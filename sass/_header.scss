@@ -6,6 +6,10 @@
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
 
+  @media (min-width: $break-small-desktop) {
+    height: 820px;
+  }
+
   @media (min-width: $break-medium-desktop) {
     height: 970px;
   }
@@ -69,6 +73,10 @@
     flex-direction: column;
     animation: 1.2s ease-out 0s 1 slideInFromLeft;
 
+    @media (min-width: $break-small-desktop) {
+      width: 75%;
+    }
+
     @media (min-width: $break-medium-desktop) {
       width: 74.5%;
     }
@@ -82,12 +90,16 @@
       letter-spacing: -6px;
       line-height: 0.899;
 
+      @media (min-width: $break-small-desktop) {
+        line-height: 0.888;
+      }
+
       @media (min-width: $break-medium-desktop) {
         line-height: 0.885;
       }
 
       @media (min-width: $break-large-desktop) {
-        line-height: 0.884;
+        line-height: 0.888;
       }
     }
 
@@ -96,13 +108,17 @@
       padding-left: 30px;
       animation: 1.4s ease-out 0s 1 slideInFromRight;
 
+      @media (min-width: $break-small-desktop) {
+        font-size: 22rem;
+      }
+
       @media (min-width: $break-medium-desktop) {
         font-size: 25rem;
         padding-left: 50px;
       }
 
       @media (min-width: $break-large-desktop) {
-        font-size: 28.5rem;
+        font-size: 30.5rem;
         padding-left: 50px;
       }
     }
@@ -114,14 +130,19 @@
       font-size: 12rem;
       animation: 1s ease-out 0s 1 slideInFromLeft;
 
+      @media (min-width: $break-small-desktop) {
+        font-size: 13.17rem;
+        padding-left: 367px;
+      }
+
       @media (min-width: $break-medium-desktop) {
         font-size: 14.9rem;
         padding-left: 435px;
       }
 
       @media (min-width: $break-large-desktop) {
-        font-size: 20.6rem;
-        padding-left: 434px;
+        font-size: 18.15rem;
+        padding-left: 523px;
       }
     }
   }
@@ -139,6 +160,12 @@
     background-size: cover;
     left: 53%;
     animation: 1s ease-out 0s 1 slideInFromRight;
+
+    @media (min-width: $break-small-desktop) {
+      left: 51%;
+      width: 670px;
+      height: 820px;
+    }
 
     @media (min-width: $break-medium-desktop) {
       left: 50%;

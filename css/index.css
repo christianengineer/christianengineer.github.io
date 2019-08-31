@@ -41,6 +41,11 @@ html {
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
 }
+@media (min-width: 1400px) {
+  .header {
+    height: 820px;
+  }
+}
 @media (min-width: 1600px) {
   .header {
     height: 970px;
@@ -100,6 +105,11 @@ html {
   flex-direction: column;
   animation: 1.2s ease-out 0s 1 slideInFromLeft;
 }
+@media (min-width: 1400px) {
+  .header__left {
+    width: 75%;
+  }
+}
 @media (min-width: 1600px) {
   .header__left {
     width: 74.5%;
@@ -115,6 +125,12 @@ html {
   letter-spacing: -6px;
   line-height: 0.899;
 }
+@media (min-width: 1400px) {
+  .header__left h1,
+.header__left h2 {
+    line-height: 0.888;
+  }
+}
 @media (min-width: 1600px) {
   .header__left h1,
 .header__left h2 {
@@ -124,13 +140,18 @@ html {
 @media (min-width: 1900px) {
   .header__left h1,
 .header__left h2 {
-    line-height: 0.884;
+    line-height: 0.888;
   }
 }
 .header__left h1 {
   font-size: 20.5rem;
   padding-left: 30px;
   animation: 1.4s ease-out 0s 1 slideInFromRight;
+}
+@media (min-width: 1400px) {
+  .header__left h1 {
+    font-size: 22rem;
+  }
 }
 @media (min-width: 1600px) {
   .header__left h1 {
@@ -140,7 +161,7 @@ html {
 }
 @media (min-width: 1900px) {
   .header__left h1 {
-    font-size: 28.5rem;
+    font-size: 30.5rem;
     padding-left: 50px;
   }
 }
@@ -151,6 +172,12 @@ html {
   font-size: 12rem;
   animation: 1s ease-out 0s 1 slideInFromLeft;
 }
+@media (min-width: 1400px) {
+  .header__left h2 {
+    font-size: 13.17rem;
+    padding-left: 367px;
+  }
+}
 @media (min-width: 1600px) {
   .header__left h2 {
     font-size: 14.9rem;
@@ -159,8 +186,8 @@ html {
 }
 @media (min-width: 1900px) {
   .header__left h2 {
-    font-size: 20.6rem;
-    padding-left: 434px;
+    font-size: 18.15rem;
+    padding-left: 523px;
   }
 }
 .header__right {
@@ -175,6 +202,13 @@ html {
   background-size: cover;
   left: 53%;
   animation: 1s ease-out 0s 1 slideInFromRight;
+}
+@media (min-width: 1400px) {
+  .header::after {
+    left: 51%;
+    width: 670px;
+    height: 820px;
+  }
 }
 @media (min-width: 1600px) {
   .header::after {
