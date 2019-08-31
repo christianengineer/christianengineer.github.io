@@ -41,6 +41,11 @@ html {
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
 }
+@media (min-width: 1900px) {
+  .header {
+    height: 100vh;
+  }
+}
 .header nav div a {
   color: inherit;
   text-decoration: none;
@@ -90,15 +95,32 @@ html {
   flex-direction: column;
   animation: 1.2s ease-out 0s 1 slideInFromLeft;
 }
+@media (min-width: 1900px) {
+  .header__left {
+    width: 76.5%;
+  }
+}
 .header__left h1,
 .header__left h2 {
-  font-size: 20.5rem;
   letter-spacing: -6px;
   line-height: 0.899;
 }
+@media (min-width: 1900px) {
+  .header__left h1,
+.header__left h2 {
+    line-height: 0.884;
+  }
+}
 .header__left h1 {
+  font-size: 20.5rem;
   padding-left: 30px;
   animation: 1.4s ease-out 0s 1 slideInFromRight;
+}
+@media (min-width: 1900px) {
+  .header__left h1 {
+    font-size: 28.5rem;
+    padding-left: 50px;
+  }
 }
 .header__left h2 {
   color: #898632;
@@ -106,6 +128,12 @@ html {
   font-weight: 300;
   font-size: 12rem;
   animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+@media (min-width: 1900px) {
+  .header__left h2 {
+    font-size: 20.6rem;
+    padding-left: 434px;
+  }
 }
 .header__right {
   background-color: #3a3729;
@@ -119,6 +147,13 @@ html {
   background-size: cover;
   left: 53%;
   animation: 1s ease-out 0s 1 slideInFromRight;
+}
+@media (min-width: 1900px) {
+  .header::after {
+    left: 54.5%;
+    width: 820px;
+    height: 100vh;
+  }
 }
 
 @keyframes fadeIn {
