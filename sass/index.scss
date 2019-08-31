@@ -4,11 +4,26 @@
 
 .header {
   height: 700px;
+  color: #3a3729;
   position: relative;
   display: flex;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+
+  & nav {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    font-size: 1.6rem;
+    animation: 2s ease-out 1.3s forwards fadeIn;
+
+    div {
+      padding: 40px;
+    }
+  }
 
   &__left {
-    font-family: "Oswald", sans-serif;
     width: 76%;
     background-color: #fff95a;
     display: flex;
@@ -19,10 +34,8 @@
 
     & h1,
     h2 {
-      color: #3a3729;
       font-size: 20.5rem;
       letter-spacing: -6px;
-      text-transform: uppercase;
       line-height: 0.9;
     }
 
@@ -56,12 +69,12 @@
   }
 }
 
-@keyframes slideInFromTop {
-  0% {
-    transform: translateY(-200%);
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  100% {
-    transform: translateY(0);
+  to {
+    opacity: 1;
   }
 }
 
