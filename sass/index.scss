@@ -1,4 +1,5 @@
-@import 'reset';
+@import "reset";
+@import "fonts";
 
 .header {
   height: 850px;
@@ -6,13 +7,24 @@
   display: flex;
 
   &__left {
+    font-family: "Oswald", sans-serif;
     width: 70%;
-    background-color: yellow;
+    background-color: #fff95a;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+
+    & h1 {
+      color: #3a3729;
+      font-size: 18rem;
+      letter-spacing: -5px;
+    }
   }
 
   &__right {
     width: 30%;
-    background-color: gray;
+    background-color: #3a3729;
   }
 
   &::after {
