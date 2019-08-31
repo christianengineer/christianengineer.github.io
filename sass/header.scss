@@ -1,0 +1,111 @@
+.header {
+  height: 700px;
+  color: $primary-color;
+  position: relative;
+  display: flex;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+
+  .nav__top {
+    margin-top: 40px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    font-size: 1.6rem;
+    animation: 1.2s ease-out 1.5s forwards fadeIn;
+    right: 30%;
+
+    div {
+      padding-right: 80px;
+    }
+  }
+
+  .nav__bottom {
+    margin-bottom: 40px;
+    margin-left: 45px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    font-size: 1.6rem;
+    animation: 1.2s ease-out 2s forwards fadeIn;
+    bottom: 0;
+
+    div {
+      padding-right: 80px;
+    }
+  }
+
+  &__left {
+    width: 76%;
+    background-color: $accent-color;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    animation: 1.2s ease-out 0s 1 slideInFromLeft;
+
+    & h1,
+    h2 {
+      font-size: 20.5rem;
+      letter-spacing: -6px;
+      line-height: 0.899;
+    }
+
+    & h1 {
+      padding-left: 30px;
+      animation: 1.4s ease-out 0s 1 slideInFromRight;
+    }
+
+    & h2 {
+      color: $accent-secondary-color;
+      padding-left: 342px;
+      font-weight: 300;
+      font-size: 12rem;
+      animation: 1s ease-out 0s 1 slideInFromLeft;
+    }
+  }
+
+  &__right {
+    background-color: $primary-color;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 570px;
+    height: 700px;
+    background-image: url(../img/christian-header-background.png);
+    background-size: cover;
+    left: 53%;
+    animation: 1s ease-out 0s 1 slideInFromRight;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(200%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
