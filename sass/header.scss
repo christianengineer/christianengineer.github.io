@@ -6,6 +6,20 @@
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
 
+  nav div a {
+    color: inherit;
+    text-decoration: none;
+    padding: 15px;
+    border-bottom: 1px solid transparent;
+    border-left: 1px solid transparent;
+    transition: 0.5s ease-in-out;
+
+    &:hover { 
+      border-bottom: 1px solid $primary-color;
+      border-left: 1px solid $primary-color;
+    }
+  }
+
   .nav__top {
     margin-top: 40px;
     position: absolute;
@@ -15,6 +29,7 @@
     font-size: 1.6rem;
     animation: 1.2s ease-out 1.5s forwards fadeIn;
     right: 30%;
+    z-index: 1;
 
     div {
       padding-right: 80px;
