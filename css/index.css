@@ -43,10 +43,22 @@ hr {
   justify-content: center;
   flex-direction: column;
 }
-.header__left h1 {
+.header__left h1,
+.header__left h2 {
   color: #3a3729;
-  font-size: 18rem;
-  letter-spacing: -5px;
+  font-size: 17.5rem;
+  letter-spacing: -6px;
+  text-transform: uppercase;
+  line-height: 0.9;
+}
+.header__left h1 {
+  padding-left: 30px;
+}
+.header__left h2 {
+  color: #898632;
+  padding-left: 294px;
+  font-weight: 300;
+  font-size: 10.5rem;
 }
 .header__right {
   width: 30%;
@@ -59,7 +71,7 @@ hr {
   height: 850px;
   background-image: url(../img/christian-header-background.png);
   background-size: cover;
-  left: 45%;
+  left: 47%;
 }
 
 /*# sourceMappingURL=index.css.map */
