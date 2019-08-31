@@ -1,5 +1,4 @@
 .header {
-  height: 700px;
   color: $primary-color;
   position: relative;
   display: flex;
@@ -10,16 +9,20 @@
     height: 768px;
   }
 
+  @media (min-width: $break-large-laptop) {
+    height: 700px;
+  }
+
   @media (min-width: $break-small-desktop) {
-    height: 820px;
+    height: 821px;
   }
 
   @media (min-width: $break-medium-desktop) {
-    height: 970px;
+    height: 971px;
   }
 
   @media (min-width: $break-large-desktop) {
-    height: 1000px;
+    height: 1001px;
   }
 
   nav div a {
@@ -69,7 +72,6 @@
   }
 
   &__left {
-    width: 76%;
     background-color: $accent-color;
     display: flex;
     align-content: center;
@@ -79,6 +81,10 @@
 
     @media (min-width: $break-small-laptop) {
       width: 81%;
+    }
+
+    @media (min-width: $break-large-laptop) {
+      width: 76%;
     }
 
     @media (min-width: $break-small-desktop) {
@@ -96,10 +102,13 @@
     & h1,
     h2 {
       letter-spacing: -6px;
-      line-height: 0.899;
 
       @media (min-width: $break-small-laptop) {
         line-height: 0.886;
+      }
+
+      @media (min-width: $break-large-laptop) {
+        line-height: 0.899;
       }
 
       @media (min-width: $break-small-desktop) {
@@ -116,12 +125,15 @@
     }
 
     & h1 {
-      font-size: 20.5rem;
-      padding-left: 30px;
       animation: 1.4s ease-out 0s 1 slideInFromRight;
 
       @media (min-width: $break-small-laptop) {
         font-size: 16rem;
+        padding-left: 30px;
+      }
+
+      @media (min-width: $break-large-laptop) {
+        font-size: 20rem;
       }
 
       @media (min-width: $break-small-desktop) {
@@ -135,20 +147,22 @@
 
       @media (min-width: $break-large-desktop) {
         font-size: 30.5rem;
-        padding-left: 50px;
       }
     }
 
     & h2 {
       color: $accent-secondary-color;
-      padding-left: 342px;
       font-weight: 300;
-      font-size: 12rem;
       animation: 1s ease-out 0s 1 slideInFromLeft;
 
       @media (min-width: $break-small-laptop) {
         font-size: 9.72rem;
         padding-left: 269px;
+      }
+
+      @media (min-width: $break-large-laptop) {
+        font-size: 12rem;
+        padding-left: 335px;
       }
 
       @media (min-width: $break-small-desktop) {
@@ -175,36 +189,39 @@
   &::after {
     position: absolute;
     content: "";
-    width: 570px;
-    height: 700px;
     background-image: url(../img/christian-header-background.png);
-    background-size: cover;
-    left: 53%;
     animation: 1s ease-out 0s 1 slideInFromRight;
 
-    @media (min-width: $break-small-laptop) and (max-width: 1200px) {
+    @media (min-width: $break-small-laptop) {
       background-size: 635px;
       left: 49%;
-      width: 635px;
+      width: 522px;
       height: 768px;
+    }
+
+    @media (min-width: $break-large-laptop) {
+      background-size: cover;
+      left: 53%;
+      width: 570px;
+      height: 700px;
     }
 
     @media (min-width: $break-small-desktop) {
       left: 51%;
       width: 670px;
-      height: 820px;
+      height: 821px;
     }
 
     @media (min-width: $break-medium-desktop) {
       left: 50%;
       width: 790px;
-      height: 970px;
+      height: 971px;
     }
 
     @media (min-width: $break-large-desktop) {
       left: 54.5%;
       width: 820px;
-      height: 1000px;
+      height: 1001px;
     }
   }
 }
