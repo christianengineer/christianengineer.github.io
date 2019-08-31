@@ -1,4 +1,27 @@
-body {
-  background-color: red;
-  color: green;
+@import 'reset';
+
+.header {
+  height: 850px;
+  position: relative;
+  display: flex;
+
+  &__left {
+    width: 70%;
+    background-color: yellow;
+  }
+
+  &__right {
+    width: 30%;
+    background-color: gray;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 650px;
+    height: 850px;
+    background-image: url(../img/christian-header-background.png);
+    background-size: cover;
+    left: 45%;
+  }
 }
