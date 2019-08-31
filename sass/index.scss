@@ -10,16 +10,34 @@
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
 
-  & nav {
+  .nav__top {
+    margin-top: 40px;
     position: absolute;
     display: flex;
     justify-content: center;
     opacity: 0;
     font-size: 1.6rem;
-    animation: 2s ease-out 1.3s forwards fadeIn;
+    animation: 1.2s ease-out 1.5s forwards fadeIn;
+    right: 30%;
 
     div {
-      padding: 40px;
+      padding-right: 80px;
+    }
+  }
+
+  .nav__bottom {
+    margin-bottom: 40px;
+    margin-left: 45px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    font-size: 1.6rem;
+    animation: 1.2s ease-out 2s forwards fadeIn;
+    bottom: 0;
+
+    div {
+      padding-right: 80px;
     }
   }
 
@@ -36,7 +54,7 @@
     h2 {
       font-size: 20.5rem;
       letter-spacing: -6px;
-      line-height: 0.9;
+      line-height: 0.899;
     }
 
     & h1 {
@@ -46,9 +64,9 @@
 
     & h2 {
       color: #898632;
-      padding-left: 294px;
+      padding-left: 342px;
       font-weight: 300;
-      font-size: 13.5rem;
+      font-size: 12rem;
       animation: 1s ease-out 0s 1 slideInFromLeft;
     }
   }
