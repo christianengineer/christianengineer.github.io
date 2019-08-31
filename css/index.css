@@ -43,7 +43,7 @@ html {
 }
 @media (min-width: 1900px) {
   .header {
-    height: 100vh;
+    height: 1000px;
   }
 }
 .header nav div a {
@@ -152,7 +152,7 @@ html {
   .header::after {
     left: 54.5%;
     width: 820px;
-    height: 100vh;
+    height: 1000px;
   }
 }
 
