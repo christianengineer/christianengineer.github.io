@@ -6,6 +6,10 @@
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
 
+  @media (min-width: $break-small-laptop) {
+    height: 768px;
+  }
+
   @media (min-width: $break-small-desktop) {
     height: 820px;
   }
@@ -73,6 +77,10 @@
     flex-direction: column;
     animation: 1.2s ease-out 0s 1 slideInFromLeft;
 
+    @media (min-width: $break-small-laptop) {
+      width: 81%;
+    }
+
     @media (min-width: $break-small-desktop) {
       width: 75%;
     }
@@ -89,6 +97,10 @@
     h2 {
       letter-spacing: -6px;
       line-height: 0.899;
+
+      @media (min-width: $break-small-laptop) {
+        line-height: 0.886;
+      }
 
       @media (min-width: $break-small-desktop) {
         line-height: 0.888;
@@ -107,6 +119,10 @@
       font-size: 20.5rem;
       padding-left: 30px;
       animation: 1.4s ease-out 0s 1 slideInFromRight;
+
+      @media (min-width: $break-small-laptop) {
+        font-size: 16rem;
+      }
 
       @media (min-width: $break-small-desktop) {
         font-size: 22rem;
@@ -129,6 +145,11 @@
       font-weight: 300;
       font-size: 12rem;
       animation: 1s ease-out 0s 1 slideInFromLeft;
+
+      @media (min-width: $break-small-laptop) {
+        font-size: 9.72rem;
+        padding-left: 269px;
+      }
 
       @media (min-width: $break-small-desktop) {
         font-size: 13.17rem;
@@ -160,6 +181,13 @@
     background-size: cover;
     left: 53%;
     animation: 1s ease-out 0s 1 slideInFromRight;
+
+    @media (min-width: $break-small-laptop) and (max-width: 1200px) {
+      background-size: 635px;
+      left: 49%;
+      width: 635px;
+      height: 768px;
+    }
 
     @media (min-width: $break-small-desktop) {
       left: 51%;

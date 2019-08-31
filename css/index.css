@@ -41,6 +41,11 @@ html {
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
 }
+@media (min-width: 1000px) {
+  .header {
+    height: 768px;
+  }
+}
 @media (min-width: 1400px) {
   .header {
     height: 820px;
@@ -105,6 +110,11 @@ html {
   flex-direction: column;
   animation: 1.2s ease-out 0s 1 slideInFromLeft;
 }
+@media (min-width: 1000px) {
+  .header__left {
+    width: 81%;
+  }
+}
 @media (min-width: 1400px) {
   .header__left {
     width: 75%;
@@ -124,6 +134,12 @@ html {
 .header__left h2 {
   letter-spacing: -6px;
   line-height: 0.899;
+}
+@media (min-width: 1000px) {
+  .header__left h1,
+.header__left h2 {
+    line-height: 0.886;
+  }
 }
 @media (min-width: 1400px) {
   .header__left h1,
@@ -148,6 +164,11 @@ html {
   padding-left: 30px;
   animation: 1.4s ease-out 0s 1 slideInFromRight;
 }
+@media (min-width: 1000px) {
+  .header__left h1 {
+    font-size: 16rem;
+  }
+}
 @media (min-width: 1400px) {
   .header__left h1 {
     font-size: 22rem;
@@ -171,6 +192,12 @@ html {
   font-weight: 300;
   font-size: 12rem;
   animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+@media (min-width: 1000px) {
+  .header__left h2 {
+    font-size: 9.72rem;
+    padding-left: 269px;
+  }
 }
 @media (min-width: 1400px) {
   .header__left h2 {
@@ -202,6 +229,14 @@ html {
   background-size: cover;
   left: 53%;
   animation: 1s ease-out 0s 1 slideInFromRight;
+}
+@media (min-width: 1000px) and (max-width: 1200px) {
+  .header::after {
+    background-size: 635px;
+    left: 49%;
+    width: 635px;
+    height: 768px;
+  }
 }
 @media (min-width: 1400px) {
   .header::after {
