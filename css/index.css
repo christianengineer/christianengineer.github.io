@@ -29,6 +29,10 @@ hr {
   padding: 0;
 }
 
+html {
+  background-color: #3a3729;
+}
+
 .header {
   height: 850px;
   position: relative;
