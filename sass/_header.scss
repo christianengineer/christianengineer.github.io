@@ -6,7 +6,7 @@
   text-transform: uppercase;
 
   @media (min-width: $break-small-laptop) {
-    height: 768px;
+    height: 561px;
   }
 
   @media (min-width: $break-large-laptop) {
@@ -80,7 +80,7 @@
     animation: 1.2s ease-out 0s 1 slideInFromLeft;
 
     @media (min-width: $break-small-laptop) {
-      width: 81%;
+      width: 75%;
     }
 
     @media (min-width: $break-large-laptop) {
@@ -189,37 +189,35 @@
   &::after {
     position: absolute;
     content: "";
-    background-image: url(../img/christian-header-background.png);
     animation: 1s ease-out 0s 1 slideInFromRight;
+    right: 1%;
 
     @media (min-width: $break-small-laptop) {
-      background-size: 635px;
-      left: 49%;
-      width: 522px;
-      height: 768px;
+      background-image: url(../img/christian-header-background-medium.png);
+      background-size: 462px;
+      background-repeat: no-repeat;
+      width: 462px;
+      height: 561px;
     }
 
     @media (min-width: $break-large-laptop) {
+      background-image: url(../img/christian-header-background-large.png);
       background-size: cover;
-      left: 53%;
       width: 570px;
       height: 700px;
     }
 
     @media (min-width: $break-small-desktop) {
-      left: 51%;
       width: 670px;
       height: 821px;
     }
 
     @media (min-width: $break-medium-desktop) {
-      left: 50%;
       width: 790px;
       height: 971px;
     }
 
     @media (min-width: $break-large-desktop) {
-      left: 54.5%;
       width: 820px;
       height: 1001px;
     }
