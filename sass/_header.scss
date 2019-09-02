@@ -109,26 +109,7 @@
     & h1 {
       animation: 1.4s ease-out 0s 1 slideInFromRight;
       padding-left: 2%;
-
-      @media (min-width: $break-small-laptop) {
-        font-size: 17rem;
-      }
-
-      @media (min-width: $break-large-laptop) {
-        font-size: 20rem;
-      }
-
-      @media (min-width: $break-small-desktop) {
-        font-size: 22rem;
-      }
-
-      @media (min-width: $break-medium-desktop) {
-        font-size: 25rem;
-      }
-
-      @media (min-width: $break-large-desktop) {
-        font-size: 30.5rem;
-      }
+      font-size: 17vw;
     }
 
     & h2 {
@@ -169,8 +150,19 @@
     @media (min-width: $break-small-laptop) {
       width: 300px;
     }
-  }
 
+    @media (min-width: $break-large-laptop) {
+      width: 360px;
+    }
+
+    @media (min-width: $break-small-desktop) {
+      width: 440px;
+    }
+
+    @media (min-width: $break-medium-desktop) {
+      width: 520px;
+    }
+  }
   &::after {
     position: absolute;
     content: "";

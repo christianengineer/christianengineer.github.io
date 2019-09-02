@@ -152,31 +152,7 @@ html {
 .header__left h1 {
   animation: 1.4s ease-out 0s 1 slideInFromRight;
   padding-left: 2%;
-}
-@media (min-width: 1000px) {
-  .header__left h1 {
-    font-size: 17rem;
-  }
-}
-@media (min-width: 1200px) {
-  .header__left h1 {
-    font-size: 20rem;
-  }
-}
-@media (min-width: 1400px) {
-  .header__left h1 {
-    font-size: 22rem;
-  }
-}
-@media (min-width: 1600px) {
-  .header__left h1 {
-    font-size: 25rem;
-  }
-}
-@media (min-width: 1900px) {
-  .header__left h1 {
-    font-size: 30.5rem;
-  }
+  font-size: 17vw;
 }
 .header__left h2 {
   color: #898632;
@@ -219,6 +195,21 @@ html {
 @media (min-width: 1000px) {
   .header__right {
     width: 300px;
+  }
+}
+@media (min-width: 1200px) {
+  .header__right {
+    width: 360px;
+  }
+}
+@media (min-width: 1400px) {
+  .header__right {
+    width: 440px;
+  }
+}
+@media (min-width: 1600px) {
+  .header__right {
+    width: 520px;
   }
 }
 .header::after {
