@@ -43,27 +43,27 @@ html {
 }
 @media (min-width: 1000px) {
   .header {
-    height: 561px;
+    height: 620px;
   }
 }
 @media (min-width: 1200px) {
   .header {
-    height: 700px;
+    height: 666px;
   }
 }
 @media (min-width: 1400px) {
   .header {
-    height: 821px;
+    height: 789px;
   }
 }
 @media (min-width: 1600px) {
   .header {
-    height: 971px;
+    height: 939px;
   }
 }
 @media (min-width: 1900px) {
   .header {
-    height: 1001px;
+    height: 969px;
   }
 }
 .header nav div a {
@@ -158,99 +158,45 @@ html {
   color: #898632;
   font-weight: 300;
   animation: 1s ease-out 0s 1 slideInFromLeft;
-}
-@media (min-width: 1000px) {
-  .header__left h2 {
-    font-size: 10.26rem;
-    padding-left: 272px;
-  }
-}
-@media (min-width: 1200px) {
-  .header__left h2 {
-    font-size: 12rem;
-    padding-left: 335px;
-  }
-}
-@media (min-width: 1400px) {
-  .header__left h2 {
-    font-size: 13.17rem;
-    padding-left: 367px;
-  }
-}
-@media (min-width: 1600px) {
-  .header__left h2 {
-    font-size: 14.9rem;
-    padding-left: 435px;
-  }
-}
-@media (min-width: 1900px) {
-  .header__left h2 {
-    font-size: 18.15rem;
-    padding-left: 523px;
-  }
+  font-size: 10.26vw;
+  padding-left: 35.2%;
 }
 .header__right {
   background-color: #3a3729;
-}
-@media (min-width: 1000px) {
-  .header__right {
-    width: 300px;
-  }
-}
-@media (min-width: 1200px) {
-  .header__right {
-    width: 360px;
-  }
-}
-@media (min-width: 1400px) {
-  .header__right {
-    width: 440px;
-  }
-}
-@media (min-width: 1600px) {
-  .header__right {
-    width: 520px;
-  }
+  width: 28vw;
 }
 .header::after {
   position: absolute;
   content: "";
   animation: 1s ease-out 0s 1 slideInFromRight;
-  right: 1%;
+  right: 0;
+  width: 45vw;
+  background-size: cover;
+  background-image: url(../img/christian-header-background-large.png);
 }
 @media (min-width: 1000px) {
   .header::after {
-    background-image: url(../img/christian-header-background-medium.png);
-    background-size: 462px;
-    background-repeat: no-repeat;
-    width: 462px;
-    height: 561px;
+    height: 620px;
   }
 }
 @media (min-width: 1200px) {
   .header::after {
-    background-image: url(../img/christian-header-background-large.png);
-    background-size: cover;
-    width: 570px;
-    height: 700px;
+    height: 666px;
   }
 }
 @media (min-width: 1400px) {
   .header::after {
-    width: 670px;
-    height: 821px;
+    height: 789px;
   }
 }
 @media (min-width: 1600px) {
   .header::after {
-    width: 790px;
-    height: 971px;
+    height: 939px;
   }
 }
 @media (min-width: 1900px) {
   .header::after {
-    width: 820px;
-    height: 1001px;
+    height: 969px;
   }
 }
 

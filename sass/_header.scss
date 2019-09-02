@@ -7,23 +7,23 @@
   text-transform: uppercase;
 
   @media (min-width: $break-small-laptop) {
-    height: 561px;
+    height: 620px;
   }
 
   @media (min-width: $break-large-laptop) {
-    height: 700px;
+    height: 666px;
   }
 
   @media (min-width: $break-small-desktop) {
-    height: 821px;
+    height: 789px;
   }
 
   @media (min-width: $break-medium-desktop) {
-    height: 971px;
+    height: 939px;
   }
 
   @media (min-width: $break-large-desktop) {
-    height: 1001px;
+    height: 969px;
   }
 
   nav div a {
@@ -116,87 +116,44 @@
       color: $accent-secondary-color;
       font-weight: 300;
       animation: 1s ease-out 0s 1 slideInFromLeft;
-
-      @media (min-width: $break-small-laptop) {
-        font-size: 10.26rem;
-        padding-left: 272px;
-      }
-
-      @media (min-width: $break-large-laptop) {
-        font-size: 12rem;
-        padding-left: 335px;
-      }
-
-      @media (min-width: $break-small-desktop) {
-        font-size: 13.17rem;
-        padding-left: 367px;
-      }
-
-      @media (min-width: $break-medium-desktop) {
-        font-size: 14.9rem;
-        padding-left: 435px;
-      }
-
-      @media (min-width: $break-large-desktop) {
-        font-size: 18.15rem;
-        padding-left: 523px;
-      }
+      font-size: 10.26vw;
+      padding-left: 35.2%;
     }
   }
 
   &__right {
     background-color: $primary-color;
-
-    @media (min-width: $break-small-laptop) {
-      width: 300px;
-    }
-
-    @media (min-width: $break-large-laptop) {
-      width: 360px;
-    }
-
-    @media (min-width: $break-small-desktop) {
-      width: 440px;
-    }
-
-    @media (min-width: $break-medium-desktop) {
-      width: 520px;
-    }
+    width: 28vw;
   }
+
   &::after {
     position: absolute;
     content: "";
     animation: 1s ease-out 0s 1 slideInFromRight;
-    right: 1%;
+    right: 0;
+    width: 45vw;
+
+    background-size: cover;
+    background-image: url(../img/christian-header-background-large.png);
 
     @media (min-width: $break-small-laptop) {
-      background-image: url(../img/christian-header-background-medium.png);
-      background-size: 462px;
-      background-repeat: no-repeat;
-      width: 462px;
-      height: 561px;
+      height: 620px;
     }
 
     @media (min-width: $break-large-laptop) {
-      background-image: url(../img/christian-header-background-large.png);
-      background-size: cover;
-      width: 570px;
-      height: 700px;
+      height: 666px;
     }
 
     @media (min-width: $break-small-desktop) {
-      width: 670px;
-      height: 821px;
+      height: 789px;
     }
 
     @media (min-width: $break-medium-desktop) {
-      width: 790px;
-      height: 971px;
+      height: 939px;
     }
 
     @media (min-width: $break-large-desktop) {
-      width: 820px;
-      height: 1001px;
+      height: 969px;
     }
   }
 }
