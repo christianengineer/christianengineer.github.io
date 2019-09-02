@@ -7,7 +7,7 @@
   text-transform: uppercase;
 
   @media (min-width: $break-small-laptop) {
-    height: 620px;
+    height: 560px;
   }
 
   @media (min-width: $break-large-laptop) {
@@ -137,7 +137,7 @@
     background-image: url(../img/christian-header-background-large.png);
 
     @media (min-width: $break-small-laptop) {
-      height: 620px;
+      height: 560px;
     }
 
     @media (min-width: $break-large-laptop) {

@@ -43,7 +43,7 @@ html {
 }
 @media (min-width: 1000px) {
   .header {
-    height: 620px;
+    height: 560px;
   }
 }
 @media (min-width: 1200px) {
@@ -176,7 +176,7 @@ html {
 }
 @media (min-width: 1000px) {
   .header::after {
-    height: 620px;
+    height: 560px;
   }
 }
 @media (min-width: 1200px) {
