@@ -41,6 +41,11 @@ html {
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
 }
+@media (max-width: 879px) {
+  .header {
+    height: 330px;
+  }
+}
 @media (min-width: 880px) {
   .header {
     height: 500px;
@@ -102,6 +107,11 @@ html {
 .header .nav__top div {
   padding-right: 80px;
 }
+@media (max-width: 879px) {
+  .header .nav__top {
+    font-size: 0.6rem;
+  }
+}
 .header .nav__bottom {
   margin-bottom: 40px;
   margin-left: 45px;
@@ -115,6 +125,11 @@ html {
 }
 .header .nav__bottom div {
   padding-right: 80px;
+}
+@media (max-width: 879px) {
+  .header .nav__bottom {
+    font-size: 0.6rem;
+  }
 }
 .header__left {
   background-color: #fff95a;
@@ -154,6 +169,12 @@ html {
   width: 45vw;
   background-size: cover;
   background-image: url(../img/christian-header-background-large.png);
+}
+@media (max-width: 879px) {
+  .header::after {
+    width: 50vw;
+    height: 330px;
+  }
 }
 @media (min-width: 880px) {
   .header::after {

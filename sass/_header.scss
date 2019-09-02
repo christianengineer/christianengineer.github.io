@@ -6,6 +6,10 @@
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
 
+  @media (max-width: $break-phone) {
+    height: 330px;
+  }
+
   @media (min-width: $break-iPad-medium) {
     height: 500px;
   }
@@ -62,6 +66,10 @@
     div {
       padding-right: 80px;
     }
+
+    @media (max-width: $break-phone) {
+      font-size: 0.6rem;
+    }
   }
 
   .nav__bottom {
@@ -77,6 +85,10 @@
 
     div {
       padding-right: 80px;
+    }
+
+    @media (max-width: $break-phone) {
+      font-size: 0.6rem;
     }
   }
 
@@ -124,6 +136,11 @@
 
     background-size: cover;
     background-image: url(../img/christian-header-background-large.png);
+
+    @media (max-width: $break-phone) {
+      width: 50vw;
+      height: 330px;
+    }
 
     @media (min-width: $break-iPad-medium) {
       height: 500px;
