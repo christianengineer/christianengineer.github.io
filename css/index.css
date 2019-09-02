@@ -37,6 +37,7 @@ html {
   color: #3a3729;
   position: relative;
   display: flex;
+  justify-content: space-between;
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
 }
@@ -112,31 +113,7 @@ html {
   justify-content: center;
   flex-direction: column;
   animation: 1.2s ease-out 0s 1 slideInFromLeft;
-}
-@media (min-width: 1000px) {
-  .header__left {
-    width: 75%;
-  }
-}
-@media (min-width: 1200px) {
-  .header__left {
-    width: 76%;
-  }
-}
-@media (min-width: 1400px) {
-  .header__left {
-    width: 75%;
-  }
-}
-@media (min-width: 1600px) {
-  .header__left {
-    width: 74.5%;
-  }
-}
-@media (min-width: 1900px) {
-  .header__left {
-    width: 76.5%;
-  }
+  width: 100%;
 }
 .header__left h1,
 .header__left h2 {
@@ -174,11 +151,11 @@ html {
 }
 .header__left h1 {
   animation: 1.4s ease-out 0s 1 slideInFromRight;
+  padding-left: 2%;
 }
 @media (min-width: 1000px) {
   .header__left h1 {
-    font-size: 16rem;
-    padding-left: 30px;
+    font-size: 17rem;
   }
 }
 @media (min-width: 1200px) {
@@ -194,7 +171,6 @@ html {
 @media (min-width: 1600px) {
   .header__left h1 {
     font-size: 25rem;
-    padding-left: 50px;
   }
 }
 @media (min-width: 1900px) {
@@ -209,8 +185,8 @@ html {
 }
 @media (min-width: 1000px) {
   .header__left h2 {
-    font-size: 9.72rem;
-    padding-left: 269px;
+    font-size: 10.26rem;
+    padding-left: 272px;
   }
 }
 @media (min-width: 1200px) {
@@ -239,6 +215,11 @@ html {
 }
 .header__right {
   background-color: #3a3729;
+}
+@media (min-width: 1000px) {
+  .header__right {
+    width: 300px;
+  }
 }
 .header::after {
   position: absolute;
@@ -300,7 +281,7 @@ html {
 }
 @keyframes slideInFromRight {
   0% {
-    transform: translateX(200%);
+    transform: translateX(300%);
   }
   100% {
     transform: translateX(0);

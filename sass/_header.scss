@@ -2,6 +2,7 @@
   color: $primary-color;
   position: relative;
   display: flex;
+  justify-content: space-between;
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
 
@@ -78,26 +79,7 @@
     justify-content: center;
     flex-direction: column;
     animation: 1.2s ease-out 0s 1 slideInFromLeft;
-
-    @media (min-width: $break-small-laptop) {
-      width: 75%;
-    }
-
-    @media (min-width: $break-large-laptop) {
-      width: 76%;
-    }
-
-    @media (min-width: $break-small-desktop) {
-      width: 75%;
-    }
-
-    @media (min-width: $break-medium-desktop) {
-      width: 74.5%;
-    }
-
-    @media (min-width: $break-large-desktop) {
-      width: 76.5%;
-    }
+    width: 100%;
 
     & h1,
     h2 {
@@ -126,10 +108,10 @@
 
     & h1 {
       animation: 1.4s ease-out 0s 1 slideInFromRight;
+      padding-left: 2%;
 
       @media (min-width: $break-small-laptop) {
-        font-size: 16rem;
-        padding-left: 30px;
+        font-size: 17rem;
       }
 
       @media (min-width: $break-large-laptop) {
@@ -142,7 +124,6 @@
 
       @media (min-width: $break-medium-desktop) {
         font-size: 25rem;
-        padding-left: 50px;
       }
 
       @media (min-width: $break-large-desktop) {
@@ -156,8 +137,8 @@
       animation: 1s ease-out 0s 1 slideInFromLeft;
 
       @media (min-width: $break-small-laptop) {
-        font-size: 9.72rem;
-        padding-left: 269px;
+        font-size: 10.26rem;
+        padding-left: 272px;
       }
 
       @media (min-width: $break-large-laptop) {
@@ -184,6 +165,10 @@
 
   &__right {
     background-color: $primary-color;
+
+    @media (min-width: $break-small-laptop) {
+      width: 300px;
+    }
   }
 
   &::after {
@@ -244,7 +229,7 @@
 
 @keyframes slideInFromRight {
   0% {
-    transform: translateX(200%);
+    transform: translateX(300%);
   }
   100% {
     transform: translateX(0);
