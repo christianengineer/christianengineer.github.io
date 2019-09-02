@@ -6,8 +6,16 @@
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
 
+  @media (min-width: $break-iPad-medium) {
+    height: 500px;
+  }
+
+  @media (min-width: $break-iPad-large) {
+    height: 550px;
+  }
+
   @media (min-width: $break-small-laptop) {
-    height: 560px;
+    height: 600px;
   }
 
   @media (min-width: $break-large-laptop) {
@@ -48,7 +56,7 @@
     opacity: 0;
     font-size: 1.6rem;
     animation: 1.2s ease-out 1.5s forwards fadeIn;
-    right: 30%;
+    right: 25%;
     z-index: 1;
 
     div {
@@ -84,26 +92,7 @@
     & h1,
     h2 {
       letter-spacing: -6px;
-
-      @media (min-width: $break-small-laptop) {
-        line-height: 0.886;
-      }
-
-      @media (min-width: $break-large-laptop) {
-        line-height: 0.899;
-      }
-
-      @media (min-width: $break-small-desktop) {
-        line-height: 0.888;
-      }
-
-      @media (min-width: $break-medium-desktop) {
-        line-height: 0.885;
-      }
-
-      @media (min-width: $break-large-desktop) {
-        line-height: 0.888;
-      }
+      line-height: 0.886;
     }
 
     & h1 {
@@ -136,8 +125,16 @@
     background-size: cover;
     background-image: url(../img/christian-header-background-large.png);
 
+    @media (min-width: $break-iPad-medium) {
+      height: 500px;
+    }
+
+    @media (min-width: $break-iPad-large) {
+      height: 550px;
+    }
+
     @media (min-width: $break-small-laptop) {
-      height: 560px;
+      height: 600px;
     }
 
     @media (min-width: $break-large-laptop) {
