@@ -6,8 +6,13 @@
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
 
-  @media (max-width: $break-phone) {
-    height: 330px;
+  @media (max-width: $break-phone-small) {
+    height: 486px;
+    
+  }
+
+  @media (min-width: $break-phone-large) {
+    height: 450px;
   }
 
   @media (min-width: $break-iPad-medium) {
@@ -67,8 +72,12 @@
       padding-right: 80px;
     }
 
-    @media (max-width: $break-phone) {
-      font-size: 0.6rem;
+    @media (max-width: $break-phone-small) {
+      display: none;
+    }
+
+    @media (min-width: $break-phone-large) {
+      font-size: 1.2rem;
     }
   }
 
@@ -82,13 +91,18 @@
     font-size: 1.6rem;
     animation: 1.2s ease-out 2s forwards fadeIn;
     bottom: 0;
+    z-index: 1;
 
     div {
       padding-right: 80px;
     }
 
-    @media (max-width: $break-phone) {
-      font-size: 0.6rem;
+    @media (max-width: $break-phone-small) {
+      display: none;
+    }
+
+    @media (min-width: $break-phone-large) {
+      font-size: 1.2rem;
     }
   }
 
@@ -101,6 +115,10 @@
     animation: 1.2s ease-out 0s 1 slideInFromLeft;
     width: 100%;
 
+    @media (max-width: $break-phone-small) {
+      width: 50vw;
+    }
+
     & h1,
     h2 {
       letter-spacing: -6px;
@@ -111,6 +129,9 @@
       animation: 1.4s ease-out 0s 1 slideInFromRight;
       padding-left: 2%;
       font-size: 17vw;
+      @media (max-width: $break-phone-small) {
+        display: none;
+      }
     }
 
     & h2 {
@@ -119,12 +140,19 @@
       animation: 1s ease-out 0s 1 slideInFromLeft;
       font-size: 10.26vw;
       padding-left: 35.2%;
+      @media (max-width: $break-phone-small) {
+        display: none;
+      }
     }
   }
 
   &__right {
     background-color: $primary-color;
     width: 28vw;
+
+    @media (max-width: $break-phone-small) {
+      width: 50vw;
+    }
   }
 
   &::after {
@@ -137,9 +165,18 @@
     background-size: cover;
     background-image: url(../img/christian-header-background-large.png);
 
-    @media (max-width: $break-phone) {
-      width: 50vw;
-      height: 330px;
+    @media (max-width: $break-phone-small) {
+      background-image: url(../img/christian-header-background-medium.png);
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      width: 400px;
+      height: 486px;
+    }
+
+    @media (min-width: $break-phone-large) {
+      height: 450px;
     }
 
     @media (min-width: $break-iPad-medium) {

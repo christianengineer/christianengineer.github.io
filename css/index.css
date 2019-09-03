@@ -41,9 +41,14 @@ html {
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
 }
-@media (max-width: 879px) {
+@media (max-width: 759px) {
   .header {
-    height: 330px;
+    height: 486px;
+  }
+}
+@media (min-width: 760px) {
+  .header {
+    height: 450px;
   }
 }
 @media (min-width: 880px) {
@@ -107,9 +112,14 @@ html {
 .header .nav__top div {
   padding-right: 80px;
 }
-@media (max-width: 879px) {
+@media (max-width: 759px) {
   .header .nav__top {
-    font-size: 0.6rem;
+    display: none;
+  }
+}
+@media (min-width: 760px) {
+  .header .nav__top {
+    font-size: 1.2rem;
   }
 }
 .header .nav__bottom {
@@ -122,13 +132,19 @@ html {
   font-size: 1.6rem;
   animation: 1.2s ease-out 2s forwards fadeIn;
   bottom: 0;
+  z-index: 1;
 }
 .header .nav__bottom div {
   padding-right: 80px;
 }
-@media (max-width: 879px) {
+@media (max-width: 759px) {
   .header .nav__bottom {
-    font-size: 0.6rem;
+    display: none;
+  }
+}
+@media (min-width: 760px) {
+  .header .nav__bottom {
+    font-size: 1.2rem;
   }
 }
 .header__left {
@@ -140,6 +156,11 @@ html {
   animation: 1.2s ease-out 0s 1 slideInFromLeft;
   width: 100%;
 }
+@media (max-width: 759px) {
+  .header__left {
+    width: 50vw;
+  }
+}
 .header__left h1,
 .header__left h2 {
   letter-spacing: -6px;
@@ -150,6 +171,11 @@ html {
   padding-left: 2%;
   font-size: 17vw;
 }
+@media (max-width: 759px) {
+  .header__left h1 {
+    display: none;
+  }
+}
 .header__left h2 {
   color: #898632;
   font-weight: 300;
@@ -157,9 +183,19 @@ html {
   font-size: 10.26vw;
   padding-left: 35.2%;
 }
+@media (max-width: 759px) {
+  .header__left h2 {
+    display: none;
+  }
+}
 .header__right {
   background-color: #3a3729;
   width: 28vw;
+}
+@media (max-width: 759px) {
+  .header__right {
+    width: 50vw;
+  }
 }
 .header::after {
   position: absolute;
@@ -170,10 +206,20 @@ html {
   background-size: cover;
   background-image: url(../img/christian-header-background-large.png);
 }
-@media (max-width: 879px) {
+@media (max-width: 759px) {
   .header::after {
-    width: 50vw;
-    height: 330px;
+    background-image: url(../img/christian-header-background-medium.png);
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    height: 486px;
+  }
+}
+@media (min-width: 760px) {
+  .header::after {
+    height: 450px;
   }
 }
 @media (min-width: 880px) {
