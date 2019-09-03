@@ -78,10 +78,6 @@
     @media (max-width: $break-phone-medium) {
       display: none;
     }
-
-    @media (max-width: $break-phone-large) {
-      font-size: 1.2rem;
-    }
   }
 
   .nav__bottom {
@@ -102,10 +98,6 @@
 
     @media (max-width: $break-phone-medium) {
       display: none;
-    }
-
-    @media (min-width: $break-phone-large) {
-      font-size: 1.2rem;
     }
   }
 

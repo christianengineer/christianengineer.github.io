@@ -122,11 +122,6 @@ html {
     display: none;
   }
 }
-@media (min-width: 760px) {
-  .header .nav__top {
-    font-size: 1.2rem;
-  }
-}
 .header .nav__bottom {
   margin-bottom: 40px;
   margin-left: 45px;
@@ -145,11 +140,6 @@ html {
 @media (max-width: 759px) {
   .header .nav__bottom {
     display: none;
-  }
-}
-@media (min-width: 760px) {
-  .header .nav__bottom {
-    font-size: 1.2rem;
   }
 }
 .header__left {
