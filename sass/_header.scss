@@ -8,7 +8,7 @@
   height: 410px;
   
   @media (min-width: $break-phone-medium) {
-    height: 450px;
+    height: 400px;
   }
 
   @media (min-width: $break-phone-large) {
@@ -169,7 +169,7 @@
       background-image: url(../img/christian-header-background-large.png);
       right: 0;
       width: 330px;
-      height: 450px;
+      height: 400px;
     }
     
     @media (min-width: $break-phone-large) {

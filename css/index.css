@@ -44,7 +44,7 @@ html {
 }
 @media (min-width: 660px) {
   .header {
-    height: 450px;
+    height: 400px;
   }
 }
 @media (min-width: 760px) {
@@ -209,7 +209,7 @@ html {
     background-image: url(../img/christian-header-background-large.png);
     right: 0;
     width: 330px;
-    height: 450px;
+    height: 400px;
   }
 }
 @media (min-width: 760px) {
