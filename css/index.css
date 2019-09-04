@@ -42,9 +42,9 @@ html {
   text-transform: uppercase;
   height: 450px;
 }
-@media (min-width: 400px) {
+@media (min-width: 660px) {
   .header {
-    height: 486px;
+    height: 450px;
   }
 }
 @media (min-width: 760px) {
@@ -113,7 +113,7 @@ html {
 .header .nav__top div {
   padding-right: 80px;
 }
-@media (min-width: 400px) {
+@media (min-width: 660px) {
   .header .nav__top {
     display: flex;
   }
@@ -133,7 +133,7 @@ html {
 .header .nav__bottom div {
   padding-right: 80px;
 }
-@media (min-width: 400px) {
+@media (min-width: 660px) {
   .header .nav__bottom {
     display: flex;
   }
@@ -147,7 +147,7 @@ html {
   animation: 1.2s ease-out 0s 1 slideInFromLeft;
   width: 50vw;
 }
-@media (min-width: 400px) {
+@media (min-width: 660px) {
   .header__left {
     width: 100%;
   }
@@ -163,7 +163,7 @@ html {
   padding-left: 2%;
   font-size: 17vw;
 }
-@media (min-width: 400px) {
+@media (min-width: 660px) {
   .header__left h1 {
     display: block;
   }
@@ -176,7 +176,7 @@ html {
   font-size: 10.26vw;
   padding-left: 35.2%;
 }
-@media (min-width: 400px) {
+@media (min-width: 660px) {
   .header__left h2 {
     display: block;
   }
@@ -185,7 +185,7 @@ html {
   background-color: #3a3729;
   width: 50vw;
 }
-@media (min-width: 400px) {
+@media (min-width: 660px) {
   .header__right {
     width: 28vw;
   }
@@ -198,25 +198,25 @@ html {
   background-image: url(../img/christian-header-background-medium.png);
   width: 100%;
   height: 450px;
+  margin-left: auto;
+  margin-right: auto;
 }
-@media (min-width: 400px) {
+@media (min-width: 660px) {
   .header::after {
     background-image: url(../img/christian-header-background-large.png);
-    margin-left: auto;
-    margin-right: auto;
-    width: 400px;
-    height: 486px;
+    right: 0;
+    width: 330px;
+    height: 450px;
   }
 }
 @media (min-width: 760px) {
   .header::after {
-    right: 0;
+    width: 45vw;
     height: 450px;
   }
 }
 @media (min-width: 880px) {
   .header::after {
-    width: 45vw;
     height: 500px;
   }
 }
