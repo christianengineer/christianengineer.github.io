@@ -123,11 +123,6 @@ html {
     display: flex;
   }
 }
-@media (min-width: 760px) {
-  .header .nav__top {
-    right: 25%;
-  }
-}
 .header .nav__bottom {
   display: none;
   margin-bottom: 40px;
