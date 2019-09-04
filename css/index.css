@@ -107,15 +107,25 @@ html {
   opacity: 0;
   font-size: 1.6rem;
   animation: 1.2s ease-out 1.5s forwards fadeIn;
-  right: 25%;
+  right: 30%;
   z-index: 1;
 }
 .header .nav__top div {
-  padding-right: 80px;
+  padding-right: 10px;
+}
+@media (min-width: 760px) {
+  .header .nav__top div {
+    padding-right: 50px;
+  }
 }
 @media (min-width: 660px) {
   .header .nav__top {
     display: flex;
+  }
+}
+@media (min-width: 760px) {
+  .header .nav__top {
+    right: 25%;
   }
 }
 .header .nav__bottom {
@@ -131,7 +141,12 @@ html {
   z-index: 1;
 }
 .header .nav__bottom div {
-  padding-right: 80px;
+  padding-right: 10px;
+}
+@media (min-width: 760px) {
+  .header .nav__bottom div {
+    padding-right: 50px;
+  }
 }
 @media (min-width: 660px) {
   .header .nav__bottom {

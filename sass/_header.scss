@@ -6,7 +6,7 @@
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
   height: 410px;
-  
+
   @media (min-width: $break-phone-medium) {
     height: 400px;
   }
@@ -65,15 +65,24 @@
     opacity: 0;
     font-size: 1.6rem;
     animation: 1.2s ease-out 1.5s forwards fadeIn;
-    right: 25%;
+    right: 30%;
     z-index: 1;
-    
+
     div {
-      padding-right: 80px;
+      padding-right: 10px;
+
+      @media (min-width: $break-phone-large) {
+        padding-right: 50px;
+      }
     }
-    
+
+
     @media (min-width: $break-phone-medium) {
       display: flex;
+    }
+
+    @media (min-width: $break-phone-large) {
+      right: 25%;
     }
   }
 
@@ -88,11 +97,15 @@
     animation: 1.2s ease-out 2s forwards fadeIn;
     bottom: 0;
     z-index: 1;
-    
+
     div {
-      padding-right: 80px;
+      padding-right: 10px;
+
+      @media (min-width: $break-phone-large) {
+        padding-right: 50px;
+      }
     }
-    
+
     @media (min-width: $break-phone-medium) {
       display: flex;
     }
@@ -163,7 +176,7 @@
     height: 410px;
     margin-left: auto;
     margin-right: auto;
-    
+
     @media (min-width: $break-phone-medium) {
       background-size: cover;
       background-image: url(../img/christian-header-background-large.png);
@@ -171,7 +184,7 @@
       width: 330px;
       height: 400px;
     }
-    
+
     @media (min-width: $break-phone-large) {
       width: 45vw;
       height: 450px;
