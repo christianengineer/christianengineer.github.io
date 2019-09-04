@@ -40,13 +40,9 @@ html {
   justify-content: space-between;
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
+  height: 450px;
 }
-@media (max-width: 759px) {
-  .header {
-    height: 486px;
-  }
-}
-@media (max-width: 400px) {
+@media (min-width: 400px) {
   .header {
     height: 486px;
   }
@@ -104,9 +100,9 @@ html {
   border-left: 1px solid #3a3729;
 }
 .header .nav__top {
+  display: none;
   margin-top: 40px;
   position: absolute;
-  display: flex;
   justify-content: center;
   opacity: 0;
   font-size: 1.6rem;
@@ -117,16 +113,16 @@ html {
 .header .nav__top div {
   padding-right: 80px;
 }
-@media (max-width: 759px) {
+@media (min-width: 400px) {
   .header .nav__top {
-    display: none;
+    display: flex;
   }
 }
 .header .nav__bottom {
+  display: none;
   margin-bottom: 40px;
   margin-left: 45px;
   position: absolute;
-  display: flex;
   justify-content: center;
   opacity: 0;
   font-size: 1.6rem;
@@ -137,9 +133,9 @@ html {
 .header .nav__bottom div {
   padding-right: 80px;
 }
-@media (max-width: 759px) {
+@media (min-width: 400px) {
   .header .nav__bottom {
-    display: none;
+    display: flex;
   }
 }
 .header__left {
@@ -149,11 +145,11 @@ html {
   justify-content: center;
   flex-direction: column;
   animation: 1.2s ease-out 0s 1 slideInFromLeft;
-  width: 100%;
+  width: 50vw;
 }
-@media (max-width: 759px) {
+@media (min-width: 400px) {
   .header__left {
-    width: 50vw;
+    width: 100%;
   }
 }
 .header__left h1,
@@ -162,70 +158,65 @@ html {
   line-height: 0.886;
 }
 .header__left h1 {
+  display: none;
   animation: 1.4s ease-out 0s 1 slideInFromRight;
   padding-left: 2%;
   font-size: 17vw;
 }
-@media (max-width: 759px) {
+@media (min-width: 400px) {
   .header__left h1 {
-    display: none;
+    display: block;
   }
 }
 .header__left h2 {
+  display: none;
   color: #898632;
   font-weight: 300;
   animation: 1s ease-out 0s 1 slideInFromLeft;
   font-size: 10.26vw;
   padding-left: 35.2%;
 }
-@media (max-width: 759px) {
+@media (min-width: 400px) {
   .header__left h2 {
-    display: none;
+    display: block;
   }
 }
 .header__right {
   background-color: #3a3729;
-  width: 28vw;
+  width: 50vw;
 }
-@media (max-width: 759px) {
+@media (min-width: 400px) {
   .header__right {
-    width: 50vw;
+    width: 28vw;
   }
 }
 .header::after {
   position: absolute;
   content: "";
   animation: 1s ease-out 0s 1 slideInFromRight;
-  right: 0;
-  width: 45vw;
   background-size: cover;
-  background-image: url(../img/christian-header-background-large.png);
+  background-image: url(../img/christian-header-background-medium.png);
+  width: 100%;
+  height: 450px;
 }
-@media (max-width: 759px) {
+@media (min-width: 400px) {
   .header::after {
-    background-image: url(../img/christian-header-background-medium.png);
-    left: 0;
-    right: 0;
+    background-image: url(../img/christian-header-background-large.png);
     margin-left: auto;
     margin-right: auto;
     width: 400px;
     height: 486px;
   }
 }
-@media (max-width: 400px) {
-  .header::after {
-    background-image: url(../img/christian-header-background-medium.png);
-    width: 100%;
-    height: 486px;
-  }
-}
 @media (min-width: 760px) {
   .header::after {
+    right: 0;
     height: 450px;
   }
 }
 @media (min-width: 880px) {
   .header::after {
+    width: 45vw;
     height: 500px;
   }
 }
