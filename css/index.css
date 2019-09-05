@@ -302,11 +302,12 @@ body {
 }
 
 .achievements {
-  border-top: 8px solid #fbfbfb;
-  background-color: #3a3729;
+  position: relative;
   display: flex;
   flex-direction: column;
   padding: 10%;
+  background: linear-gradient(rgba(58, 55, 41, 0.9), rgba(58, 55, 41, 0.9)), url(../img/christian-ipanaque-achievements.jpg);
+  background-size: cover;
 }
 .achievements div {
   margin-bottom: 15px;

@@ -1,9 +1,14 @@
 .achievements {
-  border-top: 8px solid $secondary-color;
-  background-color: $primary-color;
+  position: relative;
   display: flex;
   flex-direction: column;
   padding: 10%;
+  background: linear-gradient(
+      rgba($primary-color, 0.9),
+      rgba($primary-color, 0.9)
+    ),
+    url(../img/christian-ipanaque-achievements.jpg);
+  background-size: cover;
 
   div {
     margin-bottom: 15px;
