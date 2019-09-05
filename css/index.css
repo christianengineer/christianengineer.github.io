@@ -302,10 +302,31 @@ body {
 }
 
 .achievements {
+  border-top: 8px solid #fbfbfb;
   background-color: #3a3729;
+  display: flex;
+  flex-direction: column;
+  padding: 10%;
+}
+.achievements div {
+  margin-bottom: 15px;
 }
 .achievements h2 {
+  font-size: 10vw;
+  text-transform: uppercase;
   color: #fff95a;
+}
+.achievements h3,
+.achievements h4 {
+  color: #fbfbfb;
+}
+.achievements h3 {
+  font-size: 5vw;
+}
+.achievements h4 {
+  font-size: 3vw;
+  font-weight: 300;
+  color: #D8D8D8;
 }
 
 /*# sourceMappingURL=index.css.map */
