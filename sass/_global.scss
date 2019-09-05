@@ -1,3 +1,7 @@
 html {
-  background-color: #3A3729;
+  background-color: $primary-color;
+}
+
+body {
+  font-family: $primary-font;
 }

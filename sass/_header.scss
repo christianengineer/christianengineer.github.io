@@ -3,7 +3,6 @@
   position: relative;
   display: flex;
   justify-content: space-between;
-  font-family: "Oswald", sans-serif;
   text-transform: uppercase;
   height: 410px;
 
@@ -222,32 +221,5 @@
     @media (min-width: $break-large-desktop) {
       height: 969px;
     }
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes slideInFromLeft {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideInFromRight {
-  0% {
-    transform: translateX(300%);
-  }
-  100% {
-    transform: translateX(0);
   }
 }
