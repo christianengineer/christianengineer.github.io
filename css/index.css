@@ -209,7 +209,7 @@ body {
 @media (min-width: 400px) {
   .header__left h1 {
     font-size: 8rem;
-    margin-top: -240px;
+    margin-top: -270px;
     margin-left: -120px;
   }
 }
@@ -228,7 +228,7 @@ body {
   transform: rotate(-90deg);
   font-weight: 300;
   font-size: 4rem;
-  margin-top: -55px;
+  margin-top: -69px;
   margin-left: 0px;
 }
 @media (min-width: 400px) {
