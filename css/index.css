@@ -302,6 +302,7 @@ body {
 }
 
 .achievements {
+  text-align: left;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -328,11 +329,12 @@ body {
 }
 
 .education {
+  text-align: right;
   position: relative;
   display: flex;
   flex-direction: column;
   padding: 10%;
-  background: linear-gradient(rgba(255, 249, 90, 0.9), rgba(255, 249, 90, 0.9)), url(../img/christian-ipanaque-achievements.jpg);
+  background: linear-gradient(rgba(255, 249, 90, 0.9), rgba(255, 249, 90, 0.9)), url(../img/christian-ipanaque-education.jpg);
   background-size: cover;
 }
 .education div {

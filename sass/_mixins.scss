@@ -1,0 +1,41 @@
+@mixin sections(
+  $text-align,
+  $background-image,
+  $background-color,
+  $h2-color,
+  $h3-color,
+  $h4-color
+) {
+  text-align: $text-align;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 10%;
+  background: linear-gradient(
+      rgba($background-color, 0.9),
+      rgba($background-color, 0.9)
+    ),
+    $background-image;
+  background-size: cover;
+
+  div {
+    margin-bottom: 15px;
+  }
+
+  h2 {
+    font-size: 10vw;
+    text-transform: uppercase;
+    color: $h2-color;
+  }
+
+  h3 {
+    font-size: 5vw;
+    color: $h3-color;
+  }
+
+  h4 {
+    font-size: 3vw;
+    font-weight: 300;
+    color: $h4-color;
+  }
+}
