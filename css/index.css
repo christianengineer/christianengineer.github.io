@@ -191,14 +191,27 @@ body {
 }
 .header__left h1,
 .header__left h2 {
-  letter-spacing: -6px;
+  letter-spacing: -2px;
   line-height: 0.886;
+}
+@media (min-width: 400px) {
+  .header__left h1,
+.header__left h2 {
+    letter-spacing: -6px;
+  }
 }
 .header__left h1 {
   transform: rotate(-90deg);
-  font-size: 8rem;
+  font-size: 6rem;
   margin-top: -240px;
-  margin-left: -120px;
+  margin-left: -100px;
+}
+@media (min-width: 400px) {
+  .header__left h1 {
+    font-size: 8rem;
+    margin-top: -240px;
+    margin-left: -120px;
+  }
 }
 @media (min-width: 660px) {
   .header__left h1 {
@@ -213,10 +226,17 @@ body {
 .header__left h2 {
   color: #898632;
   transform: rotate(-90deg);
-  font-size: 5.57rem;
-  margin-top: -110px;
-  margin-left: 0px;
   font-weight: 300;
+  font-size: 4.57rem;
+  margin-top: -68px;
+  margin-left: 0px;
+}
+@media (min-width: 400px) {
+  .header__left h2 {
+    font-size: 5.57rem;
+    margin-top: -110px;
+    margin-left: 0px;
+  }
 }
 @media (min-width: 660px) {
   .header__left h2 {
@@ -307,7 +327,7 @@ body {
   display: flex;
   flex-direction: column;
   padding: 10%;
-  background: linear-gradient(rgba(58, 55, 41, 0.9), rgba(58, 55, 41, 0.9)), url(../img/christian-ipanaque-achievements.jpg);
+  background: linear-gradient(rgba(58, 55, 41, 0.85), rgba(58, 55, 41, 0.85)), url(../img/christian-ipanaque-achievements.jpg);
   background-size: cover;
 }
 .achievements div {
@@ -334,7 +354,7 @@ body {
   display: flex;
   flex-direction: column;
   padding: 10%;
-  background: linear-gradient(rgba(255, 249, 90, 0.9), rgba(255, 249, 90, 0.9)), url(../img/christian-ipanaque-education.jpg);
+  background: linear-gradient(rgba(255, 249, 90, 0.85), rgba(255, 249, 90, 0.85)), url(../img/christian-ipanaque-education.jpg);
   background-size: cover;
 }
 .education div {

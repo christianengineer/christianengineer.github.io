@@ -120,15 +120,24 @@
 
     & h1,
     h2 {
-      letter-spacing: -6px;
+      letter-spacing: -2px;
       line-height: 0.886;
+      @media (min-width: $break-phone-small) {
+        letter-spacing: -6px;
+      }
     }
 
     & h1 {
       transform: rotate(-90deg);
-      font-size: 8rem;
+      font-size: 6rem;
       margin-top: -240px;
-      margin-left: -120px;
+      margin-left: -100px;
+
+      @media (min-width: $break-phone-small) {
+        font-size: 8rem;
+        margin-top: -240px;
+        margin-left: -120px;
+      }
 
       @media (min-width: $break-phone-medium) {
         animation: 1.4s ease-out 0s 1 slideInFromRight;
@@ -143,10 +152,16 @@
     & h2 {
       color: $accent-secondary-color;
       transform: rotate(-90deg);
-      font-size: 5.57rem;
-      margin-top: -110px;
-      margin-left: 0px;
       font-weight: 300;
+      font-size: 4.57rem;
+      margin-top: -68px;
+      margin-left: 0px;
+
+      @media (min-width: $break-phone-small) {
+        font-size: 5.57rem;
+        margin-top: -110px;
+        margin-left: 0px;
+      }
 
       @media (min-width: $break-phone-medium) {
         transform: none;
