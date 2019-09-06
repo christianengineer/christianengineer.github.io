@@ -375,4 +375,36 @@ body {
   color: #898632;
 }
 
+.projects {
+  text-align: left;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 10%;
+  background: linear-gradient(rgba(58, 55, 41, 0.85), rgba(58, 55, 41, 0.85)), url(../img/christian-ipanaque-achievements.jpg);
+  background-size: cover;
+}
+.projects div {
+  margin-bottom: 15px;
+}
+.projects h2 {
+  font-size: 10vw;
+  text-transform: uppercase;
+  color: #fff95a;
+}
+.projects h3 {
+  font-size: 5vw;
+  color: #fbfbfb;
+}
+.projects h4 {
+  font-size: 3vw;
+  font-weight: 300;
+  color: #D8D8D8;
+}
+
+.tools {
+  color: #fff95a;
+  font-weight: 400;
+}
+
 /*# sourceMappingURL=index.css.map */

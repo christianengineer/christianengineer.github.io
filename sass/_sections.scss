@@ -19,3 +19,19 @@
     $accent-secondary-color
   );
 }
+
+.projects {
+  @include sections(
+    left,
+    url(../img/christian-ipanaque-achievements.jpg),
+    $primary-color,
+    $accent-color,
+    $secondary-color,
+    $light-gray-color
+  );
+}
+
+.tools {
+  color: $accent-color;
+  font-weight: 400;
+}
