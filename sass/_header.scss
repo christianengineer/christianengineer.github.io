@@ -122,7 +122,7 @@
     h2 {
       letter-spacing: -2px;
       line-height: 0.886;
-      
+
       @media (min-width: $break-phone-small) {
         letter-spacing: -6px;
       }
@@ -130,7 +130,7 @@
 
     & h1 {
       transform: rotate(-90deg);
-      font-size: 6rem;
+      font-size: 5rem;
       margin-top: -280px;
       margin-left: -100px;
 
