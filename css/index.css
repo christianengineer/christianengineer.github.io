@@ -407,4 +407,10 @@ body {
   font-weight: 400;
 }
 
+.projects__links {
+  text-decoration: underline;
+  font-weight: 400;
+  color: #fff95a;
+}
+
 /*# sourceMappingURL=index.css.map */
