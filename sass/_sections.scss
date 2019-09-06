@@ -1,13 +1,19 @@
-.achievements {
+@mixin sections(
+  $background-image,
+  $background-color,
+  $h2-color,
+  $h3-color,
+  $h4-color
+) {
   position: relative;
   display: flex;
   flex-direction: column;
   padding: 10%;
   background: linear-gradient(
-      rgba($primary-color, 0.9),
-      rgba($primary-color, 0.9)
+      rgba($background-color, 0.9),
+      rgba($background-color, 0.9)
     ),
-    url(../img/christian-ipanaque-achievements.jpg);
+    $background-image;
   background-size: cover;
 
   div {
@@ -17,21 +23,37 @@
   h2 {
     font-size: 10vw;
     text-transform: uppercase;
-    color: $accent-color;
-  }
-
-  h3,
-  h4 {
-    color: $secondary-color;
+    color: $h2-color;
   }
 
   h3 {
     font-size: 5vw;
+    color: $h3-color;
   }
 
   h4 {
     font-size: 3vw;
     font-weight: 300;
-    color: $light-gray-color;
+    color: $h4-color;
   }
+}
+
+.achievements {
+  @include sections(
+    url(../img/christian-ipanaque-achievements.jpg),
+    $primary-color,
+    $accent-color,
+    $secondary-color,
+    $light-gray-color
+  );
+}
+
+.education {
+  @include sections(
+    url(../img/christian-ipanaque-achievements.jpg),
+    $accent-color,
+    $primary-color,
+    $accent-secondary-color,
+    $accent-secondary-color
+  );
 }
