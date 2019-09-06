@@ -381,7 +381,7 @@ body {
   display: flex;
   flex-direction: column;
   padding: 10%;
-  background: linear-gradient(rgba(58, 55, 41, 0.85), rgba(58, 55, 41, 0.85)), url(../img/christian-ipanaque-achievements.jpg);
+  background: linear-gradient(rgba(58, 55, 41, 0.85), rgba(58, 55, 41, 0.85)), url(../img/christian-ipanaque-projects.jpg);
   background-size: cover;
 }
 .projects div {
