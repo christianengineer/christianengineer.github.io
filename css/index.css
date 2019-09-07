@@ -331,7 +331,7 @@ body {
   background-size: cover;
 }
 .achievements div {
-  margin-bottom: 15px;
+  margin-bottom: 60px;
 }
 .achievements h2 {
   font-size: 10vw;
@@ -358,7 +358,7 @@ body {
   background-size: cover;
 }
 .education div {
-  margin-bottom: 15px;
+  margin-bottom: 60px;
 }
 .education h2 {
   font-size: 10vw;
@@ -385,7 +385,7 @@ body {
   background-size: cover;
 }
 .projects div {
-  margin-bottom: 15px;
+  margin-bottom: 60px;
 }
 .projects h2 {
   font-size: 10vw;
