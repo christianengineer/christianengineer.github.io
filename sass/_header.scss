@@ -133,6 +133,7 @@
       font-size: 5rem;
       margin-top: -280px;
       margin-left: -90px;
+      animation: 1.4s ease-out 0s 1 slideInFromBottom;
 
       @media (min-width: $break-phone-small) {
         font-size: 8rem;
@@ -157,6 +158,7 @@
       font-size: 4rem;
       margin-top: -72px;
       margin-left: 0px;
+      animation: 1.4s ease-out 0s 1 slideInFromTop;
 
       @media (min-width: $break-phone-small) {
         font-size: 5.57rem;
