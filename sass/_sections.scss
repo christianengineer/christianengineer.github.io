@@ -34,7 +34,7 @@
 .awards {
   @include sections(
     right,
-    transparent,
+    url(../img/christian-ipanaque-awards.jpg),
     $accent-color,
     $primary-color,
     $accent-secondary-color,
