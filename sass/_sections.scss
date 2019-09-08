@@ -1,7 +1,7 @@
-.achievements {
+.ethics {
   @include sections(
     left,
-    url(../img/christian-ipanaque-achievements.jpg),
+    transparent,
     $primary-color,
     $accent-color,
     $secondary-color,
@@ -13,6 +13,28 @@
   @include sections(
     right,
     url(../img/christian-ipanaque-education.jpg),
+    $accent-color,
+    $primary-color,
+    $accent-secondary-color,
+    $accent-secondary-color
+  );
+}
+
+.achievements {
+  @include sections(
+    left,
+    url(../img/christian-ipanaque-achievements.jpg),
+    $primary-color,
+    $accent-color,
+    $secondary-color,
+    $light-gray-color
+  );
+}
+
+.awards {
+  @include sections(
+    right,
+    transparent,
     $accent-color,
     $primary-color,
     $accent-secondary-color,
