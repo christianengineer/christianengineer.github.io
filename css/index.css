@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Oswald:300,400&display=swap");
 html {
   box-sizing: border-box;
   font-size: 62.5%;
@@ -37,6 +36,21 @@ body {
   font-family: "Oswald", sans-serif;
 }
 
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("../fonts/oswald-v24-latin-regular.woff2") format("woff2"), url("../fonts/oswald-v24-latin-regular.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* oswald-300 - latin */
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 300;
+  src: local(""), url("../fonts/oswald-v24-latin-300.woff2") format("woff2"), url("../fonts/oswald-v24-latin-300.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
 @keyframes fadeIn {
   from {
     opacity: 0;
