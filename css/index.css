@@ -375,10 +375,6 @@ body {
   font-size: 5vw;
   color: #fbfbfb;
 }
-.education h3 a,
-.education h3 a:active {
-  color: #fbfbfb;
-}
 .education h4 {
   font-size: 3vw;
   font-weight: 300;
@@ -404,10 +400,6 @@ body {
 }
 .achievements h3 {
   font-size: 5vw;
-  color: #898632;
-}
-.achievements h3 a,
-.achievements h3 a:active {
   color: #898632;
 }
 .achievements h4 {
@@ -437,10 +429,6 @@ body {
   font-size: 5vw;
   color: #fbfbfb;
 }
-.projects h3 a,
-.projects h3 a:active {
-  color: #fbfbfb;
-}
 .projects h4 {
   font-size: 3vw;
   font-weight: 300;
@@ -466,10 +454,6 @@ body {
 }
 .publications h3 {
   font-size: 5vw;
-  color: #898632;
-}
-.publications h3 a,
-.publications h3 a:active {
   color: #898632;
 }
 .publications h4 {
@@ -499,10 +483,6 @@ body {
   font-size: 5vw;
   color: #fbfbfb;
 }
-.ethics h3 a,
-.ethics h3 a:active {
-  color: #fbfbfb;
-}
 .ethics h4 {
   font-size: 3vw;
   font-weight: 300;
@@ -514,10 +494,16 @@ body {
   font-weight: 400;
 }
 
-.projects__links {
+.light__links {
   text-decoration: underline;
   font-weight: 400;
   color: #fff95a;
+}
+
+.dark__links {
+  text-decoration: underline;
+  font-weight: 400;
+  color: #3a3729;
 }
 
 /*# sourceMappingURL=index.css.map */

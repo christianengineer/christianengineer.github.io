@@ -58,8 +58,14 @@
   font-weight: 400;
 }
 
-.projects__links {
+.light__links {
   text-decoration: underline;
   font-weight: 400;
   color: $accent-color;
+}
+
+.dark__links {
+  text-decoration: underline;
+  font-weight: 400;
+  color: $primary-color;
 }
