@@ -1,14 +1,3 @@
-.ethics {
-  @include sections(
-    left,
-    url(../img/christian-ipanaque-ethics.jpg),
-    $primary-color,
-    $accent-color,
-    $secondary-color,
-    $light-gray-color
-  );
-}
-
 .education {
   @include sections(
     right,
@@ -31,10 +20,21 @@
   );
 }
 
-.awards {
+.projects {
+  @include sections(
+    left,
+    url(../img/christian-ipanaque-projects.jpg),
+    $primary-color,
+    $accent-color,
+    $secondary-color,
+    $light-gray-color
+  );
+}
+
+.publications {
   @include sections(
     right,
-    url(../img/christian-ipanaque-awards.jpg),
+    url(../img/christian-ipanaque-publications.jpg),
     $accent-color,
     $primary-color,
     $accent-secondary-color,
@@ -42,10 +42,10 @@
   );
 }
 
-.projects {
+.ethics {
   @include sections(
     left,
-    url(../img/christian-ipanaque-projects.jpg),
+    url(../img/christian-ipanaque-ethics.jpg),
     $primary-color,
     $accent-color,
     $secondary-color,

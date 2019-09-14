@@ -354,33 +354,6 @@ body {
   }
 }
 
-.ethics {
-  text-align: left;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  padding: 10%;
-  background: linear-gradient(rgba(58, 55, 41, 0.85), rgba(58, 55, 41, 0.85)), url(../img/christian-ipanaque-ethics.jpg);
-  background-size: cover;
-}
-.ethics div {
-  margin-bottom: 40px;
-}
-.ethics h2 {
-  font-size: 10vw;
-  text-transform: uppercase;
-  color: #fff95a;
-}
-.ethics h3 {
-  font-size: 5vw;
-  color: #fbfbfb;
-}
-.ethics h4 {
-  font-size: 3vw;
-  font-weight: 300;
-  color: #D8D8D8;
-}
-
 .education {
   text-align: right;
   position: relative;
@@ -435,33 +408,6 @@ body {
   color: #D8D8D8;
 }
 
-.awards {
-  text-align: right;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  padding: 10%;
-  background: linear-gradient(rgba(255, 249, 90, 0.85), rgba(255, 249, 90, 0.85)), url(../img/christian-ipanaque-awards.jpg);
-  background-size: cover;
-}
-.awards div {
-  margin-bottom: 40px;
-}
-.awards h2 {
-  font-size: 10vw;
-  text-transform: uppercase;
-  color: #3a3729;
-}
-.awards h3 {
-  font-size: 5vw;
-  color: #898632;
-}
-.awards h4 {
-  font-size: 3vw;
-  font-weight: 300;
-  color: #898632;
-}
-
 .projects {
   text-align: left;
   position: relative;
@@ -484,6 +430,60 @@ body {
   color: #fbfbfb;
 }
 .projects h4 {
+  font-size: 3vw;
+  font-weight: 300;
+  color: #D8D8D8;
+}
+
+.publications {
+  text-align: right;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 10%;
+  background: linear-gradient(rgba(255, 249, 90, 0.85), rgba(255, 249, 90, 0.85)), url(../img/christian-ipanaque-publications.jpg);
+  background-size: cover;
+}
+.publications div {
+  margin-bottom: 40px;
+}
+.publications h2 {
+  font-size: 10vw;
+  text-transform: uppercase;
+  color: #3a3729;
+}
+.publications h3 {
+  font-size: 5vw;
+  color: #898632;
+}
+.publications h4 {
+  font-size: 3vw;
+  font-weight: 300;
+  color: #898632;
+}
+
+.ethics {
+  text-align: left;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 10%;
+  background: linear-gradient(rgba(58, 55, 41, 0.85), rgba(58, 55, 41, 0.85)), url(../img/christian-ipanaque-ethics.jpg);
+  background-size: cover;
+}
+.ethics div {
+  margin-bottom: 40px;
+}
+.ethics h2 {
+  font-size: 10vw;
+  text-transform: uppercase;
+  color: #fff95a;
+}
+.ethics h3 {
+  font-size: 5vw;
+  color: #fbfbfb;
+}
+.ethics h4 {
   font-size: 3vw;
   font-weight: 300;
   color: #D8D8D8;
