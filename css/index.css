@@ -360,7 +360,7 @@ body {
   display: flex;
   flex-direction: column;
   padding: 10%;
-  background: linear-gradient(rgba(255, 249, 90, 0.85), rgba(255, 249, 90, 0.85)), url(../img/christian-ipanaque-education.jpg);
+  background: linear-gradient(rgba(58, 55, 41, 0.85), rgba(58, 55, 41, 0.85)), url(../img/christian-ipanaque-education.jpg);
   background-size: cover;
 }
 .education div {
@@ -369,16 +369,16 @@ body {
 .education h2 {
   font-size: 10vw;
   text-transform: uppercase;
-  color: #3a3729;
+  color: #fff95a;
 }
 .education h3 {
   font-size: 5vw;
-  color: #898632;
+  color: #fbfbfb;
 }
 .education h4 {
   font-size: 3vw;
   font-weight: 300;
-  color: #898632;
+  color: #D8D8D8;
 }
 
 .achievements {
@@ -387,7 +387,7 @@ body {
   display: flex;
   flex-direction: column;
   padding: 10%;
-  background: linear-gradient(rgba(58, 55, 41, 0.85), rgba(58, 55, 41, 0.85)), url(../img/christian-ipanaque-achievements.jpg);
+  background: linear-gradient(rgba(255, 249, 90, 0.85), rgba(255, 249, 90, 0.85)), url(../img/christian-ipanaque-achievements.jpg);
   background-size: cover;
 }
 .achievements div {
@@ -396,16 +396,16 @@ body {
 .achievements h2 {
   font-size: 10vw;
   text-transform: uppercase;
-  color: #fff95a;
+  color: #3a3729;
 }
 .achievements h3 {
   font-size: 5vw;
-  color: #fbfbfb;
+  color: #898632;
 }
 .achievements h4 {
   font-size: 3vw;
   font-weight: 300;
-  color: #D8D8D8;
+  color: #898632;
 }
 
 .projects {
