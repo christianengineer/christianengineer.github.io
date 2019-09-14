@@ -2,10 +2,10 @@
   @include sections(
     right,
     url(../img/christian-ipanaque-education.jpg),
-    $accent-color,
     $primary-color,
-    $accent-secondary-color,
-    $accent-secondary-color
+    $accent-color,
+    $secondary-color,
+    $light-gray-color
   );
 }
 
@@ -13,10 +13,10 @@
   @include sections(
     left,
     url(../img/christian-ipanaque-achievements.jpg),
-    $primary-color,
     $accent-color,
-    $secondary-color,
-    $light-gray-color
+    $primary-color,
+    $accent-secondary-color,
+    $accent-secondary-color
   );
 }
 
