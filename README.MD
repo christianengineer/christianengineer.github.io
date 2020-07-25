@@ -1,15 +1,5 @@
-## Great inspiration by:
+# Hi, I'm [Christian](https://christianipanaque.com) 👋
 
-[https://stackoverflow.com/a/12638711/933941](https://stackoverflow.com/a/12638711/933941)
+![christianipanaque.com](https://raw.githubusercontent.com/chrisipanaque/chrisipanaque/master/christian-ipanaque-header.png)
 
-[https://stackoverflow.com/a/13038091/933941](https://stackoverflow.com/a/13038091/933941)
-
-[https://stackoverflow.com/a/41662789/933941](https://stackoverflow.com/a/41662789/933941)
-
-### Multiple transform properties in keyframe:
-
-[https://stackoverflow.com/a/13580112/933941](https://stackoverflow.com/a/13580112/933941)
-
-### Loading Google Fonts Faster:
-
-[https://medium.com/clio-calliope/making-google-fonts-faster-aadf3c02a36d](https://medium.com/clio-calliope/making-google-fonts-faster-aadf3c02a36d)
+I'm a Software Engineer at [Formidable Labs](https://formidable.com/) working on all things JavaScript.
