@@ -49,7 +49,6 @@ const LandingPage = () => {
           backgroundGradient="education"
           align="right"
           sectionTheme="dark"
-          linkTheme="dark"
         >
           <h2>Education</h2>
           <div>
@@ -65,6 +64,44 @@ const LandingPage = () => {
               curriculum. Received training in cross-functional team
               collaboration, and constantly going above and beyond in meeting
               code standards.
+            </h4>
+          </div>
+        </Section>
+
+        <Section
+          backgroundGradient="achievements"
+          align="left"
+          sectionTheme="light"
+        >
+          <h2>Achievements</h2>
+          <div>
+            <h3>AWS Certified Solutions Architect</h3>
+            <h4>
+              <a
+                href="https://www.youracclaim.com/badges/ea7d8a27-1a69-466b-9e80-68803c43d8d5/public_url"
+                target="_blank"
+              >
+                View Certificate
+              </a>
+            </h4>
+            <h4>
+              Designed cost-efficient and scalable systems using Amazon Web
+              Services.
+            </h4>
+          </div>
+          <div>
+            <h3>AWS Certified Developer</h3>
+            <h4>
+              <a
+                href="https://www.youracclaim.com/badges/ab67a10d-7bd5-4d28-a632-a2b332e5ef45/public_url"
+                target="_blank"
+              >
+                View Certificate
+              </a>
+            </h4>
+            <h4>
+              Developed, deployed and debugged cloud-based applications using
+              Amazon Web Services.
             </h4>
           </div>
         </Section>
