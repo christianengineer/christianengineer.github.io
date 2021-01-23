@@ -12,6 +12,21 @@ const backgroundGradients = {
       ),
       url(./images/christian-ipanaque-achievements.jpg);
   `,
+  projects: css`
+    background: linear-gradient(rgba(58, 55, 41, 0.8), rgba(58, 55, 41, 0.8)),
+      url(./images/christian-ipanaque-projects.jpg);
+  `,
+  publications: css`
+    background: linear-gradient(
+        rgba(255, 249, 90, 0.8),
+        rgba(255, 249, 90, 0.8)
+      ),
+      url(./images/christian-ipanaque-publications.jpg);
+  `,
+  ethics: css`
+    background: linear-gradient(rgba(58, 55, 41, 0.8), rgba(58, 55, 41, 0.8)),
+      url(./images/christian-ipanaque-ethics.jpg);
+  `,
 };
 
 const sectionThemes = {
@@ -82,6 +97,11 @@ const Section = styled.section`
 
   a {
     ${({ sectionTheme }) => sectionThemes[sectionTheme]['a']}
+  }
+
+  span {
+    color: ${({ theme }) => theme.colors.secondaryColor};
+    font-weight: 400;
   }
 `;
 
