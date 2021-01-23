@@ -44,20 +44,6 @@ const Header = styled.div`
     height: 969px;
   }
 
-  nav div a {
-    color: inherit;
-    text-decoration: none;
-    padding: 15px;
-    border-bottom: 1px solid transparent;
-    border-left: 1px solid transparent;
-    transition: 0.5s ease-in-out;
-
-    &:hover {
-      border-bottom: 1px solid ${({ theme }) => theme.colors.primaryColor};
-      border-left: 1px solid ${({ theme }) => theme.colors.primaryColor};
-    }
-  }
-
   &::after {
     position: absolute;
     content: '';
@@ -164,7 +150,7 @@ const NavTop = styled.nav`
   }
 `;
 
-const HeaderLeft = styled.div`
+const ContentLeft = styled.div`
   background-color: ${({ theme }) => theme.colors.accentColor};
   display: flex;
   align-content: center;
@@ -236,7 +222,7 @@ const HeaderLeft = styled.div`
   }
 `;
 
-const HeaderRight = styled.div`
+const ContentRight = styled.div`
   background-color: ${({ theme }) => theme.colors.primaryColor};
   width: 50vw;
 
@@ -245,40 +231,57 @@ const HeaderRight = styled.div`
   }
 `;
 
+const NavLink = styled.a`
+  color: inherit;
+  text-decoration: none;
+  padding: 15px;
+  border-bottom: 1px solid transparent;
+  border-left: 1px solid transparent;
+  transition: 0.5s ease-in-out;
+
+  &:hover {
+    border-bottom: 1px solid ${({ theme }) => theme.colors.primaryColor};
+    border-left: 1px solid ${({ theme }) => theme.colors.primaryColor};
+  }
+`;
+
 const LandingPage = () => {
   return (
     <Header>
       <NavTop>
         <div>
-          <a href="https://github.com/chrisipanaque" target="_blank">
+          <NavLink href="https://github.com/chrisipanaque" target="_blank">
             Github
-          </a>
+          </NavLink>
         </div>
         <div>
-          <a href="https://www.linkedin.com/in/chrisipanaque/" target="_blank">
+          <NavLink
+            href="https://www.linkedin.com/in/chrisipanaque/"
+            target="_blank"
+          >
             LinkedIn
-          </a>
+          </NavLink>
         </div>
         <div>
-          <a href="./christian_ipanaque_2019.pdf" target="_blank">
+          <NavLink href="./christian_ipanaque_2019.pdf" target="_blank">
             Resume
-          </a>
+          </NavLink>
         </div>
       </NavTop>
-      <HeaderLeft>
+      <ContentLeft>
         <h1>Christian</h1>
         <h2>Ipanaque</h2>
-      </HeaderLeft>
-      <HeaderRight />
+      </ContentLeft>
+      <ContentRight />
       <NavBottom>
         <div>
-          <a href="#education">Education</a>
+          <NavLink href="#education">Education</NavLink>
         </div>
         <div>
-          <a href="#achievements">Achievements</a>
+          <NavLink href="#achievements">Achievements</NavLink>
         </div>
         <div>
-          <a href="#projects">Projects</a>
+          <NavLink href="#projects">Projects</NavLink>
         </div>
       </NavBottom>
     </Header>
