@@ -8,6 +8,7 @@ const Nav = styled.nav`
   font-size: 1.6rem;
   animation: 1.2s ease-out 2s forwards fadeIn;
   z-index: 1;
+
   ${({ top }) =>
     top &&
     css`
@@ -35,5 +36,21 @@ const Nav = styled.nav`
     display: flex;
   }
 `;
+
+const Link = styled.a`
+  color: inherit;
+  text-decoration: none;
+  padding: 15px;
+  border-bottom: 1px solid transparent;
+  border-left: 1px solid transparent;
+  transition: 0.5s ease-in-out;
+
+  &:hover {
+    border-bottom: 1px solid ${({ theme }) => theme.colors.primaryColor};
+    border-left: 1px solid ${({ theme }) => theme.colors.primaryColor};
+  }
+`;
+
+Nav.Link = Link;
 
 export default Nav;
