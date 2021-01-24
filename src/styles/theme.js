@@ -29,6 +29,8 @@ const breakPoints = {
   smallDesktop: '1400px',
   mediumDesktop: '1600px',
   largeDesktop: '1900px',
+  extraLargeDesktop: '2000px',
+  superExtraLargeDesktop: '2300px',
 };
 
 export default {

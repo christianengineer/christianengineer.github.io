@@ -44,6 +44,15 @@ const Header = styled.div`
     height: 969px;
   }
 
+  @media (min-width: ${({ theme }) => theme.breakPoints.extraLargeDesktop}) {
+    height: 1090px;
+  }
+
+  @media (min-width: ${({ theme }) =>
+      theme.breakPoints.superExtraLargeDesktop}) {
+    height: 1290px;
+  }
+
   &::after {
     position: absolute;
     content: '';
@@ -97,6 +106,15 @@ const Header = styled.div`
 
     @media (min-width: ${({ theme }) => theme.breakPoints.largeDesktop}) {
       height: 969px;
+    }
+
+    @media (min-width: ${({ theme }) => theme.breakPoints.extraLargeDesktop}) {
+      height: 1090px;
+    }
+
+    @media (min-width: ${({ theme }) =>
+        theme.breakPoints.superExtraLargeDesktop}) {
+      height: 1290px;
     }
   }
 `;
