@@ -46,6 +46,7 @@ const LandingPage = () => {
 
       <main>
         <Section
+          id="education"
           backgroundGradient="education"
           align="right"
           sectionTheme="dark"
@@ -69,6 +70,7 @@ const LandingPage = () => {
         </Section>
 
         <Section
+          id="achievements"
           backgroundGradient="achievements"
           align="left"
           sectionTheme="light"
@@ -106,7 +108,12 @@ const LandingPage = () => {
           </div>
         </Section>
 
-        <Section backgroundGradient="projects" align="left" sectionTheme="dark">
+        <Section
+          id="projects"
+          backgroundGradient="projects"
+          align="left"
+          sectionTheme="dark"
+        >
           <h2>Projects</h2>
           <div>
             <h3>GraphQL Blog</h3>
