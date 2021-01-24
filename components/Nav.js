@@ -46,6 +46,7 @@ const Link = styled.a`
   transition: 0.5s ease-in-out;
 
   &:hover {
+    cursor: pointer;
     border-bottom: 1px solid ${({ theme }) => theme.colors.primaryColor};
     border-left: 1px solid ${({ theme }) => theme.colors.primaryColor};
   }
