@@ -9,16 +9,16 @@ class MyDocument extends Document {
             rel="preload"
             as="font"
             type="font/woff2"
-            href="./fonts/oswald-v24-latin-regular.woff2"
-            crossOrigin=""
+            href="/fonts/oswald-v24-latin-regular.woff2"
+            crossOrigin="anonymous"
           />
 
           <link
             rel="preload"
             as="font"
             type="font/woff2"
-            href="./fonts/oswald-v24-latin-300.woff2"
-            crossOrigin=""
+            href="/fonts/oswald-v24-latin-300.woff2"
+            crossOrigin="anonymous"
           />
         </Head>
         <body>

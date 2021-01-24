@@ -1,3 +1,4 @@
+import '../src/styles/global.css';
 import Head from 'next/head';
 import { ThemeProvider } from 'styled-components';
 import theme from '../src/styles/theme';

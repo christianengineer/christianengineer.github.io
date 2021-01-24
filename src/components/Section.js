@@ -36,7 +36,6 @@ const sectionThemes = {
     `,
     a: css`
       text-decoration: underline;
-      font-weight: 400;
       color: ${({ theme }) => theme.colors.primaryColor};
     `,
   },
@@ -52,7 +51,6 @@ const sectionThemes = {
     `,
     a: css`
       text-decoration: underline;
-      font-weight: 400;
       color: ${({ theme }) => theme.colors.accentColor};
     `,
   },
@@ -95,7 +93,6 @@ const Section = styled.section`
 
   span {
     color: ${({ theme }) => theme.colors.secondaryColor};
-    font-weight: 400;
   }
 `;
 
