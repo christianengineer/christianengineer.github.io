@@ -1,6 +1,7 @@
-import Header from '../src/components/Header';
-import Nav from '../src/components/Nav';
-import Section from '../src/components/Section';
+import Header from '../components/Header';
+import Nav from '../components/Nav';
+import Section from '../components/Section';
+import Link from 'next/link';
 
 const LandingPage = () => {
   return (
@@ -21,9 +22,9 @@ const LandingPage = () => {
             </Nav.Link>
           </div>
           <div>
-            <Nav.Link href="./christian_ipanaque_2019.pdf" target="_blank">
-              Resume
-            </Nav.Link>
+            <Link href="/blog">
+              <Nav.Link>Blog</Nav.Link>
+            </Link>
           </div>
         </Nav>
         <Header.Content left>
