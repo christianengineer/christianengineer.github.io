@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import HeaderAnimations from '../styles/header-animations';
 
 const Header = styled.div`
   color: ${({ theme }) => theme.colors.primaryColor};
@@ -117,6 +118,8 @@ const Header = styled.div`
       height: 1290px;
     }
   }
+
+  ${HeaderAnimations}
 `;
 
 const Content = styled.div`
