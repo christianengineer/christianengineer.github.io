@@ -47,7 +47,7 @@ const Header = styled.div`
   &::after {
     position: absolute;
     content: '';
-    animation: 1.4s ease-out 0s 1 slideInFromRight fadeIn;
+    animation: 1.4s ease-out 0s 1 slideInFromRight;
     background-size: 350px;
     background-image: url(./images/christian-header-background-medium.png);
     background-position: center;
@@ -58,7 +58,7 @@ const Header = styled.div`
     margin-right: auto;
 
     @media (min-width: ${({ theme }) => theme.breakPoints.phoneMedium}) {
-      animation: 1s ease-out 0s 1 slideInFromRight fadeIn;
+      animation: 1s ease-out 0s 1 slideInFromRight;
       background-size: cover;
       background-image: url(./images/christian-header-background-large.png);
       right: 0;
