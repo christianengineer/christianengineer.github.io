@@ -2,29 +2,23 @@ import styled, { css } from 'styled-components';
 
 const backgroundGradients = {
   education: css`
-    background: linear-gradient(rgba(58, 55, 41, 0.8), rgba(58, 55, 41, 0.8)),
+    background: ${({ theme }) => theme.gradients.dark},
       url(./images/christian-ipanaque-education.jpg);
   `,
   achievements: css`
-    background: linear-gradient(
-        rgba(255, 249, 90, 0.8),
-        rgba(255, 249, 90, 0.8)
-      ),
+    background: ${({ theme }) => theme.gradients.light},
       url(./images/christian-ipanaque-achievements.jpg);
   `,
   projects: css`
-    background: linear-gradient(rgba(58, 55, 41, 0.8), rgba(58, 55, 41, 0.8)),
+    background: ${({ theme }) => theme.gradients.dark},
       url(./images/christian-ipanaque-projects.jpg);
   `,
   publications: css`
-    background: linear-gradient(
-        rgba(255, 249, 90, 0.8),
-        rgba(255, 249, 90, 0.8)
-      ),
+    background: ${({ theme }) => theme.gradients.light},
       url(./images/christian-ipanaque-publications.jpg);
   `,
   ethics: css`
-    background: linear-gradient(rgba(58, 55, 41, 0.8), rgba(58, 55, 41, 0.8)),
+    background: ${({ theme }) => theme.gradients.dark},
       url(./images/christian-ipanaque-ethics.jpg);
   `,
 };

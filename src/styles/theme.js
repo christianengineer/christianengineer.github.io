@@ -6,6 +6,11 @@ const colors = {
   accentSecondaryColor: '#898632',
 };
 
+const gradients = {
+  light: `linear-gradient(rgba(255, 249, 90, 0.8), rgba(255, 249, 90, 0.8))`,
+  dark: `linear-gradient(rgba(58, 55, 41, 0.8), rgba(58, 55, 41, 0.8))`,
+};
+
 const fonts = {
   primaryFont: `'Oswald', 'sans-serif'`,
 };
@@ -30,4 +35,5 @@ export default {
   breakPoints,
   colors,
   fonts,
+  gradients,
 };
