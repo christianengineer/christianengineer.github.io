@@ -36,17 +36,9 @@ class MyDocument extends Document {
           <link
             rel="preload"
             as="font"
-            type="font/woff2"
-            href="/fonts/oswald-v24-latin-regular.woff2"
-            crossOrigin="anonymous"
-          />
-
-          <link
-            rel="preload"
-            as="font"
-            type="font/woff2"
-            href="/fonts/oswald-v24-latin-300.woff2"
-            crossOrigin="anonymous"
+            type="font/ttf"
+            href="/fonts/oswald-variable-font.ttf"
+            crossOrigin=""
           />
         </Head>
         <body>

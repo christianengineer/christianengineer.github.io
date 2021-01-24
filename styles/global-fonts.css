@@ -1,15 +1,15 @@
 @font-face {
   font-family: 'Oswald';
+  src: url('/fonts/oswald-variable-font.ttf');
   font-style: normal;
-  font-weight: 400;
-  font-display: optional;
-  src: url('/fonts/oswald-v24-latin-regular.woff2') format('woff2');
+  font-weight: 300;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Oswald';
+  src: url('/fonts/oswald-variable-font.ttf');
   font-style: normal;
-  font-weight: 300;
-  font-display: optional;
-  src: url('/fonts/oswald-v24-latin-300.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
 }
