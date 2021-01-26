@@ -3,7 +3,7 @@ import Nav from '../components/Nav';
 import Section from '../components/Section';
 import Link from 'next/link';
 
-const LandingPage = () => {
+export default function LandingPage() {
   return (
     <>
       <Header>
@@ -265,6 +265,4 @@ const LandingPage = () => {
       </main>
     </>
   );
-};
-
-export default LandingPage;
+}
