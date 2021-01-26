@@ -1,6 +1,4 @@
-import Header from '../components/Header';
-import Nav from '../components/Nav';
-import Section from '../components/Section';
+import { Header, Nav, Section } from '@home-page-components';
 import Link from 'next/link';
 
 export default function LandingPage() {

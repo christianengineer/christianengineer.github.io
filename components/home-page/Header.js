@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import HeaderAnimations from '../styles/header-animations';
+import { HeaderAnimations } from '@styles';
 
 const Header = styled.div`
   color: ${({ theme }) => theme.colors.primaryColor};
