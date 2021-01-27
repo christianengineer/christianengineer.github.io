@@ -59,11 +59,9 @@ export default function LandingPage() {
               </a>
             </h4>
             <h4>
-              9-month Full Stack Software Development and Computer Science
-              Bootcamp that provides a full-time immersive hands-on training
-              curriculum. Received training in cross-functional team
-              collaboration, and constantly going above and beyond in meeting
-              code standards.
+              9-month full stack software engineering training in
+              cross-functional team collaboration, constantly going above and
+              beyond in meeting code standards.
             </h4>
           </div>
         </Section>
