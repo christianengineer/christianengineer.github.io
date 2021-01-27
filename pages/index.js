@@ -59,9 +59,10 @@ export default function LandingPage() {
               </a>
             </h4>
             <h4>
-              9-month full stack software engineering training in
-              cross-functional team collaboration, constantly going above and
-              beyond in meeting code standards.
+              9-month full stack software engineering training in React, state
+              management, Node.js RESTful APIs, data persistence,
+              authentication, testing, cross-functional team collaboration,
+              constantly going above and beyond in meeting code standards.
             </h4>
           </div>
         </Section>
