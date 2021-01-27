@@ -244,9 +244,9 @@ export default function LandingPage() {
           <div>
             <h3>About Me</h3>
             <h4>
-              I am a Full Stack Software Development Engineer living in Seattle,
-              WA who is passionate about scalable software design patterns and
-              development paradigms that provide solutions to local businesses.
+              Full stack software engineer living in Seattle, WA who is
+              passionate about scalable software design patterns and development
+              paradigms that provide solutions to clients.
             </h4>
           </div>
           <div>
