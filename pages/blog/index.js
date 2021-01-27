@@ -1,20 +1,21 @@
-import { getAllPosts } from '@lib-blog';
+import { getAllPosts } from '@blog-library';
+import { AllPosts } from '@blog-components';
 
 export default function Blog({ allPosts }) {
   return (
-    <>
+    <AllPosts>
       {allPosts.map((post) => (
-        <div key={post.slug}>
+        <AllPosts.Post key={post.slug}>
           <h2>{post.title}</h2>
           <p>{post.excerpt}</p>
-        </div>
+        </AllPosts.Post>
       ))}
-    </>
+    </AllPosts>
   );
 }
 
 export async function getStaticProps() {
-  const allPosts = getAllPosts(['title', 'excerpt']);
+  const allPosts = getAllPosts(['title', 'slug', 'excerpt']);
 
   return {
     props: { allPosts },
