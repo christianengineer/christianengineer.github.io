@@ -1,5 +1,6 @@
 import { getAllPosts, getPostBySlug, markdownToHtml } from 'lib/blog';
 import Head from 'next/head';
+import { Post as StyledPost } from '@blog-components';
 
 export default function Post({ post: { title, content } }) {
   return (
@@ -7,14 +8,14 @@ export default function Post({ post: { title, content } }) {
       <Head>
         <title>{title} | Christian Ipanaque</title>
       </Head>
-      <div>
+      <StyledPost>
         <h1>{title}</h1>
-        <div
+        <p
           dangerouslySetInnerHTML={{
             __html: content
           }}
         />
-      </div>
+      </StyledPost>
     </article>
   );
 }
