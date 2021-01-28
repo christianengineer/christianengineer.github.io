@@ -3,7 +3,6 @@
     "baseUrl": ".",
     "paths": {
       "@blog-library": ["lib/blog/"],
-      "@blog-components": ["components/blog/"],
       "@home-page-components": ["components/home-page/"],
       "@styles": ["styles/"]
     }
