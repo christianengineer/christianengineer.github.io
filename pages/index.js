@@ -1,5 +1,6 @@
 import { Header, Nav, Section } from '@home-page-components';
 import { getAllPosts } from '@blog-library';
+import Link from 'next/link';
 
 export default function LandingPage({ allPosts }) {
   return (
@@ -268,7 +269,11 @@ export default function LandingPage({ allPosts }) {
           <div>
             {allPosts.map(({ slug, title, excerpt }) => (
               <div key={slug}>
-                <h3>{title}</h3>
+                <h3>
+                  <Link href={`/blog/${slug}`}>
+                    <a>{title}</a>
+                  </Link>
+                </h3>
                 <h4>{excerpt}</h4>
               </div>
             ))}
