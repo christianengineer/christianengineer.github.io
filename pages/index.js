@@ -1,7 +1,8 @@
 import { Header, Nav, Section } from '@home-page-components';
+import { getAllPosts } from '@blog-library';
 import Link from 'next/link';
 
-export default function LandingPage() {
+export default function LandingPage({ allPosts }) {
   return (
     <>
       <Header>
@@ -20,9 +21,7 @@ export default function LandingPage() {
             </Nav.Link>
           </div>
           <div>
-            <Link href="/blog">
-              <Nav.Link>Blog</Nav.Link>
-            </Link>
+            <Nav.Link href="#blog">Blog</Nav.Link>
           </div>
         </Nav>
         <Header.Content left>
@@ -259,7 +258,36 @@ export default function LandingPage() {
             </h4>
           </div>
         </Section>
+
+        <Section
+          id="blog"
+          backgroundGradient="projects"
+          align="left"
+          sectionTheme="dark"
+        >
+          <h2>Blog</h2>
+          <div>
+            {allPosts.map(({ slug, title, excerpt }) => (
+              <div key={slug}>
+                <h3>
+                  <Link href={`/blog/${slug}`}>
+                    <a>{title}</a>
+                  </Link>
+                </h3>
+                <h4>{excerpt}</h4>
+              </div>
+            ))}
+          </div>
+        </Section>
       </main>
     </>
   );
+}
+
+export async function getStaticProps() {
+  const allPosts = getAllPosts(['title', 'slug', 'excerpt']);
+
+  return {
+    props: { allPosts }
+  };
 }

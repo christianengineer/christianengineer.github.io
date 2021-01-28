@@ -1,3 +1,3 @@
-import AllPosts from './AllPosts';
+import Post from './Post';
 
-export { AllPosts };
+export { Post };
