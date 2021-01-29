@@ -1,5 +1,4 @@
 import { Header, Nav, Section } from '@home-page-components';
-import Link from 'next/link';
 
 export default function LandingPage() {
   return (
@@ -13,16 +12,16 @@ export default function LandingPage() {
           </div>
           <div>
             <Nav.Link
-              href="https://www.linkedin.com/in/chrisipanaque/"
+              href="https://linkedin.com/in/chrisipanaque/"
               target="_blank"
             >
               LinkedIn
             </Nav.Link>
           </div>
           <div>
-            <Link href="/blog">
-              <Nav.Link>Blog</Nav.Link>
-            </Link>
+            <Nav.Link href="https://twitter.com/chrisipanaque" target="_blank">
+              Twitter
+            </Nav.Link>
           </div>
         </Nav>
         <Header.Content left>
