@@ -1,13 +1,9 @@
 import styled from 'styled-components';
 
-const AllPosts = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+const Post = styled.div`
+  padding: 10rem;
 
-  h2 {
-    text-transform: uppercase;
+  h1 {
     color: ${({ theme }) => theme.colors.accentColor};
     font-size: 8rem;
   }
@@ -19,10 +15,4 @@ const AllPosts = styled.div`
   }
 `;
 
-const Post = styled.div`
-  padding: 12rem;
-`;
-
-AllPosts.Post = Post;
-
-export default AllPosts;
+export default Post;
