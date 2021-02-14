@@ -1,3 +1,5 @@
+import { css } from 'styled-components';
+
 const colors = {
   primaryColor: '#3a3729',
   secondaryColor: '#fbfbfb',
@@ -33,9 +35,69 @@ const breakPoints = {
   superExtraLargeDesktop: '2300px',
 };
 
+const backgroundGradients = {
+  education: css`
+    background: ${({ theme }) => theme.gradients.dark},
+      url(./images/christian-ipanaque-education.jpg);
+  `,
+  achievements: css`
+    background: ${({ theme }) => theme.gradients.light},
+      url(./images/christian-ipanaque-achievements.jpg);
+  `,
+  projects: css`
+    background: ${({ theme }) => theme.gradients.dark},
+      url(./images/christian-ipanaque-projects.jpg);
+  `,
+  publications: css`
+    background: ${({ theme }) => theme.gradients.light},
+      url(./images/christian-ipanaque-publications.jpg);
+  `,
+  ethics: css`
+    background: ${({ theme }) => theme.gradients.dark},
+      url(./images/christian-ipanaque-ethics.jpg);
+  `,
+};
+
+const sectionThemes = {
+  light: {
+    h2: css`
+      color: ${({ theme }) => theme.colors.primaryColor};
+    `,
+    h3: css`
+      color: ${({ theme }) => theme.colors.accentSecondaryColor};
+    `,
+    h4: css`
+      color: ${({ theme }) => theme.colors.accentSecondaryColor};
+    `,
+    a: css`
+      text-decoration: underline;
+      font-weight: 400;
+      color: ${({ theme }) => theme.colors.primaryColor};
+    `,
+  },
+  dark: {
+    h2: css`
+      color: ${({ theme }) => theme.colors.accentColor};
+    `,
+    h3: css`
+      color: ${({ theme }) => theme.colors.secondaryColor};
+    `,
+    h4: css`
+      color: ${({ theme }) => theme.colors.lightGrayColor};
+    `,
+    a: css`
+      text-decoration: underline;
+      font-weight: 400;
+      color: ${({ theme }) => theme.colors.accentColor};
+    `,
+  },
+};
+
 export default {
+  backgroundGradients,
   breakPoints,
   colors,
   fonts,
   gradients,
+  sectionThemes,
 };
