@@ -1,6 +1,11 @@
 import styled, { css } from 'styled-components';
 
-const Nav = styled.nav`
+type NavType = {
+  top?: boolean;
+  bottom?: boolean;
+};
+
+export const Nav = styled.nav<NavType>`
   display: none;
   position: absolute;
   justify-content: center;
@@ -37,7 +42,7 @@ const Nav = styled.nav`
   }
 `;
 
-const Link = styled.a`
+export const NavLink = styled.a`
   color: inherit;
   text-decoration: none;
   padding: 15px;
@@ -51,7 +56,3 @@ const Link = styled.a`
     border-left: 1px solid ${({ theme }) => theme.colors.primaryColor};
   }
 `;
-
-Nav.Link = Link;
-
-export default Nav;

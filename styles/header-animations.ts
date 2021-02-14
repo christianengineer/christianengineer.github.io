@@ -1,6 +1,6 @@
 import { css } from 'styled-components';
 
-const HeaderAnimations = css`
+export const HeaderAnimations = css`
   @keyframes fadeIn {
     from {
       opacity: 0;
@@ -42,5 +42,3 @@ const HeaderAnimations = css`
     }
   }
 `;
-
-export default HeaderAnimations;

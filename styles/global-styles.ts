@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
-const GlobalStyle = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`
   html {
     background-color: ${({ theme }) => theme.colors.primaryColor};
     box-sizing: border-box;
@@ -36,5 +36,3 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
   }
 `;
-
-export default GlobalStyle;

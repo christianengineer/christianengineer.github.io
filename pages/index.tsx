@@ -1,4 +1,10 @@
-import { Header, Nav, Section } from '@home-page-components';
+import {
+  Header,
+  HeaderContent,
+  Nav,
+  NavLink,
+  Section,
+} from '@home-page-components';
 
 export default function LandingPage() {
   return (
@@ -6,38 +12,38 @@ export default function LandingPage() {
       <Header>
         <Nav top>
           <div>
-            <Nav.Link href="https://github.com/chrisipanaque" target="_blank">
+            <NavLink href="https://github.com/chrisipanaque" target="_blank">
               Github
-            </Nav.Link>
+            </NavLink>
           </div>
           <div>
-            <Nav.Link
+            <NavLink
               href="https://linkedin.com/in/chrisipanaque/"
               target="_blank"
             >
               LinkedIn
-            </Nav.Link>
+            </NavLink>
           </div>
           <div>
-            <Nav.Link href="https://twitter.com/chrisipanaque" target="_blank">
+            <NavLink href="https://twitter.com/chrisipanaque" target="_blank">
               Twitter
-            </Nav.Link>
+            </NavLink>
           </div>
         </Nav>
-        <Header.Content left>
+        <HeaderContent left>
           <h1>Christian</h1>
           <h2>Ipanaque</h2>
-        </Header.Content>
-        <Header.Content right />
+        </HeaderContent>
+        <HeaderContent right />
         <Nav bottom>
           <div>
-            <Nav.Link href="#education">Education</Nav.Link>
+            <NavLink href="#education">Education</NavLink>
           </div>
           <div>
-            <Nav.Link href="#achievements">Achievements</Nav.Link>
+            <NavLink href="#achievements">Achievements</NavLink>
           </div>
           <div>
-            <Nav.Link href="#projects">Projects</Nav.Link>
+            <NavLink href="#projects">Projects</NavLink>
           </div>
         </Nav>
       </Header>
@@ -45,7 +51,7 @@ export default function LandingPage() {
       <main>
         <Section
           id="education"
-          backgroundGradient="education"
+          sectionBackground="education"
           align="right"
           sectionTheme="dark"
         >
@@ -68,7 +74,7 @@ export default function LandingPage() {
 
         <Section
           id="achievements"
-          backgroundGradient="achievements"
+          sectionBackground="achievements"
           align="left"
           sectionTheme="light"
         >
@@ -107,7 +113,7 @@ export default function LandingPage() {
 
         <Section
           id="projects"
-          backgroundGradient="projects"
+          sectionBackground="projects"
           align="left"
           sectionTheme="dark"
         >
@@ -212,7 +218,7 @@ export default function LandingPage() {
         </Section>
 
         <Section
-          backgroundGradient="publications"
+          sectionBackground="publications"
           align="right"
           sectionTheme="light"
         >
@@ -238,7 +244,7 @@ export default function LandingPage() {
           </div>
         </Section>
 
-        <Section backgroundGradient="ethics" align="left" sectionTheme="dark">
+        <Section sectionBackground="ethics" align="left" sectionTheme="dark">
           <h2>Ethics and Values</h2>
           <div>
             <h3>About Me</h3>

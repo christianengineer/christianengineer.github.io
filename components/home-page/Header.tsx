@@ -1,7 +1,12 @@
 import styled, { css } from 'styled-components';
 import { HeaderAnimations } from '@styles';
 
-const Header = styled.div`
+type HeaderContentType = {
+  left?: boolean;
+  right?: boolean;
+};
+
+export const Header = styled.div`
   color: ${({ theme }) => theme.colors.primaryColor};
   position: relative;
   display: flex;
@@ -122,7 +127,7 @@ const Header = styled.div`
   ${HeaderAnimations}
 `;
 
-const Content = styled.div`
+export const HeaderContent = styled.div<HeaderContentType>`
   ${({ left }) =>
     left &&
     css`
@@ -208,7 +213,3 @@ const Content = styled.div`
       }
     `}
 `;
-
-Header.Content = Content;
-
-export default Header;
