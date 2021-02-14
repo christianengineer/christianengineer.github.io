@@ -1,10 +1,12 @@
+import { ReactElement } from 'react';
+import { AppProps } from 'next/app';
 import '../styles/global-fonts.css';
 import Head from 'next/head';
 import { ThemeProvider } from 'styled-components';
 import { theme } from '@styles';
 import { GlobalStyle } from '@styles';
 
-export default function App({ Component, pageProps }) {
+export default function App({ Component, pageProps }: AppProps): ReactElement {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
