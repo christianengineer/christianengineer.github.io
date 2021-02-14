@@ -1,4 +1,4 @@
-import { Header, Nav, Section } from '@home-page-components';
+import { Header, Nav, NavLink, Section } from '@home-page-components';
 
 export default function LandingPage() {
   return (
@@ -6,22 +6,22 @@ export default function LandingPage() {
       <Header>
         <Nav top>
           <div>
-            <Nav.Link href="https://github.com/chrisipanaque" target="_blank">
+            <NavLink href="https://github.com/chrisipanaque" target="_blank">
               Github
-            </Nav.Link>
+            </NavLink>
           </div>
           <div>
-            <Nav.Link
+            <NavLink
               href="https://linkedin.com/in/chrisipanaque/"
               target="_blank"
             >
               LinkedIn
-            </Nav.Link>
+            </NavLink>
           </div>
           <div>
-            <Nav.Link href="https://twitter.com/chrisipanaque" target="_blank">
+            <NavLink href="https://twitter.com/chrisipanaque" target="_blank">
               Twitter
-            </Nav.Link>
+            </NavLink>
           </div>
         </Nav>
         <Header.Content left>
@@ -31,13 +31,13 @@ export default function LandingPage() {
         <Header.Content right />
         <Nav bottom>
           <div>
-            <Nav.Link href="#education">Education</Nav.Link>
+            <NavLink href="#education">Education</NavLink>
           </div>
           <div>
-            <Nav.Link href="#achievements">Achievements</Nav.Link>
+            <NavLink href="#achievements">Achievements</NavLink>
           </div>
           <div>
-            <Nav.Link href="#projects">Projects</Nav.Link>
+            <NavLink href="#projects">Projects</NavLink>
           </div>
         </Nav>
       </Header>

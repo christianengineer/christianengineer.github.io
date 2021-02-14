@@ -1,6 +1,11 @@
 import styled, { css } from 'styled-components';
 
-const Nav = styled.nav`
+interface NavProps {
+  readonly top: boolean;
+  readonly bottom: boolean;
+}
+
+export const Nav = styled.nav<NavProps>`
   display: none;
   position: absolute;
   justify-content: center;
@@ -9,14 +14,14 @@ const Nav = styled.nav`
   animation: 1.2s ease-out 2s forwards fadeIn;
   z-index: 1;
 
-  ${({ top }) =>
+  ${({ top }: NavProps) =>
     top &&
     css`
       margin-top: 40px;
       right: 30%;
     `}
 
-  ${({ bottom }) =>
+  ${({ bottom }: NavProps) =>
     bottom &&
     css`
       margin-bottom: 40px;
@@ -37,7 +42,7 @@ const Nav = styled.nav`
   }
 `;
 
-const Link = styled.a`
+export const NavLink = styled.a`
   color: inherit;
   text-decoration: none;
   padding: 15px;
@@ -51,7 +56,3 @@ const Link = styled.a`
     border-left: 1px solid ${({ theme }) => theme.colors.primaryColor};
   }
 `;
-
-Nav.Link = Link;
-
-export default Nav;
