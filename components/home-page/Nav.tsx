@@ -14,14 +14,14 @@ export const Nav = styled.nav<NavProps>`
   animation: 1.2s ease-out 2s forwards fadeIn;
   z-index: 1;
 
-  ${({ top }: NavProps) =>
+  ${({ top }) =>
     top &&
     css`
       margin-top: 40px;
       right: 30%;
     `}
 
-  ${({ bottom }: NavProps) =>
+  ${({ bottom }) =>
     bottom &&
     css`
       margin-bottom: 40px;
