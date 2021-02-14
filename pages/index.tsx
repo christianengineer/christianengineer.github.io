@@ -1,4 +1,10 @@
-import { Header, Nav, NavLink, Section } from '@home-page-components';
+import {
+  Header,
+  HeaderContent,
+  Nav,
+  NavLink,
+  Section,
+} from '@home-page-components';
 
 export default function LandingPage() {
   return (
@@ -24,11 +30,11 @@ export default function LandingPage() {
             </NavLink>
           </div>
         </Nav>
-        <Header.Content left>
+        <HeaderContent left>
           <h1>Christian</h1>
           <h2>Ipanaque</h2>
-        </Header.Content>
-        <Header.Content right />
+        </HeaderContent>
+        <HeaderContent right />
         <Nav bottom>
           <div>
             <NavLink href="#education">Education</NavLink>

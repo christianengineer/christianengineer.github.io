@@ -1,11 +1,11 @@
 import styled, { css } from 'styled-components';
 
-interface NavProps {
-  readonly top: boolean;
-  readonly bottom: boolean;
-}
+type NavType = {
+  top?: boolean;
+  bottom?: boolean;
+};
 
-export const Nav = styled.nav<NavProps>`
+export const Nav = styled.nav<NavType>`
   display: none;
   position: absolute;
   justify-content: center;

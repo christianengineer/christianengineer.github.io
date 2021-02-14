@@ -1,5 +1,5 @@
-import Header from './Header';
+import { Header, HeaderContent } from './Header';
 import { Nav, NavLink } from './Nav';
 import Section from './Section';
 
-export { Header, Nav, NavLink, Section };
+export { Header, HeaderContent, Nav, NavLink, Section };
