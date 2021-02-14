@@ -1,4 +1,4 @@
-import theme from './theme';
+import { theme } from './theme';
 import GlobalStyle from './global-styles';
 import HeaderAnimations from './header-animations';
 
