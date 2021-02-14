@@ -9,7 +9,6 @@ import { GlobalStyle } from '@styles';
 export default function App({ Component, pageProps }: AppProps): ReactElement {
   return (
     <ThemeProvider theme={theme}>
-      <GlobalStyle />
       <Head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,6 +16,7 @@ export default function App({ Component, pageProps }: AppProps): ReactElement {
         <title>Christian Ipanaque - Software Engineer in Seattle, WA</title>
       </Head>
       <Component {...pageProps} />
+      <GlobalStyle />
     </ThemeProvider>
   );
 }

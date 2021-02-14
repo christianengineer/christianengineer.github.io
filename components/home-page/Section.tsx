@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 type SectionType = {
-  backgroundGradient: string;
-  sectionTheme: string;
-  align: string;
+  readonly sectionBackground: string;
+  readonly sectionTheme: string;
+  readonly align: string;
 };
 
 export const Section = styled.section<SectionType>`
@@ -13,8 +13,10 @@ export const Section = styled.section<SectionType>`
 
   flex-direction: column;
   padding: 10%;
-  ${({ backgroundGradient, theme }) =>
-    theme.backgroundGradients[backgroundGradient]}
+
+  ${({ sectionBackground, theme }) =>
+    theme.sectionBackgrounds[sectionBackground]}
+
   background-size: cover;
 
   div {
@@ -24,23 +26,23 @@ export const Section = styled.section<SectionType>`
   h2 {
     font-size: 10vw;
     text-transform: uppercase;
-    ${({ sectionTheme, theme }) => theme.sectionThemes[sectionTheme]['h2']}
   }
 
   h3 {
     font-size: 5vw;
-    ${({ sectionTheme, theme }) => theme.sectionThemes[sectionTheme]['h3']}
   }
 
   h4 {
     font-size: 3vw;
     font-weight: 300;
-    ${({ sectionTheme, theme }) => theme.sectionThemes[sectionTheme]['h4']}
   }
 
   a {
-    ${({ sectionTheme, theme }) => theme.sectionThemes[sectionTheme]['a']}
+    text-decoration: underline;
+    font-weight: 400;
   }
+
+  ${({ sectionTheme, theme }) => theme.sectionThemes[sectionTheme]}
 
   span {
     color: ${({ theme }) => theme.colors.secondaryColor};

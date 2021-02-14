@@ -32,7 +32,7 @@ export const theme: DefaultTheme = {
     extraLargeDesktop: '2000px',
     superExtraLargeDesktop: '2300px',
   },
-  backgroundGradients: {
+  sectionBackgrounds: {
     education: css`
       background: ${({ theme }) => theme.gradients.dark},
         url(./images/christian-ipanaque-education.jpg);
@@ -55,37 +55,39 @@ export const theme: DefaultTheme = {
     `,
   },
   sectionThemes: {
-    light: {
-      h2: css`
+    light: css`
+      h2 {
         color: ${({ theme }) => theme.colors.primaryColor};
-      `,
-      h3: css`
+      }
+
+      h3 {
         color: ${({ theme }) => theme.colors.accentSecondaryColor};
-      `,
-      h4: css`
+      }
+
+      h4 {
         color: ${({ theme }) => theme.colors.accentSecondaryColor};
-      `,
-      a: css`
-        text-decoration: underline;
-        font-weight: 400;
+      }
+
+      a {
         color: ${({ theme }) => theme.colors.primaryColor};
-      `,
-    },
-    dark: {
-      h2: css`
+      }
+    `,
+    dark: css`
+      h2 {
         color: ${({ theme }) => theme.colors.accentColor};
-      `,
-      h3: css`
+      }
+
+      h3 {
         color: ${({ theme }) => theme.colors.secondaryColor};
-      `,
-      h4: css`
+      }
+
+      h4 {
         color: ${({ theme }) => theme.colors.lightGrayColor};
-      `,
-      a: css`
-        text-decoration: underline;
-        font-weight: 400;
+      }
+
+      a {
         color: ${({ theme }) => theme.colors.accentColor};
-      `,
-    },
+      }
+    `,
   },
 };

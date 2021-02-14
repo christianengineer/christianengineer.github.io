@@ -51,7 +51,7 @@ export default function LandingPage() {
       <main>
         <Section
           id="education"
-          backgroundGradient="education"
+          sectionBackground="education"
           align="right"
           sectionTheme="dark"
         >
@@ -74,7 +74,7 @@ export default function LandingPage() {
 
         <Section
           id="achievements"
-          backgroundGradient="achievements"
+          sectionBackground="achievements"
           align="left"
           sectionTheme="light"
         >
@@ -113,7 +113,7 @@ export default function LandingPage() {
 
         <Section
           id="projects"
-          backgroundGradient="projects"
+          sectionBackground="projects"
           align="left"
           sectionTheme="dark"
         >
@@ -218,7 +218,7 @@ export default function LandingPage() {
         </Section>
 
         <Section
-          backgroundGradient="publications"
+          sectionBackground="publications"
           align="right"
           sectionTheme="light"
         >
@@ -244,7 +244,7 @@ export default function LandingPage() {
           </div>
         </Section>
 
-        <Section backgroundGradient="ethics" align="left" sectionTheme="dark">
+        <Section sectionBackground="ethics" align="left" sectionTheme="dark">
           <h2>Ethics and Values</h2>
           <div>
             <h3>About Me</h3>
