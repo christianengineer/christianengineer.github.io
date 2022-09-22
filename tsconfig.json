@@ -2,13 +2,20 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@home-page-components": ["components/home-page/"],
-      "@styles": ["styles/"]
+      "@home-page-components": [
+        "components/home-page/"
+      ],
+      "@styles": [
+        "styles/"
+      ]
     },
     "target": "esnext",
     "module": "esnext",
     "jsx": "preserve",
-    "lib": ["DOM", "ES2017"],
+    "lib": [
+      "DOM",
+      "ES2017"
+    ],
     "moduleResolution": "node",
     "allowJs": true,
     "noEmit": true,
@@ -23,8 +30,15 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
-    "isolatedModules": true
+    "isolatedModules": true,
+    "incremental": true
   },
-  "exclude": ["node_modules"],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
+  "exclude": [
+    "node_modules"
+  ],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
+  ]
 }
