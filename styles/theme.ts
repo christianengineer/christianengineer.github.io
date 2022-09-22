@@ -1,5 +1,10 @@
 import { DefaultTheme, css } from 'styled-components';
 
+// new colors:
+// blue #B6C4E4
+// pink #E69FC0
+// light pink #F8D1DA
+
 export const theme: DefaultTheme = {
   colors: {
     primaryColor: '#3a3729',
