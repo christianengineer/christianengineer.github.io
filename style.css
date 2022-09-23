@@ -139,7 +139,7 @@ header p {
 }
 
 .section-introduction {
-  padding: 0 40px 120px 40px;
+  padding: 120px 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -158,6 +158,7 @@ header p {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #f8d1da;
 }
 
 .section-normal p {
@@ -170,7 +171,7 @@ header p {
 
 .section-light {
   padding: 120px 40px;
-  background-color: #f8d1da;
+  background-color: #E7D97F;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -218,6 +219,7 @@ header p {
   padding: 40px;
   border-radius: 20px;
   background-color: #d136b2;
+  text-decoration: none;
 }
 
 .cta-top {
@@ -231,7 +233,7 @@ header p {
 }
 
 .sales {
-  color: #323359;
+  color: #d136b2;
 }
 
 @media (max-width: 620px) {
