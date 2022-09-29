@@ -22,4 +22,4 @@ Frontend Software Engineer working on all things JavaScript
 
 ## My Published Articles:
 
-- ["Achieving Reusability With React Composition"](https://formidable.com/blog/2021/react-composition/)
+- ["Achieving Reusability With React Composition"](https://formidable.com/blog/2021/react-composition/) for [Formidable](https://formidable.com)
