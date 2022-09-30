@@ -1,6 +1,6 @@
-# Hi, I'm [Christian](https://christianipanaque.com) 👋
+# Hi there! My name is Christian 👋🏽
 
-Frontend Software Engineer working on all things JavaScript
+and I'm a Frontend Software Engineer working on all things JavaScript!
 
 ## My Open Source Contributions:
 
