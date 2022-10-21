@@ -1,3 +1,5 @@
+![Christian Ipanaque - Senior Frontend Software Engineer](./christian-ipanaque-banner.jpg)
+
 # Hi there! My name is Christian 👋🏽
 
 and I'm a Senior Frontend Software Engineer working on all things JavaScript!
