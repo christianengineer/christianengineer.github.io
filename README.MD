@@ -1,6 +1,6 @@
 # Hi there! My name is Christian 👋🏽
 
-and I'm a Frontend Software Engineer working on all things JavaScript!
+and I'm a Senior Frontend Software Engineer working on all things JavaScript!
 
 ## My Open Source Contributions:
 
