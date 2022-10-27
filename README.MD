@@ -6,9 +6,9 @@ and I'm a Senior Frontend Software Engineer working on all things JavaScript!
 
 ## My Open Source Contributions:
 
+- [Updated Next.js example `with-aws-amplify` with TypeScript](https://github.com/vercel/next.js/pull/41815) for [Next.js](https://nextjs.org/)
 - [Updated highlightedRanges prop in CodePane component](https://github.com/FormidableLabs/spectacle/pull/959) for [Spectacle](https://formidable.com/open-source/spectacle/)
 - [Fixed url parameters when user tabs through slides in Overview Mode](https://github.com/FormidableLabs/spectacle/pull/961) for [Spectacle](https://formidable.com/open-source/spectacle/)
-- [Updated Next.js example `with-aws-amplify` with TypeScript](https://github.com/vercel/next.js/pull/41815) for [Next.js](https://nextjs.org/)
 
 ## My Coding Bootcamp Certification:
 
