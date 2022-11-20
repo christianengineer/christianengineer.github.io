@@ -1,8 +1,8 @@
-![Christian Ipanaque - Senior Frontend Software Engineer](./christian-ipanaque-banner.jpg)
+![Christian Ipanaque - Senior Front End Software Engineer](./christian-ipanaque-banner.png)
 
 # Hi there! My name is Christian 👋🏽
 
-and I'm a Senior Frontend Software Engineer working on all things JavaScript!
+and I'm a Senior Front End Software Engineer working on all things JavaScript!
 
 ## My Open Source Contributions:
 
@@ -21,6 +21,7 @@ and I'm a Senior Frontend Software Engineer working on all things JavaScript!
 
 ## My Leadership Certifications:
 
+- [Harvard X - Leadership and Communication](https://credentials.edx.org/credentials/7e6cc9c2a4df4ee6b97b5d0df073b793/)
 - [University of Washington - IT Project Management](https://credentials.edx.org/credentials/4533f58c8cc248208e7c3d12b4859e91/)
 
 ## My Published Articles:
