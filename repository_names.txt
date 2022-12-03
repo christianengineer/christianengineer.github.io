@@ -1,4 +1,3 @@
-AI Chatbot with Deep Learning Build a chatbot using deep learning techniques
 Sentiment Analysis with Machine Learning Implement sentiment analysis using machine learning
 Computer Vision for Object Detection Develop an object detection model using computer vision techniques
 Speech Recognition System Build a speech recognition system using deep learning
