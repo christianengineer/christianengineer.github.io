@@ -1,4 +1,3 @@
-AutoNav AI for Autonomous Navigation
 LanguageLearner AI for Language Learning
 DefenseSimulator AI in Defense Simulation
 AssetManagerAI AI for Asset Management
