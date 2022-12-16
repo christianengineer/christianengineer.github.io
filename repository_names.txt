@@ -1,4 +1,3 @@
-Automated Stock Trading with Reinforcement Learning (Python) Executing trades autonomously
 HR Employee Attrition Analysis with Scikit-Learn (Python) Predicting staff turnover
 AI-Driven E-Learning Platforms using Django (Python) Personalizing online education
 Emotion Recognition in Images with TensorFlow (Python) Interpreting facial expressions
