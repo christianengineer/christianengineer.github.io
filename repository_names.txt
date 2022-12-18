@@ -1,4 +1,3 @@
-Supply Chain Demand Forecasting using Prophet (Python) Predicting product demand
 Cybersecurity Threat Detection with Scikit-Learn (Python) Identifying security risks
 Automated Essay Scoring with NLTK (Python) Grading essays objectively
 Agricultural Crop Yield Prediction using TensorFlow (Python) Enhancing farm productivity
