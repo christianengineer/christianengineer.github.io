@@ -1,4 +1,3 @@
-PharmaTech AI for the Pharmaceutical Industry
 SkyBot Autonomous Drone AI
 EntertainAI AI in Entertainment
 UrbanPlanner AI for Urban Planning
