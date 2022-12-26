@@ -1,4 +1,3 @@
-Sentiment Analysis with NLTK (Python) - Analyzing customer feedback
 Image Classification using TensorFlow (Python) - Distinguishing objects in images
 Fraud Detection with Scikit-Learn (Python) - Identifying fraudulent transactions
 Stock Price Prediction using Keras (Python) - Forecasting market trends
