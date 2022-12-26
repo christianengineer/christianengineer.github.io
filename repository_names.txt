@@ -1,4 +1,3 @@
-Sustainable Fishing Practices Model (TensorFlow, Keras) For ocean sustainability
 Public Health Data Visualization (D3js, Pandas) For health awareness
 Automated Vaccine Distribution Planning (Scikit-Learn, TensorFlow) For equitable healthcare
 Gender Equality Analysis Tools (TensorFlow, Scikit-Learn) For social research
