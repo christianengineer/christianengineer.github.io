@@ -1,4 +1,3 @@
-AI-enhanced Supply Chain Risk Management (Scikit-Learn, Kafka, Terraform) For logistics
 Predictive Analytics for Renewable Energy Production (PyTorch, Hadoop, Docker) For energy sector
 Automated Sentiment Analysis for Brand Monitoring (TensorFlow, Apache Beam, Kubernetes) For PR management
 Large-scale Retail Customer Behavior Analysis (Keras, RabbitMQ, Grafana) For consumer insights
