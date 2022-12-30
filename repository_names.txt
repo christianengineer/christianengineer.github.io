@@ -1,4 +1,3 @@
-Customized Content Recommendation Engine (PyTorch, Flask, Kubernetes) For user engagement
 Smart Traffic Management System (Scikit-Learn, Apache NiFi, Docker) For urban planning
 Large Scale Sentiment Analysis for Social Media (NLTK, Spark, Airflow) For market insights
 Automated Drug Discovery Platform (TensorFlow, Luigi, Docker) For pharmaceuticals
