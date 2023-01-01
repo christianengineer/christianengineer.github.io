@@ -1,4 +1,3 @@
-Language Detection and Translation with FastText (Python) Identifying and translating languages
 Interactive Voice Response (IVR) Systems using Asterisk (Python) Automating call responses
 Social Network Analysis with NetworkX (Python) Studying social connections
 Automated Resume Screening with NLP (Python) Filtering job applications
