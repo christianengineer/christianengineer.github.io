@@ -1,4 +1,3 @@
-ServiceAI AI for Customer Service
 MediRobot AI for Healthcare Robotics
 GeneAI AI in Genomic Studies
 FinanceShield AI for Financial Fraud Detection
