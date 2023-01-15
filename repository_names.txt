@@ -1,4 +1,3 @@
-Hybrid Cloud and Multi-cloud ML Deployments Demonstrate deploying ML models in a hybrid or multi-cloud environment, showcasing strategies for cloud interoperability and data transfer
 MarketMover AI for Digital Marketing
 CognitiveCompute AI for Cognitive Computing
 SimulAI Advanced Simulation Platform
