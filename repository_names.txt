@@ -1,4 +1,3 @@
-AI for Predictive Maintenance Build a predictive maintenance system using AI
 Healthcare Data Analysis with ML Analyze healthcare data using machine learning techniques
 Automated Essay Scoring System Develop a system for scoring essays using NLP
 AI-powered Inventory Management System Create an inventory management system using AI algorithms
