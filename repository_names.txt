@@ -1,4 +1,3 @@
-Deep Learning for Audio Classification Build an audio classification system using deep learning
 Automated Vehicle Number Plate Recognition Create a system for recognizing vehicle number plates
 Biometric Recognition System Implement a biometric recognition system using machine learning
 AI in Agriculture for Crop Prediction Use AI for predicting crop yields in agriculture
