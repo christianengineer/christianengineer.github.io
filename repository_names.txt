@@ -1,4 +1,3 @@
-AI-powered Clinical Trial Data Analysis (Keras, Apache Beam, Grafana) For medical research
 Automated Financial Market Analysis (TensorFlow, Spark, Prometheus) For investment strategies
 Real-time Fleet Management for Logistics (Scikit-Learn, RabbitMQ, Docker) For transportation
 AI-driven Energy Usage Forecasting for Buildings (PyTorch, Kafka, Kubernetes) For smart buildings
