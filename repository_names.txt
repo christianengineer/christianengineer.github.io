@@ -1,4 +1,3 @@
-Predictive Maintenance in Manufacturing (Keras, MQTT, Grafana) For industrial IoT
 Dynamic Pricing Model for E-commerce (TensorFlow, FastAPI, Celery) For retail strategy
 AI-driven Cybersecurity Threat Detection (PyTorch, ELK Stack, Ansible) For network security
 Advanced Weather Prediction System (TensorFlow, Dask, Kubernetes) For climate analysis
