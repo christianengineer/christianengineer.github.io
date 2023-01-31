@@ -1,4 +1,3 @@
-ManufacturingBots AI in Manufacturing Robotics
 GameMaster AI in Gaming
 AviationAI AI for Aviation
 AgriRobotics AI in Agricultural Robotics
