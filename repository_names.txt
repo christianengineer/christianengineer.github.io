@@ -1,4 +1,3 @@
-Accessible Emergency Information Systems (TensorFlow, Keras) For public safety alerts
 Community Resource Optimization (Scikit-Learn, TensorFlow) For local development
 Automated Disease Vector Tracking (TensorFlow, OpenCV) For public health
 Urban Green Space Planning Tool (Scikit-Learn, TensorFlow) For city livability
