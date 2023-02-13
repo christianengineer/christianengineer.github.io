@@ -1,4 +1,3 @@
-AI-powered Personalized Learning Platform (TensorFlow, RabbitMQ, Terraform) For education
 Automated Video Surveillance for Public Safety (OpenCV, Kafka, Kubernetes) For law enforcement
 Customized Content Recommendation Engine (PyTorch, Flask, Kubernetes) For user engagement
 Smart Traffic Management System (Scikit-Learn, Apache NiFi, Docker) For urban planning
