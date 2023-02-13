@@ -1,4 +1,3 @@
-Smart Water Management System (TensorFlow, Flask, Terraform) For resource conservation
 AI-enhanced Customer Relationship Management (GPT-3, Kafka, Docker) For business development
 Automated Soil Analysis for Agriculture (Scikit-Learn, Hadoop, Prometheus) For farming
 AI-powered Predictive Policing (PyTorch, Spark, Grafana) For public safety
