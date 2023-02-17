@@ -1,4 +1,3 @@
-SmartFactory AI in Smart Manufacturing
 AviationSafetyNet AI for Aviation Safety
 ClaimProcessAI AI for Insurance Claims Automation
 EcoAI AI in Sustainability Analytics
