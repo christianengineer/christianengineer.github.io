@@ -1,4 +1,3 @@
-Online Advertising Effectiveness Analysis with Pandas (Python) Measuring ad performance
 Voice Biometrics using DeepSpeech (Python) Verifying identity through voice
 Crowd Counting in Public Spaces with OpenCV (Python/C++) Estimating crowd sizes
 Automated News Aggregation using BeautifulSoup (Python) Curating news content
