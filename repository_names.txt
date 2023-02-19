@@ -1,4 +1,3 @@
-ML Model Version Control with DVC Use Data Version Control (DVC) for ML model versioning
 Machine Learning Model Interpretability Implement techniques for interpreting machine learning models
 ML Feature Store Implementation Create a feature store for machine learning models
 Automated Data Cleaning and Preprocessing Build an automated data cleaning and preprocessing pipeline
