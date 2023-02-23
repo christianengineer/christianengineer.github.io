@@ -1,4 +1,3 @@
-Smart Home Automation using IoT and TensorFlow (Python) Controlling home environments
 Language Detection and Translation with FastText (Python) Identifying and translating languages
 Interactive Voice Response (IVR) Systems using Asterisk (Python) Automating call responses
 Social Network Analysis with NetworkX (Python) Studying social connections
