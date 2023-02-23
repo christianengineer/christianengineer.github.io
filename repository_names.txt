@@ -1,4 +1,3 @@
-Public Health Monitoring using Geopandas (Python) Analyzing health trends geographically
 Predictive Healthcare Analytics (TensorFlow, Keras) For early disease detection and prevention
 Automated Disaster Response System (PyTorch, OpenCV) For rapid emergency management
 Accessible Education Tools (GPT, BERT) Tailoring learning for special needs students
