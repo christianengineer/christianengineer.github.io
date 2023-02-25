@@ -1,4 +1,3 @@
-Speech Recognition using PyTorch (Python) Converting spoken words to text
 Customer Segmentation with Pandas (Python) Grouping customers based on behavior
 Recommender System using Surprise (Python) Suggesting products to users
 Self-driving Car Algorithms with TensorFlow (Python) Automating vehicle navigation
