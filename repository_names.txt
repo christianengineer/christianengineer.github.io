@@ -1,4 +1,3 @@
-AI-Powered Fitness Coach using TensorFlow (Python) Personalizing workout recommendations
 Dynamic Pricing in Ride-Hailing Services with Pandas (Python) Adjusting fares in real-time
 Video Game AI using Reinforcement Learning (Python) Developing adaptive game AI
 Energy Consumption Forecasting with LSTM (Python) Predicting utility usage
