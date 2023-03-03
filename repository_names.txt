@@ -1,4 +1,3 @@
-Text Summarization with Hugging Face Transformers (Python) Condensing large text documents
 Election Result Forecasting with TensorFlow (Python) Predicting political outcomes
 Audio Signal Processing using Librosa (Python) Analyzing sound data
 AI-based Game Development with Unity ML-Agents (C#/Python) Creating intelligent game characters
