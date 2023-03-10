@@ -1,4 +1,3 @@
-Citizen Engagement Platforms (GPT, TensorFlow) Enhancing public participation
 Wildlife Conservation Analytics (Scikit-Learn, TensorFlow) For biodiversity preservation
 Domestic Violence Incident Predictors (TensorFlow, Keras) For preventive interventions
 AI-Powered Tutoring Systems (BERT, GPT) For personalized education
