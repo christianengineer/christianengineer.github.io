@@ -206,11 +206,11 @@ header p {
   width: 700px;
 }
 
-.section-light h2,
+/* .section-light h2,
 .section-dark h2,
 .section-normal h2 {
   width: 700px;
-}
+} */
 
 .cta {
   display: block;
@@ -268,9 +268,9 @@ header p {
     width: 100%;
   }
 
-  .section-light h2,
+  /* .section-light h2,
   .section-dark h2,
   .section-normal h2 {
     width: 100%;
-  }
+  } */
 }

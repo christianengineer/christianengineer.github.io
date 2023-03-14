@@ -1,6 +1,6 @@
 # How I Avoided Misunderstandings In My Technical Discussions By Using Clear, Concise And Direct Writing.
 
-My thoughts, technical solutions and decisions are now understood quickly because of the following writing patterns I've been using in my sentences.
+Communicating my thoughts and technical decisions have been understood more quickly because of the following writing patterns I use in my sentences.
 
 1. X because Y.
 2. Since X, Y.
@@ -8,11 +8,11 @@ My thoughts, technical solutions and decisions are now understood quickly becaus
 4. Although X, Y.
 5. X and/but/so Y.
 
-X = Character / Subject
+X = Subject
 
-Y = Action / Verb
+Y = Verb
 
-These patterns helped break up my sentences so that they were easier to digest and understand. Since they also reduced confusion and misinterpretations, I'm now able to discuss technical decisions faster.
+These patterns helped break up my sentences so that they're quicker to digest and understand. They also reduced confusion and misinterpretations within my team during high stake discussions.
 
 ## 1. X because Y:
 
