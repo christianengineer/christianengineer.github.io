@@ -1,4 +1,3 @@
-Nutritional Deficiency Detection (Scikit-Learn, Pandas) For global health
 AI-Enhanced Agricultural Advice (TensorFlow, Keras) For small-scale farmers
 Ocean Cleanup Optimization (TensorFlow, Scikit-Learn) For marine health
 Rural Connectivity Solutions (TensorFlow, Keras) Bridging the digital divide
