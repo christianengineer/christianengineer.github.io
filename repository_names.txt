@@ -1,4 +1,3 @@
-Object Detection with YOLO (Python/C++) Identifying objects in real-time
 Real-time Translation using Seq2Seq (Python) Translating languages instantly
 Weather Forecasting with PyTorch (Python) Predicting weather conditions
 Facial Recognition using Dlib (Python/C++) Identifying individuals from images
