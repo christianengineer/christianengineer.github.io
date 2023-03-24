@@ -1,4 +1,3 @@
-Autonomous Drone Navigation using AirSim (Python/C++) Piloting drones autonomously
 Movie Recommendation System with MovieLens (Python) Suggesting movies to users
 Language Modeling using BERT (Python) Understanding language context
 Genetic Algorithm for Optimization with DEAP (Python) Solving complex optimization problems
