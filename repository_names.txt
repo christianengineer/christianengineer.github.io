@@ -1,4 +1,3 @@
-High-resolution Satellite Image Analysis (TensorFlow, Hadoop, Kubernetes) For earth observation
 Predictive Maintenance for Aerospace Equipment (Scikit-Learn, Kafka, Airflow) For aviation safety
 Automated Radio Frequency Signal Analysis (PyTorch, Apache Beam, Docker) For communication systems
 Real-time Medical Emergency Response System (Keras, RabbitMQ, Kubernetes) For healthcare
