@@ -1,4 +1,3 @@
-Biometric Authentication using Face Recognition (Python) Securing access with facial data
 Automated Document Classification with NLTK (Python) Sorting documents intelligently
 AI-Powered Fitness Coach using TensorFlow (Python) Personalizing workout recommendations
 Dynamic Pricing in Ride-Hailing Services with Pandas (Python) Adjusting fares in real-time
