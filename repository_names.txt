@@ -1,4 +1,3 @@
-Space Exploration Data Analysis with AstroPy (Python) Studying astronomical data
 Election Campaign Analysis with Pandas (Python) Analyzing political data
 Automated Image Captioning with CNN-LSTM (Python) Describing images with text
 Predictive Modeling in Insurance with XGBoost (Python) Assessing insurance risks
