@@ -1,4 +1,3 @@
-Automated Anomaly Detection in Financial Transactions (Keras, Kafka, Prometheus) For fraud prevention
 Real-time Social Media Trend Analysis (PyTorch, Spark, Docker) For marketing strategies
 Automated Quality Inspection in Manufacturing (OpenCV, RabbitMQ, Kubernetes) For quality control
 Predictive Analytics for Public Health Surveillance (Scikit-Learn, Flask, Airflow) For healthcare monitoring
