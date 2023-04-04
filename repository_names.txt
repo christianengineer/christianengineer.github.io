@@ -1,4 +1,3 @@
-AI-driven Human Resource Management System (TensorFlow, Kafka, Docker) For HR processes
 Intelligent Urban Planning and Analysis Tool (PyTorch, Hadoop, Kubernetes) For city development
 AI-powered Clinical Trial Data Analysis (Keras, Apache Beam, Grafana) For medical research
 Automated Financial Market Analysis (TensorFlow, Spark, Prometheus) For investment strategies
