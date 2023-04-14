@@ -1,4 +1,3 @@
-Virtual Personal Assistant Development using Rasa (Python) Building conversational AI
 Retail Sales Forecasting with ARIMA (Python) Predicting sales trends
 Gesture Recognition using OpenCV (Python/C++) Interpreting human gestures
 Solar Energy Prediction with Keras (Python) Estimating solar power generation
