@@ -1,4 +1,3 @@
-AI-enhanced Customer Relationship Management (GPT-3, Kafka, Docker) For business development
 Automated Soil Analysis for Agriculture (Scikit-Learn, Hadoop, Prometheus) For farming
 AI-powered Predictive Policing (PyTorch, Spark, Grafana) For public safety
 Energy Trading Optimization Model (TensorFlow, Apache NiFi, Kubernetes) For utilities
