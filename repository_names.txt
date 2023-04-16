@@ -1,4 +1,3 @@
-AI-Powered Legal Document Analysis with SpaCy (Python) Understanding legal texts
 Space Exploration Data Analysis with AstroPy (Python) Studying astronomical data
 Election Campaign Analysis with Pandas (Python) Analyzing political data
 Automated Image Captioning with CNN-LSTM (Python) Describing images with text
