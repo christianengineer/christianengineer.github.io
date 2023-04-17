@@ -1,4 +1,3 @@
-Peru Restaurant Supply Demand Forecaster (TensorFlow, PyTorch, Airflow, Grafana) Predicts demand for various food products from restaurants, aiding suppliers in managing inventory and reducing food waste
 Food Safety Incident Predictor for Peru (Keras, BERT, Kafka, Docker) Analyzes historical data on food safety incidents to predict potential future outbreaks, enabling preemptive actions
 Peru Agribusiness Market Expansion AI (GPT-3, Scikit-Learn, Flask, Kubernetes) Identifies emerging markets and consumer segments for Peruvian agribusiness products, guiding strategic expansion efforts
 Supply Chain Carbon Footprint Calculator for Peru (TensorFlow, Pandas, Spark, DVC) Estimates the carbon footprint of food supply chains, helping businesses to identify areas for carbon reduction and sustainability improvement
