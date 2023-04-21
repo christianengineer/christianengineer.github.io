@@ -1,4 +1,3 @@
-Peru Agri-FinTech Credit Scoring Model (TensorFlow, PyTorch, Kafka, Docker) Provides credit scoring for farmers and food producers based on alternative data, facilitating access to financial services and supporting the food supply ecosystem
 Peru Gourmet Ingredient Prediction AI (TensorFlow, Scikit-Learn, Airflow, Kubernetes) Forecasts the availability of high-quality, seasonal ingredients to aid in menu planning and sourcing strategies
 Fine Dining Customer Experience Enhancer for Peru (PyTorch, Pandas, Flask, Grafana) Utilizes feedback and behavior analysis to personalize dining experiences, enhancing customer satisfaction and loyalty
 Peru Microfinance Loan Matcher (TensorFlow, Scikit-Learn, Flask, Kubernetes) Matches low-income families with microfinance loan opportunities based on their financial needs and capacity, empowering them to start small businesses or expand existing ones
