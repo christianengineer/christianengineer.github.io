@@ -1,4 +1,3 @@
-Peru Food Product Lifecycle Management AI (PyTorch, Scikit-Learn, Airflow, Prometheus) Manages the lifecycle of food products from development to market, optimizing for cost, sustainability, and consumer preferences
 Precision Irrigation Scheduling AI for Peru (Keras, TensorFlow, Kafka, Docker) Utilizes weather forecasts and soil moisture data to schedule irrigation, maximizing water efficiency and crop yield
 Consumer Trends and Insights Dashboard for Peru (BERT, GPT-3, Flask, Grafana) Aggregates and analyzes consumer behavior data to provide real-time insights into food consumption trends and preferences
 Peru Crop Insurance Claim AI Assessor (Scikit-Learn, Pandas, Airflow, Kubernetes) Automates the assessment of crop insurance claims using satellite imagery and weather data, speeding up the claims process
