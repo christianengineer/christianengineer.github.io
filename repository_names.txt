@@ -1,4 +1,3 @@
-Peru Food Supply Chain Risk Assessment AI (TensorFlow, Scikit-Learn, Airflow, Kubernetes) Evaluates risks across the supply chain, predicting disruptions from environmental, economic, or logistical factors to enhance resilience
 Sustainable Agriculture Predictor for Peru (PyTorch, Pandas, Flask, Grafana) Leverages climate and soil data to recommend sustainable farming practices, optimizing crop yields while minimizing environmental impact
 Peru Crop Demand Forecasting System (Keras, TensorFlow, Spark, DVC) Predicts future demand for various crops, aiding farmers and suppliers in planning and distribution to meet market needs efficiently
 Food Quality Control AI for Peru Enterprises (Scikit-Learn, OpenCV, Kafka, Docker) Utilizes image recognition to automate quality control in food processing, ensuring product consistency and safety
