@@ -1,4 +1,3 @@
-Competitive Intelligence Dashboard for Peru (GPT-3, Scikit-Learn, Airflow, Prometheus) Aggregates and analyzes competitor data, providing insights into market trends and opportunities for differentiation
 Peru Business Fraud Detection System (Keras, Pandas, Kafka, Docker) Identifies fraudulent transactions and irregularities in financial data, safeguarding business assets and revenues
 Employee Productivity Enhancer in Peru (TensorFlow, PyTorch, Flask, Grafana) Utilizes performance data to identify factors affecting employee productivity, offering targeted interventions
 Peru E-commerce Personalization Engine (BERT, Keras, Spark, DVC) Delivers personalized shopping experiences for e-commerce customers, increasing engagement and conversion rates
