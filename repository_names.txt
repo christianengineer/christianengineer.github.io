@@ -1,4 +1,3 @@
-Automated Chatbots for Customer Engagement (GPT-3, Flask, Kubernetes) For customer service
 AI-enhanced Supply Chain Risk Management (Scikit-Learn, Kafka, Terraform) For logistics
 Predictive Analytics for Renewable Energy Production (PyTorch, Hadoop, Docker) For energy sector
 Automated Sentiment Analysis for Brand Monitoring (TensorFlow, Apache Beam, Kubernetes) For PR management
