@@ -1,4 +1,3 @@
-Cultural Heritage Preservation (OpenCV, TensorFlow) Digitizing historical artifacts
 Homeless Population Support Systems (Pandas, Scikit-Learn) For social services
 Automated Sign Language Interpreter (TensorFlow, OpenCV) For the deaf and hard of hearing
 Fair Lending Analysis Tools (Scikit-Learn, TensorFlow) Combating financial biases
