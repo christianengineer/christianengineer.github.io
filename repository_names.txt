@@ -1,4 +1,3 @@
-Community Solar Power Planning (Scikit-Learn, TensorFlow) Promoting renewable energy
 Automated Drug Discovery (TensorFlow, Keras) Accelerating medical research
 Nutritional Deficiency Detection (Scikit-Learn, Pandas) For global health
 AI-Enhanced Agricultural Advice (TensorFlow, Keras) For small-scale farmers
