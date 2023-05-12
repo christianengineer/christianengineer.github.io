@@ -1,4 +1,3 @@
-EntertainAI AI in Entertainment
 UrbanPlanner AI for Urban Planning
 ServiceAI AI for Customer Service
 MediRobot AI for Healthcare Robotics
