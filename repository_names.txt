@@ -1,4 +1,3 @@
-Food Safety Incident Predictor for Peru (Keras, BERT, Kafka, Docker) Analyzes historical data on food safety incidents to predict potential future outbreaks, enabling preemptive actions
 Peru Agribusiness Market Expansion AI (GPT-3, Scikit-Learn, Flask, Kubernetes) Identifies emerging markets and consumer segments for Peruvian agribusiness products, guiding strategic expansion efforts
 Supply Chain Carbon Footprint Calculator for Peru (TensorFlow, Pandas, Spark, DVC) Estimates the carbon footprint of food supply chains, helping businesses to identify areas for carbon reduction and sustainability improvement
 Peru Food Product Lifecycle Management AI (PyTorch, Scikit-Learn, Airflow, Prometheus) Manages the lifecycle of food products from development to market, optimizing for cost, sustainability, and consumer preferences
