@@ -1,4 +1,3 @@
-Housing Quality Assessment AI for Peru (PyTorch, OpenCV, Flask, Kubernetes) Uses satellite imagery and on-ground sensor data to assess housing quality and infrastructure needs in impoverished areas
 Peru Social Aid Distribution Optimizer (Keras, TensorFlow, Spark, DVC) Enhances the efficiency of social aid distribution by predicting demand and optimizing logistics and delivery routes
 Child Welfare Monitoring System in Peru (Scikit-Learn, Pandas, Airflow, Grafana) Leverages child welfare and educational data to identify children at risk and recommend interventions
 Peru Clean Energy Access Predictor (TensorFlow, PyTorch, Kafka, Docker) Predicts areas with potential for clean energy projects to improve access to sustainable energy in impoverished regions
