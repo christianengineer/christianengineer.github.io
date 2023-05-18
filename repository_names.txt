@@ -1,4 +1,3 @@
-Smart Traffic Management System in Callao, Peru (TensorFlow, Keras, OpenCV) Optimizes traffic flow and reduces emissions, transforming Callao, Peru into a model of urban efficiency and clean air
 Advanced Waste Collection Optimizer in Callao, Peru (PyTorch, SciPy, Pandas) Enhances waste management and recycling, leading Callao, Peru towards a future of cleanliness and sustainability
 Crime Prediction and Prevention System in Callao, Peru (Scikit-learn, TensorFlow, GPT) Improves public safety through data-driven strategies, making Callao, Peru a beacon of peace and security
 Intelligent Public Transport Planner for Callao, Peru (TensorFlow, Keras, NetworkX) Revolutionizes public transport with AI, offering seamless connectivity and eco-friendly travel in Callao, Peru
