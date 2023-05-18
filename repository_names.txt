@@ -1,3 +1,2 @@
-Automated Sentiment Analysis for Brand Monitoring (TensorFlow, Apache Beam, Kubernetes) For PR management
 Large-scale Retail Customer Behavior Analysis (Keras, RabbitMQ, Grafana) For consumer insights
 AI-driven Project Management Tool (Scikit-Learn, Flask, Prometheus) For business efficiency
