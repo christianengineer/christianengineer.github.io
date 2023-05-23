@@ -1,4 +1,3 @@
-Peru E-commerce Personalization Engine (BERT, Keras, Spark, DVC) Delivers personalized shopping experiences for e-commerce customers, increasing engagement and conversion rates
 SME Credit Scoring Model for Peru (Scikit-Learn, TensorFlow, Airflow, Prometheus) Facilitates access to credit for small and medium-sized enterprises (SMEs) by providing alternative credit scoring based on operational data
 Peru Retail Foot Traffic Predictor (PyTorch, Scikit-Learn, Kafka, Kubernetes) Forecasts foot traffic in retail locations, aiding in staffing and promotional planning to maximize sales opportunities
 Sustainable Operations Planner for Peru Businesses (TensorFlow, Keras, Flask, Grafana) Aids businesses in transitioning to more sustainable operations by identifying areas for improvement and predicting the impact of green initiatives
