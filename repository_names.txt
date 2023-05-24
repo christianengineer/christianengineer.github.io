@@ -1,4 +1,3 @@
-Automated Data Cleaning and Preprocessing Build an automated data cleaning and preprocessing pipeline
 AI-powered Anomaly Detection System Develop an anomaly detection system using machine learning
 Deep Learning for Image Recognition Implement a deep learning project for image classification
 Natural Language Processing (NLP) Model Build an NLP model for text analysis or generation
