@@ -1,4 +1,3 @@
-Music Genre Classification using PyTorch (Python) Categorizing music tracks
 AI for Cybersecurity Defense using TensorFlow (Python) Protecting against cyber threats
 Predictive Analytics in Healthcare with Scikit-Learn (Python) Anticipating patient outcomes
 Automated Invoice Processing with Tesseract OCR (Python) Digitizing financial documents
