@@ -1,4 +1,3 @@
-Urban Green Space Planning Tool (Scikit-Learn, TensorFlow) For city livability
 Affordable Telemedicine Services (TensorFlow, PyTorch) For remote healthcare
 Volunteer Matching Platforms (Scikit-Learn, TensorFlow) For community service
 Public Library Digital Access Tools (GPT, TensorFlow) For educational resources
