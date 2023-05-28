@@ -1,4 +1,3 @@
-Serverless ML Model Deployment with AWS Lambda Deploy an ML model using AWS Lambda for serverless execution
 Azure ML Workspace Example Showcase a project using Azure ML workspace
 Google Cloud AI Platform Integration Deploy an ML model on Google Cloud AI Platform
 Dockerized ML Model for Easy Deployment Create a Docker container for an ML model for ease of deployment
