@@ -1,4 +1,3 @@
-Real-time Cyberattack Detection and Response (Scikit-Learn, RabbitMQ, Grafana) For cybersecurity
 Automated Image Analysis for Clinical Pathology (TensorFlow, Flask, Prometheus) For medical diagnostics
 AI-powered Talent Acquisition and Screening (PyTorch, Kafka, Docker) For HR
 Dynamic Energy Grid Management (Keras, Hadoop, Kubernetes) For sustainable power
