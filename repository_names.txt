@@ -1,4 +1,3 @@
-Blockchain and AI Integration Project Explore the integration of blockchain technology with AI
 AI for Energy Consumption Optimization Use AI to optimize energy consumption in buildings
 Facial Emotion Recognition System Build a system for recognizing emotions from facial expressions
 AI for Environmental Monitoring Develop an AI system for monitoring environmental parameters
