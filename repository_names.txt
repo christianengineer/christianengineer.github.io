@@ -1,4 +1,3 @@
-Public Transportation Accessibility AI for Peru (Keras, Scikit-Learn, Flask, Prometheus) Analyzes transportation networks to improve accessibility and affordability for low-income populations
 Peru Small Business Growth Predictor (BERT, GPT-3, Airflow, Kubernetes) Identifies small businesses with growth potential in impoverished areas, providing insights for targeted support and development programs
 Agricultural Drone Analytics for Peru Farms (PyTorch, OpenCV, Kafka, Docker) Processes drone-captured imagery to assess crop health, pest infestations, and irrigation needs, enabling precision agriculture practices
 Peru Fishery Stock Management System (Keras, TensorFlow, Spark, DVC) Uses satellite and sonar data to monitor and predict fish stock levels, supporting sustainable fishing practices and supply planning
