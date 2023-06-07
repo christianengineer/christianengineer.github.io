@@ -1,4 +1,3 @@
-Automated Image Tagging for Digital Asset Management (TensorFlow, RabbitMQ, Kubernetes) For content management
 Machine Learning-based Network Security Monitoring (Scikit-Learn, ELK Stack, Ansible) For cybersecurity
 AI-assisted Medical Coding and Billing (PyTorch, Kafka, Docker) For healthcare administration
 Real-time Audio Processing for Entertainment (TensorFlow, Apache NiFi, Grafana) For media production
