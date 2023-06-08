@@ -1,4 +1,3 @@
-Intelligent Public Transport Planner for Callao, Peru (TensorFlow, Keras, NetworkX) Revolutionizes public transport with AI, offering seamless connectivity and eco-friendly travel in Callao, Peru
 Environmental Quality Monitor in Callao, Peru (TensorFlow, Arduino for IoT, Pandas) Monitors and improves environmental health, envisioning a Callao in Peru where every breath is a testament to a greener future
 Agricultural Yield Enhancement AI for Peru (TensorFlow, PyTorch, Spark, DVC) Offers predictive insights on crop selection, planting schedules, and sustainable farming practices to maximize agricultural productivity
 Peru Health Intervention Planning Tool (Keras, Pandas, Flask, Grafana) Analyzes public health data to prioritize health interventions in communities most affected by poverty
