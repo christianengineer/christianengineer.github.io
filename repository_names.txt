@@ -1,4 +1,3 @@
-Automated Legal Contract Analysis (GPT-3, RabbitMQ, Terraform) For legal services
 AI-based Inventory Forecasting for Retail (TensorFlow, Spark, Prometheus) For supply chain
 Dynamic Scheduling for Healthcare Providers (PyTorch, Flask, Kubernetes) For patient care
 Automated Real-time Fraud Detection (TensorFlow, Kafka, Docker) For financial security
