@@ -1,4 +1,3 @@
-Consumer Trends and Insights Dashboard for Peru (BERT, GPT-3, Flask, Grafana) Aggregates and analyzes consumer behavior data to provide real-time insights into food consumption trends and preferences
 Peru Crop Insurance Claim AI Assessor (Scikit-Learn, Pandas, Airflow, Kubernetes) Automates the assessment of crop insurance claims using satellite imagery and weather data, speeding up the claims process
 Food Distribution Route Optimizer in Peru (TensorFlow, PyTorch, Kafka, Docker) Uses real-time traffic and weather data to optimize delivery routes, reducing delivery times and fuel consumption
 Peru Agrochemical Usage Optimization Model (Keras, TensorFlow, Spark, DVC) Balances crop yield goals with environmental protection by optimizing the use of fertilizers and pesticides
