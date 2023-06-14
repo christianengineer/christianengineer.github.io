@@ -1,4 +1,3 @@
-Automated Content Moderation using TensorFlow (Python) Filtering inappropriate content
 Smart City Traffic Management with Keras (Python) Optimizing urban traffic flow
 Predictive Text Input with GPT (Python) Enhancing typing efficiency
 Earthquake Prediction with SciPy (Python) Anticipating seismic events
