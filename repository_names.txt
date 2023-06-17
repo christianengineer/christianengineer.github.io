@@ -1,4 +1,3 @@
-Peru Microfinance Loan Matcher (TensorFlow, Scikit-Learn, Flask, Kubernetes) Matches low-income families with microfinance loan opportunities based on their financial needs and capacity, empowering them to start small businesses or expand existing ones
 Agricultural Market Access Optimizer for Peru (PyTorch, Pandas, Django, Docker) Connects smallholder farmers with markets and buyers by filtering and matching crop production data with market demand, increasing sales and profits
 Peru Remote Work Opportunity Connector (BERT, TensorFlow, FastAPI, Grafana) Screens and matches low-income individuals with remote work opportunities that suit their skills and availability, providing access to stable income sources
 Skill Development Pathway Planner for Peru (GPT-3, Keras, Flask, Prometheus) Filters and recommends personalized skill development and training programs for low-income individuals, aligning them with in-demand job markets to boost employability
