@@ -1,4 +1,3 @@
-Speech Recognition System Build a speech recognition system using deep learning
 Reinforcement Learning Project Implement a reinforcement learning algorithm for a specific task
 Edge Computing ML Deployment Deploy an ML model on an edge device
 Genetic Algorithms for Optimization Use genetic algorithms for solving optimization problems
