@@ -1,4 +1,3 @@
-MarketMover AI for Digital Marketing
 CognitiveCompute AI for Cognitive Computing
 SimulAI Advanced Simulation Platform
 RemoteVision AI for Remote Sensing
