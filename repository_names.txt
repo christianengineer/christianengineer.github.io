@@ -1,4 +1,3 @@
-Recommendation System with ML Create a recommendation engine using machine learning techniques
 Time Series Forecasting Model Develop a model for forecasting time series data
 AI Chatbot with Deep Learning Build a chatbot using deep learning techniques
 Sentiment Analysis with Machine Learning Implement sentiment analysis using machine learning
