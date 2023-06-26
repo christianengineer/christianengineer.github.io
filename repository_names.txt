@@ -1,4 +1,3 @@
-High-Net-Worth Tax Optimization AI for Peru (Scikit-Learn, PyTorch, Airflow, Kubernetes) Offers tax optimization strategies tailored to the financial profiles of millionaires in Peru, ensuring compliance while maximizing tax efficiency
 Peru Yacht and Luxury Asset Management AI (Scikit-Learn, TensorFlow, Kafka, Docker) Offers predictive maintenance and logistical planning for yachts and other luxury assets, reducing downtime and optimizing usage
 Bank Transaction Anomaly Detector for Peru (Keras, PyTorch, Prometheus) Identifies unusual banking transactions that may indicate errors or fraudulent activities, enhancing transaction integrity
 Peru Poverty Prediction and Mapping System (TensorFlow, GeoPandas, Airflow, Kubernetes) Utilizes socioeconomic and satellite data to predict poverty hotspots, facilitating targeted intervention and resource allocation
