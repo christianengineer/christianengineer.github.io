@@ -1,4 +1,3 @@
-Dynamic Energy Demand Prediction (TensorFlow, Apache Beam, Grafana) For utilities
 Automated Anomaly Detection in Financial Transactions (Keras, Kafka, Prometheus) For fraud prevention
 Real-time Social Media Trend Analysis (PyTorch, Spark, Docker) For marketing strategies
 Automated Quality Inspection in Manufacturing (OpenCV, RabbitMQ, Kubernetes) For quality control
