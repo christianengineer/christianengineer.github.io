@@ -1,4 +1,3 @@
-Deep Learning-based Medical Image Analysis (Keras, Apache Beam, Airflow) For healthcare diagnostics
 AI-powered Personalized Learning Platform (TensorFlow, RabbitMQ, Terraform) For education
 Automated Video Surveillance for Public Safety (OpenCV, Kafka, Kubernetes) For law enforcement
 Customized Content Recommendation Engine (PyTorch, Flask, Kubernetes) For user engagement
