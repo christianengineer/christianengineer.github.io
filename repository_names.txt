@@ -1,4 +1,3 @@
-Traffic Accident Prevention Analysis (Scikit-Learn, OpenCV) For safer roads
 Affordable Clean Energy Research (TensorFlow, PyTorch) For energy access
 Civic Engagement Chatbots (GPT, NLTK) Encouraging democratic participation
 Digital Literacy Training Tools (TensorFlow, GPT) For global education
