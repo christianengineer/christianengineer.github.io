@@ -1,4 +1,3 @@
-Cultural Awareness Educational Apps (Unity, TensorFlow) For diversity and inclusion
 Low-bandwidth Online Education Platforms (GPT, TensorFlow) For remote learning
 AI-Powered Environmental Law Compliance (BERT, TensorFlow) For regulation adherence
 Accessible Emergency Information Systems (TensorFlow, Keras) For public safety alerts
