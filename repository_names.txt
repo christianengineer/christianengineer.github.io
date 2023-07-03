@@ -1,4 +1,3 @@
-Educational Podcast Compressor for Peru (Opus Codec, Flask, RabbitMQ, Kubernetes) Compresses educational podcasts to ultra-low bitrates for download over minimal data connections, maintaining intelligibility and quality
 Peru Lite Language Learning Tool (TensorFlow Lite, NLTK, GPRS, Docker) Offers language learning in small, easily downloadable lessons, focusing on indigenous languages and Spanish for educational and cultural preservation
 Peru Education Access Enhancer (TensorFlow, Keras, Airflow, Kubernetes) Utilizes predictive analytics to identify communities with the most significant barriers to education and suggests targeted interventions
 Mobile Learning Platform Optimizer for Peru (PyTorch, React Native, Flask, Grafana) Personalizes mobile learning experiences for users with limited technology access, optimizing content delivery based on connectivity and device capabilities
