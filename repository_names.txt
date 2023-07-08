@@ -1,4 +1,3 @@
-Automated Essay Scoring System Develop a system for scoring essays using NLP
 AI-powered Inventory Management System Create an inventory management system using AI algorithms
 Customer Segmentation with Machine Learning Implement customer segmentation using unsupervised learning
 Fraud Detection using Machine Learning Build a fraud detection system using AI
