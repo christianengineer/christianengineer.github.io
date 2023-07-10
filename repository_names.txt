@@ -1,4 +1,3 @@
-Scalable E-commerce Search Engine (Elasticsearch, Kafka, Kubernetes) For product discovery
 AI-based Credit Scoring System (Scikit-Learn, Flask, Prometheus) For financial assessments
 Retail Inventory Optimization Model (TensorFlow, Airflow, Grafana) For supply chain efficiency
 Healthcare Patient Flow Optimization (PyTorch, Apache NiFi, Docker) For hospital management
