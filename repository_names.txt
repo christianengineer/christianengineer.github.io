@@ -1,4 +1,3 @@
-Text Summarization with Deep Learning Develop a text summarization tool using deep learning
 Deep Reinforcement Learning for Gaming Implement a deep reinforcement learning algorithm in a game environment
 Predictive Analytics for Retail Sales Use machine learning for forecasting retail sales
 Deep Learning for Audio Classification Build an audio classification system using deep learning
