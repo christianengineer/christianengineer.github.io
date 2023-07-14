@@ -1,4 +1,3 @@
-Large-scale Network Traffic Analysis (Scikit-Learn, Spark, Docker) For internet management
 AI-Enhanced Legal Document Analysis (BERT, Flask, Kubernetes) For legal services
 Dynamic Energy Demand Prediction (TensorFlow, Apache Beam, Grafana) For utilities
 Automated Anomaly Detection in Financial Transactions (Keras, Kafka, Prometheus) For fraud prevention
