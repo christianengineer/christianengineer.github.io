@@ -1,4 +1,3 @@
-Recycling Sorting Robots (OpenCV, TensorFlow) Enhancing waste management
 Affordable Housing Analysis (Scikit-Learn, Pandas) For urban development
 Nonprofit Donor Matching (TensorFlow, Keras) Maximizing charitable impact
 Public Transportation Optimization (Scikit-Learn, TensorFlow) For efficient urban transit
