@@ -1,4 +1,3 @@
-Peru Low-Data EduContent Streamer (TensorFlow Lite, Flask, MQTT, Kubernetes) Streams educational content using minimal data, optimizing video and audio for low-bandwidth consumption while retaining educational value
 SMS-Based Learning System for Peru (Scikit-Learn, NLTK, Twilio API, Docker) Delivers personalized educational lessons and quizzes via SMS, requiring no data or internet, tailored to the Peruvian curriculum
 Peru Lite Mobile Library Access (PyTorch Lite, SQLite, Firebase, Grafana) Provides access to a digital library via a lightweight mobile app, designed for downloading and accessing reading materials offline
 Voice-Activated Learning Assistant for Peru (TensorFlow Lite, Kaldi, GPRS, Prometheus) A voice-activated educational assistant that works with minimal data usage, providing interactive learning through voice commands and responses
