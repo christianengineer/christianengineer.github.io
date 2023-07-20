@@ -1,4 +1,3 @@
-Peru Health Service Accessibility Enhancer (PyTorch, Scikit-Learn, Django, Docker) Matches low-income families with accessible healthcare services and programs, filtering based on location, family health needs, and eligibility criteria
 Nutritional Assistance Program Matcher for Peru (BERT, TensorFlow, FastAPI, Prometheus) Screens for nutritional assistance programs and matches them with low-income families in need, ensuring children and vulnerable populations have access to healthy food
 Peru Educational Scholarship Matcher (GPT-3, Keras, Flask, Kubernetes) Filters and matches scholarship opportunities with eligible low-income students, supporting their educational aspirations and reducing financial barriers
 Small Business Growth Toolkit for Peru Entrepreneurs (Scikit-Learn, TensorFlow, Django, Docker) Matches small business owners with resources, training, and tools tailored to their business stage and industry, promoting growth and income stability
