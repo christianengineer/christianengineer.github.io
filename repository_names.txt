@@ -1,4 +1,3 @@
-SportsAnalytix AI in Sports Analytics
 RoboAssist AI in Autonomous Robotics
 StarAI AI in Astronomy Studies
 Custom TensorFlow Model Deployment Build and deploy a unique TensorFlow model on a cloud platform
