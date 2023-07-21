@@ -1,4 +1,3 @@
-Custom TensorFlow Model Deployment Build and deploy a unique TensorFlow model on a cloud platform
 PyTorch Model with GPU Acceleration Develop a PyTorch model that leverages GPU for faster training
 Kubernetes-based ML Model Orchestration Demonstrate deploying ML models using Kubernetes
 Automated ML Pipeline with Kubeflow Create an end-to-end ML pipeline using Kubeflow on Kubernetes
