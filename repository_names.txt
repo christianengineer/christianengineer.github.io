@@ -1,4 +1,3 @@
-MelodyAI AI for Music Composition
 HealthDiagnoser AI for Healthcare Diagnosis
 SportsAnalytix AI in Sports Analytics
 RoboAssist AI in Autonomous Robotics
