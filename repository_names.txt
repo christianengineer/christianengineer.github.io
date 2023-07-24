@@ -1,4 +1,3 @@
-Dynamic Wine Pairing AI for Peru Restaurants (Scikit-Learn, PyTorch, Flask, Kubernetes) Suggests optimal wine pairings for menu items using flavor profile analysis and sommelier knowledge bases
 Peru Fine Dining Table Management System (TensorFlow, Keras, Airflow, Prometheus) Optimizes table allocations and reservations to enhance dining room flow and maximize seating efficiency
 Exclusive Event Planner AI for Peru (GPT-3, BERT, Kafka, Grafana) Automates the planning and personalization of exclusive dining events and tastings based on guest preferences and profiles
 Peru Gourmet Market Analysis Tool (PyTorch, Scikit-Learn, Spark, DVC) Provides in-depth market analysis and consumer behavior insights to fine dining establishments for strategic decision-making
