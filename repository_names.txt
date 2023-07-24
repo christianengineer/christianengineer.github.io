@@ -1,4 +1,3 @@
-Automated Emergency Dispatch (TensorFlow, Keras) For quick response services
 Climate Change Simulation Models (TensorFlow, PyTorch) For environmental awareness
 Community Health Worker Tools (Scikit-Learn, Pandas) For healthcare outreach
 Language Translation Services (PyTorch, BERT) Breaking language barriers
