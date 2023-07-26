@@ -1,4 +1,3 @@
-EnviroPredict Environmental Forecasting AI
 SmartGridAI AI for Smart Grid Optimization
 InventoryBot AI for Automated Inventory Management
 PrivacyProtector AI for Data Privacy
