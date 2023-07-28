@@ -1,4 +1,3 @@
-Peru Consumer Taste Preference Analyzer (BERT, GPT-3, Flask, Prometheus) Analyzes consumer feedback and market trends to identify shifting taste preferences, guiding product development and marketing strategies
 Real-time Logistics Optimization for Peru Food Supply (TensorFlow, Keras, Airflow, Grafana) Optimizes delivery routes and schedules in real-time, reducing costs and improving the timeliness of food distribution
 Waste Reduction AI for Peru Food Enterprises (PyTorch, Scikit-Learn, Spark, DVC) Identifies patterns leading to waste in the supply chain, recommending interventions to reduce waste and improve sustainability
 Peru Agro-Product Traceability System (Blockchain, TensorFlow, Kafka, Kubernetes) Implements blockchain and ML for end-to-end traceability of agro-products, enhancing transparency and consumer trust
