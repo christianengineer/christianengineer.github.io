@@ -1,4 +1,3 @@
-Precision Irrigation Scheduling AI for Peru (Keras, TensorFlow, Kafka, Docker) Utilizes weather forecasts and soil moisture data to schedule irrigation, maximizing water efficiency and crop yield
 Consumer Trends and Insights Dashboard for Peru (BERT, GPT-3, Flask, Grafana) Aggregates and analyzes consumer behavior data to provide real-time insights into food consumption trends and preferences
 Peru Crop Insurance Claim AI Assessor (Scikit-Learn, Pandas, Airflow, Kubernetes) Automates the assessment of crop insurance claims using satellite imagery and weather data, speeding up the claims process
 Food Distribution Route Optimizer in Peru (TensorFlow, PyTorch, Kafka, Docker) Uses real-time traffic and weather data to optimize delivery routes, reducing delivery times and fuel consumption
