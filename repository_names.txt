@@ -1,4 +1,3 @@
-WatchOver AI for Video Surveillance
 RetailReco AI-Powered Retail Recommendation System
 Healthcare DigitalFront AI for Digital Healthcare
 ChainAnalytics AI for Supply Chain Analytics
