@@ -1,4 +1,3 @@
-AI-driven Energy Usage Forecasting for Buildings (PyTorch, Kafka, Kubernetes) For smart buildings
 AI-based Personal Assistant for Scheduling (GPT-3, Flask, Terraform) For time management
 Automated Image Tagging for Digital Asset Management (TensorFlow, RabbitMQ, Kubernetes) For content management
 Machine Learning-based Network Security Monitoring (Scikit-Learn, ELK Stack, Ansible) For cybersecurity
