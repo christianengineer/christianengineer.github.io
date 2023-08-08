@@ -1,4 +1,3 @@
-InventoryBot AI for Automated Inventory Management
 PrivacyProtector AI for Data Privacy
 LogiTechAI AI for Logistics Optimization
 SmartFactory AI in Smart Manufacturing
