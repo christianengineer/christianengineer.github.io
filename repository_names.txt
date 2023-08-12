@@ -1,4 +1,3 @@
-EnergyAI AI for Energy Management
 TelecomAI AI for Telecommunications
 PharmaTech AI for the Pharmaceutical Industry
 SkyBot Autonomous Drone AI
