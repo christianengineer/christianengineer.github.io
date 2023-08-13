@@ -156,6 +156,10 @@ section {
   padding: 80px 0;
 }
 
+.section-leetcode {
+  background-color: #f3a758;
+}
+
 .section-introduction {
   display: flex;
   flex-direction: column;
