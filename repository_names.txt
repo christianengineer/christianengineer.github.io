@@ -1,4 +1,3 @@
-Energy Consumption Forecasting with LSTM (Python) Predicting utility usage
 Automated Stock Trading with Reinforcement Learning (Python) Executing trades autonomously
 HR Employee Attrition Analysis with Scikit-Learn (Python) Predicting staff turnover
 AI-Driven E-Learning Platforms using Django (Python) Personalizing online education
