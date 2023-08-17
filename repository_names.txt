@@ -1,4 +1,3 @@
-Dynamic Energy Grid Management (Keras, Hadoop, Kubernetes) For sustainable power
 Real-time Language Processing for Media Analysis (BERT, Spark, Terraform) For PR
 Automated Video Encoding and Optimization (TensorFlow, Apache NiFi, Grafana) For streaming
 AI-enhanced Pharmaceutical Research (Scikit-Learn, RabbitMQ, Docker) For drug development
