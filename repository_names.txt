@@ -1,4 +1,3 @@
-AviationAI AI for Aviation
 AgriRobotics AI in Agricultural Robotics
 EduMetrics AI for Educational Analytics
 AutoTroubleSolver AI for Automated Troubleshooting
