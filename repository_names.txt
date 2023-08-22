@@ -1,4 +1,3 @@
-Cybersecurity Threat Detection with Scikit-Learn (Python) Identifying security risks
 Automated Essay Scoring with NLTK (Python) Grading essays objectively
 Agricultural Crop Yield Prediction using TensorFlow (Python) Enhancing farm productivity
 SEO Content Optimization with SpaCy (Python) Improving website visibility
