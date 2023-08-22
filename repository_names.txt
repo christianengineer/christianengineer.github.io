@@ -1,4 +1,3 @@
-Language Barrier Reduction AI for Peru (BERT, GPT-3, Django, Docker) Breaks down language barriers by providing real-time translation and language learning tools, particularly for indigenous languages
 Peru Skills and Employment Matching Platform (PyTorch, Pandas, Flask, Grafana) Connects learners with employment opportunities based on their newly acquired skills, facilitating economic advancement through education
 High-Net-Worth Tax Optimization AI for Peru (Scikit-Learn, PyTorch, Airflow, Kubernetes) Offers tax optimization strategies tailored to the financial profiles of millionaires in Peru, ensuring compliance while maximizing tax efficiency
 Peru Yacht and Luxury Asset Management AI (Scikit-Learn, TensorFlow, Kafka, Docker) Offers predictive maintenance and logistical planning for yachts and other luxury assets, reducing downtime and optimizing usage
