@@ -1,4 +1,3 @@
-Low-bandwidth Online Education Platforms (GPT, TensorFlow) For remote learning
 AI-Powered Environmental Law Compliance (BERT, TensorFlow) For regulation adherence
 Accessible Emergency Information Systems (TensorFlow, Keras) For public safety alerts
 Community Resource Optimization (Scikit-Learn, TensorFlow) For local development
