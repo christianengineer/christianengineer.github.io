@@ -1,4 +1,3 @@
-Genetic Algorithm for Optimization with DEAP (Python) Solving complex optimization problems
 Drug Discovery using DeepChem (Python) Accelerating pharmaceutical development
 Handwriting Recognition with MNIST (Python) Digitizing written text
 Quantitative Finance Models with NumPy (Python) Analyzing financial markets
