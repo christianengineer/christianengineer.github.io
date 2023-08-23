@@ -1,4 +1,3 @@
-Domestic Violence Incident Predictors (TensorFlow, Keras) For preventive interventions
 AI-Powered Tutoring Systems (BERT, GPT) For personalized education
 Accessible Mental Health Resources (NLTK, TensorFlow) For online therapy and support
 Automated Accessibility Testing (Selenium, TensorFlow) For inclusive web design
