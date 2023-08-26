@@ -1,4 +1,3 @@
-MarketIntel AI for Market Research
 AutoNav AI for Autonomous Navigation
 LanguageLearner AI for Language Learning
 DefenseSimulator AI in Defense Simulation
