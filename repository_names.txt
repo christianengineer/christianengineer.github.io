@@ -1,4 +1,3 @@
-Augmented Reality Experience using ARKit (Swift) Creating immersive AR applications
 Cyberbullying Detection with SpaCy (Python) Identifying harmful online behavior
 Automated Content Moderation using TensorFlow (Python) Filtering inappropriate content
 Smart City Traffic Management with Keras (Python) Optimizing urban traffic flow
