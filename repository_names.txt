@@ -1,4 +1,3 @@
-LangTranslate Automated Language Translation AI
 BlockAnalytix Blockchain Analytics AI
 WatchOver AI for Video Surveillance
 RetailReco AI-Powered Retail Recommendation System
