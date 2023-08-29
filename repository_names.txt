@@ -1,4 +1,3 @@
-Traffic Flow Prediction with Keras (Python) Managing city traffic efficiently
 Anomaly Detection in Network Security with PyTorch (Python) Identifying unusual network patterns
 Predictive Maintenance using LSTM (Python) Forecasting equipment failures
 Social Media Trend Analysis with Tweepy (Python) Tracking viral content
