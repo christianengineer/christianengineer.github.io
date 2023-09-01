@@ -1,4 +1,3 @@
-Cloud-based ML Model Deployment Use cloud platforms like AWS, Azure, or Google Cloud for deploying and managing ML models, demonstrating cloud-specific tools and services
 ML Experiment Tracking and Management Implement a system for tracking and managing machine learning experiments using tools like Weights & Biases or Cometml
 Automated Data Quality Checks and Balancing Develop automated processes for checking data quality and handling imbalanced datasets in machine learning projects
 ML Model Performance Optimization Focus on techniques to optimize machine learning models for performance, including hardware acceleration with GPUs or TPUs
