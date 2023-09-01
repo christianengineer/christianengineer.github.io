@@ -1,4 +1,3 @@
-Public Library Digital Access Tools (GPT, TensorFlow) For educational resources
 Real-time Manufacturing Process Optimization (TensorFlow, Kafka, Docker) For production efficiency
 Dynamic Route Optimization for Delivery Services (PyTorch, Apache NiFi, Kubernetes) For logistics
 AI-based Asset Management in Finance (Keras, Spark, Prometheus) For investment strategies
