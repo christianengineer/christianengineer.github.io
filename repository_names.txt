@@ -1,4 +1,3 @@
-Human Rights Violation Detectors (TensorFlow, PyTorch) Monitoring conflict zones
 Low-Cost Prosthetic Design (TensorFlow, OpenCV) For affordable healthcare devices
 Community Solar Power Planning (Scikit-Learn, TensorFlow) Promoting renewable energy
 Automated Drug Discovery (TensorFlow, Keras) Accelerating medical research
