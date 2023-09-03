@@ -1,4 +1,3 @@
-Minimal Data Health Tips Service for Peru (TensorFlow Lite, FastAPI, MQTT, Grafana) Provides health and wellness tips via text messages or a lightweight app, designed to operate on minimal cellular data
 Peru Community News Lite App (PyTorch Lite, SQLite, Firebase, Prometheus) A lightweight app for accessing local news and community updates, optimized for downloading content during low-data-usage periods for later reading
 Educational Podcast Compressor for Peru (Opus Codec, Flask, RabbitMQ, Kubernetes) Compresses educational podcasts to ultra-low bitrates for download over minimal data connections, maintaining intelligibility and quality
 Peru Lite Language Learning Tool (TensorFlow Lite, NLTK, GPRS, Docker) Offers language learning in small, easily downloadable lessons, focusing on indigenous languages and Spanish for educational and cultural preservation
