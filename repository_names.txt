@@ -1,4 +1,3 @@
-Customer Segmentation with Pandas (Python) Grouping customers based on behavior
 Recommender System using Surprise (Python) Suggesting products to users
 Self-driving Car Algorithms with TensorFlow (Python) Automating vehicle navigation
 Human Pose Estimation using OpenPose (C++) Detecting human postures in images
