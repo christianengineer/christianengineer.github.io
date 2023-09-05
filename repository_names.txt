@@ -1,4 +1,3 @@
-AI-powered Inventory Management System Create an inventory management system using AI algorithms
 Customer Segmentation with Machine Learning Implement customer segmentation using unsupervised learning
 Fraud Detection using Machine Learning Build a fraud detection system using AI
 Text Summarization with Deep Learning Develop a text summarization tool using deep learning
