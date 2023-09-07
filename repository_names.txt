@@ -1,4 +1,3 @@
-AI-assisted Medical Coding and Billing (PyTorch, Kafka, Docker) For healthcare administration
 Real-time Audio Processing for Entertainment (TensorFlow, Apache NiFi, Grafana) For media production
 Customized Marketing Campaign Analysis (Keras, Spark, Prometheus) For advertising ROI
 AI-powered Fraud Detection in Insurance Claims (TensorFlow, RabbitMQ, Docker) For insurance industry
