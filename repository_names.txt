@@ -1,4 +1,3 @@
-Peru Informal Economy Tracker (BERT, GPT-3, Airflow, Prometheus) Utilizes NLP and economic modeling to understand the dynamics of the informal economy and its impact on poverty
 Housing Quality Assessment AI for Peru (PyTorch, OpenCV, Flask, Kubernetes) Uses satellite imagery and on-ground sensor data to assess housing quality and infrastructure needs in impoverished areas
 Peru Social Aid Distribution Optimizer (Keras, TensorFlow, Spark, DVC) Enhances the efficiency of social aid distribution by predicting demand and optimizing logistics and delivery routes
 Child Welfare Monitoring System in Peru (Scikit-Learn, Pandas, Airflow, Grafana) Leverages child welfare and educational data to identify children at risk and recommend interventions
