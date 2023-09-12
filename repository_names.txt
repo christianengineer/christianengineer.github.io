@@ -1,4 +1,3 @@
-Peru Agro-Product Traceability System (Blockchain, TensorFlow, Kafka, Kubernetes) Implements blockchain and ML for end-to-end traceability of agro-products, enhancing transparency and consumer trust
 Dynamic Pricing Model for Peru Food Markets (Keras, Pandas, Flask, Prometheus) Adapts pricing in real-time based on supply, demand, and market conditions, maximizing profitability while ensuring market competitiveness
 Peru Food Supply Network Collaboration Platform (GPT-3, BERT, Airflow, Docker) Facilitates data sharing and collaboration among stakeholders in the food supply chain, optimizing overall efficiency through collective intelligence
 Nutritional Value Optimization AI for Peru (TensorFlow, Scikit-Learn, Kafka, Grafana) Enhances the nutritional value of food products by analyzing ingredients and processing methods, addressing public health goals
