@@ -1,4 +1,3 @@
-Gender Equality Analysis Tools (TensorFlow, Scikit-Learn) For social research
 Ethical Supply Chain Monitoring (TensorFlow, Pandas) For responsible production
 Cultural Awareness Educational Apps (Unity, TensorFlow) For diversity and inclusion
 Low-bandwidth Online Education Platforms (GPT, TensorFlow) For remote learning
