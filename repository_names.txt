@@ -1,4 +1,3 @@
-Self-driving Car Algorithms with TensorFlow (Python) Automating vehicle navigation
 Human Pose Estimation using OpenPose (C++) Detecting human postures in images
 Credit Scoring with XGBoost (Python) Assessing creditworthiness
 Churn Prediction using LightGBM (Python) Predicting customer attrition
