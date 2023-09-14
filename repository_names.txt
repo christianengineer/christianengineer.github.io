@@ -1,4 +1,3 @@
-Predictive Analytics for Telecommunications (TensorFlow, Hadoop, Airflow) For network optimization
 Real-time Sports Analytics for Performance Improvement (Scikit-Learn, Apache Beam, Docker) For athletics
 Automated Legal Contract Analysis (GPT-3, RabbitMQ, Terraform) For legal services
 AI-based Inventory Forecasting for Retail (TensorFlow, Spark, Prometheus) For supply chain
