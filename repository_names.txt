@@ -1,4 +1,3 @@
-Blockchain Transaction Analysis with PyTorch (Python) Understanding blockchain networks
 Autonomous Robot Control with ROS (Python/C++) Programming robots for autonomy
 Audio Fingerprinting with Dejavu (Python) Recognizing songs from audio snippets
 Real Estate Price Prediction with Scikit-Learn (Python) Estimating property values
