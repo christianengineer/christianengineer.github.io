@@ -1,4 +1,3 @@
-Healthcare DigitalFront AI for Digital Healthcare
 ChainAnalytics AI for Supply Chain Analytics
 EcommAI AI for E-Commerce Solutions
 HomeSmart AI for Smart Homes
