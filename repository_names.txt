@@ -1,4 +1,3 @@
-Autonomous Vehicle Navigation System (TensorFlow, ROS, Airflow) For self-driving cars
 Smart Grid Energy Optimization (Scikit-Learn, Kafka, Prometheus) For energy management
 Predictive Maintenance in Manufacturing (Keras, MQTT, Grafana) For industrial IoT
 Dynamic Pricing Model for E-commerce (TensorFlow, FastAPI, Celery) For retail strategy
