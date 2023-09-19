@@ -1,4 +1,3 @@
-Financial Risk Modeling with Pandas (Python) Assessing investment risks
 Sports Performance Analysis using Scikit-Learn (Python) Enhancing athletic strategies
 Sentiment Analysis in Social Media with NLTK (Python) Gauging public opinion
 Object Tracking in Video with OpenCV (Python/C++) Monitoring objects in motion
