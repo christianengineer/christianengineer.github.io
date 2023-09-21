@@ -1,4 +1,3 @@
-Predictive Modeling in Insurance with XGBoost (Python) Assessing insurance risks
 AI for Sustainable Agriculture with TensorFlow (Python) Enhancing agricultural practices
 Mobile App Personalization using TensorFlow Lite (Python) Tailoring app experiences
 Public Health Monitoring using Geopandas (Python) Analyzing health trends geographically
