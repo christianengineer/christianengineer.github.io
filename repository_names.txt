@@ -1,4 +1,3 @@
-Peru Public Transport Optimization for Workers (GPT-3, Keras, Django, Kubernetes) Filters and optimizes public transport routes and schedules, reducing commute times and costs for low-income workers
 Child Care Exchange Network for Peru Parents (BERT, TensorFlow, Flask, Docker) Matches low-income families with affordable child care options, supporting parents in maintaining employment and generating income
 Peru Community-Supported Agriculture Subscription Matcher (Scikit-Learn, Pandas, Django, Prometheus) Connects small farmers directly with consumers through a subscription model, ensuring stable income for farmers and fresh produce for families
 Peru Culinary Trend Analyzer (BERT, GPT-3, Kafka, Docker) Identifies emerging culinary trends and consumer preferences, enabling chefs to innovate and adapt menus dynamically
