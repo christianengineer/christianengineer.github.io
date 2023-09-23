@@ -1,4 +1,3 @@
-Refugee Aid Distribution Optimization (Scikit-Learn, TensorFlow) For humanitarian aid
 Low-Cost Medical Diagnostic Tools (TensorFlow, Keras) For underserved communities
 Cultural Heritage Preservation (OpenCV, TensorFlow) Digitizing historical artifacts
 Homeless Population Support Systems (Pandas, Scikit-Learn) For social services
