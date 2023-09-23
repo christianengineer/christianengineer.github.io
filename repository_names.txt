@@ -1,4 +1,3 @@
-Elderly Care Companion Robots (Scikit-Learn, OpenCV) Assisting the aging population
 Child Education Game Development (Unity, TensorFlow) For interactive learning
 Automated Emergency Dispatch (TensorFlow, Keras) For quick response services
 Climate Change Simulation Models (TensorFlow, PyTorch) For environmental awareness
