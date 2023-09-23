@@ -1,4 +1,3 @@
-Gesture Recognition using OpenCV (Python/C++) Interpreting human gestures
 Solar Energy Prediction with Keras (Python) Estimating solar power generation
 Blockchain Transaction Analysis with PyTorch (Python) Understanding blockchain networks
 Autonomous Robot Control with ROS (Python/C++) Programming robots for autonomy
