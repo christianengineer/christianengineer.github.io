@@ -1,4 +1,3 @@
-Human Trafficking Pattern Detection (TensorFlow, PyTorch) For law enforcement
 Accessible Web Content Tools (PyTorch, Selenium) For users with disabilities
 Automated Braille Translators (TensorFlow, Keras) For the visually impaired
 Elderly Care Companion Robots (Scikit-Learn, OpenCV) Assisting the aging population
