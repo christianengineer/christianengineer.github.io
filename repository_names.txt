@@ -1,4 +1,3 @@
-Deep Learning for Image Recognition Implement a deep learning project for image classification
 Natural Language Processing (NLP) Model Build an NLP model for text analysis or generation
 Recommendation System with ML Create a recommendation engine using machine learning techniques
 Time Series Forecasting Model Develop a model for forecasting time series data
