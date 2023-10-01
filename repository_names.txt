@@ -1,4 +1,3 @@
-Agricultural Market Access Optimizer for Peru (PyTorch, Pandas, Django, Docker) Connects smallholder farmers with markets and buyers by filtering and matching crop production data with market demand, increasing sales and profits
 Peru Remote Work Opportunity Connector (BERT, TensorFlow, FastAPI, Grafana) Screens and matches low-income individuals with remote work opportunities that suit their skills and availability, providing access to stable income sources
 Skill Development Pathway Planner for Peru (GPT-3, Keras, Flask, Prometheus) Filters and recommends personalized skill development and training programs for low-income individuals, aligning them with in-demand job markets to boost employability
 Peru Affordable Housing Locator (Scikit-Learn, GeoPandas, Django, Kubernetes) Matches low-income families with affordable housing options, utilizing filtering algorithms to prioritize based on family size, income, and location preferences
