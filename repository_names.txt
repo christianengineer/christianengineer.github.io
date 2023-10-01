@@ -1,4 +1,3 @@
-DefenseSimulator AI in Defense Simulation
 AssetManagerAI AI for Asset Management
 RealEstateAnalyzer AI for Real Estate Analytics
 FoodTechAI AI in Food Technology
