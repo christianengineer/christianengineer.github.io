@@ -1,4 +1,3 @@
-Automated Invoice Processing with Tesseract OCR (Python) Digitizing financial documents
 Sports Betting Odds Prediction using Keras (Python) Analyzing betting markets
 Online Advertising Effectiveness Analysis with Pandas (Python) Measuring ad performance
 Voice Biometrics using DeepSpeech (Python) Verifying identity through voice
