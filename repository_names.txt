@@ -1,4 +1,3 @@
-FinAI AI in Fintech Analytics
 LegalResearcher AI for Legal Research
 CrisisAvert AI for Crisis Management
 EnergyAI AI for Energy Management
