@@ -1,4 +1,3 @@
-Facial Recognition using Dlib (Python/C++) Identifying individuals from images
 E-commerce Price Optimization with Scikit-Learn (Python) Dynamic pricing strategies
 Healthcare Image Analysis using TensorFlow (Python) Diagnosing diseases from images
 Traffic Flow Prediction with Keras (Python) Managing city traffic efficiently
