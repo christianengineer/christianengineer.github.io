@@ -1,4 +1,3 @@
-AutoTroubleSolver AI for Automated Troubleshooting
 MentalHealthAI AI for Mental Health
 MarketIntel AI for Market Research
 AutoNav AI for Autonomous Navigation
