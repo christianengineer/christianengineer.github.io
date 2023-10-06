@@ -1,4 +1,3 @@
-Agricultural Crop Yield Prediction using TensorFlow (Python) Enhancing farm productivity
 SEO Content Optimization with SpaCy (Python) Improving website visibility
 Virtual Personal Assistant Development using Rasa (Python) Building conversational AI
 Retail Sales Forecasting with ARIMA (Python) Predicting sales trends
