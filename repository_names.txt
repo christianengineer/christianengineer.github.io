@@ -1,4 +1,3 @@
-Social Network Analysis with NetworkX (Python) Studying social connections
 Automated Resume Screening with NLP (Python) Filtering job applications
 Algorithmic Music Composition using Magenta (Python) Creating music with AI
 Clinical Trial Data Analysis using TensorFlow (Python) Evaluating medical studies
