@@ -1,4 +1,3 @@
-E-commerce Price Optimization with Scikit-Learn (Python) Dynamic pricing strategies
 Healthcare Image Analysis using TensorFlow (Python) Diagnosing diseases from images
 Traffic Flow Prediction with Keras (Python) Managing city traffic efficiently
 Anomaly Detection in Network Security with PyTorch (Python) Identifying unusual network patterns
