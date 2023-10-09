@@ -1,4 +1,3 @@
-Digital Literacy Training Tools (TensorFlow, GPT) For global education
 Emergency Shelter Allocation AI (Scikit-Learn, TensorFlow) For disaster relief
 Financial Inclusion Platforms (TensorFlow, Keras) For unbanked populations
 Sustainable Fishing Practices Model (TensorFlow, Keras) For ocean sustainability
