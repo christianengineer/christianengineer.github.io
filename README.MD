@@ -1,14 +1,20 @@
-![Christian Ipanaque - Senior Front End Software Engineer](./christian-ipanaque-banner.png)
+## Career History
 
-# Hi there! My name is Christian 👋🏽
+- 2020 - Front End Sofware Engineer 1 @ [Formidable](https://formidable.com)
+- 2021 - Front End Sofware Engineer 2 @ [Formidable](https://formidable.com)
+- 2022 - Front End Sofware Engineer 3 @ [Formidable](https://formidable.com)
+- 2023 - Senior Software Engineer @ [Walmart Global Tech](https://tech.walmart.com/content/walmart-global-tech/en_us.html)
 
-and I'm a Senior Front End Software Engineer working on all things JavaScript!
+# Hi there! My name is Christian and I'm a Senior Software Engineer 👋
+
+Here you will find blog posts, and articles about my career. I hope the information in this repository helps you without asking for anything in return.
 
 ## My Open Source Contributions:
 
 - [Updated Next.js example `with-aws-amplify` with TypeScript](https://github.com/vercel/next.js/pull/41815) for [Next.js](https://nextjs.org/)
 - [Updated highlightedRanges prop in CodePane component](https://github.com/FormidableLabs/spectacle/pull/959) for [Spectacle](https://formidable.com/open-source/spectacle/)
 - [Fixed url parameters when user tabs through slides in Overview Mode](https://github.com/FormidableLabs/spectacle/pull/961) for [Spectacle](https://formidable.com/open-source/spectacle/)
+- [TypeScript Awaited](https://github.com/type-challenges/type-challenges/issues/18837)
 
 ## My Coding Bootcamp Certification:
 
@@ -27,3 +33,7 @@ and I'm a Senior Front End Software Engineer working on all things JavaScript!
 ## My Published Articles:
 
 - ["Achieving Reusability With React Composition"](https://formidable.com/blog/2021/react-composition/) for [Formidable](https://formidable.com)
+
+## My Education Tool
+
+- [ChatGPT](https://chat.openai.com/)
