@@ -5,7 +5,7 @@
 - 2022 - Front End Sofware Engineer 3 @ [Formidable](https://formidable.com)
 - 2023 - Senior Software Engineer @ [Walmart Global Tech](https://tech.walmart.com/content/walmart-global-tech/en_us.html)
 
-# Hi there! My name is Christian and I'm a Senior Software Engineer 👋
+# Hi there! My name is Christian 👋
 
 Here you will find blog posts, and articles about my career. I hope the information in this repository helps you without asking for anything in return.
 
@@ -36,4 +36,11 @@ Here you will find blog posts, and articles about my career. I hope the informat
 
 ## My Education Tool
 
-- [ChatGPT](https://chat.openai.com/)
+- [ChatGPT](https://chat.openai.com)
+
+## My Favorite Image Generation Tool
+- [MidJourney](https://www.midjourney.com)
+- Prompt used for profile photo:
+```bash
+a small turtle wearing headphones and glasses, a hyperrealistic painting by Mark Arian, city background, featured on cgsociety, funk art, detailed painting, behance hd, hyper realism
+```
