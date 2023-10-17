@@ -1,4 +1,3 @@
-Energy Trading Optimization Model (TensorFlow, Apache NiFi, Kubernetes) For utilities
 Real-time Public Transit Optimization (Keras, RabbitMQ, Docker) For urban transportation
 Automated Disease Outbreak Monitoring (Scikit-Learn, Flask, Airflow) For public health
 Large Scale IoT Data Analytics (TensorFlow, Kafka, Terraform) For smart devices
