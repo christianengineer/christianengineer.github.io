@@ -1,4 +1,3 @@
-Interactive Voice Response Educational System for Peru (PyTorch, Twilio API, Flask, Grafana) Offers educational content and tutoring through interactive voice response (IVR) technology, accessible without internet or smartphones
 Peru Education Gamification Engine (Scikit-Learn, Unity, Kafka, Kubernetes) Develops gamified learning experiences to engage students from low-income backgrounds, making education more accessible and enjoyable
 Rural Peru E-Library Access System (Keras, Flask, Airflow, Prometheus) Provides a curated e-library accessible via low-tech solutions, ensuring students and educators in rural areas have access to quality learning materials
 Peru Educational Disparity Dashboard (TensorFlow, Dash, Spark, DVC) Visualizes educational disparities across regions, aiding in the targeted allocation of resources and interventions
