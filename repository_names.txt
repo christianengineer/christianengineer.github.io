@@ -1,4 +1,3 @@
-Object Tracking in Video with OpenCV (Python/C++) Monitoring objects in motion
 Customer Support Chatbot using Rasa (Python) Automating customer interactions
 Genome Sequence Analysis with Biopython (Python) Studying genetic data
 Air Quality Forecasting using TensorFlow (Python) Predicting environmental conditions
