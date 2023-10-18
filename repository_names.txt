@@ -1,4 +1,3 @@
-EcommAI AI for E-Commerce Solutions
 HomeSmart AI for Smart Homes
 HumanAI AI for HR Management
 FinAI AI in Fintech Analytics
