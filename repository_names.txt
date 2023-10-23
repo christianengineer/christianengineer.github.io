@@ -1,4 +1,3 @@
-ChatEcomm E-commerce Chatbot AI
 RemoteWorkOptimizer AI for Remote Work Enhancement
 VoiceBio Voice Biometrics AI
 ContractAnalyzer AI for Legal Contract Analysis
