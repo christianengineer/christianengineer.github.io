@@ -1,4 +1,3 @@
-Smart City Traffic Management with Keras (Python) Optimizing urban traffic flow
 Predictive Text Input with GPT (Python) Enhancing typing efficiency
 Earthquake Prediction with SciPy (Python) Anticipating seismic events
 Voice-Activated Systems using SpeechRecognition (Python) Building voice-controlled interfaces
