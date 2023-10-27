@@ -1,4 +1,3 @@
-Biometric Recognition System Implement a biometric recognition system using machine learning
 AI in Agriculture for Crop Prediction Use AI for predicting crop yields in agriculture
 Language Translation with Neural Networks Develop a neural network-based language translation system
 AI-driven Social Media Analytics Analyze social media data using AI techniques
