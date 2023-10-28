@@ -1,4 +1,3 @@
-Voice Biometrics using DeepSpeech (Python) Verifying identity through voice
 Crowd Counting in Public Spaces with OpenCV (Python/C++) Estimating crowd sizes
 Automated News Aggregation using BeautifulSoup (Python) Curating news content
 Vehicle Number Plate Recognition with TensorFlow (Python) Identifying vehicles
