@@ -1,0 +1,23 @@
+# Allow all bots to access the entire site
+User-agent: *
+
+# Disallow crawling of admin and backend sections
+Disallow: /admin/
+Disallow: /cgi-bin/
+Disallow: /backend/
+
+# Disallow crawling of user account and search pages
+Disallow: /account/
+Disallow: /search/
+
+# Prevent indexing of PDFs and other non-html documents
+Disallow: /*.pdf$
+Disallow: /*.doc$
+Disallow: /*.docx$
+
+# Allow crawling of important directories
+Allow: /posts/
+
+# Sitemap URLs (include the actual URL of your sitemap)
+Sitemap: https://christianipanaque.com/sitemap.xml
+Sitemap: https://christianipanaque/posts/sitemap.xml
