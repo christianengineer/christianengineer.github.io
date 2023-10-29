@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+  <channel>
+    <title>Find Full Stack Developer</title>
+    <link>https://christianipanaque.com</link>
+    <description>Latest news and updates from Christian Ipanaque.</description>
+    <lastBuildDate>Sun, 29 Oct 2023 07:34:56 GMT</lastBuildDate>
+    <pubDate>Sun, 29 Oct 2023 07:34:56 GMT</pubDate>
+
+    <item>
+      <title>How I started using AI as a Software Engineer</title>
+      <link>https://christianipanaque.com/posts/how-i-started-using-ai.html</link>
+      <description>AI as a tool for accelerated learning and streamline contributions to large projects.</description>
+      <pubDate>Sun, 29 Oct 2023 07:34:56 GMT</pubDate>
+    </item>
+
+  </channel>
+</rss>
