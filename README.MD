@@ -1,9 +1,16 @@
+# Hello, I'm Christian 👋
+
+I'm a Senior Software Engineer that's passionate about delivering high-impact features and tools that benefit our human race.
+
 ## Career History
 
-- 2020 - Front End Sofware Engineer 1 @ [Formidable](https://formidable.com)
-- 2021 - Front End Sofware Engineer 2 @ [Formidable](https://formidable.com)
-- 2022 - Front End Sofware Engineer 3 @ [Formidable](https://formidable.com)
-- 2023 - Senior Software Engineer @ [Walmart Global Tech](https://tech.walmart.com/content/walmart-global-tech/en_us.html)
+### [Front End Software Engineer 1 @ Formidable (2020)](https://formidable.com)
+
+### [Front End Software Engineer 2 @ Formidable (2021)](https://formidable.com)
+
+### [Front End Software Engineer 3 @ Formidable (2022)](https://formidable.com)
+
+### [Senior Software Engineer @ Walmart Global Tech (2023)](https://tech.walmart.com/content/walmart-global-tech/en_us.html)
 
 ## Blog Posts:
 
