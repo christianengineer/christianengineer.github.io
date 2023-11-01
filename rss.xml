@@ -4,8 +4,15 @@
     <title>Find Full Stack Developer</title>
     <link>https://christianipanaque.com</link>
     <description>Latest news and updates from Christian Ipanaque.</description>
-    <lastBuildDate>Sun, 29 Oct 2023 07:34:56 GMT</lastBuildDate>
-    <pubDate>Sun, 29 Oct 2023 07:34:56 GMT</pubDate>
+    <lastBuildDate>Wed, 01 Nov 2023 08:45:43 GMT</lastBuildDate>
+    <pubDate>Wed, 01 Nov 2023 08:45:43 GMT</pubDate>
+
+    <item>
+      <title>Setting Up a Scalable GraphQL Repository for Large Tech Corporations</title>
+      <link>https://christianipanaque.com/posts/setting-up-scalable-graphql-repository.html</link>
+      <description>Guide on setting up a scalable GraphQL repository for large tech corporations.</description>
+      <pubDate>Wed, 01 Nov 2023 08:45:43 GMT</pubDate>
+    </item>
 
     <item>
       <title>How I started using AI as a Software Engineer</title>

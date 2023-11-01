@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Guide on setting up a scalable GraphQL repository for large tech corporations."
+    />
+    <meta
+      name="keywords"
+      content="GraphQL, GraphQL repository, scalable GraphQL, Apollo Server, database migration, database seeding, GraphQL schemas, GraphQL resolvers, tech company, large tech company, software development, application development"
+    />
+    <title>
+      Setting Up a Scalable GraphQL Repository for Large Tech Corporations
+    </title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>
+        Setting Up a Scalable GraphQL Repository for Large Tech Corporations
+      </h1>
+    </header>
+
+    <section id="introduction">
+      <h2>Introduction</h2>
+      <p>
+        Setting up a scalable GraphQL repository for a large tech company,
+        especially one with over 100 applications, can be a daunting task.
+        However, with the right approach, this task becomes more manageable.
+        This article will guide you on how to set up an effective, scalable
+        GraphQL repository for your tech company.
+      </p>
+    </section>
+
+    <section id="folder-structure">
+      <h2>Folder Structure</h2>
+      <pre>
+/graphql-repo
+  /applications
+    /app1
+      /src
+      /test
+    /app2
+      /src
+      /test
+    ...
+  /common
+    /schemas
+    /resolvers
+  /tools
+    /migration
+    /seeding
+  /docs
+        </pre
+      >
+      <p>
+        In this structure, each application has its own directory under the
+        <code>/applications</code> directory. Each application directory
+        contains a <code>/src</code> folder for source files and a
+        <code>/test</code> folder for test files.
+      </p>
+      <p>
+        The <code>/common</code> directory is where shared resources like
+        schemas and resolvers are stored. The <code>/tools</code> directory
+        contains tools for database migration and seeding. The
+        <code>/docs</code> directory is for storing documentation.
+      </p>
+    </section>
+
+    <section id="outline">
+      <h2>Outline</h2>
+      <ol>
+        <li>Understanding GraphQL</li>
+        <li>Why Choose GraphQL?</li>
+        <li>Setting Up Your GraphQL Repository</li>
+        <li>Organizing Your Applications</li>
+        <li>Setting Up Common Resources</li>
+        <li>Setting Up Database Tools</li>
+        <li>Documentation</li>
+        <li>Scaling Your GraphQL Repository</li>
+      </ol>
+    </section>
+
+    <section id="faq">
+      <h2>FAQ</h2>
+      <dl>
+        <dt>Why GraphQL?</dt>
+        <dd>
+          GraphQL offers a more efficient data-fetching than traditional REST.
+          It allows clients to specify exactly what data they need, reducing the
+          amount of data that needs to be transferred over the network.
+        </dd>
+        <dt>What is the /common directory for?</dt>
+        <dd>
+          The /common directory is for shared resources like schemas and
+          resolvers. These are resources that are used by multiple applications.
+        </dd>
+        <dt>What are the /migration and /seeding directories for?</dt>
+        <dd>
+          These directories contain tools for database migration and seeding.
+          Migration scripts are used to update your database schema, while
+          seeding scripts are used to populate your database with initial data.
+        </dd>
+      </dl>
+    </section>
+
+    <section id="resources">
+      <h2>Resources</h2>
+      <ul>
+        <li>
+          <a href="https://graphql.org/" target="_blank"
+            >GraphQL Official Website</a
+          >
+        </li>
+        <li>
+          <a href="https://www.graphql-tools.com/" target="_blank"
+            >GraphQL Tools</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.apollographql.com/docs/apollo-server/"
+            target="_blank"
+            >Apollo Server</a
+          >
+        </li>
+      </ul>
+    </section>
+
+    <section id="links">
+      <h2>Links</h2>
+      <ul>
+        <li>
+          <a href="https://graphql.org/learn/best-practices/" target="_blank"
+            >GraphQL Best Practices</a
+          >
+        </li>
+        <li>
+          <a href="https://www.apollographql.com/docs/" target="_blank"
+            >Apollo Server Docs</a
+          >
+        </li>
+      </ul>
+    </section>
+
+    <footer>
+      <section id="conclusion">
+        <h2>Conclusion</h2>
+        <p>
+          Setting up a scalable GraphQL repository for a large tech company
+          requires careful planning and organization. With the right folder
+          structure and tools, you can create a repository that can effectively
+          handle over 100 applications.
+        </p>
+      </section>
+    </footer>
+  </body>
+</html>
