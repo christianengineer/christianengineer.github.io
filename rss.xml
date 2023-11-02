@@ -18,6 +18,19 @@
     <ttl>60</ttl>
 
     <item>
+      <title>Schema Directives in GraphQL: Enhancing AI Data Queries</title>
+      <link>https://christianipanaque.com/posts/schema-directives-in-graphql-enhancing-ai-data-queries
+      </link>
+      <description>An advanced guide on leveraging GraphQL schema directives to enhance data querying capabilities for AI processes. Discover the power and flexibility of directives in AI data management.</description>
+      <author>christianipanaque@outlook.com (Christian Ipanaque)</author>
+      <category>GraphQL</category>
+      <guid isPermaLink="true">https://christianipanaque.com/posts/schema-directives-in-graphql-enhancing-ai-data-queries
+      </guid>
+      <pubDate>Wed, 01 Nov 2023 09:41:23 GMT</pubDate>
+      <source url="https://christianipanaque.com/rss.xml">Find Full Stack Developer</source>
+    </item>
+
+    <item>
       <title>Setting Up a Scalable GraphQL Repository for Large Tech Corporations</title>
       <link>https://christianipanaque.com/posts/setting-up-scalable-graphql-repository</link>
       <description>Guide on setting up a scalable GraphQL repository for large tech corporations.</description>
