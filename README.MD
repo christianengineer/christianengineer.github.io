@@ -1,6 +1,6 @@
 # Hello, I'm Christian 👋
 
-I'm a Senior Software Engineer that's passionate about delivering high-impact features and tools that benefit our human race.
+I'm a Senior Software Engineer that's passionate about delivering high-impact features and tools that benefit our fellow human species.
 
 ## Career History
 
