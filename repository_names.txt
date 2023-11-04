@@ -1,4 +1,3 @@
-EduMetrics AI for Educational Analytics
 AutoTroubleSolver AI for Automated Troubleshooting
 MentalHealthAI AI for Mental Health
 MarketIntel AI for Market Research
