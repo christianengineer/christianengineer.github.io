@@ -4,19 +4,69 @@ Senior Software Engineer experienced in scaling large code bases using Nx Worksp
 
 ## Career History
 
-- Software Engineer I @ [Formidable](https://formidable.com) (2020)
-
-- Software Engineer II @ [Formidable](https://formidable.com) (2021)
+- Senior Software Engineer @ [Walmart Global Tech](https://tech.walmart.com/content/walmart-global-tech/en_us.html) (2023)
 
 - Software Engineer III @ [Formidable](https://formidable.com) (2022)
 
-- Senior Software Engineer @ [Walmart Global Tech](https://tech.walmart.com/content/walmart-global-tech/en_us.html) (2023)
+- Software Engineer II @ [Formidable](https://formidable.com) (2021)
 
-## Publications
+- Software Engineer I @ [Formidable](https://formidable.com) (2020)
 
-- [Achieving Reusability With React Composition](https://formidable.com/blog/2021/react-composition/) for [Formidable](https://formidable.com)
+## Open Source Projects
 
-- [The 21 Sentences I Read Every Day to Keep Myself Mentally Strong](https://www.linkedin.com/pulse/21-sentences-i-read-every-day-keep-myself-mentally-strong-ipanaque) for [LinkedIn Pulse](https://www.linkedin.com/company/pulse-news/)
+Here is the list with all the names converted to a lower case format, hyphenated where necessary, and suffixed with "example":
+
+1. ai-orchestrator-example
+
+2. deep-learner-pro-example
+3. neural-nexus-core-example
+4. infinity-data-engine-example
+5. scalable-tensorflow-example
+6. elastic-brain-cells-example
+7. quantum-compute-lab-example
+8. visionary-nets-example
+9. smart-stream-optimizer-example
+10. hyper-cluster-ai-example
+11. neural-forge-network-example
+12. ai-adaptive-grids-example
+13. biocompute-systems-example
+14. intellicode-matrix-example
+15. evo-neural-models-example
+16. efficient-mlflow-example
+17. alpha-ai-platform-example
+18. fast-track-predictions-example
+19. machine-minds-framework-example
+20. insightful-ai-analytics-example
+21. reinforce-runtime-example
+22. cognition-creators-example
+23. deep-dive-data-crunch-example
+24. ai-horizon-scalper-example
+25. agile-ai-engine-example
+26. neural-evolution-x-example
+27. smart-synapse-stack-example
+28. cloud-brain-framework-example
+29. next-gen-neural-net-example
+30. flexi-ai-adaptors-example
+31. intellisense-architect-example
+32. robust-ai-reactor-example
+33. predictive-neuron-tower-example
+34. machine-genius-hub-example
+35. infinite-insight-engine-example
+36. swift-ai-assembler-example
+37. dynamic-data-sculptor-example
+38. code-helix-ai-example
+39. ultra-ai-optimizer-example
+40. smart-fusion-fabric-example
+41. scalable-intellect-wave-example
+42. cognitive-computing-core-example
+43. ai-quantum-grid-example
+44. neural-matrix-mechanics-example
+45. ai-deep-dynamics-example
+46. fluid-intelligence-frameworks-example
+47. rapid-ai-prototype-example
+48. synthetica-ai-example
+49. data-sentience-works-example
+50. titan-neural-structure-example
 
 ## Open Source Contributions
 
@@ -39,3 +89,9 @@ Senior Software Engineer experienced in scaling large code bases using Nx Worksp
 - [Amazon Web Services - Certified Developer](https://www.credly.com/badges/ab67a10d-7bd5-4d28-a632-a2b332e5ef45/public_url)
 
 - [Amazon Web Services - Certified Solutions Architect](https://www.credly.com/badges/ea7d8a27-1a69-466b-9e80-68803c43d8d5/public_url)
+
+## Publications
+
+- [Achieving Reusability With React Composition](https://formidable.com/blog/2021/react-composition/) for [Formidable](https://formidable.com)
+
+- [The 21 Sentences I Read Every Day to Keep Myself Mentally Strong](https://www.linkedin.com/pulse/21-sentences-i-read-every-day-keep-myself-mentally-strong-ipanaque) for [LinkedIn Pulse](https://www.linkedin.com/company/pulse-news/)
