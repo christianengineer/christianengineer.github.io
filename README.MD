@@ -1,63 +1,41 @@
 # Hello, I'm Christian 👋
 
-I'm a Senior Software Engineer that's passionate about delivering high-impact features and tools that benefit our fellow human species.
+Senior Software Engineer experienced in scaling large code bases using Nx Workspaces and Generators, Next.js Server Side Rendering, GraphQL Schemas and Types, Reusable React Components, prioritizing modularity and code reusability in large monorepos to avoid cross-team conflicts.
 
 ## Career History
 
-### [Front End Software Engineer 1 @ Formidable (2020)](https://formidable.com)
+- Software Engineer I @ [Formidable](https://formidable.com) (2020)
 
-### [Front End Software Engineer 2 @ Formidable (2021)](https://formidable.com)
+- Software Engineer II @ [Formidable](https://formidable.com) (2021)
 
-### [Front End Software Engineer 3 @ Formidable (2022)](https://formidable.com)
+- Software Engineer III @ [Formidable](https://formidable.com) (2022)
 
-### [Senior Software Engineer @ Walmart Global Tech (2023)](https://tech.walmart.com/content/walmart-global-tech/en_us.html)
+- Senior Software Engineer @ [Walmart Global Tech](https://tech.walmart.com/content/walmart-global-tech/en_us.html) (2023)
 
-## Blog Posts:
+## Publications
 
-- ["Achieving Reusability With React Composition"](https://formidable.com/blog/2021/react-composition/) for [Formidable](https://formidable.com)
+- [Achieving Reusability With React Composition](https://formidable.com/blog/2021/react-composition/) for [Formidable](https://formidable.com)
 
-## Open Source Contributions:
+- [The 21 Sentences I Read Every Day to Keep Myself Mentally Strong](https://www.linkedin.com/pulse/21-sentences-i-read-every-day-keep-myself-mentally-strong-ipanaque) for [LinkedIn Pulse](https://www.linkedin.com/company/pulse-news/)
 
-### Next.js and AWS Amplify
+## Open Source Contributions
 
 - [Updated Next.js example `with-aws-amplify` with TypeScript](https://github.com/vercel/next.js/pull/41815) for [Next.js](https://nextjs.org/)
 
-### Spectacle
-
 - [Updated highlightedRanges prop in CodePane component](https://github.com/FormidableLabs/spectacle/pull/959) for [Spectacle](https://formidable.com/open-source/spectacle/)
-- [Fixed url parameters when user tabs through slides in Overview Mode](https://github.com/FormidableLabs/spectacle/pull/961) for [Spectacle](https://formidable.com/open-source/spectacle/)
 
-### TypeScript
+- [Fixed url parameters when user tabs through slides in Overview Mode](https://github.com/FormidableLabs/spectacle/pull/961) for [Spectacle](https://formidable.com/open-source/spectacle/)
 
 - [TypeScript Awaited](https://github.com/type-challenges/type-challenges/issues/18837)
 
-## Certifications
-
-### Coding Bootcamp Certification:
-
-- [BloomTech Full-Stack Web Development](https://www.credly.com/badges/70239758-6508-4309-aeb1-083f53a31813/public_url)
-
-### Amazon Web Services Certifications:
-
-- [AWS - Certified Developer](https://www.credly.com/badges/ab67a10d-7bd5-4d28-a632-a2b332e5ef45/public_url)
-- [AWS - Certified Solutions Architect](https://www.credly.com/badges/ea7d8a27-1a69-466b-9e80-68803c43d8d5/public_url)
-
-### Leadership and Management Certifications:
+## Education
 
 - [Harvard X - Leadership and Communication](https://credentials.edx.org/credentials/7e6cc9c2a4df4ee6b97b5d0df073b793/)
-- [University of Washington - IT Project Management](https://credentials.edx.org/credentials/4533f58c8cc248208e7c3d12b4859e91/)
 
-## Favorite Tools
+- [University of Washington - Project Management](https://credentials.edx.org/credentials/4533f58c8cc248208e7c3d12b4859e91/)
 
-### Self-training tools
+- [Bloomtech - Full Stack Web Development Bootcamp](https://www.credly.com/badges/70239758-6508-4309-aeb1-083f53a31813/public_url)
 
-- [ChatGPT](https://chat.openai.com)
+- [Amazon Web Services - Certified Developer](https://www.credly.com/badges/ab67a10d-7bd5-4d28-a632-a2b332e5ef45/public_url)
 
-### Image Generation Tool
-
-- [MidJourney](https://www.midjourney.com)
-- Prompt used for profile photo:
-
-```bash
-a small turtle wearing headphones and glasses, a hyperrealistic painting by Mark Arian, city background, featured on cgsociety, funk art, detailed painting, behance hd, hyper realism
-```
+- [Amazon Web Services - Certified Solutions Architect](https://www.credly.com/badges/ea7d8a27-1a69-466b-9e80-68803c43d8d5/public_url)
