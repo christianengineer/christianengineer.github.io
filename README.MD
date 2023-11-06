@@ -12,16 +12,14 @@ Senior Software Engineer experienced in scaling large code bases using Nx Worksp
 
 - Software Engineer I @ [Formidable](https://formidable.com) (2020)
 
-## Open Source Projects
+## Open Source Software
 
-Here is the list with all the names converted to a lower case format, hyphenated where necessary, and suffixed with "example":
-
-1. ai-orchestrator-example
+1. [ai-orchestrator-example](https://github.com/christianengineer/ai-orchestrator-example)
 
 2. deep-learner-pro-example
 3. neural-nexus-core-example
 4. infinity-data-engine-example
-5. scalable-tensorflow-example
+5. [scalable-tensorflow-example](https://github.com/christianengineer/scalable-tensorflow-example)
 6. elastic-brain-cells-example
 7. quantum-compute-lab-example
 8. visionary-nets-example
@@ -41,7 +39,7 @@ Here is the list with all the names converted to a lower case format, hyphenated
 22. cognition-creators-example
 23. deep-dive-data-crunch-example
 24. ai-horizon-scalper-example
-25. agile-ai-engine-example
+25. [agile-ai-engine-example](https://github.com/christianengineer/agile-ai-engine-example)
 26. neural-evolution-x-example
 27. smart-synapse-stack-example
 28. cloud-brain-framework-example
