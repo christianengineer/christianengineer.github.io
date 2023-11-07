@@ -20,7 +20,9 @@ Senior Software Engineer experienced in scaling large code bases using Nx Worksp
 
 3. [agile-ai-engine-example](https://github.com/christianengineer/agile-ai-engine-example)
 
-4. [synthetica-ai-example] (https://github.com/christianengineer/synthetica-ai-example)
+4. [synthetica-ai-example](https://github.com/christianengineer/synthetica-ai-example)
+
+5. [ai-adaptive-grids-example](https://github.com/christianengineer/ai-adaptive-grids-example)
 
 - deep-learner-pro-example
 - neural-nexus-core-example
@@ -31,7 +33,6 @@ Senior Software Engineer experienced in scaling large code bases using Nx Worksp
 - smart-stream-optimizer-example
 - hyper-cluster-ai-example
 - neural-forge-network-example
-- ai-adaptive-grids-example
 - biocompute-systems-example
 - intellicode-matrix-example
 - evo-neural-models-example
