@@ -1,1 +1,0 @@
-AI-driven Project Management Tool (Scikit-Learn, Flask, Prometheus) For business efficiency
