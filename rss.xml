@@ -18,6 +18,19 @@
     <ttl>60</ttl>
 
     <item>
+      <title>From Concept to Launch: How My Modular Development Techniques Accelerate
+      Large AI Applications</title>
+      <link>https://christianipanaque.com/posts/modular-development-for-large-ai-applications
+      </link>
+      <description>Discover how modular development techniques streamline AI project workflows. Dive into our Knowledge Base for best practices, code examples, and modular design strategies tailored for software engineers in AI development.</description>
+      <author>christianipanaque@outlook.com (Christian Ipanaque)</author>
+      <category>Modularity</category>
+      <guid isPermaLink="true">https://christianipanaque.com/posts/modular-development-for-large-ai-applications
+      </guid>
+      <pubDate>Thu, 09 Nov 2023 01:31:15 GMT</pubDate>
+      <source url="https://christianipanaque.com/rss.xml">Full Stack Software Engineer</source>
+    </item>
+    <item>
       <title>Implementing AI-Driven Features with Next.js Serverless Functions</title>
       <link>https://christianipanaque.com/posts/implementing-aidriven-features-with-nextjs-serverless
       </link>
