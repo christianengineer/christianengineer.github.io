@@ -80,3 +80,17 @@ dd {
   font-family: "Roboto", sans-serif;
   letter-spacing: -0.4px;
 }
+
+/* tables */
+table tr th {
+  border-bottom: 1px solid black;
+  padding: 15px;
+}
+
+table tr:nth-child(even) {
+  background-color: #d6d6d6;
+}
+
+table tr td {
+  padding: 15px;
+}
