@@ -1,4 +1,3 @@
-Affordable Clean Energy Research (TensorFlow, PyTorch) For energy access
 Civic Engagement Chatbots (GPT, NLTK) Encouraging democratic participation
 Digital Literacy Training Tools (TensorFlow, GPT) For global education
 Emergency Shelter Allocation AI (Scikit-Learn, TensorFlow) For disaster relief
