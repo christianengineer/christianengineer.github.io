@@ -1,1 +1,0 @@
-AI for Environmental Monitoring Develop an AI system for monitoring environmental parameters
