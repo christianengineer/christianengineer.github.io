@@ -1,4 +1,3 @@
-LegalResearcher AI for Legal Research
 CrisisAvert AI for Crisis Management
 EnergyAI AI for Energy Management
 TelecomAI AI for Telecommunications
