@@ -14,6 +14,6 @@ Senior Software Engineer experienced in scaling large code bases using Nx Worksp
 
 ## Publications
 
-- [Achieving Reusability With React Composition](https://formidable.com/blog/2021/react-composition/) for [Formidable](https://formidable.com)
+- [Achieving Reusability With React Composition](https://formidable.com/blog/2021/react-composition/) for [Formidable](https://formidable.com) (2021)
 
-- [The 21 Sentences I Read Every Day to Keep Myself Mentally Strong](https://www.linkedin.com/pulse/21-sentences-i-read-every-day-keep-myself-mentally-strong-ipanaque) for [LinkedIn Pulse](https://www.linkedin.com/company/pulse-news/)
+- [The 21 Sentences I Read Every Day to Keep Myself Mentally Strong](https://www.linkedin.com/pulse/21-sentences-i-read-every-day-keep-myself-mentally-strong-ipanaque) for [LinkedIn Pulse](https://www.linkedin.com/company/pulse-news/) (2019)
