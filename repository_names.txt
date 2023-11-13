@@ -1,4 +1,3 @@
-Peru Remote Work Opportunity Connector (BERT, TensorFlow, FastAPI, Grafana) Screens and matches low-income individuals with remote work opportunities that suit their skills and availability, providing access to stable income sources
 Skill Development Pathway Planner for Peru (GPT-3, Keras, Flask, Prometheus) Filters and recommends personalized skill development and training programs for low-income individuals, aligning them with in-demand job markets to boost employability
 Peru Affordable Housing Locator (Scikit-Learn, GeoPandas, Django, Kubernetes) Matches low-income families with affordable housing options, utilizing filtering algorithms to prioritize based on family size, income, and location preferences
 Energy Cost Reduction Advisor for Peru Households (TensorFlow, Pandas, Flask, Grafana) Screens household energy usage patterns and matches with tailored advice on reducing energy bills through efficient practices and renewable energy sources
