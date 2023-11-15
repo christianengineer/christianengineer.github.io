@@ -1,4 +1,3 @@
-Peru Poverty Prediction and Mapping System (TensorFlow, GeoPandas, Airflow, Kubernetes) Utilizes socioeconomic and satellite data to predict poverty hotspots, facilitating targeted intervention and resource allocation
 Educational Access Optimizer for Peru (PyTorch, Scikit-Learn, Flask, Grafana) Predicts areas with significant educational disparities and recommends infrastructure improvements to enhance access to education
 Peru Nutritional Deficiency Identifier (Keras, TensorFlow, Pandas, Docker) Analyzes health and consumption data to identify regions with high rates of nutritional deficiencies, guiding food assistance programs
 Employment Opportunity Matcher in Peru (BERT, GPT-3, Kafka, Prometheus) Connects job seekers in impoverished areas with employment opportunities, using NLP to match skills and job requirements
