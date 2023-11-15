@@ -1,4 +1,3 @@
-AssetManagerAI AI for Asset Management
 RealEstateAnalyzer AI for Real Estate Analytics
 FoodTechAI AI in Food Technology
 EnviroPredict Environmental Forecasting AI
