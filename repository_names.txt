@@ -1,4 +1,3 @@
-Churn Prediction using LightGBM (Python) Predicting customer attrition
 Object Detection with YOLO (Python/C++) Identifying objects in real-time
 Real-time Translation using Seq2Seq (Python) Translating languages instantly
 Weather Forecasting with PyTorch (Python) Predicting weather conditions
