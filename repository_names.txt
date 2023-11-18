@@ -1,4 +1,3 @@
-Smart Agriculture Systems (TensorFlow, Keras) Enhancing sustainable farming practices
 Water Quality Monitoring (Scikit-Learn, Pandas) For environmental health
 Renewable Energy Optimization (TensorFlow, PyTorch) For sustainable energy management
 Air Quality Prediction Models (Keras, TensorFlow) To combat air pollution
