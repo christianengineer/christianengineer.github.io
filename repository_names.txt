@@ -1,4 +1,3 @@
-AI-Powered Environmental Law Compliance (BERT, TensorFlow) For regulation adherence
 Accessible Emergency Information Systems (TensorFlow, Keras) For public safety alerts
 Community Resource Optimization (Scikit-Learn, TensorFlow) For local development
 Automated Disease Vector Tracking (TensorFlow, OpenCV) For public health
