@@ -1,5 +1,5 @@
 ---
-permalink: /comparing-server-side-languages-nodejs-python-java/
+permalink: posts/comparing-server-side-languages-nodejs-python-java
 ---
 
 # Introduction to Server-Side Languages: Node.js, Python, and Java
