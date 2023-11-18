@@ -1,5 +1,7 @@
 ---
+permalink: /big-data-technologies-hadoop-spark-guide/
 ---
+
 # Big Data Technologies: A Focus on Hadoop and Spark
 
 In today's digital age, where data is more valuable than ever, big data technologies have become vital to businesses across sectors. This article provides an in-depth discussion about two of the most popular of these technologies - Hadoop and Spark - along with use cases, features, and comparisons.
@@ -8,7 +10,7 @@ In today's digital age, where data is more valuable than ever, big data technolo
 
 - Understanding Big Data
 - What is Hadoop?
-  - Hadoop Ecosystem 
+  - Hadoop Ecosystem
   - Advantages of Hadoop
   - Disadvantages of Hadoop
 - What is Spark?
@@ -45,12 +47,14 @@ print(list(map(map_fn, map_input))) # output: [1, 4, 9, 16, 25]
 ```
 
 ### Advantages of Hadoop
+
 - Scalable: Hadoop can handle petabytes of data highly efficiently.
 - Cost-effective: Stores massive data sets across distributed clusters, which could be nodes of commodity hardware.
 - Fault-tolerant: Data is copied across other nodes in the cluster, ensuring that the data processing and integrity is maintained even if a single node fails.
 
 ### Disadvantages of Hadoop
-- Hadoop lacks strong data security measures. 
+
+- Hadoop lacks strong data security measures.
 - The initial Hadoop setup can be complex and requires significant expertise.
 - Not efficient for small data sets.
 
@@ -59,11 +63,13 @@ print(list(map(map_fn, map_input))) # output: [1, 4, 9, 16, 25]
 Apache Spark is another open-source, big data processing framework that can perform complex data analytics tasks at high speeds. Spark is designed for fast computation and operates both on memory (RAM) and disk storage.
 
 ### Advantages of Spark
+
 - High-speed data processing: Complete in-memory computation allows Spark to perform faster than Hadoop.
 - Ease of use: Supports several programming languages, including Java, Scala, and Python.
 - Advanced analytics: Supports machine learning algorithms, graph processing, and real-time processing.
 
 ### Disadvantages of Spark
+
 - Spark's in-memory computation can be a disadvantage on large datasets, leading to excess garbage collection.
 - Spark does not have its own distributed storage system.
 
@@ -92,6 +98,6 @@ Here's a comparison to better distinguish between Hadoop and Spark:
 
 ## Conclusion
 
-When it comes to choosing between Hadoop and Spark, the decision should be based on the specific business requirements. If the application involves processing large-scale data and budget is a constraint, then Hadoop is the ideal choice. On the other hand, if the application requires complex data processing at incredible speeds, then Spark would be the suitable choice. Thus, Hadoop and Spark serve different purposes and are both integral to the big data ecosystem. 
+When it comes to choosing between Hadoop and Spark, the decision should be based on the specific business requirements. If the application involves processing large-scale data and budget is a constraint, then Hadoop is the ideal choice. On the other hand, if the application requires complex data processing at incredible speeds, then Spark would be the suitable choice. Thus, Hadoop and Spark serve different purposes and are both integral to the big data ecosystem.
 
 In the end, understanding these technologies and how to effectively and efficiently use them is a cornerstone in the domain of big data.

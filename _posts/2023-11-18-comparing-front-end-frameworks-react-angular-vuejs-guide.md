@@ -1,5 +1,7 @@
 ---
+permalink: /comparing-front-end-frameworks-react-angular-vuejs-guide/
 ---
+
 # Front-End Frameworks: React, Angular, and Vue.js
 
 The continual evolution of technology has paved the way for modern front-end frameworks that aim to simplify web development for programmers. These frameworks provide developers with a starting block and structure for their projects. Some of the most popular among these are React, Angular, and Vue.js. This article will discuss these three competencies from a professional engineering perspective, diving into the particularities of each and how they contribute to the web development world.
@@ -17,17 +19,14 @@ React.js, widely known as React, is a JavaScript library developed by Facebook. 
 ### Code Snippet
 
 ```jsx
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
 
 function Hello() {
   return <h1>Hello, world!</h1>;
 }
 
-ReactDOM.render(
-  <Hello />, 
-  document.getElementById('root')
-);
+ReactDOM.render(<Hello />, document.getElementById("root"));
 ```
 
 ## Angular
@@ -43,12 +42,12 @@ Angular, not to be confused with AngularJS (its predecessor), is a TypeScript-ba
 ### Code Snippet
 
 ```ts
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-root',
+  selector: "app-root",
   template: `<h1>Hello, world!</h1>`,
-  styles: []
+  styles: [],
 })
 export class AppComponent {}
 ```
@@ -67,11 +66,11 @@ Vue.js is gradually gaining popularity among developers due to its smooth learni
 
 ```js
 var app = new Vue({
-  el: '#app',
+  el: "#app",
   data: {
-    message: 'Hello, world!'
-  }
-})
+    message: "Hello, world!",
+  },
+});
 ```
 
 ```html
