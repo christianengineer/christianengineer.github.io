@@ -59,9 +59,13 @@ def main():
         print("generate title end")
 
         markdown_filename = f"_posts/{title}.md"
-        with open(markdown_filename, "w") as md_file:
-            md_file.write("---\n---\n")  # Writing empty front matter
-            print("Markdown file created with empty front matter")
+
+        os.makedirs(os.path.dirname(markdown_filename), exist_ok=True)
+
+        if not os.path.exists(markdown_filename):
+            with open(markdown_filename, "w") as md_file:
+                md_file.write("---\n---\n")  # Writing empty front matter
+                print("Markdown file created with empty front matter")
 
         article = generate_article(topic)
 
