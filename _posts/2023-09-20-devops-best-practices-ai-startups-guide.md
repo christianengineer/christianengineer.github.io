@@ -1,5 +1,7 @@
 ---
+permalink: /devops-best-practices-ai-startups-guide/
 ---
+
 # DevOps Best Practices in AI Startups
 
 The convergence of Development Operations (DevOps) and Artificial Intelligence (AI) has the potential to greatly improve a startup's ability to deliver high-quality software on schedule. By leveraging DevOps principles and incorporating AI, startups can innovate and operate more efficiently than ever before. This article will discuss the best practices of DevOps in AI startups.
@@ -27,7 +29,7 @@ AI, on the other hand, refers to the simulation of human intelligence processes 
 - CI allows developers to integrate their changes back to the main branch as often as possible. This reduces integration problems and allows a team to develop cohesive software more rapidly.
 
 ```bash
-# Example of a CI System 
+# Example of a CI System
 git pull origin master
 make test
 ```
@@ -36,7 +38,7 @@ make test
 
 ### 3. Versioning and Tracking
 
-- Track code, configuration, data, and ML models. 
+- Track code, configuration, data, and ML models.
 
 - Use version control systems such as Git and keep a registry of the ML models using tools like MLflow or Kubeflow.
 
@@ -58,9 +60,9 @@ def test_add():
 
 ### 5. Infrastructure as Code (IaC)
 
-- Treat infrastructure the same way as software. 
+- Treat infrastructure the same way as software.
 
-- All the infrastructure specification and configuration should be stored as code and checked into version control. 
+- All the infrastructure specification and configuration should be stored as code and checked into version control.
 
 - Therefore, the entire environment can be set up at the push of a button, ensuring repeatability and reducing any manual error.
 

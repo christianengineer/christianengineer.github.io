@@ -1,5 +1,7 @@
 ---
+permalink: /cultural-fit-assessment-ai-startups-guide/
 ---
+
 # Cultural Fit Assessment in AI Startups
 
 The modern business environment signals the crucial role of Artificial Intelligence (AI) in the business world—a fact best epitomized by the rise of AI startups. As these companies continue to grow and transform the landscape of business operations, one element they must not overlook is the importance of cultural fit in scaling and sustaining their growth. In the realm of hiring for AI companies, cultural fit assessment plays a critical role.
@@ -20,7 +22,7 @@ Startups often have less formal hierarchies and systems compared to established 
 
 There are several ways to embark on the journey of cultural fit assessment. Some of these include:
 
-### Define the Startup Culture Clearly 
+### Define the Startup Culture Clearly
 
 Defining the culture of the organization is the first step towards determining cultural fit. Startups should develop a clear understanding of their mission, vision, core values, and behaviors that depict these values.
 

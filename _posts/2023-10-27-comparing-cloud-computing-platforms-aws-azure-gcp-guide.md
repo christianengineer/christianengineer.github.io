@@ -1,5 +1,7 @@
 ---
+permalink: /comparing-cloud-computing-platforms-aws-azure-gcp-guide/
 ---
+
 # Cloud Computing Platforms: AWS, Azure, GCP
 
 Cloud Computing Platforms have revolutionized the world of IT, bringing a multitude of benefits for large enterprises, SMEs, and even individual developers. They have transformed the way we develop, deploy, and scale software, hardware, and networking infrastructure. Top-tier vendors in this field are Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform (GCP). This article will take a thorough look into these platforms, their services, strengths, and differences.
@@ -31,11 +33,10 @@ ec2.create_instances(
 Microsoft Azure, launched in 2010, is the closest competitor to AWS. Azure gives a consistent platform which facilities seamless migration and easy multilevel management. Azure is typically preferred by companies that use Windows-based software, having a stronger association with Windows Server, Dynamics, SQL Server, and Active Directory.
 
 1. **Azure Virtual Machines:** Allows the creation of Linux and Windows virtual machines in seconds.
-   
 2. **SQL Database:** Relational database service based on the latest stable version of Microsoft SQL Server Database Engine.
 
 3. **Blob Storage:** For storing large amounts of unstructured object data, such as text or binary.
-   
+
 ```csharp
 // C# example to create a blob in Azure
 BlobServiceClient blobServiceClient = new BlobServiceClient(connectionString);
@@ -51,7 +52,7 @@ uploadFileStream.Close();
 Being a late entrant, GCP, launched publically in 2013, rapidly captured the interest of companies and developers. With its solid infrastructure, data analysis, and machine learning capabilities, many businesses have fulfilled their unique requirements.
 
 1. **Google Compute Engine (GCE):** Provides users with Virtual Machines that run in Google's innovative data centres and worldwide network.
-  
+
 2. **Google Cloud Storage (GCS):** An object storage service for any amount of data at any time.
 
 3. **Google Kubernetes Engine (GKE):** A managed environment for deploying, scaling, and managing containerized applications.

@@ -1,3 +1,7 @@
+---
+permalink: /java-for-large-scalable-ai-applications-guide/
+---
+
 # Java for Large Scalable AI Applications
 
 In the world of artificial intelligence (AI), choice of programming language is crucial to the development and scalability of an application. One of the key options developers often consider is Java, a general-purpose programming language with wide-ranging capabilities. This article aims to explain why Java has become a preferred choice in developing large, scalable AI applications.
@@ -75,7 +79,7 @@ learner.setModelContext(header);
 
 ## 3. Limitations and Solutions
 
-One drawback of Java is that it's verbose compared with languages like Python. To counter this, developers can use modern JVM languages such as Scala and Kotlin that interoperate with Java and support functional programming paradigm which makes code concise and expressive. 
+One drawback of Java is that it's verbose compared with languages like Python. To counter this, developers can use modern JVM languages such as Scala and Kotlin that interoperate with Java and support functional programming paradigm which makes code concise and expressive.
 
 Furthermore, while there might be more community support and materials available for AI in Python, the Java community is also growing rapidly, with continual development of libraries and tools catering to AI.
 

@@ -1,5 +1,7 @@
 ---
+permalink: /scalable-system-design-architecture-guide/
 ---
+
 # Scalable System Design and Architecture
 
 When building software systems and applications, scalability is one of the most critical aspects that engineers need to consider. A scalable system is one that can handle an increasing number of users, tasks, or data without suffering a significant decrease in performance or increase in cost.
@@ -23,13 +25,14 @@ This article will detail the key principles, strategies, and patterns used in sc
 [Conclusion](#conclusion)
 
 ## Definitions
+
 Before diving deeper, it's essential to understand a few relevant terms related to system scalability:
 
 - **Performance:** It refers to the system's capability to complete tasks or transactions within a specified time under a particular workload.
-  
 - **Scalability:** Scalability is the system’s ability to handle the increase in load without affecting the performance. There are two types of scalability:
-    - *Horizontal scaling*: Adding more machines into your pool of resources (also known as scale-out).
-    - *Vertical scaling*: Adding more power (CPU, RAM, etc.) to your existing machine (also known as scale-up).
+
+  - _Horizontal scaling_: Adding more machines into your pool of resources (also known as scale-out).
+  - _Vertical scaling_: Adding more power (CPU, RAM, etc.) to your existing machine (also known as scale-up).
 
 - **Capacity:** It is the total workload that a system can handle without violating the performance.
 
@@ -106,7 +109,6 @@ In event-driven architecture, components of a system are triggered by events suc
 While scalability offers numerous benefits, there are also some challenges to consider:
 
 - **Complexity:** Architecture of a scalable system is more complex due to the involvement of multiple servers, system interdependencies, and data partitioning strategies.
-  
 - **Data Consistency:** Keeping data consistent across multiple servers can be a challenge. Strategies like database replication and partitioning can help, but they come with their own complexities.
 
 - **Cost:** While scalable solutions can be more efficient, they also often require significant initial investment. These can be in the form of resources needed for additional hardware, software licensing, or the operational cost of maintaining multiple servers.

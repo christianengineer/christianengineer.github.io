@@ -1,6 +1,6 @@
 ---
 title: Setting Up a Scalable GraphQL Repository
-permalink: setting-up-scalable-graphql-repository
+permalink: /setting-up-scalable-graphql-repository/
 ---
 
 # Introduction

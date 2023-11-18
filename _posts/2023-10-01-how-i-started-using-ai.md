@@ -1,4 +1,5 @@
 ---
+permalink: /how-i-started-using-ai/
 ---
 
 # How I started using AI as a Software Engineer

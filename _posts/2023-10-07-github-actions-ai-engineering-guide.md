@@ -1,5 +1,7 @@
 ---
+permalink: /github-actions-ai-engineering-guide/
 ---
+
 # GitHub Actions for AI Engineering
 
 For any AI project, one of the most essential tasks is creating and managing workflows. These workflows generally involve tests, builds, and deployments of models that require multiple steps and may also include different tools and environments. This is where GitHub Actions can come into play and streamline your workflow. GitHub Actions is a CI/CD (Continuous Integration & Continuous Deployment) service provided by GitHub to automate workflows in software development. In this article, we'll discuss how GitHub Actions can be used effectively in the field of AI Engineering.
@@ -33,18 +35,19 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up Python 3.8
-      uses: actions/setup-python@v2
-      with:
-        python-version: 3.8
-    - name: Install dependencies
-      run: |
-        pip install -r requirements.txt
-    - name: Run tests
-      run: |
-        python -m unittest
+      - uses: actions/checkout@v2
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+      - name: Run tests
+        run: |
+          python -m unittest
 ```
+
 In the above example, a GitHub Action is defined to set up Python environment, install required dependencies and run unit tests on every push to the repository.
 
 2. **Training models**: GitHub Actions can even kick off the process of training models once new data or changes to your model code are pushed to your repository.
@@ -59,15 +62,15 @@ on:
   schedule:
     # * is a special character in YAML so you have to quote this string
     # This will run the job at 2:30 AM UTC
-    - cron:  '30 2 * * *'
+    - cron: "30 2 * * *"
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Re-train model
-      run: |
-        python train.py
+      - uses: actions/checkout@v2
+      - name: Re-train model
+        run: |
+          python train.py
 ```
 
 In the above example, a GitHub Action is defined to checkout to the latest version of the repository and re-train the model every day at 2:30 AM UTC.

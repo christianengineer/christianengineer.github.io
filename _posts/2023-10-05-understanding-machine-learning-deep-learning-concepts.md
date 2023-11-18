@@ -1,10 +1,13 @@
 ---
+permalink: /understanding-machine-learning-deep-learning-concepts/
 ---
+
 ## Machine Learning and Deep Learning Concepts
 
 Machine Learning (ML) and Deep Learning (DL) are two advanced technologies currently driving the artificial intelligence (AI) revolution. Simply put, ML is a subset of AI that involves teaching machines how to learn from data, while DL is a specialized subset of ML that employs layered neural networks to simulate human decision-making. These technologies hold tremendous potential in various domains, from healthcare to finance, from commerce to transportation.
 
-__Table of Contents__
+**Table of Contents**
+
 1. [Understanding Machine Learning](#Understanding-Machine-Learning)
 2. [Supervised, Unsupervised and Reinforcement Learning](#Supervised,-Unsupervised-and-Reinforcement-Learning)
 3. [Deep Learning Concepts](#Deep-Learning-Concepts)
@@ -13,7 +16,7 @@ __Table of Contents__
 
 ## Understanding Machine Learning
 
-Machine learning is a data analysis method that automates the creation of analytical models. Leveraging algorithms that learn from data, machine learning allows computers to find hidden insights without being explicitly programmed to look for them. 
+Machine learning is a data analysis method that automates the creation of analytical models. Leveraging algorithms that learn from data, machine learning allows computers to find hidden insights without being explicitly programmed to look for them.
 
 ### How Machine Learning Works
 
@@ -21,11 +24,12 @@ At its core, machine learning involves using algorithms to:
 
 - Parse and learn from data
 - Explore and identify patterns within that data
-- Make decisions or predictions based on these patterns without explicit programming  
+- Make decisions or predictions based on these patterns without explicit programming
 
 The core principle of machine learning is to build models based on data. When it has sufficient data, the computer uses machine learning algorithms to analyze it, identify patterns, make decisions, or predict future outcomes.
 
 Here's a simple Python example using `scikit-learn` library's `LinearRegression` model:
+
 ```
 from sklearn.linear_model import LinearRegression
 from sklearn.datasets import make_regression
@@ -44,7 +48,7 @@ y_pred = model.predict(x)
 
 ## Supervised, Unsupervised and Reinforcement Learning
 
-Machine learning can be categorized into three main types: supervised learning, unsupervised learning, and reinforcement learning. 
+Machine learning can be categorized into three main types: supervised learning, unsupervised learning, and reinforcement learning.
 
 - **Supervised Learning**: This model requires human intervention, providing labeled input and expected output data, as well as feedback about the accuracy of predictions during the training phase.
 
@@ -61,6 +65,7 @@ Deep learning, a subset of machine learning, uses neural network architectures t
 Deep learning models are built using layers of artificial neural networks. It involves feeding data into the network, allowing it to make predictions, evaluating the predictions, and adjusting the model's weights to improve its predictive accuracy.
 
 One of the popular Python libraries for deep learning is `TensorFlow`. Here's a simple code snippet for creating a DL model using `TensorFlow` and `Keras`:
+
 ```
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense

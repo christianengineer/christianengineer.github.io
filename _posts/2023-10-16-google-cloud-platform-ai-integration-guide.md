@@ -1,18 +1,20 @@
 ---
+permalink: /google-cloud-platform-ai-integration-guide/
 ---
+
 # Google Cloud Platform for AI integration
 
-Google Cloud Platform (GCP) has emerged as one of the leading platforms for developing and managing artificial intelligence (AI) applications. GCP provides robust and versatile ecosystem for AI integration, offering complex machine learning solutions as well as simple and intuitive APIs. In this article, we'll look into various services provided by GCP for AI and how they can be leveraged to build and deploy smart applications.   
+Google Cloud Platform (GCP) has emerged as one of the leading platforms for developing and managing artificial intelligence (AI) applications. GCP provides robust and versatile ecosystem for AI integration, offering complex machine learning solutions as well as simple and intuitive APIs. In this article, we'll look into various services provided by GCP for AI and how they can be leveraged to build and deploy smart applications.
 
 ## Overview of Google Cloud AI Services
 
 Google Cloud AI comes with a wide range of services. Here's a quick glance at some of the most crucial offerings:
 
-1. **Cloud AutoML**: AutoML offers an intuitive interface for training high-quality models specific to individual businesses. It allows developers with limited ML expertise to train and deploy models. 
+1. **Cloud AutoML**: AutoML offers an intuitive interface for training high-quality models specific to individual businesses. It allows developers with limited ML expertise to train and deploy models.
 
 2. **Cloud ML Engine**: It is a managed service that allows developers to build ML models using TensorFlow and other popular libraries. The ML engine takes care of all the infrastructure needs.
 
-3. **AI Platform Data Labeling Service**: An essential component of the AI/ML model training cycle, this AI labelling service provides an efficient and easy process to label datasets used in ML model training. 
+3. **AI Platform Data Labeling Service**: An essential component of the AI/ML model training cycle, this AI labelling service provides an efficient and easy process to label datasets used in ML model training.
 
 4. **AI Hub**: It’s a one-stop destination for ML developers to share, discover and deploy AI assets within their organization.
 
@@ -22,7 +24,7 @@ Google Cloud AI comes with a wide range of services. Here's a quick glance at so
 
 Cloud AutoML simplifies the process of integrating AI by providing a seamless user interface where you can upload your dataset, and it will automatically train a model based on that dataset. For instance, if you're running an e-commerce website and you want to build a recommendation engine, you would:
 
-1. Prepare a dataset: 
+1. Prepare a dataset:
 
 ```bash
 USER, ITEM, TIMESTAMP, EVENT_TYPE, EVENT_STRENGTH
@@ -96,6 +98,6 @@ def detect_intent_texts(project_id, session_id, texts, language_code):
 
 ## Conclusion
 
-Google Cloud Platform comes with built-in support for popular libraries such as TensorFlow, PyTorch, and scikit-learn. Developers can write code in their preferred language, including Python, JavaScript, Swift and more. 
+Google Cloud Platform comes with built-in support for popular libraries such as TensorFlow, PyTorch, and scikit-learn. Developers can write code in their preferred language, including Python, JavaScript, Swift and more.
 
 Furthermore, GCP AI services provide secure, scalable, and reliable solutions that can significantly reduce the time it takes to go from building, testing to deploying models, giving teams more time to focus on creating efficient models. Leveraging Google Cloud Platform for AI integration helps organizations succeed in their AI-driven digital transformation.

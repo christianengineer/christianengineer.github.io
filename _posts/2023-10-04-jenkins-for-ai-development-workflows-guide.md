@@ -1,5 +1,7 @@
 ---
+permalink: /jenkins-for-ai-development-workflows-guide/
 ---
+
 # Jenkins for AI Development Workflows
 
 Artificial Intelligence (AI) development involves various complex processes such as data collection, data preprocessing, model training, model verification, and model deployment. To ensure the effective and efficient management of these processes, there is a need for high-level orchestration, automation, and monitoring tools. Jenkins is one of the most powerful and versatile automation servers that can be used to streamline and manage AI development workflows.
@@ -14,10 +16,10 @@ AI projects, especially those involving Machine Learning (ML), often involve rep
 
 Some specific reasons to use Jenkins in an AI development environment include:
 
-* **Automation** – The entire build process from code commit to production can be automated, reducing human error and increasing efficiency.
-* **Integration** – Jenkins has over 1000 plugins that can integrate with practically any dev tool in the ecosystem. Essential for AI development are plugins for Jupyter notebooks, Python, Docker, Kubernetes, and cloud platforms.
-* **Portability** – Jenkins supports all major operating systems and platforms, making it possible to create AI/ML models that run anywhere.
-* **Community** – Jenkins has an active community of users and developers that continually improve its capabilities and can provide support.
+- **Automation** – The entire build process from code commit to production can be automated, reducing human error and increasing efficiency.
+- **Integration** – Jenkins has over 1000 plugins that can integrate with practically any dev tool in the ecosystem. Essential for AI development are plugins for Jupyter notebooks, Python, Docker, Kubernetes, and cloud platforms.
+- **Portability** – Jenkins supports all major operating systems and platforms, making it possible to create AI/ML models that run anywhere.
+- **Community** – Jenkins has an active community of users and developers that continually improve its capabilities and can provide support.
 
 ## How to Use Jenkins for AI Development?
 

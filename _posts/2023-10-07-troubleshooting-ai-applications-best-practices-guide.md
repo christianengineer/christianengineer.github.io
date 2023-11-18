@@ -1,5 +1,7 @@
 ---
+permalink: /troubleshooting-ai-applications-best-practices-guide/
 ---
+
 # Troubleshooting AI Applications
 
 Artificial Intelligence (AI) has changed the way businesses operate by enabling them to predict trends, personalize customer experiences, and accelerate innovation. However, as with any technology, using AI can bring its own share of challenges. This article provides a comprehensive guide on how to troubleshoot some of the common issues that can arise when working with AI applications.

@@ -1,5 +1,7 @@
 ---
+permalink: /performance-optimization-techniques-in-AI-systems/
 ---
+
 # Performance Optimization in AI Systems
 
 Performance optimization is a growing sub-domain in Artificial Intelligence (AI) that focuses on improving the efficiency and speed of AI systems. In the modern world of data science, machine learning, deep learning, and other AI-related fields, running resource-intensive algorithms efficiently is critical for any application. This article explains the concept of performance optimization in AI systems and provides a deep dive into different techniques to achieve it.
@@ -12,7 +14,7 @@ As AI systems become increasingly complex, the computation requirements to train
 
 - **Reduced processing time**: Large AI models often require complex computations, which leads to increased processing time. Performance optimization can significantly reduce this time, thereby increasing the efficiency of the model.
 
-- **Improved accuracy**: Optimizing performance does not just mean making things faster and more efficient; it also means improving the accuracy of the results generated from an AI system. 
+- **Improved accuracy**: Optimizing performance does not just mean making things faster and more efficient; it also means improving the accuracy of the results generated from an AI system.
 
 ## Techniques for Performance Optimization in AI
 
@@ -36,7 +38,7 @@ Hardware optimization involves tuning and selecting appropriate hardware for pro
 
 ### 3. Parallel Processing
 
-Parallel processing is a computing technique whereby multiple calculations can be performed concurrently, contributing to a significant reduction in computation and processing time. 
+Parallel processing is a computing technique whereby multiple calculations can be performed concurrently, contributing to a significant reduction in computation and processing time.
 
 For example, in Python, libraries like `Multiprocessing` allow you to create multiple processes, each of which can work on a different core of your CPU or different thread of your GPU.
 
@@ -52,13 +54,13 @@ if __name__ == '__main__':
 
 ### 4. Optimization of Batch Sizes
 
-The batch size in a gradient descent algorithm, one of the most commonly used algorithms for optimizing machine learning models, plays a crucial role in determining the performance and accuracy of a model's output. 
+The batch size in a gradient descent algorithm, one of the most commonly used algorithms for optimizing machine learning models, plays a crucial role in determining the performance and accuracy of a model's output.
 
-- Increasing batch size beyond a certain point does not improve the generalization capability of the models but leads to a significant reduction in the computational cost. 
+- Increasing batch size beyond a certain point does not improve the generalization capability of the models but leads to a significant reduction in the computational cost.
 
-- On the other hand, small batch sizes sometimes yield a regularizing effect, leading to better generalization. 
+- On the other hand, small batch sizes sometimes yield a regularizing effect, leading to better generalization.
 
-Thus, a careful selection of batch size can help achieve a balance between optimization and computational cost. 
+Thus, a careful selection of batch size can help achieve a balance between optimization and computational cost.
 
 ## Conclusion
 

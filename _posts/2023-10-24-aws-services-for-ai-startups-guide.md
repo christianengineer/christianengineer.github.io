@@ -1,5 +1,7 @@
 ---
+permalink: /aws-services-for-ai-startups-guide/
 ---
+
 # AWS Services for Artificial Intelligence Startups
 
 As a startup in the artificial intelligence (AI) domain, one of your primary goals would be to reduce your data management and computation costs without compromising on quality. Adopting the right cloud storage and tools is crucial for this purpose. Amazon Web Services (AWS), the most comprehensive and broadly adopted cloud platform, provides a myriad of services ideal for AI startups.
@@ -40,7 +42,7 @@ Key features:
 - **Multi-Turn Conversations**: Lex allows you to model conversations with multiple turns and dynamic responses, allowing the virtual agent to interact with users in a conversational manner.
 
 ### Amazon Polly
-  
+
 Amazon Polly leverages advanced deep learning technologies to synthesize speech that sounds like a human voice.
 
 Key features:
@@ -49,7 +51,7 @@ Key features:
 - **Multilingual Capabilities**: Polly supports dozens of languages, making it easier to expand your AI-driven applications to international markets.
 
 ### Amazon Rekognition
-  
+
 Amazon Rekognition provides API-based image and video analysis capabilities that can recognize faces, identify objects, scenes, activities, text, and detect unsafe content.
 
 Key features:
@@ -58,8 +60,8 @@ Key features:
 - **Integration-ready**: The service integrates easily with other AWS services, such as S3 and Lambda, to analyze stored and streaming videos.
 
 ### Amazon Forecast
-  
-Amazon Forecast provides highly accurate forecasts to predict future trends. 
+
+Amazon Forecast provides highly accurate forecasts to predict future trends.
 
 Key features:
 

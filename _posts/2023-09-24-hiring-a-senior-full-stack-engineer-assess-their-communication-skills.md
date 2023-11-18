@@ -1,8 +1,10 @@
 ---
+permalink: /hiring-a-senior-full-stack-engineer-assess-their-communication-skills/
 ---
+
 # Hiring a Senior Full Stack Engineer: How to Assess Their Communication Skills
 
-As a hiring manager or technical recruiter, it’s crucial to evaluate a candidate's communication skills during the interview process, especially when hiring for senior full stack engineering positions. Effective communication is vital for collaborating with team members, understanding project requirements, and conveying technical concepts to non-technical stakeholders. In this article, we will explore how you can assess a candidate's communication skills by asking them about their projects. 
+As a hiring manager or technical recruiter, it’s crucial to evaluate a candidate's communication skills during the interview process, especially when hiring for senior full stack engineering positions. Effective communication is vital for collaborating with team members, understanding project requirements, and conveying technical concepts to non-technical stakeholders. In this article, we will explore how you can assess a candidate's communication skills by asking them about their projects.
 
 ## Why Communication Skills Matter for Senior Full Stack Engineers
 
@@ -25,7 +27,6 @@ While evaluating a senior full stack engineer's communication skills, it's benef
 By prompting the candidate to discuss their recent project, you gain insights into their ability to articulate complex ideas, explain technical details concisely, and discuss challenges and solutions. Pay attention to the following:
 
 - **Clarity**: Are they able to communicate the project's purpose, goal, and functionality in a way that is understandable to a non-technical person?
-  
 - **Organization**: Do they present information in a well-structured manner, highlighting the key components, technologies, and decisions they made during the project?
 
 - **Technical Depth**: Are they able to dive into technical details when necessary? Do they demonstrate a good understanding of the underlying principles and technologies?

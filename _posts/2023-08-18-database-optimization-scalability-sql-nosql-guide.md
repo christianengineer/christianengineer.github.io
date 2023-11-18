@@ -1,5 +1,7 @@
 ---
+permalink: /database-optimization-scalability-sql-nosql-guide/
 ---
+
 # Database Optimization and Scalability (SQL and NoSQL)
 
 In today's data-centric society, databases play a central role in information management across many industries. Modern organizations depend significantly on databases for the scalability and optimization of their operations. But as databases grow, managing them effectively becomes challenging. Thus, the concepts of database optimization and scalability become of paramount importance.
@@ -14,7 +16,7 @@ Database optimization is the process of modifying a database system to reduce co
 
 SQL databases follow a structured data model which makes them ideal for applications that require multi-row transactions, for instance, Accounting systems. Here are some techniques to optimize your SQL databases:
 
-1. Indexing: Indexing is the method of defining a point of access for data, similar to an index in a book. An index in a database does the same. It allows the database engine to retrieve required data without scanning the entire database. 
+1. Indexing: Indexing is the method of defining a point of access for data, similar to an index in a book. An index in a database does the same. It allows the database engine to retrieve required data without scanning the entire database.
 
 ```sql
 CREATE INDEX idx_column
@@ -22,8 +24,7 @@ ON Table(column_name);
 ```
 
 2. Normalization: It involves structuring a database in accordance with rules to minimize data redundancy and anomaly. With normalization we organize columns and tables of a relational database to reduce data redundancy.
-   
-3. Query Optimization: The aim is to minimize the workload of data retrieval. This includes eliminating unnecessary columns, using 'exists' instead of 'in' where possible, and avoiding 'select *' syntax.
+3. Query Optimization: The aim is to minimize the workload of data retrieval. This includes eliminating unnecessary columns, using 'exists' instead of 'in' where possible, and avoiding 'select \*' syntax.
 
 ```sql
 SELECT column1, column2, ...
@@ -42,12 +43,12 @@ NoSQL databases, on the other hand, are ideal for storing unstructured or semi-s
 3. Caching: Frequently accessed data is kept in-memory for faster retrieval, reducing the overall disk I/O operations.
 
 ```javascript
-const cachedData = cache.get('key');
+const cachedData = cache.get("key");
 if (cachedData) {
   return res.send(cachedData);
 } else {
-  const response = db.query('SELECT * FROM table');
-  cache.set('key', response);
+  const response = db.query("SELECT * FROM table");
+  cache.set("key", response);
   return res.send(response);
 }
 ```
@@ -60,13 +61,13 @@ Scalability is the ability of a database to handle increased amounts of work and
 
 Scaling in SQL databases can be challenging due to their adherence to ACID transaction properties (Atomicity, Consistency, Isolation, Durability). Some techniques are:
 
-1. Replication: Data is stored in different database servers to distribute read load. It ensures that if one server goes down, the data is available from another server. 
+1. Replication: Data is stored in different database servers to distribute read load. It ensures that if one server goes down, the data is available from another server.
 
 2. Partitioning: Large tables are divided into smaller, more manageable pieces, called partitions.
 
 ### NoSQL Database Scalability
 
-NoSQL databases are renowned for their scalability due to their distributed computing and simpler transaction models. 
+NoSQL databases are renowned for their scalability due to their distributed computing and simpler transaction models.
 
 1. Distributed Systems: NoSQL databases use distributed systems, making the scaling-out process easier and more efficient.
 

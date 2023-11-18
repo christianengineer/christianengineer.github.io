@@ -1,5 +1,7 @@
 ---
+permalink: /scaling-ai-models-production-optimization-guide/
 ---
+
 # Scaling AI Models in Production
 
 In the last few years, as Artificial Intelligence (AI) and Machine Learning (ML) have come to the forefront of technology, a new challenge has begun to emerge - how to scale these AI models in a production environment. With computer capabilities advancing and data volumes growing at an exponential rate, the potential for AI models to make invaluable predictions or decisions in real-time has only increased.
@@ -37,7 +39,7 @@ def serve_model(model, request):
 
 ### Automate the Machine Learning Pipeline
 
-Automating the end-to-end ML process: preparing data, training models, optimizing hyperparameters, and managing deployments can significantly enhance the model's scalability. This automation ensures that data is consistently processed, models are objectively evaluated, and maintained with minimal human intervention. 
+Automating the end-to-end ML process: preparing data, training models, optimizing hyperparameters, and managing deployments can significantly enhance the model's scalability. This automation ensures that data is consistently processed, models are objectively evaluated, and maintained with minimal human intervention.
 
 ```python
 def automated_pipeline(data):
@@ -61,7 +63,7 @@ trained_model = data_rdd.map(train_model)
 
 ### Invest in Hardware Accelerators
 
-Investing in hardware accelerators like GPUs or TPUs can speed up computation and enable quick processing of large calculation matrix, thus boosting the scaling process for AI models. 
+Investing in hardware accelerators like GPUs or TPUs can speed up computation and enable quick processing of large calculation matrix, thus boosting the scaling process for AI models.
 
 ```python
 with tf.device('/GPU:0'):

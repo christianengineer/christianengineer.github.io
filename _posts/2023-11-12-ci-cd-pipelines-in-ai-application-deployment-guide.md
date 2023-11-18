@@ -1,5 +1,7 @@
 ---
+permalink: /ci-cd-pipelines-in-ai-application-deployment-guide/
 ---
+
 # CI/CD Pipelines in AI Application Deployment
 
 Continuous Integration/Continuous Deployment (CI/CD) is a methodology that allows development teams to consistently integrate new code with the existing code and unsuspectingly deploy code changes to production systems. When applied to AI, it helps to accelerate the development cycles and minimize the risk associated with deploying AI models.
@@ -34,15 +36,15 @@ Deploying AI models to production involves various steps, extending beyond model
 
 2. **Build Phase**: In this phase, the AI model is trained and validated. This typically involves:
 
-  - Data fetching and cleaning
-  - Model training and evaluation
-  - Saving the trained model
+- Data fetching and cleaning
+- Model training and evaluation
+- Saving the trained model
 
 3. **Test Phase**: Once the model is built, it is tested to ensure accuracy and performance. The testing phase can include:
 
-  - Unit testing
-  - Integration testing
-  - Model validation - checking the accuracy of prediction 
+- Unit testing
+- Integration testing
+- Model validation - checking the accuracy of prediction
 
 4. **Deployment Phase**: If the tests pass successfully, the model is deployed to the production. This could be as an API, embedded within the product code, or standalone application.
 

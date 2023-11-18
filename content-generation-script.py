@@ -1,11 +1,18 @@
 import os
 from openai import OpenAI
-from datetime import datetime
+from datetime import datetime, timedelta
+import random
 
 # Initialize the OpenAI client
 client = OpenAI(
     api_key=os.getenv("OPENAI_API_KEY")  # Get the API key from environment variable
 )
+
+
+def get_random_date(start_date, end_date):
+    time_between_dates = end_date - start_date
+    random_number_of_days = random.randrange(time_between_dates.days)
+    return start_date + timedelta(days=random_number_of_days)
 
 
 def generate_title(topic):
@@ -59,14 +66,22 @@ def main():
         title = generate_title(topic)
         print("generate title end")
 
-        today_date = datetime.now().strftime('%Y-%m-%d')
-        markdown_filename = f"_posts/{today_date}-{title}.md"
+        # Define start and end dates
+        start_date = datetime(2023, 1, 1)
+        end_date = datetime(2023, 11, 1)
+
+        random_date = get_random_date(start_date, end_date).strftime("%Y-%m-%d")
+
+        # today_date = datetime.now().strftime("%Y-%m-%d")
+        markdown_filename = f"_posts/{random_date}-{title}.md"
 
         os.makedirs(os.path.dirname(markdown_filename), exist_ok=True)
 
         if not os.path.exists(markdown_filename):
             with open(markdown_filename, "w") as md_file:
-                md_file.write("---\n---\n")  # Writing empty front matter
+                # # Writing empty front matter
+                # md_file.write("---\n---\n")
+                md_file.write(f"---\npermalink: /{title}/\n---\n\n")
                 print("Markdown file created with empty front matter")
 
         article = generate_article(topic)

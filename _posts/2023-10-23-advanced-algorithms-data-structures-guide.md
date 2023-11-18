@@ -1,6 +1,8 @@
 ---
+permalink: /advanced-algorithms-data-structures-guide/
 ---
-# Advanced Algorithms and Data Structures 
+
+# Advanced Algorithms and Data Structures
 
 Algorithms and data structures form the basic building blocks of any software or program. They're essential to understanding how a program works and to increasing its efficiency. The first part of writing any program is understanding algorithms, which describe the steps a program should take, and data structures, which gather and store the data the algorithm will manipulate.
 
@@ -68,14 +70,14 @@ An algorithm refers to the sequence of steps a program follows to complete a spe
 def merge_sort(arr):
     if len(arr) <= 1:
         return arr
-    
+
     mid = len(arr) // 2
     left = arr[:mid]
     right = arr[mid:]
-    
+
     left = merge_sort(left)
     right = merge_sort(right)
-    
+
     return merge(left, right)
 ```
 
@@ -89,7 +91,7 @@ def merge_sort(arr):
 def dijsktra(graph,start_vertex):
   D = {v:float('inf') for v in graph}
   D[start_vertex] = 0
-  
+
   unvisited = list(graph)
 
   while len(unvisited):
@@ -97,7 +99,7 @@ def dijsktra(graph,start_vertex):
     for vertex in unvisited[1:]:
       if D[vertex] < D[current_vertex]:
         current_vertex = vertex
-        
+
     unvisited.remove(current_vertex)
     for neighbour, distance in graph[current_vertex].items():
       if distance + D[current_vertex] < D[neighbour]:

@@ -1,10 +1,13 @@
 ---
+permalink: /understanding-microservices-architecture-guide/
 ---
+
 # Microservices Architecture: A Comprehensive Guide
 
-In the realm of software engineering, the need for simplifying the management of applications while promoting their scaling and agility has led to the rise of Microservices Architecture. This architectural style, often shortened to Microservices, is known for its ability to structure an application as a collection of small, loosely-coupled services. 
+In the realm of software engineering, the need for simplifying the management of applications while promoting their scaling and agility has led to the rise of Microservices Architecture. This architectural style, often shortened to Microservices, is known for its ability to structure an application as a collection of small, loosely-coupled services.
 
 ## Table of Contents
+
 1. [What is Microservices Architecture?](#section1)
 2. [Key Features of Microservices](#section2)
 3. [Advantages of Microservices](#section3)
@@ -15,7 +18,8 @@ In the realm of software engineering, the need for simplifying the management of
 8. [Conclusion](#section8)
 
 <a name="section1"></a>
-## 1. What is Microservices Architecture?  
+
+## 1. What is Microservices Architecture?
 
 Microservices Architecture is an architectural style that structures an application as a collection of loosely coupled services. This allows developers to build and maintain each service independently of the others — focusing their efforts on individual services that make up the larger application.
 
@@ -35,6 +39,7 @@ class UserMicroservice(APIView):
 ```
 
 <a name="section2"></a>
+
 ## 2. Key Features of Microservices
 
 Microservices come with several unique features that differentiate them from traditional monolithic architectures. These features include:
@@ -48,6 +53,7 @@ Microservices come with several unique features that differentiate them from tra
 - **Built Around Business Capabilities**: A microservice should be built with a specific business capability in mind, making it more functional centric rather than layered or horizontal.
 
 <a name="section3"></a>
+
 ## 3. Advantages of Microservices
 
 Implementing Microservices provides several benefits, including:
@@ -61,6 +67,7 @@ Implementing Microservices provides several benefits, including:
 - **Technology Diversity**: Different services can use different technologies, frameworks, and databases.
 
 <a name="section4"></a>
+
 ## 4. Disadvantages of Microservices
 
 Despite the numerous advantages, Microservices also come with their own challenges:
@@ -74,6 +81,7 @@ Despite the numerous advantages, Microservices also come with their own challeng
 - **Distributed System**: Testing and deployment can be complicated in distributed systems.
 
 <a name="section5"></a>
+
 ## 5. Key Components of Microservices Architecture
 
 The main components involved in Microservices Architecture include:
@@ -83,12 +91,11 @@ The main components involved in Microservices Architecture include:
 - **Registry**: The registry holds information about service instances which are up and running.
 
 - **Gateway**: The gateway acts as an entry point for clients. It's responsible for routing requests, composing responses, and other cross-cutting tasks.
-    
 - **Configuration Server**: Stores external configuration properties for microservices.
-    
 - **Circuit Breakers**: They halt cascading failures across multiple services and provide fallback options.
 
 <a name="section6"></a>
+
 ## 6. Principles of Microservices
 
 Microservices follow certain design principles to ensure their effective execution:
@@ -102,17 +109,17 @@ Microservices follow certain design principles to ensure their effective executi
 - **Decentralization of data**: Each microservice has its own private database to prevent data corruption.
 
 <a name="section7"></a>
+
 ## 7. Where to Use Microservices?
 
 Though not suited to every application, Microservices are an excellent choice for complex systems that need to be highly scalable and maintainable. This makes them ideal for:
 
 - **Large-scale applications**: Where different modules require different data structures or processing capabilities.
-    
 - **Applications with varied technology stacks**: As each microservice can use a different technology stack.
-    
 - **Organizations with a DevOps culture**: Microservices are a good fit with DevOps and Agile methodologies due to their focus on cross-functional teams and iterative delivery.
 
 <a name="section8"></a>
+
 ## 8. Conclusion
 
 In conclusion, Microservices Architecture offers a versatile and scalable solution for modern-day application development. While they may not be the best fit for every type of application, their ability to isolate failures, enable continuous delivery, and easily scale makes them a powerful tool for specific needs.

@@ -1,3 +1,7 @@
+---
+permalink: /microservices-architecture-ai-systems/
+---
+
 # Microservices Architecture for AI Systems
 
 ## Introduction

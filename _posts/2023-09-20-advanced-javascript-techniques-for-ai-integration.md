@@ -1,5 +1,7 @@
 ---
+permalink: /advanced-javascript-techniques-for-ai-integration/
 ---
+
 # Advanced JavaScript Techniques for AI Integration
 
 ## Introduction
@@ -56,12 +58,12 @@ async function fetchData() {
 - **Web Workers**: JavaScript Web Workers allow developers to perform AI computations in separate background threads, parallel to the main thread. This prevents UI freezes and enhances the application's responsiveness.
 
 ```javascript
-const worker = new Worker('ai-worker.js');
+const worker = new Worker("ai-worker.js");
 worker.postMessage(data);
-worker.onmessage = function(event) {
+worker.onmessage = function (event) {
   const results = event.data;
   // Process the results
-}
+};
 ```
 
 By utilizing these techniques, developers can ensure smooth user experiences even when executing complex AI operations.

@@ -1,5 +1,7 @@
 ---
+permalink: /css-strategies-for-responsive-ai-web-design/
 ---
+
 # CSS Strategies for Responsive AI Web Design
 
 ## Introduction
@@ -30,7 +32,7 @@ Improving typography readability is crucial for AI web designs, as AI platforms 
 
 ```css
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   font-size: 16px;
   line-height: 1.5;
 }

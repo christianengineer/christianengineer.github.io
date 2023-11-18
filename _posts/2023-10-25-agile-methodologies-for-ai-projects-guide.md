@@ -1,5 +1,7 @@
 ---
+permalink: /agile-methodologies-for-ai-projects-guide/
 ---
+
 # Agile Methodologies for AI Projects
 
 In the contemporary world of Artificial Intelligence (AI) and Machine Learning (ML), it's crucial to leverage methodologies that promise efficiency, flexibility, and close collaboration. Many businesses nowadays are turning to Agile Methodologies to manage their AI projects. Agile's iterative nature, emphasis on collaboration, and flexibility make it a suitable approach for the complexity and evolving nature of AI projects.
@@ -11,7 +13,7 @@ Agile is a software development methodology that leverages iterative development
 This methodology emphasizes:
 
 - Collaboration and interaction among team members
-- Customer satisfaction through continuous delivery of software 
+- Customer satisfaction through continuous delivery of software
 - Embracing changes to ensure the customer's advantage
 - Regular reflection on how to become more efficient
 
@@ -84,7 +86,7 @@ pipeline {
 
 ### Test-Driven Development
 
-Test-Driven Development (TDD) is a software development practice that requires its users to write tests before writing the code itself. TDD can be incredibly beneficial to measure the performance of AI algorithms. 
+Test-Driven Development (TDD) is a software development practice that requires its users to write tests before writing the code itself. TDD can be incredibly beneficial to measure the performance of AI algorithms.
 
 ```python
 # Sample Python code using TDD for an AI project
@@ -96,6 +98,6 @@ def test_add():
 
 After every sprint, it is crucial to solicit feedback from stakeholders and team members. Considering the product owner, stakeholders, and the development team are involved, it is a great opportunity to inspect, learn, and adapt the product.
 
-## Final Thoughts 
+## Final Thoughts
 
 Ultimately, what Agile offers for AI projects isn't fundamentally different from other spaces where Agile has proved to be beneficial, i.e., promoting better project visibility, improved productivity, and superior product quality. Agile becomes an even more potent tool when applied to AI projects due to the discovery-based nature of these initiatives and allows teams to navigate through complex, evolving landscapes effectively.
