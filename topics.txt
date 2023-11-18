@@ -1,4 +1,3 @@
-High-Performance Computing
 Database Optimization and Scalability (SQL and NoSQL)
 Big Data Technologies (Hadoop, Spark)
 API Design and Development (REST, GraphQL)
