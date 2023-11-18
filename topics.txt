@@ -1,4 +1,3 @@
-Scalable System Design and Architecture
 Cloud Computing Platforms (AWS, Azure, GCP)
 Containerization and Orchestration (Docker, Kubernetes)
 Microservices Architecture
