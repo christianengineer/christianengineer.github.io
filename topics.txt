@@ -1,4 +1,3 @@
-Advanced Algorithms and Data Structures
 Machine Learning and Deep Learning Concepts
 Scalable System Design and Architecture
 Cloud Computing Platforms (AWS, Azure, GCP)
