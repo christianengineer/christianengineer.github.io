@@ -1,4 +1,3 @@
-Front-End Frameworks (React, Angular, Vue.js)
 Server-Side Languages (Node.js, Python, Java)
 CI/CD Pipelines and DevOps Practices
 Distributed Systems and Concurrency
