@@ -1,4 +1,3 @@
-CI/CD Pipelines and DevOps Practices
 Distributed Systems and Concurrency
 AI Model Deployment and Scaling
 Security Best Practices in AI Applications
