@@ -1,5 +1,5 @@
 ---
-permalink: /comparing-cloud-computing-platforms-aws-azure-gcp-guide/
+permalink: posts/comparing-cloud-computing-platforms-aws-azure-gcp-guide
 ---
 
 # Cloud Computing Platforms: AWS, Azure, GCP

@@ -1,5 +1,5 @@
 ---
-permalink: /java-for-large-scalable-ai-applications-guide/
+permalink: posts/java-for-large-scalable-ai-applications-guide
 ---
 
 # Java for Large Scalable AI Applications

@@ -1,5 +1,5 @@
 ---
-permalink: /modular-development-for-large-ai-applications/
+permalink: posts/modular-development-for-large-ai-applications
 ---
 
 # From Concept to Launch: How My Modular Development Techniques Accelerate Large AI Applications

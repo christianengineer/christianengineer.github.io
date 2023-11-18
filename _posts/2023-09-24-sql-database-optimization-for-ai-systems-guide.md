@@ -1,5 +1,5 @@
 ---
-permalink: /sql-database-optimization-for-ai-systems-guide/
+permalink: posts/sql-database-optimization-for-ai-systems-guide
 ---
 
 # SQL Database Optimization for AI Systems

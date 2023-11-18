@@ -1,5 +1,5 @@
 ---
-permalink: /implementing-aidriven-features-with-nextjs-serverless/
+permalink: posts/implementing-aidriven-features-with-nextjs-serverless
 ---
 
 # Implementing AI-Driven Features with Next.js Serverless Functions

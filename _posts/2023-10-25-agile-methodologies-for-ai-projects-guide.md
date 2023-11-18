@@ -1,5 +1,5 @@
 ---
-permalink: /agile-methodologies-for-ai-projects-guide/
+permalink: posts/agile-methodologies-for-ai-projects-guide
 ---
 
 # Agile Methodologies for AI Projects

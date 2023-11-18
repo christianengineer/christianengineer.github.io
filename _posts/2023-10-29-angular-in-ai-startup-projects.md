@@ -1,5 +1,5 @@
 ---
-permalink: /angular-in-ai-startup-projects/
+permalink: posts/angular-in-ai-startup-projects
 ---
 
 # Angular in AI Startup Projects

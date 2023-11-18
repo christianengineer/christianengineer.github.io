@@ -1,5 +1,5 @@
 ---
-permalink: /advanced-algorithms-data-structures-guide/
+permalink: posts/advanced-algorithms-data-structures-guide
 ---
 
 # Advanced Algorithms and Data Structures

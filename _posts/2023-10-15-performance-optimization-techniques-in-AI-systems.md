@@ -1,5 +1,5 @@
 ---
-permalink: /performance-optimization-techniques-in-AI-systems/
+permalink: posts/performance-optimization-techniques-in-AI-systems
 ---
 
 # Performance Optimization in AI Systems

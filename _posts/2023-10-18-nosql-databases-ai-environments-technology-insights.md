@@ -1,5 +1,5 @@
 ---
-permalink: /nosql-databases-ai-environments-technology-insights/
+permalink: posts/nosql-databases-ai-environments-technology-insights
 ---
 
 # NoSQL Databases in AI Environments

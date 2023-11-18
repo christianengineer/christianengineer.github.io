@@ -1,5 +1,5 @@
 ---
-permalink: /project-management-strategies-in-ai-startups/
+permalink: posts/project-management-strategies-in-ai-startups
 ---
 
 # Project Management in AI Startups: A Comprehensive Guide

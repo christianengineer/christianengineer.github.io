@@ -1,5 +1,5 @@
 ---
-permalink: /azure-cloud-solutions-ai-technology-guide/
+permalink: posts/azure-cloud-solutions-ai-technology-guide
 ---
 
 # Azure Cloud Solutions for Artificial Intelligence

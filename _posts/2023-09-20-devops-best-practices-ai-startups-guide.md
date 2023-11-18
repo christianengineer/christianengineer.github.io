@@ -1,5 +1,5 @@
 ---
-permalink: /devops-best-practices-ai-startups-guide/
+permalink: posts/devops-best-practices-ai-startups-guide
 ---
 
 # DevOps Best Practices in AI Startups

@@ -1,5 +1,5 @@
 ---
-permalink: /microservices-architecture-ai-systems/
+permalink: posts/microservices-architecture-ai-systems
 ---
 
 # Microservices Architecture for AI Systems

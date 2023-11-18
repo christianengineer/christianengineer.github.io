@@ -1,5 +1,5 @@
 ---
-permalink: /hiring-a-senior-full-stack-engineer/
+permalink: posts/hiring-a-senior-full-stack-engineer
 ---
 
 # Hiring a Senior Full Stack Engineer

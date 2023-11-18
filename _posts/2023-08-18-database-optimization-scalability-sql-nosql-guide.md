@@ -1,5 +1,5 @@
 ---
-permalink: /database-optimization-scalability-sql-nosql-guide/
+permalink: posts/database-optimization-scalability-sql-nosql-guide
 ---
 
 # Database Optimization and Scalability (SQL and NoSQL)

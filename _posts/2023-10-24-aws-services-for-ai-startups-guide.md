@@ -1,5 +1,5 @@
 ---
-permalink: /aws-services-for-ai-startups-guide/
+permalink: posts/aws-services-for-ai-startups-guide
 ---
 
 # AWS Services for Artificial Intelligence Startups

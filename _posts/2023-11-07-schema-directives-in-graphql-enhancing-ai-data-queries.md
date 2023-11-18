@@ -1,5 +1,5 @@
 ---
-permalink: /schema-directives-in-graphql-enhancing-ai-data-queries/
+permalink: posts/schema-directives-in-graphql-enhancing-ai-data-queries
 ---
 
 # Schema Directives in GraphQL: Enhancing AI Data Queries

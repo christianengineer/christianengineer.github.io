@@ -1,5 +1,5 @@
 ---
-permalink: /understanding-containerization-orchestration-docker-kubernetes-guide/
+permalink: posts/understanding-containerization-orchestration-docker-kubernetes-guide
 ---
 
 # Containerization and Orchestration: An Overview of Docker and Kubernetes

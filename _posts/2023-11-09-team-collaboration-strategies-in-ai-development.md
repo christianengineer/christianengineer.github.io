@@ -1,5 +1,5 @@
 ---
-permalink: /team-collaboration-strategies-in-ai-development/
+permalink: posts/team-collaboration-strategies-in-ai-development
 ---
 
 # Team Collaboration in AI Development

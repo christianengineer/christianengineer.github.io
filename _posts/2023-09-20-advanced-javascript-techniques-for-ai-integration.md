@@ -1,5 +1,5 @@
 ---
-permalink: /advanced-javascript-techniques-for-ai-integration/
+permalink: posts/advanced-javascript-techniques-for-ai-integration
 ---
 
 # Advanced JavaScript Techniques for AI Integration

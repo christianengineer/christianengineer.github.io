@@ -1,5 +1,5 @@
 ---
-permalink: /scalable-system-design-architecture-guide/
+permalink: posts/scalable-system-design-architecture-guide
 ---
 
 # Scalable System Design and Architecture

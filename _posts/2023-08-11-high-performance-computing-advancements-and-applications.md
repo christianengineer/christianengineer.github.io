@@ -1,5 +1,5 @@
 ---
-permalink: /high-performance-computing-advancements-and-applications/
+permalink: posts/high-performance-computing-advancements-and-applications
 ---
 
 # High-Performance Computing (HPC)

@@ -1,5 +1,5 @@
 ---
-permalink: /full-stack-ai-solutions-using-python-guide/
+permalink: posts/full-stack-ai-solutions-using-python-guide
 ---
 
 # Python for Full Stack AI Solutions

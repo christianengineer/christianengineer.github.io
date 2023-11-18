@@ -1,5 +1,5 @@
 ---
-permalink: /building-graphql-endpoints-ai-services-multiple-front-end-teams/
+permalink: posts/building-graphql-endpoints-ai-services-multiple-front-end-teams
 ---
 
 # Building GraphQL Endpoints for AI Services That Support Multiple Front End Teams

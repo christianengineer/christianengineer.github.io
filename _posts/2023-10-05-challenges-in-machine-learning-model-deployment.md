@@ -1,5 +1,5 @@
 ---
-permalink: /challenges-in-machine-learning-model-deployment/
+permalink: posts/challenges-in-machine-learning-model-deployment
 ---
 
 # Machine Learning Model Deployment Challenges

@@ -1,5 +1,5 @@
 ---
-permalink: /scaling-ai-models-production-optimization-guide/
+permalink: posts/scaling-ai-models-production-optimization-guide
 ---
 
 # Scaling AI Models in Production

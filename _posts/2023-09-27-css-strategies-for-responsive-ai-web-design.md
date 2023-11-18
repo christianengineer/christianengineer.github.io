@@ -1,5 +1,5 @@
 ---
-permalink: /css-strategies-for-responsive-ai-web-design/
+permalink: posts/css-strategies-for-responsive-ai-web-design
 ---
 
 # CSS Strategies for Responsive AI Web Design

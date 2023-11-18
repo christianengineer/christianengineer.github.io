@@ -1,5 +1,5 @@
 ---
-permalink: /jenkins-for-ai-development-workflows-guide/
+permalink: posts/jenkins-for-ai-development-workflows-guide
 ---
 
 # Jenkins for AI Development Workflows

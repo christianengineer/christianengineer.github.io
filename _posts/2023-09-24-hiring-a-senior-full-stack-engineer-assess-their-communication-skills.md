@@ -1,5 +1,5 @@
 ---
-permalink: /hiring-a-senior-full-stack-engineer-assess-their-communication-skills/
+permalink: posts/hiring-a-senior-full-stack-engineer-assess-their-communication-skills
 ---
 
 # Hiring a Senior Full Stack Engineer: How to Assess Their Communication Skills

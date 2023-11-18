@@ -1,5 +1,5 @@
 ---
-permalink: /troubleshooting-ai-applications-best-practices-guide/
+permalink: posts/troubleshooting-ai-applications-best-practices-guide
 ---
 
 # Troubleshooting AI Applications

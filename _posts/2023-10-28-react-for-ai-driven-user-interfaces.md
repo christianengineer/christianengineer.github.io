@@ -1,5 +1,5 @@
 ---
-permalink: /react-for-ai-driven-user-interfaces/
+permalink: posts/react-for-ai-driven-user-interfaces
 ---
 
 # React.js for AI-driven User Interfaces

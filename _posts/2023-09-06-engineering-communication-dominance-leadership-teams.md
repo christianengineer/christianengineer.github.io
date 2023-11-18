@@ -1,5 +1,5 @@
 ---
-permalink: /engineering-communication-dominance-leadership-teams/
+permalink: posts/engineering-communication-dominance-leadership-teams
 ---
 
 # Improve Your Engineering Communication: Dominance vs Leadership

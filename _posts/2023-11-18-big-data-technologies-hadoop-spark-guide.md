@@ -1,5 +1,5 @@
 ---
-permalink: /big-data-technologies-hadoop-spark-guide/
+permalink: posts/big-data-technologies-hadoop-spark-guide
 ---
 
 # Big Data Technologies: A Focus on Hadoop and Spark

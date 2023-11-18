@@ -1,5 +1,5 @@
 ---
-permalink: /github-actions-ai-engineering-guide/
+permalink: posts/github-actions-ai-engineering-guide
 ---
 
 # GitHub Actions for AI Engineering

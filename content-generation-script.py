@@ -81,7 +81,7 @@ def main():
             with open(markdown_filename, "w") as md_file:
                 # # Writing empty front matter
                 # md_file.write("---\n---\n")
-                md_file.write(f"---\npermalink: /{title}/\n---\n\n")
+                md_file.write(f"---\npermalink: posts/{title}\n---\n\n")
                 print("Markdown file created with empty front matter")
 
         article = generate_article(topic)

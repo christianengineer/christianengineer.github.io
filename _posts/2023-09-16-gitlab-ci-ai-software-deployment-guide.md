@@ -1,5 +1,5 @@
 ---
-permalink: /gitlab-ci-ai-software-deployment-guide/
+permalink: posts/gitlab-ci-ai-software-deployment-guide
 ---
 
 # GitLab CI for AI Software Deployment

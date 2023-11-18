@@ -1,5 +1,5 @@
 ---
-permalink: /ultimate-guide-api-design-development-rest-graphql/
+permalink: posts/ultimate-guide-api-design-development-rest-graphql
 ---
 
 # API Design and Development (REST, GraphQL)

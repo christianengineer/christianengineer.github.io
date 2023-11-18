@@ -1,5 +1,5 @@
 ---
-permalink: /understanding-machine-learning-deep-learning-concepts/
+permalink: posts/understanding-machine-learning-deep-learning-concepts
 ---
 
 ## Machine Learning and Deep Learning Concepts

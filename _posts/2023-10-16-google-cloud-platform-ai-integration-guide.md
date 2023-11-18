@@ -1,5 +1,5 @@
 ---
-permalink: /google-cloud-platform-ai-integration-guide/
+permalink: posts/google-cloud-platform-ai-integration-guide
 ---
 
 # Google Cloud Platform for AI integration

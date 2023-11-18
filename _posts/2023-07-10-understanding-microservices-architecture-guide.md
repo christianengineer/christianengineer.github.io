@@ -1,5 +1,5 @@
 ---
-permalink: /understanding-microservices-architecture-guide/
+permalink: posts/understanding-microservices-architecture-guide
 ---
 
 # Microservices Architecture: A Comprehensive Guide

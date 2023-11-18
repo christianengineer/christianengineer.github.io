@@ -1,5 +1,5 @@
 ---
-permalink: /ci-cd-pipelines-in-ai-application-deployment-guide/
+permalink: posts/ci-cd-pipelines-in-ai-application-deployment-guide
 ---
 
 # CI/CD Pipelines in AI Application Deployment

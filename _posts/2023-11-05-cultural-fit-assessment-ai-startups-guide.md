@@ -1,5 +1,5 @@
 ---
-permalink: /cultural-fit-assessment-ai-startups-guide/
+permalink: posts/cultural-fit-assessment-ai-startups-guide
 ---
 
 # Cultural Fit Assessment in AI Startups
