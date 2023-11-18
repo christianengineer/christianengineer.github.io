@@ -1,5 +1,6 @@
 import os
 from openai import OpenAI
+from datetime import datetime
 
 # Initialize the OpenAI client
 client = OpenAI(
@@ -58,7 +59,8 @@ def main():
         title = generate_title(topic)
         print("generate title end")
 
-        markdown_filename = f"_posts/{title}.md"
+        today_date = datetime.now().strftime('%Y-%m-%d')
+        markdown_filename = f"_posts/{today_date}-{title}.md"
 
         os.makedirs(os.path.dirname(markdown_filename), exist_ok=True)
 
