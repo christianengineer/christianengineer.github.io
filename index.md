@@ -14,7 +14,7 @@ If you're an AI startup founder seeking not just a coder but visionary engineer 
 
 ## Blog Posts:
 
-{% for item in site.posts %}
+{% for post in site.posts %}
 
-- [{{ item.title }}]({{ item.url | absolute_url }})
+- [{{ post.title }}]({{ post.url | relative_url }}) - {{ post.date | date_to_string }}
   {% endfor %}
