@@ -4,10 +4,9 @@ permalink: posts/ai-model-deployment-scaling-guide
 
 # AI Model Deployment and Scaling
 
-In the lifecycle of machine learning (ML) model development, one of the critical stages is model deployment. The deployment of AI models involves integrating a model into an existing system to make real-time predictions. 
+In the lifecycle of machine learning (ML) model development, one of the critical stages is model deployment. The deployment of AI models involves integrating a model into an existing system to make real-time predictions.
 
 Though the development and training of a machine learning model is an arduous process, once that process yields satisfactory results, the next step is scaling and deployment. In this article, we will discuss what AI model deployment and scaling mean, its importance, and outline the best practices for effective deployment and scaling.
-
 
 ## Table of Contents
 
@@ -23,10 +22,9 @@ AI model deployment refers to the integration of a developed machine learning mo
 
 In the broader context, the deployed ML model takes in input (new data), and output predictions, which can be utilized within an organization's decision-making process. These deployments can take various forms, such as APIs (Application Programming Interface), depending upon the requirements of the business solution.
 
-
 ## What is AI Model Scaling?
 
-Model scaling, on the other hand, involves handling increased data loads and model complexity without compromising performance. As business requirements expand, the trained machine learning model should have the ability to scale horizontally or vertically. 
+Model scaling, on the other hand, involves handling increased data loads and model complexity without compromising performance. As business requirements expand, the trained machine learning model should have the ability to scale horizontally or vertically.
 
 Vertically, scaling means increasing the capacity of a single server, usually by adding more memory, CPUs or faster disks. Horizontally, scaling involves adding more servers to support the application's increasing demands.
 
@@ -44,18 +42,18 @@ Deployment and scaling are critical for the following reasons:
 
 1. **Choose the method of deployment**: Depending on the problem at hand, you have to choose the appropriate method of deployment. For example, you could go with an API or make use of batch processing.
 
-    Below is an example of how you could serve a machine learning model through Flask API in Python, available for prediction mode at any time.
-    
-    ```python
-    from flask import Flask
-    app = Flask(__name__)
+   Below is an example of how you could serve a machine learning model through Flask API in Python, available for prediction mode at any time.
 
-    @app.route('/predict', methods=['POST'])
-    def predict():
-       input_data = request.json
-       prediction = model.predict(input_data)
-       return jsonify(prediction)
-    ```
+   ```python
+   from flask import Flask
+   app = Flask(__name__)
+
+   @app.route('/predict', methods=['POST'])
+   def predict():
+      input_data = request.json
+      prediction = model.predict(input_data)
+      return jsonify(prediction)
+   ```
 
 2. **Consider methods for scaling**: At a higher level, consider two methods for scaling - vertical and horizontal scaling. While both have their merit, horizontal scaling (increasing the number of servers) is usually considered a more effective way of dealing with large spikes in traffic.
 

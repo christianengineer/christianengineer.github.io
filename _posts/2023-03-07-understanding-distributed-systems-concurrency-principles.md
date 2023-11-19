@@ -1,4 +1,6 @@
 ---
+title: Distributed Systems and Concurrency
+date: 2023-03-07
 permalink: posts/understanding-distributed-systems-concurrency-principles
 ---
 
@@ -15,7 +17,7 @@ In today's digitally connected world, managing and efficiently leveraging big da
 
 ### Definition of a Distributed System
 
-A distributed system, in the simplest terms, is a network of independent computers connected together and appear as a single system to users. These independent computers, or nodes, communicate with each other via a shared network and work together to achieve a common goal or handle tasks segmented across the system. 
+A distributed system, in the simplest terms, is a network of independent computers connected together and appear as a single system to users. These independent computers, or nodes, communicate with each other via a shared network and work together to achieve a common goal or handle tasks segmented across the system.
 
 ### Components of a Distributed System
 
@@ -71,6 +73,6 @@ In distributed systems, concurrency is vital for handling multiple operations si
 
 ## Conclusion
 
-Distributed Systems represent a significant stride in the world of computation and data management, offering solutions to some of the most demanding computational and data problems. When we introduce concurrency in distributed systems, we unlock a higher potential to compute and process data at a scale unseen before. However, it's vital to manage the complexity and security aspects to reap the most benefits. 
+Distributed Systems represent a significant stride in the world of computation and data management, offering solutions to some of the most demanding computational and data problems. When we introduce concurrency in distributed systems, we unlock a higher potential to compute and process data at a scale unseen before. However, it's vital to manage the complexity and security aspects to reap the most benefits.
 
 By understanding distributed systems and concurrent programming, we can build more robust, scalable, and efficient systems to meet the increasingly complex demands of our digital world.

@@ -1,4 +1,6 @@
 ---
+title: "Server-Side Languages: Node.js, Python, and Java"
+date: 2023-02-26
 permalink: posts/comparing-server-side-languages-nodejs-python-java
 ---
 
@@ -10,7 +12,7 @@ In this article, we will explore three popular server-side languages: Node.js, P
 
 ## What Are Server-Side Languages?
 
-In a nutshell, server-side languages are programming languages specifically designed for the server, where all the data processing takes place, before sending results to the client. They provide the logic behind user authentication, database interactions, and data processing. 
+In a nutshell, server-side languages are programming languages specifically designed for the server, where all the data processing takes place, before sending results to the client. They provide the logic behind user authentication, database interactions, and data processing.
 
 ## Node.js
 
@@ -19,22 +21,22 @@ Node.js is neither a language nor a framework; it is a runtime environment that 
 ### Pros of Node.js
 
 - Exceptional Performance: Node.js uses a non-blocking, event-driven I/O model which makes it lightweight, making it particularly well-suited for data-intensive, real-time applications.
-- Code Reusability: Since Node.js allows JavaScript to be run on the server as well, developers can write both the front-end and back-end in JavaScript, promoting code reusability. 
+- Code Reusability: Since Node.js allows JavaScript to be run on the server as well, developers can write both the front-end and back-end in JavaScript, promoting code reusability.
 - Huge Community Support: Node.js enjoys remarkable community support and the NPM registry is the largest collection of open-source libraries.
 
 ```javascript
 // Code snippet illustrating a basic HTTP server with Node.js
-const http = require('http');
+const http = require("http");
 const server = http.createServer((req, res) => {
-   res.write('Hello World!');
-   res.end();
+  res.write("Hello World!");
+  res.end();
 });
 server.listen(8080);
 ```
 
 ### Cons of Node.js
 
-- Not Ideal for CPU Intensive Tasks: Node.js can struggle with tasks involving complex calculations. 
+- Not Ideal for CPU Intensive Tasks: Node.js can struggle with tasks involving complex calculations.
 - Asynchronous Programming Model: While this enhances performance, it can lead to "callback hell", making the code more difficult to read and debug.
 
 ## Python
@@ -71,8 +73,8 @@ Java, a class-based, object-oriented programming language, has been a dominant p
 
 ### Pros of Java
 
-- Robust Performance: Java, being a statically-typed, compiled language, provides strong performance benefits, especially for large, complex applications. 
-- Rich Libraries: Java has a very extensive library, which can help to solve various types of problems. 
+- Robust Performance: Java, being a statically-typed, compiled language, provides strong performance benefits, especially for large, complex applications.
+- Rich Libraries: Java has a very extensive library, which can help to solve various types of problems.
 - Scalability: Java is a great choice for large scale applications due to its scalability and stability.
 
 ```java
