@@ -1,4 +1,6 @@
 ---
+title: Angular in AI Startup Projects
+date: 2023-10-29
 permalink: posts/angular-in-ai-startup-projects
 ---
 

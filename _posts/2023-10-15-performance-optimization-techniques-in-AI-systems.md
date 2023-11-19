@@ -1,4 +1,6 @@
 ---
+title: Performance Optimization in AI Systems
+date: 2023-10-15
 permalink: posts/performance-optimization-techniques-in-AI-systems
 ---
 

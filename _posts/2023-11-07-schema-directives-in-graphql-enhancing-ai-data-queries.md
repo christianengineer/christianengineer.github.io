@@ -1,4 +1,6 @@
 ---
+title: "Schema Directives in GraphQL: Enhancing AI Data Queries"
+date: 2023-11-07
 permalink: posts/schema-directives-in-graphql-enhancing-ai-data-queries
 ---
 

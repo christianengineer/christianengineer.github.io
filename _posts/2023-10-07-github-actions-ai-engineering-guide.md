@@ -1,4 +1,6 @@
 ---
+title: GitHub Actions for AI Engineering
+date: 2023-10-07
 permalink: posts/github-actions-ai-engineering-guide
 ---
 

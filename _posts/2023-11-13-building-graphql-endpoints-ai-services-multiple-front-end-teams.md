@@ -1,4 +1,6 @@
 ---
+title: Building GraphQL Endpoints for AI Services That Support Multiple Front End Teams
+date: 2023-11-13
 permalink: posts/building-graphql-endpoints-ai-services-multiple-front-end-teams
 ---
 
@@ -97,7 +99,7 @@ app.use(
     schema,
     rootValue: resolvers,
     graphiql: true, // Enable GraphiQL
-  }),
+  })
 );
 
 app.listen(4000);

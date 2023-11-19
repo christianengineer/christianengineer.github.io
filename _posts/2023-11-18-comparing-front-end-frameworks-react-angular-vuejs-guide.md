@@ -1,4 +1,6 @@
 ---
+title: "Front-End Frameworks: React, Angular, and Vue.js"
+date: 2023-11-18
 permalink: posts/comparing-front-end-frameworks-react-angular-vuejs-guide
 ---
 

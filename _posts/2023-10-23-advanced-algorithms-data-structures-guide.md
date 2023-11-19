@@ -1,4 +1,6 @@
 ---
+title: Advanced Algorithms and Data Structures
+date: 2023-10-24
 permalink: posts/advanced-algorithms-data-structures-guide
 ---
 

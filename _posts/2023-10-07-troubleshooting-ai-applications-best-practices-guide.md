@@ -1,4 +1,6 @@
 ---
+title: Troubleshooting AI Applications
+date: 2023-10-07
 permalink: posts/troubleshooting-ai-applications-best-practices-guide
 ---
 

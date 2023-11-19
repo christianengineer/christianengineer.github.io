@@ -1,4 +1,6 @@
 ---
+title: Team Collaboration in AI Development
+date: 2023-11-09
 permalink: posts/team-collaboration-strategies-in-ai-development
 ---
 

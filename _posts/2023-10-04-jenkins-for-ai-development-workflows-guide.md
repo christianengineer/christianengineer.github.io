@@ -1,4 +1,6 @@
 ---
+title: "Jenkins for AI Development Workflows"
+date: 2023-10-04
 permalink: posts/jenkins-for-ai-development-workflows-guide
 ---
 

@@ -1,4 +1,6 @@
 ---
+title: AWS Services for Artificial Intelligence Startups
+date: 2023-10-24
 permalink: posts/aws-services-for-ai-startups-guide
 ---
 

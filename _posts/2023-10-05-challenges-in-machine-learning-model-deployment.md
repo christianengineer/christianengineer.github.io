@@ -1,4 +1,6 @@
 ---
+title: Machine Learning Model Deployment Challenges
+date: 2023-10-05
 permalink: posts/challenges-in-machine-learning-model-deployment
 ---
 

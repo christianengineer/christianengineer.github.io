@@ -1,8 +1,10 @@
 ---
+title: Machine Learning and Deep Learning Concepts
+date: 2023-10-05
 permalink: posts/understanding-machine-learning-deep-learning-concepts
 ---
 
-## Machine Learning and Deep Learning Concepts
+# Machine Learning and Deep Learning Concepts
 
 Machine Learning (ML) and Deep Learning (DL) are two advanced technologies currently driving the artificial intelligence (AI) revolution. Simply put, ML is a subset of AI that involves teaching machines how to learn from data, while DL is a specialized subset of ML that employs layered neural networks to simulate human decision-making. These technologies hold tremendous potential in various domains, from healthcare to finance, from commerce to transportation.
 

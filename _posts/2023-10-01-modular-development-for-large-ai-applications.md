@@ -1,4 +1,6 @@
 ---
+title: "From Concept to Launch: How My Modular Development Techniques Accelerate Large AI Applications"
+date: 2023-10-01
 permalink: posts/modular-development-for-large-ai-applications
 ---
 

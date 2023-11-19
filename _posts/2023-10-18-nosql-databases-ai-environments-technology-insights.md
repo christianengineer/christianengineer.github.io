@@ -1,4 +1,6 @@
 ---
+title: NoSQL Databases in AI Environments
+date: 2023-10-18
 permalink: posts/nosql-databases-ai-environments-technology-insights
 ---
 

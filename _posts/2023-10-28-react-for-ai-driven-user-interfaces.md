@@ -1,4 +1,6 @@
 ---
+title: "React.js for AI-driven User Interfaces"
+date: 2023-10-28
 permalink: posts/react-for-ai-driven-user-interfaces
 ---
 

@@ -1,4 +1,6 @@
 ---
+title: Hiring a Senior Full Stack Engineer
+date: 2023-10-30
 permalink: posts/hiring-a-senior-full-stack-engineer
 ---
 

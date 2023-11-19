@@ -1,4 +1,6 @@
 ---
+title: CI/CD Pipelines in AI Application Deployment
+date: 2023-11-12
 permalink: posts/ci-cd-pipelines-in-ai-application-deployment-guide
 ---
 
