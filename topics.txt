@@ -1,4 +1,3 @@
-Sentiment Analysis Tool for Customer Feedback
 AI-Based Crop Disease Prediction App
 Real-Time Sports Analytics Platform
 AI-Driven Job Matching Engine
