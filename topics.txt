@@ -1,4 +1,3 @@
-Predictive Analytics for E-Commerce Sales
 Facial Recognition for Security Systems
 AI-Based Personal Finance Advisor
 Machine Learning Driven Marketing Insights Tool
