@@ -1,4 +1,3 @@
-Virtual Fashion Stylist App
 Automated Video Content Analysis Tool
 AI-Powered News Aggregator and Summarizer
 Smart Inventory Management System
