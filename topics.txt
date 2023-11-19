@@ -1,4 +1,3 @@
-Natural Language Processing for Social Media Analysis
 AI-Enhanced Educational Platform
 Predictive Maintenance Tool for Manufacturing
 Smart Home Energy Optimization System
