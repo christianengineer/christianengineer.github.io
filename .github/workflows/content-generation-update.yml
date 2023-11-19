@@ -30,14 +30,6 @@ jobs:
         run: |
           python content-generation-script.py
 
-      - name: Upload New Files and Updated Topics as Artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: generated-content
-          path: |
-            _blahbly/
-            topics.txt
-
       - name: Commit
         run: |
           git config --global user.name 'christianengineer'
