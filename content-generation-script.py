@@ -102,7 +102,7 @@ def main():
                 # md_file.write("---\n---\n")
                 # md_file.write(f"---\npermalink: posts/{title}\n---\n\n")
                 md_file.write(
-                    f"---\ntitle: `{non_formated_title}`\ndate: {random_date}\npermalink: posts/{title}\n---\n\n"
+                    f"---\ntitle: {non_formated_title}\ndate: {random_date}\npermalink: posts/{title}\n---\n\n"
                 )
                 print("Markdown file created with empty front matter")
 
