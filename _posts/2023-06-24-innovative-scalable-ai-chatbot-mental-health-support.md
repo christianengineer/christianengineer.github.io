@@ -1,7 +1,7 @@
 ---
 title: "Redefining Mental Health Support: An Innovative Approach to Developing a Scalable and Data-Driven AI Chatbot in the Cloud"
 date: 2023-06-24
-permalink: posts/"innovative-scalable-ai-chatbot-mental-health-support"
+permalink: posts/innovative-scalable-ai-chatbot-mental-health-support
 ---
 
 ## **Chatbot for Mental Health Support Repository**
