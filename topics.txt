@@ -1,4 +1,3 @@
-Intelligent Document Classification System
 AI-Based Language Learning Assistant
 Smart Waste Management System
 AI-Powered Legal Document Analysis
