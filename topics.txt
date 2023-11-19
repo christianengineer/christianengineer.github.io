@@ -1,4 +1,3 @@
-Smart Home Energy Optimization System
 AI-Driven Traffic Management System
 Healthcare Chatbot for Diagnosis Assistance
 Sentiment Analysis Tool for Customer Feedback
