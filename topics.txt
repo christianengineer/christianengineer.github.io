@@ -1,4 +1,3 @@
-Smart Inventory Management System
 Personalized AI Fitness Coach
 AI-Based Cybersecurity Threat Detection
 Natural Language Query Engine for Databases
