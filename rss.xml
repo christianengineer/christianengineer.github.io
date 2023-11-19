@@ -1,69 +1,516 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<rss version="2.0"
-  xmlns:atom="http://www.w3.org/2005/Atom"
-  xmlns:media="http://search.yahoo.com/mrss/">
+<rss xmlns:ns0="http://www.w3.org/2005/Atom" version="2.0">
   <channel>
     <title>Full Stack Software Engineer - Christian Ipanaque</title>
     <link>https://christianipanaque.com/</link>
-    <atom:link href="https://christianipanaque.com/rss.xml" rel="self" type="application/rss+xml" />
+    <ns0:link href="https://christianipanaque.com/rss.xml" rel="self" type="application/rss+xml" />
     <description>Diving deep into the world of Full Stack Development with a focus on building scalable enterprise AI applications and platforms. Discover cutting-edge design patterns, best practices, and insights tailored for the next generation of AI innovations. Whether you're bootstrapping your AI startup or scaling an AI Corporation to new heights, this blog provides the technical knowledge and engineering-focused advice to build robust, scalable, and intelligent platforms.</description>
-
     <language>en-us</language>
     <copyright>2023 Christian Ipanaque</copyright>
     <managingEditor>christianipanaque@outlook.com (Christian Ipanaque)</managingEditor>
     <webMaster>christianipanaque@outlook.com (Christian Ipanaque)</webMaster>
-    <lastBuildDate>Thu, 02 Nov 2023 15:21:45 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 19 Nov 2023 02:54:32 GMT</lastBuildDate>
     <category>Full Stack Developer</category>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <ttl>60</ttl>
 
     <item>
+      <title>CI/CD Pipelines in AI Application Deployment</title>
+      <link>https://christianipanaque.com/posts/ci-cd-pipelines-in-ai-application-deployment-guide</link>
+      <description>Read about CI/CD Pipelines in AI Application Deployment</description>
+      <author>christianipanaque@outlook.com (Christian Ipanaque)</author>
+      <category>Software Engineering</category>
+      <guid isPermaLink="true">https://christianipanaque.com/posts/ci-cd-pipelines-in-ai-application-deployment-guide</guid>
+      <pubDate>Sun, 12 Nov 2023 00:00:00 GMT</pubDate>
+      <source url="https://christianipanaque.com/rss.xml">Senior Full Stack Software Engineer</source>
+    </item>
+    <item>
+      <title>Java for Large Scalable AI Applications</title>
+      <link>https://christianipanaque.com/posts/java-for-large-scalable-ai-applications-guide</link>
+      <description>Read about Java for Large Scalable AI Applications</description>
+      <author>christianipanaque@outlook.com (Christian Ipanaque)</author>
+      <category>Software Engineering</category>
+      <guid isPermaLink="true">https://christianipanaque.com/posts/java-for-large-scalable-ai-applications-guide</guid>
+      <pubDate>Fri, 10 Nov 2023 00:00:00 GMT</pubDate>
+      <source url="https://christianipanaque.com/rss.xml">Senior Full Stack Software Engineer</source>
+    </item>
+    <item>
+      <title>Building GraphQL Endpoints for AI Services That Support Multiple Front End Teams</title>
+      <link>https://christianipanaque.com/posts/building-graphql-endpoints-ai-services-multiple-front-end-teams</link>
+      <description>Read about Building GraphQL Endpoints for AI Services That Support Multiple Front End Teams</description>
+      <author>christianipanaque@outlook.com (Christian Ipanaque)</author>
+      <category>Software Engineering</category>
+      <guid isPermaLink="true">https://christianipanaque.com/posts/building-graphql-endpoints-ai-services-multiple-front-end-teams</guid>
+      <pubDate>Mon, 13 Nov 2023 00:00:00 GMT</pubDate>
+      <source url="https://christianipanaque.com/rss.xml">Senior Full Stack Software Engineer</source>
+    </item>
+    <item>
+      <title>Agile Methodologies for AI Projects</title>
+      <link>https://christianipanaque.com/posts/agile-methodologies-for-ai-projects-guide</link>
+      <description>Read about Agile Methodologies for AI Projects</description>
+      <author>christianipanaque@outlook.com (Christian Ipanaque)</author>
+      <category>Software Engineering</category>
+      <guid isPermaLink="true">https://christianipanaque.com/posts/agile-methodologies-for-ai-projects-guide</guid>
+      <pubDate>Wed, 25 Oct 2023 00:00:00 GMT</pubDate>
+      <source url="https://christianipanaque.com/rss.xml">Senior Full Stack Software Engineer</source>
+    </item>
+    <item>
+      <title>"Crucial Techniques for Advanced Performance Testing &amp; Optimization: A Comprehensive Guide for Senior Software Engineers"</title>
+      <link>https://christianipanaque.com/posts/advanced-performance-testing-optimization-techniques-for-senior-software-engineers-guide</link>
+      <description>Read about "Crucial Techniques for Advanced Performance Testing &amp; Optimization: A Comprehensive Guide for Senior Software Engineers"</description>
+      <author>christianipanaque@outlook.com (Christian Ipanaque)</author>
+      <category>Software Engineering</category>
+      <guid isPermaLink="true">https://christianipanaque.com/posts/advanced-performance-testing-optimization-techniques-for-senior-software-engineers-guide</guid>
+      <pubDate>Sun, 10 Sep 2023 00:00:00 GMT</pubDate>
+      <source url="https://christianipanaque.com/rss.xml">Senior Full Stack Software Engineer</source>
+    </item>
+    <item>
+      <title>Troubleshooting AI Applications</title>
+      <link>https://christianipanaque.com/posts/troubleshooting-ai-applications-best-practices-guide</link>
+      <description>Read about Troubleshooting AI Applications</description>
+      <author>christianipanaque@outlook.com (Christian Ipanaque)</author>
+      <category>Software Engineering</category>
+      <guid isPermaLink="true">https://christianipanaque.com/posts/troubleshooting-ai-applications-best-practices-guide</guid>
+      <pubDate>Sat, 07 Oct 2023 00:00:00 GMT</pubDate>
+      <source url="https://christianipanaque.com/rss.xml">Senior Full Stack Software Engineer</source>
+    </item>
+    <item>
+      <title>Machine Learning and Deep Learning Concepts</title>
+      <link>https://christianipanaque.com/posts/understanding-machine-learning-deep-learning-concepts</link>
+      <description>Read about Machine Learning and Deep Learning Concepts</description>
+      <author>christianipanaque@outlook.com (Christian Ipanaque)</author>
+      <category>Software Engineering</category>
+      <guid isPermaLink="true">https://christianipanaque.com/posts/understanding-machine-learning-deep-learning-concepts</guid>
+      <pubDate>Thu, 05 Oct 2023 00:00:00 GMT</pubDate>
+      <source url="https://christianipanaque.com/rss.xml">Senior Full Stack Software Engineer</source>
+    </item>
+    <item>
+      <title>Microservices Architecture for AI Systems</title>
+      <link>https://christianipanaque.com/posts/microservices-architecture-ai-systems</link>
+      <description>Read about Microservices Architecture for AI Systems</description>
+      <author>christianipanaque@outlook.com (Christian Ipanaque)</author>
+      <category>Software Engineering</category>
+      <guid isPermaLink="true">https://christianipanaque.com/posts/microservices-architecture-ai-systems</guid>
+      <pubDate>Fri, 17 Nov 2023 00:00:00 GMT</pubDate>
+      <source url="https://christianipanaque.com/rss.xml">Senior Full Stack Software Engineer</source>
+    </item>
+    <item>
+      <title>"Big Data Technologies: A Focus on Hadoop and Spark"</title>
+      <link>https://christianipanaque.com/posts/big-data-technologies-hadoop-spark-guide</link>
+      <description>Read about "Big Data Technologies: A Focus on Hadoop and Spark"</description>
+      <author>christianipanaque@outlook.com (Christian Ipanaque)</author>
+      <category>Software Engineering</category>
+      <guid isPermaLink="true">https://christianipanaque.com/posts/big-data-technologies-hadoop-spark-guide</guid>
+      <pubDate>Sat, 18 Nov 2023 00:00:00 GMT</pubDate>
+      <source url="https://christianipanaque.com/rss.xml">Senior Full Stack Software Engineer</source>
+    </item>
+    <item>
+      <title>Azure Cloud Solutions for Artificial Intelligence</title>
+      <link>https://christianipanaque.com/posts/azure-cloud-solutions-ai-technology-guide</link>
+      <description>Read about Azure Cloud Solutions for Artificial Intelligence</description>
+      <author>christianipanaque@outlook.com (Christian Ipanaque)</author>
+      <category>Software Engineering</category>
+      <guid isPermaLink="true">https://christianipanaque.com/posts/azure-cloud-solutions-ai-technology-guide</guid>
+      <pubDate>Fri, 01 Sep 2023 00:00:00 GMT</pubDate>
+      <source url="https://christianipanaque.com/rss.xml">Senior Full Stack Software Engineer</source>
+    </item>
+    <item>
+      <title>Cultural Fit Assessment in AI Startups</title>
+      <link>https://christianipanaque.com/posts/cultural-fit-assessment-ai-startups-guide</link>
+      <description>Read about Cultural Fit Assessment in AI Startups</description>
+      <author>christianipanaque@outlook.com (Christian Ipanaque)</author>
+      <category>Software Engineering</category>
+      <guid isPermaLink="true">https://christianipanaque.com/posts/cultural-fit-assessment-ai-startups-guide</guid>
+      <pubDate>Sun, 05 Nov 2023 00:00:00 GMT</pubDate>
+      <source url="https://christianipanaque.com/rss.xml">Senior Full Stack Software Engineer</source>
+    </item>
+    <item>
+      <title>Angular in AI Startup Projects</title>
+      <link>https://christianipanaque.com/posts/angular-in-ai-startup-projects</link>
+      <description>Read about Angular in AI Startup Projects</description>
+      <author>christianipanaque@outlook.com (Christian Ipanaque)</author>
+      <category>Software Engineering</category>
+      <guid isPermaLink="true">https://christianipanaque.com/posts/angular-in-ai-startup-projects</guid>
+      <pubDate>Sun, 29 Oct 2023 00:00:00 GMT</pubDate>
+      <source url="https://christianipanaque.com/rss.xml">Senior Full Stack Software Engineer</source>
+    </item>
+    <item>
+      <title>Python for Full Stack AI Solutions</title>
+      <link>https://christianipanaque.com/posts/full-stack-ai-solutions-using-python-guide</link>
+      <description>Read about Python for Full Stack AI Solutions</description>
+      <author>christianipanaque@outlook.com (Christian Ipanaque)</author>
+      <category>Software Engineering</category>
+      <guid isPermaLink="true">https://christianipanaque.com/posts/full-stack-ai-solutions-using-python-guide</guid>
+      <pubDate>Wed, 08 Nov 2023 00:00:00 GMT</pubDate>
+      <source url="https://christianipanaque.com/rss.xml">Senior Full Stack Software Engineer</source>
+    </item>
+    <item>
+      <title>How I started using AI as a Software Engineer</title>
+      <link>https://christianipanaque.com/posts/how-i-started-using-ai</link>
+      <description>Read about How I started using AI as a Software Engineer</description>
+      <author>christianipanaque@outlook.com (Christian Ipanaque)</author>
+      <category>Software Engineering</category>
+      <guid isPermaLink="true">https://christianipanaque.com/posts/how-i-started-using-ai</guid>
+      <pubDate>Sun, 01 Oct 2023 00:00:00 GMT</pubDate>
+      <source url="https://christianipanaque.com/rss.xml">Senior Full Stack Software Engineer</source>
+    </item>
+    <item>
+      <title>Machine Learning Model Deployment Challenges</title>
+      <link>https://christianipanaque.com/posts/challenges-in-machine-learning-model-deployment</link>
+      <description>Read about Machine Learning Model Deployment Challenges</description>
+      <author>christianipanaque@outlook.com (Christian Ipanaque)</author>
+      <category>Software Engineering</category>
+      <guid isPermaLink="true">https://christianipanaque.com/posts/challenges-in-machine-learning-model-deployment</guid>
+      <pubDate>Thu, 05 Oct 2023 00:00:00 GMT</pubDate>
+      <source url="https://christianipanaque.com/rss.xml">Senior Full Stack Software Engineer</source>
+    </item>
+    <item>
+      <title>Project Management in AI Startups</title>
+      <link>https://christianipanaque.com/posts/project-management-strategies-in-ai-startups</link>
+      <description>Read about Project Management in AI Startups</description>
+      <author>christianipanaque@outlook.com (Christian Ipanaque)</author>
+      <category>Software Engineering</category>
+      <guid isPermaLink="true">https://christianipanaque.com/posts/project-management-strategies-in-ai-startups</guid>
+      <pubDate>Sun, 10 Sep 2023 00:00:00 GMT</pubDate>
+      <source url="https://christianipanaque.com/rss.xml">Senior Full Stack Software Engineer</source>
+    </item>
+    <item>
+      <title>Google Cloud Platform for AI integration</title>
+      <link>https://christianipanaque.com/posts/google-cloud-platform-ai-integration-guide</link>
+      <description>Read about Google Cloud Platform for AI integration</description>
+      <author>christianipanaque@outlook.com (Christian Ipanaque)</author>
+      <category>Software Engineering</category>
+      <guid isPermaLink="true">https://christianipanaque.com/posts/google-cloud-platform-ai-integration-guide</guid>
+      <pubDate>Mon, 16 Oct 2023 00:00:00 GMT</pubDate>
+      <source url="https://christianipanaque.com/rss.xml">Senior Full Stack Software Engineer</source>
+    </item>
+    <item>
+      <title>"Containerization and Orchestration: An Overview of Docker and Kubernetes"</title>
+      <link>https://christianipanaque.com/posts/understanding-containerization-orchestration-docker-kubernetes-guide</link>
+      <description>Read about "Containerization and Orchestration: An Overview of Docker and Kubernetes"</description>
+      <author>christianipanaque@outlook.com (Christian Ipanaque)</author>
+      <category>Software Engineering</category>
+      <guid isPermaLink="true">https://christianipanaque.com/posts/understanding-containerization-orchestration-docker-kubernetes-guide</guid>
+      <pubDate>Fri, 01 Sep 2023 00:00:00 GMT</pubDate>
+      <source url="https://christianipanaque.com/rss.xml">Senior Full Stack Software Engineer</source>
+    </item>
+    <item>
+      <title>"React.js for AI-driven User Interfaces"</title>
+      <link>https://christianipanaque.com/posts/react-for-ai-driven-user-interfaces</link>
+      <description>Read about "React.js for AI-driven User Interfaces"</description>
+      <author>christianipanaque@outlook.com (Christian Ipanaque)</author>
+      <category>Software Engineering</category>
+      <guid isPermaLink="true">https://christianipanaque.com/posts/react-for-ai-driven-user-interfaces</guid>
+      <pubDate>Sat, 28 Oct 2023 00:00:00 GMT</pubDate>
+      <source url="https://christianipanaque.com/rss.xml">Senior Full Stack Software Engineer</source>
+    </item>
+    <item>
+      <title>"Database Optimization and Scalability with SQL and NoSQL"</title>
+      <link>https://christianipanaque.com/posts/database-optimization-scalability-sql-nosql-guide</link>
+      <description>Read about "Database Optimization and Scalability with SQL and NoSQL"</description>
+      <author>christianipanaque@outlook.com (Christian Ipanaque)</author>
+      <category>Software Engineering</category>
+      <guid isPermaLink="true">https://christianipanaque.com/posts/database-optimization-scalability-sql-nosql-guide</guid>
+      <pubDate>Fri, 18 Aug 2023 00:00:00 GMT</pubDate>
+      <source url="https://christianipanaque.com/rss.xml">Senior Full Stack Software Engineer</source>
+    </item>
+    <item>
+      <title>GitLab CI for AI Software Deployment</title>
+      <link>https://christianipanaque.com/posts/gitlab-ci-ai-software-deployment-guide</link>
+      <description>Read about GitLab CI for AI Software Deployment</description>
+      <author>christianipanaque@outlook.com (Christian Ipanaque)</author>
+      <category>Software Engineering</category>
+      <guid isPermaLink="true">https://christianipanaque.com/posts/gitlab-ci-ai-software-deployment-guide</guid>
+      <pubDate>Sat, 16 Sep 2023 00:00:00 GMT</pubDate>
+      <source url="https://christianipanaque.com/rss.xml">Senior Full Stack Software Engineer</source>
+    </item>
+    <item>
+      <title>Scaling AI Models in Production</title>
+      <link>https://christianipanaque.com/posts/scaling-ai-models-production-optimization-guide</link>
+      <description>Read about Scaling AI Models in Production</description>
+      <author>christianipanaque@outlook.com (Christian Ipanaque)</author>
+      <category>Software Engineering</category>
+      <guid isPermaLink="true">https://christianipanaque.com/posts/scaling-ai-models-production-optimization-guide</guid>
+      <pubDate>Thu, 14 Sep 2023 00:00:00 GMT</pubDate>
+      <source url="https://christianipanaque.com/rss.xml">Senior Full Stack Software Engineer</source>
+    </item>
+    <item>
+      <title>Advanced Algorithms and Data Structures</title>
+      <link>https://christianipanaque.com/posts/advanced-algorithms-data-structures-guide</link>
+      <description>Read about Advanced Algorithms and Data Structures</description>
+      <author>christianipanaque@outlook.com (Christian Ipanaque)</author>
+      <category>Software Engineering</category>
+      <guid isPermaLink="true">https://christianipanaque.com/posts/advanced-algorithms-data-structures-guide</guid>
+      <pubDate>Tue, 24 Oct 2023 00:00:00 GMT</pubDate>
+      <source url="https://christianipanaque.com/rss.xml">Senior Full Stack Software Engineer</source>
+    </item>
+    <item>
+      <title>CSS Strategies for Responsive AI Web Design</title>
+      <link>https://christianipanaque.com/posts/css-strategies-for-responsive-ai-web-design</link>
+      <description>Read about CSS Strategies for Responsive AI Web Design</description>
+      <author>christianipanaque@outlook.com (Christian Ipanaque)</author>
+      <category>Software Engineering</category>
+      <guid isPermaLink="true">https://christianipanaque.com/posts/css-strategies-for-responsive-ai-web-design</guid>
+      <pubDate>Wed, 27 Sep 2023 00:00:00 GMT</pubDate>
+      <source url="https://christianipanaque.com/rss.xml">Senior Full Stack Software Engineer</source>
+    </item>
+    <item>
+      <title>"CI/CD Pipelines and DevOps Practices: A Comprehensive Overview"</title>
+      <link>https://christianipanaque.com/posts/ci-cd-pipelines-devops-best-practices-guide</link>
+      <description>Read about "CI/CD Pipelines and DevOps Practices: A Comprehensive Overview"</description>
+      <author>christianipanaque@outlook.com (Christian Ipanaque)</author>
+      <category>Software Engineering</category>
+      <guid isPermaLink="true">https://christianipanaque.com/posts/ci-cd-pipelines-devops-best-practices-guide</guid>
+      <pubDate>Sun, 07 May 2023 00:00:00 GMT</pubDate>
+      <source url="https://christianipanaque.com/rss.xml">Senior Full Stack Software Engineer</source>
+    </item>
+    <item>
+      <title>Team Collaboration in AI Development</title>
+      <link>https://christianipanaque.com/posts/team-collaboration-strategies-in-ai-development</link>
+      <description>Read about Team Collaboration in AI Development</description>
+      <author>christianipanaque@outlook.com (Christian Ipanaque)</author>
+      <category>Software Engineering</category>
+      <guid isPermaLink="true">https://christianipanaque.com/posts/team-collaboration-strategies-in-ai-development</guid>
+      <pubDate>Thu, 09 Nov 2023 00:00:00 GMT</pubDate>
+      <source url="https://christianipanaque.com/rss.xml">Senior Full Stack Software Engineer</source>
+    </item>
+    <item>
+      <title>SQL Database Optimization for AI Systems</title>
+      <link>https://christianipanaque.com/posts/sql-database-optimization-for-ai-systems-guide</link>
+      <description>Read about SQL Database Optimization for AI Systems</description>
+      <author>christianipanaque@outlook.com (Christian Ipanaque)</author>
+      <category>Software Engineering</category>
+      <guid isPermaLink="true">https://christianipanaque.com/posts/sql-database-optimization-for-ai-systems-guide</guid>
+      <pubDate>Sun, 24 Sep 2023 00:00:00 GMT</pubDate>
+      <source url="https://christianipanaque.com/rss.xml">Senior Full Stack Software Engineer</source>
+    </item>
+    <item>
+      <title>"Server-Side Languages: Node.js, Python, and Java"</title>
+      <link>https://christianipanaque.com/posts/comparing-server-side-languages-nodejs-python-java</link>
+      <description>Read about "Server-Side Languages: Node.js, Python, and Java"</description>
+      <author>christianipanaque@outlook.com (Christian Ipanaque)</author>
+      <category>Software Engineering</category>
+      <guid isPermaLink="true">https://christianipanaque.com/posts/comparing-server-side-languages-nodejs-python-java</guid>
+      <pubDate>Sun, 26 Feb 2023 00:00:00 GMT</pubDate>
+      <source url="https://christianipanaque.com/rss.xml">Senior Full Stack Software Engineer</source>
+    </item>
+    <item>
+      <title>GitHub Actions for AI Engineering</title>
+      <link>https://christianipanaque.com/posts/github-actions-ai-engineering-guide</link>
+      <description>Read about GitHub Actions for AI Engineering</description>
+      <author>christianipanaque@outlook.com (Christian Ipanaque)</author>
+      <category>Software Engineering</category>
+      <guid isPermaLink="true">https://christianipanaque.com/posts/github-actions-ai-engineering-guide</guid>
+      <pubDate>Sat, 07 Oct 2023 00:00:00 GMT</pubDate>
+      <source url="https://christianipanaque.com/rss.xml">Senior Full Stack Software Engineer</source>
+    </item>
+    <item>
+      <title>"Cloud Computing Platforms: AWS, Azure, GCP"</title>
+      <link>https://christianipanaque.com/posts/comparing-cloud-computing-platforms-aws-azure-gcp-guide</link>
+      <description>Read about "Cloud Computing Platforms: AWS, Azure, GCP"</description>
+      <author>christianipanaque@outlook.com (Christian Ipanaque)</author>
+      <category>Software Engineering</category>
+      <guid isPermaLink="true">https://christianipanaque.com/posts/comparing-cloud-computing-platforms-aws-azure-gcp-guide</guid>
+      <pubDate>Fri, 27 Oct 2023 00:00:00 GMT</pubDate>
+      <source url="https://christianipanaque.com/rss.xml">Senior Full Stack Software Engineer</source>
+    </item>
+    <item>
+      <title>Advanced JavaScript Techniques for AI Integration</title>
+      <link>https://christianipanaque.com/posts/advanced-javascript-techniques-for-ai-integration</link>
+      <description>Read about Advanced JavaScript Techniques for AI Integration</description>
+      <author>christianipanaque@outlook.com (Christian Ipanaque)</author>
+      <category>Software Engineering</category>
+      <guid isPermaLink="true">https://christianipanaque.com/posts/advanced-javascript-techniques-for-ai-integration</guid>
+      <pubDate>Wed, 20 Sep 2023 00:00:00 GMT</pubDate>
+      <source url="https://christianipanaque.com/rss.xml">Senior Full Stack Software Engineer</source>
+    </item>
+    <item>
+      <title>AI Model Deployment and Scaling</title>
+      <link>https://christianipanaque.com/posts/ai-model-deployment-scaling-guide</link>
+      <description>Read about AI Model Deployment and Scaling</description>
+      <author>christianipanaque@outlook.com (Christian Ipanaque)</author>
+      <category>Software Engineering</category>
+      <guid isPermaLink="true">https://christianipanaque.com/posts/ai-model-deployment-scaling-guide</guid>
+      <pubDate>Mon, 28 Aug 2023 00:00:00 GMT</pubDate>
+      <source url="https://christianipanaque.com/rss.xml">Senior Full Stack Software Engineer</source>
+    </item>
+    <item>
+      <title>"Front-End Frameworks: React, Angular, and Vue.js"</title>
+      <link>https://christianipanaque.com/posts/comparing-front-end-frameworks-react-angular-vuejs-guide</link>
+      <description>Read about "Front-End Frameworks: React, Angular, and Vue.js"</description>
+      <author>christianipanaque@outlook.com (Christian Ipanaque)</author>
+      <category>Software Engineering</category>
+      <guid isPermaLink="true">https://christianipanaque.com/posts/comparing-front-end-frameworks-react-angular-vuejs-guide</guid>
+      <pubDate>Sat, 18 Nov 2023 00:00:00 GMT</pubDate>
+      <source url="https://christianipanaque.com/rss.xml">Senior Full Stack Software Engineer</source>
+    </item>
+    <item>
+      <title>AWS Services for Artificial Intelligence Startups</title>
+      <link>https://christianipanaque.com/posts/aws-services-for-ai-startups-guide</link>
+      <description>Read about AWS Services for Artificial Intelligence Startups</description>
+      <author>christianipanaque@outlook.com (Christian Ipanaque)</author>
+      <category>Software Engineering</category>
+      <guid isPermaLink="true">https://christianipanaque.com/posts/aws-services-for-ai-startups-guide</guid>
+      <pubDate>Tue, 24 Oct 2023 00:00:00 GMT</pubDate>
+      <source url="https://christianipanaque.com/rss.xml">Senior Full Stack Software Engineer</source>
+    </item>
+    <item>
+      <title>"Jenkins for AI Development Workflows"</title>
+      <link>https://christianipanaque.com/posts/jenkins-for-ai-development-workflows-guide</link>
+      <description>Read about "Jenkins for AI Development Workflows"</description>
+      <author>christianipanaque@outlook.com (Christian Ipanaque)</author>
+      <category>Software Engineering</category>
+      <guid isPermaLink="true">https://christianipanaque.com/posts/jenkins-for-ai-development-workflows-guide</guid>
+      <pubDate>Wed, 04 Oct 2023 00:00:00 GMT</pubDate>
+      <source url="https://christianipanaque.com/rss.xml">Senior Full Stack Software Engineer</source>
+    </item>
+    <item>
+      <title>API Design and Development with REST and GraphQL</title>
+      <link>https://christianipanaque.com/posts/ultimate-guide-api-design-development-rest-graphql</link>
+      <description>Read about API Design and Development with REST and GraphQL</description>
+      <author>christianipanaque@outlook.com (Christian Ipanaque)</author>
+      <category>Software Engineering</category>
+      <guid isPermaLink="true">https://christianipanaque.com/posts/ultimate-guide-api-design-development-rest-graphql</guid>
+      <pubDate>Sat, 18 Nov 2023 00:00:00 GMT</pubDate>
+      <source url="https://christianipanaque.com/rss.xml">Senior Full Stack Software Engineer</source>
+    </item>
+    <item>
+      <title>Scalable System Design and Architecture</title>
+      <link>https://christianipanaque.com/posts/scalable-system-design-architecture-guide</link>
+      <description>Read about Scalable System Design and Architecture</description>
+      <author>christianipanaque@outlook.com (Christian Ipanaque)</author>
+      <category>Software Engineering</category>
+      <guid isPermaLink="true">https://christianipanaque.com/posts/scalable-system-design-architecture-guide</guid>
+      <pubDate>Sat, 04 Nov 2023 00:00:00 GMT</pubDate>
+      <source url="https://christianipanaque.com/rss.xml">Senior Full Stack Software Engineer</source>
+    </item>
+    <item>
+      <title>DevOps Best Practices in AI Startups</title>
+      <link>https://christianipanaque.com/posts/devops-best-practices-ai-startups-guide</link>
+      <description>Read about DevOps Best Practices in AI Startups</description>
+      <author>christianipanaque@outlook.com (Christian Ipanaque)</author>
+      <category>Software Engineering</category>
+      <guid isPermaLink="true">https://christianipanaque.com/posts/devops-best-practices-ai-startups-guide</guid>
+      <pubDate>Wed, 20 Sep 2023 00:00:00 GMT</pubDate>
+      <source url="https://christianipanaque.com/rss.xml">Senior Full Stack Software Engineer</source>
+    </item>
+    <item>
+      <title>Performance Optimization in AI Systems</title>
+      <link>https://christianipanaque.com/posts/performance-optimization-techniques-in-AI-systems</link>
+      <description>Read about Performance Optimization in AI Systems</description>
+      <author>christianipanaque@outlook.com (Christian Ipanaque)</author>
+      <category>Software Engineering</category>
+      <guid isPermaLink="true">https://christianipanaque.com/posts/performance-optimization-techniques-in-AI-systems</guid>
+      <pubDate>Sun, 15 Oct 2023 00:00:00 GMT</pubDate>
+      <source url="https://christianipanaque.com/rss.xml">Senior Full Stack Software Engineer</source>
+    </item>
+    <item>
+      <title>"Implementing Advanced Security Protocols in AI Development: A Comprehensive Guide for Senior Software Engineers"</title>
+      <link>https://christianipanaque.com/posts/advanced-AI-security-protocols-implementation-guide-for-senior-software-engineers</link>
+      <description>Read about "Implementing Advanced Security Protocols in AI Development: A Comprehensive Guide for Senior Software Engineers"</description>
+      <author>christianipanaque@outlook.com (Christian Ipanaque)</author>
+      <category>Software Engineering</category>
+      <guid isPermaLink="true">https://christianipanaque.com/posts/advanced-AI-security-protocols-implementation-guide-for-senior-software-engineers</guid>
+      <pubDate>Sun, 09 Apr 2023 00:00:00 GMT</pubDate>
+      <source url="https://christianipanaque.com/rss.xml">Senior Full Stack Software Engineer</source>
+    </item>
+    <item>
+      <title>High-Performance Computing</title>
+      <link>https://christianipanaque.com/posts/high-performance-computing-advancements-and-applications</link>
+      <description>Read about High-Performance Computing</description>
+      <author>christianipanaque@outlook.com (Christian Ipanaque)</author>
+      <category>Software Engineering</category>
+      <guid isPermaLink="true">https://christianipanaque.com/posts/high-performance-computing-advancements-and-applications</guid>
+      <pubDate>Fri, 11 Aug 2023 00:00:00 GMT</pubDate>
+      <source url="https://christianipanaque.com/rss.xml">Senior Full Stack Software Engineer</source>
+    </item>
+    <item>
+      <title>Hiring a Senior Full Stack Engineer</title>
+      <link>https://christianipanaque.com/posts/hiring-a-senior-full-stack-engineer</link>
+      <description>Read about Hiring a Senior Full Stack Engineer</description>
+      <author>christianipanaque@outlook.com (Christian Ipanaque)</author>
+      <category>Software Engineering</category>
+      <guid isPermaLink="true">https://christianipanaque.com/posts/hiring-a-senior-full-stack-engineer</guid>
+      <pubDate>Mon, 30 Oct 2023 00:00:00 GMT</pubDate>
+      <source url="https://christianipanaque.com/rss.xml">Senior Full Stack Software Engineer</source>
+    </item>
+    <item>
+      <title>Distributed Systems and Concurrency</title>
+      <link>https://christianipanaque.com/posts/understanding-distributed-systems-concurrency-principles</link>
+      <description>Read about Distributed Systems and Concurrency</description>
+      <author>christianipanaque@outlook.com (Christian Ipanaque)</author>
+      <category>Software Engineering</category>
+      <guid isPermaLink="true">https://christianipanaque.com/posts/understanding-distributed-systems-concurrency-principles</guid>
+      <pubDate>Tue, 07 Mar 2023 00:00:00 GMT</pubDate>
+      <source url="https://christianipanaque.com/rss.xml">Senior Full Stack Software Engineer</source>
+    </item>
+    <item>
+      <title>" Hiring a Senior Full Stack Engineer: How to Assess Their Communication Skills"</title>
+      <link>https://christianipanaque.com/posts/hiring-a-senior-full-stack-engineer-assess-their-communication-skills</link>
+      <description>Read about " Hiring a Senior Full Stack Engineer: How to Assess Their Communication Skills"</description>
+      <author>christianipanaque@outlook.com (Christian Ipanaque)</author>
+      <category>Software Engineering</category>
+      <guid isPermaLink="true">https://christianipanaque.com/posts/hiring-a-senior-full-stack-engineer-assess-their-communication-skills</guid>
+      <pubDate>Sun, 24 Sep 2023 00:00:00 GMT</pubDate>
+      <source url="https://christianipanaque.com/rss.xml">Senior Full Stack Software Engineer</source>
+    </item>
+    <item>
+      <title>"Microservices Architecture: A Comprehensive Guide"</title>
+      <link>https://christianipanaque.com/posts/understanding-microservices-architecture-guide</link>
+      <description>Read about "Microservices Architecture: A Comprehensive Guide"</description>
+      <author>christianipanaque@outlook.com (Christian Ipanaque)</author>
+      <category>Software Engineering</category>
+      <guid isPermaLink="true">https://christianipanaque.com/posts/understanding-microservices-architecture-guide</guid>
+      <pubDate>Mon, 10 Jul 2023 00:00:00 GMT</pubDate>
+      <source url="https://christianipanaque.com/rss.xml">Senior Full Stack Software Engineer</source>
+    </item>
+    <item>
+      <title>NoSQL Databases in AI Environments</title>
+      <link>https://christianipanaque.com/posts/nosql-databases-ai-environments-technology-insights</link>
+      <description>Read about NoSQL Databases in AI Environments</description>
+      <author>christianipanaque@outlook.com (Christian Ipanaque)</author>
+      <category>Software Engineering</category>
+      <guid isPermaLink="true">https://christianipanaque.com/posts/nosql-databases-ai-environments-technology-insights</guid>
+      <pubDate>Wed, 18 Oct 2023 00:00:00 GMT</pubDate>
+      <source url="https://christianipanaque.com/rss.xml">Senior Full Stack Software Engineer</source>
+    </item>
+    <item>
       <title>Improve Your Engineering Communication: Dominance vs Leadership</title>
-      <link>https://christianipanaque.com/posts/engineering-communication-dominance-leadership-teams
-      </link>
+      <link>https://christianipanaque.com/posts/engineering-communication-dominance-leadership-teams</link>
       <description>Explore the nuances of engineering communication through examples of dominance and leadership in frontend and backend development contexts. Learn the best approaches for team collaboration and project success.</description>
       <author>christianipanaque@outlook.com (Christian Ipanaque)</author>
       <category>Engineering</category>
-      <guid isPermaLink="true">https://christianipanaque.com/posts/engineering-communication-dominance-leadership-teams
-      </guid>
+      <guid isPermaLink="true">https://christianipanaque.com/posts/engineering-communication-dominance-leadership-teams</guid>
       <pubDate>Thu, 09 Nov 2023 08:44:33 GMT</pubDate>
       <source url="https://christianipanaque.com/rss.xml">Full Stack Software Engineer</source>
     </item>
     <item>
-      <title>From Concept to Launch: How My Modular Development Techniques Accelerate
-      Large AI Applications</title>
-      <link>https://christianipanaque.com/posts/modular-development-for-large-ai-applications
-      </link>
+      <title>From Concept to Launch: How My Modular Development Techniques Accelerate Large AI Applications</title>
+      <link>https://christianipanaque.com/posts/modular-development-for-large-ai-applications</link>
       <description>Discover how modular development techniques streamline AI project workflows. Dive into our Knowledge Base for best practices, code examples, and modular design strategies tailored for software engineers in AI development.</description>
       <author>christianipanaque@outlook.com (Christian Ipanaque)</author>
       <category>Modularity</category>
-      <guid isPermaLink="true">https://christianipanaque.com/posts/modular-development-for-large-ai-applications
-      </guid>
+      <guid isPermaLink="true">https://christianipanaque.com/posts/modular-development-for-large-ai-applications</guid>
       <pubDate>Thu, 09 Nov 2023 01:31:15 GMT</pubDate>
       <source url="https://christianipanaque.com/rss.xml">Full Stack Software Engineer</source>
     </item>
     <item>
       <title>Implementing AI-Driven Features with Next.js Serverless Functions</title>
-      <link>https://christianipanaque.com/posts/implementing-aidriven-features-with-nextjs-serverless
-      </link>
+      <link>https://christianipanaque.com/posts/implementing-aidriven-features-with-nextjs-serverless</link>
       <description>Unlock the full potential of serverless with an in-depth exploration of its implications on performance, cost strategies, and best practices for optimization. Also, discover insights on AI integration with Next.js serverless functions.</description>
       <author>christianipanaque@outlook.com (Christian Ipanaque)</author>
       <category>Serverless</category>
-      <guid isPermaLink="true">https://christianipanaque.com/posts/implementing-aidriven-features-with-nextjs-serverless
-      </guid>
+      <guid isPermaLink="true">https://christianipanaque.com/posts/implementing-aidriven-features-with-nextjs-serverless</guid>
       <pubDate>Thu, 02 Nov 2023 15:21:45 GMT</pubDate>
       <source url="https://christianipanaque.com/rss.xml">Full Stack Software Engineer</source>
     </item>
 
     <item>
       <title>Schema Directives in GraphQL: Enhancing AI Data Queries</title>
-      <link>https://christianipanaque.com/posts/schema-directives-in-graphql-enhancing-ai-data-queries
-      </link>
+      <link>https://christianipanaque.com/posts/schema-directives-in-graphql-enhancing-ai-data-queries</link>
       <description>An advanced guide on leveraging GraphQL schema directives to enhance data querying capabilities for AI processes. Discover the power and flexibility of directives in AI data management.</description>
       <author>christianipanaque@outlook.com (Christian Ipanaque)</author>
       <category>GraphQL</category>
-      <guid isPermaLink="true">https://christianipanaque.com/posts/schema-directives-in-graphql-enhancing-ai-data-queries
-      </guid>
+      <guid isPermaLink="true">https://christianipanaque.com/posts/schema-directives-in-graphql-enhancing-ai-data-queries</guid>
       <pubDate>Wed, 01 Nov 2023 09:41:23 GMT</pubDate>
       <source url="https://christianipanaque.com/rss.xml">Find Full Stack Developer</source>
     </item>
@@ -78,6 +525,5 @@
       <pubDate>Wed, 01 Nov 2023 08:45:43 GMT</pubDate>
       <source url="https://christianipanaque.com/rss.xml">Find Full Stack Developer</source>
     </item>
-
   </channel>
 </rss>
