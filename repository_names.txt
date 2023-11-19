@@ -1,4 +1,3 @@
-Agricultural Drone Analytics for Peru Farms (PyTorch, OpenCV, Kafka, Docker) Processes drone-captured imagery to assess crop health, pest infestations, and irrigation needs, enabling precision agriculture practices
 Peru Fishery Stock Management System (Keras, TensorFlow, Spark, DVC) Uses satellite and sonar data to monitor and predict fish stock levels, supporting sustainable fishing practices and supply planning
 Dynamic Food Packaging Optimization in Peru (Scikit-Learn, Pandas, Flask, Prometheus) Optimizes packaging processes based on product type, destination, and shelf life to minimize waste and cost
 Peru Restaurant Supply Demand Forecaster (TensorFlow, PyTorch, Airflow, Grafana) Predicts demand for various food products from restaurants, aiding suppliers in managing inventory and reducing food waste
