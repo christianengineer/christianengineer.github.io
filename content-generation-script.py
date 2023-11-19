@@ -15,6 +15,23 @@ def get_random_date(start_date, end_date):
     return start_date + timedelta(days=random_number_of_days)
 
 
+def generate_title_non_formated(topic):
+    print("generate_title_non_formated start")
+    print("generate_title_non_formated chat_completion start")
+    response = client.chat.completions.create(
+        messages=[
+            {
+                "role": "user",
+                "content": f"Generate an SEO-optimized title for an article aimed at Senior Software Engineers about {topic}. The title should include advanced technical terms and relevant SEO keywords to attract experienced professionals. Ensure the title is engaging and reflects the in-depth nature of the article, catering specifically to a senior-level audience in the software engineering field.",
+            }
+        ],
+        model="gpt-4",
+    )
+    print("generate_title_non_formated end")
+    print("generate_title_non_formated chat_completion end")
+    return response.choices[0].message.content.strip()
+
+
 def generate_title(topic):
     print("generate_title start")
     print("generate_title chat_completion start")
@@ -22,7 +39,7 @@ def generate_title(topic):
         messages=[
             {
                 "role": "user",
-                "content": f"Generate a concise, SEO-optimized file name suitable for a URL, based on an article about {topic}. Include relevant SEO keywords, ensure the file name is catchy, and relevant to the topic. Use only letters and hyphens (no other characters) instead of spaces. Exclude the '.md' extension from the file name.",
+                "content": f"Develop a concise, SEO-focused file name tailored for web URLs, derived from an in-depth article about {topic}. The file name should integrate targeted SEO keywords to maximize search engine visibility, appealing to a technically adept audience. Ensure it's both engaging and directly related to the article's subject. Use a simple format with only letters and hyphens to replace spaces, maintaining web URL standards. Do not include the '.md' extension. The file name should effectively represent the article's core theme and be optimized for high-ranking search results.",
             }
         ],
         model="gpt-4",
@@ -39,7 +56,7 @@ def generate_article(topic):
         messages=[
             {
                 "role": "user",
-                "content": f"Create a detailed, informative article in Markdown format about {topic}. The article should have a professional engineering tone, be well-structured with appropriate headings, bullet points, and code snippets (if applicable).",
+                "content": f"Create a comprehensive, technically rich article in Markdown format about {topic}, tailored for experienced software engineers. The article should delve into complex engineering concepts, demonstrating a high level of expertise. Ensure it's well-structured with clear, concise headings, bullet points for key takeaways, and include in-depth code snippets or examples where relevant. The tone should be professional yet engaging, providing deep insights and advanced knowledge that resonates with a senior engineering audience.",
             }
         ],
         model="gpt-4",
@@ -62,8 +79,10 @@ def main():
         print("retrieve first topic from topics.txt")
         topic = topics.pop(0)
 
+        non_formated_title = generate_title_non_formated(topic)
+
         print("generate title start")
-        title = generate_title(topic)
+        title = generate_title(non_formated_title)
         print("generate title end")
 
         # Define start and end dates
@@ -81,10 +100,13 @@ def main():
             with open(markdown_filename, "w") as md_file:
                 # # Writing empty front matter
                 # md_file.write("---\n---\n")
-                md_file.write(f"---\npermalink: posts/{title}\n---\n\n")
+                # md_file.write(f"---\npermalink: posts/{title}\n---\n\n")
+                md_file.write(
+                    f"---\ntitle: {non_formated_title}\ndate: {random_date}\npermalink: posts/{title}\n---\n\n"
+                )
                 print("Markdown file created with empty front matter")
 
-        article = generate_article(topic)
+        article = generate_article(non_formated_title)
 
         if article:
             # Write the article content to the already created Markdown file
