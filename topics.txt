@@ -1,4 +1,3 @@
-AI-Driven Car Parking Assistant App
 Machine Learning Enhanced Photo Editor
 Intelligent Document Classification System
 AI-Based Language Learning Assistant
