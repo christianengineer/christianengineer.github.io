@@ -5,6 +5,7 @@ import random
 
 # Initialize the OpenAI client
 client = OpenAI(
+    # api_key=os.getenv("OPENAI_API_KEY")
     api_key=os.getenv("OPENAI_API_KEY")  # Get the API key from environment variable
 )
 
@@ -15,26 +16,23 @@ def get_random_date(start_date, end_date):
     return start_date + timedelta(days=random_number_of_days)
 
 
-def generate_title_non_formated(topic):
-    print("generate_title_non_formated start")
-    print("generate_title_non_formated chat_completion start")
+def generate_main_title(topic):
+    print("generate_main_title start")
     response = client.chat.completions.create(
         messages=[
             {
                 "role": "user",
-                "content": f"Generate an SEO-optimized title for an article aimed at Senior Software Engineers about {topic}. The title should include advanced technical terms and relevant SEO keywords to attract experienced professionals. Ensure the title is engaging and reflects the in-depth nature of the article, catering specifically to a senior-level audience in the software engineering field.",
+                "content": f"Generate a succinct and engaging title for a comprehensive development plan aimed at creating a scalable {topic} for a large AI Corporation. The title should encapsulate the essence of a project that encompasses design, development, deployment, and data handling strategies, along with machine learning model training and API integration. It should reflect the project’s commitment to handling large volumes of data, robust scalability testing, and the integration of cloud technologies and AI for superior performance and user experience. Consider a title that conveys innovation, technological advancement, and scalability.",
             }
         ],
         model="gpt-4",
     )
-    print("generate_title_non_formated end")
-    print("generate_title_non_formated chat_completion end")
+    print("generate_main_title end")
     return response.choices[0].message.content.strip()
 
 
-def generate_title(topic):
-    print("generate_title start")
-    print("generate_title chat_completion start")
+def generate_seo_url_title(topic):
+    print("generate_seo_url_title start")
     response = client.chat.completions.create(
         messages=[
             {
@@ -44,26 +42,24 @@ def generate_title(topic):
         ],
         model="gpt-4",
     )
-    print("generate_title end")
-    print("generate_title chat_completion end")
+    print("generate_seo_url_title end")
     return response.choices[0].message.content.strip()
 
 
 def generate_article(topic):
     print("generate_article start")
-    print("generate_article chat_completion start")
     response = client.chat.completions.create(
         messages=[
             {
                 "role": "user",
-                "content": f"Create a comprehensive, technically rich article in Markdown format about {topic}, tailored for experienced software engineers. The article should delve into complex engineering concepts, demonstrating a high level of expertise. Ensure it's well-structured with clear, concise headings, bullet points for key takeaways, and include in-depth code snippets or examples where relevant. The tone should be professional yet engaging, providing deep insights and advanced knowledge that resonates with a senior engineering audience.",
+                # "content": f"Develop a detailed plan in Markdown format for {topic}, focusing on a scalable file structure and collaborative environment for thousands of engineers. Address the architectural design, emphasizing modular, reusable components and a microservices approach. Include a strategy for efficient data handling, robust machine learning model training, and seamless API integration. Tackle the challenges of high data volumes and concurrent user activities. Incorporate code snippets demonstrating key scalability solutions. Plan for phased rollouts, scalability testing, continuous integration, and deployment. Emphasize cloud and AI technologies to enhance performance and user experience, ensuring a flexible, scalable, and maintainable system.",
+                "content": f"Create an advanced development blueprint in Markdown format for {topic} aimed at large-scale AI corporations, designed to captivate and motivate highly skilled software engineers. Focus on presenting a well-structured, modular design, and development strategy, incorporating concise, clear code snippets that offer quick, high-level insights. These snippets should demonstrate innovative solutions for scalable data handling, efficient machine learning model training, and robust API integration. Address the complexities of managing vast data and high user traffic. Include a strategic phased rollout with rigorous scalability testing. Emphasize the utilization of cloud technologies and AI to optimize performance and user experience, crafting a narrative that excites and encourages immediate engagement from top-tier developers.",
             }
         ],
         model="gpt-4",
     )
     article = response.choices[0].message.content.strip()
     print("generate_article end")
-    print("generate_article chat_completion end")
     return article
 
 
@@ -71,19 +67,16 @@ def main():
     print("script start")
 
     with open("topics.txt", "r") as file:
-        print(f"opened topics")
         topics = [line.strip() for line in file if line.strip()]
-        print(f"topics stripped")
 
     if topics:
-        print("retrieve first topic from topics.txt")
         topic = topics.pop(0)
 
-        non_formated_title = generate_title_non_formated(topic)
+        main_title = generate_main_title(topic)
+        print(f"main_title: {main_title}")
 
-        print("generate title start")
-        title = generate_title(non_formated_title)
-        print("generate title end")
+        seo_title = generate_seo_url_title(main_title)
+        print(f"seo_title: {seo_title}")
 
         # Define start and end dates
         start_date = datetime(2023, 1, 1)
@@ -92,28 +85,21 @@ def main():
         random_date = get_random_date(start_date, end_date).strftime("%Y-%m-%d")
 
         # today_date = datetime.now().strftime("%Y-%m-%d")
-        markdown_filename = f"_posts/{random_date}-{title}.md"
+        markdown_filename = f"_posts/{random_date}-{seo_title}.md"
 
         os.makedirs(os.path.dirname(markdown_filename), exist_ok=True)
 
         if not os.path.exists(markdown_filename):
             with open(markdown_filename, "w") as md_file:
-                # # Writing empty front matter
-                # md_file.write("---\n---\n")
-                # md_file.write(f"---\npermalink: posts/{title}\n---\n\n")
                 md_file.write(
-                    f"---\ntitle: {non_formated_title}\ndate: {random_date}\npermalink: posts/{title}\n---\n\n"
+                    f"---\ntitle: {main_title}\ndate: {random_date}\npermalink: posts/{seo_title}\n---\n\n"
                 )
-                print("Markdown file created with empty front matter")
 
-        article = generate_article(non_formated_title)
+        article = generate_article(main_title)
 
         if article:
-            # Write the article content to the already created Markdown file
             with open(markdown_filename, "a") as md_file:
-                print("Markdown writing start")
                 md_file.write(article)
-                print("Markdown writing end")
 
             print(f"Article for '{topic}' generated and saved as {markdown_filename}.")
 
