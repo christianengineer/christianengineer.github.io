@@ -1,4 +1,3 @@
-Data Engineering and ETL Pipelines
 Real-Time Data Processing
 Ethical AI and Data Privacy Regulations
 Building Effective Communication within Full Stack Teams
