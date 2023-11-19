@@ -1,4 +1,6 @@
 ---
+title: "Containerization and Orchestration: An Overview of Docker and Kubernetes"
+date: 2023-09-01
 permalink: posts/understanding-containerization-orchestration-docker-kubernetes-guide
 ---
 
