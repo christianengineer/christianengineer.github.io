@@ -1,4 +1,3 @@
-AI-Driven Traffic Management System
 Healthcare Chatbot for Diagnosis Assistance
 Sentiment Analysis Tool for Customer Feedback
 AI-Based Crop Disease Prediction App
