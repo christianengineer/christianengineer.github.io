@@ -1,5 +1,6 @@
 ---
 title: Setting Up a Scalable GraphQL Repository
+date: 2023-09-10
 permalink: posts/setting-up-scalable-graphql-repository
 ---
 

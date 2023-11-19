@@ -1,4 +1,6 @@
 ---
+title: Advanced JavaScript Techniques for AI Integration
+date: 2023-09-20
 permalink: posts/advanced-javascript-techniques-for-ai-integration
 ---
 

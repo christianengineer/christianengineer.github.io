@@ -1,4 +1,6 @@
 ---
+title: Project Management in AI Startups
+date: 2023-09-10
 permalink: posts/project-management-strategies-in-ai-startups
 ---
 

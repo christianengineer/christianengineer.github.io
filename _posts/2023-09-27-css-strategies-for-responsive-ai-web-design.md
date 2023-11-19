@@ -1,4 +1,6 @@
 ---
+title: CSS Strategies for Responsive AI Web Design
+date: 2023-09-27
 permalink: posts/css-strategies-for-responsive-ai-web-design
 ---
 
