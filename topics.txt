@@ -1,4 +1,3 @@
-AI-Based Language Learning Assistant
 Smart Waste Management System
 AI-Powered Legal Document Analysis
 Climate Change Analysis and Prediction Model
