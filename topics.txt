@@ -1,4 +1,3 @@
-Personalized AI Fitness Coach
 AI-Based Cybersecurity Threat Detection
 Natural Language Query Engine for Databases
 AI-Driven Car Parking Assistant App
