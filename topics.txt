@@ -1,4 +1,3 @@
-Machine Learning Enhanced Photo Editor
 Intelligent Document Classification System
 AI-Based Language Learning Assistant
 Smart Waste Management System
