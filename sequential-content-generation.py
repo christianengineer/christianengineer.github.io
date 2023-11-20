@@ -15,13 +15,13 @@ def get_random_date(start_date, end_date):
 
 def summarize(text):
     # Split the text into sections
-    sections = text.split("Summary Section:")
+    sections = text.split("Summary Section")
     # Check if a summary section exists
     if len(sections) > 1:
         summary = sections[1].strip()
         return summary
     else:
-        return "No summary section found."
+        return text
 
 
 def add_message_and_get_response(conversation, user_prompt):
