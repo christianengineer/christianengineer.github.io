@@ -1,4 +1,3 @@
-AI-Based Wildlife Monitoring System
 Predictive AI Analytics for Public Health
 Automated AI-Powered Blogging Assistant
 AI-Enabled Customer Support Chatbot
