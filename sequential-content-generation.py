@@ -28,11 +28,11 @@ def add_message_and_get_response(conversation, user_prompt):
 def get_user_prompts_for_article(topic):
     user_prompts = [
         f"In Markdown format, create the technical specifications document of the {topic} repository that focuses on its capacity for efficient data management and handling high user traffic. Include a description, objectives, and chosen libraries. Assume the reader is an expert with each library, only include why each library was chosen with tradeoffs",
-        f"Design a detailed, multi-level file structure that supports scalability, diving deep into nested directories and specific file organization. Focus on a hierarchy that facilitates extensive growth and complex project APIs.",
-        f"Design a file detailing the primary API module, focusing on its core logic and functionality for rapid development. Include file path.",
-        f"Create a file for a secondary API module, but essential part of the project, describing its unique logic and how it integrates with other modules.",
-        f"Develop a file outlining an additional API module, emphasizing its role in the overall system and interdependencies with previously outlined modules.",
-        f"Generate list of type of users that will use this application. Include a user story for each type of user and which file will accomplish this.",
+        f"Design a detailed, multi-level scalable file structure for {topic}, diving deep into nested directories and specific file organization. Focus on a hierarchy that facilitates extensive growth",
+        f"Design a file detailing the core logic of {topic}. Include file path.",
+        f"Create a file for a secondary core logic of {topic}, but essential part of the project, describing its unique logic and how it integrates with other files.",
+        f"Develop a file outlining an additional core logic of {topic}, emphasizing its role in the overall system and interdependencies with previously outlined files.",
+        f"Generate list of type of users that will use the {topic} application. Include a user story for each type of user and which file will accomplish this.",
     ]
     return user_prompts
 
