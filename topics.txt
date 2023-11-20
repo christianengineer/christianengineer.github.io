@@ -1,4 +1,3 @@
-Predictive Analytics for Retail Inventory Management
 Real-Time Language Translation Chatbot
 AI-Based Cybersecurity Threat Detection System
 Personalized Learning Recommendation Engine
