@@ -1,4 +1,3 @@
-Smart AI Contract Analyzer for Blockchain
 AI-Based Language Translation for Websites
 AI-Powered Code Review Assistant
 Predictive Analytics for Retail Inventory Management
