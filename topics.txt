@@ -1,4 +1,3 @@
-Personalized AI Art Generator
 AI-Powered Virtual Event Coordinator
 Machine Learning for Efficient Supply Chain Management
 AI-Driven Podcast Summarization Tool
