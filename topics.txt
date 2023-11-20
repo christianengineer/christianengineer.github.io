@@ -1,4 +1,3 @@
-AI-Driven Podcast Summarization Tool
 Smart AI Contract Analyzer for Blockchain
 AI-Based Language Translation for Websites
 AI-Powered Code Review Assistant
