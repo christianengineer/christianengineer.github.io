@@ -2,11 +2,9 @@ import os
 from openai import OpenAI
 from datetime import datetime, timedelta
 import random
+import re
 
-
-client = OpenAI(
-    api_key=os.getenv("OPENAI_API_KEY")
-)
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 
 def get_random_date(start_date, end_date):
@@ -18,24 +16,34 @@ def get_random_date(start_date, end_date):
 def add_message_and_get_response(conversation, user_prompt):
     conversation.append({"role": "user", "content": user_prompt})
 
-    response = client.chat.completions.create(model="gpt-4", messages=conversation)
+    response = client.chat.completions.create(
+        model="gpt-3.5-turbo", messages=conversation
+    )
     assistant_message = response.choices[0].message.content
     conversation.append({"role": "assistant", "content": assistant_message})
 
     return assistant_message
 
 
-def get_user_prompts(topic):
+def get_user_prompts_for_article(topic):
     user_prompts = [
-        f"In Markdown format, expand on the {topic} repository. Description, goals and libraries to be used for efficient data handling and scalable user traffic.",
-        f"In Markdown format, generate a scalable file structure for the {topic} repository.",
-        f"In Markdown format, generate a fictitious file for {topic}. This file will handle the logic for {topic}. Include the folder location.",
-        # main_title
-        f"Generate a succinct and engaging title for a comprehensive development plan aimed at creating a scalable {topic} for a large AI Corporation. The title should encapsulate the essence of a project that encompasses design, development, deployment, and data handling strategies. It should reflect the project’s commitment to handling large volumes of data, robust scalability testing, and the integration of cloud technologies and AI for superior performance for high user traffic. Consider a title that conveys innovation, technological advancement, and scalability.",
-        # seo_title
-        f"Develop a concise, SEO-focused file name tailored for web URLs, derived from an in-depth article about {topic}. The file name should integrate targeted SEO keywords to maximize search engine visibility, appealing to a technically adept audience. Ensure it's both engaging and directly related to the article's subject. Use a simple format with only letters and hyphens to replace spaces, maintaining web URL standards. Do not include the '.md' extension. The file name should effectively represent the article's core theme and be optimized for high-ranking search results.",
+        f"In Markdown format, create the technical specifications document of the {topic} repository that focuses on its capacity for efficient data management and handling high user traffic. Include a description, objectives, and chosen libraries. Assume the reader is an expert with each library, only include why each library was chosen with tradeoffs",
+        f"Design a detailed, multi-level file structure that supports scalability, diving deep into nested directories and specific file organization. Focus on a hierarchy that facilitates extensive growth and complex project APIs.",
+        f"Design a file detailing the primary API module, focusing on its core logic and functionality for rapid development. Include file path.",
+        f"Create a file for a secondary API module, but essential part of the project, describing its unique logic and how it integrates with other modules.",
+        f"Develop a file outlining an additional API module, emphasizing its role in the overall system and interdependencies with previously outlined modules.",
+        f"Generate list of type of users that will use this application. Include a user story for each type of user and which file will accomplish this.",
     ]
     return user_prompts
+
+
+def format_title_to_url(title):
+    title = title.lower()
+    # Remove special characters
+    title = re.sub(r"[^a-z0-9\s-]", "", title)
+    # Replace spaces with hyphens
+    title = re.sub(r"\s+", "-", title).strip("-")
+    return title
 
 
 def main():
@@ -46,7 +54,7 @@ def main():
     conversation = [
         {
             "role": "system",
-            "content": "You are a large AI Corporation looking to hire a highly skilled Full Stack Software Engineer",
+            "content": "You are a large AI Corporation Principal Engineer looking to hire a highly skilled Senior Full Stack Software Engineer",
         }
     ]
 
@@ -56,33 +64,31 @@ def main():
     if topics:
         topic = topics.pop(0)
 
-        for prompt in get_user_prompts(topic):
+        for prompt in get_user_prompts_for_article(topic):
             response = add_message_and_get_response(conversation, prompt)
             results.append(response)
-            print(f"\nprompt successfull: {prompt}\n{response}\n\n")
+            print(f"\nprompt successful: {conversation}\n\n{prompt}\n\n{response}\n\n")
 
         # Define start and end dates
-        start_date = datetime(2023, 1, 1)
-        end_date = datetime(2023, 11, 1)
+        start_date = datetime(2023, 11, 18)
+        end_date = datetime(2023, 11, 19)
 
         random_date = get_random_date(start_date, end_date).strftime("%Y-%m-%d")
 
-        permalink_value = results[4].replace('"', "")
-
-        main_title = results[3]
+        permalink_url = format_title_to_url(topic)
 
         # today_date = datetime.now().strftime("%Y-%m-%d")
-        markdown_filename = f"_posts/{random_date}-{permalink_value}.md"
+        markdown_filename = f"_posts/{random_date}-{permalink_url}.md"
 
         os.makedirs(os.path.dirname(markdown_filename), exist_ok=True)
 
         if not os.path.exists(markdown_filename):
             with open(markdown_filename, "w") as md_file:
                 md_file.write(
-                    f"---\ntitle: {main_title}\ndate: {random_date}\npermalink: posts/{permalink_value}\n---\n\n"
+                    f"---\ntitle: {topic}\ndate: {random_date}\npermalink: posts/{permalink_url}\n---\n\n"
                 )
 
-        combined_result = "\n\n".join(results[:3])
+        combined_result = "\n\n".join(results)
 
         if combined_result:
             with open(markdown_filename, "a") as md_file:
