@@ -13,6 +13,17 @@ def get_random_date(start_date, end_date):
     return start_date + timedelta(days=random_number_of_days)
 
 
+def summarize(text):
+    # Split the text into sections
+    sections = text.split("Summary Section:")
+    # Check if a summary section exists
+    if len(sections) > 1:
+        summary = sections[1].strip()
+        return summary
+    else:
+        return "No summary section found."
+
+
 def add_message_and_get_response(conversation, user_prompt):
     conversation.append({"role": "user", "content": user_prompt})
 
@@ -20,18 +31,23 @@ def add_message_and_get_response(conversation, user_prompt):
         model="gpt-3.5-turbo", messages=conversation
     )
     assistant_message = response.choices[0].message.content
-    conversation.append({"role": "assistant", "content": assistant_message})
+
+    # Summarize the assistant's response before appending
+    summarized_response = summarize(
+        assistant_message
+    )  # Assume 'summarize' is a function you've defined to summarize text
+    conversation.append({"role": "assistant", "content": summarized_response})
 
     return assistant_message
 
 
 def get_user_prompts_for_article(topic):
     user_prompts = [
-        f"In Markdown format, create the technical specifications document of the {topic} repository that focuses on its capacity for efficient data management and handling high user traffic. Include a description, objectives, and chosen libraries. Assume the reader is an expert with each library, only include why each library was chosen with tradeoffs",
-        f"Design a detailed, multi-level scalable file structure for {topic}, diving deep into nested directories and specific file organization. Focus on a hierarchy that facilitates extensive growth",
+        f"In Markdown format, create the technical specifications document of the {topic} repository, focusing on efficient data management and high user traffic handling. Include a description, objectives, and reasons for choosing specific libraries, considering the reader's expert knowledge of each. Conclude with a 'Summary Section' summarizing key points and decisions made in the document.",
+        f"Generate a professional scalable file structure for {topic}.",
         f"Design a file detailing the core logic of {topic}. Include file path.",
-        f"Create a file for a secondary core logic of {topic}, but essential part of the project, describing its unique logic and how it integrates with other files.",
-        f"Develop a file outlining an additional core logic of {topic}, emphasizing its role in the overall system and interdependencies with previously outlined files.",
+        f"Create a another file for another core part of {topic}. Include how it integrates with other files.",
+        f"Develop another file outlining an additional core logic of {topic}, emphasizing its role in the overall system and interdependencies with previously outlined files.",
         f"Generate list of type of users that will use the {topic} application. Include a user story for each type of user and which file will accomplish this.",
     ]
     return user_prompts
