@@ -1,4 +1,3 @@
-AI-Powered Virtual Event Coordinator
 Machine Learning for Efficient Supply Chain Management
 AI-Driven Podcast Summarization Tool
 Smart AI Contract Analyzer for Blockchain
