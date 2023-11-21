@@ -1,4 +1,3 @@
-FutureScope - AI Forecasting Tool
 RecoEngine - Smart Recommendation System
 ChatAI - Intelligent Chatbot Service
 ImageIQ - AI-Enhanced Image Recognition
