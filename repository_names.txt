@@ -1,4 +1,3 @@
-CyberShield - AI-Based Cybersecurity System
 TradeAutomate - AI for Automated Trading
 CRMPro - AI-Enhanced CRM Solutions
 HRIntelli - AI for HR Analytics
