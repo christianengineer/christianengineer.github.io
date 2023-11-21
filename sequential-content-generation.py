@@ -64,11 +64,11 @@ def generate_responses(repository_name):
             if i == 2:
                 prompts.extend(
                     [
-                        f"Summarize the key components and the scalable organizational approach of the file structure: \n{responses[2]}",
-                        f"Generate a fictitious file for one of the key component's logic of {repository_name}. Include file path.",
-                        f"Generate a fictitious file for one of the key component's for the AI logic of the {repository_name} repository. Include file path.",
-                        f"Generate a fictitious file for one of the key component's for core logic of the {repository_name} repository. Include file path.",
-                        f"Generate a fictitious file for one of the key component's for the API logic of the {repository_name} repository. Include file path.",
+                        f"In text only format, summarize the key components and the scalable organizational approach of the file structure for the {repository_name} application: \n{responses[2]}",
+                        f"Generate a fictitious file for the core objective of the {repository_name} application. Include file path.",
+                        f"Generate a fictitious file for the core AI logic of the {repository_name} application. Include file path.",
+                        f"Generate a fictitious file for handling high user traffic for the {repository_name} application. Include file path.",
+                        f"Generate a fictitious file for the efficient data-intensive management logic of the {repository_name} application. Include file path.",
                         f"Generate a list of type of users that will use the {repository_name} application. Include a user story for each type of user and which file will accomplish this."
                         # "prompt 0",
                         # f"generate a summary of {response[0]}",
