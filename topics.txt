@@ -1,4 +1,3 @@
-Natural Language Processing (NLP) for Legal Document Review
 Intelligent Virtual Health Assistant
 AI-Driven Content Creation and Curation Platform
 Smart Traffic Control and Optimization System
