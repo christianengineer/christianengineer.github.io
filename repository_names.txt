@@ -1,4 +1,3 @@
-DataTrendz - Smart Analytics Tool
 MindLearn - Comprehensive Machine Learning Service
 AutoFlow - AI-Driven Automation Platform
 VisioGraph - Dynamic Data Visualization Suite
