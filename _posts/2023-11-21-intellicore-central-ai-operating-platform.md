@@ -1,5 +1,5 @@
 ---
-title: IntelliCore: Central AI Operating Platform
+title: IntelliCore - Central AI Operating Platform
 date: 2023-11-21
 permalink: posts/intellicore-central-ai-operating-platform
 ---
