@@ -1,4 +1,3 @@
-EcoMonitor - Environmental Monitoring AI
 SmartCity - AI Solutions for Smart Cities
 AutoDrive - Autonomous Vehicle AI System
 RoboTech - Advanced Robotics AI
