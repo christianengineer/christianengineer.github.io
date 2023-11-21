@@ -1,4 +1,3 @@
-EnergySaver - AI for Energy Optimization
 EcoMonitor - Environmental Monitoring AI
 SmartCity - AI Solutions for Smart Cities
 AutoDrive - Autonomous Vehicle AI System
