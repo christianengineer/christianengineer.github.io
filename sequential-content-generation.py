@@ -3,8 +3,7 @@ from openai import OpenAI
 from datetime import datetime, timedelta
 import re
 
-# client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-client = OpenAI(api_key="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")
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 
 def generate_responses(repository_name):
