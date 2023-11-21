@@ -1,4 +1,3 @@
-HRIntelli - AI for HR Analytics
 EnergySaver - AI for Energy Optimization
 EcoMonitor - Environmental Monitoring AI
 SmartCity - AI Solutions for Smart Cities
