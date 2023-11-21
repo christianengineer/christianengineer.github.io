@@ -7,50 +7,86 @@ import re
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 
-def get_random_date(start_date, end_date):
-    time_between_dates = end_date - start_date
-    random_number_of_days = random.randrange(time_between_dates.days)
-    return start_date + timedelta(days=random_number_of_days)
+def generate_responses(repository_name):
+    responses = []
+    i = 0
 
+    system_content = "You are a AI Startup Founder seeking a Senior Full Stack Software Engineer skilled in creating scalable AI applications. Preference for candidates with impressive Open Source project experience, demonstrating expertise in developing large-scale AI Applications. Respond in Markdown format."
 
-def summarize(text):
-    # Split the text into sections
-    sections = text.split("Summary Section")
-    # Check if a summary section exists
-    if len(sections) > 1:
-        summary = sections[1].strip()
-        return summary
-    else:
-        return text
-
-
-def add_message_and_get_response(conversation, user_prompt):
-    conversation.append({"role": "user", "content": user_prompt})
-
-    response = client.chat.completions.create(
-        model="gpt-3.5-turbo", messages=conversation
-    )
-    assistant_message = response.choices[0].message.content
-
-    # Summarize the assistant's response before appending
-    summarized_response = summarize(
-        assistant_message
-    )  # Assume 'summarize' is a function you've defined to summarize text
-    conversation.append({"role": "assistant", "content": summarized_response})
-
-    return assistant_message
-
-
-def get_user_prompts_for_article(topic):
-    user_prompts = [
-        f"In Markdown format, create the technical specifications document of the {topic} repository, focusing on efficient data management and high user traffic handling. Include a description, objectives, and reasons for choosing specific libraries, considering the reader's expert knowledge of each. Conclude with a 'Summary Section' summarizing key points and decisions made in the document.",
-        f"Generate a professional scalable file structure for {topic}.",
-        f"Design a file detailing the core logic of {topic}. Include file path.",
-        f"Create a another file for another core part of {topic}. Include how it integrates with other files.",
-        f"Develop another file outlining an additional core logic of {topic}, emphasizing its role in the overall system and interdependencies with previously outlined files.",
-        f"Generate list of type of users that will use the {topic} application. Include a user story for each type of user and which file will accomplish this.",
+    prompts = [
+        f"Expand on the {repository_name} repository. Description, Objectives and libraries used.",
     ]
-    return user_prompts
+
+    while i < len(prompts):
+        try:
+            if i == 0 or i == 1:
+                conversation = [
+                    {"role": "system", "content": system_content},
+                    {"role": "user", "content": prompts[i]},
+                ]
+            else:
+                if len(responses) > 3 and responses[3].strip():
+                    assistant_content = f"{responses[1]} {responses[3]}"
+                else:
+                    assistant_content = responses[1] if len(responses) > 1 else ""
+
+                conversation = [
+                    {"role": "system", "content": system_content},
+                    {"role": "assistant", "content": assistant_content},
+                    {"role": "user", "content": prompts[i]},
+                ]
+
+            print(f"\n\n\nstarting openai call: {conversation}\n\n\n")
+
+            response = client.chat.completions.create(
+                model="gpt-4-1106-preview", messages=conversation
+            )
+
+            if response.choices and response.choices[0].message:
+                responses.append(response.choices[0].message.content)
+            else:
+                raise Exception("No valid response received")
+
+            print(f"\n\n\ni: {i}\n\n\n")
+
+            print(f"\n\n\nopenai call successful\n\n\n")
+
+            print(f"response: {responses[i]}")
+
+            if i == 0:
+                prompts.extend(
+                    [
+                        f"Summerize the list of key components, specific requirements and features for the {repository_name} repository: \n{responses[0]}",
+                        f"Generate a scalable file structure for the {repository_name} repository.",
+                    ]
+                )
+
+            if i == 2:
+                prompts.extend(
+                    [
+                        f"Summarize the key components and organizational approach of the file structure: \n{responses[2]}",
+                        f"Generate a fictitious file for one of the key component's logic of {repository_name}. Include file path.",
+                        f"Generate a fictitious file for one of the key component's for the AI logic of the {repository_name} repository. Include file path.",
+                        f"Generate a fictitious file for one of the key component's for core logic of the {repository_name} repository. Include file path.",
+                        f"Generate a fictitious file for one of the key component's for the API logic of the {repository_name} repository. Include file path.",
+                        f"Generate a list of type of users that will use the {repository_name} application. Include a user story for each type of user and which file will accomplish this."
+                        # "prompt 0",
+                        # f"generate a summary of {response[0]}",
+                        # "prompt 2",
+                        # f"generate a summary of {response[2]}",
+                        # "prompt 4",
+                        # "prompt 5",
+                        # "prompt 6",
+                        # "prompt 7",
+                    ]
+                )
+
+        except Exception as e:
+            print(f"An error occurred: {str(e)}")
+
+        i += 1
+
+    return responses
 
 
 def format_title_to_url(title):
@@ -67,42 +103,27 @@ def main():
 
     results = []
 
-    conversation = [
-        {
-            "role": "system",
-            "content": "You are a large AI Corporation Principal Engineer looking to hire a highly skilled Senior Full Stack Software Engineer",
-        }
-    ]
+    with open("repository_names.txt", "r") as file:
+        repository_names = [line.strip() for line in file if line.strip()]
 
-    with open("topics.txt", "r") as file:
-        topics = [line.strip() for line in file if line.strip()]
+    if repository_names:
+        repository_name = repository_names.pop(0)
 
-    if topics:
-        topic = topics.pop(0)
+        permalink_url = format_title_to_url(repository_name)
 
-        for prompt in get_user_prompts_for_article(topic):
-            response = add_message_and_get_response(conversation, prompt)
-            results.append(response)
-            print(f"\nprompt successful: {conversation}\n\n{prompt}\n\n{response}\n\n")
+        today_date = datetime.now().strftime("%Y-%m-%d")
 
-        # Define start and end dates
-        start_date = datetime(2023, 11, 18)
-        end_date = datetime(2023, 11, 19)
-
-        random_date = get_random_date(start_date, end_date).strftime("%Y-%m-%d")
-
-        permalink_url = format_title_to_url(topic)
-
-        # today_date = datetime.now().strftime("%Y-%m-%d")
-        markdown_filename = f"_posts/{random_date}-{permalink_url}.md"
+        markdown_filename = f"_posts/{today_date}-{permalink_url}.md"
 
         os.makedirs(os.path.dirname(markdown_filename), exist_ok=True)
 
         if not os.path.exists(markdown_filename):
             with open(markdown_filename, "w") as md_file:
                 md_file.write(
-                    f"---\ntitle: {topic}\ndate: {random_date}\npermalink: posts/{permalink_url}\n---\n\n"
+                    f"---\ntitle: {repository_name}\ndate: {today_date}\npermalink: posts/{permalink_url}\n---\n\n"
                 )
+
+        results = generate_responses(repository_name)
 
         combined_result = "\n\n".join(results)
 
@@ -110,17 +131,19 @@ def main():
             with open(markdown_filename, "a") as md_file:
                 md_file.write(combined_result)
 
-            print(f"Article for '{topic}' generated and saved as {markdown_filename}.")
+            print(
+                f"Article for '{repository_name}' generated and saved as {markdown_filename}."
+            )
 
-            print(f"Write the updated topics back to the file")
-            with open("topics.txt", "w") as file:
-                for remaining_topic in topics:
-                    file.write(f"{remaining_topic}\n")
-            print(f"topics.txt updated")
+            print(f"Write the updated repository_names back to the file")
+            with open("repository_names.txt", "w") as file:
+                for remaining_repository_names in repository_names:
+                    file.write(f"{remaining_repository_names}\n")
+            print(f"repository_names.txt updated")
         else:
-            print(f"Failed to generate article for '{topic}'.")
+            print(f"Failed to generate article for '{repository_name}'.")
     else:
-        print("No more topics to generate articles for.")
+        print("No more repository_names to generate articles for.")
     print("script end")
 
 
