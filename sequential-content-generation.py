@@ -39,7 +39,9 @@ def generate_responses(repository_name):
             print(f"\n\n\nstarting openai call: {conversation}\n\n\n")
 
             response = client.chat.completions.create(
-                model="gpt-4-1106-preview", messages=conversation
+                # model="gpt-4-1106-preview", messages=conversation
+                model="gpt-3.5-turbo-1106",
+                messages=conversation,
             )
 
             if response.choices and response.choices[0].message:
