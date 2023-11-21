@@ -1,4 +1,3 @@
-Smart Traffic Control and Optimization System
 Predictive Maintenance for Industrial Equipment
 AI-Fueled Personal Finance Advisor
 Image Recognition for Wildlife Conservation
