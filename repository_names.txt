@@ -1,4 +1,3 @@
-SentimentAnalyzer - AI Sentiment Analysis Tool
 VoicePal - Interactive Voice Assistant
 HealthGenius - AI-Powered Healthcare Solutions
 FinanceSmart - AI-Driven Finance Analytics
