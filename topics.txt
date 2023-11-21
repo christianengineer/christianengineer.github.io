@@ -1,4 +1,3 @@
-AI-Based Cybersecurity Threat Detection System
 Personalized Learning Recommendation Engine
 Automated Financial Market Analysis Tool
 Natural Language Processing (NLP) for Legal Document Review
