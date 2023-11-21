@@ -1,40 +1,40 @@
 import os
 from openai import OpenAI
 from datetime import datetime, timedelta
-import random
 import re
 
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+# client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+client = OpenAI(api_key="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")
 
 
 def generate_responses(repository_name):
+    conversation = []
     responses = []
+    total_tokens = 0
     i = 0
 
-    system_content = "You are a AI Startup Founder seeking a Senior Full Stack Software Engineer skilled in creating scalable AI applications. Preference for candidates with impressive Open Source project experience, demonstrating expertise in developing large-scale AI Applications. Respond in Markdown format."
+    system_content = "You are a AI Principal Engineer with a Master's in Artificial Intellience training a Senior Full Stack Software Engineer how to build scalable, data-intensive, AI applications that leverage the use of Machine Learning and Deep Learning. Respond in Markdown format."
 
     prompts = [
-        f"Expand on the {repository_name} repository. Description, Objectives and libraries used.",
+        f"Expand on the AI {repository_name} repository. Objectives, system design strategies and choosen libraries.",
+        f"Expand on the infrastructure for the {repository_name} application.",
+        f"Generate a scalable file structure for the {repository_name} repository.",
+        f"Expand on the AI directory and its files for the {repository_name} application.",
+        f"Expand on the utils directory and its files for the {repository_name} application.",
+        f"Generate a function for a complex machine learning algorithm of the {repository_name} application that uses mock data. Include file path.",
+        f"Generate a function for a complex deep learning algorithm of the {repository_name} application that uses mock data. Include file path.",
+        f"Generate a list of type of users that will use the {repository_name} application. Include a user story for each type of user and which file will accomplish this.",
     ]
 
     while i < len(prompts):
         try:
-            if i == 0 or i == 1:
+            if i == 0:
                 conversation = [
                     {"role": "system", "content": system_content},
                     {"role": "user", "content": prompts[i]},
                 ]
             else:
-                if len(responses) > 3 and responses[3].strip():
-                    assistant_content = f"{responses[1]} {responses[3]}"
-                else:
-                    assistant_content = responses[1] if len(responses) > 1 else ""
-
-                conversation = [
-                    {"role": "system", "content": system_content},
-                    {"role": "assistant", "content": assistant_content},
-                    {"role": "user", "content": prompts[i]},
-                ]
+                conversation.append({"role": "user", "content": prompts[i]})
 
             print(f"\n\n\nstarting openai call: {conversation}\n\n\n")
 
@@ -44,6 +44,7 @@ def generate_responses(repository_name):
 
             if response.choices and response.choices[0].message:
                 responses.append(response.choices[0].message.content)
+                total_tokens += response.usage.total_tokens
             else:
                 raise Exception("No valid response received")
 
@@ -53,38 +54,14 @@ def generate_responses(repository_name):
 
             print(f"response: {responses[i]}")
 
-            if i == 0:
-                prompts.extend(
-                    [
-                        f"Summerize the list of key components, scalable strategies, and high traffic features for the {repository_name} application: \n{responses[0]}",
-                        f"Generate a scalable file structure for the {repository_name} repository.",
-                    ]
-                )
-
-            if i == 2:
-                prompts.extend(
-                    [
-                        f"In text only format, summarize the key components and the scalable organizational approach of the file structure for the {repository_name} application: \n{responses[2]}",
-                        f"Generate a fictitious file for the core objective of the {repository_name} application. Include file path.",
-                        f"Generate a fictitious file for the core AI logic of the {repository_name} application. Include file path.",
-                        f"Generate a fictitious file for handling high user traffic for the {repository_name} application. Include file path.",
-                        f"Generate a fictitious file for the efficient data-intensive management logic of the {repository_name} application. Include file path.",
-                        f"Generate a list of type of users that will use the {repository_name} application. Include a user story for each type of user and which file will accomplish this."
-                        # "prompt 0",
-                        # f"generate a summary of {response[0]}",
-                        # "prompt 2",
-                        # f"generate a summary of {response[2]}",
-                        # "prompt 4",
-                        # "prompt 5",
-                        # "prompt 6",
-                        # "prompt 7",
-                    ]
-                )
+            conversation.append({"role": "assistant", "content": responses[i]})
 
         except Exception as e:
             print(f"An error occurred: {str(e)}")
 
         i += 1
+
+    print(f"\n\n\n{total_tokens}\n\n\n")
 
     return responses
 

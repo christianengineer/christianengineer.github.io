@@ -1,4 +1,3 @@
-CustomerInsight - Advanced Customer Portal
 AdminMax - AI-Powered Administration Dashboard
 DataTrendz - Smart Analytics Tool
 MindLearn - Comprehensive Machine Learning Service
