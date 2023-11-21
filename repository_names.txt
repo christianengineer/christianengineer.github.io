@@ -1,4 +1,3 @@
-FraudGuard - AI Fraud Detection System
 SentimentAnalyzer - AI Sentiment Analysis Tool
 VoicePal - Interactive Voice Assistant
 HealthGenius - AI-Powered Healthcare Solutions
