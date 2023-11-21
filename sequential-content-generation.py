@@ -56,7 +56,7 @@ def generate_responses(repository_name):
             if i == 0:
                 prompts.extend(
                     [
-                        f"Summerize the list of key components, specific requirements and features for the {repository_name} repository: \n{responses[0]}",
+                        f"Summerize the list of key components, scalable strategies, and high traffic features for the {repository_name} application: \n{responses[0]}",
                         f"Generate a scalable file structure for the {repository_name} repository.",
                     ]
                 )
@@ -64,7 +64,7 @@ def generate_responses(repository_name):
             if i == 2:
                 prompts.extend(
                     [
-                        f"Summarize the key components and organizational approach of the file structure: \n{responses[2]}",
+                        f"Summarize the key components and the scalable organizational approach of the file structure: \n{responses[2]}",
                         f"Generate a fictitious file for one of the key component's logic of {repository_name}. Include file path.",
                         f"Generate a fictitious file for one of the key component's for the AI logic of the {repository_name} repository. Include file path.",
                         f"Generate a fictitious file for one of the key component's for core logic of the {repository_name} repository. Include file path.",
