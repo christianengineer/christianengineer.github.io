@@ -1,4 +1,3 @@
-ImageIQ - AI-Enhanced Image Recognition
 VoiceStream - Advanced Speech Processing System
 LinguaNet - Natural Language Processing Suite
 FraudGuard - AI Fraud Detection System
