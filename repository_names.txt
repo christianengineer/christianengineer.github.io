@@ -1,4 +1,3 @@
-RoboTech - Advanced Robotics AI
 AgriBot - AI for Agriculture
 EduAI - AI-Driven Educational Platform
 LegalMind - AI for Legal Analysis
