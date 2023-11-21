@@ -1,4 +1,3 @@
-ManufactureAI - AI for Manufacturing Efficiency
 RetailInsight - AI for Retail Analytics
 QualityCheck - AI for Quality Control
 InsureTech - AI in Insurance Analytics
