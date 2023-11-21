@@ -1,4 +1,3 @@
-InsureTech - AI in Insurance Analytics
 SocialSense - AI for Social Media Analytics
 RealTimeWatch - Real-Time Monitoring AI
 VoiceID - Advanced Voice Recognition System
