@@ -1,4 +1,3 @@
-AI-Fueled Personal Finance Advisor
 Image Recognition for Wildlife Conservation
 AI-Based Disaster Prediction and Management System
 Automated News Summarization and Analysis Tool
