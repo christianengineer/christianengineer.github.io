@@ -1,4 +1,3 @@
-CognitiveCompute - AI for Cognitive Computing
 SimulAI - Advanced Simulation Platform
 RemoteVision - AI for Remote Sensing
 SecureAI - Defense and Security AI
