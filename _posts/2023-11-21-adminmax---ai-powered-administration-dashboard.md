@@ -24,31 +24,31 @@ AdminMax is an innovative and scalable AI-powered administration dashboard desig
 **Libraries and Technologies Used:**
 
 - **Frontend:**
-    - `React.js` / `Vue.js` - for building the user interface.
-    - `Redux` / `Vuex` - for state management.
-    - `D3.js` / `Chart.js` - for data visualization.
-    - `Material-UI` / `Vuetify` - for designing a rich material-based UI component library.
-    - `Socket.IO` (if real-time interaction is required) - for enabling real-time bidirectional event-based communication.
+  - `React.js` / `Vue.js` - for building the user interface.
+  - `Redux` / `Vuex` - for state management.
+  - `D3.js` / `Chart.js` - for data visualization.
+  - `Material-UI` / `Vuetify` - for designing a rich material-based UI component library.
+  - `Socket.IO` (if real-time interaction is required) - for enabling real-time bidirectional event-based communication.
 - **Backend:**
-    - `Node.js` - for creating a scalable server-side application.
-    - `Express.js` - for building the web application framework.
-    - `Python (Flask/Django)` - for integrating AI and machine learning capabilities.
-    - `TensorFlow` / `PyTorch` - for developing and training AI models.
-    - `scikit-learn` - for simpler machine learning algorithms and data processing.
+  - `Node.js` - for creating a scalable server-side application.
+  - `Express.js` - for building the web application framework.
+  - `Python (Flask/Django)` - for integrating AI and machine learning capabilities.
+  - `TensorFlow` / `PyTorch` - for developing and training AI models.
+  - `scikit-learn` - for simpler machine learning algorithms and data processing.
 - **Database:**
-    - `MongoDB` / `PostgreSQL` - for storing and retrieving data.
-    - `Redis` - for caching and session management.
+  - `MongoDB` / `PostgreSQL` - for storing and retrieving data.
+  - `Redis` - for caching and session management.
 - **AI and Machine Learning:**
-    - `spaCy` / `NLTK` - for natural language processing.
-    - `OpenCV` - for image processing and computer vision tasks.
-    - `Pandas` / `NumPy` - for data manipulation and analysis.
+  - `spaCy` / `NLTK` - for natural language processing.
+  - `OpenCV` - for image processing and computer vision tasks.
+  - `Pandas` / `NumPy` - for data manipulation and analysis.
 - **DevOps and Infrastructure:**
-    - `Docker` / `Kubernetes` - for containerization and orchestration.
-    - `Git` - for version control and collaborative development.
-    - `CI/CD tools (Jenkins, Travis CI, GitHub Actions)` - for continuous integration and deployment.
+  - `Docker` / `Kubernetes` - for containerization and orchestration.
+  - `Git` - for version control and collaborative development.
+  - `CI/CD tools (Jenkins, Travis CI, GitHub Actions)` - for continuous integration and deployment.
 - **Security:**
-    - `OAuth 2.0` / `JWT` - for secure authentication and authorization.
-    - `Helmet.js` - for securing Express applications by setting various HTTP headers.
+  - `OAuth 2.0` / `JWT` - for secure authentication and authorization.
+  - `Helmet.js` - for securing Express applications by setting various HTTP headers.
 
 **Conclusion:**
 
@@ -57,6 +57,7 @@ AdminMax aims to be at the forefront of administrative technology by leveraging 
 ## **AdminMax - AI-Powered Administration Dashboard**
 
 ### **Objective Summary:**
+
 - **Management Simplification:** Intuitive interface for efficient oversight and control.
 - **Process Automation:** AI-fueled automation of routine administrative tasks.
 - **Data Analysis in Real-Time:** Tools for immediate, informed decision-making via data analysis and visualization.
@@ -67,34 +68,36 @@ AdminMax aims to be at the forefront of administrative technology by leveraging 
 - **Security and Dependability:** Emphasis on strong security protocols and reliable platform performance.
 
 ### **Technical Stack & Strategies:**
+
 - **Frontend:**
-    - Interactive UI with `React.js` or `Vue.js`.
-    - State management via `Redux` or `Vuex`.
-    - Data representations through `D3.js` or `Chart.js`.
-    - Material design aesthetically achieved using `Material-UI` or `Vuetify`.
-    - Potential use of `Socket.IO` for real-time features.
+  - Interactive UI with `React.js` or `Vue.js`.
+  - State management via `Redux` or `Vuex`.
+  - Data representations through `D3.js` or `Chart.js`.
+  - Material design aesthetically achieved using `Material-UI` or `Vuetify`.
+  - Potential use of `Socket.IO` for real-time features.
 - **Backend:**
-    - Scalable server-side with `Node.js`.
-    - Application framework via `Express.js`.
-    - AI/ML integration using Python (`Flask/Django`).
-    - AI modeling with `TensorFlow` or `PyTorch`.
-    - Data processing using `scikit-learn`.
+  - Scalable server-side with `Node.js`.
+  - Application framework via `Express.js`.
+  - AI/ML integration using Python (`Flask/Django`).
+  - AI modeling with `TensorFlow` or `PyTorch`.
+  - Data processing using `scikit-learn`.
 - **Database:**
-    - Data handling with `MongoDB` or `PostgreSQL`.
-    - Enhanced performance through `Redis`.
+  - Data handling with `MongoDB` or `PostgreSQL`.
+  - Enhanced performance through `Redis`.
 - **AI and ML:**
-    - NLP operations utilizing `spaCy` or `NLTK`.
-    - Image processing with `OpenCV`.
-    - Data manipulation supported by `Pandas`/`NumPy`.
+  - NLP operations utilizing `spaCy` or `NLTK`.
+  - Image processing with `OpenCV`.
+  - Data manipulation supported by `Pandas`/`NumPy`.
 - **Infrastructure and DevOps:**
-    - Containerization with `Docker` and orchestration via `Kubernetes`.
-    - Version control and team collaboration through `Git`.
-    - Streamlined deployment achieved by CI/CD tools like Jenkins, Travis CI, or GitHub Actions.
+  - Containerization with `Docker` and orchestration via `Kubernetes`.
+  - Version control and team collaboration through `Git`.
+  - Streamlined deployment achieved by CI/CD tools like Jenkins, Travis CI, or GitHub Actions.
 - **Security:**
-    - Authentication and authorization managed by `OAuth 2.0` or `JWT`.
-    - `Helmet.js` for securing HTTP headers in Express apps.
+  - Authentication and authorization managed by `OAuth 2.0` or `JWT`.
+  - `Helmet.js` for securing HTTP headers in Express apps.
 
 ### **Conclusion:**
+
 AdminMax is crafted to be a leader in administrative automation, propelling businesses ahead with AI efficiency. By embracing the latest in AI and software development, it positions itself strategically for continual relevance and adaptability. We seek a **Senior Full Stack Software Engineer** with a track record in AI-driven applications, particularly those with Open Source contributions to join and elevate our team's efforts in making AdminMax an indispensable business tool.
 
 Below is a scalable directory structure for **AdminMax - AI-Powered Administration Dashboard.** The structure is organized clearly to separate concerns and to accommodate the technical stack outlined in the original description. It also allows for future expansion and provides a space for essential configurations and documentation.
@@ -160,6 +163,7 @@ AdminMax/
 ```
 
 ### Important notes:
+
 - **Frontend (`client`)**:  
   Contains all the code related to the user interface. React.js, or any preferred frontend technology, can be flexibly integrated.
 
@@ -340,30 +344,32 @@ In the above `AdminMax` project directory structure, the core AI logic is encaps
 - `anomaly_detection.py`: Special algorithms to identify outliers or unusual patterns to flag potential errors or fraud.
 
 ### File Path:
+
 ```
 /adminmax-dashboard/src/server/services/scalabilityService.js
 ```
 
 ### File Content (scalabilityService.js):
+
 ```javascript
 /**
  * Scalability Service to handle high user traffic.
  * Implements load balancing, caching, and on-demand scaling strategies.
  */
 
-const cluster = require('cluster');
-const os = require('os');
-const redis = require('redis');
-const ClientBalancer = require('./clientBalancer');
+const cluster = require("cluster");
+const os = require("os");
+const redis = require("redis");
+const ClientBalancer = require("./clientBalancer");
 
 // Redis client setup for caching
 const cacheClient = redis.createClient({
-    host: process.env.REDIS_HOST,
-    port: process.env.REDIS_PORT
+  host: process.env.REDIS_HOST,
+  port: process.env.REDIS_PORT,
 });
 
-cacheClient.on('error', (err) => {
-    console.log('Redis Client Error', err);
+cacheClient.on("error", (err) => {
+  console.log("Redis Client Error", err);
 });
 
 // Initiate cache client
@@ -373,72 +379,74 @@ cacheClient.connect();
  * Startup service for clustering.
  */
 function initializeCluster() {
-    if (cluster.isMaster) {
-        const numCPUs = os.cpus().length;
+  if (cluster.isMaster) {
+    const numCPUs = os.cpus().length;
 
-        // Fork workers.
-        for (let i = 0; i < numCPUs; i++) {
-            cluster.fork();
-        }
-
-        cluster.on('exit', (worker, code, signal) => {
-            console.log(`worker ${worker.process.pid} died`);
-            // Replace the dead worker
-            console.log('Forking a new worker');
-            cluster.fork();
-        });
-    } else {
-        // Workers can share any TCP connection
-        // In this case, it is an HTTP server
-        require('../index.js');
+    // Fork workers.
+    for (let i = 0; i < numCPUs; i++) {
+      cluster.fork();
     }
+
+    cluster.on("exit", (worker, code, signal) => {
+      console.log(`worker ${worker.process.pid} died`);
+      // Replace the dead worker
+      console.log("Forking a new worker");
+      cluster.fork();
+    });
+  } else {
+    // Workers can share any TCP connection
+    // In this case, it is an HTTP server
+    require("../index.js");
+  }
 }
 
 /**
  * Caching middleware function to serve cached content.
  */
 function cacheMiddleware(req, res, next) {
-    const key = `__express__${req.originalUrl}` || req.url;
-    
-    cacheClient.get(key, (error, data) => {
-        if (error) throw error;
-        if (data !== null) {
-            res.send(JSON.parse(data));
-        } else {
-            res.sendResponse = res.send;
-            res.send = (body) => {
-                cacheClient.set(key, JSON.stringify(body));
-                res.sendResponse(body);
-            }
-            next();
-        }
-    });
+  const key = `__express__${req.originalUrl}` || req.url;
+
+  cacheClient.get(key, (error, data) => {
+    if (error) throw error;
+    if (data !== null) {
+      res.send(JSON.parse(data));
+    } else {
+      res.sendResponse = res.send;
+      res.send = (body) => {
+        cacheClient.set(key, JSON.stringify(body));
+        res.sendResponse(body);
+      };
+      next();
+    }
+  });
 }
 
 /**
  * Load balancer configuration and setup.
  */
 function setupLoadBalancer() {
-    const clientBalancer = new ClientBalancer({
-        // Load balancer configurations and strategies
-    });
+  const clientBalancer = new ClientBalancer({
+    // Load balancer configurations and strategies
+  });
 
-    clientBalancer.start();
+  clientBalancer.start();
 }
 
 module.exports = {
-    initializeCluster,
-    cacheMiddleware,
-    setupLoadBalancer
+  initializeCluster,
+  cacheMiddleware,
+  setupLoadBalancer,
 };
 ```
 
 ### How to Use:
+
 1. Include the `cacheMiddleware` function in routes where caching is beneficial to reduce the database or computation load.
 2. Call `initializeCluster()` in the main application initialization to start the cluster.
 3. Implement `setupLoadBalancer()` to configure load balancing settings if a Client Balancer is used.
 
 ### Explanation:
+
 - **initializeCluster**: Handles the spawning of Node.js worker processes that share server ports – essentially, the server can be started in multiples modes, leveraging multi-core systems without needing to modify the application code.
 - **cacheMiddleware**: A Redis cache to store and serve frequent requests, reducing direct database querying and processor-intensive work.
 - **setupLoadBalancer**: An external client balancer can be used to distribute loads if multiple instances of the application are running, whether on the same machine or spread across a network.
@@ -494,11 +502,11 @@ This fictitious file represents the logic for managing data-intensive tasks effi
 
 ```javascript
 // dataManagement.js
-const { Pipeline } = require('stream');
-const AIAnalysisService = require('../../ai/services/textAnalysis');
-const Model = require('../models/yourDataModel');
-const CacheService = require('./cacheService');
-const ErrorHandler = require('../middlewares/errorHandler');
+const { Pipeline } = require("stream");
+const AIAnalysisService = require("../../ai/services/textAnalysis");
+const Model = require("../models/yourDataModel");
+const CacheService = require("./cacheService");
+const ErrorHandler = require("../middlewares/errorHandler");
 
 class DataManagementService {
   constructor() {
@@ -522,7 +530,7 @@ class DataManagementService {
           }
 
           return insights;
-        }
+        },
       );
       return processPipeline;
     } catch (error) {
@@ -565,34 +573,42 @@ This file encapsulates efficient and scalable data management logic by harnessin
 ### **Types of Users for AdminMax - AI-Powered Administration Dashboard:**
 
 1. **System Administrator**
+
    - **User Story:** As a System Administrator, I want to monitor system health and user activities to ensure the integrity and performance of the administration dashboard. I need quick access to logs, system statistics, and user management controls.
    - **Relevant File:** The `Server Folder` would contain logging and system monitoring tools, while the `Client Folder` would offer a front-end interface for real-time data visualization and user administration.
 
 2. **Business Analyst**
+
    - **User Story:** As a Business Analyst, I need to evaluate complex datasets to extract actionable insights and generate comprehensive reports. The ability to visualize trends and patterns is critical for my role.
    - **Relevant File:** The `AI Folder` would hold data analysis and visualization models, whereas the `Client Folder` would provide the dashboard UI components for displaying the analysis results in an easily interpretable format.
 
 3. **IT Support Staff**
+
    - **User Story:** As IT Support Staff, I require a streamlined process to address system issues, manage upgrades, and provide user support. I need a concise view of pending tasks and user requests for efficient management.
    - **Relevant File:** The `Server Folder` for backend logic handling support ticket routing and the `Client Folder` for the frontend UI where support tasks are displayed and managed.
 
 4. **Marketing Manager**
+
    - **User Story:** As a Marketing Manager, I aim to understand customer behavior and campaign performance. Access to AI-driven predictive analytics and market trends is vital for effective decision-making.
    - **Relevant File:** The `AI Folder` for running predictive models and the `Client Folder` for showing the marketing dashboards and insights.
 
 5. **Data Scientist**
+
    - **User Story:** As a Data Scientist, I require robust tools to develop and deploy machine learning models to predict future trends based on current data. A platform for versioning these models and rolling them out efficiently is necessary.
    - **Relevant File:** The `AI Folder` to contain the machine learning pipelines and models, and the `Scripts Folder` for versioning and deployment scripts.
 
 6. **HR Manager**
+
    - **User Story:** As an HR Manager, I must manage employee records, track performance, and oversee recruitment processes. An intuitive UI for accessing and updating HR-related data is essential for smooth operations.
    - **Relevant File:** The `Client Folder` for the human resource management interface and the `Server Folder` for the backend APIs to handle the data transactions.
 
 7. **Executive Officer**
+
    - **User Story:** As an Executive Officer, I need a consolidated view of the company's performance metrics across various departments to make high-level decisions. Everything must be displayed in a secure and easy-to-understand manner.
    - **Relevant File:** The `Client Folder` for the executive-level dashboard interfaces and the `Server Folder` for secure serving of critical business data.
 
 8. **Software Developer**
+
    - **User Story:** As a Software Developer, I need to access development tools, repository controls, and an API development environment to contribute to the product continuously and deploy updates.
    - **Relevant File:** The `Scripts Folder` for development and deployment utilities, and the `Server Folder` for the backend development environment setup.
 

@@ -7,9 +7,11 @@ permalink: posts/personalized-ai-fitness-coach-next-generation-fitness-solution
 # Personalized AI Fitness Coach Repository
 
 ## Description:
+
 Our project, the Personalized AI Fitness Coach, is an innovative, digital solution that aims to revolutionize the fitness and health industry. This repository hosts the joint efforts of our talented team as we create an intelligent trainer that can provide individualized fitness instruction and health advice to our users. By leveraging the power of AI and machine learning, we will create a product that factors in each end user's unique body type, fitness level, health goals, and time constraints to create custom-tailored workout and meal plans.
 
 ## Goals:
+
 1. **Personalized Fitness Program**: Create an AI model that provides personalized exercise routines to users based on individual body metrics, personal goals (weight loss, muscle gain, maintain current physique), and available workout equipment.
 
 2. **Diet Recommendations**: Integrate nutrition-focused AI algorithms to provide meal recommendations that complement the user's fitness program, considering dietary restrictions and preferences.
@@ -18,11 +20,11 @@ Our project, the Personalized AI Fitness Coach, is an innovative, digital soluti
 
 4. **User-Experience**: Develop a user-friendly interface that is intuitive to navigate and aesthetically pleasing. The AI functionalities should be seamlessly integrated, fostering trust and engagement from users.
 
-
 ## Libraries and Tools:
+
 The technologies that we might utilize in this project include but are not limited to:
 
-- **TensorFlow**: This library will let us build and train our deep learning models 
+- **TensorFlow**: This library will let us build and train our deep learning models
 
 - **Keras**: As a user-friendly neural network library written in Python, Keras will be especially useful when prototyping our AI model.
 
@@ -39,12 +41,12 @@ The technologies that we might utilize in this project include but are not limit
 - **MySQL/PostgreSQL**: These relational databases will be used to store and retrieve user information securely and efficiently.
 
 - **Docker/Kubernetes**: These will be used for automating deployment, scaling, and managing our application's containerized system effectively.
-  
+
 Please remember this is just a short list of potential libraries and tools we may use. We'll be adjusting and revising this list as we continue to develop and optimize our AI Fitness Coach.
 
 # File Structure of the Personalized AI Fitness Coach repository
 
-Below you will find a suggested file structure for the Personalized AI Fitness Coach repository. This structure aims to keep components modular and scalable for easier collaboration and development. 
+Below you will find a suggested file structure for the Personalized AI Fitness Coach repository. This structure aims to keep components modular and scalable for easier collaboration and development.
 
 ```
 Personalised-AI-Fitness-Coach/
@@ -65,16 +67,17 @@ Personalised-AI-Fitness-Coach/
 │
 ├── db/           # Database scripts
 │
-├── docs/         # Documentation 
+├── docs/         # Documentation
 │
-├── .gitignore    # Files and paths that should be ignored by git 
+├── .gitignore    # Files and paths that should be ignored by git
 │
 └── README.md     # Overview of project, setup notes
 ```
 
-This file structure separates the project based on functionality which aligns with the concept of Separation of Concerns. 
+This file structure separates the project based on functionality which aligns with the concept of Separation of Concerns.
 
 Each folder has its own role:
+
 - **backend**: houses the server-side code, including the machine learning models and APIs.
 - **frontend**: contains all the client-side code for the user interface (UI).
 - **db**: used for database scripts and related files.
@@ -132,4 +135,5 @@ class AIFitnessCoach:
 if __name__ == "__main__":
     # Instantiate the AIFitnessCoach class with user data
 ```
+
 This file is merely a simplified representation and may not encompass the full complexity of the AI logic required for a personalized fitness coach. It's intended to give a basic idea of what the file could potentially contain. The actual file would, of course, include complete function definitions along with the necessary dataset import, data preprocessing, model creation, model training, recommendations, and progress tracking code.

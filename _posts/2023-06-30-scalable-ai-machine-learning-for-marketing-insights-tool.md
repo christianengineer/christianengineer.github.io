@@ -7,11 +7,13 @@ permalink: posts/scalable-ai-machine-learning-for-marketing-insights-tool
 # Machine Learning Driven Marketing Insights Tool
 
 ## Project Description
+
 The Machine Learning Driven Marketing Insights Tool is an ambitious project aimed towards revolutionizing the way businesses understand their marketing data. This tool leverages the power of AI and machine learning to gain valuable marketing insights from raw data, enabling businesses to make data-driven decisions that enhance growth and profitability.
 
 Businesses generate massive volumes of data on a daily basis. However, most of these data remain unused or under-utilized due to lack of robust tools that can facilitate effective analysis and interpretation. This project seeks to bridge this gap and transform raw data into actionable insights.
 
 ## Project Objectives
+
 The primary objectives of this project are:
 
 1. **Data Collection:**
@@ -27,27 +29,32 @@ The primary objectives of this project are:
    The tool will generate comprehensive reports, dashboards and visual illustrations of the derived insights for effective understanding and decision making.
 
 ## Libraries
+
 This project will use numerous libraries to ensure efficient data handling and scalable user traffic. The key libraries that will be used are:
 
 **Python:**
- - **Pandas**: For structured data operations and manipulations. It is extensively used for data preparation.
- - **NumPy**: This library for Python is used in this project for numerical computations.
- - **Scikit-Learn**: Machine learning library for Python for modelling with many built-in machine learning models.
- - **Matplotlib, Seaborn**: These Python libraries will be used for data visualization.
+
+- **Pandas**: For structured data operations and manipulations. It is extensively used for data preparation.
+- **NumPy**: This library for Python is used in this project for numerical computations.
+- **Scikit-Learn**: Machine learning library for Python for modelling with many built-in machine learning models.
+- **Matplotlib, Seaborn**: These Python libraries will be used for data visualization.
 
 **Java:**
- - **Spring Boot**: Framework for building stand-alone, production-grade Spring based Applications that can "just run".
- - **Hibernate**: Hibernate for relational mapping and data persistence.
+
+- **Spring Boot**: Framework for building stand-alone, production-grade Spring based Applications that can "just run".
+- **Hibernate**: Hibernate for relational mapping and data persistence.
 
 **JavaScript:**
- - **Node.js**: Server environment for running JS on the server.
- - **Express.js**: Framework for Node.js to build web applications.
- - **React/Redux**: For building user interfaces and managing application state.
-  
+
+- **Node.js**: Server environment for running JS on the server.
+- **Express.js**: Framework for Node.js to build web applications.
+- **React/Redux**: For building user interfaces and managing application state.
+
 **Others:**
- - **Tensorflow/Keras**: Open source machine learning libraries used to develop and train ML models.
- - **SQL/NoSQL Databases**: To store, retrieve, and manage data in a database (e.g., PostgreSQL, MongoDB).
- - **Docker/Kubernetes**: For containerization, orchestration and ensuring the solution is scalable.
+
+- **Tensorflow/Keras**: Open source machine learning libraries used to develop and train ML models.
+- **SQL/NoSQL Databases**: To store, retrieve, and manage data in a database (e.g., PostgreSQL, MongoDB).
+- **Docker/Kubernetes**: For containerization, orchestration and ensuring the solution is scalable.
 
 The Machine Learning Driven Marketing Insights Tool will simplify complex marketing data and provide valuable insights that will help businesses grow and thrive in today's competitive market.
 
@@ -61,7 +68,7 @@ Machine-Learning-Marketing-Insights-Tool
 ├─ documentation
 │  ├─ user-guide.md
 │  └─ technical-guide.md
-│  
+│
 ├─ src
 │  ├─ main
 │  │  ├─ java
@@ -74,13 +81,13 @@ Machine-Learning-Marketing-Insights-Tool
 │  │  │
 │  │  └─ resources
 │  │     └─ application.properties
-│  │ 
+│  │
 │  └─ test
 │     └─ java
 │        └─ com
 │           └─ mlm-tool
 │              └─ TestCases
-│                  
+│
 │
 ├─ frontend
 │  ├─ public
@@ -100,12 +107,13 @@ Machine-Learning-Marketing-Insights-Tool
 │  ├─ preprocessing
 │  ├─ models
 │  └─ data
-│  
+│
 ├─ .gitignore
 ├─ README.md
 ├─ pom.xml
 └─ Dockerfile
 ```
+
 This structure maintains a clean separation between the main application server (backend), user interface (frontend), machine learning models, and documentation. This separation promotes greater readability, scalable development and easier deployment.
 
 # Machine Learning Driven Marketing Insights Tool
@@ -139,7 +147,7 @@ class MarketingInsightsModel:
         """Load the dataset from a given CSV filepath, perform initial processing"""
         data = pd.read_csv(filepath)
         # # TODO: your data preprocessing and cleaning goes here
-        
+
         return data
 
     def split_data(self, data):
@@ -149,18 +157,18 @@ class MarketingInsightsModel:
         y = data['target']
 
         self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-        
+
     def train_model(self):
         """Train the model"""
         self.model = LinearRegression()
         self.model.fit(self.X_train, self.y_train)
-        
+
     def evaluate_model(self):
         """Evaluate the model, returning MSE and R2 score"""
         y_pred = self.model.predict(self.X_test)
         mse = mean_squared_error(self.y_test, y_pred)
         r2 = r2_score(self.y_test, y_pred)
-        
+
         return mse, r2
 
     def save_model(self, filepath):

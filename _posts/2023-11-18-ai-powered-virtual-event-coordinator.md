@@ -138,6 +138,7 @@ AI-Powered Virtual Event Coordinator/
 Explanation:
 
 - `/src`: This directory contains all the source code files.
+
   - `/controllers`: This directory holds the controllers responsible for handling different operations related to events and users.
   - `/models`: This directory contains the models for events and users, specifying the data structure and interactions with the database.
   - `/services`: This directory consists of the business logic services for events and users, acting as the intermediate layer between controllers and models.

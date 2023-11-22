@@ -7,20 +7,23 @@ permalink: posts/ai-powered-legal-document-analysis-guide
 # AI-Powered Legal Document Analysis
 
 ## Description
+
 This project repository will contain all the details and code about an AI-Powered Legal Document Analysis System. This software aims to provide an efficient and automated way of analyzing complex legal documents, saving hours of manual labor. It will utilize sophisticated algorithms and tools drawn from the fields of Artificial Intelligence, Natural Language Processing (NLP), and Machine Learning to accurately and rapidly parse through loads of legal documents.
 
 ## Goals
+
 1. **Automated Content Analysis:** To create an automated system that can effectively recognize and analyze textual and structural patterns in legal documents. This includes everything from extracting key details to identifying inconsistencies or issues.
 
 2. **High Accuracy**: To ensure maximum accuracy in document analysis, minimizing potential errors and omissions that could occur in manual review.
 
-3. **Efficiency**: To exponentially improve the efficiency of legal document analysis compared to traditional manual methods. 
+3. **Efficiency**: To exponentially improve the efficiency of legal document analysis compared to traditional manual methods.
 
 4. **Scalability**: To build a system that can handle large volumes of legal document processing tasks without a dip in performance levels.
 
 5. **User-friendly Interface**: Implementing an intuitive and user-friendly UI/UX design to make the usage of the system easy and straightforward for legal professionals.
 
-## Libraries 
+## Libraries
+
 The following libraries and services will be implemented in the project to guarantee data handling efficiency and scalable user traffic:
 
 1. **Python**: Python's dynamic semantics and quick prototyping capabilities make it a great language for this project. Libraries in Python, such as TensorFlow and Pytorch, can be used for building machine learning models.
@@ -37,7 +40,7 @@ The following libraries and services will be implemented in the project to guara
 
 7. **React, Angular, or Vue**: To build a user-friendly front-end interface, ensuring usability and accessibility.
 
-8. **Redis, Memcached**: These will be used to cache frequent data queries, thus increasing the efficiency and speed of the system. 
+8. **Redis, Memcached**: These will be used to cache frequent data queries, thus increasing the efficiency and speed of the system.
 
 These tools and libraries will be selected to expediently handle large amounts of data, support concurrent user sessions, offer high performing AI computations, and provide superior functionality.
 
@@ -85,7 +88,7 @@ Below is a brief scalable file structure for this project repository.
 
 ### File Structure Description:
 
-- `src`: is the folder that contains all the application source code. 
+- `src`: is the folder that contains all the application source code.
 
 - `backend`: contains all backend files associated with the API, commands, document processing, NLP analysis, and server configurations.
 
@@ -107,7 +110,6 @@ Below is a brief scalable file structure for this project repository.
 
 - `.gitignore`: to specify the files and directories that Git should ignore when creating commits.
 
-
 # AI-Powered Legal Document Analysis - AI Logic File
 
 This fictitious Python file, `AI_Analysis.py`, will handle the logic for AI-Powered Legal Document Analysis. The location of this file would be under the `NLP` directory, i.e., `src/backend/NLP/AI_Analysis.py`. See below for an example of what the structure and content of this file could look like.
@@ -125,7 +127,7 @@ class AI_Analysis:
     def __init__(self, document):
         self.document = document
         self.nlp = spacy.load("en_core_web_lg")
-        
+
     def tokenize(self):
         return word_tokenize(self.document)
 
@@ -155,16 +157,16 @@ if __name__ == "__main__":
 
 ### File Description:
 
-The `AI_Analysis.py` file contains the `AI_Analysis` class which has multiple methods each performing a specific task related to legal document analysis. 
+The `AI_Analysis.py` file contains the `AI_Analysis` class which has multiple methods each performing a specific task related to legal document analysis.
 
-* The `__init__` method initializes the class with the necessary document and loads the necessary spacy model.
+- The `__init__` method initializes the class with the necessary document and loads the necessary spacy model.
 
-* The `tokenize` method breaks down the document into tokens for further processing.
+- The `tokenize` method breaks down the document into tokens for further processing.
 
-* The `named_entity_recognition` method identifies named entities, phrases, and concepts in the document using Spacy's NER feature.
+- The `named_entity_recognition` method identifies named entities, phrases, and concepts in the document using Spacy's NER feature.
 
-* The `sentiment_analysis` method uses a pre-trained model to perform sentiment analysis on the document.
+- The `sentiment_analysis` method uses a pre-trained model to perform sentiment analysis on the document.
 
-* The `extract_key_elements` method is another method to extract key elements from the document.
+- The `extract_key_elements` method is another method to extract key elements from the document.
 
-* At the end of the file, sample test cases are written to test the functionality of the above methods.
+- At the end of the file, sample test cases are written to test the functionality of the above methods.

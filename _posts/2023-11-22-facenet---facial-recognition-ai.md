@@ -312,27 +312,32 @@ This function exemplifies training a complex deep learning algorithm (FaceNet) u
 ### List of Types of Users for the FaceNet - Facial Recognition AI Application
 
 1. **Security Personnel**
-   - *User Story*: As a security personnel, I want to use the facial recognition system to quickly verify the identity of individuals entering restricted areas, ensuring only authorized personnel gain access.
-   - *Related File*: The web-based API endpoints for facial recognition within the `app/web/api` directory would enable this user to access the facial recognition capabilities of the application.
+
+   - _User Story_: As a security personnel, I want to use the facial recognition system to quickly verify the identity of individuals entering restricted areas, ensuring only authorized personnel gain access.
+   - _Related File_: The web-based API endpoints for facial recognition within the `app/web/api` directory would enable this user to access the facial recognition capabilities of the application.
 
 2. **System Administrator**
-   - *User Story*: As a system administrator, I need to manage and configure the infrastructure for the facial recognition system, ensuring it scales effectively and operates reliably.
-   - *Related File*: The IaC (Infrastructure as Code) scripts within the `infrastructure/cloud` directory would aid the system administrator in managing the cloud-based infrastructure for the FaceNet application.
+
+   - _User Story_: As a system administrator, I need to manage and configure the infrastructure for the facial recognition system, ensuring it scales effectively and operates reliably.
+   - _Related File_: The IaC (Infrastructure as Code) scripts within the `infrastructure/cloud` directory would aid the system administrator in managing the cloud-based infrastructure for the FaceNet application.
 
 3. **Application Developer**
-   - *User Story*: As an application developer, I want to integrate facial recognition capabilities into our access control system, allowing users to authenticate using facial recognition.
-   - *Related File*: The FaceNet model implementation and inference scripts within the `AI/models` and `AI/inference` directories would facilitate the integration of facial recognition functionalities into the access control system.
+
+   - _User Story_: As an application developer, I want to integrate facial recognition capabilities into our access control system, allowing users to authenticate using facial recognition.
+   - _Related File_: The FaceNet model implementation and inference scripts within the `AI/models` and `AI/inference` directories would facilitate the integration of facial recognition functionalities into the access control system.
 
 4. **Data Scientist/Researcher**
-   - *User Story*: As a data scientist, I am interested in analyzing the performance of the facial recognition model and exploring potential enhancements based on real-world use cases and feedback.
-   - *Related File*: The model evaluation scripts and performance analysis tools within the `AI/evaluation` directory would support the data scientist in evaluating model performance and iterating on the facial recognition algorithms.
+
+   - _User Story_: As a data scientist, I am interested in analyzing the performance of the facial recognition model and exploring potential enhancements based on real-world use cases and feedback.
+   - _Related File_: The model evaluation scripts and performance analysis tools within the `AI/evaluation` directory would support the data scientist in evaluating model performance and iterating on the facial recognition algorithms.
 
 5. **End User (General Customer)**
-   - *User Story*: As an end user, I want to use the facial recognition feature to unlock my personal device and access specific functionalities, providing a convenient and secure authentication method.
-   - *Related File*: The frontend components and interface elements within the `app/web` directory would be relevant to the end user's interaction with the facial recognition capabilities through the application's user interface.
+
+   - _User Story_: As an end user, I want to use the facial recognition feature to unlock my personal device and access specific functionalities, providing a convenient and secure authentication method.
+   - _Related File_: The frontend components and interface elements within the `app/web` directory would be relevant to the end user's interaction with the facial recognition capabilities through the application's user interface.
 
 6. **Quality Assurance Engineer**
-   - *User Story*: As a QA engineer, I am responsible for testing the facial recognition system to ensure accurate and efficient identification of individuals across various scenarios and lighting conditions.
-   - *Related File*: The unit and integration tests within the `tests` directory would be essential for the QA engineer to validate the functionality and performance of the facial recognition AI application.
+   - _User Story_: As a QA engineer, I am responsible for testing the facial recognition system to ensure accurate and efficient identification of individuals across various scenarios and lighting conditions.
+   - _Related File_: The unit and integration tests within the `tests` directory would be essential for the QA engineer to validate the functionality and performance of the facial recognition AI application.
 
 Each type of user interacts with distinct components of the application, and the user stories align with their specific roles and objectives. By considering these diverse user perspectives, the FaceNet - Facial Recognition AI application can be developed to meet a wide range of user needs.

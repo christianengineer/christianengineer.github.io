@@ -117,7 +117,6 @@ Explanation:
 - `docker-compose.yml`: Defines services, networks, and volumes for docker-compose.
 - `requirements.txt`: Lists all required Python libraries.
 
-
 Sure, here is an example of how a file that handles summarization logic with the Hugging Face transformer library might look like in Python. Let's say this file is located at `app/summarizers/summarizer_model.py`.
 
 ```python
@@ -133,9 +132,9 @@ class Summarizer:
 
     def summarize(self, article_text):
         """
-        This method uses the Hugging Face summarization pipeline 
+        This method uses the Hugging Face summarization pipeline
         to generate a summary given the text of a news article.
-        
+
         :param article_text: str
         :return: str
         """
@@ -143,6 +142,6 @@ class Summarizer:
         return summary
 ```
 
-This file defines a `Summarizer` class that wraps the Hugging Face's transformer summarization pipeline. The method `summarize` accepts the text of a news article and returns its summary. 
+This file defines a `Summarizer` class that wraps the Hugging Face's transformer summarization pipeline. The method `summarize` accepts the text of a news article and returns its summary.
 
 Please note that summarizing text is a complex process, and this is just for illustrative purposes. In a real-world implementation, additional processing might be necessary before passing the text to the summarization model and after obtaining the summary.

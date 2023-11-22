@@ -7,9 +7,11 @@ permalink: posts/ai-based-cybersecurity-threat-detection-system
 # AI-Based Cybersecurity Threat Detection System
 
 ## Description
+
 The AI-Based Cybersecurity Threat Detection System is a repository aimed at developing a robust and efficient system for detecting cybersecurity threats using artificial intelligence techniques. This system will analyze network data in real-time to identify potential threats and respond accordingly to mitigate risks.
 
 ## Objectives
+
 The primary objectives of this project are as follows:
 
 1. Efficient Data Management: Implement a data management strategy that can handle large volumes of data in real-time efficiently. This includes data collection, storage, indexing, and retrieval.
@@ -98,8 +100,8 @@ Certainly! Here's an example of a file detailing the core logic of the AI-Based 
 
 ```javascript
 // Import necessary modules and models
-const Threat = require('../models/Threat');
-const threatDetectionService = require('../services/threatDetectionService');
+const Threat = require("../models/Threat");
+const threatDetectionService = require("../services/threatDetectionService");
 
 // Define the methods for threat detection
 const threatDetectionController = {
@@ -113,8 +115,10 @@ const threatDetectionController = {
 
       res.status(200).json({ success: true, threats });
     } catch (error) {
-      console.error('Threat detection failed:', error);
-      res.status(500).json({ success: false, error: 'Threat detection failed' });
+      console.error("Threat detection failed:", error);
+      res
+        .status(500)
+        .json({ success: false, error: "Threat detection failed" });
     }
   },
 };
@@ -122,7 +126,7 @@ const threatDetectionController = {
 module.exports = threatDetectionController;
 ```
 
-This file, `threatDetectionController.js`, is located at the path `controllers/threatDetectionController.js` in the project structure. It contains the core logic for threat detection in the AI-Based Cybersecurity Threat Detection System. 
+This file, `threatDetectionController.js`, is located at the path `controllers/threatDetectionController.js` in the project structure. It contains the core logic for threat detection in the AI-Based Cybersecurity Threat Detection System.
 
 In this example, the `Threat` model represents the schema for threat data and is imported from the `../models/Threat` file. The `threatDetectionService` is responsible for the actual analysis of incoming data and is imported from the `../services/threatDetectionService` file.
 
@@ -138,9 +142,9 @@ Certainly! Here's an example of another core file in the AI-Based Cybersecurity 
 
 ```javascript
 // Import necessary modules and models
-const TensorFlow = require('tensorflow');
-const ScikitLearn = require('scikit-learn');
-const Threat = require('../models/Threat');
+const TensorFlow = require("tensorflow");
+const ScikitLearn = require("scikit-learn");
+const Threat = require("../models/Threat");
 
 // Define the threat detection service
 const threatDetectionService = {
@@ -157,8 +161,8 @@ const threatDetectionService = {
 
       return formattedThreats;
     } catch (error) {
-      console.error('Threat detection service failed:', error);
-      throw new Error('Threat detection service failed');
+      console.error("Threat detection service failed:", error);
+      throw new Error("Threat detection service failed");
     }
   },
 };
@@ -198,14 +202,14 @@ Certainly! Here's an example of another file outlining an additional core logic 
 
 ```javascript
 // Import necessary modules and controllers
-const express = require('express');
-const threatDetectionController = require('../controllers/threatDetectionController');
+const express = require("express");
+const threatDetectionController = require("../controllers/threatDetectionController");
 
 // Create an express router instance
 const router = express.Router();
 
 // Define the routes for threat detection
-router.post('/detect', threatDetectionController.detectThreats);
+router.post("/detect", threatDetectionController.detectThreats);
 
 module.exports = router;
 ```
@@ -225,27 +229,31 @@ Overall, this `threatDetection.js` file plays a crucial role in handling the rou
 Based on the AI-Based Cybersecurity Threat Detection System, here's a list of potential user types along with a user story for each type:
 
 1. Security Analyst:
-   - User Story: 
+
+   - User Story:
      As a Security Analyst, I want to analyze the detected threats and investigate their potential impact on the system. I should be able to view detailed threat reports and take appropriate actions to mitigate the threats.
    - File: The `threatDetectionController.js` file in the `controllers` directory will accomplish this, as it handles the detection of threats and provides the detected threats as a response.
 
 2. System Administrator:
-   - User Story: 
+
+   - User Story:
      As a System Administrator, I want to configure the AI-Based Cybersecurity Threat Detection System to meet the specific security requirements of our organization. I should be able to set up system parameters, manage user roles, and customize threat detection rules.
    - File: The `userController.js` file in the `controllers` directory will handle the user management and configuration functionalities. This file will provide methods to manage user roles and access permissions.
 
 3. IT Manager:
-   - User Story: 
+
+   - User Story:
      As an IT Manager, I want to have an overview of the system's security and threat detection performance. I should be able to view real-time system health, metrics, and logs. Additionally, I should be notified of any critical security incidents.
    - File: The `log.js` model in the `models` directory will help store logs related to system performance, security incidents, and noteworthy events. The `userController.js` file will handle generating real-time system health and metric information, providing the IT Manager with the necessary data.
 
 4. Security Operations Center (SOC) Manager:
-   - User Story: 
+
+   - User Story:
      As a SOC Manager, I want to be alerted about potential threats immediately. I should have real-time access to the threat detection system through a user-friendly dashboard. Additionally, I need to manage user access and permissions for the threat detection system.
    - File: The `userController.js` file in the `controllers` directory will handle user access and permissions. Additionally, the `dashboard.js` file in the `routes` directory will define the endpoints for the user-friendly SOC Manager dashboard.
 
 5. Incident Responder:
-   - User Story: 
+   - User Story:
      As an Incident Responder, I want to rapidly respond to detected threats and investigate their origin. I should be able to access threat details, view related logs, and take immediate mitigation actions.
    - File: The `threatDetectionController.js` file in the `controllers` directory will provide access to threat details. The `log.js` model in the `models` directory will store relevant logs. Moreover, the `userController.js` file will handle user access and permissions, granting the Incident Responder the necessary privileges.
 

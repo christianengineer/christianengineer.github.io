@@ -79,7 +79,7 @@ Brief Explanation of the file structure:
 - **requirements.txt:** A file containing a list of items to be installed using pip install.
 - **README.md:** Provides information about the project and instructions on how to use it.
 
-```markdown
+````markdown
 # Natural-Language-Query-Engine/app/nlqe_logic.py
 
 ```python
@@ -130,6 +130,7 @@ def process_query(query):
 
     return result
 ```
+````
 
 ```
 
@@ -138,3 +139,4 @@ Explanation of the Python code above:
 - The `parse_query` function uses Spacy to parse and understand a natural language query, and then it transforms it into an SQL query. This is oversimplified and in a production environment, this transformation would be much more sophisticated.
 - `execute_query` function then takes an SQL query, executes it on the database, and fetches the results.
 - Finally, `process_query` is the main function that takes a natural language query, converts it to SQL with `parse_query`, and fetches the result with `execute_query`.
+```

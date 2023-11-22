@@ -22,25 +22,31 @@ The AI-Driven Car Parking Assistant App is a smart solution designed to address 
 ## Key Libraries and Technologies
 
 ### Data Handling and Analysis
+
 1. **Pandas:** This Python library will be used for data manipulation and analysis. It offers data structures and operations for manipulating large, complex datasets.
 2. **NumPy:** NumPy is a library for the Python programming language, adding support for large, multi-dimensional arrays and matrices, along with a collection of high-level mathematical functions to operate on these arrays.
-   
+
 ### AI and Machine Learning
+
 1. **Scikit-learn:** This machine learning library for Python will be employed for implementing various AI algorithms, assisting in tasks such as model fitting, data preprocessing, prediction, and more.
 2. **TensorFlow:** TensorFlow is another key library that will be utilized, particularly for developing and training deep learning models to predict future parking space availability.
 
 ### Back-End Development
+
 1. **Django:** A high-level Python Web framework that promotes rapid development and clean, pragmatic design. Django's primary goal is to ease the creation of complex, database-driven websites.
 2. **Flask:** A lightweight backend framework for Python, it is exceedingly useful for the scalable creation of web applications.
 
 ### Front-End Development
+
 1. **ReactJS:** A popular JavaScript library for building user interfaces, particularly for single-page applications.
 2. **Redux:** A predictable state container for JavaScript apps that will be used in conjunction with ReactJS for efficient and consistent state management across the app.
 
 ### Database Management
+
 1. **PostgreSQL:** An open-source object-relational database system, PostgreSQL is robust and capable of handling large user traffic with efficient data optimization.
 
 ### Scalability and Traffic Handling
+
 1. **Docker:** A tool designed to ease the process of development, deployment, and running of applications by using containers. It allows the app to scale well with increasing load.
 2. **Nginx:** An HTTP and reverse proxy server, Nginx would be used for efficient handling and balancing of incoming user traffic.
 
@@ -120,6 +126,7 @@ AI-Driven-Car-Parking-Assistant-App/
         └── scripts/
             └── ai_logic.py
 ```
+
 Below is a brief overview of the `ai_logic.py`:
 
 ```python
@@ -155,7 +162,7 @@ def define_model():
     model.add(Dense(10, input_dim=8))
     model.add(Dense(1))
     model.compile(loss='mean_squared_error', optimizer='adam', metrics=['accuracy'])
-    
+
     return model
 
 # Train Model
@@ -165,7 +172,7 @@ def train_model(model, X_train, y_train):
 # Evaluate Model
 def evaluate_model(model, X_test, y_test):
     prediction = model.predict(X_test)
-    
+
     return mean_absolute_error(y_test, prediction)
 
 # Main Execution Flow of Car Parking Assistant's AI Logic
@@ -183,6 +190,7 @@ if __name__ == "__main__":
     main()
 
 ```
+
 This `ai_logic.py` file includes functions to load, preprocess, and split the data, as well as define, train, and evaluate the AI model. While the code here indicates the utilization of a simple neural network, the AI model used in the actual project may involve more complex algorithms or approaches based on the given data and requirements.
 
 The main execution flow starts from reading a dataset, preprocessing the data, splitting the data into training and testing sets, defining the model, training the model, and finally evaluating the model.

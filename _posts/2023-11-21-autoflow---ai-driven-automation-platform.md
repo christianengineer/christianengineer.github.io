@@ -31,35 +31,41 @@ At the core of AutoFlow lie advanced AI algorithms capable of learning and adapt
 **Libraries Used:**
 
 - **Machine Learning and Data Processing:**
+
   - `scikit-learn`: For building traditional machine learning models.
   - `pandas`: For data manipulation and analysis.
   - `numpy`: For high-level mathematical functions and multi-dimensional arrays.
   - `tensorflow` / `pytorch`: Deep learning libraries for constructing neural networks.
 
 - **Web Frameworks:**
+
   - `Django` / `Flask`: For building the web backend; Django for a more feature-complete framework and Flask for simpler, more flexible deployments.
 
 - **Frontend Technologies:**
+
   - `React.js` or `Vue.js`: To build interactive user interfaces in a modular way.
   - `Redux`: For state management in React applications.
   - `Bootstrap` / `Tailwind CSS`: For rapid and responsive UI development.
 
 - **Database:**
+
   - `PostgreSQL`: As a primary database for structured data storage.
   - `MongoDB`: For handling unstructured or semi-structured data.
   - `Redis`: As an in-memory data store for caching and message brokering.
 
 - **Containerization and Orchestration:**
+
   - `Docker`: For containerizing applications to ensure consistency across environments.
   - `Kubernetes`: For automating deployment, scaling, and management of containerized applications.
 
 - **Continuous Integration / Continuous Deployment (CI/CD):**
+
   - `Jenkins` / `GitHub Actions`: For automating the software development process with continuous integration and delivery pipelines.
 
 - **Monitoring and Logging:**
   - `Prometheus` / `Grafana`: For real-time monitoring and visualization of the platform’s performance.
   - `Elasticsearch` / `Logstash` / `Kibana` (ELK Stack): For comprehensive log analysis and insight into system behavior.
-  
+
 **Contribution:**
 
 If you are passionate about AI and automation and have a knack for building scalable applications, we invite you to contribute to AutoFlow. Whether you're improving the documentation, adding new features, or providing bug fixes, your contributions are welcome.
@@ -100,20 +106,24 @@ The AutoFlow platform is designed to introduce AI-driven automation into various
 **Libraries and Technologies:**
 
 - **Machine Learning/Data Processing:**
+
   - `scikit-learn`: For creating various machine learning models.
   - `pandas` and `numpy`: Essential for data analysis and complex calculations.
   - `tensorflow` / `pytorch`: Frameworks for building and training deep learning neural networks.
 
 - **Backend and Frontend Stack:**
+
   - `Django` or `Flask`: Chosen for backend development based on project complexity.
   - `React.js` or `Vue.js`: Used to craft a dynamic and interactive UI.
   - `Redux`, `Bootstrap`, and `Tailwind CSS`: For state management and designing responsive interfaces.
 
 - **Databases and Caching:**
+
   - `PostgreSQL` and `MongoDB`: Serve as the primary data stores for structured and unstructured data, respectively.
   - `Redis`: Employed for its fast in-memory data caching and as a message broker.
 
 - **Containerization and Orchestration:**
+
   - `Docker`: Ensures consistent operation across different environments through containerization.
   - `Kubernetes`: Manages these containers' deployment and scaling automatically.
 
@@ -192,6 +202,7 @@ The AutoFlow AI-Driven Automation Platform utilizes a structured and modular fil
 - **`docs/`**: Contains all documentation, including setup instructions (`setup.md`), end-user guides (`usage.md`), and API documentation collected under the `api/` directory.
 
 - **`src/`**: The source code folder, further divided to separate backend and frontend concerns.
+
   - **Backend**: Includes RESTful API endpoint definitions (`api/`), core logic of the application (`core/`), data models (`models/`), business logic services (`services/`), database migration scripts (`migrations/`), configuration settings (`settings/`), and backend-specific tests (`tests/`).
   - **Frontend**: Houses reusable UI components (`components/`), views for pages (`views/`), state management scripts (`store/`), styles for components (`styles/`), static assets like images and fonts (`assets/`), and frontend-testing code (`tests/`).
   - **Shared**: Contains code needed by both the backend and frontend parts of the application such as utilities (`utils/`), constant values (`constants/`), and shared interfaces or types (`interfaces/`).
@@ -220,11 +231,13 @@ The AutoFlow AI-Driven Automation Platform utilizes a structured and modular fil
 This organization ensures clear separation of concerns, simplifies navigation, and aids in the future-proofing and scaling of AutoFlow.
 
 ### File Path:
+
 ```
 /src/core/automation_engine.py
 ```
 
 ### File Content (automation_engine.py):
+
 ```python
 """
 automation_engine.py
@@ -281,6 +294,7 @@ if __name__ == "__main__":
 ```
 
 ### Explanation:
+
 This file constructs the core automation engine for the AutoFlow platform. It includes an `AutomationEngine` class with methods to run a workflow, manage the orchestration of different steps within the workflow, and schedule periodic workflow tasks. The code leverages services like `WorkflowService` for managing workflow logistics, `NotificationService` for sending out alerts, and `Predictor` for utilizing AI model predictions within automation flows. The logging module captures important activities and potential issues, which is critical for maintenance and debugging of the platform. This file can be invoked directly or be integrated within a broader system to trigger and manage tasks on demand or through scheduled events.
 
 ```
@@ -309,7 +323,7 @@ class AutomationEngine:
         """
         Initializes the Automation Engine with an existing model or starts
         a new one.
-        
+
         :param model_path: Path to a pre-trained model on disk.
         """
         if model_path:
@@ -317,38 +331,38 @@ class AutomationEngine:
         else:
             # Initialize a new model if a pre-trained one is not provided
             self.model = RandomForestClassifier(n_estimators=100)
-        
+
         self.data_service = DataService()
         self.predictor = Predictor()
 
     def train(self, data_source):
         """
         Trains the AI model with the provided data source.
-        
+
         :param data_source: Path to the training data or a Pandas DataFrame.
         """
         # Fetch the training data
         training_data = self.data_service.fetch_data(data_source)
-        
+
         # Preprocess the data
         x_train, y_train = preprocess_data(training_data)
-        
+
         # Fit the model to the training data
         self.model.fit(x_train, y_train)
-        
+
         # Save the trained model to disk
         save_model(self.model, 'model_path')
 
     def automate_decision(self, input_data):
         """
         Uses the trained AI model to automate decisions based on new input data.
-        
+
         :param input_data: Data on which to perform the prediction.
         :return: Prediction result.
         """
         # Preprocess the input data
         processed_data = preprocess_data(input_data, training=False)
-        
+
         # Use the predictor utility to make a prediction
         prediction = self.predictor.make_prediction(self.model, processed_data)
         return prediction
@@ -356,7 +370,7 @@ class AutomationEngine:
     def schedule_retraining(self, interval_days, training_data_path):
         """
         Schedules re-training of the model to adapt to new data over time.
-        
+
         :param interval_days: Frequency of retraining in days.
         :param training_data_path: Path to the training data.
         """
@@ -377,11 +391,13 @@ if __name__ == '__main__':
 This file is an illustration of a Python class within the AI core that could be used to manage training and predictions for AutoFlow's AI-driven operations. The actual implementations of `DataService`, `Predictor`, `load_model`, `save_model`, and `preprocess_data` would be elsewhere in the project and imported here.
 
 ### File Path:
+
 ```
 /src/backend/high_traffic_handler.py
 ```
 
 ### File Content: `high_traffic_handler.py`
+
 ```python
 import os
 import logging
@@ -437,7 +453,7 @@ def handle_high_traffic(api_tasks):
     Distributes work across multiple threads to handle high traffic scenarios.
     :param api_tasks: A list of tasks where each task consists of API endpoint and its arguments.
     """
-    
+
     # Fill the task queue with API tasks
     for task in api_tasks:
         task_queue.put(task)
@@ -477,7 +493,7 @@ if __name__ == '__main__':
 
 ### Explanation
 
-This Python file introduces a worker-based approach to handling high user traffic. The `handle_high_traffic()` function takes in a list of API tasks and dispatches them to a ThreadPoolExecutor. This executor is responsible for executing tasks concurrently, which allows for handling multiple requests simultaneously without overwhelming the service. The use of the `ratelimit` decorator ensures that API calls are throttled not to exceed the specified rate limit. Additionally, with the `on_exception` from the `backoff` library, there's an exponential backoff in place whenever a `RateLimitException` is encountered, protecting the service from crashing due to excessive traffic. 
+This Python file introduces a worker-based approach to handling high user traffic. The `handle_high_traffic()` function takes in a list of API tasks and dispatches them to a ThreadPoolExecutor. This executor is responsible for executing tasks concurrently, which allows for handling multiple requests simultaneously without overwhelming the service. The use of the `ratelimit` decorator ensures that API calls are throttled not to exceed the specified rate limit. Additionally, with the `on_exception` from the `backoff` library, there's an exponential backoff in place whenever a `RateLimitException` is encountered, protecting the service from crashing due to excessive traffic.
 
 **Note:** The endpoint calls and processing logic are placeholders and should be replaced with actual application logic and API calling code. Error handling is minimal for simplicity and should be made more robust to cover more failure cases and potentially alert system administrators of critical issues. Also, environment variables like `MAX_THREADS` and `REQUESTS_PER_MINUTE` should be set accordingly based on the specific deployment scenarios and infrastructure capabilities.
 
@@ -486,8 +502,10 @@ This Python file introduces a worker-based approach to handling high user traffi
 
 ## File Path
 ```
+
 src/backend/services/data_intensive_manager.py
-```
+
+````
 
 *This module is responsible for handling the data-intensive operations necessary for the AI components of the AutoFlow platform. It ensures efficient data processing, management, and storage to support the underlying AI workflows.*
 
@@ -542,7 +560,7 @@ class DataIntensiveManager:
 
 # ... more related services and classes
 
-```
+````
 
 ### Key Functionalities:
 
@@ -553,10 +571,13 @@ class DataIntensiveManager:
 This module is engineered to leverage the fastest available libraries for data handling (e.g., `pandas`) and connect with custom-built modules for AI and database operations. It ensures that as data volumes grow, performance remains consistent and efficient.
 
 ## Usage
+
 This file is a central piece in the backend logic and is meant to be utilized by other backend services that require data-intensive operations, such as workflow managers, AI model trainers, and real-time analytics services.
 
 ## Note
+
 Performance and scaling tests should be regularly performed to validate the efficacy of the `DataIntensiveManager` module, ensuring it continues to meet the platform's stringent requirements for processing speed and resource management as the platform grows.
+
 ```
 
 This is a simplified outline of the `data_intensive_manager.py` file that gives a clear understanding of its purpose and functionality within the AutoFlow - AI-Driven Automation Platform.
@@ -596,3 +617,4 @@ This is a simplified outline of the `data_intensive_manager.py` file that gives 
    - **Accomplishing File(s)**: `src/frontend/views/ExecutiveInsightsDashboard.vue`, sourcing data from analytical services such as `src/backend/services/ROIService.py`.
 
 Each file or service mentioned is a representative component in the overarching functionality necessary to support different user types and their stories. The platform is designed with both technical and non-technical users in mind, providing different layers of abstraction and interfaces to match the varying skill sets and needs of its users.
+```

@@ -9,7 +9,7 @@ permalink: posts/AI-Driven-Crop-Disease-Prediction-Revolutionizing-Agriculture
 
 **Description:**
 
-The AI-Based Crop Disease Prediction App is developed to recognize crop disease through image identification. The ultimate goal of the app is to facilitate early detection of crop diseases and provide swift mitigation strategies, consequently aiding farmers in safeguarding their crops. The application works by analyzing input images and identifying the potential diseases affecting the crops. 
+The AI-Based Crop Disease Prediction App is developed to recognize crop disease through image identification. The ultimate goal of the app is to facilitate early detection of crop diseases and provide swift mitigation strategies, consequently aiding farmers in safeguarding their crops. The application works by analyzing input images and identifying the potential diseases affecting the crops.
 
 The project uses advanced AI and Machine Learning models to analyze and classify images based on training and testing datasets. The app consists of a user-friendly front-end and a powerful back-end that processes the image and returns the analysis in a simple and comprehensive way.
 
@@ -46,7 +46,7 @@ The project uses advanced AI and Machine Learning models to analyze and classify
 - **Nginx/Apache server:** For better request handling and balancing the load, making the app capable of handling higher traffic.
 
 It's crucial to note that maintaining security, performance efficiency, and data privacy will remain at the top on our agenda while employing these technologies.
-  
+
 **Backend Language:**
 
 - **Python:** It is a high-level, interpreted, and general-purpose dynamic programming language. Python's design philosophy emphasizes code readability, and its syntax allows programmers to express concepts in fewer lines of code than possible in languages such as C++ or Java.
@@ -65,32 +65,32 @@ Below is a suggested file structure for your AI-based Crop Disease Prediction Ap
 AI-Based-Crop-Disease-Prediction-App/
 │
 ├── app/
-│   ├── __init__.py
-│   ├── main.py
-│   ├── api/
-│   │   ├── __init__.py
-│   │   ├── routes.py
-│   │   └── utilities/
-│   │       ├── __init__.py
-│   │       └── prediction_helpers.py
-│   ├── models/
-│   │   ├── __init__.py
-│   │   └── prediction_model.h5
-│   ├── static/
-│   │   ├── css/
-│   │   └── js/
-│   └── templates/
-│       └── index.html
+│ ├── **init**.py
+│ ├── main.py
+│ ├── api/
+│ │ ├── **init**.py
+│ │ ├── routes.py
+│ │ └── utilities/
+│ │ ├── **init**.py
+│ │ └── prediction_helpers.py
+│ ├── models/
+│ │ ├── **init**.py
+│ │ └── prediction_model.h5
+│ ├── static/
+│ │ ├── css/
+│ │ └── js/
+│ └── templates/
+│ └── index.html
 │
 ├── test/
-│   ├── __init__.py
-│   ├── test_models.py
-│   ├── test_api.py
-│   └── test_utilities.py
+│ ├── **init**.py
+│ ├── test_models.py
+│ ├── test_api.py
+│ └── test_utilities.py
 │
 ├── data/
-│   ├── training/
-│   └── testing/
+│ ├── training/
+│ └── testing/
 │
 ├── node_modules/
 │
@@ -106,11 +106,11 @@ AI-Based-Crop-Disease-Prediction-App/
 **Explanation:**
 
 - The **app** directory contains the core application code.
-    - **main.py** is the entry point of the application.
-    - The **api** directory contains the route definitions and utilities for the API.
-    - The **models** directory contains the machine learning model used for predictions.
-    - The **static** folder serves static files like CSS and JavaScript.
-    - The **templates** directory consists of templates for rendering frontend views.
+  - **main.py** is the entry point of the application.
+  - The **api** directory contains the route definitions and utilities for the API.
+  - The **models** directory contains the machine learning model used for predictions.
+  - The **static** folder serves static files like CSS and JavaScript.
+  - The **templates** directory consists of templates for rendering frontend views.
 - The **test** directory contains all unit tests for the application.
 - The **data** directory consists of datasets for training and testing the prediction model.
 - The **node_modules** directory contains all the project dependencies.
@@ -132,7 +132,7 @@ from tensorflow.keras.preprocessing import image
 from sklearn.preprocessing import LabelEncoder
 
 class DiseasePredictor:
-  
+
     def __init__(self):
         self.model = load_model('../../models/prediction_model.h5')
         self.class_labels = LabelEncoder()

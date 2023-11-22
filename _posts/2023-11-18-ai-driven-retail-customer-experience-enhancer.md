@@ -45,7 +45,7 @@ To ensure a scalable file structure for the AI-Driven Retail Customer Experience
 1. **src**: This directory will contain the source code files of the application.
 
    - **backend**: Store the back-end server files.
-     
+
      - **controllers**: Keep the controller files responsible for handling business logic and HTTP request handling.
      - **models**: Store the model files representing data structures and defining database schemas.
      - **routes**: Keep the route files for different API endpoints.
@@ -53,7 +53,7 @@ To ensure a scalable file structure for the AI-Driven Retail Customer Experience
      - **utils**: Keep utility files that provide helper functions or reusable code.
 
    - **frontend**: Store the front-end files.
-     
+
      - **components**: Keep reusable UI components.
      - **pages**: Store the different web pages and their associated components.
      - **assets**: Store static assets like images, stylesheets, and fonts.
@@ -92,10 +92,10 @@ Certainly! Here's an example of how a file detailing the primary module of the A
 // Description: Primary module for enhancing the retail customer experience
 
 // Import required libraries and modules
-const express = require('express');
-const customerRouter = require('./routes/customerRouter');
-const recommendationService = require('./services/recommendationService');
-const analyticsService = require('./services/analyticsService');
+const express = require("express");
+const customerRouter = require("./routes/customerRouter");
+const recommendationService = require("./services/recommendationService");
+const analyticsService = require("./services/analyticsService");
 
 // Set up Express application
 const app = express();
@@ -104,7 +104,7 @@ const app = express();
 app.use(express.json());
 
 // Route for handling customer-related endpoints
-app.use('/api/customers', customerRouter);
+app.use("/api/customers", customerRouter);
 
 // Recommendation Engine initialization
 recommendationService.initialize();
@@ -146,9 +146,9 @@ Certainly! Here's an example of how a file for a secondary module could be struc
 // Description: Secondary module for managing customer recommendations
 
 // Import required libraries and modules
-const redisClient = require('../utils/redisClient');
-const userModel = require('../models/userModel');
-const productModel = require('../models/productModel');
+const redisClient = require("../utils/redisClient");
+const userModel = require("../models/userModel");
+const productModel = require("../models/productModel");
 
 // Object to store the recommendation service
 const recommendationService = {};
@@ -165,15 +165,19 @@ recommendationService.updateRecommendationsForUser = async (userId) => {
     const userPreferences = await userModel.getUserPreferences(userId);
 
     // Retrieve relevant products based on user preferences using the productModel
-    const recommendedProducts = await productModel.getRecommendedProducts(userPreferences);
+    const recommendedProducts =
+      await productModel.getRecommendedProducts(userPreferences);
 
     // Store the recommended products in Redis cache
-    redisClient.set(`user:${userId}:recommendations`, JSON.stringify(recommendedProducts));
+    redisClient.set(
+      `user:${userId}:recommendations`,
+      JSON.stringify(recommendedProducts),
+    );
 
     return recommendedProducts;
   } catch (error) {
     // Handle errors
-    throw new Error('Failed to update recommendations for the user');
+    throw new Error("Failed to update recommendations for the user");
   }
 };
 
@@ -181,7 +185,9 @@ recommendationService.updateRecommendationsForUser = async (userId) => {
 recommendationService.getRecommendationsForUser = async (userId) => {
   try {
     // Check if recommendations exist in Redis cache
-    const recommendationsData = await redisClient.get(`user:${userId}:recommendations`);
+    const recommendationsData = await redisClient.get(
+      `user:${userId}:recommendations`,
+    );
 
     if (recommendationsData) {
       // Parse and return recommendations from cache
@@ -189,12 +195,13 @@ recommendationService.getRecommendationsForUser = async (userId) => {
       return recommendations;
     } else {
       // Retrieve recommendations from the database if not stored in cache
-      const recommendations = await recommendationService.updateRecommendationsForUser(userId);
+      const recommendations =
+        await recommendationService.updateRecommendationsForUser(userId);
       return recommendations;
     }
   } catch (error) {
     // Handle errors
-    throw new Error('Failed to get recommendations for the user');
+    throw new Error("Failed to get recommendations for the user");
   }
 };
 
@@ -225,8 +232,8 @@ Certainly! Here's an example of how a file outlining an additional module could 
 // Description: Additional module for collecting and analyzing customer analytics
 
 // Import required libraries and modules
-const rabbitmqClient = require('../utils/rabbitmqClient');
-const userModel = require('../models/userModel');
+const rabbitmqClient = require("../utils/rabbitmqClient");
+const userModel = require("../models/userModel");
 
 // Object to store the analytics service
 const analyticsService = {};
@@ -239,17 +246,17 @@ analyticsService.initialize = () => {
 // Receive and process analytics events from the message queue
 analyticsService.receiveAnalyticsEvents = () => {
   // Consume analytics events from the message queue using rabbitmqClient
-  rabbitmqClient.consume('analyticsQueue', async (event) => {
+  rabbitmqClient.consume("analyticsQueue", async (event) => {
     try {
       // Extract relevant data from the event message
       const { userId, eventType } = event;
 
       // Perform analytics processing based on the eventType
       switch (eventType) {
-        case 'purchase':
+        case "purchase":
           await analyticsService.processPurchaseEvent(userId);
           break;
-        case 'view':
+        case "view":
           await analyticsService.processViewEvent(userId);
           break;
         // Handle other event types

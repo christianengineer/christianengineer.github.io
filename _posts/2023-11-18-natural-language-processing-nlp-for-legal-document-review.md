@@ -7,9 +7,11 @@ permalink: posts/natural-language-processing-nlp-for-legal-document-review
 # Technical Specifications Document: NLP for Legal Document Review Repository
 
 ## Description
+
 The Natural Language Processing (NLP) for Legal Document Review repository aims to develop an efficient system for analyzing and reviewing legal documents using NLP techniques. The primary objective is to automate the process of document review, enabling faster and more accurate extraction of key information.
 
 ## Objectives
+
 1. Develop robust data management strategies for handling large volumes of legal documents efficiently.
 2. Implement NLP algorithms to extract relevant information such as case details, contract clauses, and legal opinions.
 3. Create a user-friendly interface for document review, enabling easy navigation, annotation, and collaboration between multiple users.
@@ -19,6 +21,7 @@ The Natural Language Processing (NLP) for Legal Document Review repository aims 
 ## Libraries and Technologies
 
 ### Backend
+
 1. **Python**: A widely used programming language for NLP tasks, offering extensive support for natural language processing libraries.
 2. **Django**: A high-level Python web framework, providing an organized architecture for building scalable and secure web applications.
 3. **NLTK**: The Natural Language Toolkit is a comprehensive library for NLP tasks, including tokenization, stemming, part-of-speech tagging, and entity recognition.
@@ -26,6 +29,7 @@ The Natural Language Processing (NLP) for Legal Document Review repository aims 
 5. **Scikit-learn**: A machine learning library offering various classifiers and preprocessing tools to train and optimize NLP models.
 
 ### Frontend
+
 1. **React**: A popular JavaScript library for building user interfaces with reusable components and efficient rendering.
 2. **Redux**: A predictable state management solution for JavaScript applications, providing a centralized data store and actions for managing user interactions.
 3. **Material-UI**: A UI component library based on Google's Material Design, offering pre-built components for creating a intuitive and visually appealing user interface.
@@ -34,6 +38,7 @@ The Natural Language Processing (NLP) for Legal Document Review repository aims 
 6. **Babel**: A JavaScript compiler that enables the use of modern syntax and ensures cross-browser compatibility.
 
 ## Summary Section
+
 The NLP for Legal Document Review repository aims to develop an efficient system for automating document review in the legal domain. By leveraging Python, Django, NLTK, spaCy, and Scikit-learn on the backend, we can effectively process and extract key information from legal documents. On the frontend, React, Redux, Material-UI, Socket.io, Webpack, and Babel will ensure a user-friendly, collaborative, and high-performing interface for document review.
 
 Through the combination of these technologies and libraries, we can achieve efficient data management, handle high user traffic, and ensure data privacy and security. The selected libraries are well-known and widely used in the NLP and web development communities, offering excellent support and flexibility for our project needs.
@@ -288,19 +293,24 @@ Similarly, you can import and use these functions across other modules as requir
 Remember to adjust the file structure and imports based on your specific requirements and the interdependencies of the modules in your application.
 
 Type of Users:
+
 1. Legal Researchers/Lawyers:
+
    - User Story: As a legal researcher, I want to upload legal documents and extract key information and topics to aid in my research.
    - Accomplished by: The `nlp_logic.py` file, specifically functions such as `extract_entities()` and `extract_topics()`, will assist in extracting important legal terms and topics from the documents.
 
 2. Document Reviewers:
+
    - User Story: As a document reviewer, I want to compare the similarity between legal documents to identify duplicates or related documents for more efficient review.
    - Accomplished by: The `legal_similarity.py` file, specifically the `calculate_similarity()` and `find_similar_documents()` functions, will help reviewers identify similar documents for more streamlined review processes.
 
 3. Case Managers:
+
    - User Story: As a case manager, I want to classify legal documents to categorize and organize them effectively for case management.
    - Accomplished by: The `nlp_logic.py` file, specifically the `classify_document()` function, will provide document classification capabilities to group and organize legal documents based on their type.
 
 4. Data Privacy and Compliance Officers:
+
    - User Story: As a data privacy officer, I want to ensure that sensitive information from legal documents is handled securely without violating data privacy regulations.
    - Accomplished by: The `nlp_logic.py` file, in conjunction with relevant data access and storage mechanisms implemented in the backend services and models, ensures compliance with data privacy regulations and the secure handling of legal documents.
 

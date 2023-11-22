@@ -99,7 +99,7 @@ app.use(
     schema,
     rootValue: resolvers,
     graphiql: true, // Enable GraphiQL
-  })
+  }),
 );
 
 app.listen(4000);

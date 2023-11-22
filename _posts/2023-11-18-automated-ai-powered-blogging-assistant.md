@@ -128,9 +128,10 @@ root/
 ```
 
 **controllers/postController.js**
+
 ```javascript
 // Import necessary dependencies and files
-const Post = require('../models/post');
+const Post = require("../models/post");
 
 // Define the post controller object
 const postController = {
@@ -138,12 +139,12 @@ const postController = {
   createPost: async (req, res) => {
     try {
       const { title, content, author } = req.body;
-      
+
       // Create a new instance of the Post model
       const newPost = new Post({
         title,
         content,
-        author
+        author,
       });
 
       // Save the post to the database
@@ -152,15 +153,15 @@ const postController = {
       // Return successful response
       res.status(201).json({
         success: true,
-        message: 'Post created successfully',
-        post: newPost
+        message: "Post created successfully",
+        post: newPost,
       });
     } catch (error) {
       // Handle any errors that may occur during post creation
       res.status(500).json({
         success: false,
-        message: 'Error creating post',
-        error: error.message
+        message: "Error creating post",
+        error: error.message,
       });
     }
   },
@@ -174,21 +175,20 @@ const postController = {
       // Return the fetched posts
       res.status(200).json({
         success: true,
-        message: 'Successfully retrieved posts',
-        posts
+        message: "Successfully retrieved posts",
+        posts,
       });
     } catch (error) {
       // Handle any errors that may occur during post retrieval
       res.status(500).json({
         success: false,
-        message: 'Error retrieving posts',
-        error: error.message
+        message: "Error retrieving posts",
+        error: error.message,
       });
     }
   },
 
   // Other post-related controller functions...
-
 };
 
 // Export the postController object
@@ -215,9 +215,10 @@ root/
 ```
 
 **services/aiService.js**
+
 ```javascript
 // Import necessary dependencies and files
-const Post = require('../models/post');
+const Post = require("../models/post");
 
 // Define the aiService object
 const aiService = {
@@ -237,7 +238,7 @@ const aiService = {
       return post;
     } catch (error) {
       // Handle any errors that may occur during content generation
-      throw new Error('Error generating content: ' + error.message);
+      throw new Error("Error generating content: " + error.message);
     }
   },
 
@@ -254,12 +255,11 @@ const aiService = {
       return analysisResult;
     } catch (error) {
       // Handle any errors that may occur during content analysis
-      throw new Error('Error analyzing content: ' + error.message);
+      throw new Error("Error analyzing content: " + error.message);
     }
   },
 
   // Other AI-related service functions...
-
 };
 
 // Export the aiService object
@@ -292,9 +292,10 @@ root/
 ```
 
 **utils/analyticsUtils.js**
+
 ```javascript
 // Import necessary dependencies and files
-const Post = require('../models/post');
+const Post = require("../models/post");
 
 // Define the analyticsUtils object
 const analyticsUtils = {
@@ -318,7 +319,7 @@ const analyticsUtils = {
       return post;
     } catch (error) {
       // Handle any errors that may occur during analytics calculations
-      throw new Error('Error calculating analytics: ' + error.message);
+      throw new Error("Error calculating analytics: " + error.message);
     }
   },
 
@@ -339,7 +340,6 @@ const analyticsUtils = {
   },
 
   // Other analytics-related utility functions...
-
 };
 
 // Export the analyticsUtils object
@@ -359,18 +359,22 @@ Please note that this is a simplified example, and the actual implementation of 
 Based on the Automated AI-Powered Blogging Assistant application, the following are the different types of users along with their respective user stories and the files that will accomplish their tasks:
 
 1. **Bloggers**
+
    - User Story: As a blogger, I want to create and publish blog posts effortlessly using AI-powered assistance.
    - File: `controllers/postController.js` handles the creation and management of blog posts.
 
 2. **Readers**
+
    - User Story: As a reader, I want to easily find and read high-quality blog posts on various topics.
    - File: `controllers/postController.js` retrieves and serves the blog posts to readers.
 
 3. **Administrators**
+
    - User Story: As an administrator, I want to manage user accounts, monitor analytics, and ensure smooth operation of the application.
    - File: `controllers/userController.js` handles user account management, while `utils/analyticsUtils.js` assists with analytics calculations.
 
 4. **AI Specialists**
+
    - User Story: As an AI specialist, I want to develop and integrate advanced AI algorithms to improve content generation and analysis.
    - Files: `services/aiService.js` utilizes AI algorithms for content generation and analysis.
 

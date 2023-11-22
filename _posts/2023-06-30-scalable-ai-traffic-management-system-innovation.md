@@ -34,7 +34,7 @@ To achieve our project goals effectively and efficiently, we will leverage sever
 
 3. **OpenAI for Sustainable Traffic Policies:** We will use OpenAI's reinforcement learning algorithms to develop sustainable traffic policies based upon real-time feeds and predictive models.
 
-4. **Numpy, Pandas, and Dask for Data Handling:** We will use Numpy and Pandas for handling, analyzing, and visualizing data related to traffic. 
+4. **Numpy, Pandas, and Dask for Data Handling:** We will use Numpy and Pandas for handling, analyzing, and visualizing data related to traffic.
 
 5. **Docker and Kubernetes for Scalability:** Docker will be used for containerization of deployment, and Kubernetes will be used for orchestration of these containers to cope with increasing user traffic without performance drops.
 
@@ -95,7 +95,7 @@ AI-Driven-Traffic-Management-System
 9. **package.json:** This file is all about what scripts your application relies on, and it handles versions and scripts.
 
 10. **Dockerfile:** This plain text file contains all the commands a user could call on the command line to create a docker image.
- 
+
 11. **docker-compose.yml:** This YAML file is a tool for defining and running multi-container Docker applications.
 
 # File Location:
@@ -133,7 +133,7 @@ class AITrafficManagement:
         reshaped = np.reshape(normalized, (1, normalized.shape[0], normalized.shape[1], 1))
         return reshaped
 
-    # the method below is used to train the model and update its weights periodically 
+    # the method below is used to train the model and update its weights periodically
     def train_model(self, data, labels):
         # split data and labels into training and testing sets
         train_data, test_data, train_labels, test_labels = train_test_split(data, labels)
@@ -149,4 +149,4 @@ class AITrafficManagement:
 
 ```
 
-In this fictitious `trafficAI.py` file, the `AITrafficManagement` class includes the logic needed for AI-driven traffic management. *Note: In reality, this is a highly simplified example that doesn't fully cover all the complexities of traffic prediction.* Each function is designed with a specific role, including preprocessing of traffic images, prediction of traffic flow, and training of the AI model.
+In this fictitious `trafficAI.py` file, the `AITrafficManagement` class includes the logic needed for AI-driven traffic management. _Note: In reality, this is a highly simplified example that doesn't fully cover all the complexities of traffic prediction._ Each function is designed with a specific role, including preprocessing of traffic images, prediction of traffic flow, and training of the AI model.

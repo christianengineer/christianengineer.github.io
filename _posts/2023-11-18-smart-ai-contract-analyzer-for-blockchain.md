@@ -7,6 +7,7 @@ permalink: posts/smart-ai-contract-analyzer-for-blockchain
 # Smart AI Contract Analyzer for Blockchain Technical Specifications
 
 ## Description
+
 The Smart AI Contract Analyzer for Blockchain is a web application designed to analyze and detect vulnerabilities in smart contracts deployed on blockchain networks. The objective of this project is to provide accurate and efficient vulnerability analysis while handling high user traffic. This document outlines the technical specifications of the application, with a focus on data management and handling high user traffic.
 
 ## Objectives
@@ -62,7 +63,7 @@ Certainly! Here is a professional and scalable file structure for the Smart AI C
 │   │   ├── index.js
 │   │   └── ...
 │   └── package.json
-│   
+│
 ├── server
 │   ├── controllers
 │   │   ├── ContractController.js
@@ -114,8 +115,8 @@ Certainly! Here is an example of how you could design a file detailing the core 
 File: `server/controllers/ContractController.js`
 
 ```javascript
-const ContractModel = require('../models/ContractModel');
-const aiAnalyzer = require('../utils/AIAnalyzer');
+const ContractModel = require("../models/ContractModel");
+const aiAnalyzer = require("../utils/AIAnalyzer");
 
 class ContractController {
   static async analyzeContract(req, res) {
@@ -130,11 +131,11 @@ class ContractController {
         contractCode,
         vulnerabilities,
       });
-      
+
       return res.status(200).json(contract);
     } catch (error) {
-      console.error('Error while analyzing contract:', error);
-      return res.status(500).json({ error: 'Internal Server Error' });
+      console.error("Error while analyzing contract:", error);
+      return res.status(500).json({ error: "Internal Server Error" });
     }
   }
 }
@@ -163,8 +164,8 @@ Certainly! Here is an example of another file that represents a core part of the
 File: `server/routes/api/contract.js`
 
 ```javascript
-const express = require('express');
-const ContractController = require('../../controllers/ContractController');
+const express = require("express");
+const ContractController = require("../../controllers/ContractController");
 
 const router = express.Router();
 
@@ -174,7 +175,7 @@ const router = express.Router();
  * Request Body: { contractCode: string }
  * Response: { contract: { contractCode: string, vulnerabilities: Array } }
  */
-router.post('/analyze', ContractController.analyzeContract);
+router.post("/analyze", ContractController.analyzeContract);
 
 module.exports = router;
 ```
@@ -202,11 +203,11 @@ const AIAnalyzer = {
   analyze(contractCode) {
     // perform AI analysis on contract code here
     // return a list of vulnerabilities found
-    
+
     // This is a placeholder code.
-    const vulnerabilities = ['reentrancy', 'integer overflow'];
+    const vulnerabilities = ["reentrancy", "integer overflow"];
     return Promise.resolve(vulnerabilities);
-  }
+  },
 };
 
 module.exports = AIAnalyzer;
@@ -230,7 +231,7 @@ List of types of users for the Smart AI Contract Analyzer for Blockchain applica
 
 1. Developers: Developers who write and submit smart contracts for analysis.
 
-User Story: 
+User Story:
 As a developer, I want to analyze my smart contract code for potential vulnerabilities before deploying it to the blockchain. This will help me ensure the security and reliability of my smart contract.
 
 File: `server/routes/api/contract.js`

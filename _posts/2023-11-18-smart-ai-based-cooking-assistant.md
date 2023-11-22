@@ -87,7 +87,9 @@ To facilitate extensive growth and maintain a scalable file structure for the Sm
 Let's break down the structure:
 
 - `src`: This directory contains all the source code for the application.
+
   - `server`: This directory contains server-side files.
+
     - `config`: Configuration files such as database connection settings and environment variables.
     - `controllers`: API controller files that handle incoming requests and interact with services.
     - `models`: Database model files defining the schema and data structure.
@@ -102,12 +104,11 @@ Let's break down the structure:
     - `actions`: Redux action files that define actions triggered by user or system events.
     - `styles`: CSS or SASS files for styling the UI components.
     - `index.js`: The main entry point for the client-side React application.
-      
   - `shared`: This directory contains shared files used in both server and client applications.
     - `utils`: Utility/helper files that provide common functionalities across the application.
     - `constants`: Constant files that define reusable values used throughout the application.
     - `assets`: Static asset files like images, icons, or fonts used in the application.
-      
+
 - `public`: This directory contains the publicly accessible files for the application.
   - `index.html`: The HTML file used as a template to render the React application on the client-side.
 
@@ -122,8 +123,8 @@ File path: `src/server/services/recipeService.js`
 ```javascript
 // src/server/services/recipeService.js
 
-const Recipe = require('../models/Recipe');
-const UserModel = require('../models/User');
+const Recipe = require("../models/Recipe");
+const UserModel = require("../models/User");
 
 async function getRecommendedRecipes(userId, preferences) {
   try {
@@ -134,7 +135,10 @@ async function getRecommendedRecipes(userId, preferences) {
     const dietaryRestrictions = preferences.dietaryRestrictions;
 
     // Fetch user's cooking history from the database
-    const userCookingHistory = await UserModel.findById(userId, 'cookingHistory').lean();
+    const userCookingHistory = await UserModel.findById(
+      userId,
+      "cookingHistory",
+    ).lean();
 
     // Perform AI-based algorithm to recommend recipes based on preferences and history
     const recommendedRecipes = await Recipe.find({
@@ -142,14 +146,14 @@ async function getRecommendedRecipes(userId, preferences) {
       dietaryRestrictions: { $nin: dietaryRestrictions },
       _id: { $nin: userCookingHistory.cookingHistory },
     })
-      .select('name imageUrl')
+      .select("name imageUrl")
       .limit(5)
       .lean();
 
     return recommendedRecipes;
   } catch (error) {
     // Handle error case
-    throw new Error('Failed to get recommended recipes');
+    throw new Error("Failed to get recommended recipes");
   }
 }
 
@@ -190,19 +194,19 @@ File path: `src/server/controllers/userController.js`
 ```javascript
 // src/server/controllers/userController.js
 
-const UserModel = require('../models/User');
-const RecipeService = require('../services/recipeService');
+const UserModel = require("../models/User");
+const RecipeService = require("../services/recipeService");
 
 async function getUserPreferences(req, res) {
   try {
     const { userId } = req.params;
 
     // Fetch user preferences from the database
-    const user = await UserModel.findById(userId, 'preferences').lean();
+    const user = await UserModel.findById(userId, "preferences").lean();
 
     res.status(200).json(user.preferences);
   } catch (error) {
-    res.status(500).json({ error: 'Failed to fetch user preferences' });
+    res.status(500).json({ error: "Failed to fetch user preferences" });
   }
 }
 
@@ -211,14 +215,17 @@ async function getRecommendedRecipes(req, res) {
     const { userId } = req.params;
 
     // Fetch user preferences from the database
-    const user = await UserModel.findById(userId, 'preferences').lean();
+    const user = await UserModel.findById(userId, "preferences").lean();
 
     // Get recommended recipes matching user preferences
-    const recommendedRecipes = await RecipeService.getRecommendedRecipes(userId, user.preferences);
+    const recommendedRecipes = await RecipeService.getRecommendedRecipes(
+      userId,
+      user.preferences,
+    );
 
     res.status(200).json(recommendedRecipes);
   } catch (error) {
-    res.status(500).json({ error: 'Failed to fetch recommended recipes' });
+    res.status(500).json({ error: "Failed to fetch recommended recipes" });
   }
 }
 
@@ -237,16 +244,20 @@ Explanation:
 These controller functions can be mapped to the corresponding API routes and integrated with other parts of the application. For example, in a separate file within the `routes` directory, we can define routes that link to these controller functions:
 
 File path: `src/server/routes/userRoutes.js`
+
 ```javascript
 // src/server/routes/userRoutes.js
 
-const express = require('express');
-const userController = require('../controllers/userController');
+const express = require("express");
+const userController = require("../controllers/userController");
 
 const router = express.Router();
 
-router.get('/:userId/preferences', userController.getUserPreferences);
-router.get('/:userId/recommended-recipes', userController.getRecommendedRecipes);
+router.get("/:userId/preferences", userController.getUserPreferences);
+router.get(
+  "/:userId/recommended-recipes",
+  userController.getRecommendedRecipes,
+);
 
 module.exports = router;
 ```
@@ -262,7 +273,7 @@ File path: `src/server/models/Recipe.js`
 ```javascript
 // src/server/models/Recipe.js
 
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const recipeSchema = new mongoose.Schema({
   name: {
@@ -292,12 +303,12 @@ const recipeSchema = new mongoose.Schema({
   dietaryRestrictions: [
     {
       type: String,
-      enum: ['Vegetarian', 'Vegan', 'Gluten-Free', 'Dairy-Free'],
+      enum: ["Vegetarian", "Vegan", "Gluten-Free", "Dairy-Free"],
     },
   ],
 });
 
-module.exports = mongoose.model('Recipe', recipeSchema);
+module.exports = mongoose.model("Recipe", recipeSchema);
 ```
 
 Explanation:

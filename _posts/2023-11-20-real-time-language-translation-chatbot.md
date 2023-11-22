@@ -39,6 +39,7 @@ The contribution to such a project would not only indicate the candidate's exper
 ### Real-Time Language Translation Chatbot Repository Overview
 
 #### Description
+
 A sophisticated open-source project aimed at overcoming language boundaries in online communication by providing instantaneous translation through AI and NLP technologies.
 
 #### Objectives
@@ -122,6 +123,7 @@ This file structure organizes the real-time translation chatbot repository into 
 The `real-time-translation-chatbot` repository has a structured and modular design to efficiently manage the collaboration and development process for building a scalable AI-powered application. Below is a summary of the key components and organizational approach:
 
 **Backend Directory (`/backend`):**
+
 - Houses all server-side code, with a dedicated `app` directory for core application logic.
 - Inside `app`, there are:
   - `api`: Contains versioned API routes for chat operations, user management, and potentially more.
@@ -132,6 +134,7 @@ The `real-time-translation-chatbot` repository has a structured and modular desi
 - `main.py` serves as the application's entry point.
 
 **AI Models Directory (`/ai_models`):**
+
 - Centralizes AI models and associated management processes.
 - Contains subdirectories for:
   - `nlp`: NLP models and associated scripts.
@@ -139,6 +142,7 @@ The `real-time-translation-chatbot` repository has a structured and modular desi
   - `inference`: Utilities for loading models and performing inference tasks.
 
 **Frontend Directory (`/frontend`):**
+
 - Encompasses all client-side code.
 - The `public` folder holds static files, while `src` contains the source files for the frontend app.
 - `components` and `views` organize UI elements and page components.
@@ -147,19 +151,21 @@ The `real-time-translation-chatbot` repository has a structured and modular desi
 - Additional configurations and frontend tests are included.
 
 **Scripts Directory (`/scripts`):**
+
 - Features utility scripts for deployment and development environments.
 - `deployment`: Scripts related to Docker, CI/CD, etc.
 - `setup`: Scripts for setting up the development environment.
 
 **Documentation Directory (`/docs`):**
+
 - Contains all project documentation, including API specifics and project overviews.
 
 **Root Directory:**
+
 - Contains example environment variables `.env.example`, Docker configurations `Dockerfile` and `docker-compose.yml`, package dependencies `package.json` for frontend, and `requirements.txt` for backend Python dependencies.
 - Includes `README.md` with detailed instructions on installation, usage, and contribution guidelines.
 
 This well-organized file structure effectively separates different areas of concern, enabling a team of engineers to work on distinct aspects of the project in a simultaneous, non-conflicting manner. It also ensures ease of maintainability and scalability by clearly delineating the purposes of different files and directories.
-
 
 File: /backend/app/api/translation_routes.py
 
@@ -181,8 +187,8 @@ async def websocket_translate_endpoint(websocket: WebSocket):
 
         try:
             translation_input = TranslationInput.parse_raw(data)
-            translation_output = translator.translate(translation_input.text, 
-                                                      translation_input.source_language, 
+            translation_output = translator.translate(translation_input.text,
+                                                      translation_input.source_language,
                                                       translation_input.target_language)
             await websocket.send_text(TranslationResponse(translation=translation_output).json())
         except Exception as e:
@@ -249,7 +255,7 @@ class TranslationModel:
         model_name = f"Helsinki-NLP/opus-mt-{source_lang}-{target_lang}"
         self.tokenizer = MarianTokenizer.from_pretrained(model_name)
         self.model = MarianMTModel.from_pretrained(model_name)
-        
+
         # Device setup for utilizing GPU when available
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         self.model.to(self.device)
@@ -269,7 +275,7 @@ class TranslationModel:
         # Perform the translation and decode the output
         translated = self.model.generate(tokenized_text)
         translated_text = self.tokenizer.decode(translated[0], skip_special_tokens=True)
-        
+
         return translated_text
 
     def _preprocess(self, text: str) -> str:
@@ -287,13 +293,14 @@ if __name__ == "__main__":
     source_language = "en"
     target_language = "es"
     translator = TranslationModel(source_language, target_language)
-    
+
     example_text = "Hello, world!"
     print(f"Translating '{example_text}' to {target_language}:")
     print(translator.translate(example_text))
 ```
 
 **Important Notes:**
+
 1. This is a simplified version of the logic that a Senior Full Stack Software Engineer might implement in a real-world scenario.
 2. The usage of `transformers` library presumes access to pre-trained models suitable for the MarianMT model, which might need significant computational resources.
 3. Actual deployment would require careful management of computational resources, preprocessing, error handling, and could involve using more efficient language-specific tokenizers or handling multiple translation directions dynamically.
@@ -316,7 +323,7 @@ class TranslationService:
         """
         self.tokenizer = MarianTokenizer.from_pretrained(model_name)
         self.model = MarianMTModel.from_pretrained(model_name)
-    
+
     def translate(self, text, src_lang, tgt_lang):
         """
         Translates the text from the source language to the target language.
@@ -327,20 +334,20 @@ class TranslationService:
         """
         # Constructing the model name based on the source and target languages
         model_name = f'Helsinki-NLP/opus-mt-{src_lang}-{tgt_lang}'
-        
+
         # Reinitialize the tokenizer and model in case of language change
         self.tokenizer = MarianTokenizer.from_pretrained(model_name)
         self.model = MarianMTModel.from_pretrained(model_name)
-        
+
         # Tokenize and prepare input for the model
         tokenized_text = self.tokenizer(text, return_tensors="pt", padding=True)
-        
+
         # Perform translation
         translated = self.model.generate(**tokenized_text)
-        
+
         # Decode the output tokens to a string
         translation = self.tokenizer.decode(translated[0], skip_special_tokens=True)
-        
+
         return translation
 
 # Example usage
@@ -382,8 +389,8 @@ async def websocket_translation_endpoint(websocket: WebSocket, user_id: int):
 
             # Perform the translation
             translation = await translation_service.translate_text(
-                chat_message.text, 
-                chat_message.source_language, 
+                chat_message.text,
+                chat_message.source_language,
                 chat_message.target_language
             )
             translated_message = TranslatedMessage(
@@ -404,8 +411,8 @@ async def websocket_translation_endpoint(websocket: WebSocket, user_id: int):
 async def translate_text_endpoint(chat_message: ChatMessage):
     # Translate text using translation service
     translation = await translation_service.translate_text(
-        chat_message.text, 
-        chat_message.source_language, 
+        chat_message.text,
+        chat_message.source_language,
         chat_message.target_language
     )
     translated_message = TranslatedMessage(
@@ -415,7 +422,7 @@ async def translate_text_endpoint(chat_message: ChatMessage):
         source_language=chat_message.source_language,
         target_language=chat_message.target_language
     )
-    
+
     # Return JSON response with the translated message
     return JSONResponse(status_code=200, content=translated_message.dict())
 ```
@@ -431,31 +438,37 @@ The code demonstrates an understanding of asynchronous operations, API design, d
 ### Types of Users for the Real-Time Language Translation Chatbot Application
 
 1. **End Users** - Individuals who utilize the chat application for personal or business communication across languages.
-    - **User Story**: As an end user, I want to send and receive messages in my native language, and have them automatically translated to and from other users' languages, so that I can effortlessly communicate with international friends, colleagues, and clients.
-    - **Accomplished by**: `frontend/src/components/` for the UI components that the user directly interacts with, and `backend/app/api/` for processing and responding to user requests with translations.
+
+   - **User Story**: As an end user, I want to send and receive messages in my native language, and have them automatically translated to and from other users' languages, so that I can effortlessly communicate with international friends, colleagues, and clients.
+   - **Accomplished by**: `frontend/src/components/` for the UI components that the user directly interacts with, and `backend/app/api/` for processing and responding to user requests with translations.
 
 2. **Administrators** - Operators or moderators responsible for overseeing the chat service's operations, user management, and system health.
-    - **User Story**: As an administrator, I need to have control over user accounts, access logs, and analytics of the chat service, so I can manage and moderate the overall system effectively.
-    - **Accomplished by**: `backend/app/services/` for the backend logic to manage administrative tasks, and `backend/app/models/` for interacting with the database storing user credentials and logs.
+
+   - **User Story**: As an administrator, I need to have control over user accounts, access logs, and analytics of the chat service, so I can manage and moderate the overall system effectively.
+   - **Accomplished by**: `backend/app/services/` for the backend logic to manage administrative tasks, and `backend/app/models/` for interacting with the database storing user credentials and logs.
 
 3. **Developers/Contributors** - Developers who work on or contribute to enhancing the application's features, performance, and scalability.
-    - **User Story**: As a developer, I want to improve the accuracy and speed of translations and make sure the app scales well with increased usage, so that users have a seamless experience regardless of load.
-    - **Accomplished by**: `ai_models/` directory for improving translation models and the `backend/core/` for enhancing the core app scalability and performance.
+
+   - **User Story**: As a developer, I want to improve the accuracy and speed of translations and make sure the app scales well with increased usage, so that users have a seamless experience regardless of load.
+   - **Accomplished by**: `ai_models/` directory for improving translation models and the `backend/core/` for enhancing the core app scalability and performance.
 
 4. **Business Clients** - Companies that adopt the chatbot service for global customer support and internal international communication.
-    - **User Story**: As a business client, I need the translation chatbot to integrate with our existing customer service platforms and support our specific industry terminology, so that we can provide effective support to customers and enable smooth internal communication.
-    - **Accomplished by**: `backend/app/api/` for API integration functionality, and `ai_models/nlp/` for customizing the translation model to support industry-specific language.
+
+   - **User Story**: As a business client, I need the translation chatbot to integrate with our existing customer service platforms and support our specific industry terminology, so that we can provide effective support to customers and enable smooth internal communication.
+   - **Accomplished by**: `backend/app/api/` for API integration functionality, and `ai_models/nlp/` for customizing the translation model to support industry-specific language.
 
 5. **Language Researchers** - Academics and linguists who utilize the application to collect linguistic data and test the effectiveness of translation algorithms.
-    - **User Story**: As a language researcher, I want to access and analyze the translation data, to refine and contribute to the development of more sophisticated translation algorithms.
-    - **Accomplished by**: `ai_models/train/` for training and refining models, and potentially `backend/app/services/` if anonymized translation data export capabilities are available.
+
+   - **User Story**: As a language researcher, I want to access and analyze the translation data, to refine and contribute to the development of more sophisticated translation algorithms.
+   - **Accomplished by**: `ai_models/train/` for training and refining models, and potentially `backend/app/services/` if anonymized translation data export capabilities are available.
 
 6. **Machine Learning Enthusiasts** - Individuals with an interest in NLP and machine learning who want to experiment with or learn from the application.
-    - **User Story**: As a machine learning enthusiast, I want to understand how the translation model works and possibly contribute my own ideas to enhance its capabilities, so that I can grow my skills and contribute to the project.
-    - **Accomplished by**: `ai_models/` for accessing and improving the AI models, and `docs/` for understanding the technical documentation related to the AI and chat engine.
+
+   - **User Story**: As a machine learning enthusiast, I want to understand how the translation model works and possibly contribute my own ideas to enhance its capabilities, so that I can grow my skills and contribute to the project.
+   - **Accomplished by**: `ai_models/` for accessing and improving the AI models, and `docs/` for understanding the technical documentation related to the AI and chat engine.
 
 7. **UX Designers** - Designers focused on the user interface and experience, ensuring the application is accessible and visually appealing.
-    - **User Story**: As a UX designer, I want to craft a user-friendly interface for the language translation chatbot that is intuitive and easy to navigate, ensuring a satisfying user experience.
-    - **Accomplished by**: `frontend/src/` directory, which contains all assets related to the design such as CSS and user interface components.
+   - **User Story**: As a UX designer, I want to craft a user-friendly interface for the language translation chatbot that is intuitive and easy to navigate, ensuring a satisfying user experience.
+   - **Accomplished by**: `frontend/src/` directory, which contains all assets related to the design such as CSS and user interface components.
 
 Each type of user interacts with different parts of the project depending on their roles and goals. The specified directories comprise the code and tools necessary to fulfill each user story, ensuring that all stakeholders have their requirements met by the application.

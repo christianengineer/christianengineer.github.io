@@ -19,25 +19,25 @@ The main goals for the Smart Inventory Management System are:
 - Offer insightful data analytics on demand trends, sales, and inventory consumption.
 - Be easily scalable to handle a growing business’s changing needs.
 - Improve cost-effective decision-making and forecasting through accurate data.
-  
+
 ## Key Features
-  
+
 - **Real-time Inventory Management:** The system offers real-time tracking and updates of stock levels, ensuring businesses have a clear and accurate view of inventory status.
 
 - **Sales and Order Tracking:** Integrated with the sales system, it offers a clear overview of sales trends, client orders, and shipping status.
 
 - **Data Analytics:** The system is integrated with a robust data analytics engine, providing accurate insights.
 
-- **Scalability:** Designed with scalability as a need, it can be adapted to businesses of all sizes, from startups to large corporations. 
+- **Scalability:** Designed with scalability as a need, it can be adapted to businesses of all sizes, from startups to large corporations.
 
-## Process Flow 
-  
+## Process Flow
+
 - Inventory Update: The system will constantly keep track of the inventory based on the incoming and outgoing stocks.
 - Sales Tracking: Interfacing with your sales software to keep track of all completed sales transactions.
 - Orders Tracking: Keeps track of all pending, completed or cancelled orders, and auto-updates the inventory respectively.
 - Data Analysis: Constantly analyzing data to provide insights, forecasts and trends.
-  
-## Libraries to be Used 
+
+## Libraries to be Used
 
 Using the right libraries ensures efficient data handling and scalable user traffic:
 
@@ -59,12 +59,12 @@ Markdown format may not be the best choice for visualizing a file hierarchy in l
 Smart_Inventory_Management_System/
 |
 ├── client/      # Client-side React application
-│   ├── public/ 
+│   ├── public/
 │   │    ├── index.html
 │   │    ├── favicon.ico
 │   │    └── ...
-│   ├── src/     
-│   │   ├── components/   
+│   ├── src/
+│   │   ├── components/
 │   │   │    ├── Dashboard.js
 │   │   │    ├── Inventory.js
 │   │   │    ├── Orders.js
@@ -77,7 +77,7 @@ Smart_Inventory_Management_System/
 │   └── ...
 │
 ├── server/     # Server-side Express application
-│   ├── routes/   
+│   ├── routes/
 │   │    ├── inventory.js
 │   │    ├── orders.js
 │   │    ├── sales.js
@@ -111,9 +111,9 @@ Smart_Inventory_Management_System/
 ├── README.md   # Documentation for the project
 |
 └── package.json  # Lists dependencies and scripts of this project
-``` 
+```
 
-Each directory is organized in such a way as to group related files, ensuring efficient navigation and scalability as the system requirements grow. 
+Each directory is organized in such a way as to group related files, ensuring efficient navigation and scalability as the system requirements grow.
 
 - The client-side "components" includes files for each component like Dashboard, Inventory, Sales, Orders, and Analytics.
 - The server-side "routes" includes the server routing and "models" contains MongoDB database schema definitions.
@@ -125,15 +125,15 @@ The handling logic for the Smart Inventory Management System will likely be spli
 
 ```javascript
 /**
-* /server/routes/inventory.js
-*/
+ * /server/routes/inventory.js
+ */
 
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const Inventory = require('../models/Inventory');
+const Inventory = require("../models/Inventory");
 
 // Get all inventory items
-router.get('/', async (req, res) => {
+router.get("/", async (req, res) => {
   try {
     const items = await Inventory.find();
     res.json(items);
@@ -143,15 +143,15 @@ router.get('/', async (req, res) => {
 });
 
 // Get one inventory item
-router.get('/:id', getInventory, (req, res) => {
+router.get("/:id", getInventory, (req, res) => {
   res.json(res.inventory);
 });
 
 // Create one inventory item
-router.post('/', async (req, res) => {
+router.post("/", async (req, res) => {
   const item = new Inventory({
     name: req.body.name,
-    quantity: req.body.quantity
+    quantity: req.body.quantity,
   });
 
   try {
@@ -163,7 +163,7 @@ router.post('/', async (req, res) => {
 });
 
 // Update one inventory item
-router.patch('/:id', getInventory, async (req, res) => {
+router.patch("/:id", getInventory, async (req, res) => {
   if (req.body.name != null) {
     res.inventory.name = req.body.name;
   }
@@ -186,7 +186,7 @@ async function getInventory(req, res, next) {
   try {
     inventory = await Inventory.findById(req.params.id);
     if (inventory == null) {
-      return res.status(404).json({ message: 'Cannot find item' });
+      return res.status(404).json({ message: "Cannot find item" });
     }
   } catch (err) {
     return res.status(500).json({ message: err.message });

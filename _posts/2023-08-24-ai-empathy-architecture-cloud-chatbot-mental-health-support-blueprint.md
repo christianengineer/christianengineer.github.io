@@ -10,25 +10,23 @@ This blueprint describes an advanced modular approach to build a highly scalable
 
 ## 1. Introduction
 
-**Objective:** Leverage cloud technologies and AI to build a chatbot capable of helping millions of people suffering from mental health issues. The bot will be empathetic, multilingual and available for help at any time. 
+**Objective:** Leverage cloud technologies and AI to build a chatbot capable of helping millions of people suffering from mental health issues. The bot will be empathetic, multilingual and available for help at any time.
 
 ## 2. High-Level Design
 
 **Stack:**
+
 - Infrastructure: AWS Cloud
 - Chatbot Framework: Google Dialogflow
 - Language Support: Natural Language Toolkit (NLTK)
 - Machine Learning: Tensorflow
 - API: Flask
 
-### 2.1 Data Flow 
+### 2.1 Data Flow
 
 1. Web Client (End User) communicates with Chatbot Interface (Dialogflow).
-    
-2. Dialogflow sends the user's statement to our Flask API. 
-    
+2. Dialogflow sends the user's statement to our Flask API.
 3. API feeds this information to our AI model for interpretation and response generation.
-    
 4. The response is sent back to the client through the same pipeline.
 
 ```python
@@ -50,9 +48,8 @@ def get_reply():
 ### 3.1 Modular Design of AI Model
 
 The AI model consists of multiple modules:
-   
+
 1. **Data Preprocessing Module**: Cleans, normalizes and tokenizes the data.
-    
 2. **Feature Extraction Module**: Embeds the processed data into an appropriate form for the machine learning model.
 
 3. **Training Module**: Trains the model to understand and generate responses.
@@ -77,7 +74,7 @@ Our first phase involves developing our machine learning model with Google's Ten
 
 ### Phase 2: Integrating Model with Flask API
 
-We would integrate the trained machine learning model with a Flask API. 
+We would integrate the trained machine learning model with a Flask API.
 
 ### Phase 3: Deployment and Scaling
 
@@ -95,8 +92,8 @@ The final phase involves intensive testing and refining based on user feedback a
 
 We'll conduct load testing for scalability and use AWS CloudWatch to monitor system health, optimize performance, and manage system logs.
 
-## 8. Security 
+## 8. Security
 
-We will use AWS Identity and Access management (IAM) to provide necessary data and resource access. 
+We will use AWS Identity and Access management (IAM) to provide necessary data and resource access.
 
 This blueprint proposes a ground-breaking approach to mental health tech-support, providing scalable and empathetic AI-driven assistance to all. Leveraging the best tools and technologies available, we hope to make a significant impact in this vital sector.

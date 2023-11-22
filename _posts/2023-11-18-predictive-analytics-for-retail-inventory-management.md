@@ -7,10 +7,13 @@ permalink: posts/predictive-analytics-for-retail-inventory-management
 # Technical Specifications Document: Predictive Analytics for Retail Inventory Management Repository
 
 ## Description
-The Predictive Analytics for Retail Inventory Management repository aims to develop a robust and scalable solution for optimizing inventory management in retail stores using predictive analytics. The system will provide accurate forecasts of sales demand, enabling retailers to make data-driven decisions regarding product ordering, stock replenishment, and inventory optimization. 
+
+The Predictive Analytics for Retail Inventory Management repository aims to develop a robust and scalable solution for optimizing inventory management in retail stores using predictive analytics. The system will provide accurate forecasts of sales demand, enabling retailers to make data-driven decisions regarding product ordering, stock replenishment, and inventory optimization.
 
 ## Objectives
+
 The main objectives of this repository are to:
+
 1. Develop a highly efficient data management system for handling large volumes of retail sales and inventory data.
 2. Implement predictive analytics algorithms to forecast sales demand accurately.
 3. Design and build a user-friendly web interface to visualize data analytics and facilitate decision-making for retail managers.
@@ -123,7 +126,7 @@ def calculate_reorder_schedules(inventory_items):
         optimal_order_quantity = calculate_optimal_order_quantity(
             predicted_demand, item.current_inventory, item.lead_time
         )
-        
+
         # Create reorder schedule for each item
         schedule = {
             'item_id': item.id,

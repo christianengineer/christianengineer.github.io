@@ -154,7 +154,6 @@ A thorough file structure like the one above helps maintain clean separation of 
 The proposed scalable file structure for the Predictive Analytics for Retail Inventory Management project is meticulously organized to streamline the development and maintenance processes. Key components include:
 
 - `docs/`: This directory houses all necessary documentation, facilitating a deep understanding of the system's setup, usage, and APIs for both developers and users.
-  
 - `datasets/`: Segregated into raw, processed, and external subdirectories, this location is designated for storing and organizing data essential for training, testing, and model validation.
 
 - `notebooks/`: Dedicated sections for exploratory data analysis and model development allow for systematic experimentation and assessment within Jupyter notebooks.
@@ -215,7 +214,7 @@ class DemandForecastingModel:
 
         Args:
             X_test (pd.DataFrame): Testing features.
-        
+
         Returns:
             np.array: Predicted inventory demand values.
         """
@@ -228,7 +227,7 @@ class DemandForecastingModel:
         Args:
             X_test (pd.DataFrame): Testing features.
             y_test (pd.Series): Actual values to compare against.
-        
+
         Returns:
             float: The RMSE value.
         """
@@ -272,7 +271,7 @@ if __name__ == "__main__":
     print(f"Model RMSE on test set: {performance_rmse}")
     demand_forecaster.save_model('models/demand_forecasting_model.joblib')
 
-    # Predict future demand 
+    # Predict future demand
     future_demand_prediction = demand_forecaster.predict(test_features)
     print(f"Predicted future demand: {future_demand_prediction}")
 ```
@@ -282,6 +281,7 @@ Please note that the above is a simplified representation of a potential Python 
 Sure, let's create a core logic implementation for the forecasting model that the predictive analytics tool would use. Bear in mind that this is fictitious and meant to serve as a placeholder or example.
 
 **File Path:**
+
 ```
 src/predictive_models/forecasting_model.py
 ```
@@ -306,10 +306,10 @@ class InventoryForecastingModel:
         """
         # Example: Convert categorical data to numeric
         data = pd.get_dummies(data, columns=['StoreType', 'DayOfWeek', 'PromotionApplied'])
-        
+
         # Remove any null values
         data = data.dropna()
-        
+
         # Feature engineering: Combine features or create new ones
         # ...
 
@@ -483,7 +483,7 @@ class InventoryForecastingModel:
             model_path (str): the path where the model is saved
         """
         self.model = joblib.load(model_path)
-        
+
 
 if __name__ == "__main__":
     # For the purpose of demonstrating a simple workflow

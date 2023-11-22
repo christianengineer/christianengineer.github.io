@@ -102,59 +102,59 @@ Below is a scalable file structure for the MindLearn - Comprehensive Machine Lea
 ```markdown
 MindLearn-AI/
 │
-├── .github/                  # GitHub-related files (templates, workflows, etc.)
-│   ├── ISSUE_TEMPLATE/
-│   ├── workflows/            # CI/CD workflows
-│   └── PULL_REQUEST_TEMPLATE.md
+├── .github/ # GitHub-related files (templates, workflows, etc.)
+│ ├── ISSUE_TEMPLATE/
+│ ├── workflows/ # CI/CD workflows
+│ └── PULL_REQUEST_TEMPLATE.md
 │
-├── api/                      # API service
-│   ├── controllers/          # API route controllers
-│   ├── middleware/           # API middlewares
-│   ├── models/               # Data models
-│   ├── routes/               # API route definitions
-│   ├── utils/                # Utility functions
-│   ├── tests/                # API test cases
-│   ├── server.js             # API server entry point
-│   └── package.json          # API dependencies and scripts
+├── api/ # API service
+│ ├── controllers/ # API route controllers
+│ ├── middleware/ # API middlewares
+│ ├── models/ # Data models
+│ ├── routes/ # API route definitions
+│ ├── utils/ # Utility functions
+│ ├── tests/ # API test cases
+│ ├── server.js # API server entry point
+│ └── package.json # API dependencies and scripts
 │
-├── ml/                       # Machine Learning models and utilities
-│   ├── models/               # Pre-trained models and model definitions
-│   ├── services/             # ML services & background tasks
-│   ├── data/                 # Sample data for training/testing
-│   ├── notebooks/            # Jupyter notebooks for experiments
-│   ├── utils/                # Machine Learning utility functions
-│   └── requirements.txt      # ML Python dependencies
+├── ml/ # Machine Learning models and utilities
+│ ├── models/ # Pre-trained models and model definitions
+│ ├── services/ # ML services & background tasks
+│ ├── data/ # Sample data for training/testing
+│ ├── notebooks/ # Jupyter notebooks for experiments
+│ ├── utils/ # Machine Learning utility functions
+│ └── requirements.txt # ML Python dependencies
 │
-├── ui/                       # User Interface
-│   ├── public/               # Static files
-│   ├── src/                  # React source files
-│   │   ├── components/       # React components
-│   │   ├── hooks/            # Custom React hooks
-│   │   ├── views/            # Pages/views
-│   │   ├── services/         # Front-end services (API calls, data processing)
-│   │   ├── context/          # React context (state management)
-│   │   ├── app.js            # Main React application file
-│   │   └── index.js          # UI entry point
-│   ├── .env                  # Environment variables
-│   ├── package.json          # UI dependencies and scripts
-│   └── README.md             # UI documentation
+├── ui/ # User Interface
+│ ├── public/ # Static files
+│ ├── src/ # React source files
+│ │ ├── components/ # React components
+│ │ ├── hooks/ # Custom React hooks
+│ │ ├── views/ # Pages/views
+│ │ ├── services/ # Front-end services (API calls, data processing)
+│ │ ├── context/ # React context (state management)
+│ │ ├── app.js # Main React application file
+│ │ └── index.js # UI entry point
+│ ├── .env # Environment variables
+│ ├── package.json # UI dependencies and scripts
+│ └── README.md # UI documentation
 │
-├── config/                   # Configuration files and setup scripts
-│   ├── default.json          # Default config values
-│   ├── production.json       # Production-specific config
-│   └── local.json            # Local development config (git-ignored)
+├── config/ # Configuration files and setup scripts
+│ ├── default.json # Default config values
+│ ├── production.json # Production-specific config
+│ └── local.json # Local development config (git-ignored)
 │
-├── scripts/                  # Development and deployment scripts
-│   ├── setup_env.sh          # Environment setup script
-│   ├── deploy.sh             # Deployment script to server or cloud
-│   └── lint.sh               # Linting and code formatting scripts
+├── scripts/ # Development and deployment scripts
+│ ├── setup_env.sh # Environment setup script
+│ ├── deploy.sh # Deployment script to server or cloud
+│ └── lint.sh # Linting and code formatting scripts
 │
-├── Dockerfile                # Dockerfile for containerizing the application
-├── docker-compose.yml        # Docker Compose for orchestrating services
-├── .gitignore                # Specifies intentionally untracked files to ignore
-├── LICENCE                   # License information for the project
-├── README.md                 # Readme with project overview and setup instructions
-└── package.json              # Root package file with global dependencies/scripts
+├── Dockerfile # Dockerfile for containerizing the application
+├── docker-compose.yml # Docker Compose for orchestrating services
+├── .gitignore # Specifies intentionally untracked files to ignore
+├── LICENCE # License information for the project
+├── README.md # Readme with project overview and setup instructions
+└── package.json # Root package file with global dependencies/scripts
 ```
 
 This structure is modular, separating the concerns of the API, the machine learning logic, and the user interface, which allows for a maintainable and organized scaling of the application as the codebase grows. Additionally, it supports containerization and deployment workflows out-of-the-box.
@@ -184,9 +184,11 @@ The structure is designed to facilitate intuitive navigation and extension of th
 ---
 
 #### File Path:
+
 `/ml/core/machine_learning_service.py`
 
 #### Content:
+
 ```python
 """
 machine_learning_service.py: Core service implementation for MindLearn's Comprehensive AI Application.
@@ -249,25 +251,25 @@ class MachineLearningService:
 # Example usage
 if __name__ == "__main__":
     ml_service = MachineLearningService()
-    
+
     # Example data - in practice, this would come from a database, file, or API
     raw_training_data = ...
     raw_test_data = ...
-    
+
     # The target could be continuous for regression tasks or categorical for classification
     target = ...
-    
+
     # Preparing data
     training_data = ml_service.prepare_data(raw_training_data)
     test_data = ml_service.prepare_data(raw_test_data)
-    
+
     # Training and evaluating the model
     ml_service.train_model(training_data, target)
     ml_service.evaluate_model(test_data, target)
-    
+
     # Saving the model for later use
     ml_service.save_model("generic_model_v1")
-    
+
     # Loading the model and using it for prediction
     ml_service.load_model("generic_model_v1")
     predictions = ml_service.predict(raw_test_data)
@@ -280,11 +282,13 @@ This file represents the core AI service functionality within the MindLearn appl
 Assuming the application is primarily based on Python for the AI-specific logic, here's an example of what the file and its path might look like:
 
 **File Path:**
+
 ```
 /mindlearn-ml-service/ml/core/ai_engine.py
 ```
 
 **ai_engine.py:**
+
 ```python
 # Import necessary libraries
 import numpy as np
@@ -298,7 +302,7 @@ class AIEngine:
     The AIEngine is the core logic component of the MindLearn ML Service application.
     It orchestrates data preprocessing, model training, prediction, and evaluation.
     """
-    
+
     def __init__(self, dataset_path):
         """
         Initialize the AI Engine with the path to the dataset.
@@ -321,7 +325,7 @@ class AIEngine:
         self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(
             features, labels, test_size=0.2, random_state=42
         )
-        
+
         return self.X_train, self.X_test, self.y_train, self.y_test
 
     def train_model(self, model_type='default'):
@@ -357,7 +361,7 @@ class AIEngine:
         Load a model from a file.
         """
         self.model = ModelFactory.load_model(model_path)
-        
+
 
 # Usage example
 if __name__ == "__main__":
@@ -366,7 +370,7 @@ if __name__ == "__main__":
     engine.train_model('neural_network')
     evaluation_metrics = engine.evaluate_model()
     print(f'Model Evaluation Metrics: {evaluation_metrics}')
-    
+
     # Predict from new data
     new_data = np.array([[5.1, 3.5, 1.4, 0.2]])
     prediction = engine.predict(new_data)
@@ -426,7 +430,7 @@ def enqueue_request():
 def process_request(data):
     """
     Process a request from the queue.
-    This function represents processing a single request using available 
+    This function represents processing a single request using available
     ML service processor, as distributed by the load balancer.
     """
     if request_queue.empty():
@@ -435,11 +439,11 @@ def process_request(data):
     try:
         # Retrieve the next request from the queue
         request_data = request_queue.get()
-        
+
         # Distribute the request to one of the available ML processors
         processor_id = load_balancer.get_processor()
         result = perform_ml_task(processor_id, request_data)
-        
+
         return result
     finally:
         request_queue.task_done()
@@ -494,35 +498,34 @@ Now, let's look at the contents of one of these files, which would form the back
 ```javascript
 // ml/services/dataManagementService.js
 
-const { Datastore } = require('@google-cloud/datastore');
-const { PubSub } = require('@google-cloud/pubsub');
-const config = require('../../config/dbConfig');
-const optimizeDatasetScript = require('../../scripts/optimizeDataset');
+const { Datastore } = require("@google-cloud/datastore");
+const { PubSub } = require("@google-cloud/pubsub");
+const config = require("../../config/dbConfig");
+const optimizeDatasetScript = require("../../scripts/optimizeDataset");
 
 // Instantiates a client
 const datastore = new Datastore(config.datastore);
 const pubsub = new PubSub(config.pubSub);
 
 class DataManagementService {
-  
   constructor() {
     this.datastore = datastore;
     this.pubsub = pubsub;
-    this.datasetTopic = this.pubsub.topic('datasets');
+    this.datasetTopic = this.pubsub.topic("datasets");
   }
-  
+
   async retrieveDataset(datasetId) {
     const transaction = this.datastore.transaction();
     let datasetEntity;
-    
+
     try {
       await transaction.run();
-      
-      const datasetKey = this.datastore.key(['Dataset', datasetId]);
+
+      const datasetKey = this.datastore.key(["Dataset", datasetId]);
       [datasetEntity] = await transaction.get(datasetKey);
-      
-      if (!datasetEntity) throw new Error('Dataset not found');
-      
+
+      if (!datasetEntity) throw new Error("Dataset not found");
+
       await transaction.commit();
     } catch (err) {
       await transaction.rollback();
@@ -531,32 +534,34 @@ class DataManagementService {
 
     return datasetEntity;
   }
-  
+
   async optimizeAndPublishDataset(datasetEntity) {
     const optimizedDataset = optimizeDatasetScript.optimize(datasetEntity);
-    
+
     const datasetBuffer = Buffer.from(JSON.stringify(optimizedDataset));
     await this.datasetTopic.publish(datasetBuffer);
-    
+
     return optimizedDataset;
   }
-  
+
   async dispatchDataProcessingTasks(optimizedDataset) {
-    optimizedDataset.parts.forEach(async part => {
+    optimizedDataset.parts.forEach(async (part) => {
       // Each part is processed in a separate microtask, allowing for parallel processing
       const partBuffer = Buffer.from(JSON.stringify(part));
-      const messageId = await this.pubsub.topic('data-processing-tasks').publish(partBuffer);
+      const messageId = await this.pubsub
+        .topic("data-processing-tasks")
+        .publish(partBuffer);
       console.log(`Task dispatched with message ID: ${messageId}`);
     });
   }
-  
+
   async orchestrateDataWorkflow(datasetId) {
     try {
       const dataset = await this.retrieveDataset(datasetId);
       const optimizedDataset = await this.optimizeAndPublishDataset(dataset);
       await this.dispatchDataProcessingTasks(optimizedDataset);
     } catch (err) {
-      console.error('Error in data workflow orchestration:', err);
+      console.error("Error in data workflow orchestration:", err);
       throw err;
     }
   }
@@ -572,14 +577,16 @@ Here is a list of potential user types for the MindLearn - Comprehensive Machine
 ### Types of Users and User Stories
 
 1. **Data Scientist/User**
+
    - **User story**: As a Data Scientist, I want to upload datasets, run machine learning models, and analyze the results, so that I can gain insights from my data.
-   - **Files/components**: 
+   - **Files/components**:
      - `ml/datasets/` for the datasets they upload and manage.
      - `ml/models/` where ML models and training scripts reside.
      - `api/controllers/` and `api/routes/` for API endpoints to manage datasets and model execution.
      - `ui/views/Datasets/` and `ui/views/Analytics/` for UI elements to interact with data and visualize results.
 
 2. **ML Developer/Engineer**
+
    - **User story**: As an ML Developer, I need to prototype new ML models and implement them into production systems, ensuring they are scalable and efficient.
    - **Files/components**:
      - `ml/services/` for services related to model operations.
@@ -588,6 +595,7 @@ Here is a list of potential user types for the MindLearn - Comprehensive Machine
      - `ml/notebooks/` where they can work on Jupyter notebooks for prototyping.
 
 3. **Application User (Business Analyst)**
+
    - **User story**: As a Business Analyst, I want to access pre-built ML models, run predictive analysis, and create reports without needing in-depth ML knowledge, so that I can make data-driven decisions.
    - **Files/components**:
      - `ui/components/PreBuiltModels/` for reusable UI components that enable analysts to select and execute pre-built models.
@@ -595,6 +603,7 @@ Here is a list of potential user types for the MindLearn - Comprehensive Machine
      - `api/controllers/prediction.js` and associated routes in `api/routes/` to handle prediction requests and responses.
 
 4. **IT Operations Specialist**
+
    - **User story**: As an IT Operations Specialist, I need to ensure the ML service is always up and running, able to handle a high load, and be notified of issues promptly, to maintain service quality.
    - **Files/components**:
      - `config/` with environment-specific configurations for different deployment scenarios.
@@ -603,6 +612,7 @@ Here is a list of potential user types for the MindLearn - Comprehensive Machine
      - `.github/workflows/` where CI/CD workflows are defined for automating testing and deployment.
 
 5. **UI/UX Designer**
+
    - **User story**: As a UI/UX Designer, I want to collaborate with developers to create a user-friendly ML web interface that is intuitive and accessible, in order to provide a satisfying user experience.
    - **Files/components**:
      - `ui/components/` for all the reusable components they design.
@@ -610,6 +620,7 @@ Here is a list of potential user types for the MindLearn - Comprehensive Machine
      - `ui/assets/` where images, icons, and other design assets are kept.
 
 6. **Open Source Contributor/Developer**
+
    - **User story**: As an Open Source Developer, I want to contribute to the application's codebase by fixing bugs, improving performance, and adding new features, to strengthen my portfolio and support the community.
    - **Files/components**:
      - The entire code folder structure, especially `README.md` for setup instructions.

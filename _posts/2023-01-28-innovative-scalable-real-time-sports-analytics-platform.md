@@ -12,6 +12,7 @@ permalink: posts/innovative-scalable-real-time-sports-analytics-platform
 This platform adheres to collecting a broad spectrum of performance metrics, deriving insights, predicting future outcomes, and delivering data visualizations that are dynamic and interactive. It aims to analyze the critical performance indicators in real-time, contributing to strategies, pinpoint strengths, and areas for improvements, facilitate instant decision-making, and empower users with foresight.
 
 ##Goals
+
 - To provide real-time sports data analytics to a wide range of users - analysts, coaches, athletes, and fans
 - Develop user-friendly dashboards with data-rich visuals to aid in tactical decision making
 - Maintain robust systems capable of handling vast amounts of data and user traffic
@@ -120,36 +121,36 @@ The contents of `sportsData.js` could include operations related to fetching, pr
  */
 
 // Import required modules
-const axios = require('axios');
+const axios = require("axios");
 
 // Define the URL for sports data API
-const SPORTS_DATA_API = 'http://sportsdataapi.com';
+const SPORTS_DATA_API = "http://sportsdataapi.com";
 
 /**
  * Fetches real-time sports data.
  */
 async function fetchRealTimeData(sport) {
-    try {
-        const response = await axios.get(`${SPORTS_DATA_API}/${sport}`);
-        return response.data;
-    } catch (error) {
-        console.log(`Error fetching real-time data for ${sport}: ${error}`);
-        throw error;
-    }
+  try {
+    const response = await axios.get(`${SPORTS_DATA_API}/${sport}`);
+    return response.data;
+  } catch (error) {
+    console.log(`Error fetching real-time data for ${sport}: ${error}`);
+    throw error;
+  }
 }
 
 /**
  * Processes fetched sports data.
  */
 function processRealTimeData(data) {
-    // Placeholder for processing data logic.
-    // This could include computations for specific data fields,
-    //    aggregation operations, predictive modeling, etc.
+  // Placeholder for processing data logic.
+  // This could include computations for specific data fields,
+  //    aggregation operations, predictive modeling, etc.
 }
 
 module.exports = {
-    fetchRealTimeData,
-    processRealTimeData,
+  fetchRealTimeData,
+  processRealTimeData,
 };
 ```
 

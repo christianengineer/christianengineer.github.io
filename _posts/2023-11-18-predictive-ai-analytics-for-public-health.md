@@ -22,33 +22,40 @@ The Predictive AI Analytics for Public Health repository aims to develop a robus
 To achieve the objectives mentioned above, the following libraries have been chosen after careful consideration of their features, community support, and trade-offs:
 
 1. **Python Flask**:
+
    - Flask is a lightweight and flexible web framework for building RESTful APIs.
    - It provides easy-to-use features for routing, request handling, and URL mapping.
    - Flask allows us to quickly develop scalable and maintainable server-side components.
 
 2. **PostgreSQL**:
+
    - PostgreSQL is a powerful open-source relational database management system (RDBMS).
    - It offers excellent support for storing and querying structured data efficiently.
    - PostgreSQL's scalability, reliability, and strong consistency features make it suitable for managing large volumes of health data.
 
 3. **Docker**:
+
    - Docker is a containerization platform that enables the creation and deployment of lightweight, self-contained software packages called containers.
    - Using Docker allows us to create reproducible and scalable environments for our application, ensuring consistent behavior across different deployments.
 
 4. **Redis**:
+
    - Redis is an in-memory data structure store that can be used as a cache or a message broker.
    - Redis enables fast data retrieval and reduces the load on the backend database by caching frequently accessed or computationally expensive results.
 
 5. **Celery**:
+
    - Celery is a distributed task queue library that adds asynchronous and parallel task execution capabilities to Python applications.
    - It allows us to offload time-consuming tasks to separate worker processes, enhancing the responsiveness of our system.
 
 6. **Elasticsearch**:
+
    - Elasticsearch is a distributed search and analytics engine.
    - It provides efficient indexing and searching capabilities over large volumes of data.
    - We will leverage Elasticsearch to implement real-time monitoring and analytics features for our system.
 
 7. **React.js**:
+
    - React.js is a popular JavaScript library for building user interfaces.
    - Its component-based architecture and virtual DOM efficiently update the UI, providing a seamless user experience.
    - React.js allows us to build a responsive and interactive front-end that can handle high user traffic effectively.
@@ -196,14 +203,17 @@ To document the core logic of the Predictive AI Analytics for Public Health proj
 In the `core_logic.py` file, we would document the key algorithms, methods, and functions that form the foundation of the Predictive AI Analytics for Public Health project. This could include:
 
 1. Data preprocessing techniques:
+
    - Functions and methods for cleaning and transforming raw health data.
    - Feature engineering approaches for deriving insightful features from the data.
 
 2. Predictive modeling:
+
    - Algorithms and procedures for model training, validation, and evaluation.
    - Techniques like machine learning, statistical analysis, or deep learning employed for prediction.
 
 3. Visualization techniques:
+
    - Code snippets for generating visualizations to present analyzed health data effectively.
 
 4. Other core analytical functionalities:
@@ -243,14 +253,17 @@ To document another essential part of the Predictive AI Analytics for Public Hea
 In the `secondary_core_logic.py` file, we will describe the unique logic and functionalities that are integral to the Predictive AI Analytics for Public Health project and how they integrate with other files. This file might include:
 
 1. Advanced predictive modeling:
+
    - Implementation of cutting-edge algorithms or models specific to public health analytics.
    - Integration with the `model_training.py` and `model_evaluation.py` files to train and evaluate these advanced models.
 
 2. Real-time data processing and analysis:
+
    - Logic and functions to handle streaming or near real-time data.
    - Integration with other modules, such as `preprocessing` or `visualization`, to generate real-time insights and visualizations.
 
 3. Integration with external APIs or data sources:
+
    - Logic for fetching data from external sources like public health databases or APIs.
    - Methods to integrate the retrieved data into the existing data processing pipeline.
 
@@ -293,15 +306,18 @@ To document another core logic component of the Predictive AI Analytics for Publ
 In the `additional_core_logic.py` file, we will describe another essential component of the Predictive AI Analytics for Public Health project. This component plays a vital role in the overall system and has interdependencies with previously outlined files. The file may include:
 
 1. Integration with external data sources:
+
    - Logic to collect and ingest data from various external sources, such as wearable devices, health monitoring systems, or publicly available health datasets.
    - Methods to synchronize and manage the incoming data in the existing data processing pipeline.
    - Integration with the `preprocessing` module to incorporate external data into the preprocessing steps.
 
 2. Long-term health trend analysis:
+
    - Algorithms and functions to analyze long-term health trends and patterns.
    - Integration with the `modeling` module to develop models that capture and predict long-term health outcomes.
 
 3. Advanced visualization techniques:
+
    - Addition of advanced visualization methods, such as interactive charts, dashboards, or geospatial visualizations, to represent public health analytics results more effectively.
    - Integration with the `visualization` module to enhance the visual insights provided by the system.
 
@@ -314,26 +330,32 @@ The `additional_core_logic.py` file captures another crucial component of the Pr
 List of User Types for Predictive AI Analytics for Public Health:
 
 1. **Data Analysts**:
+
    - User Story: As a data analyst, I want to preprocess and clean the raw health data to ensure its quality and usability for analysis.
    - Relevant File: `preprocessing/data_cleaning.py`
 
 2. **Machine Learning Experts**:
+
    - User Story: As a machine learning expert, I want to train and evaluate predictive models on the preprocessed health data.
    - Relevant Files: `modeling/model_training.py`, `modeling/model_evaluation.py`
 
 3. **Data Visualization Specialists**:
+
    - User Story: As a data visualization specialist, I want to create visually compelling and informative charts and graphs to represent health insights.
    - Relevant Files: `visualization/plot_utils.py`, `visualization/visualization_helpers.py`
 
 4. **Backend Developers**:
+
    - User Story: As a backend developer, I want to develop efficient and scalable APIs to handle data requests and serve predictions.
    - Relevant File: `app.py`
 
 5. **Frontend Developers**:
+
    - User Story: As a frontend developer, I want to create an intuitive and user-friendly UI to interact with the public health analytics system.
    - Relevant Files: HTML templates in the `templates` directory, CSS and JavaScript files in the `static` directory
 
 6. **Healthcare Professionals**:
+
    - User Story: As a healthcare professional, I want to access real-time insights and predictions to make informed decisions and interventions.
    - Relevant Files: Integration with the entire system, specific user-related functionalities in various modules
 

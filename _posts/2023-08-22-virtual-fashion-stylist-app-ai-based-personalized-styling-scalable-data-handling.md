@@ -39,7 +39,7 @@ The Virtual Fashion Stylist App is an innovative solution designed to redefine t
 
 8. **Nginx:** A free, open-source, high-performance HTTP server and reverse proxy, as well as an IMAP/POP3 proxy server. Known for its high performance, stability, rich features, simple configuration, and low resource consumption.
 
-9. **PM2:** It’s a Production Runtime and Process Manager for Node.js applications with a built-in Load Balancer. It allows you to keep applications alive forever, reload them without downtime, helps in common administrative tasks, and facilitates common Systemd commands. 
+9. **PM2:** It’s a Production Runtime and Process Manager for Node.js applications with a built-in Load Balancer. It allows you to keep applications alive forever, reload them without downtime, helps in common administrative tasks, and facilitates common Systemd commands.
 
 The Virtual Fashion Stylist App aims to revolutionize the fashion industry by leveraging next-level AI technology to provide a customized fashion solution for each individual. As a Full Stack Software Engineer, your contribution will be at the heart of this pioneering endeavour.
 
@@ -47,36 +47,36 @@ Certainly. Below is a scalable and maintainable file structure to the Virtual Fa
 
 ```markdown
 .
-├── client                      # Frontend code base
-│   ├── public                  # Public assets and index file
-│   ├── src                     
-│   │   ├── components          # React components
-│   │   ├── views               # Screens / Views / Routes
-│   │   ├── redux               # Redux state management
-│   │   ├── services            # API services
-│   │   ├── styles              # Stylesheets, variables, themes
-│   │   └── app.js              
-│   └── package.json            
-├── server                      # Backend code base
-│   ├── config                  # Configuration files
-│   ├── models                  # Database models
-│   ├── routes                  # API endpoints and routes
-│   ├── services                # Service handlers (business logic)
-│   ├── tests                   # Testing scripts
-│   └── server.js               # Entry file
-├── scripts                     # Script files
-├── .env                        # Environment variables
-├── .gitignore                  # Ignore files (node_modules, .env etc) 
-├── readme.md                   # Project description, setup guide etc.
-├── package.json                # Dependency list
-└── Dockerfile                  # For Dockerization
+├── client # Frontend code base
+│ ├── public # Public assets and index file
+│ ├── src  
+│ │ ├── components # React components
+│ │ ├── views # Screens / Views / Routes
+│ │ ├── redux # Redux state management
+│ │ ├── services # API services
+│ │ ├── styles # Stylesheets, variables, themes
+│ │ └── app.js  
+│ └── package.json  
+├── server # Backend code base
+│ ├── config # Configuration files
+│ ├── models # Database models
+│ ├── routes # API endpoints and routes
+│ ├── services # Service handlers (business logic)
+│ ├── tests # Testing scripts
+│ └── server.js # Entry file
+├── scripts # Script files
+├── .env # Environment variables
+├── .gitignore # Ignore files (node_modules, .env etc)
+├── readme.md # Project description, setup guide etc.
+├── package.json # Dependency list
+└── Dockerfile # For Dockerization
 ```
 
 It is recommended to keep server and client codebases separate (through the two directories `client` and `server`) for better separation of concerns. This also provides the flexibility to scale up the frontend and backend independently based on the load. Remember that it's good to tailor the structure based on your application needs and team preferences.
 
-Certainly, below is a fictitious JavaScript file `virtualStylist.js` that would handle the logic for Virtual Fashion Stylist App. 
+Certainly, below is a fictitious JavaScript file `virtualStylist.js` that would handle the logic for Virtual Fashion Stylist App.
 
-This file will be located in the `services` directory of the `server` folder. 
+This file will be located in the `services` directory of the `server` folder.
 
 ```markdown
 /server/services/virtualStylist.js
@@ -85,30 +85,30 @@ This file will be located in the `services` directory of the `server` folder.
 The file could look something like this:
 
 ```javascript
-
-const StylistService = require('./stylistService');
-const UserPreferenceService = require('./userPreferenceService');
-const OutfitRecommendationService = require('./outfitRecommendationService');
+const StylistService = require("./stylistService");
+const UserPreferenceService = require("./userPreferenceService");
+const OutfitRecommendationService = require("./outfitRecommendationService");
 
 class VirtualStylistService {
+  constructor() {
+    this.stylistService = new StylistService();
+    this.userPreferenceService = new UserPreferenceService();
+    this.outfitRecommendationService = new OutfitRecommendationService();
+  }
 
-    constructor() {
-        this.stylistService = new StylistService();
-        this.userPreferenceService = new UserPreferenceService();
-        this.outfitRecommendationService = new OutfitRecommendationService();
-    }
+  async getUserStyle(userId) {
+    const userPreferences =
+      await this.userPreferenceService.getUserPreferences(userId);
+    const stylistResponse = await this.stylistService.analyzeResponse(userId);
+    return { ...userPreferences, ...stylistResponse };
+  }
 
-    async getUserStyle(userId) {
-        const userPreferences = await this.userPreferenceService.getUserPreferences(userId);
-        const stylistResponse = await this.stylistService.analyzeResponse(userId);
-        return { ...userPreferences, ...stylistResponse };
-    }
-
-    async getOutfitRecommendation(userId) {
-        const userStyle = await this.getUserStyle(userId);
-        const recommendation = await this.outfitRecommendationService.recommendOutfit(userStyle);
-        return recommendation;
-    }
+  async getOutfitRecommendation(userId) {
+    const userStyle = await this.getUserStyle(userId);
+    const recommendation =
+      await this.outfitRecommendationService.recommendOutfit(userStyle);
+    return recommendation;
+  }
 }
 
 module.exports = VirtualStylistService;

@@ -26,7 +26,7 @@ To achieve efficient data handling, accurate predictions, and scalable user traf
 1. **Pandas**: This library provides powerful data structures and data analysis tools for Python, which will be used for efficient data handling.
 2. **NumPy**: Essential for numerical computing in Python, NumPy offers robust high-level mathematical functions.
 3. **Scikit-Learn**: This library offers a variety of machine learning algorithms to develop our predictive models.
-4. **TensorFlow and Keras**: These powerful libraries will be utilized for deep learning models. 
+4. **TensorFlow and Keras**: These powerful libraries will be utilized for deep learning models.
 5. **Matplotlib and Seaborn**: These libraries will be used for data visualization.
 6. **Flask**: We will use this lightweight web-server framework for creating our user-interface and managing user traffic.
 7. **Docker**: This technology will be used to create, deploy, and run applications by using containers - allowing for scalability and ensuring our application runs the same regardless of the environment.
@@ -36,8 +36,8 @@ With commitment to continued enhancement, this Predictive Maintenance Tool aims 
 
 ```markdown
 # Predictive Maintenance Tool for Manufacturing Repository
-
 ```
+
 - **Predictive-Maintenance-Tool-for-Manufacturing**
   - **src**
     - **analysis**
@@ -62,7 +62,7 @@ With commitment to continued enhancement, this Predictive Maintenance Tool aims 
     - `processed`
       - `cleanedData.csv`
     - `output`
-      - `predictions.csv`      
+      - `predictions.csv`
   - **docs**
     - `README.md`
     - `CONTRIBUTING.md`
@@ -85,9 +85,9 @@ With commitment to continued enhancement, this Predictive Maintenance Tool aims 
 - **`requirements.txt`**: This file lists all the python libraries required for the project.
 ```
 
-
-```markdown
+````markdown
 # Predictive Maintenance Tool for Manufacturing
+
 ## File Structure
 
 This is a demonstration of a fictitious Python file that would handle the logic for the Predictive Maintenance Tool. The filename is `predictiveModel.py` under the folder `src/analysis`.
@@ -142,5 +142,10 @@ class PredictiveModel:
         prediction = self.model.predict(input_data)
         return prediction
 ```
+````
+
 This file is kept minimal for the sake of example. `Preprocess`, `train`, `save`, `load` and `predict` are methods that are expected in a machine learning pipeline. Exact methods and their implementations can vary based on the actual data and requirements.
+
+```
+
 ```

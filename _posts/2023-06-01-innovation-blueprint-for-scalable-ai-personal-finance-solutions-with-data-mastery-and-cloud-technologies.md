@@ -24,9 +24,9 @@ This blueprint is aimed at both enlightening and enticing advanced software engi
 
 The world of personal finance is ripe for disruption. To provide human-like interactions, target the pain points, and deliver personalized automation, we propose building advanced, AI-driven personal finance tools for managing financial wellness.
 
-```python 
+```python
 class PersonalFinanceTool(AITool):
-    def __init__(self, user): 
+    def __init__(self, user):
         self.user = user
         self.actions = []
 ```
@@ -59,7 +59,7 @@ class DataMaster:
 
 Public cloud platforms provide the scalability needed to ingest, process, store, and analyze data in real-time. Tools such as AWS, Google Cloud, and Azure have excellent AI and machine learning capabilities.
 
-```python 
+```python
 aws = boto3.resource('s3')
 bucket = aws.Bucket('bucket-name')
 object = bucket.Object('file-name')
@@ -79,7 +79,7 @@ df.show()
 
 ## VI. Efficient Machine Learning Model Training
 
-We propose a versatile, customizable model that can be tweaked to fit individual financial contexts. 
+We propose a versatile, customizable model that can be tweaked to fit individual financial contexts.
 
 ```python
 from sklearn.ensemble import RandomForestRegressor

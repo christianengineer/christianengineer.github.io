@@ -198,8 +198,8 @@ Here's an example of the structure for the `supplyChainOptimization.js` file:
 
 ```javascript
 // src/supplyChainOptimization.js
-import { loadSupplyChainData } from './coreLogic';
-import { dataManipulationFunction } from './utils/helpers';
+import { loadSupplyChainData } from "./coreLogic";
+import { dataManipulationFunction } from "./utils/helpers";
 
 // Function to perform supply chain optimization
 const performSupplyChainOptimization = () => {
@@ -252,8 +252,8 @@ Here's an example of the structure for the `realTimeMonitoring.js` file:
 
 ```javascript
 // src/realTimeMonitoring.js
-import { loadSupplyChainData } from './coreLogic';
-import performSupplyChainOptimization from './supplyChainOptimization';
+import { loadSupplyChainData } from "./coreLogic";
+import performSupplyChainOptimization from "./supplyChainOptimization";
 
 // Function to perform real-time monitoring and generate recommendations
 const performRealTimeMonitoring = () => {
@@ -264,7 +264,10 @@ const performRealTimeMonitoring = () => {
   // ... implementation of real-time monitoring logic goes here
 
   // Generate recommendations based on the analyzed data and optimization result
-  const recommendations = generateRecommendations(supplyChainData, optimizedSolution);
+  const recommendations = generateRecommendations(
+    supplyChainData,
+    optimizedSolution,
+  );
 
   // Return recommendations
   return recommendations;
@@ -287,18 +290,22 @@ This file highlights the integration of real-time monitoring and recommendation 
 Users of the Machine Learning for Efficient Supply Chain Management application can include various roles within an organization involved in supply chain management. Here are some examples of user types, along with their user stories and the corresponding files that will accomplish the tasks:
 
 1. Supply Chain Manager:
+
    - User Story: As a supply chain manager, I want to have an overall view of the current supply chain performance to make data-driven decisions for optimization.
    - File: `Dashboard.js` in the `src/pages` directory will provide an intuitive and comprehensive dashboard that presents key metrics and insights about the supply chain performance, derived from the analysis and optimization performed by other core files.
 
 2. Inventory Manager:
+
    - User Story: As an inventory manager, I want to identify trends and patterns in demand to optimize the inventory levels and ensure cost-effective stock management.
    - File: `Analytics.js` in the `src/pages` directory will use machine learning models implemented in `coreLogic.js` to analyze historical demand data and provide visualizations and insights to help the inventory manager make informed inventory level decisions.
 
 3. Logistics Coordinator:
+
    - User Story: As a logistics coordinator, I want to improve the efficiency of supply chain operations by optimizing shipment routes and resource allocation.
    - File: `supplyChainOptimization.js` in the `src` directory, as outlined before, will perform the supply chain optimization algorithm. This file will aid the logistics coordinator in finding optimized shipment routes and resource allocation to minimize costs and improve logistics efficiency.
 
 4. Procurement Analyst:
+
    - User Story: As a procurement analyst, I need to gather supply chain data and perform data preprocessing to enable accurate and efficient analysis.
    - File: `data.js` in the `src/api` directory will provide functions to fetch and preprocess supply chain data from various sources. This file will help the procurement analyst access clean and properly formatted data for analysis.
 

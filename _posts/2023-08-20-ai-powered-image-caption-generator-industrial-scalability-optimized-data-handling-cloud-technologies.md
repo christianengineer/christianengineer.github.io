@@ -25,7 +25,7 @@ First, we will focus on designing the entire system as a collection of loosely c
 
 ## Data Handling
 
-We anticipate dealing with a large volume of image data. We'll use a distributed file system, like Hadoop HDFS or Google Cloud Storage (GCS) to ensure data is stored in a scalable, secure, and durable manner, and data processing is accomplished in a parallel distributed fashion. 
+We anticipate dealing with a large volume of image data. We'll use a distributed file system, like Hadoop HDFS or Google Cloud Storage (GCS) to ensure data is stored in a scalable, secure, and durable manner, and data processing is accomplished in a parallel distributed fashion.
 
 Data will be batch processed initially, and as the data volume grows and use-cases demand, we can efficiently switch to real-time data processing using tools like Apache Kafka.
 
@@ -52,7 +52,7 @@ We will utilize cloud platforms' autoscaling capabilities to scale out instances
 
 ## Continuous Testing, Integration & Deployment
 
-The testing methodology will include unit tests, integration tests, and end-to-end tests. We'll Implement Continuous Integration and Continuous Deployment (CI/CD) pipelines using tools like Jenkins and Docker. 
+The testing methodology will include unit tests, integration tests, and end-to-end tests. We'll Implement Continuous Integration and Continuous Deployment (CI/CD) pipelines using tools like Jenkins and Docker.
 
 ## Phased Rollouts and Scalability Testing
 

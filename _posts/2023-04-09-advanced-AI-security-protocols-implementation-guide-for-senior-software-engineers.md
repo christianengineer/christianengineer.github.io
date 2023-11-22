@@ -12,9 +12,9 @@ As artificial intelligence (AI) continues to evolve and influence industries, it
 
 Before diving into the security protocols, let's first understand the predominant security concerns in AI development:
 
- - **Adversarial attacks**: AI systems are prone to adversarial attacks, where small changes are made in the input data to deceive the model, leading to incorrect outcomes, thereby compromising data integrity.
- 
- - **Data Privacy**: AI systems necessitate the use of large datasets for training purposes. This can invoke privacy concerns, especially with personally identifiable information (PII).
+- **Adversarial attacks**: AI systems are prone to adversarial attacks, where small changes are made in the input data to deceive the model, leading to incorrect outcomes, thereby compromising data integrity.
+
+- **Data Privacy**: AI systems necessitate the use of large datasets for training purposes. This can invoke privacy concerns, especially with personally identifiable information (PII).
 
 - **Model Stealing**: Cybercriminals can create a replica of your AI models using the information revealed by API queries.
 
@@ -69,9 +69,9 @@ for meta_params in model.meta_named_parameters():
     print(meta_params)
 ```
 
-## Security Measures for Model Training 
+## Security Measures for Model Training
 
-### Federated Learning 
+### Federated Learning
 
 Federated Learning is a machine learning approach where a model is trained across multiple decentralized edge devices or servers holding local data samples, without exchanging them. This greatly minimizes privacy risks.
 
@@ -83,7 +83,7 @@ workers = ['worker1', 'worker2']
 optims = Optims(workers, optim=torch.optim.Adam(params=model.parameters(), lr=0.1))
 ```
 
-### Secure Aggregation 
+### Secure Aggregation
 
 In Federated Learning, Secure Aggregation is used to aggregate the model updates from various devices in an encrypted way, ensuring no party can access any other's data.
 

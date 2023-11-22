@@ -109,10 +109,9 @@ ML-Enhanced-Photo-Editor/
 - **docker-compose.yml** -> Allows defining and running multi-container Docker applications.
 - **README.md** -> Contains basic information about the project, its setup, and usage.
 
-
 # File: ml_controller.py
 
-## Folder Location: 
+## Folder Location:
 
 `/server/controllers/ml_controller.py`
 
@@ -132,7 +131,7 @@ class MLController:
 
     def __init__(self):
         # Initialize your ML models here
-        self.model = None 
+        self.model = None
         # self.model = custom_models.CustomModel()
 
     # Modifying an image using a pre-trained ML model
@@ -144,7 +143,7 @@ class MLController:
         :return: modified image
         """
         # Implement feature application logic here using self.model
-        modified_img = image 
+        modified_img = image
         return modified_img
 
     # Add more functions as needed for handling ML operations
@@ -156,6 +155,6 @@ class MLController:
 
 ```
 
-The `MLController` class houses all the methods that undertake operations fueled by machine learning, such as applying a particular editing feature on an image. We initialize our machine learning models in the constructor. Models can be custom-made or pre-trained models depending on the project's requirements. 
+The `MLController` class houses all the methods that undertake operations fueled by machine learning, such as applying a particular editing feature on an image. We initialize our machine learning models in the constructor. Models can be custom-made or pre-trained models depending on the project's requirements.
 
 Please note, this is a placeholder with an example structure. Adhere to best practices to manage your models effeciently, keeping mind the scope of your application and performance requirements.

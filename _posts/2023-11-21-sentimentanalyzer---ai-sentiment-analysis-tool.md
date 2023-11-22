@@ -135,12 +135,14 @@ SentimentAnalyzer/
 In the proposed file structure for the SentimentAnalyzer AI Sentiment Analysis Tool repository, the organization is designed to facilitate scalability, modularity, and maintainability. Here's an overview of the key directories and their contents:
 
 1. **app/**: Contains the frontend and backend components of the application.
+
    - **frontend/**: Houses the codebase for the user interface, encompassing the public assets and source code.
    - **backend/**: Includes the backend API, data preprocessing, machine learning model serving, and application code.
 
 2. **models/**: Stores the trained machine learning and deep learning models utilized by the application.
 
 3. **infrastructure/**: Encompasses the infrastructure components and deployment configurations.
+
    - **cloud/**: Contains subdirectories for specific cloud platform configurations, such as AWS, Azure, GCP, etc.
    - **deployment/**: Includes deployment configurations for containerization (e.g., Dockerfiles) and orchestration (e.g., Kubernetes YAML files).
 
@@ -307,27 +309,32 @@ This function represents a complex deep learning algorithm for sentiment analysi
 ### Type of Users
 
 1. **Data Analyst**
-    - User Story: As a data analyst, I want to be able to upload and preprocess large datasets of textual data to perform sentiment analysis for market research and trend analysis.
-    - File: `backend/data_preprocessing/preprocess.py`
+
+   - User Story: As a data analyst, I want to be able to upload and preprocess large datasets of textual data to perform sentiment analysis for market research and trend analysis.
+   - File: `backend/data_preprocessing/preprocess.py`
 
 2. **Data Scientist**
-    - User Story: As a data scientist, I need to be able to train and evaluate different deep learning models for sentiment analysis using various datasets.
-    - File: `AI/training_scripts/train_model.py`
+
+   - User Story: As a data scientist, I need to be able to train and evaluate different deep learning models for sentiment analysis using various datasets.
+   - File: `AI/training_scripts/train_model.py`
 
 3. **Software Developer**
-    - User Story: As a software developer, I want to integrate the sentiment analysis tool's API into our existing applications to provide sentiment analysis capabilities to our users.
-    - File: `backend/api/app.py`
+
+   - User Story: As a software developer, I want to integrate the sentiment analysis tool's API into our existing applications to provide sentiment analysis capabilities to our users.
+   - File: `backend/api/app.py`
 
 4. **Business User**
-    - User Story: As a business user, I want to use the sentiment analysis tool to monitor customer sentiment from social media and customer feedback for business intelligence.
-    - File: `frontend/src/App.js`
+
+   - User Story: As a business user, I want to use the sentiment analysis tool to monitor customer sentiment from social media and customer feedback for business intelligence.
+   - File: `frontend/src/App.js`
 
 5. **Machine Learning Engineer**
-    - User Story: As a machine learning engineer, I want to deploy trained sentiment analysis models as microservices for real-time inference.
-    - File: `infrastructure/deployment/kubernetes/deployment.yaml`
+
+   - User Story: As a machine learning engineer, I want to deploy trained sentiment analysis models as microservices for real-time inference.
+   - File: `infrastructure/deployment/kubernetes/deployment.yaml`
 
 6. **System Administrator**
-    - User Story: As a system administrator, I need to monitor the resource usage and health of the sentiment analysis tool's backend services to ensure its reliability and performance.
-    - File: `infrastructure/cloud/aws/cloudwatch_configs.json`
+   - User Story: As a system administrator, I need to monitor the resource usage and health of the sentiment analysis tool's backend services to ensure its reliability and performance.
+   - File: `infrastructure/cloud/aws/cloudwatch_configs.json`
 
 Each type of user interacts with a different aspect of the SentimentAnalyzer - AI Sentiment Analysis Tool application and utilizes specific files to accomplish their tasks.

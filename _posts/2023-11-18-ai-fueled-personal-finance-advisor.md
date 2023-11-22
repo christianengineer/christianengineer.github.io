@@ -111,7 +111,9 @@ Sure! Here's a suggested file structure for the AI-Fueled Personal Finance Advis
 ```
 
 Explanation of the file structure:
+
 1. `src`: This directory contains all the source code of the frontend application.
+
    - `components`: Contains reusable UI components used in various screens.
    - `screens`: Contains individual screens or pages of the application.
    - `services`: Contains modules for interacting with external APIs or sockets.
@@ -121,12 +123,14 @@ Explanation of the file structure:
 2. `public`: This directory contains the publicly accessible files of the frontend application, such as the HTML file.
 
 3. `server`: This directory contains the source code for the backend server.
+
    - `controllers`: Contains modules responsible for handling different API endpoints.
    - `models`: Contains data models for entities like User and Transaction (backend specific).
    - `routes`: Contains modules defining the API routes.
    - `app.js`: Entry point for the server application.
 
 4. `tests`: This directory contains different types of tests for the application.
+
    - `componentTests`: Contains tests for individual UI components.
    - `integrationTests`: Contains tests for testing API and socket integration.
    - `utils`: Contains tests for utility functions.
@@ -147,10 +151,10 @@ File path: `src/screens/FinanceAdvisor.js`
 ```javascript
 // src/screens/FinanceAdvisor.js
 
-import React, { useEffect, useState } from 'react';
-import { fetchTransactions } from '../services/api';
-import { calculateMetrics, generateRecommendations } from '../services/ai';
-import Dashboard from './Dashboard';
+import React, { useEffect, useState } from "react";
+import { fetchTransactions } from "../services/api";
+import { calculateMetrics, generateRecommendations } from "../services/ai";
+import Dashboard from "./Dashboard";
 
 const FinanceAdvisor = () => {
   const [transactions, setTransactions] = useState([]);
@@ -164,7 +168,7 @@ const FinanceAdvisor = () => {
         const data = await fetchTransactions();
         setTransactions(data);
       } catch (error) {
-        console.error('Error fetching transactions:', error);
+        console.error("Error fetching transactions:", error);
       }
     };
 
@@ -212,6 +216,7 @@ export default FinanceAdvisor;
 ```
 
 Explanation of the core logic code:
+
 - The `FinanceAdvisor` component is responsible for fetching financial data, calculating metrics, generating recommendations, and rendering the `Dashboard` component.
 - It makes use of the `fetchTransactions` function from the `../services/api` module to fetch transaction data from the server.
 - Once the transactions are fetched, it uses the `calculateMetrics` function from the `../services/ai` module to calculate financial metrics based on the transactions.
@@ -229,7 +234,7 @@ File path: `src/utils/auth.js`
 ```javascript
 // src/utils/auth.js
 
-import { loginAPI, logoutAPI, getUserAPI } from '../services/api';
+import { loginAPI, logoutAPI, getUserAPI } from "../services/api";
 
 export const login = async (username, password) => {
   try {
@@ -237,11 +242,11 @@ export const login = async (username, password) => {
     const { token } = response.data;
 
     // Save token to local storage or cookies
-    localStorage.setItem('token', token);
+    localStorage.setItem("token", token);
 
     return true;
   } catch (error) {
-    console.error('Error during login:', error);
+    console.error("Error during login:", error);
     return false;
   }
 };
@@ -249,20 +254,20 @@ export const login = async (username, password) => {
 export const logout = async () => {
   try {
     // Clear token from local storage or cookies
-    localStorage.removeItem('token');
+    localStorage.removeItem("token");
     await logoutAPI();
   } catch (error) {
-    console.error('Error during logout:', error);
+    console.error("Error during logout:", error);
   }
 };
 
 export const getUser = async () => {
   try {
     // Retrieve token from local storage or cookies
-    const token = localStorage.getItem('token');
+    const token = localStorage.getItem("token");
 
     if (!token) {
-      throw new Error('No token found');
+      throw new Error("No token found");
     }
 
     const response = await getUserAPI(token);
@@ -270,13 +275,14 @@ export const getUser = async () => {
 
     return user;
   } catch (error) {
-    console.error('Error during getUser:', error);
+    console.error("Error during getUser:", error);
     return null;
   }
 };
 ```
 
 Explanation of the authorization logic code:
+
 - The `auth.js` module provides functions for user authentication and authorization.
 - It imports API functions (`loginAPI`, `logoutAPI`, `getUserAPI`) from `../services/api` for interacting with the server.
 - The `login` function handles the login process by making a request to the server with the provided username and password. If successful, it saves the returned token to local storage or cookies.
@@ -285,6 +291,7 @@ Explanation of the authorization logic code:
 - Other modules and components within the application can import and utilize these functions for authentication and user-related operations.
 
 Integration with other files:
+
 - Other files, such as login and registration components, user dashboard components, and API service modules, can import and use the `login`, `logout`, and `getUser` functions from `auth.js` for handling user authentication and authorization.
 - For example, during the login process, the login/sign-in component can call the `login` function to authenticate the user and save the returned token to local storage or cookies.
 - The user dashboard components can utilize the `getUser` function to fetch the user information and display personalized data.
@@ -299,7 +306,7 @@ File path: `src/services/recommendations.js`
 ```javascript
 // src/services/recommendations.js
 
-import { fetchRecommendationsAPI } from './api';
+import { fetchRecommendationsAPI } from "./api";
 
 export const fetchRecommendations = async () => {
   try {
@@ -308,7 +315,7 @@ export const fetchRecommendations = async () => {
 
     return recommendations;
   } catch (error) {
-    console.error('Error fetching recommendations:', error);
+    console.error("Error fetching recommendations:", error);
     return [];
   }
 };
@@ -321,10 +328,14 @@ export const generateAIRecommendations = (metrics) => {
   // Example implementation:
   const recommendations = [];
   if (metrics.savingsRate < 0.1) {
-    recommendations.push('Increase your savings rate to reach your financial goals');
+    recommendations.push(
+      "Increase your savings rate to reach your financial goals",
+    );
   }
   if (metrics.creditCardUtilization > 0.5) {
-    recommendations.push('Lower your credit card utilization for better financial health');
+    recommendations.push(
+      "Lower your credit card utilization for better financial health",
+    );
   }
 
   return recommendations;
@@ -332,6 +343,7 @@ export const generateAIRecommendations = (metrics) => {
 ```
 
 Explanation of the recommendation engine code:
+
 - The `recommendations.js` module provides functions for fetching recommendations from the server and for generating AI-powered recommendations based on financial metrics.
 - It imports the `fetchRecommendationsAPI` function from `./api` to fetch the recommendations from the server.
 - The `fetchRecommendations` function makes an API request to fetch recommendations from the server.
@@ -340,6 +352,7 @@ Explanation of the recommendation engine code:
 - Other files, such as the finance advisor component or dashboard component, can import and utilize these functions for fetching recommendations and displaying AI-powered recommendations to the user.
 
 Integration with other files:
+
 - The previously outlined `FinanceAdvisor.js` file can import and use the `fetchRecommendations` function from `recommendations.js` to fetch recommendations from the server and store them in the component state.
 - The `FinanceAdvisor.js` file can also import the `generateAIRecommendations` function from `recommendations.js` to generate AI-powered recommendations based on the calculated metrics and display them to the user through the `Dashboard.js` component or similar components.
 
@@ -348,14 +361,17 @@ This file plays a crucial role in generating personalized AI-powered recommendat
 Here are four types of users that could use the AI-Fueled Personal Finance Advisor application, along with a user story for each type and the respective files that would support their needs:
 
 1. Individual User:
+
    - User Story: As an individual user, I want to be able to track my personal finances and receive personalized recommendations to improve my financial health.
    - Responsible Files: The `FinanceAdvisor.js` file would be responsible for fetching and displaying user-specific financial data and recommendations through the `Dashboard.js` component. The `recommendations.js` file would generate AI-powered recommendations based on the user's financial metrics.
 
 2. Small Business Owner:
+
    - User Story: As a small business owner, I want to gain insights into my business finances, analyze expenses, and receive recommendations to optimize my financial operations.
    - Responsible Files: In addition to the `FinanceAdvisor.js` file and the `Dashboard.js` component, the application would likely need additional files such as `BusinessDashboard.js` to provide business-specific metrics and insights. The `recommendations.js` file, tailored for business finance, would generate AI-powered recommendations for optimizing business financial operations.
 
 3. Financial Advisor:
+
    - User Story: As a financial advisor, I want to access a comprehensive view of my clients' financial data and receive AI-generated insights to offer personalized financial advice.
    - Responsible Files: The application would require a separate file such as `AdvisorDashboard.js` to provide financial advisors with an aggregated view of their clients' financial data. The `FinanceAdvisor.js` file could serve as the basis, communicating with the server to retrieve and display client-specific information. The `recommendations.js` file would generate AI-generated insights and recommendations specifically for financial advisors to guide their advice-giving process.
 

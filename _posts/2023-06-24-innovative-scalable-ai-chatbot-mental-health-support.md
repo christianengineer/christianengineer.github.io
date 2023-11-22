@@ -12,14 +12,13 @@ permalink: posts/innovative-scalable-ai-chatbot-mental-health-support
 
 The repository is dedicated to the creation and development of a chatbot meant to provide first-level assistance for mental health. Our objective is to offer an easily accessible tool for individuals dealing with various mental health issues like anxiety, depression, PTSD and so forth. The chatbot is programmed to make initial contact with users, answer their queries, provide immediate assistance or redirect them to the right channels for professional help.
 
-This software is not intended to replace professional treatment, but to serve as an immediate point of help and to function as a bridge, facilitating the path towards expert attention when necessary. 
+This software is not intended to replace professional treatment, but to serve as an immediate point of help and to function as a bridge, facilitating the path towards expert attention when necessary.
 
 ---
 
 ### **Goals**
 
 1. **Accessibility and Engagement**: Give users an instant and accessible tool to deal with mental health issues.
-   
 2. **First-Level Assistance**: Ensure the chatbot can provide preliminary suggestions based on user queries.
 
 3. **Information Channel**: Direct users to resources, guidance, and professional mental health services as needed.
@@ -112,7 +111,9 @@ Chatbot-for-Mental-Health-Support/
 └── .gitignore
 
 ```
+
 ### Description of structure
+
 - **app** - Django project root directory.
 - **chatbot** - Application directory for the chatbot logic.
 - **chatbot/models** - Database model definitions for the chatbot application.
@@ -132,12 +133,14 @@ Chatbot-for-Mental-Health-Support/
 - **README.md** - Explains how to use the project.
 - **requirements.txt** - All the python dependencies required by the project.
 - **.gitignore** - Specifies the files and folders to ignore in Git operations.
+
 ```python
 Chatbot-for-Mental-Health-Support/
 └── chatbot/
     └── services/
         └── chatbot_logic.py
 ```
+
 ---
 
 File: `chatbot_logic.py`
@@ -147,7 +150,7 @@ File: `chatbot_logic.py`
 ## ------------------Chatbot Logic------------------ ##
 import random
 from chatbot.models import chatbot
-from chatbot.services import natural_language_processing as nlp, ai_model 
+from chatbot.services import natural_language_processing as nlp, ai_model
 
 ## Generate Basic Greetings
 def get_bot_greeting():

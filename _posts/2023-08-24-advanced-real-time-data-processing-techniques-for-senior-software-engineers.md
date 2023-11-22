@@ -6,15 +6,15 @@ permalink: posts/advanced-real-time-data-processing-techniques-for-senior-softwa
 
 # Mastering Real-Time Data Processing: Advanced Techniques and Strategies for Senior Software Engineers
 
-Real-time data processing is a crucial arm of modern software engineering, facilitating effective data analysis, predictive modeling, and informed decision-making. Unlike batch processing, real-time processing allows engineers to obtain immediate insights from their data, opening a realm of opportunities for immediate feedback and action. 
+Real-time data processing is a crucial arm of modern software engineering, facilitating effective data analysis, predictive modeling, and informed decision-making. Unlike batch processing, real-time processing allows engineers to obtain immediate insights from their data, opening a realm of opportunities for immediate feedback and action.
 
 This article delves into the advanced techniques and strategies that senior software engineers can adapt to master real-time data processing. We will explore a multitude of topics, from stream processing principles, micro-batching and windowing techniques, to real-time data processing architectures and tools.
 
-## Real-Time Stream Processing Principles 
+## Real-Time Stream Processing Principles
 
 Stream processing methodologies focus on processing data as it arrives, enabling real-time analytics and instant decision-making. The primary principles are:
 
-1. **Event Time vs Processing Time:** 
+1. **Event Time vs Processing Time:**
 
    Event time refers to when the event actually happened, while processing time is when the system processes the event. Both play significant roles in ensuring data consistency and accuracy.
 
@@ -25,7 +25,7 @@ class Event():
         self.processing_time = processing_time
 ```
 
-2. **Windowing:** 
+2. **Windowing:**
 
    Windowing is the technique of dividing continuous data into discrete segments (called windows), to process and analyze them. There are different types of window operations, including Sliding Windows, Tumbling Windows, and Session Windows.
 
@@ -53,7 +53,7 @@ JavaStreamingContext jssc = new JavaStreamingContext(sparkConf, Durations.second
 
 ```java
 // The code below demonstrates pattern detection on a stream:
-Pattern<LoginEvent, ?> loginFailPattern = 
+Pattern<LoginEvent, ?> loginFailPattern =
         Pattern.<LoginEvent>begin("first").where(new SimpleCondition<LoginEvent>() {
             @Override
             public boolean filter(LoginEvent value) throws Exception {
@@ -67,7 +67,6 @@ Pattern<LoginEvent, ?> loginFailPattern =
 Senior engineers must be well-versed with architectural models designed for real-time data processing. Key architectures include:
 
 - **Lambda Architecture:** This multi-layered architecture involves a speed layer for real-time data processing, and a batch layer for historical data.
-  
 - **Kappa Architecture:** The Kappa Architecture simplifies Lambda, leveraging stream processing for both real-time and batch data.
 
 - **Zeta Architecture:** In Zeta, data is stored, manipulated, and queried from a decentralized and distributed file system such as Hadoop.

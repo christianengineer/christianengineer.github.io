@@ -8,11 +8,12 @@ permalink: posts/ai-based-language-translation-for-websites
 
 ## Description
 
-The AI-Based Language Translation for Websites repository aims to develop a robust and efficient solution for dynamically translating website content in real-time. The focus of this document is to outline the technical specifications related to data management and high user traffic handling. 
+The AI-Based Language Translation for Websites repository aims to develop a robust and efficient solution for dynamically translating website content in real-time. The focus of this document is to outline the technical specifications related to data management and high user traffic handling.
 
 ## Objectives
 
 1. Efficient Data Management:
+
    - Develop an efficient storage mechanism to handle translation data.
    - Implement an automated data cleaning process to ensure the quality of translation data.
    - Design a scalable data architecture to accommodate future growth and requirements.
@@ -27,11 +28,13 @@ The AI-Based Language Translation for Websites repository aims to develop a robu
 To efficiently manage translation data, we will utilize the following libraries:
 
 1. **MongoDB**:
+
    - MongoDB is a NoSQL database that offers flexibility and scalability for storing large volumes of translation data.
    - Its document-oriented nature allows for easy representation and retrieval of translations.
    - The ability to horizontally scale MongoDB clusters ensures seamless handling of increased translation data.
 
 2. **Apache Kafka**:
+
    - Apache Kafka will be used as a distributed event streaming platform for handling translation data processing.
    - It provides fault-tolerant and high-throughput data ingestion from multiple sources.
    - Kafka's distributed nature enables scalable processing of translation events in real-time.
@@ -46,11 +49,13 @@ To efficiently manage translation data, we will utilize the following libraries:
 To handle high user traffic efficiently, the following libraries will be used:
 
 1. **Node.js**:
+
    - Node.js is chosen for its event-driven, non-blocking I/O model, which allows for high concurrency and scalability.
    - With its rich ecosystem of libraries and frameworks, Node.js simplifies the development of a scalable backend.
    - Node.js also allows easy integration with other languages and frameworks through its extensive module system.
 
 2. **Express.js**:
+
    - Express.js is a fast and minimalist web application framework for Node.js, providing a simple and efficient way to handle HTTP requests.
    - It offers middleware functionalities for request processing, routing, and error handling.
    - Express.js also integrates well with other libraries and tools, making it an ideal choice for handling high user traffic.
@@ -123,8 +128,8 @@ Sure! Here's an example of a file that details the core logic of the AI-Based La
 ```javascript
 // File: services/translationService.js
 
-const TranslationModel = require('../models/translationModel');
-const ValidationUtils = require('../utils/validation');
+const TranslationModel = require("../models/translationModel");
+const ValidationUtils = require("../utils/validation");
 
 class TranslationService {
   constructor() {
@@ -137,10 +142,13 @@ class TranslationService {
       ValidationUtils.validateLanguage(sourceLanguage);
       ValidationUtils.validateLanguage(targetLanguage);
 
-      const translationData = await this.translationModel.getTranslationData(sourceLanguage, targetLanguage);
-      
+      const translationData = await this.translationModel.getTranslationData(
+        sourceLanguage,
+        targetLanguage,
+      );
+
       if (!translationData) {
-        throw new Error('Translation data not found');
+        throw new Error("Translation data not found");
       }
 
       const translatedText = await translationData.translate(text);
@@ -172,8 +180,8 @@ Certainly! Here's an example of another file that represents another core part o
 ```javascript
 // File: controllers/translationController.js
 
-const TranslationService = require('../services/translationService');
-const Logger = require('../utils/logger');
+const TranslationService = require("../services/translationService");
+const Logger = require("../utils/logger");
 
 class TranslationController {
   constructor() {
@@ -183,17 +191,21 @@ class TranslationController {
   async translate(req, res) {
     try {
       const { text, sourceLanguage, targetLanguage } = req.body;
-      const translatedText = await this.translationService.translateText(text, sourceLanguage, targetLanguage);
+      const translatedText = await this.translationService.translateText(
+        text,
+        sourceLanguage,
+        targetLanguage,
+      );
       Logger.info(`Text "${text}" translated successfully.`);
 
       res.status(200).json({
-        translatedText
+        translatedText,
       });
     } catch (error) {
       Logger.error(`Translation failed due to: ${error.message}`);
 
       res.status(500).json({
-        error: 'Translation failed'
+        error: "Translation failed",
       });
     }
   }
@@ -228,9 +240,9 @@ Certainly! Here's an example of another file that represents an additional core 
 ```javascript
 // File: models/translationModel.js
 
-const TranslationData = require('./translationData');
-const Database = require('../config/database');
-const Logger = require('../utils/logger');
+const TranslationData = require("./translationData");
+const Database = require("../config/database");
+const Logger = require("../utils/logger");
 
 class TranslationModel {
   constructor() {
@@ -239,10 +251,13 @@ class TranslationModel {
 
   async getTranslationData(sourceLanguage, targetLanguage) {
     try {
-      const translationData = await this.database.getTranslationData(sourceLanguage, targetLanguage);
+      const translationData = await this.database.getTranslationData(
+        sourceLanguage,
+        targetLanguage,
+      );
 
       if (!translationData) {
-        throw new Error('Translation data not found');
+        throw new Error("Translation data not found");
       }
 
       return new TranslationData(translationData);
@@ -282,14 +297,17 @@ With these steps, the `TranslationModel` acts as an intermediary between the dat
 Sure! Here are some types of users who may use the AI-Based Language Translation for Websites application, along with a user story and the file that would fulfill their needs:
 
 1. Website Admin:
+
    - User Story: As a website admin, I want to manage translation data, including adding, editing, and deleting translation records.
    - File: The `AdminDashboardController.js` in the `controllers/` directory will handle these operations by interacting with the `TranslationModel` in the `models/` directory and validating inputs using `ValidationUtils` in the `utils/` directory.
 
 2. Website User:
+
    - User Story: As a website user, I want to translate website content into my preferred language so that I can understand and consume the content easily.
    - File: The `TranslationController.js` in the `controllers/` directory will handle the translation request made by the user, utilizing the translation service from the `services/translationService.js` file.
 
 3. Localization Team Member:
+
    - User Story: As a localization team member, I want to review and approve translation suggestions provided by the AI system to ensure accuracy and quality.
    - File: The `TranslationReviewerController.js` in the `controllers/` directory will provide functionalities for the localization team member to review, approve, and reject translation suggestions. This file will interact with the `TranslationModel` and `TranslationData` as well.
 

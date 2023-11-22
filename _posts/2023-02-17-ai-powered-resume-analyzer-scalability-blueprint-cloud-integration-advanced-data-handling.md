@@ -35,7 +35,7 @@ We propose a microservices-based architecture hosted in the cloud, using an API-
 ```plantuml
 @startuml
 package "Resume Analyzer" {
-  [User Interface] 
+  [User Interface]
   [API Gateway]
   [Resume Parser Service]
   [Scraping Service]
@@ -88,7 +88,7 @@ const resumeSchema = mongoose.Schema({
   lastName: String,
   email: String,
   skills: [String],
-  experience: [String]
+  experience: [String],
 });
 
 module.exports = mongoose.model("Resume", resumeSchema);
@@ -96,7 +96,7 @@ module.exports = mongoose.model("Resume", resumeSchema);
 
 ---
 
-## <a name='machine-learning'></a>6. Machine Learning Model 
+## <a name='machine-learning'></a>6. Machine Learning Model
 
 Training models efficiently demands high-performance computing power. By utilizing cloud-based GPUs like AWS EC2 P2/P3 instances and Google Cloud's AI Platform, we can accelerate this process.
 
@@ -121,10 +121,10 @@ model.fit(x_train, y_train, epochs=5, batch_size=32)
 To ensure optimal performance, asynchronous handling of requests will be used, preventing API blocking and ensuring smooth scaling under load.
 
 ```javascript
-const express = require('express');
+const express = require("express");
 const router = express.Router();
 
-router.post('/resume', async (req, res, next) => {
+router.post("/resume", async (req, res, next) => {
   try {
     const data = await resumeService.parse(req.body);
     res.send(data);

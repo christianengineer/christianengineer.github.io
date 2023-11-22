@@ -41,6 +41,7 @@ Additionally, IntelliCore would integrate with tools for version control (e.g., 
 # AI Startup - Senior Full Stack Software Engineer Vacancy
 
 ## Job Description
+
 We are seeking a **Senior Full Stack Software Engineer** with a specialization in scalable AI applications. The ideal candidate will contribute to the IntelliCore project – a Central AI Operating Platform designed to be the nucleus for AI-powered application deployment and orchestration.
 
 ## Responsibilities
@@ -208,11 +209,13 @@ This scalable structure is designed to be flexible, to accommodate growth, and t
 ### Fictitious File: Machine Learning Service - Model Training Pipeline
 
 #### File Path:
+
 ```
 /apps/ai_engine/src/train_pipeline.py
 ```
 
 #### Content (`train_pipeline.py`):
+
 ```python
 """
 Train Pipeline for IntelliCore AI Engine
@@ -244,19 +247,19 @@ class TrainPipeline:
         """
         try:
             logger.info("Starting model training pipeline...")
-            
+
             # Load and pre-process dataset
             data = self.data_loader.load_data()
             preprocessed_data = self.data_loader.preprocess_data(data)
-            
+
             # Initialize and train model
             model = self.model_factory.get_model(self.config.model_conf)
             self.training_monitor.start_monitoring(model)
             model.fit(preprocessed_data)
-            
+
             # Save trained model to the repository
             self.model_saver.save_model(model, self.config.model_name)
-            
+
             logger.info("Model training completed and saved successfully.")
         except Exception as e:
             logger.error(f"Error during model training pipeline: {str(e)}")
@@ -267,7 +270,7 @@ class TrainPipeline:
 if __name__ == "__main__":
     # Load training configuration
     train_config = TrainingConfig.load_from_file('config/training_config.yaml')
-    
+
     # Create and execute the training pipeline
     pipeline = TrainPipeline(train_config)
     pipeline.run()
@@ -333,7 +336,7 @@ class ModelInferenceEngine:
 
     def preprocess_input(self, input_data: Dict[str, Any]) -> np.array:
         """Preprocess input data for model inference.
-        
+
         Args:
             input_data (Dict[str, Any]): Raw input data from users or services.
 
@@ -361,7 +364,7 @@ class ModelInferenceEngine:
 
     def handle_inference(self, input_json: str) -> str:
         """Main method to handle inference requests.
-        
+
         Args:
             input_json (str): JSON string of input data.
 
@@ -417,10 +420,10 @@ class AIOrchestrator:
         data_loader = DataSetLoader(dataset_id)
         preprocessor = Preprocessor(spec=model_spec['preprocessing'])
         processed_data = preprocessor.process(data_loader.load())
-        
+
         # Registering the model spec in the Model Registry
         model_id = self.model_registry.register_model(model_spec)
-        
+
         # Add training task to the queue
         self.task_queue.enqueue(ModelTrainer, {
             'model_id': model_id,
@@ -435,9 +438,9 @@ class AIOrchestrator:
         # Implementation of monitoring logic
         metrics = self.task_queue.monitor(model_id)
         self.metrics_tracker.update_metrics(model_id, metrics)
-        
+
         logger.info(f"Monitoring training for model ID {model_id}")
-        
+
         # Publish results to a persistent store or a dashboard
         self.result_publisher.publish(metrics)
 
@@ -447,7 +450,7 @@ class AIOrchestrator:
         """
         model_evaluator = ModelEvaluator(model_id)
         evaluation_results = model_evaluator.evaluate()
-        
+
         if evaluation_results['is_successful']:
             model_deployer = ModelDeployer(model_id)
             model_deployer.deploy()
@@ -519,16 +522,16 @@ async def process_ai_task(ai_request: AIRequestModel, request: Request):
         # Validate AI task
         if not ai_request.task:
             raise ValueError("Task is a required field.")
-        
+
         # Process AI task
         result = await ai_engine.process_task(
             task=ai_request.task,
             parameters=ai_request.parameters,
             model_name=ai_request.model_name
         )
-        
+
         return AIResponseModel(result=result, message="Task processed successfully.")
-    
+
     except ValueError as e:
         raise HTTPException(status_code=400, detail=str(e))
     except Exception as e:
@@ -545,68 +548,79 @@ async def get_ai_model_details(model_name: str):
     """
     try:
         model_details = await ai_engine.get_model_details(model_name)
-        
+
         if model_details:
             return model_details
         else:
             raise HTTPException(status_code=404, detail=f'Model named "{model_name}" not found.')
-    
+
     except Exception as e:
         logger.error(f"Error retrieving model details: {str(e)}")
         raise HTTPException(status_code=500, detail="Failed to retrieve model details.")
 ```
 
 #### File Explanation:
+
 The file `ai_engine_routes.py` is part of the IntelliCore Platform's API Gateway service. It defines FastAPI routes handling requests related to AI tasks. This file interfaces with the AI Engine, demonstrates request validation, error handling, and responses. Dependency injection is used for the AI Engine service interface, promoting testability and decoupling from specific AI Engine implementations. The models `AIRequestModel` and `AIResponseModel` aid in enforcing a schema for requests and responses, improving API usability and consistency. The two endpoints allow for processing of AI tasks and retrieval of AI model details, respectively.
 
 ### Types of Users for IntelliCore: Central AI Operating Platform
 
 #### 1. AI Researchers
+
 **User Story:** As an AI Researcher, I want to efficiently experiment with different AI models and algorithms, so that I can develop new AI solutions effectively.
 
 **Relevant File:** `/notebooks/` - this directory will contain Jupyter notebooks where AI researchers can collaborate, test, and visualize various AI experiments and data analysis.
 
 #### 2. Data Scientists
+
 **User Story:** As a Data Scientist, I want to have easy access to data, feature engineering tools, and model training pipelines, so that I can build and validate predictive models seamlessly.
 
 **Relevant File:** `/common/models/` - for data models and schemas; `/data/` - where datasets and ML models are stored and managed.
 
 #### 3. DevOps Engineers
+
 **User Story:** As a DevOps Engineer, I need to manage the deployment, scaling, and monitoring of the AI applications, so that they are always reliable and high-performing.
 
 **Relevant File:** `/infra/` - for Kubernetes, Terraform, and Helm configurations; `/scripts/` for deployment and management scripts; `/apps/` for Dockerfiles related to services.
 
-#### 4. Application Developers  (Back-End and Front-End)
+#### 4. Application Developers (Back-End and Front-End)
+
 **User Story:** As an Application Developer, I want to integrate AI capabilities into our products with clear and well-documented APIs, so that we can enhance our applications with intelligent features.
 
 **Relevant File:** `/apps/` - the microservices (including the API gateway); `/web/` - for front-end integration; `/docs/` for API and integration documentation.
 
 #### 5. Machine Learning Engineers
+
 **User Story:** As a Machine Learning Engineer, I want to build, optimize, and maintain ML pipelines, so that I can ensure the production AI systems are efficient and up to date.
 
 **Relevant File:** `/common/utils/` - for shared utilities aiding in ML pipeline creation; `/apps/` - specifically the AI engine service.
 
 #### 6. Security Analysts
+
 **User Story:** As a Security Analyst, I need to ensure that all aspects of the AI platform adhere to strict security standards, so that user data and intellectual property are always protected.
 
 **Relevant File:** `/docs/` for security protocols and compliance standards documentation; `/infra/k8s/` for security configurations in Kubernetes.
 
 #### 7. Business Analysts/Product Owners
+
 **User Story:** As a Business Analyst/Product Owner, I want to track the usage and performance of different AI features, so that I can make informed decisions on future product development.
 
 **Relevant File:** `/web/` for dashboards and reports; `/common/utils/` for analysis tools.
 
 #### 8. QA Testers
+
 **User Story:** As a QA Tester, I want to have a comprehensive suite of automated tests for the AI platform, so that I can continuously assert the quality and stability of the system.
 
 **Relevant File:** `/tests/` - a directory dedicated to unit and integration tests ensuring that quality assurance is an integral part of the development lifecycle.
 
 #### 9. AI Application Users/Clients
+
 **User Story:** As an AI Application User/Client, I want a seamless interaction with the AI features embedded in the apps I use, so that I can benefit from enhanced experiences and smarter services.
 
 **Relevant File:** `/apps/` for backend integration with AI features; `/web/` for frontend UI components that interact with the AI features.
 
 #### 10. System Administrators
+
 **User Story:** As a System Administrator, I need to have control over the platform's deployment, monitoring, and scaling, so that I can manage system operations efficiently.
 
 **Relevant File:** `/infra/` for the deployment and management of the infrastructure, and `/scripts/` for routine administrative tasks.

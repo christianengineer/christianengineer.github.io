@@ -7,20 +7,26 @@ permalink: posts/fraudguard---ai-fraud-detection-system
 ## AI FraudGuard - AI Fraud Detection System
 
 ### Objectives
+
 The AI FraudGuard project aims to develop a robust fraud detection system using machine learning and deep learning techniques to effectively identify and prevent fraudulent activities within financial transactions. The core objectives of the project include:
+
 - Developing a scalable and high-performing system capable of processing large volumes of transaction data in real-time.
 - Leveraging advanced machine learning models to accurately detect patterns and anomalies indicative of fraudulent behavior.
 - Implementing a user-friendly interface for visualizing and analyzing detection results to aid in decision-making processes.
 
 ### System Design Strategies
+
 The system design for AI FraudGuard involves several key strategies to ensure scalability, robustness, and accuracy in fraud detection:
+
 - **Microservices Architecture**: The system will be designed as a set of loosely coupled microservices, each responsible for specific tasks such as data ingestion, model training, real-time inference, and result visualization. This enables scalability, fault isolation, and easier maintenance.
 - **Real-time Data Processing**: Utilizing stream processing frameworks like Apache Kafka or Apache Flink for real-time ingestion, processing, and analysis of transaction data, enabling prompt identification of fraudulent activities.
 - **Machine Learning Model Serving**: Implementing a model serving infrastructure using platforms like TensorFlow Serving or TorchServe to deploy trained machine learning models for making real-time predictions on incoming data streams.
 - **Data Visualization**: Integrating a frontend interface with interactive visualization capabilities for monitoring and analyzing fraud detection results and patterns.
 
 ### Chosen Libraries and Frameworks
+
 The AI FraudGuard project will leverage a variety of libraries and frameworks to fulfill its objectives, including:
+
 - **Scikit-learn**: Utilizing Scikit-learn for building and training traditional machine learning models such as decision trees, random forests, and gradient boosting classifiers for fraud detection.
 - **TensorFlow/Keras**: Leveraging TensorFlow and Keras for developing deep learning models, particularly neural networks, to capture complex patterns and anomalies within transaction data.
 - **Apache Kafka**: Employing Apache Kafka for real-time data streaming and event-driven architecture to enable efficient processing of transaction data.
@@ -89,31 +95,31 @@ fraudguard/
 │   ├── data_processing/          # Microservice for data processing
 │   ├── model_serving/            # Microservice for model serving
 │   ├── visualization/            # Microservice for result visualization
-│   
+│
 ├── config/
 │   ├── deployment/               # Configuration files for deployment (e.g., Kubernetes manifests)
 │   ├── environment/              # Environment-specific configuration files
-│   
+│
 ├── docs/
 │   ├── architecture/             # System architecture diagrams and documentation
 │   ├── api/                      # API documentation
 │   ├── user_guide/               # User guide and documentation
-│   
+│
 ├── models/                       # Trained machine learning models
-│   
+│
 ├── scripts/
 │   ├── deployment/               # Deployment scripts
 │   ├── maintenance/              # Maintenance scripts
 │   ├── setup/                    # Setup scripts for local development
-│   
+│
 ├── src/
 │   ├── data_processing/          # Source code for data processing microservice
 │   ├── model_training/           # Source code for machine learning model training
 │   ├── model_serving/            # Source code for model serving microservice
 │   ├── visualization/            # Source code for result visualization microservice
-│   
+│
 ├── tests/                        # Unit tests and integration tests
-│   
+│
 ├── .gitignore                    # Git ignore file
 ├── Dockerfile                    # Dockerfile for containerization
 ├── README.md                     # Project README with overview, setup instructions, and usage guide
@@ -227,6 +233,7 @@ def train_gradient_boosting_model(data_file_path, model_output_path):
 ```
 
 In this example:
+
 - The `train_gradient_boosting_model` function takes the file path for the mock input data (`data_file_path`) and the desired output path for the serialized model (`model_output_path`).
 - It loads the mock data from a CSV file, performs data preprocessing and feature engineering (note that this part of the code is commented out as it requires specific feature engineering based on the actual data).
 - It instantiates a Gradient Boosting Classifier model and trains the model using the preprocessed data.
@@ -281,6 +288,7 @@ def train_deep_learning_model(data_file_path, model_output_path):
 ```
 
 In this example:
+
 - The `train_deep_learning_model` function takes the file path for the mock input data (`data_file_path`) and the desired output path for the saved model (`model_output_path`).
 - It loads the mock data from a CSV file, performs data preprocessing and feature engineering (note that this part of the code is commented out as it requires specific feature engineering based on the actual data).
 - It defines a deep learning neural network model using the Keras API from TensorFlow.
@@ -293,14 +301,17 @@ Please note that the data preprocessing and model evaluation sections are partia
 Here are several types of users who may interact with the FraudGuard - AI Fraud Detection System application, along with user stories for each type of user and the corresponding files that may relate to their interactions:
 
 1. **Data Scientist / Machine Learning Engineer**
+
    - User Story: As a data scientist, I want to train and evaluate different machine learning models using the provided data to improve fraud detection accuracy.
    - Related File: `src/AI/model_training/`
 
 2. **Software Engineer**
+
    - User Story: As a software engineer, I want to maintain and enhance the microservices responsible for model serving and real-time inference to ensure system scalability and performance.
    - Related File: `src/app/model_serving/`
 
 3. **Operations Engineer / DevOps**
+
    - User Story: As an operations engineer, I want to automate the deployment and scaling of microservices using container orchestration tools to ensure system reliability and availability.
    - Related File: `scripts/deployment/`
 
