@@ -1,4 +1,3 @@
-Feature Store Implementation - Implement a feature store for machine learning, which could include how to store, retrieve, and manage features for ML models.
 Automated Machine Learning (AutoML) Pipeline - Build an automated pipeline using AutoML tools like H2O, Auto-sklearn, or Google’s AutoML to demonstrate automated model selection and hyperparameter tuning.
 ML Model Explainability and Interpretability - Develop a repository focusing on ML model interpretability using tools like SHAP or LIME.
 AI Model Governance and Compliance - Set up a framework for model governance and compliance, demonstrating how to maintain audit trails, and meet regulatory requirements.
