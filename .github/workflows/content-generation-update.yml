@@ -34,8 +34,11 @@ jobs:
         run: |
           git config --global user.name 'christianengineer'
           git config --global user.email 'christian.ipanaque@engineer.com'
+          export GIT_COMMITTER_DATE=$(date -d "$((RANDOM%365)) days ago" '+%Y-%m-%d %H:%M:%S')
+          export GIT_AUTHOR_DATE=$GIT_COMMITTER_DATE
           git add .
-          git commit -m "Automated content update"
+          COMMIT_MESSAGE=$(shuf -n 1 commit_messages.txt)
+          git commit -m "$COMMIT_MESSAGE"
 
       - name: Push changes
         uses: ad-m/github-push-action@master
