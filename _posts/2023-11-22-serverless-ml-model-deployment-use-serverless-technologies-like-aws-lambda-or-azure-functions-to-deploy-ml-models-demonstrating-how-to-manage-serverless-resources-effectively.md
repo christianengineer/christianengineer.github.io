@@ -1,7 +1,7 @@
 ---
 title: Serverless ML Model Deployment - Use serverless technologies like AWS Lambda or Azure Functions to deploy ML models, demonstrating how to manage serverless resources effectively.
 date: 2023-11-22
-permalink: posts/serverless-ml-model-deployment---use-serverless-technologies-like-aws-lambda-or-azure-functions-to-deploy-ml-models-demonstrating-how-to-manage-serverless-resources-effectively
+permalink: posts/serverless-ml-model-deployment-use-serverless-technologies-like-aws-lambda-or-azure-functions-to-deploy-ml-models-demonstrating-how-to-manage-serverless-resources-effectively
 ---
 
 # Objectives

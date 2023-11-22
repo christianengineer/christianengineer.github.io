@@ -1,7 +1,7 @@
 ---
 title: Edge AI: Deploying ML Models on Edge Devices - Showcase deploying ML models on edge devices using technologies like TensorFlow Lite or NVIDIA Jetson.
 date: 2023-11-22
-permalink: posts/edge-ai-deploying-ml-models-on-edge-devices---showcase-deploying-ml-models-on-edge-devices-using-technologies-like-tensorflow-lite-or-nvidia-jetson
+permalink: posts/edge-ai-deploying-ml-models-on-edge-devices
 ---
 
 # AI Edge AI: Deploying ML Models on Edge Devices
