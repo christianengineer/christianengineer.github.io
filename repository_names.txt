@@ -1,4 +1,3 @@
-ML Model Explainability and Interpretability - Develop a repository focusing on ML model interpretability using tools like SHAP or LIME.
 AI Model Governance and Compliance - Set up a framework for model governance and compliance, demonstrating how to maintain audit trails, and meet regulatory requirements.
 Serverless ML Model Deployment - Use serverless technologies like AWS Lambda or Azure Functions to deploy ML models, demonstrating how to manage serverless resources effectively.
 Scalable Data Pipelines for ML - Implement a scalable data pipeline using technologies like Apache Kafka, Apache Spark, or Apache Beam.
