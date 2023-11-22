@@ -1,4 +1,3 @@
-VoiceID - Advanced Voice Recognition System
 EmotionAI - Emotion Recognition System
 FaceNet - Facial Recognition AI
 MarketMover - AI for Digital Marketing
