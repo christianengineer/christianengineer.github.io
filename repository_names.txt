@@ -1,4 +1,3 @@
-Serverless ML Model Deployment - Use serverless technologies like AWS Lambda or Azure Functions to deploy ML models, demonstrating how to manage serverless resources effectively.
 Scalable Data Pipelines for ML - Implement a scalable data pipeline using technologies like Apache Kafka, Apache Spark, or Apache Beam.
 End-to-End ML Project with MLOps Best Practices - An end-to-end machine learning project incorporating MLOps principles, from data preparation to model deployment and monitoring.
 Edge AI: Deploying ML Models on Edge Devices - Showcase deploying ML models on edge devices using technologies like TensorFlow Lite or NVIDIA Jetson.
