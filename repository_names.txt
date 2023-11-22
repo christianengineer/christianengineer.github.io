@@ -1,4 +1,3 @@
-Machine Learning Workflow Automation - Create a repository demonstrating the use of tools like MLflow or Kubeflow for automating machine learning workflows.
 Continuous Integration/Continuous Deployment (CI/CD) for ML Models - Implement a CI/CD pipeline specifically for machine learning models using Jenkins, GitLab CI, or GitHub Actions.
 Containerization of ML Models with Docker - Showcase how to containerize different ML models using Docker for easy deployment and scalability.
 Kubernetes for ML Model Deployment - Demonstrate deploying and managing ML models at scale using Kubernetes, focusing on aspects like autoscaling and load balancing.
