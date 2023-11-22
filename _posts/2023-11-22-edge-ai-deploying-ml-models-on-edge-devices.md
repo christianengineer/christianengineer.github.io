@@ -1,5 +1,5 @@
 ---
-title: Edge AI: Deploying ML Models on Edge Devices - Showcase deploying ML models on edge devices using technologies like TensorFlow Lite or NVIDIA Jetson.
+title: Edge AI - Deploying ML Models on Edge Devices
 date: 2023-11-22
 permalink: posts/edge-ai-deploying-ml-models-on-edge-devices
 ---
@@ -7,19 +7,23 @@ permalink: posts/edge-ai-deploying-ml-models-on-edge-devices
 # AI Edge AI: Deploying ML Models on Edge Devices
 
 ## Objectives
+
 The objectives of deploying ML models on edge devices include:
+
 1. **Low Latency**: Reduce the round-trip time for data to travel from the edge device to a central server and back, allowing for real-time or near-real-time inference.
 2. **Privacy and Security**: Keep sensitive data on the device and minimize the need to transmit data to a central server, reducing privacy and security risks.
 3. **Offline Capabilities**: Enable AI applications to function even without an internet connection, allowing for uninterrupted service in remote or low-connectivity areas.
 4. **Scalability**: Distribute computation across multiple edge devices, allowing for scalable and robust AI systems.
 
 ## System Design Strategies
+
 1. **Model Optimization**: Use techniques such as quantization, pruning, and model distillation to reduce the size and computational complexity of the ML models, making them suitable for edge devices with limited resources.
 2. **Edge-Cloud Coordination**: Design a system that allows seamless coordination between edge devices and cloud servers, enabling tasks such as model updates, data aggregation, and distributed computing.
 3. **Edge Device Selection**: Choose suitable edge devices based on factors like computational power, memory, and energy efficiency to ensure optimal performance for the deployed ML models.
 4. **Power Management**: Implement power-efficient algorithms and strategies to prolong the battery life of edge devices while running AI workloads.
 
 ## Chosen Libraries and Technologies
+
 1. **TensorFlow Lite**: Utilize TensorFlow Lite as a framework for deploying lightweight ML models on edge devices. TensorFlow Lite provides tools for model conversion, inference, and optimization specifically tailored for edge deployment.
 2. **NVIDIA Jetson**: Leverage NVIDIA Jetson devices, which are specifically designed for AI at the edge. The Jetson platform provides powerful GPUs, along with software support for running deep learning frameworks and libraries optimized for edge deployments.
 
@@ -28,27 +32,35 @@ By combining TensorFlow Lite with NVIDIA Jetson, the AI application will be able
 # Infrastructure for Edge AI: Deploying ML Models on Edge Devices
 
 ## Edge Device Selection
+
 The infrastructure for deploying ML models on edge devices involves careful consideration of the hardware and software components to ensure efficient and reliable operation. The selection of edge devices plays a crucial role in the overall infrastructure. For this showcase, the NVIDIA Jetson platform is chosen as the primary edge device due to its powerful GPU capabilities and dedicated support for AI workloads.
 
 ## Cloud-Edge Coordination
+
 To facilitate seamless coordination between edge devices and cloud servers, a robust cloud-edge infrastructure is required. This infrastructure enables tasks such as model updates, data aggregation, and distributed computing. It involves designing communication protocols, data synchronization mechanisms, and security measures to ensure reliable and secure interactions between edge devices and the cloud.
 
 ## Software Stack
+
 The software stack for the showcase application will include the following components:
 
 ### TensorFlow for Model Training and Conversion
+
 - TensorFlow will be used for developing and training the ML models. Once trained, the models will be converted into TensorFlow Lite format for efficient deployment on edge devices.
 
 ### TensorFlow Lite for Edge Inference
+
 - TensorFlow Lite will be utilized on the edge devices for efficient and low-latency inference of ML models. It provides tools for model conversion, optimization, and inference specifically tailored for edge deployment.
 
 ### NVIDIA Jetson SDK and Libraries
+
 - The NVIDIA Jetson platform offers a comprehensive software stack including CUDA, cuDNN, TensorRT, and JetPack SDK. These libraries and tools are optimized for running deep learning frameworks and GPU-accelerated computing on Jetson devices, ensuring high-performance execution of AI workloads.
 
 ### Cloud Services
+
 - Cloud services such as AWS, Google Cloud, or Azure may be utilized for tasks such as model training, centralized model management, data aggregation, and orchestration of edge devices. These cloud services form an integral part of the infrastructure for managing and coordinating edge AI deployments.
 
 ## Power Management
+
 Efficient power management is critical for edge devices, especially in scenarios where the devices may operate on battery power. The infrastructure will incorporate power-efficient algorithms, task scheduling, and low-power modes to maximize the battery life of edge devices while running AI workloads.
 
 By integrating the selected edge devices, cloud-edge coordination, a tailored software stack, and power management strategies, the infrastructure for deploying ML models on edge devices will be well-equipped to support efficient and scalable AI applications at the edge.
@@ -143,6 +155,7 @@ models
 Explanation of the models directory structure and files:
 
 - **model1**: Directory for the first ML model.
+
   - **model1_training**: Subdirectory containing scripts and data for model training.
     - **data_preprocessing.py**: Code for preprocessing and preparing training data.
     - **model1_training_script.py**: Script for training the model using TensorFlow or other framework.
@@ -179,8 +192,8 @@ Explanation of the edge_deployment directory structure and files:
 - **edge_device_management.py**: This script handles the management of edge devices, including functionalities for device provisioning, monitoring, health checks, and status reporting. It may also include functionalities for deploying updated models to edge devices and coordinating their activities.
 
 - **utils**: A subdirectory containing utility scripts and modules used by the edge deployment functionalities.
-    - **data_preprocessing.py**: This script provides functions for preprocessing input data before inference, ensuring that the input aligns with the expectations of the deployed ML models.
-    - **edge_device_communication.py**: This module contains functions for communication between edge devices and other components, such as cloud servers or central management systems. It may include protocols for data exchange, updates, and synchronization.
+  - **data_preprocessing.py**: This script provides functions for preprocessing input data before inference, ensuring that the input aligns with the expectations of the deployed ML models.
+  - **edge_device_communication.py**: This module contains functions for communication between edge devices and other components, such as cloud servers or central management systems. It may include protocols for data exchange, updates, and synchronization.
 
 This structure provides a clear separation of concerns for the various aspects of deploying ML models on edge devices. It allows for distinct management of inference, device configurations, device operations, and utility functionalities, making it easier to maintain and extend the edge deployment capabilities of the application.
 
@@ -277,26 +290,32 @@ You would replace the mock data and the simple deep learning model architecture 
 Sure! Here's a list of different types of users who may use the Edge AI application along with a user story for each type of user and the file that would accomplish their needs:
 
 1. **Data Scientist/ML Engineer**
+
    - User Story: As a data scientist, I want to train and evaluate machine learning models using different algorithms on my local machine.
    - File: `models/model_training_evaluation.py`
 
 2. **AI Researcher**
+
    - User Story: As an AI researcher, I want to experiment with complex deep learning architectures and evaluate their performance using various datasets.
    - File: `models/deep_learning_model_experiments.py`
 
 3. **Edge Device Operator**
+
    - User Story: As an edge device operator, I want to deploy and run ML models on edge devices and monitor their performance in real-time.
    - File: `edge_deployment/edge_inference.py`
 
 4. **System Administrator**
+
    - User Story: As a system administrator, I want to manage edge device configurations and handle communication between edge devices and the cloud server.
    - File: `edge_deployment/edge_device_management.py`
 
 5. **ML Operations Engineer**
+
    - User Story: As a ML operations engineer, I want to automate the process of model update and data aggregation between edge devices and the cloud.
    - File: `cloud_integration/model_update.py`
 
 6. **Documentation Manager**
+
    - User Story: As a documentation manager, I want to create and maintain user manuals and deployment guides for the application.
    - File: `resources/documentation/user_manual.md`
 
