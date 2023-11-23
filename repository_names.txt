@@ -1,4 +1,3 @@
-Automated ML Pipeline with Kubeflow Create an end-to-end ML pipeline using Kubeflow on Kubernetes
 Scalable Data Pipeline in Apache Spark Implement a scalable data processing pipeline using Apache Spark
 Real-time Inference with Kafka and TensorFlow Integrate Kafka with TensorFlow for real-time data processing and model inference
 Serverless ML Model Deployment with AWS Lambda Deploy an ML model using AWS Lambda for serverless execution
