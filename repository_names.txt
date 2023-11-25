@@ -1,4 +1,3 @@
-Ocean Cleanup Optimization (TensorFlow, Scikit-Learn) For marine health
 Rural Connectivity Solutions (TensorFlow, Keras) Bridging the digital divide
 Traffic Accident Prevention Analysis (Scikit-Learn, OpenCV) For safer roads
 Affordable Clean Energy Research (TensorFlow, PyTorch) For energy access
