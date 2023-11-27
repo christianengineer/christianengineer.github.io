@@ -1,4 +1,3 @@
-Drug Discovery using DeepChem (Python) Accelerating pharmaceutical development
 Handwriting Recognition with MNIST (Python) Digitizing written text
 Quantitative Finance Models with NumPy (Python) Analyzing financial markets
 Customer Lifetime Value Prediction using Lifetimes (Python) Estimating customer value
