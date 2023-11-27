@@ -1,4 +1,3 @@
-Automated News Aggregation using BeautifulSoup (Python) Curating news content
 Vehicle Number Plate Recognition with TensorFlow (Python) Identifying vehicles
 AI-Enhanced Medical Imaging Analysis with PyTorch (Python) Improving diagnostic accuracy
 Smart Home Automation using IoT and TensorFlow (Python) Controlling home environments
