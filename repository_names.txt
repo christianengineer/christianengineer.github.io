@@ -1,4 +1,3 @@
-Fair Lending Analysis Tools (Scikit-Learn, TensorFlow) Combating financial biases
 Automated Fact-Checking Systems (BERT, GPT) For countering misinformation
 Energy Consumption Analysis (Pandas, TensorFlow) For reducing carbon footprint
 Poverty Mapping AI (TensorFlow, Keras) For targeted social programs
