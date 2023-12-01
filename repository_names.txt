@@ -1,4 +1,3 @@
-AI-based Asset Management in Finance (Keras, Spark, Prometheus) For investment strategies
 Automated Biometric Identification System (OpenCV, RabbitMQ, Grafana) For security
 AI-driven Content Moderation for Online Platforms (BERT, Flask, Docker) For community safety
 High-resolution Satellite Image Analysis (TensorFlow, Hadoop, Kubernetes) For earth observation
