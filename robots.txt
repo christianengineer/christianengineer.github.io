@@ -15,9 +15,5 @@ Disallow: /*.pdf$
 Disallow: /*.doc$
 Disallow: /*.docx$
 
-# Allow crawling of important directories
-Allow: /posts/
-
 # Sitemap URLs (include the actual URL of your sitemap)
 Sitemap: https://christianipanaque.com/sitemap.xml
-Sitemap: https://christianipanaque/posts/sitemap.xml

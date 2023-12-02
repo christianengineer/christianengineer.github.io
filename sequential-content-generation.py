@@ -12,7 +12,7 @@ def generate_responses(repository_name):
     total_tokens = 0
     i = 0
 
-    system_content = "You are a AI Principal Engineer with a Master's in Artificial Intellience training a Senior Full Stack Software Engineer how to build scalable, data-intensive, AI applications that leverage the use of Machine Learning and Deep Learning. Respond in Markdown format."
+    system_content = "You are a AI Principal Engineer with a Master's in Artificial Intellience training a Senior Full Stack Software Engineer how to build scalable, data-intensive, AI applications that leverage the use of Machine Learning. Respond in Markdown format."
 
     prompts = [
         f"Expand on the AI {repository_name} repository. Objectives, system design strategies and choosen libraries.",
@@ -21,7 +21,7 @@ def generate_responses(repository_name):
         f"Expand on the models directory and its files for the {repository_name} application.",
         f"Expand on the deployment directory and its files for the {repository_name} application.",
         f"Generate a function for a complex machine learning algorithm of the {repository_name} application that uses mock data. Include file path.",
-        f"Generate a function for a complex deep learning algorithm of the {repository_name} application that uses mock data. Include file path.",
+        f"Generate a function for a complex machine learning algorithm of the {repository_name} application that uses mock data. Include file path.",
         f"Generate a list of type of users that will use the {repository_name} application. Include a user story for each type of user and which file will accomplish this.",
     ]
 
