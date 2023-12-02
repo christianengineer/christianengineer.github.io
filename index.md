@@ -1,5 +1,6 @@
 ---
 layout: default
+description: Discover advanced solutions in AI application development from a Senior Full Stack Software Engineer. Discover the latest trends and technologies such as TensorFlow, PyTorch, React, Node.js, and Kubernetes. Learn from my experience in building scalable, efficient AI systems that drive innovation and growth. Join me in navigating the ever-evolving landscape of artificial intelligence and full-stack development, where each post reflects a commitment to excellence and a deep understanding of Artificial Ingelligence solutions.
 ---
 
 # Welcome to Christian's Full Stack Software Engineering Blog
