@@ -1,4 +1,3 @@
-Automated Disease Outbreak Monitoring (Scikit-Learn, Flask, Airflow) For public health
 Large Scale IoT Data Analytics (TensorFlow, Kafka, Terraform) For smart devices
 Automated Content Generation for Media (GPT-3, Hadoop, Prometheus) For journalism
 Predictive Modeling for Insurance Underwriting (PyTorch, Spark, Docker) For risk assessment
