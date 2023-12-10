@@ -1,4 +1,3 @@
-Climate Change Simulation Models (TensorFlow, PyTorch) For environmental awareness
 Community Health Worker Tools (Scikit-Learn, Pandas) For healthcare outreach
 Language Translation Services (PyTorch, BERT) Breaking language barriers
 Refugee Aid Distribution Optimization (Scikit-Learn, TensorFlow) For humanitarian aid
