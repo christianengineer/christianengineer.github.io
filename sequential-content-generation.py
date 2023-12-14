@@ -16,12 +16,12 @@ def generate_responses(repository_name):
 
     prompts = [
         f"Expand on the AI {repository_name} repository. Objectives, system design strategies and choosen libraries.",
-        f"Expand on the infrastructure for the {repository_name} application.",
+        f"Expand on the MLOps infrastructure for the {repository_name} application.",
         f"Generate a scalable file structure for the {repository_name} repository.",
         f"Expand on the models directory and its files for the {repository_name} application.",
         f"Expand on the deployment directory and its files for the {repository_name} application.",
-        f"Generate a function for a complex machine learning algorithm of the {repository_name} application that uses mock data. Include file path.",
-        f"Generate a function for a complex machine learning algorithm of the {repository_name} application that uses mock data. Include file path.",
+        f"Generate a file for training a model of the {repository_name} application that uses mock data. Include file path.",
+        f"Generate a file for a complex machine learning algorithm of the {repository_name} application that uses mock data. Include file path.",
         f"Generate a list of type of users that will use the {repository_name} application. Include a user story for each type of user and which file will accomplish this.",
     ]
 
