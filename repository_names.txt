@@ -1,4 +1,3 @@
-Precision Agriculture using Satellite Imagery (Keras, Hadoop, Kubernetes) For farming efficiency
 Real-time Language Processing for Customer Service (BERT, RabbitMQ, Docker) For business automation
 Scalable E-commerce Search Engine (Elasticsearch, Kafka, Kubernetes) For product discovery
 AI-based Credit Scoring System (Scikit-Learn, Flask, Prometheus) For financial assessments
