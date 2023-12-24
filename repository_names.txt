@@ -1,4 +1,3 @@
-Private Investment Promotion Agency of Peru (Scikit-Learn, TensorFlow) Investment Analyst pain point is assessing project viability, solution is to use machine learning to evaluate investment projects based on economic and social impact criteria, enhancing decision-making
 National Council of Science, Technology, and Technological Innovation of Peru (TensorFlow, Keras) Research Funding Coordinator pain point is allocating research grants, solution is to deploy machine learning to assess research proposals and predict their potential impact, optimizing fund distribution
 Peru Customer Sentiment Analysis Tool (BERT, TensorFlow, Flask, Grafana) Analyzes customer feedback across multiple channels to improve product offerings and customer service strategies
 Competitive Intelligence Dashboard for Peru (GPT-3, Scikit-Learn, Airflow, Prometheus) Aggregates and analyzes competitor data, providing insights into market trends and opportunities for differentiation
