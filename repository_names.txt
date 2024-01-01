@@ -1,4 +1,3 @@
-Blockchain-Based Food Traceability for Peru (Hyperledger, Scikit-Learn, Flask, Prometheus) Implements a blockchain-based system to ensure transparency and traceability in the food supply chain, from farm to table
 Peru Food Supply Chain Risk Assessment AI (TensorFlow, Scikit-Learn, Airflow, Kubernetes) Evaluates risks across the supply chain, predicting disruptions from environmental, economic, or logistical factors to enhance resilience
 Sustainable Agriculture Predictor for Peru (PyTorch, Pandas, Flask, Grafana) Leverages climate and soil data to recommend sustainable farming practices, optimizing crop yields while minimizing environmental impact
 Peru Crop Demand Forecasting System (Keras, TensorFlow, Spark, DVC) Predicts future demand for various crops, aiding farmers and suppliers in planning and distribution to meet market needs efficiently
