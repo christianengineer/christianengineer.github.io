@@ -1,4 +1,3 @@
-Waste Reduction and Sustainability Planner for Peru (Keras, Pandas, Spark, DVC) Analyzes kitchen waste patterns to suggest reduction strategies and sustainable practices, aligning with consumer expectations for eco-friendliness
 Peru Restaurant Market Entry Advisor (TensorFlow, Scikit-Learn, Flask, Kubernetes) Assists new restaurants in identifying optimal locations and niches based on market analysis and consumer trends
 Staff Performance and Training Enhancer in Peru (PyTorch, TensorFlow, Airflow, Grafana) Utilizes staff performance data to recommend personalized training programs, enhancing service quality and efficiency
 Peru Menu Optimization AI (GPT-3, Keras, Kafka, Prometheus) Employs NLP to analyze menu item performance and customer preferences, suggesting menu optimizations to attract more patrons
