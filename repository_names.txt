@@ -1,4 +1,3 @@
-Peru Menu Optimization AI (GPT-3, Keras, Kafka, Prometheus) Employs NLP to analyze menu item performance and customer preferences, suggesting menu optimizations to attract more patrons
 Fraud Detection System for Restaurant Transactions in Peru (Scikit-Learn, PyTorch, Flask, Docker) Detects fraudulent transactions in real-time, protecting restaurant revenues and customer information
 Energy Efficiency Advisor for Peru Restaurants (TensorFlow, Pandas, Spark, DVC) Monitors energy usage and recommends adjustments to reduce costs and support environmental sustainability
 Peru Restaurant Loyalty and Rewards Program Designer (Keras, BERT, Airflow, Grafana) Develops personalized loyalty programs based on customer behavior analysis, encouraging repeat business and enhancing customer engagement
