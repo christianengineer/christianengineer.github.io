@@ -1,4 +1,3 @@
-Small Business Growth Toolkit for Peru Entrepreneurs (Scikit-Learn, TensorFlow, Django, Docker) Matches small business owners with resources, training, and tools tailored to their business stage and industry, promoting growth and income stability
 Peru Crafts and Local Artisan Market Expander (PyTorch, Pandas, Flask, Grafana) Utilizes AI to match local artisans with online marketplaces and tourist shops, increasing the visibility and sales of their crafts, fostering sustainable income streams
 Waste-to-Resource Matching System for Peru Communities (TensorFlow, Scikit-Learn, FastAPI, Prometheus) Matches waste producers with recycling and upcycling companies, turning community waste into income-generating resources
 Peru Public Transport Optimization for Workers (GPT-3, Keras, Django, Kubernetes) Filters and optimizes public transport routes and schedules, reducing commute times and costs for low-income workers
