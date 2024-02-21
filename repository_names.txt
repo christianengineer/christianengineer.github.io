@@ -1,4 +1,3 @@
-Peru Health Intervention Planning Tool (Keras, Pandas, Flask, Grafana) Analyzes public health data to prioritize health interventions in communities most affected by poverty
 Water Access and Quality Monitoring System for Peru (Scikit-Learn, TensorFlow, Kafka, Docker) Monitors water access points and predicts areas at risk of water quality issues, guiding infrastructure development
 Peru Informal Economy Tracker (BERT, GPT-3, Airflow, Prometheus) Utilizes NLP and economic modeling to understand the dynamics of the informal economy and its impact on poverty
 Housing Quality Assessment AI for Peru (PyTorch, OpenCV, Flask, Kubernetes) Uses satellite imagery and on-ground sensor data to assess housing quality and infrastructure needs in impoverished areas
