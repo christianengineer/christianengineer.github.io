@@ -1,4 +1,3 @@
-Peru Social Aid Distribution Optimizer (Keras, TensorFlow, Spark, DVC) Enhances the efficiency of social aid distribution by predicting demand and optimizing logistics and delivery routes
 Child Welfare Monitoring System in Peru (Scikit-Learn, Pandas, Airflow, Grafana) Leverages child welfare and educational data to identify children at risk and recommend interventions
 Peru Clean Energy Access Predictor (TensorFlow, PyTorch, Kafka, Docker) Predicts areas with potential for clean energy projects to improve access to sustainable energy in impoverished regions
 Public Transportation Accessibility AI for Peru (Keras, Scikit-Learn, Flask, Prometheus) Analyzes transportation networks to improve accessibility and affordability for low-income populations
