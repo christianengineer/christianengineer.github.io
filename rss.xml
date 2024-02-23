@@ -14,6 +14,16 @@
     <ttl>60</ttl>
 
     <item>
+      <title>Automated Resume Screening with NLP (Python) Filtering job applications</title>
+      <link>https://christianipanaque.com/posts/automated-resume-screening-with-nlp-python-filtering-job-applications</link>
+      <description>Implement a scalable and efficient system for automatically screening and filtering job applications using Natural Language Processing (NLP) and machine learning.</description>
+      <author>christianipanaque@outlook.com (Christian Ipanaque)</author>
+      <category>Software Engineering</category>
+      <guid isPermaLink="true">https://christianipanaque.com/posts/automated-resume-screening-with-nlp-python-filtering-job-applications</guid>
+      <pubDate>Thu, 14 Dec 2023 00:00:00 GMT</pubDate>
+      <source url="https://christianipanaque.com/rss.xml">Senior Full Stack Software Engineer</source>
+    </item>
+    <item>
       <title>CI/CD Pipelines in AI Application Deployment</title>
       <link>https://christianipanaque.com/posts/ci-cd-pipelines-in-ai-application-deployment-guide</link>
       <description>Read about CI/CD Pipelines in AI Application Deployment</description>
