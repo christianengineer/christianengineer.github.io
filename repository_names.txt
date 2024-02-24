@@ -1,4 +1,3 @@
-Mobile Learning Platform Optimizer for Peru (PyTorch, React Native, Flask, Grafana) Personalizes mobile learning experiences for users with limited technology access, optimizing content delivery based on connectivity and device capabilities
 Peru Tech Literacy AI Tutor (BERT, GPT-3, Django, Prometheus) Provides interactive, AI-powered tutoring to improve technological literacy, using natural language processing to adapt lessons to each learner's pace
 Information Accessibility Mapping Tool for Peru (Scikit-Learn, GeoPandas, Kafka, Docker) Maps regions with limited access to information and technology, supporting policymakers in infrastructure planning and deployment
 Peru Remote Education Resource Allocator (TensorFlow, Pandas, Spark, DVC) Predicts educational resource needs for remote learners and optimizes the distribution of digital learning materials and devices
