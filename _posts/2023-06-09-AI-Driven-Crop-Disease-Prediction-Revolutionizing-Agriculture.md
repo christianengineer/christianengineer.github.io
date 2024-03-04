@@ -1,6 +1,5 @@
 ---
 title: "Blueprint for a Next-Generation, Scalable AI-Driven Crop Disease Prediction Ecosystem: Masterfully Integrating Design, Data, and Cloud Technologies for Superior High-Volume User Experience"
-
 date: 2023-06-09
 permalink: posts/AI-Driven-Crop-Disease-Prediction-Revolutionizing-Agriculture
 ---

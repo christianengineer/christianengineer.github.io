@@ -36,7 +36,7 @@ def update_rss_xml(posts_dir, rss_file):
                 content = file.read()
                 md = markdown.Markdown(extensions=["meta"])
                 md.convert(content)
-
+                print(md.Meta)
                 permalink = f"https://christianipanaque.com/{md.Meta['permalink'][0]}"
 
                 if permalink not in existing_links:
