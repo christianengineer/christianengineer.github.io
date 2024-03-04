@@ -1,4 +1,3 @@
-Peru Culinary Trend Analyzer (BERT, GPT-3, Kafka, Docker) Identifies emerging culinary trends and consumer preferences, enabling chefs to innovate and adapt menus dynamically
 Sustainable Sourcing Optimizer for Peru Fine Dining (Keras, TensorFlow, Spark, DVC) Analyzes supply chain data to recommend sustainable and ethical sourcing options for gourmet ingredients
 Dynamic Wine Pairing AI for Peru Restaurants (Scikit-Learn, PyTorch, Flask, Kubernetes) Suggests optimal wine pairings for menu items using flavor profile analysis and sommelier knowledge bases
 Peru Fine Dining Table Management System (TensorFlow, Keras, Airflow, Prometheus) Optimizes table allocations and reservations to enhance dining room flow and maximize seating efficiency

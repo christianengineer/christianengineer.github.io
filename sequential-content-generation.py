@@ -3,6 +3,11 @@ from openai import OpenAI
 from datetime import datetime, timedelta
 import re
 
+# # Remove comments to test locally
+# from dotenv import load_dotenv
+# # Load environment variables from .env file
+# load_dotenv()
+
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 
@@ -12,17 +17,20 @@ def generate_responses(repository_name):
     total_tokens = 0
     i = 0
 
-    system_content = "You are a AI Principal Engineer with a Master's in Artificial Intellience training a Senior Full Stack Software Engineer how to build scalable, data-intensive, AI applications that leverage the use of Machine Learning. Respond in Markdown format."
+    system_content = "You are a Machine Learning Engineer training a Senior Full Stack Software Engineer how to build and deploy scalable, data-intensive, machine learning solutions that leverage the use of the machine learning pipeline which is sourcing, cleansing, and modeling data, and finally deploying data to production. Respond in Markdown format."
 
     prompts = [
-        f"Expand on the AI {repository_name} repository. Objectives, system design strategies and choosen libraries.",
-        f"Expand on the MLOps infrastructure for the {repository_name} application.",
-        f"Generate a scalable file structure for the {repository_name} repository.",
-        f"Expand on the models directory and its files for the {repository_name} application.",
-        f"Expand on the deployment directory and its files for the {repository_name} application.",
-        f"Generate a file for training a model of the {repository_name} application that uses mock data. Include file path.",
-        f"Generate a file for a complex machine learning algorithm of the {repository_name} application that uses mock data. Include file path.",
-        f"Generate a list of type of users that will use the {repository_name} application. Include a user story for each type of user and which file will accomplish this.",
+        f"Expand on the machine learning {repository_name} repository. Objectives, sourcing, cleansing, modeling and deploying strategies, with their choosen tools and libraries",
+        f"Expand on the MLOps infrastructure",
+        f"Generate a scalable folder and file structure for this repository",
+        f"Expand on the sourcing directory and its files",
+        f"Expand on the cleansing directory and its files",
+        f"Expand on the modeling directory and its files",
+        f"Expand on the deployment directory and its files",
+        f"Generate a large fictitious mocked data structured data file for training the model",
+        f"Expand on the modeling strategy step by step and prioritize on the most importan step for this project",
+        f"Generate the code required for training the model with the mocked data. Include file path",
+        f"Generate a list of type of users that will use the {repository_name} application. Include a user story for each type of user and which file will accomplish this",
     ]
 
     while i < len(prompts):
@@ -72,8 +80,8 @@ def format_title_to_url(title):
     # Truncate the title at the first closing parenthesis ")"
     first_parenthesis_index = title.find(")")
     if first_parenthesis_index != -1:
-        title = title[:first_parenthesis_index + 1]
-    
+        title = title[: first_parenthesis_index + 1]
+
     title = title.lower()
     # Remove special characters
     title = re.sub(r"[^a-z0-9\s-]", "", title)
