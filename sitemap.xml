@@ -1,11 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-   <url>
-      <loc>https://christianipanaque.com/</loc>
-      <lastmod>2024-02-23</lastmod>
-      <changefreq>daily</changefreq>
-      <priority>1.0</priority>
-   </url>
    <url>
       <loc>https://christianipanaque.com/posts/peru-lite-mobile-library-access-pytorch-lite-sqlite-firebase-grafana-provides-access-to-a-digital-library-via-a-lightweight-mobile-app-designed-for-downloading-and-accessing-reading-materials-offline</loc>
       <lastmod>2024-02-24</lastmod>
@@ -3103,7 +3097,7 @@
       <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://christianipanaque.com/posts/predictive-analytics-for-retail-inventory-management</loc>
+      <loc>https://christianipanaque.com/posts/technical-specifications-predictive-analytics-for-retail-inventory-management</loc>
       <lastmod>2023-11-18</lastmod>
       <changefreq>yearly</changefreq>
       <priority>0.8</priority>
