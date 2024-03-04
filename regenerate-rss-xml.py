@@ -1,83 +1,125 @@
 import os
-import markdown
 from datetime import datetime
-import xml.etree.ElementTree as ET
+import frontmatter
+from lxml import etree
+from datetime import datetime
 
 
-def update_rss_xml(posts_dir, rss_file):
-    tree = ET.parse(rss_file)
-    root = tree.getroot()
-    channel = root.find("channel")
+from datetime import datetime, date
 
-    first_item_index = next(
-        (i for i, element in enumerate(list(channel)) if element.tag == "item"),
-        len(channel),
+
+def convert_to_isoformat(date_input):
+    # Handle None or empty input
+    if not date_input:
+        return ""  # or return a default ISO format string, if desired
+
+    # If input is already a datetime object, convert to ISO format string
+    if isinstance(date_input, datetime):
+        return date_input.isoformat()
+
+    # If input is a date object (without time), convert to datetime at midnight
+    if isinstance(date_input, date):
+        return datetime.combine(date_input, datetime.min.time()).isoformat()
+
+    # Assume input is a string and try parsing it
+    try:
+        # Adjust the format string as needed to match your expected date format
+        date_obj = datetime.strptime(date_input, "%Y-%m-%d")
+        return date_obj.isoformat()
+    except ValueError as e:
+        # Log or handle the parsing error
+        print(f"Error parsing date: {date_input}. Error: {e}")
+        return ""  # Return an empty string or a default value
+
+
+def generate_atom_feed(posts_folder):
+    ns_map = {"atom": "http://www.w3.org/2005/Atom"}
+    feed = etree.Element("{http://www.w3.org/2005/Atom}feed", nsmap=ns_map)
+    etree.SubElement(feed, "{http://www.w3.org/2005/Atom}title").text = (
+        "Full Stack Software Engineer - Christian Ipanaque"
     )
+    etree.SubElement(
+        feed, "{http://www.w3.org/2005/Atom}subtitle", type="html"
+    ).text = "Diving deep into the world of Full Stack Development with a focus on building scalable enterprise AI applications and platforms. Discover cutting-edge design patterns, best practices, and insights tailored for the next generation of AI innovations. Whether you're bootstrapping your AI startup or scaling an AI Corporation to new heights, this blog provides the technical knowledge and engineering-focused advice to build robust, scalable, and intelligent platforms."
+    etree.SubElement(feed, "{http://www.w3.org/2005/Atom}updated").text = (
+        datetime.now().isoformat()
+    )
+    etree.SubElement(feed, "{http://www.w3.org/2005/Atom}id").text = (
+        "tag:christianipanaque.com,2024:3"
+    )
+    etree.SubElement(
+        feed,
+        "{http://www.w3.org/2005/Atom}link",
+        rel="alternate",
+        type="text/html",
+        hreflang="en",
+        href="https://christianipanaque.com",
+    )
+    etree.SubElement(
+        feed,
+        "{http://www.w3.org/2005/Atom}link",
+        rel="self",
+        type="application/atom+xml",
+        href="https://christianipanaque.com/feed.atom",
+    )
+    etree.SubElement(feed, "{http://www.w3.org/2005/Atom}rights").text = (
+        "Copyright (c) 2024, Christian Ipanaque"
+    )
+    etree.SubElement(
+        feed,
+        "{http://www.w3.org/2005/Atom}generator",
+        uri="https://github.com/christianipanque",
+        version="1.0",
+    ).text = "Christian Ipanaque RSS / Atom Feed Generator"
 
-    last_build_date = channel.find("lastBuildDate")
-    current_utc_time = datetime.utcnow()
-
-    formatted_date = current_utc_time.strftime("%a, %d %b %Y %H:%M:%S GMT")
-
-    if last_build_date is not None:
-        last_build_date.text = formatted_date
-    else:
-        new_last_build_date = ET.SubElement(channel, "lastBuildDate")
-        new_last_build_date.text = formatted_date
-
-    existing_links = {item.find("link").text for item in channel.findall("item")}
-    print(existing_links)
-
-    new_items = []
-
-    for filename in os.listdir(posts_dir):
+    for filename in os.listdir(posts_folder):
         if filename.endswith(".md"):
-            with open(os.path.join(posts_dir, filename), "r") as file:
-                content = file.read()
-                md = markdown.Markdown(extensions=["meta"])
-                md.convert(content)
-                print(md.Meta)
-                permalink = f"https://christianipanaque.com/{md.Meta['permalink'][0]}"
-
-                if permalink not in existing_links:
-                    item = ET.Element("item")
-
-                    title = ET.SubElement(item, "title")
-                    title.text = md.Meta["title"][0]
-
-                    link = ET.SubElement(item, "link")
-                    link.text = permalink
-
-                    description = ET.SubElement(item, "description")
-                    description.text = f"Read about {md.Meta['title'][0]}"
-
-                    author = ET.SubElement(item, "author")
-                    author.text = "christianipanaque@outlook.com (Christian Ipanaque)"
-
-                    category = ET.SubElement(item, "category")
-                    category.text = "Software Engineering"
-
-                    guid = ET.SubElement(item, "guid", isPermaLink="true")
-                    guid.text = permalink
-
-                    # Format date for pubDate
-                    post_date = datetime.strptime(md.Meta["date"][0], "%Y-%m-%d")
-                    formatted_date = post_date.strftime("%a, %d %b %Y %H:%M:%S GMT")
-
-                    pubDate = ET.SubElement(item, "pubDate")
-                    pubDate.text = formatted_date
-
-                    source = ET.SubElement(
-                        item, "source", url="https://christianipanaque.com/rss.xml"
+            path = os.path.join(posts_folder, filename)
+            with open(path, "r", encoding="utf-8") as file:
+                post = frontmatter.load(file)
+                entry = etree.SubElement(feed, "{http://www.w3.org/2005/Atom}entry")
+                etree.SubElement(entry, "{http://www.w3.org/2005/Atom}title").text = (
+                    post.metadata.get(
+                        "title", "Full Stack Software Engineer - Christian Ipanaque"
                     )
-                    source.text = "Senior Full Stack Software Engineer"
+                )
+                etree.SubElement(
+                    entry,
+                    "{http://www.w3.org/2005/Atom}link",
+                    rel="alternate",
+                    type="text/html",
+                    href=f"https://christianipanaque.com/{filename}",
+                )
+                etree.SubElement(entry, "{http://www.w3.org/2005/Atom}id").text = (
+                    f"tag:christianipanaque.com,2024:{filename.split('.')[0]}"
+                )
+                etree.SubElement(entry, "{http://www.w3.org/2005/Atom}updated").text = (
+                    convert_to_isoformat(post.metadata.get("date"))
+                )
+                etree.SubElement(
+                    entry, "{http://www.w3.org/2005/Atom}published"
+                ).text = convert_to_isoformat(post.metadata.get("date"))
+                author = etree.SubElement(entry, "{http://www.w3.org/2005/Atom}author")
+                etree.SubElement(author, "{http://www.w3.org/2005/Atom}name").text = (
+                    post.metadata.get("author", "Christian Ipanaque")
+                )
+                content = etree.SubElement(
+                    entry,
+                    "{http://www.w3.org/2005/Atom}content",
+                    type="xhtml",
+                    xml_lang="en",
+                    xml_base="https://christianipanaque.com",
+                )
+                # Wrap markdown-converted HTML in CDATA
+                content.text = f"Read about {post.metadata.get('title', 'Full Stack Software Engineer - Christian Ipanaque')}."
 
-                    new_items.append(item)
+    # Write the XML to a file
+    tree = etree.ElementTree(feed)
+    with open("feed.atom", "wb") as file:
+        tree.write(file, pretty_print=True, xml_declaration=True, encoding="UTF-8")
+    with open("rss.xml", "wb") as file:
+        tree.write(file, pretty_print=True, xml_declaration=True, encoding="UTF-8")
 
-    for item in reversed(new_items):
-        channel.insert(first_item_index, item)
 
-    tree.write(rss_file)
-
-
-update_rss_xml("_posts", "rss.xml")
+# Usage
+generate_atom_feed("_posts")
