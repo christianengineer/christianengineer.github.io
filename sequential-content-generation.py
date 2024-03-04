@@ -21,15 +21,19 @@ def generate_responses(repository_name):
 
     prompts = [
         f"Expand on the machine learning {repository_name} repository. Objectives, sourcing, cleansing, modeling and deploying strategies, with their choosen tools and libraries",
-        f"Expand on the MLOps infrastructure",
+        f"Using MLOps, expand on the most important step to accomplish scalability",
         f"Generate a scalable folder and file structure for this repository",
+        f"Expand on the sourcing strategy step by step. Include in-text links for data sources best fit for {repository_name}",
         f"Expand on the sourcing directory and its files",
+        f"Expand on the cleansing strategy step by step. Include common problems and solutions when cleansing this type of data.",
         f"Expand on the cleansing directory and its files",
+        f"Expand on the modeling strategy step by step and prioritize on the most important step for this project",
         f"Expand on the modeling directory and its files",
-        f"Expand on the deployment directory and its files",
         f"Generate a large fictitious mocked data structured data file for training the model",
-        f"Expand on the modeling strategy step by step and prioritize on the most importan step for this project",
-        f"Generate the code required for training the model with the mocked data. Include file path",
+        f"Generate the production-ready code required for training the model with the mocked data. Include file path",
+        f"Expand on the deployment strategy step by step on supporting local, development, staging and production environments.",
+        f"Generate a production-ready Dockerfile",
+        f"Expand on the deployment directory and its files",
         f"Generate a list of type of users that will use the {repository_name} application. Include a user story for each type of user and which file will accomplish this",
     ]
 
@@ -43,7 +47,7 @@ def generate_responses(repository_name):
             else:
                 conversation.append({"role": "user", "content": prompts[i]})
 
-            print(f"\n\n\nstarting openai call: {conversation}\n\n\n")
+            print(f"\n\n\nSTART: starting openai call: {conversation}\n\n\n")
 
             response = client.chat.completions.create(
                 # model="gpt-4-1106-preview", messages=conversation
@@ -60,18 +64,18 @@ def generate_responses(repository_name):
 
             print(f"\n\n\ni: {i}\n\n\n")
 
-            print(f"\n\n\nopenai call successful\n\n\n")
+            print(f"\n\n\nSUCCESS: openai call successful\n\n\n")
 
-            print(f"response: {responses[i]}")
+            print(f"RESPONSE: {responses[i]}")
 
             conversation.append({"role": "assistant", "content": responses[i]})
 
         except Exception as e:
-            print(f"An error occurred: {str(e)}")
+            print(f"ERROR: An error occurred: {str(e)}")
 
         i += 1
 
-    print(f"\n\n\n{total_tokens}\n\n\n")
+    print(f"\n\n\nTOTAL TOKENS USED: {total_tokens}\n\n\n")
 
     return responses
 
@@ -91,7 +95,7 @@ def format_title_to_url(title):
 
 
 def main():
-    print("script start")
+    print("START: script start")
 
     results = []
 
@@ -124,16 +128,16 @@ def main():
                 md_file.write(combined_result)
 
             print(
-                f"Article for '{repository_name}' generated and saved as {markdown_filename}."
+                f"SUCCESS: Article for '{repository_name}' generated and saved as {markdown_filename}."
             )
 
-            print(f"Write the updated repository_names back to the file")
+            print(f"Write the updated repository_names.txt back to the file")
             with open("repository_names.txt", "w") as file:
                 for remaining_repository_names in repository_names:
                     file.write(f"{remaining_repository_names}\n")
-            print(f"repository_names.txt updated")
+            print(f"UPDATED: repository_names.txt updated")
         else:
-            print(f"Failed to generate article for '{repository_name}'.")
+            print(f"ERROR: Failed to generate article for '{repository_name}'.")
     else:
         print("No more repository_names to generate articles for.")
     print("script end")
