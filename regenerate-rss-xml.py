@@ -105,7 +105,7 @@ def generate_atom_feed(posts_folder):
                     href=f"https://christianipanaque.com/{post.metadata.get('permalink')}",
                 )
                 etree.SubElement(entry, "{http://www.w3.org/2005/Atom}id").text = (
-                    f"tag:christianipanaque.com,2024:{filename.split('.')[0]}"
+                    f"tag:christianipanaque.com,2024:{post.metadata.get('permalink')}"
                 )
                 etree.SubElement(entry, "{http://www.w3.org/2005/Atom}updated").text = (
                     convert_to_rfc3339(post.metadata.get("date"))
@@ -117,10 +117,16 @@ def generate_atom_feed(posts_folder):
                 etree.SubElement(author, "{http://www.w3.org/2005/Atom}name").text = (
                     post.metadata.get("author", "Christian Ipanaque")
                 )
+                etree.SubElement(author, "{http://www.w3.org/2005/Atom}uri").text = (
+                    "https://linkedin.com/in/christianipanaque-ai"
+                )
+                etree.SubElement(author, "{http://www.w3.org/2005/Atom}email").text = (
+                    "christian.ipanaque@outlook.com"
+                )
                 content = etree.SubElement(
                     entry,
                     "{http://www.w3.org/2005/Atom}content",
-                    type="text/html",
+                    type="text",
                 )
                 # Wrap markdown-converted HTML in CDATA
                 content.text = f"Read about {post.metadata.get('title', 'Full Stack Software Engineer - Christian Ipanaque')}."
