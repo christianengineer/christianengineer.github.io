@@ -1,7 +1,7 @@
 ---
-title: Real-Time Language Translation Chatbot
+title: Technical Specifications For A Real-Time Language Translation Chatbot
 date: 2023-11-18
-permalink: posts/real-time-language-translation-chatbot
+permalink: posts/technical-specifications-real-time-language-translation-chatbot
 ---
 
 # Technical Specifications Document - Real-Time Language Translation Chatbot
