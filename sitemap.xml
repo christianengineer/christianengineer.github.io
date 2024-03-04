@@ -1321,12 +1321,6 @@
       <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://christianipanaque.com/posts/social-network-analysis-with-networkx-python-studying-social-connections</loc>
-      <lastmod>2023-12-04</lastmod>
-      <changefreq>yearly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
       <loc>https://christianipanaque.com/posts/renewable-energy-optimization-tensorflow-pytorch-for-sustainable-energy-management</loc>
       <lastmod>2023-12-15</lastmod>
       <changefreq>yearly</changefreq>

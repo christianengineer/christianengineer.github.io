@@ -1,4 +1,4 @@
-<rss xmlns:ns0="http://www.w3.org/2005/Atom" version="2.0">
+<rss xmlns="http://www.w3.org/2005/Atom" version="2.0">
   <channel>
     <title>Full Stack Software Engineer - Christian Ipanaque</title>
     <link>https://christianipanaque.com/</link>
@@ -1961,16 +1961,6 @@
       <category>Software Engineering</category>
       <guid isPermaLink="true">https://christianipanaque.com/posts/water-access-and-quality-monitoring-system-for-peru-scikit-learn-tensorflow-kafka-docker-monitors-water-access-points-and-predicts-areas-at-risk-of-water-quality-issues-guiding-infrastructure-development</guid>
       <pubDate>Tue, 27 Feb 2024 00:00:00 GMT</pubDate>
-      <source url="https://christianipanaque.com/rss.xml">Senior Full Stack Software Engineer</source>
-    </item>
-    <item>
-      <title>Social Network Analysis with NetworkX (Python) Studying social connections</title>
-      <link>https://christianipanaque.com/posts/social-network-analysis-with-networkx-python-studying-social-connections</link>
-      <description>Read about Social Network Analysis with NetworkX (Python) Studying social connections</description>
-      <author>christianipanaque@outlook.com (Christian Ipanaque)</author>
-      <category>Software Engineering</category>
-      <guid isPermaLink="true">https://christianipanaque.com/posts/social-network-analysis-with-networkx-python-studying-social-connections</guid>
-      <pubDate>Mon, 04 Dec 2023 00:00:00 GMT</pubDate>
       <source url="https://christianipanaque.com/rss.xml">Senior Full Stack Software Engineer</source>
     </item>
     <item>
