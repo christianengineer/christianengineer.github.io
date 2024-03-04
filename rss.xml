@@ -1,8 +1,8 @@
-<rss xmlns="http://www.w3.org/2005/Atom" version="2.0">
+<feed xmlns="http://www.w3.org/2005/Atom" version="1.0">
   <channel>
     <title>Full Stack Software Engineer - Christian Ipanaque</title>
     <link>https://christianipanaque.com/</link>
-    <ns0:link href="https://christianipanaque.com/rss.xml" rel="self" type="application/rss+xml" />
+    <link href="https://christianipanaque.com/rss.xml" rel="self" type="application/rss+xml" />
     <description>Diving deep into the world of Full Stack Development with a focus on building scalable enterprise AI applications and platforms. Discover cutting-edge design patterns, best practices, and insights tailored for the next generation of AI innovations. Whether you're bootstrapping your AI startup or scaling an AI Corporation to new heights, this blog provides the technical knowledge and engineering-focused advice to build robust, scalable, and intelligent platforms.</description>
     <language>en-us</language>
     <copyright>2023 Christian Ipanaque</copyright>
@@ -6256,4 +6256,4 @@
       <source url="https://christianipanaque.com/rss.xml">Find Full Stack Developer</source>
     </item>
   </channel>
-</rss>
+</feed>
