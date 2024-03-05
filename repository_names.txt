@@ -1,4 +1,3 @@
-Peru Restaurant Demand Forecasting System (TensorFlow, Scikit-Learn, Airflow, Kubernetes) Predicts customer demand to optimize staffing, inventory, and reduce food waste
 Customer Preference Analysis Tool for Peru Restaurants (PyTorch, Pandas, Flask, Grafana) Analyzes customer feedback and dining patterns to tailor menu offerings and improve satisfaction
 Peru Food Supply Chain Optimizer (Keras, TensorFlow, Kafka, Docker) Enhances supply chain logistics by predicting supply needs and identifying efficient sourcing options
 Dynamic Pricing Model for Restaurants in Peru (Scikit-Learn, PyTorch, Airflow, Prometheus) Adjusts menu pricing in real-time based on demand, special events, and competitor pricing to maximize revenue
