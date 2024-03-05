@@ -3,10 +3,10 @@ from openai import OpenAI
 from datetime import datetime, timedelta
 import re
 
-# # Remove comments to test locally
-# from dotenv import load_dotenv
-# # Load environment variables from .env file
-# load_dotenv()
+# Remove comments to test locally
+from dotenv import load_dotenv
+# Load environment variables from .env file
+load_dotenv()
 
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
@@ -21,17 +21,16 @@ def generate_responses(repository_name):
 
     prompts = [
         f"Expand on the machine learning {repository_name} repository. Objectives, sourcing, cleansing, modeling and deploying strategies, with their choosen tools and libraries",
-        f"Using MLOps, expand on the most important step to accomplish scalability",
-        f"Generate a scalable folder and file structure for this repository",
-        f"Expand on the sourcing strategy step by step. Include in-text links for data sources best fit for {repository_name}",
+        f"Expand on the sourcing strategy step by step and include what would be the best type of data for this project and why.",
         f"Expand on the sourcing directory and its files",
         f"Expand on the cleansing strategy step by step. Include common problems and solutions when cleansing this type of data.",
         f"Expand on the cleansing directory and its files",
+        f"Generate the production-ready code required for cleansing the data for this project. Include file path",
         f"Expand on the modeling strategy step by step and prioritize on the most important step for this project",
         f"Expand on the modeling directory and its files",
         f"Generate a large fictitious mocked data structured data file for training the model",
         f"Generate the production-ready code required for training the model with the mocked data. Include file path",
-        f"Expand on the deployment strategy step by step on supporting local, development, staging and production environments.",
+        f"Generate a step by step plan to deploy this model",
         f"Generate a production-ready Dockerfile",
         f"Expand on the deployment directory and its files",
         f"Generate a list of type of users that will use the {repository_name} application. Include a user story for each type of user and which file will accomplish this",
