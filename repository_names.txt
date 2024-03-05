@@ -1,3 +1,15 @@
+Peruvian Ministry of Interior (OpenCV, TensorFlow, Scikit-Learn) Public safety concerns, improve crime prediction and public safety measures with image recognition and predictive modeling
+Peruvian Superintendence of Banking, Insurance, and Pension Funds (TensorFlow, Keras, PyTorch) Financial instability and fraud, ensure financial sector stability with fraud detection and risk assessment models
+Peruvian Ministry of Education (NLTK, Gensim, TensorFlow) Educational content delivery, personalize learning and predict student performance to improve educational outcomes
+Peruvian Ministry of Labor and Employment Promotion (Scikit-Learn, TensorFlow, Pandas) Unemployment and job mismatch, streamline job matching and labor market trend analysis to reduce unemployment
+Peruvian Environmental Assessment and Enforcement Agency (TensorFlow, Keras, PyTorch) Environmental regulation compliance, automate pollution detection and environmental monitoring to ensure regulatory adherence
+Peruvian Ministry of Energy and Mines (Pandas, NumPy, Scikit-Learn) Resource extraction inefficiency, predict maintenance and optimize operations for sustainable mining and energy production
+National Water Authority of Peru (TensorFlow, Keras, PyTorch) Water resource management challenges, improve irrigation and flood prediction to support agriculture and prevent disasters
+Peruvian Ministry of Development and Social Inclusion (TensorFlow, Pandas, Scikit-Learn) Inefficient social program allocation, optimize resource distribution and predict social program needs to better target assistance
+Peruvian Ministry of Production (NumPy, Pandas, TensorFlow) Supply chain inefficiencies, optimize production forecasting and supply chain operations to boost industry competitiveness
+National Superintendence of Higher University Education of Peru (NLTK, Gensim, TensorFlow) Quality assurance in higher education, enhance accreditation processes and educational quality evaluation with NLP and predictive analytics
+Private Investment Promotion Agency of Peru (Scikit-Learn, TensorFlow, Pandas) Low investment attraction, use predictive modeling for investment analysis and risk assessment to attract sustainable investments
+National Council of Science, Technology, and Technological Innovation of Peru (TensorFlow, Keras, PyTorch) Research and innovation bottlenecks, optimize funding allocation and foster innovation with analysis of research trends and outcomes
 Peru Customer Sentiment Analysis Tool (BERT, TensorFlow, Flask, Grafana) Analyzes customer feedback across multiple channels to improve product offerings and customer service strategies
 Competitive Intelligence Dashboard for Peru (GPT-3, Scikit-Learn, Airflow, Prometheus) Aggregates and analyzes competitor data, providing insights into market trends and opportunities for differentiation
 Peru Business Fraud Detection System (Keras, Pandas, Kafka, Docker) Identifies fraudulent transactions and irregularities in financial data, safeguarding business assets and revenues
