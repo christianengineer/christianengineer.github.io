@@ -5,6 +5,7 @@ import re
 
 # Remove comments to test locally
 from dotenv import load_dotenv
+
 # Load environment variables from .env file
 load_dotenv()
 
@@ -21,19 +22,20 @@ def generate_responses(repository_name):
 
     prompts = [
         f"Expand on the machine learning {repository_name} repository. Objectives, sourcing, cleansing, modeling and deploying strategies, with their choosen tools and libraries",
-        f"Expand on the sourcing strategy step by step and include what would be the best type of data for this project and why.",
-        f"Expand on the sourcing directory and its files",
-        f"Expand on the cleansing strategy step by step. Include common problems and solutions when cleansing this type of data.",
-        f"Expand on the cleansing directory and its files",
-        f"Generate the production-ready code required for cleansing the data for this project. Include file path",
-        f"Expand on the modeling strategy step by step and prioritize on the most important step for this project",
-        f"Expand on the modeling directory and its files",
-        f"Generate a large fictitious mocked data structured data file for training the model",
-        f"Generate the production-ready code required for training the model with the mocked data. Include file path",
+        f"Analyze the sourcing data strategy step by step and emphasize on indentifying the best data sources",
+        f"Expand on tools that will be used for the data sourcing strategy. Include links to their documentation.",
+        f"Analyze the cleansing data strategy step by step. Include common problems that may happen.",
+        f"Expand on the tools that will be used for the data cleansing strategy. Include links to their documentation.",
+        f"Generate the production-ready code required for cleansing the data",
+        f"Analyze the modeling data strategy step by step and prioritize on the most important modeling step for this project",
+        f"Expand on the tools that will be used for the data modeling strategy. Include links to their documentation",
+        f"Generate a large fictitious mocked data file that is ready for the model",
+        f"Generate a small example of the mocked data that is ready for the model",
+        f"Generate the production-ready code required for the model with the mocked data",
         f"Generate a step by step plan to deploy this model",
         f"Generate a production-ready Dockerfile",
-        f"Expand on the deployment directory and its files",
-        f"Generate a list of type of users that will use the {repository_name} application. Include a user story for each type of user and which file will accomplish this",
+        f"Expand on the tools that will be used to deploy this model",
+        f"Generate a list of type of users that will use the {repository_name} application. Include a user story for each type of user, their benefit, and which file will accomplish this",
     ]
 
     while i < len(prompts):
