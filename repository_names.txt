@@ -1,4 +1,3 @@
-Fine Dining Staff Skill Enhancement Platform for Peru (TensorFlow, Pandas, Flask, Kubernetes) Identifies skill gaps in fine dining staff and recommends targeted training programs to elevate service quality
 Peru Luxury Dining Fraud Detection System (Keras, TensorFlow, Airflow, Prometheus) Detects and prevents fraudulent transactions, protecting revenue and enhancing customer trust
 Gourmet Menu Design AI for Peru (BERT, GPT-3, Kafka, Docker) Leverages NLP to generate innovative menu descriptions that capture the essence of dishes and entice diners
 Peru Fine Dining Reputation Management AI (Scikit-Learn, PyTorch, Flask, Grafana) Monitors and analyzes online reviews and social media mentions to manage and enhance the restaurant's reputation
