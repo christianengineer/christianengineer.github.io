@@ -1,4 +1,3 @@
-Energy Efficiency Advisor for Peru Restaurants (TensorFlow, Pandas, Spark, DVC) Monitors energy usage and recommends adjustments to reduce costs and support environmental sustainability
 Peru Restaurant Loyalty and Rewards Program Designer (Keras, BERT, Airflow, Grafana) Develops personalized loyalty programs based on customer behavior analysis, encouraging repeat business and enhancing customer engagement
 Inventory Management AI for Restaurants in Peru (Scikit-Learn, TensorFlow, Kafka, Kubernetes) Predicts inventory needs based on historical data and forecasted demand, reducing overstock and stockouts
 Peru Restaurant Social Media Content Optimizer (GPT-3, PyTorch, Flask, Docker) Generates optimized social media content and schedules based on analysis of engagement data and trending topics
