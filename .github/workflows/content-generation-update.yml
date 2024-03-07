@@ -1,8 +1,8 @@
 name: Content Generation and Deployment
 
 on:
-  schedule:
-    - cron: "0 * * * *"
+  # schedule:
+  #   - cron: "* * * * *"
   workflow_dispatch:
 
 jobs:
