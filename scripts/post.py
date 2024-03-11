@@ -3,23 +3,23 @@ from openai import OpenAI
 from datetime import datetime, timedelta
 import re
 
-# # Remove comments to test locally
-# from dotenv import load_dotenv
+# Remove comments to test locally
+from dotenv import load_dotenv
 
-# # Load environment variables from .env file
-# load_dotenv()
+# Load environment variables from .env file
+load_dotenv()
 
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 
-def generate_responses(repository_name):
+def generate_post(project_name):
     conversation = []
     responses = []
     total_tokens = 0
     i = 0
 
     # espanol
-    # system_content = f"Eres un Ingeniero de Aprendizaje Automático documentando cómo preparar, construir y desplegar una solución de aprendizaje automático escalable y lista para producción para: {repository_name}. Prioriza resolver el punto de dolor de la audiencia. Responde en formato Markdown."
+    # system_content = f"Eres un Ingeniero de Aprendizaje Automático documentando cómo preparar, construir y desplegar una solución de aprendizaje automático escalable y lista para producción para: {project_name}. Prioriza resolver el punto de dolor de la audiencia. Responde en formato Markdown."
 
     # prompts = [
     #     "Identifique objetivos y beneficios para una audiencia específica. Algoritmo de aprendizaje automático específico. Estrategias de obtención, preprocesamiento, modelado y despliegue. Enlaces a todas las herramientas y bibliotecas.",
@@ -35,10 +35,10 @@ def generate_responses(repository_name):
     #     "Para mejorar la transición del proyecto a producción, ahora buscamos desarrollar un archivo de código listo para producción para el(los) modelo(s) utilizando el conjunto de datos preprocesado. El enfoque está en asegurar que el código cumpla con los altos estándares de calidad, legibilidad y mantenibilidad observados en las grandes empresas tecnológicas. ¿Podría proporcionar: Un archivo de código o fragmento que esté estructurado para el despliegue inmediato en un entorno de producción, específicamente diseñado para los datos de nuestro modelo? Comentarios detallados dentro del código que expliquen la lógica, propósito y funcionalidad de secciones clave, siguiendo las mejores prácticas para la documentación. ¿Cualquier convención o estándar para la calidad y estructura del código que se adopta comúnmente en entornos tecnológicos grandes, asegurando que nuestra base de código permanezca robusta y escalable? Esta solicitud tiene como objetivo asegurar un ejemplo de código claro, bien documentado y de alta calidad que pueda servir como referencia para desarrollar nuestro modelo de aprendizaje automático a nivel de producción del proyecto.",
     #     "Para desplegar eficazmente el modelo en producción, necesitamos un plan de despliegue paso a paso que sea directamente relevante para las demandas y características únicas de nuestro proyecto, en lugar de un plan de despliegue general, incluyendo referencias a herramientas necesarias. Proporcione: Un esquema breve de los pasos de despliegue para nuestro modelo de aprendizaje automático, desde los chequeos previos al despliegue hasta la integración en el entorno en vivo. Herramientas clave y plataformas recomendadas para cada paso, con enlaces directos a su documentación oficial. Esta guía debería empoderar a nuestro equipo con una hoja de ruta clara y la confianza para ejecutar el despliegue de forma independiente.",
     #     "Para la fase final de preparar el proyecto para producción, necesitamos crear un Dockerfile que encapsule nuestro entorno y dependencias, adaptado específicamente a las necesidades de rendimiento de nuestro proyecto. Proporcione: Un Dockerfile listo para producción con configuraciones optimizadas para manejar los objetivos de nuestro proyecto. Instrucciones específicas dentro del Dockerfile que aborden los requisitos de rendimiento y escalabilidad únicos de nuestro proyecto. Este Dockerfile debería servir como una configuración de contenedor robusta, asegurando un rendimiento óptimo para nuestro caso de uso específico.",
-    #     f"Para comprender completamente el impacto del proyecto: {repository_name}, necesitamos identificar los diversos grupos de usuarios que interactuarán con la aplicación. Proporcione: Una lista de los tipos de usuarios que se beneficiarán de usar la aplicación. Para cada tipo de usuario, una historia de usuario que incluya: Un escenario breve que ilustre sus puntos de dolor específicos. Cómo la aplicación aborda estos puntos de dolor y los beneficios que ofrece. Qué archivo o componente particular del proyecto facilita esta solución. Esta información ayudará a mostrar los beneficios amplios del proyecto y cómo sirve a diferentes audiencias, mejorando nuestra comprensión de su propuesta de valor.",
+    #     f"Para comprender completamente el impacto del proyecto: {project_name}, necesitamos identificar los diversos grupos de usuarios que interactuarán con la aplicación. Proporcione: Una lista de los tipos de usuarios que se beneficiarán de usar la aplicación. Para cada tipo de usuario, una historia de usuario que incluya: Un escenario breve que ilustre sus puntos de dolor específicos. Cómo la aplicación aborda estos puntos de dolor y los beneficios que ofrece. Qué archivo o componente particular del proyecto facilita esta solución. Esta información ayudará a mostrar los beneficios amplios del proyecto y cómo sirve a diferentes audiencias, mejorando nuestra comprensión de su propuesta de valor.",
     # ]
 
-    system_content = f"You are a Machine Learning Engineer documenting how to prepare, build, and deploy a scalable, production-ready, machine learning solution for: {repository_name}. Prioritize to solve the audience's pain point. Respond in Markdown format."
+    system_content = f"You are a Machine Learning Engineer documenting how to prepare, build, and deploy a scalable, production-ready, machine learning solution for: {project_name}. Prioritize to solve the audience's pain point. Respond in Markdown format."
 
     prompts = [
         f"Pinpoint objectives and benefits to a specific audience. Specific machine learning algorithm. Sourcing, preprocessing, modeling and deploying strategies. Links to all tools and libraries",
@@ -54,7 +54,7 @@ def generate_responses(repository_name):
         f"To enhance the project's transition into production, we now seek to develop a production-ready code file for the model(s) utilizing the preprocessed dataset. The focus is on ensuring the code adheres to the high standards of quality, readability, and maintainability observed in large tech companies. Could you provide: A code file or snippet that is structured for immediate deployment in a production environment, specifically designed for our model's data. Detailed comments within the code that explain the logic, purpose, and functionality of key sections, following best practices for documentation. Any conventions or standards for code quality and structure that are commonly adopted in large tech environments, ensuring our codebase remains robust and scalable. This request aims at securing a clear, well-documented, and high-quality code example that can serve as a benchmark for developing our project's production-level machine learning model.",
         f"To effectively deploy the model into production, we require a step-by-step deployment plan that is directly relevant to the unique demands and characteristics of our project, rather than a general deployment plan, including references to necessary tools. Please provide: A brief outline of the deployment steps for our machine learning model, from pre-deployment checks to live environment integration. Key tools and platforms recommended for each step, with direct links to their official documentation. This guide should empower our team with a clear roadmap and the confidence to execute the deployment independently.",
         f"For the final phase of preparing the project for production, we need to create a Dockerfile that encapsulates our environment and dependencies, tailored specifically to our project's performance needs. Please provide: A production-ready Dockerfile with configurations optimized for handling the objectives of our project. Specific instructions within the Dockerfile that address our project's unique performance and scalability requirements. This Dockerfile should serve as a robust container setup, ensuring optimal performance for our specific use case.",
-        f"To fully understand the impact of the project: {repository_name}, we need to identify the diverse user groups that will interact with the application. Please provide: A list of the types of users who will benefit from using the application. For each user type, a user story that includes: A brief scenario illustrating their specific pain points. How the application addresses these pain points and the benefits it offers. Which particular file or component of the project facilitates this solution. This information will help showcase the project's wide-ranging benefits and how it serves different audiences, enhancing our understanding of its value proposition.",
+        f"To fully understand the impact of the project: {project_name}, we need to identify the diverse user groups that will interact with the application. Please provide: A list of the types of users who will benefit from using the application. For each user type, a user story that includes: A brief scenario illustrating their specific pain points. How the application addresses these pain points and the benefits it offers. Which particular file or component of the project facilitates this solution. This information will help showcase the project's wide-ranging benefits and how it serves different audiences, enhancing our understanding of its value proposition.",
     ]
 
     while i < len(prompts):
@@ -70,8 +70,11 @@ def generate_responses(repository_name):
             print(f"\n\n\nSTART: starting openai call: {conversation}\n\n\n")
 
             response = client.chat.completions.create(
-                # model="gpt-4-1106-preview", messages=conversation
+                # expensive
+                # model="gpt-4-1106-preview",
+                # cheap
                 # model="gpt-3.5-turbo-1106",
+                # cheaper, better
                 model="gpt-3.5-turbo-0125",
                 messages=conversation,
             )
@@ -100,18 +103,27 @@ def generate_responses(repository_name):
     return responses
 
 
-def format_title_to_url(title):
-    # Truncate the title at the first closing parenthesis ")"
-    first_parenthesis_index = title.find(",")
-    if first_parenthesis_index != -1:
-        title = title[: first_parenthesis_index + 1]
-
+def convert_title_to_url_friendly_format(title):
+    # Convert title to lowercase first to simplify processing
     title = title.lower()
-    # Remove special characters
-    title = re.sub(r"[^a-z0-9\s-]", "", title)
-    # Replace spaces with hyphens
-    title = re.sub(r"\s+", "-", title).strip("-")
-    return title
+
+    # Find the index of the first " - " and truncate the title up to but not including " - "
+    first_hyphen_space_index = title.find(" - ")
+    if first_hyphen_space_index != -1:
+        title = title[:first_hyphen_space_index]
+
+    # Replace hyphens with spaces around them with a single space (though they should no longer exist after truncation)
+    title_without_loose_hyphens = re.sub(r"\s+-\s+", " ", title)
+
+    # Remove special characters, allowing only alphanumeric characters, spaces, and hyphens
+    title_without_special_chars = re.sub(
+        r"[^a-z0-9\s-]", "", title_without_loose_hyphens
+    )
+
+    # Replace one or more spaces with a single hyphen and trim trailing hyphens
+    url_friendly_title = re.sub(r"\s+", "-", title_without_special_chars).strip("-")
+
+    return url_friendly_title
 
 
 def main():
@@ -119,13 +131,13 @@ def main():
 
     results = []
 
-    with open("repository_names.txt", "r") as file:
-        repository_names = [line.strip() for line in file if line.strip()]
+    with open("assets/projects/project_list_user_problem_solution.txt", "r") as file:
+        project_names = [line.strip() for line in file if line.strip()]
 
-    if repository_names:
-        repository_name = repository_names.pop(0)
+    if project_names:
+        project_name = project_names.pop(0)
 
-        permalink_url = format_title_to_url(repository_name)
+        permalink_url = convert_title_to_url_friendly_format(project_name)
 
         today_date = datetime.now().strftime("%Y-%m-%d")
 
@@ -136,10 +148,10 @@ def main():
         if not os.path.exists(markdown_filename):
             with open(markdown_filename, "w") as md_file:
                 md_file.write(
-                    f"---\ntitle: {repository_name}\ndate: {today_date}\npermalink: posts/{permalink_url}\n---\n\n"
+                    f"---\ntitle: {project_name}\ndate: {today_date}\npermalink: posts/{permalink_url}\n---\n\n"
                 )
 
-        results = generate_responses(repository_name)
+        results = generate_post(project_name)
 
         combined_result = "\n\n".join(results)
 
@@ -148,18 +160,24 @@ def main():
                 md_file.write(combined_result)
 
             print(
-                f"SUCCESS: Article for '{repository_name}' generated and saved as {markdown_filename}."
+                f"SUCCESS: Article for '{project_name}' generated and saved as {markdown_filename}."
             )
 
-            print(f"Write the updated repository_names.txt back to the file")
-            with open("repository_names.txt", "w") as file:
-                for remaining_repository_names in repository_names:
-                    file.write(f"{remaining_repository_names}\n")
-            print(f"UPDATED: repository_names.txt updated")
+            print(
+                f"Write the updated assets/projects/project_list_user_problem_solution.txt back to the file"
+            )
+            with open(
+                "assets/projects/project_list_user_problem_solution.txt", "w"
+            ) as file:
+                for remaining_project_names in project_names:
+                    file.write(f"{remaining_project_names}\n")
+            print(
+                f"UPDATED: assets/projects/project_list_user_problem_solution.txt updated"
+            )
         else:
-            print(f"ERROR: Failed to generate article for '{repository_name}'.")
+            print(f"ERROR: Failed to generate article for '{project_name}'.")
     else:
-        print("No more repository_names to generate articles for.")
+        print("No more projects to generate post for.")
     print("script end")
 
 
