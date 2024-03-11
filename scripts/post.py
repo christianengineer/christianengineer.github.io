@@ -3,11 +3,11 @@ from openai import OpenAI
 from datetime import datetime, timedelta
 import re
 
-# # Remove comments to test locally
-# from dotenv import load_dotenv
+# Remove comments to test locally
+from dotenv import load_dotenv
 
-# # Load environment variables from .env file
-# load_dotenv()
+# Load environment variables from .env file
+load_dotenv()
 
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
