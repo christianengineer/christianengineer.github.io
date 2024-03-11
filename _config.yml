@@ -10,4 +10,4 @@ defaults:
       path: ""
     values:
       seo_description_max_words: 200
-      image: /assets/images/default-card.png
+      image: /assets/images/ci-ai-logo.webp
