@@ -8,11 +8,12 @@ layout: article
 ## AI Waste-to-Resource Matching System for Peru Communities
 
 ### Objectives:
+
 1. **Match Waste Producers with Recycling and Upcycling Companies:** Utilize AI algorithms to match waste producers in Peru communities with recycling and upcycling companies efficiently.
-   
 2. **Turn Waste into Income-Generating Resources:** Transform community waste into valuable resources, fostering sustainable practices while generating income for the community.
 
 ### System Design Strategies:
+
 1. **Data Collection and Preprocessing:** Gather data on waste producers, types of waste generated, and recycling/upcycling companies. Preprocess and clean the data for the AI algorithms.
 
 2. **Machine Learning Models:** Develop recommendation systems using TensorFlow and Scikit-Learn to match waste producers with suitable recycling and upcycling companies based on historical data and preferences.
@@ -22,6 +23,7 @@ layout: article
 4. **Monitoring and Observability:** Utilize Prometheus for monitoring system performance, tracking key metrics, and ensuring scalability and reliability of the AI application.
 
 ### Chosen Libraries:
+
 1. **TensorFlow:** Utilize TensorFlow for building and training machine learning models, such as collaborative filtering for matching waste producers with companies based on preferences and behavior.
 
 2. **Scikit-Learn:** Use Scikit-Learn for implementing traditional machine learning algorithms like decision trees or random forests for predictive modeling and matching waste types with suitable recycling/upcycling processes.
@@ -35,13 +37,14 @@ By leveraging TensorFlow, Scikit-Learn, FastAPI, and Prometheus, the AI Waste-to
 ## MLOps Infrastructure for Waste-to-Resource Matching System
 
 ### Objectives:
+
 1. **Automate Model Deployment:** Automatically deploy machine learning models built using TensorFlow and Scikit-Learn for waste-to-resource matching.
-   
 2. **Continuous Integration/Continuous Deployment (CI/CD):** Implement CI/CD pipelines to streamline model training, testing, and deployment processes.
 
 3. **Scalability and Reliability:** Ensure the MLOps infrastructure can handle scaling demands and maintain reliability for real-time waste-to-resource matching.
 
 ### Components of MLOps Infrastructure:
+
 1. **Model Training:** Utilize TensorFlow and Scikit-Learn for training machine learning models based on historical data on waste producers, waste types, and recycling companies.
 
 2. **Model Registry:** Store trained models in a central repository and version control system for easy access and tracking of model performance.
@@ -53,6 +56,7 @@ By leveraging TensorFlow, Scikit-Learn, FastAPI, and Prometheus, the AI Waste-to
 5. **Feedback Loop:** Incorporate user feedback into the model training process to continuously improve waste-to-resource matching accuracy and relevance.
 
 ### Chosen Tools for MLOps Infrastructure:
+
 1. **TensorFlow Extended (TFX):** Use TFX for end-to-end ML pipelines, including data validation, preprocessing, training, and model validation, ensuring consistency and reproducibility in model deployment.
 
 2. **Kubernetes:** Deploy models on Kubernetes clusters for managing containerized applications, providing scalability and reliability for handling varying workloads.
@@ -68,6 +72,7 @@ By implementing a robust MLOps infrastructure with TensorFlow, Scikit-Learn, Fas
 ## Scalable File Structure for Waste-to-Resource Matching System
 
 ### Project Structure:
+
 ```
 waste-resource-matching-system/
 |   ├── data/                           ## Data storage and processing
@@ -96,8 +101,8 @@ waste-resource-matching-system/
 ```
 
 ### Explanation:
+
 1. **data/:** Contains subdirectories for raw and processed data. Raw data is stored in `raw_data/` and processed/cleaned data in `processed_data/`.
-   
 2. **models/:** Stores TensorFlow and Scikit-Learn machine learning models for waste-to-resource matching and waste classification.
 
 3. **api/:** Contains FastAPI backend code with the main application file `main.py`, routers for different API functionalities, and schemas for request/response validation.
@@ -117,6 +122,7 @@ By organizing the Waste-to-Resource Matching System's codebase into a structured
 ## Models Directory for Waste-to-Resource Matching System
 
 ### Project Structure:
+
 ```
 models/
 |   ├── waste_matching_model/           ## TensorFlow model for waste-to-resource matching
@@ -133,7 +139,9 @@ models/
 ```
 
 ### Explanation:
+
 1. **waste_matching_model/:**
+
    - **train.py:** Script for training the TensorFlow model for waste-to-resource matching. It preprocesses data, builds and trains the model, and saves the trained model.
    - **predict.py:** Script for making predictions using the trained waste matching model on new data.
    - **model/:** Directory to store the trained TensorFlow model files, including model architecture, weights, and configuration.
@@ -150,6 +158,7 @@ By structuring the `models/` directory in this way, it separates the TensorFlow 
 ## Deployment Directory for Waste-to-Resource Matching System
 
 ### Project Structure:
+
 ```
 deployment/
 |   ├── docker-compose.yml              ## Docker Compose file for defining services
@@ -169,15 +178,19 @@ deployment/
 ```
 
 ### Explanation:
+
 1. **docker-compose.yml:**
+
    - Contains the Docker Compose file for defining services like the FastAPI application, machine learning models, and any databases necessary for the Waste-to-Resource Matching System.
 
 2. **kubernetes/:**
+
    - **waste_matching_model.yaml:** Kubernetes deployment configuration file for deploying the TensorFlow waste matching model as a scalable service.
    - **waste_classification_model.yaml:** Kubernetes deployment configuration file for deploying the Scikit-Learn waste classification model as a scalable service.
    - **fastapi_app.yaml:** Kubernetes deployment configuration file for the FastAPI application to provide endpoints for waste-to-resource matching.
 
 3. **scripts/:**
+
    - **deploy_models.sh:** Script for deploying and managing machine learning models using Docker containers or Kubernetes pods.
    - **deploy_fastapi.sh:** Script for deploying the FastAPI application and setting up the necessary services.
    - **deploy_monitoring.sh:** Script for deploying and configuring the Prometheus monitoring system and Grafana dashboard.
@@ -221,6 +234,7 @@ joblib.dump(model, 'models/waste_matching_model/model/random_forest_model.pkl')
 ```
 
 ### Explanation:
+
 - This Python script (`train.py`) trains a RandomForestClassifier model using mock data for waste-to-resource matching.
 - It loads mock processed data from `data/processed_data/mock_waste_matching_data.csv`.
 - The script performs feature engineering, splits the data into training and testing sets, trains the model, evaluates its accuracy, and saves the trained model as `random_forest_model.pkl` in the `models/waste_matching_model/model/` directory.
@@ -270,6 +284,7 @@ joblib.dump(model, 'models/waste_matching_model/model/svm_model.pkl')
 ```
 
 ### Explanation:
+
 - This Python script (`train_complex.py`) uses a Support Vector Machine (SVM) algorithm with radial basis function kernel for waste-to-resource matching.
 - It loads mock processed data from `data/processed_data/mock_waste_matching_data.csv`.
 - The script performs feature scaling using StandardScaler, splits the data, trains the SVM model, evaluates its accuracy, and saves the trained model as `svm_model.pkl` in the `models/waste_matching_model/model/` directory.
@@ -278,18 +293,22 @@ joblib.dump(model, 'models/waste_matching_model/model/svm_model.pkl')
 ## Types of Users for Waste-to-Resource Matching System
 
 1. **Waste Producer User**
+
    - User Story: As a waste producer in a Peru community, I want to easily find suitable recycling and upcycling companies to turn my waste into income-generating resources.
    - Achieved via: The `models/waste_matching_model/predict.py` file will accomplish this by taking input data on waste characteristics and providing recommendations on potential recycling partners.
 
 2. **Recycling Partner User**
+
    - User Story: As a recycling partner company, I want to be matched with waste producers in Peru communities to efficiently collect and process their waste.
    - Achieved via: The `api/routers/recycling_partner.py` file in the FastAPI backend will handle requests from recycling partners to be matched with waste producers, integrating with the waste matching model.
 
 3. **Upcycling Partner User**
+
    - User Story: As an upcycling partner company, I want to collaborate with waste producers to upcycle their waste into valuable products to generate sustainable income.
    - Achieved via: The `api/routers/upcycling_partner.py` file in FastAPI will facilitate communication between upcycling partners and waste producers, aiding in the waste-to-product transformation process.
 
 4. **System Administrator**
+
    - User Story: As a system administrator, I want to monitor the system's performance, ensure scalability, and track key metrics to guarantee the system's reliability.
    - Achieved via: The `monitoring/prometheus_config.yml` file will define metrics to be monitored, while the `deployment/scripts/deploy_monitoring.sh` script will deploy and configure the Prometheus monitoring system.
 

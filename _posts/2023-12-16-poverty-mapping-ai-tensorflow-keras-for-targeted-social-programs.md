@@ -6,9 +6,11 @@ layout: article
 ---
 
 ### Objectives
+
 The AI Poverty Mapping project aims to use machine learning to accurately identify areas of poverty and vulnerability in order to effectively target social programs and aid. The objectives include developing a scalable AI system that can process a large amount of data, create accurate poverty maps, and provide actionable insights for decision-makers to allocate resources effectively.
 
 ### System Design Strategies
+
 1. **Data Collection and Preprocessing**: Utilize various sources of data such as satellite imagery, socioeconomic indicators, and demographic information. Preprocess the data to ensure its quality and compatibility with the machine learning models.
 
 2. **Feature Engineering**: Extract meaningful features from the diverse datasets to capture the underlying factors contributing to poverty. This may involve techniques such as image processing for satellite imagery and statistical analysis for demographic data.
@@ -20,6 +22,7 @@ The AI Poverty Mapping project aims to use machine learning to accurately identi
 5. **Actionable Insights and Visualization**: Develop a user interface to visualize the generated poverty maps and insights for decision-makers. This could involve using libraries like Matplotlib or Plotly for interactive data visualization.
 
 ### Chosen Libraries
+
 1. **TensorFlow**: TensorFlow provides a powerful framework for building and training machine learning models, including deep learning architectures. Its scalability and support for distributed computing make it suitable for processing large volumes of data.
 
 2. **Keras**: Keras, being a high-level neural networks API, is integrated with TensorFlow and offers a user-friendly interface to design and train deep learning models. Its flexibility and ease of use make it suitable for rapid experimentation with different model architectures.
@@ -152,23 +155,23 @@ models/
 
 1. **preprocessing/**: This subdirectory contains scripts for data preprocessing and feature engineering, crucial for preparing the input data for model training.
 
-    - **data_preprocessing.py**: This script includes functions for data cleaning, normalization, and handling missing values. It also encompasses the initial transformation of the raw data into a format suitable for model training.
+   - **data_preprocessing.py**: This script includes functions for data cleaning, normalization, and handling missing values. It also encompasses the initial transformation of the raw data into a format suitable for model training.
 
-    - **feature_engineering.py**: This file includes code for creating new features, deriving insights from existing data, and performing advanced feature engineering based on domain knowledge and exploratory data analysis.
+   - **feature_engineering.py**: This file includes code for creating new features, deriving insights from existing data, and performing advanced feature engineering based on domain knowledge and exploratory data analysis.
 
 2. **training/**: This subdirectory comprises the necessary files for training the TensorFlow/Keras models.
 
-    - **model_architecture.py**: This file defines the architecture of the machine learning model using TensorFlow/Keras API. It includes the layers, activation functions, and model setup needed for training.
+   - **model_architecture.py**: This file defines the architecture of the machine learning model using TensorFlow/Keras API. It includes the layers, activation functions, and model setup needed for training.
 
-    - **train.py**: This script is responsible for orchestrating the model training process by loading the preprocessed data, instantiating the model architecture, training the model on the data, and saving the trained model weights.
+   - **train.py**: This script is responsible for orchestrating the model training process by loading the preprocessed data, instantiating the model architecture, training the model on the data, and saving the trained model weights.
 
-    - **hyperparameters.yaml**: This configuration file stores hyperparameters such as learning rate, batch size, and dropout rate used during model training. Centralizing hyperparameters in a separate file simplifies hyperparameter tuning and management.
+   - **hyperparameters.yaml**: This configuration file stores hyperparameters such as learning rate, batch size, and dropout rate used during model training. Centralizing hyperparameters in a separate file simplifies hyperparameter tuning and management.
 
 3. **evaluation/**: This subdirectory encompasses files for evaluating the trained models and monitoring their performance.
 
-    - **model_evaluation.py**: This script includes functions for evaluating the model on the test/validation dataset, calculating performance metrics (e.g., accuracy, precision, recall), and detecting any potential overfitting or underfitting issues.
+   - **model_evaluation.py**: This script includes functions for evaluating the model on the test/validation dataset, calculating performance metrics (e.g., accuracy, precision, recall), and detecting any potential overfitting or underfitting issues.
 
-    - **visualize_results.py**: This file contains code for visualizing model predictions, analyzing performance metrics, and generating visual insights to aid in interpreting the model's outputs.
+   - **visualize_results.py**: This file contains code for visualizing model predictions, analyzing performance metrics, and generating visual insights to aid in interpreting the model's outputs.
 
 By organizing the models directory in this manner, the AI application can ensure clarity, reproducibility, and maintainability of the TensorFlow and Keras models, facilitating efficient development, training, evaluation, and improvement of the poverty mapping AI models.
 
@@ -329,23 +332,27 @@ This script provides a simple example of a more complex model architecture and i
 ### List of Types of Users
 
 1. **Data Analyst / Researcher**
-   - *User Story*: As a data analyst, I want to explore and analyze the poverty mapping data to identify trends and correlations that can inform policy recommendations and resource allocation decisions.
-   - *File*: Exploratory data analysis and visualization notebooks in the `notebooks/exploratory/` directory.
+
+   - _User Story_: As a data analyst, I want to explore and analyze the poverty mapping data to identify trends and correlations that can inform policy recommendations and resource allocation decisions.
+   - _File_: Exploratory data analysis and visualization notebooks in the `notebooks/exploratory/` directory.
 
 2. **Machine Learning Engineer**
-   - *User Story*: As a machine learning engineer, I want to develop and experiment with different machine learning models to improve the accuracy of poverty mapping predictions based on various data sources.
-   - *File*: Model development and experimentation notebooks in the `notebooks/model_development/` directory.
+
+   - _User Story_: As a machine learning engineer, I want to develop and experiment with different machine learning models to improve the accuracy of poverty mapping predictions based on various data sources.
+   - _File_: Model development and experimentation notebooks in the `notebooks/model_development/` directory.
 
 3. **Policy Maker / Government Official**
-   - *User Story*: As a policy maker, I want to access the AI-generated poverty maps to make informed decisions about the allocation of social aid and development programs in areas most in need.
-   - *File*: API deployment script for serving the trained model as an endpoint in the `deployment/api/` directory.
+
+   - _User Story_: As a policy maker, I want to access the AI-generated poverty maps to make informed decisions about the allocation of social aid and development programs in areas most in need.
+   - _File_: API deployment script for serving the trained model as an endpoint in the `deployment/api/` directory.
 
 4. **Front-end Developer**
-   - *User Story*: As a front-end developer, I want to integrate the AI-powered poverty mapping into a web application that provides an intuitive interface for visualizing and interacting with the poverty maps.
-   - *File*: Model deployment and integration documentation in the `docs/` directory for understanding how to integrate the AI models into web applications.
+
+   - _User Story_: As a front-end developer, I want to integrate the AI-powered poverty mapping into a web application that provides an intuitive interface for visualizing and interacting with the poverty maps.
+   - _File_: Model deployment and integration documentation in the `docs/` directory for understanding how to integrate the AI models into web applications.
 
 5. **System Administrator**
-   - *User Story*: As a system administrator, I want to monitor the performance and health of the deployed AI models and ensure scalable infrastructure for handling inference requests.
-   - *File*: Infrastructure setup and monitoring configurations in the `deployment/infrastructure/` directory, including Kubernetes deployment and monitoring configuration files.
+   - _User Story_: As a system administrator, I want to monitor the performance and health of the deployed AI models and ensure scalable infrastructure for handling inference requests.
+   - _File_: Infrastructure setup and monitoring configurations in the `deployment/infrastructure/` directory, including Kubernetes deployment and monitoring configuration files.
 
 These user stories and corresponding files demonstrate how different types of users, from data analysts to policy makers and developers, may interact with various components of the Poverty Mapping AI application built with TensorFlow and Keras. Each user type has specific needs that are addressed by different aspects of the application, ranging from data exploration and model development to deployment and integration into user-facing applications.

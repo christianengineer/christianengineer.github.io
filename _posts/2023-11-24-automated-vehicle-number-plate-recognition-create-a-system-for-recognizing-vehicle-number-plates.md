@@ -6,9 +6,11 @@ layout: article
 ---
 
 ## Objectives
+
 The objective of the AI Automated Vehicle Number Plate Recognition system is to accurately detect and recognize vehicle number plates from images or video feeds in real-time. The system should be designed to handle large volumes of traffic data, extract number plate information, and store the data in a repository for further processing.
 
 ## System Design Strategies
+
 1. **Image Preprocessing**: Utilize image preprocessing techniques such as resizing, normalization, and noise reduction to enhance the quality of input images.
 2. **Object Detection**: Implement a deep learning-based object detection model, such as YOLO (You Only Look Once) or SSD (Single Shot MultiBox Detector), to identify and localize vehicle number plates within the images.
 3. **Character Recognition**: Employ a machine learning or deep learning model to recognize and extract the alphanumeric characters from the detected number plates.
@@ -17,6 +19,7 @@ The objective of the AI Automated Vehicle Number Plate Recognition system is to 
 6. **Scalability and Load Balancing**: Design the system to be horizontally scalable, allowing it to handle increasing loads by distributing the workload across multiple instances.
 
 ## Chosen Libraries and Frameworks
+
 1. **OpenCV**: for image preprocessing, object detection, and video feed processing.
 2. **TensorFlow or PyTorch**: for building and training deep learning models for object detection and character recognition.
 3. **Flask or Django**: for creating a web API to interface with the number plate recognition system.
@@ -94,6 +97,7 @@ number_plate_recognition_system/
 In this file structure:
 
 - **app/**: Contains the main application code.
+
   - **main.py**: Entry point for the application.
   - **number_plate_detection/**: Module for vehicle number plate detection.
     - **detection_model.py**: Code for the number plate detection model.
@@ -109,6 +113,7 @@ In this file structure:
     - **schemas.py**: Pydantic models for request/response schemas.
 
 - **config/**: Configuration files for the application.
+
   - **app_config.py**: Application settings and configuration.
   - **database_config.py**: Database connection configuration.
 
@@ -158,13 +163,14 @@ number_plate_recognition_system/
 
 In this expanded models directory:
 
-- **number_plate_detection/**: 
+- **number_plate_detection/**:
+
   - **model_weights/**: Directory for storing the trained weights of the number plate detection model, such as model.h5 for a Keras model.
   - **training_scripts/**: Directory containing scripts for training the number plate detection model, including train_model.py and any related scripts or configuration files.
   - **inference.py**: Module for performing inference using the trained detection model. It may define functions for loading the model, preprocessing input images, and performing object detection.
   - **utils.py**: Utility functions related to number plate detection, such as image processing or bounding box manipulation.
 
-- **character_recognition/**: 
+- **character_recognition/**:
   - **model_weights/**: Directory for storing the trained weights of the character recognition model, such as model.pth for a PyTorch model.
   - **training_scripts/**: Directory containing scripts for training the character recognition model, including train_model.py and any related scripts or configuration files.
   - **inference.py**: Module for performing inference using the trained character recognition model. It may define functions for loading the model, preprocessing input images, and predicting characters from cropped number plate images.
@@ -205,10 +211,12 @@ In this expanded deployment directory:
 - **docker-compose.yml**: The Docker Compose configuration file for orchestrating multi-container Docker applications. It could define services, dependencies, and network configurations for the application.
 
 - **deployment_config/**: This directory contains additional deployment-specific configurations, such as:
+
   - **nginx.conf**: Configuration file for Nginx, if used as a reverse proxy or load balancer for the application.
   - Any other deployment-specific configuration files or templates.
 
 - **scripts/**: This directory contains deployment scripts or automation scripts, such as:
+
   - **deployment_scripts.sh**: Shell script for automating the deployment process, including tasks like building Docker images, starting containers, and managing environment configurations.
 
 - **deployment_instructions.md**: Documentation providing instructions and guidelines for deploying the application. It could include steps for setting up the environment, configuring the application, and starting the deployment.
@@ -351,23 +359,27 @@ This function can be used within the application to simulate the behavior of a r
 ### Types of Users for Automated Vehicle Number Plate Recognition System
 
 1. **Traffic Monitoring Authority**
-   - *User Story*: As a traffic monitoring authority, I want to use the system to monitor and enforce traffic regulations by capturing and recording the number plates of vehicles violating traffic laws.
-   - *File*: This user story can be supported by the `number_plate_detection/detection_model.py` file, which contains the algorithm for number plate detection.
+
+   - _User Story_: As a traffic monitoring authority, I want to use the system to monitor and enforce traffic regulations by capturing and recording the number plates of vehicles violating traffic laws.
+   - _File_: This user story can be supported by the `number_plate_detection/detection_model.py` file, which contains the algorithm for number plate detection.
 
 2. **Parking Management Company**
-   - *User Story*: As a parking management company, I want to use the system to automate vehicle access to parking facilities based on number plate recognition.
-   - *File*: This user story can be supported by the `number_plate_recognition_system/app/main.py` file, which contains the main application logic and interfaces with the number plate recognition components.
+
+   - _User Story_: As a parking management company, I want to use the system to automate vehicle access to parking facilities based on number plate recognition.
+   - _File_: This user story can be supported by the `number_plate_recognition_system/app/main.py` file, which contains the main application logic and interfaces with the number plate recognition components.
 
 3. **Law Enforcement Agency**
-   - *User Story*: As a law enforcement agency, I want to use the system to identify and track vehicles involved in criminal activities using their number plates.
-   - *File*: This user story can be supported by the `character_recognition/recognition_model.py` file, which contains the algorithm for character recognition, enabling the identification of vehicles associated with criminal activities.
+
+   - _User Story_: As a law enforcement agency, I want to use the system to identify and track vehicles involved in criminal activities using their number plates.
+   - _File_: This user story can be supported by the `character_recognition/recognition_model.py` file, which contains the algorithm for character recognition, enabling the identification of vehicles associated with criminal activities.
 
 4. **Toll Management Authority**
-   - *User Story*: As a toll management authority, I want to use the system to automate toll collection by identifying and charging vehicles based on their number plates.
-   - *File*: This user story can be supported by the `app/api/routes.py` file, which defines the API endpoints for handling toll collection requests and interfacing with the number plate recognition system.
+
+   - _User Story_: As a toll management authority, I want to use the system to automate toll collection by identifying and charging vehicles based on their number plates.
+   - _File_: This user story can be supported by the `app/api/routes.py` file, which defines the API endpoints for handling toll collection requests and interfacing with the number plate recognition system.
 
 5. **Fleet Management Company**
-   - *User Story*: As a fleet management company, I want to use the system to track and manage the movement of my fleet of vehicles using number plate recognition.
-   - *File*: This user story can be supported by the `main.py` file, which coordinates the integration of number plate detection and character recognition functionalities for fleet tracking.
+   - _User Story_: As a fleet management company, I want to use the system to track and manage the movement of my fleet of vehicles using number plate recognition.
+   - _File_: This user story can be supported by the `main.py` file, which coordinates the integration of number plate detection and character recognition functionalities for fleet tracking.
 
 By addressing the needs of these diverse user roles, the Automated Vehicle Number Plate Recognition system can effectively facilitate traffic monitoring, parking management, law enforcement, toll collection, and fleet tracking through its various components and functionalities.

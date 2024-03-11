@@ -66,7 +66,7 @@ By establishing a robust MLOps infrastructure encompassing data handling, model 
 
 ├── machine_learning            ## Machine Learning models and scripts
 │   ├── data                    ## Data processing scripts and datasets
-│   ├── models                  ## Trained TensorFlow models 
+│   ├── models                  ## Trained TensorFlow models
 │   └── notebooks               ## Jupyter notebooks for experimentation
 
 ├── real_time_processing         ## Real-time data processing with Kafka
@@ -94,15 +94,15 @@ This file structure provides a modular and organized layout for the Peru Agro-Pr
 ### Models Directory for Peru Agro-Product Traceability System
 
 ```
-├── machine_learning      
-│   ├── models              
+├── machine_learning
+│   ├── models
 │       ├── product_quality_prediction.h5     ## Trained TensorFlow model for product quality prediction
 │       ├── anomaly_detection.pkl             ## Serialized ML model for anomaly detection
 │       ├── supply_chain_optimization.pb       ## TensorFlow model for supply chain optimization
-│   ├── data                
+│   ├── data
 │       ├── raw_data.csv                      ## Raw data for training and testing models
 │       ├── processed_data.csv                ## Cleaned and processed data for model input
-│   └── notebooks           
+│   └── notebooks
 │       ├── data_exploration.ipynb            ## Jupyter notebook for data exploration and preprocessing
 │       ├── model_training.ipynb              ## Notebook for training TensorFlow models
 ```
@@ -110,11 +110,13 @@ This file structure provides a modular and organized layout for the Peru Agro-Pr
 In the Models directory for the Peru Agro-Product Traceability System, we have organized various files related to machine learning models and data processing for enhancing transparency and consumer trust through blockchain and ML integration.
 
 1. **Trained Models:**
+
    - `product_quality_prediction.h5`: Trained TensorFlow model responsible for predicting the quality of agro-products based on various features and historical data.
    - `anomaly_detection.pkl`: Serialized machine learning model used for detecting anomalies in the agro-product supply chain, ensuring quality and transparency.
    - `supply_chain_optimization.pb`: TensorFlow model optimized for enhancing supply chain operations and optimizing efficiency.
 
 2. **Data Files:**
+
    - `raw_data.csv`: Raw data collected from various sources such as farms, processing units, and distribution centers, used for training and testing machine learning models.
    - `processed_data.csv`: Cleaned and preprocessed data ready to be fed into the machine learning models for analysis and predictions.
 
@@ -148,12 +150,14 @@ This structured Models directory provides a clear organization of files essentia
 In the Deployment directory for the Peru Agro-Product Traceability System, we have organized various files related to Kubernetes deployments and services for integrating blockchain, TensorFlow, Kafka, and other system components efficiently.
 
 1. **Deployments:**
+
    - `blockchain.yaml`: Kubernetes deployment file specifying the setup for the blockchain network components, including nodes, peers, and orderers.
    - `machine_learning.yaml`: Deployment configuration for hosting the TensorFlow model API as a scalable service for processing incoming data.
    - `kafka.yaml`: Configuration file for deploying Apache Kafka clusters for real-time data streaming and processing.
    - `web_app.yaml`: Deployment file for the web application frontend that interacts with the traceability system and displays information to users.
 
 2. **Services:**
+
    - `blockchain_svc.yaml`: Service definition for the blockchain network to enable communication between different blockchain nodes and external clients.
    - `machine_learning_svc.yaml`: Service configuration for exposing the TensorFlow model API to external systems for making predictions based on input data.
    - `kafka_svc.yaml`: Service setup for Apache Kafka to allow internal and external components to interact with the data streaming platform.
@@ -236,18 +240,22 @@ The script `complex_ml_algorithm.py` can be found within the `machine_learning` 
 ### Types of Users for the Peru Agro-Product Traceability System
 
 1. **Farmers:**
+
    - **User Story:** As a farmer, I want to log information about the products I produce, including details about cultivation practices and harvest dates, in the traceability system.
    - **Related File:** `/blockchain/smart_contracts/farmer_contract.sol`
 
 2. **Inspectors:**
+
    - **User Story:** As an inspector, I need to verify the authenticity and quality of agro-products by accessing detailed information stored in the traceability system.
    - **Related File:** `/machine_learning/models/product_quality_prediction.h5`
 
 3. **Distributors:**
+
    - **User Story:** As a distributor, I should be able to track the movement of agro-products from the farm to the end consumer using the traceability system.
    - **Related File:** `/kubernetes/deployments/web_app.yaml`
 
 4. **Retailers:**
+
    - **User Story:** As a retailer, I want to retrieve information on the origin and processing of agro-products to ensure transparency and compliance with standards.
    - **Related File:** `/real_time_processing/consumers/retailer_consumer.py`
 

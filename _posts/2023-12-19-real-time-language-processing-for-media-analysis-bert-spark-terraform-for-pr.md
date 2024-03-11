@@ -6,13 +6,16 @@ layout: article
 ---
 
 ## Objectives
+
 The objectives of the AI Real-time Language Processing for Media Analysis (BERT, Spark, Terraform) for PR repository are to:
+
 1. Process and analyze large volumes of media content in real-time
 2. Utilize BERT (Bidirectional Encoder Representations from Transformers) for natural language processing tasks
 3. Employ Apache Spark for distributed data processing and analysis
 4. Implement infrastructure as code using Terraform for scalable and reliable deployment
 
 ## System Design Strategies
+
 To achieve the objectives, the following system design strategies can be employed:
 
 - **Real-time Data Ingestion**: Use a scalable and fault-tolerant data ingestion system to collect media content in real-time.
@@ -21,6 +24,7 @@ To achieve the objectives, the following system design strategies can be employe
 - **Scalable Infrastructure**: Leverage Terraform for infrastructure as code to deploy and manage scalable, reliable infrastructure on cloud platforms, enabling efficient utilization of computing resources.
 
 ## Chosen Libraries
+
 The following libraries and technologies can be chosen to implement the system:
 
 - **BERT**: Utilize the Hugging Face Transformers library to integrate BERT for NLP tasks. This library provides pre-trained BERT models and a high-level interface for utilizing them in applications.
@@ -34,21 +38,25 @@ By leveraging these libraries and technologies, the AI Real-time Language Proces
 In the context of the Real-time Language Processing for Media Analysis application leveraging BERT, Spark, and Terraform, a robust MLOps infrastructure can be designed to ensure efficient development, deployment, and maintenance of machine learning models and data-intensive AI applications.
 
 ### CI/CD Pipeline for ML Models
+
 - **Version Control**: Utilize Git for version control of the machine learning models, code, and infrastructure configurations.
 - **Continuous Integration**: Employ CI systems like Jenkins or CircleCI to automate the building and testing of the ML models and application code.
 - **Continuous Deployment**: Automate the deployment of ML models and application updates using tools like Docker and Kubernetes for containerization and orchestration.
 
 ### Model Training and Monitoring
+
 - **Model Training Environment**: Use scalable cloud-based training environments with support for distributed training using technologies like TensorFlow or PyTorch.
 - **Model Versioning**: Implement model versioning and tracking using platforms like MLflow or Kubeflow for managing the lifecycle of models.
 - **Model Monitoring**: Integrate monitoring and logging tools such as Prometheus and Grafana to track model performance and drift in real-time.
 
 ### Scalable Infrastructure Management
+
 - **Automated Provisioning**: Utilize Terraform for infrastructure as code to provision scalable and reliable cloud resources for the AI application.
 - **Auto-scaling**: Configure the cloud infrastructure for auto-scaling based on resource utilization to handle varying workloads efficiently.
 - **Fault Tolerance**: Implement redundancy and fault-tolerant architectures to ensure high availability and reliability of the application.
 
 ### Data Management and Processing
+
 - **Real-time Data Processing**: Leverage Apache Kafka for real-time data streaming and processing to handle the continuous influx of media content.
 - **Distributed Data Processing**: Utilize Apache Spark for distributed data processing tasks to efficiently handle large volumes of media data.
 - **Data Versioning**: Implement data versioning and lineage tracking to ensure reproducibility and traceability of the data used for model training and analysis.
@@ -154,15 +162,16 @@ deployment/
 - **Dockerfile**: This file contains the instructions for building a Docker image for the real-time language processing application, including the necessary dependencies and environment setup.
 
 - **kubernetes/**: This directory contains configuration files for deploying the application on Kubernetes, a popular container orchestration platform.
+
   - **deployment.yaml**: Defines the deployment configuration for the real-time language processing application, including the container image, resource limits, and environment variables.
   - **service.yaml**: Configures the Kubernetes service for exposing the application internally within the cluster.
   - **ingress.yaml**: Specifies the ingress configuration for routing external traffic to the application, enabling external access to the API endpoints.
 
 - **helm/**: The Helm directory contains a Helm chart, a package manager for Kubernetes, which enables templating and packaging of the application for deployment.
-   - **Chart.yaml**: Metadata and dependencies for the Helm chart, specifying the name, version, and dependencies of the chart.
-   - **values.yaml**: Default configuration values for the Helm chart, including configurable parameters such as service ports, replicas, and environment variables.
-   - **templates/**: This directory contains Kubernetes manifest templates for the application deployment, which are parameterized using Helm's templating engine to facilitate dynamic configuration.
-   - **charts/**: This directory would contain any dependencies required by the Helm chart, should the application depend on other services or components.
+  - **Chart.yaml**: Metadata and dependencies for the Helm chart, specifying the name, version, and dependencies of the chart.
+  - **values.yaml**: Default configuration values for the Helm chart, including configurable parameters such as service ports, replicas, and environment variables.
+  - **templates/**: This directory contains Kubernetes manifest templates for the application deployment, which are parameterized using Helm's templating engine to facilitate dynamic configuration.
+  - **charts/**: This directory would contain any dependencies required by the Helm chart, should the application depend on other services or components.
 
 By organizing the deployment configurations in this manner, the Real-time Language Processing for Media Analysis application can be efficiently containerized, deployed, and managed on Kubernetes using standard practices and tools such as Docker and Helm.
 
@@ -202,14 +211,14 @@ class MediaDataset(Dataset):
         self.labels = labels
         self.tokenizer = tokenizer
         self.max_len = max_len
-        
+
     def __len__(self):
         return len(self.texts)
-    
+
     def __getitem__(self, item):
         text = str(self.texts[item])
         label = self.labels[item]
-        
+
         encoding = self.tokenizer.encode_plus(
             text,
             add_special_tokens=True,
@@ -220,7 +229,7 @@ class MediaDataset(Dataset):
             return_tensors='pt',
             truncation=True
         )
-        
+
         return {
             'text': text,
             'input_ids': encoding['input_ids'].flatten(),
@@ -258,22 +267,22 @@ model.to(device)
 for epoch in range(epochs):
     model.train()
     total_loss = 0
-    
+
     for batch in train_dataloader:
         input_ids = batch['input_ids'].to(device)
         attention_mask = batch['attention_mask'].to(device)
         labels = batch['label'].to(device)
-        
+
         model.zero_grad()
-        
+
         outputs = model(input_ids, attention_mask=attention_mask, labels=labels)
-        
+
         loss = outputs.loss
         total_loss += loss.item()
-        
+
         loss.backward()
         torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
-        
+
         optimizer.step()
         scheduler.step()
 ```
@@ -336,23 +345,25 @@ In this example, the file "compute_text_classification_spark.py" is located with
 ### Types of Users
 
 1. **Data Scientist / Machine Learning Engineer**
-   - *User Story*: As a data scientist, I need to train and evaluate machine learning models for media analysis using the Real-time Language Processing application.
-   - *File*: The file "train_bert_model.py" located in the "app/src/" directory will accomplish this, as it demonstrates the training of a BERT model for sentiment analysis using mock data.
-   
+   - _User Story_: As a data scientist, I need to train and evaluate machine learning models for media analysis using the Real-time Language Processing application.
+   - _File_: The file "train_bert_model.py" located in the "app/src/" directory will accomplish this, as it demonstrates the training of a BERT model for sentiment analysis using mock data.
 2. **Data Engineer / Spark Developer**
-   - *User Story*: As a data engineer, I need to develop and deploy complex machine learning algorithms using Spark for media analysis.
-   - *File*: The file "compute_text_classification_spark.py" in the "app/src/" directory enables the implementation of a complex machine learning algorithm for media analysis using Spark's MLlib.
+
+   - _User Story_: As a data engineer, I need to develop and deploy complex machine learning algorithms using Spark for media analysis.
+   - _File_: The file "compute_text_classification_spark.py" in the "app/src/" directory enables the implementation of a complex machine learning algorithm for media analysis using Spark's MLlib.
 
 3. **DevOps Engineer**
-   - *User Story*: As a DevOps engineer, I need to manage the deployment and scaling of the Real-time Language Processing application utilizing infrastructure as code.
-   - *File*: The infrastructure configurations in the "infrastructure/terraform" directory, particularly "main.tf" and "variables.tf", facilitate infrastructure management and provisioning using Terraform.
+
+   - _User Story_: As a DevOps engineer, I need to manage the deployment and scaling of the Real-time Language Processing application utilizing infrastructure as code.
+   - _File_: The infrastructure configurations in the "infrastructure/terraform" directory, particularly "main.tf" and "variables.tf", facilitate infrastructure management and provisioning using Terraform.
 
 4. **System Administrator**
-   - *User Story*: As a system administrator, I need to ensure the reliable deployment and monitoring of the Real-time Language Processing application on Kubernetes.
-   - *File*: The Kubernetes deployment configurations in the "deployment/kubernetes" directory (e.g., "deployment.yaml", "service.yaml") enable setting up and managing the application on a Kubernetes cluster.
+
+   - _User Story_: As a system administrator, I need to ensure the reliable deployment and monitoring of the Real-time Language Processing application on Kubernetes.
+   - _File_: The Kubernetes deployment configurations in the "deployment/kubernetes" directory (e.g., "deployment.yaml", "service.yaml") enable setting up and managing the application on a Kubernetes cluster.
 
 5. **Quality Assurance / Testing Team**
-   - *User Story*: As a member of the QA/testing team, I need to perform various levels of testing to ensure the correctness and reliability of the Real-time Language Processing application.
-   - *File*: The testing scripts in the "tests/" directory, including unit tests, integration tests, and performance tests, support comprehensive quality assurance and testing efforts for the application.
+   - _User Story_: As a member of the QA/testing team, I need to perform various levels of testing to ensure the correctness and reliability of the Real-time Language Processing application.
+   - _File_: The testing scripts in the "tests/" directory, including unit tests, integration tests, and performance tests, support comprehensive quality assurance and testing efforts for the application.
 
 By considering these user types and corresponding user stories, the Real-time Language Processing for Media Analysis application can cater to the diverse needs of individuals involved in the development, deployment, and maintenance of the data-intensive AI system.

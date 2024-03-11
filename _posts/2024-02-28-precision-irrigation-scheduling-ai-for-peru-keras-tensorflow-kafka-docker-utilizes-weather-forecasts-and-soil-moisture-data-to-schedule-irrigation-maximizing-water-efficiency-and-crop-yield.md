@@ -12,9 +12,8 @@ The AI Precision Irrigation Scheduling system for Peru aims to leverage AI techn
 ### Objectives
 
 1. **Optimizing Irrigation Schedules:** Utilize AI algorithms to predict the most optimal irrigation schedules based on weather forecasts and soil moisture data.
-  
+
 2. **Maximizing Water Efficiency:** Ensure that irrigation is precisely timed to minimize water wastage and optimize water usage for crop growth.
-   
 3. **Enhancing Crop Yield:** By providing the ideal irrigation conditions, aim to increase crop yield and improve overall agricultural productivity.
 
 ### System Design Strategies
@@ -142,13 +141,15 @@ models/
 ### File Description:
 
 1. **trained_models/**:
+
    - **model_2022.h5**: Trained Machine Learning model for the year 2022. This H5 file contains the weights and architecture of the model that has been trained on historical weather forecasts and soil moisture data.
    - **model_2023.h5**: Trained Machine Learning model for the year 2023. Similar to the model for 2022, this file contains the weights and architecture specific to the year 2023.
    - **...**: Additional trained model files for other years can be stored here, providing a repository of models for different time periods.
 
 2. **model_training.py**:
+
    - **Description**: Python script responsible for training the Machine Learning model using Keras and TensorFlow. This script reads the historical weather forecasts and soil moisture data, preprocesses the data, trains the model, and saves the trained model to the `trained_models/` directory.
-   - **Functionality**: 
+   - **Functionality**:
      - Data preprocessing
      - Model training (e.g., neural network architecture, optimization)
      - Saving the trained model in H5 format
@@ -189,14 +190,17 @@ deployment/
 ### File Description:
 
 1. **Dockerfile**:
+
    - **Description**: Defines the configuration for building the Docker image that encapsulates the Precision Irrigation Scheduling AI application, including all dependencies and environment setup required for deployment.
    - **Content**: Specifies the base image, installs necessary dependencies, copies source code, sets environment variables, and defines the commands to run the application.
 
 2. **requirements.txt**:
+
    - **Description**: Lists all Python dependencies required for the AI application to run. This file ensures that all dependencies are properly installed within the Docker container during deployment.
    - **Content**: Includes packages like Keras, TensorFlow, Kafka, and other libraries needed for data processing, model training, and real-time decision-making.
 
 3. **config/**:
+
    - **kafka_config.yml**: Configuration file specifying Kafka broker details, topics, and settings for data streaming.
    - **model_config.yml**: Configuration file containing model-specific parameters (e.g., model paths, data preprocessing settings) used during inference and scheduling.
 
@@ -258,8 +262,8 @@ model.save("models/trained_model_mock.h5")
 
 ### File Path: `src/model_training_mock_data.py`
 
-
 ### How to Use the File:
+
 1. Run the `train_model_mock_data.py` script to generate synthetic weather data and soil moisture data, train a TensorFlow model on this mock data, and save the trained model.
 2. The trained model will be saved as `trained_model_mock.h5` in the `models/` directory.
 3. You can further customize the model architecture, data generation process, and training parameters based on your requirements and actual data sources.
@@ -317,6 +321,7 @@ model.save("models/trained_complex_model_mock.h5")
 ### File Path: `src/complex_ml_algorithm_mock_data.py`
 
 ### How to Use the File:
+
 1. Run the `complex_ml_algorithm_mock_data.py` script to generate synthetic image data representing weather forecasts and synthetic soil moisture data, train a CNN model on this mock data, and save the trained model.
 2. The trained CNN model will be saved as `trained_complex_model_mock.h5` in the `models/` directory.
 3. You can customize the CNN architecture, data generation process, and training parameters to suit the requirements of the Precision Irrigation Scheduling AI application.
@@ -326,22 +331,27 @@ This script demonstrates the implementation of a more advanced machine learning 
 ## Types of Users for Precision Irrigation Scheduling AI System:
 
 ### 1. Agricultural Farmer
+
 - **User Story**: As an agricultural farmer, I want to use the Precision Irrigation Scheduling AI system to optimize irrigation schedules based on weather forecasts and soil moisture data, so that I can maximize water efficiency and crop yield in my fields.
 - **Related File**: `model_inference.py` - This file will process real-time weather and soil moisture data to provide irrigation recommendations for the farmer's fields.
 
 ### 2. Agricultural Analyst
+
 - **User Story**: As an agricultural analyst, I need to access analytics and insights from the Precision Irrigation Scheduling AI system to evaluate water efficiency and crop yield trends over time, enabling me to make data-driven recommendations for agricultural practices.
 - **Related File**: `data_processing.py` - This script preprocesses historical data for analysis and generates reports for the agricultural analyst to review and analyze trends.
 
 ### 3. Agricultural Technician
+
 - **User Story**: As an agricultural technician, I rely on the Precision Irrigation Scheduling AI system to monitor and adjust irrigation schedules on the ground, ensuring that water is applied efficiently and effectively to support optimal crop growth.
 - **Related File**: `model_service.py` - This script will run as a service to monitor real-time data streams, trigger irrigation scheduling updates, and communicate with irrigation systems based on AI recommendations.
 
 ### 4. Agricultural Researcher
+
 - **User Story**: As an agricultural researcher, I utilize the Precision Irrigation Scheduling AI system to conduct experiments and analyze the impact of different irrigation strategies on crop yield and water usage, aiding in the advancement of sustainable agricultural practices.
 - **Related File**: `experimentation_pipeline.py` - This script will automate the setup and execution of irrigation experiments based on different AI-driven schedules and collect data for research analysis.
 
 ### 5. System Administrator
+
 - **User Story**: As a system administrator, I am responsible for maintaining the infrastructure and ensuring the smooth operation of the Precision Irrigation Scheduling AI system, including managing data pipelines, monitoring system performance, and deploying updates.
 - **Related File**: `system_monitoring.py` - This script will provide real-time monitoring of system components, log performances, and send alerts in case of any anomalies to the system administrator for troubleshooting.
 

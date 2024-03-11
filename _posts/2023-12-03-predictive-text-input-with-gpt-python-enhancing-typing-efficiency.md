@@ -8,6 +8,7 @@ layout: article
 ## AI Predictive Text Input with GPT (Python) Repository
 
 ## Objectives
+
 The objectives of the AI Predictive Text Input with GPT (Python) repository are to enhance typing efficiency by providing users with intelligent, context-aware text predictions using GPT (Generative Pre-trained Transformer) models. The main goals include:
 
 1. Implementing a user-friendly interface for text input with real-time text predictions.
@@ -15,6 +16,7 @@ The objectives of the AI Predictive Text Input with GPT (Python) repository are 
 3. Optimizing the system for scalability and performance to handle a large number of concurrent users.
 
 ## System Design Strategies
+
 To achieve the objectives, the system should be designed with the following strategies:
 
 1. **User Interface Design**: Develop a responsive and intuitive user interface for text input and prediction display, possibly using web technologies like React or similar frameworks for the frontend.
@@ -28,6 +30,7 @@ To achieve the objectives, the system should be designed with the following stra
 5. **Data Security**: Ensure that user input and predictions are handled securely to protect user privacy and data confidentiality.
 
 ## Chosen Libraries
+
 The repository may utilize the following libraries and technologies:
 
 1. **Hugging Face's transformers**: This library provides a simple and effective way to leverage pre-trained language models, including GPT, for natural language processing tasks.
@@ -45,9 +48,11 @@ By employing these libraries and technologies, the AI Predictive Text Input with
 ## Infrastructure for Predictive Text Input with GPT Application
 
 ### Cloud Architecture
+
 The infrastructure for the Predictive Text Input with GPT application can be designed using a cloud-native approach, leveraging services provided by a major cloud provider such as AWS, Azure, or GCP.
 
 ### Components
+
 1. **Web Application Layer**: This layer includes the frontend user interface and backend API service. It could be built using React.js for the frontend and FastAPI for the backend API service.
 
 2. **API Service**: The API service, built with FastAPI, serves as the bridge between the frontend and the AI model for processing user requests and returning predictions.
@@ -61,11 +66,13 @@ The infrastructure for the Predictive Text Input with GPT application can be des
 6. **Monitoring and Logging**: Integration with monitoring and logging services such as AWS CloudWatch, Azure Monitor, or GCP Stackdriver is essential for tracking system performance, resource utilization, and errors.
 
 ### Scaling and Availability
+
 - **Elastic Compute Capacity**: Utilize cloud services such as AWS EC2, Azure Virtual Machines, or GCP Compute Engine to dynamically adjust the compute capacity based on traffic patterns.
 - **Serverless Computing**: Consider leveraging serverless offerings like AWS Lambda, Azure Functions, or Google Cloud Functions for cost-effective and scalable execution of specific tasks, such as model serving.
 - **Multi-Region Deployment**: To ensure high availability and disaster recovery, deploy the application across multiple cloud regions, leveraging global load balancers for traffic distribution.
 
 ### Security Considerations
+
 - **Access Control**: Employ role-based access control (RBAC) and implement least privilege access policies for the services and data storage used in the application.
 - **Data Encryption**: Utilize encryption at rest and in transit to protect sensitive user data and communication between components.
 - **Threat Detection**: Implementing intrusion detection, anomaly detection, and security monitoring tools to identify and respond to potential security threats.
@@ -167,9 +174,10 @@ deployment/
 - **Dockerfile**: The Dockerfile contains the instructions to build a Docker image for the application. It defines the environment and dependencies needed to run the application in a containerized environment.
 
 - **kubernetes/**: This directory includes Kubernetes deployment manifests for orchestrating the application in a Kubernetes cluster. It typically contains:
-    - **deployment.yaml**: Defines the deployment configuration for creating and managing the application's pods.
-    - **service.yaml**: Describes the Kubernetes service that exposes the application to network traffic.
-    - **ingress.yaml**: Optionally includes an Ingress resource to provide external access to the services within the Kubernetes cluster.
+
+  - **deployment.yaml**: Defines the deployment configuration for creating and managing the application's pods.
+  - **service.yaml**: Describes the Kubernetes service that exposes the application to network traffic.
+  - **ingress.yaml**: Optionally includes an Ingress resource to provide external access to the services within the Kubernetes cluster.
 
 - **README.md**: Provides documentation and instructions for deploying the application using Docker or Kubernetes. It may include details about configuring the deployment, managing resources, and scaling the application in a containerized environment.
 
@@ -185,21 +193,21 @@ from transformers import GPT2LMHeadModel, GPT2Tokenizer
 def generate_text_predictions(input_text):
     ## Path to the GPT model and tokenizer files (example path)
     model_path = "models/gpt2"
-    
+
     ## Load GPT model and tokenizer
     model = GPT2LMHeadModel.from_pretrained(model_path)
     tokenizer = GPT2Tokenizer.from_pretrained(model_path)
-    
+
     ## Preprocess input text
     input_ids = tokenizer.encode(input_text, return_tensors="pt")
-    
+
     ## Generate text predictions
     max_length = 50  ## Maximum length of the generated text
     temperature = 0.7  ## Controls the randomness of the generated text
     top_k = 50  ## Limits the number of highest probability vocabulary tokens to consider
     top_p = 0.9  ## Nucleus sampling parameter
     num_return_sequences = 3  ## Number of different sequences to generate
-    
+
     ## Generate predictions using the GPT model
     output_sequences = model.generate(
         input_ids,
@@ -209,14 +217,15 @@ def generate_text_predictions(input_text):
         top_p=top_p,
         num_return_sequences=num_return_sequences
     )
-    
+
     ## Decode the generated sequences and return the predicted text
     predicted_texts = [tokenizer.decode(sequence, skip_special_tokens=True) for sequence in output_sequences]
-    
+
     return predicted_texts
 ```
 
 In this example:
+
 - The function `generate_text_predictions()` takes an input text and uses a pre-trained GPT-2 model to generate text predictions.
 - It loads the GPT-2 model and tokenizer from the specified file path.
 - The input text is preprocessed using the tokenizer and then used to generate multiple text predictions using the GPT-2 model.
@@ -233,21 +242,21 @@ from transformers import GPT2LMHeadModel, GPT2Tokenizer
 def generate_text_predictions(input_text):
     ## Example file paths for the GPT-2 model and tokenizer
     model_path = "models/gpt2"
-    
+
     ## Load the pre-trained GPT-2 model and tokenizer
     model = GPT2LMHeadModel.from_pretrained(model_path)
     tokenizer = GPT2Tokenizer.from_pretrained(model_path)
-    
+
     ## Tokenize the input text
     input_ids = tokenizer.encode(input_text, return_tensors="pt")
-    
+
     ## Generate text predictions using the GPT-2 model
     max_length = 50
     temperature = 0.7
     top_k = 50
     top_p = 0.9
     num_return_sequences = 3
-    
+
     ## Generate multiple sequences of text predictions
     generated_sequences = model.generate(
         input_ids,
@@ -257,17 +266,18 @@ def generate_text_predictions(input_text):
         top_p=top_p,
         num_return_sequences=num_return_sequences
     )
-    
+
     ## Decode the generated sequences into text predictions
     generated_texts = []
     for sequence in generated_sequences:
         text = tokenizer.decode(sequence, skip_special_tokens=True)
         generated_texts.append(text)
-    
+
     return generated_texts
 ```
 
 In this example:
+
 - The function `generate_text_predictions` takes an input text and generates text predictions using a pre-trained GPT-2 model.
 - It uses the `transformers` library to load the GPT-2 model and tokenizer from the specified file path.
 - The input text is tokenized using the tokenizer.
@@ -279,18 +289,22 @@ This function can serve as a starting point for integrating the GPT-2 model into
 ### Types of Users for Predictive Text Input with GPT Application
 
 1. **Casual Users:**
+
    - User Story: As a casual user, I want to use the predictive text input to quickly compose emails and messages without spending a lot of time typing.
    - File: This user story can be captured in the frontend part of the application, specifically in the React component that handles the text input and displays the predictions to the user.
 
 2. **Technical Writers:**
+
    - User Story: As a technical writer, I want to leverage the GPT-based predictive text input to efficiently draft technical documents and articles while ensuring accurate and contextually relevant content.
    - File: This user story may impact the backend part of the application where the GPT model integration and processing of longer text segments are handled.
 
 3. **Multilingual Users:**
+
    - User Story: As a multilingual user, I want the predictive text input to support and provide accurate predictions for multiple languages, allowing me to seamlessly switch between languages while typing.
    - File: This user story could involve both frontend and backend components, as it may require additional handling of language-specific input and features to support multilingual capabilities.
 
 4. **Power Users:**
+
    - User Story: As a power user, I need control over the settings for the predictive text input, such as adjusting the prediction confidence level or enabling/disabling certain prediction features to suit my specific preferences and usage patterns.
    - File: This user story may impact the frontend part of the application, specifically in the user settings or preferences section where power users can customize their prediction experience.
 

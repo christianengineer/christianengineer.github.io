@@ -8,18 +8,21 @@ layout: article
 ## AI Kubernetes for ML Model Deployment
 
 ## Objectives
+
 1. Deploy and manage ML models at scale using Kubernetes
 2. Implement autoscaling to efficiently manage resources based on workload
 3. Utilize load balancing to evenly distribute traffic across multiple instances
 4. Achieve high availability and fault tolerance for ML model deployment
 
 ## System Design Strategies
+
 1. **Containerization**: Package ML models and their dependencies as container images for consistent deployment and execution.
 2. **Kubernetes Orchestration**: Utilize Kubernetes for automated deployment, scaling, and management of containerized ML models.
 3. **Autoscaling**: Implement Horizontal Pod Autoscaler (HPA) to automatically adjust the number of running ML model instances based on CPU or memory utilization.
 4. **Load Balancing**: Utilize Kubernetes Service to distribute incoming traffic across multiple instances of ML models.
 
 ## Chosen Libraries and Tools
+
 1. **Kubernetes**: For container orchestration and managing ML model deployment at scale.
 2. **Docker**: For containerization of ML models and their dependencies.
 3. **Kube-Scaler**: A Kubernetes resource scaler that automates the scaling of deployments based on custom metrics such as GPU usage or inference latency.
@@ -32,29 +35,36 @@ By implementing the above strategies and leveraging the chosen libraries and too
 To deploy and manage ML models at scale using Kubernetes, the infrastructure needs to be designed to support autoscaling, load balancing, and efficient management of resources. Here are the key components of the infrastructure:
 
 ## Kubernetes Cluster
+
 - **Master Node**: Manages the cluster and schedules application workloads.
 - **Worker Nodes**: Run the containerized ML model instances and handle the actual computation.
 
 ## Containerization
+
 - **Docker**: Used to containerize ML models and their dependencies, ensuring consistent deployment across different environments.
 
 ## ML Model Deployment
+
 - **Kubernetes Deployments**: Define the desired state for ML model instances, including the number of replicas and how they should be created or replaced.
 - **Kubernetes Pods**: Kubernetes runs ML model instances as individual pods, each encapsulating one or more containers.
 
 ## Autoscaling
+
 - **Horizontal Pod Autoscaler (HPA)**: Used to automatically scale the number of ML model replicas based on CPU or memory utilization.
 - **Custom Metrics**: Implement custom metric-based autoscaling using tools like Kube-Scaler to scale based on GPU usage or inference latency.
 
 ## Load Balancing
+
 - **Kubernetes Service**: Acts as an internal load balancer to distribute traffic across multiple ML model instances.
 - **Kubernetes Ingress**: Manages external access to ML model APIs, providing capabilities for load balancing and traffic routing.
 
 ## Monitoring and Logging
+
 - **Prometheus**: Monitors the Kubernetes cluster and collects metrics for autoscaling decisions.
 - **Grafana**: Provides visualization and monitoring of the Kubernetes cluster and ML model performance.
 
 ## High Availability
+
 - **Kubernetes ReplicaSets**: Ensures the specified number of pod replicas are running at all times for fault tolerance and high availability.
 - **PodDisruptionBudget**: Guarantees the availability of a certain number of ML model instances during maintenance or disruptions.
 
@@ -98,17 +108,20 @@ By setting up this infrastructure, the application will be capable of deploying 
 ### Directory Structure Details
 
 1. **app**: Contains directories for individual ML models.
+
    - **ml_model_1, ml_model_2, ...**: Directories for each ML model.
      - **Dockerfile**: Defines the container image for the ML model and its dependencies.
      - **model_code.py**: Implementation of the ML model.
      - **requirements.txt**: File listing the required dependencies for the ML model.
 
 2. **kubernetes**: Contains Kubernetes deployment and service configurations.
+
    - **deployments**: YAML files defining the deployments for each ML model, including scaling and image specifications.
    - **services**: YAML files specifying services for accessing ML model deployments.
    - **ingress**: YAML file for defining the Kubernetes Ingress for external access to ML model APIs.
 
 3. **monitoring**: Directory for monitoring configuration files.
+
    - **prometheus**: Contains the Prometheus configuration file for monitoring the Kubernetes cluster and collecting metrics.
    - **grafana**: Contains the Grafana dashboard configuration for visualization and monitoring.
 
@@ -188,17 +201,17 @@ spec:
         app: ml-model-1
     spec:
       containers:
-      - name: ml-model-container
-        image: your-registry/ml-model-1:latest
-        resources:
-          limits:
-            memory: "2Gi"
-            cpu: "500m"
-          requests:
-            memory: "1Gi"
-            cpu: "250m"
-        ports:
-        - containerPort: 8080
+        - name: ml-model-container
+          image: your-registry/ml-model-1:latest
+          resources:
+            limits:
+              memory: "2Gi"
+              cpu: "500m"
+            requests:
+              memory: "1Gi"
+              cpu: "250m"
+          ports:
+            - containerPort: 8080
 ```
 
 The `deployments` directory is essential for defining the Kubernetes deployments for each ML model, ensuring efficient scaling and resource management with the focus on autoscaling and load balancing.
@@ -291,27 +304,30 @@ This function can be further developed, and the entire `ml_model_2` directory, i
 
 This Python function should be placed in the directory structure under the `models/ml_model_2` directory, as indicated by the file path `models/ml_model_2/model_code.py`.
 
-
 ### Types of Users for Kubernetes for ML Model Deployment
 
 1. **Data Scientist / Machine Learning Engineer**
-    - *User Story*: As a data scientist, I want to deploy my trained machine learning models at scale using Kubernetes to handle varying workloads efficiently.
-    - *File*: The data scientist would primarily interact with the `model_code.py` files in the respective `ml_model_1` and `ml_model_2` directories, implementing the algorithms and preprocessing logic for the models.
+
+   - _User Story_: As a data scientist, I want to deploy my trained machine learning models at scale using Kubernetes to handle varying workloads efficiently.
+   - _File_: The data scientist would primarily interact with the `model_code.py` files in the respective `ml_model_1` and `ml_model_2` directories, implementing the algorithms and preprocessing logic for the models.
 
 2. **DevOps Engineer**
-    - *User Story*: As a DevOps engineer, I want to define the Kubernetes deployment configurations to ensure smooth deployment and scaling of machine learning models.
-    - *File*: The DevOps engineer would work with the YAML files in the `deployments` directory to define and manage the Kubernetes deployment specifications, such as `ml_model_1_deployment.yaml` and `ml_model_2_deployment.yaml`.
+
+   - _User Story_: As a DevOps engineer, I want to define the Kubernetes deployment configurations to ensure smooth deployment and scaling of machine learning models.
+   - _File_: The DevOps engineer would work with the YAML files in the `deployments` directory to define and manage the Kubernetes deployment specifications, such as `ml_model_1_deployment.yaml` and `ml_model_2_deployment.yaml`.
 
 3. **Site Reliability Engineer (SRE)**
-    - *User Story*: As an SRE, I want to set up and manage the monitoring and observability tools for the ML model deployments on Kubernetes.
-    - *File*: The SRE would be responsible for the monitoring configurations and would work with files within the `monitoring` directory, such as `prometheus-config.yaml` and `grafana-dashboard-config.yaml`.
+
+   - _User Story_: As an SRE, I want to set up and manage the monitoring and observability tools for the ML model deployments on Kubernetes.
+   - _File_: The SRE would be responsible for the monitoring configurations and would work with files within the `monitoring` directory, such as `prometheus-config.yaml` and `grafana-dashboard-config.yaml`.
 
 4. **AI Application Developer**
-    - *User Story*: As an AI application developer, I want to consume and integrate the deployed ML models into AI applications through the exposed APIs.
-    - *File*: The application developer would interact with the Kubernetes Service and Ingress configurations, which are defined in the `services` and `ingress` directories, for example, `ml_model_1_service.yaml` and `ml_model_2_service.yaml`.
+
+   - _User Story_: As an AI application developer, I want to consume and integrate the deployed ML models into AI applications through the exposed APIs.
+   - _File_: The application developer would interact with the Kubernetes Service and Ingress configurations, which are defined in the `services` and `ingress` directories, for example, `ml_model_1_service.yaml` and `ml_model_2_service.yaml`.
 
 5. **Data Engineer**
-    - *User Story*: As a data engineer, I want to manage the data pipelines and ensure that the required data is available for training and inference in the ML models.
-    - *File*: The data engineer's focus would be on managing the data sources and pipelines feeding into the ML models. While not directly related to Kubernetes configuration files, they might work with the data used by the `model_code.py` files in the `ml_model_1` and `ml_model_2` directories.
+   - _User Story_: As a data engineer, I want to manage the data pipelines and ensure that the required data is available for training and inference in the ML models.
+   - _File_: The data engineer's focus would be on managing the data sources and pipelines feeding into the ML models. While not directly related to Kubernetes configuration files, they might work with the data used by the `model_code.py` files in the `ml_model_1` and `ml_model_2` directories.
 
 The different types of users interact with various aspects of the Kubernetes for ML Model Deployment application, each having their own responsibilities and collaborating to ensure the successful deployment and management of ML models at scale using Kubernetes.

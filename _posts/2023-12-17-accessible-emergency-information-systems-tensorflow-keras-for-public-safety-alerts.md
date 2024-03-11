@@ -8,9 +8,11 @@ layout: article
 ## AI Accessible Emergency Information Systems
 
 ## Objectives
+
 The primary objective of the AI Accessible Emergency Information Systems is to create a scalable and data-intensive application that leverages machine learning to provide timely and accurate public safety alerts to the public. The system aims to use AI technologies to process large volumes of data from various sources, such as social media, weather reports, and government alerts, to provide relevant and accessible emergency information to users in real-time.
 
 ## System Design Strategies
+
 To achieve the objectives of the AI Accessible Emergency Information Systems, the following system design strategies can be employed:
 
 1. **Scalability**: Design the system to handle a large volume of data and user requests. This can be achieved through distributed computing and the use of scalable infrastructure such as cloud services.
@@ -24,6 +26,7 @@ To achieve the objectives of the AI Accessible Emergency Information Systems, th
 5. **Real-time Alerts**: Enable the system to provide real-time alerts to users through various channels such as mobile applications, SMS, and email.
 
 ## Chosen Libraries and Frameworks
+
 For the implementation of the AI Accessible Emergency Information Systems, the following libraries and frameworks can be used:
 
 1. **TensorFlow**: TensorFlow can be utilized for building and training deep learning models for tasks such as natural language processing and image recognition, which are essential for analyzing and understanding emergency information from various sources.
@@ -37,7 +40,6 @@ For the implementation of the AI Accessible Emergency Information Systems, the f
 5. **React Native**: For developing mobile applications with a focus on accessibility, React Native can be used to ensure cross-platform availability and efficient user interfaces.
 
 By leveraging these libraries and frameworks, the AI Accessible Emergency Information Systems can be designed to process vast amounts of data, leverage machine learning techniques, and disseminate critical public safety alerts effectively.
-
 
 ## MLOps Infrastructure for Accessible Emergency Information Systems
 
@@ -330,26 +332,31 @@ This file represents the implementation of a more complex machine learning algor
 ### Types of Users for the Accessible Emergency Information Systems
 
 #### 1. Public Users (General Public)
+
 **User Story**: As a public user, I want to receive real-time safety alerts and access emergency information through a user-friendly interface on my mobile device.
 
 **File to Accomplish**: The frontend components of the mobile application, found in the `app/frontend` directory, particularly the `user_interface.js` file.
 
 #### 2. Emergency Responders (First Responders, Law Enforcement, Firefighters)
+
 **User Story**: As an emergency responder, I want to receive detailed information about ongoing emergency incidents to effectively respond and provide assistance.
 
 **File to Accomplish**: An API endpoint within the backend service for accessing detailed emergency incident information, located in the `app/backend/src/routes/emergency_response.js` file.
 
 #### 3. System Administrators (IT Administrators, Maintenance Personnel)
+
 **User Story**: As a system administrator, I want to monitor the health and performance of the AI models and system infrastructure to ensure optimal functioning.
 
 **File to Accomplish**: The monitoring and logging configurations for the AI models and infrastructure, likely found within the `infrastructure` and `ci-cd` directories.
 
 #### 4. Accessibility Users (Special Needs Individuals, Non-English Speakers)
+
 **User Story**: As an accessibility user, I want to receive emergency alerts in accessible formats such as audio or in multiple languages to ensure I can comprehend and take necessary precautions.
 
 **File to Accomplish**: Accessibility-specific components within the frontend application, located in the `app/frontend/src/accessibility` directory, such as `audio_alerts.js` and `language_support.js`.
 
 #### 5. Data Analysts and AI Engineers
+
 **User Story**: As a data analyst or AI engineer, I want to access historical data and machine learning model outputs for analysis and improvement.
 
 **File to Accomplish**: The data preprocessing, model evaluation scripts, and API endpoints within the machine learning directory, particularly `machine-learning/models/tensorflow/public-safety-alerts/evaluation/evaluate_model.py`.

@@ -8,13 +8,17 @@ layout: article
 ## AI Automated Disease Outbreak Monitoring
 
 ## Objectives
+
 The objectives of the AI Automated Disease Outbreak Monitoring system are as follows:
+
 1. **Early Detection**: To detect disease outbreaks early by analyzing various data sources such as social media, healthcare records, and environmental factors.
 2. **Prediction**: To predict the spread of diseases and their potential impact on public health.
 3. **Alerting System**: To provide an alerting system for public health authorities to take proactive measures in response to potential disease outbreaks.
 
 ## System Design Strategies
+
 The system will be designed to incorporate the following strategies to ensure scalability, data-intensive processing, and real-time monitoring:
+
 1. **Microservices Architecture**: Divide the system into smaller, independently deployable services to handle different tasks such as data ingestion, processing, and prediction.
 2. **Event-Driven Architecture**: Utilize event-driven processing to handle real-time data streams and trigger actions based on specific events or thresholds.
 3. **Scalable Data Storage**: Employ scalable data storage solutions such as NoSQL databases or data lakes to handle large volumes of diverse data types.
@@ -22,6 +26,7 @@ The system will be designed to incorporate the following strategies to ensure sc
 5. **API-Driven**: Expose the system functionality through APIs to enable integration with front-end applications and external systems.
 
 ## Chosen Libraries and Frameworks
+
 To achieve the specified objectives, the following libraries and frameworks will be utilized:
 
 1. **Scikit-Learn**: As a widely-used machine learning library in Python, Scikit-Learn will be leveraged for building predictive models and analyzing patterns in disease outbreak data.
@@ -35,9 +40,11 @@ By utilizing these libraries and frameworks, we can build a scalable, data-inten
 ## MLOps Infrastructure for Automated Disease Outbreak Monitoring
 
 ## Continuous Integration and Continuous Deployment (CI/CD)
+
 The MLOps infrastructure for the Automated Disease Outbreak Monitoring system will incorporate a CI/CD pipeline to automate the machine learning model development, testing, and deployment processes. This pipeline will ensure that new models can be seamlessly integrated into the production environment with minimal manual intervention.
 
 ## Model Training and Evaluation
+
 The process of model training and evaluation will involve the following components:
 
 1. **Data Versioning**: Utilize tools such as DVC (Data Version Control) to track changes in the datasets and ensure reproducibility of model training.
@@ -46,6 +53,7 @@ The process of model training and evaluation will involve the following componen
 4. **Model Evaluation**: Employ metrics monitoring to track the performance of the trained models against predefined thresholds. Tools such as Prometheus and Grafana can be used for this purpose.
 
 ## Model Deployment and Serving
+
 Once a new version of the model is trained and evaluated, the MLOps infrastructure will handle the deployment and serving of the model. This will involve the following components:
 
 1. **Model Registry**: Utilize a model registry such as MLflow or Kubeflow to track and manage different versions of the trained models.
@@ -54,6 +62,7 @@ Once a new version of the model is trained and evaluated, the MLOps infrastructu
 4. **Model Serving**: Expose the deployed models as RESTful APIs using Flask, allowing real-time inference requests from the application.
 
 ## Monitoring and Feedback Loop
+
 To ensure the health and performance of the deployed machine learning models, the MLOps infrastructure will incorporate monitoring and a feedback loop. This includes:
 
 1. **Logging and Monitoring**: Set up logging and monitoring solutions to track the performance of the deployed models in real-time. Tools like Elasticsearch, Kibana, and Prometheus can be used for this purpose.
@@ -172,10 +181,11 @@ models/
 ```
 
 1. **trained_models/**: This subdirectory will store trained machine learning models. It contains subdirectories for each version of the trained models, organized to enable version tracking and comparison. Each model version directory includes the following files:
+
    - **model.pkl**: The serialized form of the trained machine learning model, allowing for easy loading and inference.
    - **model_metrics.json**: A JSON file containing metrics and evaluation results for the trained model, facilitating comparison between different versions.
    - **feature_importance.png**: Visualization of feature importances if applicable, aiding in understanding the model's decision-making process.
-   - * ... (other relevant files)
+   - - ... (other relevant files)
 
 2. **model_training.py**: This Python script contains code for training machine learning models. It may encapsulate functions/classes for data preprocessing, model training, and hyperparameter tuning using Scikit-Learn or other relevant libraries. This script can be orchestrated as part of the Apache Airflow DAG for automated model training.
 
@@ -246,6 +256,7 @@ joblib.dump(model, model_path)
 ```
 
 In this example, the Python script "model_training.py" is located at the following file path within the project's directory structure:
+
 ```
 models/model_training.py
 ```
@@ -289,6 +300,7 @@ joblib.dump(model, model_path)
 ```
 
 In this example, the Python script "model_training_complex.py" is located at the following file path within the project's directory structure:
+
 ```
 models/model_training_complex.py
 ```
@@ -298,23 +310,28 @@ The script utilizes mock data for demonstration purposes, and the Gradient Boost
 ### Types of Users
 
 #### 1. Public Health Officials
-   - *User Story*: As a public health official, I want to be able to monitor and analyze disease outbreak data in real-time to make informed decisions about resource allocation and public health interventions.
-   - *File*: The Flask application's API endpoints (defined in `app/api/routes.py`) will allow public health officials to access and query the disease outbreak monitoring system to obtain real-time insights and reports.
+
+- _User Story_: As a public health official, I want to be able to monitor and analyze disease outbreak data in real-time to make informed decisions about resource allocation and public health interventions.
+- _File_: The Flask application's API endpoints (defined in `app/api/routes.py`) will allow public health officials to access and query the disease outbreak monitoring system to obtain real-time insights and reports.
 
 #### 2. Data Analysts/Researchers
-   - *User Story*: As a data analyst/researcher, I need to access historical disease outbreak data to perform in-depth analysis and identify patterns or trends that can aid in developing proactive strategies for disease containment and mitigation.
-   - *File*: Jupyter notebooks (e.g., `notebooks/exploratory_data_analysis.ipynb`) will provide data analysts/researchers with an interactive environment to explore and analyze historical disease outbreak data.
+
+- _User Story_: As a data analyst/researcher, I need to access historical disease outbreak data to perform in-depth analysis and identify patterns or trends that can aid in developing proactive strategies for disease containment and mitigation.
+- _File_: Jupyter notebooks (e.g., `notebooks/exploratory_data_analysis.ipynb`) will provide data analysts/researchers with an interactive environment to explore and analyze historical disease outbreak data.
 
 #### 3. Machine Learning Engineers
-   - *User Story*: As a machine learning engineer, I aim to develop and deploy advanced machine learning models for early detection and prediction of disease outbreaks based on diverse data sources.
-   - *File*: The model training script (e.g., `models/model_training.py`) will facilitate the training and evaluation of machine learning models leveraging mock data as a placeholder for initial model development and testing.
+
+- _User Story_: As a machine learning engineer, I aim to develop and deploy advanced machine learning models for early detection and prediction of disease outbreaks based on diverse data sources.
+- _File_: The model training script (e.g., `models/model_training.py`) will facilitate the training and evaluation of machine learning models leveraging mock data as a placeholder for initial model development and testing.
 
 #### 4. System Administrators/DevOps Engineers
-   - *User Story*: As a system administrator/DevOps engineer, I am responsible for deploying, scaling, and maintaining the infrastructure components of the disease outbreak monitoring system, ensuring high availability and reliability.
-   - *File*: The deployment configurations (e.g., `deployment/docker-compose.yml` and Kubernetes files in `deployment/kubernetes/`) will aid system administrators/DevOps engineers in orchestrating the deployment and management of the application in different environments.
+
+- _User Story_: As a system administrator/DevOps engineer, I am responsible for deploying, scaling, and maintaining the infrastructure components of the disease outbreak monitoring system, ensuring high availability and reliability.
+- _File_: The deployment configurations (e.g., `deployment/docker-compose.yml` and Kubernetes files in `deployment/kubernetes/`) will aid system administrators/DevOps engineers in orchestrating the deployment and management of the application in different environments.
 
 #### 5. Public Users/General Population
-   - *User Story*: As a member of the public, I want to stay informed about potential disease outbreaks in my area and understand preventive measures recommended by public health authorities.
-   - *File*: Front-end components (not explicitly mentioned in the provided technologies) can be designed to allow public users to access information and alerts through a user interface, serving content from the API endpoints defined in the Flask application.
+
+- _User Story_: As a member of the public, I want to stay informed about potential disease outbreaks in my area and understand preventive measures recommended by public health authorities.
+- _File_: Front-end components (not explicitly mentioned in the provided technologies) can be designed to allow public users to access information and alerts through a user interface, serving content from the API endpoints defined in the Flask application.
 
 By addressing the needs and user stories of these diverse user types, the Automated Disease Outbreak Monitoring application can effectively cater to a wide range of stakeholders, contributing to improved public health surveillance and decision-making.

@@ -8,6 +8,7 @@ layout: article
 ### AI Disease Outbreak Prediction Project
 
 #### Objectives:
+
 1. **Prediction Accuracy:**
    - Develop accurate models for disease outbreak prediction using historical data and relevant features.
 2. **Scalability:**
@@ -16,6 +17,7 @@ layout: article
    - Enable real-time monitoring of potential outbreak indicators and early warning systems.
 
 #### System Design Strategies:
+
 1. **Data Ingestion:**
    - Utilize scalable data pipelines for ingesting and processing diverse data sources such as health records, climate data, and social media activity.
 2. **Model Training and Deployment:**
@@ -24,6 +26,7 @@ layout: article
    - Implement a real-time monitoring system using streaming data platforms to detect potential outbreak indicators and trigger alerts.
 
 #### Chosen Libraries:
+
 1. **TensorFlow:**
    - Utilize TensorFlow for building and training deep learning models for complex pattern recognition and time-series forecasting.
 2. **Scikit-Learn:**
@@ -38,12 +41,14 @@ By employing the above strategies and libraries, the AI Disease Outbreak Predict
 ### MLOps Infrastructure for Disease Outbreak Prediction
 
 #### Data Versioning and Management:
+
 1. **Data Versioning:**
    - Utilize tools like DVC (Data Version Control) to track changes in datasets and ensure reproducibility of experiments.
 2. **Data Catalog:**
    - Establish a data catalog using tools like Apache Atlas to maintain metadata and lineage information for datasets used in the prediction models.
 
 #### Model Training and Deployment:
+
 1. **Training Pipeline:**
    - Implement automated model training pipelines using platforms like MLflow to track experiments and manage model versions.
 2. **Model Versioning:**
@@ -52,24 +57,28 @@ By employing the above strategies and libraries, the AI Disease Outbreak Predict
    - Utilize Kubernetes for containerized model deployment, ensuring scalability and ease of management.
 
 #### Monitoring and Alerting:
+
 1. **Performance Monitoring:**
    - Implement automated monitoring of model performance using platforms like Prometheus and Grafana to track model accuracy and drift.
 2. **Real-time Alerting:**
    - Utilize tools like PagerDuty or Prometheus AlertManager for real-time alerting based on model predictions and performance metrics.
 
 #### Continuous Integration/Continuous Deployment (CI/CD):
+
 1. **Automated Testing:**
    - Implement automated testing of models using libraries such as TensorFlow Data Validation and Scikit-learn's model evaluation tools.
 2. **Continuous Deployment:**
    - Utilize tools like Argo CD or Jenkins for continuous deployment of trained models to production environments.
 
 #### Infrastructure as Code (IaC) and Orchestration:
+
 1. **IaC Tools:**
    - Employ infrastructure as code tools like Terraform or Ansible to define and manage the infrastructure required for model training and deployment.
 2. **Workflow Orchestration:**
    - Utilize Apache Airflow for orchestrating complex data pipelines and workflows across the MLOps infrastructure.
 
 #### Collaboration and Documentation:
+
 1. **Collaboration Tools:**
    - Implement platforms like JupyterHub and GitLab for collaborative model development, version control, and documentation.
 2. **Model Documentation:**
@@ -178,27 +187,30 @@ models/
     └── ...
 ```
 
-In the "models" directory for the Disease Outbreak Prediction application, the "tensorflow" and "scikit-learn" subdirectories house the trained machine learning models and associated artifacts. 
+In the "models" directory for the Disease Outbreak Prediction application, the "tensorflow" and "scikit-learn" subdirectories house the trained machine learning models and associated artifacts.
 
-#### tensorflow/ 
+#### tensorflow/
+
 - **model_version1/**: This directory represents a specific version of a TensorFlow model.
-    - **saved_model/**: Contains the serialized TensorFlow SavedModel format, including the model architecture, weights, and assets.
-        - **assets/**: Additional files used by the TensorFlow model, like vocabulary files, tokenizers, etc.
-        - **variables/**: Saved weights and other model state.
-        - **saved_model.pb**: Protocol Buffer file containing the serialized TensorFlow graph.
-    - **model_artifacts/**: Additional artifacts related to the model.
-        - **evaluation_metrics.json**: JSON file containing evaluation metrics like accuracy, precision, recall, etc.
-        - **hyperparameters.yaml**: YAML file containing the hyperparameters used for training the model.
-        - **training_logs.txt**: Text file containing training logs and metrics.
-        - **...**: Other relevant artifacts.
-    - **deployment/**: Contains scripts and configurations related to model deployment.
-        - **deployment_script.sh**: Shell script for model deployment automation.
-        - **inference_server_config.yaml**: Configuration file for the inference server setup.
-        - **...**: Other deployment-related files.
+
+  - **saved_model/**: Contains the serialized TensorFlow SavedModel format, including the model architecture, weights, and assets.
+    - **assets/**: Additional files used by the TensorFlow model, like vocabulary files, tokenizers, etc.
+    - **variables/**: Saved weights and other model state.
+    - **saved_model.pb**: Protocol Buffer file containing the serialized TensorFlow graph.
+  - **model_artifacts/**: Additional artifacts related to the model.
+    - **evaluation_metrics.json**: JSON file containing evaluation metrics like accuracy, precision, recall, etc.
+    - **hyperparameters.yaml**: YAML file containing the hyperparameters used for training the model.
+    - **training_logs.txt**: Text file containing training logs and metrics.
+    - **...**: Other relevant artifacts.
+  - **deployment/**: Contains scripts and configurations related to model deployment.
+    - **deployment_script.sh**: Shell script for model deployment automation.
+    - **inference_server_config.yaml**: Configuration file for the inference server setup.
+    - **...**: Other deployment-related files.
 
 - **model_version2/**: Directory containing another version of the TensorFlow model with similar internal structure.
 
 #### scikit-learn/
+
 - **model_version1.pkl**: Serialized file for a specific version of a scikit-learn model, containing the model object, including trained parameters, preprocessing steps, and feature transformation logic.
 - **model_version2.pkl**: Another version of the scikit-learn model serialized file.
 
@@ -222,6 +234,7 @@ models/
 The deployment directory within the specific version of the TensorFlow model houses files and configurations essential for deploying the model in production environments for the Disease Outbreak Prediction application.
 
 #### deployment/
+
 - **deployment_script.sh**: A shell script that contains the necessary commands and instructions to deploy the TensorFlow model. It may include steps for setting up the model serving infrastructure, starting the inference server, and configuring any required dependencies.
 - **inference_server_config.yaml**: Configuration file specifying the settings and parameters for the inference server that will host the model. This includes details such as server configuration, request handling, concurrency limits, and potential caching options.
 
@@ -262,6 +275,7 @@ joblib.dump(model, model_path)
 The provided Python script, `model_training.py`, showcases the process of training a mock Disease Outbreak Prediction model using Scikit-Learn with mock data. The file is located at `scripts/model_training.py` within the disease_outbreak_prediction repository.
 
 The script performs the following actions:
+
 1. Reads mock outbreak data from 'data/processed/mock_outbreak_data.csv'.
 2. Prepares the features and target variable.
 3. Splits the data into training and testing sets.
@@ -323,6 +337,7 @@ model.save(model_path)
 The provided Python script, `complex_model_training.py`, illustrates the training of a complex machine learning algorithm using both Scikit-Learn and TensorFlow with mock data. This file is located at `scripts/complex_model_training.py` within the disease_outbreak_prediction repository.
 
 This script performs the following actions:
+
 1. Reads mock outbreak data from 'data/processed/mock_outbreak_data.csv'.
 2. Prepares the features and target variable.
 3. Splits the data into training and testing sets.
@@ -335,6 +350,7 @@ This script serves as a demonstration of training a complex machine learning mod
 ### Types of Users for Disease Outbreak Prediction Application
 
 #### 1. Public Health Officials
+
 **User Story**: As a public health official, I need to monitor and analyze disease outbreak predictions to make informed decisions about resource allocation and public health intervention strategies.
 
 **File**: Real-time Prediction Monitoring Dashboard (e.g., web application or dashboard using technologies such as React.js, Flask, or Dash) located in `web_app/real_time_monitoring_dashboard.py`.
@@ -342,6 +358,7 @@ This script serves as a demonstration of training a complex machine learning mod
 ---
 
 #### 2. Data Scientists/Analysts
+
 **User Story**: As a data scientist, I need access to historical outbreak data and machine learning models to conduct in-depth analysis and perform exploratory data analysis (EDA) for further model refinement.
 
 **File**: Jupyter Notebook for Data Exploration and Model Analysis located in `notebooks/data_exploration_and_model_analysis.ipynb`.
@@ -349,6 +366,7 @@ This script serves as a demonstration of training a complex machine learning mod
 ---
 
 #### 3. DevOps Engineers
+
 **User Story**: As a DevOps engineer, I am responsible for automation of model training and deployment processes and ensuring efficient scaling and management of the infrastructure.
 
 **File**: Model Training and Deployment Automation Script located in `scripts/model_training_automation.py`.
@@ -356,6 +374,7 @@ This script serves as a demonstration of training a complex machine learning mod
 ---
 
 #### 4. Healthcare Administrators
+
 **User Story**: As a healthcare administrator, I need to access high-level insights and reports generated from disease outbreak predictions to make informed decisions about hospital resource allocation and staffing.
 
 **File**: Executive Summary Report Generator located in `scripts/executive_summary_report_generator.py`.
@@ -363,6 +382,7 @@ This script serves as a demonstration of training a complex machine learning mod
 ---
 
 #### 5. Government Officials
+
 **User Story**: As a government official, I need to be informed about potential disease outbreaks and receive alerts about high-risk areas, helping in policy-making and resource allocation decisions.
 
 **File**: Real-time Alerting System Configuration located in `scripts/real_time_alerting_config.py`.

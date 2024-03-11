@@ -8,31 +8,38 @@ layout: article
 ## Competitive Intelligence Dashboard for Supermercados Peruanos
 
 ## Objectives and Benefits
+
 - **Objective**: To provide in-depth insights into competitor pricing, promotions, and customer preferences for data-driven strategic planning.
 - **Audience**: Market Analysts at Supermercados Peruanos who struggle to keep up with rapid market changes and competitor strategies.
 
 ## Machine Learning Algorithm
+
 - **Algorithm**: GPT-3 for natural language processing tasks and Scikit-Learn for traditional machine learning tasks like clustering and classification.
 
 ## Sourcing Strategy
+
 1. **Competitor Data**: Collect competitor data using web scraping tools like BeautifulSoup or Scrapy to gather pricing and promotion information.
 2. **Customer Data**: Utilize customer surveys, loyalty program data, and transaction data to understand customer preferences.
 
 ## Preprocessing Strategy
+
 1. **Feature Engineering**: Generate features like average price, promotional frequency, customer segmentation based on purchase behavior.
 2. **Normalization**: Scale numerical features using techniques like Min-Max scaling or Standardization.
 3. **Text Processing**: Preprocess text data using techniques like tokenization, stopwords removal, and lemmatization for GPT-3 input.
 
 ## Modeling Strategy
+
 1. **GPT-3 for Natural Language Processing**: Utilize OpenAI's GPT-3 model for tasks like sentiment analysis on customer reviews or text summarization of competitor strategies.
 2. **Scikit-Learn Models**: Build clustering models to identify customer segments and classification models to predict competitor pricing strategies.
 
 ## Deployment Strategy
+
 1. **Airflow**: Orchestrate the data pipeline for regular data updates and model retraining.
 2. **Dash or Flask**: Build interactive dashboards for Market Analysts to visualize insights and interact with the data.
 3. **Prometheus**: Monitor and track the performance of the system for scalability and reliability.
 
 ## Links to Tools and Libraries
+
 - [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/): Python library for web scraping.
 - [Scrapy](https://scrapy.org/): Python framework for web scraping.
 - [GPT-3](https://www.openai.com/gpt-3/): OpenAI's powerful language model for NLP tasks.
@@ -46,41 +53,48 @@ layout: article
 ## Data Collection Tools and Methods
 
 ### Competitor Data
-1. **Web Scraping Tools**: 
-    - **BeautifulSoup**: Python library for scraping data from HTML and XML files.
-    - **Scrapy**: Python framework for web crawling and scraping.
-    - **Importance**: To extract pricing, promotion details, and product information from competitor websites efficiently.
 
-2. **API Integration**: 
-    - **Retail APIs**: Utilize APIs provided by competitor platforms to gather real-time pricing and promotion data.
-    - **Importance**: Ensures up-to-date and accurate information for analysis.
+1. **Web Scraping Tools**:
+
+   - **BeautifulSoup**: Python library for scraping data from HTML and XML files.
+   - **Scrapy**: Python framework for web crawling and scraping.
+   - **Importance**: To extract pricing, promotion details, and product information from competitor websites efficiently.
+
+2. **API Integration**:
+   - **Retail APIs**: Utilize APIs provided by competitor platforms to gather real-time pricing and promotion data.
+   - **Importance**: Ensures up-to-date and accurate information for analysis.
 
 ### Customer Data
+
 1. **Customer Surveys**:
-    - **SurveyMonkey, Google Forms**: Platforms to create and distribute surveys.
-    - **Importance**: Collect feedback on customer preferences, satisfaction, and shopping behavior.
+
+   - **SurveyMonkey, Google Forms**: Platforms to create and distribute surveys.
+   - **Importance**: Collect feedback on customer preferences, satisfaction, and shopping behavior.
 
 2. **Transaction Data Analysis**:
-    - **SQL, Pandas**: Analyze transaction data to understand customer purchase patterns and preferences.
-    - **Importance**: Identify popular products, frequent purchases, and customer segmentation.
+   - **SQL, Pandas**: Analyze transaction data to understand customer purchase patterns and preferences.
+   - **Importance**: Identify popular products, frequent purchases, and customer segmentation.
 
 ## Integration with Existing Technology Stack
 
 1. **Data Pipeline with Airflow**:
-    - Schedule web scraping tasks using Airflow to collect competitor data at regular intervals.
-    - Integrate API calls within Airflow workflows to automate data retrieval processes.
+
+   - Schedule web scraping tasks using Airflow to collect competitor data at regular intervals.
+   - Integrate API calls within Airflow workflows to automate data retrieval processes.
 
 2. **Data Storage**:
-    - Store raw and preprocessed data in a data warehouse like AWS Redshift or Google BigQuery for easy access and scalability.
-    - Use tools like SQLAlchemy to interact with databases and retrieve data for analysis.
+
+   - Store raw and preprocessed data in a data warehouse like AWS Redshift or Google BigQuery for easy access and scalability.
+   - Use tools like SQLAlchemy to interact with databases and retrieve data for analysis.
 
 3. **Data Processing**:
-    - Preprocess data using Pandas and NumPy for feature engineering and cleaning.
-    - Ensure data is in the correct format (e.g., CSV, Parquet) for model training.
+
+   - Preprocess data using Pandas and NumPy for feature engineering and cleaning.
+   - Ensure data is in the correct format (e.g., CSV, Parquet) for model training.
 
 4. **Model Training**:
-    - Utilize Scikit-Learn pipelines to streamline the training process and integrate feature engineering steps seamlessly.
-    - Connect data sources to Jupyter notebooks or Python scripts for model development.
+   - Utilize Scikit-Learn pipelines to streamline the training process and integrate feature engineering steps seamlessly.
+   - Connect data sources to Jupyter notebooks or Python scripts for model development.
 
 By leveraging these specific tools and methods, such as web scraping tools, APIs, and survey platforms, and integrating them within the existing technology stack using Airflow for automation, SQL/Pandas for data analysis, and Scikit-Learn for model training, Supermercados Peruanos can streamline the data collection process, ensuring that the data is readily accessible and in the correct format for analysis and model training for the Competitive Intelligence Dashboard project.
 
@@ -89,94 +103,102 @@ By leveraging these specific tools and methods, such as web scraping tools, APIs
 ## Feature Extraction
 
 ### Competitor Data
+
 1. **Price Features**
-   - *price_avg*: Average price of products offered by competitors.
-   - *price_diff*: Price difference of competitor products compared to Supermercados Peruanos.
-   
+   - _price_avg_: Average price of products offered by competitors.
+   - _price_diff_: Price difference of competitor products compared to Supermercados Peruanos.
 2. **Promotion Features**
-   - *promotion_freq*: Frequency of promotions run by competitors.
-   - *promotion_type*: Type of promotions (discounts, BOGO, etc.).
-   
+   - _promotion_freq_: Frequency of promotions run by competitors.
+   - _promotion_type_: Type of promotions (discounts, BOGO, etc.).
 3. **Product Features**
-   - *product_category*: Categorization of competitor products.
-   - *product_rating*: Customer rating of competitor products.
+   - _product_category_: Categorization of competitor products.
+   - _product_rating_: Customer rating of competitor products.
 
 ### Customer Data
+
 1. **Purchase Behavior**
-   - *purchase_freq*: Frequency of customer purchases.
-   - *purchase_amount*: Average amount spent per purchase.
+
+   - _purchase_freq_: Frequency of customer purchases.
+   - _purchase_amount_: Average amount spent per purchase.
 
 2. **Segmentation Features**
-   - *customer_segment*: Segmentation based on demographics or behavioral patterns.
+   - _customer_segment_: Segmentation based on demographics or behavioral patterns.
 
 ## Feature Engineering
 
 1. **Normalization**
-   - Scale numerical features like *price_avg* and *purchase_amount* using Min-Max scaling.
-   
+   - Scale numerical features like _price_avg_ and _purchase_amount_ using Min-Max scaling.
 2. **Categorical Encoding**
-   - Encode categorical features like *promotion_type* and *product_category* using one-hot encoding.
-   
+   - Encode categorical features like _promotion_type_ and _product_category_ using one-hot encoding.
 3. **Text Data Processing**
    - Extract sentiment features from customer reviews using NLP techniques.
-   
 4. **Interaction Features**
-   - Create interaction features like *price_avg* x *promotion_freq* to capture combined effects.
+
+   - Create interaction features like _price_avg_ x _promotion_freq_ to capture combined effects.
 
 5. **Customer Segmentation**
-   - Cluster customers based on *purchase_freq* and *purchase_amount* for personalized recommendations.
+   - Cluster customers based on _purchase_freq_ and _purchase_amount_ for personalized recommendations.
 
 ## Recommendations for Variable Names
 
 1. **Competitor Data Variables**
-   - *avg_price_competitor1*, *price_diff_competitor2*, *promotion_freq_competitor3*, *product_category_competitor4*
+
+   - _avg_price_competitor1_, _price_diff_competitor2_, _promotion_freq_competitor3_, _product_category_competitor4_
 
 2. **Customer Data Variables**
-   - *purchase_freq_customer1*, *purchase_amount_customer2*, *customer_segment_demographics3*
+   - _purchase_freq_customer1_, _purchase_amount_customer2_, _customer_segment_demographics3_
 
-By incorporating these feature extraction and engineering strategies, Supermercados Peruanos can enhance the interpretability of the data and improve the performance of the machine learning models in the Competitive Intelligence Dashboard project. Using clear and descriptive variable names like *avg_price_competitor1* and *customer_segment_demographics3* will aid in better understanding and analysis of the data, leading to more effective decision-making based on the insights derived from the project.
+By incorporating these feature extraction and engineering strategies, Supermercados Peruanos can enhance the interpretability of the data and improve the performance of the machine learning models in the Competitive Intelligence Dashboard project. Using clear and descriptive variable names like _avg_price_competitor1_ and _customer_segment_demographics3_ will aid in better understanding and analysis of the data, leading to more effective decision-making based on the insights derived from the project.
 
 ## Metadata Management for Competitive Intelligence Dashboard
 
 ## Unique Demands and Characteristics
 
 ### Competitor Data Metadata
+
 1. **Competitor Information**
-   - *competitor_name*: Name of the competitor store.
-   - *competitor_website*: URL of the competitor's website for data retrieval.
-   - *competitor_location*: Geographic location of the competitor store.
+
+   - _competitor_name_: Name of the competitor store.
+   - _competitor_website_: URL of the competitor's website for data retrieval.
+   - _competitor_location_: Geographic location of the competitor store.
 
 2. **Pricing Metadata**
-   - *price_currency*: Currency used for pricing data.
-   - *price_date*: Date and time of the pricing data extraction.
-   - *price_unit*: Unit (e.g., kg, item) for pricing information.
+
+   - _price_currency_: Currency used for pricing data.
+   - _price_date_: Date and time of the pricing data extraction.
+   - _price_unit_: Unit (e.g., kg, item) for pricing information.
 
 3. **Promotion Metadata**
-   - *promotion_type*: Type of promotion (e.g., discount, BOGO).
-   - *promotion_duration*: Duration of the promotion.
+   - _promotion_type_: Type of promotion (e.g., discount, BOGO).
+   - _promotion_duration_: Duration of the promotion.
 
 ### Customer Data Metadata
+
 1. **Customer Information**
-   - *customer_id*: Unique identifier for each customer.
-   - *customer_age*: Age of the customer.
-   - *customer_gender*: Gender of the customer.
+
+   - _customer_id_: Unique identifier for each customer.
+   - _customer_age_: Age of the customer.
+   - _customer_gender_: Gender of the customer.
 
 2. **Purchase Metadata**
-   - *purchase_date*: Date and time of the customer purchase.
-   - *purchase_total*: Total amount spent in the transaction.
-   - *purchase_items*: Number of items purchased.
+   - _purchase_date_: Date and time of the customer purchase.
+   - _purchase_total_: Total amount spent in the transaction.
+   - _purchase_items_: Number of items purchased.
 
 ## Relevant Insights
 
 1. **Data Source Tracking**
+
    - **Importance**: Track the source of each data point to ensure data accuracy and traceability.
    - **Implementation**: Store data source information in metadata to link back to the original data.
 
 2. **Data Versioning**
+
    - **Importance**: Maintain a history of data changes for reproducibility and auditing purposes.
    - **Implementation**: Include timestamps for data extraction and updates in metadata.
 
 3. **Feature Description**
+
    - **Importance**: Provide detailed descriptions of each feature for better understanding and interpretation.
    - **Implementation**: Document feature definitions, types, and transformations in metadata.
 
@@ -191,6 +213,7 @@ By including specific metadata elements tailored to the competitive intelligence
 ## Specific Data Problems
 
 ### Competitor Data
+
 1. **Incomplete Data**:
    - Competitor pricing or promotion data may be missing for certain products or time periods.
 2. **Data Discrepancies**:
@@ -199,6 +222,7 @@ By including specific metadata elements tailored to the competitive intelligence
    - Erroneous pricing outliers in competitor datasets may skew analysis results.
 
 ### Customer Data
+
 1. **Missing Values**:
    - Customer demographic information or purchase history may contain missing values.
 2. **Biased Sampling**:
@@ -209,6 +233,7 @@ By including specific metadata elements tailored to the competitive intelligence
 ## Strategic Data Preprocessing Practices
 
 ### Competitor Data
+
 1. **Missing Data Handling**
    - **Strategy**: Impute missing values based on historical trends or competitor averages.
 2. **Data Standardization**
@@ -217,6 +242,7 @@ By including specific metadata elements tailored to the competitive intelligence
    - **Strategy**: Apply robust statistical methods like winsorization to handle pricing outliers.
 
 ### Customer Data
+
 1. **Imputation Techniques**
    - **Strategy**: Utilize predictive modeling for imputing missing customer demographic information.
 2. **Bias Mitigation**
@@ -227,13 +253,15 @@ By including specific metadata elements tailored to the competitive intelligence
 ## Unique Demands and Characteristics
 
 1. **Real-time Data Updates**
+
    - **Challenge**: Ensuring timely preprocessing of constantly changing competitor and customer data.
    - **Strategy**: Implement automated data pipelines with incremental preprocessing steps for efficient updates.
-  
+
 2. **Multi-source Data Integration**
+
    - **Challenge**: Combining diverse data sources while maintaining data quality and consistency.
    - **Strategy**: Employ data fusion techniques to integrate competitor and customer data seamlessly.
-  
+
 3. **Interpretability vs. Complexity**
    - **Challenge**: Balancing feature engineering complexity with model interpretability.
    - **Strategy**: Document feature engineering rationale and maintain feature importance analysis for transparency.
@@ -274,6 +302,7 @@ customer_data.to_csv("preprocessed_customer_data.csv", index=False)
 ```
 
 In this code snippet:
+
 - Competitor data pricing information is imputed with the mean and then normalized using Min-Max scaling for consistent scaling across features.
 - Customer data demographic information is imputed with the most frequent value and then encoded using one-hot encoding for the categorical gender feature.
 - The preprocessed data is saved to CSV files for further model training and analysis.
@@ -287,23 +316,28 @@ To address the unique challenges and data types presented by the Competitive Int
 ## Recommended Modeling Steps
 
 ### 1. **Hybrid Modeling Approach**
-   - **Importance**: Integrating traditional machine learning algorithms like clustering and classification with advanced natural language processing models such as GPT-3 allows for a holistic analysis of competitor pricing, promotions, customer preferences, and textual data.
-   
+
+- **Importance**: Integrating traditional machine learning algorithms like clustering and classification with advanced natural language processing models such as GPT-3 allows for a holistic analysis of competitor pricing, promotions, customer preferences, and textual data.
+
 ### 2. **Competitor Pricing and Promotion Analysis**
-   - **Step**: Train clustering models to identify patterns in competitor pricing and promotion strategies.
-   - **Importance**: Understanding these patterns can help Supermercados Peruanos adjust their pricing and promotional strategies to stay competitive in the market.
+
+- **Step**: Train clustering models to identify patterns in competitor pricing and promotion strategies.
+- **Importance**: Understanding these patterns can help Supermercados Peruanos adjust their pricing and promotional strategies to stay competitive in the market.
 
 ### 3. **Customer Segmentation and Recommendation**
-   - **Step**: Develop classification models to segment customers based on purchase behavior and preferences.
-   - **Importance**: Tailoring marketing strategies and promotions to specific customer segments can improve customer engagement and loyalty.
+
+- **Step**: Develop classification models to segment customers based on purchase behavior and preferences.
+- **Importance**: Tailoring marketing strategies and promotions to specific customer segments can improve customer engagement and loyalty.
 
 ### 4. **Sentiment Analysis and Text Summarization**
-   - **Step**: Utilize GPT-3 for sentiment analysis of customer reviews and summarization of competitor strategies from textual data.
-   - **Importance**: Extracting insights from unstructured text data can provide valuable information on customer satisfaction, competitor strengths, and weaknesses.
+
+- **Step**: Utilize GPT-3 for sentiment analysis of customer reviews and summarization of competitor strategies from textual data.
+- **Importance**: Extracting insights from unstructured text data can provide valuable information on customer satisfaction, competitor strengths, and weaknesses.
 
 ### 5. **Continuous Model Training and Evaluation**
-   - **Step**: Implement a feedback loop for continuous model training and evaluation based on new data inputs.
-   - **Importance**: Ensuring that models are up-to-date and adapting to changing market dynamics and competitor strategies for accurate insights.
+
+- **Step**: Implement a feedback loop for continuous model training and evaluation based on new data inputs.
+- **Importance**: Ensuring that models are up-to-date and adapting to changing market dynamics and competitor strategies for accurate insights.
 
 ## Crucial Step: Integrating Structured and Unstructured Data Sources
 
@@ -318,49 +352,61 @@ To effectively implement the modeling strategy for the Competitive Intelligence 
 ## 1. Scikit-Learn
 
 ### Description:
+
 Scikit-Learn is a widely-used machine learning library in Python, offering a robust set of tools for traditional machine learning tasks such as clustering and classification.
 
 ### Fit with Modeling Strategy:
+
 - **Handling Structured Data**: Scikit-Learn is ideal for training clustering and classification models on competitor pricing, promotions, and customer segmentation.
 - **Benefits**: Supports a variety of algorithms and provides tools for model evaluation and validation.
 
 ### Integration with Current Technologies:
+
 - **Seamless Integration**: Scikit-Learn can be integrated into existing Python workflows alongside data preprocessing and visualization tools.
 - **Beneficial Features**: Pipeline functionality for streamlined model training and testing.
 
 ### Documentation and Resources:
+
 - [Scikit-Learn Documentation](https://scikit-learn.org/stable/): Official documentation providing detailed information on usage, algorithms, and examples relevant to the project's objectives.
 
 ## 2. OpenAI's GPT-3
 
 ### Description:
+
 GPT-3 is a state-of-the-art natural language processing model developed by OpenAI, capable of tasks like sentiment analysis and text summarization.
 
 ### Fit with Modeling Strategy:
+
 - **Handling Unstructured Text Data**: GPT-3 excels in processing unstructured text data, allowing for sentiment analysis of customer reviews and summarizing competitor strategies.
 - **Benefits**: Provides advanced language processing capabilities for extracting insights from textual data sources.
 
 ### Integration with Current Technologies:
+
 - **API Integration**: Connect GPT-3 API calls within the data processing pipeline to incorporate text analysis tasks seamlessly.
 - **Beneficial Features**: Ability to generate high-quality text outputs for summarization tasks.
 
 ### Documentation and Resources:
+
 - [OpenAI's GPT-3 Documentation](https://www.openai.com/gpt-3/): Official resources offering insights and examples on leveraging GPT-3 for natural language processing tasks.
 
 ## 3. Apache Airflow
 
 ### Description:
+
 Apache Airflow is an open-source platform to programmatically author, schedule, and monitor workflows.
 
 ### Fit with Modeling Strategy:
+
 - **Automating Data Pipelines**: Airflow can orchestrate model training workflows, ensuring regular data updates and retraining.
 - **Benefits**: Enables the automation of data preprocessing, model training, and evaluation processes.
 
 ### Integration with Current Technologies:
+
 - **Workflow Management**: Seamlessly integrate Airflow into existing data pipelines for efficient data processing.
 - **Beneficial Features**: DAG (Directed Acyclic Graph) management for visualizing and monitoring workflow tasks.
 
 ### Documentation and Resources:
+
 - [Apache Airflow Documentation](https://airflow.apache.org/docs/): Official documentation offering detailed guidance on setting up and utilizing Airflow for workflow management.
 
 By incorporating these tools and technologies tailored to the project's data modeling needs, Supermercados Peruanos can enhance efficiency, accuracy, and scalability in the development of their Competitive Intelligence Dashboard. This strategic selection of tools aligns with the project's objectives and ensures a seamless integration into the existing workflow for impactful data-driven strategic planning.
@@ -422,6 +468,7 @@ data.to_csv("fictitious_competitor_customer_data.csv", index=False)
 ```
 
 In the script:
+
 1. Fictitious data is generated for competitor pricing, promotions, product attributes, and customer data based on the specified attributes.
 2. Data validation checks are performed for missing values to ensure data quality.
 3. Real-world variability is incorporated by adding noise to simulated data to mimic variability in the real dataset.
@@ -432,13 +479,14 @@ By utilizing this script and incorporating data validation, variability, and com
 Certainly! Below is an example of a few rows of mocked data representing relevant information for the Competitive Intelligence Dashboard project at Supermercados Peruanos. This example showcases the structure of the dataset with feature names and types, and highlights how the data points are formatted for model ingestion.
 
 | price_avg | price_diff | promotion_freq | promotion_type | product_category | product_rating | customer_id | customer_age | customer_gender | purchase_freq | purchase_amount |
-|-----------|------------|----------------|----------------|------------------|----------------|-------------|--------------|-----------------|---------------|-----------------|
+| --------- | ---------- | -------------- | -------------- | ---------------- | -------------- | ----------- | ------------ | --------------- | ------------- | --------------- |
 | 39.28     | 5.12       | 2              | Discount       | Grocery          | 4.3            | 1           | 38           | Male            | 5             | 52.17           |
 | 21.75     | 3.81       | 0              | BOGO           | Electronics      | 4.9            | 2           | 45           | Female          | 7             | 48.93           |
 | 56.91     | 4.92       | 3              | Discount       | Clothing         | 3.7            | 3           | 27           | Male            | 4             | 55.72           |
 | 43.76     | 3.04       | 1              | Free Gift      | Grocery          | 4.5            | 4           | 33           | Female          | 6             | 49.81           |
 
 - **Feature Names and Types**:
+
   - Numeric Features: `price_avg`, `price_diff`, `product_rating`, `customer_id`, `customer_age`, `purchase_freq`, `purchase_amount`
   - Categorical Features: `promotion_type`, `product_category`, `customer_gender`
 
@@ -482,23 +530,29 @@ print("Model Accuracy: {:.2f}".format(accuracy))
 ```
 
 ### Code Structure and Conventions:
+
 1. **Data Loading**:
+
    - Load the preprocessed dataset for model training and evaluation.
 
 2. **Data Preparation**:
+
    - Split the dataset into features (X) and the target variable (y).
    - Split the data into training and testing sets using `train_test_split`.
 
 3. **Model Training**:
+
    - Initialize a RandomForestClassifier model and train it on the training data.
 
 4. **Model Evaluation**:
+
    - Make predictions on the test set and calculate the model's accuracy.
 
 5. **Model Deployment**:
    - Save the trained model using joblib for future deployment in a production environment.
 
 ### Code Quality and Documentation:
+
 - **Comments**: Detailed comments explain the purpose and logic of each section of the code.
 - **Variable Naming**: Descriptive variable names enhance code readability.
 - **Modular Structure**: Code is segmented into clear sections for easy maintenance and scalability.
@@ -510,43 +564,53 @@ By following these conventions and best practices, Supermercados Peruanos can en
 To effectively deploy the machine learning model for the Competitive Intelligence Dashboard project at Supermercados Peruanos, here is a step-by-step deployment plan tailored to the unique demands and characteristics of the project.
 
 ## 1. Pre-Deployment Checks
+
 - **Data Validation**: Ensure the dataset used for training the model is up-to-date and consistent.
 - **Model Evaluation**: Confirm the model's performance metrics meet the project's accuracy requirements.
 
 ## 2. Model Packaging
+
 - **Tools**: Use `joblib` or `pickle` for model serialization.
 - **Documentation**: [joblib Documentation](https://joblib.readthedocs.io/en/latest/) | [pickle Documentation](https://docs.python.org/3/library/pickle.html)
 
 ## 3. Containerization
+
 - **Tool**: Docker for containerization.
 - **Documentation**: [Docker Documentation](https://docs.docker.com/)
 
 ## 4. Model Deployment
+
 - **Platform**: Amazon SageMaker for model deployment.
 - **Documentation**: [Amazon SageMaker Documentation](https://docs.aws.amazon.com/sagemaker/)
 
 ## 5. API Development
+
 - **Tools**: Flask or FastAPI for RESTful API development.
 - **Documentation**: [Flask Documentation](https://flask.palletsprojects.com/en/2.0.x/) | [FastAPI Documentation](https://fastapi.tiangolo.com/)
 
 ## 6. Monitoring & Logging
+
 - **Tool**: Prometheus for monitoring.
 - **Documentation**: [Prometheus Documentation](https://prometheus.io/)
 
 ## 7. Scalability
+
 - **Tool**: Kubernetes for container orchestration.
 - **Documentation**: [Kubernetes Documentation](https://kubernetes.io/)
 
 ## 8. Continuous Integration/Continuous Deployment (CI/CD)
+
 - **Platform**: GitHub Actions or Jenkins for CI/CD pipeline.
 - **Documentation**: [GitHub Actions Documentation](https://docs.github.com/en/actions) | [Jenkins Documentation](https://www.jenkins.io/)
 
 ## 9. Post-Deployment Testing
+
 - **Automated Testing**: Conduct automated testing to ensure model functionality in the live environment.
 - **Tools**: PyTest for testing.
 - **Documentation**: [PyTest Documentation](https://docs.pytest.org/en/6.2.x/)
 
 ## 10. Live Environment Integration
+
 - **Collaboration**: Work closely with DevOps and IT teams to integrate the model into the live environment.
 - **Testing & Validation**: Run end-to-end tests to confirm the model's behavior in the production setup.
 
@@ -577,6 +641,7 @@ CMD ["python", "app.py"]
 ```
 
 ### Dockerfile Configurations:
+
 1. **Base Image**: Utilizes a Python slim image for a lightweight container setup.
 2. **Dependency Installation**: Installs project dependencies defined in `requirements.txt` for a clean environment.
 3. **Project Files**: Copies project files into the container for deployment.
@@ -584,6 +649,7 @@ CMD ["python", "app.py"]
 5. **Command**: Specifies the command to start the API server using `app.py`.
 
 ### Instructions:
+
 - **Optimized Performance**: Ensure to optimize Dockerfile configurations for memory and CPU usage to enhance performance.
 - **Scalability Consideration**: Implement container orchestration tools like Kubernetes for enhanced scalability.
 - **Monitoring Setup**: Incorporate monitoring tools like Prometheus for performance tracking.
@@ -593,31 +659,35 @@ By utilizing this Dockerfile with configurations tailored to the performance and
 ## User Groups and User Stories for the Competitive Intelligence Dashboard
 
 ### 1. Market Analysts
-- **User Story**:  
-  - *Scenario*: Maria is a Market Analyst at Supermercados Peruanos. She struggles to keep up with rapid market changes and competitor strategies, leading to challenges in making data-driven strategic decisions.  
-  - *Pain Point*: Maria finds it time-consuming to manually gather and analyze competitor pricing, promotions, and customer data across multiple sources.  
-  - *Solution*: The Competitive Intelligence Dashboard automates data collection, provides in-depth insights into competitor strategies and customer preferences, enabling Maria to make informed decisions quickly.  
-  - *Component*: The integrated data pipeline in Apache Airflow gathers and preprocesses the data, feeding it into models trained with Scikit-Learn and GPT-3 for analysis.
+
+- **User Story**:
+  - _Scenario_: Maria is a Market Analyst at Supermercados Peruanos. She struggles to keep up with rapid market changes and competitor strategies, leading to challenges in making data-driven strategic decisions.
+  - _Pain Point_: Maria finds it time-consuming to manually gather and analyze competitor pricing, promotions, and customer data across multiple sources.
+  - _Solution_: The Competitive Intelligence Dashboard automates data collection, provides in-depth insights into competitor strategies and customer preferences, enabling Maria to make informed decisions quickly.
+  - _Component_: The integrated data pipeline in Apache Airflow gathers and preprocesses the data, feeding it into models trained with Scikit-Learn and GPT-3 for analysis.
 
 ### 2. Marketing Managers
-- **User Story**:  
-  - *Scenario*: Juan, a Marketing Manager, struggles to tailor marketing campaigns to meet customer preferences and stay competitive in the retail market.  
-  - *Pain Point*: Juan lacks insights into customer behavior and competitor positioning, hindering the effectiveness of campaign strategies.  
-  - *Solution*: The dashboard provides detailed customer segmentation and competitor analysis, enabling Juan to create targeted campaigns based on real-time market trends.  
-  - *Component*: Scikit-Learn models for customer segmentation and competitor analysis empower Juan to make data-driven marketing decisions.
+
+- **User Story**:
+  - _Scenario_: Juan, a Marketing Manager, struggles to tailor marketing campaigns to meet customer preferences and stay competitive in the retail market.
+  - _Pain Point_: Juan lacks insights into customer behavior and competitor positioning, hindering the effectiveness of campaign strategies.
+  - _Solution_: The dashboard provides detailed customer segmentation and competitor analysis, enabling Juan to create targeted campaigns based on real-time market trends.
+  - _Component_: Scikit-Learn models for customer segmentation and competitor analysis empower Juan to make data-driven marketing decisions.
 
 ### 3. Data Scientists
-- **User Story**:  
-  - *Scenario*: Sofia, a Data Scientist at Supermercados Peruanos, faces challenges in deriving meaningful insights from vast amounts of data.  
-  - *Pain Point*: Sofia struggles to analyze unstructured textual data and needs advanced tools for sentiment analysis and text summarization.  
-  - *Solution*: The integration of GPT-3 in the dashboard automates sentiment analysis and text summarization, enabling Sofia to extract valuable insights quickly.  
-  - *Component*: The text analysis module powered by GPT-3 enables Sofia to process unstructured text data efficiently.
+
+- **User Story**:
+  - _Scenario_: Sofia, a Data Scientist at Supermercados Peruanos, faces challenges in deriving meaningful insights from vast amounts of data.
+  - _Pain Point_: Sofia struggles to analyze unstructured textual data and needs advanced tools for sentiment analysis and text summarization.
+  - _Solution_: The integration of GPT-3 in the dashboard automates sentiment analysis and text summarization, enabling Sofia to extract valuable insights quickly.
+  - _Component_: The text analysis module powered by GPT-3 enables Sofia to process unstructured text data efficiently.
 
 ### 4. Business Executives
-- **User Story**:  
-  - *Scenario*: Carlos, a Business Executive, is responsible for making key strategic decisions for Supermercados Peruanos.  
-  - *Pain Point*: Carlos needs accurate and timely insights into market trends and competitor strategies to drive business growth.  
-  - *Solution*: The dashboard provides real-time competitive intelligence, enabling Carlos to anticipate market changes and make informed strategic decisions.  
-  - *Component*: Prometheus for monitoring dashboard performance and ensuring data accuracy for critical decision-making.
+
+- **User Story**:
+  - _Scenario_: Carlos, a Business Executive, is responsible for making key strategic decisions for Supermercados Peruanos.
+  - _Pain Point_: Carlos needs accurate and timely insights into market trends and competitor strategies to drive business growth.
+  - _Solution_: The dashboard provides real-time competitive intelligence, enabling Carlos to anticipate market changes and make informed strategic decisions.
+  - _Component_: Prometheus for monitoring dashboard performance and ensuring data accuracy for critical decision-making.
 
 By identifying diverse user groups and their specific pain points, along with how the application addresses these pain points through different project components, Supermercados Peruanos can showcase the wide-ranging benefits of the Competitive Intelligence Dashboard and its value proposition in enabling data-driven strategic planning and informed decision-making in the competitive retail environment of Peru.

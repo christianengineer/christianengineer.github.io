@@ -8,18 +8,21 @@ layout: article
 ## AI Public Transportation Accessibility Project Overview
 
 ## Objectives:
+
 - To analyze transportation networks in Peru to identify areas where accessibility and affordability can be improved for low-income populations.
 - To develop an AI system that leverages Machine Learning models to optimize transportation routes and schedules.
 - To create a user-friendly interface (using Flask) for users to access information and recommendations for efficient public transportation options.
 - To monitor and gather metrics regarding system performance and user interactions using Prometheus.
 
 ## System Design Strategies:
+
 1. **Data Collection and Processing:** Gather data on transportation networks, schedules, and user demographics in Peru. Preprocess and clean the data for training machine learning models.
 2. **Machine Learning Modeling** - Use Keras and Scikit-Learn to develop models for optimizing transportation routes, predicting demand, and recommending affordable options for low-income populations.
 3. **Flask-based Web Interface:** Create a web application using Flask to display transportation information, route recommendations, and affordability insights to users.
 4. **Integration with Prometheus:** Implement monitoring and metric gathering using Prometheus to track system performance, user interactions, and provide feedback for system improvement.
 
 ## Chosen Libraries:
+
 1. **Keras:** Utilized for building and training neural networks for various machine learning tasks such as demand prediction, route optimization, and affordability analysis.
 2. **Scikit-Learn:** Employed for developing traditional machine learning models like regression, clustering, and classification algorithms for data analysis in the transportation domain.
 3. **Flask:** Selected as the web framework for building the user interface to interact with the AI system, enabling users to access transportation recommendations and information.
@@ -30,24 +33,29 @@ By combining these technologies and strategies, the AI Public Transportation Acc
 ## MLOps Infrastructure for Public Transportation Accessibility AI in Peru
 
 ## Continuous Integration/Continuous Deployment (CI/CD):
+
 - **CI/CD Pipeline:** Implement a robust CI/CD pipeline to automate the training, testing, and deployment of machine learning models using Keras and Scikit-Learn.
 - **GitHub Actions:** Utilize GitHub Actions for version control, automated testing, and deployment of code changes to production and staging environments.
 
 ## Model Training and Deployment:
+
 - **Model Registry:** Establish a central model registry where trained models are stored, versioned, and easily accessible for deployment.
 - **Model Versioning:** Implement a versioning strategy for models to track changes, improvements, and performance metrics over time.
 - **Model Deployment:** Utilize tools like TensorFlow Serving or Flask APIs to deploy trained models for real-time predictions in the public transportation accessibility application.
 
 ## Monitoring and Logging:
+
 - **Logging:** Set up centralized logging to track system events, errors, and user interactions for monitoring and troubleshooting purposes.
 - **Metrics Collection:** Use Prometheus to collect performance metrics, model accuracy, and user engagement data for analyzing system behavior and making data-driven decisions.
 - **Alerting:** Implement alerting mechanisms to notify stakeholders of critical system issues or anomalies in model performance.
 
 ## Data Pipelines and Data Versioning:
+
 - **Data Versioning:** Establish a data versioning system to track changes in input data used for training models and ensure reproducibility.
 - **Data Pipelines:** Build data pipelines using tools like Apache Airflow to automate data ingestion, preprocessing, and feature engineering tasks for training machine learning models.
 
 ## Infrastructure Orchestration and Scalability:
+
 - **Containerization:** Dockerize the application components, including Flask API, model serving containers, and Prometheus for easier deployment and scalability.
 - **Orchestration:** Use Kubernetes for container orchestration to manage scaling, load balancing, and fault tolerance of application components in a distributed environment.
 - **Auto-Scaling:** Implement auto-scaling strategies to dynamically adjust resources based on system load and demand, ensuring optimal performance during peak usage periods.
@@ -100,16 +108,17 @@ public-transportation-ai-peru/
 ```
 
 ## File Structure Overview:
+
 - **data/**: Contains subdirectories for raw and processed data used in model training and evaluation.
 - **models/**: Stores trained machine learning models that can be loaded for predictions in the application.
 - **notebooks/**: Includes Jupyter notebooks for data exploration, preprocessing, and model development.
 - **src/**: Houses the source code for data processing, model training, and Flask application components.
-    - **data_processing/**: Scripts for data preprocessing and feature engineering.
-    - **models/**: Python scripts for model training, evaluation, and serialization.
-    - **app/**: Contains files for the Flask web application.
-        - **api/**: Flask API endpoints for serving machine learning models.
-        - **templates/**: HTML templates for the web interface.
-        - **static/**: Static files like CSS, JavaScript for frontend.
+  - **data_processing/**: Scripts for data preprocessing and feature engineering.
+  - **models/**: Python scripts for model training, evaluation, and serialization.
+  - **app/**: Contains files for the Flask web application.
+    - **api/**: Flask API endpoints for serving machine learning models.
+    - **templates/**: HTML templates for the web interface.
+    - **static/**: Static files like CSS, JavaScript for frontend.
 - **config/**: Configuration files for model hyperparameters, API settings, etc.
 - **tests/**: Unit tests for data processing, model training to ensure code quality and functionality.
 - **requirements.txt**: List of Python dependencies required for the project.
@@ -140,19 +149,23 @@ models/
 ```
 
 ## Models Directory Overview:
+
 - **demand_prediction/**: Contains files related to the demand prediction model.
-    - **train_demand_prediction.py**: Python script for training the demand prediction model using Keras or Scikit-Learn.
-    - **demand_prediction_model.pkl**: Serialized demand prediction model saved after training for making predictions.
+
+  - **train_demand_prediction.py**: Python script for training the demand prediction model using Keras or Scikit-Learn.
+  - **demand_prediction_model.pkl**: Serialized demand prediction model saved after training for making predictions.
 
 - **route_optimization/**: Includes files for the route optimization model.
-    - **train_route_optimization.py**: Script for training the route optimization model using Keras or Scikit-Learn.
-    - **route_optimization_model.h5**: Trained route optimization model saved in a format suitable for deployment.
+
+  - **train_route_optimization.py**: Script for training the route optimization model using Keras or Scikit-Learn.
+  - **route_optimization_model.h5**: Trained route optimization model saved in a format suitable for deployment.
 
 - **affordability_analysis/**: Holds files for the affordability analysis model.
-    - **train_affordability_analysis.py**: Python script for training the affordability analysis model using Keras or Scikit-Learn.
-    - **affordability_analysis_model.joblib**: Affordability analysis model serialized and saved for making predictions.
+  - **train_affordability_analysis.py**: Python script for training the affordability analysis model using Keras or Scikit-Learn.
+  - **affordability_analysis_model.joblib**: Affordability analysis model serialized and saved for making predictions.
 
 ## Model Files Detail:
+
 - Each model directory contains a script for training the respective model and the serialized model file saved after training.
 - Training scripts include data preprocessing, model training, evaluation, and serialization steps.
 - Serialized model files are saved in formats compatible with deployment frameworks like TensorFlow Serving for seamless integration with the Flask application.
@@ -188,22 +201,24 @@ deployment/
 ```
 
 ## Deployment Directory Overview:
+
 - **Dockerfile**: Contains instructions for building a Docker image to deploy the application components.
 - **requirements.txt**: Lists the Python dependencies required for the deployment environment.
 - **app/**: Includes files for the Flask web application.
-    - **app.py**: Main Flask application file containing API endpoints and web interface logic.
-    - **templates/**: Contains HTML templates for the web interface to display transportation recommendations.
-    - **static/**: Stores static files like CSS, JavaScript for frontend styling and functionality.
+  - **app.py**: Main Flask application file containing API endpoints and web interface logic.
+  - **templates/**: Contains HTML templates for the web interface to display transportation recommendations.
+  - **static/**: Stores static files like CSS, JavaScript for frontend styling and functionality.
 - **ml_model/**: Contains the machine learning model files required for making predictions in the deployed application.
-    - **model.py**: Python script for loading and using the trained machine learning models.
-    - **demand_prediction_model.pkl**: Serialized demand prediction model for predicting transportation demand.
-    - **route_optimization_model.h5**: Trained route optimization model for optimizing transportation routes.
-    - **affordability_analysis_model.joblib**: Serialized affordability analysis model for assessing transportation affordability.
+  - **model.py**: Python script for loading and using the trained machine learning models.
+  - **demand_prediction_model.pkl**: Serialized demand prediction model for predicting transportation demand.
+  - **route_optimization_model.h5**: Trained route optimization model for optimizing transportation routes.
+  - **affordability_analysis_model.joblib**: Serialized affordability analysis model for assessing transportation affordability.
 - **config/**: Configuration directory containing settings for the application, API endpoints, and model parameters.
 - **README.md**: Deployment documentation providing guidelines for setting up and running the application.
 - **docker-compose.yml**: Docker Compose configuration file for orchestrating multiple containers for the application components.
 
 ## Deployment Details:
+
 - The Dockerfile and requirements.txt ensure reproducible deployments with all necessary dependencies installed.
 - The Flask application files in the app directory handle API endpoints and user interface for accessing transportation recommendations.
 - The ml_model directory stores the trained machine learning models required for making predictions in the deployed application.
@@ -297,35 +312,42 @@ The model is trained on the mock data, evaluated using mean squared error, and s
 ## Types of Users for Public Transportation Accessibility AI in Peru
 
 1. **Low-Income Commuter**
-    - User Story: As a low-income commuter, I want to find the most affordable and accessible public transportation options to reach my destination.
-    - File: `app/templates/index.html` (Homepage template displaying transportation recommendations)
+
+   - User Story: As a low-income commuter, I want to find the most affordable and accessible public transportation options to reach my destination.
+   - File: `app/templates/index.html` (Homepage template displaying transportation recommendations)
 
 2. **Urban Planner**
-    - User Story: As an urban planner, I need insights on transportation demand and route optimization to improve public transportation infrastructure in low-income areas.
-    - File: `models/train_demand_prediction.py` (Machine learning model for demand prediction)
+
+   - User Story: As an urban planner, I need insights on transportation demand and route optimization to improve public transportation infrastructure in low-income areas.
+   - File: `models/train_demand_prediction.py` (Machine learning model for demand prediction)
 
 3. **Government Official**
-    - User Story: As a government official, I want to monitor metrics and performance of the transportation accessibility AI system to make data-driven decisions for public policy.
-    - File: `config/prometheus.yml` (Configuration file for Prometheus monitoring)
+
+   - User Story: As a government official, I want to monitor metrics and performance of the transportation accessibility AI system to make data-driven decisions for public policy.
+   - File: `config/prometheus.yml` (Configuration file for Prometheus monitoring)
 
 4. **Data Analyst**
-    - User Story: As a data analyst, I aim to explore and preprocess transportation data for training machine learning models to enhance transportation affordability analysis.
-    - File: `src/data_processing/preprocess_data.py` (Script for data preprocessing and feature engineering)
+
+   - User Story: As a data analyst, I aim to explore and preprocess transportation data for training machine learning models to enhance transportation affordability analysis.
+   - File: `src/data_processing/preprocess_data.py` (Script for data preprocessing and feature engineering)
 
 5. **Regular Commuter**
-    - User Story: As a regular commuter, I seek an easy-to-use web interface to access real-time transportation updates and affordable route recommendations.
-    - File: `app/app.py` (Flask API endpoints for serving transportation recommendations)
+
+   - User Story: As a regular commuter, I seek an easy-to-use web interface to access real-time transportation updates and affordable route recommendations.
+   - File: `app/app.py` (Flask API endpoints for serving transportation recommendations)
 
 6. **AI Developer**
-    - User Story: As an AI developer, I need access to trained machine learning models for demand prediction, route optimization, and affordability analysis to integrate into the public transportation AI application.
-    - File: `models/train_route_optimization.py` (Training script for the route optimization model)
+
+   - User Story: As an AI developer, I need access to trained machine learning models for demand prediction, route optimization, and affordability analysis to integrate into the public transportation AI application.
+   - File: `models/train_route_optimization.py` (Training script for the route optimization model)
 
 7. **Transportation Researcher**
-    - User Story: As a transportation researcher, I want to analyze the impact of improved public transportation accessibility on low-income populations for academic studies.
-    - File: `notebooks/analyze_affordability.ipynb` (Jupyter notebook for data exploration and analysis)
+
+   - User Story: As a transportation researcher, I want to analyze the impact of improved public transportation accessibility on low-income populations for academic studies.
+   - File: `notebooks/analyze_affordability.ipynb` (Jupyter notebook for data exploration and analysis)
 
 8. **System Administrator**
-    - User Story: As a system administrator, I aim to deploy and maintain the AI application for public transportation accessibility, ensuring high availability and performance.
-    - File: `deployment/Dockerfile` (Instructions for building Docker image for deployment)
+   - User Story: As a system administrator, I aim to deploy and maintain the AI application for public transportation accessibility, ensuring high availability and performance.
+   - File: `deployment/Dockerfile` (Instructions for building Docker image for deployment)
 
 By identifying and catering to the needs of these diverse types of users, the Public Transportation Accessibility AI in Peru aims to provide valuable insights and solutions for enhancing transportation networks to improve accessibility and affordability for low-income populations.

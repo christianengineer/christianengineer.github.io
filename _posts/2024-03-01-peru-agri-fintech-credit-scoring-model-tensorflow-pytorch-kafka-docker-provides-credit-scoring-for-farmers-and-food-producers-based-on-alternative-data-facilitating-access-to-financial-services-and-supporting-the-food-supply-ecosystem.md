@@ -6,26 +6,29 @@ layout: article
 ---
 
 ### Objectives:
+
 - Develop a credit scoring model using alternative data sources for farmers and food producers in Peru.
 - Facilitate access to financial services for underserved populations in the agriculture sector.
 - Strengthen the food supply ecosystem by providing accurate credit assessments.
 
 ### System Design Strategies:
+
 1. **Data Collection**: Gather alternative data sources such as crop yields, weather patterns, market prices, and farmers' socio-economic factors.
-  
+
 2. **Preprocessing**: Clean, transform, and standardize the data to make it suitable for machine learning algorithms.
-  
+
 3. **Model Development**: Utilize TensorFlow or PyTorch to build and train machine learning models for credit scoring.
-  
+
 4. **Scalability**: Use Apache Kafka for real-time data streaming and processing to handle large volumes of data efficiently.
-  
+
 5. **Containerization**: Docker can be utilized for packaging the application and its dependencies into containers, ensuring portability and easy deployment across different environments.
 
 ### Chosen Libraries:
+
 1. **TensorFlow/PyTorch**: Both are powerful deep learning frameworks that can be used for developing and training complex neural network models.
-  
+
 2. **Kafka**: Ideal for building scalable and fault-tolerant data pipelines to handle real-time data streams effectively.
-  
+
 3. **Docker**: Helps in packaging the application, along with its dependencies, into containers, ensuring consistency across different environments and simplifying deployment.
 
 By implementing these strategies and leveraging the chosen libraries, we aim to build a scalable, data-intensive AI application that significantly improves access to financial services for farmers and food producers in Peru while supporting the food supply ecosystem.
@@ -33,37 +36,35 @@ By implementing these strategies and leveraging the chosen libraries, we aim to 
 ### MLOps Infrastructure for the Peru Agri-FinTech Credit Scoring Model
 
 #### Components:
+
 1. **Data Collection & Preprocessing**:
    - **Data Sources**: Gather alternative data sources like crop yields, weather patterns, and socio-economic factors of farmers.
    - **ETL Pipeline**: Use tools like Apache NiFi or Apache Airflow for data extraction, transformation, and loading.
-   
 2. **Model Development**:
    - **TensorFlow/PyTorch Models**: Develop, train, and fine-tune credit scoring models using TensorFlow and PyTorch frameworks.
-   
 3. **Model Deployment**:
+
    - **Model Packaging**: Use Docker to containerize the trained models, ensuring consistent deployment across different environments.
    - **Model Serving**: Deploy models using frameworks like TensorFlow Serving or FastAPI for inference.
 
 4. **Real-time Data Processing**:
    - **Kafka**: Set up Kafka clusters for real-time data streaming, enabling efficient processing of large volumes of data.
    - **Kafka Connect**: Stream data between external systems and Kafka for seamless integration.
-   
 5. **Monitoring & Logging**:
    - **Prometheus & Grafana**: Monitor and visualize model performance, system metrics, and data pipelines.
    - **ELK Stack (Elasticsearch, Logstash, Kibana)**: Centralized logging for tracking application logs and identifying issues.
-   
 6. **Automated Testing & CI/CD**:
    - **Unit & Integration Tests**: Ensure model robustness and accuracy through automated testing.
    - **CI/CD Pipelines**: Use tools like Jenkins or GitLab CI/CD for automated builds, testing, and deployment.
-   
 7. **Model Versioning & Governance**:
+
    - **MLflow**: Track experiment results, manage model versions, and reproduce model runs.
    - **Model Registry**: Govern model lifecycle, versioning, and deployment.
 
 8. **Security & Compliance**:
    - **Encryption**: Implement data encryption at rest and in transit to protect sensitive information.
    - **Access Control**: Set up role-based access control to secure data and models.
-   
+
 By implementing a robust MLOps infrastructure that integrates TensorFlow, PyTorch, Kafka, and Docker, we ensure seamless model development, deployment, monitoring, and maintenance of the Peru Agri-FinTech Credit Scoring application. This infrastructure facilitates AI-driven credit scoring for farmers and food producers, improving financial inclusion and supporting the food supply ecosystem in Peru.
 
 ### Scalable File Structure for Peru Agri-FinTech Credit Scoring Model
@@ -113,7 +114,6 @@ peru_agri_fintech_credit_scoring/
 ### File Structure Details:
 
 1. **data/**: Directory for storing raw and processed data used in the models.
-   
 2. **models/**: Contains directories for TensorFlow and PyTorch models developed for credit scoring.
 
 3. **pipelines/**: Houses ETL, data processing, and model training pipelines for managing data flow.
@@ -151,7 +151,7 @@ models/
 │   │
 │   ├── model_2/
 │   │   ├── ...
-│   
+│
 ├── pytorch_models/
 │   │
 │   ├── model_a/
@@ -270,6 +270,7 @@ print("Training completed and model saved.")
 ```
 
 ### Description:
+
 - This Python script trains a TensorFlow model for the Peru Agri-FinTech Credit Scoring application using mock data.
 - It loads mock data from a CSV file, preprocesses the data, and splits it into training and testing sets.
 - A simple neural network model is defined and trained on the data.
@@ -342,6 +343,7 @@ print("Training completed and complex model saved.")
 ```
 
 ### Description:
+
 - This Python script implements a complex neural network algorithm using PyTorch for the Peru Agri-FinTech Credit Scoring application with mock data.
 - The script loads mock data, preprocesses it, and splits it into training and testing sets.
 - It defines a more complex neural network architecture using PyTorch and trains the model with the data.

@@ -10,6 +10,7 @@ layout: article
 The Dynamic Wine Pairing AI for Peru Restaurants aims to suggest optimal wine pairings for menu items using flavor profile analysis and sommelier knowledge bases repository. This project will involve leveraging Scikit-Learn and PyTorch for machine learning, Flask for building RESTful APIs, and Kubernetes for deploying and scaling the application.
 
 ## Objectives
+
 1. **Sourcing**: Gather data on menu items, flavor profiles, and wine pairings from various sources including sommelier knowledge bases and restaurant menus.
 2. **Cleansing**: Preprocess and clean the data to ensure consistency and accuracy for training the machine learning models.
 3. **Modeling**: Develop machine learning models using Scikit-Learn and PyTorch to analyze flavor profiles and suggest optimal wine pairings for different menu items.
@@ -18,19 +19,23 @@ The Dynamic Wine Pairing AI for Peru Restaurants aims to suggest optimal wine pa
 ## Strategies and Tools/Libraries
 
 ### Sourcing
+
 - **Data Collection**: Utilize web scraping techniques to extract data from restaurant menus and sommelier knowledge bases.
 - **Libraries**: BeautifulSoup for web scraping, Requests for fetching data.
 
 ### Cleansing
+
 - **Data Cleaning**: Handle missing values, remove duplicates, and standardize data formats.
 - **Libraries**: Pandas for data manipulation, scikit-learn for preprocessing.
 
 ### Modeling
+
 - **Flavor Profile Analysis**: Use Scikit-Learn to analyze flavor profiles and extract key features for pairing wines.
 - **Deep Learning**: Employ PyTorch for building neural network models for more complex flavor analysis.
 - **Libraries**: Scikit-Learn for traditional ML models, PyTorch for deep learning.
 
 ### Deploying
+
 - **Web Application**: Develop a RESTful API using Flask to interact with the machine learning models.
 - **Containerization**: Dockerize the application for portability and consistency.
 - **Deployment**: Use Kubernetes for deploying and managing containers in a scalable manner.
@@ -45,26 +50,32 @@ In the context of the Dynamic Wine Pairing AI for Peru Restaurants, scalability 
 ### Automation of Model Training and Deployment Pipelines
 
 1. **Continuous Integration/Continuous Deployment (CI/CD)**:
+
    - Set up CI/CD pipelines to automate the training and deployment of machine learning models.
    - Ensure that the pipelines are triggered automatically when new data is available or when model improvements are implemented.
 
 2. **Version Control**:
+
    - Use a version control system like Git to track changes to the code, data, and model configurations.
    - Enable collaboration among team members and maintain a history of model iterations.
 
 3. **Model Versioning**:
+
    - Implement a system for managing different versions of trained models.
    - Enable easy rollback to previous versions in case of issues with new deployments.
 
 4. **Scalable Infrastructure**:
+
    - Utilize cloud services such as AWS, Google Cloud, or Azure to provision scalable resources for training and serving models.
    - Deploy machine learning models on Kubernetes to facilitate scalability and load balancing.
 
 5. **Monitoring and Logging**:
+
    - Implement monitoring tools to track the performance of deployed models in real-time.
    - Monitor key metrics such as latency, throughput, and errors to ensure scalability and reliability.
 
 6. **Automated Scaling**:
+
    - Configure auto-scaling mechanisms based on metrics like CPU utilization or incoming request rates.
    - Automatically provision additional resources to handle increased workloads and scale down during low demand.
 
@@ -108,10 +119,10 @@ Dynamic-Wine-Pairing-AI/
 ### Folder Structure Details:
 
 1. **data/**: Contains different sub-directories for raw data, processed data, and external data used in the project.
-   
 2. **models/**: Contains saved model artifacts and configurations.
 
 3. **src/**:
+
    - **data_preprocessing/**: Code for data cleaning and preparation.
    - **feature_engineering/**: Code for feature extraction and transformation.
    - **model_training/**: Scripts for training machine learning models.
@@ -135,26 +146,32 @@ This structured approach separates concerns, making it easier for team members t
 
 ## Sourcing Strategy for Dynamic Wine Pairing AI
 
-1. **Sourcing Data**: 
+1. **Sourcing Data**:
+
    - In order to suggest optimal wine pairings for menu items based on flavor profile analysis and sommelier knowledge bases, the first step is to identify relevant data sources.
-  
+
 2. **Restaurant Menus**:
+
    - Restaurant menus are a rich source of information on dishes, ingredients, and flavor profiles.
    - Websites like [AllMenus](https://www.allmenus.com/) and [MenuPages](https://www.menupages.com/) provide access to a wide range of restaurant menus from different cuisines in Peru.
-  
+
 3. **Wine Databases**:
+
    - Access wine databases such as [Wine.com](https://www.wine.com/) or [Vivino](https://www.vivino.com/).
    - These platforms offer detailed information on various wines, including descriptions, ratings, and food pairing recommendations.
 
 4. **Sommelier Knowledge Bases**:
+
    - Sommelier knowledge bases contain expert recommendations on wine pairings and flavor profiles.
    - Platforms like [GuildSomm](https://www.guildsomm.com/) and [WineSpectator](https://www.winespectator.com/) are reputable sources of sommelier expertise.
 
 5. **Web Scraping**:
+
    - Utilize web scraping tools like BeautifulSoup and Requests to extract data from online sources.
    - Create scripts to scrape information from restaurant menus, wine databases, and sommelier websites.
 
 6. **Data Integration**:
+
    - Merge and harmonize the data obtained from different sources to create a comprehensive dataset for training the machine learning models.
    - Match menu items from restaurant menus with corresponding wine recommendations from sommelier knowledge bases.
 
@@ -190,11 +207,13 @@ Dynamic-Wine-Pairing-AI/
 ### Sourcing Directory Details:
 
 1. **web_scraping/**:
+
    - **scrape_restaurant_menus.py**: Python script to scrape restaurant menus from online platforms like AllMenus and MenuPages.
    - **scrape_wine_databases.py**: Script to extract wine information from websites such as Wine.com and Vivino.
    - **scrape_sommelier_websites.py**: Script for scraping sommelier recommendations from sites like GuildSomm and WineSpectator.
 
 2. **data_integration/**:
+
    - **merge_data.py**: Script to merge data from different sources, aligning menu items with wine pairings.
    - **clean_data.py**: Script for cleaning and preprocessing data to ensure data quality and consistency.
 
@@ -210,30 +229,35 @@ By organizing the sourcing directory with separate subdirectories for web scrapi
 Data cleansing is a critical step in preparing the data for analysis and modeling in the Dynamic Wine Pairing AI project. Here is an in-depth look at the cleansing strategy, along with common problems encountered and their corresponding solutions:
 
 1. **Handling Missing Values**:
+
    - **Problem**: Missing values in the dataset can lead to biased analysis and inaccurate model predictions.
-   - **Solution**: 
+   - **Solution**:
      - Identify missing values in columns related to menu items, wine data, and sommelier recommendations.
      - Impute missing values using techniques such as mean, median, or mode imputation based on data characteristics.
 
 2. **Dealing with Duplicates**:
+
    - **Problem**: Duplicate records can skew analysis results and model performance.
    - **Solution**:
      - Identify and remove duplicate entries in the dataset, ensuring data consistency.
      - Use unique identifiers to avoid duplications in key fields.
 
 3. **Standardizing Data Formats**:
+
    - **Problem**: Inconsistent data formats across different sources can hinder data integration and analysis.
    - **Solution**:
      - Standardize data formats for features like flavor profiles, menu items, and wine details.
      - Ensure uniformity in data representations to facilitate accurate processing.
 
 4. **Handling Outliers**:
+
    - **Problem**: Outliers in certain data fields can impact model training and prediction accuracy.
    - **Solution**:
      - Identify outliers through statistical methods or visualization techniques.
      - Apply outlier handling techniques such as trimming, winsorization, or outlier removal based on domain knowledge.
 
 5. **Addressing Data Sparsity**:
+
    - **Problem**: Data sparsity can lead to challenges in training machine learning models effectively.
    - **Solution**:
      - Explore feature engineering techniques to derive additional informative features from sparse data.
@@ -276,14 +300,17 @@ Dynamic-Wine-Pairing-AI/
 ### Cleansing Directory Details:
 
 1. **preprocessing/**:
+
    - **handle_missing_values.py**: Script to handle missing values in the dataset by imputing or removing them.
    - **remove_duplicates.py**: Script to identify and remove duplicate entries from the data.
 
 2. **transformation/**:
+
    - **standardize_data_formats.py**: Script for standardizing data formats across different features in the dataset.
    - **handle_outliers.py**: Script to identify and address outliers in the data through appropriate techniques.
 
 3. **data_quality/**:
+
    - **address_data_sparsity.py**: Script to handle data sparsity issues by exploring feature engineering and augmentation methods.
    - **handle_inconsistent_data.py**: Script for addressing inconsistencies in data representations and harmonizing data structures.
 
@@ -299,27 +326,35 @@ By structuring the cleansing directory with subdirectories for different cleansi
 Modeling plays a crucial role in the Dynamic Wine Pairing AI project, where machine learning algorithms are employed to analyze flavor profiles and suggest optimal wine pairings for menu items. Below is a detailed step-by-step modeling strategy, prioritizing the most important step for this project:
 
 1. **Data Exploration and Feature Selection**:
+
    - **Important Step**: Understand the structure of the data, explore relationships between variables, and identify relevant features for modeling.
-  
+
 2. **Data Preprocessing**:
+
    - Handle missing values, scale numerical features, encode categorical variables, and split the data into training and testing sets.
 
 3. **Model Selection**:
+
    - Choose appropriate machine learning algorithms such as regression, classification, or clustering based on the nature of the problem.
-  
+
 4. **Model Training**:
+
    - Train the selected models on the training data and evaluate their performance using suitable evaluation metrics.
-  
+
 5. **Hyperparameter Tuning**:
+
    - Optimize the hyperparameters of the models to improve their performance using techniques like grid search or randomized search.
 
 6. **Ensembling**:
+
    - Combine multiple models through techniques like blending, stacking, or bagging to improve predictive accuracy.
 
 7. **Cross-Validation**:
+
    - Perform cross-validation to assess the models' generalization ability and reduce overfitting.
 
 8. **Model Evaluation**:
+
    - Evaluate the models on the test set using metrics such as accuracy, precision, recall, or F1-score.
 
 9. **Deployment**:
@@ -366,21 +401,27 @@ Dynamic-Wine-Pairing-AI/
 ### Modeling Directory Details:
 
 1. **data_processing/**:
+
    - **data_preprocessing.py**: Script for preprocessing data, handling missing values, feature scaling, and encoding categorical variables.
 
 2. **model_training/**:
+
    - **train_model.py**: Script for training machine learning models on the preprocessed data and saving the trained models.
 
 3. **model_evaluation/**:
+
    - **evaluate_model.py**: Script for evaluating the performance of trained models on the test set using evaluation metrics.
 
 4. **ensemble/**:
+
    - **ensemble_models.py**: Script for ensembling multiple models to create an ensemble model for improved predictions.
 
 5. **cross_validation/**:
+
    - **cross_validation.py**: Script for implementing cross-validation to assess model performance and generalization.
 
 6. **deployment/**:
+
    - **deploy_model.py**: Script for deploying the trained model using Flask to serve wine pairing recommendations in production.
 
 7. **trained_models/**:
@@ -408,6 +449,7 @@ Chupe de Camarones,1.0,0.9,0.4,White,WineJ
 ```
 
 In this example data file:
+
 - Each row represents a menu item with corresponding flavor profile attributes and suggested wine pairing.
 - The `menu_item` column lists the name of the dish.
 - The `flavor_profile_1`, `flavor_profile_2`, and `flavor_profile_3` columns represent numerical values indicating different flavor components.
@@ -450,6 +492,7 @@ print(f'Trained model saved at: {model_output_path}')
 ```
 
 In this code snippet:
+
 - We load the synthetic mocked data stored in a CSV file located at `'data/mock_data.csv'`.
 - The script separates the input features (flavor profiles) and the target variable (wine variant).
 - The data is split into training and testing sets for model training and evaluation.
@@ -466,6 +509,7 @@ Deploying the Dynamic Wine Pairing AI across different environments (local, deve
 ### Local Environment:
 
 1. **Development Server Setup**:
+
    - Install necessary dependencies and tools (Python, Flask, required libraries).
    - Set up a local development server to run the Flask application.
 
@@ -476,6 +520,7 @@ Deploying the Dynamic Wine Pairing AI across different environments (local, deve
 ### Development Environment:
 
 1. **Dockerization**:
+
    - Containerize the application using Docker for portability and consistency.
    - Create a Dockerfile to build the image.
 
@@ -486,6 +531,7 @@ Deploying the Dynamic Wine Pairing AI across different environments (local, deve
 ### Staging Environment:
 
 1. **Infrastructure Provisioning**:
+
    - Set up infrastructure for the staging environment (e.g., cloud services, Kubernetes cluster).
    - Configure necessary resources for deployment.
 
@@ -496,6 +542,7 @@ Deploying the Dynamic Wine Pairing AI across different environments (local, deve
 ### Production Environment:
 
 1. **Deployment to Production**:
+
    - Deploy the Flask application to the production server or cloud platform.
    - Set up a production-grade database and ensure data security.
 
@@ -506,6 +553,7 @@ Deploying the Dynamic Wine Pairing AI across different environments (local, deve
 ### Monitoring and Maintenance:
 
 1. **Monitoring**:
+
    - Monitor application logs, server performance, and user activity in all environments.
    - Use monitoring tools (e.g., Prometheus, Grafana) to track application health.
 
@@ -541,6 +589,7 @@ CMD ["python", "app.py"]
 ```
 
 In this Dockerfile:
+
 - We start by using the official Python 3.9-slim base image.
 - The working directory in the container is set to `/app`.
 - The `requirements.txt` file containing the necessary Python dependencies is copied and installed.
@@ -588,10 +637,12 @@ Dynamic-Wine-Pairing-AI/
 ### Deployment Directory Details:
 
 1. **scripts/**:
+
    - **deploy_flask_app.sh**: Deployment script for starting the Flask application.
    - **deploy_kubernetes.sh**: Script for deploying the application on a Kubernetes cluster.
 
 2. **configurations/**:
+
    - **app_config.yaml**: YAML file containing configuration settings for the Flask application.
    - **kubernetes_config.yaml**: YAML file defining Kubernetes configurations for deployment.
 
@@ -606,18 +657,22 @@ By structuring the deployment directory with dedicated subdirectories for script
 ## Types of Users for Dynamic Wine Pairing AI
 
 1. **Restaurant Owner**
+
    - **User Story**: As a restaurant owner, I want to use the Dynamic Wine Pairing AI to enhance the dining experience for my customers by suggesting optimal wine pairings for menu items, ensuring a delightful culinary experience.
    - **File**: The `app.py` file where the Flask application is housed allows the restaurant owner to interact with the AI and receive wine pairing recommendations.
 
 2. **Sommelier**
+
    - **User Story**: As a sommelier, I rely on the Dynamic Wine Pairing AI to leverage flavor profile analysis and sommelier knowledge bases to provide accurate and expert wine pairing recommendations based on menu items.
    - **File**: The `models/model.pkl` file containing the trained machine learning model incorporates sommelier knowledge bases and flavor analysis to suggest optimal wine pairings.
 
 3. **Restaurant Waitstaff**
+
    - **User Story**: The restaurant waitstaff can utilize the Dynamic Wine Pairing AI to quickly and confidently recommend wine pairings to guests based on menu selections, enhancing the overall dining experience.
    - **File**: The `config.py` file containing settings and configurations guides the restaurant waitstaff in utilizing the AI application seamlessly during service.
 
 4. **Food Enthusiast**
+
    - **User Story**: As a food enthusiast, I use the Dynamic Wine Pairing AI to explore new flavor combinations, learn about wine pairing principles, and experiment with different wine options for varied dishes.
    - **File**: The `data/mock_data.csv` file, which contains synthetic data structured for training the model, helps provide accurate and diverse wine pairing recommendations for the food enthusiast.
 

@@ -8,22 +8,27 @@ layout: article
 ## AI Supply Chain Carbon Footprint Calculator for Peru
 
 ## Objectives:
+
 - Estimate the carbon footprint of food supply chains in Peru
 - Assist businesses in identifying areas for carbon reduction and sustainability improvements
 - Develop a scalable and data-intensive AI application leveraging Machine Learning
 
 ## System Design Strategies:
+
 1. **Data Collection and Preprocessing:**
+
    - Collect relevant data related to the food supply chain in Peru
    - Use Pandas for data preprocessing and cleaning
    - Implement data version control with DVC to manage changes and track experiments
 
 2. **Model Development:**
+
    - Utilize TensorFlow for building Machine Learning models to estimate carbon footprints
    - Train the models using the collected data to make accurate predictions
    - Implement Spark for distributed computing to handle large datasets efficiently
 
 3. **Carbon Footprint Calculation:**
+
    - Create algorithms to calculate the carbon footprint based on the input data
    - Use TensorFlow for building neural networks for prediction tasks
 
@@ -33,15 +38,19 @@ layout: article
    - Generate visualizations and reports for better understanding
 
 ## Chosen Libraries:
+
 1. **TensorFlow:**
+
    - For building and training Machine Learning models to estimate carbon footprints
    - Utilize TensorFlow's flexibility and scalability for complex neural network architectures
 
 2. **Pandas:**
+
    - For data preprocessing, cleaning, and manipulation
    - Handle diverse datasets efficiently to prepare them for model training
 
 3. **Spark:**
+
    - For distributed computing to process and analyze large-scale datasets
    - Enable efficient parallel processing for improved performance
 
@@ -54,28 +63,35 @@ By employing these system design strategies and leveraging libraries like Tensor
 ## MLOps Infrastructure for Supply Chain Carbon Footprint Calculator
 
 ## Components of MLOps Infrastructure:
+
 1. **Data Collection and Storage:**
+
    - Implement data pipelines to collect and store relevant data related to the food supply chain in Peru
    - Utilize databases or data lakes to efficiently manage and store large datasets
 
 2. **Data Preprocessing and Feature Engineering:**
+
    - Use Pandas and Spark for data preprocessing and feature engineering tasks
    - Clean, transform, and prepare the data for model training
 
 3. **Model Development and Training:**
+
    - Utilize TensorFlow for building and training Machine Learning models to estimate carbon footprints
    - Develop model training pipelines for automated model building and iteration
 
 4. **Model Evaluation and Deployment:**
+
    - Evaluate model performance using metrics like accuracy, precision, recall, etc.
    - Utilize DVC for versioning and tracking models, ensuring reproducibility
    - Deploy models using containerization tools like Docker for consistency across environments
 
 5. **Monitoring and Logging:**
+
    - Implement monitoring tools to track model performance and data quality
    - Log key metrics and monitor for drift in data or model performance
 
 6. **Continuous Integration/Continuous Deployment (CI/CD):**
+
    - Set up CI/CD pipelines for automated testing and deployment of model updates
    - Ensure seamless integration of new features and improvements into production
 
@@ -84,15 +100,19 @@ By employing these system design strategies and leveraging libraries like Tensor
    - Optimize model inference time and resource utilization for scalability
 
 ## Workflow Using Selected Libraries:
+
 1. **Data Collection and Preprocessing:**
+
    - Use Pandas and Spark to collect and preprocess data from various sources
    - Implement data validation checks and data cleaning processes
 
 2. **Model Development and Training:**
+
    - Build and train Machine Learning models using TensorFlow
    - Utilize distributed computing with Spark to handle large-scale training data
 
 3. **Model Evaluation and Deployment:**
+
    - Evaluate model performance using appropriate metrics
    - Version models using DVC for easy tracking and reproducibility
    - Deploy models using containerization tools like Docker for portability
@@ -102,6 +122,7 @@ By employing these system design strategies and leveraging libraries like Tensor
    - Continuously optimize models for better accuracy and efficiency
 
 ## Benefits of MLOps Infrastructure:
+
 - **Automation:** Streamline and automate the end-to-end ML workflow for efficiency
 - **Scalability:** Scale model training and deployment processes to handle increasing data volume
 - **Reproducibility:** Ensure reproducibility of experiments and models for consistency
@@ -150,6 +171,7 @@ By establishing a robust MLOps infrastructure with the selected libraries (Tenso
 ```
 
 ## Description:
+
 1. **data/**: Directory to store raw and processed data used in the application.
 2. **models/**: Directory to save trained TensorFlow models for estimating carbon footprints.
 3. **notebooks/**: Jupyter notebooks for data exploration and model training.
@@ -180,17 +202,22 @@ This file structure is designed to maintain a clear organization of files and di
 ```
 
 ## Description:
+
 1. **saved_models/**: Directory to store trained TensorFlow models for estimating carbon footprints.
+
    - **model_1.h5**: Trained TensorFlow model for carbon footprint estimation.
    - **model_2.h5**: Additional trained model for experimentation and comparison.
 
 2. **model_training.py**: Script for training Machine Learning models using TensorFlow.
+
    - Responsible for loading data, defining the model architecture, training the model, and saving the trained model.
 
 3. **model_evaluation.py**: Script for evaluating model performance.
+
    - Contains functions to evaluate model metrics such as accuracy, loss, and any custom evaluation criteria.
 
 4. **model_inference.py**: Script for using trained models to make predictions.
+
    - Includes functions for loading a saved model and making predictions on new data.
 
 5. **pipelines/**: Directory containing data processing pipelines using Pandas/Spark.
@@ -216,12 +243,15 @@ The `models/` directory stores trained models, model training and evaluation scr
 ```
 
 ## Description:
+
 1. **deployment/**: Directory for deployment-related files and configurations for the application.
+
    - **docker-compose.yaml**: Docker Compose configuration file for defining multi-container deployment setup.
    - **Dockerfile**: Dockerfile specifying the instructions for building the production container.
    - **requirements.txt**: File listing production Python dependencies required for deployment.
 
 2. **app/**: Subdirectory containing the main application code and resources for the web interface.
+
    - **main.py**: Main application code for interacting with trained models and providing insights.
    - **app_config.yaml**: Configuration file for specifying application settings and parameters.
    - **templates/**: Directory for HTML templates used in the web interface.
@@ -339,24 +369,29 @@ File Path: `scripts/train_complex_model.py`
 This script demonstrates training a complex neural network model using mock data to estimate the carbon footprint of food supply chains. It preprocesses the data using Spark, defines a deep learning model, trains the model, and saves the trained model for future use. This setup allows for the development of sophisticated machine learning algorithms for the Supply Chain Carbon Footprint Calculator application.
 
 ### Types of Users:
+
 1. **Supply Chain Manager**:
-   - *User Story*: As a Supply Chain Manager, I need to analyze the carbon footprint of our food supply chains in Peru to identify areas for improvement and sustainability initiatives.
-   - *File*: `reports/carbon_footprint_report.pdf`
+
+   - _User Story_: As a Supply Chain Manager, I need to analyze the carbon footprint of our food supply chains in Peru to identify areas for improvement and sustainability initiatives.
+   - _File_: `reports/carbon_footprint_report.pdf`
 
 2. **Data Scientist**:
-   - *User Story*: As a Data Scientist, I want to train and evaluate machine learning models to estimate the carbon footprint of food supply chains based on historical data.
-   - *File*: `train_complex_model.py`
+
+   - _User Story_: As a Data Scientist, I want to train and evaluate machine learning models to estimate the carbon footprint of food supply chains based on historical data.
+   - _File_: `train_complex_model.py`
 
 3. **Business Owner**:
-   - *User Story*: As a Business Owner, I aim to utilize the application to gain insights into areas of our supply chain operations that contribute most to carbon emissions and prioritize sustainability efforts.
-   - *File*: `app/main.py`
+
+   - _User Story_: As a Business Owner, I aim to utilize the application to gain insights into areas of our supply chain operations that contribute most to carbon emissions and prioritize sustainability efforts.
+   - _File_: `app/main.py`
 
 4. **Sustainability Analyst**:
-   - *User Story*: As a Sustainability Analyst, I need to access visualizations and reports that highlight the carbon footprint trends in our food supply chains to support decision-making on sustainability strategies.
-   - *File*: `reports/carbon_footprint_report.pdf`
+
+   - _User Story_: As a Sustainability Analyst, I need to access visualizations and reports that highlight the carbon footprint trends in our food supply chains to support decision-making on sustainability strategies.
+   - _File_: `reports/carbon_footprint_report.pdf`
 
 5. **IT Administrator**:
-   - *User Story*: As an IT Administrator, I am responsible for deploying and maintaining the application in a scalable and reliable environment for seamless access by users.
-   - *File*: `deployment/docker-compose.yaml`
+   - _User Story_: As an IT Administrator, I am responsible for deploying and maintaining the application in a scalable and reliable environment for seamless access by users.
+   - _File_: `deployment/docker-compose.yaml`
 
 Each type of user interacts with the Supply Chain Carbon Footprint Calculator in different ways to achieve their specific objectives. By catering to the needs of these varied users, the application can effectively support businesses in identifying areas for carbon reduction and sustainability improvement within their food supply chains in Peru.

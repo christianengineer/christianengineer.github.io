@@ -8,38 +8,46 @@ layout: article
 ## Machine Learning Solution for Yacht and Private Jet Optimization Suite
 
 ## Objectives and Benefits
+
 - **Objective**: To optimize scheduling and maintenance processes for Aerocondor's fleet of yachts and private jets, reducing downtime and improving service reliability.
 - **Benefits**:
-    - **Efficiency**: Streamlining scheduling and maintenance operations to minimize downtime.
-    - **Reliability**: Improving service reliability through optimized maintenance schedules.
-    - **Cost Savings**: Reducing costs associated with unnecessary maintenance and downtime.
-    - **Customer Satisfaction**: Ensuring consistent and reliable service for high-end transport services in Peru.
+  - **Efficiency**: Streamlining scheduling and maintenance operations to minimize downtime.
+  - **Reliability**: Improving service reliability through optimized maintenance schedules.
+  - **Cost Savings**: Reducing costs associated with unnecessary maintenance and downtime.
+  - **Customer Satisfaction**: Ensuring consistent and reliable service for high-end transport services in Peru.
 
 ## Audience
+
 This solution is tailored for Fleet Managers at Aerocondor who are looking to overcome the challenge of inefficient scheduling and maintenance processes for their fleet of yachts and private jets.
 
 ## Machine Learning Algorithm
+
 The machine learning algorithm employed for this solution is based on **Reinforcement Learning**, leveraging techniques like **Deep Q-Learning** to optimize maintenance and operational scheduling for Aerocondor's fleet.
 
 ## Strategies
+
 1. **Sourcing Data**:
-    - Collect data on historical maintenance schedules, operational data, downtime records, and service logs.
-    - Integrate real-time data sources for up-to-date information on the condition of each aircraft.
-  
+
+   - Collect data on historical maintenance schedules, operational data, downtime records, and service logs.
+   - Integrate real-time data sources for up-to-date information on the condition of each aircraft.
+
 2. **Preprocessing**:
-    - Clean and preprocess the data, handling missing values and outliers.
-    - Encode categorical variables and scale numerical features as needed.
+
+   - Clean and preprocess the data, handling missing values and outliers.
+   - Encode categorical variables and scale numerical features as needed.
 
 3. **Modeling**:
-    - Utilize **Scikit-Learn** for traditional machine learning models such as Random Forests or Gradient Boosting for initial scheduling optimization.
-    - Implement **TensorFlow** for Deep Q-Learning algorithms to develop an AI system for continuous learning and optimization.
+
+   - Utilize **Scikit-Learn** for traditional machine learning models such as Random Forests or Gradient Boosting for initial scheduling optimization.
+   - Implement **TensorFlow** for Deep Q-Learning algorithms to develop an AI system for continuous learning and optimization.
 
 4. **Deploying**:
-    - Build a RESTful API using **Flask** to serve predictions and recommendations.
-    - Containerize the solution using **Docker** for portability.
-    - Orchestrate deployments with **Kubernetes** for scalability, monitoring, and efficient resource management.
-  
+   - Build a RESTful API using **Flask** to serve predictions and recommendations.
+   - Containerize the solution using **Docker** for portability.
+   - Orchestrate deployments with **Kubernetes** for scalability, monitoring, and efficient resource management.
+
 ## Tools and Libraries
+
 - [Scikit-Learn](https://scikit-learn.org/): For traditional machine learning models.
 - [TensorFlow](https://www.tensorflow.org/): For Deep Learning algorithms.
 - [Flask](https://flask.palletsprojects.com/): Web framework for building APIs.
@@ -51,7 +59,9 @@ By following these strategies and utilizing the recommended tools and libraries,
 ## Sourcing Data Strategy
 
 ### Data Collection:
+
 1. **Historical Maintenance Schedules**:
+
    - **Recommended Tool: SQL Database Integration**
      - Use tools like **MySQL** or **PostgreSQL** to store and manage historical maintenance schedule data.
      - Integrate SQL database with Python using libraries like **SQLAlchemy** for easy data retrieval.
@@ -59,30 +69,27 @@ By following these strategies and utilizing the recommended tools and libraries,
 2. **Operational Data**:
    - **Recommended Tool: Data Scraping**
      - Utilize web scraping tools like **Beautiful Soup** or APIs to extract operational data from various sources such as flight logs, fuel consumption records, and flight routes.
-   
 3. **Downtime Records**:
-    - **Recommended Tool: Logging Systems**
-      - Implement logging systems like **ELK Stack (Elasticsearch, Logstash, Kibana)** or **Splunk** to track and analyze downtime records in real-time.
-   
+   - **Recommended Tool: Logging Systems**
+     - Implement logging systems like **ELK Stack (Elasticsearch, Logstash, Kibana)** or **Splunk** to track and analyze downtime records in real-time.
 4. **Service Logs**:
-    - **Recommended Tool: RESTful APIs**
-      - Develop APIs using Flask or Django to capture and store service logs for each aircraft.
-  
+
+   - **Recommended Tool: RESTful APIs**
+     - Develop APIs using Flask or Django to capture and store service logs for each aircraft.
+
 5. **Real-Time Data Sources**:
-    - **Recommended Method: IoT Sensors**
-      - Install IoT sensors on the aircraft to gather real-time data on performance metrics, engine health, and other critical information.
-      - Integrate IoT platforms like **AWS IoT** or **Google Cloud IoT Core** to collect, process, and store real-time data.
+   - **Recommended Method: IoT Sensors**
+     - Install IoT sensors on the aircraft to gather real-time data on performance metrics, engine health, and other critical information.
+     - Integrate IoT platforms like **AWS IoT** or **Google Cloud IoT Core** to collect, process, and store real-time data.
 
 ### Integration within Existing Technology Stack:
+
 - **Data Pipeline with Apache Airflow**:
   - Use Apache Airflow to orchestrate data collection processes, scheduling data extraction, transformation, and loading tasks.
-  
 - **Data Storage with AWS S3**:
   - Store collected data in an AWS S3 bucket for scalability and easy access.
-  
 - **Data Processing with Pandas and NumPy**:
   - Preprocess and clean data using Pandas and NumPy libraries within the Python ecosystem.
-  
 - **Data Visualization with Matplotlib and Seaborn**:
   - Use Matplotlib and Seaborn for visualizing data insights and patterns.
 
@@ -91,57 +98,65 @@ By incorporating the recommended tools and methods within the existing technolog
 ## Feature Extraction and Engineering Analysis
 
 ### Feature Extraction:
+
 1. **Time-related Features**:
-   - *feature_name*: `last_maintenance_date`
+   - _feature_name_: `last_maintenance_date`
      - Description: Date of the last maintenance performed on the aircraft.
-   - *feature_name*: `next_maintenance_date`
+   - _feature_name_: `next_maintenance_date`
      - Description: Estimated date for the next scheduled maintenance.
-   
 2. **Operational Features**:
-   - *feature_name*: `total_flight_hours`
+   - _feature_name_: `total_flight_hours`
      - Description: Total number of flight hours accumulated by the aircraft.
-   - *feature_name*: `fuel_consumption_rate`
+   - _feature_name_: `fuel_consumption_rate`
      - Description: Average fuel consumption rate per flight.
-   
 3. **Performance Metrics**:
-   - *feature_name*: `engine_health_score`
+   - _feature_name_: `engine_health_score`
      - Description: Engine health score based on real-time performance metrics.
-   - *feature_name*: `temperature_variance`
+   - _feature_name_: `temperature_variance`
      - Description: Variance in engine temperature readings.
 
 ### Feature Engineering:
+
 1. **Deriving New Features**:
-   - *feature_name*: `days_since_last_maintenance`
+
+   - _feature_name_: `days_since_last_maintenance`
      - Description: Number of days elapsed since the last maintenance.
-   - *feature_name*: `predicted_maintenance_cost`
+   - _feature_name_: `predicted_maintenance_cost`
      - Description: Predicted cost of upcoming maintenance based on historical data and maintenance schedules.
-  
+
 2. **Encoding Categorical Variables**:
-   - *feature_name*: `aircraft_type`
+
+   - _feature_name_: `aircraft_type`
      - Description: Type of aircraft (e.g., Yacht, Private Jet) encoded as categorical variable.
 
 3. **Scaling Numerical Features**:
-   - *feature_name*: `scaled_flight_hours`
+   - _feature_name_: `scaled_flight_hours`
      - Description: Flight hours scaled to a standard range for uniform comparison.
 
 ### Recommendations for Variable Names:
+
 1. **Time-related Features**:
+
    - `last_maintenance_date`
    - `next_maintenance_date`
 
 2. **Operational Features**:
+
    - `total_flight_hours`
    - `fuel_consumption_rate`
 
 3. **Performance Metrics**:
+
    - `engine_health_score`
    - `temperature_variance`
 
 4. **Derived Features**:
+
    - `days_since_last_maintenance`
    - `predicted_maintenance_cost`
 
 5. **Categorical Variables**:
+
    - `aircraft_type`
 
 6. **Scaled Features**:
@@ -152,15 +167,18 @@ By incorporating these recommended features and engineering techniques within th
 ## Metadata Management for Yacht and Private Jet Optimization Project
 
 ### Key Metadata Recommendations:
+
 1. **Maintenance Schedule Metadata**:
+
    - **Attributes**:
      - `aircraft_id`: Identifies each aircraft uniquely.
      - `last_maintenance_date`: Date of the last maintenance performed.
      - `next_maintenance_date`: Estimated date for the next scheduled maintenance.
    - **Importance**:
      - Ensures tracking of maintenance history and upcoming schedules for each aircraft.
-  
+
 2. **Operational Data Metadata**:
+
    - **Attributes**:
      - `flight_id`: Unique identifier for each flight record.
      - `total_flight_hours`: Accumulated flight hours for each aircraft.
@@ -176,16 +194,16 @@ By incorporating these recommended features and engineering techniques within th
      - Enables monitoring of critical performance metrics for predictive maintenance and operational optimization.
 
 ### Unique Project Demands:
+
 - **Dynamic Metadata Updates**:
   - Ensure the metadata system can handle real-time updates for performance metrics and operational data changes.
-  
 - **Security and Access Control**:
   - Implement role-based access control to ensure confidentiality and integrity of sensitive metadata.
-  
 - **Quality Assurance Metadata**:
   - Track data quality metrics such as missing values, outliers, and data distributions for effective model training and evaluation.
 
 ### Metadata Schema Example:
+
 ```yaml
 metadata_schema:
   aircraft:
@@ -217,41 +235,47 @@ By implementing robust metadata management specific to the demands of the Yacht 
 ## Data Challenges and Preprocessing Strategies for Yacht and Private Jet Optimization Project
 
 ### Specific Data Problems:
+
 1. **Missing Data**:
+
    - **Issue**: Incomplete records for maintenance schedules or operational data.
    - **Impact**: Can lead to bias in model training and inaccurate predictive maintenance schedules.
-   - **Preprocessing Strategy**: 
+   - **Preprocessing Strategy**:
      - Impute missing data using methods like mean imputation for numerical features and mode imputation for categorical variables.
-  
+
 2. **Outliers**:
+
    - **Issue**: Abnormal values in performance metrics or operational data.
    - **Impact**: Outliers can skew model predictions and lead to suboptimal scheduling decisions.
-   - **Preprocessing Strategy**: 
+   - **Preprocessing Strategy**:
      - Detect outliers using statistical methods like Z-score or IQR, and either remove or transform them appropriately for model training.
 
 3. **Data Skewness**:
+
    - **Issue**: Imbalance in data distribution for certain features.
    - **Impact**: Skewed data can affect the model's ability to generalize and make accurate predictions.
-   - **Preprocessing Strategy**: 
+   - **Preprocessing Strategy**:
      - Apply techniques like oversampling, undersampling, or SMOTE to balance skewed classes and improve model performance.
 
 4. **Feature Scaling**:
    - **Issue**: Variability in the scale of numerical features.
    - **Impact**: Different scales can affect the convergence rate of machine learning algorithms.
-   - **Preprocessing Strategy**: 
+   - **Preprocessing Strategy**:
      - Use standard scaling or min-max scaling to bring all features to a similar scale for better model training.
 
 ### Unique Project Demands:
+
 - **Real-Time Data Integration**:
   - Implement data preprocessing pipelines that can handle real-time streaming data for timely updates and analysis.
-  
 - **Data Consistency Checks**:
+
   - Conduct regular consistency checks to ensure uniform data quality and integrity across different sources and formats.
 
 - **Domain-specific Normalization**:
   - Normalize data based on domain-specific constraints and thresholds for maintenance and operational scheduling optimization.
 
 ### Data Preprocessing Practices Example:
+
 ```python
 ## Handling Missing Data
 from sklearn.impute import SimpleImputer
@@ -303,6 +327,7 @@ data.to_csv('preprocessed_data.csv', index=False)
 ```
 
 In the provided code file:
+
 1. The data is loaded and missing values in the 'total_flight_hours' column are imputed with the mean value.
 2. Outliers in 'engine_health_score' and 'temperature_variance' are removed using the Z-score method.
 3. The 'fuel_consumption_rate' feature is standardized for consistent model training.
@@ -314,15 +339,18 @@ These preprocessing steps are crucial for ensuring that the data is cleaned, sta
 ## Modeling Strategy for Yacht and Private Jet Optimization Project
 
 ### Recommended Modeling Approach:
+
 Given the complexity of scheduling and maintenance optimization for Aerocondor's fleet of yachts and private jets, a **Reinforcement Learning** approach, specifically **Deep Q-Learning**, is well-suited for this project.
 
 ### Why Deep Q-Learning?
+
 - **Complex Decision-Making**: Deep Q-Learning can handle the intricate decision-making processes involved in optimizing maintenance schedules and operational efficiency.
 - **Continuous Learning**: The AI agent can continuously learn and adapt to changing conditions, improving scheduling accuracy over time.
 - **Accounting for Uncertainties**: Deep Q-Learning can effectively handle uncertainties and dynamic nature of real-world fleet operations.
 - **Interpretable Policies**: The reinforcement learning model can provide interpretable policies for maintenance scheduling and operational decisions.
 
-### Crux of the Modeling Strategy: 
+### Crux of the Modeling Strategy:
+
 The most crucial step in this recommended modeling strategy is **State Representation Design**. Designing an effective state representation that captures the critical features and relationships among maintenance, operational, and performance metrics is vital for the success of the project.
 
 - **Importance**:
@@ -330,19 +358,18 @@ The most crucial step in this recommended modeling strategy is **State Represent
   - By including key variables like historical maintenance data, real-time performance metrics, and operational parameters, the AI agent can learn to predict optimal scheduling actions.
 
 ### Steps in the Modeling Strategy:
+
 1. **State Representation Design**:
    - Define a comprehensive state space that encapsulates all essential information for decision-making.
-   
 2. **Action Space Definition**:
    - Establish a set of actions that the AI agent can take to optimize maintenance and scheduling processes.
-   
 3. **Reward System Definition**:
    - Specify a reward system that incentivizes desirable outcomes, such as reduced downtime and optimized maintenance costs.
-   
 4. **Deep Q-Learning Implementation**:
    - Develop and train a Deep Q-Learning network that can learn optimal maintenance and operational scheduling policies.
 
 ### Key Tools and Libraries:
+
 - **TensorFlow**: For implementing Deep Q-Learning algorithms.
 - **Keras**: For building and training neural networks.
 - **NumPy**: For numerical computation and array operations.
@@ -353,36 +380,40 @@ By focusing on designing a robust state representation that encapsulates the cor
 ## Tools and Technologies Recommendations for Data Modeling in Yacht and Private Jet Optimization Project
 
 ### 1. **TensorFlow**
-   - **Description**: TensorFlow is well-suited for implementing Deep Q-Learning algorithms for reinforcement learning in complex decision-making tasks, such as optimizing maintenance schedules and operational efficiency for yachts and private jets.
-   - **Integration**: TensorFlow can seamlessly integrate with existing Python workflows and data processing pipelines through libraries like Pandas and NumPy.
-   - **Beneficial Features**:
-     - High-level APIs like Keras for building and training neural networks.
-     - TensorBoard for visualizing and monitoring model performance.
-   - **Documentation**: [TensorFlow Documentation](https://www.tensorflow.org/)
+
+- **Description**: TensorFlow is well-suited for implementing Deep Q-Learning algorithms for reinforcement learning in complex decision-making tasks, such as optimizing maintenance schedules and operational efficiency for yachts and private jets.
+- **Integration**: TensorFlow can seamlessly integrate with existing Python workflows and data processing pipelines through libraries like Pandas and NumPy.
+- **Beneficial Features**:
+  - High-level APIs like Keras for building and training neural networks.
+  - TensorBoard for visualizing and monitoring model performance.
+- **Documentation**: [TensorFlow Documentation](https://www.tensorflow.org/)
 
 ### 2. **Keras**
-   - **Description**: Keras, as a high-level neural networks API, complements TensorFlow for building and training neural networks efficiently in Deep Q-Learning implementations for the project.
-   - **Integration**: Keras works seamlessly with TensorFlow, providing an easy-to-use interface for rapid prototyping and experimentation.
-   - **Beneficial Features**:
-     - Modular and extensible design for flexible model architectures.
-     - Built-in support for various deep learning layers and activations.
-   - **Documentation**: [Keras Documentation](https://keras.io/)
+
+- **Description**: Keras, as a high-level neural networks API, complements TensorFlow for building and training neural networks efficiently in Deep Q-Learning implementations for the project.
+- **Integration**: Keras works seamlessly with TensorFlow, providing an easy-to-use interface for rapid prototyping and experimentation.
+- **Beneficial Features**:
+  - Modular and extensible design for flexible model architectures.
+  - Built-in support for various deep learning layers and activations.
+- **Documentation**: [Keras Documentation](https://keras.io/)
 
 ### 3. **NumPy**
-   - **Description**: NumPy is crucial for efficient numerical computations and array operations required for manipulating and processing data within the Deep Q-Learning model.
-   - **Integration**: NumPy seamlessly integrates with Pandas for data manipulation and transformation, forming a robust data processing pipeline.
-   - **Beneficial Features**:
-     - Multidimensional array support for handling complex data structures.
-     - Mathematical functions for array operations and transformations.
-   - **Documentation**: [NumPy Documentation](https://numpy.org/doc/stable/)
+
+- **Description**: NumPy is crucial for efficient numerical computations and array operations required for manipulating and processing data within the Deep Q-Learning model.
+- **Integration**: NumPy seamlessly integrates with Pandas for data manipulation and transformation, forming a robust data processing pipeline.
+- **Beneficial Features**:
+  - Multidimensional array support for handling complex data structures.
+  - Mathematical functions for array operations and transformations.
+- **Documentation**: [NumPy Documentation](https://numpy.org/doc/stable/)
 
 ### 4. **Pandas**
-   - **Description**: Pandas is instrumental for data manipulation and preprocessing tasks, essential for preparing and structuring the fleet data for model training in Deep Q-Learning.
-   - **Integration**: Pandas integrates seamlessly with NumPy and other Python libraries, allowing for efficient data manipulation and analysis.
-   - **Beneficial Features**:
-     - Data structures like DataFrames for handling structured data.
-     - Data alignment and merging capabilities for integrating diverse datasets.
-   - **Documentation**: [Pandas Documentation](https://pandas.pydata.org/docs/)
+
+- **Description**: Pandas is instrumental for data manipulation and preprocessing tasks, essential for preparing and structuring the fleet data for model training in Deep Q-Learning.
+- **Integration**: Pandas integrates seamlessly with NumPy and other Python libraries, allowing for efficient data manipulation and analysis.
+- **Beneficial Features**:
+  - Data structures like DataFrames for handling structured data.
+  - Data alignment and merging capabilities for integrating diverse datasets.
+- **Documentation**: [Pandas Documentation](https://pandas.pydata.org/docs/)
 
 By leveraging these recommended tools and technologies, tailored to the specific needs of the Yacht and Private Jet Optimization Project, Aerocondor can effectively implement the Deep Q-Learning modeling strategy, optimize maintenance schedules, and improve operational efficiency to address the pain points of inefficient scheduling and maintenance processes in their high-end transport services.
 
@@ -430,11 +461,13 @@ data.to_csv('simulated_dataset.csv', index=False)
 ```
 
 In this Python script:
+
 1. Random data for last maintenance date, operational data, performance metrics, and aircraft types is generated to mimic real-world data.
 2. A Pandas DataFrame is created using the generated data.
 3. The fictitious dataset is saved to a CSV file for model testing and validation.
 
 ### Dataset Creation Strategy:
+
 - **Real-World Variability**: Randomization techniques are used to introduce variability in data attributes, ensuring the dataset simulates real conditions.
 - **Tools Used**: Pandas for data manipulation, NumPy for generating random data, and Python's datetime module for handling dates.
 - **Integration**: The script seamlessly integrates with the existing tech stack, allowing for data generation that aligns with the project's objectives.
@@ -452,7 +485,9 @@ By utilizing this Python script to create a fictitious dataset that mirrors real
 ```
 
 In this sample mocked dataset example:
+
 - **Features**:
+
   - last_maintenance_date (date)
   - total_flight_hours (int)
   - fuel_consumption_rate (float)
@@ -461,6 +496,7 @@ In this sample mocked dataset example:
   - aircraft_type (str)
 
 - **Formatting**:
+
   - The data is structured in a tabular format for easy ingestion by the model.
   - Dates are in the 'YYYY-MM-DD' format for consistency.
   - Numerical values are represented as integers or floats.
@@ -505,20 +541,25 @@ joblib.dump(model, 'maintenance_schedule_model.pkl')
 ```
 
 ### Code Structure and Comments:
+
 - **Data Loading and Preparation**:
+
   - Load the preprocessed dataset and separate features and target variable.
   - Split the data into training and testing sets for model evaluation.
 
 - **Model Training**:
+
   - Initialize a Random Forest Regressor model and train it on the training data.
 
 - **Model Evaluation**:
+
   - Make predictions on the test set and calculate the mean squared error to evaluate model performance.
 
 - **Model Saving**:
   - Save the trained model using joblib for future use in deployment.
 
 ### Conventions and Standards:
+
 - **Modularity**: Code is divided into logical sections for clarity and ease of maintenance.
 - **Descriptive Variable Naming**: Meaningful variable names for readability and understanding.
 - **Error Handling**: Include error handling mechanisms for robustness in production environments.
@@ -529,37 +570,33 @@ By following best practices for code quality and structure, adhering to conventi
 ## Deployment Plan for Machine Learning Model in Yacht and Private Jet Optimization Project
 
 ### Step-by-Step Deployment Outline:
+
 1. **Pre-Deployment Checks**:
    - **Key Tasks**:
      - Ensure the model is trained on recent data.
      - Perform final model evaluation and validation.
    - **Tools**:
      - Python, Pandas, Scikit-Learn.
-   
 2. **Model Serialization**:
    - **Key Tasks**:
      - Serialize the trained model for deployment.
    - **Tools**:
      - Joblib for model serialization.
-   
 3. **Containerization**:
    - **Key Tasks**:
      - Containerize the model using Docker for portability.
    - **Tools**:
      - Docker for containerization.
-   
 4. **Building RESTful API**:
    - **Key Tasks**:
      - Develop a RESTful API using Flask for model inference.
    - **Tools**:
      - Flask for API development.
-   
 5. **Deployment to Kubernetes**:
    - **Key Tasks**:
      - Orchestrate deployments using Kubernetes for scalability.
    - **Tools**:
      - Kubernetes for container orchestration.
-   
 6. **Monitoring and Logging**:
    - **Key Tasks**:
      - Implement logging and monitoring for model performance.
@@ -567,27 +604,21 @@ By following best practices for code quality and structure, adhering to conventi
      - ELK Stack (Elasticsearch, Logstash, Kibana) for monitoring.
 
 ### Recommended Tools and Platforms:
+
 1. **Python**:
    - Official Documentation: [Python Documentation](https://www.python.org/doc/)
-   
 2. **Pandas**:
    - Official Documentation: [Pandas Documentation](https://pandas.pydata.org/docs/)
-   
 3. **Scikit-Learn**:
    - Official Documentation: [Scikit-Learn Documentation](https://scikit-learn.org/stable/documentation.html)
-   
 4. **Joblib**:
    - Official Documentation: [Joblib Documentation](https://joblib.readthedocs.io/en/latest/)
-   
 5. **Docker**:
    - Official Documentation: [Docker Documentation](https://docs.docker.com/)
-   
 6. **Flask**:
    - Official Documentation: [Flask Documentation](https://flask.palletsprojects.com/en/2.0.x/)
-   
 7. **Kubernetes**:
    - Official Documentation: [Kubernetes Documentation](https://kubernetes.io/docs/)
-   
 8. **ELK Stack**:
    - Official Documentation: [ELK Stack Documentation](https://www.elastic.co/what-is/elk-stack)
 
@@ -617,46 +648,57 @@ CMD ["python", "app.py"]
 ```
 
 In the provided Dockerfile:
+
 1. It starts with an official Python runtime image for consistency and efficiency.
 2. Sets up the working directory in the container as `/app`.
 3. Copies the project files into the container.
 4. Installs dependencies from `requirements.txt` to ensure all necessary packages are installed.
 5. Sets an environment variable for unbuffered Python output.
 6. Exposes port `5000` for communication with the Flask API.
-7. Defines the command to run the Flask application (`app.py`). 
+7. Defines the command to run the Flask application (`app.py`).
 
 This Dockerfile is optimized for handling the requirements of the Yacht and Private Jet Optimization Project, encapsulating the environment and dependencies needed for efficient and scalable deployment of the machine learning model.
 
 ## User Groups and User Stories for Yacht and Private Jet Optimization Suite
 
 ### 1. Fleet Managers at Aerocondor
+
 #### User Story:
-- *Scenario*: As a Fleet Manager at Aerocondor, I struggle with inefficient scheduling and maintenance processes, leading to increased downtime and reduced service reliability.
-- *Solution*: The application utilizes AI optimization algorithms to recommend optimal maintenance schedules and operational plans, reducing downtime and improving service reliability.
-- *Facilitated by*: Deep Q-Learning algorithm for maintenance scheduling and operational optimization.
+
+- _Scenario_: As a Fleet Manager at Aerocondor, I struggle with inefficient scheduling and maintenance processes, leading to increased downtime and reduced service reliability.
+- _Solution_: The application utilizes AI optimization algorithms to recommend optimal maintenance schedules and operational plans, reducing downtime and improving service reliability.
+- _Facilitated by_: Deep Q-Learning algorithm for maintenance scheduling and operational optimization.
 
 ### 2. Maintenance Crew and Technicians
+
 #### User Story:
-- *Scenario*: Maintenance crew and technicians face challenges in managing multiple maintenance tasks efficiently and effectively.
-- *Solution*: The application provides prioritized maintenance schedules and alerts for preventive maintenance tasks, enhancing maintenance efficiency and reducing aircraft downtime.
-- *Facilitated by*: Data preprocessing and feature engineering for generating maintenance alerts and schedules.
+
+- _Scenario_: Maintenance crew and technicians face challenges in managing multiple maintenance tasks efficiently and effectively.
+- _Solution_: The application provides prioritized maintenance schedules and alerts for preventive maintenance tasks, enhancing maintenance efficiency and reducing aircraft downtime.
+- _Facilitated by_: Data preprocessing and feature engineering for generating maintenance alerts and schedules.
 
 ### 3. Operations Team
+
 #### User Story:
-- *Scenario*: The operations team struggles with balancing fleet utilization and maintenance requirements to meet service demands.
-- *Solution*: The application offers real-time insights into fleet performance and maintenance needs, allowing for optimized operational scheduling to maximize fleet utilization and service reliability.
-- *Facilitated by*: RESTful API for accessing real-time data and optimizing operational decisions.
+
+- _Scenario_: The operations team struggles with balancing fleet utilization and maintenance requirements to meet service demands.
+- _Solution_: The application offers real-time insights into fleet performance and maintenance needs, allowing for optimized operational scheduling to maximize fleet utilization and service reliability.
+- _Facilitated by_: RESTful API for accessing real-time data and optimizing operational decisions.
 
 ### 4. Customer Support Team
+
 #### User Story:
-- *Scenario*: The customer support team encounters challenges in managing customer expectations due to unexpected downtimes or service interruptions.
-- *Solution*: The application ensures improved service reliability and fewer disruptions, enabling the customer support team to provide accurate information and maintain customer satisfaction.
-- *Facilitated by*: Flask API for accessing optimized maintenance schedules and operational plans.
+
+- _Scenario_: The customer support team encounters challenges in managing customer expectations due to unexpected downtimes or service interruptions.
+- _Solution_: The application ensures improved service reliability and fewer disruptions, enabling the customer support team to provide accurate information and maintain customer satisfaction.
+- _Facilitated by_: Flask API for accessing optimized maintenance schedules and operational plans.
 
 ### 5. Executives and Stakeholders
+
 #### User Story:
-- *Scenario*: Executives and stakeholders are concerned about the financial impact of maintenance inefficiencies and service disruptions on business performance.
-- *Solution*: The application optimizes maintenance and operational scheduling to reduce costs associated with downtime and improve overall service quality, enhancing business performance.
-- *Facilitated by*: Kubernetes for scalability and efficient resource management in deployment.
+
+- _Scenario_: Executives and stakeholders are concerned about the financial impact of maintenance inefficiencies and service disruptions on business performance.
+- _Solution_: The application optimizes maintenance and operational scheduling to reduce costs associated with downtime and improve overall service quality, enhancing business performance.
+- _Facilitated by_: Kubernetes for scalability and efficient resource management in deployment.
 
 By identifying the various user groups and their user stories, we can understand the specific pain points addressed by the Yacht and Private Jet Optimization Suite and how it offers significant benefits to each user group within Aerocondor, ultimately improving operational efficiency, reducing downtime, and enhancing service reliability for Peru's high-end transport services.

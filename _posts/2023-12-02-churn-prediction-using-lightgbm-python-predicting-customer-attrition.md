@@ -8,9 +8,11 @@ layout: article
 ## AI Churn Prediction using LightGBM
 
 ## Objectives
+
 The objective of the AI churn prediction system is to develop a machine learning model that can accurately predict customer attrition or churn. By utilizing historical customer data, the system aims to identify patterns and factors associated with customers who are likely to churn. This will enable businesses to proactively take measures to retain at-risk customers and minimize revenue loss.
 
 ## System Design Strategies
+
 - **Data Collection**: Gather relevant customer data such as demographics, transaction history, customer interactions, and usage patterns.
 - **Data Preprocessing**: Clean and preprocess the data by handling missing values, encoding categorical variables, and splitting the dataset into training and testing sets.
 - **Feature Engineering**: Extract and create meaningful features from the data that can improve the predictive performance of the model.
@@ -20,6 +22,7 @@ The objective of the AI churn prediction system is to develop a machine learning
 - **Deployment**: Integrate the trained model into a scalable and production-ready system that can make real-time predictions on customer churn.
 
 ## Chosen Libraries
+
 - **Pandas**: For data manipulation and preprocessing tasks.
 - **Scikit-learn**: To split the dataset, perform feature engineering, and evaluate the model.
 - **LightGBM**: As the primary machine learning framework for training the churn prediction model using gradient boosting algorithms.
@@ -33,12 +36,15 @@ By following these design strategies and leveraging the chosen libraries, the sy
 To build a scalable infrastructure for the Churn Prediction using LightGBM application, we can leverage modern cloud-based technologies and principles of microservices architecture.
 
 ## Cloud Infrastructure
+
 Utilize a cloud platform such as AWS, Azure, or Google Cloud to host the application. The cloud infrastructure provides scalability, reliability, and security.
 
 ## Microservices Architecture
+
 Implement a microservices architecture to break down the application into smaller, independent services. This allows for better maintainability, scalability, and flexibility in deploying and updating individual components.
 
 ## Components of the Infrastructure
+
 1. **Data Storage**: Utilize a scalable and reliable data storage solution such as Amazon S3, Azure Blob Storage, or Google Cloud Storage to store the customer data used for training and inference.
 
 2. **Model Training**: Set up a scalable model training infrastructure using cloud-based compute resources such as AWS EC2 instances, Azure Virtual Machines, or Google Compute Engine. Use containerization technologies like Docker to encapsulate the model training process and ensure reproducibility.
@@ -50,6 +56,7 @@ Implement a microservices architecture to break down the application into smalle
 5. **Monitoring and Logging**: Implement a monitoring and logging solution using tools like AWS CloudWatch, Azure Monitor, or Google Cloud Operations to monitor the performance, health, and security of the application.
 
 ## Automation and Infrastructure as Code
+
 Leverage infrastructure as code tools like AWS CloudFormation, Azure Resource Manager, or Google Cloud Deployment Manager to define the infrastructure and automate the provisioning, configuration, and management of cloud resources.
 
 By adopting cloud infrastructure, microservices architecture, and the above components, the Churn Prediction using LightGBM application can be built to be scalable, reliable, and cost-effective, while leveraging the predictive capabilities of the AI model.
@@ -94,6 +101,7 @@ Churn-Prediction-LightGBM/
 ```
 
 In the above scalable file structure for the Churn Prediction using LightGBM repository:
+
 - **data/**: Contains directories for raw and processed data, enabling separation of raw data from preprocessed datasets.
 - **models/**: Includes directories for trained models and model evaluation results, allowing for organized storage and retrieval of model artifacts and evaluation metrics.
 - **notebooks/**: Housing Jupyter notebooks for data exploration, model training, and evaluation, facilitating reproducibility and documentation of the analysis process.
@@ -117,7 +125,9 @@ models/
 ```
 
 In the models directory for the Churn Prediction using LightGBM (Python) application:
+
 - **trained_model/**: This directory contains the trained model artifacts.
+
   - **lightgbm_model.pkl**: This file stores the serialized LightGBM model after it has been trained. It encapsulates the model's architecture, hyperparameters, and learned patterns from the data. This file is used for making predictions on new data without the need to retrain the model.
 
 - **model_evaluation/**: This directory houses the evaluation metrics of the trained model.
@@ -235,27 +245,28 @@ print(f"Model trained with accuracy: {accuracy}. Saved at: {saved_model_path}")
 ```
 
 1. **Data Scientist / Machine Learning Engineer**
-   - *User Story*: As a data scientist, I want to train and evaluate the LightGBM churn prediction model to assess its accuracy and effectiveness in predicting customer attrition.
-   - *File*: `notebooks/model_training_evaluation.ipynb`
+
+   - _User Story_: As a data scientist, I want to train and evaluate the LightGBM churn prediction model to assess its accuracy and effectiveness in predicting customer attrition.
+   - _File_: `notebooks/model_training_evaluation.ipynb`
 
 2. **Full Stack Developer**
-   - *User Story*: As a full stack developer, I want to implement the data preprocessing, feature engineering, model training, and model evaluation processes for the churn prediction application.
-   - *File*: `src/data_preprocessing.py`, `src/feature_engineering.py`, `src/model_training.py`, `src/model_evaluation.py`
-   
+   - _User Story_: As a full stack developer, I want to implement the data preprocessing, feature engineering, model training, and model evaluation processes for the churn prediction application.
+   - _File_: `src/data_preprocessing.py`, `src/feature_engineering.py`, `src/model_training.py`, `src/model_evaluation.py`
 3. **Business Analyst**
-   - *User Story*: As a business analyst, I want to understand the evaluation metrics of the trained churn prediction model to assess its business impact and make strategic decisions.
-   - *File*: `models/model_evaluation/evaluation_metrics.txt`
-   
+   - _User Story_: As a business analyst, I want to understand the evaluation metrics of the trained churn prediction model to assess its business impact and make strategic decisions.
+   - _File_: `models/model_evaluation/evaluation_metrics.txt`
 4. **API Developer**
-   - *User Story*: As an API developer, I want to build a RESTful API to serve real-time predictions using the trained LightGBM churn prediction model.
-   - *File*: `src/api/app.py`
+
+   - _User Story_: As an API developer, I want to build a RESTful API to serve real-time predictions using the trained LightGBM churn prediction model.
+   - _File_: `src/api/app.py`
 
 5. **Quality Assurance Engineer**
-   - *User Story*: As a QA engineer, I want to write and execute unit tests for different components of the churn prediction system to ensure its reliability and robustness.
-   - *File*: `tests/test_data_preprocessing.py`, `tests/test_feature_engineering.py`, `tests/test_model_training.py`, `tests/test_model_evaluation.py`
+
+   - _User Story_: As a QA engineer, I want to write and execute unit tests for different components of the churn prediction system to ensure its reliability and robustness.
+   - _File_: `tests/test_data_preprocessing.py`, `tests/test_feature_engineering.py`, `tests/test_model_training.py`, `tests/test_model_evaluation.py`
 
 6. **DevOps Engineer**
-   - *User Story*: As a DevOps engineer, I want to containerize the entire application for deployment and set up the necessary infrastructure for the Churn Prediction using LightGBM application.
-   - *File*: `deployment/Dockerfile`, Infrastructure as Code templates for cloud resources.
+   - _User Story_: As a DevOps engineer, I want to containerize the entire application for deployment and set up the necessary infrastructure for the Churn Prediction using LightGBM application.
+   - _File_: `deployment/Dockerfile`, Infrastructure as Code templates for cloud resources.
 
 Each type of user interacts with specific files or components of the Churn Prediction using LightGBM application according to their role and responsibilities, enabling a collaborative and cross-functional approach to the development, deployment, and utilization of the application.

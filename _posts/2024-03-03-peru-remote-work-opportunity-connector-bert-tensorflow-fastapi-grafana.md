@@ -6,12 +6,14 @@ layout: article
 ---
 
 **Objectives:**
+
 - Screen and match low-income individuals with remote work opportunities based on their skills and availability.
 - Provide access to stable income sources for individuals in need.
 - Develop a scalable, data-intensive AI application using Machine Learning to optimize the matching process.
 - Implement a user-friendly interface to facilitate easy interaction for both job seekers and employers.
 
 **System Design Strategies:**
+
 1. **Data Collection:** Collect comprehensive data on job seekers' skills and availability, as well as available remote work opportunities.
 2. **Machine Learning Model:** Utilize BERT (Bidirectional Encoder Representations from Transformers) and TensorFlow to develop a model for skill matching between candidates and job opportunities.
 3. **API Development:** Leverage FastAPI to create an efficient and scalable API for handling communication between front-end and back-end systems.
@@ -19,6 +21,7 @@ layout: article
 5. **Monitoring and Visualization:** Implement Grafana for monitoring system performance and visualizing data to gain insights on user interactions and job matching success rates.
 
 **Chosen Libraries:**
+
 1. **BERT:** BERT is selected for its advanced natural language processing capabilities, making it suitable for analyzing and understanding the skills and requirements of job listings and candidate profiles.
 2. **TensorFlow:** TensorFlow will be used to build and train the machine learning model, leveraging its high-level APIs for ease of development and deployment.
 3. **FastAPI:** FastAPI is chosen for its high performance and easy-to-use framework for building APIs, enabling efficient communication between different components of the system.
@@ -29,28 +32,33 @@ By combining these libraries and technologies in the system design, the AI Peru 
 **MLOps Infrastructure for the Peru Remote Work Opportunity Connector:**
 
 **Continuous Integration/Continuous Deployment (CI/CD) Pipeline:**
+
 - **Source Code Management:** Utilize Git for version control to track changes and collaborate on code development.
 - **Automated Testing:** Implement unit tests and integration tests to ensure the reliability of the codebase.
 - **CI/CD Tools:** Utilize tools like Jenkins or GitLab CI/CD to automate the build, test, and deployment process.
 - **Containerization:** Dockerize the application components to ensure consistency across different environments and simplify deployment.
 
 **Model Training and Deployment:**
+
 - **Machine Learning Pipeline:** Establish a pipeline for model training, evaluation, and validation using TensorFlow and BERT.
 - **Model Versioning:** Implement a system for versioning trained models to track performance and facilitate rollback if necessary.
 - **Model Monitoring:** Set up monitoring tools to track model performance metrics, such as accuracy and inference time.
 - **Model Deployment:** Utilize tools like TensorFlow Serving or Kubernetes to deploy models in production for real-time inference.
 
 **Data Management and Monitoring:**
+
 - **Data Versioning:** Implement a system for versioning and tracking changes to the dataset used for training and testing.
 - **Data Quality Monitoring:** Set up monitoring to detect anomalies and ensure data quality throughout the system.
 - **Data Pipelines:** Develop data pipelines using tools like Apache Airflow or Prefect to automate data processing and transformation tasks.
 
 **Infrastructure Scalability and Monitoring:**
+
 - **Cloud Infrastructure:** Deploy the application on cloud platforms like AWS or Google Cloud to leverage scalable resources and enhance performance.
 - **Auto-Scaling:** Configure auto-scaling mechanisms to adjust resources based on the system's workload and demand.
 - **Logging and Monitoring:** Set up logging with tools like ELK Stack (Elasticsearch, Logstash, Kibana) and monitoring with Grafana to track system performance and diagnose issues.
 
 **Security and Compliance:**
+
 - **Data Privacy:** Implement encryption mechanisms to protect sensitive user data and ensure compliance with data privacy regulations.
 - **Access Control:** Configure role-based access control to restrict access to sensitive data and system components.
 - **Regular Audits:** Conduct regular security audits and penetration testing to identify and address potential vulnerabilities.
@@ -98,6 +106,7 @@ By establishing a robust MLOps infrastructure encompassing CI/CD practices, mode
 **Explanation:**
 
 1. **app/:** Contains the main application logic for the Peru Remote Work Opportunity Connector.
+
    - **models/:** Houses the BERT and TensorFlow models for matching low-income individuals with remote work opportunities.
    - **api/:** Handles API functionality using FastAPI, with separate route files for users and job listings.
    - **services/:** Implements business logic for user and job services.
@@ -105,9 +114,11 @@ By establishing a robust MLOps infrastructure encompassing CI/CD practices, mode
    - **utils/:** Includes utility functions for authentication and validation.
 
 2. **config/:** Consists of configuration settings for the application.
+
    - **config.py:** Contains configurations for database connections, API settings, etc.
 
 3. **infra/:** Manages infrastructure-related code.
+
    - **database.py:** Connects to the database for data storage and retrieval.
 
 4. **tests/:** Contains unit tests for API endpoints and services.
@@ -132,7 +143,8 @@ This structured file layout ensures modularity, maintainability, and scalability
 
 **Explanation:**
 
-1. **bert_model.py:** This file contains the implementation of the BERT (Bidirectional Encoder Representations from Transformers) model. 
+1. **bert_model.py:** This file contains the implementation of the BERT (Bidirectional Encoder Representations from Transformers) model.
+
    - **Functionality:**
      - Preprocesses text data for input to the BERT model.
      - Loads the pre-trained BERT model using TensorFlow or Hugging Face's Transformers library.
@@ -175,17 +187,19 @@ As deployment typically involves more than just code files, the following direct
 2. **`docker-compose.yml`:** Specifies configurations for multi-container Docker applications. It can define services like the application server, database, and monitoring tools.
 
 3. **`kubernetes/`:** Contains Kubernetes deployment configurations for orchestrating containerized applications.
-    - **`deployment.yaml`:** Defines the deployment details for scaling the application across pods.
-    - **`service.yaml`:** Specifies the Kubernetes service configuration for routing traffic to the deployed pods.
+
+   - **`deployment.yaml`:** Defines the deployment details for scaling the application across pods.
+   - **`service.yaml`:** Specifies the Kubernetes service configuration for routing traffic to the deployed pods.
 
 4. **`scripts/`:** Includes shell scripts for managing the deployment process.
-    - **`start.sh`:** Script for starting the deployed application.
-    - **`stop.sh`:** Script for stopping the deployed application.
-    - **`deploy.sh`:** Script for automating the deployment process.
+
+   - **`start.sh`:** Script for starting the deployed application.
+   - **`stop.sh`:** Script for stopping the deployed application.
+   - **`deploy.sh`:** Script for automating the deployment process.
 
 5. **`config/`:** Stores configuration files for additional services like NGINX for reverse proxy and Grafana for monitoring.
-    - **`nginx.conf`:** Configuration file for NGINX to handle incoming HTTP requests and route them to the FastAPI server.
-    - **`grafana.ini`:** Configuration file for Grafana settings such as data source configuration and dashboard settings.
+   - **`nginx.conf`:** Configuration file for NGINX to handle incoming HTTP requests and route them to the FastAPI server.
+   - **`grafana.ini`:** Configuration file for Grafana settings such as data source configuration and dashboard settings.
 
 By organizing deployment resources in a structured manner, the deployment pipeline for the Peru Remote Work Opportunity Connector can be streamlined, making it easier to manage, scale, and monitor the application in a production environment effectively.
 
@@ -276,14 +290,17 @@ This file showcases a more sophisticated machine learning approach to match low-
 **Types of Users for the Peru Remote Work Opportunity Connector:**
 
 1. **Job Seeker - Maria:**
+
    - **User Story:** Maria is a single mother looking for remote work opportunities that match her graphic design skills. She wants to find flexible jobs that suit her availability to support her family.
    - **Accomplished by:** The `user_routes.py` file in the `app/api/routes` directory will handle Maria's interaction with the platform to create her profile, search for job listings, and apply for suitable opportunities.
 
 2. **Employer - David:**
+
    - **User Story:** David is a small business owner searching for candidates with programming skills to join his remote team. He wants to find qualified individuals who can work remotely and contribute to his projects.
    - **Accomplished by:** The `job_routes.py` file in the `app/api/routes` directory will enable David to post job listings, specify required skills, and review applications from potential candidates.
 
 3. **Platform Admin - Sofia:**
+
    - **User Story:** Sofia is an admin responsible for monitoring platform activity, handling user support, and ensuring the smooth operation of the Peru Remote Work Opportunity Connector.
    - **Accomplished by:** The `admin_routes.py` file in the `app/api/routes` directory will provide Sofia with the necessary functionalities to manage user accounts, troubleshoot issues, and oversee the overall platform performance.
 

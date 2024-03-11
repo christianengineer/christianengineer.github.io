@@ -8,36 +8,33 @@ layout: article
 ## AI Peru Microfinance Loan Matcher Project Overview
 
 ## Objectives:
+
 - Match low-income families with suitable microfinance loan opportunities based on their financial needs and capacity.
 - Empower families to start small businesses or expand existing ones, ultimately improving their economic well-being.
 
 ## System Design Strategies:
+
 1. **Data Collection and Processing**:
    - Collect and preprocess data on low-income families' financial information and loan opportunities.
    - Utilize TensorFlow for data preprocessing and feature engineering.
-   
 2. **Machine Learning Model Development**:
    - Build machine learning models to predict loan suitability for each family.
    - Use Scikit-Learn for model development and training.
-   
 3. **Web Application Development**:
    - Develop a web application using Flask framework for user interactions.
    - Integrate the machine learning model to provide loan recommendations based on user inputs.
-   
 4. **Scalability and Deployment**:
    - Deploy the application on Kubernetes to ensure scalability and availability.
    - Implement containerization for easy deployment and management.
 
 ## Chosen Libraries:
+
 1. **TensorFlow**:
    - Utilized for data preprocessing, feature engineering, and possibly model development for complex neural network architectures.
-   
 2. **Scikit-Learn**:
    - Ideal for building and training traditional machine learning models such as decision trees, random forests, and gradient boosting.
-   
 3. **Flask**:
    - Lightweight web framework for building the web application, handling user requests, and interfacing with the machine learning model.
-   
 4. **Kubernetes**:
    - Container orchestration platform to enable scalability, load balancing, and high availability of the application.
    - Supports efficient deployment and management of containerized applications.
@@ -51,21 +48,17 @@ By leveraging these libraries and design strategies, the AI Peru Microfinance Lo
 1. **Data Pipeline**:
    - Ingest data on low-income families and loan opportunities from various sources.
    - Use tools like Apache Airflow or Kubeflow Pipelines to automate data collection, preprocessing, and transformation.
-   
 2. **Model Training and Testing**:
    - Utilize TensorFlow and Scikit-Learn for developing machine learning models.
    - Implement version control using tools like Git to track changes in model code and data.
    - Conduct model testing and evaluation to ensure accuracy and reliability.
-   
 3. **Model Deployment**:
    - Containerize the trained models using Docker for portability and consistency.
    - Deploy models on Kubernetes for scalability and resource efficiency.
    - Implement CI/CD pipelines with tools like Jenkins or GitLab CI/CD for automated model deployment.
-   
 4. **Monitoring and Logging**:
    - Utilize monitoring tools like Prometheus and Grafana to track model performance metrics and system health.
    - Set up logging with ELK stack (Elasticsearch, Logstash, Kibana) to capture and analyze application logs.
-   
 5. **Feedback Loop and Model Updating**:
    - Establish a feedback loop to collect user feedback and model predictions for continuous improvement.
    - Use A/B testing to evaluate new model versions and performance before full deployment.
@@ -101,7 +94,7 @@ Peru-Microfinance-Loan-Matcher/
 │   ├── model_selection/
 │       ├── decision_tree_model.pkl
 │       ├── neural_network_model.h5
-│   
+│
 ├── app/
 │   ├── static/
 │   ├── templates/
@@ -112,7 +105,7 @@ Peru-Microfinance-Loan-Matcher/
 │   ├── kubernetes/
 │       ├── deployment.yaml
 │       ├── service.yaml
-│   
+│
 ├── pipelines/
 │   ├── data_pipeline.py
 │   ├── model_pipeline.py
@@ -158,6 +151,7 @@ models/
 ## Explanation of Files in Models Directory:
 
 1. **model_training.py**:
+
    - **Description**: Script for training machine learning models on the low-income families and loan opportunities data.
    - **Usage**:
      - Preprocesses data, splits into training and testing sets.
@@ -165,6 +159,7 @@ models/
      - Saves the trained models for later use.
 
 2. **model_evaluation.py**:
+
    - **Description**: Script for evaluating model performance and generating metrics.
    - **Usage**:
      - Loads the trained models from the model_selection directory.
@@ -172,14 +167,14 @@ models/
      - Prints and logs evaluation results for model performance assessment.
 
 3. **model_selection/**
+
    - **decision_tree_model.pkl**:
      - **Description**: Trained decision tree model saved in a serialized format.
-     - **Usage**: 
+     - **Usage**:
        - Loaded for making loan recommendations based on decision tree predictions.
-   
    - **neural_network_model.h5**:
      - **Description**: Trained neural network model saved in a Hierarchical Data Format (HDF5).
-     - **Usage**: 
+     - **Usage**:
        - Loaded for making loan recommendations based on neural network predictions.
 
 These files in the models directory encapsulate the functionalities related to training, evaluating, and utilizing machine learning models for the Peru Microfinance Loan Matcher application. The separation of concerns allows for easier management, updates, and reusability of the models in the project.
@@ -198,17 +193,18 @@ deployment/
 ## Explanation of Files in Deployment Directory:
 
 1. **Dockerfile**:
+
    - **Description**: Configuration file for building a Docker image for the Flask application.
    - **Usage**:
      - Defines the base image, sets up environment variables, and copies the application code into the container.
      - Specifies any dependencies to be installed and commands to run the Flask application.
 
 2. **kubernetes/**
+
    - **deployment.yaml**:
      - **Description**: Kubernetes manifest file for deploying the Flask application.
      - **Usage**:
        - Defines the deployment specifications, such as the Docker image, replicas, resources, and ports for the Flask application.
-   
    - **service.yaml**:
      - **Description**: Kubernetes service manifest file for exposing the Flask application externally.
      - **Usage**:
@@ -302,18 +298,22 @@ This script loads mock data, preprocesses it by normalizing the features, trains
 ## Types of Users for Peru Microfinance Loan Matcher Application
 
 1. **Low-Income Family**:
+
    - **User Story**: As a low-income family, I want to find suitable microfinance loan opportunities to start a small business and improve my financial situation.
    - **File**: The Flask application file (`app.py`) will provide a user-friendly interface for low-income families to input their financial details and receive personalized loan recommendations based on machine learning models.
 
 2. **Microfinance Institution Representative**:
+
    - **User Story**: As a microfinance institution representative, I aim to assess the financial needs of low-income families and match them with appropriate loan opportunities.
    - **File**: The `model_evaluation.py` file in the `models/` directory will allow the representative to evaluate the performance of the machine learning models used in the application and ensure accurate loan recommendations.
 
 3. **Data Scientist**:
+
    - **User Story**: As a data scientist, I want to analyze the data on low-income families and loan opportunities to improve the accuracy of loan matching algorithms.
    - **File**: The `train_neural_network.py` and `train_model.py` files in the `models/` directory will be used by the data scientist to train and experiment with machine learning models using mock data.
 
 4. **System Administrator**:
+
    - **User Story**: As a system administrator, I need to deploy and manage the Peru Microfinance Loan Matcher application on Kubernetes to ensure high availability.
    - **File**: The Kubernetes deployment files (`deployment.yaml` and `service.yaml`) in the `deployment/kubernetes/` directory will be used by the system administrator to deploy and expose the Flask application within the Kubernetes cluster.
 

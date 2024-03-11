@@ -6,10 +6,13 @@ layout: article
 ---
 
 ## Objectives of the Repository
+
 The objectives of the "AI Accessible Web Content Tools for users with disabilities" repository are to develop and implement tools that utilize AI and machine learning to make web content more accessible for users with disabilities. The repository aims to leverage PyTorch and Selenium to build scalable and data-intensive AI applications that can identify and improve accessibility issues on websites.
 
 ## System Design Strategies
+
 The system design for the AI Accessible Web Content Tools repository will involve the following key strategies:
+
 1. **Data Collection:** Use Selenium for web scraping to collect large amounts of web content, including text, images, and other multimedia.
 2. **Data Preprocessing:** Utilize PyTorch for preprocessing the collected data, preparing it for various machine learning tasks such as text classification, image recognition, and object detection.
 3. **Machine Learning Models:** Develop and train machine learning models using PyTorch for tasks such as identifying alt text for images, improving semantic structure of web pages, and providing recommendations for accessibility enhancements.
@@ -17,10 +20,13 @@ The system design for the AI Accessible Web Content Tools repository will involv
 5. **Accessibility Guidelines:** Incorporate accessibility guidelines such as WCAG (Web Content Accessibility Guidelines) into the AI models to ensure the identified issues align with established standards.
 
 ## Chosen Libraries
-### PyTorch 
+
+### PyTorch
+
 PyTorch is chosen for its flexibility and scalability in building and training machine learning models. It provides a rich set of tools for handling complex data-intensive tasks, making it well-suited for the AI applications in this repository.
 
 ### Selenium
+
 Selenium is selected for its web automation capabilities, allowing for efficient and accurate scraping of web content. It enables the systematic collection of diverse data types from web pages, which is essential for training models to improve web accessibility for users with disabilities.
 
 By leveraging PyTorch and Selenium in the development of the AI Accessible Web Content Tools, the repository aims to empower developers and organizations to create more inclusive web content for users with disabilities.
@@ -30,36 +36,45 @@ By leveraging PyTorch and Selenium in the development of the AI Accessible Web C
 To ensure the effective development, deployment, and monitoring of the Accessible Web Content Tools application, a comprehensive MLOps infrastructure is essential. The MLOps infrastructure integrates best practices from DevOps with machine learning processes to streamline the development lifecycle and facilitate the scalable deployment of AI solutions. Here's an expansion of the MLOps infrastructure for the Accessible Web Content Tools application:
 
 ### Version Control
+
 - Utilize Git or a similar version control system to track changes and manage the codebase for the AI models, web scraping scripts, and infrastructure configurations.
 
 ### Continuous Integration/Continuous Deployment (CI/CD)
+
 - Implement CI/CD pipelines to automate the testing, validation, and deployment of model updates and web scraping functionalities.
 - Integrate tools like Jenkins or GitLab CI for automated testing and deployment workflows.
 
 ### Model Training and Validation
+
 - Leverage PyTorch to train machine learning models on accessible web content data.
 - Implement automated model validation checks to ensure the quality and accuracy of the trained models.
 
 ### Model Registry and Artifact Management
+
 - Use a model registry like MLflow to track and manage trained models, including versioning, metadata, and lineage information.
 - Employ artifact management tools to store and access artifacts such as trained models, datasets, and preprocessing scripts.
 
 ### Infrastructure as Code (IaC)
+
 - Define the infrastructure components (e.g., cloud resources, containers) as code using tools like Terraform or AWS CloudFormation, enabling reproducibility and consistency in deployment setups.
 
 ### Monitoring and Logging
+
 - Set up monitoring and logging solutions to track model performance, web scraping efficiency, and system health.
 - Integrate tools such as Prometheus, Grafana, or ELK stack for comprehensive monitoring and log aggregation.
 
 ### Deployment
+
 - Utilize containerization (e.g., Docker) for packaging the AI models, web scraping components, and associated dependencies.
 - Choose orchestration frameworks like Kubernetes for scalable, containerized deployment across environments.
 
 ### Governance and Compliance
+
 - Establish governance practices for data privacy, security, and ethical AI considerations.
 - Ensure compliance with accessibility regulations and standards such as WCAG.
 
 ### Collaboration and Communication
+
 - Integrate collaboration platforms (e.g., Slack, Microsoft Teams) and project management tools (e.g., Jira) for efficient communication and task management within the development team.
 
 By implementing a robust MLOps infrastructure, the development and deployment of the Accessible Web Content Tools application can be streamlined, ensuring reliability, scalability, and maintainability of the AI-driven accessibility solutions for users with disabilities.
@@ -138,16 +153,19 @@ models/
 ```
 
 ### `image_classification/` Directory
+
 - `model.py`: Contains PyTorch model code for image classification tasks such as identifying images with accessibility issues.
 - `dataset.py`: Defines a custom dataset class for image data, incorporating necessary transformations and data loading logic.
 - `utils.py`: Includes utility functions for image processing, data augmentation, and image feature extraction.
 
 ### `text_classification/` Directory
+
 - `model.py`: Houses PyTorch model code for text classification tasks, such as classifying text content based on accessibility standards.
 - `preprocessing.py`: Includes functions for text data preprocessing, tokenization, and embedding generation.
 - `evaluation.py`: Provides functionality for model evaluation, including metrics calculation and result analysis.
 
 ### `object_detection/` Directory
+
 - `model.py`: Holds PyTorch model code for object detection tasks, identifying specific objects or elements on web pages that may require accessibility improvements.
 - `dataset.py`: Defines a custom dataset class for object detection data, integrating data loading and preprocessing logic.
 - `postprocessing.py`: Contains post-processing functions for object detection results, such as bounding box manipulation and confidence thresholding.
@@ -176,15 +194,18 @@ deployment/
 ```
 
 ### `terraform/` Directory
+
 - `main.tf`: The main Terraform configuration file that defines the cloud infrastructure resources, including compute instances, storage, networking components, and any required services.
 - `variables.tf`: Contains Terraform variables and input declarations to parameterize the infrastructure configuration.
 - `outputs.tf`: Defines the output values produced by the Terraform configuration, such as endpoint URLs or resource identifiers.
 
 ### `docker/` Directory
+
 - `Dockerfile`: Specifies the instructions for building the containerized application, including the base image, environment setup, and application deployment steps.
 - `requirements.txt`: Lists the Python dependencies required for the Docker image, ensuring a reproducible environment within the container.
 
 ### `kubernetes/` Directory
+
 - `deployment.yaml`: Specifies the Kubernetes deployment configuration for deploying the AI models, web scraping components, and any necessary services.
 - `service.yaml`: Defines the Kubernetes service configuration to expose the application internally or externally.
 - `ingress.yaml`: Contains the Ingress configuration for routing external traffic to the application within the Kubernetes cluster.

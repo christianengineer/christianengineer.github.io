@@ -8,11 +8,13 @@ layout: article
 ## AI Water Access and Quality Monitoring System for Peru
 
 ## Objectives:
+
 1. **Monitor Water Access Points**: Collect and analyze data on water access points to ensure availability and quality.
 2. **Predict Areas at Risk**: Use machine learning models to predict areas at risk of water quality issues for proactive intervention.
 3. **Guide Infrastructure Development**: Provide insights to guide infrastructure development for improved water accessibility and quality.
 
 ## System Design Strategies:
+
 1. **Data Collection**: Utilize sensors and IoT devices to collect real-time data on water access points.
 2. **Data Processing**: Employ Kafka for real-time data streaming and processing.
 3. **Machine Learning Models**: Develop models using Scikit-Learn and TensorFlow to predict water quality issues.
@@ -20,6 +22,7 @@ layout: article
 5. **Visualization**: Implement a dashboard for visualizing data and predictions to aid decision-making.
 
 ## Chosen Libraries:
+
 1. **Scikit-Learn**: For building traditional machine learning models such as regression, classification, and clustering to predict water quality.
 2. **TensorFlow**: For developing deep learning models like neural networks for more complex patterns in the data.
 3. **Kafka**: For real-time data streaming and processing to handle large volumes of data efficiently.
@@ -30,6 +33,7 @@ By combining the power of Scikit-Learn and TensorFlow for predictive modeling, K
 ## MLOps Infrastructure for AI Water Access and Quality Monitoring System
 
 ## Workflow Steps:
+
 1. **Data Ingestion**: Data from water access points is collected using sensors and IoT devices and streamed to Kafka for real-time processing.
 2. **Data Processing**: Kafka processes the streaming data and stores it in a scalable database for further analysis.
 3. **Feature Engineering**: Data preprocessing techniques are applied to extract relevant features for modeling from the stored data.
@@ -40,6 +44,7 @@ By combining the power of Scikit-Learn and TensorFlow for predictive modeling, K
 8. **Feedback Loop**: Feedback from model predictions and user interactions is used to continuously improve and retrain the models for better accuracy.
 
 ## Key Components:
+
 1. **CI/CD Pipeline**: Automate the end-to-end process of model development, testing, and deployment using tools like Jenkins or GitLab CI.
 2. **Model Registry**: Maintain a central repository to track and version machine learning models for easy access and reproducibility.
 3. **Environment Management**: Use tools like Conda or Docker to manage dependencies and ensure consistent environments across development, testing, and production.
@@ -111,6 +116,7 @@ models/
 ## Files in the `models` directory:
 
 1. **scikit-learn/**:
+
    - **regression_model.pkl**: Trained Scikit-Learn regression model specifically designed to predict water quality based on relevant features.
    - **classification_model.pkl**: Trained Scikit-Learn classification model used to assess areas at risk of water quality issues.
    - **feature_encoder.pkl**: Trained Scikit-Learn feature encoder to preprocess data for modeling.
@@ -135,9 +141,11 @@ deployment/
 ## Files in the `deployment` directory:
 
 1. **Dockerfile**:
+
    - The `Dockerfile` contains instructions for building the Docker image that will containerize the model deployment components for the Water Access and Quality Monitoring System. It specifies the base image, dependencies, and commands to run the application.
 
 2. **requirements.txt**:
+
    - `requirements.txt` lists all the Python dependencies required for the Docker image. This file helps ensure that all the necessary libraries and packages are installed when building the Docker container.
 
 3. **config/**:
@@ -249,22 +257,27 @@ Keep in mind that this script is a simplified example and should be adapted to m
 ## Types of Users for the Water Access and Quality Monitoring System:
 
 1. **Government Officials**:
+
    - User Story: As a government official, I need to access real-time data on water access points and areas at risk of water quality issues to make informed decisions on infrastructure development and resource allocation.
    - File: `water_access_quality_monitoring_system/notebooks/data_exploration.ipynb`
 
 2. **Water Engineers**:
+
    - User Story: As a water engineer, I want to analyze historical water quality data and leverage predictive models to identify potential risks and plan preventive measures for water quality management.
    - File: `water_access_quality_monitoring_system/scripts/train_model.py`
 
 3. **Data Scientists**:
+
    - User Story: As a data scientist, I aim to develop and deploy advanced machine learning models to predict water quality issues accurately and automate decision-making processes for the water monitoring system.
    - File: `water_access_quality_monitoring_system/scripts/train_complex_model.py`
 
 4. **Local Community Representatives**:
+
    - User Story: As a local community representative, I need access to user-friendly dashboards that visually present water quality insights and predictions, enabling me to advocate for improved water access in our community.
    - File: `water_access_quality_monitoring_system/notebooks/model_training_evaluation.ipynb`
 
 5. **Infrastructure Planners**:
+
    - User Story: As an infrastructure planner, I require analytical reports that highlight areas at higher risk of water quality issues, guiding me in prioritizing infrastructure development projects for enhanced water access and quality.
    - File: `water_access_quality_monitoring_system/scripts/model_inference.py`
 

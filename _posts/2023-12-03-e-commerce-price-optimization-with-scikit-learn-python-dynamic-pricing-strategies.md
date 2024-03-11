@@ -46,24 +46,29 @@ By focusing on these objectives, system design strategies, and chosen libraries,
 Building a robust infrastructure for the E-commerce Price Optimization application involves incorporating various components to support the dynamic pricing strategies powered by Scikit-Learn and Python. The infrastructure can be divided into several key elements:
 
 #### Data Collection and Storage
+
 - **Data Sources**: Gather data from various sources such as sales history, market trends, competitor pricing, and customer behavior.
 - **Data Pipeline**: Implement a robust data pipeline for collecting, processing, and storing large volumes of data to support real-time pricing decisions.
 - **Data Storage**: Utilize scalable and high-performance data storage solutions such as cloud-based databases (e.g., Amazon RDS, Google Cloud Bigtable) to handle the growing datasets efficiently.
 
 #### Model Training and Deployment
+
 - **Machine Learning Infrastructure**: Set up a dedicated infrastructure for model training, which may include cloud-based compute resources with GPU support for accelerating training tasks.
 - **Scikit-Learn Integration**: Integrate Scikit-Learn into the training infrastructure to develop, validate, and optimize pricing models using various machine learning algorithms.
 - **Model Deployment**: Implement a scalable and efficient framework for deploying trained models, which may involve containerization using Docker for easy deployment and management.
 
 #### Real-time Pricing Engine
+
 - **API Layer**: Develop an API layer to interface with the trained pricing models, enabling real-time pricing decisions based on incoming data and customer requests.
 - **Scalability**: Design the pricing engine infrastructure to scale horizontally, ensuring it can handle increased computational load during peak periods or sudden changes in demand.
 
 #### Application Integration
+
 - **Web Application**: Develop a web-based interface for integrating the pricing optimization engine into the e-commerce platform, allowing users to interact with the dynamic pricing features.
 - **Backend Services**: Implement backend services to handle user requests, process transactions, and synchronize pricing updates across the e-commerce platform.
 
 #### Monitoring and Analytics
+
 - **Logging and Monitoring**: Set up comprehensive logging and monitoring solutions to track the performance of the pricing engine, identify anomalies, and troubleshoot potential issues.
 - **Analytics and Reporting**: Integrate analytics tools to generate insights from pricing data, customer behavior, and sales performance, providing valuable feedback for continual optimization.
 
@@ -180,7 +185,7 @@ def train_price_optimization_model(data_file_path):
     Returns:
     RandomForestRegressor: Trained price optimization model.
     """
-    
+
     ## Load mock data from the provided file path
     data = pd.read_csv(data_file_path)
 
@@ -213,23 +218,27 @@ In the above function, `train_price_optimization_model` is designed to train a c
 ### Types of Users for E-commerce Price Optimization Application
 
 1. **Data Scientist / Machine Learning Engineer**
-   - *User Story*: As a Data Scientist, I want to train and evaluate various machine learning models using different datasets to optimize pricing strategies.
-   - *File*: `model_training.ipynb` in the `models/` directory.
+
+   - _User Story_: As a Data Scientist, I want to train and evaluate various machine learning models using different datasets to optimize pricing strategies.
+   - _File_: `model_training.ipynb` in the `models/` directory.
 
 2. **Software Developer**
-   - *User Story*: As a Software Developer, I want to integrate the trained pricing models into our e-commerce platform to enable dynamic pricing for our products.
-   - *File*: `app.py` in the `api/` directory.
+
+   - _User Story_: As a Software Developer, I want to integrate the trained pricing models into our e-commerce platform to enable dynamic pricing for our products.
+   - _File_: `app.py` in the `api/` directory.
 
 3. **Business Analyst**
-   - *User Story*: As a Business Analyst, I want to analyze the impact of dynamic pricing on sales and customer behavior to provide insights for strategic decision-making.
-   - *File*: `README.md` in the `documentation/` directory.
+
+   - _User Story_: As a Business Analyst, I want to analyze the impact of dynamic pricing on sales and customer behavior to provide insights for strategic decision-making.
+   - _File_: `README.md` in the `documentation/` directory.
 
 4. **Operations Manager**
-   - *User Story*: As an Operations Manager, I want to monitor the real-time performance of the pricing engine and ensure its scalability and reliability.
-   - *File*: `start_api.sh` in the `deploy_scripts/` directory.
+
+   - _User Story_: As an Operations Manager, I want to monitor the real-time performance of the pricing engine and ensure its scalability and reliability.
+   - _File_: `start_api.sh` in the `deploy_scripts/` directory.
 
 5. **End Customer**
-   - *User Story*: As an End Customer, I want to experience personalized pricing and promotional offers based on my browsing and purchasing behavior.
-   - *File*: `index.html` and `main.js` in the `web_application/` directory.
+   - _User Story_: As an End Customer, I want to experience personalized pricing and promotional offers based on my browsing and purchasing behavior.
+   - _File_: `index.html` and `main.js` in the `web_application/` directory.
 
 By considering the needs and user stories of each type of user, the E-commerce Price Optimization application aims to cater to a diverse set of stakeholders and provide value through its efficient use of Scikit-Learn and dynamic pricing strategies.

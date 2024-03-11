@@ -8,35 +8,41 @@ layout: article
 ## Private Investment Promotion Agency of Peru - Machine Learning Solution
 
 ## Objectives and Benefits for Investment Analysts:
+
 - **Objective**: Evaluate investment projects based on economic and social impact criteria.
 - **Benefits**:
   - Improved decision-making process.
   - Enhanced accuracy and efficiency in assessing project viability.
   - Prioritization of investment opportunities based on data-driven insights.
-  
+
 ## Machine Learning Algorithm:
+
 - **Algorithm**: Random Forest Classifier
   - **Reasoning**: Offers high accuracy, handles non-linear data well, and provides feature importances for better interpretability.
 
 ## Sourcing, Preprocessing, Modeling, and Deploying Strategies:
+
 1. **Sourcing Data**:
-   - **Data Source**: 
-      - Collect data on investment projects from various sources like reports, surveys, and databases.
+
+   - **Data Source**:
+     - Collect data on investment projects from various sources like reports, surveys, and databases.
    - **Tools**: Python libraries like Pandas, NumPy for data manipulation.
 
 2. **Data Preprocessing**:
+
    - **Steps**:
-      - Handle missing values and outliers.
-      - Perform feature engineering and selection.
-      - Encode categorical variables.
+     - Handle missing values and outliers.
+     - Perform feature engineering and selection.
+     - Encode categorical variables.
    - **Tools**: Scikit-learn for preprocessing tasks.
 
 3. **Modeling**:
+
    - **Model**: Random Forest Classifier
    - **Steps**:
-      - Split data into training and testing sets.
-      - Train the model on the training set.
-      - Evaluate model performance using metrics like accuracy, precision, recall.
+     - Split data into training and testing sets.
+     - Train the model on the training set.
+     - Evaluate model performance using metrics like accuracy, precision, recall.
    - **Tools**: Scikit-learn for training and evaluation.
 
 4. **Deployment**:
@@ -44,6 +50,7 @@ layout: article
    - **Tools**: Flask or FastAPI for building the API. Docker for containerization.
 
 ## Tools and Libraries:
+
 - **Python**: https://www.python.org/
 - **Scikit-learn**: https://scikit-learn.org/
 - **TensorFlow**: https://www.tensorflow.org/
@@ -58,17 +65,21 @@ By following these strategies and utilizing the mentioned tools and libraries, t
 ## Sourcing Data Strategy for Investment Project Evaluation
 
 ## Data Collection Tools and Methods:
+
 1. **Web Scraping**:
+
    - **Tool**: Beautiful Soup and Scrapy
      - **Description**: Extract data from websites, reports, and online databases efficiently.
      - **Integration**: Automate data extraction and store in a structured format for easy access.
 
 2. **API Integration**:
+
    - **Tool**: Requests library in Python
      - **Description**: Fetch data from external APIs such as economic indicators, social impact data, and financial market information.
      - **Integration**: Integrate API calls within scripts to retrieve real-time data for analysis.
 
 3. **Database Querying**:
+
    - **Tool**: SQL (e.g., SQLite, PostgreSQL)
      - **Description**: Query structured databases to retrieve relevant project data.
      - **Integration**: Connect to databases storing project information to retrieve data for evaluation.
@@ -78,6 +89,7 @@ By following these strategies and utilizing the mentioned tools and libraries, t
      - **Integration**: Establish data sharing agreements and pipelines to access required data securely.
 
 ## Integration within Existing Technology Stack:
+
 - **Data Storage**: Utilize databases (e.g., PostgreSQL) to store collected data securely and in a structured format.
 - **ETL Processes**: Implement ETL (Extract, Transform, Load) pipelines using tools like Apache Airflow to preprocess and integrate data into the system.
 - **Automation**: Use cron jobs or scheduling tools to automate data collection processes at regular intervals.
@@ -88,76 +100,83 @@ By incorporating these tools and methods within the existing technology stack, t
 ## Feature Extraction and Engineering Strategy for Investment Project Evaluation
 
 ## Feature Extraction:
+
 1. **Economic Indicators**:
-   - *GDP Growth Rate*: Measure of economic growth
-   - *Interest Rates*: Impact on investment decisions
-   - *Inflation Rate*: Reflects purchasing power
+   - _GDP Growth Rate_: Measure of economic growth
+   - _Interest Rates_: Impact on investment decisions
+   - _Inflation Rate_: Reflects purchasing power
 2. **Social Impact Data**:
-   - *Employment Rate*: Indicates labor market conditions
-   - *Poverty Rate*: Measure of social inequality
-   - *Education Level*: Influence on workforce productivity
+   - _Employment Rate_: Indicates labor market conditions
+   - _Poverty Rate_: Measure of social inequality
+   - _Education Level_: Influence on workforce productivity
 
 ## Feature Engineering:
+
 1. **Time-Related Features**:
-   - *Quarter*: Extract quarter from project timeline
-   - *Year*: Extract year from project timeline
+   - _Quarter_: Extract quarter from project timeline
+   - _Year_: Extract year from project timeline
 2. **Categorical Variables**:
-   - *Region*: Encode geographical location of the project
-   - *Sector*: Categorize the industry sector of the project
+   - _Region_: Encode geographical location of the project
+   - _Sector_: Categorize the industry sector of the project
 3. **Interaction Features**:
-   - *GDP Growth Rate x Sector*: Interaction between economic performance and sector
-   - *Employment Rate x Region*: Impact of regional employment on project viability
+   - _GDP Growth Rate x Sector_: Interaction between economic performance and sector
+   - _Employment Rate x Region_: Impact of regional employment on project viability
 
 ## Variable Naming Recommendations:
+
 1. **Economic Indicators**:
-   - *gdp_growth_rate*
-   - *interest_rate*
-   - *inflation_rate*
+   - _gdp_growth_rate_
+   - _interest_rate_
+   - _inflation_rate_
 2. **Social Impact Data**:
-   - *employment_rate*
-   - *poverty_rate*
-   - *education_level*
+   - _employment_rate_
+   - _poverty_rate_
+   - _education_level_
 3. **Time-Related Features**:
-   - *quarter*
-   - *year*
+   - _quarter_
+   - _year_
 4. **Categorical Variables**:
-   - *region_encoded*
-   - *sector_encoded*
+   - _region_encoded_
+   - _sector_encoded_
 5. **Interaction Features**:
-   - *gdp_sector_interaction*
-   - *employment_region_interaction*
+   - _gdp_sector_interaction_
+   - _employment_region_interaction_
 
 By incorporating these feature extraction and engineering strategies, the project can enhance both the interpretability of the data and the performance of the machine learning model. The recommended variable names follow a consistent and descriptive naming convention, aiding in better understanding and analysis of the dataset. This approach will optimize the development and effectiveness of the project's objectives, ultimately improving the evaluation of investment projects for Investment Analysts at the Private Investment Promotion Agency of Peru.
 
 ## Metadata Management Recommendations for Investment Project Evaluation
 
 1. **Variable Descriptions**:
+
    - **Economic Indicators**:
-     - *gdp_growth_rate*: Percentage change in GDP over a period
-     - *interest_rate*: Rate at which interest is charged on borrowed funds
-     - *inflation_rate*: Rate of price increase of goods and services
+     - _gdp_growth_rate_: Percentage change in GDP over a period
+     - _interest_rate_: Rate at which interest is charged on borrowed funds
+     - _inflation_rate_: Rate of price increase of goods and services
    - **Social Impact Data**:
-     - *employment_rate*: Percentage of the workforce currently employed
-     - *poverty_rate*: Percentage of the population living below the poverty line
-     - *education_level*: Level of education attained by the workforce
+     - _employment_rate_: Percentage of the workforce currently employed
+     - _poverty_rate_: Percentage of the population living below the poverty line
+     - _education_level_: Level of education attained by the workforce
 
 2. **Variable Types**:
+
    - **Continuous Variables**:
-     - *gdp_growth_rate*, *interest_rate*, *inflation_rate*
+     - _gdp_growth_rate_, _interest_rate_, _inflation_rate_
    - **Discrete Variables**:
-     - *employment_rate*, *poverty_rate*, *education_level*
+     - _employment_rate_, _poverty_rate_, _education_level_
    - **Categorical Variables**:
-     - *region_encoded*, *sector_encoded*
+     - _region_encoded_, _sector_encoded_
 
 3. **Variable Relationships**:
+
    - **Correlations**:
      - Explore correlations between economic indicators and social impact data
    - **Interactions**:
      - Analyze interaction effects between different variables (e.g., GDP growth rate and sector)
 
 4. **Missing Data Handling**:
+
    - **Imputation**:
-     - Define strategies for imputing missing values in variables like *employment_rate* and *education_level*
+     - Define strategies for imputing missing values in variables like _employment_rate_ and _education_level_
 
 5. **Outlier Detection**:
    - **Identification**:
@@ -170,6 +189,7 @@ By managing metadata specific to the characteristics and demands of the investme
 ## Data Challenges and Preprocessing Strategies for Investment Project Evaluation
 
 ## Specific Data Problems:
+
 1. **Missing Values**:
    - Economic and social impact data may have missing values, impacting analysis and model performance.
 2. **Outliers**:
@@ -182,6 +202,7 @@ By managing metadata specific to the characteristics and demands of the investme
    - Encoding categorical variables like region and sector requires careful handling to avoid bias and ensure model interpretability.
 
 ## Data Preprocessing Strategies:
+
 1. **Handling Missing Values**:
    - Impute missing values using appropriate methods like mean, median, or advanced imputation techniques based on the variable characteristics.
 2. **Outlier Detection and Treatment**:
@@ -239,6 +260,7 @@ print(X_preprocessed.shape)
 ```
 
 In the provided code:
+
 - The data is loaded and divided into features (X) and the target variable (y).
 - Numeric features are standardized with missing values imputed using the median to handle missing data effectively.
 - Categorical features are one-hot encoded to convert them into numerical format for model training without introducing ordinal relationships.
@@ -250,29 +272,34 @@ These preprocessing steps are tailored to handle specific challenges of the inve
 ## Modeling Strategy for Investment Project Evaluation
 
 ## Recommended Modeling Strategy:
+
 - **Algorithm**: Gradient Boosting Classifier
-  - **Reasoning**: 
+  - **Reasoning**:
     - Handles complex relationships well and provides high accuracy.
     - Robust to overfitting and works with a mix of data types.
-  
 - **Hyperparameter Tuning**:
+
   - Utilize techniques like grid search or random search to optimize the model's hyperparameters for enhanced performance and generalization.
 
 - **Cross-Validation**:
+
   - Implement k-fold cross-validation to assess the model's performance robustly on different subsets of data and mitigate overfitting.
 
 - **Evaluation Metrics**:
+
   - Focus on metrics such as F1 Score and Area Under the ROC Curve (AUC-ROC) to evaluate the model's ability to balance precision and recall, crucial for investment project decision-making accuracy.
 
 - **Feature Importance Analysis**:
   - Conduct feature importance analysis to identify the key economic and social impact factors influencing investment project viability, aiding in decision-making interpretation.
 
 ## Most Crucial Step: Hyperparameter Tuning
+
 The most critical step in this modeling strategy is hyperparameter tuning. In the context of evaluating investment projects based on economic and social impact criteria, hyperparameter tuning is vital because it fine-tunes the model's parameters to optimize performance and generalization. Since the project deals with diverse data types and complex relationships between features, tuning the algorithm's hyperparameters ensures that the model can effectively capture these nuances and make accurate predictions. This step is crucial for enhancing the model's predictive power and ensuring that it can effectively evaluate investment projects, ultimately improving decision-making for Investment Analysts at the Private Investment Promotion Agency of Peru.
 
 ## Tools and Technologies Recommendations for Data Modeling in Investment Project Evaluation:
 
 1. **Tool: XGBoost**
+
    - **Description**: XGBoost is an optimized distributed gradient boosting library known for its efficiency, speed, and performance in handling diverse data types.
    - **Fit with Modeling Strategy**: XGBoost is well-suited for handling the complexities of the project's data, such as mixed data types and complex relationships, aligning with the Gradient Boosting Classifier modeling strategy.
    - **Integration**: XGBoost can easily integrate with Python and Scikit-learn, ensuring seamless inclusion in the existing workflow.
@@ -280,6 +307,7 @@ The most critical step in this modeling strategy is hyperparameter tuning. In th
    - **Documentation**: [XGBoost Documentation](https://xgboost.readthedocs.io/)
 
 2. **Tool: Hyperopt**
+
    - **Description**: Hyperopt is a Python library for optimizing model hyperparameters using Bayesian optimization techniques.
    - **Fit with Modeling Strategy**: Hyperopt is crucial for hyperparameter tuning, optimizing the Gradient Boosting Classifier for improved performance and generalization.
    - **Integration**: Compatible with popular machine learning libraries like Scikit-learn, providing seamless integration into the modeling workflow.
@@ -335,6 +363,7 @@ print("Dataset created and saved successfully.")
 ```
 
 In the provided Python script:
+
 - A large fictitious dataset is generated to mimic real-world data relevant to the investment project evaluation.
 - The script includes attributes for economic indicators, social impact data, region encoded, and sector encoded as per the project's feature requirements.
 - Categorical variables are one-hot encoded to represent them numerically for model training.
@@ -361,6 +390,7 @@ Note: This sample dataset showcases a few rows of data with relevant features st
 ```
 
 In the provided sample mocked dataset representation:
+
 - Rows of data showcase the values for economic indicators, social impact data, region encoded, and sector encoded as relevant to the investment project evaluation.
 - Features are structured with clear names and types, including numeric features and one-hot encoded categorical features for regions and sectors.
 - The one-hot encoded representation highlights the presence or absence of each category, facilitating model ingestion and interpretation for the project's objectives.
@@ -400,6 +430,7 @@ joblib.dump(model, 'investment_project_model.pkl')
 ```
 
 In the provided Python code snippet:
+
 - The code is structured for immediate deployment in a production environment, focusing on the model's data for the investment project evaluation.
 - Comments are included to explain the logic, purpose, and functionality of key sections, adhering to best practices for documentation.
 - Conventions for code quality and structure in large tech environments are followed, including clear variable names, modularization of code, and concise yet informative comments.
@@ -410,6 +441,7 @@ By following these standards for quality, readability, and maintainability in th
 ## Deployment Plan for Machine Learning Model in Investment Project Evaluation
 
 ## Pre-Deployment Checks:
+
 1. **Model Evaluation**:
    - Ensure the model meets performance criteria through thorough testing.
 2. **Security and Compliance**:
@@ -418,6 +450,7 @@ By following these standards for quality, readability, and maintainability in th
    - Check scalability of the model for production-level workload.
 
 ## Deployment Steps:
+
 1. **Model Serialization**:
    - Serialize the trained model for easy deployment.
    - **Tools**: Joblib or Pickle
@@ -439,6 +472,7 @@ By following these standards for quality, readability, and maintainability in th
      - [Azure Documentation](https://docs.microsoft.com/en-us/azure/)
 
 ## Live Environment Integration:
+
 1. **Monitoring and Logging**:
    - Implement monitoring tools for performance tracking.
    - **Tools**: Prometheus, Grafana
@@ -480,6 +514,7 @@ CMD ["python", "predict.py"]
 ```
 
 In the provided Dockerfile:
+
 - The base image is set to Python with a specific version to match the project's requirements.
 - Libraries are installed from the `requirements.txt` file to ensure the necessary dependencies are included in the container.
 - Important project files including preprocessed data, trained model, and prediction script are copied into the container.
@@ -491,27 +526,35 @@ This Dockerfile is tailored to encapsulate the project's environment and depende
 ## User Groups and User Stories for the Investment Project Evaluation Application:
 
 ### User Group: Investment Analysts
+
 **User Story**:
-- *Scenario*: Maria, an Investment Analyst at the agency, is overwhelmed by the volume of investment projects to assess. She struggles to evaluate projects based on multiple economic and social impact criteria efficiently.
-- *Application Solution*: The machine learning model in the application automates project evaluation based on economic and social impact factors. Maria can quickly obtain insights on project viability, prioritizing high-impact opportunities.
-- *Facilitating Component*: The model training script and model deployment API streamline project evaluation, saving time and improving decision-making for Investment Analysts.
+
+- _Scenario_: Maria, an Investment Analyst at the agency, is overwhelmed by the volume of investment projects to assess. She struggles to evaluate projects based on multiple economic and social impact criteria efficiently.
+- _Application Solution_: The machine learning model in the application automates project evaluation based on economic and social impact factors. Maria can quickly obtain insights on project viability, prioritizing high-impact opportunities.
+- _Facilitating Component_: The model training script and model deployment API streamline project evaluation, saving time and improving decision-making for Investment Analysts.
 
 ### User Group: Decision-Makers at the Agency
+
 **User Story**:
-- *Scenario*: Alejandro, a Decision-Maker, needs to allocate resources effectively to drive economic growth. He lacks a systematic approach to assess the potential impact of investment projects on the local economy.
-- *Application Solution*: The machine learning model provides data-driven insights on the economic and social impact of investment projects. Alejandro can make informed decisions, maximizing the agency's contributions to economic development.
-- *Facilitating Component*: The model's feature importance analysis helps Decision-Makers identify critical factors influencing project viability, enhancing resource allocation strategies.
+
+- _Scenario_: Alejandro, a Decision-Maker, needs to allocate resources effectively to drive economic growth. He lacks a systematic approach to assess the potential impact of investment projects on the local economy.
+- _Application Solution_: The machine learning model provides data-driven insights on the economic and social impact of investment projects. Alejandro can make informed decisions, maximizing the agency's contributions to economic development.
+- _Facilitating Component_: The model's feature importance analysis helps Decision-Makers identify critical factors influencing project viability, enhancing resource allocation strategies.
 
 ### User Group: Project Managers and Stakeholders
+
 **User Story**:
-- *Scenario*: Javier, a Project Manager, struggles to communicate the potential benefits of his investment project effectively to stakeholders. He needs a comprehensive analysis to showcase the project's value proposition.
-- *Application Solution*: The machine learning model evaluates projects based on economic and social impact criteria, quantifying their potential benefits. Javier can present data-backed insights to stakeholders, garnering support and funding for projects.
-- *Facilitating Component*: The model's prediction capabilities and API integration enable Project Managers to generate detailed analyses for stakeholders, fostering collaboration and project success.
+
+- _Scenario_: Javier, a Project Manager, struggles to communicate the potential benefits of his investment project effectively to stakeholders. He needs a comprehensive analysis to showcase the project's value proposition.
+- _Application Solution_: The machine learning model evaluates projects based on economic and social impact criteria, quantifying their potential benefits. Javier can present data-backed insights to stakeholders, garnering support and funding for projects.
+- _Facilitating Component_: The model's prediction capabilities and API integration enable Project Managers to generate detailed analyses for stakeholders, fostering collaboration and project success.
 
 ### User Group: Researchers and Academics
+
 **User Story**:
-- *Scenario*: Sofia, a researcher specializing in economic development, seeks data-driven insights on the impact of investments in specific regions and sectors. She requires robust analytical tools to support her research.
-- *Application Solution*: The machine learning model offers sophisticated analysis of investment projects, providing valuable insights for research on economic and social impact. Sofia can leverage the model's results to enhance her studies and publications.
-- *Facilitating Component*: Access to the model's predictions and feature importance analysis supports researchers in analyzing and interpreting investment project data effectively.
+
+- _Scenario_: Sofia, a researcher specializing in economic development, seeks data-driven insights on the impact of investments in specific regions and sectors. She requires robust analytical tools to support her research.
+- _Application Solution_: The machine learning model offers sophisticated analysis of investment projects, providing valuable insights for research on economic and social impact. Sofia can leverage the model's results to enhance her studies and publications.
+- _Facilitating Component_: Access to the model's predictions and feature importance analysis supports researchers in analyzing and interpreting investment project data effectively.
 
 By identifying diverse user groups and crafting user stories that illustrate how the application addresses their pain points, the value proposition of the investment project evaluation application becomes clear. Each user type benefits from the machine learning solution by streamlining project assessments, enhancing decision-making, and providing valuable insights tailored to their specific needs within the Private Investment Promotion Agency of Peru.

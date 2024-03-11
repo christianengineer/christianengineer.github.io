@@ -8,14 +8,17 @@ layout: article
 ### AI Peru Food Export Compliance Application
 
 #### Objectives
+
 The main objectives of the AI Peru Food Export Compliance application are to automate the monitoring and reporting of compliance with international food export standards, reduce manual oversight, and facilitate market access for food exporters. The system aims to provide real-time insights into compliance status, identify potential issues, and streamline the export process.
 
 #### System Design Strategies
+
 1. **Scalability:** Use containerization (Kubernetes) for scalability and to handle increasing workloads efficiently.
 2. **Data-Intensive Processing:** Leverage Apache Airflow for orchestrating complex data workflows and managing data pipelines.
 3. **Machine Learning:** Implement TensorFlow and Scikit-Learn for building and deploying machine learning models to analyze and predict compliance patterns.
 
 #### Chosen Libraries
+
 1. **TensorFlow:** Utilize TensorFlow for creating and training deep learning models to identify compliance patterns within the exported food data.
 2. **Scikit-Learn:** Use Scikit-Learn for traditional machine learning tasks such as classification, regression, and clustering in the compliance monitoring process.
 3. **Apache Airflow:** Employ Airflow to schedule and monitor workflows, ensuring reliable and scalable data processing.
@@ -28,29 +31,36 @@ By combining these libraries and tools, the AI Peru Food Export Compliance appli
 The MLOps infrastructure for the Peru Food Export Compliance AI involves the integration of TensorFlow, Scikit-Learn, Apache Airflow, and Kubernetes to automate the monitoring and reporting of compliance with international food export standards. The infrastructure encompasses the following components and processes:
 
 #### 1. Data Collection and Storage
+
 - **Data Sources**: Ingest data from various sources such as food export databases, regulatory standards repositories, and historical compliance records.
 - **Data Storage**: Use scalable and reliable data storage solutions like cloud-based databases or data lakes to store the collected data.
 
 #### 2. Data Preprocessing and Feature Engineering
+
 - **Data Preprocessing**: Prepare the raw data for modeling by handling missing values, encoding categorical variables, and normalizing numerical features.
 - **Feature Engineering**: Create relevant features and transform the data to be suitable for inputting into machine learning models.
 
 #### 3. Machine Learning Model Development
+
 - **TensorFlow and Scikit-Learn**: Develop machine learning models using TensorFlow for deep learning-based approaches and Scikit-Learn for traditional machine learning algorithms. Train, evaluate, and tune these models to predict compliance patterns.
 
 #### 4. Model Deployment and Monitoring
+
 - **Kubernetes**: Deploy machine learning models as scalable microservices within Kubernetes clusters to handle varying workloads.
 - **Model Monitoring**: Implement monitoring of deployed models using Kubernetes monitoring tools to ensure performance and reliability.
 
 #### 5. Workflow Orchestration and Automation
+
 - **Apache Airflow**: Orchestrate complex data workflows and manage data pipelines for data preprocessing, model training, deployment, and monitoring.
 - **Automation**: Schedule and automate the entire compliance monitoring and reporting process using Airflow's workflow automation capabilities.
 
 #### 6. Reporting and Insights
+
 - **Visualization Tools**: Utilize visualization libraries such as Matplotlib, Seaborn, or specialized BI tools to create insightful visualizations of compliance status and trends.
 - **Real-Time Reporting**: Enable real-time reporting of compliance status and actionable insights based on the monitored data.
 
 #### 7. Continuous Integration/Continuous Deployment (CI/CD)
+
 - **CI/CD Pipelines**: Implement CI/CD pipelines to automate the testing, deployment, and monitoring of the end-to-end MLOps infrastructure.
 
 By integrating these components into the MLOps infrastructure, the Peru Food Export Compliance AI application can effectively automate compliance monitoring, provide real-time insights, and facilitate market access for food exporters by reducing manual oversight and streamlining the compliance reporting process.
@@ -176,7 +186,7 @@ The "model_deployment/" directory contains the "kubernetes/" subdirectory, which
 
 By organizing the deployment-related files within the "model_deployment/" directory, the Peru Food Export Compliance AI application can streamline the deployment process for machine learning models, facilitate reproducibility, and ensure efficient integration with Kubernetes infrastructure for scalable and reliable serving of the models.
 
-Certainly! Below is an example of a Python script "train_model.py" for training a machine learning model using mock data. This script demonstrates how to use TensorFlow and Scikit-Learn to train models for the Peru Food Export Compliance AI application. Since this is a mock example, the data used here is synthetic and not representative of real-world data. 
+Certainly! Below is an example of a Python script "train_model.py" for training a machine learning model using mock data. This script demonstrates how to use TensorFlow and Scikit-Learn to train models for the Peru Food Export Compliance AI application. Since this is a mock example, the data used here is synthetic and not representative of real-world data.
 
 ```python
 ## train_model.py
@@ -198,11 +208,11 @@ def load_mock_data():
 def train_scikit_learn_model(features, labels):
     ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(features, labels, test_size=0.2, random_state=42)
-    
+
     ## Initialize and train a Scikit-Learn model (Random Forest Classifier in this case)
     model = RandomForestClassifier(n_estimators=100, random_state=42)
     model.fit(X_train, y_train)
-    
+
     ## Evaluate the model
     accuracy = model.score(X_test, y_test)
     print(f"Scikit-Learn Model Accuracy: {accuracy}")
@@ -213,12 +223,12 @@ def train_tensorflow_model(features, labels):
         layers.Dense(64, activation='relu', input_shape=(features.shape[1],)),
         layers.Dense(1, activation='sigmoid')
     ])
-    
+
     model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
-    
+
     ## Train the model
     model.fit(features, labels, epochs=10, validation_split=0.2)
-    
+
     ## Evaluate the model
     _, accuracy = model.evaluate(features, labels)
     print(f"TensorFlow Model Accuracy: {accuracy}")
@@ -226,10 +236,10 @@ def train_tensorflow_model(features, labels):
 def main():
     ## Load mock data
     features, labels = load_mock_data()
-    
+
     ## Train a Scikit-Learn model
     train_scikit_learn_model(features, labels)
-    
+
     ## Train a TensorFlow model
     train_tensorflow_model(features, labels)
 
@@ -264,17 +274,17 @@ def train_complex_ml_algorithm(features, labels):
     ## Preprocess the data
     scaler = StandardScaler()
     scaled_features = scaler.fit_transform(features)
-    
+
     ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(scaled_features, labels, test_size=0.2, random_state=42)
-    
+
     ## Initialize and train a complex machine learning algorithm (Random Forest Classifier in this case)
     model = RandomForestClassifier(n_estimators=100, random_state=42)
     model.fit(X_train, y_train)
-    
+
     ## Make predictions
     y_pred = model.predict(X_test)
-    
+
     ## Evaluate the model
     accuracy = accuracy_score(y_test, y_pred)
     report = classification_report(y_test, y_pred)
@@ -284,7 +294,7 @@ def train_complex_ml_algorithm(features, labels):
 def main():
     ## Load mock data
     features, labels = load_mock_data()
-    
+
     ## Train a complex machine learning algorithm
     train_complex_ml_algorithm(features, labels)
 
@@ -299,27 +309,32 @@ In this script, we have included a more complex machine learning algorithm utili
 ### Types of Users
 
 1. **Compliance Manager**
-   - *User Story*: As a Compliance Manager, I need to oversee the monitoring and reporting of international food export standards to ensure compliance and market access.
-   - *File*: `workflow_orchestration/airflow_dags/monitoring_and_reporting_dag.py` - This Airflow DAG orchestrates the monitoring and reporting process, generating compliance reports and insights.
+
+   - _User Story_: As a Compliance Manager, I need to oversee the monitoring and reporting of international food export standards to ensure compliance and market access.
+   - _File_: `workflow_orchestration/airflow_dags/monitoring_and_reporting_dag.py` - This Airflow DAG orchestrates the monitoring and reporting process, generating compliance reports and insights.
 
 2. **Data Scientist**
-   - *User Story*: As a Data Scientist, I need to train and deploy machine learning models to analyze compliance data for predictive insights.
-   - *File*: `model_development/train_model.py` - This script trains machine learning models using TensorFlow and Scikit-Learn with mock data.
+
+   - _User Story_: As a Data Scientist, I need to train and deploy machine learning models to analyze compliance data for predictive insights.
+   - _File_: `model_development/train_model.py` - This script trains machine learning models using TensorFlow and Scikit-Learn with mock data.
 
 3. **DevOps Engineer**
-   - *User Story*: As a DevOps Engineer, I need to deploy and scale machine learning models using container orchestration for efficient and reliable serving.
-   - *File*: `model_deployment/kubernetes/Dockerfile` and `model_deployment/kubernetes/deployment_scripts/` - These files include the Dockerfile and deployment scripts for Kubernetes-based model deployment.
+
+   - _User Story_: As a DevOps Engineer, I need to deploy and scale machine learning models using container orchestration for efficient and reliable serving.
+   - _File_: `model_deployment/kubernetes/Dockerfile` and `model_deployment/kubernetes/deployment_scripts/` - These files include the Dockerfile and deployment scripts for Kubernetes-based model deployment.
 
 4. **Business Analyst**
-   - *User Story*: As a Business Analyst, I need to access real-time compliance reports and visualizations for decision-making and market insights.
-   - *File*: `reporting_and_insights/reporting_scripts/generate_real_time_reports.py` - This script generates real-time compliance reports and insights, providing valuable information for decision-making.
+
+   - _User Story_: As a Business Analyst, I need to access real-time compliance reports and visualizations for decision-making and market insights.
+   - _File_: `reporting_and_insights/reporting_scripts/generate_real_time_reports.py` - This script generates real-time compliance reports and insights, providing valuable information for decision-making.
 
 5. **System Administrator**
-   - *User Story*: As a System Administrator, I need to maintain and configure the infrastructure and CI/CD pipelines for the AI application.
-   - *File*: `infrastructure_as_code/infrastructure_scripts/` - These scripts may include infrastructure provisioning and CI/CD pipeline configurations for managing the application's infrastructure.
+
+   - _User Story_: As a System Administrator, I need to maintain and configure the infrastructure and CI/CD pipelines for the AI application.
+   - _File_: `infrastructure_as_code/infrastructure_scripts/` - These scripts may include infrastructure provisioning and CI/CD pipeline configurations for managing the application's infrastructure.
 
 6. **Regulatory Compliance Officer**
-   - *User Story*: As a Regulatory Compliance Officer, I need to ensure that the AI application meets industry standards and regulatory requirements for food export compliance.
-   - *File*: `peru_food_export_compliance_ai/README.md` - This file may contain information on the application's compliance with regulatory standards and industry best practices.
+   - _User Story_: As a Regulatory Compliance Officer, I need to ensure that the AI application meets industry standards and regulatory requirements for food export compliance.
+   - _File_: `peru_food_export_compliance_ai/README.md` - This file may contain information on the application's compliance with regulatory standards and industry best practices.
 
 Each type of user interacts with specific components and functionalities of the Peru Food Export Compliance AI application, utilizing the provided files to accomplish their respective tasks and responsibilities within the compliance monitoring and reporting process.

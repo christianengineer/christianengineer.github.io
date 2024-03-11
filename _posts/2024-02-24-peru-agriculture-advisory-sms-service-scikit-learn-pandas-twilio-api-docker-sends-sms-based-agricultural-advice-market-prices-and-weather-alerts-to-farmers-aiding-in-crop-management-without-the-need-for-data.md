@@ -6,16 +6,19 @@ layout: article
 ---
 
 ## Objectives:
+
 1. Provide real-time, personalized agricultural advice, market prices, and weather alerts to farmers via SMS, enabling better crop management.
 2. Eliminate the need for a centralized data repository by leveraging Machine Learning in a scalable and cost-effective manner.
 
 ## System Design Strategies:
+
 1. **Scalable Architecture**: Utilize Docker containers for scalability and portability of the system across different environments.
 2. **Real-Time Data Processing**: Use Twilio API to send SMS messages and receive responses in real time for instant communication.
 3. **Machine Learning Integration**: Implement algorithms using Scikit-Learn and Pandas for agricultural advice, market price prediction, and weather analysis.
 4. **Privacy and Security**: Ensure data privacy and security by anonymizing user information and following best practices for handling sensitive data.
 
 ## Chosen Libraries:
+
 1. **Scikit-Learn**: For building and training Machine Learning models for crop management advice, market price prediction, and weather analysis.
 2. **Pandas**: For data manipulation and preprocessing tasks, such as managing datasets, cleaning data, and transforming features.
 3. **Twilio API**: For programmable SMS services, enabling the system to send real-time alerts and receive responses from farmers.
@@ -26,30 +29,36 @@ By integrating these libraries and design strategies, the system can efficiently
 ## MLOps Infrastructure for AI Peru Agriculture Advisory SMS Service:
 
 ### 1. Data Collection and Preprocessing:
+
 - **Data Sources**: Gather agricultural data, market prices, and weather data from various sources.
 - **Pandas**: Use Pandas for data manipulation, cleaning, and preprocessing tasks.
 - **Data Pipeline**: Create automated data pipelines for seamless data processing.
 
 ### 2. Model Development and Training:
+
 - **Scikit-Learn**: Develop Machine Learning models for crop management advice, market price prediction, and weather analysis.
 - **Model Versioning**: Implement model versioning to track changes and reproducibility.
 - **Hyperparameter Tuning**: Optimize model performance through hyperparameter tuning.
 
 ### 3. Deployment and Monitoring:
+
 - **Docker**: Containerize the application for easy deployment and scalability.
 - **CI/CD Pipeline**: Set up Continuous Integration/Continuous Deployment pipeline for automated testing and deployment.
 - **Monitoring**: Implement monitoring tools to track model performance, data drift, and system health.
 
 ### 4. Real-Time Communication:
+
 - **Twilio API**: Integrate Twilio API for sending SMS-based agricultural advice, market prices, and weather alerts.
 - **Real-Time Updates**: Ensure real-time updates and communication with farmers for timely information.
 
 ### 5. Security and Privacy:
+
 - **Data Encryption**: Encrypt sensitive data to ensure privacy and security.
 - **Access Control**: Implement role-based access control to restrict data access.
 - **Compliance**: Adhere to data protection regulations and best practices for handling user data.
 
 ### 6. Scalability and Cost Optimization:
+
 - **Container Orchestration**: Use container orchestration tools like Kubernetes for managing containerized applications.
 - **Auto-Scaling**: Implement auto-scaling based on demand to optimize resource utilization and costs.
 - **Cost Monitoring**: Monitor and optimize costs associated with cloud resources and services.
@@ -88,6 +97,7 @@ Peru_Agriculture_Advisory_SMS_Service/
 ```
 
 In this scalable file structure:
+
 - The `app/` directory contains the main application logic, including data processing tasks, machine learning models, and Twilio API integration.
 - The `config/` directory holds configuration files such as `config.yaml` for storing API keys and settings.
 - The `data/` directory stores raw and processed data files used for training models and providing advice to farmers.
@@ -114,6 +124,7 @@ models/
 ```
 
 In the `models/` directory:
+
 - `trained_models/` subdirectory contains the saved trained Machine Learning models in serialized form (e.g., `.pkl` files) for crop management advice, market price prediction, and weather analysis.
   - `crop_management_model.pkl` stores the trained model for providing crop management advice to farmers.
   - `price_prediction_model.pkl` holds the trained model for predicting market prices to assist farmers in decision-making.
@@ -141,6 +152,7 @@ deployment/
 ```
 
 In the `deployment/` directory:
+
 - `scripts/` subdirectory contains deployment scripts for managing the application lifecycle:
   - `deploy.sh` deploys the application using Docker containers.
   - `start.sh` script starts the deployed application.
@@ -195,6 +207,7 @@ print('Model trained and saved successfully!')
 ```
 
 ### Description:
+
 - The above script (`train_model.py`) demonstrates the training of a Machine Learning model (RandomForestRegressor) for price prediction using mock data.
 - It loads mock data from the file path `'../data/mock_data.csv'`, preprocesses the data, trains the model, evaluates its performance using mean squared error, and saves the trained model to `'../models/trained_models/price_prediction_model.pkl'`.
 - It serves as a template for training models using Scikit-Learn and Pandas with mock data for the Peru Agriculture Advisory SMS Service.
@@ -244,6 +257,7 @@ print('Complex model trained and saved successfully!')
 ```
 
 ### Description:
+
 - The above script (`complex_algorithm.py`) demonstrates the training of a complex Machine Learning algorithm (GradientBoostingClassifier) using mock data for classification tasks.
 - It loads mock data from the file path `'../data/mock_data.csv'`, preprocesses the data, trains the model, evaluates its performance using accuracy score, and saves the trained model to `'../models/trained_models/complex_algorithm_model.pkl'`.
 - This script showcases the development of a more sophisticated ML algorithm for tasks such as agricultural advice, market prices, and weather alerts in the context of the Peru Agriculture Advisory SMS Service.
@@ -253,6 +267,7 @@ By modifying this script and adapting it to actual data sources and features rel
 ## Types of Users for Peru Agriculture Advisory SMS Service:
 
 ### 1. Farmers:
+
 **User Story**: As a farmer in Peru, I want to receive SMS-based agricultural advice, market prices, and weather alerts to effectively manage my crops and make informed decisions.
 
 **File**: The `main.py` file located at `app/src/main.py` will handle sending personalized SMS alerts to farmers with relevant information on crop management, market prices, and weather updates.
@@ -260,6 +275,7 @@ By modifying this script and adapting it to actual data sources and features rel
 ---
 
 ### 2. Agricultural Experts:
+
 **User Story**: As an agricultural expert, I aim to provide valuable insights and recommendations to farmers. I need a platform that enables me to analyze data and generate actionable advice for better crop management.
 
 **File**: The `analyze_data.py` located at `app/src/analyze_data.py` will process and analyze agricultural data, utilizing Scikit-Learn and Pandas to generate recommendations for farmers.
@@ -267,6 +283,7 @@ By modifying this script and adapting it to actual data sources and features rel
 ---
 
 ### 3. Government Officials:
+
 **User Story**: Government officials overseeing agriculture in Peru require real-time data on crop conditions, market trends, and weather forecasts to make informed policy decisions and support farmers.
 
 **File**: The `fetch_data.py` located at `app/src/fetch_data.py` will retrieve and process relevant data from various sources, updating government officials on the latest agricultural insights through SMS alerts.
@@ -274,6 +291,7 @@ By modifying this script and adapting it to actual data sources and features rel
 ---
 
 ### 4. Market Analysts:
+
 **User Story**: Market analysts need access to up-to-date market prices and trends to provide accurate pricing information and forecasts to farmers and stakeholders in the agriculture sector.
 
 **File**: The `predict_prices.py` located at `app/src/predict_prices.py` will utilize Machine Learning models to forecast market prices based on historical data, assisting market analysts in providing market insights via SMS.
@@ -281,6 +299,7 @@ By modifying this script and adapting it to actual data sources and features rel
 ---
 
 ### 5. Weather Forecasters:
+
 **User Story**: Weather forecasters play a crucial role in predicting weather patterns that impact crop growth and harvest. They require tools to analyze weather data and issue alerts for farmers.
 
 **File**: The `weather_analysis.py` located at `app/src/weather_analysis.py` will analyze weather data using ML algorithms to forecast weather conditions, sending timely alerts to farmers and weather forecasters.

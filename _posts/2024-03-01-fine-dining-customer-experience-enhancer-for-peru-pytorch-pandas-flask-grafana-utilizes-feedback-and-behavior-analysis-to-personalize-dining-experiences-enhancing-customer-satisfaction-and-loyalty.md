@@ -35,28 +35,34 @@ The objective of the AI Fine Dining Customer Experience Enhancer for Peru is to 
 **MLOps Infrastructure for the Fine Dining Customer Experience Enhancer:**
 
 **1. Continuous Integration/Continuous Deployment (CI/CD):**
-   - **Pipeline Automation:** Implement CI/CD pipelines using tools like Jenkins or GitLab CI to automate the process of building, testing, and deploying machine learning models and application updates.
-   - **Version Control:** Utilize Git for version control to track changes in both code and model artifacts, ensuring reproducibility and easy collaboration among team members.
+
+- **Pipeline Automation:** Implement CI/CD pipelines using tools like Jenkins or GitLab CI to automate the process of building, testing, and deploying machine learning models and application updates.
+- **Version Control:** Utilize Git for version control to track changes in both code and model artifacts, ensuring reproducibility and easy collaboration among team members.
 
 **2. Model Training and Deployment:**
-   - **Model Versioning:** Use tools like MLflow for tracking and managing different versions of trained models, along with associated metadata and metrics.
-   - **Model Serving:** Deploy trained models using platforms like TensorFlow Serving, Amazon SageMaker, or Docker containers for real-time inference and serving predictions to the application.
-   
+
+- **Model Versioning:** Use tools like MLflow for tracking and managing different versions of trained models, along with associated metadata and metrics.
+- **Model Serving:** Deploy trained models using platforms like TensorFlow Serving, Amazon SageMaker, or Docker containers for real-time inference and serving predictions to the application.
+
 **3. Monitoring and Logging:**
-   - **Model Performance Monitoring:** Set up monitoring tools like Prometheus and Grafana to track model performance metrics such as accuracy, latency, and throughput in real-time.
-   - **Application Monitoring:** Monitor the health and performance of the application using tools like New Relic or DataDog to ensure optimal user experience.
-   
+
+- **Model Performance Monitoring:** Set up monitoring tools like Prometheus and Grafana to track model performance metrics such as accuracy, latency, and throughput in real-time.
+- **Application Monitoring:** Monitor the health and performance of the application using tools like New Relic or DataDog to ensure optimal user experience.
+
 **4. Data Management:**
-   - **Data Versioning:** Utilize tools like DVC (Data Version Control) to version data sets and ensure consistency between training and deployment environments.
-   - **Data Pipeline Automation:** Implement data pipeline orchestration using Apache Airflow or Kubeflow to automate the process of collecting, preprocessing, and feeding data to the models.
-   
+
+- **Data Versioning:** Utilize tools like DVC (Data Version Control) to version data sets and ensure consistency between training and deployment environments.
+- **Data Pipeline Automation:** Implement data pipeline orchestration using Apache Airflow or Kubeflow to automate the process of collecting, preprocessing, and feeding data to the models.
+
 **5. Scalability and Resource Management:**
-   - **Auto-Scaling:** Utilize cloud services like AWS Auto Scaling or Kubernetes Horizontal Pod Autoscaler to automatically adjust computing resources based on the workload, ensuring scalability and cost-efficiency.
-   - **Resource Allocation:** Optimize resource allocation for training and serving models by utilizing tools like Kubernetes for container orchestration and resource management.
+
+- **Auto-Scaling:** Utilize cloud services like AWS Auto Scaling or Kubernetes Horizontal Pod Autoscaler to automatically adjust computing resources based on the workload, ensuring scalability and cost-efficiency.
+- **Resource Allocation:** Optimize resource allocation for training and serving models by utilizing tools like Kubernetes for container orchestration and resource management.
 
 **6. Security and Compliance:**
-   - **Data Security:** Implement encryption techniques and access controls to secure sensitive customer data and ensure compliance with data protection regulations like GDPR.
-   - **Model Governance:** Establish model governance practices to monitor model behavior, interpretability, and fairness, ensuring ethical use of AI in customer interactions.
+
+- **Data Security:** Implement encryption techniques and access controls to secure sensitive customer data and ensure compliance with data protection regulations like GDPR.
+- **Model Governance:** Establish model governance practices to monitor model behavior, interpretability, and fairness, ensuring ethical use of AI in customer interactions.
 
 By incorporating these MLOps practices and tools into the infrastructure for the Fine Dining Customer Experience Enhancer, the application can efficiently manage the machine learning lifecycle, ensure model reliability, and enhance customer satisfaction through personalized dining experiences.
 
@@ -130,6 +136,7 @@ models/
 **Explanation of Files within the Models Directory:**
 
 1. **trained_models/**:
+
    - **recommendation_model.pt**: PyTorch model file containing the trained recommendation system model used to provide personalized dining recommendations to customers based on their preferences and feedback.
    - **sentiment_analysis_model.pt**: PyTorch model file containing the trained sentiment analysis model used to analyze customer feedback and sentiment towards dining experiences.
    - **behavior_prediction_model.pt**: PyTorch model file containing the trained behavior prediction model used to predict customer behavior patterns and tailor dining experiences.
@@ -157,9 +164,11 @@ deployment/
 **Explanation of Files within the Deployment Directory:**
 
 1. **Dockerfile**:
+
    - A Dockerfile that contains instructions for building a Docker image for the Fine Dining Customer Experience Enhancer application. It specifies the base image, dependencies, and commands needed to set up the application inside a container.
 
 2. **docker-compose.yml**:
+
    - A docker-compose file defining multi-container application services for the application. It includes configurations for services like Flask API, Grafana for data visualization, and any other required services.
 
 3. **kubernetes/**:
@@ -201,7 +210,7 @@ class CustomModel(nn.Module):
         super(CustomModel, self).__init__()
         self.fc1 = nn.Linear(input_dim, hidden_dim)
         self.fc2 = nn.Linear(hidden_dim, output_dim)
-    
+
     def forward(self, x):
         x = torch.relu(self.fc1(x))
         x = self.fc2(x)
@@ -223,7 +232,7 @@ optimizer = optim.Adam(model.parameters(), lr=0.001)
 num_epochs = 100
 for epoch in range(num_epochs):
     optimizer.zero_grad()
-    
+
     outputs = model(X_train)
     loss = criterion(outputs, y_train.unsqueeze(1).float())
     loss.backward()
@@ -276,7 +285,7 @@ class ComplexModel(nn.Module):
         self.fc2 = nn.Linear(hidden_dim1, hidden_dim2)
         self.fc3 = nn.Linear(hidden_dim2, output_dim)
         self.dropout = nn.Dropout(0.2)
-    
+
     def forward(self, x):
         x = torch.relu(self.fc1(x))
         x = self.dropout(x)
@@ -302,7 +311,7 @@ optimizer = optim.Adam(model.parameters(), lr=0.001)
 num_epochs = 200
 for epoch in range(num_epochs):
     optimizer.zero_grad()
-    
+
     outputs = model(torch.tensor(X_train, dtype=torch.float32))
     loss = criterion(outputs, torch.tensor(y_train.values, dtype=torch.float32).unsqueeze(1))
     loss.backward()
@@ -324,18 +333,22 @@ In this script for a complex machine learning algorithm for the Fine Dining Cust
 **Types of Users for the Fine Dining Customer Experience Enhancer:**
 
 1. **Customer**:
+
    - **User Story**: As a customer, I want to receive personalized dining recommendations based on my preferences and past behavior to enhance my dining experience and increase my satisfaction and loyalty.
    - **File**: The file 'models/training_model.py' will use machine learning algorithms to analyze customer feedback and behavior to generate personalized recommendations.
 
 2. **Restaurant Manager**:
+
    - **User Story**: As a restaurant manager, I want to access data insights on customer preferences and satisfaction levels to optimize menu offerings and improve overall customer experience.
    - **File**: The 'deployment/dashboard.py' file will utilize Grafana to create interactive dashboards showcasing data analytics and insights on customer feedback and behavior analysis.
 
 3. **Marketing Manager**:
+
    - **User Story**: As a marketing manager, I want to segment customers based on their dining preferences and behavior to create targeted marketing campaigns and promotions.
    - **File**: The 'models/complex_ml_algorithm.py' file will create machine learning models for customer segmentation based on feedback and behavior analysis, enabling targeted marketing strategies.
 
 4. **Data Analyst**:
+
    - **User Story**: As a data analyst, I want to analyze trends in customer feedback and behavior over time to identify areas for improvement in the dining experience and customer satisfaction.
    - **File**: The 'data/data_analysis.py' file will use Pandas for data analysis tasks such as trend analysis, customer segmentation, and sentiment analysis based on feedback data.
 

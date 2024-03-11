@@ -8,12 +8,14 @@ layout: article
 ### Project: AI Peru Community-Supported Agriculture Subscription Matcher
 
 #### Objectives:
+
 1. Connect small farmers directly with consumers through a subscription model.
 2. Ensure stable income for farmers and provide fresh produce for families.
 3. Facilitate matching of farmers with local consumers based on dietary preferences and availability of produce.
 4. Enhance user experience by providing a seamless and personalized interface for subscriptions.
 
 #### System Design Strategies:
+
 1. **Data Intensive Approach**: Utilize data-intensive methodologies to analyze dietary preferences, availability of produce, and user profiles to facilitate accurate matching.
 2. **Scalability**: Design the system to handle a large volume of users and data by leveraging cloud services and scalable architecture.
 3. **Real-time Monitoring**: Implement real-time monitoring using Prometheus to track system performance, user interactions, and subscription matching success rates.
@@ -21,6 +23,7 @@ layout: article
 5. **Efficient Data Processing**: Utilize Pandas for efficient data processing and manipulation to handle the large dataset of farmers, consumers, and produce.
 
 #### Chosen Libraries:
+
 1. **Scikit-Learn**: Employ Scikit-Learn for implementing machine learning algorithms such as clustering for matching farmers with consumers based on various factors like location, dietary preferences, and availability of produce.
 2. **Pandas**: Utilize Pandas for data manipulation and analysis to preprocess the data, perform feature engineering, and generate insights for optimizing the matching algorithm.
 3. **Django**: Use Django as the web framework to develop the application, manage user subscriptions, and handle the backend logic for matching farmers with consumers.
@@ -31,6 +34,7 @@ By integrating these libraries and system design strategies, the AI Peru Communi
 ### MLOps Infrastructure for Peru Community-Supported Agriculture Subscription Matcher
 
 #### Components:
+
 1. **Data Pipeline**: Extract data related to farmers, consumers, dietary preferences, and produce availability. Preprocess and transform the data using Pandas for input into the machine learning models.
 2. **Machine Learning Model Training**: Utilize Scikit-Learn to train machine learning models for matching farmers with consumers based on features like location, dietary preferences, and produce availability.
 3. **Model Deployment**: Deploy trained models within the Django application to facilitate real-time matching of farmers and consumers.
@@ -40,6 +44,7 @@ By integrating these libraries and system design strategies, the AI Peru Communi
 7. **Security**: Implement security measures to protect user data and ensure secure communication between the application components.
 
 #### Workflow:
+
 1. **Data Ingestion**: Data from farmers, consumers, and produce availability is ingested into the system.
 2. **Data Processing**: Use Pandas for data preprocessing, feature engineering, and data transformation to prepare it for machine learning model training.
 3. **Model Training**: Train machine learning models using Scikit-Learn to optimize the matching process based on user preferences and feedback.
@@ -60,10 +65,10 @@ Peru_Agriculture_Matcher/
 │   ├── consumers_data.csv
 │   ├── dietary_preferences.csv
 │   ├── produce_availability.csv
-│   
+│
 ├── models/
 │   ├── matching_model.pkl
-│   
+│
 ├── src/
 │   ├── app/
 │   │   ├── __init__.py
@@ -85,7 +90,7 @@ Peru_Agriculture_Matcher/
 │   │   ├── prometheus_config.yml
 │   │   ├── monitoring_service.py
 │   │   └── logging_utils.py
-│   
+│
 ├── config/
 │   ├── settings.py
 │   ├── urls.py
@@ -95,13 +100,13 @@ Peru_Agriculture_Matcher/
 │   ├── css/
 │   ├── js/
 │   └── ...
-│   
+│
 ├── templates/
 │   ├── base.html
 │   ├── home.html
 │   ├── farmer_profile.html
 │   └── consumer_profile.html
-│   
+│
 ├── requirements.txt
 ├── Dockerfile
 ├── docker-compose.yml
@@ -109,6 +114,7 @@ Peru_Agriculture_Matcher/
 ```
 
 ### File Structure Description:
+
 1. **data/**: Contains CSV files of farmers' data, consumers' data, dietary preferences, and produce availability.
 2. **models/**: Stores the trained matching model in a pickle file for deployment.
 3. **src/**:
@@ -145,13 +151,14 @@ models/
 #### Description:
 
 1. **matching_model.pkl**:
+
    - **Description**: This file stores the trained machine learning model used for matching small farmers with consumers based on various factors like location, dietary preferences, and produce availability.
    - **Location**: This file will be generated after training the model using Scikit-Learn and will be stored in this directory for deployment within the Django application.
-  
+
 2. **src/app/**:
    - **Description**: The source code for the Django application that incorporates the machine learning model for matching farmers with consumers.
    - **Files**:
-     - **__init__.py**: Marks the directory as a Python package.
+     - ****init**.py**: Marks the directory as a Python package.
      - **models.py**: Contains Django models and database schema definitions.
      - **views.py**: Includes the logic for handling HTTP requests, processing data, and invoking the machine learning model for matching.
      - **urls.py**: Defines the URL patterns and routes for different views in the Django application.
@@ -173,7 +180,7 @@ deployment/
 └── src/
     ├── app/
     │   ├── __init__.py
-    │   
+    │
     ├── data_processing/
     │   ├── data_loader.py
     │   ├── data_preprocessing.py
@@ -193,14 +200,17 @@ deployment/
 #### Description:
 
 1. **Dockerfile**:
+
    - **Description**: Specifies the configuration for building the Docker image for the application, including dependencies, environment setup, and commands for running the application.
    - **Purpose**: Facilitates containerization of the application and ensures consistent deployment across different environments.
 
 2. **docker-compose.yml**:
+
    - **Description**: Defines the services, networks, and volumes configuration for running the application using Docker Compose.
    - **Purpose**: Simplifies the setup and management of multi-container applications and orchestrates the deployment of the Peru Community-Supported Agriculture Subscription Matcher.
 
 3. **config/**:
+
    - **Description**: Contains configuration files for the Django application, including settings.py, urls.py, and other Django-specific settings.
    - **Purpose**: Centralizes the application configuration for easy access and modification.
 
@@ -258,6 +268,7 @@ print('Model saved successfully')
 ```
 
 #### Description:
+
 - This script trains a machine learning model using mock data for the Peru Community-Supported Agriculture Subscription Matcher.
 - It loads mock data for farmers, consumers, and produce, preprocesses the data, and trains a Random Forest classifier.
 - The model is evaluated on test data, and the accuracy is printed.
@@ -310,6 +321,7 @@ print('Complex model saved successfully')
 ```
 
 #### Description:
+
 - This script implements a more complex machine learning algorithm, Gradient Boosting Classifier, using mock data for the Peru Community-Supported Agriculture Subscription Matcher.
 - It loads mock data for farmers, consumers, and produce, preprocesses the data, and trains a Gradient Boosting classifier with specified hyperparameters.
 - The model is evaluated on test data, and the accuracy is printed.
@@ -321,18 +333,22 @@ This file demonstrates the implementation of a sophisticated machine learning al
 ### Types of Users for Peru Community-Supported Agriculture Subscription Matcher
 
 1. **Farmers**
+
    - **User Story**: As a farmer, I want to list and update my available produce to connect with consumers and ensure a stable income.
    - **Associated Script**: `src/app/views.py`
 
 2. **Consumers**
+
    - **User Story**: As a consumer, I want to subscribe to fresh produce from local farmers based on my dietary preferences.
    - **Associated Script**: `src/app/views.py`
 
 3. **Admin/Platform Manager**
+
    - **User Story**: As an admin, I want to monitor the matching process, manage farmer and consumer data, and optimize the subscription model.
    - **Associated Script**: `src/monitoring/monitoring_service.py`
 
 4. **Data Analyst**
+
    - **User Story**: As a data analyst, I want to analyze user interactions, performance metrics, and subscription matching success rates.
    - **Associated Script**: `src/monitoring/logging_utils.py`
 

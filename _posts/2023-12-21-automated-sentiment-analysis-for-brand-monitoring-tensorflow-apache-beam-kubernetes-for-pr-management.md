@@ -8,20 +8,26 @@ layout: article
 ## AI Automated Sentiment Analysis for Brand Monitoring
 
 ## Objectives
+
 The objectives of the AI Automated Sentiment Analysis for Brand Monitoring project are to:
+
 - Automatically analyze and classify sentiments expressed in social media and other online platforms related to a brand.
 - Provide insights into public perception and sentiment trends for the brand.
 - Support PR management in decision-making processes by understanding public sentiment towards the brand.
 
 ## System Design Strategies
+
 To achieve the objectives, the following system design strategies will be employed:
+
 - **Scalable Data Processing**: Utilize Apache Beam for parallel and distributed data processing, enabling the system to handle large volumes of data.
 - **Machine Learning Model**: Implement sentiment analysis using TensorFlow for training and deploying machine learning models that can accurately classify sentiments.
 - **Container Orchestration**: Use Kubernetes for container orchestration to ensure scalability, resilience, and efficient resource utilization.
 - **Real-time Dashboard**: Develop a real-time dashboard for PR management to visualize sentiment analysis results and trends.
 
 ## Chosen Libraries and Technologies
+
 The following libraries and technologies have been chosen for the project:
+
 - **TensorFlow**: TensorFlow will be used for building and training the sentiment analysis model. It provides a comprehensive platform for machine learning and deep learning applications.
 - **Apache Beam**: Apache Beam will be utilized for scalable, parallel data processing. It provides a unified model for both batch and streaming data, allowing for efficient processing of large datasets.
 - **Kubernetes**: Kubernetes will be used for container orchestration to facilitate scalability, fault tolerance, and automated deployment of the sentiment analysis system.
@@ -34,26 +40,32 @@ By leveraging these technologies and libraries, the AI Automated Sentiment Analy
 To establish a robust MLOps infrastructure for the Automated Sentiment Analysis for Brand Monitoring application, we will adopt the following components and practices:
 
 ### 1. Continuous Integration/Continuous Deployment (CI/CD)
+
 - **GitHub Actions**: Create CI/CD pipelines using GitHub Actions to automate the integration, testing, and deployment process for machine learning models and application code.
 - **Docker Build**: Build Docker containers for the sentiment analysis model and application components to ensure consistency in deployment across different environments.
 
 ### 2. Model Training and Deployment
+
 - **TensorFlow Extended (TFX)**: Utilize TFX for managing the end-to-end ML lifecycle, including data validation, feature engineering, model training, and serving.
 - **Kubeflow**: Integrate Kubeflow for deploying and managing machine learning workflows on Kubernetes. It provides a scalable and portable platform for ML deployment and orchestration.
 
 ### 3. Monitoring and Observability
+
 - **Prometheus and Grafana**: Implement monitoring and observability using Prometheus for collecting metrics and Grafana for visualizing the performance and health of the sentiment analysis system.
 - **Elasticsearch, Fluentd, and Kibana (EFK)**: Use EFK stack for log aggregation, monitoring, and visualization to track system and application logs.
 
 ### 4. Scalability and Resilience
+
 - **Horizontal Pod Autoscaling**: Configure Kubernetes Horizontal Pod Autoscaler to automatically scale the number of sentiment analysis processing pods based on CPU or custom metrics.
 - **Fault Tolerance**: Implement fault tolerance mechanisms within the application components and Kubernetes infrastructure to handle failures gracefully.
 
 ### 5. Data Processing and Orchestration
+
 - **Apache Beam**: Use Apache Beam for parallel and distributed data processing to handle large volumes of incoming data from social media and online platforms.
 - **Apache Airflow**: Integrate Apache Airflow for orchestrating data pipelines and coordinating the execution of preprocessing, training, and inference tasks.
 
 ### 6. Governance and Compliance
+
 - **Kubernetes RBAC**: Enforce role-based access control (RBAC) in Kubernetes to manage permissions and access control for different components of the sentiment analysis application.
 - **Audit Logging**: Enable audit logging to track user actions, changes, and access to sensitive resources within the MLOps infrastructure.
 
@@ -126,10 +138,12 @@ model/
 In the `model/` directory for the Automated Sentiment Analysis for Brand Monitoring application, the directory is split into two main subdirectories: `training/` and `serving/`.
 
 ### `training/` Subdirectory
+
 - **train_model.py**: This Python script contains the code for training the sentiment analysis model using TensorFlow. It includes data preprocessing, model definition, training, and evaluation.
 - **hyperparameter_tuning.yaml**: The hyperparameter tuning configuration file specifies the hyperparameters and search space for optimizing the model's performance through automated hyperparameter tuning processes.
 
 ### `serving/` Subdirectory
+
 - **inference_server.py**: This Python script serves as the application for running the trained sentiment analysis model to perform real-time inference on incoming data. It leverages TensorFlow Serving or a custom inference server for model deployment.
 - **model_weights.h5**: This file contains the weights and architecture of the trained sentiment analysis model in a serialized format, which is used for model serving and inference tasks.
 
@@ -145,13 +159,17 @@ infrastructure/
 In the `infrastructure/kubernetes/` directory for the Automated Sentiment Analysis for Brand Monitoring application, the directory includes Kubernetes deployment and service configuration files for orchestrating the deployment and scalable operation of the application.
 
 ### `deployment.yaml`
+
 The `deployment.yaml` file specifies the deployment configuration for the application components. It includes:
+
 - Container specifications: Defines the container image, resource limits, environment variables, and other settings required for running the sentiment analysis application.
 - Replica count: Specifies the number of replicas of the application to be maintained by the deployment.
 - Health checks: Configures liveness and readiness probes to ensure the availability and health of the application pods.
 
 ### `service.yaml`
+
 The `service.yaml` file defines the Kubernetes service for exposing the deployed application to internal or external clients. It includes:
+
 - Service type: Specifies the type of service (e.g., ClusterIP, NodePort, LoadBalancer) based on the networking requirements.
 - Port configuration: Defines the port mappings and protocols used by the application pods to receive traffic.
 - Service endpoints: Specifies the selectors and endpoints to which the service should route the traffic.
@@ -243,23 +261,27 @@ In this example, the `train_complex_model.py` script demonstrates the process of
 ### Type of Users for the Automated Sentiment Analysis for Brand Monitoring Application
 
 1. **PR Manager**
-    - *User Story*: As a PR manager, I want to monitor the sentiment of public perception towards our brand in real-time, so that I can make data-driven decisions to manage the brand reputation effectively.
-    - *File*: This user story aligns with the `app/dashboard/dashboard_server.py` file, which provides a real-time dashboard for visualizing sentiment analysis results and trends.
+
+   - _User Story_: As a PR manager, I want to monitor the sentiment of public perception towards our brand in real-time, so that I can make data-driven decisions to manage the brand reputation effectively.
+   - _File_: This user story aligns with the `app/dashboard/dashboard_server.py` file, which provides a real-time dashboard for visualizing sentiment analysis results and trends.
 
 2. **Data Scientist/ML Engineer**
-    - *User Story*: As a data scientist, I need to train and deploy machine learning models for sentiment analysis, so that I can continuously improve the accuracy of sentiment classification.
-    - *File*: The `model/training/train_complex_model.py` file serves this user story, as it demonstrates the training of a complex sentiment analysis model using TensorFlow.
+
+   - _User Story_: As a data scientist, I need to train and deploy machine learning models for sentiment analysis, so that I can continuously improve the accuracy of sentiment classification.
+   - _File_: The `model/training/train_complex_model.py` file serves this user story, as it demonstrates the training of a complex sentiment analysis model using TensorFlow.
 
 3. **DevOps Engineer**
-    - *User Story*: As a DevOps engineer, I want to manage the deployment and scaling of the sentiment analysis application using Kubernetes, ensuring high availability and fault tolerance.
-    - *File*: The `infrastructure/kubernetes/deployment.yaml` and `infrastructure/kubernetes/service.yaml` files are relevant to this user story, as they define the Kubernetes deployment and service configurations.
+
+   - _User Story_: As a DevOps engineer, I want to manage the deployment and scaling of the sentiment analysis application using Kubernetes, ensuring high availability and fault tolerance.
+   - _File_: The `infrastructure/kubernetes/deployment.yaml` and `infrastructure/kubernetes/service.yaml` files are relevant to this user story, as they define the Kubernetes deployment and service configurations.
 
 4. **Data Engineer**
-    - *User Story*: As a data engineer, I need to design and implement scalable data processing pipelines, so that I can efficiently handle large volumes of data for sentiment analysis.
-    - *File*: The `pipeline/data_processing/data_processing_beam.py` file aligns with this user story, as it demonstrates the implementation of scalable data processing using Apache Beam.
+
+   - _User Story_: As a data engineer, I need to design and implement scalable data processing pipelines, so that I can efficiently handle large volumes of data for sentiment analysis.
+   - _File_: The `pipeline/data_processing/data_processing_beam.py` file aligns with this user story, as it demonstrates the implementation of scalable data processing using Apache Beam.
 
 5. **Business Analyst**
-    - *User Story*: As a business analyst, I want to extract insights from sentiment analysis reports to identify trends and patterns in public sentiment towards our brand, enabling data-driven decision-making.
-    - *File*: The `model/serving/inference_server.py` file plays a role in this user story, as it serves the trained sentiment analysis model for real-time inference on incoming data.
+   - _User Story_: As a business analyst, I want to extract insights from sentiment analysis reports to identify trends and patterns in public sentiment towards our brand, enabling data-driven decision-making.
+   - _File_: The `model/serving/inference_server.py` file plays a role in this user story, as it serves the trained sentiment analysis model for real-time inference on incoming data.
 
 By considering these types of users and their respective user stories, the Automated Sentiment Analysis for Brand Monitoring application caters to a diverse set of stakeholders with specific needs and responsibilities related to PR management and brand sentiment analysis.

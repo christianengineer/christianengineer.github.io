@@ -8,26 +8,32 @@ layout: article
 ## AI Peru Poverty Prediction and Mapping System
 
 ### Objectives:
+
 - Utilize socioeconomic and satellite data to predict poverty hotspots in Peru
 - Facilitate targeted interventions and resource allocations in regions most in need
 - Create a scalable system that can handle large volumes of data and high computational requirements
 
 ### System Design Strategies:
+
 1. **Data Collection and Preprocessing**:
+
    - Gather socioeconomic data from various sources such as census reports, surveys, and government databases
    - Obtain satellite imagery data for land use, infrastructure, and vegetation analysis
    - Preprocess and clean the data to ensure consistency and accuracy for model training
 
 2. **Machine Learning Model Development**:
+
    - Utilize TensorFlow for building machine learning models that can predict poverty levels based on the input data
    - Implement techniques such as deep learning and ensemble methods to improve prediction accuracy
    - Train the models on historical data to learn patterns and trends in poverty distribution
 
 3. **Geospatial Mapping**:
+
    - Utilize GeoPandas for geospatial analysis and visualization of the predicted poverty hotspots
    - Integrate the machine learning predictions with geographical data to create detailed poverty maps
 
 4. **Workflow Management**:
+
    - Use Apache Airflow for orchestrating the data processing pipeline, model training, and prediction generation
    - Schedule and monitor tasks to ensure timely execution and efficient resource utilization
 
@@ -36,15 +42,19 @@ layout: article
    - Design the system to handle large datasets and complex computations efficiently
 
 ### Chosen Libraries:
+
 1. **TensorFlow**:
+
    - For building and training machine learning models, especially deep learning models like neural networks
    - Provides flexibility and scalability for developing complex AI algorithms
 
 2. **GeoPandas**:
+
    - For handling geospatial data and performing spatial operations such as mapping and analysis
    - Offers a wide range of functionalities for working with geographical datasets
 
 3. **Apache Airflow**:
+
    - For orchestrating workflows and automating the data processing pipeline
    - Enables easy scheduling, monitoring, and management of tasks in a distributed environment
 
@@ -57,7 +67,9 @@ By combining these libraries and technologies, the AI Peru Poverty Prediction an
 ## MLOps Infrastructure for Peru Poverty Prediction and Mapping System
 
 ### 1. **Data Pipeline**:
-- **Data Collection**: 
+
+- **Data Collection**:
+
   - Implement data connectors to fetch socioeconomic and satellite data from various sources.
   - Store the data in a data lake or data warehouse for easy access and processing.
 
@@ -66,7 +78,9 @@ By combining these libraries and technologies, the AI Peru Poverty Prediction an
   - Apply data cleaning, normalization, and transformation techniques to prepare the data for modeling.
 
 ### 2. **Model Development**:
+
 - **TensorFlow Model Training**:
+
   - Develop machine learning models using TensorFlow to predict poverty hotspots.
   - Utilize techniques like convolutional neural networks (CNNs) for analyzing satellite imagery data.
 
@@ -75,12 +89,15 @@ By combining these libraries and technologies, the AI Peru Poverty Prediction an
   - Validate the model on a holdout dataset to assess its generalization capability.
 
 ### 3. **Workflow Management**:
+
 - **Apache Airflow Orchestration**:
   - Design DAGs (Directed Acyclic Graphs) in Airflow to automate the end-to-end pipeline.
   - Schedule tasks for data preprocessing, model training, evaluation, and prediction generation.
 
 ### 4. **Deployment and Scalability**:
+
 - **Containerization with Docker**:
+
   - Containerize the application components using Docker for portability and reproducibility.
   - Package the GeoPandas, TensorFlow, and Airflow components into separate containers.
 
@@ -89,7 +106,9 @@ By combining these libraries and technologies, the AI Peru Poverty Prediction an
   - Ensure scalability, fault tolerance, and resource efficiency of the deployed application.
 
 ### 5. **Monitoring and Logging**:
+
 - **Logging Mechanism**:
+
   - Implement logging mechanisms to track application events, errors, and performance metrics.
   - Integrate with centralized logging tools like ELK stack or Splunk for log analysis.
 
@@ -98,6 +117,7 @@ By combining these libraries and technologies, the AI Peru Poverty Prediction an
   - Configure alerts for critical events and anomalies in the system.
 
 ### 6. **Continuous Integration/Continuous Deployment (CI/CD)**:
+
 - **CI/CD Pipelines**:
   - Automate model training and deployment using CI/CD pipelines.
   - Integrate with version control systems like Git for code management and collaboration.
@@ -168,6 +188,7 @@ peru_poverty_prediction_mapping_system/
 ```
 
 ### Explanation of File Structure:
+
 - **data/**: Contains raw and processed data used for training and evaluation.
 - **models/**: Stores trained machine learning models for predicting poverty hotspots.
 - **src/**:
@@ -191,27 +212,31 @@ models/
 │   ├── assets/
 │   ├── saved_model.pb
 │   └── variables/
-│   
+│
 ├── model_2/
 │   ├── assets/
 │   ├── saved_model.pb
 │   └── variables/
-│   
+│
 └── ...
 ```
 
 ### Explanation of Models Directory:
+
 - **model_1/**: Directory containing the trained model files for Model 1.
+
   - **assets/**: Assets related to the model, such as vocabulary files or metadata.
   - **saved_model.pb**: Serialized representation of the model architecture and trained weights.
   - **variables/**: Directory containing the model weights and other related variables.
 
 - **model_2/**: Directory for another trained model (Model 2), following a similar structure as Model 1.
-  - *Assets/, saved_model.pb, variables/*: Same as described for Model 1.
+
+  - _Assets/, saved_model.pb, variables/_: Same as described for Model 1.
 
 - **...**: Additional directories for storing trained models as needed, each with a similar structure.
 
 ### Explanation:
+
 - The **models/** directory organizes trained machine learning models for predicting poverty hotspots based on socioeconomic and satellite data in a structured manner.
 - Each subdirectory within **models/** represents a trained model (e.g., Model 1, Model 2), with specific files and directories to store the model artifacts.
 - The **saved_model.pb** file contains the serialized representation of the model architecture and trained weights, allowing for easy loading and inference.
@@ -229,7 +254,7 @@ deployment/
 │   ├── data_processing_dag.py
 │   ├── modeling_dag.py
 │   └── ...
-│   
+│
 ├── kubernetes_config/
 │   ├── deployment.yaml
 │   └── service.yaml
@@ -238,7 +263,9 @@ deployment/
 ```
 
 ### Explanation of Deployment Directory:
+
 - **airflow_dags/**: Directory containing Apache Airflow DAGs for orchestrating data processing and modeling tasks.
+
   - **data_processing_dag.py**: Airflow DAG script for data collection and preprocessing workflow.
   - **modeling_dag.py**: Airflow DAG script for model training and evaluation workflow.
   - **...**: Additional Airflow DAGs for other tasks and workflows as needed.
@@ -246,17 +273,17 @@ deployment/
 - **kubernetes_config/**: Directory holding Kubernetes configuration files for deploying the application.
   - **deployment.yaml**: YAML file defining the deployment configuration for the application.
   - **service.yaml**: YAML file specifying the Kubernetes service configuration for the application.
-  
 - **...**: Additional files and directories for deployment configurations, scripts, or resources.
 
 ### Explanation:
+
 - The **deployment/** directory organizes files related to the deployment and orchestration of the Peru Poverty Prediction and Mapping System.
 - The **airflow_dags/** directory contains Apache Airflow DAG scripts for defining and scheduling workflows related to the data processing, modeling, and any other tasks within the AI application.
 - Each DAG script orchestrates a sequence of tasks to automate the execution of various components of the application pipeline.
 - The **kubernetes_config/** directory houses Kubernetes configuration files essential for deploying and managing the application in a Kubernetes cluster.
 - The **deployment.yaml** file specifies the deployment configuration, such as the containers to be deployed, resource allocation, and scaling policies.
 - The **service.yaml** file defines the Kubernetes service configuration to expose the deployed application internally or externally.
-  
+
 By structuring the **deployment/** directory in this way, the Peru Poverty Prediction and Mapping System can streamline the deployment process and ensure efficient orchestration and scalability of the AI application utilizing socioeconomic and satellite data for predicting poverty hotspots and facilitating targeted interventions.
 
 ```python
@@ -291,6 +318,7 @@ model.fit(X_train, y_train, epochs=10)
 ```
 
 ### Explanation:
+
 - **File Name**: `model_training.py`
 - **Path**: `src/modeling/model_training.py`
 - **Description**: This Python script trains a machine learning model using TensorFlow by utilizing mock socioeconomic and satellite data for predicting poverty hotspots in the Peru Poverty Prediction and Mapping System.
@@ -343,6 +371,7 @@ print(f'Accuracy of the Random Forest classifier: {accuracy}')
 ```
 
 ### Explanation:
+
 - **File Name**: `complex_model_training.py`
 - **Path**: `src/modeling/complex_model_training.py`
 - **Description**: This Python script implements a complex machine learning algorithm, specifically a Random Forest classifier, to predict poverty hotspots in the Peru Poverty Prediction and Mapping System using mock socioeconomic and satellite data.
@@ -357,18 +386,22 @@ This script showcases the implementation of a Random Forest classifier as a comp
 ## Types of Users for the Peru Poverty Prediction and Mapping System
 
 1. **Data Scientist**
+
    - **User Story**: As a Data Scientist, I want to explore and analyze the socioeconomic and satellite data to identify trends and insights that can help improve the accuracy of poverty predictions.
    - **Related File**: `data_exploration.py` in `src/data_pipeline/data_exploration.py`
 
 2. **Machine Learning Engineer**
+
    - **User Story**: As a Machine Learning Engineer, I need to develop and train machine learning models using TensorFlow to predict poverty hotspots based on the data provided.
    - **Related File**: `model_training.py` in `src/modeling/model_training.py`
 
 3. **GIS Analyst**
+
    - **User Story**: As a GIS Analyst, I aim to leverage GeoPandas for spatial analysis and visualization of poverty hotspots on the map to assist in decision-making for resource allocation.
    - **Related File**: `geospatial_analysis.py` in `src/data_pipeline/geospatial_analysis.py`
 
 4. **Data Engineer**
+
    - **User Story**: As a Data Engineer, I am responsible for orchestrating data pipelines and managing data processing tasks using Apache Airflow to ensure efficient data flow throughout the system.
    - **Related File**: `etl_pipeline.py` in `src/data_pipeline/etl_pipeline.py`
 

@@ -8,17 +8,20 @@ layout: article
 ## AI Educational Podcast Compressor for Peru
 
 ### Objectives:
+
 1. Compress educational podcasts to ultra-low bitrates for download over minimal data connections in Peru.
 2. Maintain intelligibility and quality of the podcasts.
 3. Build a scalable and efficient system for podcast compression.
 
 ### System Design Strategies:
+
 1. **Opus Codec**: Utilize Opus Codec for audio compression. Opus is known for its high audio quality at low bitrates, making it suitable for minimizing data usage without compromising on intelligibility.
 2. **Flask**: Develop a Flask API to receive podcast files, process them using Opus Codec, and return the compressed versions. Flask is lightweight, easy to use, and integrates well with other technologies.
 3. **RabbitMQ**: Implement RabbitMQ for message queueing to manage the asynchronous processing of podcast compression tasks. This ensures efficient handling of multiple compression requests and scalability of the system.
 4. **Kubernetes**: Deploy the application on Kubernetes for container orchestration, scalability, and easy management of resources. Kubernetes helps in automating deployment, scaling, and operations of the application.
 
 ### Chosen Libraries:
+
 1. **Opus Codec**: Open-source audio codec known for its quality and efficiency in compressing audio files.
 2. **Flask**: Python web framework for building APIs quickly and easily.
 3. **RabbitMQ**: Messaging broker that enables communication between different parts of the application asynchronously.
@@ -29,22 +32,28 @@ By combining the Opus Codec for audio compression, Flask for API development, Ra
 ## MLOps Infrastructure for the Educational Podcast Compressor for Peru
 
 ### Overview:
+
 The MLOps infrastructure for the Educational Podcast Compressor aims to integrate machine learning into the podcast compression process, leveraging the Opus Codec, Flask, RabbitMQ, and Kubernetes to deliver high-quality compressed podcasts over minimal data connections.
 
 ### Components:
+
 1. **Data Collection and Preprocessing**:
+
    - Gather educational podcast data for training the machine learning model.
    - Preprocess the audio data, extract features, and label the podcasts for compression levels.
 
 2. **Machine Learning Model Development**:
+
    - Develop a machine learning model that optimizes the compression process based on Opus Codec parameters.
    - Train the model on the labeled podcast data to learn the best compression settings for maintaining quality at ultra-low bitrates.
 
 3. **Model Deployment with Flask**:
+
    - Integrate the trained machine learning model into the Flask API to dynamically adjust compression parameters based on the input audio file.
    - Upon receiving a podcast compression request, the Flask API utilizes the model to determine the optimal Opus Codec settings for ultra-low bitrate compression.
 
 4. **Asynchronous Processing with RabbitMQ**:
+
    - Utilize RabbitMQ for managing the asynchronous processing of podcast compression tasks.
    - Queue compression requests and distribute the workload efficiently across the system for scalability.
 
@@ -53,11 +62,14 @@ The MLOps infrastructure for the Educational Podcast Compressor aims to integrat
    - Utilize Kubernetes for scaling resources based on demand, ensuring high availability and efficient resource management.
 
 ### Workflow:
+
 1. **Training Phase**:
+
    - Train the machine learning model on labeled podcast data to optimize compression parameters.
    - Validate the model's performance in maintaining the intelligibility and quality of compressed podcasts.
 
 2. **Inference Phase**:
+
    - Upon receiving a podcast compression request through the Flask API, use the trained model to determine the best compression settings.
    - Compress the podcast using Opus Codec with the recommended parameters to achieve ultra-low bitrates while preserving quality.
 
@@ -73,7 +85,7 @@ By incorporating machine learning into the podcast compression workflow and leve
 educational-podcast-compressor/
 │
 ├── app/
-│   ├── api/ 
+│   ├── api/
 │   │   ├── controllers/
 │   │   │   ├── compression_controller.py    ## Flask controllers for compression requests
 │   │   │   ├── health_controller.py         ## Flask controller for health check endpoint
@@ -104,7 +116,9 @@ educational-podcast-compressor/
 ```
 
 ### Directory Structure Overview:
+
 1. **`app/`**: Contains the core application code.
+
    - **`api/`**: Includes controllers for handling compression requests and health check.
    - **`models/`**: Houses the machine learning model for compression optimization.
    - **`services/`**: Contains services for compression processing, RabbitMQ interaction, and Opus Codec utilization.
@@ -135,26 +149,30 @@ models/
 ```
 
 ### Models Directory Overview:
-1. **`compression_model.py`**: 
-   - **Description**: This file contains the machine learning model responsible for optimizing the podcast compression process. 
+
+1. **`compression_model.py`**:
+
+   - **Description**: This file contains the machine learning model responsible for optimizing the podcast compression process.
    - **Functionality**:
      - Implement logic for training the model on labeled podcast data.
      - Define methods for predicting optimal compression parameters based on input audio features.
      - Handle the integration with the Flask API for dynamic adjustment of compression settings.
 
-2. **`audio_processor.py`**: 
+2. **`audio_processor.py`**:
+
    - **Description**: Module for processing audio data before model training or compression.
    - **Functionality**:
      - Include functions for reading audio files, extracting audio features, and performing data preprocessing.
      - Prepare the audio data in a format suitable for model training and prediction.
 
-3. **`feature_extraction.py`**: 
+3. **`feature_extraction.py`**:
+
    - **Description**: Module for extracting relevant features from audio data.
    - **Functionality**:
      - Implement feature extraction techniques to capture key characteristics of the audio content.
      - Extract features that are essential for the machine learning model to make informed compression decisions.
 
-4. **`data_loader.py`**: 
+4. **`data_loader.py`**:
    - **Description**: Module for loading and preprocessing training data.
    - **Functionality**:
      - Load labeled podcast data from the designated data directory.
@@ -174,22 +192,26 @@ deployment/
 ```
 
 ### Deployment Directory Overview:
-1. **`Dockerfile`**: 
+
+1. **`Dockerfile`**:
+
    - **Description**: File that specifies the Docker configuration for containerizing the Educational Podcast Compressor application.
    - **Functionality**:
      - Define the steps to build the Docker image for the application, including installing dependencies and setting up the environment.
      - Ensure that the application can be easily packaged into a container for portability and deployment.
 
-2. **`kubernetes/`**: 
+2. **`kubernetes/`**:
+
    - **Description**: Directory containing Kubernetes deployment and service configuration files.
    - **Functionality**:
+
      - **`deployment.yaml`**: File that defines the Kubernetes deployment configuration for the application.
        - Specify the container image, resource limits, environment variables, and other settings for running the application.
        - Set up replicas and scaling options for efficient resource utilization.
 
-    - **`service.yaml`**: File that specifies the Kubernetes service configuration.
-       - Define service endpoints, ports, and communication rules for accessing the deployed application.
-       - Ensure proper networking setup for seamless interaction with the Flask API, RabbitMQ, and other components.
+   - **`service.yaml`**: File that specifies the Kubernetes service configuration.
+     - Define service endpoints, ports, and communication rules for accessing the deployed application.
+     - Ensure proper networking setup for seamless interaction with the Flask API, RabbitMQ, and other components.
 
 By organizing the deployment directory with these files, the Educational Podcast Compressor establishes a structured approach to containerization and Kubernetes deployment. These configurations enable efficient deployment, scaling, and management of the application, ensuring smooth operation and optimal performance of the podcast compression system.
 
@@ -223,6 +245,7 @@ print(f"Trained model saved at: {model_filepath}")
 ```
 
 ### File Path:
+
 - File Name: `train_model.py`
 - Path: `educational-podcast-compressor/models/train_model.py`
 
@@ -258,6 +281,7 @@ print(f"Trained complex model saved at: {model_filepath}")
 ```
 
 ### File Path:
+
 - File Name: `complex_model.py`
 - Path: `educational-podcast-compressor/models/complex_model.py`
 
@@ -266,22 +290,27 @@ This script showcases the implementation of a complex machine learning algorithm
 ## Types of Users for the Educational Podcast Compressor:
 
 1. **Teachers**:
+
    - **User Story**: As a teacher in rural areas of Peru, I want to compress educational podcasts to ultra-low bitrates so that my students can easily access and download them over minimal data connections.
    - File: `compression_controller.py`
 
 2. **Students**:
+
    - **User Story**: As a student with limited internet access, I need to download educational podcasts efficiently at ultra-low bitrates to study offline.
    - File: `audio_processor.py`
 
 3. **Administrators**:
+
    - **User Story**: As an administrator of an educational institution, I need to monitor and manage the podcast compression tasks to ensure smooth operation of the system.
    - File: `rabbitmq_service.py`
 
 4. **Developers**:
+
    - **User Story**: As a developer working on enhancing the Educational Podcast Compressor, I aim to deploy the application on Kubernetes for better scalability and management.
    - File: `deployment.yaml`
 
 5. **Quality Assurance**:
+
    - **User Story**: As a QA tester, I need to evaluate the efficiency and performance of the compression model to ensure that the podcasts maintain quality and intelligibility.
    - File: `train_model.py`
 

@@ -6,15 +6,18 @@ layout: article
 ---
 
 ## Project Overview
+
 The "AI High-Net-Worth Tax Optimization for Peru" project aims to offer personalized tax optimization strategies to millionaires in Peru. It ensures compliance with tax laws while maximizing tax efficiency for individuals with high net worth. The system will utilize a combination of Scikit-Learn and PyTorch for machine learning algorithms, Airflow for workflow management, and Kubernetes for container orchestration to create a scalable and efficient AI application.
 
 ## Objectives
+
 1. Develop personalized tax optimization strategies based on the financial profiles of high-net-worth individuals in Peru.
 2. Ensure compliance with Peruvian tax laws and regulations.
 3. Maximize tax efficiency for individuals with high net worth.
 4. Create a scalable and efficient AI application using modern technologies like Scikit-Learn, PyTorch, Airflow, and Kubernetes.
 
 ## System Design Strategies
+
 1. **Data Ingestion**: Collect financial data from high-net-worth individuals securely and efficiently.
 2. **Data Preprocessing**: Clean and preprocess the data to prepare it for machine learning algorithms.
 3. **Feature Engineering**: Extract relevant features from the data to maximize the effectiveness of the models.
@@ -24,6 +27,7 @@ The "AI High-Net-Worth Tax Optimization for Peru" project aims to offer personal
 7. **Workflow Automation**: Use Airflow for managing complex workflows and scheduling tasks related to data processing, model training, and optimization.
 
 ## Chosen Libraries
+
 1. **Scikit-Learn**: For building and training traditional machine learning models such as regression and classification models for tax optimization.
 2. **PyTorch**: For developing more advanced machine learning models such as neural networks for complex pattern recognition in financial data.
 3. **Airflow**: For orchestrating workflows, scheduling tasks, and monitoring the entire data processing and model training pipeline.
@@ -34,34 +38,43 @@ By leveraging these libraries and technologies, the project aims to deliver a sc
 ## MLOps Infrastructure for High-Net-Worth Tax Optimization AI in Peru
 
 ### Version Control System (VCS)
+
 - **GitHub**: Use GitHub for version control to track changes in code, models, and configurations.
 
 ### Continuous Integration/Continuous Deployment (CI/CD)
+
 - **CI/CD Pipelines**: Implement CI/CD pipelines to automate testing, building, and deployment processes for the AI application.
 - **Jenkins**: Use Jenkins for automating tasks such as code testing, model training, and deployment workflows.
 
 ### Model Registry
+
 - **MLflow**: Utilize MLflow for tracking and managing machine learning models, including versioning, experimentation tracking, and model serving.
 
 ### Monitoring and Logging
+
 - **Prometheus and Grafana**: Monitor system performance, metrics, and logs using Prometheus for data collection and Grafana for visualization.
 - **ELK Stack (Elasticsearch, Logstash, Kibana)**: Centralize logs and analyze them for troubleshooting and optimization.
 
 ### Infrastructure as Code (IaC)
+
 - **Terraform**: Implement Infrastructure as Code using Terraform to manage and provision infrastructure resources on cloud platforms like AWS, Azure, or Google Cloud.
 
 ### Model Serving
+
 - **Docker**: Containerize the AI application using Docker for efficient deployment and scalability.
 - **Kubernetes**: Orchestrate and manage containers using Kubernetes to ensure scalability, fault tolerance, and efficient resource utilization.
 
 ### Data Versioning and Management
+
 - **DVC (Data Version Control)**: Track changes in data, collaborate on data projects, and ensure data reproducibility throughout the ML pipeline.
 
 ### Security
+
 - **Encryption**: Secure sensitive data using encryption mechanisms to protect the financial information of high-net-worth individuals.
 - **Authentication and Authorization**: Implement secure authentication and authorization mechanisms to control access to the AI application and data.
 
 ### Scalability and Resource Management
+
 - **Horizontal Scaling**: Utilize Kubernetes for horizontal scaling to handle increased load and ensure optimal performance.
 - **Auto-scaling**: Configure auto-scaling policies to automatically adjust the number of resources based on demand.
 
@@ -79,7 +92,7 @@ By establishing a robust MLOps infrastructure with the aforementioned tools and 
 │   ├── scikit-learn/         ## Scikit-Learn models for tax optimization
 │   └── pytorch/              ## PyTorch models for complex pattern recognition
 
-├── notebooks/                
+├── notebooks/
 │   ├── exploratory_analysis/  ## Jupyter notebooks for data exploration and analysis
 │   ├── model_training/        ## Notebooks for model training and evaluation
 │   └── model_evaluation/      ## Notebooks for model evaluation and optimization
@@ -104,7 +117,7 @@ By establishing a robust MLOps infrastructure with the aforementioned tools and 
 │   └── airflow.cfg            ## Configuration file for Airflow settings and connections
 
 ├── docs/                     ## Documentation for the project
-│   
+│
 ├── tests/                    ## Unit tests and integration tests for the application
 
 ├── LICENSE
@@ -112,6 +125,7 @@ By establishing a robust MLOps infrastructure with the aforementioned tools and 
 ```
 
 In this structured layout:
+
 - `data/` directory stores raw and processed data, along with any external datasets.
 - `models/` directory contains subdirectories for Scikit-Learn and PyTorch models.
 - `notebooks/` directory houses Jupyter notebooks for data exploration, model training, and evaluation.
@@ -133,7 +147,7 @@ This structured file layout ensures organization, scalability, and ease of maint
 │   │   ├── regression_model.pkl       ## Serialized Scikit-Learn regression model for tax optimization
 │   │   ├── classification_model.pkl   ## Serialized Scikit-Learn classification model for compliance prediction
 │   │   └── feature_engineering.py     ## Script for feature engineering for Scikit-Learn models
-   
+
 │   └── pytorch/
 │       ├── neural_network.pth          ## Trained PyTorch neural network model for complex pattern recognition
 │       ├── data_loader.py              ## Script for data loading and preprocessing for PyTorch models
@@ -141,7 +155,9 @@ This structured file layout ensures organization, scalability, and ease of maint
 ```
 
 In the `models/` directory:
+
 - `scikit-learn/` subdirectory holds serialized Scikit-Learn models for tax optimization and compliance prediction.
+
   - `regression_model.pkl`: Serialized regression model trained to optimize tax strategies.
   - `classification_model.pkl`: Serialized classification model used for predicting compliance with tax laws.
   - `feature_engineering.py`: Script containing functions for feature engineering specific to Scikit-Learn models.
@@ -177,6 +193,7 @@ Having a structured `models/` directory segmented by the machine learning librar
 ```
 
 In the `deployment/` directory:
+
 - `Dockerfile` contains instructions for building a Docker image that encapsulates the High-Net-Worth Tax Optimization AI application and its dependencies.
 - `kubernetes/` subdirectory includes Kubernetes configuration files for deploying and managing the AI application:
   - `deployment.yaml` specifies the deployment configuration, including the container image, replicas, and resource settings.
@@ -229,7 +246,7 @@ class NeuralNetwork(nn.Module):
     def __init__(self):
         super(NeuralNetwork, self).__init()
         self.fc = nn.Linear(X.shape[1], 1)
-    
+
     def forward(self, x):
         return self.fc(x)
 
@@ -278,7 +295,7 @@ class ComplexNeuralNetwork(nn.Module):
         self.fc1 = nn.Linear(X.shape[1], 64)
         self.fc2 = nn.Linear(64, 32)
         self.fc3 = nn.Linear(32, 1)
-    
+
     def forward(self, x):
         x = torch.relu(self.fc1(x))
         x = torch.relu(self.fc2(x))
@@ -315,27 +332,32 @@ This Python script `train_complex_model.py` loads mock data, defines a complex P
 ### Types of Users for the High-Net-Worth Tax Optimization AI Application:
 
 1. **Financial Advisor**:
-    - **User Story**: As a financial advisor, I want to access personalized tax optimization strategies for my high-net-worth clients in Peru to ensure compliance and maximize tax efficiency based on their financial profiles.
-    - **File**: `src/model_training/train_model.py` for training and evaluating machine learning models.
+
+   - **User Story**: As a financial advisor, I want to access personalized tax optimization strategies for my high-net-worth clients in Peru to ensure compliance and maximize tax efficiency based on their financial profiles.
+   - **File**: `src/model_training/train_model.py` for training and evaluating machine learning models.
 
 2. **Data Scientist**:
-    - **User Story**: As a data scientist, I need to analyze, preprocess, and train complex machine learning models for tax optimization based on high-net-worth individuals' financial data.
-    - **File**: `src/model_training/train_complex_model.py` for training a complex PyTorch neural network model.
+
+   - **User Story**: As a data scientist, I need to analyze, preprocess, and train complex machine learning models for tax optimization based on high-net-worth individuals' financial data.
+   - **File**: `src/model_training/train_complex_model.py` for training a complex PyTorch neural network model.
 
 3. **Compliance Officer**:
-    - **User Story**: As a compliance officer, I want to ensure that the AI application's tax optimization strategies comply with Peruvian tax laws and regulations.
-    - **File**: `deployment/kubernetes/deployment.yaml` for managing deployment configurations.
+
+   - **User Story**: As a compliance officer, I want to ensure that the AI application's tax optimization strategies comply with Peruvian tax laws and regulations.
+   - **File**: `deployment/kubernetes/deployment.yaml` for managing deployment configurations.
 
 4. **System Administrator**:
-    - **User Story**: As a system administrator, I need to deploy and manage the AI application on Kubernetes to handle high traffic and ensure scalability.
-    - **File**: `deployment/scripts/startup.sh` for setting up and starting the AI application and required services.
+
+   - **User Story**: As a system administrator, I need to deploy and manage the AI application on Kubernetes to handle high traffic and ensure scalability.
+   - **File**: `deployment/scripts/startup.sh` for setting up and starting the AI application and required services.
 
 5. **Data Analyst**:
-    - **User Story**: As a data analyst, I want to explore and analyze high-net-worth individuals' financial data to identify trends and insights that can optimize tax strategies.
-    - **File**: `notebooks/exploratory_analysis/data_analysis.ipynb` for conducting exploratory data analysis on the financial data.
+
+   - **User Story**: As a data analyst, I want to explore and analyze high-net-worth individuals' financial data to identify trends and insights that can optimize tax strategies.
+   - **File**: `notebooks/exploratory_analysis/data_analysis.ipynb` for conducting exploratory data analysis on the financial data.
 
 6. **Executive Stakeholder**:
-    - **User Story**: As an executive stakeholder, I require regular reports on the performance and effectiveness of the AI application in maximizing tax efficiency for high-net-worth clients.
-    - **File**: `src/model_evaluation/evaluate_model.py` for evaluating and optimizing the tax optimization models.
+   - **User Story**: As an executive stakeholder, I require regular reports on the performance and effectiveness of the AI application in maximizing tax efficiency for high-net-worth clients.
+   - **File**: `src/model_evaluation/evaluate_model.py` for evaluating and optimizing the tax optimization models.
 
 Each user has a specific role and requirement in utilizing the High-Net-Worth Tax Optimization AI application. The corresponding files in the application cater to these user needs by enabling them to carry out tasks that align with their responsibilities and objectives.

@@ -39,6 +39,7 @@ By integrating these tools and technologies, the AI Automated Real-time Fraud De
 ## MLOps Infrastructure for Automated Real-time Fraud Detection
 
 ## Objectives
+
 The MLOps infrastructure for the Automated Real-time Fraud Detection application is designed to seamlessly integrate machine learning into the software development and deployment lifecycle, ensuring efficient model training, deployment, monitoring, and maintenance.
 
 ## Components and Workflow
@@ -250,6 +251,7 @@ model.save('trained_fraud_detection_model')
 ```
 
 In this script:
+
 - The mock transaction data is loaded from a CSV file (`mock_transaction_data.csv`).
 - The data is preprocessed by scaling the features using `StandardScaler` and performing a train-test split.
 - A simple fraud detection model is defined and trained using TensorFlow's Keras API.
@@ -319,6 +321,7 @@ print(f"Accuracy: {accuracy:.4f}, Precision: {precision:.4f}, Recall: {recall:.4
 ```
 
 In this script:
+
 - The mock transaction data is loaded from a CSV file (`mock_transaction_data.csv`).
 - Feature engineering and data preprocessing steps can be incorporated as needed for a complex model.
 - The script demonstrates the training and evaluation of a complex fraud detection model using the `RandomForestClassifier` from the scikit-learn library.
@@ -331,23 +334,27 @@ This script acts as a starting point for training a complex machine learning alg
 ## Types of Users for the Automated Real-time Fraud Detection Application
 
 1. **Data Scientist/ML Engineer**
-   - *User Story*: As a data scientist, I want to train and assess the performance of different machine learning models using mock data to improve fraud detection accuracy.
-   - *Accomplishing File*: `ml_models/train_complex_model_mock_data.py`
+
+   - _User Story_: As a data scientist, I want to train and assess the performance of different machine learning models using mock data to improve fraud detection accuracy.
+   - _Accomplishing File_: `ml_models/train_complex_model_mock_data.py`
 
 2. **Software Developer**
-   - *User Story*: As a software developer, I want to deploy and manage the real-time processing component of the fraud detection application within Docker containers for scalability and ease of deployment.
-   - *Accomplishing File*: `infrastructure/docker/docker-compose.yml`
+
+   - _User Story_: As a software developer, I want to deploy and manage the real-time processing component of the fraud detection application within Docker containers for scalability and ease of deployment.
+   - _Accomplishing File_: `infrastructure/docker/docker-compose.yml`
 
 3. **Data Engineer**
-   - *User Story*: As a data engineer, I want to integrate data streaming and processing pipelines with Kafka to ensure seamless ingestion and processing of real-time transaction data for fraud detection.
-   - *Accomplishing File*: `app_code/real_time_processing/kafka_consumer.py`
+
+   - _User Story_: As a data engineer, I want to integrate data streaming and processing pipelines with Kafka to ensure seamless ingestion and processing of real-time transaction data for fraud detection.
+   - _Accomplishing File_: `app_code/real_time_processing/kafka_consumer.py`
 
 4. **Business Analyst**
-   - *User Story*: As a business analyst, I want to monitor the performance and accuracy of deployed fraud detection models and visualize key metrics in real-time to identify potential fraud patterns.
-   - *Accomplishing File*: `mlops/monitoring/prometheus_config.yml` and `mlops/monitoring/grafana_dashboard_definitions/`
+
+   - _User Story_: As a business analyst, I want to monitor the performance and accuracy of deployed fraud detection models and visualize key metrics in real-time to identify potential fraud patterns.
+   - _Accomplishing File_: `mlops/monitoring/prometheus_config.yml` and `mlops/monitoring/grafana_dashboard_definitions/`
 
 5. **System Administrator/DevOps Engineer**
-   - *User Story*: As a system administrator, I want to maintain the Kubernetes deployment configuration for the fraud detection application to ensure high availability and fault tolerance.
-   - *Accomplishing File*: `infrastructure/kubernetes/deployment_config.yml` and `infrastructure/kubernetes/service_config.yml`
+   - _User Story_: As a system administrator, I want to maintain the Kubernetes deployment configuration for the fraud detection application to ensure high availability and fault tolerance.
+   - _Accomplishing File_: `infrastructure/kubernetes/deployment_config.yml` and `infrastructure/kubernetes/service_config.yml`
 
 By addressing the needs and user stories of these diverse user types, the Automated Real-time Fraud Detection application can effectively support the collaborative efforts of data scientists, software developers, data engineers, business analysts, and system administrators, aligning with the goals of the organization and ensuring the successful deployment and operation of the AI-powered fraud detection system.

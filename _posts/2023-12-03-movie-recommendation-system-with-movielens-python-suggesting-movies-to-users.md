@@ -14,24 +14,29 @@ The objective of the AI Movie Recommendation System is to build a scalable, data
 ## System Design Strategies
 
 ### Data Collection and Storage
+
 1. **Data Collection**: Use the MovieLens dataset or similar movie ratings dataset for collecting user preferences and movie information.
 2. **Data Storage**: Utilize a scalable and robust database such as PostgreSQL or MongoDB to store user profiles, movie ratings, and movie metadata.
 
 ### Machine Learning Model
+
 1. **Collaborative Filtering**: Implement collaborative filtering algorithms such as user-based or item-based collaborative filtering to generate movie recommendations based on user behavior and preferences.
 2. **Model Training**: Utilize machine learning libraries such as scikit-learn or TensorFlow to train the recommendation model on the collected movie ratings data.
 
 ### Recommendation Engine
+
 1. **Scalable Recommendation Engine**: Design a scalable recommendation engine that can handle a large number of users and movies efficiently.
 2. **Real-time Recommendation**: Implement real-time recommendation generation to provide instant feedback to the users.
 
 ### Frontend and Backend Architecture
+
 1. **Microservices Architecture**: Consider implementing a microservices architecture to decouple the recommendation engine from the frontend application, allowing for better scalability and maintainability.
 2. **RESTful APIs**: Design RESTful APIs for communication between the frontend and backend components of the system.
 
 ## Chosen Libraries and Frameworks
 
 ### Python Libraries
+
 1. **Pandas**: For data manipulation and preprocessing of the MovieLens dataset.
 2. **scikit-learn**: To build and train machine learning models for collaborative filtering.
 3. **Flask**: As a lightweight web framework for building the backend API services.
@@ -39,6 +44,7 @@ The objective of the AI Movie Recommendation System is to build a scalable, data
 5. **SQLAlchemy**: To interact with the database and manage the persistence layer for user profiles and movie data.
 
 ### Additional Technologies
+
 1. **Docker**: For containerization and deployment of the microservices components of the system.
 2. **Kubernetes**: For orchestrating and managing the containerized components in a production environment.
 3. **React**: As a frontend framework for building an interactive user interface to display movie recommendations.
@@ -52,50 +58,62 @@ Building a scalable and reliable infrastructure for the AI Movie Recommendation 
 ### 1. Data Storage
 
 #### Database
+
 Utilize a robust and scalable database to store user profiles, movie ratings, and movie metadata.
 
 ##### Choice: Amazon RDS (Relational Database Service) with PostgreSQL
+
 - Amazon RDS provides the capability to easily set up, operate, and scale a relational database in the cloud.
 - PostgreSQL is a powerful, open-source relational database management system with extensive support for complex queries and data types.
 
 #### Data Warehousing
+
 Consider a data warehousing solution for advanced analytics and reporting on user preferences and movie interactions.
 
 ##### Choice: Amazon Redshift
+
 - Amazon Redshift is a fully managed, petabyte-scale data warehouse service in the cloud.
 - It is designed for high performance and scalability, with the ability to handle large volumes of data and complex queries.
 
 ### 2. Model Training and Serving
 
 #### Machine Learning Infrastructure
+
 To support training, deploying, and serving machine learning models, a robust infrastructure is needed.
 
 ##### Choice: Amazon SageMaker
+
 - Amazon SageMaker is a fully managed service that provides the ability to build, train, and deploy machine learning models quickly and at scale.
 - It supports popular machine learning frameworks such as TensorFlow and scikit-learn, and automates the process of training and deployment.
 
 ### 3. Backend and Microservices
 
 #### RESTful API Services
+
 Design a scalable and reliable backend infrastructure to handle recommendation requests and serve user-specific movie recommendations.
 
 ##### Choice: AWS Lambda with API Gateway
+
 - AWS Lambda allows for running code without provisioning or managing servers, making it suitable for handling recommendation requests at scale.
 - API Gateway provides a fully managed service to create, publish, maintain, monitor, and secure APIs at any scale.
 
 #### Asynchronous Task Processing
+
 For background tasks such as model training and recommendation generation, an asynchronous processing framework is essential.
 
 ##### Choice: AWS Step Functions with AWS Batch
+
 - AWS Step Functions coordinates distributed components and microservices using visual workflows, making it suitable for orchestrating model training tasks.
 - AWS Batch enables running batch computing workloads at any scale, making it suitable for running recommendation generation tasks in parallel.
 
 ### 4. Frontend Application
 
 #### Web Hosting and Content Delivery
+
 For hosting the frontend application and delivering content to users globally, a content delivery network (CDN) is essential.
 
 ##### Choice: Amazon CloudFront
+
 - Amazon CloudFront is a fast and secure CDN service that delivers data, videos, applications, and APIs to users globally with low latency and high transfer speeds.
 - It integrates seamlessly with other AWS services and offers advanced security and caching features.
 
@@ -242,27 +260,30 @@ In this example, the `complex_movie_recommendation_algorithm` function takes the
 
 When using real data and models, the recommendation algorithm implementation will depend on the specific machine learning techniques and models chosen for the Movie Recommendation System.
 
-
 ### Types of Users for the Movie Recommendation System
 
 1. **Regular Movie Enthusiast**
-   - *User Story*: As a regular movie enthusiast, I want to discover new movies similar to the ones I've enjoyed in the past, so that I can explore a diverse range of films within my preferred genres.
-   - *Accomplishing File*: The `user_ratings.csv` file containing the user's historical ratings and the `movies.csv` file for movie metadata will be used to provide personalized movie recommendations based on their previous ratings and movie preferences.
+
+   - _User Story_: As a regular movie enthusiast, I want to discover new movies similar to the ones I've enjoyed in the past, so that I can explore a diverse range of films within my preferred genres.
+   - _Accomplishing File_: The `user_ratings.csv` file containing the user's historical ratings and the `movies.csv` file for movie metadata will be used to provide personalized movie recommendations based on their previous ratings and movie preferences.
 
 2. **Casual Movie Viewer**
-   - *User Story*: As a casual movie viewer, I want to receive popular and trending movie recommendations across different genres, so that I can stay updated with the latest and most talked-about films.
-   - *Accomplishing File*: The `movies.csv` file, which contains a list of movies along with their genres and popularity ratings, will be used to generate trending and popular movie recommendations that are currently trending or highly-rated.
+
+   - _User Story_: As a casual movie viewer, I want to receive popular and trending movie recommendations across different genres, so that I can stay updated with the latest and most talked-about films.
+   - _Accomplishing File_: The `movies.csv` file, which contains a list of movies along with their genres and popularity ratings, will be used to generate trending and popular movie recommendations that are currently trending or highly-rated.
 
 3. **Genre-Specific Movie Fan**
-   - *User Story*: As a fan of a specific movie genre (e.g., science fiction), I want to get recommendations tailored specifically to that genre and other related genres, so that I can discover more movies that align with my particular interests.
-   - *Accomplishing File*: The `movies.csv` file, which includes movie genres, will be used to provide genre-specific movie recommendations based on the user's preferred genre and related genres.
+
+   - _User Story_: As a fan of a specific movie genre (e.g., science fiction), I want to get recommendations tailored specifically to that genre and other related genres, so that I can discover more movies that align with my particular interests.
+   - _Accomplishing File_: The `movies.csv` file, which includes movie genres, will be used to provide genre-specific movie recommendations based on the user's preferred genre and related genres.
 
 4. **New User**
-   - *User Story*: As a new user of the platform, I want to receive initial movie recommendations that are popular and well-received, so that I can start exploring movies that are generally liked by a wide audience.
-   - *Accomplishing File*: The `movies.csv` file, which contains movie metadata and popularity ratings, along with usage of general popularity-based recommendation algorithms, will be used to provide initial movie recommendations to new users.
+
+   - _User Story_: As a new user of the platform, I want to receive initial movie recommendations that are popular and well-received, so that I can start exploring movies that are generally liked by a wide audience.
+   - _Accomplishing File_: The `movies.csv` file, which contains movie metadata and popularity ratings, along with usage of general popularity-based recommendation algorithms, will be used to provide initial movie recommendations to new users.
 
 5. **Critically Acclaimed Movie Buff**
-   - *User Story*: As a movie enthusiast who appreciates critically acclaimed and award-winning films, I want to receive recommendations for high-quality and award-winning movies, so that I can explore noteworthy and acclaimed films.
-   - *Accomplishing File*: The `movies.csv` file, which includes movie metadata and possibly external sources for award and critical acclaim data, will be used to provide personalized recommendations based on critically acclaimed movies and awards won.
+   - _User Story_: As a movie enthusiast who appreciates critically acclaimed and award-winning films, I want to receive recommendations for high-quality and award-winning movies, so that I can explore noteworthy and acclaimed films.
+   - _Accomplishing File_: The `movies.csv` file, which includes movie metadata and possibly external sources for award and critical acclaim data, will be used to provide personalized recommendations based on critically acclaimed movies and awards won.
 
 Each type of user will interact with the movie recommendation system through the backend application (`app.py`) and potentially the frontend application for viewing and interacting with recommended movies. The recommendation algorithms will utilize various data files for generating personalized movie recommendations tailored to each user's preferences and behaviors.

@@ -6,15 +6,18 @@ layout: article
 ---
 
 ## Objectives
+
 The objective of this recommendation engine is to leverage machine learning techniques to provide personalized recommendations for users. The system should be able to handle large datasets, scale efficiently, and continuously improve its recommendations based on user interactions.
 
 ## System Design Strategies
+
 - **Data Collection and Storage**: Utilize a distributed database or data warehouse to store large volumes of user and item data. This could be achieved using technologies such as Apache Hadoop or Apache Spark.
 - **Feature Engineering**: Extract meaningful features from the raw data to represent users, items, and their interactions. This could involve techniques such as collaborative filtering, content-based filtering, and matrix factorization.
 - **Model Training**: Use scalable machine learning algorithms to train recommendation models on the extracted features. This could involve techniques such as collaborative filtering, matrix factorization, and deep learning-based approaches.
 - **Real-time Recommendation**: Implement a real-time recommendation service that can quickly retrieve and deliver personalized recommendations to users based on their current interactions.
 
 ## Chosen Libraries and Technologies
+
 - **Python**: Utilize Python as the primary programming language for its rich ecosystem of machine learning libraries and frameworks.
 - **Scikit-learn**: Leverage Scikit-learn for traditional machine learning algorithms such as collaborative filtering and matrix factorization.
 - **TensorFlow or PyTorch**: Use TensorFlow or PyTorch for building and training deep learning-based recommendation models, especially for complex patterns and embeddings.
@@ -26,24 +29,29 @@ By leveraging these libraries and technologies, we can design a scalable, data-i
 ## Infrastructure for AI Recommendation System with ML
 
 ### Cloud Infrastructure
+
 - **Cloud Provider**: Utilize a major cloud provider such as AWS, Google Cloud Platform, or Microsoft Azure for scalable infrastructure and managed services.
 - **Compute Resources**: Leverage auto-scaling groups or Kubernetes for elastic compute resources to handle varying workloads.
 - **Storage**: Utilize cloud storage services like Amazon S3 or Google Cloud Storage for storing large datasets and model artifacts.
 
 ### Data Pipeline
+
 - **Data Ingestion**: Use services such as Amazon Kinesis, Google Cloud Pub/Sub, or Apache Kafka for real-time data ingestion of user interactions and item data.
 - **Data Processing**: Leverage Apache Spark for distributed data processing, feature extraction, and model training on large-scale datasets.
 - **Data Storage**: Utilize a distributed database like Amazon Redshift, Google BigQuery, or Apache Cassandra for storing pre-processed user-item interaction data.
 
 ### Machine Learning Infrastructure
+
 - **Model Training**: Use managed services like Amazon SageMaker, Google AI Platform, or Azure Machine Learning for scalable model training and hyperparameter optimization.
 - **Model Deployment**: Utilize containerization with Docker and orchestration with Kubernetes for deploying machine learning models as scalable microservices.
 
 ### Real-time Recommendation Service
+
 - **API Service**: Implement a real-time recommendation API using Flask or FastAPI to serve personalized recommendations to users based on their current interactions.
 - **Scalability**: Utilize load balancers and auto-scaling to ensure the recommendation service can handle varying traffic loads.
 
 ### Monitoring and Logging
+
 - **Logging**: Employ centralized logging using services such as Amazon CloudWatch, Google Cloud Logging, or ELK stack to capture and analyze logs from the application and infrastructure components.
 - **Monitoring**: Utilize services like Amazon CloudWatch, Google Cloud Monitoring, or Prometheus for monitoring infrastructure health, application performance, and machine learning model metrics.
 
@@ -100,7 +108,6 @@ This file structure is designed to organize the ML recommendation system reposit
 In the "models" directory, we have two subdirectories: "trained_models" and "model_evaluation_results".
 
 - **trained_models**: This directory contains serialized files of trained machine learning models. Each model is saved in a serialized format (e.g., pickle, joblib) for easy loading and deployment. Multiple models can be stored here, each with its own respective file.
-  
 - **model_evaluation_results**: This directory contains the evaluation metrics and results for the trained models. Each model's evaluation metrics are stored in separate JSON files, making it easy to track and compare the performance of different models. The JSON files may include metrics such as accuracy, precision, recall, F1 score, AUC-ROC, etc.
 
 Having a dedicated "models" directory with subdirectories for trained models and model evaluation results helps in organizing and tracking the trained models and their performance metrics effectively within the ML recommendation system repository.
@@ -161,7 +168,7 @@ def train_recommendation_model(data_file_path):
 
     ## Evaluate the model using mean squared error
     mse = mean_squared_error(y_test, y_pred)
-    
+
     return model, mse
 ```
 
@@ -213,23 +220,27 @@ In this function, `train_deep_learning_recommendation_model`, the given file pat
 ### Types of Users for the Recommendation System
 
 1. **Casual Shopper**
-    - *User Story*: As a casual shopper, I want to receive personalized product recommendations based on my browsing and purchase history to discover new items that align with my preferences.
-    - *File*: This user story can be addressed in the "api_service/app.py" file, where the recommendation API service processes user interactions and delivers personalized recommendations.
+
+   - _User Story_: As a casual shopper, I want to receive personalized product recommendations based on my browsing and purchase history to discover new items that align with my preferences.
+   - _File_: This user story can be addressed in the "api_service/app.py" file, where the recommendation API service processes user interactions and delivers personalized recommendations.
 
 2. **Fashion Enthusiast**
-    - *User Story*: As a fashion enthusiast, I want to explore trendy and unique clothing recommendations based on current fashion trends and user-generated content.
-    - *File*: This user story can be addressed in the "notebooks/data_exploration.ipynb" file, where data exploration and content-based filtering techniques could be used to provide fashion-centric recommendations.
+
+   - _User Story_: As a fashion enthusiast, I want to explore trendy and unique clothing recommendations based on current fashion trends and user-generated content.
+   - _File_: This user story can be addressed in the "notebooks/data_exploration.ipynb" file, where data exploration and content-based filtering techniques could be used to provide fashion-centric recommendations.
 
 3. **Movie Buff**
-    - *User Story*: As a movie buff, I want to receive tailored movie recommendations based on my movie-watching history and preferences, including genre and actors.
-    - *File*: This user story can be addressed in the "src/model_training/movie_recommendation_model.py" file, which could contain the training and evaluation logic for a movie recommendation model based on collaborative filtering or content-based approaches.
+
+   - _User Story_: As a movie buff, I want to receive tailored movie recommendations based on my movie-watching history and preferences, including genre and actors.
+   - _File_: This user story can be addressed in the "src/model_training/movie_recommendation_model.py" file, which could contain the training and evaluation logic for a movie recommendation model based on collaborative filtering or content-based approaches.
 
 4. **Book Lover**
-    - *User Story*: As a book lover, I want to discover personalized book recommendations based on my reading history and interests, covering a range of genres and authors.
-    - *File*: This user story can be addressed in the "src/data_processing/book_feature_engineering.py" file, where feature engineering techniques could be applied to generate meaningful representations of books for user-based or item-based collaborative filtering.
+
+   - _User Story_: As a book lover, I want to discover personalized book recommendations based on my reading history and interests, covering a range of genres and authors.
+   - _File_: This user story can be addressed in the "src/data_processing/book_feature_engineering.py" file, where feature engineering techniques could be applied to generate meaningful representations of books for user-based or item-based collaborative filtering.
 
 5. **Music Aficionado**
-    - *User Story*: As a music aficionado, I want to explore recommendations for new music releases and artists based on my listening history and preferred genres.
-    - *File*: This user story can be addressed in the "models/trained_models/music_recommendation_model.pkl" file, where a trained machine learning model could be utilized to provide personalized music recommendations based on user listening habits.
+   - _User Story_: As a music aficionado, I want to explore recommendations for new music releases and artists based on my listening history and preferred genres.
+   - _File_: This user story can be addressed in the "models/trained_models/music_recommendation_model.pkl" file, where a trained machine learning model could be utilized to provide personalized music recommendations based on user listening habits.
 
 By addressing these user stories across various files within the ML recommendation system repository, we can ensure that the recommendation engine caters to the diverse needs and preferences of different types of users.

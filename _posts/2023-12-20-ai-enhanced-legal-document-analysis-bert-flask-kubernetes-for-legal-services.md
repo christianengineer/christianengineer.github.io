@@ -6,9 +6,11 @@ layout: article
 ---
 
 ## Objectives
+
 The objective of the AI-enhanced legal document analysis system is to provide a scalable and efficient platform for legal services, leveraging the power of AI and machine learning to analyze legal documents. This involves employing BERT (Bidirectional Encoder Representations from Transformers) for natural language processing tasks, integrating it into a Flask web application, and deploying it using Kubernetes for scalability.
 
 ## System Design Strategies
+
 1. **Microservices Architecture**: The system can be designed as a collection of small services that can be independently developed, tested, and deployed, allowing for scalability and flexibility.
 
 2. **Use of BERT for NLP**: BERT will be utilized for tasks such as document classification, entity extraction, and summarization. This will involve pre-training BERT on legal text corpora and fine-tuning it for specific tasks.
@@ -20,6 +22,7 @@ The objective of the AI-enhanced legal document analysis system is to provide a 
 5. **Data Pipeline for Document Processing**: Designing an efficient data pipeline to handle large volumes of legal documents, including preprocessing, feature extraction, and transformation for input into the AI models.
 
 ## Chosen Libraries
+
 1. **BERT (Transformers)**: For leveraging pre-trained BERT models and fine-tuning them for legal document analysis tasks.
 
 2. **Flask**: As the web framework for building the backend APIs that expose the AI capabilities.
@@ -35,27 +38,35 @@ By employing these system design strategies and chosen libraries, the AI-enhance
 ## MLOps Infrastructure for AI-Enhanced Legal Document Analysis
 
 ### Version Control System
+
 Utilize a version control system like Git to manage the source code, model weights, and configuration files. This allows for tracking changes, collaboration, and reproducibility.
 
 ### Continuous Integration/Continuous Deployment (CI/CD)
+
 Implement CI/CD pipelines to automate the testing, building, and deployment of the system. This ensures that changes in the codebase and models are thoroughly tested and seamlessly deployed into production.
 
 ### Model Registry
+
 Establish a model registry to keep track of different versions of trained models, along with relevant metadata and performance metrics. This facilitates model governance and allows for easy retrieval and deployment of specific model versions.
 
 ### Monitoring and Logging
+
 Incorporate monitoring and logging mechanisms to track the performance of the deployed models and the overall application. This includes logging model predictions, tracking system metrics, and setting up alerts for anomalous behavior.
 
 ### Infrastructure as Code (IaC)
+
 Utilize infrastructure as code tools, such as Terraform or Kubernetes manifests, to define and manage the infrastructure required for deploying the application. This ensures consistency and reproducibility across different environments.
 
 ### Model Testing and Validation
+
 Implement automated testing for the trained models to ensure that they perform as expected across various inputs and edge cases. This includes unit tests, integration tests, and validation against predefined benchmarks.
 
 ### Data Versioning and Management
+
 Establish a system for managing and versioning the datasets used for training and testing the models. This involves tracking the lineage of data, ensuring reproducibility, and enabling the traceability of model predictions back to the original data.
 
 ### Scalability and Resource Orchestration
+
 Utilize Kubernetes for resource orchestration and scalability, enabling the deployment of the application in a containerized environment that can scale based on demand.
 
 By incorporating these MLOps practices and infrastructure components, the AI-enhanced legal document analysis system can maintain a robust and efficient deployment pipeline, ensuring the reliability, scalability, and performance of the AI application in production.
@@ -271,23 +282,27 @@ In this example, the script trains a complex machine learning algorithm, a Rando
 ### Types of Users:
 
 1. **Legal Professionals**
-   - *User Story*: As a legal professional, I want to upload legal documents and obtain summaries and key insights to expedite the review process for case preparation.
-   - *File*: `app/src/api/app.py` (Flask API endpoints for document analysis and result retrieval)
+
+   - _User Story_: As a legal professional, I want to upload legal documents and obtain summaries and key insights to expedite the review process for case preparation.
+   - _File_: `app/src/api/app.py` (Flask API endpoints for document analysis and result retrieval)
 
 2. **Data Analysts**
-   - *User Story*: As a data analyst, I need to access and analyze the entity extraction results from legal documents to identify patterns and trends.
-   - *File*: `app/src/api/app.py` (Flask API providing endpoints for entity extraction results)
+
+   - _User Story_: As a data analyst, I need to access and analyze the entity extraction results from legal documents to identify patterns and trends.
+   - _File_: `app/src/api/app.py` (Flask API providing endpoints for entity extraction results)
 
 3. **Software Developers**
-   - *User Story*: As a software developer, I want to integrate the AI capabilities of the legal document analysis system into our internal legal management platform via API.
-   - *File*: `app/src/api/app.py` (Flask API endpoints for seamless integration)
+
+   - _User Story_: As a software developer, I want to integrate the AI capabilities of the legal document analysis system into our internal legal management platform via API.
+   - _File_: `app/src/api/app.py` (Flask API endpoints for seamless integration)
 
 4. **Compliance Officers**
-   - *User Story*: As a compliance officer, I need to classify legal documents for regulatory compliance checks and access detailed analysis reports.
-   - *File*: `app/src/api/app.py` (Flask API endpoints for document classification and detailed analysis reports)
+
+   - _User Story_: As a compliance officer, I need to classify legal documents for regulatory compliance checks and access detailed analysis reports.
+   - _File_: `app/src/api/app.py` (Flask API endpoints for document classification and detailed analysis reports)
 
 5. **System Administrators**
-   - *User Story*: As a system administrator, I want to monitor the performance and usage statistics of the AI models to ensure system reliability and efficiency.
-   - *File*: `deployment/kubernetes/deployment.yaml` (Kubernetes deployment configuration for managing system resources)
+   - _User Story_: As a system administrator, I want to monitor the performance and usage statistics of the AI models to ensure system reliability and efficiency.
+   - _File_: `deployment/kubernetes/deployment.yaml` (Kubernetes deployment configuration for managing system resources)
 
 These user stories represent a variety of users who would interact with the AI-Enhanced Legal Document Analysis system, each with their unique requirements and use cases. The specified files are pivotal in delivering the functionality required by each type of user.

@@ -8,14 +8,18 @@ layout: article
 ## AI-driven Energy Usage Forecasting for Buildings Repository
 
 ## Objectives
+
 The objectives of the AI-driven Energy Usage Forecasting for Buildings repository are to leverage AI and machine learning techniques to forecast energy usage in smart buildings. The system aims to provide accurate predictions of energy consumption, enabling proactive energy management and optimization in real-time. The key objectives include:
+
 - Developing machine learning models for energy usage forecasting
 - Implementing a scalable and data-intensive system architecture
 - Integrating with real-time data streams from IoT devices in buildings
 - Deploying the solution leveraging containerization and orchestration with Kubernetes
 
 ## System Design Strategies
+
 The system design for AI-driven Energy Usage Forecasting for Buildings involves several key strategies to achieve scalability, reliability, and real-time processing. Some of the design strategies include:
+
 - Utilizing PyTorch for building and training machine learning models for energy usage forecasting
 - Leveraging Kafka for real-time data streaming and message queuing to handle high volume data from IoT devices
 - Implementing a microservices architecture to ensure scalability and modularity
@@ -24,7 +28,9 @@ The system design for AI-driven Energy Usage Forecasting for Buildings involves 
 - Implementing data pipelines for aggregating, processing, and feeding data to machine learning models
 
 ## Chosen Libraries and Technologies
+
 The chosen libraries and technologies for the AI-driven Energy Usage Forecasting for Buildings repository include:
+
 - **PyTorch**: Utilized for building and training deep learning models for time series forecasting of energy usage.
 - **Kafka**: Used for managing real-time data streams and message queuing to handle high volume data from IoT devices in buildings.
 - **Kubernetes**: Employed for container orchestration to manage and scale the application components efficiently.
@@ -37,28 +43,35 @@ By incorporating these libraries and technologies, the AI-driven Energy Usage Fo
 ## MLOps Infrastructure for AI-driven Energy Usage Forecasting for Buildings
 
 ## Overview
+
 The MLOps infrastructure for the AI-driven Energy Usage Forecasting for Buildings application is designed to facilitate the end-to-end lifecycle management of machine learning models, from development to deployment and monitoring. The infrastructure is built to support the scalability, reliability, and automation of the machine learning workflow, while ensuring seamless integration with the existing system architecture based on PyTorch, Kafka, and Kubernetes for smart buildings.
 
 ## Components and Workflow
+
 The MLOps infrastructure encompasses the following key components and workflow:
 
 1. **Data Collection and Preprocessing**:
+
    - Real-time data streams from IoT devices in buildings are ingested into the Kafka message queue.
    - Data preprocessing pipelines are implemented to clean and prepare the raw data for consumption by the machine learning models.
 
 2. **Model Development and Training**:
+
    - Utilizing PyTorch, machine learning models for energy usage forecasting are developed and trained using historical and preprocessed data.
    - Model training tasks are containerized using Docker and run on Kubernetes clusters to leverage scalable compute resources.
 
 3. **Model Evaluation and Validation**:
+
    - Trained models are evaluated using validation datasets to assess their performance and accuracy.
    - Monitoring and logging mechanisms are set up to capture model evaluation metrics and performance indicators.
 
-4. **Model Deployment**: 
+4. **Model Deployment**:
+
    - The trained models are containerized and deployed as microservices within the Kubernetes environment to enable real-time predictions.
    - Integration with the Kafka message queue allows the deployed models to consume real-time data for forecasting energy usage.
 
 5. **Monitoring and Observability**:
+
    - Implementing monitoring and observability tools for tracking model performance, data drift, and system health within the Kubernetes clusters.
    - Metrics, logs, and performance indicators are collected and visualized to facilitate proactive model maintenance and management.
 
@@ -67,7 +80,9 @@ The MLOps infrastructure encompasses the following key components and workflow:
    - Integration with version control systems (e.g., Git) to ensure traceability and reproducibility of model changes.
 
 ## Benefits and Advantages
+
 The MLOps infrastructure for AI-driven Energy Usage Forecasting for Buildings offers several benefits and advantages, including:
+
 - Automated and scalable machine learning workflow management leveraging Kubernetes for model training and deployment.
 - Seamless integration with the existing system architecture based on PyTorch for model development and Kafka for real-time data streams.
 - Enhanced observability and proactive maintenance of machine learning models through monitoring, logging, and performance tracking.
@@ -112,7 +127,7 @@ AI-driven-Energy-Usage-Forecasting/
 ├── LICENSE                     ## Project license file
 ```
 
-This file structure is designed to support modularity, scalability, and maintainability of the AI-driven Energy Usage Forecasting for Buildings application. It includes dedicated directories for data management, model development and deployment, application components, configuration settings, testing, documentation, and essential project files. 
+This file structure is designed to support modularity, scalability, and maintainability of the AI-driven Energy Usage Forecasting for Buildings application. It includes dedicated directories for data management, model development and deployment, application components, configuration settings, testing, documentation, and essential project files.
 The `Dockerfile`, `requirements.txt`, and `deploy.yaml` files are crucial for containerization, defining dependencies, and Kubernetes deployment, respectively.
 
 Each directory follows a logical separation of concerns to organize the project components effectively. The `docs` directory holds project documentation, while the `tests` directory contains unit tests and integration tests to ensure code quality. Additionally, the `config` directory manages configuration settings for deployment, Kafka, logging, and monitoring.
@@ -139,15 +154,19 @@ models/
 ## Description of Files
 
 1. **data_loading.py**:
+
    - This Python module includes functions for loading, preprocessing, and transforming the raw data from the `data/processed/` directory. It encapsulates the data loading logic, feature engineering, and data transformation necessary for training the machine learning models.
 
 2. **model_training.py**:
+
    - The `model_training.py` script is responsible for training the PyTorch machine learning model using the preprocessed data. It leverages PyTorch's functionalities for defining the model architecture, loss functions, optimization, and training loops. The trained model weights and configurations are saved to the `trained/` directory upon successful training.
 
 3. **model_evaluation.py**:
+
    - This Python module includes functions for evaluating the performance of the trained model. It computes metrics such as accuracy, RMSE, MAE, and other relevant measures to assess the quality of the model's predictions. The evaluation results can be used for model selection and performance monitoring.
 
 4. **model.pt**:
+
    - `model.pt` file contains the saved weights and architecture of the trained PyTorch model. This file is used for model deployment and serving to make real-time energy usage forecasts within the smart buildings application.
 
 5. **model_config.json**:
@@ -178,9 +197,11 @@ deployment/
 ## Description of Files
 
 1. **namespace.yaml**:
+
    - The `namespace.yaml` file defines the Kubernetes namespace where the application components will be deployed, providing logical isolation and organization within the Kubernetes cluster.
 
 2. **Deployment Configurations**:
+
    - The `deployments/` directory contains deployment configurations for various components of the smart buildings application:
      - **model-serving.yaml**: Includes the deployment configuration for the model serving microservice, which serves real-time energy usage forecasts based on the trained PyTorch model.
      - **kafka-consumer.yaml**: Defines the deployment configuration for the Kafka consumer, responsible for ingesting real-time data streams from IoT devices for energy usage forecasting.
@@ -194,7 +215,7 @@ deployment/
 
 The `deployment` directory and its files play a critical role in orchestrating the deployment and management of the AI-driven Energy Usage Forecasting for Buildings application within the Kubernetes environment. It supports the creation of namespaces, deployment of microservices, and management of sensitive credentials, ensuring a secure and scalable deployment process within the smart buildings ecosystem.
 
-Sure, I can provide a sample Python file for training a PyTorch model for the AI-driven Energy Usage Forecasting for Buildings application using mock data. 
+Sure, I can provide a sample Python file for training a PyTorch model for the AI-driven Energy Usage Forecasting for Buildings application using mock data.
 
 ```python
 ## models/src/model_training.py
@@ -361,27 +382,33 @@ Please note that in a real-world scenario, the data preprocessing, model archite
 ### Types of Users
 
 #### 1. Data Scientist / Machine Learning Engineer
-   - **User Story**: As a data scientist, I want to build and train machine learning models for energy usage forecasting using PyTorch and mock data, so I can enhance the accuracy and efficiency of energy consumption predictions.
-   - **File**: `models/src/model_training.py`
+
+- **User Story**: As a data scientist, I want to build and train machine learning models for energy usage forecasting using PyTorch and mock data, so I can enhance the accuracy and efficiency of energy consumption predictions.
+- **File**: `models/src/model_training.py`
 
 #### 2. DevOps Engineer
-   - **User Story**: As a DevOps engineer, I want to deploy the AI-driven Energy Usage Forecasting application to Kubernetes, ensuring scalability and reliability within the smart buildings environment.
-   - **File**: `deployment/k8s/namespace.yaml`, `deployment/k8s/deployments/model-serving.yaml`, `deployment/secrets/kafka-creds.yaml`
+
+- **User Story**: As a DevOps engineer, I want to deploy the AI-driven Energy Usage Forecasting application to Kubernetes, ensuring scalability and reliability within the smart buildings environment.
+- **File**: `deployment/k8s/namespace.yaml`, `deployment/k8s/deployments/model-serving.yaml`, `deployment/secrets/kafka-creds.yaml`
 
 #### 3. Data Engineer
-   - **User Story**: As a data engineer, I want to set up data pipelines to ingest real-time data from IoT devices into Kafka for energy usage forecasting, ensuring seamless data integration for the application.
-   - **File**: `app/kafka_consumer/kafka_data_pipeline.py`
+
+- **User Story**: As a data engineer, I want to set up data pipelines to ingest real-time data from IoT devices into Kafka for energy usage forecasting, ensuring seamless data integration for the application.
+- **File**: `app/kafka_consumer/kafka_data_pipeline.py`
 
 #### 4. IoT Device Technician
-   - **User Story**: As an IoT device technician, I want to ensure that the real-time data streams from the sensors are properly integrated and handled by the Kafka message queue for further processing.
-   - **File**: `app/kafka_consumer/kafka_data_pipeline.py`
+
+- **User Story**: As an IoT device technician, I want to ensure that the real-time data streams from the sensors are properly integrated and handled by the Kafka message queue for further processing.
+- **File**: `app/kafka_consumer/kafka_data_pipeline.py`
 
 #### 5. API Consumer
-   - **User Story**: As an API consumer, I want to access real-time energy usage forecasts from the AI-driven Energy Usage Forecasting model through an API, enabling me to integrate the predictions into a smart building management system.
-   - **File**: `app/api/api_server.py`
+
+- **User Story**: As an API consumer, I want to access real-time energy usage forecasts from the AI-driven Energy Usage Forecasting model through an API, enabling me to integrate the predictions into a smart building management system.
+- **File**: `app/api/api_server.py`
 
 #### 6. System Monitoring/Operations
-   - **User Story**: As a system monitoring/operations user, I want to monitor and visualize the performance and health of the deployed AI-driven Energy Usage Forecasting application within the Kubernetes cluster, ensuring proactive maintenance and observability.
-   - **File**: `deployment/k8s/deployments/monitoring-agent.yaml`
+
+- **User Story**: As a system monitoring/operations user, I want to monitor and visualize the performance and health of the deployed AI-driven Energy Usage Forecasting application within the Kubernetes cluster, ensuring proactive maintenance and observability.
+- **File**: `deployment/k8s/deployments/monitoring-agent.yaml`
 
 Each type of user interacts with different components of the AI-driven Energy Usage Forecasting for Buildings application, and specific files within the repository cater to their respective needs, whether it's model training, deployment, data processing, API consumption, or system monitoring.

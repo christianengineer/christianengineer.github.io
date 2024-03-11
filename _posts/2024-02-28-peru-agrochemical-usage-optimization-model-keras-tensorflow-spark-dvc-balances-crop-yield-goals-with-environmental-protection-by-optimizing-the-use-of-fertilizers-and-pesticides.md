@@ -8,37 +8,48 @@ layout: article
 ## AI Peru Agrochemical Usage Optimization Model
 
 ### Objectives
+
 The objectives of the AI Peru Agrochemical Usage Optimization Model are to:
+
 - Balance crop yield goals with environmental protection by optimizing the use of fertilizers and pesticides.
 - Minimize the environmental impact of agrochemical usage while maximizing crop yield.
 - Provide actionable insights to farmers on the optimal application of fertilizers and pesticides based on various environmental factors and crop conditions.
 
 ### System Design Strategies
-1. **Data Collection**: 
+
+1. **Data Collection**:
+
    - Gather data on environmental factors (e.g., soil quality, weather conditions), crop data (e.g., type, growth stage), and historical agrochemical usage.
    - Utilize DVC (Data Version Control) to manage and version control the datasets.
 
 2. **Data Preprocessing**:
+
    - Clean and preprocess the data, handle missing values, and normalize features.
-  
+
 3. **Model Development**:
+
    - Build a Machine Learning model using Keras and TensorFlow to predict the optimal amount of fertilizers and pesticides required based on input features.
    - Incorporate Spark for distributed processing to handle large-scale datasets efficiently.
 
 4. **Optimization**:
+
    - Implement optimization algorithms to find the optimal distribution of agrochemicals that balance crop yield goals with environmental protection.
-  
+
 5. **Evaluation**:
+
    - Evaluate the model performance using metrics like RMSE (Root Mean Square Error) for regression tasks and accuracy metrics for classification tasks.
 
 6. **Deployment**:
    - Deploy the model as a scalable service using cloud resources for real-time prediction or batch processing.
 
 ### Chosen Libraries
+
 1. **Keras and TensorFlow**:
+
    - Keras provides a high-level API for building neural networks, and TensorFlow offers efficient computation for training deep learning models.
 
 2. **Spark**:
+
    - Spark allows for distributed data processing, making it ideal for handling large-scale datasets efficiently.
 
 3. **DVC (Data Version Control)**:
@@ -49,15 +60,19 @@ By implementing these system design strategies and utilizing the chosen librarie
 ## MLOps Infrastructure for Peru Agrochemical Usage Optimization Model
 
 ### Continuous Integration/Continuous Deployment (CI/CD) Pipeline
+
 1. **Data Collection and Management**:
+
    - Data pipelines are set up to collect and preprocess data from various sources, ensuring high data quality and consistency.
    - DVC is used for version control and management of datasets.
 
 2. **Model Training**:
+
    - Utilize Spark for distributed training of models on large datasets efficiently.
    - TensorFlow and Keras are used to build and train Machine Learning models to optimize agrochemical usage.
 
 3. **Model Evaluation**:
+
    - Automated testing and validation of models using predefined metrics to ensure model performance.
    - Incorporate validation checks to prevent deploying models that do not meet performance thresholds.
 
@@ -66,7 +81,9 @@ By implementing these system design strategies and utilizing the chosen librarie
    - Deploy models on cloud instances or Kubernetes clusters for scalability and reliability.
 
 ### Monitoring and Logging
+
 1. **Model Performance Monitoring**:
+
    - Monitor model performance in real-time, tracking key metrics such as prediction accuracy, latency, and resource utilization.
    - Use tools like Prometheus and Grafana for monitoring and visualization.
 
@@ -75,7 +92,9 @@ By implementing these system design strategies and utilizing the chosen librarie
    - Set up alerts for anomalies, model degradation, or system failures.
 
 ### Model Versioning and Reproducibility
+
 1. **Model Versioning**:
+
    - Use tools like MLflow to track and manage different versions of models, parameters, and evaluation metrics.
    - Ensure reproducibility by linking specific dataset versions with model versions.
 
@@ -83,7 +102,9 @@ By implementing these system design strategies and utilizing the chosen librarie
    - Record hyperparameters, training configurations, and model performance to facilitate model improvement and experimentation.
 
 ### Security and Compliance
+
 1. **Data Security**:
+
    - Implement data encryption, access controls, and robust authentication mechanisms to protect sensitive data.
 
 2. **Compliance**:
@@ -125,19 +146,21 @@ Peru-Agrochemical-Optimization/
 ## Peru Agrochemical Usage Optimization Model - Models Directory
 
 ```
+
 models/
 │
 ├── keras/
-│   ├── model_architecture.json      ## Keras model architecture in JSON format
-│   ├── model_weights.h5             ## Keras model weights
-│   ├── model_training_history.log   ## Log file capturing training history
-│   └── model_evaluation_results.txt ## Model evaluation results
+│ ├── model_architecture.json ## Keras model architecture in JSON format
+│ ├── model_weights.h5 ## Keras model weights
+│ ├── model_training_history.log ## Log file capturing training history
+│ └── model_evaluation_results.txt ## Model evaluation results
 │
 └── tensorflow/
-    ├── saved_model/                 ## TensorFlow SavedModel format for deployment
-    ├── model_checkpoint/             ## TensorFlow model checkpoints for resuming training
-    ├── tensorboard_logs/             ## TensorBoard logs for visualization
-    └── model_evaluation_metrics.txt  ## Model evaluation metrics for TensorFlow model
+├── saved_model/ ## TensorFlow SavedModel format for deployment
+├── model_checkpoint/ ## TensorFlow model checkpoints for resuming training
+├── tensorboard_logs/ ## TensorBoard logs for visualization
+└── model_evaluation_metrics.txt ## Model evaluation metrics for TensorFlow model
+
 ```
 
 In the `models` directory of the Peru Agrochemical Usage Optimization Model, there are subdirectories for storing the trained models developed using Keras and TensorFlow.
@@ -173,25 +196,27 @@ By organizing the trained models and related artifacts within the `models` direc
 ## Peru Agrochemical Usage Optimization Model - Deployment Directory
 
 ```
+
 deployment/
 │
-├── dockerfile                ## Dockerfile for building the model deployment image
+├── dockerfile ## Dockerfile for building the model deployment image
 │
-├── requirements.txt          ## Python dependencies required for model deployment
+├── requirements.txt ## Python dependencies required for model deployment
 │
 ├── app/
-│   ├── main.py                ## Main Python script for model prediction and serving
-│   ├── preprocessing.py       ## Script for data preprocessing before model prediction
-│   ├── postprocessing.py      ## Script for post-processing model predictions
-│   └── model_utils.py         ## Utility functions for model loading and inference
+│ ├── main.py ## Main Python script for model prediction and serving
+│ ├── preprocessing.py ## Script for data preprocessing before model prediction
+│ ├── postprocessing.py ## Script for post-processing model predictions
+│ └── model_utils.py ## Utility functions for model loading and inference
 │
 ├── config/
-│   ├── deployment_config.yaml ## Configuration file for deployment settings
-│   └── environment_variables.sh ## Environment variables for deployment
+│ ├── deployment_config.yaml ## Configuration file for deployment settings
+│ └── environment_variables.sh ## Environment variables for deployment
 │
 └── tests/
-    └── test_prediction.py     ## Unit tests for model prediction functionality
-```
+└── test_prediction.py ## Unit tests for model prediction functionality
+
+````
 
 In the `deployment` directory of the Peru Agrochemical Usage Optimization Model, there are files and subdirectories dedicated to deploying and serving the trained models for practical application in optimizing the use of fertilizers and pesticides while balancing crop yield goals with environmental protection.
 
@@ -250,7 +275,7 @@ model.fit(X_train, y_train, epochs=10, batch_size=32)
 model.save('models/tensorflow/optimized_agrochemical_model')
 
 print("Model training completed and saved.")
-```
+````
 
 ### File Path: `train_model.py`
 
@@ -305,30 +330,30 @@ By executing this script, a more intricate neural network model using TensorFlow
 
    **User Story**: As a small-scale farmer with limited resources, I want to optimize the usage of fertilizers and pesticides to maximize my crop yield while minimizing environmental impact.
 
-   *File*: `train_model.py`
+   _File_: `train_model.py`
 
 2. **Large Agricultural Enterprises**
 
    **User Story**: As a large agricultural enterprise, I aim to enhance the efficiency and sustainability of our farming practices by leveraging AI to optimize agrochemical usage for each crop.
 
-   *File*: `complex_ml_algorithm.py`
+   _File_: `complex_ml_algorithm.py`
 
 3. **Environmental Conservation Organizations**
 
    **User Story**: As an environmental conservation organization, we seek to support farmers in adopting sustainable practices that protect the environment while maintaining crop productivity.
 
-   *File*: `deployment/app/main.py`
+   _File_: `deployment/app/main.py`
 
 4. **Government Agricultural Regulatory Departments**
 
    **User Story**: As a government agricultural regulatory department, we aim to use advanced technology to recommend best practices to farmers that ensure crop yield goals alongside strict environmental protection measures.
 
-   *File*: `deployment/config/deployment_config.yaml`
+   _File_: `deployment/config/deployment_config.yaml`
 
 5. **Agrochemical Manufacturers**
 
    **User Story**: As an agrochemical manufacturer, our goal is to provide data-driven solutions to farmers for optimal usage of our products, enhancing crop yields and promoting eco-friendly agricultural practices.
 
-   *File*: `models/tensorflow/model_evaluation_metrics.txt`
+   _File_: `models/tensorflow/model_evaluation_metrics.txt`
 
 By tailoring the Peru Agrochemical Usage Optimization Model to different types of users and addressing their specific needs through user stories, we can ensure that the application of the model aligns with the diverse requirements of stakeholders involved in crop management and environmental protection.

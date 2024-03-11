@@ -8,17 +8,20 @@ layout: article
 ## Exclusive Real Estate Investment Predictor (Keras, TensorFlow, Spark, DVC) for Urbanova
 
 ## Objectives and Benefits to the Audience:
+
 1. **Objective**: Develop a scalable, production-ready machine learning solution to predict exclusive real estate investments in Peru's urban landscapes.
-    - **Benefit**: Provide Investment Strategists with a tool to accurately identify undervalued properties with high appreciation potential, enabling informed investment decisions.
+   - **Benefit**: Provide Investment Strategists with a tool to accurately identify undervalued properties with high appreciation potential, enabling informed investment decisions.
 2. **Objective**: Utilize market analytics to uncover real estate opportunities, catering to the dynamic nature of Peru's real estate market.
-    - **Benefit**: Offer predictive insights that guide investment strategies, leading to increased ROI and minimized risks for real estate investments in Peru.
+   - **Benefit**: Offer predictive insights that guide investment strategies, leading to increased ROI and minimized risks for real estate investments in Peru.
 
 ## Machine Learning Algorithm:
+
 - **Specific Algorithm**: Deep Learning model using a Multilayer Perceptron (MLP) architecture for regression tasks.
 
 ## Strategies for Sourcing, Preprocessing, Modeling, and Deploying:
 
 ### Sourcing:
+
 - **Data Sources**:
   - Real estate listings, historical sales data, demographic information, economic indicators from reliable sources.
   - APIs for geospatial data, property information, and market trends.
@@ -26,6 +29,7 @@ layout: article
   - Python Libraries: `pandas`, `numpy`, `requests`, `beautifulsoup`, `geopandas`.
 
 ### Preprocessing:
+
 - **Data Cleaning**:
   - Handle missing values, outliers, and inconsistencies in the dataset.
   - Convert categorical variables to numerical format using techniques like one-hot encoding.
@@ -36,6 +40,7 @@ layout: article
   - Python Libraries: `scikit-learn`, `feature-engine`, `scipy`.
 
 ### Modeling:
+
 - **Model Selection**:
   - Build a Multilayer Perceptron (MLP) model using Keras and TensorFlow for regression tasks.
   - Fine-tune hyperparameters to optimize model performance.
@@ -46,6 +51,7 @@ layout: article
   - `Keras`, `TensorFlow`, `scikit-learn`, `NumPy`, `matplotlib`.
 
 ### Deploying:
+
 - **Scaling**:
   - Utilize Apache Spark for scalability and parallel processing of large datasets.
   - Dockerize the application for easy deployment and management.
@@ -55,6 +61,7 @@ layout: article
   - `Apache Spark`, `Docker`, `DVC`.
 
 ## Links to Tools and Libraries:
+
 - [Keras](https://keras.io/)
 - [TensorFlow](https://www.tensorflow.org/)
 - [Apache Spark](https://spark.apache.org/)
@@ -71,29 +78,35 @@ layout: article
 ## Data Sourcing and Collection Strategy for Exclusive Real Estate Investment Predictor
 
 ## Data Collection Strategy:
+
 To efficiently collect diverse data for the Exclusive Real Estate Investment Predictor project, a comprehensive strategy is needed. We recommend the following tools and methods to cover all relevant aspects of the problem domain while integrating seamlessly within the existing technology stack:
 
 ### 1. **Web Scraping with BeautifulSoup**:
+
 - **Usage**: Extract real estate listings, property details, and market trends from various websites.
 - **Integration**: BeautifulSoup can parse HTML content and extract relevant data, which can then be stored in a structured format for further analysis.
 - **Benefits**: Automates data collection from multiple sources, ensuring a continuous influx of up-to-date information.
 
 ### 2. **API Integration**:
+
 - **Usage**: Access geospatial data, demographic information, and economic indicators from external APIs.
 - **Integration**: APIs can provide real-time data directly into the project's data pipeline for analysis and model training.
 - **Benefits**: Enables the retrieval of specific data points critical for making informed investment decisions.
 
 ### 3. **Geospatial Data Processing with geopandas**:
+
 - **Usage**: Incorporate geospatial data for property locations, proximity to amenities, and neighborhood features.
 - **Integration**: geopandas facilitates the manipulation and analysis of geospatial data, integrating seamlessly with pandas for structured dataset handling.
 - **Benefits**: Enhances the predictive power of the model by incorporating location-based insights into the investment predictions.
 
 ### 4. **Data Version Control with DVC**:
+
 - **Usage**: Track changes in data collection processes, source data, and preprocessing steps.
 - **Integration**: DVC can version control datasets, ensuring reproducibility and traceability of data transformations.
 - **Benefits**: Streamlines the data collection process by maintaining a clear record of data lineage and facilitating collaboration across the team.
 
 ### 5. **Data Quality Validation**:
+
 - **Usage**: Implement data quality checks to ensure the accuracy and completeness of sourced data.
 - **Integration**: Use libraries like `pandas` and custom scripts to validate data integrity before proceeding to analysis and modeling.
 - **Benefits**: Prevents errors in downstream processes by identifying and rectifying data inconsistencies early in the pipeline.
@@ -103,19 +116,23 @@ By leveraging web scraping, API integration, geospatial data processing, and dat
 ## Feature Extraction and Engineering for Exclusive Real Estate Investment Predictor
 
 ## Feature Extraction:
+
 For the Exclusive Real Estate Investment Predictor project, effective feature extraction plays a crucial role in enhancing the interpretability and performance of the machine learning model. We recommend the following features extraction techniques:
 
 1. **Property Features**:
+
    - Location-specific features such as latitude and longitude.
    - Property size, number of bedrooms, bathrooms, and other amenities.
    - Property type (e.g., apartment, house, commercial property).
 
 2. **Market Trends**:
+
    - Historical sales data for properties in the neighborhood.
    - Trends in property prices over time.
    - Economic indicators affecting the real estate market.
 
 3. **Demographic Information**:
+
    - Population density in the neighborhood.
    - Median income of residents in the area.
    - Crime rates and safety index of the locality.
@@ -126,21 +143,26 @@ For the Exclusive Real Estate Investment Predictor project, effective feature ex
    - Neighborhood features like parks, restaurants, and shopping centers.
 
 ## Feature Engineering:
+
 Feature engineering is essential for capturing complex relationships in the data and improving model performance. We recommend the following feature engineering techniques:
 
 1. **Interaction Features**:
+
    - Create interaction features between property size and price per square meter.
    - Combine the age of the property with renovation history to capture maintenance efforts.
 
 2. **Temporal Features**:
+
    - Capture seasonality in property prices.
    - Extract trends and cyclical patterns in market data over time.
 
 3. **Normalization and Scaling**:
+
    - Standardize numerical features like property size and age.
    - Normalize data distribution for improved model convergence.
 
 4. **One-Hot Encoding**:
+
    - Encode categorical variables such as property type and neighborhood.
    - Convert ordinal variables like property condition into numerical values.
 
@@ -149,18 +171,22 @@ Feature engineering is essential for capturing complex relationships in the data
    - Remove redundant or highly correlated features to prevent overfitting.
 
 ## Recommendations for Variable Names:
+
 To maintain consistency and clarity in the project, we suggest the following naming conventions for variables:
 
 - **Property Features**:
+
   - `property_latitude`, `property_longitude`
   - `property_size_sqft`, `num_bedrooms`, `num_bathrooms`
   - `property_type`
 
 - **Market Trends**:
+
   - `avg_price_neighborhood`, `price_trend_yearly`
   - `economic_indicator_1`, `economic_indicator_2`
 
 - **Demographic Information**:
+
   - `population_density`, `median_income`
   - `crime_rate`, `safety_index`
 
@@ -176,36 +202,42 @@ By implementing these feature extraction and engineering strategies and followin
 In the context of the Exclusive Real Estate Investment Predictor project, efficient metadata management is crucial for ensuring reproducibility, traceability, and scalability. Here are some insights directly relevant to the unique demands and characteristics of our project:
 
 ## 1. Data Source Metadata:
+
 - **Source Identification**:
   - Store detailed information about the sources of data used, such as real estate websites, APIs, and external datasets.
 - **Data Retrieval Timestamp**:
   - Record the timestamps of data retrieval to track the freshness and relevancy of the sourced data for real-time decision-making.
 
 ## 2. Feature Metadata:
+
 - **Feature Description**:
   - Document the meaning and purpose of each extracted feature, including property details, market trends, demographic information, and geospatial features.
 - **Feature Transformation**:
   - Track the transformations applied to features during preprocessing, such as normalization, scaling, one-hot encoding, and interaction feature creation.
 
 ## 3. Model Metadata:
+
 - **Model Configuration**:
   - Capture hyperparameters, architecture details, and any fine-tuning steps performed during model development using MLP architecture in Keras and TensorFlow.
 - **Model Performance Metrics**:
   - Record evaluation metrics like RMSE, MAE, R² scores, and cross-validation results to assess model performance and compare different iterations.
 
 ## 4. Data Version Control (DVC) Integration:
+
 - **Data Lineage**:
   - Use DVC to track changes in data sources, feature engineering steps, and model training data to ensure reproducibility and transparency.
 - **Pipeline Versioning**:
   - Version control the entire data processing pipeline, including feature extraction, engineering, preprocessing, and model training, to replicate and iterate on successful models.
 
 ## 5. Deployment Metadata:
+
 - **Deployment Configurations**:
   - Document the configurations and dependencies required for deploying the machine learning model, including Dockerized environments and Spark integration.
 - **Deployment Logs**:
   - Maintain logs of deployment processes, updates, and any performance issues encountered post-deployment for continuous improvement.
 
 ## 6. Collaboration and Documentation:
+
 - **Team Collaboration**:
   - Encourage team members to contribute to metadata management, ensuring shared understanding and seamless collaboration.
 - **Documentation Standards**:
@@ -218,19 +250,24 @@ By prioritizing metadata management tailored to the unique demands of the Exclus
 In the context of the Exclusive Real Estate Investment Predictor project, several specific challenges may arise with the data that require strategic preprocessing practices to ensure the data remains robust, reliable, and suitable for high-performing machine learning models. Here are insights directly relevant to the unique demands and characteristics of our project:
 
 ## Data Challenges:
+
 1. **Missing Values**:
+
    - **Problem**: Real estate datasets often contain missing values due to incomplete property listings or unrecorded information.
    - **Solution**: Impute missing values based on statistical measures such as mean, median, or mode for numerical features, or use predictive imputation methods for categorical features.
 
 2. **Outliers**:
+
    - **Problem**: Outliers in property prices or sizes can skew the model training and prediction outcomes.
    - **Solution**: Apply robust scaling techniques or winsorization to handle outliers without removing them entirely, ensuring model stability and accuracy.
 
 3. **Categorical Variables**:
+
    - **Problem**: Categorical variables like property type or neighborhood may need encoding for machine learning models.
    - **Solution**: Use one-hot encoding or target encoding to convert categorical variables into numerical representations suitable for model training.
 
 4. **Geospatial Data Integration**:
+
    - **Problem**: Integrating geospatial data like distances to amenities can require specialized handling and preprocessing.
    - **Solution**: Use spatial feature engineering techniques to derive meaningful insights from geospatial data, such as calculating proximity-based features and incorporating neighborhood characteristics.
 
@@ -239,16 +276,15 @@ In the context of the Exclusive Real Estate Investment Predictor project, severa
    - **Solution**: Create lag features to capture temporal patterns, incorporate time-related trends, and account for seasonality in the real estate market.
 
 ## Preprocessing Strategies:
+
 1. **Normalization and Scaling**:
    - **Strategy**: Normalize numerical features like property sizes and distances to ensure uniformity in scale across variables.
-   
 2. **Feature Engineering**:
    - **Strategy**: Create new features based on domain knowledge to capture relevant information that may enhance model performance.
-   
 3. **Dimensionality Reduction**:
    - **Strategy**: Employ techniques like Principal Component Analysis (PCA) to reduce the dimensionality of high-dimensional datasets while preserving essential information.
-   
 4. **Data Imbalance Handling**:
+
    - **Strategy**: Address data imbalance issues, if present, by using techniques like oversampling, undersampling, or synthetic sample generation to ensure model training on a representative dataset.
 
 5. **Validation Set Construction**:
@@ -298,6 +334,7 @@ y_test.to_csv('y_test.csv', index=False)
 ```
 
 In this code file:
+
 - We first load the raw real estate data and perform essential preprocessing steps tailored to our project needs.
 - The missing values in numerical features are handled by filling them with the median values for robust training data.
 - Feature engineering is applied by creating a new feature 'price_per_sqft' to capture the price per square foot of the properties.
@@ -315,19 +352,23 @@ To address the unique challenges and data types presented by the Exclusive Real 
 ## Modeling Strategy Steps:
 
 1. **Feature Selection and Importance Analysis**:
-   - *Importance*: This step is crucial for identifying the most influential features that drive property prices and investment opportunities. It helps in focusing model training on the most relevant predictors, optimizing model performance and interpretability.
+
+   - _Importance_: This step is crucial for identifying the most influential features that drive property prices and investment opportunities. It helps in focusing model training on the most relevant predictors, optimizing model performance and interpretability.
 
 2. **Hyperparameter Tuning**:
-   - *Importance*: Fine-tuning hyperparameters, such as learning rate, tree depth, and regularization, is vital for optimizing model performance and generalization. It ensures that the model is tailored to the intricacies of the real estate data and market dynamics in Peru.
+
+   - _Importance_: Fine-tuning hyperparameters, such as learning rate, tree depth, and regularization, is vital for optimizing model performance and generalization. It ensures that the model is tailored to the intricacies of the real estate data and market dynamics in Peru.
 
 3. **Ensemble Learning with Gradient Boosting Regression**:
-   - *Importance*: Ensemble methods like Gradient Boosting Regression excel in capturing non-linear relationships, handling heterogeneous data types, and mitigating overfitting. They combine multiple weak learners to create a robust predictive model, well-suited for the diverse features present in real estate datasets.
+
+   - _Importance_: Ensemble methods like Gradient Boosting Regression excel in capturing non-linear relationships, handling heterogeneous data types, and mitigating overfitting. They combine multiple weak learners to create a robust predictive model, well-suited for the diverse features present in real estate datasets.
 
 4. **Cross-Validation and Evaluation**:
-   - *Importance*: Cross-validation ensures the model's generalizability by assessing performance across multiple subsets of data. Evaluating the model using metrics like RMSE, MAE, and R² on validation sets guarantees reliable predictions for investment decisions.
+
+   - _Importance_: Cross-validation ensures the model's generalizability by assessing performance across multiple subsets of data. Evaluating the model using metrics like RMSE, MAE, and R² on validation sets guarantees reliable predictions for investment decisions.
 
 5. **Interpretability Analysis**:
-   - *Importance*: Understanding how the model makes predictions is essential for investment strategists to trust and act upon the insights provided. Analyzing feature contributions and relationships enhances transparency and confidence in the model's recommendations.
+   - _Importance_: Understanding how the model makes predictions is essential for investment strategists to trust and act upon the insights provided. Analyzing feature contributions and relationships enhances transparency and confidence in the model's recommendations.
 
 ## Emphasis on Crucial Step:
 
@@ -385,7 +426,7 @@ from sklearn.datasets import make_regression
 X, y = make_regression(n_samples=10000, n_features=10, noise=0.2, random_state=42)
 
 ## Create a dataframe with synthetic features
-data = pd.DataFrame(X, columns=['property_size_sqft', 'num_bedrooms', 'num_bathrooms', 
+data = pd.DataFrame(X, columns=['property_size_sqft', 'num_bedrooms', 'num_bathrooms',
                                  'price_per_sqft', 'property_type_Apartment', 'property_type_House',
                                  'property_type_Commercial', 'population_density', 'median_income', 'crime_rate'])
 
@@ -411,6 +452,7 @@ else:
 ```
 
 In this script:
+
 - We generate synthetic features using `make_regression` from `scikit-learn` to simulate real-world data.
 - We create a dataframe with features such as property size, number of bedrooms, bathrooms, property type, demographic information, and crime rate.
 - Synthetic property prices are calculated based on these features with added variability to simulate real-world conditions.
@@ -431,6 +473,7 @@ property_size_sqft  num_bedrooms  num_bathrooms  price_per_sqft  property_type_A
 ```
 
 In this sample:
+
 - The data consists of property features such as size in square feet, number of bedrooms and bathrooms, price per square foot, property type (Apartment, House, Commercial), and location-specific attributes like population density, median income, and crime rate.
 - Each row represents a property listing with corresponding feature values and an associated property price.
 - The structure follows a tabular format for easy ingestion into machine learning models, with features as columns and individual property listings as rows.
@@ -473,6 +516,7 @@ print(f"Testing R^2 Score: {test_score}")
 ```
 
 In this code snippet:
+
 - The code loads the preprocessed data, splits it into features and target, and then splits it further into training and testing sets using `train_test_split`.
 - It initializes and trains a `GradientBoostingRegressor` model on the training data.
 - The model is evaluated using the R² score on both the training and testing sets.
@@ -480,6 +524,7 @@ In this code snippet:
 - Evaluation scores are printed for monitoring model performance.
 
 ### Comments and Best Practices:
+
 - The code includes clear and concise comments explaining the logic and purpose of key sections.
 - It follows PEP 8 conventions for code formatting and readability.
 - Data loading, preprocessing, model training, evaluation, and model saving are organized into separate sections for clarity and maintainability.
@@ -492,34 +537,41 @@ By following this structured and well-documented code example, the Exclusive Rea
 To deploy the machine learning model for the Exclusive Real Estate Investment Predictor project effectively, tailored to its unique demands, follow this step-by-step deployment guide:
 
 ## 1. Pre-Deployment Checks:
+
 - **Check Model Performance**: Evaluate the model on validation sets to ensure it meets performance metrics.
 - **Model Versioning**: Use Data Version Control (DVC) to track changes and ensure reproducibility.
 
 ## 2. Model Serialization:
+
 - **Tools**: Use `joblib` or `pickle` in Python to serialize the trained model.
 - **Documentation**:
   - [joblib Documentation](https://joblib.readthedocs.io/en/latest/)
   - [pickle Documentation](https://docs.python.org/3/library/pickle.html)
 
 ## 3. Containerization:
+
 - **Tool**: Docker for containerization and packaging of the model.
 - **Documentation**: [Docker Documentation](https://docs.docker.com/)
 
 ## 4. Setting up a Web Service:
+
 - **Framework**: Flask for building a REST API to serve model predictions.
 - **Documentation**: [Flask Documentation](https://flask.palletsprojects.com/)
 
 ## 5. Cloud Deployment:
+
 - **Platform**: Amazon Web Services (AWS) or Google Cloud Platform (GCP) for scalable deployment.
 - **Documentation**:
   - [AWS Documentation](https://aws.amazon.com/documentation/)
   - [GCP Documentation](https://cloud.google.com/docs/)
 
 ## 6. Monitoring and Maintenance:
+
 - **Monitoring Tool**: Prometheus for monitoring deployed model performance.
 - **Documentation**: [Prometheus Documentation](https://prometheus.io/docs/)
 
 ## Deployment Steps Summary:
+
 1. **Serialize Model**: Use `joblib` or `pickle` to save the trained model.
 2. **Containerize Model**: Use Docker to create a container for the model.
 3. **Develop API**: Use Flask to build a REST API for serving predictions.
@@ -558,6 +610,7 @@ CMD ["python", "app.py"]
 ```
 
 In this Dockerfile:
+
 - We start with a slim Python 3.9 base image for reduced container size.
 - We set a working directory at `/app` for the application.
 - The `requirements.txt` file containing necessary Python packages is copied and installed.
@@ -571,27 +624,35 @@ This Dockerfile encapsulates the project's environment and dependencies in a con
 ## User Groups and User Stories for the Exclusive Real Estate Investment Predictor Application:
 
 ### 1. **Investment Strategists**
+
 #### User Story:
-- *Scenario*: John, an Investment Strategist, is tasked with identifying undervalued properties in Peru's dynamic urban landscapes. He struggles to analyze vast amounts of real estate data and market trends to make informed investment decisions effectively.
-- *Solution*: The Exclusive Real Estate Investment Predictor application provides predictive market analytics using machine learning algorithms to uncover properties with high appreciation potential. John can easily access insights on undervalued properties, enabling him to guide investment decisions confidently.
-- *Component*: Machine learning model using Keras and TensorFlow for predictive analytics.
+
+- _Scenario_: John, an Investment Strategist, is tasked with identifying undervalued properties in Peru's dynamic urban landscapes. He struggles to analyze vast amounts of real estate data and market trends to make informed investment decisions effectively.
+- _Solution_: The Exclusive Real Estate Investment Predictor application provides predictive market analytics using machine learning algorithms to uncover properties with high appreciation potential. John can easily access insights on undervalued properties, enabling him to guide investment decisions confidently.
+- _Component_: Machine learning model using Keras and TensorFlow for predictive analytics.
 
 ### 2. **Real Estate Investors**
+
 #### User Story:
-- *Scenario*: Maria, a Real Estate Investor, seeks opportunities to invest in properties with high appreciation potential, but she lacks the expertise to identify undervalued properties accurately.
-- *Solution*: The application offers real-time predictive analytics to uncover real estate with high appreciation potential. Maria benefits from data-driven investment recommendations, allowing her to optimize her investment portfolio effectively.
-- *Component*: Data preprocessing and feature engineering for model training.
+
+- _Scenario_: Maria, a Real Estate Investor, seeks opportunities to invest in properties with high appreciation potential, but she lacks the expertise to identify undervalued properties accurately.
+- _Solution_: The application offers real-time predictive analytics to uncover real estate with high appreciation potential. Maria benefits from data-driven investment recommendations, allowing her to optimize her investment portfolio effectively.
+- _Component_: Data preprocessing and feature engineering for model training.
 
 ### 3. **Market Analysts**
+
 #### User Story:
-- *Scenario*: David, a Market Analyst, aims to provide strategic insights into real estate market trends and investment opportunities in Peru. He faces challenges in analyzing complex data and translating it into actionable recommendations.
-- *Solution*: The application offers advanced machine learning models that analyze market trends and property data to uncover investment opportunities. David can leverage the predictive analytics to generate strategic insights and recommendations for stakeholders.
-- *Component*: Data visualization tools for interpreting model predictions.
+
+- _Scenario_: David, a Market Analyst, aims to provide strategic insights into real estate market trends and investment opportunities in Peru. He faces challenges in analyzing complex data and translating it into actionable recommendations.
+- _Solution_: The application offers advanced machine learning models that analyze market trends and property data to uncover investment opportunities. David can leverage the predictive analytics to generate strategic insights and recommendations for stakeholders.
+- _Component_: Data visualization tools for interpreting model predictions.
 
 ### 4. **Property Developers**
+
 #### User Story:
-- *Scenario*: Sofia, a Property Developer, wants to identify emerging real estate trends and assess the potential of new development projects in Peru's urban areas. She struggles to predict future market demands accurately.
-- *Solution*: The application provides predictive market analytics to uncover real estate opportunities with high appreciation potential. Sofia can use the insights to make data-driven decisions on new development projects, ensuring alignment with market demands.
-- *Component*: DVC for tracking changes in data and models.
+
+- _Scenario_: Sofia, a Property Developer, wants to identify emerging real estate trends and assess the potential of new development projects in Peru's urban areas. She struggles to predict future market demands accurately.
+- _Solution_: The application provides predictive market analytics to uncover real estate opportunities with high appreciation potential. Sofia can use the insights to make data-driven decisions on new development projects, ensuring alignment with market demands.
+- _Component_: DVC for tracking changes in data and models.
 
 By catering to these diverse user groups with tailored user stories, the Exclusive Real Estate Investment Predictor application demonstrates its value proposition in addressing specific pain points and offering tangible benefits. The project's components play a crucial role in providing solutions that empower users to make informed investment decisions, leading to enhanced market insights and optimized investment strategies in Peru's urban real estate landscapes.

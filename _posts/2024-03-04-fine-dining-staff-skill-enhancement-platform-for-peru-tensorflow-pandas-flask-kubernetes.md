@@ -6,25 +6,32 @@ layout: article
 ---
 
 ## Objective and Benefits:
+
 The objective of the Fine Dining Staff Skill Enhancement Platform for Peru is to identify skill gaps in fine dining staff and recommend targeted training programs to elevate service quality. The platform aims to improve the overall dining experience for customers and increase the competence and efficiency of the staff. The benefits include enhanced customer satisfaction, improved staff performance, and ultimately increased revenue for fine dining establishments in Peru.
 
 ## Specific Data Types:
+
 The platform will utilize various data types to achieve its objectives, including but not limited to:
+
 - Customer feedback data
 - Staff performance metrics
 - Training program effectiveness data
 - Fine dining industry standards and best practices
 
 ## Sourcing, Cleansing, Modeling, and Deploying Strategies:
+
 ### Sourcing:
+
 1. **Data Collection**: Gather customer feedback data, staff performance metrics, and other relevant data sources.
 2. **Data Integration**: Combine all sources of data into a single repository for analysis.
 
 ### Cleansing:
+
 1. **Data Cleaning**: Handle missing values, outliers, and inconsistencies in the data.
 2. **Data Transformation**: Convert raw data into a format suitable for modeling.
 
 ### Modeling:
+
 1. **Machine Learning Pipeline**:
    - **TensorFlow**: Use TensorFlow for building and training machine learning models.
    - **Pandas**: Utilize Pandas for data manipulation and analysis.
@@ -32,12 +39,14 @@ The platform will utilize various data types to achieve its objectives, includin
 3. **Model Evaluation**: Assess the performance of the models and fine-tune hyperparameters.
 
 ### Deploying:
+
 1. **Web Application**:
    - **Flask**: Develop a web application to interact with the machine learning models.
 2. **Scalability**:
    - **Kubernetes**: Deploy the platform on Kubernetes for scalability and manageability.
 
 ## Links to Tools and Libraries:
+
 - [TensorFlow](https://www.tensorflow.org/): An open-source machine learning platform for building and deploying ML models.
 - [Pandas](https://pandas.pydata.org/): A powerful data manipulation and analysis library in Python.
 - [Flask](https://flask.palletsprojects.com/): A lightweight WSGI web application framework for Python.
@@ -48,9 +57,11 @@ By following the outlined strategies and utilizing the mentioned tools and libra
 ## Project Analysis:
 
 ### Objectives:
+
 The project aims to identify skill gaps in fine dining staff and recommend targeted training programs to enhance service quality in Peru's fine dining establishments.
 
 ### Types of Data:
+
 1. **Customer Feedback Data**:
    - Customer Satisfaction Score
    - Specific Customer Complaints
@@ -67,6 +78,7 @@ The project aims to identify skill gaps in fine dining staff and recommend targe
    - Fine Dining Accreditation
 
 ### Tools Used:
+
 - TensorFlow: For building and training machine learning models.
 - Pandas: For data manipulation and analysis.
 - Flask: For developing the web application.
@@ -86,6 +98,7 @@ The project aims to identify skill gaps in fine dining staff and recommend targe
 10. **fine_dining_accreditation**: Binary variable indicating if the establishment holds fine dining accreditation.
 
 ## Naming Recommendations:
+
 - Use clear and descriptive variable names to enhance interpretability.
 - Include units where applicable to provide context.
 - Prefix or suffix variables with relevant identifiers (e.g., customer, staff) for clarity.
@@ -96,12 +109,14 @@ By incorporating these variables and following the recommended naming convention
 ## Data Gathering Tools and Methods:
 
 ### Tools:
+
 1. **Survey Tools**: Utilize online survey platforms like Google Forms or SurveyMonkey to collect customer feedback data efficiently.
 2. **Point of Sale (POS) Systems**: Integrate POS systems with data collection pipelines to capture staff performance metrics such as wait time and order accuracy.
 3. **HR Software**: Use HR software to track staff turnover rates and training participation.
 4. **Industry Reports**: Access industry reports and databases to gather industry standards and best practices data.
 
 ### Methods:
+
 1. **Automated Data Collection**: Implement automated data collection processes to streamline the gathering of customer feedback and staff performance metrics.
 2. **API Integration**: Integrate APIs from survey tools, POS systems, and HR software to directly fetch data into the platform.
 3. **Scheduled Data Sync**: Set up scheduled data synchronization tasks to ensure the data is regularly updated and readily accessible.
@@ -110,15 +125,19 @@ By incorporating these variables and following the recommended naming convention
 ## Integration within Existing Technology Stack:
 
 ### Steps to Streamline Data Collection Process:
+
 1. **Data Integration Pipeline**:
+
    - Use Pandas for data manipulation and integration of different data sources.
    - Develop scripts or workflows to automate the merging and cleansing of various datasets.
 
 2. **Web Application Integration**:
+
    - Connect data gathering tools (survey platforms, POS systems) with the Flask web application for real-time data collection.
    - Ensure that data collected through different sources is standardized and stored in a unified format for analysis.
 
 3. **Database Management**:
+
    - Use database management systems like MySQL or PostgreSQL to store and manage collected data.
    - Implement data pipelines to extract, transform, and load data into the database efficiently.
 
@@ -130,16 +149,19 @@ By incorporating these tools and methods and integrating them within the existin
 ## Potential Data Problems:
 
 ### Customer Feedback Data:
+
 1. **Incomplete Responses**: Some customers may not provide feedback on all aspects of their dining experience.
 2. **Biased Feedback**: Feedback may be skewed towards extreme positive or negative responses.
 3. **Inconsistent Formatting**: Variations in how feedback is provided can make it challenging to analyze.
 
 ### Staff Performance Metrics:
+
 1. **Missing Data**: Staff may forget to record performance metrics leading to missing values.
 2. **Data Entry Errors**: Human errors in recording data can introduce inaccuracies.
 3. **Data Drift**: Performance metrics may change over time, requiring constant updates.
 
 ### Training Program Effectiveness Data:
+
 1. **Low Participation Rate**: Incomplete data on training program participation may affect the analysis.
 2. **Subjective Evaluation**: Post-training performance improvement may be subjective and difficult to quantify.
 3. **Lack of Benchmarking**: Without clear benchmarks, measuring effectiveness can be challenging.
@@ -147,6 +169,7 @@ By incorporating these tools and methods and integrating them within the existin
 ## Strategic Data Cleansing Practices:
 
 ### Customer Feedback Data:
+
 1. **Missing Data Handling**:
    - Impute missing values using statistical methods or fill with averages to maintain data integrity.
 2. **Outlier Detection**:
@@ -155,6 +178,7 @@ By incorporating these tools and methods and integrating them within the existin
    - Normalize text feedback by removing special characters and converting to lowercase for consistency.
 
 ### Staff Performance Metrics:
+
 1. **Data Validation Checks**:
    - Implement automated validation checks to identify and correct data entry errors.
 2. **Scheduled Data Checks**:
@@ -163,6 +187,7 @@ By incorporating these tools and methods and integrating them within the existin
    - Establish a process to regularly update performance metrics to address data drift.
 
 ### Training Program Effectiveness Data:
+
 1. **Completeness Check**:
    - Verify data completeness and consider strategies to incentivize participation for more comprehensive data.
 2. **Objective Evaluation Metrics**:
@@ -189,7 +214,7 @@ customer_feedback_data.fillna(customer_feedback_data.mean(), inplace=True)  ## F
 Q1 = customer_feedback_data['Customer_Satisfaction_Score'].quantile(0.25)
 Q3 = customer_feedback_data['Customer_Satisfaction_Score'].quantile(0.75)
 IQR = Q3 - Q1
-customer_feedback_data = customer_feedback_data[(customer_feedback_data['Customer_Satisfaction_Score'] >= Q1 - 1.5 * IQR) & 
+customer_feedback_data = customer_feedback_data[(customer_feedback_data['Customer_Satisfaction_Score'] >= Q1 - 1.5 * IQR) &
                                                 (customer_feedback_data['Customer_Satisfaction_Score'] <= Q3 + 1.5 * IQR)]
 
 ## Standardize Text Data
@@ -207,7 +232,7 @@ staff_performance_data['Date'] = pd.to_datetime(staff_performance_data['Date']) 
 training_program_data.dropna(subset=['Training_Participation_Rate', 'Post_Training_Performance_Improvement'], inplace=True)  ## Drop rows with missing values
 
 ## Objective Evaluation Metrics
-training_program_data['Post_Training_Performance_Improvement'] = np.where(training_program_data['Post_Training_Performance_Improvement'] >= 0, 
+training_program_data['Post_Training_Performance_Improvement'] = np.where(training_program_data['Post_Training_Performance_Improvement'] >= 0,
                                                                          training_program_data['Post_Training_Performance_Improvement'], 0)  ## Ensure non-negative values
 
 ## Benchmarking
@@ -218,24 +243,31 @@ customer_feedback_data.to_csv('cleaned_customer_feedback_data.csv', index=False)
 staff_performance_data.to_csv('cleaned_staff_performance_data.csv', index=False)
 training_program_data.to_csv('cleaned_training_program_data.csv', index=False)
 ```
+
 This code snippet demonstrates data cleansing processes for the customer feedback data, staff performance data, and training program data. It includes handling missing data, outlier detection, standardizing text data, data validation checks, conversion of data types, and saving the cleansed data to separate CSV files. Adjustments and validations may be required based on the specific characteristics of the data and the project requirements.
 
 ## Modeling Strategy Recommendation:
 
 ### Objective:
+
 The modeling strategy should focus on accurately identifying skill gaps in fine dining staff and recommending targeted training programs to enhance service quality. The strategy must leverage the diverse data types available, including customer feedback, staff performance metrics, training program effectiveness data, and industry standards.
 
 ### Recommended Strategy:
+
 1. **Feature Engineering**:
+
    - Create new features derived from existing ones that capture the essence of skill requirements and performance indicators in the fine dining domain. For example, creating a composite metric that combines customer satisfaction with staff performance.
 
 2. **Ensemble Learning**:
+
    - Implement ensemble learning techniques such as Random Forest or Gradient Boosting to handle the complexity of the data and capture non-linear relationships effectively.
 
 3. **Cross-Validation**:
+
    - Employ robust cross-validation techniques like Stratified K-Fold Cross-Validation to ensure the model generalizes well and is not overfitting to the training data.
 
 4. **Hyperparameter Tuning**:
+
    - Conduct extensive hyperparameter tuning using techniques like Grid Search or Random Search to optimize model performance.
 
 5. **Evaluation Metrics**:
@@ -250,33 +282,36 @@ Feature engineering allows the model to learn relevant patterns and relationship
 ## Data Modeling Tools Recommendations:
 
 ### 1. **Scikit-learn**
+
 - **Description**: Scikit-learn is a popular machine learning library in Python that offers a wide range of tools for data modeling, preprocessing, and evaluation.
 - **Fit to Strategy**: Scikit-learn provides algorithms for ensemble learning, cross-validation, hyperparameter tuning, and evaluation metrics, aligning with the modeling strategy recommended for identifying skill gaps and recommending training programs.
 - **Integration**: Scikit-learn seamlessly integrates with Pandas for data manipulation and NumPy for numerical computations, facilitating easy data preprocessing and modeling.
 - **Beneficial Features**:
-   - Ensemble learning algorithms like Random Forest and Gradient Boosting.
-   - Cross-validation modules for robust performance evaluation.
-   - Hyperparameter tuning capabilities for optimizing model performance.
+  - Ensemble learning algorithms like Random Forest and Gradient Boosting.
+  - Cross-validation modules for robust performance evaluation.
+  - Hyperparameter tuning capabilities for optimizing model performance.
 - [Scikit-learn Documentation](https://scikit-learn.org/stable/documentation.html)
 
 ### 2. **XGBoost (Extreme Gradient Boosting)**
+
 - **Description**: XGBoost is an optimized distributed gradient boosting library designed for efficiency, flexibility, and performance.
 - **Fit to Strategy**: XGBoost is well-suited for complex data types and can handle large datasets efficiently, making it ideal for our diverse data sources and modeling objectives.
 - **Integration**: XGBoost can be easily integrated with Scikit-learn for ensemble learning tasks, enhancing model accuracy and predictive power.
 - **Beneficial Features**:
-   - High performance and efficiency in handling complex data structures.
-   - Built-in regularization to prevent overfitting.
-   - Support for custom evaluation metrics tailored to project objectives.
+  - High performance and efficiency in handling complex data structures.
+  - Built-in regularization to prevent overfitting.
+  - Support for custom evaluation metrics tailored to project objectives.
 - [XGBoost Documentation](https://xgboost.readthedocs.io/en/latest/index.html)
 
 ### 3. **TensorFlow**
+
 - **Description**: TensorFlow is an open-source machine learning platform that provides comprehensive tools for building and deploying machine learning models with a focus on deep learning.
 - **Fit to Strategy**: TensorFlow offers scalability and flexibility for modeling complex relationships in data, making it suitable for projects with diverse data types like customer feedback and performance metrics.
 - **Integration**: TensorFlow can be integrated with Pandas for data preparation and Scikit-learn for pre-modeling tasks, offering a seamless workflow for data analysis and modeling.
 - **Beneficial Features**:
-   - Deep learning capabilities for advanced model architectures.
-   - TensorFlow Extended (TFX) for end-to-end ML pipeline development.
-   - TensorFlow Serving for model deployment in production.
+  - Deep learning capabilities for advanced model architectures.
+  - TensorFlow Extended (TFX) for end-to-end ML pipeline development.
+  - TensorFlow Serving for model deployment in production.
 - [TensorFlow Documentation](https://www.tensorflow.org/guide)
 
 By incorporating tools like Scikit-learn, XGBoost, and TensorFlow into the data modeling workflow, you can effectively analyze, process, and model the diverse data sources in your project, leading to more accurate and actionable insights for identifying skill gaps and recommending targeted training programs in the fine dining industry. These tools offer the flexibility, performance, and scalability required to drive the success of your data modeling efforts.
@@ -284,27 +319,32 @@ By incorporating tools like Scikit-learn, XGBoost, and TensorFlow into the data 
 ## Mocked Dataset Generation for Model Testing:
 
 ### Methodologies for Dataset Creation:
+
 1. **Synthetic Data Generation**: Use statistical distributions to generate synthetic data that closely resembles real-world patterns and variability.
 2. **Data Augmentation Techniques**: Apply data augmentation methods like perturbation or transformation to introduce variability into existing datasets.
 3. **Domain-specific Rules**: Incorporate domain-specific rules and conditions to simulate realistic scenarios in the dataset.
 
 ### Recommended Tools for Dataset Creation and Validation:
+
 1. **NumPy**: For generating synthetic data arrays using mathematical functions and distributions.
 2. **Pandas**: For structuring and manipulating the generated dataset with ease.
 3. **Scikit-learn's `make_classification` and `make_regression`**: For creating classification and regression datasets with specified characteristics.
 4. **TensorFlow Data Validation (TFDV)**: For validating and examining the dataset for anomalies, data drift, and consistency issues.
 
 ### Strategies for Incorporating Real-World Variability:
+
 1. **Introduce Noise**: Add random noise to features to mimic real-world data variability.
 2. **Feature Correlation**: Incorporate correlated features that align with real-world relationships observed in the data.
 3. **Outlier Generation**: Create outliers within the dataset to reflect unexpected data points.
 
 ### Structuring Dataset for Model Testing:
+
 1. **Feature Engineering**: Create relevant features that align with the project's objectives and data characteristics.
 2. **Train-Test Split**: Divide the dataset into training and testing sets to evaluate the model's performance accurately.
 3. **Target Variable Definition**: Define the target variable based on the project's goals for skill gap identification and training program recommendation.
 
 ### Tools and Frameworks for Mocked Data Generation:
+
 1. **NumPy Documentation**: For generating synthetic data arrays and manipulating numerical data efficiently.
    - [NumPy Documentation](https://numpy.org/doc/)
 2. **Scikit-learn Documentation**: Utilize `make_classification` and `make_regression` functions for creating classification and regression datasets.
@@ -325,6 +365,7 @@ By leveraging these methodologies, tools, and frameworks for creating a realisti
 In this sample dataset snippet for our project, we have structured the data with relevant variables related to the fine dining industry and staff skills. Each row represents an observation with data points such as customer satisfaction, specific complaints, wait time, order accuracy, staff turnover rate, training participation rate, post-training improvement, service quality benchmark, and fine dining accreditation.
 
 - **Variable Names**:
+
   - Customer_Satisfaction: Numeric (float)
   - Specific_Complaints: Categorical (string)
   - Wait_Time: Numeric (integer)
@@ -390,30 +431,36 @@ By following this structured and well-documented code example, you can ensure th
 ## Deployment Plan for Machine Learning Model:
 
 ### 1. **Pre-Deployment Checks**:
-   - **Data Integrity Check**: Ensure the preprocessed dataset used for training is up-to-date and consistent.
-   - **Model Validation**: Validate the trained model's performance on a separate validation set.
-   - **Dependencies Check**: Verify that all necessary libraries and packages are installed and up-to-date.
+
+- **Data Integrity Check**: Ensure the preprocessed dataset used for training is up-to-date and consistent.
+- **Model Validation**: Validate the trained model's performance on a separate validation set.
+- **Dependencies Check**: Verify that all necessary libraries and packages are installed and up-to-date.
 
 ### 2. **Model Containerization**:
-   - **Docker**: Containerize the model and its dependencies for consistency across different environments and easy deployment.
-     - [Docker Documentation](https://docs.docker.com/get-started/)
+
+- **Docker**: Containerize the model and its dependencies for consistency across different environments and easy deployment.
+  - [Docker Documentation](https://docs.docker.com/get-started/)
 
 ### 3. **Model Hosting**:
-   - **Amazon SageMaker**:
-     - Deploy the model on Amazon SageMaker for scalable and cost-effective model hosting.
-     - [Amazon SageMaker Documentation](https://docs.aws.amazon.com/sagemaker/index.html)
+
+- **Amazon SageMaker**:
+  - Deploy the model on Amazon SageMaker for scalable and cost-effective model hosting.
+  - [Amazon SageMaker Documentation](https://docs.aws.amazon.com/sagemaker/index.html)
 
 ### 4. **API Development**:
-   - **Flask**:
-     - Develop a RESTful API using Flask to expose the model predictions.
-     - [Flask Documentation](https://flask.palletsprojects.com/en/2.0.x/)
+
+- **Flask**:
+  - Develop a RESTful API using Flask to expose the model predictions.
+  - [Flask Documentation](https://flask.palletsprojects.com/en/2.0.x/)
 
 ### 5. **API Deployment**:
-   - **Heroku**:
-     - Deploy the Flask API on Heroku for easy deployment and scaling.
-     - [Heroku Documentation](https://devcenter.heroku.com/categories/reference)
+
+- **Heroku**:
+  - Deploy the Flask API on Heroku for easy deployment and scaling.
+  - [Heroku Documentation](https://devcenter.heroku.com/categories/reference)
 
 ### Deployment Steps Summary:
+
 1. **Ensure Data and Model Readiness**: Validate data and model integrity.
 2. **Containerize Model**: Use Docker for encapsulating the model and dependencies.
 3. **Host the Model**: Deploy the containerized model on Amazon SageMaker.
@@ -447,6 +494,7 @@ CMD ["python", "app.py"]
 ```
 
 In this Dockerfile:
+
 - We use the official Python image as the base image to ensure compatibility with our Python dependencies.
 - We set the working directory in the container and copy the requirements file to install necessary Python packages.
 - The model file (model.pkl) and the Flask API file (app.py) are copied into the container.
@@ -458,18 +506,22 @@ This Dockerfile encapsulates the project's environment and dependencies, ensurin
 ## User Groups and User Stories:
 
 ### 1. **Fine Dining Establishment Owners/Managers**:
+
 **User Story**: As an owner/manager of a fine dining establishment, I struggle to identify and address skill gaps in my staff, leading to inconsistent service quality and customer satisfaction.
 **Solution**: The platform analyzes staff performance metrics and customer feedback data to pinpoint skill gaps and recommend tailored training programs. The deployment of the trained machine learning model (e.g., model.pkl) facilitates this solution.
 
 ### 2. **Staff Training Managers**:
+
 **User Story**: As a training manager, I find it challenging to design training programs that effectively address the specific needs of the staff and improve service quality.
 **Solution**: The platform provides insights into staff performance improvement areas derived from the data analysis, enabling the creation of targeted and impactful training programs. The Flask API (app.py) facilitates accessing these insights and recommendations.
 
 ### 3. **Fine Dining Staff Members**:
+
 **User Story**: As a staff member, I struggle to understand my performance and where I can improve to provide better service to customers.
 **Solution**: The platform offers personalized feedback on individual performance metrics and areas for growth, empowering staff members to enhance their skills and deliver superior service. The data visualization components in the web application aid in presenting this feedback effectively.
 
 ### 4. **Customer Experience Managers**:
+
 **User Story**: As a customer experience manager, I face challenges in maintaining consistent quality standards in service across the establishment.
 **Solution**: The platform identifies patterns in customer feedback and staff performance to recommend targeted interventions, ultimately improving service quality and enhancing the overall customer experience. The TensorFlow models processing the data play a vital role in generating these recommendations.
 

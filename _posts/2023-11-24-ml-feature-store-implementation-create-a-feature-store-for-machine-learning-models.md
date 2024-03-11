@@ -233,10 +233,10 @@ def custom_image_recognition_model(image_feature_id):
 
     ## Perform data preprocessing
     preprocessed_image = preprocess_image(image_features)
-    
+
     ## Load the preprocessed image
     image_array = np.array(preprocessed_image)
-    
+
     ## Perform model inference
     predictions = run_custom_image_recognition_model(image_array)
 
@@ -260,6 +260,7 @@ def run_custom_image_recognition_model(image_array):
 ```
 
 In this example:
+
 - We define a function `custom_image_recognition_model` that integrates with a fictitious deep learning image recognition model.
 - The function interacts with a feature store using a custom module `FeatureStore` to fetch the required image features.
 - The `preprocess_image` function handles image preprocessing, and `run_custom_image_recognition_model` simulates the model inference process.
@@ -319,6 +320,7 @@ def generate_predictions(model, data):
 ```
 
 In this example:
+
 - We define a function `complex_deep_learning_model` that represents a hypothetical complex deep learning algorithm.
 - The function interfaces with a feature store using a custom module `FeatureStore` to retrieve the required feature vectors based on their IDs.
 - Data preprocessing, model training, and prediction generation processes are simulated using placeholder logic, which should be replaced with the actual deep learning model implementation and training process.
@@ -328,23 +330,27 @@ The `feature_store_path` variable represents the file path to the feature store 
 ### Types of Users for the ML Feature Store Implementation
 
 1. **Data Scientists/Analysts**
-   - *User Story*: As a data scientist, I want to access and leverage preprocessed and feature-engineered data from the feature store to build and train machine learning models without worrying about the underlying data preparation steps.
-   - *File*: Data scientists would primarily interact with the `feature_extraction/pipelines/` directory, which contains the pipeline configurations and scripts for feature extraction and engineering processes.
+
+   - _User Story_: As a data scientist, I want to access and leverage preprocessed and feature-engineered data from the feature store to build and train machine learning models without worrying about the underlying data preparation steps.
+   - _File_: Data scientists would primarily interact with the `feature_extraction/pipelines/` directory, which contains the pipeline configurations and scripts for feature extraction and engineering processes.
 
 2. **Machine Learning Engineers**
-   - *User Story*: As a machine learning engineer, I want to integrate and deploy trained machine learning models that consume features from the feature store, ensuring seamless access to the required features during model inference and serving.
-   - *File*: Machine learning engineers would interact with the `model_integration/models/` directory, containing model-specific files such as `model_config.yaml`, `train.py`, and `predict.py`, which facilitate the integration and deployment of machine learning models.
+
+   - _User Story_: As a machine learning engineer, I want to integrate and deploy trained machine learning models that consume features from the feature store, ensuring seamless access to the required features during model inference and serving.
+   - _File_: Machine learning engineers would interact with the `model_integration/models/` directory, containing model-specific files such as `model_config.yaml`, `train.py`, and `predict.py`, which facilitate the integration and deployment of machine learning models.
 
 3. **DevOps/Infrastructure Engineers**
-   - *User Story*: As a DevOps/Infrastructure engineer, I want to automate the deployment and scaling of the feature store application in a cloud environment using infrastructure as code tools, ensuring efficient resource management and high availability.
-   - *File*: DevOps and Infrastructure engineers would primarily work with the contents of the `infrastructure/deployment/` directory. If using Kubernetes, they would work with the `kubernetes/` directory, whereas if using Terraform or AWS CloudFormation, they would interact with the respective subdirectories for infrastructure automation.
+
+   - _User Story_: As a DevOps/Infrastructure engineer, I want to automate the deployment and scaling of the feature store application in a cloud environment using infrastructure as code tools, ensuring efficient resource management and high availability.
+   - _File_: DevOps and Infrastructure engineers would primarily work with the contents of the `infrastructure/deployment/` directory. If using Kubernetes, they would work with the `kubernetes/` directory, whereas if using Terraform or AWS CloudFormation, they would interact with the respective subdirectories for infrastructure automation.
 
 4. **Data Engineers**
-   - *User Story*: As a data engineer, I want to manage the ingestion and processing of raw data into feature vectors, ensuring efficient data pipelines and reliable access to high-quality features for model training and serving.
-   - *File*: Data engineers would predominantly interact with the `data_sources/raw_data/` and `feature_extraction/pipelines/` directories. Raw data for ingestion and the feature extraction pipeline configurations would be the focus of their work.
+
+   - _User Story_: As a data engineer, I want to manage the ingestion and processing of raw data into feature vectors, ensuring efficient data pipelines and reliable access to high-quality features for model training and serving.
+   - _File_: Data engineers would predominantly interact with the `data_sources/raw_data/` and `feature_extraction/pipelines/` directories. Raw data for ingestion and the feature extraction pipeline configurations would be the focus of their work.
 
 5. **Quality Assurance/Test Engineers**
-   - *User Story*: As a quality assurance/test engineer, I want to ensure that the feature store functionality, including feature extraction, model integration, and overall system behavior, meets the expected quality and performance standards.
-   - *File*: Test engineers would primarily work with the `tests/` directory, encompassing both unit tests for individual components (`unit_tests/`) and integration tests for end-to-end feature store functionality (`integration_tests/`).
+   - _User Story_: As a quality assurance/test engineer, I want to ensure that the feature store functionality, including feature extraction, model integration, and overall system behavior, meets the expected quality and performance standards.
+   - _File_: Test engineers would primarily work with the `tests/` directory, encompassing both unit tests for individual components (`unit_tests/`) and integration tests for end-to-end feature store functionality (`integration_tests/`).
 
 By considering the unique user stories and the associated files within the feature store repository, we can ensure that the feature store meets the diverse needs of its users, promoting collaboration and efficiency across various roles and responsibilities.

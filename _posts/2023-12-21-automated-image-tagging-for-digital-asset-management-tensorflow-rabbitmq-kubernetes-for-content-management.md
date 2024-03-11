@@ -8,9 +8,11 @@ layout: article
 ## AI Automated Image Tagging for Digital Asset Management
 
 ## Objectives
+
 The objective of this project is to build a scalable and efficient system for automated image tagging for digital asset management using AI. The system should be able to process large volumes of images, extract meaningful tags from them using machine learning, and efficiently manage the tagged images in a content management repository.
 
 ## System Design Strategies
+
 1. **Scalability**: The system should be designed to scale horizontally to handle an increasing number of images.
 2. **Efficient Image Processing**: Utilize distributed computing and parallel processing to handle image processing efficiently.
 3. **Machine Learning Model Serving**: Deploy machine learning models using scalable and efficient frameworks like TensorFlow serving to handle image tagging requests.
@@ -18,6 +20,7 @@ The objective of this project is to build a scalable and efficient system for au
 5. **Containerization and Orchestration**: Utilize Kubernetes for container orchestration to manage and scale the various components of the system.
 
 ## Chosen Libraries and Frameworks
+
 1. **TensorFlow**: Utilize TensorFlow for training machine learning models for image tagging and TensorFlow Serving for serving the trained models efficiently.
 2. **RabbitMQ**: Use RabbitMQ as the message broker to enable asynchronous communication between different parts of the system.
 3. **Kubernetes**: Employ Kubernetes for container orchestration, allowing for efficient scaling of services and management of containerized applications.
@@ -29,28 +32,35 @@ By leveraging these libraries and frameworks, the system design will be well-equ
 ## MLOps Infrastructure for Automated Image Tagging
 
 ## Continuous Integration and Continuous Deployment (CI/CD)
+
 - **GitHub Actions**: Implement GitHub Actions for continuous integration and continuous deployment, enabling automated testing, building, and deployment of the application code and machine learning models.
 
 ## Machine Learning Model Lifecycle Management
+
 - **Model Versioning**: Utilize tools like MLflow for versioning, tracking, and managing machine learning models, enabling easy comparison of model performance and reproducibility.
 - **Model Registry**: Use a model registry such as MLflow or Kubeflow to store and manage trained machine learning models and associated metadata.
 
 ## Dockerization and Kubernetes Orchestration
+
 - **Dockerization**: Containerize the application components and machine learning models using Docker for consistency and portability across different environments.
 - **Kubernetes Deployment**: Utilize Kubernetes for orchestrating the deployment and scaling of containerized services, including model serving and image tagging components.
 
 ## Model Serving and Inference
+
 - **TensorFlow Serving**: Deploy trained TensorFlow models using TensorFlow Serving, enabling efficient and scalable model inference for image tagging.
 - **RESTful API**: Expose model inference endpoints as RESTful APIs for handling image tagging requests from the content management application.
 
 ## Data Management and Versioning
+
 - **Data Version Control**: Implement a data versioning system, such as DVC (Data Version Control), to track changes in the dataset and ensure reproducibility of model training.
 - **Data Pipeline Orchestration**: Utilize tools like Apache Airflow for orchestrating data pipelines, ensuring efficient data processing and management for model training and inference.
 
 ## Monitoring and Logging
+
 - **Logging and Monitoring**: Implement logging and monitoring using tools like Prometheus and Grafana to track the performance and health of the system, including model inference latency and resource utilization.
 
 ## Infrastructure as Code (IaC)
+
 - **Terraform**: Utilize Terraform for defining and provisioning the infrastructure as code, enabling the automated setup and management of the underlying cloud infrastructure.
 
 By incorporating these MLOps practices and infrastructure components, the automated image tagging system will be well-equipped for efficient model deployment, monitoring, and management throughout its lifecycle, ensuring scalability, reliability, and reproducibility of the AI application.
@@ -99,6 +109,7 @@ models/
 ```
 
 ### Training Directory
+
 - `data_preprocessing.py`: This script contains the code for preprocessing and augmenting the raw image data before model training. It may include tasks such as resizing images, normalization, and data augmentation.
 
 - `model_training.py`: This script is responsible for training the image tagging machine learning model using TensorFlow. It includes the code for defining the model architecture, training loop, and model evaluation.
@@ -106,6 +117,7 @@ models/
 - `evaluation.ipynb`: This Jupyter notebook provides a detailed analysis of the trained model's performance, including metrics, visualizations, and insights into the model's behavior.
 
 ### Deployment Directory
+
 - `Dockerfile`: The Dockerfile specifies the environment and dependencies required for serving the trained machine learning model. It includes instructions for building the model serving container.
 
 - `requirements.txt`: The `requirements.txt` file lists the Python dependencies required for running the model serving API within the container.
@@ -113,6 +125,7 @@ models/
 - `run_model_server.py`: This script is responsible for running the model serving API using TensorFlow Serving. It includes code for loading the trained model and exposing it as a RESTful API for image tagging requests.
 
 ### Metadata Directory
+
 - `model_config.yaml`: This file contains configuration parameters for the trained model, such as hyperparameters, architecture configuration, and other metadata relevant to the model's training and deployment.
 
 - `performance_metrics.json`: The `performance_metrics.json` file includes recorded performance metrics of the trained models, such as accuracy, precision, recall, and any relevant evaluation metrics.
@@ -129,6 +142,7 @@ deployment/
 ```
 
 ### Dockerfile
+
 The `Dockerfile` specifies the instructions for building the container for serving the trained machine learning model. It includes the necessary environment setup, dependencies installation, and configuration for running the model serving API.
 
 Example `Dockerfile` for serving a TensorFlow model with TensorFlow Serving:
@@ -144,17 +158,21 @@ CMD ["tensorflow_model_server", "--port=8500", "--rest_api_port=8501", "--model_
 ```
 
 ### requirements.txt
+
 The `requirements.txt` file lists the Python dependencies required for running the model serving API within the container. It includes the specific versions of libraries and frameworks necessary for serving the machine learning model.
 
 Example `requirements.txt` for TensorFlow Serving:
+
 ```plaintext
 tensorflow-serving-api
 ```
 
 ### run_model_server.py
+
 The `run_model_server.py` script is responsible for running the model serving API using TensorFlow Serving. It includes the code for loading the trained model and exposing it as a RESTful API for image tagging requests.
 
 Example `run_model_server.py`:
+
 ```python
 import os
 import tensorflow as tf
@@ -175,7 +193,7 @@ def make_prediction(image):
     request.model_spec.name = 'my_model'
     request.model_spec.signature_name = 'serving_default'
     request.inputs['image'].CopyFrom(tf.make_tensor_proto(image))
-    
+
     response = stub.Predict(request)
 
     return response
@@ -185,11 +203,11 @@ def make_prediction(image):
 def predict():
     data = request.get_json()
     image = data['image']
-    
+
     prediction = make_prediction(image)
-    
+
     ## Process prediction and return response
-    
+
 ```
 
 By organizing the `deployment` directory in this manner, the application can effectively manage the deployment of the machine learning model serving container, ensuring scalability, maintainability, and reproducibility of the image tagging system.
@@ -280,24 +298,29 @@ In this example, the script utilizes a pre-trained ResNet50 model for feature ex
 You can adapt this script to use your actual image data and labels, as well as modify the model architecture and training process based on your specific requirements.
 
 ### Types of Users
+
 1. **Content Manager**
-   - *User Story*: As a content manager, I want to be able to upload a large number of images and have them automatically tagged with relevant keywords, saving me time and effort in organizing and categorizing the digital assets.
-   - *File*: The main application logic for managing image tagging and processing, located in `app/main.py`, will accomplish the automation of image tagging and processing for the content manager.
+
+   - _User Story_: As a content manager, I want to be able to upload a large number of images and have them automatically tagged with relevant keywords, saving me time and effort in organizing and categorizing the digital assets.
+   - _File_: The main application logic for managing image tagging and processing, located in `app/main.py`, will accomplish the automation of image tagging and processing for the content manager.
 
 2. **Data Scientist/ML Engineer**
-   - *User Story*: As a data scientist or ML engineer, I want to be able to train and fine-tune machine learning models using custom or pre-existing image datasets to improve the accuracy of the automated image tagging system.
-   - *File*: The `model_training.py` and `complex_model_training.py` scripts within the `models/training/` directory will allow the data scientist or ML engineer to train and fine-tune machine learning models using mock or real image data.
+
+   - _User Story_: As a data scientist or ML engineer, I want to be able to train and fine-tune machine learning models using custom or pre-existing image datasets to improve the accuracy of the automated image tagging system.
+   - _File_: The `model_training.py` and `complex_model_training.py` scripts within the `models/training/` directory will allow the data scientist or ML engineer to train and fine-tune machine learning models using mock or real image data.
 
 3. **DevOps Engineer**
-   - *User Story*: As a DevOps engineer, I want to ensure the scalability and reliability of the system by managing the Kubernetes deployment and orchestration for the model serving and image tagging components.
-   - *File*: The Kubernetes configuration files within the `infrastructure/kubernetes/` directory, along with the `Dockerfile` and `run_model_server.py` within the `deployment/` directory, will allow the DevOps engineer to manage Kubernetes deployment and configuration for the image tagging components.
+
+   - _User Story_: As a DevOps engineer, I want to ensure the scalability and reliability of the system by managing the Kubernetes deployment and orchestration for the model serving and image tagging components.
+   - _File_: The Kubernetes configuration files within the `infrastructure/kubernetes/` directory, along with the `Dockerfile` and `run_model_server.py` within the `deployment/` directory, will allow the DevOps engineer to manage Kubernetes deployment and configuration for the image tagging components.
 
 4. **System Administrator**
-   - *User Story*: As a system administrator, I need to monitor the system's performance, ensure availability, and manage the infrastructure resources to support the image tagging application's operations effectively.
-   - *File*: The monitoring and logging configuration, including tools like Prometheus and Grafana, specified within the `ml_ops` directory, will enable the system administrator to monitor the system's performance and resource utilization.
+
+   - _User Story_: As a system administrator, I need to monitor the system's performance, ensure availability, and manage the infrastructure resources to support the image tagging application's operations effectively.
+   - _File_: The monitoring and logging configuration, including tools like Prometheus and Grafana, specified within the `ml_ops` directory, will enable the system administrator to monitor the system's performance and resource utilization.
 
 5. **End User/Consumer**
-   - *User Story*: As an end user or consumer, I want to be able to search for and retrieve images based on their tags and metadata with a user-friendly interface, allowing me to find relevant digital assets quickly and efficiently.
-   - *File*: The frontend and API components developed within the `app/` directory, specifically the file `main.py`, will enable the end user to interact with the system, search for images based on tags, and retrieve relevant digital assets.
+   - _User Story_: As an end user or consumer, I want to be able to search for and retrieve images based on their tags and metadata with a user-friendly interface, allowing me to find relevant digital assets quickly and efficiently.
+   - _File_: The frontend and API components developed within the `app/` directory, specifically the file `main.py`, will enable the end user to interact with the system, search for images based on tags, and retrieve relevant digital assets.
 
 By considering these diverse user types and their respective user stories, the application can be tailored to meet the needs and expectations of each user group, enhancing the overall usability and effectiveness of the Automated Image Tagging for Digital Asset Management system.

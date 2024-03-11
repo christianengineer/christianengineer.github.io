@@ -8,7 +8,9 @@ layout: article
 ## AI EnviroPredict Environmental Forecasting AI Repository
 
 ## Objectives
+
 The AI EnviroPredict repository aims to provide a platform for building environmental forecasting AI applications. The primary objectives of the repository include:
+
 - Developing machine learning models for environmental data analysis and prediction
 - Providing scalable and efficient system design strategies for handling large environmental datasets
 - Leveraging deep learning techniques for image and signal processing in environmental applications
@@ -16,14 +18,18 @@ The AI EnviroPredict repository aims to provide a platform for building environm
 - Facilitating research and collaboration in the field of environmental AI
 
 ## System Design Strategies
+
 The system design of the AI EnviroPredict repository focuses on several key strategies to ensure scalability, efficiency, and reliability:
+
 - **Data Ingestion and Storage:** Implementing scalable data ingestion pipelines to handle large volumes of environmental data. Utilizing data storage solutions such as distributed file systems or cloud-based storage to efficiently store and access environmental datasets.
 - **Machine Learning Model Training:** Leveraging distributed computing frameworks such as Apache Spark or TensorFlow to train machine learning models on large-scale environmental datasets. Using techniques like model parallelism and data parallelism to scale training processes.
 - **API Design:** Designing a RESTful API that can handle high traffic and concurrent requests for accessing environmental forecasts and insights. Implementing caching mechanisms and load balancing to ensure efficient API performance.
 - **Signal and Image Processing:** Utilizing distributed computing and parallel processing for signal and image processing tasks in environmental applications. Employing techniques such as GPU acceleration for deep learning-based processing.
 
 ## Chosen Libraries
+
 The AI EnviroPredict repository makes use of several key libraries and frameworks for building scalable and data-intensive AI applications:
+
 - **Python:** Leveraging the Python programming language for its rich ecosystem of data science and machine learning libraries.
 - **TensorFlow:** Utilizing TensorFlow for building and training deep learning models for environmental data analysis, especially for tasks like image and signal processing.
 - **Apache Spark:** Employing Apache Spark for distributed data processing and machine learning model training on large-scale environmental datasets.
@@ -107,6 +113,7 @@ enviro_predict/
 ### Directory Structure Overview:
 
 - **data/**: This directory contains subdirectories for raw input data, processed data, and saved trained models.
+
   - **raw/**: Raw environmental data obtained from sources such as sensors, satellites, weather stations, etc.
   - **processed/**: Processed and transformed data ready for model training and analysis.
   - **models/**: Saved trained machine learning models for environmental forecasting.
@@ -114,6 +121,7 @@ enviro_predict/
 - **notebooks/**: Jupyter notebooks for exploratory data analysis (EDA), prototyping, and experiment documentation.
 
 - **src/**: Source code directory for the AI application.
+
   - **data_processing/**: Modules for data preprocessing, including ETL (Extract, Transform, Load) processes, data preparation, and augmentation.
   - **model_training/**: Modules for training and fine-tuning machine learning models.
     - **preprocessing/**: Code for feature engineering, data normalization, and other preprocessing steps.
@@ -154,6 +162,7 @@ models/
 ### Models Directory Overview:
 
 - **trained_models/**: This subdirectory contains saved trained machine learning models for environmental forecasting.
+
   - **regression/**: Subdirectory for regression models used for predicting continuous environmental variables.
     - **linear_regression_v1.pkl**: Serialized trained model file for linear regression (version 1).
     - **random_forest_regression_v1.pkl**: Serialized trained model file for random forest regression (version 1).
@@ -284,23 +293,27 @@ As with the previous function, ensure that the mock data file at `data_file_path
 ### Type of Users for EnviroPredict Environmental Forecasting AI Application
 
 1. **Environmental Scientists and Researchers**
-   - *User Story*: As an environmental scientist, I want to analyze historical environmental data and build predictive models for various environmental parameters to understand long-term trends and potential future scenarios.
-   - *File*: `notebooks/`
+
+   - _User Story_: As an environmental scientist, I want to analyze historical environmental data and build predictive models for various environmental parameters to understand long-term trends and potential future scenarios.
+   - _File_: `notebooks/`
 
 2. **Data Engineers and Analysts**
-   - *User Story*: As a data engineer, I need to preprocess and transform raw environmental data into a structured format suitable for training machine learning models, and analyze the quality and integrity of the data.
-   - *File*: `src/data_processing/`, `tests/`
+
+   - _User Story_: As a data engineer, I need to preprocess and transform raw environmental data into a structured format suitable for training machine learning models, and analyze the quality and integrity of the data.
+   - _File_: `src/data_processing/`, `tests/`
 
 3. **Data Scientists and Machine Learning Engineers**
-   - *User Story*: As a data scientist, I want to experiment with different machine learning and deep learning algorithms to build accurate models for environmental forecasting, and evaluate their performance using various metrics.
-   - *File*: `src/model_training/`, `models/trained_models/`, `src/model_evaluation/`
+
+   - _User Story_: As a data scientist, I want to experiment with different machine learning and deep learning algorithms to build accurate models for environmental forecasting, and evaluate their performance using various metrics.
+   - _File_: `src/model_training/`, `models/trained_models/`, `src/model_evaluation/`
 
 4. **AI Application Developers**
-   - *User Story*: As an application developer, I need to build and deploy a high-performance API for accessing environmental forecasts and insights generated by machine learning models, and ensure the scalability and reliability of the system.
-   - *File*: `src/api/`, `deployment/`
+
+   - _User Story_: As an application developer, I need to build and deploy a high-performance API for accessing environmental forecasts and insights generated by machine learning models, and ensure the scalability and reliability of the system.
+   - _File_: `src/api/`, `deployment/`
 
 5. **End Users (Environmental Agencies, Public, etc.)**
-   - *User Story*: As an end user, I want to access environmental forecasts and insights through an intuitive web or mobile interface to make informed decisions regarding environmental conservation and planning.
-   - *File*: `src/api/endpoints/`, `docs/`
+   - _User Story_: As an end user, I want to access environmental forecasts and insights through an intuitive web or mobile interface to make informed decisions regarding environmental conservation and planning.
+   - _File_: `src/api/endpoints/`, `docs/`
 
 Each type of user will interact with different parts of the EnviroPredict Environmental Forecasting AI application based on their specific roles and requirements. The application's codebase, including notebooks, source code, and deployment scripts, caters to the needs of these diverse user types, providing functionality and usability tailored to their respective responsibilities.

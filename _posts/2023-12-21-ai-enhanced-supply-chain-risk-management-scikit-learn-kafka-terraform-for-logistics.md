@@ -8,21 +8,27 @@ layout: article
 ## AI-enhanced Supply Chain Risk Management
 
 ### Objectives
+
 The objectives of the AI-enhanced Supply Chain Risk Management system are to:
+
 - Identify potential risks in the supply chain process
 - Predict and mitigate disruptions before they occur
 - Optimize logistics and transportation operations for efficiency
 - Leverage AI to provide real-time decision support for risk management
 
 ### System Design Strategies
+
 The system will leverage the following design strategies:
+
 - **Scalability**: The system will be designed to handle large volumes of data and scale horizontally to accommodate increasing demand.
 - **Real-time Data Processing**: Utilize Kafka for real-time data streaming and processing to enable quick responses to potential risks in the supply chain.
 - **AI Integration**: Integrate machine learning models using Scikit-Learn to predict and identify potential risks in the supply chain.
 - **Infrastructure as Code**: Use Terraform for infrastructure provisioning and management to ensure consistency and scalability of the system's infrastructure.
 
 ### Chosen Libraries
+
 The following libraries will be used in the development of the AI-enhanced Supply Chain Risk Management system:
+
 - **Scikit-Learn**: Due to its simplicity, performance, and scalability, Scikit-Learn will be utilized for building and training machine learning models for risk prediction and mitigation.
 - **Kafka**: As a distributed streaming platform, Kafka will be used for real-time data processing and messaging, enabling seamless integration of data sources and efficient event-driven architecture in the system.
 - **Terraform**: For infrastructure as code, Terraform will be used to define and provision the necessary infrastructure resources required for the deployment and operation of the system, providing scalability, flexibility, and consistency in the infrastructure setup.
@@ -32,9 +38,11 @@ By leveraging these libraries and design strategies, the AI-enhanced Supply Chai
 ## MLOps Infrastructure for AI-enhanced Supply Chain Risk Management
 
 ### Continuous Integration and Deployment (CI/CD) Pipeline
+
 The MLOps infrastructure for the AI-enhanced Supply Chain Risk Management application will incorporate a robust CI/CD pipeline for managing the end-to-end lifecycle of machine learning models. The CI/CD pipeline will automate the processes of model training, evaluation, deployment, and monitoring, ensuring seamless integration of new model versions into the production environment.
 
 ### Components of MLOps Infrastructure
+
 1. **Data Versioning and Management**: Utilize platforms like DVC (Data Version Control) or MLflow to version and manage the datasets used for training and testing machine learning models. This would ensure reproducibility and traceability of model performance over time.
 
 2. **Model Training and Pipelines**: Implement scalable and reproducible model training pipelines using frameworks like Kubeflow or Apache Airflow. These pipelines would orchestrate the end-to-end process of data ingestion, preprocessing, feature engineering, model training, evaluation, and hyperparameter tuning.
@@ -82,6 +90,7 @@ AI-enhanced-Supply-Chain-Risk-Management
 ```
 
 In this file structure:
+
 - The `data` directory contains subdirectories for storing raw data, processed data, and data versioning information.
 - The `models` directory includes subdirectories for storing trained machine learning models and a model registry for managing model artifacts and metadata.
 - The `infrastructure` directory contains subdirectories for managing Terraform infrastructure code and Dockerfiles for containerization of Kafka and the AI application components.
@@ -107,6 +116,7 @@ models
 ```
 
 In the `models` directory:
+
 - The `trained_models` subdirectory contains trained machine learning models serialized in files, such as `risk_prediction_model_v1.pkl`, `risk_prediction_model_v2.pkl`, etc. These files represent different versions of the risk prediction model trained using Scikit-Learn.
 - The `model_registry` subdirectory stores metadata and artifacts associated with each trained model. It contains a `metadata` subdirectory for JSON files that capture model information, such as hyperparameters, training metrics, and version details. For example, `risk_prediction_model_v1_metadata.json` and `risk_prediction_model_v2_metadata.json` represent metadata for different model versions. In addition, the `artifacts` subdirectory houses model artifacts, which can include serialized models, deployment configurations, and any auxiliary files necessary for model deployment and inference.
 
@@ -126,6 +136,7 @@ deployment
 ```
 
 In the `deployment` directory:
+
 - The `docker-compose.yml` file defines the Docker services, networks, and volumes for containerizing and orchestrating the AI application and Kafka components. It allows for the specification of multi-container Docker applications and their interdependencies, providing a way to manage and run the containers in a unified environment.
 
 - The `kubernetes` subdirectory houses YAML deployment manifests for deploying the AI application and Kafka components on a Kubernetes cluster. The `ai_application_deployment.yaml` file describes the deployment configuration for the AI application, while the `kafka_deployment.yaml` file outlines the deployment specifications for Kafka. Additional YAML files can be added to define other components or services required for the application's deployment on Kubernetes.
@@ -137,6 +148,7 @@ This `deployment` directory structure enables the infrastructure provisioning an
 Certainly! Below is an example of a Python script for training a machine learning model using Scikit-Learn with mock data. The script uses a simple logistic regression model for risk prediction; however, in a real-world scenario, more sophisticated models and actual data would be used for training.
 
 ### File: train_model.py
+
 ```python
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -185,6 +197,7 @@ print('Model training and metadata file creation completed.')
 ```
 
 In this example:
+
 - The script loads mock data from a CSV file, preprocesses the data, and splits it into training and testing sets.
 - It then trains a logistic regression model using the training data and evaluates its performance on the test data.
 - The trained model is saved as a pickle file in the specified model output path, and the metadata associated with the model is saved in a JSON file within the model registry directory.
@@ -196,6 +209,7 @@ This script demonstrates the training of a machine learning model using Scikit-L
 Certainly! Below is an example of a Python script for training a complex machine learning algorithm (Random Forest Classifier) using Scikit-Learn with mock data. The script uses a more sophisticated model for risk prediction compared to the logistic regression model, and it is intended to showcase a more advanced machine learning approach.
 
 ### File: train_complex_model.py
+
 ```python
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -249,6 +263,7 @@ print('Complex model training and metadata file creation completed.')
 ```
 
 In this example:
+
 - The script loads mock data from a CSV file, preprocesses the data, and splits it into training and testing sets.
 - It then trains a Random Forest Classifier using the training data and evaluates its performance on the test data.
 - The trained model is saved as a pickle file in the specified model output path, and the metadata associated with the model is saved in a JSON file within the model registry directory.
@@ -260,31 +275,37 @@ This script demonstrates the training of a more complex machine learning model (
 ### Types of Users
 
 1. **Logistics Manager**
-   - *User Story*: As a logistics manager, I need to view real-time risk assessments and predictions for different segments of the supply chain, allowing me to make informed decisions to mitigate potential disruptions.
+
+   - _User Story_: As a logistics manager, I need to view real-time risk assessments and predictions for different segments of the supply chain, allowing me to make informed decisions to mitigate potential disruptions.
    - Relevant File: `src/real_time_inference/inference_service.py`
 
 2. **Data Scientist**
-   - *User Story*: As a data scientist, I want to train and deploy advanced machine learning models to enhance the accuracy of risk predictions based on historical data and apply new techniques in feature engineering.
+
+   - _User Story_: As a data scientist, I want to train and deploy advanced machine learning models to enhance the accuracy of risk predictions based on historical data and apply new techniques in feature engineering.
    - Relevant File: `src/model_training/train_complex_model.py`
 
 3. **Operations Analyst**
-   - *User Story*: As an operations analyst, I need access to historical risk reports and trends to identify patterns and optimize strategies for risk management in different geographical regions.
+
+   - _User Story_: As an operations analyst, I need access to historical risk reports and trends to identify patterns and optimize strategies for risk management in different geographical regions.
    - Relevant File: `documentation/user_guides/risk_report_user_guide.md`
 
 4. **System Administrator**
-   - *User Story*: As a system administrator, I am responsible for ensuring the high availability and scalability of the AI application and its supporting infrastructure.
+
+   - _User Story_: As a system administrator, I am responsible for ensuring the high availability and scalability of the AI application and its supporting infrastructure.
    - Relevant File: `infrastructure/terraform/main.tf`
 
 5. **Business Intelligence Analyst**
-   - *User Story*: As a business intelligence analyst, I require access to aggregated risk management data and visualization tools to conduct trend analysis and generate reports for senior management.
+
+   - _User Story_: As a business intelligence analyst, I require access to aggregated risk management data and visualization tools to conduct trend analysis and generate reports for senior management.
    - Relevant File: `src/data_processing/aggregation_pipeline.py`
 
 6. **Machine Learning Engineer**
-   - *User Story*: As a machine learning engineer, my goal is to optimize the data pipeline and streamline model training and deployment processes while monitoring model performance in production.
+
+   - _User Story_: As a machine learning engineer, my goal is to optimize the data pipeline and streamline model training and deployment processes while monitoring model performance in production.
    - Relevant File: `src/model_training/train_model.py`
 
 7. **Quality Assurance Tester**
-   - *User Story*: As a QA tester, I need to run automated tests for new system features and enhancements to ensure that the application is robust and reliable in identifying potential supply chain risks.
+   - _User Story_: As a QA tester, I need to run automated tests for new system features and enhancements to ensure that the application is robust and reliable in identifying potential supply chain risks.
    - Relevant File: `tests/integration_tests/risk_assessment_test.py`
 
 By understanding the needs and perspectives of these diverse user roles, the AI-enhanced Supply Chain Risk Management application can be tailored to provide targeted features and capabilities, enhancing its value across the logistics domain.

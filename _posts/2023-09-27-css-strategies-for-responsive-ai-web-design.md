@@ -51,7 +51,7 @@ When designing for AI platforms, it is essential to consider accessibility and n
 a:focus,
 button:focus,
 input:focus {
-  outline: 2px solid ## 07bff;
+  outline: 2px solid ##07bff;
 }
 ```
 
@@ -67,7 +67,7 @@ Animations and transitions provide visual feedback, enhance user interactions, a
 }
 
 .button:hover {
-  background-color: ## 07bff;
+  background-color: ##07bff;
 }
 ```
 

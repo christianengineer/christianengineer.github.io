@@ -8,9 +8,11 @@ layout: article
 ## AI Audio Fingerprinting with Dejavu (Python)
 
 ## Objectives
+
 The objectives of implementing AI audio fingerprinting with Dejavu are to recognize songs from audio snippets by creating unique fingerprints of audio files and then matching them to a database of known audio tracks. This can be used for applications such as music recognition, content identification, and copyright enforcement.
 
 ## System Design Strategies
+
 1. **Audio Fingerprinting**: Use signal processing techniques to extract unique fingerprints from audio snippets. These fingerprints should be robust against noise and other distortions.
 
 2. **Database Management**: Store fingerprints of known audio tracks in a database that allows fast indexing and matching.
@@ -20,6 +22,7 @@ The objectives of implementing AI audio fingerprinting with Dejavu are to recogn
 4. **Integration**: Integrate the AI audio fingerprinting system with other components such as user interfaces or APIs for seamless usage.
 
 ## Chosen Libraries
+
 1. **Dejavu**: Utilize the Dejavu library, a well-established Python library for audio fingerprinting, to handle the fingerprinting and matching process.
 
 2. **Librosa**: Leverage the Librosa library for audio analysis and feature extraction. Librosa provides tools for analyzing and extracting features from audio signals, which is essential for creating audio fingerprints.
@@ -33,32 +36,39 @@ By employing these selected libraries and system design strategies, we can build
 ## Infrastructure for Audio Fingerprinting with Dejavu (Python) Application
 
 ### 1. Cloud Infrastructure
-   - **Compute**: Utilize cloud-based virtual machines or container services to host the application, providing scalability and flexibility in resource allocation.
-   - **Storage**: Leverage cloud storage services for storing audio files, fingerprint databases, and any necessary assets.
-   - **Networking**: Set up networking configurations to ensure low latency and high throughput for audio data transfer.
+
+- **Compute**: Utilize cloud-based virtual machines or container services to host the application, providing scalability and flexibility in resource allocation.
+- **Storage**: Leverage cloud storage services for storing audio files, fingerprint databases, and any necessary assets.
+- **Networking**: Set up networking configurations to ensure low latency and high throughput for audio data transfer.
 
 ### 2. Database
-   - **Fingerprint Database**: Use a scalable and performant database system such as PostgreSQL or MongoDB to store the fingerprints of known audio tracks. This database should support indexing and querying for efficient matching.
+
+- **Fingerprint Database**: Use a scalable and performant database system such as PostgreSQL or MongoDB to store the fingerprints of known audio tracks. This database should support indexing and querying for efficient matching.
 
 ### 3. Processing
-   - **Audio Processing**: Deploy dedicated compute resources for audio processing tasks, such as extracting features and creating fingerprints from audio snippets. These tasks can be parallelized for improved performance.
+
+- **Audio Processing**: Deploy dedicated compute resources for audio processing tasks, such as extracting features and creating fingerprints from audio snippets. These tasks can be parallelized for improved performance.
 
 ### 4. Load Balancing and Autoscaling
-   - **Load Balancer**: Employ a load balancer to evenly distribute incoming requests across multiple instances of the application, ensuring optimal resource utilization.
-   - **Autoscaling**: Configure autoscaling policies to automatically adjust the number of application instances based on workload and resource utilization, providing elasticity to handle varying demand.
+
+- **Load Balancer**: Employ a load balancer to evenly distribute incoming requests across multiple instances of the application, ensuring optimal resource utilization.
+- **Autoscaling**: Configure autoscaling policies to automatically adjust the number of application instances based on workload and resource utilization, providing elasticity to handle varying demand.
 
 ### 5. Monitoring and Logging
-   - **Monitoring Tools**: Integrate monitoring tools such as Prometheus, Grafana, or cloud-specific monitoring services to track system performance, resource usage, and application health.
-   - **Logging Infrastructure**: Implement centralized logging infrastructure to aggregate logs from all application instances for troubleshooting and analysis.
+
+- **Monitoring Tools**: Integrate monitoring tools such as Prometheus, Grafana, or cloud-specific monitoring services to track system performance, resource usage, and application health.
+- **Logging Infrastructure**: Implement centralized logging infrastructure to aggregate logs from all application instances for troubleshooting and analysis.
 
 ### 6. Security
-   - **Access Control**: Implement strong access control measures to restrict access to sensitive data and ensure secure communication between components.
-   - **Data Encryption**: Use encryption mechanisms to safeguard audio data and fingerprint information at rest and in transit.
-   - **API Security**: Apply best practices for API security, including authentication, authorization, and input validation.
+
+- **Access Control**: Implement strong access control measures to restrict access to sensitive data and ensure secure communication between components.
+- **Data Encryption**: Use encryption mechanisms to safeguard audio data and fingerprint information at rest and in transit.
+- **API Security**: Apply best practices for API security, including authentication, authorization, and input validation.
 
 ### 7. Integration
-   - **API Gateway**: Consider utilizing an API gateway to manage and secure API endpoints, providing a unified entry point for external integrations.
-   - **Webhooks and Event Triggers**: Implement event-driven architecture to enable seamless integration with other systems, allowing for real-time interaction and event processing.
+
+- **API Gateway**: Consider utilizing an API gateway to manage and secure API endpoints, providing a unified entry point for external integrations.
+- **Webhooks and Event Triggers**: Implement event-driven architecture to enable seamless integration with other systems, allowing for real-time interaction and event processing.
 
 By setting up a robust infrastructure encompassing these components, the AI audio fingerprinting with Dejavu application can deliver scalable, efficient, and reliable performance while recognizing songs from audio snippets with high accuracy and speed.
 
@@ -121,6 +131,7 @@ audio-fingerprinting-dejavu/
 ### File Structure Overview:
 
 1. **app/**: Contains the core application code.
+
    - **config.py**: Configuration settings for the application.
    - **controllers/**: Modules for handling different aspects of the application logic.
      - **api_controllers/**: Controllers specifically for handling API requests and responses.
@@ -160,7 +171,7 @@ models/
 
 ### File Overview:
 
-1. **__init__.py**: This file signifies that the "models/" directory is a Python package and may include any package initialization code if necessary.
+1. ****init**.py**: This file signifies that the "models/" directory is a Python package and may include any package initialization code if necessary.
 
 2. **audio_file.py**: This module defines the database model and schema for audio files. It can include fields such as file name, metadata, duration, and other attributes that describe an audio file. It may also include methods for querying and manipulating audio file data.
 
@@ -209,11 +220,13 @@ deployment/
 2. **docker-compose.yml**: If the application consists of multiple services, this file defines the configuration for orchestrating these services using Docker Compose. It specifies the services, networks, and volumes required to run the application stack.
 
 3. **kubernetes/**: If the application is to be deployed on Kubernetes, this directory may contain Kubernetes deployment configuration files, such as:
+
    - **deployment.yaml**: Configuration for deploying the application's pods.
    - **service.yaml**: Configuration for defining Kubernetes services.
    - **hpa.yaml**: Configuration for Horizontal Pod Autoscaling (HPA) if dynamic scaling is required.
 
 4. **scripts/**: This directory contains various deployment and management scripts for the application, such as:
+
    - **deploy.sh**: Script for deploying the application to a specific environment.
    - **migrate_database.sh**: Script for running database migrations or schema changes.
    - **start_application.sh**: Script for starting the application in a specific environment.
@@ -233,14 +246,14 @@ def audio_fingerprinting_algorithm(audio_file_path, fingerprint_database):
     ## Mock data for audio fingerprinting algorithm
     audio_data = load_audio(audio_file_path)  ## Function to load audio data from file
     audio_features = extract_audio_features(audio_data)  ## Function to extract features from audio
-    
+
     ## Simulated matching with fingerprint database
     matched_tracks = []
     for fingerprint in fingerprint_database:
         similarity_score = calculate_similarity(audio_features, fingerprint.features)  ## Function to calculate similarity using features
         if similarity_score > 0.8:  ## Example threshold for considering a match
             matched_tracks.append(fingerprint.track)
-    
+
     return matched_tracks
 
 def load_audio(file_path):
@@ -308,19 +321,22 @@ In this example, the `audio_fingerprinting_algorithm` function represents a comp
 ### Types of Users for the Audio Fingerprinting Application
 
 1. **Music Enthusiast**:
-   - *User Story*: As a music enthusiast, I want to use the application to identify songs playing in my surroundings quickly.
-   - *File*: `audio_processing_api_controller.py`
+
+   - _User Story_: As a music enthusiast, I want to use the application to identify songs playing in my surroundings quickly.
+   - _File_: `audio_processing_api_controller.py`
 
 2. **Content Creator**:
-   - *User Story*: As a content creator, I aim to utilize the application for identifying music in videos I come across for potential use in my content.
-   - *File*: `fingerprint_matching_api_controller.py`
+
+   - _User Story_: As a content creator, I aim to utilize the application for identifying music in videos I come across for potential use in my content.
+   - _File_: `fingerprint_matching_api_controller.py`
 
 3. **Music Service Provider**:
-   - *User Story*: As a music service provider, I desire to integrate the application to enable music recognition capabilities, enhancing user experience within my platform.
-   - *File*: `database_controller.py`
+
+   - _User Story_: As a music service provider, I desire to integrate the application to enable music recognition capabilities, enhancing user experience within my platform.
+   - _File_: `database_controller.py`
 
 4. **Security Professional**:
-   - *User Story*: As a security professional, I intend to utilize the application to monitor and detect unauthorized use of copyrighted music in public spaces.
-   - *File*: `fingerprint_matching_controller.py`
+   - _User Story_: As a security professional, I intend to utilize the application to monitor and detect unauthorized use of copyrighted music in public spaces.
+   - _File_: `fingerprint_matching_controller.py`
 
 Each type of user interacts with the application via different API controllers (`audio_processing_api_controller.py`, `fingerprint_matching_api_controller.py`) and database management (`database_controller.py`) to accomplish their specific goals. These user stories help guide the development and usage of the Audio Fingerprinting with Dejavu application for distinct user roles.

@@ -6,15 +6,18 @@ layout: article
 ---
 
 ## Objectives:
+
 The objectives of the AI Video Game AI using Reinforcement Learning (Python) project are to develop adaptive game AI using reinforcement learning techniques, creating intelligent bots that can learn and adapt to different game environments, and improving the overall gaming experience for players through realistic, dynamic AI behavior.
 
 ## System Design Strategies:
+
 1. **Game Environment Integration**: Integrate the game environment with the reinforcement learning agents to enable interaction and learning from the environment.
 2. **Reinforcement Learning Algorithms**: Implement various reinforcement learning algorithms such as Q-learning, Deep Q Networks (DQN), Proximal Policy Optimization (PPO), or Deep Deterministic Policy Gradients (DDPG) to train the AI agents.
 3. **Integration with Game Engine**: Integrate the AI agents with the game engine to ensure seamless interaction and decision-making based on learned policies.
 4. **Scalability and Performance**: Design the system to be scalable, allowing training of multiple AI agents concurrently and ensuring high performance during inference.
 
 ## Chosen Libraries:
+
 1. **TensorFlow or PyTorch**: Use TensorFlow or PyTorch for implementing the neural networks and reinforcement learning algorithms.
 2. **OpenAI Gym**: Utilize OpenAI Gym for creating the game environments and interfacing with the reinforcement learning agents.
 3. **Stable Baselines3**: Leverage Stable Baselines3 as a set of high-quality implementations of reinforcement learning algorithms to facilitate quick experimentation and benchmarking.
@@ -258,6 +261,7 @@ def train_dqn_with_mock_data(data_file_path, learning_rate=0.001, batch_size=32,
 ```
 
 In this function:
+
 - `data_file_path` represents the path to the file containing the mock data.
 - `learning_rate`, `batch_size`, and `num_episodes` are hyperparameters used for training the DQN.
 - The mock data is loaded, preprocessed, and used to train a DQN model using TensorFlow.
@@ -269,23 +273,27 @@ This function is just a part of the overall pipeline for training, evaluating, a
 ### Types of Users
 
 1. **Game Developers**
-    - *User Story*: As a game developer, I want to integrate intelligent AI agents into my video game to enhance the gaming experience and keep players engaged.
-    - *Accomplished with*: The `game_env/` directory would be particularly relevant to game developers, as it contains the `game_environment.py` file, which provides the interface for integrating the AI agents into the game environment.
+
+   - _User Story_: As a game developer, I want to integrate intelligent AI agents into my video game to enhance the gaming experience and keep players engaged.
+   - _Accomplished with_: The `game_env/` directory would be particularly relevant to game developers, as it contains the `game_environment.py` file, which provides the interface for integrating the AI agents into the game environment.
 
 2. **Data Scientists/Researchers**
-    - *User Story*: As a data scientist, I want access to the AI models and data generated during training to analyze and improve the learning process.
-    - *Accomplished with*: The `models/` and `data/` directories are relevant in this case. The trained AI models are stored in the `trained_models/` subdirectory of `data/`, and the neural network model implementations are present in the `models/` directory.
+
+   - _User Story_: As a data scientist, I want access to the AI models and data generated during training to analyze and improve the learning process.
+   - _Accomplished with_: The `models/` and `data/` directories are relevant in this case. The trained AI models are stored in the `trained_models/` subdirectory of `data/`, and the neural network model implementations are present in the `models/` directory.
 
 3. **AI Engineers**
-    - *User Story*: As an AI engineer, I want to experiment with different reinforcement learning algorithms and model architectures to optimize AI behavior in the game environment.
-    - *Accomplished with*: The `agents/` and `models/` directories would be important for AI engineers. The `agents/` directory contains the various agent implementations, and the `models/` directory holds the neural network models used by the agents.
+
+   - _User Story_: As an AI engineer, I want to experiment with different reinforcement learning algorithms and model architectures to optimize AI behavior in the game environment.
+   - _Accomplished with_: The `agents/` and `models/` directories would be important for AI engineers. The `agents/` directory contains the various agent implementations, and the `models/` directory holds the neural network models used by the agents.
 
 4. **Quality Assurance/Testers**
-    - *User Story*: As a quality assurance tester, I need to verify that the AI agents behave appropriately within the game environment and do not exhibit erratic or undesirable behaviors.
-    - *Accomplished with*: This user may utilize the `tests/` directory, particularly the files within, such as `test_game_env.py` for testing the game environment and `test_agents.py` for testing the AI agents' behavior.
+
+   - _User Story_: As a quality assurance tester, I need to verify that the AI agents behave appropriately within the game environment and do not exhibit erratic or undesirable behaviors.
+   - _Accomplished with_: This user may utilize the `tests/` directory, particularly the files within, such as `test_game_env.py` for testing the game environment and `test_agents.py` for testing the AI agents' behavior.
 
 5. **AI Enthusiasts/Students**
-    - *User Story*: As an AI enthusiast or student, I want to learn about reinforcement learning and experiment with the provided implementation to understand its practical application in game development.
-    - *Accomplished with*: For this user group, the `README.md` file in the root directory would serve as a valuable resource, providing an overview of the project, setup instructions, and usage guidelines. Additionally, they may explore the implementations in the `agents/` and `models/` directories for learning purposes.
+   - _User Story_: As an AI enthusiast or student, I want to learn about reinforcement learning and experiment with the provided implementation to understand its practical application in game development.
+   - _Accomplished with_: For this user group, the `README.md` file in the root directory would serve as a valuable resource, providing an overview of the project, setup instructions, and usage guidelines. Additionally, they may explore the implementations in the `agents/` and `models/` directories for learning purposes.
 
 Each type of user interacts with different aspects of the application, and the files within the project repository cater to their specific needs, whether it involves integrating AI into the game environment, analyzing trained models, experimenting with AI algorithms, ensuring the quality of AI behavior, or learning about reinforcement learning through the provided implementation.

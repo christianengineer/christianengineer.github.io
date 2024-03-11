@@ -6,11 +6,13 @@ layout: article
 ---
 
 ### Objectives:
+
 1. **Matching Low-Income Families with Affordable Housing:** Develop an AI-powered solution that efficiently matches low-income families with suitable housing options based on their specific needs and preferences.
 2. **Utilizing Filtering Algorithms:** Implement filtering algorithms to prioritize housing options according to criteria such as family size, income, and location preferences.
 3. **Scalability and Data-Intensive Processing:** Ensure the system can handle a large volume of data and users by incorporating scalable architecture and efficient data processing techniques.
 
 ### System Design Strategies:
+
 1. **Microservices Architecture:** Divide the application into microservices for modularity and scalability. For example, separate services for user management, housing data retrieval, and matching algorithms.
 2. **Containerization with Kubernetes:** Utilize Docker containers and Kubernetes for efficient deployment, scaling, and management of application components.
 3. **AI Model Training Pipeline:** Implement a pipeline for training and updating machine learning models using Scikit-Learn to ensure accurate recommendations based on user data.
@@ -18,6 +20,7 @@ layout: article
 5. **RESTful APIs with Django:** Develop RESTful APIs using Django for seamless interaction between frontend interfaces and backend services.
 
 ### Chosen Libraries:
+
 1. **Scikit-Learn:** Use Scikit-Learn for developing machine learning models, such as clustering algorithms for grouping housing options based on user preferences.
 2. **GeoPandas:** Leverage GeoPandas for processing geo-spatial data, enabling location-based filtering and visualization of housing options on maps.
 3. **Django:** Utilize Django for building the backend infrastructure, including handling user authentication, data storage, and API development.
@@ -31,33 +34,40 @@ By combining these strategies and libraries, the AI Peru Affordable Housing Loca
 ### MLOps Infrastructure for Peru Affordable Housing Locator:
 
 #### 1. **Data Collection and Preprocessing:**
-   - **Data Collection Pipeline:** Set up pipelines to collect housing data, user preferences, and other relevant information from various sources.
-   - **Data Cleaning and Feature Engineering:** Use GeoPandas and other tools to clean and preprocess geo-spatial data, incorporate location features, and transform data for model input.
+
+- **Data Collection Pipeline:** Set up pipelines to collect housing data, user preferences, and other relevant information from various sources.
+- **Data Cleaning and Feature Engineering:** Use GeoPandas and other tools to clean and preprocess geo-spatial data, incorporate location features, and transform data for model input.
 
 #### 2. **Model Training and Deployment:**
-   - **Scikit-Learn Models:** Develop machine learning models using Scikit-Learn for housing recommendation based on family size, income, and location preferences.
-   - **Pipeline for Model Training:** Implement a pipeline for training and evaluating models on updated data regularly.
-   - **Model Serving using Django:** Deploy trained models as RESTful APIs within the Django backend for real-time housing recommendations.
+
+- **Scikit-Learn Models:** Develop machine learning models using Scikit-Learn for housing recommendation based on family size, income, and location preferences.
+- **Pipeline for Model Training:** Implement a pipeline for training and evaluating models on updated data regularly.
+- **Model Serving using Django:** Deploy trained models as RESTful APIs within the Django backend for real-time housing recommendations.
 
 #### 3. **Monitoring and Logging:**
-   - **Model Performance Monitoring:** Track model performance metrics such as accuracy, latency, and throughput using monitoring tools like Prometheus and Grafana.
-   - **Logging and Error Handling:** Implement logging mechanisms within Django to log events, errors, and user interactions for debugging and auditing purposes.
+
+- **Model Performance Monitoring:** Track model performance metrics such as accuracy, latency, and throughput using monitoring tools like Prometheus and Grafana.
+- **Logging and Error Handling:** Implement logging mechanisms within Django to log events, errors, and user interactions for debugging and auditing purposes.
 
 #### 4. **Automation and Orchestration:**
-   - **Kubernetes:** Deploy the entire application stack on Kubernetes for container orchestration, scaling, and resource management.
-   - **Automated CI/CD Pipelines:** Set up continuous integration and deployment pipelines to automate testing, building, and deployment of new features and model updates.
+
+- **Kubernetes:** Deploy the entire application stack on Kubernetes for container orchestration, scaling, and resource management.
+- **Automated CI/CD Pipelines:** Set up continuous integration and deployment pipelines to automate testing, building, and deployment of new features and model updates.
 
 #### 5. **Data Storage and Management:**
-   - **PostgreSQL/PostGIS:** Use PostgreSQL with PostGIS extension for storing geo-spatial data, user profiles, and housing information.
-   - **Data Versioning:** Implement data versioning strategies to track changes in housing data and user preferences over time.
+
+- **PostgreSQL/PostGIS:** Use PostgreSQL with PostGIS extension for storing geo-spatial data, user profiles, and housing information.
+- **Data Versioning:** Implement data versioning strategies to track changes in housing data and user preferences over time.
 
 #### 6. **Scalability and Performance Optimization:**
-   - **Auto-Scaling:** Configure Kubernetes to automatically scale the application based on traffic and resource demands.
-   - **Caching with Redis:** Integrate Redis for caching frequently accessed data, such as housing options and user preferences, to reduce response times and improve performance.
+
+- **Auto-Scaling:** Configure Kubernetes to automatically scale the application based on traffic and resource demands.
+- **Caching with Redis:** Integrate Redis for caching frequently accessed data, such as housing options and user preferences, to reduce response times and improve performance.
 
 #### 7. **Security and Compliance:**
-   - **Data Privacy Measures:** Implement data encryption, user authentication, and access controls to ensure user data privacy and security compliance.
-   - **Regular Security Audits:** Conduct regular security audits and penetration testing to identify vulnerabilities and address security concerns proactively.
+
+- **Data Privacy Measures:** Implement data encryption, user authentication, and access controls to ensure user data privacy and security compliance.
+- **Regular Security Audits:** Conduct regular security audits and penetration testing to identify vulnerabilities and address security concerns proactively.
 
 By establishing this comprehensive MLOps infrastructure for the Peru Affordable Housing Locator, the application can effectively match low-income families with affordable housing options by leveraging intelligent filtering algorithms while ensuring scalability, performance, security, and compliance with best practices throughout the development and deployment lifecycle.
 
@@ -134,21 +144,27 @@ peru_housing_locator/
 ### Description of the File Structure:
 
 1. **`backend/`:**
+
    - Contains Django backend application logic, including API endpoints, models, services, and utility functions.
 
 2. **`data_processing/`:**
+
    - Houses scripts for data collection, preprocessing, and feature engineering tasks using GeoPandas and related tools.
 
 3. **`machine_learning/`:**
+
    - Includes scripts for training and evaluating machine learning models using Scikit-Learn.
 
 4. **`frontend/`:**
+
    - Holds the frontend application codebase, including components, pages, services, and configuration files for the web interface.
 
 5. **`kubernetes/`:**
+
    - Consists of Kubernetes configuration files for deployment, service setup, and managing networking within the cluster.
 
 6. **`README.md`:**
+
    - Contains project documentation, setup instructions, and information for developers and users.
 
 7. **`requirements.txt`:**
@@ -170,10 +186,12 @@ models/
 ### Description of the Models Directory:
 
 1. **`housing_models.py`:**
+
    - **Description:** Contains Django models for representing housing options in the system, including attributes like location, affordability, amenities, and availability.
    - **Purpose:** Store information about different housing units, enabling efficient querying and filtering based on user preferences.
 
 2. **`user_models.py`:**
+
    - **Description:** Defines Django models to represent user profiles and preferences, such as family size, income level, location preferences, and search history.
    - **Purpose:** Capture user data to personalize housing recommendations and track user interactions within the application.
 
@@ -200,6 +218,7 @@ deployment/
 ### Description of the Deployment Directory:
 
 1. **`Dockerfile`:**
+
    - **Description:** Contains instructions to build a Docker image for the application, including dependencies, environment setup, and configuration.
    - **Purpose:** Enables containerization of the application components, ensuring consistency in deployment across different environments.
 
@@ -246,6 +265,7 @@ print(f"Model training complete. Silhouette score: {silhouette_score_val}")
 ```
 
 ### Description:
+
 - This Python script, located in `machine_learning/model_training.py`, loads mock housing data, preprocesses the features, trains a clustering model using KMeans algorithm from Scikit-Learn, and evaluates the model's performance based on silhouette score.
 - The trained model is then saved as a pickle file for later use in the application.
 - Make sure to replace `'path/to/mock/housing_data.csv'` and `'path/to/save/trained_model.pkl'` with actual file paths on your system.
@@ -294,6 +314,7 @@ print(f"Complex model training complete. Mean Squared Error: {mse}")
 ```
 
 ### Description:
+
 - This Python script, located in `machine_learning/complex_algorithm.py`, demonstrates a complex machine learning algorithm for the Peru Affordable Housing Locator application.
 - The script loads mock housing data, performs feature engineering to create a new feature 'age_of_property', trains a Random Forest Regressor model to predict housing prices based on income, family size, property age, latitude, and longitude.
 - The script evaluates the model's performance using Mean Squared Error and saves the trained model as a pickle file for later use.
@@ -304,22 +325,27 @@ By running this script, you can train a more complex machine learning algorithm 
 ### Types of Users for Peru Affordable Housing Locator:
 
 1. **Low-Income Family Seekers**
+
    - **User Story:** As a low-income family seeker, I want to find affordable housing options that match my family size, income level, and preferred location to provide a comfortable living environment for my loved ones.
    - **Accomplished by:** `frontend/src/pages/HomePage.js`
 
 2. **Housing Providers/Agencies**
+
    - **User Story:** As a housing provider/agency, I want to list available housing units that cater to low-income families, allowing them to access suitable accommodation options through the platform.
    - **Accomplished by:** `backend/api/views.py`
 
 3. **Social Workers/Community Organizations**
+
    - **User Story:** As a social worker or community organization, I want to access housing recommendations generated by the AI system to assist low-income families in finding secure and affordable housing solutions.
    - **Accomplished by:** `machine_learning/recommendation_models.py`
 
 4. **Local Government Authorities**
+
    - **User Story:** As a local government authority, I want to monitor the effectiveness of the housing matching system in addressing the housing needs of low-income families within the community.
    - **Accomplished by:** `backend/services/data_processing_service.py`
 
 5. **Research Analysts**
+
    - **User Story:** As a research analyst, I want to analyze trends and patterns in housing preferences and affordability for low-income families using the data collected by the application.
    - **Accomplished by:** `data_processing/feature_engineering.py`
 

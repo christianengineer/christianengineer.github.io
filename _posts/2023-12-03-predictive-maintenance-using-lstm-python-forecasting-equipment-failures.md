@@ -8,9 +8,11 @@ layout: article
 ## AI Predictive Maintenance using LSTM (Python)
 
 ## Objectives
-The objective of the AI Predictive Maintenance using LSTM (Python) is to build a machine learning model that leverages Long Short-Term Memory (LSTM) networks to forecast equipment failures in industrial settings. By analyzing historical sensor data, the model aims to predict when maintenance is required before a failure occurs, thereby reducing downtime and optimizing maintenance schedules. 
+
+The objective of the AI Predictive Maintenance using LSTM (Python) is to build a machine learning model that leverages Long Short-Term Memory (LSTM) networks to forecast equipment failures in industrial settings. By analyzing historical sensor data, the model aims to predict when maintenance is required before a failure occurs, thereby reducing downtime and optimizing maintenance schedules.
 
 ## System Design Strategies
+
 1. **Data Collection**: Gather historical sensor data from equipment, including temperature, vibration, pressure, and other relevant parameters.
 2. **Data Preprocessing**: Clean the data, handle missing values, and perform feature engineering to extract relevant patterns and trends.
 3. **Model Development**: Utilize LSTM neural networks to build a time-series forecasting model that can predict equipment failures based on patterns in the sensor data.
@@ -18,6 +20,7 @@ The objective of the AI Predictive Maintenance using LSTM (Python) is to build a
 5. **Deployment**: Integrate the trained LSTM model into a scalable, production-ready application that can take real-time sensor data as input and provide predictive maintenance insights.
 
 ## Chosen Libraries
+
 1. **TensorFlow/Keras**: Utilize the TensorFlow library along with the Keras API to develop and train the LSTM model. TensorFlow provides a powerful framework for building and training deep learning models, while Keras offers a high-level interface for constructing neural networks.
 2. **Pandas**: Use the Pandas library for data preprocessing, manipulation, and feature engineering. Pandas provides tools for handling time-series data and preparing it for model training.
 3. **NumPy**: Leverage the NumPy library for numerical computations and array manipulations. NumPy is essential for preparing input data for the LSTM model.
@@ -28,7 +31,7 @@ By integrating these libraries into the Python codebase, the AI Predictive Maint
 
 ## Infrastructure for Predictive Maintenance using LSTM (Python)
 
-To deploy the Predictive Maintenance using LSTM (Python) forecasting equipment failures application, a scalable and resilient infrastructure is required to support the machine learning model, handle data processing, and serve predictions to end-users. 
+To deploy the Predictive Maintenance using LSTM (Python) forecasting equipment failures application, a scalable and resilient infrastructure is required to support the machine learning model, handle data processing, and serve predictions to end-users.
 
 ## Components of the Infrastructure
 
@@ -137,9 +140,9 @@ The `models/` directory in the Predictive Maintenance using LSTM (Python) foreca
 
 3. **serialized_model.pkl**: This file represents the serialized (saved) LSTM model after training. It can be loaded for inference and prediction without re-training the model.
 
-4. *(optional)* **model_hyperparameters.yml**: This file contains the hyperparameters used for training the LSTM model. Storing hyperparameters in a separate file allows for easy modification and comparison of different model configurations.
+4. _(optional)_ **model_hyperparameters.yml**: This file contains the hyperparameters used for training the LSTM model. Storing hyperparameters in a separate file allows for easy modification and comparison of different model configurations.
 
-5. *(optional)* **model_evaluation_results.csv**: If applicable, this file contains the results of the model evaluation, including metrics such as accuracy, precision, recall, F1 score, and any other relevant performance measures.
+5. _(optional)_ **model_evaluation_results.csv**: If applicable, this file contains the results of the model evaluation, including metrics such as accuracy, precision, recall, F1 score, and any other relevant performance measures.
 
 The `models/` directory serves as a centralized location for all aspects related to the LSTM model, including code, artifacts, and documentation. It allows for easy tracking, versioning, and access to all components of the LSTM model within the Predictive Maintenance using LSTM (Python) forecasting equipment failures application.
 
@@ -151,9 +154,9 @@ The deployment directory in the Predictive Maintenance using LSTM (Python) forec
 
 2. **requirements.txt**: This file lists all the required Python dependencies for running the API endpoint and serving predictions. It includes the specific versions of libraries and packages used in the deployment environment to ensure reproducibility.
 
-3. *(optional)* **Dockerfile**: If the deployment strategy involves containerization, the Dockerfile defines the environment and instructions for building the Docker image to run the API server. It includes commands for installing dependencies, copying the application code, and setting up the runtime environment.
+3. _(optional)_ **Dockerfile**: If the deployment strategy involves containerization, the Dockerfile defines the environment and instructions for building the Docker image to run the API server. It includes commands for installing dependencies, copying the application code, and setting up the runtime environment.
 
-4. *(optional)* **docker-compose.yml**: In case multiple services or containers need to be orchestrated, the docker-compose.yml file specifies the services, networks, and volumes required to orchestrate the deployment using Docker Compose.
+4. _(optional)_ **docker-compose.yml**: In case multiple services or containers need to be orchestrated, the docker-compose.yml file specifies the services, networks, and volumes required to orchestrate the deployment using Docker Compose.
 
 5. **config/**: This subdirectory could contain configuration files for the deployment environment, including server configurations, environment variables, and any required settings for hosting the API endpoint.
 
@@ -250,23 +253,27 @@ def train_lstm_model(data_file_path):
 In this function, `train_lstm_model`, the mock data is loaded from a CSV file specified by the `data_file_path`. The function performs data preprocessing, including normalization of features using MinMaxScaler. It then reshapes the input data to fit the 3D input shape required by the LSTM model. The data is split into training and testing sets, and a sequential LSTM model is defined and trained using the training data. The trained model is then returned for further evaluation and deployment.
 
 1. **Maintenance Engineer**
-   - *User Story*: As a maintenance engineer, I want to use the application to receive early warnings about potential equipment failures, allowing me to schedule proactive maintenance, reduce downtime, and minimize overall maintenance costs.
-   - *Accomplished by*: The maintenance engineer will interact with the deployed API (e.g., `app.py` in the `deployment/` directory) to request predictions for upcoming equipment failures based on real-time sensor data.
+
+   - _User Story_: As a maintenance engineer, I want to use the application to receive early warnings about potential equipment failures, allowing me to schedule proactive maintenance, reduce downtime, and minimize overall maintenance costs.
+   - _Accomplished by_: The maintenance engineer will interact with the deployed API (e.g., `app.py` in the `deployment/` directory) to request predictions for upcoming equipment failures based on real-time sensor data.
 
 2. **Data Scientist/ML Engineer**
-   - *User Story*: As a data scientist/ML engineer, I want to develop and fine-tune the LSTM model used for predictive maintenance, incorporating new features and exploring different model architectures to enhance prediction accuracy.
-   - *Accomplished by*: The data scientist/ML engineer will utilize Jupyter notebooks and scripts in the `notebooks/` and `models/` directories to experiment with data preprocessing, model training, evaluation, and refinement.
+
+   - _User Story_: As a data scientist/ML engineer, I want to develop and fine-tune the LSTM model used for predictive maintenance, incorporating new features and exploring different model architectures to enhance prediction accuracy.
+   - _Accomplished by_: The data scientist/ML engineer will utilize Jupyter notebooks and scripts in the `notebooks/` and `models/` directories to experiment with data preprocessing, model training, evaluation, and refinement.
 
 3. **System Administrator/DevOps Engineer**
-   - *User Story*: As a system administrator/DevOps engineer, I need to ensure the seamless deployment, scalability, and reliability of the application, monitoring system health, and managing the infrastructure efficiently.
-   - *Accomplished by*: The system administrator/DevOps engineer will work with the deployment files in the `deployment/` directory, such as Dockerfiles, configuration files, and infrastructure setup scripts to manage the deployment and operational aspects of the application.
+
+   - _User Story_: As a system administrator/DevOps engineer, I need to ensure the seamless deployment, scalability, and reliability of the application, monitoring system health, and managing the infrastructure efficiently.
+   - _Accomplished by_: The system administrator/DevOps engineer will work with the deployment files in the `deployment/` directory, such as Dockerfiles, configuration files, and infrastructure setup scripts to manage the deployment and operational aspects of the application.
 
 4. **Business Analyst/Manager**
-   - *User Story*: As a business analyst/manager, I want to analyze the performance of the predictive maintenance system, understand the impact on maintenance costs, and make informed decisions about resource allocation and budget planning.
-   - *Accomplished by*: The business analyst/manager will review the model evaluation results, performance metrics, and relevant documentation in the `models/` and `docs/` directories to gain insights into the effectiveness of the predictive maintenance system.
+
+   - _User Story_: As a business analyst/manager, I want to analyze the performance of the predictive maintenance system, understand the impact on maintenance costs, and make informed decisions about resource allocation and budget planning.
+   - _Accomplished by_: The business analyst/manager will review the model evaluation results, performance metrics, and relevant documentation in the `models/` and `docs/` directories to gain insights into the effectiveness of the predictive maintenance system.
 
 5. **Quality Assurance/Testing Engineer**
-   - *User Story*: As a QA/testing engineer, I need to verify the accuracy and reliability of the predictive maintenance system, ensuring that it meets the required standards and effectively identifies potential equipment failures.
-   - *Accomplished by*: The QA/testing engineer will work with the testing scripts and resources in the `tests/` directory to conduct rigorous testing of the application's functionality and accuracy.
+   - _User Story_: As a QA/testing engineer, I need to verify the accuracy and reliability of the predictive maintenance system, ensuring that it meets the required standards and effectively identifies potential equipment failures.
+   - _Accomplished by_: The QA/testing engineer will work with the testing scripts and resources in the `tests/` directory to conduct rigorous testing of the application's functionality and accuracy.
 
 Each type of user interacts with different components of the application, leveraging the files and resources in the relevant directories to fulfill their specific roles and responsibilities in utilizing, improving, or maintaining the Predictive Maintenance using LSTM (Python) forecasting equipment failures application.

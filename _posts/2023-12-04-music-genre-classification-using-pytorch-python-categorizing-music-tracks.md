@@ -8,35 +8,46 @@ layout: article
 ## AI Music Genre Classification using PyTorch
 
 ## Objectives
+
 The objective of the AI Music Genre Classification system is to categorize music tracks into different genres using machine learning techniques. This involves training a model to recognize patterns in the audio features of music tracks and classify them into specific genres such as rock, pop, jazz, hip-hop, etc. The system aims to provide accurate and reliable genre classification for a wide range of music tracks.
 
 ## System Design Strategies
+
 ### Data Collection and Preprocessing
+
 - Obtain a large dataset of music tracks with associated genre labels.
 - Preprocess the audio data to extract relevant features such as spectrograms, mel-frequency cepstral coefficients (MFCCs), or other audio representations suitable for training a machine learning model.
 
 ### Model Training
+
 - Utilize deep learning techniques for music genre classification.
 - Design and train a neural network model using PyTorch to learn from the extracted audio features and predict the genre labels.
 
 ### Evaluation and Deployment
+
 - Evaluate the model's performance using metrics such as accuracy, precision, recall, and F1 score.
 - Deploy the trained model as an API or service for classifying new music tracks in real-time.
 
 ## Chosen Libraries and Tools
+
 ### PyTorch
+
 PyTorch is chosen as the primary deep learning framework due to its flexibility, ease of use, and strong community support. It provides extensive support for building neural networks and has a rich ecosystem for research and production usage.
 
 ### Librosa
+
 Librosa is a Python package for music and audio analysis. It provides tools for feature extraction, such as creating spectrograms and extracting MFCCs from audio data, which are essential for training the music genre classification model.
 
 ### Pandas and NumPy
+
 Pandas and NumPy will be used for data manipulation, handling feature vectors, and preparing the data for model training and evaluation.
 
 ### Scikit-learn
+
 Scikit-learn will be helpful for tasks such as data preprocessing, model evaluation, and potentially for integrating traditional machine learning algorithms for comparison with deep learning approaches.
 
 ### Flask or FastAPI
+
 For deployment, Flask or FastAPI can be utilized to create a web service or API for classifying music tracks using the trained model.
 
 By leveraging these libraries and tools, we can build a scalable and efficient AI music genre classification system using PyTorch, enabling accurate categorization of music tracks based on their audio features.
@@ -44,25 +55,30 @@ By leveraging these libraries and tools, we can build a scalable and efficient A
 ## Infrastructure for Music Genre Classification using PyTorch
 
 ### Cloud Infrastructure
+
 - **Compute**: Utilize a cloud computing platform such as AWS, Google Cloud, or Microsoft Azure to provision virtual machines (VMs) or containers for model training and inference.
 - **Storage**: Leverage cloud storage services like Amazon S3, Google Cloud Storage, or Azure Blob Storage to store the training data, preprocessed audio features, and trained model parameters.
 - **Networking**: Design a virtual private cloud (VPC) to ensure secure communication between different components of the system.
 
 ### Training and Model Development
+
 - **Training VM/Containers**: Provision scalable compute resources with high-performance GPUs to accelerate training of the deep learning model using PyTorch.
 - **Distributed Training**: Utilize distributed training frameworks such as Horovod or PyTorch's native distributed training capabilities to train models across multiple GPUs or nodes for faster convergence.
 - **Experiment Tracking**: Use tools like TensorBoard, MLflow, or Neptune to track and visualize model training metrics, hyperparameters, and experiment results.
 
 ### Model Deployment
+
 - **Inference Servers**: Deploy the trained model on scalable inference servers such as AWS Lambda, AWS SageMaker, Google Cloud AI Platform, or Azure Machine Learning Service to serve real-time predictions.
 - **Containerization**: Containerize the model using Docker and deploy it on container orchestration platforms like Kubernetes for easy scaling and management.
 - **API Gateway**: Use API gateways like AWS API Gateway or Google Cloud Endpoints to expose the model as a RESTful API for music genre classification.
 
 ### Monitoring and Logging
+
 - **Logging and Metrics**: Set up logging and monitoring solutions like AWS CloudWatch, Google Cloud Logging, or Azure Monitor to track system logs, performance metrics, and model inference statistics.
 - **Alerting**: Configure alerts for monitoring system health, model performance, and resource utilization to promptly address any issues that may arise.
 
 ### Data Management
+
 - **Data Pipelines**: Implement data pipelines using tools like Apache Airflow or AWS Data Pipeline for seamless data ingestion, preprocessing, and feature extraction from new music tracks.
 - **Data Versioning**: Utilize version control systems or data versioning tools to ensure reproducibility and tracking of changes in the training data and feature engineering procedures.
 
@@ -95,6 +111,7 @@ music_genre_classification/
 ```
 
 In this file structure:
+
 - The `data/` directory contains subdirectories for storing raw and processed music track data, enabling traceability and reproducibility of the dataset used for training.
 - The `models/` directory is reserved for saving trained PyTorch models and model checkpoints, allowing easy access to different model versions.
 - The `src/` directory houses subdirectories for different aspects of the project, such as data preprocessing, model training, deployment, and evaluation, facilitating modularity and code organization.
@@ -114,6 +131,7 @@ music_genre_classification/
 ```
 
 In the `models/` directory:
+
 - The `saved_models/` subdirectory contains the following files related to the trained model:
   - `model.pth`: This file stores the trained PyTorch model's weights, which can be loaded for inference or further training.
   - `model_config.json`: This JSON file contains the model's architecture details, such as the neural network layers, activation functions, and hyperparameters used during training.
@@ -132,6 +150,7 @@ music_genre_classification/
 ```
 
 In the `deployment/` directory:
+
 - The `inference/` subdirectory contains files related to deploying the model for making predictions:
   - `dockerfile`: This file specifies the configuration for building a Docker image that encapsulates the model, its dependencies, and the inference logic, enabling consistent and portable deployment across different environments.
   - `requirements.txt`: This file lists the dependencies required for the model deployment, ensuring that the necessary packages are installed within the deployment environment.
@@ -175,6 +194,7 @@ print(mock_output)
 ```
 
 In this example:
+
 - We define a function `complex_music_genre_classification_model` that creates a complex neural network model using PyTorch's nn.Sequential. The model consists of multiple convolutional and linear layers, along with activation functions such as ReLU and softmax.
 - We use mock data to simulate the input to the model, including a batch of input data (`mock_input`) that resembles the expected input format for music genre classification and call the model to obtain mock output (`mock_output`).
 - The input data is assumed to be mock RGB image data, which is a common representation of audio data when using image-based spectrogram features for music classification.
@@ -201,7 +221,7 @@ class MusicGenreClassificationModel(nn.Module):
         self.relu4 = nn.ReLU()
         self.dropout = nn.Dropout(0.5)
         self.fc2 = nn.Linear(256, output_size)
-    
+
     def forward(self, x):
         x = self.conv1(x)
         x = self.relu1(x)
@@ -232,19 +252,22 @@ print(mock_output)
 ### Types of Users
 
 1. **Music Enthusiast**
-   - *User Story*: As a music enthusiast, I want to explore and discover new music genres that I might enjoy. I want to use an application that can accurately categorize music tracks into different genres.
+
+   - _User Story_: As a music enthusiast, I want to explore and discover new music genres that I might enjoy. I want to use an application that can accurately categorize music tracks into different genres.
    - File: The `inference/app.py` file, which implements the model inference logic and API for making predictions, would be used to serve real-time genre classification for user-uploaded music tracks.
 
 2. **Musician/Composer**
-   - *User Story*: As a musician or composer, I want to analyze the genre distribution of my music collection to understand the diversity of genres present. I also want to use a tool that can automatically tag or categorize my music tracks based on their genre.
+
+   - _User Story_: As a musician or composer, I want to analyze the genre distribution of my music collection to understand the diversity of genres present. I also want to use a tool that can automatically tag or categorize my music tracks based on their genre.
    - File: The `inference/app.py` would provide the functionality to categorize a collection of music tracks at once and output the genre tags, while the `notebooks/` directory might contain Jupyter notebooks for exploratory data analysis and visualization of genre distributions within the music collection.
 
 3. **Streaming Platform Developer**
-   - *User Story*: As a developer working on a music streaming platform, I want to integrate a genre classification feature to recommend new music based on user preferences. I need a reliable model that can be deployed as an API to classify music tracks in real time.
+
+   - _User Story_: As a developer working on a music streaming platform, I want to integrate a genre classification feature to recommend new music based on user preferences. I need a reliable model that can be deployed as an API to classify music tracks in real time.
    - File: The `deployment/` directory, particularly the `inference/` subdirectory containing `app.py`, `dockerfile`, and `requirements.txt`, would facilitate the deployment of the genre classification model as an API service for integration within the streaming platform.
 
 4. **Data Scientist/Researcher**
-   - *User Story*: As a data scientist or researcher, I want to experiment with different deep learning models for music genre classification and evaluate their performance on specific datasets. I need to access trained model weights, configurations, and evaluation metrics for comparison and analysis.
+   - _User Story_: As a data scientist or researcher, I want to experiment with different deep learning models for music genre classification and evaluate their performance on specific datasets. I need to access trained model weights, configurations, and evaluation metrics for comparison and analysis.
    - File: The `models/saved_models/` directory would store the trained PyTorch model weights and associated files such as `model_config.json` and `performance_metrics.json`, providing access to model artifacts for research and analysis.
 
 By catering to the needs of these diverse user types, the music genre classification application using PyTorch can serve a wide range of users in various contexts, from personal music exploration to professional music industry applications.

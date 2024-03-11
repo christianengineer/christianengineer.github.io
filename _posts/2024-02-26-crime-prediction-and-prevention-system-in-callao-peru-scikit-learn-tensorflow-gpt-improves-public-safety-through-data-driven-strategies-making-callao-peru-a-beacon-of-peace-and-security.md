@@ -8,11 +8,13 @@ layout: article
 ## AI Crime Prediction and Prevention System in Callao, Peru
 
 ### Objectives
+
 1. Predict crime hotspots and patterns in Callao, Peru using historical data.
 2. Implement proactive measures to prevent crimes based on AI insights.
 3. Improve public safety and security in Callao, Peru through data-driven strategies.
 
 ### System Design Strategies
+
 1. **Data Collection:** Gather historical crime data including types of crimes, locations, dates, and times.
 2. **Data Preprocessing:** Clean and preprocess the data to prepare it for analysis.
 3. **Feature Engineering:** Extract relevant features such as location clusters, time of day, and crime types.
@@ -22,6 +24,7 @@ layout: article
 7. **Feedback Loop:** Continuously update the models with new data and feedback to improve prediction accuracy.
 
 ### Chosen Libraries
+
 1. **Scikit-learn:** Utilize Scikit-learn for building machine learning models for crime prediction such as Random Forest or SVM.
 2. **TensorFlow:** Implement TensorFlow for deep learning models like neural networks for more complex crime pattern recognition.
 3. **GPT (Generative Pre-trained Transformer):** Leverage GPT for natural language processing tasks such as summarizing incident reports or generating insights from textual data related to crimes.
@@ -31,10 +34,12 @@ By integrating these libraries and design strategies, the AI Crime Prediction an
 ## MLOps Infrastructure for Crime Prediction and Prevention System in Callao, Peru
 
 ### Objectives
+
 1. Streamline the end-to-end machine learning lifecycle from data collection to model deployment for the Crime Prediction and Prevention System.
 2. Ensure scalability, reliability, and efficiency of the AI application to improve public safety in Callao, Peru.
 
 ### Components of MLOps Infrastructure
+
 1. **Data Pipeline:** Implement a robust data pipeline to ingest, clean, and preprocess crime data before feeding it into machine learning models.
 2. **Model Training:** Utilize Scikit-learn and TensorFlow to train crime prediction models on a scalable infrastructure, such as cloud-based GPUs.
 3. **Model Evaluation:** Conduct thorough model evaluation and validation to ensure the accuracy and reliability of crime predictions.
@@ -44,6 +49,7 @@ By integrating these libraries and design strategies, the AI Crime Prediction an
 7. **Security and Compliance:** Implement security measures to protect sensitive data and ensure compliance with regulations related to data privacy and security.
 
 ### Technology Stack
+
 1. **Scikit-learn and TensorFlow:** Utilize these libraries for training machine learning models for crime prediction.
 2. **Docker and Kubernetes:** Containerize and orchestrate model deployment for scalability and reliability.
 3. **Monitoring Tools:** Integrate monitoring tools like Prometheus and Grafana to monitor model performance and system health.
@@ -56,7 +62,7 @@ By establishing a robust MLOps infrastructure incorporating these components and
 
 ```
 crime_prediction_system_callao_peru/
-| 
+|
 |-- data/
 |   |-- raw_data/
 |   |   |-- crime_data.csv
@@ -64,7 +70,7 @@ crime_prediction_system_callao_peru/
 |   |   |-- cleaned_data.csv
 |   |   |-- features/
 |   |       |-- extracted_features.csv
-| 
+|
 |-- models/
 |   |-- scikit-learn/
 |   |   |-- random_forest_model.pkl
@@ -72,31 +78,32 @@ crime_prediction_system_callao_peru/
 |   |   |-- neural_network_model.h5
 |   |-- gpt/
 |       |-- language_model.bin
-| 
+|
 |-- notebooks/
 |   |-- exploratory_analysis.ipynb
 |   |-- data_preprocessing.ipynb
 |   |-- model_training_evaluation.ipynb
-| 
+|
 |-- scripts/
 |   |-- data_preprocessing.py
 |   |-- model_training.py
 |   |-- model_evaluation.py
 |   |-- inference.py
-| 
+|
 |-- deployment/
 |   |-- dockerfile
 |   |-- kubernetes_config.yml
-| 
+|
 |-- docs/
 |   |-- project_plan.md
 |   |-- system_architecture.md
-| 
+|
 |-- README.md
 |-- requirements.txt
 ```
 
 In this scalable file structure:
+
 - **data/**: Contains raw and processed data used for crime prediction. Raw data is stored in `raw_data/` and processed data along with extracted features is stored in `processed_data/`.
 - **models/**: Stores trained models using Scikit-learn, TensorFlow, and GPT for crime prediction.
 - **notebooks/**: Jupyter notebooks for exploratory data analysis, data preprocessing, model training, and evaluation.
@@ -129,15 +136,18 @@ models/
 
 ### Explanation:
 
-- **scikit-learn/**: This directory contains models trained using Scikit-learn library for crime prediction. 
+- **scikit-learn/**: This directory contains models trained using Scikit-learn library for crime prediction.
+
   - **random_forest_model.pkl**: Serialized Random Forest model trained to predict crime hotspots based on historical data.
   - **svm_model.pkl**: Serialized Support Vector Machine model for classifying crime types.
 
 - **tensorflow/**: Holds models developed using TensorFlow library for crime prediction.
+
   - **neural_network_model.h5**: Trained neural network model to predict crime patterns and identify recurring crime scenarios.
   - **lstm_model.h5**: LSTM model for sequence prediction of crime incidents.
 
 - **gpt/**: Contains models related to GPT (Generative Pre-trained Transformer) for natural language processing tasks associated with crime data.
+
   - **language_model.bin**: GPT language model for generating textual insights from incident reports or summarizing crime-related text.
 
 - **README.md**: Provides a brief description of each model stored in the directory, outlining their purposes and use cases within the Crime Prediction and Prevention System in Callao, Peru.
@@ -270,18 +280,22 @@ Please ensure to replace the mock data with actual data sources and customize th
 ### Types of Users for the Crime Prediction and Prevention System in Callao, Peru
 
 1. **Law Enforcement Officers**
+
    - **User Story:** As a law enforcement officer in Callao, I need access to real-time crime predictions to efficiently allocate resources and patrol areas with a higher risk of criminal activities.
    - **File:** `model_training.py` for training predictive models used in the system.
 
 2. **City Planners**
+
    - **User Story:** As a city planner in Callao, I aim to utilize crime data insights to design safer urban spaces and implement preventive measures in areas prone to criminal incidents.
    - **File:** `complex_model_training.py` for training complex machine learning algorithms to predict crime patterns.
 
 3. **Local Government Officials**
+
    - **User Story:** As a local government official, I require data-driven strategies to formulate policies and initiatives that enhance public safety and security in Callao.
    - **File:** `deployment/dockerfile` and `deployment/kubernetes_config.yml` for deploying and managing the AI application.
 
 4. **Community Leaders**
+
    - **User Story:** As a community leader in Callao, I seek access to summarized crime reports and insights generated by AI models to raise awareness and collaborate with authorities in crime prevention efforts.
    - **File:** `model_training.py` for training machine learning models and `data/processed_data/cleaned_data.csv` for input data.
 

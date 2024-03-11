@@ -14,12 +14,14 @@ The objective of the Model Governance and Compliance framework is to ensure the 
 ## System Design Strategies
 
 ### Audit Trails
+
 - **Data Collection**: Capture details of datasets used for training models, including sources, preprocessing steps, and any data augmentation techniques applied.
 - **Model Training**: Record hyperparameters, model architectures, and training procedures to ensure reproducibility.
 - **Model Deployment**: Document the deployment process, including the environment and dependencies, to track the deployed model's configuration.
 - **Model Inference**: Log inference requests, responses, and any model drift detection mechanisms.
 
 ### Regulatory Compliance
+
 - **Data Privacy**: Implement data anonymization and access control mechanisms to protect sensitive data.
 - **Fairness**: Integrate fairness metrics into the model evaluation process to detect biases and disparities.
 - **Transparency**: Provide explanations for model predictions through techniques such as LIME or SHAP.
@@ -28,11 +30,13 @@ The objective of the Model Governance and Compliance framework is to ensure the 
 ## Chosen Libraries
 
 ### Audit Trails
+
 - **DVC (Data Version Control)**: For maintaining versioned datasets and tracking changes in data preprocessing steps.
 - **MLflow**: To track experiment runs, log parameters, and metrics during model training and deployment.
 - **OpenTracing**: For distributed tracing to monitor model inference and capture request/response logs.
 
 ### Regulatory Compliance
+
 - **TensorFlow Privacy**: To incorporate privacy-preserving techniques such as differential privacy into data processing and model training.
 - **AI Fairness 360**: For measuring and mitigating biases in machine learning models during the development and deployment phases.
 - **Seldon Core**: To deploy models with explanation capabilities and capture inference logs for transparency and accountability.
@@ -42,41 +46,52 @@ By incorporating these libraries and design strategies, the Model Governance and
 ## Infrastructure for AI Model Governance and Compliance
 
 ## Components
+
 The infrastructure for the AI Model Governance and Compliance framework consists of the following components:
 
 ### Data Storage
+
 - **Data Lake**: Centralized repository for storing raw and processed data, providing versioning and traceability.
 
 ### Model Repository
+
 - **Model Registry**: A central catalog for storing trained models, including metadata, versions, and associated artifacts.
 
 ### Experiment Tracking
+
 - **Experiment Management System**: System for tracking model training experiments, including captured hyperparameters, metrics, and artifacts.
 
 ### Model Deployment
+
 - **Model Serving Infrastructure**: Scalable and reliable infrastructure for deploying models for inference.
 
 ### Compliance and Monitoring
+
 - **Compliance Dashboard**: A centralized interface for monitoring model performance, bias, fairness, and compliance metrics.
 
 ## Integration and Workflow
+
 - **CI/CD Pipeline**: Automated pipeline for model training, evaluation, and deployment incorporating compliance checks and monitoring.
 - **Audit Logging Service**: Capture logs and timestamps for all activities related to data, model training, deployment, and inference.
 - **Identity and Access Management (IAM)**: Role-based access control to ensure proper ownership and access permissions for model development and deployment.
 
 ## Security and Privacy
+
 - **Encryption and Tokenization**: Data encryption at rest and in transit, as well as tokenization of sensitive information to ensure data privacy.
 - **Authentication and Authorization**: Implement robust authentication mechanisms to control access to data and models.
 
 ## Scalability and Reliability
+
 - **Container Orchestration**: Use of container orchestration platforms (e.g., Kubernetes) for scalable and reliable deployment of models.
 - **Auto-scaling**: Dynamic scaling of infrastructure resources based on demand, ensuring availability and performance.
 
 ## Monitoring and Alerting
+
 - **Metrics and Logging**: Infrastructure for capturing and analyzing model performance metrics and generating logs.
 - **Alerting System**: Automated alerting for anomalous behaviors, drift detection, and compliance violations.
 
 ## Regulatory Compliance
+
 - **Fairness and Bias Detection**: Integration of tools for detecting biases and ensuring fairness in model predictions.
 - **Explainability**: Incorporation of explainability techniques to provide transparent and interpretable model predictions.
 - **Data Privacy Controls**: Implementation of data anonymization, access controls, and privacy-preserving techniques.
@@ -132,7 +147,6 @@ AI-Model-Governance-Compliance/
 ## File Structure Breakdown
 
 - **data/**: Directory for raw and processed data, enabling versioning and traceability for regulatory compliance.
-  
 - **models/**: Repository for trained models, organized by versions, each containing model artifacts, metadata, and trained model files.
 
 - **notebooks/**: Storage for Jupyter notebooks used for data exploration, model development, and compliance analysis, enabling reproducibility and documentation.
@@ -150,6 +164,7 @@ This file structure organizes the repository's components in a scalable and main
 The `models/` directory is a crucial component of the AI Model Governance and Compliance repository. It is responsible for storing trained models, along with associated artifacts, metadata, and versioning information. The structured organization within the `models/` directory ensures reproducibility, traceability, and compliance with regulatory requirements. Below is an expanded overview of the files and directories within the `models/` directory:
 
 ### models/
+
 ```
 models/
 │
@@ -177,6 +192,7 @@ models/
 ```
 
 ### Breakdown of model_version_1/
+
 - **artifacts/**: Directory containing artifacts generated during the model development and training process, such as model summary, visualizations (e.g., loss and accuracy plots), and data preprocessing summary.
 
 - **metadata.json**: JSON file containing metadata associated with the model, including information about the training data, hyperparameters, evaluation metrics, and model version details.
@@ -184,6 +200,7 @@ models/
 - **model_file.pth**: Trained model file, saved in a serialized format (e.g., PyTorch's .pth format or TensorFlow's .h5 format), representing the model's architecture and learned parameters.
 
 ### Breakdown of model_version_2/
+
 - **artifacts/**: Similar directory containing artifacts for the second version of the model, maintaining a consistent structure for reproducibility and auditability.
 
 - **metadata.json**: Likewise, a separate JSON file for metadata specific to the second model version, documenting the changes from the previous version if applicable.
@@ -197,6 +214,7 @@ By organizing the `models/` directory in this structured manner, the repository 
 The `deployment/` directory is a critical part of the AI Model Governance and Compliance framework, responsible for housing the artifacts, configuration settings, and documentation related to the deployment of AI models for inference. This structured organization ensures visibility into the deployment process, facilitates compliance with regulatory requirements, and helps maintain audit trails. Below is an expanded overview of the files and directories within the `deployment/` directory:
 
 ### deployment/
+
 ```
 deployment/
 │
@@ -234,6 +252,7 @@ deployment/
 ```
 
 ### Breakdown of model_service_1/
+
 - **model_artifacts/**: Directory containing the artifacts required for model inference, including the serialized model file (`model_version_1.pth`), model configuration settings, and any other necessary files.
 
 - **deployment_config/**: Directory housing configuration settings for the model deployment, such as environment variables, deployment settings, and any other relevant configuration files.
@@ -243,6 +262,7 @@ deployment/
 - **logging/**: Storage for inference logs, capturing the requests, responses, and any model drift detection logs relevant to the deployed model service.
 
 ### Breakdown of model_service_2/
+
 - **model_artifacts/**: Similar directory containing artifacts for the second model service, maintaining a consistent structure for reproducibility and auditability.
 
 - **deployment_config/**: Similarly, a separate directory for configuration settings specific to the second model service, ensuring distinct deployment configurations are well-documented and tracked.
@@ -370,18 +390,22 @@ def train_and_evaluate_deep_learning_model(data_file_path, model_version):
 In this function, `train_and_evaluate_deep_learning_model`, a Deep Learning model is trained and evaluated using mock data. The input `data_file_path` specifies the file path to the mock data in CSV format, and `model_version` specifies the version of the model being trained. After training, the function saves the trained model as a serialized file (`model_file.h5`) and saves the associated metadata to a JSON file (`metadata.json`) within the specified directory structure. This function demonstrates the training and management of a deep learning model while adhering to the governance and compliance standards by keeping track of the model artifacts and metadata.
 
 1. Data Scientist
+
    - **User Story**: As a Data Scientist, I need to track the training and evaluation process of machine learning and deep learning models, ensuring reproducibility and compliance with regulatory requirements.
    - **File**: The `train_and_evaluate_model` and `train_and_evaluate_deep_learning_model` functions, along with the associated metadata files within the `models/` directory, will provide a record of the model training process and performance metrics.
 
 2. DevOps Engineer
+
    - **User Story**: As a DevOps Engineer, I need to deploy machine learning models in a scalable and reliable manner while ensuring compliance with regulatory standards and maintaining audit trails.
    - **File**: The `deployment_config/` directory within the `deployment/` directory will contain environment configuration files, ensuring visibility and accountability in the deployment process.
 
 3. Compliance Officer
+
    - **User Story**: As a Compliance Officer, I need to monitor and validate the fairness and accountability of deployed machine learning models to ensure compliance with regulatory standards.
    - **File**: The `documentation/` directory will include compliance guidelines, and the `logging/` directory within the `deployment/` directory will contain inference logs for monitoring model performance and fairness.
 
 4. Data Engineer
+
    - **User Story**: As a Data Engineer, I need to ensure the integrity and traceability of data used for model development, along with implementing data privacy controls and audit trails for regulatory compliance.
    - **File**: The `data/` directory housing raw and processed data, along with versioning mechanisms and data preprocessing summaries, will provide traceability and provenance for the data used in model training.
 

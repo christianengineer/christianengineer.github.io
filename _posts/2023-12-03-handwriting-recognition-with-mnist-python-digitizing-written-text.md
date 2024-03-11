@@ -8,6 +8,7 @@ layout: article
 ## AI Handwriting Recognition with MNIST (Python) Digitizing written text
 
 ### Objectives
+
 The objective of the AI Handwriting Recognition with MNIST (Python) Digitizing written text repository is to build a machine learning model that can accurately recognize handwritten digits. The specific goals include:
 
 1. Training a machine learning model using the MNIST dataset, which is a large database of handwritten digits.
@@ -15,6 +16,7 @@ The objective of the AI Handwriting Recognition with MNIST (Python) Digitizing w
 3. Implementing a user-friendly interface for users to input handwritten digits and receive the corresponding recognized digit as output.
 
 ### System Design Strategies
+
 To achieve the objectives, the following system design strategies can be implemented:
 
 1. Data Preprocessing: Preprocess the MNIST dataset to extract features and normalize the input data to improve model performance.
@@ -23,6 +25,7 @@ To achieve the objectives, the following system design strategies can be impleme
 4. User Interface: Develop a user-friendly web interface using HTML, CSS, and JavaScript to allow users to input handwritten digits and receive the recognized digit as output.
 
 ### Chosen Libraries
+
 The following libraries can be utilized for different components of the system:
 
 1. TensorFlow or PyTorch for building and training the machine learning model.
@@ -37,22 +40,27 @@ By following these design strategies and leveraging the chosen libraries, a scal
 To support the development and deployment of the Handwriting Recognition application, the following infrastructure components can be considered:
 
 ### Data Storage
+
 - **Training Data Storage**: Utilize a data storage solution, such as Amazon S3 or Google Cloud Storage, to store the MNIST dataset for model training.
 - **User-Uploaded Images Storage**: Implement a storage system to store images uploaded by users for recognition. This could be a cloud-based solution like Amazon S3 or a database if necessary.
 
 ### Model Training and Inference
+
 - **Machine Learning Framework**: Utilize cloud-based machine learning platforms like Amazon SageMaker, Google AI Platform, or Microsoft Azure Machine Learning for model training and experimentation with various algorithms and hyperparameters.
 - **Model Serving**: Use a scalable model serving infrastructure, such as Amazon SageMaker hosting, Google Cloud AI Platform Prediction, or a custom deployment using Kubernetes, to serve the trained model for inference.
 
 ### Web Application and Interface
+
 - **Web Server**: Deploy the web application on a scalable infrastructure such as AWS Elastic Beanstalk, Google App Engine, or Azure App Service to handle user requests and interface with the model serving infrastructure.
 - **Content Delivery Network (CDN)**: Utilize a CDN like Cloudflare or AWS CloudFront to deliver static assets of the web application and improve its performance for users across different geographical locations.
 
 ### Monitoring and Logging
+
 - **Logging**: Implement logging using services like Amazon CloudWatch, Google Cloud Logging, or ELK stack for capturing application logs and monitoring system behavior.
 - **Metrics and Monitoring**: Utilize monitoring solutions such as Amazon CloudWatch, Google Cloud Monitoring, or Prometheus for tracking application and infrastructure metrics.
 
 ### Security
+
 - **Network Security**: Utilize a Virtual Private Cloud (VPC) for network isolation and security groups for controlling inbound and outbound traffic to the application.
 - **User Authentication**: Implement user authentication and authorization using services like AWS Cognito, Google Identity Platform, or custom solutions with JWT tokens.
 
@@ -100,12 +108,14 @@ handwriting_recognition_mnist/
 ### File Structure Explanation:
 
 1. **app/**: This directory contains all the files related to the web application.
+
    - **static/**: Stores static assets such as CSS and JavaScript files.
    - **templates/**: Contains HTML templates for the web interface.
    - **app.py**: Main application file for handling web requests and integrating with the model.
    - **model/**: Directory for storing the trained model and related files.
 
 2. **data/**: This directory holds the dataset required for training and testing the model.
+
    - **mnist/**: Specific directory for storing the MNIST dataset or any other relevant data.
 
 3. **notebooks/**: Contains Jupyter notebooks for data exploration, model training, and experimentation.
@@ -156,6 +166,7 @@ handwriting_recognition_mnist/
 2. **mnist_lstm_model.py**: Python script containing the definition and training code for a Long Short-Term Memory (LSTM) model for MNIST digit recognition. This file might be optional based on the project requirements.
 
 3. **utils/**: This subdirectory contains utility files for model evaluation, data loading, and image preprocessing.
+
    - **model_evaluation.py**: Utility functions for evaluating the performance of machine learning models.
    - **data_loader.py**: Functions for loading and preprocessing the MNIST dataset or user-uploaded images.
    - **image_preprocessing.py**: Utility functions for preprocessing of input images before feeding them to the models.
@@ -198,6 +209,7 @@ handwriting_recognition_mnist/
 2. **requirements.txt**: This file lists all Python dependencies required by the application, including libraries, frameworks, and versions.
 
 3. **nginx/**: This directory contains configurations related to the NGINX web server, which can be used as a reverse proxy for the web application.
+
    - **nginx.conf**: Configuration file for NGINX, specifying settings such as port binding and request handling.
 
 4. **scripts/**: This directory contains scripts for managing the application during deployment and runtime.
@@ -217,7 +229,7 @@ import joblib
 def train_and_save_model(data_path, model_save_path):
     ## Load mock data from CSV file
     data = pd.read_csv(data_path)
-    
+
     ## Prepare the data
     X = data.drop('label', axis=1)
     y = data['label']
@@ -251,6 +263,7 @@ train_and_save_model(data_path, model_save_path)
 ```
 
 In the above code:
+
 - The `train_and_save_model` function takes in the file path of the mock data (CSV file containing MNIST data) and the path where the trained model will be saved.
 - It loads the mock data, preprocesses it, trains a Support Vector Machine (SVM) model, and evaluates its accuracy.
 - Finally, it saves the trained model to a file using the joblib library.
@@ -268,7 +281,7 @@ import joblib
 def train_and_save_model(data_path, model_save_path):
     ## Load mock data from CSV file
     data = pd.read_csv(data_path)
-    
+
     ## Prepare the data
     X = data.drop('label', axis=1)
     y = data['label']
@@ -297,6 +310,7 @@ train_and_save_model(data_path, model_save_path)
 ```
 
 In the code:
+
 - The `train_and_save_model` function takes in the file path of the mock data (CSV file containing MNIST data) and the path where the trained model will be saved.
 - It loads the mock data, splits it into training and testing sets, and trains a Random Forest Classifier using the training data.
 - The function then evaluates the accuracy of the model using the test data and saves the trained model to a file using the joblib library.
@@ -306,23 +320,27 @@ This function can be used to train a complex machine learning algorithm (Random 
 ### Types of Users for Handwriting Recognition Application
 
 1. **End User**
-   - *User Story*: As an end user, I want to upload an image of a handwritten digit and receive the recognized digit as output.
-   - *File*: The front-end interface files such as HTML, CSS, and JavaScript within the `app/templates` and `app/static` directories will cater to the end user's interaction with the application.
+
+   - _User Story_: As an end user, I want to upload an image of a handwritten digit and receive the recognized digit as output.
+   - _File_: The front-end interface files such as HTML, CSS, and JavaScript within the `app/templates` and `app/static` directories will cater to the end user's interaction with the application.
 
 2. **Data Scientist/ML Engineer**
-   - *User Story*: As a data scientist, I want to access the trained model for handwritten digit recognition and evaluate its performance on test data.
-   - *File*: Jupyter notebook files within the `notebooks` directory, along with the trained model files in the `models/trained_models` directory, will serve the data scientist's needs.
+
+   - _User Story_: As a data scientist, I want to access the trained model for handwritten digit recognition and evaluate its performance on test data.
+   - _File_: Jupyter notebook files within the `notebooks` directory, along with the trained model files in the `models/trained_models` directory, will serve the data scientist's needs.
 
 3. **Developer**
-   - *User Story*: As a developer, I want to understand the system design and implement additional functionality or improvements to the application codebase.
-   - *File*: Python scripts, including the main application file `app.py` and auxiliary scripts commonly located within the `app` directory, will facilitate the developer's work.
+
+   - _User Story_: As a developer, I want to understand the system design and implement additional functionality or improvements to the application codebase.
+   - _File_: Python scripts, including the main application file `app.py` and auxiliary scripts commonly located within the `app` directory, will facilitate the developer's work.
 
 4. **DevOps Engineer**
-   - *User Story*: As a DevOps engineer, I want to deploy the application on a scalable infrastructure and manage the necessary configurations.
-   - *File*: Deployment-related files like `Dockerfile`, `requirements.txt`, and deployment scripts within the `deployment` directory will be relevant for the deployment and infrastructure setup tasks.
+
+   - _User Story_: As a DevOps engineer, I want to deploy the application on a scalable infrastructure and manage the necessary configurations.
+   - _File_: Deployment-related files like `Dockerfile`, `requirements.txt`, and deployment scripts within the `deployment` directory will be relevant for the deployment and infrastructure setup tasks.
 
 5. **Machine Learning Researcher**
-   - *User Story*: As a machine learning researcher, I want to explore different machine learning algorithms and experiment with varied model architectures for handwritten digit recognition.
-   - *File*: Jupyter notebook files within the `notebooks` directory and the machine learning model implementation scripts within the `models` directory will be useful for conducting research and experimenting with new models.
+   - _User Story_: As a machine learning researcher, I want to explore different machine learning algorithms and experiment with varied model architectures for handwritten digit recognition.
+   - _File_: Jupyter notebook files within the `notebooks` directory and the machine learning model implementation scripts within the `models` directory will be useful for conducting research and experimenting with new models.
 
 By considering each type of user and their respective user stories, the application can be designed and organized to cater to the needs of different stakeholders, ensuring a seamless user experience and development process.

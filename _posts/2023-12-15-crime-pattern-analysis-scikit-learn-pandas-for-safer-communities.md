@@ -8,10 +8,13 @@ layout: article
 ## AI Crime Pattern Analysis Repository
 
 ## Objectives
+
 The objective of the AI Crime Pattern Analysis repository is to develop a data-intensive AI application that leverages machine learning to analyze crime patterns and trends in order to contribute to the creation of safer communities. This involves the use of various data science and machine learning techniques to identify patterns, predict future occurrences, and potentially help law enforcement agencies allocate resources more effectively.
 
 ## System Design Strategies
+
 In order to achieve the objectives, the repository will follow the following system design strategies:
+
 1. **Modular Architecture**: Design the application with a modular architecture to allow for the independent development and scaling of different components of the system.
 2. **Scalability**: Design the application to be scalable, allowing it to handle large volumes of data and accommodate increased computational demands.
 3. **Data Pipeline**: Implement a robust data pipeline to collect, process, and analyze large volumes of crime data from various sources.
@@ -19,7 +22,9 @@ In order to achieve the objectives, the repository will follow the following sys
 5. **Interactive Visualization**: Implement interactive visualization tools to present the analysis results in a user-friendly and intuitive manner.
 
 ## Chosen Libraries
+
 The AI Crime Pattern Analysis repository will leverage the following libraries and tools:
+
 1. **Scikit-Learn**: This library provides simple and efficient tools for data mining and data analysis, and will be used for implementing machine learning models such as clustering and predictive algorithms.
 2. **Pandas**: Pandas will be used for data manipulation and analysis tasks, such as cleaning and preprocessing the crime data, and organizing it into a format suitable for machine learning tasks.
 3. **NumPy**: NumPy will be utilized for numerical computing tasks, particularly for handling large arrays and matrices required for various machine learning operations.
@@ -32,24 +37,31 @@ By utilizing these libraries as part of the system design, the AI Crime Pattern 
 In order to effectively develop and deploy the Crime Pattern Analysis application, a robust MLOps (Machine Learning Operations) infrastructure is key to streamline the machine learning lifecycle, from model development to deployment and monitoring. Here's an elaboration on the MLOps infrastructure for the Crime Pattern Analysis application:
 
 ## Version Control
+
 Utilize a version control system such as Git to manage the codebase, including the data preprocessing, model training, and evaluation scripts. This allows for tracking changes, collaborating with team members, and maintaining a consistent and reproducible development environment.
 
 ## Continuous Integration/Continuous Deployment (CI/CD)
+
 Implement CI/CD pipelines to automate the testing, building, and deployment processes. This ensures that changes to the application are tested and integrated into the production environment in a controlled and efficient manner.
 
 ## Model Training and Evaluation
+
 Develop a pipeline for model training and evaluation that integrates with the version control system. This pipeline should incorporate best practices for hyperparameter tuning, cross-validation, and model evaluation to ensure the reliability and performance of the machine learning models.
 
 ## Model Serving and Deployment
+
 Utilize containerization technologies such as Docker to package the machine learning models, along with their dependencies, into deployable units. These containers can then be orchestrated using tools like Kubernetes for efficient deployment, scaling, and management of the deployed models.
 
 ## Monitoring and Logging
+
 Implement monitoring and logging solutions to track the performance of the deployed models in production. This includes monitoring model accuracy, drift detection, and resource usage to ensure that the models continue to provide reliable and accurate predictions over time.
 
 ## Infrastructure as Code
+
 Adopt infrastructure as code principles to manage the underlying infrastructure required for deploying the Crime Pattern Analysis application. Tools like Terraform or AWS CloudFormation can be used to define and provision the infrastructure resources needed for hosting the application and its supporting services.
 
 ## Collaboration and Documentation
+
 Establish clear documentation and collaboration processes to ensure that all team members are aligned on the MLOps processes and best practices. This includes documenting the model training and deployment workflows, as well as facilitating effective communication and knowledge sharing within the team.
 
 By integrating these MLOps practices and infrastructure, the Crime Pattern Analysis application can benefit from streamlined development, deployment, and monitoring processes, ultimately contributing to the creation of safer communities through the effective analysis of crime patterns using machine learning techniques.
@@ -64,7 +76,7 @@ crime_pattern_analysis/
 │   ├── processed/
 │   │   ├── preprocessed_data.csv
 │   │   └── ...
-│   
+│
 ├── notebooks/
 │   ├── exploratory_data_analysis.ipynb
 │   ├── data_preprocessing.ipynb
@@ -81,7 +93,7 @@ crime_pattern_analysis/
 ├── models/
 │   ├── trained_model.pkl
 │   ├── ...
-│   
+│
 ├── scripts/
 │   ├── data_ingestion_script.py
 │   └── data_cleaning_script.py
@@ -257,23 +269,27 @@ This file demonstrates a more complex machine learning algorithm and can be inte
 ### Type of Users
 
 1. **Law Enforcement Agency Analyst**
-   - *User Story*: As a law enforcement agency analyst, I want to be able to explore historical crime data, visualize crime hotspots, and identify patterns to better allocate resources and prevent criminal activities in specific areas.
-   - *File*: `notebooks/exploratory_data_analysis.ipynb`
+
+   - _User Story_: As a law enforcement agency analyst, I want to be able to explore historical crime data, visualize crime hotspots, and identify patterns to better allocate resources and prevent criminal activities in specific areas.
+   - _File_: `notebooks/exploratory_data_analysis.ipynb`
 
 2. **Data Scientist**
-   - *User Story*: As a data scientist, I need to preprocess and clean crime data, engineer features, and train machine learning models to understand crime patterns and trends, and deploy the models for prediction and analysis.
-   - *File*: `src/model_training.py`
+
+   - _User Story_: As a data scientist, I need to preprocess and clean crime data, engineer features, and train machine learning models to understand crime patterns and trends, and deploy the models for prediction and analysis.
+   - _File_: `src/model_training.py`
 
 3. **Software Developer**
-   - *User Story*: As a software developer, I aim to build an interactive web application that allows users to interactively visualize crime patterns and access predictive models for future crime occurrences.
-   - *File*: `deployment/app/main.py`
+
+   - _User Story_: As a software developer, I aim to build an interactive web application that allows users to interactively visualize crime patterns and access predictive models for future crime occurrences.
+   - _File_: `deployment/app/main.py`
 
 4. **City Planner/Policy Maker**
-   - *User Story*: As a city planner or policy maker, I want to gain insights from crime data analysis to inform urban planning and policy decisions aimed at creating safer communities.
-   - *File*: `notebooks/model_evaluation.ipynb`
+
+   - _User Story_: As a city planner or policy maker, I want to gain insights from crime data analysis to inform urban planning and policy decisions aimed at creating safer communities.
+   - _File_: `notebooks/model_evaluation.ipynb`
 
 5. **System Administrator/DevOps Engineer**
-   - *User Story*: As a system administrator or DevOps engineer, I am responsible for deploying and maintaining the infrastructure and model serving application that enables real-time access to crime pattern analysis.
-   - *File*: `deployment/model_server/Dockerfile`
+   - _User Story_: As a system administrator or DevOps engineer, I am responsible for deploying and maintaining the infrastructure and model serving application that enables real-time access to crime pattern analysis.
+   - _File_: `deployment/model_server/Dockerfile`
 
 By addressing the needs of these diverse user types, the Crime Pattern Analysis application can effectively provide valuable insights and predictions for creating safer communities. Each user story aligns with specific files or modules within the project, illustrating the collaborative nature of the development and utilization of the application.

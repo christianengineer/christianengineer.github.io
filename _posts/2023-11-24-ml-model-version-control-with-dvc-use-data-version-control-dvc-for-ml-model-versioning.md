@@ -6,58 +6,75 @@ layout: article
 ---
 
 ## Objective
+
 The objective of using Data Version Control (DVC) for ML model versioning is to effectively manage and version control the data, models, and experiments in machine learning projects. DVC allows for tracking changes to raw data, intermediate data, and trained models, enabling reproducibility and collaboration in AI projects.
 
 ## System Design Strategies
+
 ### 1. Data Versioning
-   - Store the raw data in a well-organized directory structure within a storage or version control system such as Git, and use DVC to manage the metadata and versions of the data.
-   - Utilize DVC to version datasets, track changes, and synchronize data across team members and computational resources.
+
+- Store the raw data in a well-organized directory structure within a storage or version control system such as Git, and use DVC to manage the metadata and versions of the data.
+- Utilize DVC to version datasets, track changes, and synchronize data across team members and computational resources.
 
 ### 2. Model Versioning
-   - Organize model code and hyperparameters in a manner compatible with DVC version control.
-   - Use DVC to version control the model artifacts, including trained models, model configurations, and evaluation metrics.
+
+- Organize model code and hyperparameters in a manner compatible with DVC version control.
+- Use DVC to version control the model artifacts, including trained models, model configurations, and evaluation metrics.
 
 ### 3. Experiment Tracking
-   - Leverage DVC metrics and experiments tracking to record and compare different runs of the models, their outputs, and associated metadata.
+
+- Leverage DVC metrics and experiments tracking to record and compare different runs of the models, their outputs, and associated metadata.
 
 ### 4. Collaboration and Reproducibility
-   - Employ DVC's functionality to enable collaboration between team members and facilitate reproducibility by linking code, data, and models.
+
+- Employ DVC's functionality to enable collaboration between team members and facilitate reproducibility by linking code, data, and models.
 
 ## Chosen Libraries
+
 ### 1. DVC
-   - DVC is a version control system designed specifically for machine learning projects. It works seamlessly with Git and provides features for data versioning, model versioning, experiment tracking, and collaboration.
-   - With DVC, we can easily integrate data and model versioning into our existing Git workflow, improving the reproducibility and transparency of our AI projects.
+
+- DVC is a version control system designed specifically for machine learning projects. It works seamlessly with Git and provides features for data versioning, model versioning, experiment tracking, and collaboration.
+- With DVC, we can easily integrate data and model versioning into our existing Git workflow, improving the reproducibility and transparency of our AI projects.
 
 ### 2. Git
-   - Git is used in conjunction with DVC to manage the codebase and collaborate on the machine learning project. It provides a robust version control system for the codebase and integrates well with DVC.
+
+- Git is used in conjunction with DVC to manage the codebase and collaborate on the machine learning project. It provides a robust version control system for the codebase and integrates well with DVC.
 
 ### 3. Python Libraries
-   - Utilize standard Python libraries such as pandas, numpy, scikit-learn, and TensorFlow/Keras for data preprocessing, model training, and evaluation.
-   - Leverage DVC's compatibility with these libraries to seamlessly version control the data and model artifacts produced during the machine learning pipeline.
+
+- Utilize standard Python libraries such as pandas, numpy, scikit-learn, and TensorFlow/Keras for data preprocessing, model training, and evaluation.
+- Leverage DVC's compatibility with these libraries to seamlessly version control the data and model artifacts produced during the machine learning pipeline.
 
 ## Infrastructure for ML Model Version Control with DVC
 
 ### Overview
+
 The infrastructure for ML model version control using DVC involves setting up a robust and scalable environment to manage the data, models, and experiments in machine learning projects. The infrastructure considerations include storage, computing resources, and collaboration tools.
 
 ### Components
+
 1. **Storage**
+
    - Utilize cloud-based storage services such as Amazon S3, Google Cloud Storage, or Azure Blob Storage to store large volumes of data, model artifacts, and experiment outputs.
    - DVC integrates seamlessly with these cloud storage providers, allowing for efficient data versioning and management.
 
 2. **Computing Resources**
+
    - Leverage scalable computing resources such as AWS EC2 instances, Google Cloud VMs, or Azure Virtual Machines for model training and experimentation.
    - Use containerization technologies like Docker to create reproducible environments for model training and deployment.
 
 3. **DVC Server**
+
    - Set up a DVC server or use DVC's integration with existing Git servers to manage the versioning of data, models, and experiments.
    - DVC server facilitates centralized management of data and model versioning, enabling collaboration and reproducibility.
 
 4. **Collaboration Tools**
+
    - Utilize communication and collaboration tools such as Slack, Microsoft Teams, or Jira for team coordination and project management.
    - Integrate DVC with these tools to facilitate communication around data and model changes, experiment results, and project milestones.
 
 5. **Continuous Integration/Continuous Deployment (CI/CD)**
+
    - Implement CI/CD pipelines using tools like Jenkins, CircleCI, or GitLab CI to automate the testing and deployment of machine learning models.
    - Integrate DVC into the CI/CD pipeline to ensure that data and model versioning are maintained throughout the deployment process.
 
@@ -66,15 +83,18 @@ The infrastructure for ML model version control using DVC involves setting up a 
    - Use DVC's experiment tracking features to record model performance metrics and compare different iterations of the model.
 
 ### Scalability and Reliability
-   - Design the infrastructure to be scalable to handle increasing volumes of data and computational workload as the machine learning projects grow.
-   - Ensure redundancy and fault tolerance in the storage and computing resources to maintain reliability and availability of data and models.
+
+- Design the infrastructure to be scalable to handle increasing volumes of data and computational workload as the machine learning projects grow.
+- Ensure redundancy and fault tolerance in the storage and computing resources to maintain reliability and availability of data and models.
 
 ### Security Considerations
-   - Implement proper access controls and encryption mechanisms to secure the data and model artifacts stored in the cloud storage.
-   - Utilize secure communication protocols and authentication mechanisms for accessing the DVC server and collaborating on the machine learning projects.
+
+- Implement proper access controls and encryption mechanisms to secure the data and model artifacts stored in the cloud storage.
+- Utilize secure communication protocols and authentication mechanisms for accessing the DVC server and collaborating on the machine learning projects.
 
 ### Cost Optimization
-   - Optimize the infrastructure for cost by leveraging serverless computing, auto-scaling resources, and efficient data storage practices to minimize operational expenses while maintaining performance and reliability.
+
+- Optimize the infrastructure for cost by leveraging serverless computing, auto-scaling resources, and efficient data storage practices to minimize operational expenses while maintaining performance and reliability.
 
 By establishing a well-architected infrastructure for ML model version control with DVC, the AI application development can effectively manage and version data-intensive, AI applications that leverage the use of Machine Learning and Deep Learning.
 
@@ -130,8 +150,8 @@ project_root
 ```
 
 ### Explanation of the File Structure
+
 1. **data**: This directory contains subdirectories for raw and processed data. Raw data files are stored in their respective dataset folders. The `dvc.yaml` file tracks the directory structure and metadata for the data files.
-   
 2. **models**: This directory organizes the model-related files. Each model has its own directory for code, configuration, and DVC metadata. The `dvc.yaml` files track the model artifacts and their versions.
 
 3. **experiments**: This directory houses experiment results, metadata, and configurations. Each experiment is contained within its own directory, and a `dvc.yaml` file tracks the experiment outputs and associated metadata.
@@ -139,8 +159,8 @@ project_root
 4. **.dvcignore**: This file contains patterns for files and directories to ignore when versioning with DVC, preventing unnecessary files from being tracked.
 
 ### Benefits of the File Structure
+
 - **Scalability**: The hierarchical structure facilitates scalability by allowing the addition of new datasets, models, and experiments without affecting the overall organization.
-  
 - **Version Control**: DVC integrates seamlessly with this structure, enabling efficient versioning and tracking of data, models, and experiments.
 
 - **Clarity and Organization**: The file structure provides a clear and organized layout, making it easy for team members to navigate and locate the necessary resources for their work.
@@ -347,23 +367,28 @@ In this example, the `train_and_evaluate_deep_learning_model` function loads moc
 ### Types of Users
 
 #### 1. Data Scientist
-   - **User Story**: As a data scientist, I want to access and version the raw and processed datasets for my machine learning experiments to ensure reproducibility and traceability of the datasets used in my models.
-   - **File**: `data/raw_data.csv`, `data/processed_data.csv`, `dvc.yaml`
+
+- **User Story**: As a data scientist, I want to access and version the raw and processed datasets for my machine learning experiments to ensure reproducibility and traceability of the datasets used in my models.
+- **File**: `data/raw_data.csv`, `data/processed_data.csv`, `dvc.yaml`
 
 #### 2. Machine Learning Engineer
-   - **User Story**: As a machine learning engineer, I need to track the trained model artifacts, code, and hyperparameters used for model training to ensure that the models are versioned and reproducible.
-   - **File**: `models/model1/`, `models/model2/`, `dvc.yaml`
+
+- **User Story**: As a machine learning engineer, I need to track the trained model artifacts, code, and hyperparameters used for model training to ensure that the models are versioned and reproducible.
+- **File**: `models/model1/`, `models/model2/`, `dvc.yaml`
 
 #### 3. DevOps Engineer
-   - **User Story**: As a DevOps engineer, I want to manage deployment configurations, scripts, and dependencies to ensure that the machine learning models can be deployed consistently and efficiently.
-   - **File**: `deployment/environments/production/`, `deployment/environments/staging/`, `deployment/scripts/`, `dvc.yaml`
+
+- **User Story**: As a DevOps engineer, I want to manage deployment configurations, scripts, and dependencies to ensure that the machine learning models can be deployed consistently and efficiently.
+- **File**: `deployment/environments/production/`, `deployment/environments/staging/`, `deployment/scripts/`, `dvc.yaml`
 
 #### 4. Project Manager
-   - **User Story**: As a project manager, I need visibility into the overall progress and collaboration within the ML project, including tracking experiment results and ensuring documentation is up to date.
-   - **File**: `experiments/experiment1/`, `experiments/experiment2/`, `experiments/dvc.yaml`
+
+- **User Story**: As a project manager, I need visibility into the overall progress and collaboration within the ML project, including tracking experiment results and ensuring documentation is up to date.
+- **File**: `experiments/experiment1/`, `experiments/experiment2/`, `experiments/dvc.yaml`
 
 #### 5. Research Scientist
-   - **User Story**: As a research scientist, I want to track and version experimental results, including model metrics and outputs, to compare and reproduce different runs of models.
-   - **File**: `experiments/experiment1/results.csv`, `experiments/experiment2/results.csv`, `experiments/experiment1/metrics/`, `experiments/dvc.yaml`
+
+- **User Story**: As a research scientist, I want to track and version experimental results, including model metrics and outputs, to compare and reproduce different runs of models.
+- **File**: `experiments/experiment1/results.csv`, `experiments/experiment2/results.csv`, `experiments/experiment1/metrics/`, `experiments/dvc.yaml`
 
 Each type of user interacts with different files and directories within the ML model versioning application to achieve their specific goals, ensuring the effective adoption of DVC for versioning and reproducibility.

@@ -8,27 +8,34 @@ layout: article
 ## E-commerce Personalization Engine for Linio Peru
 
 ## Objective:
+
 The objective is to provide a scalable, production-ready machine learning solution to solve the E-commerce Manager's pain point of struggling to provide personalized shopping experiences at scale. By dynamically customizing product recommendations and content for each user, we aim to drive sales by catering to the unique preferences of the Peruvian online shopper.
 
 ## Benefits to the Audience:
+
 1. Increased Sales: Personalized recommendations can drive higher engagement and conversions.
 2. Enhanced User Experience: By providing relevant product suggestions, users are more likely to find products they are interested in quicker.
 3. Scalability: The solution will be built to handle a large number of users without compromising performance.
 4. Time and Cost-Efficiency: Automation of personalized recommendations reduces the manual effort required to curate content for each user.
 
 ## Machine Learning Algorithm:
+
 We will use Bidirectional Encoder Representations from Transformers (BERT) combined with deep learning using Keras for building the recommendation engine. BERT's contextual understanding of language combined with neural networks in Keras will enable us to generate highly accurate product recommendations based on user preferences.
 
 ## Strategies:
-1. **Sourcing**: 
+
+1. **Sourcing**:
+
    - Collect historical user interaction data, product details, and user profiles.
    - Utilize data sources such as user behavior logs, item metadata, and user feedback.
 
 2. **Preprocessing**:
+
    - Clean and preprocess the data by handling missing values, encoding categorical variables, and scaling numerical features.
    - Perform text preprocessing and tokenization of product descriptions using BERT embeddings.
 
 3. **Modeling**:
+
    - Build a recommendation engine using BERT embeddings for text data and neural networks with Keras for collaborative filtering.
    - Train the model on historical data to learn user preferences and generate personalized recommendations.
    - Evaluate the model using metrics like precision, recall, and F1-score to ensure its effectiveness.
@@ -39,6 +46,7 @@ We will use Bidirectional Encoder Representations from Transformers (BERT) combi
    - Deploy the solution on a cloud platform like AWS using Docker containers for scalability and reliability.
 
 ## Tools and Libraries:
+
 1. [BERT](https://github.com/google-research/bert): Google's BERT repository for pre-trained language representations.
 2. [Keras](https://keras.io/): High-level neural networks API in Python.
 3. [Apache Spark](https://spark.apache.org/): Distributed computing system for big data processing.
@@ -46,18 +54,20 @@ We will use Bidirectional Encoder Representations from Transformers (BERT) combi
 5. [AWS](https://aws.amazon.com/): Amazon Web Services for cloud deployment.
 6. [Docker](https://www.docker.com/): Containerization platform for packaging applications.
 
-
 ## Sourcing Data Strategy:
 
 ### Data Collection:
+
 For efficiently collecting relevant data for the E-commerce Personalization Engine, we can employ the following tools and methods:
 
 1. **User Interaction Data**:
+
    - Utilize tracking tools like Google Analytics, Mixpanel, or Amplitude to capture user behavior data such as clicks, views, searches, and purchases.
    - Implement event tracking to record user interactions on the website or app.
    - Integrate these tools with the existing website or e-commerce platform to streamline data collection.
 
 2. **Product Details**:
+
    - Extract product information from the e-commerce platform's database or API.
    - Utilize web scraping tools like BeautifulSoup or Scrapy to gather detailed product descriptions, categories, and attributes.
    - Regularly update product data to reflect changes in the product inventory.
@@ -68,14 +78,17 @@ For efficiently collecting relevant data for the E-commerce Personalization Engi
    - Implement consent management tools to comply with data privacy regulations like GDPR.
 
 ### Integration within Existing Technology Stack:
+
 To streamline data collection and ensure data readiness for analysis and model training, we can integrate the sourcing tools within our existing technology stack as follows:
 
 1. **Data Pipeline**:
+
    - Use Apache Kafka for real-time event streaming to collect user interaction data.
    - Transform and process the data using Apache Spark to prepare it for modeling.
    - Store processed data in a data warehouse like Amazon Redshift for easy access.
 
 2. **Data Processing**:
+
    - Use Apache Airflow for workflow management to automate data collection, preprocessing, and model training tasks.
    - Implement data quality checks and monitoring to ensure data integrity.
 
@@ -88,11 +101,12 @@ By integrating these tools within the existing technology stack, we can streamli
 ## Feature Extraction and Feature Engineering Analysis:
 
 ### Feature Extraction:
+
 - **Text Features**:
   - **Product Descriptions**: Extract keyword features using TF-IDF or word embeddings like Word2Vec or GloVe.
   - **User Reviews**: Analyze sentiment using NLP techniques like sentiment analysis or BERT embeddings.
-  
 - **Numerical Features**:
+
   - **User Purchase History**: Calculate user-specific metrics like average purchase value, frequency, and recency.
   - **Product Attributes**: Utilize numerical attributes such as price, discount percentage, and popularity score.
 
@@ -101,11 +115,14 @@ By integrating these tools within the existing technology stack, we can streamli
   - **User Segments**: Group users based on demographics or behavior for personalized recommendations.
 
 ### Feature Engineering:
+
 - **Interaction Features**:
+
   - Create interaction features between users and products based on past behavior (e.g., user viewed, user purchased).
   - Calculate similarity scores between user profiles or products using cosine similarity.
 
 - **Temporal Features**:
+
   - Introduce temporal features such as day of week, time of day, or seasonality to capture time-dependent patterns in user behavior.
   - Create lag features to incorporate historical data such as purchase trends over time.
 
@@ -114,23 +131,29 @@ By integrating these tools within the existing technology stack, we can streamli
   - Incorporate domain-specific features like brand preferences, sale engagement, or user loyalty status.
 
 ### Variable Naming Recommendations:
+
 - **Text Features**:
+
   - `product_description_keywords`
   - `sentiment_score_user_reviews`
 
 - **Numerical Features**:
+
   - `avg_purchase_value_user`
   - `price_product`
 
 - **Categorical Features**:
+
   - `encoded_product_category`
   - `user_segment_group`
 
 - **Interaction Features**:
+
   - `user_viewed_product`
   - `user_purchased_product`
 
 - **Temporal Features**:
+
   - `day_of_week_interaction`
   - `purchase_trend_over_time`
 
@@ -143,11 +166,14 @@ By incorporating these feature extraction and engineering strategies, we aim to 
 ## Metadata Management Recommendations:
 
 ### For Unique Project Demands:
+
 - **Product Metadata**:
+
   - **Description**: Maintain metadata for product descriptions, categories, and attributes to enable personalized recommendations based on user preferences.
   - **Popularity Score**: Track metadata related to product popularity and trending to prioritize recommendations.
 
 - **User Metadata**:
+
   - **Preferences**: Store user preferences and behavior metadata to tailor recommendations and enhance user experience.
   - **Segmentation**: Maintain metadata for user segments to deliver personalized content based on demographic or behavioral profiles.
 
@@ -156,15 +182,19 @@ By incorporating these feature extraction and engineering strategies, we aim to 
   - **Temporal Data**: Store metadata related to time-dependent patterns and historical trends in user behavior for dynamic recommendations.
 
 ### Metadata Management Strategies:
+
 - **Version Control**:
+
   - Utilize Data Version Control (DVC) to manage metadata changes, track versions, and collaborate on metadata updates.
   - Ensure consistency in metadata formats and structures across different data sources to maintain data integrity.
 
 - **Data Governance**:
+
   - Implement data governance policies to regulate access to sensitive metadata like user profiles and purchase history.
   - Define metadata dictionaries and data lineage to maintain transparency and traceability of metadata usage.
 
 - **Data Quality Monitoring**:
+
   - Set up monitoring systems to track the quality and accuracy of metadata over time.
   - Implement alerts for anomalies or discrepancies in metadata to ensure reliability in decision-making processes.
 
@@ -173,10 +203,13 @@ By incorporating these feature extraction and engineering strategies, we aim to 
   - Use metadata enrichment tools to augment existing metadata with additional attributes for improved recommendations.
 
 ### Metadata Naming Conventions:
+
 - **Product Metadata**:
+
   - `product_id`, `product_name`, `product_description`, `product_category`, `product_price`
 
 - **User Metadata**:
+
   - `user_id`, `user_name`, `user_segment`, `user_preferences`, `user_purchase_history`
 
 - **Interaction Metadata**:
@@ -187,15 +220,19 @@ By implementing these metadata management strategies tailored to the specific de
 ## Data Challenges and Preprocessing Strategies:
 
 ### Specific Data Problems:
+
 - **Sparse Data**:
+
   - Issue: Limited user interactions for some products may result in sparse matrices, impacting recommendation quality.
   - Solution: Impute missing values or use matrix factorization techniques to handle sparsity in user-item interactions.
 
 - **Cold Start Problem**:
+
   - Issue: Difficulty in recommending products to new users or items with limited historical data.
   - Solution: Implement content-based recommendation for new users based on item attributes or utilize hybrid recommendation systems.
 
 - **Noise in User Feedback**:
+
   - Issue: Noisy feedback or irrelevant interactions may skew user preferences and affect model accuracy.
   - Solution: Apply outlier detection techniques or filter out unreliable feedback to enhance data quality.
 
@@ -204,15 +241,19 @@ By implementing these metadata management strategies tailored to the specific de
   - Solution: Periodic retraining of the model with updated data to adapt to evolving user behavior and preferences.
 
 ### Data Preprocessing Strategies:
+
 - **Data Imputation**:
+
   - Identify missing values in user-item interactions and impute them using techniques like mean imputation or matrix factorization.
   - Handle missing user attributes by filling in with default values or using more advanced imputation methods like k-Nearest Neighbors (KNN).
 
 - **Normalization and Scaling**:
+
   - Normalize numerical features like purchase amounts or product prices to ensure consistency in feature scales.
   - Use standard scaling techniques like Min-Max scaling or z-score normalization to standardize feature values for improved model performance.
 
 - **Noise Reduction**:
+
   - Apply outlier detection algorithms to identify and remove noisy data points in user feedback or product interactions.
   - Implement data smoothing techniques to filter out irregularities and enhance the quality of input data for the model.
 
@@ -221,10 +262,11 @@ By implementing these metadata management strategies tailored to the specific de
   - Implement oversampling or undersampling strategies to address imbalanced data issues and improve model performance.
 
 ### Unique Project Considerations:
+
 - **Local Market Trends**:
   - Monitor and adjust for specific trends in the Peruvian e-commerce market to account for localized user preferences and behavior.
-  
 - **Multilingual Text Data**:
+
   - Preprocess multilingual text data by leveraging language-specific tokenization methods or using language detection techniques for accurate feature extraction.
 
 - **Real-Time Data Updates**:
@@ -263,16 +305,21 @@ data.to_csv('preprocessed_data.csv', index=False)
 ```
 
 ### Comments:
+
 1. **Feature Engineering**:
+
    - Create additional features like `interaction_count` and `average_rating_product` to capture user engagement and product popularity, aiding in personalized recommendations.
 
 2. **Impute Missing Values**:
+
    - Use mean imputation to handle missing values in the `rating` column, ensuring data completeness for accurate model training.
 
 3. **Normalize Numerical Features**:
+
    - Standardize the `interaction_count` feature using StandardScaler to bring all numerical features to the same scale, preventing bias during model training.
 
 4. **Feature Extraction for Text Data**:
+
    - Apply TF-IDF vectorization to extract important features from `product_description`, allowing the model to understand product descriptions and improve recommendation accuracy based on textual information.
 
 5. **Save Preprocessed Data**:
@@ -283,18 +330,23 @@ By following these preprocessing steps tailored to the specific needs of the E-c
 ## Modeling Strategy for E-commerce Personalization Engine:
 
 ### Recommended Strategy:
+
 - **Hybrid Recommender System**: Implement a hybrid approach combining collaborative filtering and content-based filtering techniques.
-  
+
 ### Steps in the Strategy:
+
 1. **Collaborative Filtering**:
+
    - Utilize collaborative filtering algorithms such as Matrix Factorization or Alternating Least Squares to capture user-item interactions and generate personalized recommendations.
    - This step is crucial as it leverages historical user behavior data to identify patterns and relationships between users and products, enabling accurate predictions based on user preferences.
 
 2. **Content-Based Filtering**:
+
    - Incorporate content-based filtering using features extracted from product descriptions and attributes to enhance recommendation quality.
    - By considering item characteristics and user preferences, this step complements collaborative filtering by providing additional context for recommendation generation.
 
 3. **Hybridization of Models**:
+
    - Combine collaborative and content-based filtering models using weighting or ensemble techniques to leverage the strengths of both approaches.
    - The hybrid model enhances recommendation accuracy by addressing the limitations of individual methods and delivering more personalized and diverse recommendations to users.
 
@@ -303,11 +355,13 @@ By following these preprocessing steps tailored to the specific needs of the E-c
    - Fine-tune the model parameters and weighting schemes based on evaluation results to optimize recommendation quality and user satisfaction.
 
 ### Importance of Collaborative Filtering:
+
 The most crucial step in this modeling strategy is the application of collaborative filtering techniques. Collaborative filtering is essential for our project's success as it directly addresses the core objective of providing personalized recommendations based on historical user interactions. By analyzing user behavior patterns and product preferences, collaborative filtering models can effectively capture intricate relationships between users and items, enabling accurate and tailored recommendations at scale. This step forms the foundation of the hybrid recommender system, driving the generation of relevant and engaging product suggestions for each user, ultimately enhancing the user experience and driving sales on the Linio Peru E-commerce platform.
 
 ## Tools and Technologies Recommendations for Data Modeling:
 
 ### 1. **Apache Spark**:
+
 - **Description**: Apache Spark is a distributed computing system that can handle big data processing efficiently, making it ideal for processing and analyzing large volumes of user interaction data in real-time.
 - **Integration**: Integrate Apache Spark into the data pipeline to preprocess and manipulate data at scale, enabling faster model training and recommendation generation.
 - **Beneficial Features**:
@@ -317,6 +371,7 @@ The most crucial step in this modeling strategy is the application of collaborat
 [Apache Spark Documentation](https://spark.apache.org/documentation.html)
 
 ### 2. **TensorFlow Recommenders**:
+
 - **Description**: TensorFlow Recommenders is a library for building, evaluating, and serving recommender systems, providing key algorithms and tools for collaborative filtering models.
 - **Integration**: Utilize TensorFlow Recommenders for implementing collaborative filtering algorithms and hybrid recommendation systems.
 - **Beneficial Features**:
@@ -326,6 +381,7 @@ The most crucial step in this modeling strategy is the application of collaborat
 [TensorFlow Recommenders Documentation](https://www.tensorflow.org/recommenders)
 
 ### 3. **Scikit-learn**:
+
 - **Description**: Scikit-learn is a popular machine learning library in Python, offering a wide range of tools for model training, evaluation, and hyperparameter tuning.
 - **Integration**: Use Scikit-learn for model evaluation and tuning within the recommendation system pipeline.
 - **Beneficial Features**:
@@ -335,6 +391,7 @@ The most crucial step in this modeling strategy is the application of collaborat
 [Scikit-learn Documentation](https://scikit-learn.org/stable/documentation.html)
 
 ### 4. **DVC (Data Version Control)**:
+
 - **Description**: DVC is a tool for managing ML models and data pipeline version control, enabling reproducibility and tracking of changes in data, code, and models.
 - **Integration**: Implement DVC to track changes in the recommendation system pipeline, ensuring reproducibility and scalability.
 - **Beneficial Features**:
@@ -392,12 +449,14 @@ products_df.to_csv('product_details_data.csv', index=False)
 ```
 
 ### Strategy for Dataset Creation:
+
 - **Data Generation**: Using Faker library to generate fake user interactions and product details data that mimic real-world patterns and variability.
 - **Feature Engineering**: Creating additional features like popularity score and average ratings for products to enhance dataset richness.
 - **Preprocessing**: Normalizing numerical features such as price to bring all values to a consistent scale for improved model training.
 - **Feature Extraction**: Utilizing TF-IDF vectorization for product descriptions to extract key features for text data analysis.
 
 ### Tools and Technologies:
+
 - **Faker**: For generating fake data resembling real-world scenarios.
 - **Scikit-learn**: For preprocessing numerical features and text data extraction.
 - **NumPy**: For generating random data points efficiently.
@@ -426,12 +485,14 @@ Sample Product Details Data:
 ```
 
 ### Data Structure:
+
 - **User Interactions Data**:
   - Features: `user_id` (int), `product_id` (int), `rating` (int)
 - **Product Details Data**:
   - Features: `product_id` (int), `product_name` (str), `product_description` (str), `price` (int), `category` (str), `popularity_score` (float), `avg_rating` (int), TF-IDF Features (float)
 
 ### Formatting:
+
 - Data represented in tabular format for easy readability and understanding.
 - Numerical features stored as integers or floats, and categorical features stored as strings.
 - TF-IDF features represented as floating-point values.
@@ -467,13 +528,13 @@ def evaluate_model(model, X_test, y_test):
 def main():
     ## Load data
     X, y = load_data('preprocessed_data.csv')
-    
+
     ## Split data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-    
+
     ## Train the model
     model = train_model(X_train, y_train)
-    
+
     ## Evaluate the model
     mse = evaluate_model(model, X_test, y_test)
     print(f'Mean Squared Error: {mse}')
@@ -483,6 +544,7 @@ if __name__ == "__main__":
 ```
 
 ### Code Structure and Best Practices:
+
 - **Modularization**: Functions like `load_data`, `train_model`, and `evaluate_model` promote code reusability and maintainability.
 - **Documentation**: Detailed comments within functions explain their purpose and functionality for better understanding.
 - **Data Splitting**: Utilizing `train_test_split` for creating separate training and testing datasets ensures model evaluation on unseen data.
@@ -490,6 +552,7 @@ if __name__ == "__main__":
 - **Model Evaluation**: Calculating Mean Squared Error (MSE) to assess model performance.
 
 ### Code Quality and Conventions:
+
 - **PEP 8**: Following Python coding conventions for readability and consistency.
 - **Functionality**: Clear separation of code into functions for logical flow and ease of maintenance.
 - **Error Handling**: Implementing error handling mechanisms for robustness in production environments.
@@ -499,59 +562,67 @@ This production-ready code snippet exemplifies best practices in code structure,
 ## Deployment Plan for Machine Learning Model:
 
 ### 1. **Pre-Deployment Checks**:
-   - **Data Validation**: Ensure the preprocessed data is consistent and accurate.
-   - **Model Evaluation**: Validate the model performance on the test dataset.
+
+- **Data Validation**: Ensure the preprocessed data is consistent and accurate.
+- **Model Evaluation**: Validate the model performance on the test dataset.
 
 ### 2. **Containerization**:
-   - **Tool**: Docker
-     - **Steps**:
-       - Dockerize the model code and dependencies for portability and reproducibility.
-       - Create a Docker image for the model deployment.
-   - **Documentation**: [Docker Documentation](https://docs.docker.com/)
+
+- **Tool**: Docker
+  - **Steps**:
+    - Dockerize the model code and dependencies for portability and reproducibility.
+    - Create a Docker image for the model deployment.
+- **Documentation**: [Docker Documentation](https://docs.docker.com/)
 
 ### 3. **Model Serving**:
-   - **Tool**: TensorFlow Serving
-     - **Steps**:
-       - Deploy the Docker image to TensorFlow Serving for scalable model serving.
-       - Expose an API endpoint for model inference.
-   - **Documentation**: [TensorFlow Serving Documentation](https://www.tensorflow.org/tfx/guide/serving)
+
+- **Tool**: TensorFlow Serving
+  - **Steps**:
+    - Deploy the Docker image to TensorFlow Serving for scalable model serving.
+    - Expose an API endpoint for model inference.
+- **Documentation**: [TensorFlow Serving Documentation](https://www.tensorflow.org/tfx/guide/serving)
 
 ### 4. **API Development**:
-   - **Tool**: FastAPI
-     - **Steps**:
-       - Develop a RESTful API using FastAPI for communication with the deployed model.
-       - Implement endpoints for model prediction requests.
-   - **Documentation**: [FastAPI Documentation](https://fastapi.tiangolo.com/)
+
+- **Tool**: FastAPI
+  - **Steps**:
+    - Develop a RESTful API using FastAPI for communication with the deployed model.
+    - Implement endpoints for model prediction requests.
+- **Documentation**: [FastAPI Documentation](https://fastapi.tiangolo.com/)
 
 ### 5. **Load Balancing & Scalability**:
-   - **Tool**: Kubernetes
-     - **Steps**:
-       - Deploy the API and model using Kubernetes for load balancing and scalability.
-       - Configure auto-scaling to handle varying traffic loads.
-   - **Documentation**: [Kubernetes Documentation](https://kubernetes.io/docs/)
+
+- **Tool**: Kubernetes
+  - **Steps**:
+    - Deploy the API and model using Kubernetes for load balancing and scalability.
+    - Configure auto-scaling to handle varying traffic loads.
+- **Documentation**: [Kubernetes Documentation](https://kubernetes.io/docs/)
 
 ### 6. **Monitoring and Logging**:
-   - **Tool**: Prometheus and Grafana
-     - **Steps**:
-       - Set up monitoring and alerting using Prometheus for metrics collection.
-       - Visualize metrics with Grafana for real-time monitoring.
-   - **Documentation**:
-     - [Prometheus Documentation](https://prometheus.io/docs/introduction/overview/)
-     - [Grafana Documentation](https://grafana.com/docs/grafana/latest/)
+
+- **Tool**: Prometheus and Grafana
+  - **Steps**:
+    - Set up monitoring and alerting using Prometheus for metrics collection.
+    - Visualize metrics with Grafana for real-time monitoring.
+- **Documentation**:
+  - [Prometheus Documentation](https://prometheus.io/docs/introduction/overview/)
+  - [Grafana Documentation](https://grafana.com/docs/grafana/latest/)
 
 ### 7. **Security & Authorization**:
-   - **Tool**: OAuth2
-     - **Steps**:
-       - Implement OAuth2 for API security and user authorization.
-       - Secure API endpoints with token-based authentication.
-   - **Documentation**: [OAuth2 Documentation](https://oauth.net/2/)
+
+- **Tool**: OAuth2
+  - **Steps**:
+    - Implement OAuth2 for API security and user authorization.
+    - Secure API endpoints with token-based authentication.
+- **Documentation**: [OAuth2 Documentation](https://oauth.net/2/)
 
 ### 8. **Deployment & Integration**:
-   - **Tool**: AWS (Amazon Web Services)
-     - **Steps**:
-       - Deploy the Dockerized model and API on AWS ECS (Elastic Container Service).
-       - Integrate the model into Linio Peru's existing infrastructure.
-   - **Documentation**: [AWS ECS Documentation](https://aws.amazon.com/ecs/)
+
+- **Tool**: AWS (Amazon Web Services)
+  - **Steps**:
+    - Deploy the Dockerized model and API on AWS ECS (Elastic Container Service).
+    - Integrate the model into Linio Peru's existing infrastructure.
+- **Documentation**: [AWS ECS Documentation](https://aws.amazon.com/ecs/)
 
 By following this step-by-step deployment plan tailored to the specific needs of the E-commerce Personalization Engine project, the machine learning model can be efficiently deployed into a production environment, ensuring scalability, reliability, and seamless integration with Linio Peru's systems.
 
@@ -583,6 +654,7 @@ CMD ["python", "model_code.py"]
 ```
 
 ### Dockerfile Configuration:
+
 - **Base Image**: Uses the official Python runtime for compatibility with Python dependencies.
 - **Workdir**: Sets the working directory in the container for model execution.
 - **Copy Dependencies**: Copies the `requirements.txt` file and installs project dependencies.
@@ -592,6 +664,7 @@ CMD ["python", "model_code.py"]
 - **Run Application**: Executes the model code when the container runs.
 
 ### Performance and Scalability Considerations:
+
 - **Dependency Management**: Utilizes a slim Python base image for efficient dependency installation and minimal container size.
 - **Environment Variables**: Configures environment variables for portability and flexibility in adjusting settings.
 - **Port Exposure**: Exposes a specific port for communication with external systems.
@@ -602,24 +675,28 @@ This optimized Dockerfile encapsulates the project's environment and dependencie
 ## User Groups and User Stories:
 
 ### 1. **Casual Online Shoppers**:
+
 - **User Story**: As a casual online shopper, Sara often struggles to find relevant products quickly, leading to a time-consuming browsing experience.
 - **Solution**: The application provides personalized product recommendations based on Sara's preferences and past interactions, helping her discover products tailored to her interests.
 - **Benefits**: Sara saves time by easily finding products she is interested in, leading to increased engagement and satisfaction.
 - **Project Component**: Collaborative filtering model utilizing historical user interactions to generate personalized recommendations.
 
 ### 2. **Frequent Buyers**:
+
 - **User Story**: Javier, a frequent online shopper, often faces decision fatigue due to the overwhelming product options available, making it challenging to make informed purchase choices.
 - **Solution**: The application offers personalized recommendations and content curation based on Javier's past purchases, reducing decision-making stress and presenting relevant products.
 - **Benefits**: Javier experiences a more streamlined shopping experience, making informed decisions quickly, and increasing loyalty to the platform.
 - **Project Component**: Content-based filtering using user purchase history to deliver tailored recommendations.
 
 ### 3. **Deal Seekers**:
+
 - **User Story**: Maria, a bargain hunter, struggles to identify the best deals and discounts amidst a vast product catalog, often missing out on potential savings.
 - **Solution**: The application leverages real-time pricing data and user preferences to showcase personalized deals and promotions that match Maria's preferences.
 - **Benefits**: Maria saves money by easily identifying discounted products that align with her interests, enhancing her shopping experience.
 - **Project Component**: Real-time processing using Spark for dynamic updates and personalized deal recommendations.
 
 ### 4. **New Users**:
+
 - **User Story**: Carlos, a new user to the platform, feels overwhelmed by the vast array of products and unsure where to start, inhibiting his engagement with the e-commerce platform.
 - **Solution**: The application utilizes content-based filtering to recommend popular and trending items to new users like Carlos, introducing them to relevant products.
 - **Benefits**: Carlos receives tailored recommendations based on his browsing behavior, encouraging exploration and enhancing his onboarding experience.

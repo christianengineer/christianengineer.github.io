@@ -8,15 +8,18 @@ layout: article
 ## AI Automated Drug Discovery Repository
 
 ## Objectives
+
 The objective of the AI Automated Drug Discovery repository is to accelerate medical research by leveraging machine learning models to predict the efficacy and safety of potential drug compounds. This will help in identifying promising drug candidates more efficiently, reducing the time and resources required for traditional drug discovery processes.
 
 ## System Design Strategies
+
 1. **Data Processing and Feature Engineering**: Preprocess and engineer molecular features from chemical structures and biological data to represent drug compounds in a format suitable for machine learning models.
 2. **Model Training and Evaluation**: Utilize machine learning libraries for training predictive models using datasets of known drug compounds and their corresponding biological activities. Evaluate model performance using appropriate metrics.
 3. **Scalability and Efficiency**: Design the system to handle large volumes of molecular data and ensure scalability by leveraging distributed computing frameworks where necessary.
 4. **Integration and Deployment**: Incorporate the trained models into a scalable and user-friendly application interface for researchers to use in their drug discovery efforts.
 
 ## Chosen Libraries
+
 1. **TensorFlow**: TensorFlow provides a flexible ecosystem of tools for constructing and training machine learning models. Its computational efficiency and support for deep learning make it an ideal choice for building and deploying AI-based drug discovery models.
 2. **Keras**: Being a high-level neural networks API, Keras integrates seamlessly with TensorFlow, allowing for rapid prototyping and experimentation with various neural network architectures for drug activity prediction.
 3. **Pandas and NumPy**: These libraries are essential for data manipulation and numerical computations, enabling efficient data preprocessing and feature engineering.
@@ -27,6 +30,7 @@ By employing these libraries and system design strategies, the AI Automated Drug
 ## MLOps Infrastructure for Automated Drug Discovery
 
 ## Infrastructure Components
+
 1. **Data Versioning and Management**: Utilize a data versioning system such as DVC (Data Version Control) to track changes to datasets and ensure reproducibility of experiments.
 2. **Model Training and Deployment Pipeline**: Implement a CI/CD pipeline to automate the training, evaluation, and deployment of machine learning models. Tools like Jenkins or GitLab CI can be used to orchestrate these processes.
 3. **Model Registry**: Utilize a model registry such as MLflow to track and manage versions of trained models, along with associated metadata and performance metrics.
@@ -34,11 +38,13 @@ By employing these libraries and system design strategies, the AI Automated Drug
 5. **Monitoring and Logging**: Implement monitoring and logging solutions to track model performance, data drift, and system behavior in production environments. Tools like Prometheus and Grafana can be used for this purpose.
 
 ## Workflow Automation
+
 1. **Data Preprocessing Automation**: Utilize workflows or Airflow to automate data preprocessing tasks such as feature engineering, data cleaning, and transformation.
 2. **Model Training Automation**: Implement automated model training workflows that fetch the latest data, train models using TensorFlow and Keras, and evaluate model performance against predefined metrics.
 3. **Model Deployment Automation**: Automate the deployment of trained models as REST APIs or batch inference pipelines using tools like Kubernetes or Docker for containerization.
 
 ## Continuous Integration and Continuous Deployment (CI/CD)
+
 1. **Version Control Integration**: Integrate the MLOps infrastructure with version control systems such as Git to track changes to code, configurations, and model artifacts.
 2. **Automated Testing**: Implement automated testing for machine learning models, including unit tests for model components and integration tests for end-to-end pipeline validation.
 3. **Deployment Orchestration**: Use CI/CD tools to automate the deployment of trained models to production or staging environments, ensuring consistency and reliability of model deployments.
@@ -144,7 +150,6 @@ In the models directory for the Automated Drug Discovery application, the follow
   - **deployment/**: This directory contains files relevant to deploying the trained models as a service or inference endpoint. It includes:
 
     - **dockerfile**: The Dockerfile for containerizing the model deployment application, specifying the environment and dependencies required for running the inference service.
-    
     - **app/**: This subdirectory holds the code for the deployment application. It includes the main script (main.py) responsible for serving the model predictions as an API, along with any necessary dependencies listed in the requirements.txt file.
 
 By organizing the models directory in this manner, the Automated Drug Discovery application can effectively manage the definition, training, inference, and deployment of machine learning models, supporting the seamless integration of AI capabilities into the drug discovery process.
@@ -254,7 +259,7 @@ model.compile(optimizer='adam', loss='mean_squared_error', metrics=['mae'])
 early_stopping = EarlyStopping(monitor='val_loss', patience=5)
 
 ## Train the model
-history = model.fit(X_train_scaled, y_train, epochs=100, batch_size=32, 
+history = model.fit(X_train_scaled, y_train, epochs=100, batch_size=32,
                     validation_data=(X_val_scaled, y_val), callbacks=[early_stopping])
 
 ## Save the trained model
@@ -270,26 +275,32 @@ This file is saved as `complex_model_training.py` in the `models/` directory of 
 ## Types of Users
 
 ### 1. Research Scientist
+
 - **User Story**: As a research scientist, I want to train and evaluate machine learning models using diverse molecular datasets to identify potential drug candidates efficiently.
 - **File**: `models/train_model.py` or `models/complex_model_training.py`
 
 ### 2. Data Scientist
+
 - **User Story**: As a data scientist, I want to preprocess and engineer molecular features from chemical structures and biological data to prepare them for model training.
 - **File**: `src/data/preprocessing.py`
 
 ### 3. Machine Learning Engineer
+
 - **User Story**: As a machine learning engineer, I want to design and implement neural network architectures for drug activity prediction using TensorFlow and Keras.
 - **File**: `models/model_architecture.py`
 
 ### 4. DevOps Engineer
+
 - **User Story**: As a DevOps engineer, I want to deploy and serve trained models as scalable APIs within a containerized environment for consumption by researchers and stakeholders.
 - **File**: `deployment/app/main.py` and `deployment/Dockerfile`
 
 ### 5. Research Lab Coordinator
+
 - **User Story**: As a research lab coordinator, I want to manage and track machine learning experiments, including versioning of datasets and trained models for reproducibility.
 - **File**: Integration of DVC (Data Version Control) for managing datasets and MLflow for tracking and managing model versions.
 
 ### 6. Clinical Research Associate
+
 - **User Story**: As a clinical research associate, I want to perform exploratory data analysis on molecular datasets to gain insights into potential drug targets.
 - **File**: `notebooks/exploratory_data_analysis.ipynb`
 

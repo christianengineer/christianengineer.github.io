@@ -8,12 +8,15 @@ layout: article
 ## AI Automated Emergency Dispatch System
 
 ### Objectives
+
 The primary objectives of the AI automated emergency dispatch system repository are to create a scalable and efficient system for prioritizing emergency calls and dispatching resources based on the severity and location of the emergency. The specific goals include:
+
 - Utilizing machine learning algorithms to predict the severity of emergencies based on input data.
 - Implementing a real-time dispatch system that assigns the nearest available resources to the emergency location.
 - Building a scalable and data-intensive application that can handle a large volume of emergency calls and continuously improve its dispatching accuracy.
 
 ### System Design Strategies
+
 1. **Machine Learning Models**: Use TensorFlow and Keras to build and train machine learning models for emergency severity prediction. These models can utilize features such as caller's information, location, and type of emergency to prioritize calls.
 2. **Real-time Location Tracking**: Integrate with location-based services or geospatial libraries to track the real-time availability and proximity of emergency resources.
 3. **Scalable Backend Infrastructure**: Implement a robust backend infrastructure using cloud services such as AWS, Azure, or Google Cloud to handle the large volume of emergency calls and to facilitate real-time dispatching.
@@ -21,6 +24,7 @@ The primary objectives of the AI automated emergency dispatch system repository 
 5. **API Services**: Create RESTful APIs to enable seamless communication between the front end, machine learning models, and the backend dispatching system.
 
 ### Chosen Libraries and Technologies
+
 1. **TensorFlow**: Use TensorFlow for building and training the machine learning models for emergency severity prediction.
 2. **Keras**: Leverage Keras, which is integrated with TensorFlow, to design and deploy deep learning models for the emergency dispatch system.
 3. **Flask/Django**: Utilize Flask or Django to build the API services and handle communication between the frontend and backend systems.
@@ -128,6 +132,7 @@ Automated_Emergency_Dispatch/
 This scalable file structure for the Automated Emergency Dispatch (TensorFlow, Keras) for quick response services repository is organized to separate concerns and facilitate the development, deployment, and maintenance of the application. Each directory serves a specific purpose and encapsulates related components, ensuring modularity and clarity within the project. This structure can accommodate features such as machine learning models, data processing, API services, infrastructure configurations, documentation, tests, and version control files.
 
 The top-level directories include:
+
 - `ml_models/`: Contains subdirectories for machine learning model components such as data processing, model training, evaluation, serving, and deployment.
 - `data_processing/`: Contains scripts for data preprocessing and validation.
 - `api_services/`: Houses the API service code, including endpoints, authentication, and other related functionalities.
@@ -161,27 +166,33 @@ ml_models/
 ```
 
 ### `emergency_severity_prediction/`
+
 The `emergency_severity_prediction/` directory is dedicated to the machine learning model for predicting the severity of emergencies. It encompasses the following subdirectories and files:
 
 ### `data/`
+
 - The `data/` directory contains subdirectories for storing processed data used for training and evaluating the model.
 - `processed/`: Contains preprocessed data split into training, testing, and validation sets.
 - `train.csv`, `test.csv`, and `validation.csv`: Data files in CSV format used for training, testing, and validation.
 
 ### `model_training/`
+
 - `train.py`: Script for training the machine learning model. This file includes the code for data loading, model training, and saving the trained model weights.
 - `model.py`: Defines the structure of the machine learning model using TensorFlow and Keras.
 - `requirements.txt`: Specifies the dependencies and packages required for training the model.
 
 ### `model_evaluation/`
+
 - `evaluate.py`: Script for evaluating the performance of the trained model using test data and computing relevant metrics.
 - `metrics.py`: Contains functions for computing evaluation metrics such as accuracy, precision, recall, and F1 score.
 
 ### `model_serving/`
+
 - `serve.py`: Script for serving the trained model to make predictions based on new data.
 - `deployment/`: Directory for storing deployment configurations and files related to model serving.
 
 ### `README.md`
+
 - Documentation providing an overview of the machine learning model, its components, and instructions for training, evaluating, and serving the model.
 
 This organized structure for the `emergency_severity_prediction/` directory ensures a clear separation of concerns, making it easier for developers to navigate, maintain, and extend the machine learning model associated with the Automated Emergency Dispatch application.
@@ -210,14 +221,17 @@ deployment/
 ```
 
 ### `deployment/`
+
 The `deployment/` directory contains subdirectories and files related to the deployment of the machine learning models and other components of the Automated Emergency Dispatch application.
 
 ### `configs/`
+
 - `model_server_config.yaml`: Configuration file specifying the settings and parameters for the model serving component.
 - `resource_dispatcher_config.yaml`: Configuration file containing the configuration details for the resource dispatcher component.
 - Other configuration files can be included for different components of the application.
 
 ### `dockerfiles/`
+
 - `model_server/`: Directory containing the Dockerfile and associated files for building the Docker image for the model serving component.
   - `Dockerfile`: Script that defines the environment and dependencies required to run the model serving component.
   - `requirements.txt`: File specifying the Python dependencies and packages required for serving the model.
@@ -226,11 +240,13 @@ The `deployment/` directory contains subdirectories and files related to the dep
   - `requirements.txt`: File specifying the Python dependencies and packages required for the resource dispatcher.
 
 ### `kubernetes_manifests/`
+
 - `model_server_deployment.yaml`: Kubernetes manifest file specifying the deployment configuration for the model serving component.
 - `resource_dispatcher_deployment.yaml`: Kubernetes manifest file containing the deployment configuration for the resource dispatcher component.
 - Other manifest files can be added for deploying other components using Kubernetes.
 
 ### `README.md`
+
 - Documentation providing guidance on the deployment process, explaining the purpose and contents of the `deployment/` directory, and outlining the steps for deploying the Automated Emergency Dispatch application.
 
 This directory structure organizes the deployment-related files and configurations, facilitating the management and deployment of the machine learning models and other components of the Automated Emergency Dispatch system using Docker and Kubernetes.
@@ -334,22 +350,27 @@ This file serves as an example of a more complex machine learning algorithm for 
 Here are the types of users who will use the Automated Emergency Dispatch application and user stories for each type, along with the files that will support these user stories:
 
 ### 1. Emergency Call Operators
+
 - **User Story**: As an emergency call operator, I want to log into the system, receive incoming emergency calls, enter relevant details, and promptly dispatch appropriate resources based on the severity and location of the emergency.
 - **File**: `api_services/app.py` will handle the API endpoints for receiving and processing incoming emergency calls. Additionally, the `ml_models/emergency_severity_prediction/model_serving/serve.py` file will be used for making predictions on the severity of the emergency.
 
 ### 2. Dispatch Coordinators
+
 - **User Story**: As a dispatch coordinator, I want to visualize the location and severity of incoming emergencies on a map, assign available resources, and track the status of dispatched units for efficient resource allocation.
 - **File**: `api_services/app.py` will include API endpoints for resource dispatch and status tracking. Additionally, specific visualization components based on the dispatch coordinator's interface may be implemented using frontend components.
 
 ### 3. Emergency Responders
+
 - **User Story**: As an emergency responder, I want to receive immediate alerts for assigned emergency tasks, navigate to the incident location, and report my availability and status to the dispatch center in real-time.
 - **File**: The functionality for sending real-time alerts and tracking responder status may be integrated within the mobile application used by the emergency responders, which could be a separate component interfacing with the overall system and not explicitly represented by a single file in the project.
 
 ### 4. System Administrators
+
 - **User Story**: As a system administrator, I want to manage user permissions, monitor system performance, and perform maintenance tasks such as data backups, updates, and troubleshooting.
 - **File**: System administration tasks could be supported by a combination of backend API endpoints and management scripts, possibly within the `infrastructure/` directory for tasks such as deployment configurations and maintenance-related scripts.
 
 ### 5. Data Scientists and Model Developers
+
 - **User Story**: As a data scientist/model developer, I want to train and evaluate new machine learning models, integrate updated models into the system, and monitor the performance of deployed models for continuous improvement.
 - **File**: For data scientists and model developers, the process of training and evaluating new machine learning models is encapsulated in files like `train.py` and `evaluate.py` within the `ml_models/emergency_severity_prediction/` directory.
 

@@ -7,39 +7,47 @@ layout: article
 
 ## AI ML Model Monitoring with Prometheus and Grafana
 
-## Objectives 
+## Objectives
 
 The objective of setting up monitoring for an ML model using Prometheus and Grafana is to gain insights into the performance, resource utilization, and behavior of the model in production. This allows us to ensure that the model is functioning as expected, identify potential issues, and make data-driven decisions for optimizations and improvements.
 
-## System Design Strategies 
+## System Design Strategies
 
 ### 1. Data Collection
+
 - Prometheus: Use Prometheus for collecting metrics from the model serving infrastructure and the model itself. This includes metrics such as request latency, error rates, resource utilization, and custom model-specific metrics.
 - Instrumentation: Instrument the model code using client libraries or SDKs to expose custom metrics and standardize the metrics exposed by the serving infrastructure.
 
 ### 2. Data Storage and Querying
+
 - Prometheus: Store the collected metrics in Prometheus, which is a time-series database optimized for monitoring data. Prometheus provides powerful querying capabilities for analyzing the collected metrics.
 
 ### 3. Visualization and Dashboarding
+
 - Grafana: Use Grafana to visualize the data collected by Prometheus. Create dashboards to display the key metrics and KPIs related to the ML model's performance and health.
 - Alerts and Notifications: Configure alerts within Grafana to notify the relevant stakeholders when predefined thresholds or anomalies are detected in the monitored metrics.
 
 ### 4. Model Lifecycle Integration
+
 - Integration with CI/CD: Integrate the model monitoring setup into the CI/CD pipeline to ensure that monitoring configurations are applied consistently across different environments.
 - Model Versioning: Incorporate model versioning in the monitoring setup to track the performance of different model versions and facilitate comparisons.
 
 ## Selected Libraries and Tools
 
 ### Prometheus
+
 - Prometheus is an open-source monitoring and alerting toolkit designed for reliability and scalability. It is well-suited for collecting and querying time-series data, making it an ideal choice for monitoring ML model performance.
 
 ### Grafana
+
 - Grafana is a leading open-source platform for monitoring and observability. It provides a rich set of visualization options, alerting capabilities, and support for diverse data sources, including Prometheus.
 
 ### Python Client Libraries (e.g., prometheus_client)
+
 - When monitoring Python-based ML models, using client libraries like prometheus_client can simplify instrumenting the model code to expose custom metrics to Prometheus.
 
 ### Model Serving Framework Integration (e.g., TensorFlow Serving, MLflow)
+
 - For models served through frameworks like TensorFlow Serving or MLflow, leveraging the built-in capabilities for exposing Prometheus-compatible metrics can streamline the monitoring integration.
 
 By following these design strategies and leveraging the selected libraries and tools, we can establish a robust monitoring setup for ML models using Prometheus and Grafana, enabling us to proactively manage and optimize the model's performance in production.
@@ -49,27 +57,35 @@ By following these design strategies and leveraging the selected libraries and t
 To set up monitoring for an ML model using Prometheus and Grafana, we need to establish a robust infrastructure that supports data collection, storage, querying, visualization, and alerting. Below is a high-level overview of the infrastructure components involved:
 
 ### 1. Model Serving Infrastructure
+
 - The model serving infrastructure, which could include components such as model servers (e.g., TensorFlow Serving), load balancers, and any custom API endpoints for model inference, forms the foundation for the ML model's deployment.
 
 ### 2. Prometheus Server
+
 - Deploy Prometheus server, which will be responsible for scraping and storing the metrics collected from the model serving infrastructure and the model itself. The Prometheus server should be designed for high availability and scalability to handle the monitoring data effectively.
 
 ### 3. Instrumented ML Model
+
 - The ML model itself should be instrumented to expose relevant metrics related to its performance, resource consumption, and any custom application-specific metrics. This may involve adding instrumentation code using client libraries or SDKs.
 
 ### 4. Grafana Dashboard
+
 - Set up Grafana for visualization and dashboarding. Grafana should be integrated with the Prometheus data source to fetch and display the collected metrics. Create dashboards to present the monitored metrics in a user-friendly and informative manner.
 
 ### 5. Alerting and Notification System
+
 - Configure alerting rules within Grafana to define thresholds and conditions for triggering alerts based on the monitored metrics. Integrate with notification channels such as email, Slack, or other communication tools to notify stakeholders about critical events.
 
 ### 6. Data Storage
+
 - The metrics collected by Prometheus need to be stored in a scalable and reliable manner. Ensure that the underlying storage solution for Prometheus can handle the volume of time-series data generated by model monitoring without compromising performance.
 
 ### 7. Network and Security Considerations
+
 - Proper networking configurations and security measures should be implemented to ensure that the monitoring infrastructure is accessible by authorized users and devices while safeguarding the monitoring data from unauthorized access or tampering.
 
 ### 8. Integration with CI/CD Pipeline
+
 - Integrate the monitoring infrastructure into the continuous integration and continuous deployment (CI/CD) pipeline to automate the deployment and configuration of monitoring components alongside the model deployment process.
 
 By establishing this infrastructure, we can create a comprehensive monitoring environment for the ML model using Prometheus and Grafana. This infrastructure enables us to collect, store, visualize, and analyze the model's performance metrics, empowering us to make informed decisions and take proactive steps to maintain the model's health and efficiency in a production environment.
@@ -317,30 +333,35 @@ By incorporating this function and instrumentation code, the deep learning model
 Certainly! Here's a list of types of users who will use the ML Model Monitoring with Prometheus and Grafana, along with a user story for each type of user and the file that will accomplish this:
 
 ### 1. Data Scientist/ML Engineer
+
 **User Story**:
 As a data scientist, I want to visualize the performance metrics of the deployed machine learning models to ensure they meet the defined accuracy and latency thresholds. I require access to Grafana dashboards, allowing me to monitor the model inference counts, prediction latencies, and accuracy metrics.
 
 **File**: `grafana/dashboards/` directory containing the dashboard configurations, e.g., `model_performance_dashboard.json`.
 
 ### 2. DevOps Engineer
+
 **User Story**:
 As a DevOps engineer, I need to set up and manage the Prometheus and Grafana infrastructure for monitoring the machine learning models. I aim to define service monitors for scraping metrics from the model services and ensure the Prometheus server is properly configured to collect and store the metrics.
 
 **File**: `deployment/kubernetes/prometheus/prometheus-deployment.yaml` for configuring Prometheus service monitors and `deployment/kubernetes/grafana/grafana-deployment.yaml` for managing Grafana deployment configurations.
 
 ### 3. Business Stakeholder
+
 **User Story**:
 As a business stakeholder, I want to receive alerts when the performance metrics of the machine learning models deviate significantly from the expected thresholds. This will enable me to ensure that the deployed models are delivering the expected business value.
 
 **File**: `prometheus/alert.rules` for defining alerting rules within Prometheus.
 
 ### 4. Software Engineer
+
 **User Story**:
 As a software engineer, I am responsible for integrating the model metrics instrumentation into the machine learning model codebase to expose relevant performance metrics for monitoring. I aim to instrument the model inference, latency, and accuracy to provide valuable insights.
 
 **File**: `model_instrumentation/model_metrics.py` containing the instrumentation code for exposing model-specific metrics.
 
 ### 5. Site Reliability Engineer (SRE)
+
 **User Story**:
 As an SRE, I need to ensure the high availability and scalability of the Prometheus and Grafana servers, and I want to define proper networking configurations and security measures to safeguard the monitoring infrastructure.
 

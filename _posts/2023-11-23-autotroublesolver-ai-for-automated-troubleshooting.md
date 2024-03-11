@@ -12,38 +12,47 @@ The objective of the AI AutoTroubleSolver repository is to build an automated tr
 ## System Design Strategies
 
 ## Data Collection and Feature Engineering
+
 - The system will gather structured and unstructured data from various sources such as log files, sensor data, user inputs, and historical troubleshooting records.
 - Feature engineering will be employed to extract relevant features from the raw data, including both numerical and categorical data, to facilitate model training.
 
 ## Machine Learning Model Training
+
 - Utilize supervised learning algorithms such as decision trees, random forests, and gradient boosting to train models for issue classification and prediction.
 - Employ unsupervised learning techniques like clustering for anomaly detection and pattern recognition in the data.
 
 ## Deep Learning for Unstructured Data
+
 - Implement deep learning models, such as convolutional neural networks (CNNs) or recurrent neural networks (RNNs), to process unstructured data like text, log files, or images for identifying patterns indicative of issues.
 
 ## Continuous Learning
+
 - Incorporate mechanisms for online learning to continuously update and improve the models based on new data and real-time feedback from issue resolutions.
 
 ## Scalability and Performance
+
 - Design the system to scale horizontally, leveraging distributed computing and containerization to handle increasing data volumes and concurrent user requests.
 - Employ efficient algorithms and data structures to optimize the performance of the AI models and ensure quick response times for troubleshooting requests.
 
 ## Chosen Libraries and Frameworks
 
 ## Data Processing and Feature Engineering
+
 - Pandas: For data manipulation and feature extraction.
 - NumPy: For numerical computation and array operations.
 
 ## Machine Learning and Deep Learning
+
 - Scikit-learn: for implementing supervised and unsupervised learning algorithms, model evaluation, and hyperparameter tuning.
 - TensorFlow or PyTorch: for building and training deep learning models, especially for processing unstructured data.
 
 ## Web Application Development
+
 - Flask or Django: for building the web service to interact with the AI troubleshooting system.
 - FastAPI: for developing high-performance, asynchronous web APIs if real-time troubleshooting is a requirement.
 
 ## Scalability and Performance
+
 - Apache Spark: for distributed data processing and scalable machine learning pipelines.
 - Docker and Kubernetes: for containerization and orchestration to ensure scalability and resilience.
 
@@ -52,29 +61,36 @@ By incorporating these design strategies and leveraging the chosen libraries and
 ## Infrastructure Setup for AI AutoTroubleSolver Application
 
 ## Cloud Infrastructure
+
 The AI AutoTroubleSolver application can be deployed on a cloud infrastructure like Amazon Web Services (AWS), Microsoft Azure, or Google Cloud Platform (GCP) to leverage their scalable and reliable services.
 
 ## Data Storage
+
 - **Structured Data**: Utilize a managed relational database service like Amazon RDS, Azure SQL Database, or Google Cloud SQL to store structured data such as historical troubleshooting records, user information, and system configurations.
 - **Unstructured Data**: Store unstructured data such as log files, sensor data, and images in a scalable object storage service like Amazon S3, Azure Blob Storage, or Google Cloud Storage.
 
 ## Data Processing
+
 - **ETL Pipeline**: Implement an ETL (Extract, Transform, Load) pipeline using services like AWS Glue, Azure Data Factory, or Google Cloud Dataflow to extract, transform, and load the data into the processing layer.
 - **Data Processing Engine**: Utilize a scalable data processing engine like Apache Spark on cloud infrastructure for distributed data processing and feature engineering.
 
 ## Model Training and Inference
+
 - **Machine Learning and Deep Learning**: Train the AI models using cloud-based machine learning services such as Amazon SageMaker, Azure Machine Learning, or Google Cloud AI Platform.
 - **Model Serving**: Deploy the trained models as RESTful APIs using AWS Lambda, Azure Functions, or Google Cloud Functions for real-time inference.
 
 ## Web Application
+
 - **Web Service**: Host the web application for user interaction on a scalable compute service like AWS EC2, Azure App Service, or Google Compute Engine.
 - **API Gateway**: Utilize API gateway services like Amazon API Gateway, Azure API Management, or Google Cloud Endpoints to manage and secure the APIs for the AutoTroubleSolver application.
 
 ## Monitoring and Logging
+
 - **Logging**: Leverage cloud-based logging services such as AWS CloudWatch, Azure Monitor, or Google Cloud Logging to capture application logs, system metrics, and user activities.
 - **Monitoring**: Utilize cloud infrastructure monitoring tools to track the performance, availability, and resource utilization of the application components.
 
 ## Security and Compliance
+
 - **Identity and Access Management (IAM)**: Implement fine-grained access control using IAM services provided by the cloud platform to regulate user access to data and application resources.
 - **Encryption**: Utilize encryption services for data at rest and in transit to ensure data security and compliance with regulatory requirements.
 
@@ -261,22 +277,27 @@ def complex_deep_learning_algorithm(data_path):
 ```
 
 1. **System Administrator**
+
    - User Story: As a system administrator, I want to upload system log files and receive automated troubleshooting recommendations for identifying and resolving issues.
    - File: `web_app/app.py`
 
 2. **Data Analyst**
+
    - User Story: As a data analyst, I want to explore and preprocess raw data to extract relevant features for model training and evaluation.
    - File: `notebooks/data_exploration.ipynb`
 
 3. **Machine Learning Engineer**
+
    - User Story: As a machine learning engineer, I want to train and evaluate machine learning models using complex algorithms to classify and predict system issues.
    - File: `src/machine_learning/model_training.py`
 
 4. **Deep Learning Engineer**
+
    - User Story: As a deep learning engineer, I want to develop and train deep learning models to process unstructured data and provide troubleshooting insights.
    - File: `src/deep_learning/cnn_model.py` or `src/deep_learning/rnn_model.py`
 
 5. **End User/Operator**
+
    - User Story: As an end user/operator, I want to interact with the web application to input system parameters and receive real-time troubleshooting guidance.
    - File: `web_app/app.py`
 

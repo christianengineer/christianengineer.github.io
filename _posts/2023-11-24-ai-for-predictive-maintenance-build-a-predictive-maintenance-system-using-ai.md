@@ -37,22 +37,27 @@ To achieve these objectives, the following system design strategies should be co
 For the implementation of the predictive maintenance system, the following libraries and frameworks can be considered:
 
 1. **Data Collection and Storage**:
+
    - Apache Kafka for real-time data streaming
    - Apache Hadoop or Apache Spark for distributed data storage and processing
    - Apache Cassandra or MongoDB for scalable time-series data storage
 
 2. **Feature Engineering**:
+
    - Pandas and NumPy for data manipulation and feature extraction
    - scikit-learn for feature selection and preprocessing
 
 3. **AI Models for Predictive Maintenance**:
+
    - TensorFlow and Keras for building and training deep learning models
    - XGBoost or LightGBM for gradient boosting models
 
 4. **Real-time Monitoring**:
+
    - Apache Flink for real-time stream processing and monitoring
 
 5. **Integration with Existing Systems**:
+
    - RESTful APIs for integration with industrial control systems
    - MQTT for lightweight messaging protocol for IoT integration
 
@@ -69,6 +74,7 @@ The infrastructure for the AI for Predictive Maintenance application should be d
 ## Data Collection and Storage
 
 ### Components
+
 1. **Edge Devices**: These devices capture sensor data from industrial equipment in real-time. They are responsible for pre-processing and transmitting the data to the central data collection system.
 
 2. **Data Ingestion System**: This system collects and ingests the sensor data from edge devices. It includes components like Apache Kafka for real-time data streaming and Apache NiFi for data ingestion and routing.
@@ -78,6 +84,7 @@ The infrastructure for the AI for Predictive Maintenance application should be d
 ## AI Models and Predictive Maintenance
 
 ### Components
+
 1. **Feature Engineering**: Algorithms developed to extract relevant features from the sensor data. Libraries like Pandas and NumPy can be used for data manipulation and feature extraction, while scikit-learn can be utilized for feature selection and preprocessing.
 
 2. **Predictive Maintenance Models**: Employ machine learning and deep learning models such as TensorFlow and Keras for building and training predictive maintenance models. XGBoost or LightGBM can be employed for gradient boosting models.
@@ -87,6 +94,7 @@ The infrastructure for the AI for Predictive Maintenance application should be d
 ## Integration with Existing Systems
 
 ### Components
+
 1. **Industrial Control Systems Integration**: Utilize RESTful APIs for seamless integration with existing industrial control systems like SCADA, enabling the application to work alongside current processes.
 
 2. **IoT Integration**: Implement MQTT, a lightweight messaging protocol suited for IoT integration, to connect and manage edge devices and IoT infrastructure.
@@ -94,6 +102,7 @@ The infrastructure for the AI for Predictive Maintenance application should be d
 ## Scalability and Performance
 
 ### Components
+
 1. **Container Orchestration**: Leverage Kubernetes for container orchestration and scaling, providing a scalable and resilient infrastructure for the application components.
 
 2. **In-memory Caching**: Use Redis for in-memory caching to improve the performance of real-time data processing and retrieval.
@@ -151,6 +160,7 @@ AI-for-Predictive-Maintenance/
 In this file structure:
 
 - `app/`: Contains the application logic.
+
   - `api/`: Handles API functionality, routes, and controllers.
   - `models/`: Houses the machine learning and deep learning models, as well as feature engineering and real-time monitoring functionalities.
   - `services/`: Manages the implementation of various services, such as data ingestion and industrial control system integration.
@@ -182,18 +192,20 @@ In the AI for Predictive Maintenance repository, the `models/` directory plays a
 ## Feature Engineering (featureEngineering.py)
 
 This file contains the code for feature engineering, responsible for extracting relevant features from the sensor data. It may include functions or classes for:
+
 - Feature extraction from raw sensor data
 - Feature transformation and scaling
 - Handling missing or noisy data
 - Time-series feature generation and aggregation
 
 Sample Content:
+
 ```python
 class FeatureEngineering:
     def extract_features(self, raw_data):
         ## Extract relevant features from raw sensor data
         pass
-    
+
     def transform_features(self, features):
         ## Perform transformation and scaling of features
         pass
@@ -202,11 +214,13 @@ class FeatureEngineering:
 ## Predictive Maintenance Models (predictiveMaintenanceModels.py)
 
 The `predictiveMaintenanceModels.py` file includes the implementation of machine learning and deep learning models for predictive maintenance. It may consist of classes or functions for:
+
 - Building and training predictive maintenance models
 - Hyperparameter optimization and model selection
 - Model evaluation and validation
 
 Sample Content:
+
 ```python
 import tensorflow as tf
 from sklearn.ensemble import RandomForestClassifier
@@ -228,17 +242,19 @@ class PredictiveMaintenanceModels:
 ## Real-time Monitoring (realTimeMonitoring.py)
 
 This file encompasses the functionality for real-time monitoring and alerting of potential equipment failures. It may involve components for:
+
 - Real-time data processing and anomaly detection
 - Threshold-based alerting mechanisms
 - Integration with the data ingestion and processing pipeline
 
 Sample Content:
+
 ```python
 class RealTimeMonitoring:
     def monitor_real_time_data(self, streaming_data):
         ## Perform real-time monitoring and detection of equipment failures
         pass
-    
+
     def send_alert(self, equipment_id, anomaly_type):
         ## Send real-time alerts for potential equipment failures
         pass
@@ -320,6 +336,7 @@ def run_predictive_maintenance_algorithm(data_file_path):
 ```
 
 In this function:
+
 - The `run_predictive_maintenance_algorithm` function reads mock data from a file located at the specified `data_file_path`.
 - It performs feature engineering and prepares the data for training.
 - The algorithm uses a Random Forest classifier to make predictions and evaluates the model's performance using accuracy and confusion matrix metrics.
@@ -375,6 +392,7 @@ def run_deep_learning_algorithm(data_file_path):
 ```
 
 In this function:
+
 - The `run_deep_learning_algorithm` function reads mock data from a file located at the specified `data_file_path`.
 - It performs feature engineering, data preprocessing, and splitting the data into features and target variable.
 - The algorithm defines a deep learning model using the `Sequential` API of TensorFlow/Keras, comprising multiple layers including Dense and Dropout layers.
@@ -387,23 +405,27 @@ Note that in a real-world scenario, the deep learning algorithm would likely inv
 Here are several types of users who may interact with the AI for Predictive Maintenance system, along with a user story for each type. Additionally, I will specify which file or directory is relevant for each user type:
 
 1. **Maintenance Engineer**
-   - *User Story*: As a maintenance engineer, I want to view the predicted maintenance schedule for the equipment under my responsibility, so I can plan and schedule maintenance activities efficiently.
-   - *File*: The `app/api/controllers/predictionController.py` file may accomplish this by providing an API endpoint for accessing the predicted maintenance schedule.
+
+   - _User Story_: As a maintenance engineer, I want to view the predicted maintenance schedule for the equipment under my responsibility, so I can plan and schedule maintenance activities efficiently.
+   - _File_: The `app/api/controllers/predictionController.py` file may accomplish this by providing an API endpoint for accessing the predicted maintenance schedule.
 
 2. **Data Scientist**
-   - *User Story*: As a data scientist, I need access to historical sensor data and the ability to test and deploy new predictive maintenance models, so I can continuously improve the accuracy of the predictions.
-   - *File*: The `models/predictiveMaintenanceModels.py` file contains the machine learning and deep learning model implementations for the data scientist to work on.
+
+   - _User Story_: As a data scientist, I need access to historical sensor data and the ability to test and deploy new predictive maintenance models, so I can continuously improve the accuracy of the predictions.
+   - _File_: The `models/predictiveMaintenanceModels.py` file contains the machine learning and deep learning model implementations for the data scientist to work on.
 
 3. **System Administrator**
-   - *User Story*: As a system administrator, I want to monitor the performance and resource utilization of the predictive maintenance system, so I can ensure the system operates efficiently and perform troubleshooting if necessary.
-   - *File*: The `deployment/monitoringSetup.sh` script may accomplish this by setting up monitoring tools and configuration within the deployment environment.
+
+   - _User Story_: As a system administrator, I want to monitor the performance and resource utilization of the predictive maintenance system, so I can ensure the system operates efficiently and perform troubleshooting if necessary.
+   - _File_: The `deployment/monitoringSetup.sh` script may accomplish this by setting up monitoring tools and configuration within the deployment environment.
 
 4. **Industrial Operator**
-   - *User Story*: As an industrial operator, I wish to receive real-time alerts for potential equipment failures, so I can take proactive measures to avoid unplanned downtime and production interruptions.
-   - *File*: The `app/models/realTimeMonitoring.py` file contains the functionality for real-time monitoring and alerting of potential equipment failures that the industrial operator can benefit from.
+
+   - _User Story_: As an industrial operator, I wish to receive real-time alerts for potential equipment failures, so I can take proactive measures to avoid unplanned downtime and production interruptions.
+   - _File_: The `app/models/realTimeMonitoring.py` file contains the functionality for real-time monitoring and alerting of potential equipment failures that the industrial operator can benefit from.
 
 5. **Business Analyst**
-   - *User Story*: As a business analyst, I need to analyze the historical maintenance and equipment failure data to identify trends and patterns, to provide insights for optimizing maintenance strategies and resource allocation.
-   - *File*: The `data/historicalData/` directory would contain the historical sensor data files that the business analyst can utilize for trend analysis and insight generation.
+   - _User Story_: As a business analyst, I need to analyze the historical maintenance and equipment failure data to identify trends and patterns, to provide insights for optimizing maintenance strategies and resource allocation.
+   - _File_: The `data/historicalData/` directory would contain the historical sensor data files that the business analyst can utilize for trend analysis and insight generation.
 
 Each of these user types interacts with various components of the AI for Predictive Maintenance system, and the respective files or directories support their specific user stories and requirements.

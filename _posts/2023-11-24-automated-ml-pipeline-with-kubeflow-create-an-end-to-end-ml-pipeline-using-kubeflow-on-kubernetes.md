@@ -8,16 +8,20 @@ layout: article
 ## AI Automated ML Pipeline with Kubeflow
 
 ## Objectives
+
 The objective of creating an end-to-end ML pipeline using Kubeflow on Kubernetes is to establish an automated and scalable system for training, deploying, and managing machine learning models. This pipeline will enable efficient experimentation, versioning, and monitoring of models, ensuring reproducibility and scalability.
 
 ## System Design Strategies
+
 To achieve the above objectives, we will implement the following design strategies:
+
 1. **Modularity**: Divide the pipeline into separate, interchangeable components such as data preprocessing, model training, evaluation, and deployment.
 2. **Scalability**: Utilize Kubernetes for container orchestration to ensure the pipeline can handle large-scale operations effectively.
 3. **Automation**: Automate the entire pipeline, from data ingestion to model deployment, to minimize manual intervention and streamline the workflow.
 4. **Versioning and Experimentation**: Implement mechanisms for versioning datasets, models, and experiments to enable reproducibility and comparison.
 
 ## Chosen Libraries and Tools
+
 1. **Kubeflow**: Leveraging Kubeflow for orchestration and management of the ML pipeline on Kubernetes.
 2. **Kubernetes**: Utilizing Kubernetes for container orchestration, enabling scalable and resilient deployment of ML components.
 3. **TensorFlow Extended (TFX)**: Using TFX for building end-to-end ML pipelines, including components for data validation, transformation, training, and model analysis.
@@ -25,6 +29,7 @@ To achieve the above objectives, we will implement the following design strategi
 5. **Docker**: Containerizing the ML components using Docker to ensure consistency and portability across environments.
 
 ## Repository Structure
+
 The repository for the end-to-end ML pipeline using Kubeflow on Kubernetes will follow a modular structure, with separate directories for each component of the pipeline (e.g., data preprocessing, model training, evaluation, deployment). Additionally, it will include configuration files for Kubernetes deployment, Dockerfiles, and scripts for automation and orchestration.
 
 By adhering to these objectives, system design strategies, and chosen libraries and tools, we aim to create a robust and scalable AI Automated ML Pipeline with Kubeflow that facilitates the development and deployment of machine learning models in a reproducible and manageable manner.
@@ -32,27 +37,35 @@ By adhering to these objectives, system design strategies, and chosen libraries 
 In the infrastructure for the Automated ML Pipeline with Kubeflow on Kubernetes, we will establish a scalable and resilient architecture that enables the deployment and management of machine learning workflows. The infrastructure will consist of several key components, including:
 
 ## 1. Kubernetes Cluster
+
 We will set up a Kubernetes cluster to provide the foundation for running and managing containerized applications. This cluster will ensure scalability, fault tolerance, and efficient resource allocation for the ML pipeline.
 
 ## 2. Kubeflow
+
 Kubeflow will be deployed on the Kubernetes cluster to facilitate the orchestration and management of ML workflows. Kubeflow provides a composable, portable, and scalable platform for deploying machine learning workflows based on microservices.
 
 ## 3. Data Storage
+
 We will configure storage solutions such as cloud-based object storage (e.g., Amazon S3, Google Cloud Storage) or on-premises storage (e.g., NFS) to store datasets, model artifacts, and intermediate results generated during the ML pipeline.
 
 ## 4. Container Registry
+
 A container registry (e.g., Docker Hub, Google Container Registry) will be utilized to store the container images for the ML components, ensuring reliable access to the required images for deployment.
 
 ## 5. Networking
+
 Networking components, including load balancers, Ingress controllers, and service meshes, will be configured to enable secure communication and traffic routing between the various components of the pipeline.
 
 ## 6. Monitoring and Logging
+
 Integration with monitoring and logging solutions (e.g., Prometheus, Grafana, ELK stack) will be established to provide visibility into the performance, health, and resource utilization of the ML pipeline.
 
 ## 7. CI/CD Pipeline
+
 A continuous integration and continuous deployment (CI/CD) pipeline will be set up to automate the building, testing, and deployment of the ML components, ensuring rapid iteration and versioning of the pipeline.
 
 ## 8. Security
+
 Security measures, including access control, encryption, and network policies, will be implemented to safeguard the ML pipeline against unauthorized access and data breaches.
 
 By incorporating these components into the infrastructure, we can ensure a robust and scalable foundation for the end-to-end ML pipeline using Kubeflow on Kubernetes. This infrastructure will enable efficient management, deployment, and scaling of machine learning workloads while maintaining high availability and reliability.
@@ -158,7 +171,7 @@ In the "models" directory, we organize and store the trained models, model metad
 
 - **trained_models/**: This directory contains subdirectories for each trained model. Within each model directory, we store the serialized model file (e.g., model.pb) alongside the model variables in a subdirectory (e.g., "variables/"). This structure allows for easy storage and retrieval of trained models and their associated variables.
 
-- **model_metadata/**: Here, we store metadata files in JSON format for each trained model. These metadata files capture information about the model, such as its architecture, hyperparameters, training history, and evaluation metrics. 
+- **model_metadata/**: Here, we store metadata files in JSON format for each trained model. These metadata files capture information about the model, such as its architecture, hyperparameters, training history, and evaluation metrics.
 
 - **model_versions/**: This directory holds subdirectories for different versions of the trained models. Each model version directory contains the serialized model file and its associated variables. This structure enables versioning of trained models, facilitating model tracking and reproducibility.
 
@@ -284,36 +297,48 @@ This function can be utilized within the context of the end-to-end ML pipeline u
 Certainly! Here are several types of users who may interact with the Automated ML Pipeline using Kubeflow on Kubernetes, along with a user story for each type of user and the corresponding files that would enable them to accomplish their tasks:
 
 ### 1. Data Scientist/User
+
 #### User Story:
+
 As a Data Scientist, I want to develop and train machine learning models using the Automated ML Pipeline with Kubeflow. I need to be able to define and execute an end-to-end ML workflow, perform data preprocessing, train and evaluate models, and manage experiment versions.
 
 #### Files:
+
 - For interacting with the end-to-end ML pipeline:
   - Notebooks (e.g., data_exploration.ipynb, model_training.ipynb, model_evaluation.ipynb) in the "notebooks/" directory for interactive development and experimentation.
 - For orchestrating the Kubeflow pipeline:
   - Python scripts (e.g., kubeflow_pipeline.py) in the "scripts/" directory to define and manage the ML pipeline.
 
 ### 2. ML Engineer/Developer
+
 #### User Story:
+
 As an ML Engineer, I need to deploy and manage machine learning models within the Automated ML Pipeline with Kubeflow. I want to define, deploy, and scale model serving endpoints, and manage model versions and metadata.
 
 #### Files:
+
 - For deploying machine learning models:
   - Deployment manifests (e.g., deployment_model_deployment.yaml) in the "kubernetes_manifests/" directory to define and manage the deployment of model serving endpoints.
 
 ### 3. DevOps Engineer
+
 #### User Story:
+
 As a DevOps Engineer, I am responsible for managing the infrastructure and deployment of the Automated ML Pipeline with Kubeflow. I want to define and manage the infrastructure, networking, containerization, and continuous integration/deployment (CI/CD) processes.
 
 #### Files:
+
 - For managing infrastructure and deployment:
   - Kubernetes manifests (e.g., namespace.yaml, deployment.yaml) in the "deployment/" directory to define Kubernetes resources for the ML pipeline components.
-  
+
 ### 4. Administrator
+
 #### User Story:
+
 As an Administrator, I am responsible for configuring access control, security measures, and global settings for the Automated ML Pipeline with Kubeflow. I need to manage user permissions, configure network policies, and oversee system-wide configurations.
 
 #### Files:
+
 - For managing security and global settings:
   - Configuration files (e.g., config.yaml) in the "config/" directory to store global settings and configurations for the ML pipeline components.
 

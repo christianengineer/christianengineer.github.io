@@ -6,9 +6,11 @@ layout: article
 ---
 
 ## Objectives
+
 The objective is to build a scalable, data-intensive AI application that performs social media trend analysis using Tweepy in Python. This application will track viral content and build a repository for further analysis and insights.
 
 ## System Design Strategies
+
 1. **Data Collection:** Utilize Tweepy to fetch real-time social media data from various platforms.
 2. **Data Storage:** Choose a scalable storage solution like Amazon S3 or a database such as MongoDB to store the fetched data.
 3. **Data Processing:** Implement efficient data processing pipelines using libraries like Pandas, NumPy, and Dask for handling large datasets.
@@ -16,6 +18,7 @@ The objective is to build a scalable, data-intensive AI application that perform
 5. **Scalability:** Leverage cloud-based solutions like AWS or Azure to scale the application based on demand.
 
 ## Chosen Libraries
+
 1. **Tweepy:** For accessing Twitter's API to fetch real-time social media data.
 2. **Pandas:** For data manipulation and analysis.
 3. **NumPy:** For numerical computing and handling large arrays of data.
@@ -28,20 +31,25 @@ By implementing these system design strategies and utilizing the chosen librarie
 ## Infrastructure for Social Media Trend Analysis Application
 
 ### Data Collection:
+
 - **Tweepy:** Python libraries like Tweepy will be used to access and fetch real-time social media data from various platforms. Tweepy provides an easy-to-use interface for accessing the Twitter API, enabling us to collect a large volume of social media data.
 
 ### Data Storage:
+
 - **Amazon S3:** This scalable storage solution provided by AWS can be used to store the fetched social media data. Amazon S3 offers high availability, durability, and scalability, making it suitable for handling large volumes of data.
 
 ### Data Processing:
+
 - **Dask:** Dask will be used for efficient parallel computing to handle large-scale data processing tasks. Dask allows for distributed computation and parallel execution on large datasets, enabling efficient data manipulation and analysis.
 
 - **MongoDB:** This NoSQL database can be used to store and manage the processed data. MongoDB's document-based data model and horizontal scalability make it well-suited for handling the semi-structured social media data.
 
 ### Machine Learning Model Deployment:
+
 - **Flask or FastAPI:** These lightweight Python web frameworks can be used to deploy the machine learning models developed for trend analysis. They provide a simple and efficient way to build RESTful APIs to serve the predictions and insights obtained from the machine learning models.
 
 ### Scalability and Deployment:
+
 - **Amazon EC2 or AWS Lambda:** These cloud computing services can be utilized for deploying the application, offering scalable compute capacity to handle varying workloads. AWS Lambda provides serverless computing, allowing the application to run without provisioning or managing servers.
 
 - **Docker and Kubernetes:** Containerization with Docker and orchestration using Kubernetes can be employed for easier deployment, scaling, and management of the application across different cloud environments.
@@ -84,6 +92,7 @@ social_media_trend_analysis/
 ```
 
 ### Explanation of File Structure
+
 1. **data_collection/**: Contains modules for data collection using Tweepy, such as `tweepy_config.py` for API keys and `data_fetch.py` for fetching social media data.
 
 2. **data_storage/**: Includes modules for data storage, with `s3_storage.py` for interacting with Amazon S3 and `mongodb_integration.py` for integrating with MongoDB.
@@ -120,6 +129,7 @@ In the `models` directory for the Social Media Trend Analysis application, we ha
 2. **model_evaluation.py**: This script is responsible for evaluating the trained machine learning models using appropriate performance metrics such as accuracy, precision, recall, and F1 score. It provides insights into the model's effectiveness and helps in further model refinement.
 
 3. **model_deployment/**:
+
    - **api_server.py**: This file contains the code for deploying the trained machine learning model as an API using Flask or FastAPI. It provides endpoints for making predictions and accessing insights from the model.
    - **ml_model.pkl**: The serialized trained machine learning model which can be loaded and used in the API server for making real-time predictions.
 
@@ -175,6 +185,7 @@ def complex_machine_learning_algorithm(data_path):
 In this function, `complex_machine_learning_algorithm`, we are simulating the implementation of a complex machine learning algorithm for the Social Media Trend Analysis application with Tweepy in Python. The function takes a `data_path` parameter, which represents the file path to the mock social media data.
 
 Within the function, the following steps are typically performed:
+
 1. **Data Loading:** The social media data is loaded using the provided file path.
 
 2. **Data Preprocessing and Feature Engineering:** Mock complex data preprocessing and feature engineering steps are performed, which may include tasks such as data cleaning, normalization, handling missing values, and creating new features from the social media data.
@@ -225,6 +236,7 @@ def run_complex_ml_algorithm(data_path):
 ```
 
 In this function:
+
 - The mock social media data is loaded using the specified `data_path`.
 - Complex data preprocessing and feature engineering steps are typically performed, preparing the data for model training.
 - The data is split into features and the target variable, followed by a split into training and testing sets.
@@ -234,24 +246,29 @@ In this function:
 This function serves as a template for implementing a complex machine learning algorithm within the application, using the provided mock data. It can be further customized and extended based on the specific requirements and characteristics of the social media data and the machine learning model being utilized.
 
 ### Types of Users
+
 1. **Data Analyst**
-   - *User Story*: As a data analyst, I want to access and analyze the trending topics and viral content on social media platforms to understand user engagement and sentiment.
-   - *File*: `data_processing/data_analysis.py`
+
+   - _User Story_: As a data analyst, I want to access and analyze the trending topics and viral content on social media platforms to understand user engagement and sentiment.
+   - _File_: `data_processing/data_analysis.py`
 
 2. **Machine Learning Engineer**
-   - *User Story*: As a machine learning engineer, I want to train, evaluate, and deploy machine learning models to identify viral content and perform trend analysis based on the social media data.
-   - *File*: `machine_learning/model_training.py` and `machine_learning/model_deployment/api_server.py`
+
+   - _User Story_: As a machine learning engineer, I want to train, evaluate, and deploy machine learning models to identify viral content and perform trend analysis based on the social media data.
+   - _File_: `machine_learning/model_training.py` and `machine_learning/model_deployment/api_server.py`
 
 3. **Backend Developer**
-   - *User Story*: As a backend developer, I want to create robust data collection and storage mechanisms to handle the influx of social media data and ensure its seamless processing and storage.
-   - *File*: `data_collection/data_fetch.py` and `data_storage/s3_storage.py`
+
+   - _User Story_: As a backend developer, I want to create robust data collection and storage mechanisms to handle the influx of social media data and ensure its seamless processing and storage.
+   - _File_: `data_collection/data_fetch.py` and `data_storage/s3_storage.py`
 
 4. **DevOps Engineer**
-   - *User Story*: As a DevOps engineer, I want to ensure the scalability, reliability, and efficient deployment of the application in a cloud environment using containerization and orchestration techniques.
-   - *File*: `infrastructure/deployment/Dockerfile`, `infrastructure/deployment/kubernetes_deployment.yaml`
+
+   - _User Story_: As a DevOps engineer, I want to ensure the scalability, reliability, and efficient deployment of the application in a cloud environment using containerization and orchestration techniques.
+   - _File_: `infrastructure/deployment/Dockerfile`, `infrastructure/deployment/kubernetes_deployment.yaml`
 
 5. **Frontend Developer**
-   - *User Story*: As a frontend developer, I want to consume the predictions and insights generated by the machine learning models and display them in an intuitive and visually appealing manner for end users.
-   - *File*: API endpoints provided by `model_deployment/api_server.py`
+   - _User Story_: As a frontend developer, I want to consume the predictions and insights generated by the machine learning models and display them in an intuitive and visually appealing manner for end users.
+   - _File_: API endpoints provided by `model_deployment/api_server.py`
 
 These user stories reflect the diverse roles and their respective objectives within the context of using the Social Media Trend Analysis application. Each user type interacts with different components of the application to achieve their specific goals, allowing for a well-structured and comprehensive application design.

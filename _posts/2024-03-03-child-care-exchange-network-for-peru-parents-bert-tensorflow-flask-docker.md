@@ -8,12 +8,14 @@ layout: article
 ## AI Child Care Exchange Network for Peru Parents
 
 ### Objectives:
+
 1. Match low-income families in Peru with affordable child care options.
 2. Support parents in maintaining employment and generating income.
 3. Utilize AI technologies like BERT and TensorFlow for efficient matching and recommendation.
 4. Build a scalable system using Flask and Docker for easy deployment and management.
 
 ### System Design Strategies:
+
 1. **Data Collection**: Gather information about low-income families and child care providers.
 2. **Recommendation Engine**: Use BERT for natural language processing to match families with suitable child care options.
 3. **Machine Learning Model**: Implement TensorFlow for building predictive models to optimize recommendations.
@@ -22,6 +24,7 @@ layout: article
 6. **User Interface**: Develop an intuitive interface for parents to easily access and interact with the system.
 
 ### Chosen Libraries:
+
 1. **BERT (Bidirectional Encoder Representations from Transformers)**: For natural language processing to understand and match preferences of families and child care providers.
 2. **TensorFlow**: For building and training machine learning models to enhance recommendation accuracy.
 3. **Flask**: As a lightweight web framework to create APIs for handling requests from users and serving recommendations.
@@ -32,26 +35,32 @@ By combining these components effectively, we can create a powerful AI Child Car
 ## MLOps Infrastructure for Child Care Exchange Network
 
 ### Data Pipeline:
+
 1. **Data Collection**: Gather information about low-income families and child care providers.
 2. **Data Preprocessing**: Clean, transform, and prepare data for model training and inference.
 
 ### Model Training and Inference:
+
 1. **BERT Training**: Train BERT model using TensorFlow on labeled data to understand user preferences and provider profiles.
 2. **Model Deployment**: Deploy trained models within Docker containers for seamless integration with the Flask application.
 
 ### Monitoring and Logging:
+
 1. **Model Performance**: Track model performance metrics like accuracy, latency, and resource utilization.
 2. **Application Logs**: Monitor Flask application logs for errors, user interactions, and system performance.
 
 ### Continuous Integration/Continuous Deployment (CI/CD):
+
 1. **Automated Testing**: Run unit tests, integration tests, and performance tests to ensure system reliability.
 2. **Deployment Automation**: Use CI/CD pipelines to automate model deployment and application updates.
 
 ### Scalability and Resource Management:
+
 1. **Container Orchestration**: Utilize tools like Kubernetes for managing Docker containers at scale.
 2. **Resource Allocation**: Monitor and optimize resource usage for efficient performance and cost effectiveness.
 
 ### Security and Compliance:
+
 1. **Data Privacy**: Implement encryption and access controls to protect sensitive user information.
 2. **Regulatory Compliance**: Ensure compliance with data protection regulations and industry standards.
 
@@ -91,6 +100,7 @@ child_care_exchange_network/
 ```
 
 In this file structure:
+
 - **app/**: Contains the Flask application code responsible for handling recommendation requests, serving the user interface, and integrating the BERT model.
 - **data/**: Stores input data about low-income families and child care providers, as well as processed data and trained model weights.
 - **scripts/**: Includes scripts for data preprocessing and model training to prepare the data for training the BERT model.
@@ -112,6 +122,7 @@ models/
 ```
 
 In the **models/** directory of the Child Care Exchange Network:
+
 - **bert_model.py**: Contains the implementation of the BERT model using TensorFlow for natural language processing. This file includes the architecture of the BERT model, training procedures, and functions for inference.
 - **recommendation.py**: Implements the recommendation engine that integrates the BERT model to match low-income families with suitable and affordable child care options. It utilizes the BERT embeddings to understand user preferences and provider profiles for effective matching.
 - **data_processing.py**: Script for data preprocessing, which involves cleaning, transforming, and preparing input data about families and child care providers. This ensures that the data is in a format suitable for training the BERT model and generating recommendations.
@@ -129,6 +140,7 @@ deployment/
 ```
 
 In the **deployment/** directory of the Child Care Exchange Network:
+
 - **Dockerfile**: Contains instructions for building a Docker image that encapsulates the Flask application. It specifies the base image, dependencies installation, copying application files, and defining the commands needed to start the application.
 - **kubernetes.yaml**: Kubernetes configuration file that defines the deployment, service, and ingress resources for deploying the application at scale. It includes specifications for the number of replicas, resource allocation, networking configurations, and other settings required for running the application on a Kubernetes cluster.
 - **nginx.conf**: Nginx configuration file that provides settings for reverse proxying and load balancing incoming traffic to the Flask application running within Docker containers. It includes directives for routing requests, handling SSL termination, and improving performance.
@@ -138,6 +150,7 @@ These files in the **deployment/** directory facilitate the deployment and scala
 ## Model Training Script (model_training.py)
 
 ### File Path:
+
 ```bash
 scripts/model_training.py
 ```
@@ -173,6 +186,7 @@ This script `model_training.py` loads mock data about families and child care pr
 ## Complex Machine Learning Algorithm Script (complex_ml_algorithm.py)
 
 ### File Path:
+
 ```bash
 scripts/complex_ml_algorithm.py
 ```
@@ -215,22 +229,27 @@ This script `complex_ml_algorithm.py` loads mock data about families and child c
 ## Types of Users for the Child Care Exchange Network:
 
 ### 1. Low-Income Families
+
 - **User Story**: As a low-income family in Peru, I want to find affordable child care options to support my children while I work, so that I can maintain employment and generate income.
 - **Related File**: `app/templates/index.html` (User Interface Template)
 
 ### 2. Child Care Providers
+
 - **User Story**: As a child care provider in Peru, I want to offer my services to low-income families in need of affordable child care options, so that I can support parents in maintaining employment and generating income.
 - **Related File**: `app/routes/recommendation_routes.py` (Flask Routes for Recommendation Requests)
 
 ### 3. Administrators
+
 - **User Story**: As an administrator of the Child Care Exchange Network, I want to manage user data, monitor system performance, and ensure the successful matching of families with child care options, so that I can fulfill the network's mission.
 - **Related File**: `scripts/data_processing.py` (Data Preprocessing Script)
 
 ### 4. Data Scientists/Engineers
+
 - **User Story**: As a data scientist/engineer working on the Child Care Exchange Network, I want to train and optimize machine learning models to improve recommendation accuracy and enhance the user experience, so that I can contribute to the network's success.
 - **Related File**: `scripts/model_training.py` (Model Training Script)
 
 ### 5. IT/DevOps Team
+
 - **User Story**: As a member of the IT/DevOps team supporting the Child Care Exchange Network, I want to ensure the smooth deployment and scalability of the application using containerization and cloud technologies, so that I can maintain high availability and performance.
 - **Related File**: `deployment/Dockerfile` (Dockerfile for Containerizing the Application)
 

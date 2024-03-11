@@ -8,7 +8,9 @@ layout: article
 ## AI RealEstateAnalyzer Repository
 
 ## Objectives
+
 The main objectives of the AI RealEstateAnalyzer repository are to build a scalable, data-intensive AI application that leverages machine learning and deep learning techniques to analyze and provide insights on real estate properties. Some of the specific objectives include:
+
 1. Data collection and preprocessing: Collecting real estate data from multiple sources, including property listings, historical sales data, and neighborhood information, and preprocessing this data for modeling.
 2. Feature engineering: Implementing feature engineering techniques to extract meaningful features from the raw data, such as property characteristics, neighborhood features, and market trends.
 3. Machine learning models: Developing machine learning models to predict property prices, analyze market trends, and identify investment opportunities.
@@ -16,7 +18,9 @@ The main objectives of the AI RealEstateAnalyzer repository are to build a scala
 5. Scalability: Designing the application to handle large volumes of real estate data, user interactions, and model training tasks.
 
 ## System Design Strategies
+
 To achieve the objectives, the AI RealEstateAnalyzer repository will employ the following system design strategies:
+
 1. Microservice architecture: Implementing the application as a set of loosely coupled microservices, each responsible for specific tasks such as data collection, feature engineering, model training, and web interface.
 2. Scalable data storage: Using scalable data storage solutions, such as NoSQL databases or distributed file systems, to handle the large volumes of real estate data.
 3. Asynchronous processing: Implementing asynchronous processing for tasks such as data collection, model training, and user interactions to ensure responsiveness and scalability.
@@ -24,7 +28,9 @@ To achieve the objectives, the AI RealEstateAnalyzer repository will employ the 
 5. API design: Exposing APIs for accessing real estate data, performing model predictions, and interacting with the application.
 
 ## Chosen Libraries and Technologies
+
 The AI RealEstateAnalyzer repository will leverage a variety of libraries and technologies to implement the application's features. Some of the chosen libraries and technologies include:
+
 1. Python: Utilizing Python as the primary programming language for its extensive libraries for data processing, machine learning, and deep learning.
 2. Scikit-learn: Using Scikit-learn for building and training traditional machine learning models such as regression and clustering.
 3. TensorFlow and Keras: Leveraging TensorFlow and Keras for implementing deep learning models for image recognition and other AI tasks.
@@ -39,24 +45,31 @@ By utilizing these libraries and technologies, we can build a robust, scalable A
 Building an infrastructure for the RealEstateAnalyzer AI application involves designing a scalable and reliable system that can handle the intensive data processing and machine learning tasks required for real estate analytics. The infrastructure components include:
 
 ## Cloud Platform
+
 Selecting a cloud platform such as Amazon Web Services (AWS), Microsoft Azure, or Google Cloud Platform (GCP) to host the application. The cloud platform provides a range of services for computing, storage, and networking that can be utilized to build a scalable and cost-effective infrastructure.
 
 ## Compute Resources
+
 Utilizing virtual machines, container services, or serverless computing to provision the necessary compute resources for running the microservices, model training tasks, and API services. Autoscaling capabilities can be employed to handle fluctuating workloads and ensure high availability.
 
 ## Data Storage
+
 Choosing appropriate data storage solutions such as Amazon S3, Azure Blob Storage, or Google Cloud Storage for storing the real estate data, property images, and model artifacts. Additionally, using scalable databases like Amazon DynamoDB, Azure Cosmos DB, or Google Cloud Bigtable for managing structured real estate data.
 
 ## Messaging and Asynchronous Processing
+
 Employing messaging services like Amazon SQS, Azure Service Bus, or Google Cloud Pub/Sub for implementing asynchronous processing of tasks such as data collection, model training, and user interactions. This helps in decoupling components and improving system responsiveness.
 
 ## Containerization
+
 Using containerization technology such as Docker and container orchestration platforms like Amazon ECS, Azure Kubernetes Service (AKS), or Google Kubernetes Engine (GKE) to package the application components into containers, manage their lifecycle, and ensure portability and scalability.
 
 ## API Gateway and Load Balancing
+
 Utilizing API gateway services to expose RESTful APIs for accessing real estate data, performing model predictions, and interacting with the application. Load balancing can be employed to distribute incoming traffic across multiple instances of microservices for improved performance.
 
 ## Monitoring and Logging
+
 Implementing monitoring and logging solutions such as Amazon CloudWatch, Azure Monitor, or Google Cloud Monitoring to track the health, performance, and usage of the application components. This helps in identifying and resolving issues and optimizing resource usage.
 
 By leveraging these infrastructure components on a cloud platform, the RealEstateAnalyzer AI application can be built to be scalable, reliable, and cost-efficient, enabling it to handle the data-intensive and AI-related tasks involved in real estate analytics.
@@ -286,18 +299,22 @@ This script assumes that the mock image data is stored in a directory located at
 Here's a list of types of users who may use the RealEstateAnalyzer AI for Real Estate Analytics application, along with a user story for each type of user and the file that would encompass the implementation of the user story:
 
 1. Real Estate Investor:
+
    - User Story: As a real estate investor, I want to analyze market trends and property prices to identify lucrative investment opportunities in specific neighborhoods.
    - File: `app/api/endpoints/data_collection.py` - This file will likely include endpoints for collecting market data, property listings, and neighborhood information that the real estate investor can use to conduct market analysis.
 
 2. Real Estate Agent:
+
    - User Story: As a real estate agent, I want to use the application to provide data-driven insights to my clients, such as accurate property valuations and market trends, to support their buying or selling decisions.
    - File: `app/api/endpoints/model_predictions.py` - This file will contain endpoints for accessing model predictions and analyses, providing the real estate agent with the necessary tools to offer data-driven insights to clients.
 
 3. Property Buyer/Seller:
+
    - User Story: As a property buyer/seller, I want to utilize the application to estimate the fair market value of a property, understand the demand and supply dynamics in the area, and make informed decisions about buying or selling a property.
    - File: `app/api/endpoints/model_predictions.py` - Similar to the real estate agent's user story, endpoints for model predictions and analyses will serve property buyers and sellers by offering accurate property valuations and market insights.
 
 4. Data Analyst/Researcher:
+
    - User Story: As a data analyst or researcher, I want to leverage the application to access raw real estate data and perform exploratory data analysis, feature engineering, and model prototyping for conducting in-depth research and analysis.
    - File: `app/data_processing/feature_engineering.py` - This file will include functions and logic for performing feature engineering on the raw real estate data, providing the necessary toolkit for data analysts and researchers to conduct in-depth analysis.
 

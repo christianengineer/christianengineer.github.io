@@ -8,9 +8,11 @@ layout: article
 ## AI Automated Invoice Processing with Tesseract OCR (Python)
 
 ## Objectives
-The objective of the AI Automated Invoice Processing system is to digitize and analyze financial documents such as invoices using Tesseract OCR and Python. The system aims to automate the extraction of relevant information from invoices, such as vendor details, invoice number, date, and line items. This will improve efficiency and reduce errors in the invoice processing workflow. 
+
+The objective of the AI Automated Invoice Processing system is to digitize and analyze financial documents such as invoices using Tesseract OCR and Python. The system aims to automate the extraction of relevant information from invoices, such as vendor details, invoice number, date, and line items. This will improve efficiency and reduce errors in the invoice processing workflow.
 
 ## System Design Strategies
+
 1. **Data Ingestion**: The system will ingest scanned or digital invoices from various sources such as email attachments, file uploads, or cloud storage.
 2. **OCR Processing**: Utilize Tesseract OCR to extract text and relevant information from the invoices. Preprocessing steps such as noise reduction, deskewing, and image enhancement may be applied to improve OCR accuracy.
 3. **Data Extraction**: Use techniques such as regular expressions, NLP, and machine learning to extract structured data from the OCR output. This includes identifying key fields such as vendor name, invoice number, date, and line items.
@@ -18,6 +20,7 @@ The objective of the AI Automated Invoice Processing system is to digitize and a
 5. **Quality Assurance**: Implement checks and validations to ensure the accuracy and completeness of the extracted data. This may include human-in-the-loop verification for high-value or high-risk invoices.
 
 ## Chosen Libraries and Tools
+
 1. **Tesseract OCR**: Tesseract is a widely used open-source OCR engine for extracting text from images. It supports various languages and can be customized for specific use cases.
 2. **Python**: Python will be the primary programming language for building the AI Automated Invoice Processing system due to its rich ecosystem of libraries for image processing, OCR, and data manipulation.
 3. **OpenCV**: OpenCV (Open Source Computer Vision Library) can be utilized for image preprocessing tasks such as noise reduction, deskewing, and enhancing the quality of the scanned invoices.
@@ -33,24 +36,31 @@ To support the Automated Invoice Processing application, we will need a scalable
 ## Components of the Infrastructure
 
 ### 1. Cloud Platform
+
 Selecting a cloud platform such as AWS, Azure, or Google Cloud will provide scalable compute resources, storage, and AI/ML services that are essential for building and deploying the AI Automated Invoice Processing application.
 
 ### 2. Compute Resources
+
 Utilize virtual machines or container services to provision the computational resources needed for OCR processing and data extraction. Autoscaling capabilities should be enabled to handle fluctuating workloads and ensure optimal resource allocation.
 
 ### 3. Storage
+
 Use a combination of object storage and database services to store the scanned invoices, OCR outputs, extracted data, and application metadata. Object storage like Amazon S3 or Azure Blob Storage is suitable for storing unstructured invoice images, while a database such as Amazon RDS or Azure SQL Database can be used for structured data storage and retrieval.
 
 ### 4. Queuing and Messaging
+
 Implement a queuing or messaging service such as Amazon SQS, Azure Queue Storage, or Kafka to manage the processing pipeline and decouple components of the application. This allows for better fault tolerance, scalability, and asynchronous processing of invoices.
 
 ### 5. AI/ML Services
+
 Leverage AI/ML services provided by the cloud platform, such as Amazon Textract, Azure Cognitive Services, or Google Cloud Vision, to complement the OCR processing with advanced text analysis, entity recognition, and data extraction capabilities.
 
 ### 6. Monitoring and Logging
+
 Integrate monitoring and logging solutions (e.g., Amazon CloudWatch, Azure Monitor) to track the performance and health of the application, including OCR accuracy, processing times, resource utilization, and error rates.
 
 ### 7. Security and Compliance
+
 Implement security best practices such as encryption at rest and in transit, access control policies, and compliance with relevant data protection regulations (e.g., GDPR, HIPAA) to ensure the confidentiality and integrity of the processed financial documents.
 
 By designing the infrastructure with these components, we can ensure a robust and scalable foundation for the Automated Invoice Processing application. This infrastructure will enable the efficient processing and digitization of financial documents while maintaining high performance and reliability.
@@ -121,7 +131,7 @@ automated-invoice-processing/
 
 ## File Structure Explanation
 
-1. **data/**: Contains subdirectories for input and output data. The *input/* directory stores scanned or digital invoices, while the *output/* directory holds the extracted data and processed invoices.
+1. **data/**: Contains subdirectories for input and output data. The _input/_ directory stores scanned or digital invoices, while the _output/_ directory holds the extracted data and processed invoices.
 
 2. **src/**: The source code directory consists of subdirectories representing various components of the application, such as preprocessing, OCR, data extraction, and integrations. Each subdirectory contains relevant Python modules for the respective tasks.
 
@@ -164,15 +174,16 @@ models/
 
 1. **trained_models/**: This directory contains subdirectories or individual model files representing different types of models used in the Automated Invoice Processing application.
 
-    - **entity_recognition_model.pkl**: An example file representing a trained model for named entity recognition, which could be used to identify entities like vendor names, invoice numbers, and dates.
+   - **entity_recognition_model.pkl**: An example file representing a trained model for named entity recognition, which could be used to identify entities like vendor names, invoice numbers, and dates.
 
-    - **line_item_extraction_model/**: Illustrates a directory structure for a more complex model, such as a deep learning model for line item extraction from invoice descriptions. The directory contains the following files:
-        - **config.json**: Configuration file storing model hyperparameters, architecture details, and training configurations.
-        - **model_weights.h5**: File storing the learned parameters (weights) of the trained deep learning model.
-        - **token_to_index.pkl**: A pickled file representing a mapping dictionary for token-to-index conversion or vocabulary used in the model.
-        - Other relevant files specific to the trained line item extraction model.
+   - **line_item_extraction_model/**: Illustrates a directory structure for a more complex model, such as a deep learning model for line item extraction from invoice descriptions. The directory contains the following files:
 
-    - Other model artifacts and directories: The models/ directory might contain additional directories, individual model files, or supplementary artifacts based on the specific models used in the application for data extraction, OCR post-processing, or any other machine learning tasks.
+     - **config.json**: Configuration file storing model hyperparameters, architecture details, and training configurations.
+     - **model_weights.h5**: File storing the learned parameters (weights) of the trained deep learning model.
+     - **token_to_index.pkl**: A pickled file representing a mapping dictionary for token-to-index conversion or vocabulary used in the model.
+     - Other relevant files specific to the trained line item extraction model.
+
+   - Other model artifacts and directories: The models/ directory might contain additional directories, individual model files, or supplementary artifacts based on the specific models used in the application for data extraction, OCR post-processing, or any other machine learning tasks.
 
 By organizing the trained machine learning models and model artifacts in the models/ directory, the repository maintains a centralized location for accessing, versioning, and reusing the models required for the AI Automated Invoice Processing with Tesseract OCR application. Additionally, this facilitates reproducibility, model management, and collaboration when working on data-intensive AI applications.
 
@@ -330,6 +341,7 @@ trained_model, model_accuracy = complex_machine_learning_algorithm(file_path)
 print(f"Trained model: {trained_model}")
 print(f"Model accuracy: {model_accuracy}")
 ```
+
 In this function, we have defined a `complex_machine_learning_algorithm` that takes a file path as input, loads mock invoice data from a CSV file, preprocesses the data, trains a complex machine learning model (Random Forest classifier in this example), and evaluates the model's accuracy. The `preprocess_data` function can contain actual data preprocessing steps tailored to the specific requirements of the invoice processing task.
 
 The file path `'path/to/mock/invoice/data.csv'` should be replaced with the actual file path to the mock invoice data CSV file. Upon execution, the function returns the trained model and its accuracy, demonstrating the application of a complex machine learning algorithm for Automated Invoice Processing.
@@ -337,27 +349,32 @@ The file path `'path/to/mock/invoice/data.csv'` should be replaced with the actu
 ## Types of Users for the Automated Invoice Processing Application
 
 1. **Finance Manager**
-   - *User Story*: As a finance manager, I need to review and approve processed invoices to ensure accuracy and compliance before they are entered into the accounting system.
-   - *File*: The `processed_invoices/` directory within the `data/` directory will store the processed invoices for the finance manager to review and approve.
+
+   - _User Story_: As a finance manager, I need to review and approve processed invoices to ensure accuracy and compliance before they are entered into the accounting system.
+   - _File_: The `processed_invoices/` directory within the `data/` directory will store the processed invoices for the finance manager to review and approve.
 
 2. **Accounts Payable Clerk**
-   - *User Story*: As an accounts payable clerk, I need to upload scanned invoices and initiate the processing workflow to extract relevant information for further processing and payment.
-   - *File*: The `scanned_invoices/` directory within the `data/input/` directory will store the scanned invoices uploaded by the accounts payable clerk.
+
+   - _User Story_: As an accounts payable clerk, I need to upload scanned invoices and initiate the processing workflow to extract relevant information for further processing and payment.
+   - _File_: The `scanned_invoices/` directory within the `data/input/` directory will store the scanned invoices uploaded by the accounts payable clerk.
 
 3. **Data Analyst**
-   - *User Story*: As a data analyst, I need to access the extracted data from invoices for reporting and analysis purposes to gain insights into spending patterns and vendor performance.
-   - *File*: The `extracted_data/` directory within the `data/output/` directory will contain the extracted data from invoices for the data analyst's analysis.
+
+   - _User Story_: As a data analyst, I need to access the extracted data from invoices for reporting and analysis purposes to gain insights into spending patterns and vendor performance.
+   - _File_: The `extracted_data/` directory within the `data/output/` directory will contain the extracted data from invoices for the data analyst's analysis.
 
 4. **IT Administrator**
-   - *User Story*: As an IT administrator, I need to manage the deployment and configuration of the application while ensuring its security and availability.
-   - *File*: The deployment scripts and configuration files in the `deployment/` directory will be utilized by the IT administrator for managing the deployment and configuration of the application.
+
+   - _User Story_: As an IT administrator, I need to manage the deployment and configuration of the application while ensuring its security and availability.
+   - _File_: The deployment scripts and configuration files in the `deployment/` directory will be utilized by the IT administrator for managing the deployment and configuration of the application.
 
 5. **Compliance Officer**
-   - *User Story*: As a compliance officer, I need to ensure that the automated invoice processing system complies with relevant data protection and privacy regulations.
-   - *File*: The compliance-related documentation and configuration files stored in the `docs/` and `config/` directories will be reviewed by the compliance officer to ensure regulatory compliance.
+
+   - _User Story_: As a compliance officer, I need to ensure that the automated invoice processing system complies with relevant data protection and privacy regulations.
+   - _File_: The compliance-related documentation and configuration files stored in the `docs/` and `config/` directories will be reviewed by the compliance officer to ensure regulatory compliance.
 
 6. **Machine Learning Engineer**
-   - *User Story*: As a machine learning engineer, I need to continuously improve the data extraction models by analyzing the performance and iterating on the machine learning algorithms.
-   - *File*: The machine learning algorithm script and model artifacts in the `models/` directory will be accessed and updated by the machine learning engineer to enhance data extraction models.
+   - _User Story_: As a machine learning engineer, I need to continuously improve the data extraction models by analyzing the performance and iterating on the machine learning algorithms.
+   - _File_: The machine learning algorithm script and model artifacts in the `models/` directory will be accessed and updated by the machine learning engineer to enhance data extraction models.
 
 Each type of user interacts with different aspects of the Automated Invoice Processing application and leverages specific files or directories within the project repository to fulfill their respective roles and responsibilities.

@@ -8,40 +8,48 @@ layout: article
 ## E-commerce Fraud Detection AI for Mercado Libre Peru
 
 ## Objective:
+
 Implement a real-time fraud detection system to reduce financial losses and protect users by accurately identifying and preventing online fraud in the E-commerce platform.
 
 ## Benefits to Fraud Prevention Specialists:
+
 1. **Real-time Detection**: Instant identification of fraudulent activities for immediate action.
 2. **Cost Reduction**: Minimize financial losses by preventing fraudulent transactions.
 3. **Enhanced User Protection**: Ensure user safety by preventing unauthorized transactions.
 4. **Automated Process**: Efficiently handle a large volume of transactions using automated fraud detection algorithms.
 
 ## Machine Learning Algorithm:
+
 - **Algorithm**: Gradient Boosting (e.g. XGBoost)
 - **Rationale**: Effective in handling imbalanced datasets, high accuracy, and scalability for real-time processing.
 
 ## Strategies:
 
 ### Sourcing Data:
+
 - **Transaction Data**: Collect user transaction details containing features like user behavior, location, device information, etc.
 - **Label Data**: Obtain labeled data indicating fraudulent and non-fraudulent transactions.
 
 ### Data Preprocessing:
+
 - **Feature Engineering**: Create relevant features like transaction frequency, user's historical behavior, etc.
 - **Normalization**: Scale numerical features for better model performance.
 - **Handling Imbalance**: Implement techniques like SMOTE for balancing classes.
 
 ### Modeling:
+
 - **Model Selection**: Utilize XGBoost for building a fraud detection model.
 - **Hyperparameter Tuning**: Optimize model performance by tuning hyperparameters.
 - **Model Evaluation**: Validate the model using metrics like precision, recall, and F1-score.
 
 ### Deployment:
+
 - **Real-time Processing**: Deploy the model to predict fraud in real-time transactions.
 - **Scalability**: Ensure the solution can handle a high volume of transactions.
 - **Monitoring**: Implement monitoring systems to track model performance and fraud detection accuracy.
 
 ## Tools and Libraries:
+
 - **Python**: Programming Language for implementation
 - **Scikit-Learn**: For data preprocessing, modeling, and evaluation
 - **Keras**: For building and deploying neural network models
@@ -53,25 +61,30 @@ By following these strategies and utilizing the mentioned tools and libraries, y
 ## Sourcing Data Strategy:
 
 ### Data Collection:
+
 - **Transaction Data**: Collect user transaction details such as timestamp, amount, items purchased, location, IP address, device information, etc.
 - **User Behavior Data**: Capture user interaction data like session duration, click patterns, add-to-cart behavior, etc.
 
 ### Data Sources:
+
 1. **Mercado Libre API**: Utilize the API to access transaction data and user behavior information directly from the platform.
 2. **Web Scraping Tools**: Use tools like BeautifulSoup or Scrapy to extract data from external sources related to user behavior and transaction patterns.
 3. **Third-Party Fraud Detection Tools**: Integrate with fraud detection services like Sift Science or Signifyd to source additional fraud-related data.
 
 ### Integration within Existing Technology Stack:
+
 - **Database Integration**: Integrate data collection tools with the existing database system (e.g. MySQL, MongoDB) to store and manage collected data.
 - **ETL Pipelines**: Implement ETL pipelines using tools like Apache Airflow to automate the extraction, transformation, and loading process of data into the database.
 - **Data Streaming**: Utilize tools like Apache Kafka for real-time data streaming to ensure the availability of fresh data for model training.
 
 ### Data Format and Accessibility:
+
 - **Data Warehousing**: Store data in a centralized data warehouse (e.g. Amazon Redshift, Google BigQuery) for easy access and analysis.
 - **Data APIs**: Develop internal APIs to access and retrieve data for analysis and model training.
 - **Cloud Storage**: Utilize cloud storage services (e.g. AWS S3, Google Cloud Storage) to store raw and processed data securely.
 
 ### Streamlining Data Collection Process:
+
 - **Automation**: Set up scheduled data collection processes to ensure continuous data flow.
 - **Data Quality Checks**: Implement data validation checks to ensure the integrity and quality of the collected data.
 - **Data Encryption**: Secure sensitive data using encryption techniques during the collection process.
@@ -81,27 +94,27 @@ By integrating Mercado Libre API, web scraping tools, and third-party fraud dete
 ## Feature Extraction and Engineering Analysis:
 
 ### Feature Extraction:
+
 1. **Historical Transaction Data**:
    - **Feature 1: Transaction Amount**: Amount spent in the current transaction.
    - **Feature 2: Transaction Frequency**: Number of transactions within a specific time frame.
    - **Feature 3: Average Transaction Amount**: Mean amount spent per transaction.
    - **Feature 4: Time since Last Transaction**: Duration since the last transaction.
-   
 2. **User Behavior Data**:
    - **Feature 5: Session Duration**: Time spent on the platform during a session.
    - **Feature 6: Click-through Rate**: Rate of page clicks during browsing.
    - **Feature 7: Add-to-Cart Frequency**: Frequency of adding items to the cart.
-   
 3. **Location and Device Information**:
    - **Feature 8: Geographic Location**: User's geographical location based on IP address.
    - **Feature 9: Device Type**: User's device information (desktop, mobile, tablet).
    - **Feature 10: IP Address Country**: Location of the IP address used for the transaction.
-   
+
 ### Feature Engineering:
+
 1. **Normalization**:
    - Scale numerical features like Transaction Amount, Transaction Frequency.
-   
 2. **One-Hot Encoding**:
+
    - Convert categorical features like Device Type into binary vectors for model compatibility.
 
 3. **New Feature Creation**:
@@ -109,6 +122,7 @@ By integrating Mercado Libre API, web scraping tools, and third-party fraud dete
    - **Feature 12: Time of Day**: Extracted from transaction timestamp to capture behavioral patterns.
 
 ### Variable Recommendations:
+
 1. **Transaction Amount**: `trans_amount`
 2. **Transaction Frequency**: `trans_freq`
 3. **Average Transaction Amount**: `avg_trans_amount`
@@ -127,15 +141,19 @@ By extracting relevant features such as transaction data, user behavior informat
 ## Metadata Management Recommendations:
 
 ### Unique Demands of the Project:
+
 1. **Transaction Data Integrity**:
+
    - Track metadata related to transaction data sources, ensuring data integrity and traceability for fraud analysis.
    - Metadata fields: Source data ID, Timestamp of data extraction, Data source type (API, Web Scraping).
 
 2. **User Behavior Tracking**:
+
    - Capture metadata on user behavior tracking to understand user interactions and patterns for fraudulent activity detection.
    - Metadata fields: User ID, Session ID, Timestamp of behavior tracking.
 
 3. **Feature Importance Tracking**:
+
    - Maintain metadata on feature engineering processes to track the importance of engineered features in the fraud detection model.
    - Metadata fields: Feature name, Feature importance score, Feature creation timestamp.
 
@@ -144,19 +162,18 @@ By extracting relevant features such as transaction data, user behavior informat
    - Metadata fields: Model version, Precision, Recall, F1-score, Timestamp of model evaluation.
 
 ### Metadata Management Strategies:
+
 1. **Metadata Repository**:
    - Implement a centralized metadata repository to store all project-related metadata for easy access and management.
-   
 2. **Version Control**:
    - Utilize version control systems (e.g. Git) to track changes in metadata files, ensuring reproducibility and auditability.
-   
 3. **Automated Logging**:
    - Set up automated logging mechanisms to capture metadata changes during feature extraction, engineering, and model training processes.
-   
 4. **Data Lineage Tracking**:
    - Establish data lineage tracking to trace the origin and transformation history of data, assisting in debugging and validation.
 
 ### Metadata Fields Example:
+
 1. **Source Data ID**: `source_data_id`
 2. **Timestamp of Data Extraction**: `extraction_timestamp`
 3. **Data Source Type**: `source_type`
@@ -174,19 +191,24 @@ By implementing metadata management strategies tailored to the unique demands of
 ## Data Problems and Preprocessing Strategies:
 
 ### Data Problems:
+
 1. **Imbalanced Data**:
+
    - **Issue**: Skewed distribution between fraudulent and non-fraudulent transactions leading to biased model predictions.
    - **Solution**: Employ oversampling techniques like SMOTE to balance classes or use evaluation metrics like Precision-Recall curve for imbalanced data.
 
 2. **Missing Values**:
+
    - **Issue**: Incomplete data entries in features such as user behavior or location information.
    - **Solution**: Impute missing values with strategies like mean imputation for numerical features or mode imputation for categorical features.
 
 3. **Outliers**:
+
    - **Issue**: Extreme values in transaction amounts or user behavior data affecting model performance.
    - **Solution**: Apply robust techniques like Winsorization to cap outliers or use outlier detection algorithms to identify and handle outliers appropriately.
 
 4. **Feature Scaling**:
+
    - **Issue**: Numerical features with different scales impacting model convergence and performance.
    - **Solution**: Normalize or standardize numerical features like transaction amount and session duration to a common scale using Min-Max scaling or Z-score normalization.
 
@@ -195,20 +217,24 @@ By implementing metadata management strategies tailored to the unique demands of
    - **Solution**: Convert categorical variables into numerical representations using techniques like one-hot encoding to capture their essence in the model.
 
 ### Unique Demands and Characteristics:
+
 1. **Real-time Processing**:
    - Perform data preprocessing efficiently to ensure real-time fraud detection without compromising model accuracy or speed.
-   
 2. **Interpretability vs. Performance**:
+
    - Balance the interpretability of features with model performance by selecting meaningful features and optimizing preprocessing steps accordingly.
 
 3. **High Volume Transactions**:
    - Implement scalable preprocessing techniques to handle a large volume of transactions while maintaining data quality and model effectiveness.
 
 ### Preprocessing Strategies:
+
 1. **Automated Data Cleaning**:
+
    - Set up automated pipelines for data cleaning steps like handling missing values, outliers, and feature scaling to streamline preprocessing workflows.
 
 2. **Continuous Monitoring**:
+
    - Monitor data quality metrics during preprocessing stages to detect issues early and ensure robust data processing for model training.
 
 3. **Parallel Processing**:
@@ -262,6 +288,7 @@ y_test.to_csv("y_test_processed.csv", index=False)
 ```
 
 In this code file:
+
 - **Step 1**: Missing values are handled by imputing with mean for numerical features and mode for categorical features to ensure completeness of data.
 - **Step 2**: Categorical variables are encoded using one-hot encoding to convert them into numerical representations for model compatibility.
 - **Step 3**: Feature scaling is performed to normalize numerical features using StandardScaler to bring all features to a common scale.
@@ -272,26 +299,32 @@ These preprocessing steps are tailored to the specific needs of the E-commerce F
 ## Modeling Strategy Recommendation:
 
 ### Gradient Boosting Algorithm Selection:
+
 - **Algorithm**: XGBoost (eXtreme Gradient Boosting)
-- **Rationale**: 
+- **Rationale**:
   - Well-suited for handling imbalanced datasets common in fraud detection scenarios.
   - Provides high accuracy and scalability for processing large volumes of real-time transactions.
   - Ability to capture complex relationships in the data for effective fraud detection.
 
 ### Modeling Steps:
+
 1. **Feature Importance Analysis**:
+
    - Conduct feature importance analysis to identify key features contributing to fraud detection accuracy.
    - Importance: Understanding the most influential features can guide feature selection and enhance model interpretability.
 
 2. **Hyperparameter Tuning**:
+
    - Optimize XGBoost hyperparameters using techniques like Grid Search or Random Search.
    - Importance: Fine-tuning hyperparameters can significantly improve model performance and generalization.
 
 3. **Model Training**:
+
    - Train the XGBoost model on the preprocessed data, incorporating feature engineering and balanced classes.
    - Importance: Building the model on well-prepared data ensures the effectiveness of fraud detection algorithms.
 
 4. **Model Evaluation**:
+
    - Evaluate the model using metrics like Precision, Recall, and F1-score on the test data set.
    - Importance: Assessing model performance provides insights into the model's ability to accurately detect fraud while minimizing false positives/negatives.
 
@@ -300,6 +333,7 @@ These preprocessing steps are tailored to the specific needs of the E-commerce F
    - Importance: Implementing the model in production enables immediate fraud identification and prevention, aligning with the project's real-time fraud detection objective.
 
 ### Crucial Step: Feature Importance Analysis
+
 - **Importance**: Analyzing feature importance is particularly vital for the success of the project as it helps in identifying the most relevant features that drive fraud detection accuracy. By understanding which features have the most significant impact on the model's predictions, we can focus on optimizing these features, enhancing model performance, and ensuring the model's interpretability. This analysis guides feature selection, informs data collection strategies, and aids in continuous model improvement for effective fraud prevention.
 
 By incorporating this key step of feature importance analysis within the recommended modeling strategy using XGBoost, the E-commerce Fraud Detection AI project can effectively tackle the complexities of fraud detection challenges, leverage the unique characteristics of the data types, and achieve accurate and real-time fraud detection for Mercado Libre Peru.
@@ -307,15 +341,17 @@ By incorporating this key step of feature importance analysis within the recomme
 ## Tools and Technologies Recommendation tailored to the Modeling Strategy:
 
 ### 1. XGBoost (eXtreme Gradient Boosting)
+
 - **Description**: XGBoost is a scalable and efficient implementation of the gradient boosting algorithm designed for speed and performance. It is well-suited for handling complex datasets and is commonly used in fraud detection due to its accuracy and scalability.
 - **How it fits in**: XGBoost aligns with our modeling strategy of employing gradient boosting for fraud detection, handling imbalanced data, and achieving high accuracy.
 - **Integration**: XGBoost integrates easily with Python and popular data processing libraries like NumPy and Pandas. It can be seamlessly incorporated into the existing workflow for model training and deployment.
-- **Key Features**: 
+- **Key Features**:
   - Regularization to prevent overfitting.
   - Parallel computation to enhance speed and performance.
 - **Documentation**: [XGBoost Documentation](https://xgboost.readthedocs.io/en/latest/)
 
 ### 2. scikit-learn
+
 - **Description**: scikit-learn is a versatile machine learning library in Python that provides tools for data preprocessing, model building, and evaluation.
 - **How it fits in**: scikit-learn offers various algorithms and utilities necessary for data preprocessing, model training, hyperparameter tuning, and model evaluation as per our modeling strategy.
 - **Integration**: scikit-learn integrates seamlessly with other Python libraries like NumPy and Pandas. It can be used in conjunction with XGBoost for end-to-end model development.
@@ -325,6 +361,7 @@ By incorporating this key step of feature importance analysis within the recomme
 - **Documentation**: [scikit-learn Documentation](https://scikit-learn.org/stable/documentation.html)
 
 ### 3. Apache Airflow
+
 - **Description**: Apache Airflow is a platform to programmatically author, schedule, and monitor workflows, making it easier to build and manage data pipelines.
 - **How it fits in**: Apache Airflow facilitates the automation of data preprocessing, model training, and deployment processes, aligning with the need for an efficient workflow.
 - **Integration**: Apache Airflow can be integrated with data storage systems, databases, and cloud services to orchestrate data pipelines seamlessly.
@@ -372,6 +409,7 @@ df.to_csv('synthetic_data.csv', index=False)
 ```
 
 In this script:
+
 - The Faker library is used to generate synthetic data for features such as geo_location, device_type, and ip_country.
 - Real-world variability is introduced by randomizing the fraudulent flag proportion based on a realistic distribution.
 - The dataset is saved to a CSV file named 'synthetic_data.csv' for model training and validation.
@@ -381,6 +419,7 @@ By using this Python script along with Faker for synthetic data generation and N
 Certainly! Below is an example of a few rows of mocked data representing features relevant to the E-commerce Fraud Detection AI project. This sample file gives an indication of how the data points are structured, including feature names and types, and how it would be formatted for model ingestion.
 
 **Sample Data File (synthetic_data_sample.csv):**
+
 ```
 transaction_amount,transaction_frequency,time_since_last_transaction,session_duration,click_through_rate,add_to_cart_frequency,geo_location,device_type,ip_country,fraudulent
 137.21,6,12,1231,0.745,4,US,desktop,United States,0
@@ -391,6 +430,7 @@ transaction_amount,transaction_frequency,time_since_last_transaction,session_dur
 ```
 
 **Explanation:**
+
 - **Features**:
   - `transaction_amount`: Numerical (float) - Amount spent in the transaction.
   - `transaction_frequency`: Integer - Number of transactions within a specific time frame.
@@ -404,6 +444,7 @@ transaction_amount,transaction_frequency,time_since_last_transaction,session_dur
   - `fraudulent`: Binary (0 or 1) - Indicates if the transaction is fraudulent (1) or not (0).
 
 **Formatting for Model Ingestion:**
+
 - The data is structured in a CSV format, making it easy to read and ingest into machine learning models.
 - Numeric features are represented as numerical values, and categorical features are in string format (to be one-hot encoded during preprocessing).
 - The target variable `fraudulent` is binary, representing the classification label for fraud detection.
@@ -441,6 +482,7 @@ model.save_model("fraud_detection_model.model")
 ```
 
 **Key Sections:**
+
 1. **Data Loading**: Load the preprocessed training and test datasets for model training and testing.
 2. **Model Initialization**: Initialize the XGBoost classifier model for fraud detection.
 3. **Model Training**: Train the model on the training data.
@@ -449,6 +491,7 @@ model.save_model("fraud_detection_model.model")
 6. **Model Saving**: Save the trained model in a file format suitable for deployment.
 
 **Code Quality Standards**:
+
 - **Descriptive Variable Names**: Clear and meaningful variable names for better code readability.
 - **Modularization**: Encapsulate code into functions or classes for better organization and maintainability.
 - **Code Comments**: Provide detailed comments explaining the purpose and logic of each section of the code.
@@ -459,18 +502,18 @@ Adhering to these code quality standards and best practices ensures the producti
 ## Machine Learning Model Deployment Plan:
 
 ### Step-by-Step Deployment Plan:
+
 1. **Pre-Deployment Checks**:
    - **Objective**: Ensure model readiness for deployment, data compatibility, and performance validation.
    - **Tools**: Jupyter Notebook for final model validation, scikit-learn's `check_estimator` for model consistency checks.
-   
 2. **Model Serialization**:
    - **Objective**: Save the trained model to a file format for deployment.
    - **Tools**: Pickle or joblib for serializing the model.
    - **Documentation**:
      - [Pickle Documentation](https://docs.python.org/3/library/pickle.html)
      - [joblib Documentation](https://joblib.readthedocs.io/en/latest/)
-   
 3. **Setting Up Deployment Environment**:
+
    - **Objective**: Configure the deployment environment for hosting the model.
    - **Tools**: Docker for containerization, Kubernetes for orchestration.
    - **Documentation**:
@@ -483,8 +526,8 @@ Adhering to these code quality standards and best practices ensures the producti
    - **Documentation**:
      - [Flask Documentation](https://flask.palletsprojects.com/)
      - [FastAPI Documentation](https://fastapi.tiangolo.com/)
-   
 5. **Model Deployment**:
+
    - **Objective**: Deploy the model on a cloud platform or server for real-time predictions.
    - **Tools**: Amazon Web Services (AWS) EC2, Google Cloud Platform (GCP) Compute Engine.
    - **Documentation**:
@@ -499,6 +542,7 @@ Adhering to these code quality standards and best practices ensures the producti
      - [Kubernetes Scalability Documentation](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/)
 
 ### Deployment Plan Summary:
+
 1. Perform pre-deployment checks, serialization, and model validation.
 2. Set up the deployment environment using Docker and Kubernetes.
 3. Develop an API using Flask or FastAPI for serving model predictions.
@@ -533,6 +577,7 @@ CMD ["python", "app.py"]
 ```
 
 **Instructions within the Dockerfile:**
+
 1. **Base Image**: Utilizes a slim Python 3.9 base image to keep the container lightweight.
 2. **Working Directory**: Sets the working directory in the container to `/app`.
 3. **Requirements Installation**: Copies and installs the required Python libraries from `requirements.txt`.
@@ -541,6 +586,7 @@ CMD ["python", "app.py"]
 6. **Execution Command**: Specifies the command to run the API (`app.py`) when the container starts.
 
 **Optimizations for Performance and Scalability:**
+
 - **Minimized Image**: Uses a slim Python image to reduce container size and optimize performance.
 - **Layer Caching**: Leverages Docker layer caching for faster builds by reusing unchanged layers.
 - **Incremental Builds**: Structured to allow for incremental builds, speeding up development iterations.
@@ -551,25 +597,33 @@ By following this Dockerfile setup optimized for the E-commerce Fraud Detection 
 ## User Groups and User Stories:
 
 ### User Group 1: Fraud Prevention Specialists
+
 **User Story**:
+
 - **Scenario**: As a Fraud Prevention Specialist at Mercado Libre Peru, I struggle to identify and prevent online fraud in real-time, leading to financial losses and compromising user security.
 - **Solution**: The E-commerce Fraud Detection AI application implements real-time fraud detection algorithms to accurately identify fraudulent transactions, enabling immediate action to prevent financial losses and protect users.
 - **Benefit**: By leveraging advanced algorithms in the model component of the project, Fraud Prevention Specialists can proactively detect and prevent online fraud, ensuring a secure and trustworthy digital marketplace.
 
 ### User Group 2: Merchants on Mercado Libre Peru
+
 **User Story**:
+
 - **Scenario**: Merchants on Mercado Libre Peru face the risk of processing fraudulent transactions, impacting their revenue and damaging their reputation.
 - **Solution**: The application's real-time fraud detection capabilities help merchants identify suspicious transactions promptly, reducing the risk of financial losses and protecting their business reputation.
 - **Benefit**: The model component of the project, integrated into the transaction verification system, enables merchants to process transactions confidently, promoting a secure online selling environment.
 
 ### User Group 3: General Users (Buyers and Sellers)
+
 **User Story**:
+
 - **Scenario**: General users on Mercado Libre Peru often encounter fraudulent activities such as unauthorized transactions, leading to distrust in the platform.
 - **Solution**: The E-commerce Fraud Detection AI application enhances the platform's security by detecting and preventing fraudulent behaviors in real-time, ensuring a safe and reliable online shopping experience.
 - **Benefit**: With the fraud detection algorithms in place, general users can shop and sell on Mercado Libre Peru with confidence, knowing that their transactions are protected, enhancing trust and loyalty to the platform.
 
 ### User Group 4: Data Scientists and Analysts
+
 **User Story**:
+
 - **Scenario**: Data Scientists and Analysts at Mercado Libre Peru require advanced tools and models to build robust fraud detection systems.
 - **Solution**: The project provides a framework for developing and deploying machine learning models using Keras and Scikit-Learn, empowering data professionals to create accurate fraud detection algorithms.
 - **Benefit**: Utilizing the model training and deployment components, Data Scientists and Analysts can enhance their fraud detection capabilities, improving overall security measures within the E-commerce platform.

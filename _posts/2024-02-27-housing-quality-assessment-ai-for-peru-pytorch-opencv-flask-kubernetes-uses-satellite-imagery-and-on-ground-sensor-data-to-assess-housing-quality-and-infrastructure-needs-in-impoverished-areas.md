@@ -6,6 +6,7 @@ layout: article
 ---
 
 ## Objectives:
+
 - Develop an AI system using PyTorch, OpenCV, Flask, and Kubernetes to assess housing quality and infrastructure needs in impoverished areas in Peru.
 - Utilize satellite imagery and on-ground sensor data for analysis.
 - Provide insights to aid in decision-making processes for improving living conditions and infrastructure in these areas.
@@ -13,20 +14,24 @@ layout: article
 ## System Design Strategies:
 
 ### 1. Data Collection and Preprocessing:
+
 - Gather satellite imagery data from sources like NASA or commercial satellite providers.
 - Collect on-ground sensor data using IoT devices installed in targeted locations.
 - Preprocess data to ensure compatibility and quality for input into the AI models.
 
 ### 2. Machine Learning Models:
+
 - Develop a Convolutional Neural Network (CNN) using PyTorch for image analysis to assess housing conditions.
 - Implement algorithms for feature extraction, object detection, and image segmentation using OpenCV.
 - Train the models on labeled data to classify housing quality and identify infrastructure needs.
 
 ### 3. Web Application Development:
+
 - Use Flask to create a web interface for users to upload images or input sensor data for analysis.
 - Integrate the AI models to provide real-time assessments and generate reports on housing quality and infrastructure needs.
 
 ### 4. Deployment and Scaling:
+
 - Containerize the application using Docker for easy deployment.
 - Orchestrate containers using Kubernetes for scalability and load balancing.
 - Utilize cloud services for storage, computing resources, and data management.
@@ -34,18 +39,22 @@ layout: article
 ## Chosen Libraries:
 
 ### 1. PyTorch:
+
 - PyTorch provides a flexible and efficient platform for building deep learning models.
 - Its dynamic computation graph feature allows for easier model design and debugging.
 
 ### 2. OpenCV:
+
 - OpenCV offers a comprehensive library of computer vision functions for image processing and analysis.
 - It includes tools for image manipulation, feature detection, and object recognition.
 
 ### 3. Flask:
+
 - Flask is a lightweight web framework in Python for developing web applications.
 - Its simplicity and extensibility make it ideal for creating the user interface and integrating with AI models.
 
 ### 4. Kubernetes:
+
 - Kubernetes is a robust container orchestration tool for automating deployment, scaling, and management of containerized applications.
 - It ensures high availability, efficient resource utilization, and easy scaling of the AI system.
 
@@ -54,31 +63,37 @@ By combining these technologies and strategies, we aim to create a scalable, dat
 ## MLOps Infrastructure for Housing Quality Assessment AI:
 
 ### 1. Data Pipeline:
+
 - Implement a robust data pipeline to handle the collection, preprocessing, and transformation of satellite imagery and sensor data.
 - Utilize tools like Apache Airflow for scheduling and orchestrating data workflows.
 - Ensure data integrity and quality throughout the pipeline.
 
 ### 2. Model Development and Training:
+
 - Set up a version control system like Git for tracking changes to code, models, and configurations.
 - Utilize a model registry such as MLflow for managing and tracking model versions, metadata, and performance metrics.
 - Automate model training using CI/CD pipelines to streamline the development process.
 
 ### 3. Model Deployment:
+
 - Containerize AI models and Flask application using Docker for consistent deployment across environments.
 - Utilize Kubernetes for container orchestration, enabling scalable and reliable deployment of models.
 - Implement blue-green or canary deployment strategies for seamless updates and rollback capabilities.
 
 ### 4. Monitoring and Logging:
+
 - Set up monitoring tools like Prometheus and Grafana to track application performance, resource usage, and model metrics.
 - Implement logging with tools like ELK stack to centralize log management and facilitate debugging.
 - Set up alerts and notifications for critical events or anomalies in the system.
 
 ### 5. Continuous Integration and Deployment (CI/CD):
+
 - Utilize CI/CD pipelines with tools like Jenkins or GitLab CI to automate testing, building, and deployment processes.
 - Perform automated testing at each stage of the pipeline to ensure code quality and model performance.
 - Enable auto-scaling and self-healing capabilities in Kubernetes clusters for efficient resource management.
 
 ### 6. Security and Compliance:
+
 - Implement security best practices such as encryption, access control, and secure communication protocols to protect sensitive data.
 - Conduct regular security audits and vulnerability assessments to ensure the integrity of the system.
 - Ensure compliance with data privacy regulations like GDPR or HIPAA when handling personal or sensitive data.
@@ -126,6 +141,7 @@ housing_quality_assessment/
 ### Explanation of File Structure:
 
 1. **app/**: Contains the Flask web application for user interface and API endpoints.
+
    - **static/**: Static files for the web application (CSS, JavaScript).
    - **templates/**: HTML templates for the web pages.
    - **Dockerfile**: Dockerfile for building the web application image.
@@ -133,15 +149,18 @@ housing_quality_assessment/
    - **requirements.txt**: Required Python packages for the application.
 
 2. **preprocessing/**: Scripts for data preprocessing and image augmentation.
+
    - **data_preprocessing.py**: Script for preparing and cleaning data.
    - **image_augmentation.py**: Script for augmenting satellite imagery data.
 
 3. **models/**: Contains scripts for model training and implementation.
+
    - **model_training.py**: Script for training machine learning models.
    - **cnn_model.py**: PyTorch CNN model implementation.
    - **utils.py**: Utility functions for model training and evaluation.
 
 4. **deployment/**: Handles deployment-related configuration files and scripts.
+
    - **kubernetes/**: Kubernetes deployment configurations.
    - **deployment.yaml**: Deployment configuration for Kubernetes.
    - **service.yaml**: Kubernetes service configuration.
@@ -150,11 +169,13 @@ housing_quality_assessment/
    - **deploy.sh**: Script for deploying the application.
 
 5. **data/**: Data directory for storing raw, processed, and train-test data.
+
    - **raw_data/**: Original data sources.
    - **processed_data/**: Cleaned and preprocessed data.
    - **train_test_data/**: Data split for training and testing models.
 
 6. **notebooks/**: Jupyter notebooks for data exploration, model training, and evaluation.
+
    - **exploratory_data_analysis.ipynb**: Notebook for exploring and visualizing data.
    - **model_training.ipynb**: Notebook for training machine learning models.
    - **model_evaluation.ipynb**: Notebook for evaluating model performance.
@@ -178,6 +199,7 @@ models/
 ### Explanation of Files:
 
 1. **model_training.py**:
+
    - **Description**: This script is responsible for training machine learning models using the provided data.
    - **Functionality**:
      - Loads the preprocessed data.
@@ -186,6 +208,7 @@ models/
      - Evaluates the model performance and saves the trained model weights.
 
 2. **cnn_model.py**:
+
    - **Description**: Contains the PyTorch implementation of the Convolutional Neural Network (CNN) model for image analysis.
    - **Functionality**:
      - Defines the CNN architecture using PyTorch neural network modules.
@@ -216,6 +239,7 @@ deployment/
 ### Explanation of Files:
 
 1. **kubernetes/** Directory:
+
    - **Description**: Contains Kubernetes deployment configurations for orchestrating the AI application.
    - **deployment.yaml**:
      - Defines the Kubernetes Deployment resource for managing application pods.
@@ -228,6 +252,7 @@ deployment/
      - Configures host, paths, TLS, and backend services for routing requests.
 
 2. **Dockerfile**:
+
    - **Description**: Dockerfile for containerizing the Flask application and its dependencies.
    - **Functionality**:
      - Defines the base image, environment variables, and working directory.
@@ -370,22 +395,27 @@ In this `complex_ml_algorithm.py` file, a complex machine learning algorithm is 
 ## Types of Users for Housing Quality Assessment AI:
 
 1. **Government Official**:
+
    - **User Story**: As a government official, I need to access reports on housing quality and infrastructure needs in impoverished areas to make informed decisions on resource allocation and improvement projects.
    - **Accomplished by**: Accessing the `docs/` directory for project reports and summaries.
 
 2. **Non-Governmental Organization (NGO) Representative**:
+
    - **User Story**: As an NGO representative, I want to view detailed assessments of housing quality in specific regions to plan interventions and support community development efforts.
    - **Accomplished by**: Utilizing the web interface in the `app/` directory to input region-specific data and view detailed assessments.
 
 3. **Data Scientist/Researcher**:
+
    - **User Story**: As a data scientist/researcher, I aim to analyze the AI models and data preprocessing techniques used in the application to enhance the accuracy of housing quality assessments in impoverished areas.
    - **Accomplished by**: Exploring the `notebooks/` directory for in-depth analyses, experiments, and model evaluations.
 
 4. **Local Community Leader**:
+
    - **User Story**: As a local community leader, I seek to understand the infrastructure needs of my community and advocate for necessary improvements based on the AI assessment results.
    - **Accomplished by**: Reviewing the user-friendly manual in the `docs/` directory to guide community members through accessing and interpreting the assessment reports.
 
 5. **Urban Planner/Architect**:
+
    - **User Story**: As an urban planner/architect, I need access to the AI system to assess housing quality and infrastructure needs when designing sustainable urban development projects in impoverished areas.
    - **Accomplished by**: Leveraging the trained AI models in the `models/` directory to integrate housing quality assessments into urban planning projects.
 

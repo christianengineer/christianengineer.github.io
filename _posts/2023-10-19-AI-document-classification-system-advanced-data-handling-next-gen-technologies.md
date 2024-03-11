@@ -106,7 +106,7 @@ The following tree represents the scalable file structure for the Intelligent Do
 
 The file that will handle the logic for Intelligent Document Classification System could be `document_classifier.py`, which resides in the `/src/app/services` directory. Here's a simple high-level implementation of this file:
 
-````markdown
+`````markdown
 **Location:** /src/app/services/document_classifier.py
 
 ````python
@@ -156,4 +156,8 @@ This file `document_classifier.py` handles the main logic of the Intelligent Doc
 
 Please note that this is a simplified version. Optimized preprocessing methods, model selection, and parameter tuning should be performed to achieve higher accuracy in a real-world application. Additionally, the model should be saved after training to be reused for predictions without the need for retraining.
 ````
-````
+`````
+
+```
+
+```

@@ -8,10 +8,13 @@ layout: article
 ## AI Domestic Violence Incident Predictors
 
 ## Objectives
+
 The primary objective of the AI Domestic Violence Incident Predictors project is to develop a machine learning model that can predict the likelihood of domestic violence incidents. The model aims to leverage historical data to identify patterns and indicators that may precede such incidents. By accurately predicting the likelihood of domestic violence, the goal is to enable preventive interventions and support to potential victims.
 
 ## System Design Strategies
+
 To achieve the objectives, the system will have the following design strategies:
+
 1. **Data Collection**: Gathering historical data related to domestic violence incidents, including factors such as previous incidents, demographic information, socioeconomic status, and behavioral indicators.
 2. **Data Preprocessing**: Cleaning and preprocessing the collected data to make it suitable for training machine learning models. This involves handling missing values, encoding categorical variables, and scaling numerical features.
 3. **Feature Engineering**: Extracting relevant features from the data and creating new informative features that can enhance the predictive capability of the model.
@@ -20,7 +23,9 @@ To achieve the objectives, the system will have the following design strategies:
 6. **Deployment and Integration**: Deploying the trained models into a scalable and accessible infrastructure, integrating them with other systems, and creating APIs for prediction requests.
 
 ## Chosen Libraries
+
 The following libraries and frameworks will be utilized in the project:
+
 1. **TensorFlow**: TensorFlow will be used as the primary deep learning framework for building and training neural network models. It provides extensive support for building complex neural network architectures, optimization algorithms, and GPU acceleration for faster training.
 2. **Keras**: Keras, which is integrated with TensorFlow, will be utilized as a high-level neural networks API to facilitate rapid experimentation and prototyping of neural network models. Keras provides a user-friendly interface for building neural networks and supports seamless integration with TensorFlow backend.
 3. **Pandas**: Pandas will be used for data manipulation and preprocessing. It offers data structures and functions for efficiently handling structured data, including data cleaning, transformation, and feature engineering.
@@ -32,29 +37,35 @@ By leveraging these libraries and following the system design strategies, the pr
 ## MLOps Infrastructure for Domestic Violence Incident Predictors
 
 ## Introduction
+
 MLOps, short for Machine Learning Operations, encompasses the practices and tools for operationalizing machine learning models to ensure their scalability, reliability, and maintainability in production environments. The MLOps infrastructure for the Domestic Violence Incident Predictors application involves the integration of various components to streamline the deployment, monitoring, and management of machine learning models based on TensorFlow and Keras for preventive interventions.
 
 ## Components of MLOps Infrastructure
 
 ### 1. Model Training Pipeline
+
 - **Data Versioning**: Utilizing a tool such as DVC (Data Version Control) to version control the datasets used for training, ensuring reproducibility and traceability of model inputs.
 - **Training Orchestration**: Employing workflow management tools such as Apache Airflow or Kubeflow to define and automate the end-to-end training process, including data preprocessing, model training, and hyperparameter tuning.
 - **Experiment Tracking**: Leveraging MLflow or TensorFlow Extended (TFX) for tracking and recording model training experiments, enabling comparison of model performance and facilitating reproducibility.
 
 ### 2. Model Deployment and Serving
+
 - **Model Packaging**: Using technologies like Docker to package the trained models along with their dependencies into containerized units for portability and consistency across different environments.
 - **Model Serving**: Deploying the containerized models on scalable and reliable serving platforms such as Kubernetes (using tools like Kubeflow Serving) or serverless platforms like AWS Lambda or Google Cloud Functions for efficient inference.
 - **API Development**: Creating RESTful APIs using frameworks like Flask or FastAPI to enable seamless integration of the model predictions into downstream applications or systems.
 
 ### 3. Monitoring and Continuous Integration/Continuous Deployment (CI/CD)
+
 - **Model Monitoring**: Implementing monitoring tools such as Prometheus and Grafana to track model performance, data drift, and concept drift in real-time, enabling proactive identification of model degradation.
 - **CI/CD Pipelines**: Setting up automated CI/CD pipelines with tools like Jenkins, GitLab CI, or CircleCI to automate model testing, validation, and deployment, ensuring rapid and reliable delivery of model updates.
 
 ### 4. Infrastructure as Code (IaC) and Scalability
+
 - **IaC with Terraform or AWS CloudFormation**: Defining the infrastructure for model serving, monitoring, and data storage as code, enabling reproducible infrastructure setup and management across different environments.
 - **Scalability and Auto-scaling**: Leveraging cloud-native features for auto-scaling infrastructure components based on demand, ensuring the application can handle varying traffic loads effectively.
 
 ## Integration with TensorFlow and Keras
+
 - **TensorFlow Serving**: Utilizing TensorFlow Serving for efficient, high-performance serving of TensorFlow and Keras models, allowing for easy integration with the MLOps infrastructure.
 - **TensorFlow Extended (TFX)**: Incorporating TFX components for end-to-end ML pipelines, including model validation, schema management, and model lineage tracking.
 
@@ -121,6 +132,7 @@ domestic-violence-incident-predictors/
 3. **notebooks/**: Includes Jupyter notebooks for exploratory data analysis, model training, and evaluation.
 
 4. **src/**: Houses the source code organized into subdirectories:
+
    - **data/**: Scripts for data preprocessing.
    - **models/**: Script for defining the model architecture.
    - **pipelines/**: Scripts for defining data processing pipelines.
@@ -148,14 +160,17 @@ By organizing the codebase with a scalable file structure, it becomes easier to 
 The `models/` directory in the Domestic Violence Incident Predictors application contains the files and scripts related to model training, evaluation, and management. It plays a crucial role in defining, training, and utilizing machine learning models based on TensorFlow and Keras for predictive insights related to domestic violence incidents.
 
 ### 1. saved_models/ Directory
-   - **Description**: This directory is intended to store the saved model artifacts after training for future use.
-   - **Usage**: After training a model, the saved model files (e.g., model.h5, model.pb) will be stored in this directory, allowing for easy access and deployment.
+
+- **Description**: This directory is intended to store the saved model artifacts after training for future use.
+- **Usage**: After training a model, the saved model files (e.g., model.h5, model.pb) will be stored in this directory, allowing for easy access and deployment.
 
 ### 2. model_training.py
-   - **Description**: This script contains the code for training the machine learning models using TensorFlow and Keras based on the selected architecture and the preprocessed data.
-   - **Role**: It defines the training pipeline, including data loading, model definition, training loop, and saving the trained model to the `saved_models/` directory.
+
+- **Description**: This script contains the code for training the machine learning models using TensorFlow and Keras based on the selected architecture and the preprocessed data.
+- **Role**: It defines the training pipeline, including data loading, model definition, training loop, and saving the trained model to the `saved_models/` directory.
 
 ### File Content Example (model_training.py)
+
 ```python
 import tensorflow as tf
 from tensorflow.keras.models import Sequential
@@ -202,14 +217,17 @@ By incorporating the `models/` directory with these essential files, the Domesti
 The `deployment/` directory within the Domestic Violence Incident Predictors application encompasses the files and scripts essential for deploying the trained machine learning model based on TensorFlow and Keras for predictive interventions related to domestic violence incidents. This directory facilitates the seamless integration and deployment of the predictive model, ensuring accessibility and usability within real-world systems.
 
 ### 1. api/ Directory
-   - **Description**: This directory contains the implementation for the API that exposes endpoints for model inference, enabling other systems or applications to make predictions based on the trained model.
-   - **Role**: It includes the necessary files and scripts to handle prediction requests, process input data, and return predictions.
+
+- **Description**: This directory contains the implementation for the API that exposes endpoints for model inference, enabling other systems or applications to make predictions based on the trained model.
+- **Role**: It includes the necessary files and scripts to handle prediction requests, process input data, and return predictions.
 
 #### app.py
-   - **Description**: The `app.py` file contains the implementation of the API using a web framework such as Flask or FastAPI.
-   - **Role**: It defines the API endpoints, request handling, model loading, data preprocessing, and response generation.
+
+- **Description**: The `app.py` file contains the implementation of the API using a web framework such as Flask or FastAPI.
+- **Role**: It defines the API endpoints, request handling, model loading, data preprocessing, and response generation.
 
 #### File Content Example (app.py)
+
 ```python
 from flask import Flask, request, jsonify
 from tensorflow.keras.models import load_model
@@ -255,6 +273,7 @@ By structuring the deployment directory with the necessary API implementation fi
 Certainly! Below is an example of a file `model_training_mock_data.py` that demonstrates training a model for the Domestic Violence Incident Predictors application using mock data. The file path for this script is located in the `models/` directory within the project structure.
 
 ### File Content Example (model_training_mock_data.py)
+
 ```python
 import tensorflow as tf
 from tensorflow.keras.models import Sequential
@@ -292,6 +311,7 @@ Please note that in real-world scenarios, actual preprocessed data from the Dome
 Certainly! Below is an example of a file `complex_model_training_mock_data.py` that demonstrates the training of a complex machine learning algorithm for the Domestic Violence Incident Predictors application using mock data. The file path for this script is located in the `models/` directory within the project structure.
 
 ### File Content Example (complex_model_training_mock_data.py)
+
 ```python
 import tensorflow as tf
 from tensorflow.keras.models import Sequential
@@ -330,23 +350,27 @@ This example showcases the training of a more intricate model architecture using
 ### Types of Users for Domestic Violence Incident Predictors Application
 
 1. **Social Workers**
-   - *User Story*: As a social worker, I need to access the system to input client information and receive risk assessments to better understand and support individuals at risk of domestic violence.
-   - *Accomplished with*: `app.py` in the `deployment/api` directory, which provides an API for handling client information and generating risk assessments using the trained model.
+
+   - _User Story_: As a social worker, I need to access the system to input client information and receive risk assessments to better understand and support individuals at risk of domestic violence.
+   - _Accomplished with_: `app.py` in the `deployment/api` directory, which provides an API for handling client information and generating risk assessments using the trained model.
 
 2. **Law Enforcement Officers**
-   - *User Story*: As a law enforcement officer, I need to utilize the system to quickly assess the risk level of reported domestic violence cases and determine appropriate intervention strategies for improved public safety.
-   - *Accomplished with*: `app.py` in the `deployment/api` directory, which accepts input related to reported cases and returns risk assessments for decision-making.
+
+   - _User Story_: As a law enforcement officer, I need to utilize the system to quickly assess the risk level of reported domestic violence cases and determine appropriate intervention strategies for improved public safety.
+   - _Accomplished with_: `app.py` in the `deployment/api` directory, which accepts input related to reported cases and returns risk assessments for decision-making.
 
 3. **Victim Support Organizations**
-   - *User Story*: As a member of a victim support organization, I rely on the system to identify individuals at high risk of domestic violence and provide targeted assistance and resources to enhance safety and well-being.
-   - *Accomplished with*: `app.py` in the `deployment/api` directory, enabling the organizations to obtain risk assessments for individuals and offer tailored support.
+
+   - _User Story_: As a member of a victim support organization, I rely on the system to identify individuals at high risk of domestic violence and provide targeted assistance and resources to enhance safety and well-being.
+   - _Accomplished with_: `app.py` in the `deployment/api` directory, enabling the organizations to obtain risk assessments for individuals and offer tailored support.
 
 4. **Data Analysts/Researchers**
-   - *User Story*: As a data analyst/researcher, I utilize the system to access historical domestic violence data and perform in-depth analysis to identify trends, risk factors, and patterns to inform evidence-based interventions and policies.
-   - *Accomplished with*: `notebooks/exploratory_data_analysis.ipynb`, which enables the exploration of historical data and the identification of insights, trends, and patterns.
+
+   - _User Story_: As a data analyst/researcher, I utilize the system to access historical domestic violence data and perform in-depth analysis to identify trends, risk factors, and patterns to inform evidence-based interventions and policies.
+   - _Accomplished with_: `notebooks/exploratory_data_analysis.ipynb`, which enables the exploration of historical data and the identification of insights, trends, and patterns.
 
 5. **System Administrators/DevOps Engineers**
-   - *User Story*: As a system administrator or DevOps engineer, I manage the deployment and maintenance of the application, ensuring its high availability, reliability, and scalability for all authorized users.
-   - *Accomplished with*: Infrastructure and deployment-related files such as Kubernetes configurations, Dockerfiles, CI/CD pipelines, and configuration files located in respective directories (`deployment/`, `config/`, etc.).
+   - _User Story_: As a system administrator or DevOps engineer, I manage the deployment and maintenance of the application, ensuring its high availability, reliability, and scalability for all authorized users.
+   - _Accomplished with_: Infrastructure and deployment-related files such as Kubernetes configurations, Dockerfiles, CI/CD pipelines, and configuration files located in respective directories (`deployment/`, `config/`, etc.).
 
 These users represent various stakeholders who interact with the Domestic Violence Incident Predictors application to support preventive interventions, leverage predictive insights, and ensure the effective deployment and maintenance of the system. Each user's requirements and interactions are catered to by different components, such as the API for risk assessments, data analysis notebooks, and infrastructure management files within the application.

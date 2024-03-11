@@ -8,9 +8,11 @@ layout: article
 ## AI Predictive Maintenance for Aerospace Equipment
 
 ## Objectives
+
 The objective of the AI Predictive Maintenance for Aerospace Equipment is to leverage machine learning to predict potential equipment failures in aerospace industry. By using historical data from the equipment, we aim to develop models that can predict failures before they occur, enabling proactive maintenance and enhancing aviation safety.
 
 ## System Design Strategies
+
 To achieve the objectives, we will employ the following system design strategies:
 
 1. **Data Collection**: Collecting real-time and historical data from aerospace equipment, such as sensor readings, maintenance logs, and operational data.
@@ -26,6 +28,7 @@ To achieve the objectives, we will employ the following system design strategies
 6. **Scalability and Performance**: Designing the system to be scalable and performant, capable of handling large volumes of data and making predictions in a timely manner.
 
 ## Chosen Libraries
+
 To implement the AI Predictive Maintenance system, we have chosen the following libraries and technologies:
 
 1. **Scikit-Learn**: Utilizing Scikit-Learn for building machine learning models. Scikit-Learn provides a powerful and user-friendly interface for implementing various machine learning algorithms and techniques.
@@ -39,9 +42,11 @@ By leveraging the chosen libraries and technologies, we aim to build a scalable,
 ## MLOps Infrastructure for Predictive Maintenance for Aerospace Equipment
 
 ## Continuous Integration and Continuous Deployment (CI/CD)
-For the Predictive Maintenance for Aerospace Equipment application, we will implement a robust MLOps infrastructure to streamline model development, deployment, and monitoring. The MLOps infrastructure will incorporate Continuous Integration and Continuous Deployment (CI/CD) practices to ensure seamless integration of machine learning models into the production environment. 
+
+For the Predictive Maintenance for Aerospace Equipment application, we will implement a robust MLOps infrastructure to streamline model development, deployment, and monitoring. The MLOps infrastructure will incorporate Continuous Integration and Continuous Deployment (CI/CD) practices to ensure seamless integration of machine learning models into the production environment.
 
 ## System Architecture
+
 The MLOps infrastructure will consist of the following components:
 
 1. **Model Development Environment**: Utilizing Jupyter notebooks or dedicated IDEs for data exploration, feature engineering, and model training using Scikit-Learn. Version control using Git/GitHub for tracking changes to the code and model artifacts.
@@ -55,12 +60,15 @@ The MLOps infrastructure will consist of the following components:
 5. **Real-time Predictions and Monitoring**: Connecting the deployed models with Kafka for real-time prediction serving. Additionally, setting up monitoring and alerting systems to track model performance drift, data quality issues, and system faults.
 
 ## Data Versioning and Lineage
+
 To maintain data consistency and traceability, we will implement data versioning using tools such as DVC (Data Version Control) to track changes and lineage of the training data. This ensures reproducibility of model training and enables rollback to specific data versions if required.
 
 ## Infrastructure as Code (IaC)
+
 Using Infrastructure as Code (IaC) principles, the entire MLOps infrastructure, including the deployment environment, CI/CD pipelines, and monitoring setups, will be defined and managed as code using tools like Terraform or AWS CloudFormation. This enables consistent and reproducible infrastructure deployment and management.
 
 ## Security and Compliance
+
 Implementing security best practices and ensuring compliance with industry regulations such as GDPR or HIPAA. This includes access control, encryption, and secure handling of sensitive data.
 
 By incorporating these MLOps practices and infrastructure components, we aim to create a reliable, scalable, and automated pipeline for deploying and managing predictive maintenance models for aerospace equipment, ultimately contributing to enhanced aviation safety.
@@ -310,22 +318,27 @@ This file demonstrates the training of a complex machine learning algorithm for 
 The Predictive Maintenance for Aerospace Equipment (Scikit-Learn, Kafka, Airflow) for aviation safety application can be used by various types of users, each with their distinct roles and requirements. Below is a list of potential user types, along with a user story for each type and the corresponding file they may interact with:
 
 1. **Data Scientist / Machine Learning Engineer**
+
    - User Story: As a data scientist, I want to train and evaluate machine learning models using historical and real-time data to predict potential equipment failures in the aerospace industry.
    - File: `src/train_model.py` or `src/train_complex_model.py`
 
 2. **Data Engineer**
+
    - User Story: As a data engineer, I need to implement data pipelines for collecting and preprocessing real-time and historical data from aerospace equipment, ensuring data quality and availability for model training and evaluation.
    - File: Airflow DAG definitions in the `airflow/dags/` directory
 
 3. **DevOps Engineer**
+
    - User Story: As a DevOps engineer, I want to automate the deployment of trained machine learning models and manage the infrastructure components required for model serving and monitoring.
    - File: Deployment scripts in the `deployment/scripts/` directory and Dockerfiles in the `deployment/docker/` directory
 
 4. **Business Analyst**
+
    - User Story: As a business analyst, I need to monitor the performance of deployed predictive maintenance models and assess the impact of proactive maintenance on aviation safety metrics and operational efficiency.
    - File: Model evaluation metrics in the `models/model_evaluation/` directory
 
 5. **System Administrator**
+
    - User Story: As a system administrator, I am responsible for setting up and maintaining the Kafka infrastructure for handling real-time data streams and ensuring the reliability and availability of the system.
    - File: Kafka configurations and setup scripts in the `kafka/` directory
 

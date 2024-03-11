@@ -8,15 +8,18 @@ layout: article
 ## AI Ethical Supply Chain Monitoring
 
 ## Objectives
+
 The objective of the "AI Ethical Supply Chain Monitoring" repository is to develop a scalable, data-intensive application that leverages machine learning to monitor and ensure responsible production within the supply chain. This involves tracking various ethical considerations such as labor practices, environmental impact, and product authenticity, among others. The system aims to provide real-time monitoring, analysis, and reporting of supply chain activities to ensure compliance with ethical standards.
 
 ## System Design Strategies
+
 - **Scalability**: The system should be designed to handle large volumes of data from diverse sources, including sensor data, transaction records, and supplier information. Scalable data storage and processing solutions will be essential.
 - **Real-time Monitoring**: Utilize streaming data processing to enable real-time monitoring of supply chain activities, allowing for immediate detection of potential ethical violations.
 - **Machine Learning Models**: Develop and deploy machine learning models to analyze and classify supply chain data, identifying patterns and anomalies that may indicate ethical concerns.
 - **Ethical Considerations**: The system will be designed to incorporate a comprehensive set of ethical considerations, leveraging machine learning to recognize patterns and deviations that align with responsible production guidelines.
 
 ## Chosen Libraries
+
 - **TensorFlow**: TensorFlow will be utilized for building and training machine learning models to classify and analyze supply chain data. Its scalability and support for distributed computing will be valuable for handling large datasets and complex model architectures.
 - **Pandas**: Pandas will be used for data manipulation and analysis, providing a powerful toolkit for handling structured data and integrating it into the machine learning workflow. Its ability to handle large datasets efficiently makes it suitable for processing supply chain data.
 
@@ -25,29 +28,37 @@ By leveraging TensorFlow for machine learning and Pandas for data processing, th
 ## MLOps Infrastructure for Ethical Supply Chain Monitoring
 
 ## Overview
+
 The MLOps infrastructure for the Ethical Supply Chain Monitoring application will be designed to support the end-to-end machine learning lifecycle, including model development, training, deployment, and monitoring. This infrastructure will enable efficient collaboration between data scientists, ML engineers, and operations teams, ensuring that the machine learning models are seamlessly integrated into the responsible production application.
 
 ## Components and Strategies
+
 ### Data Management
+
 - **Data Collection**: Utilize scalable data collection mechanisms to gather diverse data from the supply chain, including sensor data, transaction records, and supplier information. Data will be stored in a centralized location with version control and metadata tracking.
 - **Data Preprocessing**: Employ data preprocessing pipelines using tools like Pandas for cleaning, feature engineering, and transformation of the raw supply chain data.
 
 ### Model Development
+
 - **TensorFlow for Model Training**: Develop and train machine learning models using TensorFlow for tasks such as classification of ethical supply chain activities and anomaly detection.
 - **Experiment Tracking**: Utilize tools like MLflow or TensorBoard for tracking and comparing model training experiments, allowing for reproducibility and collaboration among data scientists.
 
 ### Model Deployment
+
 - **Containerization**: Utilize containerization tools like Docker to package the trained models and their dependencies into portable containers, ensuring consistency across different environments.
 - **Model Serving**: Deploy the containerized models using a scalable serving infrastructure, such as Kubernetes or AWS ECS, to provide real-time predictions to the responsible production application.
 
 ### Model Monitoring and Governance
+
 - **Model Monitoring**: Implement monitoring solutions to track the performance of deployed models, including metrics such as accuracy, latency, and concept drift, ensuring that the models continue to operate effectively over time.
 - **Responsible AI Considerations**: Incorporate ethical and responsible AI considerations into the monitoring process, such as monitoring for bias and fairness in model predictions.
 
 ### Continuous Integration/Continuous Deployment (CI/CD)
+
 - **Automated Pipelines**: Implement CI/CD pipelines for automated testing, validation, and deployment of machine learning models, ensuring that new models are integrated into the responsible production application seamlessly and reliably.
 
 ## Tools and Technologies
+
 - **MLflow**: MLflow will be used for experiment tracking, model packaging, and model registry, providing a centralized platform for managing the machine learning lifecycle.
 - **Kubernetes**: Kubernetes will be leveraged for container orchestration and scalable deployment of the machine learning models, providing a platform-agnostic solution for managing the model serving infrastructure.
 - **TensorBoard**: TensorBoard will be used for visualizing and analyzing model training experiments, enabling data scientists to monitor and optimize model performance.
@@ -192,6 +203,7 @@ models/
 In the proposed directory structure for the `models` directory within the Ethical Supply Chain Monitoring repository:
 
 - The `tf_models` subdirectory contains individual directories for each TensorFlow model, which houses the following components:
+
   - `model_code.py`: Python script containing the TensorFlow model architecture and related code for data preprocessing, model training, and evaluation.
   - `model_training.ipynb`: Jupyter notebook providing a documented workflow for model training and evaluation, including data loading, model fitting, and performance analysis.
   - `model_saved/`: Directory containing the saved model artifacts, including the trained model's weights, structure, and metadata, and structured as per TensorFlow's model saving conventions.
@@ -221,8 +233,8 @@ In the proposed `model_deployment` directory:
 - `dockerfile`: The `dockerfile` includes instructions for building a Docker image that encapsulates the model deployment environment, including dependencies such as TensorFlow, Pandas, and any other required libraries. This allows for consistent and reproducible deployment across different environments, including local development, testing, and production environments.
 
 - `deployment_scripts/`: This subdirectory contains shell scripts and associated files for orchestrating model deployment tasks:
-    - `setup_server.sh`: A shell script that automates the setup of the server environment, including installing necessary dependencies and configuring the serving infrastructure.
-    - `start_model_serving.sh`: A shell script for starting the model serving process, setting up API endpoints, and initializing monitoring and logging for the deployed models. Additional scripts may be included for monitoring, scaling, and managing the model serving infrastructure.
+  - `setup_server.sh`: A shell script that automates the setup of the server environment, including installing necessary dependencies and configuring the serving infrastructure.
+  - `start_model_serving.sh`: A shell script for starting the model serving process, setting up API endpoints, and initializing monitoring and logging for the deployed models. Additional scripts may be included for monitoring, scaling, and managing the model serving infrastructure.
 
 These deployment-specific files and scripts provide the necessary infrastructure and automation to effectively deploy the machine learning models for the responsible production application leveraging TensorFlow and Pandas for ethical supply chain monitoring.
 
@@ -342,23 +354,27 @@ The script file path is `src/model_training/complex_model_algorithm.py` within t
 ### Type of Users for the Ethical Supply Chain Monitoring Application
 
 1. **Data Analyst**
-   - *User Story*: As a data analyst, I want to be able to perform exploratory data analysis and generate reports on ethical supply chain practices based on the data collected.
-   - *Accomplishing File*: `notebooks/exploratory_data_analysis.ipynb`
+
+   - _User Story_: As a data analyst, I want to be able to perform exploratory data analysis and generate reports on ethical supply chain practices based on the data collected.
+   - _Accomplishing File_: `notebooks/exploratory_data_analysis.ipynb`
 
 2. **Data Scientist/ML Engineer**
-   - *User Story*: As a data scientist, I need to develop and train machine learning models to classify and analyze supply chain data for monitoring ethical practices.
-   - *Accomplishing File*: `src/model_training/train_model.py` for simpler models; `src/model_training/complex_model_algorithm.py` for more complex algorithms.
+
+   - _User Story_: As a data scientist, I need to develop and train machine learning models to classify and analyze supply chain data for monitoring ethical practices.
+   - _Accomplishing File_: `src/model_training/train_model.py` for simpler models; `src/model_training/complex_model_algorithm.py` for more complex algorithms.
 
 3. **System Administrator/DevOps Engineer**
-   - *User Story*: As a system administrator, I want to ensure smooth deployment and monitoring of machine learning models within the ethical supply chain monitoring system.
-   - *Accomplishing File*: `model_deployment/model_deployment_code.py` and `dockerfile` for deployment and scaling configurations.
+
+   - _User Story_: As a system administrator, I want to ensure smooth deployment and monitoring of machine learning models within the ethical supply chain monitoring system.
+   - _Accomplishing File_: `model_deployment/model_deployment_code.py` and `dockerfile` for deployment and scaling configurations.
 
 4. **Ethical Compliance Officer**
-   - *User Story*: As an ethical compliance officer, I need to have access to a user-friendly interface for monitoring and validating compliance with ethical supply chain standards.
-   - *Accomplishing File*: `web_app/index.html` for the user interface to visualize and monitor the compliance status.
+
+   - _User Story_: As an ethical compliance officer, I need to have access to a user-friendly interface for monitoring and validating compliance with ethical supply chain standards.
+   - _Accomplishing File_: `web_app/index.html` for the user interface to visualize and monitor the compliance status.
 
 5. **Executive/Manager**
-   - *User Story*: As an executive, I require summarized and actionable insights from the supply chain monitoring system to make strategic decisions in line with ethical compliance and responsible production goals.
-   - *Accomplishing File*: `notebooks/executive_summary_report.ipynb` for generating summarized reports and visualizations.
+   - _User Story_: As an executive, I require summarized and actionable insights from the supply chain monitoring system to make strategic decisions in line with ethical compliance and responsible production goals.
+   - _Accomplishing File_: `notebooks/executive_summary_report.ipynb` for generating summarized reports and visualizations.
 
 By catering to the diverse needs of these user roles, the system will effectively support ethical supply chain monitoring, leveraging TensorFlow and Pandas for responsible production.

@@ -8,12 +8,14 @@ layout: article
 ## AI Food Quality Control System for Peru Enterprises
 
 ### Objectives:
+
 1. Automate the process of food quality control in food processing plants.
 2. Ensure consistency and safety of food products by detecting defects and anomalies.
 3. Increase operational efficiency and reduce labor costs through automation.
 4. Implement a scalable and data-intensive system for processing large volumes of food product images.
 
 ### System Design Strategies:
+
 1. **Image Recognition:** Utilize OpenCV for image processing and analysis to identify defects in food products.
 2. **Machine Learning:** Implement machine learning models using Scikit-Learn for classification and anomaly detection.
 3. **Real-Time Data Processing:** Utilize Kafka for real-time data streaming to handle high volumes of image data.
@@ -21,6 +23,7 @@ layout: article
 5. **Data Storage:** Implement a robust data storage solution to store and manage food product images and quality control data.
 
 ### Chosen Libraries:
+
 1. **Scikit-Learn:** For building machine learning models for image classification and anomaly detection.
 2. **OpenCV:** For image processing and analysis to detect defects in food products.
 3. **Kafka:** For real-time data streaming to handle high volumes of image data efficiently.
@@ -32,27 +35,33 @@ By integrating these libraries and design strategies, Peru Enterprises can build
 ## MLOps Infrastructure for AI Food Quality Control System
 
 ### Continuous Integration/Continuous Deployment (CI/CD):
+
 - **GitHub Actions:** Set up CI/CD pipelines using GitHub Actions to automate the testing and deployment process of the AI models and system components.
 - **Container Registry:** Store Docker images in a container registry for version control and deployment.
 
 ### Model Training and Deployment:
+
 - **Model Versioning:** Utilize a version control system to track changes in machine learning models trained using Scikit-Learn.
 - **Model Monitoring:** Implement monitoring tools to track model performance and drift over time.
 - **Model Deployment:** Use Docker containers for deploying trained models to production environments.
 
 ### Data Pipeline:
+
 - **Data Processing:** Design a scalable data pipeline using Kafka for real-time data streaming and processing of food product images.
 - **Data Storage:** Store processed data and metadata in a reliable and scalable storage solution for future analysis and model training.
 
 ### Infrastructure Monitoring:
+
 - **Logging and Monitoring:** Implement logging and monitoring solutions to track system performance and detect anomalies.
 - **Alerting:** Set up alerts for critical system events and performance metrics to ensure timely response to issues.
 
 ### Scalability and Resource Management:
+
 - **Container Orchestration:** Use Kubernetes for container orchestration to manage scalability and resource allocation efficiently.
 - **Resource Optimization:** Implement auto-scaling mechanisms to dynamically adjust resources based on system load.
 
 ### Security and Compliance:
+
 - **Data Encryption:** Ensure data encryption at rest and in transit to protect sensitive information.
 - **Access Control:** Implement role-based access control to restrict data access and ensure compliance with security regulations.
 
@@ -95,6 +104,7 @@ food-quality-control-ai/
 ```
 
 In this file structure:
+
 - **data/**: Contains directories for raw image data, processed data, and trained models.
 - **notebooks/**: Stores Jupyter notebooks for data exploration and model development.
 - **src/**: Contains subdirectories for different components of the AI system such as preprocessing, model training, and inference scripts.
@@ -123,6 +133,7 @@ models/
 ```
 
 In the **models/** directory of the Food Quality Control AI system:
+
 - **image_classification_model.pkl**: Contains the serialized trained machine learning model for image classification using Scikit-Learn or other relevant libraries.
 - **anomaly_detection_model.pkl**: Stores the trained model used for anomaly detection in food products.
 - **preprocessing_pipeline.pkl**: Holds the preprocessing pipeline object used to transform and preprocess image data before feeding it into the models.
@@ -151,6 +162,7 @@ deployment/
 ```
 
 In the **deployment/** directory of the Food Quality Control AI system:
+
 - **docker-compose.yml**: Contains the configuration for Docker Compose to manage and orchestrate multiple containers for the AI application, Kafka, and other services.
 - **app/**: Includes the necessary files for deploying a web application to showcase the AI model predictions, such as the Flask application (app.py), HTML templates, and static files for styling and functionality.
 - **kafka/**: Contains scripts for Kafka, including the producer script (producer.py) for streaming data and the consumer script (consumer.py) for processing the streamed data.
@@ -243,23 +255,27 @@ The script demonstrates the implementation of a complex machine learning algorit
 ## Types of Users for the Food Quality Control AI System
 
 1. **Quality Control Manager**
-   - *User Story*: As a Quality Control Manager, I need to monitor the performance of the AI system, view quality control reports, and adjust the model parameters if needed.
-   - *File*: `src/model_evaluation/evaluate_model_performance.py`
+
+   - _User Story_: As a Quality Control Manager, I need to monitor the performance of the AI system, view quality control reports, and adjust the model parameters if needed.
+   - _File_: `src/model_evaluation/evaluate_model_performance.py`
 
 2. **Data Scientist**
-   - *User Story*: As a Data Scientist, I need to analyze and preprocess image data, train machine learning models, and evaluate model performance.
-   - *File*: `src/model_training/train_model.py`
+
+   - _User Story_: As a Data Scientist, I need to analyze and preprocess image data, train machine learning models, and evaluate model performance.
+   - _File_: `src/model_training/train_model.py`
 
 3. **Operations Engineer**
-   - *User Story*: As an Operations Engineer, I need to manage data streaming with Kafka, ensure system scalability, and monitor infrastructure for optimal performance.
-   - *File*: `deployment/kafka/producer.py` and `deployment/kafka/consumer.py`
+
+   - _User Story_: As an Operations Engineer, I need to manage data streaming with Kafka, ensure system scalability, and monitor infrastructure for optimal performance.
+   - _File_: `deployment/kafka/producer.py` and `deployment/kafka/consumer.py`
 
 4. **Software Developer**
-   - *User Story*: As a Software Developer, I need to deploy and maintain the AI application, handle integrations with Docker containers, and ensure the system's availability.
-   - *File*: `deployment/docker/docker-compose.yml`
+
+   - _User Story_: As a Software Developer, I need to deploy and maintain the AI application, handle integrations with Docker containers, and ensure the system's availability.
+   - _File_: `deployment/docker/docker-compose.yml`
 
 5. **Food Processing Technician**
-   - *User Story*: As a Food Processing Technician, I need to understand the output of the AI system, interpret quality control results, and take necessary actions based on the predictions.
-   - *File*: `src/inference/inference_script.py`
+   - _User Story_: As a Food Processing Technician, I need to understand the output of the AI system, interpret quality control results, and take necessary actions based on the predictions.
+   - _File_: `src/inference/inference_script.py`
 
 Each type of user plays a crucial role in utilizing and maintaining the Food Quality Control AI system for Peru Enterprises. The corresponding files and functionalities within the project structure cater to the specific needs and responsibilities of each user.

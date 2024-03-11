@@ -8,11 +8,13 @@ layout: article
 ## AI Peru Restaurant Supply Demand Forecaster
 
 ## Objectives:
+
 - Predict demand for various food products from restaurants to aid suppliers in managing inventory efficiently.
 - Reduce food waste by accurately forecasting the demand for specific food items.
 - Provide real-time insights and recommendations to both restaurants and suppliers based on forecasted demand.
 
 ## System Design Strategies:
+
 1. **Data Collection**: Gather historical sales data, weather information, holiday schedules, and other relevant factors that influence food demand.
 2. **Data Preprocessing**: Clean the data, handle missing values, encode categorical features, and scale numerical data to prepare it for modeling.
 3. **Modeling**: Train machine learning models using TensorFlow and PyTorch to predict demand for each food product.
@@ -21,6 +23,7 @@ layout: article
 6. **Monitoring**: Utilize Grafana for real-time monitoring of model performance, data trends, and demand forecast accuracy.
 
 ## Chosen Libraries:
+
 1. **TensorFlow**: For building and training deep learning models like LSTM (Long Short-Term Memory) networks for time series forecasting.
 2. **PyTorch**: To implement neural networks and leverage its flexibility for custom model architectures and experimentation.
 3. **Airflow**: For workflow automation, scheduling, and monitoring of the data pipeline, model training, and forecasting tasks.
@@ -31,35 +34,29 @@ By following these design strategies and utilizing the chosen libraries effectiv
 ## MLOps Infrastructure for Peru Restaurant Supply Demand Forecaster
 
 ## Components of MLOps Infrastructure:
+
 1. **Data Lake**:
    - Store all relevant data sources, including historical sales data, weather information, and holiday schedules in a centralized data repository.
-   
 2. **Data Pipeline**:
    - Utilize tools like Apache Spark or Apache Beam for data preprocessing, feature engineering, and ETL processes to prepare data for model training.
-   
 3. **Model Repository**:
    - Version control the machine learning models using Git and store them in a repository like MLflow or Neptune for easy access and reproducibility.
-   
 4. **Model Training**:
    - Train TensorFlow and PyTorch models on a scalable infrastructure using platforms like Google Cloud ML Engine or Amazon SageMaker.
-   
 5. **Model Validation**:
    - Conduct automated testing of models using validation datasets to ensure accuracy and reliability before deployment.
-   
 6. **Model Deployment**:
    - Use Airflow for scheduling and orchestration of model deployment tasks, ensuring timely updating of demand forecasts.
-   
 7. **Monitoring and Logging**:
    - Implement logging mechanisms to track model performance metrics, data quality issues, and system health.
    - Grafana can be used for real-time monitoring and visualization of key performance indicators and demand forecast accuracy.
-   
 8. **Alerting and Notification**:
    - Set up alerting systems to notify relevant stakeholders in case of anomalies or issues in the demand forecasting process.
-   
 9. **Feedback Loop**:
    - Capture feedback from end-users, monitoring data drift, and model performance degradation to continuously improve the forecasting accuracy.
 
 ## Benefits of MLOps Infrastructure:
+
 - Ensures reproducibility and scalability of the demand forecasting models.
 - Facilitates collaboration among data scientists, engineers, and business stakeholders in the development and deployment of AI applications.
 - Enables automated end-to-end workflows from data preprocessing to model deployment.
@@ -84,40 +81,41 @@ restaurant_supply_demand_forecaster/
 │   │   ├── encoded_features.csv
 │   │   ├── scaled_data.csv
 │   │   └── ...
-│   
+│
 ├── models/
 │   ├── tensorflow/
 │   │   ├── lstm_model/
 │   │   │   ├── model.py
 │   │   │   ├── train.py
 │   │   │   └── predict.py
-│   │   
+│   │
 │   ├── pytorch/
 │   │   ├── custom_model/
 │   │   │   ├── model.py
 │   │   │   ├── train.py
 │   │   │   └── predict.py
-│   
+│
 ├── airflow/
 │   ├── dags/
 │   │   ├── data_pipeline.py
 │   │   ├── model_training.py
 │   │   ├── model_evaluation.py
-│   
+│
 ├── monitoring/
 │   ├── grafana/
 │   │   ├── dashboard.json
-│   
+│
 ├── utils/
 │   ├── data_processing.py
 │   ├── model_evaluation.py
-│   
+│
 ├── requirements.txt
 │
 └── README.md
 ```
 
 ## Structure Overview:
+
 - **data/**: Contains raw and processed data used for training and forecasting.
 - **models/**: Includes TensorFlow and PyTorch model directories with model scripts for training and prediction.
 - **airflow/**: Holds Airflow Directed Acyclic Graphs (DAGs) for data pipeline, model training, and evaluation.
@@ -131,7 +129,9 @@ This structured approach organizes the components of the Peru Restaurant Supply 
 ## Models Directory for Peru Restaurant Supply Demand Forecaster
 
 ### models/
+
 - **tensorflow/**
+
   - **lstm_model/**
     - **model.py**: Contains the definition of the LSTM (Long Short-Term Memory) neural network model implemented using TensorFlow for time series forecasting.
     - **train.py**: Script for training the LSTM model on the historical sales data and other relevant features.
@@ -144,13 +144,16 @@ This structured approach organizes the components of the Peru Restaurant Supply 
     - **predict.py**: Implements prediction functionality using the trained PyTorch model on unseen data samples.
 
 ### Description:
+
 - **TensorFlow Models**: Utilizes the LSTM architecture for time series forecasting due to its ability to capture long-term dependencies and patterns in sequential data like sales history.
+
   - **LSTM Model**: Implemented in `lstm_model/`, this model consists of the architecture, layers, and configurations for the LSTM neural network.
 
 - **PyTorch Models**: Offers flexibility and customization in model design, making it suitable for experimenting with different architectures.
   - **Custom Model**: Located in `custom_model/`, this PyTorch model is designed specifically for demand forecasting tasks, allowing for tailored model structures and features.
 
 ### Usage:
+
 1. Developers can access the respective `model.py` files to review the neural network architectures, layer configurations, and model implementations for both TensorFlow and PyTorch models.
 2. Training scripts (`train.py`) can be used to train the models on historical sales data, weather information, and other relevant features.
 3. Prediction scripts (`predict.py`) enable making demand forecasts based on the trained models, providing valuable insights to aid suppliers in managing inventory efficiently and reducing food waste.
@@ -160,7 +163,9 @@ Having separate directories for TensorFlow and PyTorch models in the `models/` d
 ## Deployment Directory for Peru Restaurant Supply Demand Forecaster
 
 ### deployment/
+
 - **airflow/**
+
   - **dags/**
     - **data_pipeline.py**: Airflow DAG (Directed Acyclic Graph) responsible for orchestrating the data pipeline, including data preprocessing and feature engineering tasks.
     - **model_training.py**: DAG for triggering the model training process using TensorFlow and PyTorch models on preprocessed data.
@@ -171,7 +176,9 @@ Having separate directories for TensorFlow and PyTorch models in the `models/` d
     - **dashboard.json**: Grafana dashboard configuration file for visualizing real-time data monitoring metrics, including demand forecast accuracy and system performance.
 
 ### Description:
+
 - **Airflow DAGs**: Define the workflow automation and scheduling of tasks involved in the data pipeline, model training, and evaluation processes.
+
   - **Data Pipeline**: Executes data preprocessing, clean-up, and feature engineering tasks to prepare input data for model training.
   - **Model Training**: Triggers the training scripts to train the TensorFlow and PyTorch models on processed data for demand forecasting.
   - **Model Evaluation**: Evaluates the model performance using metrics like MAE, RMSE, and MAPE to assess the accuracy and reliability of the demand forecasts.
@@ -180,6 +187,7 @@ Having separate directories for TensorFlow and PyTorch models in the `models/` d
   - **dashboard.json**: Contains the configuration settings for the Grafana dashboard, allowing users to customize and view visual representations of forecast accuracy metrics, data trends, and system status.
 
 ### Usage:
+
 1. Developers can configure and schedule the Airflow DAGs in the `dags/` directory to automate the execution of data pipeline, model training, and evaluation tasks.
 2. Monitoring engineers can use the Grafana dashboard defined in `monitoring/grafana/` to visualize and track real-time performance metrics, model accuracy, and demand forecast trends.
 3. Collaborators can leverage the deployment scripts to ensure timely and efficient forecasting, aiding suppliers in managing inventory and reducing food waste effectively.
@@ -282,27 +290,32 @@ In this file, a mock complex PyTorch neural network model is trained on mock tra
 ### Types of Users for Peru Restaurant Supply Demand Forecaster:
 
 1. **Restaurant Managers**:
-   - *User Story*: As a restaurant manager, I want to use the demand forecaster to optimize inventory management based on accurate demand predictions to reduce food waste and improve profit margins.
-   - *File*: `deployment/airflow/dags/data_pipeline.py`
+
+   - _User Story_: As a restaurant manager, I want to use the demand forecaster to optimize inventory management based on accurate demand predictions to reduce food waste and improve profit margins.
+   - _File_: `deployment/airflow/dags/data_pipeline.py`
 
 2. **Food Suppliers**:
-   - *User Story*: As a food supplier, I need to access the demand forecasting tool to anticipate restaurant needs, adjust supply chains efficiently, and minimize excess inventory.
-   - *File*: `models/tensorflow/lstm_model/train.py`
+
+   - _User Story_: As a food supplier, I need to access the demand forecasting tool to anticipate restaurant needs, adjust supply chains efficiently, and minimize excess inventory.
+   - _File_: `models/tensorflow/lstm_model/train.py`
 
 3. **Data Scientists**:
-   - *User Story*: As a data scientist, I aim to develop and enhance machine learning models for demand forecasting by experimenting with various algorithms and features.
-   - *File*: `models/pytorch/custom_model/train.py`
+
+   - _User Story_: As a data scientist, I aim to develop and enhance machine learning models for demand forecasting by experimenting with various algorithms and features.
+   - _File_: `models/pytorch/custom_model/train.py`
 
 4. **Business Analysts**:
-   - *User Story*: As a business analyst, I rely on the Grafana monitoring dashboard to visualize key performance metrics and forecast accuracy trends for informed decision-making.
-   - *File*: `deployment/monitoring/grafana/dashboard.json`
+
+   - _User Story_: As a business analyst, I rely on the Grafana monitoring dashboard to visualize key performance metrics and forecast accuracy trends for informed decision-making.
+   - _File_: `deployment/monitoring/grafana/dashboard.json`
 
 5. **System Administrators**:
-   - *User Story*: As a system administrator, I am responsible for maintaining the deployment infrastructure, ensuring the smooth operation of Airflow tasks, and managing model deployments.
-   - *File*: `deployment/airflow/dags/model_training.py`
+
+   - _User Story_: As a system administrator, I am responsible for maintaining the deployment infrastructure, ensuring the smooth operation of Airflow tasks, and managing model deployments.
+   - _File_: `deployment/airflow/dags/model_training.py`
 
 6. **End Users (Restaurant Owners)**:
-   - *User Story*: As a restaurant owner, I utilize the demand forecasting application to plan menus, order ingredients timely, and optimize operational costs while reducing food wastage.
-   - *File*: `models/pytorch/custom_model/train.py`
+   - _User Story_: As a restaurant owner, I utilize the demand forecasting application to plan menus, order ingredients timely, and optimize operational costs while reducing food wastage.
+   - _File_: `models/pytorch/custom_model/train.py`
 
 Each type of user interacts with different aspects of the Peru Restaurant Supply Demand Forecaster application, from data processing and model training to real-time monitoring and decision-making. By catering to the needs of these diverse users, the application can effectively support the optimization of inventory management, reduction of food waste, and improvement of overall operational efficiency in the restaurant supply chain.

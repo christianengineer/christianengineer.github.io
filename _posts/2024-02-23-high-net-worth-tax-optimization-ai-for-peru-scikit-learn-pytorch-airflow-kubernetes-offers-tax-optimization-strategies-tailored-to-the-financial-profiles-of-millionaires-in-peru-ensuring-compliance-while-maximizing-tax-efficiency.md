@@ -8,12 +8,14 @@ layout: article
 ## AI High-Net-Worth Tax Optimization System for Peru
 
 ### Objectives:
+
 1. Develop tax optimization strategies tailored to the financial profiles of high-net-worth individuals in Peru.
 2. Ensure compliance with tax laws while maximizing tax efficiency for clients.
 3. Utilize machine learning algorithms to analyze financial data and provide personalized tax planning recommendations.
 4. Implement a scalable and reliable system that can handle large volumes of data securely.
 
 ### System Design Strategies:
+
 1. **Data Collection:** Gather financial data from high-net-worth individuals securely and in compliance with data privacy regulations.
 2. **Data Processing:** Preprocess and clean the data to prepare it for machine learning models.
 3. **Model Training:** Utilize Scikit-Learn and PyTorch to build machine learning models that can predict optimal tax optimization strategies based on individual financial profiles.
@@ -21,6 +23,7 @@ layout: article
 5. **Deployment:** Utilize Kubernetes for containerization and orchestration of the AI application to ensure scalability and efficiency.
 
 ### Chosen Libraries:
+
 1. **Scikit-Learn:** A powerful Python library for machine learning that offers a wide range of tools for building and training machine learning models.
 2. **PyTorch:** A deep learning framework that provides flexibility and speed for developing complex neural network models.
 3. **Apache Airflow:** A platform to programmatically author, schedule, and monitor workflows, allowing for scalable and maintainable data pipelines.
@@ -31,29 +34,31 @@ By combining these libraries and technologies, we can build a robust AI system t
 ## MLOps Infrastructure for High-Net-Worth Tax Optimization AI System in Peru
 
 ### Components of MLOps Infrastructure:
-1. **Data Pipeline:** 
+
+1. **Data Pipeline:**
    - Use Apache Airflow to create and manage the data pipeline that collects, preprocesses, and feeds financial data into the machine learning models.
-   
 2. **Model Training and Deployment:**
+
    - Utilize Scikit-Learn and PyTorch to develop and train machine learning models for tax optimization based on financial profiles.
    - Implement model deployment using Kubernetes for efficient scaling and resource management.
 
 3. **Model Monitoring and Management:**
    - Set up monitoring tools to track model performance, feedback loops for model updates, and version control for reproducibility.
-   
 4. **Compliance and Security:**
    - Implement robust security measures to protect sensitive financial data and ensure compliance with data privacy regulations.
-   
 5. **Scalability and Efficiency:**
+
    - Utilize Kubernetes for containerization and orchestration of the AI application to enable scalability, efficient resource utilization, and automated deployment.
 
 6. **Continuous Integration / Continuous Delivery (CI/CD):**
+
    - Implement CI/CD pipelines to automate testing, deployment, and monitoring of model updates, ensuring quick and reliable delivery of tax optimization strategies.
 
 7. **Feedback Loop:**
    - Establish a feedback loop to gather insights from client interactions and outcomes of tax optimization strategies for continuous model improvement.
 
 ### Benefits of MLOps Infrastructure:
+
 - **Efficient Workflow:** Streamlined end-to-end process from data collection to model deployment, enhancing productivity and reducing manual errors.
 - **Scalability:** Kubernetes allows for dynamic scaling of resources based on system demand, ensuring optimal performance during peak loads.
 - **Compliance:** Robust security measures and monitoring tools help maintain data privacy and compliance with regulations.
@@ -115,6 +120,7 @@ high-net-worth-tax-optimization/
 ```
 
 ### File Structure Explanation:
+
 - **data/**: Contains raw and processed data files used for training models.
 - **models/**: Includes scripts for model training, evaluation, and saved model files.
 - **workflows/**: Defines data pipeline and model training pipeline using Apache Airflow.
@@ -143,6 +149,7 @@ models/
 ### Files Explanation:
 
 1. **model_training.py**:
+
    - **Description**: This script contains functions to train machine learning models using both Scikit-Learn and PyTorch.
    - **Functionality**:
      - Data preprocessing: Prepare the input data for training.
@@ -151,6 +158,7 @@ models/
      - Model serialization: Save the trained models for future use.
 
 2. **model_evaluation.py**:
+
    - **Description**: This script is responsible for evaluating the performance of the trained models.
    - **Functionality**:
      - Model evaluation: Evaluate the accuracy and other metrics of the trained models.
@@ -180,6 +188,7 @@ deployment/
 ### Files Explanation:
 
 1. **Dockerfile**:
+
    - **Description**: This file defines the specifications and dependencies required to build a Docker image for the High-Net-Worth Tax Optimization AI application.
    - **Functionality**:
      - Define the base image, environment variables, and installation steps for the application.
@@ -187,6 +196,7 @@ deployment/
      - Expose the required ports and set up the entry point for running the application.
 
 2. **kubernetes_deployment.yaml**:
+
    - **Description**: This file contains the Kubernetes deployment configuration for deploying the AI application using Kubernetes.
    - **Functionality**:
      - Define the deployment specifications, including the desired number of replicas, resource limits, and container specifications.
@@ -338,22 +348,27 @@ This Python script demonstrates training a complex machine learning algorithm, u
 ### Types of Users for High-Net-Worth Tax Optimization AI System
 
 1. **Financial Advisor**
+
    - **User Story**: As a financial advisor, I want to provide my high-net-worth clients with personalized tax optimization strategies tailored to their financial profiles to maximize tax efficiency and ensure compliance with regulations.
    - **File**: `models/model_training.py`
 
 2. **High-Net-Worth Individual**
+
    - **User Story**: As a high-net-worth individual in Peru, I want to leverage AI technology to receive optimized tax strategies that suit my financial situation and help me maximize tax efficiency.
    - **File**: `models/complex_model_training.py`
 
 3. **Compliance Officer**
+
    - **User Story**: As a compliance officer, I need to ensure that the tax optimization strategies provided to high-net-worth clients adhere to all legal and regulatory requirements in Peru.
    - **File**: `deployment/kubernetes_deployment.yaml`
 
 4. **Data Scientist**
+
    - **User Story**: As a data scientist working on the AI system, I need to train and evaluate complex machine learning models using mock data to continuously improve the tax optimization strategies offered to clients.
    - **File**: `models/complex_model_training.py`
 
 5. **System Administrator**
+
    - **User Story**: As a system administrator, I am responsible for deploying and managing the High-Net-Worth Tax Optimization AI system on Kubernetes to ensure scalability and efficient resource utilization.
    - **File**: `deployment/Dockerfile`
 

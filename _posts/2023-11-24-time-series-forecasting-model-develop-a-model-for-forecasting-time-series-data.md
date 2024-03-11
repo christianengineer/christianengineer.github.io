@@ -6,15 +6,18 @@ layout: article
 ---
 
 ### Objectives
+
 The objective is to develop an AI time series forecasting model that can accurately predict future data points based on historical time series data. The model should be scalable, reliable, and capable of handling large volumes of data. Additionally, it should be capable of leveraging machine learning and deep learning techniques to improve forecast accuracy.
 
 ### System Design Strategies
+
 1. Data Preprocessing: The system will need to preprocess the time series data, handle missing values, and potentially transform the data to ensure it meets the requirements of the chosen forecasting model.
 2. Model Selection: It's essential to assess different forecasting models such as ARIMA, SARIMA, Prophet, or LSTM-based deep learning models to determine which best suits the characteristics of the time series data.
 3. Training and Inference: The system should support training the forecasting model on historical data and then deploying the trained model to make predictions on new data in real-time.
 4. Scalability and Performance: Design the system to handle scalability by potentially leveraging distributed computing frameworks and parallel processing to handle larger datasets efficiently.
 
 ### Chosen Libraries
+
 1. **Pandas**: For data manipulation and preprocessing.
 2. **NumPy**: For efficient numerical computations and array manipulation.
 3. **TensorFlow/PyTorch**: For building and training deep learning models if deep learning-based time series forecasting approaches are selected.
@@ -27,25 +30,32 @@ By leveraging these libraries, we can build a scalable, data-intensive AI time s
 ### Infrastructure for Time Series Forecasting Model
 
 #### 1. Data Storage:
-   - Utilize a scalable and reliable data storage solution like Amazon S3, Google Cloud Storage, or Azure Blob Storage to store historical time series data. These platforms offer durability, scalability, and ease of access for large datasets.
+
+- Utilize a scalable and reliable data storage solution like Amazon S3, Google Cloud Storage, or Azure Blob Storage to store historical time series data. These platforms offer durability, scalability, and ease of access for large datasets.
 
 #### 2. Data Preprocessing Pipeline:
-   - Implement a data preprocessing pipeline using technologies such as Apache Spark for distributed data processing, enabling efficient cleaning, transformation, and feature engineering of time series data.
+
+- Implement a data preprocessing pipeline using technologies such as Apache Spark for distributed data processing, enabling efficient cleaning, transformation, and feature engineering of time series data.
 
 #### 3. Training and Inference Environment:
-   - Leverage cloud-based machine learning platforms like Amazon SageMaker, Google AI Platform, or Microsoft Azure Machine Learning to build, train, and deploy time series forecasting models at scale. These platforms offer managed services for training and hosting models, as well as autoscaling capabilities for handling varying workloads.
+
+- Leverage cloud-based machine learning platforms like Amazon SageMaker, Google AI Platform, or Microsoft Azure Machine Learning to build, train, and deploy time series forecasting models at scale. These platforms offer managed services for training and hosting models, as well as autoscaling capabilities for handling varying workloads.
 
 #### 4. Model Serving and Inference:
-   - Utilize containerization (e.g., Docker) and orchestration tools (e.g., Kubernetes) to deploy the trained models as scalable, microservices-based inference endpoints. This allows for efficient model serving, scaling based on demand, and versioning of different model iterations.
+
+- Utilize containerization (e.g., Docker) and orchestration tools (e.g., Kubernetes) to deploy the trained models as scalable, microservices-based inference endpoints. This allows for efficient model serving, scaling based on demand, and versioning of different model iterations.
 
 #### 5. Monitoring and Logging:
-   - Implement comprehensive monitoring and logging using tools like Prometheus, Grafana, or ELK stack to track the performance of the forecasting models, monitor resource utilization, and log inference requests and responses.
+
+- Implement comprehensive monitoring and logging using tools like Prometheus, Grafana, or ELK stack to track the performance of the forecasting models, monitor resource utilization, and log inference requests and responses.
 
 #### 6. Scalable Compute:
-   - Use cloud-based scalable compute resources through services like AWS EC2, Google Compute Engine, or Azure Virtual Machines to handle the computational requirements for data preprocessing, model training, and inference.
+
+- Use cloud-based scalable compute resources through services like AWS EC2, Google Compute Engine, or Azure Virtual Machines to handle the computational requirements for data preprocessing, model training, and inference.
 
 #### 7. Automated Orchestration:
-   - Implement automated orchestration using tools like Apache Airflow or Kubernetes CronJobs to schedule and execute regular data preprocessing, model training, and inference tasks.
+
+- Implement automated orchestration using tools like Apache Airflow or Kubernetes CronJobs to schedule and execute regular data preprocessing, model training, and inference tasks.
 
 By designing the infrastructure with these components, we can ensure that the time series forecasting model application is scalable, reliable, and capable of handling the complexities of large-scale time series data processing and inference. This infrastructure also provides the flexibility to integrate with AI/ML capabilities and handle data-intensive workloads efficiently.
 
@@ -92,6 +102,7 @@ time_series_forecasting/
 ```
 
 In this file structure:
+
 - The `data/` directory holds raw and processed time series data, as well as the output forecasts and evaluation metrics.
 - The `models/` directory contains scripts for training, evaluating, deploying the models, and storing trained models and artifacts.
 - The `notebooks/` directory includes Jupyter notebooks for data exploration, model training, and model evaluation.
@@ -137,17 +148,21 @@ models/
 ```
 
 #### Explanation of Files and Directories in the Models Directory:
+
 1. `training/`: This directory contains scripts for data splitting, feature engineering, model training, and automated hyperparameter tuning.
+
    - `data_splitting.py`: Script for splitting the time series data into training and validation sets.
    - `feature_engineering.py`: Code for extracting and engineering features from the time series data, such as lag features, rolling statistics, etc.
    - `model_training.py`: Script for training the time series forecasting model using the processed features.
    - `hyperparameter_tuning.py`: Automated hyperparameter tuning for optimizing model performance.
 
 2. `evaluation/`: This directory includes scripts for evaluating the performance of the trained models.
+
    - `forecast_evaluation.py`: Script for evaluating the forecast performance against actual data, calculating accuracy metrics, and visualizing the results.
    - `model_comparison.py`: Comparative evaluation of different forecasting models based on their performance metrics.
 
 3. `deployment/`: Contains scripts for exporting the trained model, deploying the model as a service or application, and performing batch inference.
+
    - `model_export.py`: Code for exporting the trained model, including necessary artifacts for deployment.
    - `deploy_model.py`: Script for deploying the trained model as a service or application, providing inference endpoints.
    - `batch_inference.py`: Script for performing batch inference on new time series data, generating forecasts in bulk.
@@ -253,6 +268,7 @@ def lstm_time_series_forecasting(file_path):
 ```
 
 In this function:
+
 - The mock time series data is read from the CSV file specified by `file_path`.
 - The data is preprocessed and prepared for input to the LSTM model.
 - The LSTM model is defined and trained using the mock time series data.
@@ -331,6 +347,7 @@ def lstm_time_series_forecasting(file_path):
 ```
 
 In this function:
+
 - The mock time series data is read from the CSV file specified by `file_path`.
 - The data is preprocessed and prepared for input to the LSTM model.
 - The LSTM model is defined and trained using the mock time series data.
@@ -341,23 +358,27 @@ Here, the function `lstm_time_series_forecasting` takes the file path of the moc
 ### Types of Users for the Time Series Forecasting Model Application
 
 1. **Data Scientist / Machine Learning Engineer**
-   - *User Story*: As a Data Scientist, I want to train and evaluate different time series forecasting models using historical data to choose the best performing model for deployment.
-   - *File*: They would primarily interact with the `models/training/` directory, specifically the `model_training.py` and `evaluation/` scripts for training, evaluating, and comparing various time series forecasting models.
+
+   - _User Story_: As a Data Scientist, I want to train and evaluate different time series forecasting models using historical data to choose the best performing model for deployment.
+   - _File_: They would primarily interact with the `models/training/` directory, specifically the `model_training.py` and `evaluation/` scripts for training, evaluating, and comparing various time series forecasting models.
 
 2. **Business Analyst**
-   - *User Story*: As a Business Analyst, I need to explore historical time series data, generate forecasts, and assess the accuracy to make informed decisions for resource planning and demand forecasting.
-   - *File*: They would interact with the `notebooks/` directory, especially the `data_exploration.ipynb` and `model_evaluation.ipynb` notebooks for data exploration, visualization, and analysis of the forecasting models' performance.
+
+   - _User Story_: As a Business Analyst, I need to explore historical time series data, generate forecasts, and assess the accuracy to make informed decisions for resource planning and demand forecasting.
+   - _File_: They would interact with the `notebooks/` directory, especially the `data_exploration.ipynb` and `model_evaluation.ipynb` notebooks for data exploration, visualization, and analysis of the forecasting models' performance.
 
 3. **Data Engineer**
-   - *User Story*: As a Data Engineer, I am responsible for building data pipelines and maintaining the infrastructure for model training and deployment. I need to handle the storage and preprocessing of time series data efficiently.
-   - *File*: They would work on the infrastructure, particularly interacting with the `data/` directory for managing raw and processed data, as well as the `models/` directory for dealing with model artifacts and training workflows.
+
+   - _User Story_: As a Data Engineer, I am responsible for building data pipelines and maintaining the infrastructure for model training and deployment. I need to handle the storage and preprocessing of time series data efficiently.
+   - _File_: They would work on the infrastructure, particularly interacting with the `data/` directory for managing raw and processed data, as well as the `models/` directory for dealing with model artifacts and training workflows.
 
 4. **Business User / Decision Maker**
-   - *User Story*: As a Decision Maker, I want to access the generated time series forecasts through an intuitive interface to support strategic planning and decision-making processes.
-   - *File*: They would not directly interact with the code files. Instead, they would utilize the outputs and visualizations generated by the forecasting models, which can be accessed through the application or visualization tools powered by the system.
+
+   - _User Story_: As a Decision Maker, I want to access the generated time series forecasts through an intuitive interface to support strategic planning and decision-making processes.
+   - _File_: They would not directly interact with the code files. Instead, they would utilize the outputs and visualizations generated by the forecasting models, which can be accessed through the application or visualization tools powered by the system.
 
 5. **Software Developer**
-   - *User Story*: As a Software Developer, I am responsible for integrating the time series forecasting models into our existing applications and services to provide forecasted insights to end-users.
-   - *File*: They will primarily work with the `deployment/` directory, particularly the `deploy_model.py` script and the model artifacts within the `trained_models/` directory for integrating the model into the production environment and serving forecasts through the application.
+   - _User Story_: As a Software Developer, I am responsible for integrating the time series forecasting models into our existing applications and services to provide forecasted insights to end-users.
+   - _File_: They will primarily work with the `deployment/` directory, particularly the `deploy_model.py` script and the model artifacts within the `trained_models/` directory for integrating the model into the production environment and serving forecasts through the application.
 
 By considering these user personas and their respective user stories, the time series forecasting application ensures that different stakeholders can effectively leverage the capabilities of the forecasting model for their specific needs.

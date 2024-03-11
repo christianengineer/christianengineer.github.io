@@ -11,16 +11,19 @@ The objective of the deep learning project for image classification is to build 
 
 ## System Design Strategies
 
-1. **Data Collection and Preprocessing**: 
+1. **Data Collection and Preprocessing**:
+
    - Collect a large dataset of images with labeled categories.
    - Preprocess the images, including resizing, normalization, and augmentation to increase the diversity of the training data.
 
 2. **Model Training**:
+
    - Train a deep learning model, such as a Convolutional Neural Network (CNN), to classify the images.
    - Experiment with different CNN architectures and hyperparameters to optimize the model's performance.
    - Utilize transfer learning, if applicable, to leverage pre-trained models and speed up the training process.
 
 3. **Model Deployment**:
+
    - Deploy the trained model as an API using a scalable framework such as TensorFlowServing or FastAPI, allowing for real-time image classification.
    - Configure the deployment pipeline to handle model updates and versioning.
 
@@ -32,15 +35,19 @@ The objective of the deep learning project for image classification is to build 
 ## Chosen Libraries
 
 1. **TensorFlow**:
+
    - TensorFlow provides a comprehensive framework for building and training deep learning models, including support for distributed training and model deployment.
 
 2. **Keras**:
+
    - Keras, an API for TensorFlow, offers a high-level, user-friendly interface for creating neural networks, making it easier to experiment with different model architectures.
 
 3. **OpenCV**:
+
    - OpenCV is a powerful library for image processing and manipulation, which can be used for image preprocessing and augmentation.
 
 4. **FastAPI**:
+
    - FastAPI is a modern, fast (high-performance), web framework for building APIs with Python 3.7+ based on standard Python type hints. It's ideal for deploying the trained model as an API.
 
 5. **Docker** and **Kubernetes**:
@@ -310,7 +317,7 @@ def train_deep_learning_model(data_path, num_classes, num_epochs):
 
 In this example:
 
-- The `generate_mock_image_data` function generates mock image data and corresponding labels for training the deep learning model. 
+- The `generate_mock_image_data` function generates mock image data and corresponding labels for training the deep learning model.
 - The `train_deep_learning_model` function trains a deep learning model (CNN) using the generated mock image data and saves the trained model to the specified file path (`data_path`).
 - TensorFlow's Keras API is used to define the model architecture, compile the model, train the model, and save the trained model.
 
@@ -319,23 +326,27 @@ This function serves as a simplified demonstration and can be further extended w
 ### User Types and Their User Stories
 
 1. **Data Scientist**
-   - *User Story*: As a data scientist, I want to train and evaluate different deep learning models for image classification using various architectures and hyperparameters. I need to have a clear structure for running experiments and logging the results for further analysis.
-   - *Related File*: The `notebooks/` directory would be used for this purpose, with Jupyter notebooks for model experimentation (`model_training/` subdirectory) and model evaluation.
+
+   - _User Story_: As a data scientist, I want to train and evaluate different deep learning models for image classification using various architectures and hyperparameters. I need to have a clear structure for running experiments and logging the results for further analysis.
+   - _Related File_: The `notebooks/` directory would be used for this purpose, with Jupyter notebooks for model experimentation (`model_training/` subdirectory) and model evaluation.
 
 2. **Machine Learning Engineer**
-   - *User Story*: As a machine learning engineer, I need to deploy the trained model as an API endpoint for real-time image classification. I should be able to easily configure the deployment settings and ensure efficient model serving.
-   - *Related File*: The `deployment/deploy_model.py` script would accomplish this, handling the deployment of the trained model as an API endpoint.
+
+   - _User Story_: As a machine learning engineer, I need to deploy the trained model as an API endpoint for real-time image classification. I should be able to easily configure the deployment settings and ensure efficient model serving.
+   - _Related File_: The `deployment/deploy_model.py` script would accomplish this, handling the deployment of the trained model as an API endpoint.
 
 3. **Frontend Developer**
-   - *User Story*: As a frontend developer, I want to integrate the image classification API into an application interface for end-users to upload and classify images. I need to understand the format of the input and output data that the API expects and provides.
-   - *Related File*: The API documentation in the project's `README.md` and the `deployment/inference_utils.py` for understanding the format of the input data and handling the model's output.
+
+   - _User Story_: As a frontend developer, I want to integrate the image classification API into an application interface for end-users to upload and classify images. I need to understand the format of the input and output data that the API expects and provides.
+   - _Related File_: The API documentation in the project's `README.md` and the `deployment/inference_utils.py` for understanding the format of the input data and handling the model's output.
 
 4. **DevOps Engineer**
-   - *User Story*: As a DevOps engineer, I need to containerize the model deployment and set up scalable infrastructure for serving the deep learning model. I should also ensure efficient monitoring and logging of the deployed models.
-   - *Related File*: The `Dockerfile` for containerizing the model deployment and the overall infrastructure design documented in the `README.md` for setting up the scalable infrastructure.
+
+   - _User Story_: As a DevOps engineer, I need to containerize the model deployment and set up scalable infrastructure for serving the deep learning model. I should also ensure efficient monitoring and logging of the deployed models.
+   - _Related File_: The `Dockerfile` for containerizing the model deployment and the overall infrastructure design documented in the `README.md` for setting up the scalable infrastructure.
 
 5. **Product Manager**
-   - *User Story*: As a product manager, I want to track the performance and usage of the image classification API, understand user feedback, and prioritize feature requests based on the usage analytics.
-   - *Related File*: Performance metrics, usage analytics, and user feedback could be part of the monitoring and logging system integrated into the infrastructure, potentially using tools like Prometheus, Grafana, or custom logging solutions.
+   - _User Story_: As a product manager, I want to track the performance and usage of the image classification API, understand user feedback, and prioritize feature requests based on the usage analytics.
+   - _Related File_: Performance metrics, usage analytics, and user feedback could be part of the monitoring and logging system integrated into the infrastructure, potentially using tools like Prometheus, Grafana, or custom logging solutions.
 
 By identifying the diverse user types and their specific user stories, the project can be designed to accommodate the unique needs and objectives of each user. This user-centered approach ensures that the deep learning image recognition project caters to a wide range of stakeholders, promoting successful adoption and usage.

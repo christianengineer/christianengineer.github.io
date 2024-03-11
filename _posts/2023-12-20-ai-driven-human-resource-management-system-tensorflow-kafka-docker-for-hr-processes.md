@@ -38,35 +38,43 @@ By combining these technologies and design strategies, the AI-driven Human Resou
 **MLOps Infrastructure for the AI-Driven HR Management System:**
 
 **1. Data Collection and Preprocessing:**
+
 - **Kafka**: For real-time data ingestion from various HR systems and applications.
 - **Apache Spark**: Utilize Spark for large-scale data processing and preprocessing to prepare the data for training and inference.
 
 **2. Machine Learning Model Development and Training:**
+
 - **TensorFlow**: Build and train machine learning models for tasks such as candidate screening, performance prediction, and attrition analysis.
 - **Jupyter Notebooks**: Use Jupyter for interactive model development, experimentation, and collaboration among data scientists and ML engineers.
 
 **3. Model Versioning and Management:**
+
 - **MLflow**: Track experiment runs, package code, and manage and deploy models in a reproducible manner.
 - **Docker Registry**: Store Docker images for ML models and deployment environments.
 
 **4. Model Deployment and Serving:**
+
 - **Docker**: Containerize trained models and serving applications for consistent deployment across different environments.
 - **Kubernetes**: Orchestrate and manage model deployment at scale for high availability and scalability.
 - **TensorFlow Serving**: Serve TensorFlow models for real-time predictions and inferences through RESTful APIs.
 
 **5. Monitoring and Logging:**
+
 - **Prometheus and Grafana**: Monitor the performance and health of deployed models and the overall MLOps infrastructure.
 - **ELK Stack (Elasticsearch, Logstash, Kibana)**: Centralized logging and log analysis to track system behavior and troubleshoot issues.
 
 **6. Continuous Integration and Continuous Deployment (CI/CD):**
+
 - **Jenkins**: Automate the CI/CD process for model development, testing, and deployment.
 - **GitLab or GitHub Actions**: Utilize version control and CI/CD pipelines for efficient collaboration and automated deployment.
 
 **7. Model Governance and Compliance:**
+
 - **Apache Atlas**: Metadata management and governance to ensure compliance and data lineage for regulatory requirements.
 - **Kafka Connect**: Enable data governance and data integration with various systems in the HR ecosystem.
 
 **8. Feedback Loop and Model Retraining:**
+
 - **Feature Store**: Store and manage feature data for model training and serving, enabling consistency across training and inference.
 - **Apache Airflow**: Schedule and automate the retraining of models based on new data and feedback from the deployed models.
 
@@ -94,7 +102,7 @@ AI_HR_System_Repository/
 │       ├── deployment/
 │       │   ├── Dockerfile
 │       │   ├── model_serving.py
-│   
+│
 ├── data_processing/
 │   ├── kafka_ingestion.py
 │   ├── data_preprocessing_spark.py
@@ -170,6 +178,7 @@ ml_models/
 ```
 
 **Candidate Screening Model:**
+
 - **model.py**: Contains the TensorFlow model architecture and definitions for candidate screening tasks.
 - **training/**: Contains scripts for data preprocessing and model training specific to the candidate screening model.
   - data_preprocessing.py: Script for cleaning, feature engineering, and preparing data for model training.
@@ -177,6 +186,7 @@ ml_models/
 - **deployment/**: Includes Dockerfile for containerizing the trained model and model_serving.py for serving the model through RESTful APIs.
 
 **Performance Prediction Model:**
+
 - **model.py**: Holds the TensorFlow model architecture and definitions for performance prediction tasks.
 - **training/**: Consists of scripts for data preprocessing and model training specific to the performance prediction model.
   - data_preprocessing.py: Script for cleaning, feature engineering, and preparing data for model training.
@@ -199,10 +209,12 @@ deployment/
 ```
 
 **Candidate Screening Model Deployment:**
+
 - **Dockerfile**: This file contains instructions for building the Docker image that encapsulates the candidate screening model and its dependencies. It includes commands for copying the model artifacts and setting up the serving environment.
 - **model_serving.py**: This script sets up a RESTful API using a framework like Flask or FastAPI, allowing the trained candidate screening model to receive and respond to prediction requests.
 
 **Performance Prediction Model Deployment:**
+
 - **Dockerfile**: Similar to the candidate screening Dockerfile, this file contains instructions for building the Docker image for the performance prediction model, including copying model artifacts and setting up the serving environment.
 - **model_serving.py**: Similar to the candidate screening model_serving.py, this script sets up a RESTful API for the performance prediction model to receive and respond to prediction requests.
 
@@ -252,7 +264,7 @@ model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y
 model.save('candidate_screening_model.h5')
 ```
 
-In this example, the `model_training.py` script demonstrates the training process for the candidate screening model. The script loads mock HR data from a CSV file, preprocesses the data, builds a neural network model using TensorFlow's Keras API, compiles the model, trains it on the mock data, and saves the trained model to a file (`candidate_screening_model.h5`). 
+In this example, the `model_training.py` script demonstrates the training process for the candidate screening model. The script loads mock HR data from a CSV file, preprocesses the data, builds a neural network model using TensorFlow's Keras API, compiles the model, trains it on the mock data, and saves the trained model to a file (`candidate_screening_model.h5`).
 
 The mock data file path `mock_candidate_data.csv` should be in the same directory as the `model_training.py` script.
 
@@ -304,23 +316,27 @@ This file provides a simplified representation of a complex machine learning alg
 Here are the different types of users who will interact with the AI-driven Human Resource Management System and a user story for each type of user:
 
 1. **HR Manager**
-    - User Story: As an HR Manager, I want to be able to view and analyze comprehensive reports on employee performance and attrition trends to make data-driven decisions for resource allocation and retention strategies.
-    - File: `app_frontend/index.html` for accessing the user interface to view reports and insights generated by machine learning models.
+
+   - User Story: As an HR Manager, I want to be able to view and analyze comprehensive reports on employee performance and attrition trends to make data-driven decisions for resource allocation and retention strategies.
+   - File: `app_frontend/index.html` for accessing the user interface to view reports and insights generated by machine learning models.
 
 2. **Recruitment Specialist**
-    - User Story: As a Recruitment Specialist, I need to be able to leverage AI-driven candidate screening to streamline the initial assessment process and identify top candidates efficiently.
-    - File: `ml_models/candidate_screening/model.py` for defining and training the candidate screening model using TensorFlow.
+
+   - User Story: As a Recruitment Specialist, I need to be able to leverage AI-driven candidate screening to streamline the initial assessment process and identify top candidates efficiently.
+   - File: `ml_models/candidate_screening/model.py` for defining and training the candidate screening model using TensorFlow.
 
 3. **Data Scientist**
-    - User Story: As a Data Scientist, I am responsible for developing, testing, and deploying machine learning models that provide insights into employee performance and attrition.
-    - File: `model_training_xgboost.py` for training a complex XGBoost model for employee performance prediction.
+
+   - User Story: As a Data Scientist, I am responsible for developing, testing, and deploying machine learning models that provide insights into employee performance and attrition.
+   - File: `model_training_xgboost.py` for training a complex XGBoost model for employee performance prediction.
 
 4. **System Administrator**
-    - User Story: As a System Administrator, I want to ensure the scalability and availability of the MLOps infrastructure and monitor and manage the Dockerized machine learning models and data processing components.
-    - File: `mlops_infrastructure/kubernetes/deployment.yaml` for managing the deployment of machine learning models using Kubernetes.
+
+   - User Story: As a System Administrator, I want to ensure the scalability and availability of the MLOps infrastructure and monitor and manage the Dockerized machine learning models and data processing components.
+   - File: `mlops_infrastructure/kubernetes/deployment.yaml` for managing the deployment of machine learning models using Kubernetes.
 
 5. **Employees**
-    - User Story: As an employee, I want to access an intuitive self-service platform to manage my performance goals and view personalized professional development recommendations based on AI analysis.
-    - File: `app_frontend/index.html` and `app_backend/server.py` for accessing the employee-facing application and interacting with the HR system.
+   - User Story: As an employee, I want to access an intuitive self-service platform to manage my performance goals and view personalized professional development recommendations based on AI analysis.
+   - File: `app_frontend/index.html` and `app_backend/server.py` for accessing the employee-facing application and interacting with the HR system.
 
 These user stories capture the diverse needs of the users interacting with the AI-driven Human Resource Management System and demonstrate how different files and components within the application cater to their specific requirements.

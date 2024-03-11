@@ -8,11 +8,13 @@ layout: article
 ## AI Intelligent Public Transport Planner for Callao, Peru
 
 ## Objectives:
+
 1. **Seamless Connectivity:** Provide passengers in Callao, Peru with a comprehensive public transport system that enables seamless connectivity between different modes of transport.
 2. **Eco-Friendly Travel:** Optimize routes and schedules to reduce environmental impact and promote eco-friendly travel choices.
 3. **Efficiency:** Utilize AI to improve the overall efficiency of the public transport system, reducing travel time and congestion.
 
 ## System Design Strategies:
+
 1. **Data Collection:** Gather data on public transport routes, schedules, and passenger flow patterns in Callao, Peru.
 2. **Data Preprocessing:** Clean and preprocess the collected data to make it suitable for AI model training.
 3. **Graph Representation:** Utilize NetworkX to represent the public transport network as a graph for efficient route planning.
@@ -20,6 +22,7 @@ layout: article
 5. **User Interface:** Develop a user-friendly interface for passengers to input their starting point and destination, and receive optimized travel recommendations.
 
 ## Chosen Libraries:
+
 1. **TensorFlow:** TensorFlow will be used for building and training machine learning models to analyze public transport data and make predictions.
 2. **Keras:** Keras, known for its user-friendly API, will be used in conjunction with TensorFlow for efficient model building and training.
 3. **NetworkX:** NetworkX will be used to represent the public transport network as a graph, enabling efficient algorithms for route planning and optimization.
@@ -27,6 +30,7 @@ layout: article
 ## MLOps Infrastructure for the Intelligent Public Transport Planner
 
 ## Objectives:
+
 1. **Automated Model Training:** Implement a pipeline for automated training of machine learning models using TensorFlow and Keras.
 2. **Model Deployment:** Develop a system for deploying trained models to production for real-time usage in the public transport planner application.
 3. **Monitoring and Logging:** Set up monitoring and logging mechanisms to track model performance, data quality, and application usage.
@@ -34,6 +38,7 @@ layout: article
 5. **Security:** Implement security measures to protect sensitive data and ensure the integrity of the application.
 
 ## Components of the MLOps Infrastructure:
+
 1. **Data Pipeline:** Create a data pipeline that collects, preprocesses, and feeds data to the machine learning models.
 2. **Model Training Pipeline:** Develop a pipeline that automates training, hyperparameter tuning, and model evaluation using TensorFlow and Keras.
 3. **Model Deployment System:** Implement a deployment system that allows for seamless integration of trained models into the public transport planner application.
@@ -42,6 +47,7 @@ layout: article
 6. **Security Measures:** Implement encryption, access controls, and regular security audits to protect sensitive data and ensure the application's security.
 
 ## Overview:
+
 The MLOps infrastructure for the Intelligent Public Transport Planner application will ensure efficient model training, deployment, monitoring, and scalability. By leveraging TensorFlow, Keras, and NetworkX, along with robust MLOps practices, the public transport system in Callao, Peru will revolutionize travel experiences, offering seamless connectivity and eco-friendly travel options to its passengers.
 
 ## Scalable File Structure for the Intelligent Public Transport Planner Repository
@@ -101,6 +107,7 @@ intelligent_public_transport_planner/
 ```
 
 In this file structure:
+
 - `data/` directory contains raw and processed data sets used for model training and planning optimization.
 - `models/` directory stores trained machine learning models in h5 format for deployment.
 - `notebooks/` directory includes Jupyter notebooks for data preprocessing, model training, and other analyses.
@@ -130,11 +137,13 @@ models/
 ```
 
 ## `saved_models/`
+
 - **Description:** This directory contains saved trained machine learning models that have been optimized for the public transport planner application.
 - **Files:**
   - `model1.h5`, `model2.h5`, etc.: These files store the trained models in h5 format for easy loading and deployment.
 
 ## `neural_network.py`
+
 - **Description:** This Python script defines the neural network model architecture using TensorFlow and Keras.
 - **Functions:**
   - `build_neural_network()`: Constructs the neural network model with specified layers, activations, and hyperparameters.
@@ -142,12 +151,14 @@ models/
   - `predict_neural_network()`: Makes predictions using the trained neural network model.
 
 ## `graph_representation.py`
+
 - **Description:** This Python script handles the graph representation of the public transport network using NetworkX for efficient route planning.
 - **Functions:**
   - `build_transport_graph()`: Constructs a graph representation of the public transport network with nodes and edges.
   - `optimize_routes()`: Implements algorithms to optimize routes based on the graph representation.
 
 ## `model_evaluation.py`
+
 - **Description:** This script contains functions to evaluate the performance of the trained machine learning models.
 - **Functions:**
   - `evaluate_model_accuracy()`: Computes accuracy metrics for the models based on test data.
@@ -166,6 +177,7 @@ deployment/
 ```
 
 ## `deploy_model.py`
+
 - **Description:** This Python script handles the deployment of trained machine learning models for real-time usage in the public transport planner application.
 - **Functions:**
   - `load_model()`: Loads the trained model from the `models/saved_models/` directory.
@@ -173,6 +185,7 @@ deployment/
   - `update_model()`: Updates the deployed model with new training data for continuous improvement.
 
 ## `deploy_graph_module.py`
+
 - **Description:** This script manages the deployment of the graph module representing the public transport network for route planning.
 - **Functions:**
   - `load_graph()`: Loads the pre-built graph representation of the public transport network.
@@ -220,6 +233,7 @@ model.save('models/saved_models/mock_model.h5')
 ```
 
 In this file:
+
 - Mock data is generated for training a simple neural network model.
 - The data is split into features and target, followed by splitting into training and testing sets.
 - A neural network model is defined, compiled, and trained on the mock data.
@@ -270,6 +284,7 @@ model.save('models/saved_models/complex_model.h5')
 ```
 
 In this file:
+
 - Mock data with three features and a target variable is generated for training a complex neural network model.
 - The data is split into features and target, followed by splitting into training and testing sets.
 - A complex neural network model with multiple layers and dropout is defined, compiled, and trained on the mock data.
@@ -280,23 +295,27 @@ This file showcases a more intricate machine learning algorithm using mock data 
 ## List of User Types for the Intelligent Public Transport Planner:
 
 1. **Commuter User**
-    - User Story: As a commuter living in Callao, Peru, I want to quickly plan my daily route using the Intelligent Public Transport Planner to minimize travel time and reduce congestion.
-    - Accomplished by: Using the `deploy_model.py` in the `deployment/` directory to deploy the trained machine learning model for optimized route planning.
+
+   - User Story: As a commuter living in Callao, Peru, I want to quickly plan my daily route using the Intelligent Public Transport Planner to minimize travel time and reduce congestion.
+   - Accomplished by: Using the `deploy_model.py` in the `deployment/` directory to deploy the trained machine learning model for optimized route planning.
 
 2. **Tourist User**
-    - User Story: As a tourist visiting Callao, Peru, I want to explore the city's attractions using eco-friendly transport options suggested by the Intelligent Public Transport Planner.
-    - Accomplished by: Using the `deploy_graph_module.py` in the `deployment/` directory to leverage the graph representation for planning optimal routes to tourist destinations.
+
+   - User Story: As a tourist visiting Callao, Peru, I want to explore the city's attractions using eco-friendly transport options suggested by the Intelligent Public Transport Planner.
+   - Accomplished by: Using the `deploy_graph_module.py` in the `deployment/` directory to leverage the graph representation for planning optimal routes to tourist destinations.
 
 3. **Environmentally-Conscious User**
-    - User Story: As an environmentally-conscious resident of Callao, Peru, I want to choose public transport options that promote sustainability and reduce carbon footprint through the Intelligent Public Transport Planner.
-    - Accomplished by: Utilizing the eco-friendly travel recommendations provided by the model trained using `complex_ml_algorithm.py` in the `src/` directory.
+
+   - User Story: As an environmentally-conscious resident of Callao, Peru, I want to choose public transport options that promote sustainability and reduce carbon footprint through the Intelligent Public Transport Planner.
+   - Accomplished by: Utilizing the eco-friendly travel recommendations provided by the model trained using `complex_ml_algorithm.py` in the `src/` directory.
 
 4. **Transportation Authority User**
-    - User Story: As a transportation authority official in Callao, Peru, I want to access insights and analytics generated by the Intelligent Public Transport Planner to optimize the city's public transport network.
-    - Accomplished by: Accessing data analysis and model evaluation results generated by the model training scripts such as `train_model.py` and `complex_ml_algorithm.py` in the `src/` directory.
+
+   - User Story: As a transportation authority official in Callao, Peru, I want to access insights and analytics generated by the Intelligent Public Transport Planner to optimize the city's public transport network.
+   - Accomplished by: Accessing data analysis and model evaluation results generated by the model training scripts such as `train_model.py` and `complex_ml_algorithm.py` in the `src/` directory.
 
 5. **Data Analyst User**
-    - User Story: As a data analyst working on public transport optimization in Callao, Peru, I want to explore the processed data and generate actionable insights using the tools provided by the Intelligent Public Transport Planner.
-    - Accomplished by: Accessing the processed data and running data analysis scripts available in the `src/` directory.
+   - User Story: As a data analyst working on public transport optimization in Callao, Peru, I want to explore the processed data and generate actionable insights using the tools provided by the Intelligent Public Transport Planner.
+   - Accomplished by: Accessing the processed data and running data analysis scripts available in the `src/` directory.
 
 These user types represent a diverse range of stakeholders who can benefit from and contribute to the Intelligent Public Transport Planner application for Callao, Peru. Each user type has specific needs and can interact with different functionalities provided by the application through the corresponding files and functionalities within the system.

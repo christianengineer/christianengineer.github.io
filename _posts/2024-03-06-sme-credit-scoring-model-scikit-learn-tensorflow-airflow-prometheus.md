@@ -8,53 +8,65 @@ layout: article
 ## SME Credit Scoring Model Documentation
 
 ## Objectives and Benefits
+
 ### Objectives:
+
 - Develop a scalable and production-ready credit scoring model for Small and Medium Enterprises (SMEs) in Peru.
 - Utilize alternative data sources to assess creditworthiness and expand access to capital for SMEs.
 - Solve the credit analyst's pain point of excluding viable SMEs due to lack of traditional data.
 
 ### Benefits:
+
 - Increased access to capital for SMEs, fostering economic growth in Peru.
 - Improved credit scoring accuracy by leveraging alternative data sources.
 - Automation of credit scoring process, saving time and resources for credit analysts.
 
 ## Machine Learning Algorithm
+
 - Machine Learning Algorithm: Gradient Boosting Classifier (XGBoost)
   - XGBoost is chosen for its high prediction accuracy and scalability, making it suitable for handling a large volume of data.
 
 ## Strategies
+
 1. **Sourcing Strategy**:
-    - Collect alternative data sources such as transactional data, social media activity, and business performance metrics.
-    - Data collection can be automated through API integrations with financial institutions and data providers.
-  
+
+   - Collect alternative data sources such as transactional data, social media activity, and business performance metrics.
+   - Data collection can be automated through API integrations with financial institutions and data providers.
+
 2. **Preprocessing Strategy**:
-    - Conduct thorough data cleaning, handling missing values, encoding categorical variables, and scaling numerical features.
-    - Feature engineering to extract meaningful insights from the data and improve model performance.
-  
+
+   - Conduct thorough data cleaning, handling missing values, encoding categorical variables, and scaling numerical features.
+   - Feature engineering to extract meaningful insights from the data and improve model performance.
+
 3. **Modeling Strategy**:
-    - Train an XGBoost Classifier to predict the creditworthiness of SMEs based on the alternative data sources.
-    - Optimize hyperparameters using techniques like GridSearchCV to improve model performance.
-  
+
+   - Train an XGBoost Classifier to predict the creditworthiness of SMEs based on the alternative data sources.
+   - Optimize hyperparameters using techniques like GridSearchCV to improve model performance.
+
 4. **Deployment Strategy**:
-    - Utilize Apache Airflow for orchestrating the ETL pipeline and model training process.
-    - Package the trained model using TensorFlow Serving for scalable deployment.
-    - Monitor model performance and health using Prometheus for proactive maintenance.
+   - Utilize Apache Airflow for orchestrating the ETL pipeline and model training process.
+   - Package the trained model using TensorFlow Serving for scalable deployment.
+   - Monitor model performance and health using Prometheus for proactive maintenance.
 
 ## Tools and Libraries
+
 1. **Sourcing and Preprocessing**:
-    - Tools: Python, Pandas, NumPy
-    - Libraries: Scikit-Learn, TensorFlow Data Validation
-  
+
+   - Tools: Python, Pandas, NumPy
+   - Libraries: Scikit-Learn, TensorFlow Data Validation
+
 2. **Modeling**:
-    - Algorithm: XGBoost
-    - Libraries: XGBoost, Scikit-Learn
-  
+
+   - Algorithm: XGBoost
+   - Libraries: XGBoost, Scikit-Learn
+
 3. **Deployment**:
-    - Orchestration: Apache Airflow
-    - Model Serving: TensorFlow Serving
-    - Monitoring: Prometheus
+   - Orchestration: Apache Airflow
+   - Model Serving: TensorFlow Serving
+   - Monitoring: Prometheus
 
 **Links to Tools and Libraries:**
+
 - [Python](https://www.python.org/)
 - [Pandas](https://pandas.pydata.org/)
 - [NumPy](https://numpy.org/)
@@ -67,17 +79,21 @@ layout: article
 ## SME Credit Scoring Model: Sourcing Data Strategy
 
 ## Data Collection Methods
+
 To efficiently collect alternative data sources for the SME Credit Scoring Model, we recommend the following methods and tools that integrate well within the existing technology stack:
 
 1. **API Integrations**:
+
    - Utilize APIs provided by financial institutions, e-commerce platforms, social media networks, and business directories to fetch relevant data.
    - Tools like **`Requests`** in Python can be used to interact with APIs and retrieve data in real-time.
 
 2. **Web Scraping**:
+
    - Collect data from websites that offer business information, news articles, and economic indicators relevant to SME creditworthiness.
    - Tools like **`BeautifulSoup`** and **`Scrapy`** in Python can be used for efficient web scraping.
 
 3. **Data Providers**:
+
    - Partner with third-party data providers specializing in alternative data for credit scoring, such as Dun & Bradstreet or Experian.
    - Integrate their data feeds via APIs or data feeds directly into the system.
 
@@ -86,13 +102,16 @@ To efficiently collect alternative data sources for the SME Credit Scoring Model
    - Data pipelines can be set up using tools like **Apache Kafka** for real-time data streaming.
 
 ## Integration with Existing Technology Stack
+
 To streamline the data collection process and ensure data readiness for analysis and model training, the recommended tools integrate smoothly within the existing technology stack:
 
 1. **Data Processing Pipeline**:
+
    - Use **Apache Airflow** to orchestrate the data collection process, ensuring data is fetched, processed, and stored efficiently.
    - Schedule data collection tasks, monitor progress, and handle data dependencies seamlessly.
 
 2. **Data Validation and Cleaning**:
+
    - Leverage **`TensorFlow Data Validation`** to validate and clean the collected data.
    - Ensure data consistency, completeness, and schema uniformity for downstream analysis.
 
@@ -105,17 +124,21 @@ By implementing these data collection methods and tools within the existing tech
 ## SME Credit Scoring Model: Feature Extraction and Engineering Analysis
 
 ## Feature Extraction
+
 For the SME Credit Scoring Model, the following feature extraction strategies can be employed to enhance interpretability and model performance:
 
 1. **Text Data Processing**:
+
    - Extract features from unstructured text data such as business descriptions, financial reports, or social media content using techniques like TF-IDF or word embeddings.
    - Convert text data into numerical features for model input.
 
 2. **Categorical Variable Encoding**:
+
    - Encode categorical variables like business sector, location, and industry type using techniques such as one-hot encoding or target encoding.
    - Create separate binary variables for each category to represent the categorical data effectively.
 
 3. **Temporal Features**:
+
    - Extract temporal features like transaction timestamps, loan application dates, or business registration dates to capture time-related patterns.
    - Derive features like month of the year, day of the week, or time since last transaction to provide additional context to the model.
 
@@ -124,17 +147,21 @@ For the SME Credit Scoring Model, the following feature extraction strategies ca
    - These ratios can provide insights into the financial health and stability of SMEs.
 
 ## Feature Engineering
+
 To further enhance the interpretability of data and boost the performance of the machine learning model, the following feature engineering techniques can be applied:
 
 1. **Interaction Features**:
+
    - Create interaction features by combining two or more relevant features to capture potential synergistic effects.
    - For example, create a new feature by multiplying sales revenue with profit margin to represent overall profitability.
 
 2. **Polynomial Features**:
+
    - Generate polynomial features by extracting powers and interactions of the original features.
    - Include squared or cubed terms of key features to capture nonlinear relationships in the data.
 
 3. **Aggregated Features**:
+
    - Aggregate historical transaction data to create features like average transaction amount, total transactions in the last month, or maximum transaction value.
    - These aggregated features can provide a summary of past behavior and patterns.
 
@@ -143,6 +170,7 @@ To further enhance the interpretability of data and boost the performance of the
    - Reduce multicollinearity and improve model performance by transforming high-dimensional data into a lower-dimensional space.
 
 ## Variable Name Recommendations
+
 To maintain consistency and clarity in variable naming, consider the following recommendations:
 
 - **Text Data Features**: text_feature_1, text_feature_2, ...
@@ -161,22 +189,27 @@ By implementing these feature extraction and engineering strategies along with c
 To ensure the success of the SME Credit Scoring Model project, specific metadata management strategies tailored to the unique demands and characteristics of the project are crucial. Here are some insights directly relevant to the project's needs:
 
 1. **Feature Metadata**:
+
    - **Description**: Maintain detailed descriptions of each feature, including its source (e.g., business description, financial statement), type (text, categorical, numerical), and relevance to creditworthiness assessment.
    - **Impact on Model**: Document the expected impact of each feature on the model's prediction, highlighting the importance and interpretability of features in the credit scoring process.
 
 2. **Data Source Metadata**:
+
    - **Origin**: Keep track of the source of each data point or feature, whether it was sourced from transactional data, social media, or external data providers.
    - **Quality Assessment**: Include metadata on data quality assessments, such as completeness, accuracy, and reliability of data from different sources.
 
 3. **Preprocessing Steps Metadata**:
+
    - **Transformation Details**: Document the specific preprocessing steps applied to each feature, including encoding methods (e.g., one-hot encoding), scaling techniques, and imputation strategies for missing values.
    - **Normalization**: Record the normalization or standardization techniques used to ensure consistency in feature scaling across the dataset.
 
 4. **Model Training Metadata**:
+
    - **Hyperparameters**: Track the hyperparameters used during model training, such as learning rates, tree depths, and regularization parameters for XGBoost.
    - **Model Performance**: Store metrics like accuracy, precision, recall, and AUC-ROC for model evaluation and comparison across different iterations.
 
 5. **Version Control**:
+
    - **Data Versioning**: Implement version control for datasets to track changes over time and ensure reproducibility of results.
    - **Model Versioning**: Maintain versioning for trained models to facilitate model reusability and comparison of performance across different versions.
 
@@ -191,23 +224,29 @@ By implementing comprehensive metadata management practices tailored to the uniq
 ## Data Challenges and Preprocessing Solutions
 
 ### Specific Data Problems:
+
 1. **Missing Data**:
+
    - **Challenge**: Alternative data sources may have missing values, impacting the model's performance if not handled properly.
    - **Solution**: Impute missing values strategically based on the data's nature (median imputation for numerical, mode imputation for categorical), ensuring data completeness without introducing bias.
 
 2. **Outliers**:
+
    - **Challenge**: Outliers in financial or transactional data can skew the model's predictions and affect its robustness.
    - **Solution**: Apply robust techniques like Winsorization or robust scaling to mitigate the impact of outliers while preserving valuable information from the data.
 
 3. **Imbalanced Data**:
+
    - **Challenge**: Bias towards non-defaulting SMEs in the dataset can lead to model inaccuracies and underperformance in predicting defaults.
    - **Solution**: Employ techniques like oversampling (SMOTE) or undersampling to balance the class distribution, ensuring the model learns from both default and non-default instances effectively.
 
 4. **Feature Scaling**:
+
    - **Challenge**: Features with different scales and units can affect the model's convergence and performance in algorithms like XGBoost.
    - **Solution**: Standardize or normalize numerical features to bring them to a common scale, preventing certain features from dominating the model's learning process.
 
 5. **Categorical Variables**:
+
    - **Challenge**: Categorical variables like business sector or location need encoding for model input, but incorrect encoding can introduce noise.
    - **Solution**: Use target encoding for high-cardinality categorical variables and one-hot encoding for low-cardinality ones, creating meaningful representations of categorical data without adding unnecessary complexity.
 
@@ -216,6 +255,7 @@ By implementing comprehensive metadata management practices tailored to the uniq
    - **Solution**: Extract meaningful temporal features like month of the year, day of the week, or time elapsed since the last transaction, capturing time-related patterns efficiently.
 
 ### Unique Project Considerations:
+
 - **Interpretability**: Ensure data preprocessing steps preserve the interpretability of features to provide clear insights into the model's decision-making process, aligning with the project's objective of expanding access to capital for SMEs.
 - **Data Coverage**: Verify that data preprocessing techniques maintain the integrity of alternative data sources, leveraging their full potential to assess creditworthiness accurately and inclusively for SMEs in Peru.
 - **Regulatory Compliance**: Implement data preprocessing practices that uphold compliance with data privacy regulations and ethical considerations, reflecting Mibanco's commitment to responsible data handling practices.
@@ -267,6 +307,7 @@ preprocessed_data.to_csv('preprocessed_sme_credit_data.csv', index=False)
 ```
 
 In this code file:
+
 - The data is loaded, missing values are imputed, a new feature indicating missing data is created, and outliers are handled.
 - Imbalanced data is balanced using SMOTE oversampling technique.
 - Numerical features are scaled using StandardScaler.
@@ -280,20 +321,26 @@ These preprocessing steps are tailored to address the specific challenges and ne
 To address the unique challenges and data types presented by the SME Credit Scoring Model project, a Gradient Boosting Ensemble method, specifically XGBoost, is recommended. XGBoost is well-suited for handling diverse data types, capturing non-linear relationships, and providing high prediction accuracy, making it ideal for credit scoring applications.
 
 ## Modeling Strategy with XGBoost
+
 ### Steps:
+
 1. **Feature Importance Analysis**:
+
    - **Importance**: Understanding which features contribute the most to the credit scoring predictions is crucial for interpreting the model's decisions and improving transparency.
    - **Implementation**: Utilize XGBoost's built-in feature importance mechanisms to analyze and rank the features based on their contribution to the model's predictions.
 
 2. **Hyperparameter Tuning**:
+
    - **Importance**: Proper hyperparameter tuning is essential for optimizing the model's performance, ensuring it generalizes well to unseen data and yields the best credit scoring results.
    - **Implementation**: Employ techniques like GridSearchCV or RandomizedSearchCV to search through the hyperparameter space and find the optimal set of parameters for XGBoost.
 
 3. **Model Interpretability**:
+
    - **Importance**: Given the importance of transparency in credit scoring decisions, ensuring the model is interpretable and can provide insights into the factors influencing creditworthiness is paramount.
    - **Implementation**: Utilize SHAP (SHapley Additive exPlanations) values or Partial Dependence Plots to explain individual predictions and understand the impact of each feature on the model's outcomes.
 
 4. **Ensemble Techniques**:
+
    - **Importance**: Leveraging ensemble techniques like boosting can further enhance the model's predictive power by combining multiple weak learners into a strong learner, improving overall accuracy and robustness.
    - **Implementation**: Train multiple XGBoost models with different seeds or subsets of data and then combine their predictions to reduce variance and improve model performance.
 
@@ -302,7 +349,9 @@ To address the unique challenges and data types presented by the SME Credit Scor
    - **Implementation**: Evaluate the model using metrics relevant to credit scoring, such as accuracy, precision, recall, F1 score, and ROC-AUC, considering the project's focus on expanding access to capital for SMEs.
 
 ### Most Crucial Step:
+
 The most crucial step within this recommended modeling strategy is **Feature Importance Analysis**. Understanding the relative importance of features in the credit scoring model is vital for several reasons:
+
 - **Interpretability**: It provides insights into which factors are driving the creditworthiness assessments, enabling credit analysts to explain decisions to stakeholders and SMEs.
 - **Feature Selection**: It helps in identifying key variables that significantly impact credit scores, guiding feature selection and potentially improving model efficiency.
 - **Risk Assessment**: By pinpointing influential predictors, the model can better assess the risk associated with SMEs, enhancing the accuracy of credit decisions.
@@ -315,33 +364,36 @@ By prioritizing Feature Importance Analysis as a critical step in the modeling s
 To effectively implement the modeling strategy for the SME Credit Scoring Model, the following tools and technologies are recommended, tailored to handle diverse data types, ensure scalability, and integrate seamlessly with the existing workflow:
 
 ## 1. Tool: XGBoost
+
 - **Description**: XGBoost is a powerful gradient boosting algorithm known for its efficiency, scalability, and high-performance in handling structured data for classification tasks like credit scoring.
 - **Fit in Modeling Strategy**: Utilize XGBoost as the primary algorithm for credit scoring, leveraging its ability to capture complex relationships in data, handle diverse feature types, and provide accurate predictions crucial for SME credit assessments.
 - **Integration**: Easily integrate XGBoost with Python libraries like Scikit-Learn and TensorFlow for model training and deployment within the existing technology stack.
 - **Key Features**:
-   - Gradient boosting algorithm optimized for performance.
-   - Support for custom loss functions and evaluation metrics.
-   - Feature importance analysis for interpreting model decisions.
+  - Gradient boosting algorithm optimized for performance.
+  - Support for custom loss functions and evaluation metrics.
+  - Feature importance analysis for interpreting model decisions.
 
 [Official Documentation and Resources](https://xgboost.readthedocs.io/en/latest/)
 
 ## 2. Tool: SHAP (SHapley Additive exPlanations)
+
 - **Description**: SHAP is a popular tool for interpreting machine learning models by quantifying the impact of each feature on the model's predictions.
 - **Fit in Modeling Strategy**: Use SHAP values to explain individual credit scoring predictions, understand the influence of each feature on creditworthiness assessments, and enhance the model's interpretability.
 - **Integration**: Easily integrate SHAP with XGBoost models in Python for feature importance analysis and interpretation of model outcomes.
 - **Key Features**:
-   - Provides global and local interpretability of machine learning models.
-   - Visualizations like summary plots and force plots for explaining model predictions.
-   
+  - Provides global and local interpretability of machine learning models.
+  - Visualizations like summary plots and force plots for explaining model predictions.
+
 [Official Documentation and Resources](https://github.com/slundberg/shap)
 
 ## 3. Tool: GridSearchCV (from Scikit-Learn)
+
 - **Description**: GridSearchCV is a hyperparameter tuning tool that exhaustively searches for the best hyperparameters for machine learning models.
 - **Fit in Modeling Strategy**: Use GridSearchCV to optimize hyperparameters for XGBoost, ensuring the model's performance is maximized for accurate credit scoring predictions.
 - **Integration**: Seamlessly integrated with Scikit-Learn, enabling parameter tuning for XGBoost models within Python scripts or Jupyter Notebooks.
 - **Key Features**:
-   - Performs cross-validated grid search to find the best hyperparameters.
-   - Saves time by automating hyperparameter tuning process.
+  - Performs cross-validated grid search to find the best hyperparameters.
+  - Saves time by automating hyperparameter tuning process.
 
 [Official Documentation and Resources](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html)
 
@@ -386,6 +438,7 @@ df.to_csv('synthetic_sme_credit_data.csv', index=False)
 ```
 
 In this script:
+
 - The Faker library is used to generate synthetic data for features like business sector, transaction amount, and credit score.
 - Synthetic data is created for a specified number of samples.
 - Additional feature engineering or preprocessing steps can be included as needed to recreate real-world variability.
@@ -412,6 +465,7 @@ Certainly! Below is an example of a few rows of mocked data tailored to the SME 
   - Credit_Score: Numerical variable representing the credit score of an SME.
 
 **Formatting for Model Ingestion**:
+
 - Categorical variables like 'Business_Sector' may require one-hot encoding before model ingestion to convert them into a numerical format suitable for machine learning models.
 - Numerical variables like 'Transaction_Amount' and 'Credit_Score' may need scaling or normalization to ensure consistent ranges for model training.
 
@@ -454,6 +508,7 @@ model.save_model('sme_credit_model.model')
 ```
 
 **Code Quality and Structure Conventions**:
+
 - **Modularity**: Break down the code into functions or classes for reusability and easier maintenance.
 - **Documentation**: Use clear and concise comments to explain the purpose of each section of code, input/output, and logic.
 - **Error Handling**: Implement error handling mechanisms to anticipate and manage potential issues during deployment.
@@ -469,15 +524,18 @@ To effectively deploy the machine learning model for the SME Credit Scoring proj
 ## Step-by-Step Deployment Plan
 
 ### 1. Pre-Deployment Checks
+
 - **Check Model Readiness**: Ensure the machine learning model is trained, validated, and achieves the desired performance metrics.
 - **Model Serialization**: Save the trained model to a file for deployment.
 
 ### 2. Model Containerization
+
 - **Tool: Docker**
   - **Description**: Containerize the machine learning model and its dependencies for seamless deployment and scalability.
   - **Documentation**: [Docker Documentation](https://docs.docker.com/)
 
 ### 3. Model Deployment to Cloud Platform
+
 - **Tool: Amazon Web Services (AWS) / Google Cloud Platform (GCP) / Microsoft Azure**
   - **Description**: Deploy the containerized model to a cloud platform for scalability and accessibility.
   - **Documentation**:
@@ -486,6 +544,7 @@ To effectively deploy the machine learning model for the SME Credit Scoring proj
     - [Azure Kubernetes Service (AKS)](https://azure.microsoft.com/en-us/services/kubernetes-service/)
 
 ### 4. Monitoring and Logging
+
 - **Tool: Prometheus, Grafana**
   - **Description**: Monitor model performance, track metrics, and visualize data for proactive maintenance.
   - **Documentation**:
@@ -493,11 +552,13 @@ To effectively deploy the machine learning model for the SME Credit Scoring proj
     - [Grafana Documentation](https://grafana.com/docs/)
 
 ### 5. Automation and Orchestration
+
 - **Tool: Apache Airflow**
   - **Description**: Orchestrate the deployment pipeline, schedule tasks, and automate model updates.
   - **Documentation**: [Apache Airflow Documentation](https://airflow.apache.org/docs/)
 
 ### 6. Model Endpoint Exposition
+
 - **Tool: Flask / FastAPI**
   - **Description**: Develop an API endpoint to expose the model for real-time inference.
   - **Documentation**:
@@ -505,11 +566,13 @@ To effectively deploy the machine learning model for the SME Credit Scoring proj
     - [FastAPI Documentation](https://fastapi.tiangolo.com/)
 
 ### 7. Security and Compliance Checks
+
 - **Tool: Open Policy Agent (OPA)**
   - **Description**: Implement security policies and compliance checks to maintain data privacy and regulatory standards.
   - **Documentation**: [OPA Documentation](https://www.openpolicyagent.org/docs/latest/)
 
 ## Deployment Roadmap
+
 1. **Prepare Model**: Train, validate, and serialize the model.
 2. **Containerize Model**: Create a Docker container for the model.
 3. **Deploy to Cloud**: Use AWS, GCP, or Azure for deployment.
@@ -544,6 +607,7 @@ CMD ["python", "app.py"]
 ```
 
 In this Dockerfile:
+
 - It starts from a Python 3.8 slim base image to keep the image size small.
 - Sets the working directory inside the container to /app.
 - Copies the requirements.txt file and installs the necessary Python packages.
@@ -552,6 +616,7 @@ In this Dockerfile:
 - Specifies the command to run the model API using app.py.
 
 To optimize performance and scalability for the project, consider:
+
 1. **Multi-stage Builds**: Utilize multi-stage builds to separate the build environment from the runtime environment, reducing the size of the final image and optimizing performance.
 2. **Alpine Image**: If further size reduction is required, consider using Alpine-based Python images for a smaller footprint.
 3. **Caching**: Utilize layer caching by arranging commands in the Dockerfile to take advantage of caching for faster builds.
@@ -562,35 +627,45 @@ By incorporating these instructions and optimizations tailored to the project's 
 ## User Groups and User Stories for the SME Credit Scoring Model
 
 ### 1. Credit Analysts
+
 #### User Story:
+
 - **Scenario**: Juan, a credit analyst at Mibanco, struggles to assess the creditworthiness of SMEs due to limited traditional data sources, leading to missed opportunities for viable businesses.
 - **Solution**: The application leverages alternative data sources to provide a comprehensive credit scoring model that includes transactional data, social media activity, and business performance metrics.
 - **Benefits**: Juan can now access a more holistic view of SMEs' financial health, enabling more accurate credit assessments and expanding access to capital for deserving businesses.
 - **File/Component**: Preprocessing script for integrating and cleaning alternative data sources.
 
 ### 2. Small Business Owners
+
 #### User Story:
+
 - **Scenario**: Maria, a small business owner in Peru, faces difficulties obtaining a loan due to lack of credit history or traditional collateral.
 - **Solution**: The application uses alternative data sources to assess creditworthiness, allowing Maria to showcase her business performance and secure funding based on actual data.
 - **Benefits**: Maria gains access to capital that was previously unavailable, enabling business growth, investment, and economic stability.
 - **File/Component**: Model deployment API endpoint for real-time credit scoring assessments.
 
 ### 3. Financial Institutions
+
 #### User Story:
+
 - **Scenario**: Banco XYZ, a financial institution partnering with Mibanco, struggles to accurately assess the creditworthiness of SMEs with limited data points.
 - **Solution**: The application provides a scalable and accurate credit scoring model powered by machine learning algorithms, leveraging alternative data sources for comprehensive risk assessment.
 - **Benefits**: Banco XYZ can make informed lending decisions, expand their loan portfolio to underserved SMEs, and mitigate risks effectively.
 - **File/Component**: Trained XGBoost model for accurate credit scoring predictions.
 
 ### 4. Regulatory Compliance Team
+
 #### User Story:
+
 - **Scenario**: The regulatory compliance team at Mibanco faces challenges ensuring adherence to data privacy regulations and ethical standards in credit assessment processes.
 - **Solution**: The application incorporates Open Policy Agent (OPA) for implementing security policies and compliance checks, maintaining data privacy and regulatory standards.
 - **Benefits**: The team can seamlessly monitor and enforce data security and compliance measures, ensuring ethical credit scoring practices.
 - **File/Component**: OPA integration for security and compliance checks.
 
 ### 5. Business Development Team
+
 #### User Story:
+
 - **Scenario**: The business development team at Mibanco aims to foster economic growth by extending financial support to a wider range of SMEs, but faces limitations with traditional credit scoring models.
 - **Solution**: The application's predictive modeling enables the team to identify creditworthy SMEs using alternative data, unlocking opportunities for inclusive lending.
 - **Benefits**: The team can strategically target viable SMEs, promote economic growth, and contribute to a more diverse and prosperous business landscape in Peru.

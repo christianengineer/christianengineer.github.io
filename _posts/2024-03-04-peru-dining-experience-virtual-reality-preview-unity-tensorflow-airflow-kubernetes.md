@@ -8,44 +8,49 @@ layout: article
 ## Machine Learning Peru Dining Experience Virtual Reality Preview
 
 ## Objectives and Benefits:
+
 - **Objectives**:
   - Offer potential diners a virtual reality preview of the dining experience, menu items, and ambiance.
   - Enhance attraction and increase reservations at the restaurant.
-  
 - **Benefits**:
   - Improve customer engagement and satisfaction.
   - Reduce no-shows by giving customers a realistic preview.
   - Increase brand awareness and loyalty.
-  
+
 ## Data Types:
+
 - **Menu Items**: Images and descriptions of menu items.
 - **Ambiance**: Images or videos of the restaurant's interior and exterior.
 - **User Interactions**: Data on how users interact with the VR preview.
 
 ## Sourcing, Cleansing, Modeling, and Deploying Strategies:
+
 1. **Sourcing**:
+
    - **Menu Items**: Gather data from the restaurant's menu database or capture new images.
    - **Ambiance**: Get images/videos from the restaurant's marketing materials or capture new media.
    - **User Interactions**: Collect user interaction data from the VR application.
 
 2. **Cleansing**:
+
    - **Menu Items** and **Ambiance**: Ensure images are of high quality and standardized.
    - **User Interactions**: Clean and preprocess user interaction data to remove noise and inconsistencies.
 
 3. **Modeling**:
    - **Menu Items and Ambiance**: Use TensorFlow for image recognition and processing to enhance the VR experience.
-   
 4. **Deploying**:
    - Use Airflow for scheduling data pipelines and model training processes.
    - Deploy the VR preview application on Kubernetes for scalability and reliability.
 
 ## Tools and Libraries:
+
 - **Unity**: For developing the VR application.
 - **TensorFlow**: For image recognition and processing.
 - **Airflow**: For orchestrating data pipelines and model training.
 - **Kubernetes**: For deploying and managing the VR application in a scalable manner.
 
 ### Links:
+
 - [Unity](https://unity.com/)
 - [TensorFlow](https://www.tensorflow.org/)
 - [Apache Airflow](https://airflow.apache.org/)
@@ -54,8 +59,9 @@ layout: article
 ## Analysis of Data Types:
 
 1. **Menu Items**:
+
    - **Data Types**: Images and descriptions of menu items.
-   - **Variable Naming Scheme**: 
+   - **Variable Naming Scheme**:
      - For Images: `menu_item_image_1, menu_item_image_2, ...`
      - For Descriptions: `menu_item_description_1, menu_item_description_2, ...`
    - **Variables**:
@@ -63,8 +69,9 @@ layout: article
      - `menu_item_description`: Descriptions of menu items for textual features.
 
 2. **Ambiance**:
+
    - **Data Types**: Images or videos of the restaurant's interior and exterior.
-   - **Variable Naming Scheme**: 
+   - **Variable Naming Scheme**:
      - For Images: `restaurant_image_1, restaurant_image_2, ...`
      - For Videos: `restaurant_video_1, restaurant_video_2, ...`
    - **Variables**:
@@ -73,7 +80,7 @@ layout: article
 
 3. **User Interactions**:
    - **Data Types**: Interaction data from the VR application.
-   - **Variable Naming Scheme**: 
+   - **Variable Naming Scheme**:
      - `user_interaction_1, user_interaction_2, ...`
    - **Variables**:
      - `user_interaction`: Data on how users interact with the VR preview for user profiling and behavior analysis.
@@ -90,31 +97,26 @@ By using a clear and consistent naming scheme with descriptive variables, it wil
 ## Recommended Tools and Methods for Efficient Data Gathering:
 
 1. **Menu Items**:
-   - **Tools**: 
+   - **Tools**:
      - **Web Scraping**: Use tools like BeautifulSoup or Selenium to scrape menu item images and descriptions from the restaurant's website.
      - **Mobile App**: Develop a mobile app for restaurant staff to capture new menu item images and descriptions easily.
-   
 2. **Ambiance**:
-   - **Tools**: 
+   - **Tools**:
      - **Photography/Videography Equipment**: Use high-quality cameras or video cameras to capture images and videos of the restaurant.
-   
 3. **User Interactions**:
-   - **Tools**: 
+   - **Tools**:
      - **VR Analytics Tools**: Integrate VR analytics tools like Unity Analytics to track and analyze user interactions within the VR application.
 
 ## Integration within Existing Technology Stack:
 
 1. **Data Pipeline with Apache Airflow**:
    - Use Apache Airflow to schedule data gathering tasks from web scraping, mobile app data collection, and analytics data extraction.
-   
 2. **Data Storage and Formatting**:
    - Store data in a centralized data lake using tools like Amazon S3 or Google Cloud Storage.
    - Use ETL (Extract, Transform, Load) processes to clean and format the data for analysis.
-   
 3. **Model Training with TensorFlow**:
    - Integrate TensorFlow within the data pipeline to preprocess images and descriptions for menu items and ambiance.
    - Train machine learning models using TensorFlow on the cleaned and formatted data.
-   
 4. **Visualization and Monitoring**:
    - Use tools like TensorBoard for monitoring model training progress and performance.
    - Utilize data visualization libraries like Matplotlib or Plotly for analyzing and visualizing the data.
@@ -124,21 +126,27 @@ By leveraging tools like web scraping, mobile apps, photography equipment, and V
 ## Potential Data Problems and Cleansing Strategies:
 
 ### Menu Items:
+
 - **Problem**: Inconsistent image quality and resolution for menu item images.
+
   - **Cleansing Strategy**: Standardize image resolution and quality across all menu item images to ensure consistency for image processing and recognition in TensorFlow.
 
 - **Problem**: Variability in menu item descriptions, including spelling errors and inconsistencies.
   - **Cleansing Strategy**: Implement text preprocessing techniques like tokenization, lowercasing, and removing special characters to standardize and clean menu item descriptions before model training.
 
 ### Ambiance:
+
 - **Problem**: Variation in lighting conditions and angles in restaurant images and videos.
+
   - **Cleansing Strategy**: Use image processing techniques to adjust brightness, contrast, and color balance to normalize ambiance data for accurate feature extraction and recognition.
 
 - **Problem**: Differing video resolutions and frame rates in restaurant videos.
   - **Cleansing Strategy**: Standardize video quality and frame rates to ensure consistency in ambiance video data for seamless analysis and model training.
 
 ### User Interactions:
+
 - **Problem**: Noise and outliers in user interaction data, leading to inaccurate user behavior analysis.
+
   - **Cleansing Strategy**: Outlier detection and removal techniques to filter out noisy data points and ensure that user interaction data accurately reflects user behavior patterns within the VR preview.
 
 - **Problem**: Missing or incomplete user interaction data for certain VR sessions.
@@ -165,11 +173,11 @@ def preprocess_text(descriptions):
     ## Tokenize and count words in descriptions
     count_vectorizer = CountVectorizer()
     bow_matrix = count_vectorizer.fit_transform(descriptions)
-    
+
     ## Apply TF-IDF transformation
     tfidf_transformer = TfidfTransformer()
     tfidf_matrix = tfidf_transformer.fit_transform(bow_matrix)
-    
+
     return tfidf_matrix
 
 ## Example data
@@ -185,7 +193,7 @@ for img in cleaned_images:
     cv2.imshow('Standardized Image', img)
     cv2.waitKey(0)
     cv2.destroyAllWindows()
-    
+
 print(cleaned_descriptions)
 ```
 
@@ -210,6 +218,7 @@ By focusing on feature extraction and fusion, we can leverage the strengths of C
 ## Data Modeling Tools Recommendations:
 
 ### 1. **TensorFlow**
+
 - **Description**: TensorFlow is an open-source machine learning framework known for its robust support for deep learning and neural network models. It offers a wide range of tools and libraries for building and training machine learning models.
 - **Fit into Modeling Strategy**: TensorFlow will be instrumental in implementing Convolutional Neural Networks (CNNs) for processing menu item images and ambiance media in our project.
 - **Integration**: TensorFlow seamlessly integrates with other data processing tools and can be incorporated into our existing workflow for model training and evaluation.
@@ -220,6 +229,7 @@ By focusing on feature extraction and fusion, we can leverage the strengths of C
 **Documentation**: [TensorFlow Official Documentation](https://www.tensorflow.org/guide)
 
 ### 2. **Keras**
+
 - **Description**: Keras is a high-level neural networks API that runs on top of TensorFlow. It simplifies the process of building and training deep learning models.
 - **Fit into Modeling Strategy**: Keras can be used to design and implement complex CNN architectures for our project's menu item images and ambiance media processing.
 - **Integration**: Keras seamlessly integrates with TensorFlow, allowing for efficient model building and training within the TensorFlow ecosystem.
@@ -230,6 +240,7 @@ By focusing on feature extraction and fusion, we can leverage the strengths of C
 **Documentation**: [Keras Official Documentation](https://keras.io/)
 
 ### 3. **OpenCV**
+
 - **Description**: OpenCV is a popular computer vision library that provides a wide array of tools and functions for image and video processing.
 - **Fit into Modeling Strategy**: OpenCV can be used for image preprocessing, manipulation, and feature extraction in our CNN models for menu item images and ambiance media.
 - **Integration**: OpenCV can be integrated into the data preprocessing pipeline to ensure that menu item images and ambiance media are appropriately processed before model training.
@@ -244,26 +255,32 @@ By incorporating TensorFlow, Keras, and OpenCV into our data modeling toolkit, w
 ## Generating Mocked Dataset for Testing:
 
 ### Methodologies for Realistic Mocked Dataset Creation:
+
 1. **Random Data Generation**: Use libraries like NumPy and Faker to generate random data for menu items, ambiance details, and user interactions.
-  
+
 2. **Data Augmentation**: Modify existing real-world data to introduce variability, such as adding noise to images or texts.
 
 ### Recommended Tools for Dataset Creation and Validation:
+
 1. **NumPy**: Generate arrays of random data for menu item features.
 2. **Faker**: Create fake data for restaurant ambiance details and user interactions.
 3. **Pandas**: Organize and structure generated data into tabular formats for model training.
 4. **Scikit-learn**: Validate dataset integrity and statistical properties to ensure dataset quality.
 
 ### Strategies for Incorporating Real-World Variability:
+
 1. **Noise Injection**: Introduce random noise to simulated data to mimic real-world imperfections.
 2. **Data Imbalance**: Create skewed distributions in the dataset to reflect imbalanced real-world scenarios.
 
 ### Structuring the Dataset for Model Training and Validation:
+
 1. **Split Dataset**: Divide dataset into training, validation, and test sets to ensure model evaluation accuracy.
 2. **Labeling**: Assign labels to menu items, ambiance details, and user interactions for supervised learning.
 
 ### Frameworks and Resources for Mocked Data Creation:
+
 - **GitHub Repositories**:
+
   - [NumPy](https://github.com/numpy/numpy)
   - [Faker](https://github.com/joke2k/faker)
   - [Pandas](https://github.com/pandas-dev/pandas)
@@ -281,13 +298,14 @@ By leveraging tools like NumPy, Faker, Pandas, and Scikit-learn, you can create 
 
 Here is an example of a small mocked dataset representing menu item images, descriptions, ambiance details, and user interactions structured in a tabular format for your project:
 
-| menu_item_id | menu_item_image_url           | menu_item_description              | ambiance_image_url       | user_id | interaction_duration | interaction_rating |
-|--------------|-------------------------------|-----------------------------------|--------------------------|---------|----------------------|--------------------|
-| 1            | www.example.com/menu_item1.jpg | Delicious pasta with creamy sauce | www.example.com/image1.jpg | 101     | 30                   | 5                  |
+| menu_item_id | menu_item_image_url            | menu_item_description                 | ambiance_image_url         | user_id | interaction_duration | interaction_rating |
+| ------------ | ------------------------------ | ------------------------------------- | -------------------------- | ------- | -------------------- | ------------------ |
+| 1            | www.example.com/menu_item1.jpg | Delicious pasta with creamy sauce     | www.example.com/image1.jpg | 101     | 30                   | 5                  |
 | 2            | www.example.com/menu_item2.jpg | Fresh salad with vinaigrette dressing | www.example.com/image2.jpg | 102     | 45                   | 4                  |
-| 3            | www.example.com/menu_item3.jpg | Succulent steak with garlic butter  | www.example.com/image3.jpg | 103     | 60                   | 3                  |
+| 3            | www.example.com/menu_item3.jpg | Succulent steak with garlic butter    | www.example.com/image3.jpg | 103     | 60                   | 3                  |
 
 - **Structure and Types**:
+
   - `menu_item_id`: Integer - Unique identifier for each menu item.
   - `menu_item_image_url`: String - URL of the menu item image.
   - `menu_item_description`: String - Description of the menu item.
@@ -344,6 +362,7 @@ joblib.dump(clf, 'svm_model.pkl')
 ```
 
 ### Code Comments:
+
 1. **Loading the Dataset**: Reads the cleansed dataset containing menu item, ambiance, and user interaction data.
 2. **Data Splitting**: Splits the dataset into features (X) and target (y) for model training.
 3. **Data Preprocessing**: Scales the features using StandardScaler for model compatibility.
@@ -352,6 +371,7 @@ joblib.dump(clf, 'svm_model.pkl')
 6. **Saving the Model**: Saves the trained SVM model for deployment using Joblib serialization.
 
 ### Code Quality and Structure:
+
 - Follows PEP 8 style guide for Python code consistency and readability.
 - Uses descriptive variable names and comments for clarity and maintainability.
 - Organizes code into logical sections with clear separation of concerns.
@@ -362,6 +382,7 @@ This code snippet serves as a high-quality and well-documented example tailored 
 ## Machine Learning Model Deployment Plan:
 
 ### 1. Pre-Deployment Checks:
+
 - **Step**: Perform final model evaluation and validation checks.
 - **Tools**:
   - **Scikit-learn**: For model evaluation and testing.
@@ -369,6 +390,7 @@ This code snippet serves as a high-quality and well-documented example tailored 
   - [Scikit-learn User Guide](https://scikit-learn.org/stable/user_guide.html)
 
 ### 2. Model Serialization:
+
 - **Step**: Serialize the trained model for deployment.
 - **Tools**:
   - **Joblib**: For model serialization.
@@ -376,6 +398,7 @@ This code snippet serves as a high-quality and well-documented example tailored 
   - [Joblib Documentation](https://joblib.readthedocs.io/en/latest/)
 
 ### 3. API Development:
+
 - **Step**: Create an API to serve model predictions.
 - **Tools**:
   - **Flask**: For developing REST APIs.
@@ -383,6 +406,7 @@ This code snippet serves as a high-quality and well-documented example tailored 
   - [Flask Documentation](https://flask.palletsprojects.com/en/2.0.x/)
 
 ### 4. Containerization:
+
 - **Step**: Containerize the API using Docker for easy deployment.
 - **Tools**:
   - **Docker**: For containerization.
@@ -390,6 +414,7 @@ This code snippet serves as a high-quality and well-documented example tailored 
   - [Docker Documentation](https://docs.docker.com/)
 
 ### 5. Cloud Deployment:
+
 - **Step**: Deploy the Docker container to a cloud platform.
 - **Tools**:
   - **Amazon Web Services (AWS)**: Cloud platform for deployment.
@@ -397,6 +422,7 @@ This code snippet serves as a high-quality and well-documented example tailored 
   - [AWS Documentation](https://docs.aws.amazon.com/)
 
 ### 6. Monitoring and Logging:
+
 - **Step**: Implement monitoring and logging for deployed model performance.
 - **Tools**:
   - **AWS CloudWatch**: For monitoring and logging.
@@ -404,6 +430,7 @@ This code snippet serves as a high-quality and well-documented example tailored 
   - [AWS CloudWatch Documentation](https://docs.aws.amazon.com/cloudwatch/)
 
 ### 7. Testing and Scaling:
+
 - **Step**: Test the deployed model in the live environment and scale if needed.
 - **Tools**:
   - **Locust**: For load testing.
@@ -411,6 +438,7 @@ This code snippet serves as a high-quality and well-documented example tailored 
   - [Locust Documentation](https://docs.locust.io/)
 
 ### 8. Continuous Integration / Continuous Deployment (CI/CD):
+
 - **Step**: Automate the deployment process with CI/CD pipelines.
 - **Tools**:
   - **Jenkins**: For CI/CD automation.
@@ -448,8 +476,8 @@ CMD ["python", "app.py"]
 ```
 
 ### Dockerfile Instructions:
+
 1. **Base Image**: Starts with a slim Python 3.8 image.
-   
 2. **Working Directory**: Sets the working directory inside the container.
 
 3. **Requirements Installation**: Copies and installs Python dependencies listed in the `requirements.txt`.
@@ -469,31 +497,41 @@ This Dockerfile encapsulates your project's environment and dependencies, ensuri
 ## User Groups and User Stories for the Peru Dining Experience Virtual Reality Preview Project:
 
 ### 1. Potential Diners:
+
 #### User Story:
+
 - **Scenario**: Emma is planning a special anniversary dinner but is unsure about the ambiance and menu options at local restaurants. She wants to make an informed decision based on visuals and atmosphere.
 - **Solution**: Emma uses the VR preview to visualize the dining experience, view menu items, and get a feel for the ambiance before making a reservation, leading to a more confident decision.
 - **Project Component**: The VR application component that showcases ambiance images and menu item previews.
 
 ### 2. Tourists and Travelers:
+
 #### User Story:
+
 - **Scenario**: John is visiting Peru for the first time and wants to explore local dining options but is unfamiliar with the area and language.
 - **Solution**: John uses the VR preview to virtually tour various restaurants, view menu items with descriptions, and experience the ambiance, helping him make dining choices with ease.
 - **Project Component**: The language support and interactive VR tour functionalities within the application.
 
 ### 3. Event Planners and Managers:
+
 #### User Story:
+
 - **Scenario**: Sarah is organizing a corporate event and needs to select a restaurant that can accommodate a large group with specific menu requirements.
 - **Solution**: Sarah utilizes the VR preview to assess different restaurants, check menu options, and evaluate the ambiance, aiding in making the best venue selection for the event.
 - **Project Component**: The menu customization and venue visualization features in the application.
 
 ### 4. Restaurant Owners and Managers:
+
 #### User Story:
+
 - **Scenario**: David, a restaurant manager, wants to attract more diners and showcase the unique offerings of his establishment.
 - **Solution**: David partners with the platform to showcase his restaurant's ambiance, menu items, and dining experience through the VR preview, attracting more customers and increasing reservations.
 - **Project Component**: The restaurant onboarding and content management system in the application.
 
 ### 5. Food Enthusiasts and Influencers:
+
 #### User Story:
+
 - **Scenario**: Maria, a food blogger, wants to create engaging content about local dining experiences but struggles to capture the essence of the ambiance and menu visually.
 - **Solution**: Maria uses the VR preview to immerse herself in the dining experience, capture high-quality images, and showcase menu items in a unique and engaging way for her audience.
 - **Project Component**: The media capture and sharing functionalities within the application.

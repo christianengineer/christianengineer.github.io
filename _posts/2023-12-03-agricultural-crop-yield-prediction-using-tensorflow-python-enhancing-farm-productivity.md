@@ -8,6 +8,7 @@ layout: article
 ## AI Agricultural Crop Yield Prediction using TensorFlow (Python)
 
 ## Objectives
+
 The objectives of the AI Agricultural Crop Yield Prediction project using TensorFlow are to:
 
 1. **Predict Crop Yields**: Develop machine learning models to predict crop yields based on various factors such as weather data, soil conditions, and historical yields.
@@ -15,6 +16,7 @@ The objectives of the AI Agricultural Crop Yield Prediction project using Tensor
 3. **Scale Agricultural Operations**: Enable the scaling of agricultural operations by leveraging AI and predictive analytics to optimize resource usage and increase overall productivity.
 
 ## System Design Strategies
+
 The system design for the AI Agricultural Crop Yield Prediction project will involve the following strategies:
 
 1. **Data Collection**: Gather diverse and comprehensive data including weather patterns, soil characteristics, historical crop yields, and other relevant factors.
@@ -42,21 +44,26 @@ To support the Agricultural Crop Yield Prediction using TensorFlow application, 
 ## Cloud Infrastructure
 
 ### 1. Data Storage
-   - **Cloud Storage**: Utilize a scalable cloud storage solution, such as Amazon S3 or Google Cloud Storage, to store the diverse and large volumes of agricultural data including weather patterns, soil characteristics, and historical crop yields.
+
+- **Cloud Storage**: Utilize a scalable cloud storage solution, such as Amazon S3 or Google Cloud Storage, to store the diverse and large volumes of agricultural data including weather patterns, soil characteristics, and historical crop yields.
 
 ### 2. Model Training
-   - **Compute Resources**: Leverage cloud-based virtual machines or container services like Amazon EC2, Google Compute Engine, or Kubernetes to perform intensive model training tasks. This allows for scalability and cost-efficiency by provisioning compute resources as needed.
 
-   - **Distributed Training**: Use distributed training frameworks provided by TensorFlow to distribute training across multiple nodes, enabling faster model convergence and efficient use of resources.
+- **Compute Resources**: Leverage cloud-based virtual machines or container services like Amazon EC2, Google Compute Engine, or Kubernetes to perform intensive model training tasks. This allows for scalability and cost-efficiency by provisioning compute resources as needed.
+
+- **Distributed Training**: Use distributed training frameworks provided by TensorFlow to distribute training across multiple nodes, enabling faster model convergence and efficient use of resources.
 
 ### 3. Model Deployment
-   - **Serving Infrastructure**: Deploy the trained models using a scalable model-serving infrastructure such as Amazon SageMaker, Google Cloud AI Platform, or a custom Kubernetes deployment with TensorFlow Serving.
+
+- **Serving Infrastructure**: Deploy the trained models using a scalable model-serving infrastructure such as Amazon SageMaker, Google Cloud AI Platform, or a custom Kubernetes deployment with TensorFlow Serving.
 
 ### 4. Real-Time Inference
-   - **API Management**: Expose the deployed models as a RESTful API using cloud-based API management tools like Amazon API Gateway or Google Cloud Endpoints to handle real-time inference requests.
+
+- **API Management**: Expose the deployed models as a RESTful API using cloud-based API management tools like Amazon API Gateway or Google Cloud Endpoints to handle real-time inference requests.
 
 ### 5. Monitoring and Logging
-   - **Logging and Monitoring**: Utilize cloud-native monitoring and logging tools like Amazon CloudWatch, Google Cloud Monitoring, or third-party services like DataDog or Prometheus for tracking application performance, resource utilization, and system health.
+
+- **Logging and Monitoring**: Utilize cloud-native monitoring and logging tools like Amazon CloudWatch, Google Cloud Monitoring, or third-party services like DataDog or Prometheus for tracking application performance, resource utilization, and system health.
 
 ## Scalability and Reliability Considerations
 
@@ -122,16 +129,19 @@ crop-yield-prediction/
 ## File Structure Breakdown
 
 - **data/**: Contains the raw and processed data used for training and evaluation.
+
   - **raw/**: Raw data files including weather, soil, and yield data.
   - **processed/**: Preprocessed data files used for model training and evaluation.
 
 - **models/**: Stores the trained models and evaluation results.
+
   - **trained_models/**: Saved model files in a format such as HDF5.
   - **evaluation/**: Contains evaluation results, such as performance metrics and model evaluation summaries.
 
 - **notebooks/**: Jupyter notebooks for data exploration, data preprocessing, model training, and evaluation.
 
 - **src/**: Source code for the application.
+
   - **data/**: Data loading and preprocessing scripts.
   - **models/**: Model definitions and training scripts.
   - **evaluation/**: Scripts for evaluating model performance.
@@ -223,32 +233,32 @@ from tensorflow.keras.optimizers import Adam
 def build_crop_yield_prediction_model(data_path):
     ## Load mock data
     data = pd.read_csv(data_path)
-    
+
     ## Preprocess the data
     features = data.drop('yield', axis=1)
     target = data['yield']
-    
+
     ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(features, target, test_size=0.2, random_state=42)
-    
+
     ## Standardize the data
     scaler = StandardScaler()
     X_train = scaler.fit_transform(X_train)
     X_test = scaler.transform(X_test)
-    
+
     ## Build the neural network model
     model = Sequential([
         Dense(64, activation='relu', input_shape=(X_train.shape[1],)),
         Dense(64, activation='relu'),
         Dense(1)
     ])
-    
+
     ## Compile the model
     model.compile(optimizer=Adam(learning_rate=0.001), loss='mean_squared_error')
-    
+
     ## Train the model
     model.fit(X_train, y_train, epochs=50, batch_size=32, validation_data=(X_test, y_test))
-    
+
     return model
 ```
 
@@ -269,32 +279,32 @@ from tensorflow.keras.optimizers import Adam
 def build_crop_yield_prediction_model(data_path):
     ## Load mock data
     data = pd.read_csv(data_path)
-    
+
     ## Preprocess the data
     features = data.drop('yield', axis=1)
     target = data['yield']
-    
+
     ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(features, target, test_size=0.2, random_state=42)
-    
+
     ## Standardize the data
     scaler = StandardScaler()
     X_train = scaler.fit_transform(X_train)
     X_test = scaler.transform(X_test)
-    
+
     ## Build the neural network model
     model = Sequential([
         Dense(64, activation='relu', input_shape=(X_train.shape[1],)),
         Dense(64, activation='relu'),
         Dense(1)
     ])
-    
+
     ## Compile the model
     model.compile(optimizer=Adam(learning_rate=0.001), loss='mean_squared_error')
-    
+
     ## Train the model
     model.fit(X_train, y_train, epochs=50, batch_size=32, validation_data=(X_test, y_test))
-    
+
     return model
 ```
 

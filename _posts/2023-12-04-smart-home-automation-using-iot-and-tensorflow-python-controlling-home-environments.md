@@ -6,20 +6,26 @@ layout: article
 ---
 
 ## Objectives
+
 The AI Smart Home Automation using IoT and TensorFlow repository aims to create a scalable and intelligent home automation system that leverages IoT devices and TensorFlow for machine learning. The key objectives include:
+
 - Integrating various IoT devices such as smart thermostats, lights, security cameras, and sensors to automate and control home environments.
 - Utilizing TensorFlow, a popular open-source machine learning library, to develop AI models for tasks such as activity recognition, anomaly detection, and predictive maintenance within the smart home environment.
 - Providing a user-friendly interface for controlling and monitoring the smart home system, allowing users to interact with and customize the automation rules based on their preferences.
 
 ## System Design Strategies
+
 The system design for the AI Smart Home Automation using IoT and TensorFlow repository will incorporate the following strategies:
+
 - **Modularity**: The system components will be designed to be modular and loosely coupled, allowing for easy integration of new IoT devices and machine learning models.
 - **Scalability**: The design will support the scalability of IoT devices and machine learning models, enabling the system to accommodate an expanding array of connected devices and evolving AI algorithms.
 - **Security**: Emphasis will be placed on securing the IoT devices and the communication channels between devices and the central control system to ensure data privacy and prevent unauthorized access.
 - **Real-time Processing**: Utilizing real-time data processing techniques to enable quick decision-making and control actions within the smart home environment.
 
 ## Chosen Libraries
+
 The chosen libraries for implementing the AI Smart Home Automation system include:
+
 - **TensorFlow**: As the primary library for developing machine learning models, TensorFlow will be used for tasks such as activity recognition from sensor data, anomaly detection in device behavior, and predictive maintenance of IoT devices.
 - **Python IoT Libraries (e.g., MQTT, CoAP)**: These libraries will be used to communicate with and control IoT devices, enabling seamless integration with various IoT protocols and devices.
 - **Flask or Django**: To build a web-based user interface for controlling and monitoring the smart home system, either Flask or Django can be used to develop a user-friendly front-end application that interacts with the backend IoT and machine learning components.
@@ -137,14 +143,17 @@ models/
 ### Description of Each File
 
 - **controllers/**: This subdirectory contains controller modules responsible for handling interactions and business logic related to users, devices, and other relevant entities in the smart home system. For instance:
+
   - `user_controller.py`: Defines functions for user management, such as user registration, authentication, and preferences.
   - `device_controller.py`: Manages interactions with IoT devices, including data retrieval, control commands, and device status monitoring.
 
 - **data/**: The data subdirectory comprises modules for managing data and data preprocessing:
+
   - `dataset.py`: Defines classes and functions for handling datasets used for training machine learning models or storing historical IoT device data.
   - `preprocessing.py`: Contains scripts and functions for data preprocessing, feature engineering, and normalization before feeding the data into machine learning models.
 
 - **machine_learning/**: This subdirectory holds modules for defining and deploying machine learning models used within the smart home system:
+
   - `activity_recognition_model.py`: Contains the definition and training logic for a machine learning model that recognizes and classifies human activities from sensor data.
   - `anomaly_detection_model.py`: Implements a machine learning model responsible for detecting anomalies in IoT device behaviors.
 
@@ -172,10 +181,12 @@ deployment/
 ### Description of Each Subdirectory
 
 - **edge_computing/**: This subdirectory focuses on the deployment aspects related to edge computing devices. It contains the following subdirectories and their contents:
+
   - **dockerfiles/**: Holds Dockerfile definitions for building Docker images tailored to specific edge computing devices. Each device may have a dedicated directory containing the Dockerfile and necessary resources.
   - **deploy_scripts/**: Consists of scripts and configuration files for deploying the application components to edge devices, ensuring consistency and ease of deployment across multiple edge computing nodes.
 
 - **cloud/**: This subdirectory encompasses deployment-related components and resources targeting cloud infrastructure. It includes the following subdirectories:
+
   - **infrastructure_as_code/**: Contains infrastructure-as-code (IaC) templates, such as Terraform or CloudFormation scripts, for provisioning cloud resources essential for hosting the application and its dependencies.
   - **deploy_scripts/**: Incorporates scripts and configuration files for orchestrating the deployment of the application in cloud environments, automating setup processes and ensuring reproducibility.
 
@@ -212,7 +223,7 @@ def train_anomaly_detection_model(data_path):
         tf.keras.layers.Dense(32, activation='relu'),
         tf.keras.layers.Dense(1, activation='sigmoid')
     ])
-    
+
     model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
     model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y_test))
 
@@ -225,6 +236,7 @@ def train_anomaly_detection_model(data_path):
 ```
 
 In this function:
+
 - The `train_anomaly_detection_model` function takes a `data_path` parameter, which represents the path to the mock data file.
 - It loads the mock data, preprocesses it, scales the features using `StandardScaler`, and splits it into training and testing sets using `train_test_split` from scikit-learn.
 - The function then defines a simple neural network model using TensorFlow's Keras API and trains it on the preprocessed data.

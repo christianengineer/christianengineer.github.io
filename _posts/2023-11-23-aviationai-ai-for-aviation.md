@@ -129,6 +129,7 @@ aviation_ai/
 2. **models/**: Includes subdirectories for model training and inference, housing trained models, model evaluation scripts, and inference code.
 
 3. **src/**: Main source code directory containing subdirectories for different components:
+
    - **data_processing/**: Contains subdirectories for data preprocessing, feature engineering, and data pipeline code.
    - **models/**: Subdirectories for machine learning and deep learning model code.
    - **monitoring/**: Subdirectories for real-time monitoring and alerts code.
@@ -312,27 +313,32 @@ The `data_file_path` parameter specifies the file path where the mock aviation d
 ### Types of Users for AviationAI AI for Aviation Application
 
 1. **Maintenance Engineer**
-   - *User Story*: As a maintenance engineer, I need to analyze historical maintenance logs and predict potential equipment failures to proactively schedule maintenance tasks and ensure aircraft safety and reliability.
-   - *File*: `maintenance_logs.csv`
+
+   - _User Story_: As a maintenance engineer, I need to analyze historical maintenance logs and predict potential equipment failures to proactively schedule maintenance tasks and ensure aircraft safety and reliability.
+   - _File_: `maintenance_logs.csv`
 
 2. **Flight Operations Manager**
-   - *User Story*: As a flight operations manager, I require tools to optimize flight route planning, considering weather conditions, fuel efficiency, and flight time, to enhance operational efficiency and minimize costs.
-   - *File*: `flight_data.csv`
+
+   - _User Story_: As a flight operations manager, I require tools to optimize flight route planning, considering weather conditions, fuel efficiency, and flight time, to enhance operational efficiency and minimize costs.
+   - _File_: `flight_data.csv`
 
 3. **Data Analyst**
-   - *User Story*: As a data analyst, I want to explore and analyze various aviation datasets to discover trends, patterns, and insights that can improve operational efficiencies or contribute to regulatory compliance.
-   - *Files*: `flight_data.csv`, `maintenance_logs.csv`, `textual_data.csv`
+
+   - _User Story_: As a data analyst, I want to explore and analyze various aviation datasets to discover trends, patterns, and insights that can improve operational efficiencies or contribute to regulatory compliance.
+   - _Files_: `flight_data.csv`, `maintenance_logs.csv`, `textual_data.csv`
 
 4. **Safety Officer**
-   - *User Story*: As a safety officer, I need real-time monitoring and analysis of aircraft performance data to detect anomalies, identify potential safety concerns, and trigger timely alerts for preventive action.
-   - *File*: Real-time data streams from aircraft telemetry and monitoring systems
+
+   - _User Story_: As a safety officer, I need real-time monitoring and analysis of aircraft performance data to detect anomalies, identify potential safety concerns, and trigger timely alerts for preventive action.
+   - _File_: Real-time data streams from aircraft telemetry and monitoring systems
 
 5. **Compliance Manager**
-   - *User Story*: As a compliance manager, I require tools to analyze and extract insights from regulatory documents, incident reports, and compliance records to ensure adherence to aviation regulations and standards.
-   - *File*: `textual_data.csv`
+
+   - _User Story_: As a compliance manager, I require tools to analyze and extract insights from regulatory documents, incident reports, and compliance records to ensure adherence to aviation regulations and standards.
+   - _File_: `textual_data.csv`
 
 6. **AI/ML Model Developer**
-   - *User Story*: As a AI/ML model developer, I need access to the processed data and infrastructure configurations to build, train, and deploy machine learning and deep learning models for predicting maintenance, optimizing flight operations, and enhancing safety measures.
-   - *Files*: `processed/feature_engineering`, `models/training/`, `config/`
+   - _User Story_: As a AI/ML model developer, I need access to the processed data and infrastructure configurations to build, train, and deploy machine learning and deep learning models for predicting maintenance, optimizing flight operations, and enhancing safety measures.
+   - _Files_: `processed/feature_engineering`, `models/training/`, `config/`
 
 For each of these user types, corresponding files or resources within the AviationAI AI for Aviation application repository are identified. These files or resources serve as the foundational elements that enable the users to accomplish their specific tasks and goals within the aviation domain.

@@ -8,6 +8,7 @@ layout: article
 ## AI Ocean Cleanup Optimization System
 
 ### Objectives
+
 The AI Ocean Cleanup Optimization System aims to optimize the process of cleaning up marine debris using advanced AI and machine learning techniques. The key objectives include:
 
 1. Identifying and classifying marine debris using computer vision and deep learning models.
@@ -15,6 +16,7 @@ The AI Ocean Cleanup Optimization System aims to optimize the process of cleanin
 3. Enhancing the overall efficiency and effectiveness of ocean cleanup operations.
 
 ### System Design Strategies
+
 The system design will involve several key strategies to achieve its objectives:
 
 1. **Data Collection and Preprocessing**: Acquiring and preprocessing large-scale oceanic images and environmental data for training and inference.
@@ -24,6 +26,7 @@ The system design will involve several key strategies to achieve its objectives:
 5. **Scalable Architecture**: Designing a scalable architecture to handle large volumes of data and accommodate future expansion.
 
 ### Chosen Libraries
+
 The chosen libraries for building the AI Ocean Cleanup Optimization system include:
 
 1. **TensorFlow**: TensorFlow will be utilized for building and training deep learning models for object detection and classification tasks. Its scalability and extensive community support make it an ideal choice for implementing complex neural network architectures.
@@ -34,6 +37,7 @@ By leveraging these libraries and design strategies, the AI Ocean Cleanup Optimi
 ## MLOps Infrastructure for Ocean Cleanup Optimization
 
 ### Infrastructure Components
+
 The MLOps infrastructure for the Ocean Cleanup Optimization application will incorporate various components to support the development, deployment, and monitoring of machine learning models.
 
 1. **Data Management**: A robust data management system will be established to handle the collection, storage, and preprocessing of marine debris images, environmental data, and cleanup operation records.
@@ -51,6 +55,7 @@ The MLOps infrastructure for the Ocean Cleanup Optimization application will inc
 7. **Feedback Loop**: Establishing a feedback loop to collect data from deployed models, analyze model performance, and iteratively improve the models.
 
 ### Continuous Integration and Deployment
+
 To enable continuous integration and deployment for the Ocean Cleanup Optimization application, the MLOps infrastructure will integrate with CI/CD pipelines to automate the testing and deployment of machine learning models.
 
 1. **Automated Testing**: Implementing automated testing for model predictions, ensuring consistency and accuracy across different data inputs.
@@ -60,6 +65,7 @@ To enable continuous integration and deployment for the Ocean Cleanup Optimizati
 3. **A/B Testing**: Utilizing A/B testing frameworks to compare the performance of new models against existing ones in a controlled manner.
 
 ### Challenges and Considerations
+
 While setting up the MLOps infrastructure, several challenges and considerations need to be taken into account:
 
 1. **Data Security and Privacy**: Ensuring that data privacy and security measures are in place, especially when handling sensitive environmental data and imagery.
@@ -155,6 +161,7 @@ ocean-cleanup-optimization/
 ```
 
 In this structure:
+
 - `data/` directory contains subdirectories for raw and processed data, where raw images and environmental data are stored and processed training/validation images are separated.
 - `models/` directory holds subdirectories for training and deployment models, containing saved TensorFlow models.
 - `src/` directory includes subdirectories for data preprocessing, model training, evaluation, deployment, and monitoring scripts.
@@ -196,18 +203,22 @@ models/
 
 In the `models/` directory for the Ocean Cleanup Optimization application, there are two main subdirectories:
 
-### 1. training/ 
+### 1. training/
+
 This directory contains subdirectories for different types of trained models, focusing on marine debris image classification using TensorFlow and Scikit-Learn:
 
 - **image_classification/**: Contains subdirectories for various image classification models.
-    - **cnn_model/**: Directory for a trained Convolutional Neural Network (CNN) model for image classification.
-        - **assets/**: Additional files or assets required for model serving.
-        - **variables/**: Saved model variables.
-        - **saved_model.pb**: The saved model file in Protocol Buffers format.
 
-    - **resnet_model/**: Directory for a trained model based on a pre-trained ResNet architecture for image classification, offering different model choices for deployment.
+  - **cnn_model/**: Directory for a trained Convolutional Neural Network (CNN) model for image classification.
+
+    - **assets/**: Additional files or assets required for model serving.
+    - **variables/**: Saved model variables.
+    - **saved_model.pb**: The saved model file in Protocol Buffers format.
+
+  - **resnet_model/**: Directory for a trained model based on a pre-trained ResNet architecture for image classification, offering different model choices for deployment.
 
 ### 2. deployment/
+
 This directory includes subdirectories for models optimized and prepared for deployment in production environments:
 
 - **optimized_cnn_model/**: Contains the optimized CNN model ready for deployment.
@@ -234,6 +245,7 @@ deployment/
 In the `deployment/` directory for the Ocean Cleanup Optimization application, there are subdirectories for the deployment-ready models:
 
 ### 1. optimized_cnn_model/
+
 This directory contains the files necessary for deploying the optimized Convolutional Neural Network (CNN) model, which has been trained and fine-tuned for efficient inference in production:
 
 - **assets/**: Additional files or assets required for model serving, such as vocabulary files or metadata.
@@ -241,6 +253,7 @@ This directory contains the files necessary for deploying the optimized Convolut
 - **saved_model.pb**: The saved model file in Protocol Buffers format, representing the trained model's architecture and parameters.
 
 ### 2. resnet_model_v1/
+
 This directory includes the deployment files for the first version of the ResNet-based model, prepared for serving in production environments. Similarly, it contains the assets, variables, and the saved model file in Protocol Buffers format.
 
 The `deployment/` directory encapsulates the deployment-ready versions of the trained models, each organized within its own directory to ensure clarity and separation of artifacts. These files are crucial for integrating the trained models into the production system, allowing for efficient and scalable deployment within the Ocean Cleanup Optimization application.
@@ -333,21 +346,25 @@ This script forms a foundation for training and evaluating complex machine learn
 ### Types of Users for the Ocean Cleanup Optimization Application
 
 1. **Marine Biologist**
-   - *User Story*: As a marine biologist, I want to analyze marine debris data to understand the impact of different types of waste on marine ecosystems and prioritize cleanup efforts accordingly.
-   - *File*: `notebooks/exploratory_data_analysis.ipynb`
+
+   - _User Story_: As a marine biologist, I want to analyze marine debris data to understand the impact of different types of waste on marine ecosystems and prioritize cleanup efforts accordingly.
+   - _File_: `notebooks/exploratory_data_analysis.ipynb`
 
 2. **Data Scientist**
-   - *User Story*: As a data scientist, I want to develop and train machine learning models to classify marine debris from images and environmental data.
-   - *File*: `src/model_training/train_cnn.py` (for TensorFlow model) or `src/model_training/train_random_forest.py` (for Scikit-Learn model)
+
+   - _User Story_: As a data scientist, I want to develop and train machine learning models to classify marine debris from images and environmental data.
+   - _File_: `src/model_training/train_cnn.py` (for TensorFlow model) or `src/model_training/train_random_forest.py` (for Scikit-Learn model)
 
 3. **Environmental Engineer**
-   - *User Story*: As an environmental engineer, I want to deploy and monitor machine learning models that optimize the allocation of cleanup resources based on environmental data and debris classification.
-   - *File*: `src/deployment/deploy_model.py`
+
+   - _User Story_: As an environmental engineer, I want to deploy and monitor machine learning models that optimize the allocation of cleanup resources based on environmental data and debris classification.
+   - _File_: `src/deployment/deploy_model.py`
 
 4. **Project Manager**
-   - *User Story*: As a project manager, I want to track the performance and efficiency of cleanup operations and make data-driven decisions for resource allocation.
-   - *File*: `src/monitoring/monitor_performance.py`
+
+   - _User Story_: As a project manager, I want to track the performance and efficiency of cleanup operations and make data-driven decisions for resource allocation.
+   - _File_: `src/monitoring/monitor_performance.py`
 
 5. **Regulatory Compliance Officer**
-   - *User Story*: As a regulatory compliance officer, I want to ensure that the AI models used for cleanup operations adhere to environmental regulations and ethical guidelines.
-   - *File*: `docs/project_plan.md`
+   - _User Story_: As a regulatory compliance officer, I want to ensure that the AI models used for cleanup operations adhere to environmental regulations and ethical guidelines.
+   - _File_: `docs/project_plan.md`

@@ -8,28 +8,36 @@ layout: article
 ## SME Credit Scoring Model for Peru
 
 ## Objectives and Benefits
+
 ### Objectives:
+
 - Facilitate access to credit for Small and Medium-sized Enterprises (SMEs) in Peru.
 - Provide an alternative credit scoring model based on operational data to streamline the loan approval process.
 
 ### Benefits to the Audience:
+
 - Faster loan approvals for SMEs.
 - Improved accuracy in credit assessments.
 - Increased financial inclusion for underserved businesses.
 
 ## Machine Learning Algorithm
+
 - **XGBoost**: A powerful and efficient gradient boosting algorithm known for its speed and performance in classification and regression tasks, making it suitable for credit scoring.
 
 ## Sourcing, Preprocessing, Modeling, and Deployment Strategies
+
 1. **Sourcing**:
+
    - **Data Source**: Obtain operational data from SMEs in Peru through financial institutions, government databases, or third-party providers.
-  
+
 2. **Preprocessing**:
+
    - **Feature Engineering**: Create relevant features such as cash flow consistency, profitability ratios, and debt-to-equity ratios.
    - **Handling Missing Values**: Impute missing data using techniques like mean imputation or predictive imputation.
    - **Scaling**: Normalize numerical features to ensure all features contribute equally to the model.
 
 3. **Modeling**:
+
    - **XGBoost Model Training**: Train an XGBoost model on the preprocessed data for credit scoring.
    - **Hyperparameter Tuning**: Optimize model performance through techniques like grid search or random search.
 
@@ -39,6 +47,7 @@ layout: article
    - **Monitoring**: Implement Prometheus for tracking model performance, errors, and resource usage in real-time.
 
 ## Tools and Libraries
+
 1. **Sourcing**: Pandas, NumPy, SQL, Scrapy (for web scraping).
 2. **Preprocessing**: Scikit-Learn, Pandas.
 3. **Modeling**: XGBoost, Scikit-Learn, TensorFlow.
@@ -49,46 +58,54 @@ Feel free to reach out for more details on each step!
 ## Sourcing Data Strategy Analysis
 
 ## Data Collection Tools and Strategies:
+
 1. **Financial Institutions Data**:
+
    - **API Integration**: Utilize APIs provided by financial institutions to automatically fetch real-time operational data of SMEs.
    - **Tools**: Requests library in Python for API calls, secure data transmission using OAuth tokens.
 
 2. **Government Databases**:
    - **Web Scraping**: Extract relevant data from government websites or databases using tools like Scrapy or Beautiful Soup.
    - **Data Transformation**: Use Pandas for data transformation and cleaning.
-   
 3. **Third-Party Providers**:
    - **Data Aggregators**: Partner with data aggregators specializing in SME data collection to access comprehensive datasets.
    - **ETL Pipelines**: Use tools like Apache NiFi for Extract, Transform, Load (ETL) processes to ingest and preprocess data efficiently.
 
 ## Integrating Data Collection Tools within Existing Technology Stack:
+
 - **API Integration**:
-   - **Tool Integration**: Integrate Python Requests library within the data pipeline constructed using Apache Airflow.
-   - **Scheduled Data Pulls**: Automate API calls using Airflow DAGs to fetch data periodically for model training.
+
+  - **Tool Integration**: Integrate Python Requests library within the data pipeline constructed using Apache Airflow.
+  - **Scheduled Data Pulls**: Automate API calls using Airflow DAGs to fetch data periodically for model training.
 
 - **Web Scraping**:
-   - **Scrapy Integration**: Develop Scrapy spiders to scrape relevant data and store it in a format compatible with the data warehouse or model training pipeline.
-   - **Data Storage**: Use PostgreSQL or MySQL database to store scraped data for further processing.
+
+  - **Scrapy Integration**: Develop Scrapy spiders to scrape relevant data and store it in a format compatible with the data warehouse or model training pipeline.
+  - **Data Storage**: Use PostgreSQL or MySQL database to store scraped data for further processing.
 
 - **Data Aggregators**:
-   - **ETL Processing**: Set up Apache NiFi pipelines to ingest data from third-party providers, cleanse and transform it to fit the model's requirements.
-   - **Data Versioning**: Implement data versioning using tools like DVC to track changes in the datasets obtained from external sources.
+  - **ETL Processing**: Set up Apache NiFi pipelines to ingest data from third-party providers, cleanse and transform it to fit the model's requirements.
+  - **Data Versioning**: Implement data versioning using tools like DVC to track changes in the datasets obtained from external sources.
 
 ## Ensuring Data Quality and Accessibility:
+
 - **Data Validation**:
-   - **Data Checks**: Incorporate data validation checks in Apache Airflow to ensure data integrity before model training.
-   - **Schema Compliance**: Validate incoming data against predefined schemas to detect anomalies or inconsistencies.
+
+  - **Data Checks**: Incorporate data validation checks in Apache Airflow to ensure data integrity before model training.
+  - **Schema Compliance**: Validate incoming data against predefined schemas to detect anomalies or inconsistencies.
 
 - **Data Storage**:
-   - **Data Warehouse**: Store cleaned and preprocessed data in a centralized warehouse like Amazon S3 or Google Cloud Storage for easy access by the modeling pipeline.
-   - **Data Catalog**: Utilize tools like Apache Atlas or Amundsen for metadata management and data discovery.
+  - **Data Warehouse**: Store cleaned and preprocessed data in a centralized warehouse like Amazon S3 or Google Cloud Storage for easy access by the modeling pipeline.
+  - **Data Catalog**: Utilize tools like Apache Atlas or Amundsen for metadata management and data discovery.
 
 By adopting these tools and strategies, we can streamline the data collection process, ensure data quality, and make the data readily accessible in the correct format for analysis and model training within our existing technology stack. The seamless integration of these tools will enhance the efficiency and effectiveness of the SME Credit Scoring Model project.
 
 ## Feature Extraction and Engineering Analysis
 
 ## Feature Extraction Strategies:
+
 1. **Cash Flow Analysis**:
+
    - **Features**: Monthly Income, Monthly Expenses, Net Cash Flow, Cash Flow Stability.
    - **Variable Names**:
      - `monthly_income`
@@ -97,6 +114,7 @@ By adopting these tools and strategies, we can streamline the data collection pr
      - `cash_flow_stability`
 
 2. **Profitability Ratios**:
+
    - **Features**: Return on Assets, Return on Equity, Gross Profit Margin.
    - **Variable Names**:
      - `return_on_assets`
@@ -104,6 +122,7 @@ By adopting these tools and strategies, we can streamline the data collection pr
      - `gross_profit_margin`
 
 3. **Debt-to-Equity Ratio**:
+
    - **Features**: Total Debt, Total Equity, Debt-to-Equity Ratio.
    - **Variable Names**:
      - `total_debt`
@@ -118,17 +137,21 @@ By adopting these tools and strategies, we can streamline the data collection pr
      - `payment_completion_rate`
 
 ## Feature Engineering Techniques:
+
 1. **Log Transformations**:
+
    - **Purpose**: Handle skewness in data distributions for features like income or expenses.
    - **Example**:
      - `log_monthly_income = np.log1p(monthly_income)`
 
 2. **Interaction Features**:
+
    - **Purpose**: Capture potential interactions between features for improved model performance.
    - **Example**:
      - `profitability_interaction = return_on_assets * gross_profit_margin`
 
 3. **Scaling Features**:
+
    - **Purpose**: Normalize numerical features to bring them to a similar scale for better model convergence.
    - **Example**:
      - `scaled_debt_to_equity_ratio = (debt_to_equity_ratio - debt_to_equity_ratio.mean()) / debt_to_equity_ratio.std()`
@@ -139,6 +162,7 @@ By adopting these tools and strategies, we can streamline the data collection pr
      - `total_cash_flows = monthly_income - monthly_expenses`
 
 ## Recommendations for Variable Names:
+
 - Use clear and descriptive names to enhance interpretability and maintain consistency in the dataset.
 - Follow a standardized naming convention (e.g., snake_case) for variable names.
 - Include prefixes or suffixes to denote the type of feature (e.g., `log_` for log-transformed features, `scaled_` for scaled features).
@@ -148,34 +172,41 @@ By implementing these feature extraction and engineering strategies with well-th
 ## Metadata Management for SME Credit Scoring Model
 
 ## Project-Specific Metadata Requirements:
+
 1. **Feature Description**:
+
    - **Purpose**: Document detailed descriptions of each feature, including its source, calculation method, and business relevance.
-   - **Example**: 
+   - **Example**:
      - `monthly_income`: Monthly income of the SME obtained from financial statements.
 
 2. **Data Transformation History**:
+
    - **Purpose**: Capture the history of data transformations applied during feature engineering for reproducibility and auditability.
-   - **Example**: 
+   - **Example**:
      - `log_transformed_feature`: Feature created by applying log transformation to `original_feature`.
 
 3. **Model Performance Metrics**:
    - **Purpose**: Track the performance metrics of the machine learning model, including accuracy, precision, recall, and F1-score.
-   - **Example**: 
+   - **Example**:
      - `accuracy`: 0.85
      - `precision`: 0.78
      - `recall`: 0.82
      - `F1-score`: 0.80
 
 ## Metadata Management Tools and Techniques:
+
 1. **Data Lineage Tracking**:
+
    - **Tool**: Apache Atlas
    - **Implementation**: Capture data lineage to trace the origin and transformation history of features from sourcing to model training.
 
 2. **Versioning Data and Models**:
+
    - **Tool**: DVC (Data Version Control)
    - **Implementation**: Version control data transformations, model training scripts, and trained models to ensure reproducibility.
 
 3. **Metadata Annotations**:
+
    - **Tool**: Amundsen
    - **Implementation**: Annotate features with additional metadata such as data type, null percentage, and distribution for easy discovery and analysis.
 
@@ -184,8 +215,8 @@ By implementing these feature extraction and engineering strategies with well-th
    - **Implementation**: Monitor model performance metrics in real-time to detect anomalies and deviations from expected behavior.
 
 ## Unique Demands and Characteristics:
+
 - **Regulatory Compliance**: Maintain metadata on data sources and preprocessing steps to comply with regulatory requirements for transparency and auditability.
-  
 - **Interpretability**: Document feature descriptions and transformations to enhance the interpretability of the model's decisions for stakeholders and regulatory authorities.
 
 - **Scalability**: Implement metadata management tools that can scale with the growing volume of data and model iterations as the project expands.
@@ -195,19 +226,24 @@ By leveraging project-specific metadata management requirements and tailored too
 ## Data Challenges and Preprocessing Strategies for SME Credit Scoring Model
 
 ## Specific Data Challenges:
+
 1. **Imbalanced Data**:
+
    - **Issue**: Unequal distribution of creditworthy and non-creditworthy SMEs may lead to biased model predictions.
    - **Preprocessing Strategy**: Implement oversampling (e.g., SMOTE) techniques to balance the class distribution and improve model performance.
 
 2. **Missing Values**:
+
    - **Issue**: Incomplete data entries for certain features can impact model training and prediction accuracy.
    - **Preprocessing Strategy**: Impute missing values using appropriate methods (e.g., mean imputation, predictive imputation) to ensure data completeness without introducing bias.
 
 3. **Outliers**:
+
    - **Issue**: Outliers in feature values may skew model training and lead to suboptimal performance.
    - **Preprocessing Strategy**: Use robust techniques like winsorization or trimming to handle outliers without removing valuable information from the dataset.
 
 4. **Data Quality Variations**:
+
    - **Issue**: Inconsistencies or variations in data quality across different sources can hinder model generalization.
    - **Preprocessing Strategy**: Perform thorough data quality checks and standardization procedures to harmonize data from diverse sources and ensure consistency.
 
@@ -216,13 +252,15 @@ By leveraging project-specific metadata management requirements and tailored too
    - **Preprocessing Strategy**: Employ techniques like one-hot encoding or target encoding to convert categorical variables into numerical representations suitable for machine learning models.
 
 ## Unique Preprocessing Strategies:
+
 - **Domain-Specific Feature Engineering**:
   - **Strategy**: Incorporate domain knowledge to create meaningful features that reflect the unique characteristics of SME creditworthiness in the Peruvian context.
-  
 - **Currency Conversion**:
+
   - **Strategy**: Convert financial metrics to a common currency (e.g., USD) for standardized analysis and modeling, considering exchange rate fluctuations.
 
 - **Temporal Trends Analysis**:
+
   - **Strategy**: Explore time-series patterns in operational data to capture evolving creditworthiness trends and adjust model inputs accordingly.
 
 - **Localized Risk Factors**:
@@ -268,6 +306,7 @@ preprocessed_data.to_csv('preprocessed_data.csv', index=False)
 ```
 
 In this code:
+
 - The data is loaded and separated into features `X` and the target variable `y`.
 - Missing values are imputed with the mean to ensure data completeness.
 - Numerical features are scaled using `StandardScaler` for improved model convergence.
@@ -280,23 +319,29 @@ These preprocessing steps are crucial for preparing the dataset for effective mo
 ## Modeling Strategy for SME Credit Scoring Model
 
 ## Recommended Modeling Strategy:
+
 - **Algorithm**: **Gradient Boosting Decision Trees (XGBoost)**
 - **Validation Method**: **Stratified Cross-Validation**
 - **Performance Metric**: **Area Under the Receiver Operating Characteristic Curve (AUC-ROC)**
 
 ## Most Crucial Step:
+
 - **Hyperparameter Tuning with Cross-Validation**
 
 ## Rationale:
+
 1. **XGBoost Algorithm**:
+
    - **Suitability**: XGBoost is well-suited for handling structured data, nonlinear relationships, and imbalanced classes, aligning with the characteristics of SME operational data.
    - **Benefits**: It provides high predictive accuracy, feature importance insights, and efficiency in handling large datasets, essential for credit scoring models.
 
 2. **Stratified Cross-Validation**:
+
    - **Relevance to Project**: Given the imbalanced nature of creditworthy and non-creditworthy SMEs, ensuring balanced folds in cross-validation prevents bias and provides a robust estimate of model performance.
    - **Importance**: It helps in evaluating model generalization while considering class distribution, offering a reliable assessment of the model's predictive power for credit scoring.
 
 3. **AUC-ROC Performance Metric**:
+
    - **Significance**: AUC-ROC is a suitable metric for binary classification tasks like credit scoring, providing insights into the model's ability to distinguish between creditworthy and non-creditworthy SMEs, crucial for accurate risk assessment.
    - **Interpretability**: It offers a comprehensive summary of the model's performance across different classification thresholds, aiding in decision-making and evaluating model effectiveness.
 
@@ -309,30 +354,34 @@ By focusing on hyperparameter tuning with cross-validation as the most crucial s
 ## Tools and Technologies for Data Modeling in SME Credit Scoring Project
 
 ## 1. Tool: **XGBoost**
-   - **Description**: XGBoost is a powerful gradient boosting algorithm suitable for structured data and classification tasks, aligning well with the project's objective of credit scoring for SMEs in Peru.
-   - **Integration**: Integrates seamlessly with Python programming language and libraries like Scikit-Learn for model training and evaluation.
-   - **Beneficial Features**:
-     - **Efficiency**: Provides fast and scalable implementation for training models on large datasets.
-     - **Hyperparameter Optimization**: Built-in capabilities for hyperparameter tuning to enhance model performance.
-   - **Documentation**: [XGBoost Documentation](https://xgboost.readthedocs.io/en/latest/)
+
+- **Description**: XGBoost is a powerful gradient boosting algorithm suitable for structured data and classification tasks, aligning well with the project's objective of credit scoring for SMEs in Peru.
+- **Integration**: Integrates seamlessly with Python programming language and libraries like Scikit-Learn for model training and evaluation.
+- **Beneficial Features**:
+  - **Efficiency**: Provides fast and scalable implementation for training models on large datasets.
+  - **Hyperparameter Optimization**: Built-in capabilities for hyperparameter tuning to enhance model performance.
+- **Documentation**: [XGBoost Documentation](https://xgboost.readthedocs.io/en/latest/)
 
 ## 2. Tool: **Scikit-Learn**
-   - **Description**: Scikit-Learn offers a wide range of machine learning algorithms and tools for data preprocessing, modeling, and evaluation, essential for building the credit scoring model.
-   - **Integration**: Compatible with XGBoost for seamless incorporation into the modeling pipeline, ensuring consistency and accuracy.
-   - **Beneficial Features**:
-     - **Preprocessing Modules**: Provides preprocessing techniques like scaling, imputation, and encoding for data preparation.
-     - **Cross-Validation**: Offers robust cross-validation functionality for assessing model performance.
-   - **Documentation**: [Scikit-Learn Documentation](https://scikit-learn.org/stable/documentation.html)
+
+- **Description**: Scikit-Learn offers a wide range of machine learning algorithms and tools for data preprocessing, modeling, and evaluation, essential for building the credit scoring model.
+- **Integration**: Compatible with XGBoost for seamless incorporation into the modeling pipeline, ensuring consistency and accuracy.
+- **Beneficial Features**:
+  - **Preprocessing Modules**: Provides preprocessing techniques like scaling, imputation, and encoding for data preparation.
+  - **Cross-Validation**: Offers robust cross-validation functionality for assessing model performance.
+- **Documentation**: [Scikit-Learn Documentation](https://scikit-learn.org/stable/documentation.html)
 
 ## 3. Tool: **Hyperopt**
-   - **Description**: Hyperopt is a hyperparameter optimization library that can be used to efficiently tune model hyperparameters, crucial for maximizing the model's predictive accuracy.
-   - **Integration**: Compatible with XGBoost and Scikit-Learn for optimizing hyperparameters within the modeling strategy.
-   - **Beneficial Features**:
-     - **Bayesian Optimization**: Uses Bayesian optimization techniques to search for the best hyperparameters efficiently.
-     - **Parallel Processing**: Supports parallel processing for faster hyperparameter search.
-   - **Documentation**: [Hyperopt Documentation](https://hyperopt.github.io/hyperopt/)
+
+- **Description**: Hyperopt is a hyperparameter optimization library that can be used to efficiently tune model hyperparameters, crucial for maximizing the model's predictive accuracy.
+- **Integration**: Compatible with XGBoost and Scikit-Learn for optimizing hyperparameters within the modeling strategy.
+- **Beneficial Features**:
+  - **Bayesian Optimization**: Uses Bayesian optimization techniques to search for the best hyperparameters efficiently.
+  - **Parallel Processing**: Supports parallel processing for faster hyperparameter search.
+- **Documentation**: [Hyperopt Documentation](https://hyperopt.github.io/hyperopt/)
 
 ## Integration with Current Technologies:
+
 - **Python Environment**: All recommended tools are compatible with Python, ensuring smooth integration within the existing workflow and leveraging Python's extensive data science ecosystem.
 - **Jupyter Notebooks**: Tools can be easily incorporated into Jupyter Notebooks for interactive model development, evaluation, and sharing insights with stakeholders.
 
@@ -380,6 +429,7 @@ df_scaled.to_csv('synthetic_sme_credit_data.csv', index=False)
 ```
 
 In this script:
+
 - The Faker library is used to generate synthetic data for features like monthly income, expenses, return on assets, return on equity, etc.
 - Additional relevant features can be included based on the project requirements.
 - The dataset is scaled using Scikit-Learn's StandardScaler for consistency in feature scaling.
@@ -398,6 +448,7 @@ monthly_income,monthly_expenses,return_on_assets,return_on_equity,debt_to_equity
 ```
 
 In this example:
+
 - **Features**:
   - `monthly_income`: Numerical (integers)
   - `monthly_expenses`: Numerical (integers)
@@ -408,6 +459,7 @@ In this example:
   - `credit_worthy`: Binary classification (0: non-creditworthy, 1: creditworthy)
 
 **Formatting for Model Ingestion**:
+
 - Ensure consistency in data types and formatting across features for smooth model ingestion.
 - Standardize numerical features (e.g., scaling, normalization) to maintain uniformity in data representation.
 - Encode categorical variables if present (not shown in this example) to convert them into numerical form for model compatibility.
@@ -452,19 +504,24 @@ joblib.dump(model, 'credit_scoring_model.joblib')
 ```
 
 ### Code Explanation:
+
 1. **Data Loading and Preprocessing**:
+
    - The preprocessed dataset is loaded and split into features and target variable.
 
 2. **Model Training**:
+
    - The Gradient Boosting Classifier model is initialized and trained on the training set.
 
 3. **Model Evaluation**:
+
    - Predictions are made on the test set, and the AUC-ROC score is calculated to evaluate model performance.
 
 4. **Model Saving**:
    - The trained model is saved using joblib for future deployment.
 
 ### Code Quality Standards:
+
 - **Modularization**: Break down complex logic into functions for better organization and reusability.
 - **Error Handling**: Include error handling mechanisms to gracefully manage exceptions.
 - **Documentation**: Use clear and concise comments to explain the purpose of each section of the code.
@@ -478,6 +535,7 @@ Adhering to these coding practices and standards will help maintain a robust and
 ## Step-by-Step Deployment Process:
 
 ### 1. Pre-Deployment Checks:
+
 - **Objective**: Ensure model readiness and data integrity before deployment.
 - **Tools**:
   - **Model Evaluation**: Scikit-Learn for model evaluation.
@@ -487,6 +545,7 @@ Adhering to these coding practices and standards will help maintain a robust and
   - [Pandas Data Validation](https://pandas.pydata.org/pandas-docs/stable/user_guide/basics.html)
 
 ### 2. Model Serialization:
+
 - **Objective**: Serialize the trained model for deployment.
 - **Tools**:
   - **Joblib**: For serializing the model.
@@ -494,6 +553,7 @@ Adhering to these coding practices and standards will help maintain a robust and
   - [Joblib Documentation](https://joblib.readthedocs.io/en/latest/)
 
 ### 3. Model Containerization:
+
 - **Objective**: Containerize the model for portability and scalability.
 - **Tools**:
   - **Docker**: Containerization tool.
@@ -501,6 +561,7 @@ Adhering to these coding practices and standards will help maintain a robust and
   - [Docker Documentation](https://docs.docker.com/)
 
 ### 4. Model Deployment:
+
 - **Objective**: Deploy the containerized model to the cloud or server.
 - **Tools**:
   - **Kubernetes**: Orchestration tool for managing containerized applications.
@@ -508,6 +569,7 @@ Adhering to these coding practices and standards will help maintain a robust and
   - [Kubernetes Documentation](https://kubernetes.io/docs/home/)
 
 ### 5. API Development:
+
 - **Objective**: Create an API for model inference and integration.
 - **Tools**:
   - **FastAPI**: Python web framework for building APIs.
@@ -515,6 +577,7 @@ Adhering to these coding practices and standards will help maintain a robust and
   - [FastAPI Documentation](https://fastapi.tiangolo.com/)
 
 ### 6. Model Monitoring:
+
 - **Objective**: Monitor model performance and health in real-time.
 - **Tools**:
   - **Prometheus**: Monitoring and alerting tool.
@@ -522,6 +585,7 @@ Adhering to these coding practices and standards will help maintain a robust and
   - [Prometheus Documentation](https://prometheus.io/docs/)
 
 ### 7. Scalability and Auto-Scaling:
+
 - **Objective**: Ensure the model can handle varying loads efficiently.
 - **Tools**:
   - **Google Kubernetes Engine (GKE)**: Managed Kubernetes service on Google Cloud.
@@ -529,6 +593,7 @@ Adhering to these coding practices and standards will help maintain a robust and
   - [Google Kubernetes Engine Documentation](https://cloud.google.com/kubernetes-engine/docs)
 
 ## Deployment Resources and Best Practices:
+
 - Use continuous integration/continuous deployment (CI/CD) pipelines for automated deployment.
 - Implement logging and error handling mechanisms for monitoring and troubleshooting.
 - Conduct post-deployment testing and performance evaluation to ensure the model is functioning as expected in the live environment.
@@ -563,6 +628,7 @@ CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "5000"]
 ```
 
 ### Dockerfile Explanation:
+
 1. **Base Image**: Uses a Python 3.8 slim image for a lightweight container.
 2. **Optimized Dependencies**: Installs project dependencies from the `requirements.txt` file efficiently.
 3. **Data and Model**: Copies the preprocessed dataset (`preprocessed_data.csv`) and trained model (`credit_scoring_model.joblib`) into the container.
@@ -571,6 +637,7 @@ CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "5000"]
 6. **Command Execution**: Runs the FastAPI server using Uvicorn for model inference.
 
 ### Additional Considerations:
+
 - Optimize Dockerfile layers to minimize rebuild times and image size.
 - Utilize multi-stage builds for separating development and production dependencies.
 - Implement environment variables for configurable settings like model paths, server ports, etc.
@@ -580,21 +647,25 @@ Ensure to customize the Dockerfile further based on any additional dependencies,
 ### User Groups and User Stories for SME Credit Scoring Model:
 
 1. **Small and Medium-sized Enterprises (SMEs) Owners:**
+
    - **User Story**: As an SME owner in Peru, I struggle to access credit due to traditional credit scoring methods that overlook my operational data. I need a faster and more accurate way to demonstrate my creditworthiness based on my business performance.
    - **Solution**: The application utilizes operational data (monthly income, expenses, profitability ratios, etc.) to provide an alternative credit score, enabling SME owners to access credit more efficiently and fairly.
    - **Component**: Model Training and Inference Module.
 
 2. **Financial Institutions/Banks:**
+
    - **User Story**: As a loan officer in a Peruvian bank, I face challenges in assessing the creditworthiness of SMEs with limited historical credit data. I need a reliable tool to evaluate SME loan applications quickly and accurately.
    - **Solution**: The application leverages machine learning models to analyze SME operational data, offering enhanced credit scoring insights to banks for more informed lending decisions.
    - **Component**: Credit Scoring Model and Data Integration Module.
 
 3. **Regulatory Bodies/Government Agencies:**
+
    - **User Story**: As a regulatory official in Peru, I aim to promote financial inclusion for SMEs while mitigating credit risks. I require a solution to monitor and ensure fair credit assessment practices across financial institutions.
    - **Solution**: The application provides transparency and accountability in credit scoring processes for SMEs, aiding regulatory bodies in overseeing fair lending practices and fostering financial inclusivity.
    - **Component**: Monitoring and Reporting Module with Prometheus Integration.
 
 4. **Data Analysts/Data Scientists:**
+
    - **User Story**: As a data scientist working with SME credit data, I seek efficient tools to preprocess, model, and deploy credit scoring solutions. I want a platform that streamlines the end-to-end machine learning workflow for credit assessment.
    - **Solution**: The application offers streamlined data preprocessing, modeling, and deployment workflows using Scikit-Learn, TensorFlow, and Airflow, empowering data professionals to build and deploy robust credit scoring models for SMEs.
    - **Component**: Data Preprocessing, Model Building, and Pipeline Automation Modules.

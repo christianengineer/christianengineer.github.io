@@ -14,35 +14,43 @@ The primary objective of using Kubernetes for ML model orchestration is to creat
 ## System Design Strategies
 
 ### Microservices Architecture
+
 - Decompose the ML model deployment system into smaller, independently deployable services.
 - Each service can focus on a specific task such as model training, serving, and monitoring.
 
 ### Containerization
+
 - Containerize the ML models and their dependencies using Docker.
 - This ensures consistency between development, testing, and production environments.
 
 ### Scalability and Fault Tolerance
+
 - Use Kubernetes to deploy ML model containers across a cluster of nodes.
 - Utilize Kubernetes' auto-scaling feature to automatically adjust the number of model serving instances based on load.
 
 ### CI/CD Pipeline
+
 - Implement a continuous integration and continuous deployment (CI/CD) pipeline for efficient model updates and deployments.
 
 ## Chosen Libraries and Technologies
 
 ### Kubernetes
+
 - Utilize Kubernetes for container orchestration and management.
 - Leverage Kubernetes components such as Pods, Deployments, and Services to define and deploy ML model containers.
 
 ### Kubeflow
+
 - Use Kubeflow, an open-source platform built on Kubernetes, to simplify the deployment and management of ML workloads.
 - Take advantage of Kubeflow's capabilities for model serving, scaling, and monitoring.
 
 ### TensorFlow/Sklearn Serving
+
 - Use TensorFlow Serving or Sklearn Serving to serve machine learning models as a RESTful API.
 - These libraries provide built-in support for serving models in a scalable and efficient manner.
 
 ### Prometheus and Grafana
+
 - Use Prometheus for monitoring and alerting, and Grafana for visualization of the ML model orchestration system's performance and health.
 
 ## Deployment Flow
@@ -74,19 +82,24 @@ To create an infrastructure for Kubernetes-based ML model orchestration, the fol
 ## Deployment of ML Models Using Kubernetes
 
 ### Step 1: Containerizing the ML Models
+
 - Develop Dockerfiles for containerizing the ML models along with their dependencies and any preprocessing or post-processing code.
 
 ### Step 2: Building and Pushing Docker Images
+
 - Integrate the CI/CD pipeline to automatically build and push the Docker images of the ML models to the container registry upon code changes.
 
 ### Step 3: Deploying ML Models as Kubernetes Services
+
 - Define Kubernetes Deployment YAML files to deploy the ML model containers as scalable and fault-tolerant services within the cluster.
 - Specify resource requirements, environment variables, and health checks in the Deployment configuration.
 
 ### Step 4: Configuring Model Serving Endpoints
+
 - Expose the ML model serving endpoints using Kubernetes Services, and configure load balancing and networking settings as per application requirements.
 
 ### Step 5: Monitoring and Scaling
+
 - Utilize Prometheus and Grafana for monitoring the performance and health of the deployed ML models and the Kubernetes cluster.
 - Set up horizontal pod autoscaling to dynamically scale the model serving instances based on CPU/memory utilization or custom metrics.
 
@@ -167,6 +180,7 @@ models/
 1. **Dockerfile**: Each model directory contains a Dockerfile that specifies the containerization process for the corresponding ML model. The Dockerfile includes instructions for building the model serving container, installing the necessary dependencies, and defining the runtime environment.
 
    Example Dockerfile:
+
    ```Dockerfile
    FROM python:3.8-slim
    WORKDIR /app
@@ -179,6 +193,7 @@ models/
 2. **model1.py, model2.py, ...**: These files contain the actual code for the ML models. Each model's code, including the machine learning or deep learning model logic, data preprocessing, and any additional functionality, is organized within its respective directory.
 
    Example model1.py:
+
    ```python
    import pandas as pd
    from sklearn.model_selection import train_test_split
@@ -189,6 +204,7 @@ models/
 3. **requirements.txt**: This file lists the Python dependencies required for the model to run. It includes libraries, versions, and any other necessary packages. These dependencies will be installed when building the Docker image for the corresponding model.
 
    Example requirements.txt:
+
    ```
    pandas==1.3.3
    scikit-learn==0.24.2
@@ -226,20 +242,21 @@ spec:
         app: model1
     spec:
       containers:
-      - name: model1-container
-        image: your-container-registry/model1:latest
-        ports:
-        - containerPort: 8080
-        resources:
-          limits:
-            cpu: "1"
-            memory: "1Gi"
-          requests:
-            cpu: "0.5"
-            memory: "500Mi"
+        - name: model1-container
+          image: your-container-registry/model1:latest
+          ports:
+            - containerPort: 8080
+          resources:
+            limits:
+              cpu: "1"
+              memory: "1Gi"
+            requests:
+              cpu: "0.5"
+              memory: "500Mi"
 ```
 
 Explanation:
+
 - **apiVersion**: Indicates the version of the Kubernetes API being used.
 - **kind**: Specifies the type of resource being defined, in this case, a Deployment.
 - **metadata**: Contains the metadata for the Deployment, including the name.
@@ -258,6 +275,7 @@ By organizing the deployment directory in this manner, we encapsulate the deploy
 Certainly! Below is an example of a function for a complex machine learning algorithm, specifically a random forest classifier, that uses mock data. I'll also include the file path where this function may be located within the ML model's directory structure:
 
 ### File Path:
+
 Assuming the ML model `complex_model` is located in the `models` directory, the Python file containing the ML algorithm could be located at `models/complex_model/algorithm.py`.
 
 ### Example Function for Complex Machine Learning Algorithm:
@@ -361,18 +379,22 @@ By including such a function, we can build a powerful deep learning algorithm th
 Certainly! Here are different types of users who might interact with the Kubernetes-based ML Model Orchestration application, along with user stories for each type and the corresponding file or component that might accomplish their tasks:
 
 1. **Data Scientist / ML Engineer**
+
    - User Story: As a data scientist, I want to train and deploy a new machine learning model using the Kubernetes-based ML Model Orchestration application.
    - File/Component: The `train_and_deploy.py` script located in the models directory can accomplish this. It could include functions for training the model, validating the model, and deploying the model to the Kubernetes cluster.
 
 2. **DevOps Engineer**
+
    - User Story: As a DevOps engineer, I want to automate the deployment of ML models to the Kubernetes cluster and monitor their performance.
    - File/Component: The CI/CD configuration files and scripts located in the `ci_cd` directory can accomplish this. For example, the Jenkinsfile can define the pipeline for building, testing, and deploying the ML models, while the Prometheus and Grafana configurations in the `config` directory can enable monitoring and alerting.
 
 3. **Machine Learning Platform Administrator**
+
    - User Story: As a platform administrator, I want to manage the cluster resources and ensure the security and scalability of the ML model orchestration application.
    - File/Component: The Kubernetes deployment configuration files in the `deployments` directory and the networking configurations in the `config/networking` directory are essential for managing cluster resources and ensuring security. Additionally, the configuration for autoscaling within the Kubernetes cluster would also fall under the administrator's responsibilities.
 
 4. **Business Analyst**
+
    - User Story: As a business analyst, I want to access performance metrics and insights from the deployed ML models to inform business decisions.
    - File/Component: The Grafana dashboard configurations and Prometheus monitoring metrics located in the `config/monitoring` directory can provide the business analyst with insights and performance metrics for the ML models deployed on Kubernetes.
 

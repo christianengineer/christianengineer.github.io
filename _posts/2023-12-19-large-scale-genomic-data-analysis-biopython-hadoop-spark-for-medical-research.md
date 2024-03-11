@@ -6,12 +6,15 @@ layout: article
 ---
 
 ### Objectives
+
 The objectives of the AI Large-scale Genomic Data Analysis for medical research repository are to:
+
 1. Efficiently process and analyze massive genomic datasets to identify genetic variations associated with diseases and traits.
 2. Implement scalable and distributed data processing and analysis to handle the volume, velocity, and variety of genomic data.
 3. Develop machine learning models to predict disease risk and treatment response based on genomic data.
 
 ### System Design Strategies
+
 To achieve these objectives, the following system design strategies can be employed:
 
 1. **Distributed Data Storage**: Utilize distributed file systems like Hadoop Distributed File System (HDFS) to store and manage large-scale genomic data.
@@ -27,6 +30,7 @@ To achieve these objectives, the following system design strategies can be emplo
 6. **Integration with Bioinformatics Libraries**: Integrate BioPython, a powerful bioinformatics library, to facilitate genomic data manipulation, analysis, and visualization within the system.
 
 ### Chosen Libraries
+
 For the AI Large-scale Genomic Data Analysis system, the following libraries are chosen:
 
 1. **BioPython**: A widely used bioinformatics library that provides tools for biological computation, including DNA sequence analysis, protein structure analysis, and more. This library will be essential for handling genomic data manipulation and analysis.
@@ -40,12 +44,15 @@ By integrating these libraries and frameworks, the system can efficiently handle
 ### MLOps Infrastructure for Large-scale Genomic Data Analysis
 
 #### Objectives
+
 The MLOps infrastructure for the Large-scale Genomic Data Analysis application aims to:
+
 1. Enable seamless deployment, monitoring, and management of machine learning models trained on large-scale genomic data.
 2. Automate the end-to-end machine learning lifecycle, including data pre-processing, model training, validation, and deployment.
 3. Ensure reproducibility, scalability, and reliability of machine learning workflows for genomic data analysis.
 
 #### Components and Strategies
+
 1. **Data Versioning and Tracking**: Implement a data versioning system to track changes in the large-scale genomic datasets and facilitate reproducibility. Tools such as DVC (Data Version Control) can be used for this purpose.
 
 2. **Model Training and Evaluation**: Utilize Spark for distributed model training and evaluation, with the integration of MLlib for scalable machine learning tasks. Ensure that model training pipelines are orchestrated using platforms like Apache Airflow for workflow management.
@@ -61,6 +68,7 @@ The MLOps infrastructure for the Large-scale Genomic Data Analysis application a
 7. **Feedback Loop and Model Drift**: Incorporate mechanisms to monitor model drift and performance degradation in the production environment. Automated retraining of models based on new data can be managed with a feedback loop.
 
 #### Integration with BioPython, Hadoop, and Spark
+
 Integrating the MLOps infrastructure with BioPython, Hadoop, and Spark involves ensuring that the workflows for data pre-processing, feature engineering, and model training seamlessly interact with the large-scale genomic data repository and distributed computing frameworks.
 
 - **Pre-processing and Feature Engineering**: BioPython can be leveraged for data pre-processing and feature extraction tasks specific to genomic data, such as sequence alignment, variant calling, and genomic annotation.
@@ -88,7 +96,7 @@ large_scale_genomic_analysis_repository/
 │  │  └─ reference_genome/
 │  │     ├─ genome_sequence.fasta
 │  │     └─ genome_annotations.gff
-│  │ 
+│  │
 │  ├─ processed_data/
 │  │  ├─ patient_features/
 │  │  │  ├─ patient1_features.parquet
@@ -101,7 +109,7 @@ large_scale_genomic_analysis_repository/
 │  ├─ model_training/
 │  ├─ model_evaluation/
 │  └─ ...
-│ 
+│
 ├─ models/
 │  ├─ trained_models/
 │  │  ├─ model1/
@@ -135,6 +143,7 @@ large_scale_genomic_analysis_repository/
 ```
 
 ### Description
+
 - **data/**: Contains subdirectories for raw and processed genomic data, including patient data and reference genomes.
 - **code/**: Stores the codebase for different stages of the data analysis pipeline, including data preprocessing, feature engineering, and model training.
 - **models/**: Holds trained and deployed machine learning models, along with their artifacts and deployment configurations.
@@ -159,7 +168,7 @@ models/
 │  │  └─ metadata/
 │  │     ├─ model_metrics.json
 │  │     └─ model_config.json
-│  │ 
+│  │
 │  └─ model2/
 │     ├─ model_artifacts/
 │     │  ├─ model.h5
@@ -179,7 +188,9 @@ models/
 ```
 
 ### Description
+
 - **trained_models/**: This subdirectory contains the trained machine learning models, each residing in its own subdirectory named after the specific model.
+
   - **model_artifacts/**: The model_artifacts directory contains the serialized model files along with any associated feature transformers or other preprocessing artifacts required for model inference.
   - **metadata/**: This directory holds metadata files related to the trained models, such as model performance metrics, configuration settings, and any relevant information about the model's training process.
 
@@ -208,6 +219,7 @@ deployed_models/
 ```
 
 ### Description
+
 - **model1_deployment/**: This subdirectory contains the deployment configuration and files for a specific machine learning model. Each deployed model resides in its own subdirectory within the "deployed_models" directory.
 
   - **Dockerfile**: The Dockerfile defines the instructions for building a Docker container image that encapsulates the model serving API and its dependencies.
@@ -219,6 +231,7 @@ deployed_models/
 - **model2_deployment/**: Similarly, this subdirectory contains the deployment configuration and files for another specific machine learning model, following the same structure as model1_deployment.
 
 ### Usage
+
 The deployment directory structure provides a clear separation of deployment configurations for different machine learning models. Each deployed model is encapsulated within its own directory, containing the Dockerfile for building the container image, the model serving API script, and the requirements file for installing dependencies. This modular structure allows for scalable deployment management and facilitates the addition and management of new models with minimal impact on existing deployments.
 
 By adhering to this directory structure, the Large-scale Genomic Data Analysis application can streamline the deployment process, ensure reproducibility of deployment configurations, and maintain a clear separation of concerns for each deployed machine learning model. Additionally, this structure enables scalability and ease of management for deploying multiple machine learning models for real-time inference in a production environment.
@@ -267,6 +280,7 @@ spark.stop()
 ```
 
 In this example:
+
 - The script reads mock genomic data from a Parquet file using Spark.
 - It performs feature engineering and preparation using a VectorAssembler to aggregate relevant features.
 - The data is split into training and testing sets.
@@ -327,6 +341,7 @@ spark.stop()
 ```
 
 In this example:
+
 - The script reads mock genomic data from Hadoop using Spark.
 - It uses BioPython to preprocess the genomic data, calculating the sequence length as a feature.
 - Feature engineering is performed to create feature vectors for model training.
@@ -340,23 +355,27 @@ Please note that the example assumes the presence of genomic data stored in Hado
 ### Type of Users
 
 1. **Bioinformatics Researcher**
-   - *User Story*: As a bioinformatics researcher, I want to preprocess and analyze large-scale genomic data to identify genetic variations associated with diseases and traits, and to visualize the results for further research.
-   - *File*: The `code/data_processing/process_genomic_data.py` file would be used for preprocessing the raw genomic data and extracting relevant features.
+
+   - _User Story_: As a bioinformatics researcher, I want to preprocess and analyze large-scale genomic data to identify genetic variations associated with diseases and traits, and to visualize the results for further research.
+   - _File_: The `code/data_processing/process_genomic_data.py` file would be used for preprocessing the raw genomic data and extracting relevant features.
 
 2. **Data Scientist**
-   - *User Story*: As a data scientist, I want to build and train machine learning models on large-scale genomic data, as well as assess and fine-tune the performance of these models.
-   - *File*: The `code/model_training/train_model.py` script will be used for training machine learning models using Spark and MLlib, while the `code/model_evaluation/evaluate_model.py` script will be used to assess the model performance.
+
+   - _User Story_: As a data scientist, I want to build and train machine learning models on large-scale genomic data, as well as assess and fine-tune the performance of these models.
+   - _File_: The `code/model_training/train_model.py` script will be used for training machine learning models using Spark and MLlib, while the `code/model_evaluation/evaluate_model.py` script will be used to assess the model performance.
 
 3. **Clinical Researcher**
-   - *User Story*: As a clinical researcher, I want to deploy trained machine learning models to predict disease risk and treatment response based on genomic data, and to integrate these predictions into clinical research studies.
-   - *File*: The `deployed_models/model_api.py` script, within the deployed_models directory, will serve as the model serving API for real-time prediction of disease risk and treatment response based on genomic data.
+
+   - _User Story_: As a clinical researcher, I want to deploy trained machine learning models to predict disease risk and treatment response based on genomic data, and to integrate these predictions into clinical research studies.
+   - _File_: The `deployed_models/model_api.py` script, within the deployed_models directory, will serve as the model serving API for real-time prediction of disease risk and treatment response based on genomic data.
 
 4. **System Administrator**
-   - *User Story*: As a system administrator, I want to manage the infrastructure and configurations of the Large-scale Genomic Data Analysis application, ensuring scalability, security, and reliability.
-   - *File*: The `config/spark_configurations/` and `config/hadoop_configurations/` directories contain the configurations for Spark and Hadoop, which the system administrator will manage to ensure efficient and secure distributed data processing.
+
+   - _User Story_: As a system administrator, I want to manage the infrastructure and configurations of the Large-scale Genomic Data Analysis application, ensuring scalability, security, and reliability.
+   - _File_: The `config/spark_configurations/` and `config/hadoop_configurations/` directories contain the configurations for Spark and Hadoop, which the system administrator will manage to ensure efficient and secure distributed data processing.
 
 5. **Medical Research Coordinator**
-   - *User Story*: As a medical research coordinator, I want to access and view the documentation and project plan, as well as collaborate with other stakeholders on the application's development and usage.
-   - *File*: The `documentation/project_plan.md` and other documentation files within the `documentation/` directory will provide important information for coordinating medical research projects and collaborating with other stakeholders.
+   - _User Story_: As a medical research coordinator, I want to access and view the documentation and project plan, as well as collaborate with other stakeholders on the application's development and usage.
+   - _File_: The `documentation/project_plan.md` and other documentation files within the `documentation/` directory will provide important information for coordinating medical research projects and collaborating with other stakeholders.
 
 These diverse users, each with their specific roles and objectives, will interact with different components of the Large-scale Genomic Data Analysis application, utilizing distinct files and functionalities tailored to their needs and responsibilities.

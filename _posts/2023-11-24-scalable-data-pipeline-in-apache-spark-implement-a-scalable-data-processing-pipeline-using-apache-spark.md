@@ -8,15 +8,18 @@ layout: article
 ## AI Scalable Data Pipeline in Apache Spark
 
 ## Objectives
+
 The objectives of building a scalable data processing pipeline using Apache Spark are to efficiently handle large volumes of data, support parallel processing, and enable the integration of machine learning and deep learning algorithms for data analysis and prediction. The pipeline should be able to handle various data sources, perform data preprocessing, feature engineering, model training, and inference at scale.
 
 ## System Design Strategies
+
 - **Data Ingestion:** Utilize Spark's data source APIs to ingest data from various sources such as HDFS, Apache Kafka, Amazon S3, and relational databases.
 - **Data Preprocessing:** Leverage Spark's DataFrame and Spark SQL to perform data cleaning, transformation, and feature engineering operations in a distributed manner.
 - **Model Training:** Utilize Spark's MLlib or Spark's integration with external libraries such as TensorFlow or PyTorch to train machine learning and deep learning models at scale.
 - **Model Deployment:** Deploy trained models within the Spark ecosystem using libraries like MLeap or serve them using Spark's serving infrastructure.
 
 ## Choosen Libraries
+
 - **Apache Spark:** As the core distributed computing framework to handle large-scale data processing and machine learning tasks.
 - **Spark MLlib:** For machine learning algorithms and tools that are optimized for distributed processing.
 - **Spark Deep Learning:** To leverage TensorFlow and Keras for deep learning tasks within the Spark environment.
@@ -30,24 +33,31 @@ By leveraging these libraries within the Apache Spark ecosystem, the data pipeli
 To implement a scalable data processing pipeline using Apache Spark, the infrastructure needs to be set up to support distributed computing, large-scale data storage, and efficient resource management. The infrastructure components can include the following:
 
 ## Cluster Management
+
 Utilize a cluster management framework such as Apache Hadoop YARN, Apache Mesos, or Kubernetes to manage the allocation of computational resources across the nodes in the cluster. This ensures that computational tasks are distributed efficiently and that resources are utilized optimally.
 
 ## Distributed File System
+
 Integrate a distributed file system such as Hadoop Distributed File System (HDFS) or Amazon S3 to store large volumes of data that will be ingested and processed by the Spark pipeline. This provides fault tolerance and scalability for data storage.
 
 ## Data Ingestion Sources
+
 Integrate data sources such as Apache Kafka for real-time streaming data, relational databases for structured data, and Amazon S3 for batch data ingestion. This ensures that the pipeline can handle a variety of data formats and sources.
 
 ## Compute Resources
+
 Deploy a cluster of machines with sufficient computational resources (CPU, memory, and storage) to handle the data processing and machine learning tasks. The cluster should be able to horizontally scale to accommodate increasing workloads.
 
 ## Monitoring and Logging
+
 Set up monitoring and logging tools such as Apache Hadoop HDFS, Apache Spark Monitoring UI, and Grafana to track the performance and resource utilization of the Spark pipeline. This allows for efficient troubleshooting and optimization of the pipeline.
 
 ## Security
+
 Implement security measures such as network isolation, encryption at rest and in transit, and access control mechanisms to protect the data and infrastructure components. This ensures that sensitive data and resources are safeguarded against unauthorized access.
 
 ## Integration with Machine Learning and Deep Learning Frameworks
+
 Integrate with machine learning and deep learning frameworks like TensorFlow, Keras, or PyTorch to leverage advanced analytical and predictive capabilities within the Spark pipeline. This enables the development and deployment of AI models for data analysis and inference.
 
 By setting up the infrastructure with these components, the scalable data processing pipeline in Apache Spark can efficiently handle large-scale data processing, distributed computing, machine learning tasks, and seamless integration with various data sources and advanced AI capabilities.
@@ -109,7 +119,6 @@ scalable-data-pipeline/
 In this file structure:
 
 - **data/**: Contains subdirectories for raw and processed data. Raw data is stored in source-specific directories, while processed data is organized into subdirectories for feature-engineered data and model input data.
-  
 - **notebooks/**: Holds exploratory and model development Jupyter notebooks, facilitating data exploration, visualization, and model prototyping.
 
 - **src/**: Contains the core source code for the ETL (Extract, Transform, Load) processes, machine learning model training, and utility functions such as configuration and logging.
@@ -296,18 +305,22 @@ In this example:
 Please note that while this example uses a placeholder deep learning model provided by Spark (MultilayerPerceptronClassifier), in a production setting, the deep learning model implementation would be replaced with a model built using TensorFlow or Keras and integrated with Apache Spark for distributed training and inference.
 
 1. Data Engineer
+
    - User Story: As a Data Engineer, I need to ingest and preprocess large volumes of data from various sources such as Kafka, databases, and distributed file systems using Apache Spark. I also need to construct data pipelines for data transformation and feature engineering.
    - File: `src/etl/data_ingestion.py` and `src/etl/data_preprocessing.py`
 
 2. Data Scientist
+
    - User Story: As a Data Scientist, I need to build and evaluate machine learning models using Apache Spark for scalable model training and testing. I also need to create Jupyter notebooks for exploratory data analysis and model prototyping.
    - File: `notebooks/model_development/model_training_notebooks` and `src/ml/model_training.py`
 
 3. Machine Learning Engineer
+
    - User Story: As a Machine Learning Engineer, I need to deploy and serve trained machine learning models within the Spark ecosystem. I also need to create inference scripts and manage model deployment configurations.
    - File: `deployment/model_serving_artifacts/` and `deployment/inference_scripts/`
 
 4. System Administrator
+
    - User Story: As a System Administrator, I need to manage the infrastructure and cluster resources for the Spark data processing pipeline. This includes configuring cluster managers, monitoring resource utilization, and ensuring high availability and fault tolerance.
    - File: Configuration files in the root directory such as `config/spark_config.properties` and `config/etl_config.json`
 

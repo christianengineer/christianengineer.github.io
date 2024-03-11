@@ -8,13 +8,17 @@ layout: article
 ## AI Urban Green Space Planning Tool
 
 ## Objectives
+
 The AI Urban Green Space Planning Tool aims to leverage machine learning algorithms to aid city planners in optimizing the distribution and design of green spaces within urban environments. The primary objectives of the tool include:
+
 - Analyzing existing urban layouts and environmental data to identify optimal locations for green spaces
 - Predicting the impact of proposed green space layouts on city livability metrics such as air quality, temperature, and overall well-being
 - Providing actionable insights for urban planners to enhance the quality of life in urban areas through strategically placed green spaces
 
 ## System Design Strategies
+
 The system will employ a combination of machine learning models, data processing techniques, and interactive visualization components to achieve its objectives. The high-level design strategies include:
+
 - Data Ingestion and Preprocessing: Acquiring and cleaning diverse datasets related to urban infrastructure, environmental factors, and livability indicators
 - Feature Engineering: Extracting relevant features from the input data to represent spatial and environmental characteristics
 - Model Training and Inference: Developing predictive models using Scikit-Learn and TensorFlow to recommend optimal green space layouts and assess their impact
@@ -22,7 +26,9 @@ The system will employ a combination of machine learning models, data processing
 - Scalability and Performance: Designing the system to handle large-scale urban data and deliver real-time insights for different city scenarios
 
 ## Chosen Libraries
+
 To achieve the aforementioned system design strategies, the following libraries will be utilized:
+
 - **Scikit-Learn**: This library provides a wide range of machine learning algorithms for classification, regression, clustering, and dimensionality reduction. It will be used for training predictive models to identify optimal green space locations and assess their impact on urban livability.
 - **TensorFlow**: TensorFlow's capabilities in building and training deep learning models will be leveraged for more complex machine learning tasks, such as image recognition for assessing environmental factors and their impact on city livability.
 - **Pandas**: Pandas will be used for data manipulation and preprocessing, allowing efficient handling of urban datasets and feature extraction.
@@ -37,50 +43,63 @@ In order to effectively deploy and maintain the AI Urban Green Space Planning To
 ## Model Development
 
 ### Version Control
+
 - Utilize Git for version control to track changes in the source code, models, and experiment configurations.
 
 ### Experiment Tracking
+
 - Use a platform like MLflow to log and organize experiments, including metrics, parameters, and artifacts.
 
 ### Model Training
+
 - Implement a pipeline for training and evaluating models using Scikit-Learn and TensorFlow. Consider using frameworks like Kubeflow for scalable, distributed training.
 
 ## Model Deployment
 
 ### Model Packaging
+
 - Package trained models using containerization technologies like Docker to encapsulate all dependencies and ensure consistency across different environments.
 
 ### Model Registry
+
 - Utilize a model registry such as MLflow or ModelDB to store, version, and retrieve trained models for deployment.
 
 ### Deployment Orchestration
+
 - Use Kubeflow or Kubernetes for orchestrating model deployments at scale, allowing for efficient resource allocation and management.
 
 ## Monitoring and Management
 
 ### Model Monitoring
+
 - Implement monitoring for deployed models to track concept drift, input data distribution changes, and model performance degradation.
 
 ### Logging and Alerting
+
 - Set up centralized logging and alerting systems to capture model predictions, system errors, and performance metrics.
 
 ### Scalability and Auto-scaling
+
 - Design the deployment infrastructure to handle varying workloads and implement auto-scaling based on resource usage.
 
 ## Continuous Integration and Continuous Deployment (CI/CD)
 
 ### Automated Testing
+
 - Implement automated testing to validate model functionality and performance as part of the CI/CD pipeline.
 
 ### Continuous Deployment
+
 - Use CI/CD tools such as Jenkins or GitLab CI to automate the deployment of model updates to production.
 
 ## Infrastructure as Code
 
 ### Configuration Management
+
 - Leverage tools like Terraform or AWS CloudFormation to define and manage the infrastructure and resources required for the application.
 
 ### Environment Reproducibility
+
 - Use tools such as Ansible or Chef to ensure consistent configuration of deployment environments.
 
 By establishing this MLOps infrastructure, the Urban Green Space Planning Tool can ensure reliable, scalable, and efficient deployment and management of machine learning models, contributing to the overall success and impact of the application in urban planning and livability improvement.
@@ -184,6 +203,7 @@ models/
 ```
 
 ### model_training/
+
 - **model_builder.py**: This file contains functions or classes responsible for building machine learning models using Scikit-Learn and TensorFlow. It encapsulates the logic for creating and training models, including data preprocessing, feature selection, and hyperparameter tuning.
 
 - **model_evaluation.py**: It includes functions for evaluating the performance of trained models, such as calculating various metrics (e.g., accuracy, precision, recall, F1 score) and generating visualizations to assess model effectiveness.
@@ -191,16 +211,19 @@ models/
 - **hyperparameter_tuning.py**: This file houses code for hyperparameter tuning, utilizing techniques like grid search or random search to identify optimal model configurations for improved performance.
 
 ### trained_models/
+
 This directory stores the trained machine learning models, organized based on the underlying framework or library used for their construction. Specifically:
+
 - **scikit-learn/**: Contains serialized files (e.g., pickle files) representing trained models built using Scikit-Learn.
-  - *trained_regression_model.pkl*: An example of a trained regression model saved in a serialized format.
+
+  - _trained_regression_model.pkl_: An example of a trained regression model saved in a serialized format.
 
 - **tensorflow/**: Houses the artifacts related to models built with TensorFlow, including the neural network model file and preprocessed data.
-  - *trained_neural_network_model.h5*: An example of a trained neural network model saved in HDF5 format.
+  - _trained_neural_network_model.h5_: An example of a trained neural network model saved in HDF5 format.
   - **preprocessed_data/**: Contains files related to the preprocessed input data used for training the TensorFlow models.
-    - *train_data.npy*: Serialized NumPy array containing preprocessed training data.
-    - *test_data.npy*: Serialized NumPy array containing preprocessed testing data.
-    - *scaler.pkl*: Serialized scaler object used for preprocessing input data before model training.
+    - _train_data.npy_: Serialized NumPy array containing preprocessed training data.
+    - _test_data.npy_: Serialized NumPy array containing preprocessed testing data.
+    - _scaler.pkl_: Serialized scaler object used for preprocessing input data before model training.
 
 By organizing the model-related files into a dedicated `models/` directory and subdirectories, the repository maintains a clear structure, enabling easy navigation and management of assets related to the machine learning components of the Urban Green Space Planning Tool. This structure facilitates collaboration, reproducibility, and scalability of the model development processes.
 
@@ -229,16 +252,19 @@ deployment/
 ```
 
 ### app/
+
 - **main.py**: This file contains the main application logic for the Urban Green Space Planning Tool. It leverages frameworks like Flask or FastAPI to define the web server routes, handle user input, and orchestrate the interaction with deployed machine learning models.
 
 - **templates/**: This directory houses the HTML templates used for rendering the web interface of the application.
-  - *index.html*: An example of the main HTML template for the user interface.
+
+  - _index.html_: An example of the main HTML template for the user interface.
 
 - **static/**: Contains static assets (e.g., CSS stylesheets, JavaScript files) used for styling and client-side interactivity of the web application.
-  - *style.css*: An example of a CSS file for styling the web interface.
-  - *script.js*: An example of a JavaScript file for client-side functionality.
+  - _style.css_: An example of a CSS file for styling the web interface.
+  - _script.js_: An example of a JavaScript file for client-side functionality.
 
 ### model_serving/
+
 - **model_server.py**: This file defines the server-side logic for handling model predictions, including input validation, model inference, and response generation.
 
 - **model_api.py**: Contains the API endpoints and interaction logic for serving machine learning models over HTTP using Flask, FastAPI, or other web frameworks.
@@ -246,9 +272,11 @@ deployment/
 - **requirements.txt**: Specifies the Python dependencies and libraries required for the model serving component.
 
 ### Dockerfile
+
 The Dockerfile defines the configuration for building a container image that encapsulates the application and its dependencies, enabling consistent deployment across different environments.
 
 ### kubernetes_config/
+
 - **deployment.yaml**: Contains the configuration for deploying the application and its associated services within a Kubernetes cluster.
 
 - **service.yaml**: Defines the service configuration for exposing the application to external traffic within the Kubernetes environment.
@@ -356,19 +384,22 @@ This script serves as an example training workflow using TensorFlow for the Urba
 ### Types of Users for the Urban Green Space Planning Tool
 
 1. **City Planners**
-   - *User Story*: As a city planner, I want to use the Urban Green Space Planning Tool to analyze urban layouts and environmental data to identify optimal locations for green spaces, aiding in the enhancement of urban livability.
-   - *File*: The `visualization/interactive_dashboard.py` file will accomplish this, as it provides an interactive visualization of urban data, proposed green space layouts, and predicted livability metrics. City planners can use this interface to explore different scenarios and make informed decisions about green space planning.
+
+   - _User Story_: As a city planner, I want to use the Urban Green Space Planning Tool to analyze urban layouts and environmental data to identify optimal locations for green spaces, aiding in the enhancement of urban livability.
+   - _File_: The `visualization/interactive_dashboard.py` file will accomplish this, as it provides an interactive visualization of urban data, proposed green space layouts, and predicted livability metrics. City planners can use this interface to explore different scenarios and make informed decisions about green space planning.
 
 2. **Environmental Researchers**
-   - *User Story*: As an environmental researcher, I want to leverage the Urban Green Space Planning Tool to predict the impact of proposed green space layouts on city livability metrics such as air quality, temperature, and overall well-being, enabling evidence-based urban planning decisions.
-   - *File*: The `model_training/train_complex_model.py` file can align with this user story. By using real environmental data, researchers can train complex machine learning algorithms using TensorFlow to predict the impact of green space layouts on city livability metrics.
+
+   - _User Story_: As an environmental researcher, I want to leverage the Urban Green Space Planning Tool to predict the impact of proposed green space layouts on city livability metrics such as air quality, temperature, and overall well-being, enabling evidence-based urban planning decisions.
+   - _File_: The `model_training/train_complex_model.py` file can align with this user story. By using real environmental data, researchers can train complex machine learning algorithms using TensorFlow to predict the impact of green space layouts on city livability metrics.
 
 3. **Community Advocates**
-   - *User Story*: As a community advocate, I want to utilize the Urban Green Space Planning Tool to visualize the distribution of green spaces and their potential impact on the well-being of residents, helping to advocate for equitable access to green spaces in urban areas.
-   - *File*: The `app/main.py` file will enable community advocates to interact with the tool, as it sets up the web server routes and user interface for visualizing the distribution of green spaces and their impact on livability. This would enable them to effectively communicate with policymakers and the public.
+
+   - _User Story_: As a community advocate, I want to utilize the Urban Green Space Planning Tool to visualize the distribution of green spaces and their potential impact on the well-being of residents, helping to advocate for equitable access to green spaces in urban areas.
+   - _File_: The `app/main.py` file will enable community advocates to interact with the tool, as it sets up the web server routes and user interface for visualizing the distribution of green spaces and their impact on livability. This would enable them to effectively communicate with policymakers and the public.
 
 4. **Data Scientists**
-   - *User Story*: As a data scientist, I want to explore and experiment with different machine learning models using the Urban Green Space Planning Tool, allowing for the validation of new algorithms as well as the improvement of existing models.
-   - *File*: The `notebooks/model_exploration.ipynb` file can cater to this user story. It provides a platform for data scientists to experiment with different machine learning models, evaluate their performance, and potentially contribute to the improvement of the urban green space planning algorithms.
+   - _User Story_: As a data scientist, I want to explore and experiment with different machine learning models using the Urban Green Space Planning Tool, allowing for the validation of new algorithms as well as the improvement of existing models.
+   - _File_: The `notebooks/model_exploration.ipynb` file can cater to this user story. It provides a platform for data scientists to experiment with different machine learning models, evaluate their performance, and potentially contribute to the improvement of the urban green space planning algorithms.
 
 By considering these user stories and the associated files in the project, the Urban Green Space Planning Tool can effectively cater to a diverse set of users, providing value and actionable insights for urban planning and livability improvement.

@@ -6,10 +6,13 @@ layout: article
 ---
 
 ## Objectives
+
 The objectives of the AI Homeless Population Support Systems repository are to develop scalable, data-intensive applications that leverage the use of machine learning to support social services for the homeless population. This involves creating systems that can analyze and predict homelessness trends, identify at-risk individuals, optimize resource allocation, and personalize support services.
 
 ## System Design Strategies
+
 To achieve these objectives, the following system design strategies can be employed:
+
 - **Scalability**: Designing the system to handle a large volume of data and increasing user base.
 - **Data-Intensive**: Emphasizing the collection, storage, and processing of a significant amount of data related to homelessness and support services.
 - **Machine Learning Integration**: Incorporating machine learning models for tasks such as trend analysis, risk prediction, and resource optimization.
@@ -17,7 +20,9 @@ To achieve these objectives, the following system design strategies can be emplo
 - **Interoperability**: Ensuring compatibility and integration with existing social service systems and data sources.
 
 ## Chosen Libraries
+
 For the development of the AI Homeless Population Support Systems repository, the following libraries can be used:
+
 - **Pandas**: Pandas is a powerful library for data manipulation and analysis. It provides data structures and functions that are essential for handling the data-intensive nature of the application, including cleaning, transforming, and aggregating data for further analysis and modeling.
 - **Scikit-Learn**: Scikit-Learn is a widely used machine learning library that offers a wide range of algorithms for classification, regression, clustering, and dimensionality reduction. It provides a consistent interface for model training and evaluation, making it suitable for building the machine learning components of the support systems.
 
@@ -28,20 +33,24 @@ By leveraging these libraries, we can effectively manage and analyze large datas
 Incorporating MLOps (Machine Learning Operations) infrastructure for the Homeless Population Support Systems involves creating a robust framework for deploying, monitoring, and managing machine learning models that are used to support social services for the homeless population. Here are some key components and considerations for building an MLOps infrastructure using Pandas and Scikit-Learn for the application:
 
 ### Continuous Integration and Continuous Deployment (CI/CD)
+
 - **Version Control**: Utilize Git for version control to track changes in the codebase and facilitate collaboration among team members.
 - **Automated Testing**: Implement automated testing for data preprocessing, model training, and model evaluation to ensure the accuracy and reliability of the machine learning models.
 
 ### Model Training and Deployment
+
 - **Data Versioning**: Use tools such as DVC (Data Version Control) to version datasets and ensure reproducibility of the machine learning experiments.
 - **Model Registry**: Employ a model registry system to track and manage different versions of trained models, enabling easy deployment and comparison of models.
 - **Containerization**: Utilize Docker to containerize the machine learning models along with their dependencies, ensuring consistency across different environments.
 - **Model Serving**: Deploy machine learning models as microservices using platforms like Kubernetes or serverless computing to enable scalable and reliable model serving.
 
 ### Monitoring and Feedback Loop
+
 - **Logging and Monitoring**: Integrate logging and monitoring tools to track the performance of deployed models in real-time, allowing for immediate identification of issues or model degradation.
 - **Feedback Integration**: Incorporate mechanisms to gather feedback from social workers and service recipients, enabling iterative model improvement based on real-world usage.
 
 ### Scalability and Resource Management
+
 - **Automated Scalability**: Design the MLOps infrastructure to automatically scale based on demand, ensuring consistent performance during periods of high usage.
 - **Resource Optimization**: Utilize tools for resource optimization to efficiently allocate computational resources for model training and inference.
 
@@ -207,6 +216,7 @@ print(f'Trained model saved to: {model_file_path}')
 ```
 
 In this script:
+
 - We load mock dataset from the file path specified by `mock_data_file_path`.
 - Perform data preprocessing and feature engineering to prepare the data for model training.
 - Split the dataset into training and testing sets using `train_test_split`.
@@ -268,6 +278,7 @@ print(f'Trained SVM model saved to: {model_file_path}')
 ```
 
 In this script:
+
 - We load mock dataset from the file path specified by `mock_data_file_path`.
 - Perform data preprocessing and feature engineering to prepare the data for model training.
 - Split the dataset into training and testing sets using `train_test_split`.
@@ -281,23 +292,27 @@ This example demonstrates the training of a complex machine learning algorithm (
 ### Types of Users for Homeless Population Support Systems
 
 1. **Social Workers**
-   - *User Story*: As a social worker, I want to be able to access detailed information about homeless individuals, track their interactions with support services, and receive recommendations for personalized assistance based on their specific needs and circumstances.
-   - *Corresponding File*: `social_worker_dashboard.py`
+
+   - _User Story_: As a social worker, I want to be able to access detailed information about homeless individuals, track their interactions with support services, and receive recommendations for personalized assistance based on their specific needs and circumstances.
+   - _Corresponding File_: `social_worker_dashboard.py`
 
 2. **Data Analysts/Researchers**
-   - *User Story*: As a data analyst, I need to conduct in-depth analysis of homelessness trends, demographics, and service utilization to identify patterns and inform policy decisions.
-   - *Corresponding File*: `data_analysis_tool.py`
+
+   - _User Story_: As a data analyst, I need to conduct in-depth analysis of homelessness trends, demographics, and service utilization to identify patterns and inform policy decisions.
+   - _Corresponding File_: `data_analysis_tool.py`
 
 3. **Program Administrators**
-   - *User Story*: As a program administrator, I require an interface to manage and allocate resources efficiently, track program performance, and generate reports for funding organizations and stakeholders.
-   - *Corresponding File*: `program_administration_portal.py`
+
+   - _User Story_: As a program administrator, I require an interface to manage and allocate resources efficiently, track program performance, and generate reports for funding organizations and stakeholders.
+   - _Corresponding File_: `program_administration_portal.py`
 
 4. **Machine Learning Engineers/Developers**
-   - *User Story*: As a machine learning engineer, I aim to build, train, and deploy predictive models that can identify at-risk individuals, optimize resource allocation, and improve the overall efficiency of support systems.
-   - *Corresponding File*: `model_deployment_pipeline.py`
+
+   - _User Story_: As a machine learning engineer, I aim to build, train, and deploy predictive models that can identify at-risk individuals, optimize resource allocation, and improve the overall efficiency of support systems.
+   - _Corresponding File_: `model_deployment_pipeline.py`
 
 5. **Homeless Individuals/Service Recipients**
-   - *User Story*: As a homeless individual in need of support, I seek an accessible platform to access information about available services, connect with social workers, and receive personalized assistance based on my situation.
-   - *Corresponding File*: `service_recipient_portal.py`
+   - _User Story_: As a homeless individual in need of support, I seek an accessible platform to access information about available services, connect with social workers, and receive personalized assistance based on my situation.
+   - _Corresponding File_: `service_recipient_portal.py`
 
 Each of these user types represents a distinct set of needs and interactions with the Homeless Population Support Systems. The corresponding files provided are illustrative examples of components within the overall system architecture that may cater to the specific requirements of each user type. The actual system design may include a combination of web interfaces, data analysis tools, machine learning pipelines, and portals to address the diverse needs of the user base.

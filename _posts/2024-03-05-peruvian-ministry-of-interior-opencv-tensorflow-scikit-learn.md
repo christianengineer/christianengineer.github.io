@@ -4,4 +4,3 @@ date: 2024-03-05
 permalink: posts/peruvian-ministry-of-interior-opencv-tensorflow-scikit-learn
 layout: article
 ---
-

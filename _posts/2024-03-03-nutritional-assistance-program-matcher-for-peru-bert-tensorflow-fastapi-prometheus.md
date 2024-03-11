@@ -8,18 +8,21 @@ layout: article
 ## AI Nutritional Assistance Program Matcher for Peru
 
 ## Objectives:
+
 - Screen nutritional assistance programs in Peru.
 - Match programs with low-income families in need.
 - Ensure children and vulnerable populations have access to healthy food.
 - Build a scalable, data-intensive AI application leveraging machine learning.
 
 ## System Design Strategies:
+
 - **Data Collection:** Gather information on nutritional assistance programs and low-income families.
 - **Machine Learning Model:** Use BERT and TensorFlow for natural language processing to match programs with families.
 - **API Development:** Utilize FastAPI for creating a RESTful API for program matching.
 - **Monitoring:** Integrate Prometheus for monitoring application performance and bottlenecks.
 
 ## Chosen Libraries and Tools:
+
 - **BERT:** For understanding and processing text data to match programs with families effectively.
 - **TensorFlow:** For building and training machine learning models to make program matching decisions.
 - **FastAPI:** For building a scalable and fast API to serve program matching results to users.
@@ -32,24 +35,29 @@ By following these strategies and utilizing these libraries and tools, we can bu
 To ensure the seamless operation of the AI Nutritional Assistance Program Matcher application and optimize the deployment and management of machine learning models, we will implement a robust MLOps infrastructure. Here are some key components and considerations:
 
 ## Continuous Integration/Continuous Deployment (CI/CD):
+
 - **Automation:** Use tools like Jenkins or GitLab CI/CD pipelines to automate model training, testing, and deployment processes.
 - **Version Control:** Utilize Git for version control to track changes in code, models, and data.
 
 ## Model Training and Testing:
+
 - **TensorFlow Serving:** Deploy trained TensorFlow models for serving predictions efficiently.
 - **Model Monitoring:** Implement monitoring tools to track model performance, drift detection, and data quality.
 
 ## Scalability and Performance:
+
 - **Containerization:** Dockerize the application and use Kubernetes for container orchestration to ensure scalability and reliability.
 - **Load Balancing:** Employ tools like Kubernetes HPA for automatic scaling based on traffic demands.
 - **Fault Tolerance:** Implement redundancy and failover mechanisms to ensure the application's availability.
 
 ## Data Management:
+
 - **Data Versioning:** Employ tools like DVC for data versioning and management.
 - **Data Processing:** Use Apache Spark for large-scale data processing and transformation.
 - **Data Pipelines:** Build data pipelines using tools like Apache Airflow to automate data ingestion, processing, and model training workflows.
 
 ## Logging and Monitoring:
+
 - **Logging:** Utilize ELK Stack (Elasticsearch, Logstash, Kibana) for centralized logging of application events and errors.
 - **Monitoring:** Integrate Prometheus and Grafana for monitoring application performance, resource utilization, and system health.
 - **Alerting:** Set up alerts in Prometheus to notify stakeholders of any anomalies or issues in real-time.
@@ -99,6 +107,7 @@ nutritional-assistance-program-matcher/
 ```
 
 In this file structure:
+
 - The `app` directory contains modules for FastAPI endpoints and machine learning models (BERT, TensorFlow) implementation.
 - The `data` directory holds CSV files for programs and families data, along with data processing scripts.
 - The `config` directory stores application configuration settings.
@@ -134,6 +143,7 @@ models/
 ```
 
 In this structured `models` directory:
+
 - The `bert` subdirectory includes files related to the BERT model implementation, such as model configuration, pre-trained weights, tokenization utilities, and a custom BERT model script.
 - The `tensorflow` subdirectory houses scripts for the TensorFlow model, including data preprocessing, model training, evaluation, and a directory for saving the trained model.
 - The `utils` subdirectory contains general utilities used across different models, such as data loading functions and model-specific utilities.
@@ -174,6 +184,7 @@ deployment/
 ```
 
 In the structured `deployment` directory:
+
 - The `docker` subdirectory contains the Dockerfile for building the application image and a Docker Compose configuration for managing multiple containers.
 - The `kubernetes` subdirectory includes Kubernetes configuration files for deployment, service definition, and Ingress setup to enable external access to the application.
 - The `monitoring` subdirectory houses Prometheus and Grafana configurations for monitoring application performance and health.
@@ -213,6 +224,7 @@ print("Model training complete. Saved model to 'models/tensorflow/saved_model'."
 **File Path:** `models/tensorflow/train_model.py`
 
 In this script:
+
 - Mock data is loaded using a utility function `load_mock_data` to simulate the training data for the TensorFlow model.
 - The TensorFlow model is created and compiled using a custom function `create_model`.
 - The model is trained on the mock data with specified epochs and batch size.
@@ -250,9 +262,9 @@ def ensemble_predict(programs):
     tf_pred = tf_model.predict(programs)
     bert_input = tokenizer(programs, padding=True, truncation=True, max_length=128, return_tensors='tf')
     bert_pred = bert_model(bert_input)['last_hidden_state'][:, 0, :]
-    
+
     ## Custom logic for combining predictions from both models
-    
+
     return combined_predictions
 
 ## Test the ensemble model on mock data
@@ -264,6 +276,7 @@ print("Complex machine learning algorithm execution complete.")
 **File Path:** `models/complex_ml_algorithm.py`
 
 In this script:
+
 - Mock data is loaded for training and testing the complex machine learning algorithm.
 - A TensorFlow model is created, trained, and tested on the mock data.
 - A pre-trained BERT model is loaded to be used as part of the ensemble method.
@@ -275,22 +288,27 @@ This script showcases a more intricate machine learning algorithm for the Nutrit
 ## Types of Users:
 
 1. **Government Official**
+
    - **User Story:** As a government official, I need to view and analyze the utilization rates of nutritional assistance programs to assess their effectiveness in reaching low-income families in need.
    - **File:** `app/api/endpoints.py`
 
 2. **Nutrition Program Provider**
+
    - **User Story:** As a nutrition program provider, I want to input details of my program to be matched with eligible low-income families who require assistance.
    - **File:** `app/api/endpoints.py`
 
 3. **Low-Income Family**
+
    - **User Story:** As a low-income family, I wish to submit my family's information to receive matches with suitable nutritional assistance programs to support our needs.
    - **File:** `app/api/endpoints.py`
 
 4. **Healthcare Professional**
+
    - **User Story:** As a healthcare professional, I aim to access reports on the impact of the nutritional assistance programs on the health outcomes of the children and vulnerable populations.
    - **File:** `app/api/endpoints.py`
 
 5. **System Administrator**
+
    - **User Story:** As a system administrator, I am responsible for monitoring the application's performance and ensuring its scalability and reliability.
    - **File:** `monitoring/prometheus/prometheus_config.yml`
 

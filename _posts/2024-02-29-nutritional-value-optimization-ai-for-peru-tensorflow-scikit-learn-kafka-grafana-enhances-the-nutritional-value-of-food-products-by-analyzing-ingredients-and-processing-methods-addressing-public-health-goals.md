@@ -8,11 +8,13 @@ layout: article
 ## AI Nutritional Value Optimization System
 
 ## Objectives:
+
 - Enhance the nutritional value of food products by analyzing ingredients and processing methods
 - Address public health goals by recommending improvements in food production
 - Utilize AI to optimize the nutritional content of food, ensuring a healthier diet for consumers
 
 ## System Design Strategies:
+
 1. **Data Collection**: Gather data on food products, ingredients, nutritional content, and processing methods.
 2. **Data Preprocessing**: Cleanse and preprocess the data for analysis using techniques such as data normalization and feature engineering.
 3. **Model Training**: Utilize machine learning algorithms to train models that predict the nutritional value of food products based on their ingredients and processing methods.
@@ -21,6 +23,7 @@ layout: article
 6. **Scalability**: Design the system to be scalable to handle large amounts of data and accommodate potential growth in the user base.
 
 ## Chosen Libraries:
+
 1. **TensorFlow**: Utilize TensorFlow for building and training deep learning models to predict the nutritional value of food products.
 2. **Scikit-Learn**: Use Scikit-Learn for implementing machine learning algorithms such as regression and classification to analyze the data and make predictions.
 3. **Kafka**: Implement Kafka for real-time data streaming and processing, enabling the system to handle a high volume of data efficiently.
@@ -31,29 +34,36 @@ By incorporating these libraries and following the outlined system design strate
 ## MLOps Infrastructure for Nutritional Value Optimization AI System
 
 ## Objectives:
+
 - Implement a robust MLOps infrastructure to streamline the development, deployment, and monitoring of the Nutritional Value Optimization AI system
 - Ensure seamless integration of machine learning models built using TensorFlow and Scikit-Learn
 - Enable real-time data streaming and processing with Kafka for efficient analysis of food product data
 - Utilize Grafana for visualization and monitoring of metrics related to the system's performance and recommendations
 
 ## Components of MLOps Infrastructure:
+
 1. **Data Pipeline**:
+
    - Kafka is used for real-time data streaming to collect, transform, and feed data to the ML models.
    - Apache Airflow can be integrated for orchestrating data pipelines and scheduling data processing tasks.
 
 2. **Model Training and Deployment**:
+
    - TensorFlow and Scikit-Learn are used to train machine learning models for predicting the nutritional value of food products.
    - Models are deployed using containers (e.g., Docker) and container orchestrators (e.g., Kubernetes) for scalability and reproducibility.
 
 3. **Monitoring and Logging**:
+
    - Grafana is integrated to visualize key metrics related to model performance, data quality, and system health.
    - ELK Stack (Elasticsearch, Logstash, Kibana) can be used for centralized logging and monitoring of system components.
 
 4. **Continuous Integration/Continuous Deployment (CI/CD)**:
+
    - GitLab CI/CD or Jenkins can be utilized for automating model training, testing, and deployment processes.
    - Automated testing ensures the quality of models and code changes before deployment.
 
 5. **Model Versioning and Management**:
+
    - MLflow can be used for tracking experiments, managing model versions, and reproducing results.
    - Model serving can be done through frameworks like TensorFlow Serving or FastAPI for real-time inference.
 
@@ -118,6 +128,7 @@ Nutritional_Value_Optimization_AI/
 ```
 
 In this file structure:
+
 - `data/`: Contains raw and processed data used for training and analysis.
 - `models/`: Stores trained TensorFlow and Scikit-Learn models.
 - `notebooks/`: Holds Jupyter notebooks for exploratory analysis, data preprocessing, and model training/evaluation.
@@ -151,18 +162,17 @@ models/
 ```
 
 In the `models/` directory:
+
 - **`tensorflow_models/`**: Contains TensorFlow models for predicting the nutritional value of food products.
   - **`nutritional_value_prediction/`**: A directory for the specific task of nutritional value prediction.
     - **`model.py`**: Defines the architecture of the neural network model using TensorFlow.
     - **`train.py`**: Script for training the TensorFlow model on the provided dataset.
     - **`inference.py`**: Utilized for making predictions using the trained model.
-  
 - **`scikit_learn_models/`**: Contains Scikit-Learn models for analyzing ingredients and processing methods.
   - **`ingredient_analysis/`**: A subdirectory for analyzing ingredients in food products.
     - **`data_preprocessing.py`**: Script for cleansing and preprocessing the data for model training.
     - **`model_training.py`**: Utilized to train a Scikit-Learn model for ingredient analysis.
     - **`model_evaluation.py`**: Script for evaluating the performance of the trained model.
-    
 - **`README.md`**: Documentation providing details on the models used, their purpose, and guidelines for running and utilizing them within the Nutritional Value Optimization AI system.
 
 By organizing the models into separate directories based on the framework and specific tasks they perform, it facilitates the management, understanding, and maintenance of the AI models involved in enhancing the nutritional value of food products for the public health goals in Peru.
@@ -182,6 +192,7 @@ deployment/
 ```
 
 In the `deployment/` directory:
+
 - **`Dockerfile`**: Contains instructions to build a Docker image for the Nutritional Value Optimization AI application. It specifies the environment, dependencies, and commands needed to run the application within a Docker container.
 
 - **`docker-compose.yml`**: Defines a multi-container application setup using Docker Compose. It orchestrates the deployment of the Nutritional Value Optimization AI system, specifying services, networks, and volumes required for running the application.
@@ -284,23 +295,27 @@ Note: Adjust the algorithm, hyperparameters, and evaluation metrics as needed wh
 ## Types of Users for Nutritional Value Optimization AI System:
 
 1. **Nutrition Researchers**
-   - *User Story*: As a nutrition researcher, I want to analyze the nutritional value of various food products to understand their impact on public health goals and make informed recommendations for improving nutrition.
-   - *Accomplished by*: `models/scikit_learn_models/ingredient_analysis/complex_algorithm.py`
+
+   - _User Story_: As a nutrition researcher, I want to analyze the nutritional value of various food products to understand their impact on public health goals and make informed recommendations for improving nutrition.
+   - _Accomplished by_: `models/scikit_learn_models/ingredient_analysis/complex_algorithm.py`
 
 2. **Food Product Manufacturers**
-   - *User Story*: As a food product manufacturer, I want to optimize the nutritional content of our products by analyzing ingredients and processing methods, ensuring they align with public health goals.
-   - *Accomplished by*: `models/tensorflow_models/nutritional_value_prediction/train.py`
+
+   - _User Story_: As a food product manufacturer, I want to optimize the nutritional content of our products by analyzing ingredients and processing methods, ensuring they align with public health goals.
+   - _Accomplished by_: `models/tensorflow_models/nutritional_value_prediction/train.py`
 
 3. **Health Regulatory Authorities**
-   - *User Story*: As a health regulatory authority, I need to assess the nutritional value of food products in the market to ensure they comply with public health standards and regulations.
-   - *Accomplished by*: `pipelines/data_processing_pipeline.py`
+
+   - _User Story_: As a health regulatory authority, I need to assess the nutritional value of food products in the market to ensure they comply with public health standards and regulations.
+   - _Accomplished by_: `pipelines/data_processing_pipeline.py`
 
 4. **Nutritionists**
-   - *User Story*: As a nutritionist, I aim to provide personalized dietary recommendations to clients based on the nutritional analysis of their food intake and suggest improvements for a healthier diet.
-   - *Accomplished by*: `src/recommendation_engine.py`
+
+   - _User Story_: As a nutritionist, I aim to provide personalized dietary recommendations to clients based on the nutritional analysis of their food intake and suggest improvements for a healthier diet.
+   - _Accomplished by_: `src/recommendation_engine.py`
 
 5. **Consumers**
-   - *User Story*: As a consumer, I want to access information on the nutritional value of food products to make healthier choices and better understand the impact on my overall health.
-   - *Accomplished by*: `notebooks/data_preprocessing.ipynb`
+   - _User Story_: As a consumer, I want to access information on the nutritional value of food products to make healthier choices and better understand the impact on my overall health.
+   - _Accomplished by_: `notebooks/data_preprocessing.ipynb`
 
 By catering to the needs of various user types, the Nutritional Value Optimization AI system can effectively analyze and optimize the nutritional content of food products, contributing to public health goals in Peru.

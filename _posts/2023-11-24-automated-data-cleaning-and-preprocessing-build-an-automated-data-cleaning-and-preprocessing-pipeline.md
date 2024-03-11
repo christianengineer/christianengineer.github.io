@@ -6,15 +6,18 @@ layout: article
 ---
 
 ## Objectives
+
 The objective of the automated data cleaning and preprocessing pipeline repository is to create a robust and scalable system that can handle large volumes of data and perform various data cleaning and preprocessing tasks such as handling missing values, outlier detection, normalization, feature engineering, and more. The repository should provide a set of tools and utilities that enable users to easily integrate and automate these processes into their machine learning pipelines.
 
 ## System Design Strategies
+
 - **Modular Design:** The pipeline should be modular, allowing users to plug in different data cleaning and preprocessing modules based on their specific requirements.
 - **Scalability:** The system should be designed to handle large volumes of data efficiently, leveraging distributed computing if necessary.
 - **Flexibility:** The pipeline should be flexible, allowing users to customize the various data cleaning and preprocessing steps based on their specific use case.
 - **Automation:** The repository should facilitate automation, enabling users to schedule and execute the data cleaning and preprocessing tasks as part of their overall machine learning workflow.
 
 ## Chosen Libraries
+
 - **Pandas:** For data manipulation and preprocessing tasks such as handling missing values, data transformation, and feature engineering.
 - **NumPy:** For numerical computing and array manipulation, which can be useful for outlier detection and normalization.
 - **Scikit-learn:** For a wide range of machine learning utilities including data preprocessing, feature scaling, and outlier detection algorithms.
@@ -27,24 +30,30 @@ By leveraging these libraries, the pipeline can provide a comprehensive set of t
 To build an automated data cleaning and preprocessing pipeline application, we need to consider the infrastructure required to support the scalability, flexibility, and automation of the pipeline.
 
 ## Cloud Infrastructure
+
 - **Compute Resources:** Utilize cloud-based computing resources such as Amazon Web Services (AWS), Microsoft Azure, or Google Cloud Platform to access scalable computing power for processing large volumes of data efficiently.
 - **Storage:** Utilize cloud storage services for storing input and output data, such as Amazon S3, Azure Blob Storage, or Google Cloud Storage. This enables easy access and management of data in a scalable and cost-effective manner.
 - **Data Processing Services:** Leverage cloud-based data processing services like AWS Lambda, Azure Functions, or Google Cloud Functions to execute the data cleaning and preprocessing tasks in a serverless and scalable manner.
 
 ## Containerization
+
 - **Docker:** Containerize the data cleaning and preprocessing pipeline application using Docker to ensure consistency in the development, testing, and deployment environments. This facilitates seamless deployment across different cloud providers and on-premises infrastructure.
 
 ## Orchestration
+
 - **Kubernetes:** Utilize Kubernetes for container orchestration, enabling automated deployment, scaling, and management of the data cleaning and preprocessing pipeline application across a cluster of machines.
 
 ## Automation and Workflow Management
+
 - **Airflow:** Use Apache Airflow for workflow management and automation of data cleaning and preprocessing tasks. Airflow allows the creation of complex workflows, scheduling of tasks, and monitoring of pipeline execution.
 
 ## Monitoring and Logging
+
 - **Logging Services:** Implement centralized logging using tools such as Elasticsearch, Fluentd, and Kibana (EFK stack) or the ELK stack to aggregate logs and monitor the pipeline's health and performance.
 - **Metrics and Monitoring:** Utilize monitoring solutions like Prometheus and Grafana to gather metrics, set up alerts, and visualize the performance of the data cleaning and preprocessing pipeline.
 
 ## Security and Compliance
+
 - **Access Control:** Implement role-based access control and secure key management to restrict access to data and ensure compliance with security standards.
 - **Data Encryption:** Utilize encryption mechanisms for data at rest and in transit to ensure the security of sensitive data processed by the pipeline.
 
@@ -70,7 +79,7 @@ automated_data_preprocessing/
 ├── notebooks/
 │   ├── exploration.ipynb
 │   ├── preprocessing_pipeline.ipynb
-│   
+│
 ├── src/
 │   ├── __init__.py
 │   ├── data_preprocessing/
@@ -78,23 +87,23 @@ automated_data_preprocessing/
 │   │   ├── data_loader.py
 │   │   ├── data_cleaning.py
 │   │   ├── preprocessing.py
-│   │   
+│   │
 │   ├── feature_engineering/
 │   │   ├── __init__.py
 │   │   ├── feature_eng.py
-│   │   
+│   │
 │   ├── model_training/
 │   │   ├── __init__.py
 │   │   ├── train_model.py
-│   │   
+│   │
 ├── tests/
 │   ├── test_data_preprocessing.py
 │   ├── test_feature_engineering.py
 │   ├── test_model_training.py
-│   
+│
 ├── config/
 │   ├── config.yaml
-│   
+│
 ├── requirements.txt
 ├── README.md
 └── .gitignore
@@ -102,33 +111,40 @@ automated_data_preprocessing/
 
 ## Folder Structure Explanation
 
-1. **data/**: 
-    - **raw/**: Contains the raw input datasets.
-    - **processed/**: Stores the cleaned and preprocessed datasets.
+1. **data/**:
 
-2. **notebooks/**: 
-    - Jupyter notebooks for data exploration and visualization, and a notebook illustrating the usage of the preprocessing pipeline.
+   - **raw/**: Contains the raw input datasets.
+   - **processed/**: Stores the cleaned and preprocessed datasets.
 
-3. **src/**: 
-    - Contains the source code of the data preprocessing pipeline.
-    - **data_preprocessing/**: Module for data loading, cleaning, and preprocessing.
-    - **feature_engineering/**: Module for feature engineering operations.
-    - **model_training/**: Module for training machine learning models.
+2. **notebooks/**:
 
-4. **tests/**: 
-    - Unit tests for the different modules and functions to ensure the correctness of the data preprocessing pipeline.
+   - Jupyter notebooks for data exploration and visualization, and a notebook illustrating the usage of the preprocessing pipeline.
 
-5. **config/**: 
-    - Configuration files for different settings and parameters used in the pipeline, such as database connections, file paths, and hyperparameters.
+3. **src/**:
 
-6. **requirements.txt**: 
-    - Specifies the required Python packages and their versions for the project.
+   - Contains the source code of the data preprocessing pipeline.
+   - **data_preprocessing/**: Module for data loading, cleaning, and preprocessing.
+   - **feature_engineering/**: Module for feature engineering operations.
+   - **model_training/**: Module for training machine learning models.
 
-7. **README.md**: 
-    - Documentation providing an overview of the project, usage instructions, and any other relevant information.
+4. **tests/**:
 
-8. **.gitignore**: 
-    - Specifies files and directories to be ignored by version control.
+   - Unit tests for the different modules and functions to ensure the correctness of the data preprocessing pipeline.
+
+5. **config/**:
+
+   - Configuration files for different settings and parameters used in the pipeline, such as database connections, file paths, and hyperparameters.
+
+6. **requirements.txt**:
+
+   - Specifies the required Python packages and their versions for the project.
+
+7. **README.md**:
+
+   - Documentation providing an overview of the project, usage instructions, and any other relevant information.
+
+8. **.gitignore**:
+   - Specifies files and directories to be ignored by version control.
 
 By arranging the repository in this structured and modular manner, it facilitates the scalability and maintainability of the automated data cleaning and preprocessing pipeline. Each component is organized into separate modules, allowing for easier development, testing, and expansion of the pipeline.
 
@@ -152,21 +168,23 @@ automated_data_preprocessing/
 
 ## models/ Directory Explanation
 
-1. **__init__.py**: 
-    - Marks the "models" directory as a Python package.
+1. ****init**.py**:
 
-2. **saved_models/**: 
-    - Directory to store the trained machine learning models.
-    - Example files:
-        - **model_1.h5**: Serialized file for a deep learning model trained using TensorFlow or Keras.
-        - **model_2.pkl**: Pickle file for a scikit-learn model.
+   - Marks the "models" directory as a Python package.
 
-3. **model_definition/**: 
-    - Directory containing Python files for model definitions and related utilities.
-    - **__init__.py**: Marks the "model_definition" directory as a Python package.
-    - **regression_model.py**: Python file containing the definition of a regression model, including training and evaluation logic.
-    - **classification_model.py**: Python file containing the definition of a classification model, including training and evaluation logic.
-    - **utils.py**: Python file with utility functions for model evaluation, hyperparameter tuning, and serialization/deserialization of models.
+2. **saved_models/**:
+
+   - Directory to store the trained machine learning models.
+   - Example files:
+     - **model_1.h5**: Serialized file for a deep learning model trained using TensorFlow or Keras.
+     - **model_2.pkl**: Pickle file for a scikit-learn model.
+
+3. **model_definition/**:
+   - Directory containing Python files for model definitions and related utilities.
+   - ****init**.py**: Marks the "model_definition" directory as a Python package.
+   - **regression_model.py**: Python file containing the definition of a regression model, including training and evaluation logic.
+   - **classification_model.py**: Python file containing the definition of a classification model, including training and evaluation logic.
+   - **utils.py**: Python file with utility functions for model evaluation, hyperparameter tuning, and serialization/deserialization of models.
 
 This directory structure allows for a clear organization of the machine learning models and their related files. The "saved_models" directory provides a dedicated location to store the serialized trained models, ensuring easy access and management. The "model_definition" directory contains the model definition files, dividing the machine learning logic into separate modules for regression, classification, and utilities, promoting modularity and reusability.
 
@@ -196,31 +214,37 @@ automated_data_preprocessing/
 
 ## deployment/ Directory Explanation
 
-1. **README.md**: 
-    - Documentation providing instructions for deployment, setup, and execution of the data cleaning and preprocessing pipeline.
+1. **README.md**:
 
-2. **run_pipeline.sh**: 
-    - Bash script to execute the data cleaning and preprocessing pipeline. It may include commands for running the pipeline locally or within a containerized environment.
+   - Documentation providing instructions for deployment, setup, and execution of the data cleaning and preprocessing pipeline.
 
-3. **Dockerfile**: 
-    - Specification for building a Docker image for the data cleaning and preprocessing pipeline. It contains the necessary steps to set up the environment and execute the pipeline.
+2. **run_pipeline.sh**:
 
-4. **docker-compose.yml**: 
-    - Configuration file for defining and running multi-container Docker applications. It may define services for the pipeline, databases, and other dependencies.
+   - Bash script to execute the data cleaning and preprocessing pipeline. It may include commands for running the pipeline locally or within a containerized environment.
 
-5. **airflow/**: 
-    - Subdirectory containing files related to Apache Airflow setup for workflow management and automation of the pipeline.
-    - **dags/**: Directory for Apache Airflow Directed Acyclic Graphs (DAGs).
-        - **data_preprocessing_dag.py**: Python file defining the DAG for the data cleaning and preprocessing pipeline, including the sequence of tasks and their dependencies.
+3. **Dockerfile**:
 
-    - **plugins/**: Directory for Apache Airflow custom plugins and operators.
-        - **preprocessing_plugin.py**: Python file containing custom Airflow operator definitions and hooks for the data preprocessing tasks.
+   - Specification for building a Docker image for the data cleaning and preprocessing pipeline. It contains the necessary steps to set up the environment and execute the pipeline.
 
-6. **custom_operators/**: 
-    - Subdirectory containing custom operators for Apache Airflow, each performing specific data processing tasks.
-    - **data_loading_operator.py**: Python file defining an Airflow operator to load data from a source.
-    - **data_cleaning_operator.py**: Python file defining an Airflow operator to perform data cleaning tasks.
-    - **preprocessing_operator.py**: Python file defining an Airflow operator to execute the preprocessing pipeline.
+4. **docker-compose.yml**:
+
+   - Configuration file for defining and running multi-container Docker applications. It may define services for the pipeline, databases, and other dependencies.
+
+5. **airflow/**:
+
+   - Subdirectory containing files related to Apache Airflow setup for workflow management and automation of the pipeline.
+   - **dags/**: Directory for Apache Airflow Directed Acyclic Graphs (DAGs).
+
+     - **data_preprocessing_dag.py**: Python file defining the DAG for the data cleaning and preprocessing pipeline, including the sequence of tasks and their dependencies.
+
+   - **plugins/**: Directory for Apache Airflow custom plugins and operators.
+     - **preprocessing_plugin.py**: Python file containing custom Airflow operator definitions and hooks for the data preprocessing tasks.
+
+6. **custom_operators/**:
+   - Subdirectory containing custom operators for Apache Airflow, each performing specific data processing tasks.
+   - **data_loading_operator.py**: Python file defining an Airflow operator to load data from a source.
+   - **data_cleaning_operator.py**: Python file defining an Airflow operator to perform data cleaning tasks.
+   - **preprocessing_operator.py**: Python file defining an Airflow operator to execute the preprocessing pipeline.
 
 By organizing the "deployment" directory in this manner, it facilitates the deployment, execution, and automation of the data cleaning and preprocessing pipeline. The inclusion of deployment instructions, scripting for pipeline execution, Docker-related files, and Apache Airflow setup exemplify the comprehensive approach to deploying and managing the automated data cleaning and preprocessing pipeline application.
 
@@ -254,7 +278,7 @@ def complex_ml_algorithm(data_path):
 
     ## Evaluate the model
     accuracy = accuracy_score(y_test, y_pred)
-    
+
     return model, accuracy
 
 ## File path for the mock data
@@ -273,7 +297,6 @@ In this Python function for a complex machine learning algorithm, we first load 
 The function returns the trained model and its accuracy. The file path for the mock data is specified as `data/processed/mock_data.csv`.
 
 When the function is executed, it loads the mock data, trains the complex machine learning algorithm, evaluates its accuracy, and prints the accuracy score along with the details of the trained model.
-
 
 ```python
 import numpy as np
@@ -321,7 +344,7 @@ def complex_deep_learning_algorithm(data_path):
     y_pred_prob = model.predict(X_test)
     y_pred = (y_pred_prob > 0.5).astype(int)  ## convert probabilities to binary predictions
     accuracy = accuracy_score(y_test, y_pred)
-    
+
     return model, accuracy
 
 ## File path for the mock data
@@ -335,7 +358,7 @@ print(f"Accuracy of the trained deep learning model: {accuracy}")
 print(trained_model.summary())
 ```
 
-In this Python function for a complex deep learning algorithm, we load mock data from a CSV file specified by the `data_path`. We then perform data cleaning, preprocessing, splitting into training and testing sets, and standardizing the features. 
+In this Python function for a complex deep learning algorithm, we load mock data from a CSV file specified by the `data_path`. We then perform data cleaning, preprocessing, splitting into training and testing sets, and standardizing the features.
 
 Subsequently, we initialize a deep learning model using TensorFlow's Keras API, compile the model, and train it on the training data. After training, we evaluate the model's accuracy on the testing data and return the trained model along with its accuracy.
 
@@ -346,23 +369,27 @@ When the function is executed, it loads the mock data, trains the deep learning 
 ### Types of Users for the Automated Data Cleaning and Preprocessing Pipeline Application
 
 1. **Data Scientist**
-    - *User Story*: As a Data Scientist, I want to be able to easily load, clean, and preprocess data for my machine learning projects, allowing me to focus on model building and analysis.
-    - *File*: `src/data_preprocessing/data_loader.py` and `src/data_preprocessing/preprocessing.py`
+
+   - _User Story_: As a Data Scientist, I want to be able to easily load, clean, and preprocess data for my machine learning projects, allowing me to focus on model building and analysis.
+   - _File_: `src/data_preprocessing/data_loader.py` and `src/data_preprocessing/preprocessing.py`
 
 2. **Machine Learning Engineer**
-    - *User Story*: As a Machine Learning Engineer, I need a reusable and modular pipeline for data preprocessing that integrates seamlessly with model training and deployment processes.
-    - *File*: `src/data_preprocessing/preprocessing.py` and `models/`
+
+   - _User Story_: As a Machine Learning Engineer, I need a reusable and modular pipeline for data preprocessing that integrates seamlessly with model training and deployment processes.
+   - _File_: `src/data_preprocessing/preprocessing.py` and `models/`
 
 3. **DevOps Engineer**
-    - *User Story*: As a DevOps Engineer, I want to deploy the data preprocessing pipeline using containerization and orchestration to ensure scalability, reliability, and ease of management.
-    - *File*: `deployment/Dockerfile` and `deployment/docker-compose.yml`
+
+   - _User Story_: As a DevOps Engineer, I want to deploy the data preprocessing pipeline using containerization and orchestration to ensure scalability, reliability, and ease of management.
+   - _File_: `deployment/Dockerfile` and `deployment/docker-compose.yml`
 
 4. **Data Engineer**
-    - *User Story*: As a Data Engineer, I need tools to automate data cleaning and transformation tasks at scale and integrate them with our data infrastructure and ETL processes.
-    - *File*: `src/data_preprocessing/data_loader.py` and `deployment/airflow/`
+
+   - _User Story_: As a Data Engineer, I need tools to automate data cleaning and transformation tasks at scale and integrate them with our data infrastructure and ETL processes.
+   - _File_: `src/data_preprocessing/data_loader.py` and `deployment/airflow/`
 
 5. **Business Analyst**
-    - *User Story*: As a Business Analyst, I want to explore and visualize the data cleaning and preprocessing steps to gain insights and effectively communicate findings to stakeholders.
-    - *File*: `notebooks/exploration.ipynb` and `src/data_preprocessing/data_loader.py`
+   - _User Story_: As a Business Analyst, I want to explore and visualize the data cleaning and preprocessing steps to gain insights and effectively communicate findings to stakeholders.
+   - _File_: `notebooks/exploration.ipynb` and `src/data_preprocessing/data_loader.py`
 
 By addressing the needs of each type of user through designated files and functionalities, the Automated Data Cleaning and Preprocessing Pipeline Application aims to provide a comprehensive solution for data preparation in various domains.

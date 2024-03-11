@@ -8,17 +8,20 @@ layout: article
 ## AI Dynamic Pricing Model for Peru Food Markets
 
 ## Objectives:
+
 1. **Real-time Price Adaptation**: The model should be able to adjust prices dynamically based on real-time insights into supply, demand, and market conditions.
 2. **Maximize Profitability**: Optimize prices to maximize profits for the sellers while considering the competitive landscape.
 3. **Market Competitiveness**: Ensure that the prices set maintain competitiveness in the market and attract customers.
 
 ## System Design Strategies:
+
 1. **Data Collection**: Collect real-time data on market conditions, supply, demand, competitor prices, and other relevant factors. Use Pandas for data manipulation and preprocessing.
 2. **Machine Learning Model**: Utilize Keras to build a machine learning model that predicts optimal prices based on the collected data.
 3. **Dynamic Pricing Engine**: Develop a Flask-based dynamic pricing engine that integrates the ML model to adjust prices in real-time.
 4. **Monitoring and Analytics**: Use Prometheus for monitoring key metrics such as profitability, price adjustments, market share, and customer response.
 
 ## Chosen Libraries:
+
 1. **Keras**: Keras is a high-level neural networks API that is easy to use and allows for rapid prototyping of deep learning models.
 2. **Pandas**: Pandas is a powerful data manipulation and analysis library that is ideal for handling the large volumes of data required for training and updating the pricing model.
 3. **Flask**: Flask is a lightweight and efficient web framework that can be used to build the dynamic pricing engine with endpoints for real-time price adjustments.
@@ -27,6 +30,7 @@ layout: article
 ## MLOps Infrastructure for Dynamic Pricing Model
 
 ## Key Components:
+
 1. **Data Pipeline**: Automate data collection, preprocessing, and feature engineering using Pandas to ensure a continuous flow of data for model training and inference.
 2. **Model Training**: Implement a pipeline to train and update the Keras machine learning model based on the latest data. Use version control for model artifacts and tracking using tools like Git.
 3. **Model Deployment**: Set up a deployment pipeline using Flask to deploy the trained model as a service for real-time price adaptation.
@@ -35,6 +39,7 @@ layout: article
 6. **Security and Compliance**: Ensure data security and compliance with regulations by implementing appropriate access controls, encryption, and monitoring mechanisms.
 
 ## Workflow:
+
 1. **Data Collection**: Gather data on supply, demand, market conditions, and competitor prices from various sources.
 2. **Data Preprocessing**: Use Pandas for data cleaning, feature engineering, and transformation to prepare the data for training.
 3. **Model Training**: Train the Keras machine learning model on historical data to predict optimal prices based on market dynamics.
@@ -45,6 +50,7 @@ layout: article
 8. **Continuous Improvement**: Implement a process for retraining the model periodically with new data to adapt to changing market conditions and improve performance.
 
 ## Benefits:
+
 1. **Scalability**: The MLOps infrastructure allows the dynamic pricing model to scale with increasing data volume and user demand.
 2. **Reliability**: Automated pipelines minimize manual intervention and reduce errors in data processing, model training, and deployment.
 3. **Efficiency**: Streamlined workflows and monitoring capabilities improve the efficiency of the AI application development and deployment process.
@@ -87,6 +93,7 @@ dynamic-pricing-model-peru-food-markets/
 ```
 
 In this file structure:
+
 - **data/** directory holds raw and processed data along with a script for data loading and preprocessing.
 - **models/** directory contains scripts for Keras model implementation, training, and evaluation.
 - **deployment/** directory consists of the Flask application for real-time price adaptation, with subdirectories for application scripts and Dockerfile for containerization.
@@ -110,10 +117,12 @@ models/
 ## Files Description:
 
 1. **keras_model.py**:
+
    - This file contains the implementation of the Keras machine learning model used for predicting optimal prices based on supply, demand, and market conditions.
    - It includes the architecture of the neural network, data preprocessing steps specific to the model, and any custom layers or functions required for the pricing prediction.
 
 2. **model_training.py**:
+
    - The script is responsible for training and updating the Keras model based on the latest data available.
    - It loads the processed data, splits it into training and validation sets, trains the model, and saves the updated model weights for deployment.
    - The script may also include hyperparameter tuning, cross-validation, and any other training procedures specific to the model.
@@ -141,6 +150,7 @@ deployment/
 ## Files Description:
 
 1. **flask_app/**:
+
    - **app.py**: This is the main script for the Flask application responsible for handling HTTP requests, routing, and overall application configuration.
    - **routes.py**: Contains API routes for interacting with the dynamic pricing model, allowing real-time price adjustments based on supply, demand, and market conditions.
    - **pricing_engine.py**: Implements the pricing engine that integrates the Keras model for making price predictions and adjustments in real-time based on incoming data.
@@ -154,6 +164,7 @@ The **deployment** directory handles the deployment aspects of the Dynamic Prici
 ## Model Training Script for Dynamic Pricing Model
 
 ## File: model_training.py
+
 ### File Path: models/model_training.py
 
 ```python
@@ -203,6 +214,7 @@ The file path for this script is `models/model_training.py`, located in the `mod
 ## Complex Machine Learning Algorithm for Dynamic Pricing Model
 
 ## File: complex_model_algorithm.py
+
 ### File Path: models/complex_model_algorithm.py
 
 ```python
@@ -260,18 +272,22 @@ The file path for this script is `models/complex_model_algorithm.py`, located in
 ## Type of Users for the Dynamic Pricing Model
 
 1. **Market Analyst:**
+
    - **User Story**: As a Market Analyst, I want to access real-time pricing data and analytics generated by the Dynamic Pricing Model to analyze market trends, competitor pricing strategies, and make informed recommendations to optimize pricing for different products.
    - **Accomplished by**: Monitoring and analytics scripts, such as `monitoring/prometheus_config.yml` and `monitoring/logging.py`.
 
 2. **Store Owner:**
+
    - **User Story**: As a Store Owner, I want to interact with the pricing engine through the Flask application to view and adjust prices of specific products based on supply, demand, and market conditions to maximize profitability and maintain competitiveness.
    - **Accomplished by**: Flask application scripts, including `deployment/flask_app/app.py` and `deployment/flask_app/routes.py`.
 
 3. **Data Scientist:**
+
    - **User Story**: As a Data Scientist, I want to utilize the machine learning models developed in the Dynamic Pricing Model to experiment with different algorithms, feature engineering techniques, and evaluate model performance using actual and mock data.
    - **Accomplished by**: Model training scripts like `models/model_training.py` and more complex model algorithm scripts such as `models/complex_model_algorithm.py`.
 
 4. **System Administrator:**
+
    - **User Story**: As a System Administrator, I want to ensure the seamless deployment and operation of the Dynamic Pricing Model, monitor system performance, and handle any necessary maintenance tasks to keep the application running smoothly.
    - **Accomplished by**: Dockerfile for containerization `deployment/Dockerfile` and monitoring setup in `monitoring/` directory.
 

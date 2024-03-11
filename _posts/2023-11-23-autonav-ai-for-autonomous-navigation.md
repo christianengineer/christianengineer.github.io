@@ -47,12 +47,15 @@ The infrastructure for the AutoNav AI for Autonomous Navigation application play
 Given the data-intensive nature of autonomous navigation and the need for scalable computing resources, a cloud-based infrastructure is well-suited for the AutoNav AI application. Cloud providers such as Amazon Web Services (AWS), Microsoft Azure, or Google Cloud Platform (GCP) offer the following services that can support the AutoNav AI infrastructure:
 
 1. **Compute Resources:**
+
    - Virtual Machines (VMs) or Container Services: These can be used to host the computational units responsible for real-time data processing, machine learning model training, and decision making. Depending on the workload, the choice between VMs and container services (e.g., AWS EC2, Azure Virtual Machines, or Google Kubernetes Engine) should be made to optimize resource utilization and scalability.
 
 2. **Data Storage:**
+
    - Object Storage: Services like Amazon S3, Azure Blob Storage, or Google Cloud Storage can be used for storing sensor data, training data, and model checkpoints. This allows for efficient retrieval of data and facilitates data sharing among different components of the system.
 
 3. **Machine Learning Services:**
+
    - Managed Machine Learning Services: Cloud providers offer managed machine learning services such as AWS SageMaker, Azure Machine Learning, and Google Cloud AI Platform. These services can be leveraged for training and deploying machine learning models, providing scalability and infrastructure management for the AI functionality of AutoNav.
 
 4. **Networking and Communication:**
@@ -422,6 +425,7 @@ def complex_deep_learning_algorithm(data_file_path):
 ```
 
 In this example:
+
 - The function `complex_deep_learning_algorithm` takes a `data_file_path` as input, representing the path to the file containing mock data for training the complex deep learning model.
 - The mock data file is loaded using NumPy, assuming it contains `features` and `labels`.
 - The mock data is preprocessed (using placeholder functions `preprocess_features` and `preprocess_labels`) to prepare it for training.
@@ -437,28 +441,28 @@ The `data_file_path` parameter is utilized to provide the path to the file conta
 Below is a list of potential types of users for the AutoNav AI for Autonomous Navigation application, along with a user story for each type of user and the relevant file that would support their user story:
 
 1. **Autonomous Vehicle Developer:**
-   
-   - *User Story*: As an autonomous vehicle developer, I want to integrate the AutoNav AI system into our vehicle's navigation system to enable real-time object detection and path planning for safe and efficient autonomous navigation in various environments.
-   - *Relevant File*: `models/planning/path_planning_model.pkl` would be relevant for this user as it contains the serialized model for path planning.
+
+   - _User Story_: As an autonomous vehicle developer, I want to integrate the AutoNav AI system into our vehicle's navigation system to enable real-time object detection and path planning for safe and efficient autonomous navigation in various environments.
+   - _Relevant File_: `models/planning/path_planning_model.pkl` would be relevant for this user as it contains the serialized model for path planning.
 
 2. **Robotics Researcher:**
-   
-   - *User Story*: As a researcher in the field of robotics, I want to explore the machine learning algorithms utilized in the AutoNav AI system to analyze their performance and potentially adapt them for research in robotic systems.
-   - *Relevant File*: `models/README.md` would be relevant for this user as it provides an overview of the models directory.
+
+   - _User Story_: As a researcher in the field of robotics, I want to explore the machine learning algorithms utilized in the AutoNav AI system to analyze their performance and potentially adapt them for research in robotic systems.
+   - _Relevant File_: `models/README.md` would be relevant for this user as it provides an overview of the models directory.
 
 3. **System Integrator:**
-   
-   - *User Story*: As a system integrator, I need to understand the deployment process for the AutoNav AI system to ensure seamless integration with our existing autonomous vehicle platform.
-   - *Relevant File*: `deployment/documentation/deployment_guide.md` would be relevant for this user as it provides detailed deployment documentation.
+
+   - _User Story_: As a system integrator, I need to understand the deployment process for the AutoNav AI system to ensure seamless integration with our existing autonomous vehicle platform.
+   - _Relevant File_: `deployment/documentation/deployment_guide.md` would be relevant for this user as it provides detailed deployment documentation.
 
 4. **Data Scientist:**
-   
-   - *User Story*: As a data scientist, I want to evaluate the performance of the object detection model in the AutoNav AI system using my custom evaluation metrics and test dataset.
-   - *Relevant File*: `models/evaluation/model_evaluation_utils.py` would be relevant for this user as it contains utility functions for model evaluation.
+
+   - _User Story_: As a data scientist, I want to evaluate the performance of the object detection model in the AutoNav AI system using my custom evaluation metrics and test dataset.
+   - _Relevant File_: `models/evaluation/model_evaluation_utils.py` would be relevant for this user as it contains utility functions for model evaluation.
 
 5. **DevOps Engineer:**
-   
-   - *User Story*: As a DevOps engineer, I am responsible for deploying the AutoNav AI system on a Kubernetes cluster, ensuring scalability and high availability.
-   - *Relevant File*: `deployment/kubernetes/deployment.yaml` would be relevant for this user as it contains the Kubernetes deployment configuration file.
+
+   - _User Story_: As a DevOps engineer, I am responsible for deploying the AutoNav AI system on a Kubernetes cluster, ensuring scalability and high availability.
+   - _Relevant File_: `deployment/kubernetes/deployment.yaml` would be relevant for this user as it contains the Kubernetes deployment configuration file.
 
 These user stories and relevant files cater to different stakeholders who would interact with the AutoNav AI for Autonomous Navigation application, providing them with the specific information and resources they require based on their roles and responsibilities.

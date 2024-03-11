@@ -8,11 +8,13 @@ layout: article
 ## AI Waste Reduction System for Peru Food Enterprises
 
 ## Objectives
+
 - Identify patterns in the supply chain that lead to waste
 - Recommend interventions to reduce waste and improve sustainability
 - Build a scalable, data-intensive AI application utilizing Machine Learning
 
 ## System Design Strategies
+
 1. **Data Collection**: Gather data from various sources in the supply chain including suppliers, distributors, and retailers.
 2. **Data Preprocessing**: Clean and preprocess data to make it suitable for training ML models.
 3. **Feature Engineering**: Extract relevant features from the data that can help in identifying waste patterns.
@@ -24,6 +26,7 @@ layout: article
 9. **Version Control**: Utilize tools like DVC (Data Version Control) to track changes in data, models, and code.
 
 ## Chosen Libraries
+
 1. **PyTorch**: For developing deep learning models to identify complex patterns in the supply chain data.
 2. **Scikit-Learn**: For building traditional machine learning models for waste pattern recognition and intervention recommendation.
 3. **Apache Spark**: For handling big data processing and scalability of the system.
@@ -34,26 +37,31 @@ By integrating these design strategies and leveraging the chosen libraries, the 
 ## MLOps Infrastructure for Waste Reduction AI
 
 ## Continuous Integration/Continuous Deployment (CI/CD)
+
 - **Pipeline Automation**: Develop CI/CD pipelines to automate the training, evaluation, and deployment of ML models.
 - **Versioning**: Utilize version control systems like Git to manage code, data, and models.
 - **Testing**: Implement automated testing to ensure the correctness of the ML models before deployment.
 
 ## Model Monitoring
+
 - **Performance Monitoring**: Track the performance of the ML models in production to identify degradation over time.
 - **Data Drift Detection**: Monitor for changes in data distribution that may affect model performance.
 - **Alerting**: Set up alerts for detecting anomalies in model behavior or data characteristics.
 
 ## Scalability and Resource Management
+
 - **Containerization**: Containerize ML models using Docker for consistency in deployment.
 - **Orchestration**: Use tools like Kubernetes for container orchestration to manage resources efficiently.
 - **Scalable Infrastructure**: Deploy the application on cloud platforms like AWS or Google Cloud for scalability.
 
 ## Data Management
+
 - **Data Versioning**: Utilize DVC for versioning datasets and ensuring reproducibility.
 - **Data Quality Monitoring**: Implement data quality checks to ensure the integrity of input data.
 - **Data Pipelines**: Build data pipelines using tools like Apache Spark for processing large volumes of data efficiently.
 
 ## Infrastructure as Code (IaC)
+
 - **Automation**: Define infrastructure components as code using tools like Terraform or CloudFormation for reproducibility.
 - **Environment Management**: Manage different environments (development, testing, production) using IaC for consistency.
 
@@ -124,6 +132,7 @@ models/
 ```
 
 ## Description:
+
 - **pytorch_model.py**: Contains the PyTorch neural network model implementation specifically designed for identifying waste patterns in the supply chain data. It includes the model architecture, training loop, and evaluation functions.
 - **pytorch_utils.py**: Contains utility functions to support PyTorch model training and evaluation, such as data loading, preprocessing, and model evaluation metrics.
 - **saved_models/**: Directory to store trained PyTorch models for later use.
@@ -151,6 +160,7 @@ deployment/
 ```
 
 ## Description:
+
 - **app/main.py**: This script serves as the main application file that interacts with the AI models developed using PyTorch, Scikit-Learn, and Spark. It can handle user input, process requests, and provide recommendations for waste reduction interventions based on the identified patterns in the supply chain data.
 
 - **app/templates/**: This directory contains HTML templates for the web application, allowing for a user-friendly interface for accessing and utilizing the Waste Reduction AI.
@@ -220,7 +230,7 @@ class ComplexModel(nn.Module):
         self.fc3 = nn.Linear(64, 2)
         self.relu = nn.ReLU()
         self.softmax = nn.Softmax(dim=1)
-    
+
     def forward(self, x):
         x = self.relu(self.fc1(x))
         x = self.relu(self.fc2(x))
@@ -257,22 +267,27 @@ This Python script `complex_model.py` showcases the implementation of a complex 
 ## Users of Waste Reduction AI for Peru Food Enterprises
 
 ## 1. Supply Chain Manager
+
 **User Story:** As a Supply Chain Manager at Peru Food Enterprises, I need to identify patterns leading to waste in the supply chain to make informed decisions on interventions for waste reduction and sustainability improvement.
-**File for User:** `src/pipelines/ml_pipeline.py` 
+**File for User:** `src/pipelines/ml_pipeline.py`
 
 ## 2. Data Scientist
+
 **User Story:** As a Data Scientist at Peru Food Enterprises, I am responsible for training and evaluating ML models to identify waste patterns in the supply chain using machine learning algorithms like PyTorch, Scikit-Learn, and Spark.
 **File for User:** `src/model_training/train_model.py`
 
 ## 3. Sustainability Analyst
+
 **User Story:** As a Sustainability Analyst at Peru Food Enterprises, I utilize the Waste Reduction AI to recommend interventions that will positively impact sustainability metrics and reduce waste in the supply chain.
 **File for User:** `src/models/pytorch/complex_model.py`
 
 ## 4. IT Administrator
+
 **User Story:** As an IT Administrator supporting Peru Food Enterprises, I deploy and manage the infrastructure and MLOps processes for the waste reduction AI application to ensure scalability, reliability, and performance.
 **File for User:** `deployment/Dockerfile`
 
 ## 5. Business Executive
+
 **User Story:** As a Business Executive at Peru Food Enterprises, I rely on insights generated by the Waste Reduction AI to make strategic decisions that enhance operational efficiency, reduce costs, and promote sustainability.
 **File for User:** `src/app/main.py`
 

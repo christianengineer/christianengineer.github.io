@@ -6,9 +6,11 @@ layout: article
 ---
 
 ### Objectives
+
 The main objectives of the AI system for monitoring environmental parameters are to collect, analyze, and interpret data to monitor the environmental parameters such as air quality, temperature, humidity, and other relevant metrics. The system should be able to detect anomalies, predict trends, and provide valuable insights for decision-making to mitigate environmental risks.
 
 ### System Design Strategies
+
 1. **Data Collection**: Implement a robust data collection pipeline to gather real-time or historical data from various sources such as IoT sensors, weather stations, satellites, and environmental databases.
 
 2. **Data Preprocessing**: Clean, normalize, and preprocess the collected data to ensure consistency and reliability.
@@ -42,35 +44,43 @@ By leveraging these libraries and tools, the AI system for monitoring environmen
 ### Infrastructure for AI for Environmental Monitoring
 
 #### 1. Cloud Computing Platform
-   - Utilize a cloud platform such as Amazon Web Services (AWS), Microsoft Azure, or Google Cloud Platform to host the AI system. This provides scalability, flexibility, and cost-effectiveness.
-   
+
+- Utilize a cloud platform such as Amazon Web Services (AWS), Microsoft Azure, or Google Cloud Platform to host the AI system. This provides scalability, flexibility, and cost-effectiveness.
+
 #### 2. Data Storage
-   - **Data Lake**: Store raw and processed data in a data lake to accommodate structured and unstructured environmental data. AWS S3 or Azure Data Lake Storage are suitable options.
-   - **Relational Database**: Use a relational database (e.g., Amazon RDS, Azure SQL Database) for structured data storage and retrieval where necessary.
-   
+
+- **Data Lake**: Store raw and processed data in a data lake to accommodate structured and unstructured environmental data. AWS S3 or Azure Data Lake Storage are suitable options.
+- **Relational Database**: Use a relational database (e.g., Amazon RDS, Azure SQL Database) for structured data storage and retrieval where necessary.
+
 #### 3. Data Processing
-   - **Apache Spark**: Deploy Spark clusters for distributed data processing to handle large volumes of environmental data efficiently.
-   - **Kafka**: Utilize Kafka for real-time data streaming and processing to enable immediate response to critical environmental changes.
+
+- **Apache Spark**: Deploy Spark clusters for distributed data processing to handle large volumes of environmental data efficiently.
+- **Kafka**: Utilize Kafka for real-time data streaming and processing to enable immediate response to critical environmental changes.
 
 #### 4. Machine Learning Infrastructure
-   - **TensorFlow Extended (TFX)**: Use TFX for building end-to-end machine learning pipelines, including data validation, model training, and model deployment.
-   - **Kubernetes**: Manage machine learning model deployment and scaling using Kubernetes for container orchestration.
-   
+
+- **TensorFlow Extended (TFX)**: Use TFX for building end-to-end machine learning pipelines, including data validation, model training, and model deployment.
+- **Kubernetes**: Manage machine learning model deployment and scaling using Kubernetes for container orchestration.
+
 #### 5. Application Infrastructure
-   - **Microservices Architecture**: Implement the AI system using a microservices architecture, enabling scalability, modularity, and ease of maintenance.
-   - **RESTful APIs**: Build RESTful APIs using frameworks like Flask or Django to serve predictive models and allow integration with other systems or user interfaces.
+
+- **Microservices Architecture**: Implement the AI system using a microservices architecture, enabling scalability, modularity, and ease of maintenance.
+- **RESTful APIs**: Build RESTful APIs using frameworks like Flask or Django to serve predictive models and allow integration with other systems or user interfaces.
 
 #### 6. Monitoring and Logging
-   - **ELK Stack**: Employ the ELK (Elasticsearch, Logstash, Kibana) stack for centralized logging, log analysis, and monitoring of the AI system.
-   - **Prometheus and Grafana**: Monitor infrastructure and application metrics using Prometheus for metrics collection and Grafana for visualization.
+
+- **ELK Stack**: Employ the ELK (Elasticsearch, Logstash, Kibana) stack for centralized logging, log analysis, and monitoring of the AI system.
+- **Prometheus and Grafana**: Monitor infrastructure and application metrics using Prometheus for metrics collection and Grafana for visualization.
 
 #### 7. Security and Compliance
-   - **Identity and Access Management (IAM)**: Implement role-based access control and permissions management for secure data access.
-   - **Data Encryption**: Apply encryption for data at rest and in transit to ensure data security and compliance with regulations.
+
+- **Identity and Access Management (IAM)**: Implement role-based access control and permissions management for secure data access.
+- **Data Encryption**: Apply encryption for data at rest and in transit to ensure data security and compliance with regulations.
 
 #### 8. DevOps and Automation
-   - **CI/CD Pipelines**: Set up continuous integration and continuous deployment pipelines to automate testing, deployment, and monitoring processes.
-   - **Infrastructure as Code**: Utilize tools like Terraform or AWS CloudFormation for defining and provisioning infrastructure in a repeatable and automated manner.
+
+- **CI/CD Pipelines**: Set up continuous integration and continuous deployment pipelines to automate testing, deployment, and monitoring processes.
+- **Infrastructure as Code**: Utilize tools like Terraform or AWS CloudFormation for defining and provisioning infrastructure in a repeatable and automated manner.
 
 By establishing this infrastructure, the AI system for environmental monitoring will have the capacity to efficiently process, analyze, and derive insights from extensive environmental data while ensuring scalability, reliability, and security.
 
@@ -210,6 +220,7 @@ models/
 ### Explanation of Files and Structure
 
 1. **Saved Models**
+
    - The `saved_models` directory organizes trained models based on the environmental parameter they are designed to predict, such as `air_quality` and `temperature`.
    - Under each environmental parameter, different machine learning or deep learning algorithms used for modeling are arranged, such as `decision_tree`, `random_forest`, `lstm`, and `linear_regression`.
    - For each algorithm and timestamp of training, a subdirectory is created. It includes the serialized model file (e.g., `model.pkl` for scikit-learn models, `model.h5` for Keras models) and a `metadata.json` file containing information about the model, such as hyperparameters, performance metrics, and model version.
@@ -267,18 +278,23 @@ deployment/
 ### Explanation of Files and Structure
 
 1. **Docker**
+
    - The `docker` directory contains the `Dockerfile` and `requirements.txt` file necessary for building a Docker image encapsulating the AI system and its dependencies.
 
 2. **Kubernetes**
+
    - The `kubernetes` directory includes the Kubernetes deployment and service configuration files (`deployment.yaml` and `service.yaml`) for deploying the AI system as a containerized application on a Kubernetes cluster.
 
 3. **Scripts**
+
    - The `scripts` directory holds scripts for environment setup, deployment, and other operational tasks, such as `setup.sh`, `deploy.sh`, etc.
 
 4. **Config**
+
    - The `config` directory contains environment-specific configurations, including environment variables in an `environment_variables.env` file.
 
 5. **Models**
+
    - The `models` directory stores the selected final models for each environmental parameter, along with their corresponding metadata files. This ensures that the required models are easily accessible for deployment.
 
 6. **App**
@@ -323,6 +339,7 @@ def train_air_quality_model(data_file_path):
 ```
 
 In this example:
+
 - `train_air_quality_model` is the function responsible for training the air quality prediction model.
 - It accepts `data_file_path` as the input, which represents the file path of the mock data in a CSV file.
 - The function reads the data, preprocesses it, and trains a RandomForestClassifier model.
@@ -382,6 +399,7 @@ def train_temperature_lstm_model(data_file_path):
 ```
 
 In this example:
+
 - `train_temperature_lstm_model` is the function responsible for training the temperature prediction LSTM model.
 - It accepts `data_file_path` as the input, which represents the file path of the mock data in a CSV file.
 - The function reads the data, preprocesses it for LSTM input, and trains an LSTM model using Keras.
@@ -394,23 +412,27 @@ Replace `data_file_path` with the actual file path of the mock data CSV file to 
 ### Types of Users
 
 1. **Environmental Scientist**
-   - *User Story*: As an environmental scientist, I need to analyze long-term trends in air quality using historical data to understand the effects of pollution on public health.
-   - *File*: The environmental scientist would likely use the Jupyter notebooks in the `notebooks/` directory, such as `exploratory_analysis.ipynb` and `data_preprocessing.ipynb`, to explore the historical air quality data, perform statistical analysis, and preprocess the data for further analysis.
+
+   - _User Story_: As an environmental scientist, I need to analyze long-term trends in air quality using historical data to understand the effects of pollution on public health.
+   - _File_: The environmental scientist would likely use the Jupyter notebooks in the `notebooks/` directory, such as `exploratory_analysis.ipynb` and `data_preprocessing.ipynb`, to explore the historical air quality data, perform statistical analysis, and preprocess the data for further analysis.
 
 2. **Data Engineer**
-   - *User Story*: As a data engineer, I need to ensure the smooth operation of the data collection pipeline and maintain the data infrastructure to support the AI system.
-   - *File*: The data engineer would rely on the scripts and code files in the `src/data_collection/` and `src/feature_engineering/` directories to maintain and optimize the data collection and preprocessing processes. They would also work with the configuration files in the `config/` directory to manage environment-specific settings.
+
+   - _User Story_: As a data engineer, I need to ensure the smooth operation of the data collection pipeline and maintain the data infrastructure to support the AI system.
+   - _File_: The data engineer would rely on the scripts and code files in the `src/data_collection/` and `src/feature_engineering/` directories to maintain and optimize the data collection and preprocessing processes. They would also work with the configuration files in the `config/` directory to manage environment-specific settings.
 
 3. **Machine Learning Researcher**
-   - *User Story*: As a machine learning researcher, I aim to develop and experiment with new machine learning algorithms for predictive modeling of environmental parameters.
-   - *File*: The machine learning researcher would work with the Jupyter notebook `modeling.ipynb` in the `notebooks/` directory to experiment with different models and algorithms for environmental parameter prediction, as well as the scripts in the `src/modeling/` directory to develop and evaluate new machine learning models.
+
+   - _User Story_: As a machine learning researcher, I aim to develop and experiment with new machine learning algorithms for predictive modeling of environmental parameters.
+   - _File_: The machine learning researcher would work with the Jupyter notebook `modeling.ipynb` in the `notebooks/` directory to experiment with different models and algorithms for environmental parameter prediction, as well as the scripts in the `src/modeling/` directory to develop and evaluate new machine learning models.
 
 4. **System Administrator**
-   - *User Story*: As a system administrator, I am responsible for deploying and maintaining the AI system in a production environment, ensuring high availability and security.
-   - *File*: The system administrator would work with the deployment configurations in the `docker/`, `kubernetes/`, and `scripts/` directories to manage deployment processes and set up scripts. Additionally, they would use the environmental configurations in the `config/` directory to manage environment-specific settings.
+
+   - _User Story_: As a system administrator, I am responsible for deploying and maintaining the AI system in a production environment, ensuring high availability and security.
+   - _File_: The system administrator would work with the deployment configurations in the `docker/`, `kubernetes/`, and `scripts/` directories to manage deployment processes and set up scripts. Additionally, they would use the environmental configurations in the `config/` directory to manage environment-specific settings.
 
 5. **Application End-User**
-   - *User Story*: As a non-technical end-user, I want to access and interact with the AI system to view real-time environmental data and receive alerts for critical environmental changes.
-   - *File*: The application end-user would interact with the deployed RESTful APIs in the `src/api/` directory, particularly the `app.py` file, to access real-time environmental monitoring data and receive alerts.
+   - _User Story_: As a non-technical end-user, I want to access and interact with the AI system to view real-time environmental data and receive alerts for critical environmental changes.
+   - _File_: The application end-user would interact with the deployed RESTful APIs in the `src/api/` directory, particularly the `app.py` file, to access real-time environmental monitoring data and receive alerts.
 
 By considering these user types and their corresponding user stories, the AI system for monitoring environmental parameters can be designed to address a diverse set of user needs, facilitating its usability and value across various roles and responsibilities.

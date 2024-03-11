@@ -19,36 +19,44 @@ The objective of this project is to create a system for analyzing sound data usi
 ## System Design Strategies
 
 ### Data Ingestion:
+
 - **Streaming Audio**: Utilize streaming platforms or APIs to ingest real-time audio data for processing.
 - **Batch Processing**: Implement batch processing techniques for analyzing pre-recorded audio datasets.
 
 ### Feature Extraction:
+
 - **Librosa Integration**: Incorporate Librosa to extract audio features, such as MFCCs, chroma features, and tempo information.
 - **Parallel Processing**: Implement parallel processing to efficiently extract features from a large volume of audio data.
 
 ### Model Integration:
+
 - **Machine Learning Models**: Use machine learning models, such as convolutional neural networks (CNNs) and recurrent neural networks (RNNs), for tasks like audio classification and speech recognition.
 - **Model Serving**: Deploy models using frameworks like TensorFlow Serving or FastAPI for real-time predictions.
 
 ### Scalability:
+
 - **Distributed Computing**: Utilize distributed computing frameworks like Apache Spark for processing large-scale audio data.
 - **Containerization**: Dockerize the system components to enable seamless scalability and deployment.
 
 ### Real-time Processing:
+
 - **Streaming Data Processing**: Explore streaming data processing frameworks like Apache Kafka and Apache Flink for real-time audio analysis.
 - **Low-Latency Model Inference**: Optimize model serving infrastructure to ensure low latency for real-time processing.
 
 ## Chosen Libraries
 
 ### Librosa
+
 - **Purpose**: Librosa is a Python library for analyzing and extracting features from audio signals. It provides tools for audio and music analysis, including feature extraction, spectrogram computation, and beat tracking.
 - **Usage**: Librosa will be used to extract relevant features from audio data, such as MFCCs and spectrograms, for subsequent analysis and modeling.
 
 ### TensorFlow
+
 - **Purpose**: TensorFlow will be utilized for building and training machine learning models for tasks such as audio classification and speech recognition.
 - **Usage**: TensorFlow's deep learning capabilities will be leveraged to develop and deploy neural network models for audio analysis tasks.
 
 ### Apache Spark
+
 - **Purpose**: Apache Spark will be used for scalable and distributed processing of large-scale audio datasets.
 - **Usage**: Spark will enable efficient parallel processing of audio data, feature extraction, and model training to handle large volumes of audio signals.
 
@@ -59,28 +67,34 @@ By leveraging these libraries and system design strategies, we aim to build a sc
 To support the Audio Signal Processing using Librosa (Python) application, we need a robust infrastructure that can handle the processing and analysis of large volumes of sound data. The infrastructure needs to be scalable, efficient, and capable of handling both batch and real-time processing. Below are the key components of the proposed infrastructure:
 
 ### 1. Data Ingestion Layer
+
 - **Cloud Storage**: Utilize cloud-based storage solutions such as Amazon S3, Google Cloud Storage, or Azure Blob Storage for storing large audio datasets.
 - **Streaming Platforms**: Integrate with streaming platforms like Apache Kafka or Amazon Kinesis for real-time ingestion of audio data streams.
 - **API Gateway**: Implement an API gateway for receiving audio data from external sources and routing it to the processing pipeline.
 
 ### 2. Processing Pipeline
+
 - **Distributed Computing**: Utilize Apache Spark for distributed processing of audio data, allowing for efficient feature extraction and computation of audio features in parallel.
 - **Batch Processing**: Implement batch processing pipelines using tools like Apache Airflow or Kubernetes cron jobs to analyze pre-recorded audio datasets.
 - **Real-time Processing**: Utilize streaming data processing frameworks like Apache Flink for real-time audio analysis and feature extraction.
 
 ### 3. Feature Extraction and Analysis
+
 - **Librosa Integration**: Use the Librosa library for feature extraction, such as Mel-frequency cepstral coefficients (MFCCs), spectral features, and rhythm features.
 - **Distributed File System**: Use a distributed file system like HDFS or cloud-based storage for efficient storage and retrieval of audio features extracted by Librosa.
 
 ### 4. Machine Learning Model Deployment
+
 - **Model Serving Infrastructure**: Deploy machine learning models using frameworks like TensorFlow Serving or FastAPI for real-time predictions and inference.
 - **Containerization**: Dockerize machine learning model artifacts to enable seamless deployment and scaling of model serving infrastructure.
 
 ### 5. Monitoring and Logging
+
 - **Logging Infrastructure**: Implement centralized logging using tools like ELK stack (Elasticsearch, Logstash, Kibana) or AWS CloudWatch for monitoring the processing pipeline and identifying issues.
 - **Metrics and Alerts**: Use monitoring tools such as Prometheus and Grafana to track system performance and set up alerts for abnormal behavior or performance degradation.
 
 ### 6. Scalability and High Availability
+
 - **Container Orchestration**: Utilize a container orchestration platform like Kubernetes to manage and scale the application components.
 - **Auto-scaling**: Implement auto-scaling policies for processing and serving components to dynamically adjust resources based on workload demands.
 - **Load Balancing**: Set up load balancers to distribute incoming traffic across multiple instances of processing and serving components.
@@ -195,6 +209,7 @@ models/
 ## `models` Directory Structure Overview
 
 1. **audio_classification/**: This subdirectory hosts trained models for audio classification tasks. Each model is stored in a separate directory named `model_1`, `model_2`, and so on. For each model, the directory contains the following items:
+
    - **assets/**: Resources such as vocabulary files, pre-processing transformers, or any additional assets required by the model.
    - **variables/**: Saved model weights and other related variables required for model inference.
    - **saved_model.pb**: The protocol buffer file containing the serialized TensorFlow model.
@@ -323,6 +338,7 @@ print("Accuracy Score: {:.2f}".format(accuracy_score))
 ```
 
 In the provided function:
+
 - We define a `complex_machine_learning_algorithm` function that takes a list of audio file paths and their corresponding labels as input.
 - Inside the function, we mimic the process of feature extraction from audio data using Librosa. In this example, we extract Mel-frequency cepstral coefficients (MFCC) as features for simplicity.
 - We then use a RandomForestClassifier for model training and evaluation on the mock data.
@@ -360,7 +376,7 @@ def complex_machine_learning_algorithm(audio_file_paths, labels):
         mfccs = librosa.feature.mfcc(y=y, sr=sr, n_mfcc=20)  ## Example: using MFCC as features
         spectral_centroid = librosa.feature.spectral_centroid(y=y, sr=sr)[0]
         spectral_rolloff = librosa.feature.spectral_rolloff(y=y, sr=sr)[0]
-        
+
         ## Aggregate multiple features into a single feature vector (example: concatenating MFCCs and statistics of spectral features)
         combined_features = np.concatenate([np.mean(mfccs, axis=1), np.std(mfccs, axis=1), np.mean(spectral_centroid), np.std(spectral_rolloff)])
         features.append(combined_features)
@@ -395,6 +411,7 @@ print("Accuracy Score: {:.2f}".format(accuracy_score))
 ```
 
 In the provided function:
+
 - We define a `complex_machine_learning_algorithm` function that takes a list of audio file paths and their corresponding labels as input.
 - Inside the function, we mimic the process of feature extraction from audio data using Librosa. In this example, we extract Mel-frequency cepstral coefficients (MFCC), spectral centroid, and spectral rolloff as features, then aggregate them into a single feature vector for each audio file.
 - We then use a RandomForestClassifier for model training and evaluation on the mock data.
@@ -404,23 +421,27 @@ This function showcases a simplified representation of incorporating Librosa for
 ### Types of Users for the Audio Signal Processing Application
 
 1. **Audio Researcher**
-   - *User Story*: As an audio researcher, I want to analyze the acoustic characteristics of sound data to study trends in environmental sounds over time.
-   - *File*: `notebooks/data_exploration.ipynb` - This notebook allows the audio researcher to conduct exploratory data analysis, visualize sound features, and gain insights into the characteristics of the sound data.
+
+   - _User Story_: As an audio researcher, I want to analyze the acoustic characteristics of sound data to study trends in environmental sounds over time.
+   - _File_: `notebooks/data_exploration.ipynb` - This notebook allows the audio researcher to conduct exploratory data analysis, visualize sound features, and gain insights into the characteristics of the sound data.
 
 2. **Music Producer**
-   - *User Story*: As a music producer, I want to extract rhythm and tempo features from audio files to understand the musical patterns and structures in different genres of music.
-   - *File*: `src/feature_extraction/audio_feature_extraction.py` - This file provides the functionality to extract rhythm and tempo features from audio files, enabling the music producer to analyze the musical patterns within their productions.
+
+   - _User Story_: As a music producer, I want to extract rhythm and tempo features from audio files to understand the musical patterns and structures in different genres of music.
+   - _File_: `src/feature_extraction/audio_feature_extraction.py` - This file provides the functionality to extract rhythm and tempo features from audio files, enabling the music producer to analyze the musical patterns within their productions.
 
 3. **Data Scientist**
-   - *User Story*: As a data scientist, I want to train machine learning models on audio features to classify music genres and speech patterns for recommendation and transcription tasks.
-   - *File*: `src/model_training/audio_classification_model.py` - This file contains the machine learning model training pipeline which the data scientist can use to develop and train classification models for music genres and speech patterns.
+
+   - _User Story_: As a data scientist, I want to train machine learning models on audio features to classify music genres and speech patterns for recommendation and transcription tasks.
+   - _File_: `src/model_training/audio_classification_model.py` - This file contains the machine learning model training pipeline which the data scientist can use to develop and train classification models for music genres and speech patterns.
 
 4. **Software Developer**
-   - *User Story*: As a software developer, I want to deploy machine learning models for real-time inference to power applications for audio classification and speech recognition.
-   - *File*: `deployment/inference_scripts/real_time_inference.py` - This file includes the script for real-time model inference and will be utilized by the software developer to deploy models for real-time processing.
+
+   - _User Story_: As a software developer, I want to deploy machine learning models for real-time inference to power applications for audio classification and speech recognition.
+   - _File_: `deployment/inference_scripts/real_time_inference.py` - This file includes the script for real-time model inference and will be utilized by the software developer to deploy models for real-time processing.
 
 5. **AI Application User**
-   - *User Story*: As an end-user of a music recommendation application, I want the application to accurately classify music genres and provide personalized recommendations based on my listening preferences.
-   - *File*: `deployment/serving/fastapi_serving/app.py` - This file represents the API endpoint developed by the AI application user to interact with the deployed machine learning models for music genre classification and recommendation.
+   - _User Story_: As an end-user of a music recommendation application, I want the application to accurately classify music genres and provide personalized recommendations based on my listening preferences.
+   - _File_: `deployment/serving/fastapi_serving/app.py` - This file represents the API endpoint developed by the AI application user to interact with the deployed machine learning models for music genre classification and recommendation.
 
 Each type of user has distinct requirements and use cases for the Audio Signal Processing application, and the corresponding files support their specific user stories, enabling them to accomplish their objectives effectively and efficiently.

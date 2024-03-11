@@ -8,18 +8,21 @@ layout: article
 ## AI-Powered Resume Screening with NLP and Machine Learning
 
 ## Objectives for Talent Acquisition Specialists:
+
 - Automate initial screening process to handle high volume of job applications.
 - Ensure no qualified candidate is overlooked.
 - Significantly reduce time-to-hire.
 - Enhance the overall quality of candidate selection.
 
 ## Benefits for Talent Acquisition Specialists:
+
 - Increased efficiency in managing job applications.
 - Improved candidate selection accuracy.
 - Reduction in time and resources spent on manual resume screening.
 - Enhanced candidate experience through quicker response times.
 
 ## Machine Learning Algorithm:
+
 - **Algorithm**: Support Vector Machines (SVM)
 - **Reasoning**: SVM is effective for binary classification tasks like screening resumes based on qualifications and experience.
 - **Benefits**: SVM can handle high-dimensional data, works well with smaller training datasets, and provides robust performance in text classification tasks.
@@ -27,56 +30,66 @@ layout: article
 ## Strategies:
 
 ### 1. Sourcing:
+
 - **Data Collection**: Gather a large number of resumes as training data.
 - **Data Labeling**: Label resumes as qualified or unqualified based on job requirements.
 
 ### 2. Preprocessing:
+
 - **Text Cleaning**: Remove special characters, stopwords, and perform stemming/lemmatization.
 - **Vectorization**: Convert text data into numerical form using techniques like TF-IDF or word embeddings.
 
 ### 3. Modeling:
+
 - **Feature Engineering**: Extract relevant features from resumes.
 - **Model Training**: Train SVM model on the preprocessed data.
 - **Evaluation**: Validate the model using metrics like accuracy, precision, and recall.
 
 ### 4. Deployment:
+
 - **API Development**: Create an API for resume submission and prediction.
 - **Scalability**: Ensure the system can handle a large number of concurrent requests.
 - **Integration**: Integrate the AI system with the existing talent acquisition platform.
 
 ## Tools and Libraries:
+
 - **Python**: Programming language for ML implementation.
 - **Scikit-learn**: Library for SVM implementation and model evaluation.
 - **NLTK**: Toolkit for natural language processing tasks like text cleaning.
 - **TensorFlow/Keras**: Frameworks for deep learning models if needed.
 - **Flask/Django**: Frameworks for API development.
 - **Docker**: Containerization for deploying the AI system.
-  
+
 By following these strategies and utilizing the mentioned tools and libraries, Talent Acquisition Specialists can effectively implement and deploy an AI-Powered Resume Screening system to streamline their hiring process.
 
 ## Sourcing Data Strategy:
 
 ### 1. Data Collection:
+
 - **Job Portals**: Utilize job portals like LinkedIn, Indeed, Glassdoor to source a diverse range of resumes.
 - **Company Website**: Collect resumes submitted through the company's career page.
 - **External Databases**: Access external databases or APIs for additional resumes.
 
 ### 2. Data Scrapping Tools:
+
 - **Beautiful Soup**: Python library for web scrapping to extract resumes from job portals and company websites.
 - **Selenium**: Web automation tool to interact with dynamic web pages for data extraction.
 - **Scrapy**: Python framework for efficient and scalable web scrapping.
 
 ### 3. Data Storage and Integration:
+
 - **Database Management System (DBMS)**: Use tools like MySQL, PostgreSQL to store collected resumes.
 - **Data Integration Tools**: Apache NiFi, Talend for integrating data from various sources into a unified database.
 - **API Integration**: Utilize APIs provided by job portals for seamless data retrieval.
 
 ### 4. Data Formatting and Cleaning:
+
 - **Pandas**: Python library for data manipulation to clean and preprocess the collected resumes.
 - **Regular Expressions (Regex)**: For pattern matching and text extraction during data cleaning.
 - **Data Validation**: Tools like Great Expectations for ensuring data quality and integrity.
 
 ### 5. Integration with Existing Technology Stack:
+
 - **ETL Process**: Set up Extract, Transform, Load (ETL) processes to streamline data collection and integration.
 - **Automated Workflows**: Use tools like Apache Airflow for managing data pipelines and scheduling tasks.
 - **API Development**: Create APIs to interact with the data collection tools and databases.
@@ -87,64 +100,74 @@ By implementing these specific tools and methods for efficiently collecting and 
 ## Feature Extraction and Feature Engineering Analysis:
 
 ### Feature Extraction:
+
 - **Text Data**: Extract essential information from resume text, such as skills, education, experience, and achievements.
 - **Structured Data**: Extract numerical features like years of experience, degree level, certifications.
 - **Categorical Data**: Encode categorical features like job titles, industries, and location into numerical format.
 
 ### Feature Engineering:
+
 1. **Text Data Processing**:
+
    - **Feature 1**: `skills_extracted` - Extracted skills from resume text.
    - **Feature 2**: `education_level` - Numerical encoding of education level.
    - **Feature 3**: `experience_years` - Number of years of experience extracted from resume.
    - **Feature 4**: `achievements_count` - Number of achievements mentioned in the resume.
-  
+
 2. **Structured Data Transformation**:
    - **Feature 5**: `certifications_count` - Count of certifications listed in the resume.
    - **Feature 6**: `industry_encoded` - Encoded industry category of the applicant.
    - **Feature 7**: `location_encoded` - Encoded location of the applicant.
-   
 3. **Combined Features**:
    - **Feature 8**: `total_skills_expertise` - Total expertise level of all skills mentioned in the resume.
    - **Feature 9**: `relevant_experience_ratio` - Ratio of relevant experience to total experience.
    - **Feature 10**: `education_experience_ratio` - Ratio of education level to total experience.
 
 ### Recommendations for Variable Names:
+
 - **Text Features**:
-   - `text_feature_1`, `text_feature_2`, ...
+  - `text_feature_1`, `text_feature_2`, ...
 - **Structured Features**:
-   - `structured_feature_1`, `structured_feature_2`, ...
+  - `structured_feature_1`, `structured_feature_2`, ...
 - **Combined Features**:
-   - `combined_feature_1`, `combined_feature_2`, ...
+  - `combined_feature_1`, `combined_feature_2`, ...
 
 By implementing these feature extraction and feature engineering strategies, Talent Acquisition Specialists can enhance the interpretability of the data and improve the performance of the machine learning model. The detailed naming conventions for variables will make it easier to understand and interpret the features used in the model, leading to a more effective and efficient AI-Powered Resume Screening system.
 
 ## Metadata Management Recommendations:
 
 1. **Resume Metadata Extraction**:
+
    - Extract metadata from resumes such as applicant name, contact information, job titles, education, and experience details.
    - Ensure consistent parsing and extraction of metadata fields for each resume to maintain data integrity.
 
 2. **Resume Labeling Metadata**:
+
    - Include metadata indicating the labeled category of each resume (qualified/unqualified).
    - Track the source of labeled data for transparency and model training validation.
 
 3. **Feature Metadata**:
+
    - Maintain metadata for each extracted feature, specifying the type (text, numerical, categorical) and source (resume section or external database).
    - Keep track of feature engineering transformations applied to each feature.
 
 4. **Model Training Metadata**:
+
    - Record metadata related to model training sessions, including hyperparameters used, training data subset, and evaluation metrics.
    - Store model performance metrics and validation results for future model tuning and evaluation.
 
 5. **Data Preprocessing Metadata**:
+
    - Document preprocessing steps applied to each resume, such as text cleaning, vectorization techniques used, and scaling methods.
    - Track preprocessing parameters to reproduce results and ensure consistency.
 
 6. **Data Pipeline Metadata**:
+
    - Maintain metadata on the data pipeline workflow, including data sources, processing steps, and outputs.
    - Monitor and log data pipeline execution for error tracking and performance optimization.
 
 7. **Compliance Metadata**:
+
    - Include metadata related to data privacy and compliance regulations for each resume processed.
    - Ensure proper handling of sensitive information and adherence to data protection standards.
 
@@ -157,15 +180,19 @@ By implementing comprehensive metadata management tailored to the unique demands
 ## Data Challenges and Preprocessing Strategies:
 
 ### Data Problems:
+
 1. **Data Discrepancies**:
+
    - **Issue**: Inconsistent resume formats, missing fields, or errors in data entry.
    - **Solution**: Implement data validation checks and error handling mechanisms during preprocessing to address inconsistencies.
 
 2. **Imbalanced Data**:
+
    - **Issue**: Uneven distribution of qualified and unqualified resumes can lead to biased model performance.
    - **Solution**: Employ oversampling, undersampling, or synthetic data generation techniques to balance the dataset before model training.
 
 3. **Noisy Data**:
+
    - **Issue**: Irrelevant or misleading information in resumes that may affect model accuracy.
    - **Solution**: Use outlier detection methods and feature selection techniques to filter out noisy data and improve model robustness.
 
@@ -174,19 +201,24 @@ By implementing comprehensive metadata management tailored to the unique demands
    - **Solution**: Implement dimensionality reduction techniques like PCA or feature aggregation to simplify feature sets and capture essential information.
 
 ### Preprocessing Strategies:
+
 1. **Text Cleaning and Standardization**:
+
    - **Strategy**: Remove special characters, stopwords, and perform stemming/lemmatization to normalize text data.
    - **Relevance**: Ensures consistency in text features for accurate model predictions.
 
 2. **Feature Scaling and Normalization**:
+
    - **Strategy**: Scale numerical features to a standard range or normalize them to improve model performance.
    - **Relevance**: Enhances model interpretability and convergence speed during training.
 
 3. **Handling Missing Data**:
+
    - **Strategy**: Impute missing values in numerical features or encode missing values in categorical features.
    - **Relevance**: Prevents model bias and ensures the utilization of all available data.
 
 4. **Regularization and Outlier Detection**:
+
    - **Strategy**: Apply regularization techniques like L1/L2 regularization and identify outliers using statistical methods.
    - **Relevance**: Helps in controlling model complexity and identifying anomalies that could impact model performance.
 
@@ -244,6 +276,7 @@ print(X_test_final.head())
 ```
 
 In this code snippet:
+
 - We load the raw data containing resumes and labels.
 - Implement text cleaning and standardization using a custom function to ensure consistent text data format.
 - Apply feature scaling and normalization to numerical features for model convergence and interpretability.
@@ -256,26 +289,32 @@ Each preprocessing step is accompanied by comments explaining its importance for
 ## Modeling Strategy Recommendation:
 
 ### Modeling Algorithm:
+
 - **Algorithm**: XGBoost (Extreme Gradient Boosting)
 - **Reasoning**: XGBoost is adept at handling complex data structures and can effectively deal with a mix of categorical and numerical features. It also provides high predictive accuracy and speed, making it suitable for large-scale applications like resume screening.
 
 ### Feature Importance Analysis:
+
 - **Step**: Perform Feature Importance Analysis using XGBoost.
 - **Importance**: This step is particularly vital as it helps in identifying the most influential features contributing to the decision-making process of the model. By understanding which features have the most impact on the prediction outcomes, we can refine the feature engineering process and focus on the most relevant aspects of the resumes.
 
 ### Cross-Validation Strategy:
+
 - **K-Fold Cross-Validation**: Divide the data into k subsets and iteratively train the model on k-1 subsets while validating on the remaining subset.
 - **Importance**: Cross-validation is crucial for assessing the model's generalization performance and detecting overfitting. It ensures that the model's performance is reliable across different subsets of the data, providing more robust and accurate results.
 
 ### Hyperparameter Tuning:
+
 - **Grid Search or Randomized Search**: Search for the optimal hyperparameters for the XGBoost model.
 - **Importance**: Fine-tuning hyperparameters is crucial for optimizing the model's performance. By systematically searching through different parameter combinations, we can improve the model's accuracy and efficiency, ensuring it is well-suited to handle the complexities of resume screening data.
 
 ### Model Evaluation Metrics:
+
 - **Metrics**: Use metrics such as Accuracy, Precision, Recall, and F1-Score for model evaluation.
 - **Importance**: The choice of evaluation metrics is critical for measuring the model's performance in correctly identifying qualified candidates while minimizing false positives and false negatives. These metrics ensure a balance between the quality of candidate selection and the efficiency of the screening process.
 
 ### Ensemble Learning:
+
 - **Ensemble Method**: Utilize ensemble learning techniques like Stacking or Boosting to combine multiple models for improved predictive performance.
 - **Importance**: Ensemble learning can enhance the overall predictive power of the model by leveraging the strengths of individual models. It can help mitigate weaknesses in the XGBoost model and provide more accurate and robust predictions in the context of resume screening.
 
@@ -284,6 +323,7 @@ By following this modeling strategy tailored to the unique challenges and data t
 ### Data Modeling Tools Recommendations for AI-Powered Resume Screening:
 
 1. **XGBoost (eXtreme Gradient Boosting)**
+
    - **Description**: XGBoost is a powerful and efficient gradient boosting library that excels in handling complex data structures and optimizing predictive performance.
    - **Fit for Modeling Strategy**: XGBoost aligns with the modeling strategy by providing high accuracy and speed for handling a mix of categorical and numerical features in resume screening data.
    - **Integration**: Easily integrates with scikit-learn for model training and evaluation.
@@ -291,6 +331,7 @@ By following this modeling strategy tailored to the unique challenges and data t
    - **Documentation**: [XGBoost Documentation](https://xgboost.readthedocs.io/en/latest/)
 
 2. **scikit-learn**
+
    - **Description**: scikit-learn is a versatile machine learning library in Python that provides tools for data preprocessing, modeling, and evaluation.
    - **Fit for Modeling Strategy**: scikit-learn enables seamless implementation of the modeling strategy, including cross-validation, hyperparameter tuning, and model evaluation.
    - **Integration**: Integrates well with other libraries like NumPy and pandas for data manipulation.
@@ -298,6 +339,7 @@ By following this modeling strategy tailored to the unique challenges and data t
    - **Documentation**: [scikit-learn Documentation](https://scikit-learn.org/stable/documentation.html)
 
 3. **GridSearchCV/RandomizedSearchCV (from scikit-learn)**
+
    - **Description**: GridSearchCV and RandomizedSearchCV are tools for hyperparameter tuning and optimization in scikit-learn.
    - **Fit for Modeling Strategy**: Essential for fine-tuning hyperparameters in the XGBoost model to optimize performance.
    - **Integration**: Seamless integration with scikit-learn's modeling pipeline.
@@ -305,6 +347,7 @@ By following this modeling strategy tailored to the unique challenges and data t
    - **Documentation**: [GridSearchCV Documentation](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html), [RandomizedSearchCV Documentation](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.RandomizedSearchCV.html)
 
 4. **TensorBoard (from TensorFlow)**
+
    - **Description**: TensorBoard is a tool for visualizing and analyzing TensorFlow models.
    - **Fit for Modeling Strategy**: Allows for in-depth visualization and monitoring of model performance and training progress.
    - **Integration**: Compatible with TensorFlow models and can be used for tracking XGBoost model training.
@@ -339,7 +382,7 @@ def generate_resume_data(num_samples):
         experience_years = random.randint(0, 20)
         achievements_count = random.randint(0, 5)
         label = random.choice(['Qualified', 'Unqualified'])
-        
+
         data.append({
             'Skills': skills,
             'Education Level': education_level,
@@ -370,6 +413,7 @@ print(df.head())
 ```
 
 In this script:
+
 - Fictitious resume data is generated using the `faker` library to simulate real-world resume attributes.
 - The generated data includes skills, education level, experience years, achievements count, and qualification labels.
 - The dataset is saved to a CSV file for further analysis and model training.
@@ -389,18 +433,20 @@ Java; Machine Learning; SQL,Master's Degree,12,5,Qualified
 ```
 
 In this example:
+
 - **Feature Names**:
-   - Skills: Technical skills possessed by the candidate.
-   - Education Level: Highest education level attained.
-   - Experience Years: Number of years of relevant work experience.
-   - Achievements Count: Count of notable achievements mentioned in the resume.
-   - Label: Indicates whether the resume is classified as 'Qualified' or 'Unqualified'.
+
+  - Skills: Technical skills possessed by the candidate.
+  - Education Level: Highest education level attained.
+  - Experience Years: Number of years of relevant work experience.
+  - Achievements Count: Count of notable achievements mentioned in the resume.
+  - Label: Indicates whether the resume is classified as 'Qualified' or 'Unqualified'.
 
 - **Data Representation**:
-   - **Skills**: Multiple skills are separated by semicolons and listed as a string.
-   - **Education Level**: Categorical feature representing different levels of education.
-   - **Experience Years** and **Achievements Count**: Numerical features indicating years of experience and achievements.
-   - **Label**: Binary classification label for resume qualification status.
+  - **Skills**: Multiple skills are separated by semicolons and listed as a string.
+  - **Education Level**: Categorical feature representing different levels of education.
+  - **Experience Years** and **Achievements Count**: Numerical features indicating years of experience and achievements.
+  - **Label**: Binary classification label for resume qualification status.
 
 This sample provides a clear visualization of the structure and composition of the mocked dataset, showcasing how the data points are organized and formatted. It serves as a helpful reference for understanding the data features and types that will be used for model ingestion in the AI-Powered Resume Screening project.
 
@@ -456,6 +502,7 @@ print(f"Predicted Qualification: {prediction}")
 ```
 
 In this code snippet:
+
 - The code loads the preprocessed dataset, trains an XGBoost classifier, evaluates model accuracy, saves the trained model, and includes a function for making predictions on new candidate data.
 - Detailed comments are included to explain the logic and purpose of each section, following best practices for documentation.
 - Code quality and structure adhere to common conventions in large tech environments, such as consistent formatting, descriptive variable names, and modular design.
@@ -465,59 +512,65 @@ By using this production-ready code file as a benchmark, you can ensure the deve
 ## Deployment Plan for AI-Powered Resume Screening Model:
 
 ### 1. Pre-Deployment Checks:
+
 - **Step**: Ensure model performance meets acceptance criteria and is ready for deployment.
 - **Tools & Platforms**:
-   - **Jupyter Notebook**: For final model evaluation and validation.
-   - **scikit-learn**: Library for model evaluation metrics.
-   - **MLflow**: Platform for managing the machine learning lifecycle.
+  - **Jupyter Notebook**: For final model evaluation and validation.
+  - **scikit-learn**: Library for model evaluation metrics.
+  - **MLflow**: Platform for managing the machine learning lifecycle.
 
 ### 2. Model Serialization and Saving:
+
 - **Step**: Serialize the trained model and save it for deployment.
 - **Tools & Platforms**:
-   - **XGBoost**: Library for model serialization.
-   - **Python Pickle**: For saving the serialized model.
-   - **Documentation**:
-     - [XGBoost Model Serialization](https://xgboost.readthedocs.io/en/latest/tutorials/saving_model.html)
+  - **XGBoost**: Library for model serialization.
+  - **Python Pickle**: For saving the serialized model.
+  - **Documentation**:
+    - [XGBoost Model Serialization](https://xgboost.readthedocs.io/en/latest/tutorials/saving_model.html)
 
 ### 3. Building API for Model Serving:
+
 - **Step**: Develop an API endpoint to serve predictions.
 - **Tools & Platforms**:
-   - **Flask/Django**: Framework for building API endpoints.
-   - **Docker**: For containerizing the API.
-   - **Documentation**:
-     - [Flask Documentation](https://flask.palletsprojects.com/en/2.0.x/)
-     - [Django Documentation](https://docs.djangoproject.com/en/3.2/)
-     - [Docker Documentation](https://docs.docker.com/)
+  - **Flask/Django**: Framework for building API endpoints.
+  - **Docker**: For containerizing the API.
+  - **Documentation**:
+    - [Flask Documentation](https://flask.palletsprojects.com/en/2.0.x/)
+    - [Django Documentation](https://docs.djangoproject.com/en/3.2/)
+    - [Docker Documentation](https://docs.docker.com/)
 
 ### 4. Containerization and Deployment:
+
 - **Step**: Containerize the API and deploy it to a cloud platform.
 - **Tools & Platforms**:
-   - **Docker**: For containerization.
-   - **Kubernetes**: Orchestration for managing containers.
-   - **Heroku/AWS/Azure**: Cloud platforms for deployment.
-   - **Documentation**:
-     - [Kubernetes Documentation](https://kubernetes.io/docs/home/)
-     - [Heroku Documentation](https://devcenter.heroku.com/)
-     - [AWS Documentation](https://docs.aws.amazon.com/)
-     - [Azure Documentation](https://docs.microsoft.com/en-us/azure/)
+  - **Docker**: For containerization.
+  - **Kubernetes**: Orchestration for managing containers.
+  - **Heroku/AWS/Azure**: Cloud platforms for deployment.
+  - **Documentation**:
+    - [Kubernetes Documentation](https://kubernetes.io/docs/home/)
+    - [Heroku Documentation](https://devcenter.heroku.com/)
+    - [AWS Documentation](https://docs.aws.amazon.com/)
+    - [Azure Documentation](https://docs.microsoft.com/en-us/azure/)
 
 ### 5. Monitor and Scale:
+
 - **Step**: Implement monitoring and scaling strategies to ensure model performance and reliability.
 - **Tools & Platforms**:
-   - **Prometheus/Grafana**: Monitoring tools for tracking API performance.
-   - **Auto-Scaling**: Configure auto-scaling policies for handling varying loads.
-   - **Documentation**:
-     - [Prometheus Documentation](https://prometheus.io/docs/prometheus/latest/getting_started/)
-     - [Grafana Documentation](https://grafana.com/docs/grafana/latest/getting-started/what-is-grafana/)
+  - **Prometheus/Grafana**: Monitoring tools for tracking API performance.
+  - **Auto-Scaling**: Configure auto-scaling policies for handling varying loads.
+  - **Documentation**:
+    - [Prometheus Documentation](https://prometheus.io/docs/prometheus/latest/getting_started/)
+    - [Grafana Documentation](https://grafana.com/docs/grafana/latest/getting-started/what-is-grafana/)
 
 ### 6. Testing and Post-Deployment Checks:
+
 - **Step**: Conduct thorough testing and post-deployment checks to validate system integrity.
 - **Tools & Platforms**:
-   - **Postman**: For API testing and validation.
-   - **Sentry**: Error tracking and monitoring tool.
-   - **Documentation**:
-     - [Postman Documentation](https://learning.postman.com/docs/getting-started/introduction/)
-     - [Sentry Documentation](https://docs.sentry.io/)
+  - **Postman**: For API testing and validation.
+  - **Sentry**: Error tracking and monitoring tool.
+  - **Documentation**:
+    - [Postman Documentation](https://learning.postman.com/docs/getting-started/introduction/)
+    - [Sentry Documentation](https://docs.sentry.io/)
 
 By following this step-by-step deployment plan and leveraging the recommended tools and platforms, your team can confidently deploy the AI-Powered Resume Screening model into a live production environment, ensuring seamless integration and optimal performance while meeting the unique demands and characteristics of your project.
 
@@ -554,6 +607,7 @@ CMD ["gunicorn", "-w", "4", "-b", "0.0.0.0:5000", "app:app"]
 ```
 
 In this Dockerfile:
+
 - The base image is set to `python:3.8-slim` to include essential Python dependencies.
 - Required Python packages such as NumPy, pandas, scikit-learn, XGBoost, Flask, Gunicorn, and MLflow are installed.
 - The preprocessed dataset and trained model files are copied into the container.
@@ -566,26 +620,31 @@ Ensure to customize the Dockerfile further based on any additional dependencies,
 ## User Groups and User Stories:
 
 ### 1. Talent Acquisition Specialists:
+
 - **User Story**: Sarah, a Talent Acquisition Specialist, receives hundreds of job applications daily. She struggles to manually review each resume efficiently and often overlooks qualified candidates.
 - **Solution**: The AI-Powered Resume Screening application automates the initial screening process, quickly filtering out unqualified candidates and highlighting top matches based on job requirements.
 - **Project Component**: The machine learning model for resume screening and API for candidate qualification prediction.
 
 ### 2. Hiring Managers:
+
 - **User Story**: John, a Hiring Manager, needs to fill critical positions within a tight timeline. Sorting through numerous resumes delays the hiring process, impacting team productivity.
 - **Solution**: The application accelerates candidate shortlisting, providing Hiring Managers with a curated list of qualified candidates to expedite the interview process and reduce time-to-hire.
 - **Project Component**: The Flask API for retrieving qualified candidate predictions.
 
 ### 3. HR Coordinators:
+
 - **User Story**: Emma, an HR Coordinator, is responsible for coordinating interviews for multiple candidates. Managing scheduling conflicts and coordinating feedback from interviewers is time-consuming.
 - **Solution**: The application streamlines the interview scheduling process, prioritizing top candidates and facilitating seamless communication between HR, Hiring Managers, and candidates.
 - **Project Component**: Integration with scheduling tools and communication features within the application.
 
 ### 4. Candidates:
+
 - **User Story**: Mark, a Job Candidate, applies to various positions but often receives no response or feedback on his applications. It's challenging to stand out in a competitive job market.
 - **Solution**: The application ensures fair evaluation of candidate qualifications, increasing visibility for deserving candidates and providing timely feedback on application status.
 - **Project Component**: Candidate interface for receiving application feedback and status updates.
 
 ### 5. Legal and Compliance Teams:
+
 - **User Story**: Legal and Compliance Teams are tasked with ensuring fair hiring practices and compliance with regulations. Manual resume screening processes may lead to biases or discrimination risks.
 - **Solution**: The AI system standardizes the screening process, reducing biases by focusing solely on candidate qualifications and skills relevant to the job requirements.
 - **Project Component**: Model training with fair and unbiased feature selection.

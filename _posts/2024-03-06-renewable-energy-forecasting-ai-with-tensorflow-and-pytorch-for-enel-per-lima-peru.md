@@ -6,61 +6,71 @@ layout: article
 ---
 
 ## Objectives and Benefits
+
 **Audience:** Energy Analyst at Enel Perú  
 **Objective:** To predict the renewable energy production for efficient grid management  
-**Benefits:**  
-1. Improve grid management by accurately forecasting energy output  
-2. Optimize resource allocation and reduce operational costs  
-3. Enhance decision-making processes for grid maintenance and energy distribution  
+**Benefits:**
+
+1. Improve grid management by accurately forecasting energy output
+2. Optimize resource allocation and reduce operational costs
+3. Enhance decision-making processes for grid maintenance and energy distribution
 
 ## Machine Learning Algorithm
+
 **Algorithm:** Long Short-Term Memory (LSTM)  
 **Reasoning:** LSTM is well-suited for time series forecasting tasks as it can capture long-term dependencies in sequential data, making it ideal for predicting energy generation patterns that exhibit time-based trends and seasonal variations.
 
 ## Sourcing Data
-1. Weather Data: Source historical weather information including temperature, precipitation, wind speed, etc.  
+
+1. Weather Data: Source historical weather information including temperature, precipitation, wind speed, etc.
 2. Power Generation Data: Gather historical power generation data from renewable sources like solar panels and wind turbines.
 
 ## Preprocessing Data
-1. Merge weather and power generation data based on timestamps  
-2. Normalize data to scale features  
-3. Handle missing values and outliers  
-4. Generate sequences of inputs and outputs for LSTM model 
+
+1. Merge weather and power generation data based on timestamps
+2. Normalize data to scale features
+3. Handle missing values and outliers
+4. Generate sequences of inputs and outputs for LSTM model
 
 ## Modeling Strategy
-1. Split data into training and testing sets  
-2. Build LSTM model architecture using TensorFlow or PyTorch  
-3. Train the model on historical data  
-4. Fine-tune hyperparameters to optimize performance  
-5. Evaluate model performance with metrics like Mean Absolute Error (MAE)  
+
+1. Split data into training and testing sets
+2. Build LSTM model architecture using TensorFlow or PyTorch
+3. Train the model on historical data
+4. Fine-tune hyperparameters to optimize performance
+5. Evaluate model performance with metrics like Mean Absolute Error (MAE)
 
 ## Deployment Strategy
-1. Save the trained model  
-2. Develop an API using Flask or FastAPI for real-time predictions  
-3. Deploy the model on a cloud platform like Google Cloud AI Platform or AWS Lambda  
-4. Monitor model performance and retrain periodically for accuracy  
+
+1. Save the trained model
+2. Develop an API using Flask or FastAPI for real-time predictions
+3. Deploy the model on a cloud platform like Google Cloud AI Platform or AWS Lambda
+4. Monitor model performance and retrain periodically for accuracy
 
 ## Tools and Libraries
-1. TensorFlow: [https://www.tensorflow.org/](https://www.tensorflow.org/)  
-2. PyTorch: [https://pytorch.org/](https://pytorch.org/)  
-3. Pandas: [https://pandas.pydata.org/](https://pandas.pydata.org/)  
-4. NumPy: [https://numpy.org/](https://numpy.org/)  
-5. Scikit-learn: [https://scikit-learn.org/](https://scikit-learn.org/)  
-6. Flask: [https://flask.palletsprojects.com/](https://flask.palletsprojects.com/)  
-7. FastAPI: [https://fastapi.tiangolo.com/](https://fastapi.tiangolo.com/)  
+
+1. TensorFlow: [https://www.tensorflow.org/](https://www.tensorflow.org/)
+2. PyTorch: [https://pytorch.org/](https://pytorch.org/)
+3. Pandas: [https://pandas.pydata.org/](https://pandas.pydata.org/)
+4. NumPy: [https://numpy.org/](https://numpy.org/)
+5. Scikit-learn: [https://scikit-learn.org/](https://scikit-learn.org/)
+6. Flask: [https://flask.palletsprojects.com/](https://flask.palletsprojects.com/)
+7. FastAPI: [https://fastapi.tiangolo.com/](https://fastapi.tiangolo.com/)
 
 By following these steps and utilizing the suggested tools and libraries, Energy Analysts at Enel Perú can build and deploy a scalable, production-ready machine learning solution for Renewable Energy Forecasting to address their pain point effectively.
 
 ## Sourcing Data Strategy
 
-**1. Weather Data:** 
+**1. Weather Data:**
+
 - **Source:** Utilize APIs from reputable weather data providers like NOAA, AccuWeather, or OpenWeatherMap for historical weather information. These APIs offer a wealth of data including temperature, humidity, wind speed, precipitation, etc.
-- **Tools:** 
+- **Tools:**
   - **OpenWeatherMap API:** Access real-time weather data and historical weather information through a simple API interface.
   - **Python Requests Library:** Fetch data from APIs and streamline data retrieval processes.
 - **Integration:** Develop a script in Python using the Requests library to fetch weather data from the selected API. Integrate this script into the existing technology stack for seamless data collection.
 
 **2. Power Generation Data:**
+
 - **Source:** Extract historical power generation data from Enel Perú's internal databases or renewable energy monitoring systems that track solar panel and wind turbine outputs.
 - **Tools:**
   - **SQL Database:** Retrieve historical power generation data from Enel Perú's internal databases using SQL queries.
@@ -68,6 +78,7 @@ By following these steps and utilizing the suggested tools and libraries, Energy
 - **Integration:** Use SQL queries to extract relevant power generation data from internal databases. Integrate SCADA systems with the data collection pipeline to capture real-time power generation metrics.
 
 **3. Data Integration and Preparation:**
+
 - **ETL (Extract, Transform, Load):** Develop ETL pipelines using tools like Apache Airflow or Talend to extract data from disparate sources, transform it into a usable format, and load it into a central data repository.
 - **Data Cleaning and Preprocessing:** Use tools like Pandas and NumPy to clean and preprocess the data, handling missing values, outliers, and normalizing features.
 - **Integration:** Integrate ETL pipelines with the existing technology stack to automate the collection, transformation, and loading of weather and power generation data. Ensure that the data is stored in a standardized format for analysis and model training.
@@ -77,12 +88,15 @@ By leveraging these specific tools and methods for efficiently collecting weathe
 ## Feature Extraction and Feature Engineering
 
 **1. Feature Extraction:**
+
 - **Temporal Features**:
+
   - Extract day of the week, month, season, and year from timestamps to capture seasonal trends.
   - Calculate time differences between data points to capture temporal dependencies.
   - Create lag features by shifting historical data to predict future energy outputs.
 
 - **Weather Features**:
+
   - Include temperature, humidity, wind speed, precipitation, and cloud cover as predictors of energy production.
   - Calculate rolling averages or moving averages for weather variables to capture trends.
 
@@ -91,12 +105,15 @@ By leveraging these specific tools and methods for efficiently collecting weathe
   - Calculate cumulative energy production over specific time intervals to capture long-term trends.
 
 **2. Feature Engineering:**
+
 - **Polynomial Features**:
+
   - Generate polynomial features for weather variables to capture non-linear relationships.
   - Square or cube temperature, humidity, and wind speed to capture their impact on energy production.
 
 - **Interaction Features**:
-  - Create interaction features between weather variables (e.g., temperature * humidity) to capture combined effects.
+
+  - Create interaction features between weather variables (e.g., temperature \* humidity) to capture combined effects.
   - Multiply wind speed by precipitation to capture potential synergy between these factors.
 
 - **Statistical Features**:
@@ -104,7 +121,9 @@ By leveraging these specific tools and methods for efficiently collecting weathe
   - Include Fourier transformations to capture periodic patterns in the data.
 
 **3. Variable Naming Recommendations:**
+
 - **Temporal Features**:
+
   - day_of_week
   - month
   - season
@@ -113,6 +132,7 @@ By leveraging these specific tools and methods for efficiently collecting weathe
   - lag_7_wind_speed
 
 - **Weather Features**:
+
   - temperature
   - humidity
   - wind_speed
@@ -120,6 +140,7 @@ By leveraging these specific tools and methods for efficiently collecting weathe
   - cloud_cover
 
 - **Power Generation Features**:
+
   - solar_energy_production
   - wind_energy_production
   - cumulative_solar_energy
@@ -134,26 +155,31 @@ By incorporating these feature extraction and engineering strategies, Energy Ana
 ## Metadata Management for Renewable Energy Forecasting Project
 
 **1. Metadata for Weather Data:**
+
 - **Data Source:** Specify the source of weather data, including the provider (e.g., OpenWeatherMap), API endpoints, and update frequency.
 - **Feature Descriptions:** Document detailed descriptions of weather features, units of measurement, and any transformations applied during preprocessing.
 - **Quality Metrics:** Include metadata on data quality checks, such as missing data percentages, outliers, and data integrity measures.
 
 **2. Metadata for Power Generation Data:**
+
 - **Data Source:** Document the origin of power generation data, whether from internal databases or SCADA systems, along with data extraction processes.
 - **Feature Descriptions:** Define power generation variables, units, and any engineered features created during preprocessing.
 - **Quality Metrics:** Track data quality indicators specific to power generation data, such as uptime percentages, sensor accuracy, and calibration issues.
 
 **3. Model Metadata:**
+
 - **Feature Importance:** Capture feature importance scores from the model training process to understand which variables contribute most to energy production predictions.
 - **Model Hyperparameters:** Document hyperparameters used in the LSTM model, such as the number of hidden layers, units per layer, and learning rate.
 - **Model Performance Metrics:** Record evaluation metrics like Mean Absolute Error (MAE) or Root Mean Squared Error (RMSE) on the test set to assess model performance.
 
 **4. Data Integration Metadata:**
+
 - **Data Joins:** Document the merging process of weather and power generation data, including join keys, merging techniques, and time synchronization methods.
 - **Data Aggregation:** Describe how data is aggregated over time intervals (e.g., hourly, daily) for input to the LSTM model.
 - **Data Transformation:** Record any data preprocessing steps such as normalization, scaling, and feature engineering techniques applied to the dataset.
 
 **5. Storage and Access Metadata:**
+
 - **Data Storage:** Specify the storage locations for raw and processed data, whether in databases, cloud storage, or data lakes.
 - **Access Controls:** Detail who has access to the data and model outputs, with roles and permissions defined to ensure data security and compliance.
 - **Data Retention Policy:** Establish guidelines for data retention periods, archiving practices, and data purging procedures to manage storage efficiently.
@@ -163,16 +189,20 @@ By maintaining comprehensive metadata tailored to the unique demands of the Rene
 ## Data Challenges and Preprocessing Strategies for Renewable Energy Forecasting
 
 **1. Data Challenges:**
+
 - **Missing Data:** Weather sensors or power generation systems may experience downtime, leading to missing data points.
 - **Outliers:** Extreme weather events or equipment malfunctions can introduce outliers in the data.
 - **Seasonal Variations:** Weather patterns and energy production can exhibit seasonal variations that impact forecasting accuracy.
 
 **2. Preprocessing Strategies:**
+
 - **Handling Missing Data:**
+
   - Imputation Techniques: Employ methods like mean imputation or interpolation to fill missing values in weather and power generation data.
   - Forward/Backward Fill: Use forward or backward fill methods for missing data in sequential time series.
 
 - **Outlier Detection and Treatment:**
+
   - Z-Score or IQR Method: Identify and remove outliers based on statistical methods like Z-Score or Interquartile Range (IQR).
   - Winsorization: Clip extreme values by replacing outliers with a specified percentile of the data distribution.
 
@@ -181,11 +211,14 @@ By maintaining comprehensive metadata tailored to the unique demands of the Rene
   - Seasonal Adjustment: Implement seasonal adjustment methods to remove seasonal effects and isolate underlying trends for improved forecasting.
 
 **3. Feature Engineering for Robust Data:**
+
 - **Temporal Aggregation:**
+
   - Aggregate data at different time intervals (e.g., hourly, daily) to capture trends and patterns effectively.
   - Calculate rolling statistics (e.g., rolling averages, min/max) to smooth out variations and highlight trends.
 
 - **Normalization and Scaling:**
+
   - Normalize numerical features to a common scale to prevent certain features from dominating the model training process.
   - Use Min-Max scaling or Standardization to ensure feature values fall within a specific range for the LSTM model.
 
@@ -233,6 +266,7 @@ lagged_data.to_csv('preprocessed_data.csv', index=False)
 ```
 
 ### Comments:
+
 - **Drop Unnecessary Columns:** Removing columns that are not relevant to the model training process helps in reducing dimensionality and focusing on key features.
 - **Convert Timestamp:** Converting timestamps to datetime format is essential for sorting and time-based operations in the dataset.
 - **Sort Data:** Sorting data by timestamp ensures that the temporal order is maintained, crucial for time series forecasting tasks.
@@ -249,8 +283,9 @@ By executing this code file, tailored to the preprocessing strategy for the Rene
 **Recommended Modeling Strategy: Long Short-Term Memory (LSTM) Neural Network**
 
 ### Steps in the Modeling Strategy:
+
 1. **Split data into Training and Testing Sets:** Segment the dataset into training and testing subsets to train the model on past data and evaluate its performance on unseen future data.
-  
+
 2. **Feature Selection:** Choose relevant features, including weather variables, power generation data, and engineered features, for input to the LSTM model.
 
 3. **Sequence Generation for LSTM:** Create input-output sequences with lagged features to capture temporal dependencies and historical patterns in the data, essential for time series forecasting tasks.
@@ -266,6 +301,7 @@ By executing this code file, tailored to the preprocessing strategy for the Rene
 8. **Deployment and Monitoring:** Deploy the trained LSTM model for real-time predictions, monitor its performance, and retrain periodically to adapt to changing data patterns and improve forecasting accuracy.
 
 ### Crucial Step: **Feature Selection and Engineering**
+
 - **Importance:** Selecting relevant features and engineering new ones are crucial for the success of the project as they directly impact the model's ability to capture complex relationships between weather conditions, power generation, and energy output.
 - **Rationale:** In renewable energy forecasting, the relationship between weather variables (temperature, wind speed, etc.) and power generation output is non-linear and dynamic. By carefully selecting and engineering features that capture these dynamics, the LSTM model can learn meaningful patterns for accurate energy production predictions.
 
@@ -274,6 +310,7 @@ By focusing on feature selection and engineering within the recommended LSTM mod
 ## Tools and Technologies for Data Modeling in Renewable Energy Forecasting
 
 ### 1. TensorFlow
+
 - **Description:** TensorFlow is a powerful open-source machine learning framework that includes tools for building and training deep learning models, including LSTM networks.
 - **Fit into Modeling Strategy:** TensorFlow seamlessly integrates with LSTM model architecture design, training, and hyperparameter tuning, crucial for accurate renewable energy production forecasts.
 - **Integration:** TensorFlow can be easily integrated into the existing technology stack at Enel Perú for building and training LSTM models efficiently.
@@ -281,6 +318,7 @@ By focusing on feature selection and engineering within the recommended LSTM mod
 - **Resource:** [TensorFlow Documentation](https://www.tensorflow.org/)
 
 ### 2. Keras
+
 - **Description:** Keras is a high-level neural network API that runs on top of TensorFlow, providing a user-friendly interface for building and training deep learning models, including LSTM networks.
 - **Fit into Modeling Strategy:** Keras simplifies the implementation of complex LSTM architectures and sequences for time series forecasting tasks.
 - **Integration:** Keras seamlessly integrates with TensorFlow, enabling easy model building and efficient training processes.
@@ -288,6 +326,7 @@ By focusing on feature selection and engineering within the recommended LSTM mod
 - **Resource:** [Keras Documentation](https://keras.io/)
 
 ### 3. scikit-learn
+
 - **Description:** scikit-learn is a versatile machine learning library in Python that provides simple and efficient tools for data analysis and modeling, including preprocessing, model selection, and evaluation.
 - **Fit into Modeling Strategy:** scikit-learn complements the modeling strategy by offering tools for preprocessing data, evaluating model performance, and hyperparameter tuning.
 - **Integration:** scikit-learn can be seamlessly integrated into the workflow for data preprocessing, feature selection, and model evaluation.
@@ -295,6 +334,7 @@ By focusing on feature selection and engineering within the recommended LSTM mod
 - **Resource:** [scikit-learn Documentation](https://scikit-learn.org/stable/)
 
 ### 4. Pandas
+
 - **Description:** Pandas is a powerful data manipulation and analysis library in Python that provides data structures and tools for working with structured data, including time series data.
 - **Fit into Modeling Strategy:** Pandas facilitates data manipulation, feature engineering, and handling time series data, crucial for preparing data for LSTM model training.
 - **Integration:** Pandas can be seamlessly integrated into the data preprocessing pipeline for handling, cleaning, and transforming datasets.
@@ -334,7 +374,7 @@ power_data = pd.DataFrame({
 ## Merge weather and power data
 merged_data = pd.merge(weather_data, power_data, on='timestamp')
 
-## Normalize numerical features using Min-Max scaling 
+## Normalize numerical features using Min-Max scaling
 scaler = MinMaxScaler()
 numerical_features = ['temperature', 'humidity', 'wind_speed', 'precipitation', 'solar_energy_production', 'wind_energy_production']
 merged_data[numerical_features] = scaler.fit_transform(merged_data[numerical_features])
@@ -352,6 +392,7 @@ merged_data.to_csv('generated_dataset.csv', index=False)
 ```
 
 ### Code Explanation:
+
 - The script generates a fictitious dataset with weather and power generation data, mimicking real-world conditions relevant to the project.
 - Random values are generated for temperature, humidity, wind speed, precipitation, solar energy production, and wind energy production.
 - The generated data is merged and normalized using Min-Max scaling for compatibility with the LSTM model.
@@ -370,6 +411,7 @@ This Python script creates a synthetic dataset that aligns with the project's mo
 ```
 
 ### Data Structure and Formatting:
+
 - The sample data includes a few rows representing timestamped weather and power generation features related to the project.
 - **Features:**
   - `timestamp`: Date and time of the data entry
@@ -398,7 +440,7 @@ from sklearn.model_selection import train_test_split
 data = pd.read_csv('preprocessed_data.csv')
 
 ## Define input features and target variable
-X = data[['temperature', 'humidity', 'wind_speed', 'precipitation', 
+X = data[['temperature', 'humidity', 'wind_speed', 'precipitation',
           'solar_energy_production_lag1', 'solar_energy_production_lag2']]
 y = data['solar_energy_production']
 
@@ -427,6 +469,7 @@ model.save('solar_energy_forecasting_model.h5')
 ```
 
 ### Code Explanation:
+
 1. **Loading Data:** Load the preprocessed dataset containing the normalized features and lagged solar energy production data.
 2. **Feature Selection:** Define input features (including lagged values) and target variable for the LSTM model.
 3. **Data Preparation:** Reshape input data for compatibility with the LSTM model.
@@ -437,6 +480,7 @@ model.save('solar_energy_forecasting_model.h5')
 8. **Model Saving:** Save the trained LSTM model for future deployment in a production environment.
 
 ### Conventions:
+
 - Follows PEP 8 coding style guidelines for readability and consistency.
 - Uses meaningful variable names and comments to explain the purpose of each code section.
 - Adopts functional programming principles with clear separation of data loading, model building, training, and evaluation steps.
@@ -446,54 +490,62 @@ By following these conventions and best practices in code quality and structure,
 ## Deployment Plan for Machine Learning Model in Renewable Energy Forecasting
 
 ### 1. Pre-Deployment Checks:
+
 - **Check Model Performance:** Validate the model's accuracy and performance metrics on a test dataset before deployment.
 - **Model Versioning:** Implement a version control system (e.g., Git) to track changes and versions of the model code.
 - **Data Compatibility:** Ensure the production environment's data schema aligns with the model's input expectations.
 
 ### 2. Model Containerization:
+
 - **Tool:** Docker
-- **Steps:**  
+- **Steps:**
   - Create a Dockerfile to define the model environment.
   - Build a Docker image encapsulating the model and its dependencies.
   - Run and test the Docker container locally to verify functionality.
 - **Resource:** [Docker Documentation](https://docs.docker.com/)
 
 ### 3. Model Deployment:
+
 - **Platform:** Kubernetes
-- **Steps:**  
+- **Steps:**
   - Deploy the Docker container to Kubernetes for scalability and high availability.
   - Monitor resource usage and performance metrics using Kubernetes Dashboard.
 - **Resource:** [Kubernetes Documentation](https://kubernetes.io/docs/)
 
 ### 4. Model Monitoring:
+
 - **Tool:** Prometheus and Grafana
-- **Steps:**  
+- **Steps:**
   - Set up Prometheus for monitoring model metrics and performance.
   - Visualize data and create custom dashboards using Grafana.
 - **Resource:** [Prometheus Documentation](https://prometheus.io/docs/) | [Grafana Documentation](https://grafana.com/docs/)
 
 ### 5. Continuous Integration/Continuous Deployment (CI/CD):
+
 - **Platform:** Jenkins
-- **Steps:**  
+- **Steps:**
   - Configure Jenkins pipelines for automated model testing and deployment.
   - Set up automated testing, validation, and deployment to streamline the process.
 - **Resource:** [Jenkins Documentation](https://www.jenkins.io/doc/)
 
 ### 6. Model Endpoint Deployment:
+
 - **Platform:** Flask with NGINX
-- **Steps:**  
+- **Steps:**
   - Develop a REST API using Flask for model inference endpoints.
   - Set up NGINX as a reverse proxy for load balancing and routing requests.
 - **Resource:** [Flask Documentation](https://flask.palletsprojects.com/) | [NGINX Documentation](https://docs.nginx.com/)
 
 ### 7. Live Environment Integration:
+
 - **Automation Tool:** Ansible
-- **Steps:**  
+- **Steps:**
   - Use Ansible playbooks for configuring servers and deploying the model to the live environment.
   - Ensure smooth integration and operation of the model in the production environment.
 - **Resource:** [Ansible Documentation](https://docs.ansible.com/)
 
 ### Additional Considerations:
+
 - **Security Measures:** Implement encryption and authentication mechanisms to protect data and model endpoints.
 - **Scaling Strategies:** Plan for horizontal scaling to accommodate increased prediction requests.
 - **Monitored Rollouts:** Conduct phased deployments with A/B testing to validate model performance in the live environment.
@@ -525,6 +577,7 @@ CMD ["python", "model_script.py"]
 ```
 
 ### Dockerfile Explanation:
+
 - **Base Image:** Uses a slim Python 3.8 image as the base to minimize container size.
 - **Working Directory:** Sets the working directory inside the container to `/app`.
 - **Dependencies:** Copies the `requirements.txt` file and installs Python dependencies.
@@ -533,6 +586,7 @@ CMD ["python", "model_script.py"]
 - **Command:** Specifies the command to run the model script (`model_script.py`) when the container starts.
 
 ### Performance Optimization Tips:
+
 - Use a slim base image to reduce container size and improve start-up time.
 - Utilize multi-stage builds for separating build-time dependencies and runtime environment.
 - Minimize the number of layers in the Dockerfile to optimize container performance.
@@ -544,28 +598,36 @@ By following these instructions and optimizing the Dockerfile for performance ne
 ### User Groups and User Stories for Renewable Energy Forecasting AI Application:
 
 #### 1. Energy Analyst
+
 **User Story:**
+
 - **Scenario:** As an Energy Analyst at Enel Perú, I struggle with accurately predicting renewable energy production, leading to suboptimal grid management decisions and resource allocation.
 - **Solution:** The application uses weather data and historical power generation information to forecast energy output, improving grid management efficiency and optimizing resource allocation.
 - **Benefit:** By leveraging machine learning models built with TensorFlow and PyTorch, I can make data-driven decisions, enhance grid stability, and minimize operational costs.
 - **Key Component:** The LSTM model and preprocessed dataset facilitate accurate renewable energy production forecasts.
 
 #### 2. Grid Operations Manager
+
 **User Story:**
+
 - **Scenario:** As a Grid Operations Manager, I face challenges in balancing supply and demand due to inaccurate energy production forecasts, leading to grid instability and potential downtime.
 - **Solution:** The application provides real-time predictions of renewable energy production, enabling proactive grid management decisions and ensuring optimal supply-demand balance.
 - **Benefit:** With timely insights from the AI models, I can mitigate grid imbalances, reduce downtime risks, and improve overall grid reliability.
 - **Key Component:** The Dockerized model deployment setup ensures seamless integration into the production environment for live forecasting.
 
 #### 3. Maintenance Technician
+
 **User Story:**
+
 - **Scenario:** As a Maintenance Technician, I encounter difficulties in scheduling maintenance tasks efficiently without accurate energy production forecasts, risking unplanned outages and maintenance delays.
 - **Solution:** The application offers predictive insights into renewable energy production, allowing for proactive maintenance scheduling based on anticipated energy output levels.
 - **Benefit:** By aligning maintenance tasks with forecasted energy production, I can reduce downtime, optimize maintenance resources, and enhance system reliability.
 - **Key Component:** The Flask API endpoint facilitates real-time access to the forecasted energy production data for efficient maintenance planning.
 
 #### 4. System Operator
+
 **User Story:**
+
 - **Scenario:** As a System Operator, I struggle with managing grid congestion and volatility due to uncertainty in renewable energy production, impacting grid stability and necessitating manual interventions.
 - **Solution:** The application provides accurate renewable energy forecasts, enabling proactive grid management strategies and reducing the need for manual interventions.
 - **Benefit:** With improved forecasting accuracy, I can optimize grid operation, minimize congestion issues, and enhance system efficiency.

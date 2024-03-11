@@ -8,13 +8,17 @@ layout: article
 ## AI Automated Image Analysis for Clinical Pathology
 
 ## Objectives
+
 The objectives of the AI Automated Image Analysis for Clinical Pathology system are to:
+
 - Enhance the efficiency and accuracy of medical diagnostics by leveraging machine learning for automated analysis of clinical pathology images.
 - Develop a scalable and reliable system that can handle large volumes of medical image data.
 - Integrate with existing medical information systems to provide seamless integration with clinical workflows.
 
 ## System Design Strategies
+
 To achieve the objectives, the following design strategies should be considered:
+
 1. **Scalability**: Design the system to scale horizontally to handle a large number of concurrent requests and large volumes of image data.
 2. **Fault Tolerance**: Implement measures to handle and recover from failures to ensure the system remains operational.
 3. **Modularity**: Break down the system into modular components to facilitate maintenance, testing, and reusability.
@@ -22,7 +26,9 @@ To achieve the objectives, the following design strategies should be considered:
 5. **Interoperability**: Ensure that the system can seamlessly integrate with existing medical information systems and standards.
 
 ## Chosen Libraries and Frameworks
+
 The following libraries and frameworks will be utilized in the development of the AI Automated Image Analysis for Clinical Pathology system:
+
 1. **TensorFlow**: TensorFlow will be used for building and training deep learning models for image analysis. Its high-level APIs and extensive community support make it well-suited for developing and deploying machine learning models.
 2. **Flask**: Flask will be used to develop the web application for serving the AI models and handling incoming image analysis requests. Its lightweight nature and simplicity make it an ideal choice for building the backend API.
 3. **Prometheus**: Prometheus will be used for monitoring the performance and health of the system. It provides powerful metrics collection and querying capabilities, allowing for real-time insights into the system's behavior.
@@ -36,25 +42,31 @@ By leveraging these libraries and frameworks, the AI Automated Image Analysis fo
 To support the development and deployment of the Automated Image Analysis for Clinical Pathology application, a robust MLOps infrastructure must be established. MLOps, which stands for machine learning operations, involves the practices and tools used to standardize and streamline the machine learning lifecycle, including training, deployment, and monitoring. Here's an outline of the MLOps infrastructure for the system:
 
 ## Data Management
+
 - **Data Collection**: Implement mechanisms to collect and store clinical pathology images, ensuring compliance with data privacy regulations such as HIPAA.
 - **Data Preprocessing**: Utilize data preprocessing tools and pipelines to clean, format, and label the clinical pathology images before they are used for model training.
 
 ## Model Training and Versioning
+
 - **TensorFlow**: Utilize TensorFlow for building, training, and evaluating deep learning models for image analysis. Employ version control systems to track model versions, parameters, and performance metrics.
 
 ## Deployment
+
 - **Containerization**: Utilize Docker to containerize the TensorFlow models and Flask web application, ensuring consistent deployment across different environments.
 - **Kubernetes**: Use Kubernetes for orchestrating the deployment and scaling of containerized applications, enabling efficient management of resources and high availability.
 
 ## Monitoring and Logging
+
 - **Prometheus and Grafana**: Integrate Prometheus for collecting metrics and Grafana for visualization and monitoring of the system's performance, including model accuracy, inference latency, and resource utilization.
 - **Logging**: Implement centralized logging to capture runtime events and errors, facilitating debugging and audit trail.
 
 ## Continuous Integration/Continuous Deployment (CI/CD)
+
 - **GitLab, Jenkins, or CircleCI**: Implement CI/CD pipelines to automate the build, test, and deployment processes for the application and model updates.
 - **Automated Testing**: Integrate automated testing for model performance and API functionality, ensuring consistent behavior across updates.
 
 ## Model Versioning and Governance
+
 - **Model Registry**: Establish a model registry to store and manage trained model versions, enabling easy retrieval and comparison of different iterations.
 - **Model Governance**: Implement policies and procedures for model governance, including versioning, access control, and documentation.
 
@@ -168,13 +180,14 @@ infrastructure/
     └── service.yaml
 ```
 
-1. **dockerfiles/**: This subdirectory contains the Dockerfile and other related files necessary for building Docker images that encapsulate the Flask web application and any other required components. 
-    - **Dockerfile**: This file defines the steps and dependencies required to build the Docker image for the Flask application. It includes instructions for installing dependencies, copying application code, and defining the runtime environment.
-    - **requirements.txt**: It lists the Python dependencies required for running the Flask application, including packages such as Flask, TensorFlow, and any other necessary libraries.
+1. **dockerfiles/**: This subdirectory contains the Dockerfile and other related files necessary for building Docker images that encapsulate the Flask web application and any other required components.
+
+   - **Dockerfile**: This file defines the steps and dependencies required to build the Docker image for the Flask application. It includes instructions for installing dependencies, copying application code, and defining the runtime environment.
+   - **requirements.txt**: It lists the Python dependencies required for running the Flask application, including packages such as Flask, TensorFlow, and any other necessary libraries.
 
 2. **kubernetes/**: The `kubernetes/` subdirectory holds the Kubernetes configuration files needed to deploy and manage the application in a Kubernetes cluster.
-    - **deployment.yaml**: This YAML file defines the deployment configuration for the Flask web application, including the Docker image to be used, resource limits, and scaling options.
-    - **service.yaml**: This YAML file defines the Kubernetes service configuration for the Flask application, specifying networking and load balancing settings.
+   - **deployment.yaml**: This YAML file defines the deployment configuration for the Flask web application, including the Docker image to be used, resource limits, and scaling options.
+   - **service.yaml**: This YAML file defines the Kubernetes service configuration for the Flask application, specifying networking and load balancing settings.
 
 By organizing the deployment-related components in this structured manner, it facilitates a clear and consistent approach to deploying the Automated Image Analysis for Clinical Pathology application across different environments. The Dockerfiles allow for containerizing the application components, ensuring consistency and portability, while the Kubernetes configuration files define the deployment and service settings, enabling efficient orchestration and management of the deployed application within a Kubernetes cluster.
 
@@ -278,18 +291,22 @@ In this script, the `load_mock_data` function generates mock images and labels f
 This script serves as an example of a complex machine learning algorithm for image analysis, utilizing a CNN model architecture. In a real-world scenario, you would replace the mock data with actual data loading code and customize the model architecture based on the specific requirements of the Automated Image Analysis for Clinical Pathology application.
 
 1. **Medical Practitioners**
+
    - **User Story**: As a medical practitioner, I want to upload clinical pathology images for automated analysis, view the analysis results, and leverage the system to aid in diagnosing medical conditions.
    - **Accomplished by**: The `app.py` file in the `app/` directory facilitates the web application interface for medical practitioners to upload images and view the analysis results.
 
 2. **Data Scientists/Researchers**
+
    - **User Story**: As a data scientist/researcher, I want to access the trained machine learning models, work with the training pipeline, and develop and test new models for image analysis.
    - **Accomplished by**: The `train_model.py` file in the `models/training/` directory allows data scientists/researchers to build, train, and save new machine learning models using mock data.
 
 3. **System Administrators/DevOps Engineers**
+
    - **User Story**: As a system administrator or DevOps engineer, I want to deploy, monitor, and manage the infrastructure and services required for the application, ensuring high availability and reliability.
    - **Accomplished by**: The Kubernetes deployment configuration in the `kubernetes/deployment.yaml` file under the `infrastructure/` directory facilitates deployment and scaling within the Kubernetes cluster, serving the needs of system administrators and DevOps engineers.
 
 4. **Machine Learning Engineers**
+
    - **User Story**: As a machine learning engineer, I want to access the model training pipeline, handle data preprocessing, and work with the model development environment.
    - **Accomplished by**: The `preprocessing.py` file in the `models/preprocessing/` directory provides functionality for data preprocessing as part of the model development environment, allowing machine learning engineers to prepare data for training.
 

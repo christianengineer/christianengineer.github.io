@@ -12,43 +12,35 @@ The Peru Culinary Trend Analyzer project aims to use advanced machine learning t
 ### Objectives
 
 1. **Identifying Emerging Trends**: Utilize BERT and GPT-3 to analyze text data from various sources such as social media, reviews, and food blogs to identify emerging culinary trends.
-  
+
 2. **Consumer Preference Analysis**: Analyze consumer behavior data to understand preferences and patterns, helping chefs tailor their menus accordingly.
-  
+
 3. **Real-time Data Processing**: Implement Kafka for real-time data streaming to ensure timely insights into changing trends.
-  
+
 4. **Scalable Deployment**: Use Docker for containerization to ensure easy deployment and scalability of the solution.
 
 ### Sourcing Data
 
 - **Social Media APIs**: Use APIs from platforms like Twitter, Instagram, and Facebook to gather real-time data on food-related trends.
-  
 - **Web Scraping**: Utilize web scraping tools like BeautifulSoup or Scrapy to extract data from food blogs, restaurant websites, and review platforms.
-  
 - **Consumer Databases**: Access consumer databases or conduct surveys to gather information on preferences and habits.
 
 ### Data Cleansing
 
 - **Text Preprocessing**: Clean and preprocess text data using libraries like NLTK or spaCy to remove stopwords, tokenize, and lemmatize text.
-  
 - **Duplicate Removal**: Identify and remove duplicate records to ensure data accuracy.
-  
 - **Missing Data Handling**: Use techniques like mean imputation or predictive imputation to handle missing data.
 
 ### Modeling Strategies
 
 - **BERT and GPT-3**: Leverage pre-trained models for text analysis to extract insights on culinary trends and consumer preferences.
-  
 - **Machine Learning Algorithms**: Use algorithms like clustering (e.g., K-means) and classification (e.g., Random Forest) to identify patterns in the data.
-  
 - **Ensemble Methods**: Combine multiple models for better accuracy and robustness.
 
 ### Deployment Strategies
 
 - **Docker Containers**: Package the machine learning pipeline components into Docker containers for easy deployment and scalability.
-  
 - **Cloud Deployment**: Host the solution on cloud platforms like AWS or Google Cloud for reliable and cost-effective deployment.
-  
 - **API Endpoints**: Expose machine learning models as APIs using Flask or FastAPI for integration into chef management systems.
 
 By following these strategies and utilizing the chosen tools and libraries effectively, the Peru Culinary Trend Analyzer can provide valuable insights to chefs and restaurant owners to stay at the forefront of the ever-changing culinary landscape.
@@ -180,6 +172,7 @@ sourcing/
 In this structure:
 
 - `data_sources/`: Contains individual scripts for accessing different data sources.
+
   - `social_media_api.py`: Python script to interact with social media APIs (e.g., Twitter, Instagram) to collect real-time data on culinary trends and consumer behavior.
   - `web_scraping.py`: Script to extract data from food blogs, restaurant websites, and online reviews using web scraping techniques like BeautifulSoup or Scrapy.
   - `consumer_database.py`: Script to query and retrieve data from consumer databases or conduct surveys to gather consumer preferences and habits.
@@ -300,6 +293,7 @@ customer_id,age,gender,location,preferred_cuisine,spending_score,rating
 ```
 
 In this mocked dataset:
+
 - `customer_id`: Unique identifier for each customer.
 - `age`: Age of the customer.
 - `gender`: Gender of the customer.
@@ -315,30 +309,39 @@ You can use this mocked dataset for training and building your models within the
 In the context of the Peru Culinary Trend Analyzer project, the modeling strategy involves several key steps to effectively analyze culinary trends and consumer preferences. Here is a step-by-step overview of the modeling strategy, prioritizing the most important steps for this project:
 
 1. **Data Understanding and Exploration**:
+
    - **Key Step**: Understand the dataset, its features, and the relationships between variables. Explore data distributions, trends, and patterns.
-  
+
 2. **Data Preprocessing**:
+
    - **Key Step**: Clean and preprocess the data by handling missing values, encoding categorical variables, scaling numerical features, and addressing outliers.
 
 3. **Feature Engineering**:
+
    - **Key Step**: Create new relevant features that can enhance the predictive power of the model. This may involve transforming existing features, creating interaction terms, or encoding time-related features.
 
 4. **Model Selection**:
+
    - **Key Step**: Identify appropriate models for the task, considering the nature of the data and the prediction goals. Experiment with different algorithms like BERT, GPT-3, Random Forest, or Neural Networks.
 
 5. **Model Training**:
+
    - **Key Step**: Train the selected models on the preprocessed data using appropriate techniques like cross-validation to prevent overfitting and ensure generalization.
 
 6. **Model Evaluation**:
+
    - **Key Step**: Evaluate model performance using relevant metrics such as accuracy, precision, recall, F1 score, and AUC-ROC. Compare different models to identify the best-performing one.
 
 7. **Hyperparameter Tuning**:
+
    - **Key Step**: Fine-tune the hyperparameters of the selected models to optimize performance. This can involve grid search, random search, or Bayesian optimization.
 
 8. **Ensemble Methods**:
+
    - **Key Step**: Consider using ensemble methods like stacking, bagging, or boosting to combine multiple models for improved accuracy and robustness.
 
 9. **Model Interpretability**:
+
    - Explore methods to interpret and explain model predictions, especially important for understanding the drivers of culinary trends and consumer preferences.
 
 10. **Model Deployment**:
@@ -386,6 +389,7 @@ joblib.dump(model, model_file_path)
 ```
 
 In this code snippet:
+
 - Replace `'path/to/mocked_data.csv'` with the actual file path where your mocked data is stored.
 - The data is loaded into a Pandas DataFrame, and then features ('X') and target ('y') are defined.
 - The data is split into training and testing sets using `train_test_split`.
@@ -398,26 +402,32 @@ You can run this code in a Python environment with pandas, scikit-learn, and job
 ## List of Types of Users for the Peru Culinary Trend Analyzer Application
 
 1. **Head Chef**:
+
    - **User Story**: As a Head Chef, I want to use the Peru Culinary Trend Analyzer to stay updated on emerging culinary trends and consumer preferences to innovate and adapt our menu offerings dynamically.
    - **File**: The `data_visualization.py` file can be used by the Head Chef to visualize trend analysis results and gain insights for menu planning.
 
 2. **Restaurant Manager**:
+
    - **User Story**: As a Restaurant Manager, I want to leverage the Peru Culinary Trend Analyzer to understand customer preferences and optimize menu decisions to enhance customer satisfaction.
    - **File**: The `api_integration.py` file allows the Restaurant Manager to integrate the model into an API for real-time analysis of customer feedback and trends.
 
 3. **Marketing Manager**:
+
    - **User Story**: As a Marketing Manager, I want to utilize the Peru Culinary Trend Analyzer to identify market trends, plan targeted promotional campaigns, and attract more customers to the restaurant.
    - **File**: The `model_evaluation.py` file can help the Marketing Manager evaluate the performance of the model in predicting consumer preferences and trends.
 
 4. **Data Analyst**:
+
    - **User Story**: As a Data Analyst, I want to analyze the data insights provided by the Peru Culinary Trend Analyzer to generate reports, visualize trends, and make data-driven recommendations for menu optimization.
    - **File**: The `data_preparation.py` file assists the Data Analyst in preparing the raw data for further analysis and modeling.
 
 5. **Executive Chef**:
+
    - **User Story**: As an Executive Chef, I want to utilize the Peru Culinary Trend Analyzer to create innovative menu items, optimize ingredient selection, and drive culinary creativity in the restaurant.
    - **File**: The `model_training.py` file facilitates training machine learning models on the dataset to extract insights and trends important for menu innovation.
 
 6. **Front of House Manager**:
+
    - **User Story**: As a Front of House Manager, I want to monitor customer feedback, analyze dining preferences, and collaborate with the culinary team to enhance the dining experience based on real-time insights.
    - **File**: The `kafka_consumer.py` file allows the Front of House Manager to consume real-time data from Kafka for monitoring customer feedback and preferences.
 

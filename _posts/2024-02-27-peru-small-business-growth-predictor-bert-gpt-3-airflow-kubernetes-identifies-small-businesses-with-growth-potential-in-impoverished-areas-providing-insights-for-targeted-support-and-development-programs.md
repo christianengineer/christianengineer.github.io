@@ -8,11 +8,13 @@ layout: article
 ### AI Peru Small Business Growth Predictor
 
 #### Objectives:
+
 1. **Identify Small Businesses with Growth Potential:** Utilize BERT and GPT-3 models to analyze data and identify small businesses in impoverished areas that show potential for growth.
 2. **Provide Insights for Targeted Support:** Extract meaningful insights from the data to offer tailored support and development programs to the identified businesses.
 3. **Scalability and Workflow Management:** Utilize Airflow for workflow management and Kubernetes for scalability to handle large volumes of data efficiently.
 
 #### System Design Strategies:
+
 1. **Data Collection:** Gather data on small businesses, including financial records, market trends, and socioeconomic factors, from various sources.
 2. **Data Preprocessing:** Clean, normalize, and transform the data to make it suitable for analysis by the AI models.
 3. **Feature Engineering:** Extract relevant features that can help the models in identifying growth potential in small businesses.
@@ -23,6 +25,7 @@ layout: article
 8. **Scalability:** Deploy the system on Kubernetes to ensure scalability and efficient resource management to handle large datasets.
 
 #### Chosen Libraries and Frameworks:
+
 1. **BERT (Bidirectional Encoder Representations from Transformers):** For analyzing textual data and extracting patterns related to small businesses' growth potential.
 2. **GPT-3 (Generative Pre-trained Transformer 3):** To generate insights based on the data and model predictions to aid in decision-making for support programs.
 3. **Airflow:** For orchestrating complex data workflows, automating tasks, and monitoring the pipeline for data processing and model training.
@@ -33,8 +36,9 @@ By combining the power of BERT, GPT-3, Airflow, and Kubernetes, the AI Peru Smal
 ### MLOps Infrastructure for Peru Small Business Growth Predictor
 
 #### Infrastructure Components:
+
 1. **Data Pipeline:** Ingest data from various sources such as financial records, market trends, and socioeconomic factors. Use Airflow to orchestrate data processing tasks such as cleaning, preprocessing, and feature engineering before feeding it to the ML models.
-  
+
 2. **Model Training:** Use Kubernetes to deploy scalable ML training jobs for BERT and GPT-3 models. Monitor the training process and manage resources efficiently to handle large datasets and optimize model performance.
 
 3. **Model Deployment:** Containerize the trained models and deploy them on Kubernetes for real-time inference. Utilize Kubernetes for scaling the inference pipeline to accommodate varying prediction loads efficiently.
@@ -48,6 +52,7 @@ By combining the power of BERT, GPT-3, Airflow, and Kubernetes, the AI Peru Smal
 7. **Version Control:** Utilize Git for version control to track changes in the codebase and model configurations. Maintain clear documentation and versioning to enable reproducibility and traceability of the ML experiments.
 
 #### Infrastructure Setup:
+
 1. **Data Storage:** Implement a reliable data storage solution such as Amazon S3 or Google Cloud Storage to store the processed data, model checkpoints, and logs securely.
 
 2. **Containerization:** Dockerize the application components including data processing scripts, ML models, and inference services to ensure portability and consistency across different environments.
@@ -111,6 +116,7 @@ Peru-Small-Business-Growth-Predictor/
 ```
 
 #### Description:
+
 1. **data/**: Contains directories for raw and processed data necessary for training and inference.
 2. **models/**: Includes directories for BERT and GPT-3 models along with training scripts, trained models, and evaluation notebooks.
 3. **airflow/**: Consists of Directed Acyclic Graphs (DAGs) for data pipeline, model training pipeline, and inference pipeline using Airflow.
@@ -139,7 +145,9 @@ models/
 ```
 
 #### Models Directory Structure:
+
 1. **BERT/:**
+
    - **BERT_training.py:** Python script for training the BERT model on the preprocessed data, handling tokenization, model configuration, training loop, and model saving.
    - **BERT_model.pkl:** Serialized BERT model file saved after training, ready for deployment and inference.
    - **BERT_evaluation.ipynb:** Jupyter notebook for evaluating the BERT model performance, analyzing predictions, and generating insights from the results.
@@ -150,6 +158,7 @@ models/
    - **GPT3_evaluation.ipynb:** Jupyter notebook for assessing the GPT-3 model's effectiveness, interpreting outputs, and deriving actionable recommendations from the predictions.
 
 #### Model Implementation Details:
+
 - **Training Scripts:** Python scripts encapsulate the training process for BERT and GPT-3 models, ensuring reusability and reproducibility of model training with different datasets.
 - **Model Files:** Serialized model files (BERT_model.pkl, GPT3_model.pkl) store the trained model parameters and architecture, enabling seamless deployment and inference without the need for retraining.
 - **Evaluation Notebooks:** Jupyter notebooks (BERT_evaluation.ipynb, GPT3_evaluation.ipynb) provide an interactive platform to analyze model performance, visualize results, and extract insights for supporting small businesses in impoverished regions.
@@ -168,23 +177,25 @@ deployment/
 ```
 
 #### Deployment Directory Structure:
+
 1. **Kubernetes/:**
    - **deployments/:**
      - **model_deployment.yaml:** YAML configuration file defining the deployment specifications for the trained BERT and GPT-3 models as Kubernetes pods.
      - **inference_service.yaml:** YAML file specifying the deployment of an inference service using the deployed models for real-time predictions.
 
 #### Deployment Implementation Details:
-- **model_deployment.yaml:** 
+
+- **model_deployment.yaml:**
   - This file includes specifications for deploying the trained BERT and GPT-3 models as Kubernetes pods.
   - It defines the containers, volumes, resource limits, and any necessary environment variables for hosting the models.
   - The deployment ensures scalability, fault tolerance, and efficient resource management for the models.
-  
-- **inference_service.yaml:** 
+- **inference_service.yaml:**
   - The YAML file outlines the setup for deploying an inference service that utilizes the BERT and GPT-3 models for making predictions.
   - It encompasses details on exposing the service, setting up network configurations, and defining the endpoint for receiving prediction requests.
   - The service facilitates real-time inference on incoming data, providing growth potential insights for small businesses in impoverished areas.
 
 #### Deployment Benefits:
+
 - **Scalability:** Kubernetes enables horizontal scaling of the model deployments to handle varying prediction loads efficiently.
 - **Resilience:** Deployment configurations ensure fault tolerance and high availability of the models and the inference service.
 - **Resource Management:** Kubernetes optimizes resource allocation and utilization, enhancing the performance and responsiveness of the application.
@@ -230,18 +241,20 @@ model.save_pretrained('models/BERT/trained_model')
 ```
 
 #### Description:
+
 - This Python script `BERT_training_mock_data.py` trains a BERT model for the Peru Small Business Growth Predictor on mock data.
 - It loads mock training data, tokenizes the textual input, initializes the BERT model, sets up optimizer and loss function, and performs model training for 3 epochs.
 - The script saves the trained BERT model in the specified directory `models/BERT/trained_model` for future inference tasks.
 
 #### Mock Data (`data/mock_training_data.csv`):
-| text                                  | labels |
-|---------------------------------------|--------|
-| Small business A has shown steady growth in the past year. | 1      |
-| Business B in an impoverished area seems to struggle with sales. | 0      |
+
+| text                                                                  | labels |
+| --------------------------------------------------------------------- | ------ |
+| Small business A has shown steady growth in the past year.            | 1      |
+| Business B in an impoverished area seems to struggle with sales.      | 0      |
 | The local market trends indicate rising demand for handmade products. | 1      |
-| Company C is exploring new markets for expansion. | 1      |
-| Limited access to financing hinders growth for many businesses. | 0      |
+| Company C is exploring new markets for expansion.                     | 1      |
+| Limited access to financing hinders growth for many businesses.       | 0      |
 
 This training script with mock data allows for initial model training and validation, paving the way for further refinement and deployment of the Peru Small Business Growth Predictor application leveraging BERT, Airflow, and Kubernetes.
 
@@ -276,36 +289,42 @@ model.save_pretrained('models/GPT-3/trained_model')
 ```
 
 #### Description:
+
 - This Python script `GPT3_complex_algorithm_mock_data.py` implements a complex algorithm using GPT-3 for the Peru Small Business Growth Predictor on mock data.
 - It loads mock data for the complex algorithm, tokenizes the input text, initializes the GPT-3 model, and performs model training to predict the next word in each sequence.
 - The script saves the trained GPT-3 model in the specified directory `models/GPT-3/trained_model` for future inference tasks.
 
 #### Mock Data (`data/mock_complex_data.csv`):
-| text                                  |
-|---------------------------------------|
-| Small businesses in rural areas face unique challenges such as lack of infrastructure and limited access to resources. |
-| Leveraging technology can help small businesses reach a wider market and improve efficiency in their operations. |
+
+| text                                                                                                                                           |
+| ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| Small businesses in rural areas face unique challenges such as lack of infrastructure and limited access to resources.                         |
+| Leveraging technology can help small businesses reach a wider market and improve efficiency in their operations.                               |
 | Collaboration between government organizations and private entities is crucial for fostering growth in small businesses in impoverished areas. |
-| Innovation and creativity are key factors that drive success in small businesses, especially in competitive markets. |
-| Providing targeted support and mentorship programs can empower small business owners to overcome obstacles and achieve sustainable growth. |
+| Innovation and creativity are key factors that drive success in small businesses, especially in competitive markets.                           |
+| Providing targeted support and mentorship programs can empower small business owners to overcome obstacles and achieve sustainable growth.     |
 
 This script demonstrates the use of a complex machine learning algorithm with mock data to enhance the Peru Small Business Growth Predictor application's capabilities, incorporating GPT-3 for generating targeted support insights for small businesses in impoverished regions.
 
 ### Types of Users for Peru Small Business Growth Predictor
 
 1. **Data Analyst:**
+
    - **User Story:** As a data analyst, I need to preprocess and analyze data to identify small businesses with growth potential in impoverished areas using machine learning models.
    - **File: `scripts/data_preprocessing.py`**
 
 2. **AI Model Developer:**
+
    - **User Story:** As an AI model developer, I want to train and evaluate BERT and GPT-3 models on relevant data to predict growth potential and provide insights for targeted support programs.
    - **Files: `models/BERT/BERT_training.py`, `models/GPT-3/GPT3_training.py`**
 
 3. **Machine Learning Engineer:**
+
    - **User Story:** As a machine learning engineer, I aim to deploy and orchestrate the ML models using Airflow for efficient data processing pipelines and Kubernetes for scalable and robust model deployment.
    - **Files: `airflow/dags/data_pipeline.py`, `deployment/Kubernetes/deployments/model_deployment.yaml`**
 
 4. **Business Development Manager:**
+
    - **User Story:** As a business development manager, I require actionable insights generated by GPT-3 for supporting and fostering growth in small businesses in impoverished areas.
    - **File: `models/GPT-3/GPT3_complex_algorithm_mock_data.py`**
 

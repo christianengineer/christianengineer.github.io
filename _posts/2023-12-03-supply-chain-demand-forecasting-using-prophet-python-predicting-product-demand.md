@@ -6,14 +6,18 @@ layout: article
 ---
 
 ### Objectives
+
 The primary objectives of the AI Supply Chain Demand Forecasting using Prophet (Python) Predicting product demand repository include:
+
 1. Developing a scalable, data-intensive AI application for predicting product demand in a supply chain setting.
 2. Leveraging the Prophet forecasting model in Python to accurately predict future product demand.
 3. Creating a modular and extensible system design to facilitate future enhancements and integrations.
 4. Building a robust and reliable solution capable of handling large volumes of historical demand data.
 
 ### System Design Strategies
+
 To achieve the stated objectives, the system design should incorporate the following key strategies:
+
 1. **Scalability**: Design the solution to handle large volumes of historical demand data and scale to accommodate increasing data volumes over time.
 2. **Modularity**: Utilize modular components and architecture to facilitate easy maintenance, extension, and integration of new forecasting models or data sources.
 3. **Real-time Data Ingestion**: Implement capabilities for real-time data ingestion to ensure that the forecasting model can adapt to new data as it becomes available.
@@ -22,7 +26,9 @@ To achieve the stated objectives, the system design should incorporate the follo
 6. **Monitoring and Reporting**: Implement monitoring and reporting capabilities to track model performance, identify deviations, and provide insights into the accuracy of demand forecasts.
 
 ### Chosen Libraries
+
 The following libraries and tools can be leveraged to implement the AI Supply Chain Demand Forecasting repository using Prophet in Python:
+
 1. **Prophet**: Facebook's time series forecasting tool that is well-suited for forecasting irregular time series data, which is commonly encountered in demand forecasting.
 2. **Pandas**: To handle data manipulation and preprocessing tasks, such as cleaning, reshaping, and transforming historical demand data.
 3. **NumPy**: For numerical computations, array manipulation, and mathematical operations required for data preprocessing and model training.
@@ -36,28 +42,36 @@ By combining these libraries and tools, we can create a robust, scalable, and da
 
 To support the supply chain demand forecasting application using Prophet (Python) for predicting product demand, a robust infrastructure is essential. The infrastructure should encompass the following components:
 
-1. **Data Storage**: 
+1. **Data Storage**:
+
    - Use a scalable and reliable data storage solution, such as a cloud-based data warehouse (e.g., Amazon Redshift, Google BigQuery, or Snowflake) to store historical demand data securely. This allows for efficient querying and analysis of large volumes of data.
 
 2. **Data Processing and Integration**:
+
    - Utilize ETL (Extract, Transform, Load) processes to ingest and process historical demand data from various sources, such as ERP systems, inventory databases, and sales/order management systems. Tools like Apache Airflow, AWS Glue, or Google Cloud Dataflow can be used for orchestrating these processes.
 
 3. **Model Training and Deployment**:
+
    - Leverage scalable computing resources (e.g., AWS EC2, Kubernetes, or Apache Spark clusters) for training the Prophet forecasting model on historical demand data. The trained model can then be deployed as a RESTful API using a containerization technology such as Docker and a container orchestration platform like Kubernetes or Amazon ECS.
 
 4. **Real-time Data Ingestion**:
+
    - Implement real-time data ingestion capabilities using technologies like Apache Kafka or AWS Kinesis to ensure the forecasting model can adapt to new data as it becomes available in real time.
 
 5. **Monitoring and Logging**:
+
    - Use monitoring and logging systems (e.g., Prometheus, Grafana, ELK stack) to track the performance of the forecasting model, monitor system health, and identify any anomalies or deviations in the demand forecasts. This will enable proactive maintenance and troubleshooting.
 
 6. **Scalable API Gateway**:
+
    - Deploy a scalable API gateway (e.g., Amazon API Gateway, NGINX, or Kong) to handle incoming requests for demand forecasts, ensuring high availability and load balancing across multiple instances of the forecasting model.
 
 7. **Security and Access Control**:
+
    - Implement robust security measures, including data encryption, access control, and identity management, to ensure the confidentiality and integrity of the demand forecasting application and the underlying data.
 
 8. **Automated Deployment and Integration**:
+
    - Utilize CI/CD (Continuous Integration/Continuous Deployment) pipelines, such as Jenkins, CircleCI, or GitLab CI/CD, to automate the deployment and integration of new features, model updates, and system enhancements.
 
 9. **Backup and Disaster Recovery**:
@@ -121,18 +135,21 @@ supply_chain_demand_forecasting/
 #### Folder Structure Explanation:
 
 - **data/**: Contains the historical demand data and any processed or transformed data.
+
   - **historical_demand.csv**: Raw data file containing historical demand data.
   - **processed_data/**: Directory for storing processed data.
     - **clean_demand_data.csv**: Cleaned and preprocessed demand data file.
     - **transformed_data/**: Contains transformed data after feature engineering or preprocessing.
 
 - **models/**: Includes trained forecasting models and model versions.
+
   - **prophet_model.pkl**: Pre-trained Prophet model for demand forecasting.
   - **trained_models/**: Directory for storing and versioning trained models.
 
 - **notebooks/**: Stores Jupyter notebooks for data exploration, model training, and evaluation.
 
 - **src/**: Contains the source code for the application.
+
   - **api/**: Includes files for building a RESTful API using Flask or FastAPI.
   - **data_processing/**: Files for data preprocessing and ingestion.
   - **model/**: Contains scripts for training the Prophet model and model evaluation.
@@ -165,6 +182,7 @@ models/
 #### Files Explanation:
 
 1. **prophet_model.pkl**:
+
    - **Description**: This file contains the pre-trained Prophet model for demand forecasting. The model is serialized using pickle or other appropriate serialization methods to be used for making predictions without retraining.
    - **Purpose**: Storing the pre-trained Prophet model allows the application to load the model efficiently and utilize it for making demand forecasts without the need for retraining.
 
@@ -197,18 +215,23 @@ deployment/
 #### Files and Directories Explanation:
 
 1. **app.py**:
+
    - **Description**: This file contains the entry point for the application, defining the API endpoints and integrating the forecasting model for making predictions. It's typically written using a framework such as Flask or FastAPI.
 
 2. **Dockerfile**:
+
    - **Description**: The Dockerfile contains instructions for building a Docker image that encapsulates the application along with its dependencies, making it portable and easily deployable across different environments.
 
 3. **requirements.txt**:
+
    - **Description**: This file lists all the Python dependencies required by the application. It allows for consistent and reproducible environment setup by specifying the exact versions of the required packages.
 
 4. **config/**:
+
    - **Description**: This directory contains configuration files tailored for different deployment environments, such as production, staging, or local development. Each configuration file may include settings for database connections, logging, API keys, and other environment-specific variables.
 
 5. **scripts/**:
+
    - **Description**: This directory stores scripts for managing the lifecycle of the application, such as starting and stopping the application. These scripts can handle tasks like initializing the environment, running tests, and gracefully stopping the application.
 
 6. **environment/**:
@@ -236,7 +259,7 @@ def train_demand_forecasting_model(data_file_path, model_save_path):
     ## Save the trained model to a file
     with open(model_save_path, 'wb') as f:
         pickle.dump(model, f)
-    
+
     print("Demand forecasting model trained and saved successfully.")
 
 ## Mock file paths
@@ -248,6 +271,7 @@ train_demand_forecasting_model(data_file_path, model_save_path)
 ```
 
 In this example:
+
 - The `train_demand_forecasting_model` function takes the file path to the mock demand data (`data_file_path`) and the file path to save the trained model (`model_save_path`) as input parameters.
 - It loads the mock historical demand data from a CSV file, trains a Prophet model using the data, and saves the trained model to a file using Python's `pickle` module for serialization.
 - Mock file paths are defined for the demand data and the location to save the trained model.
@@ -287,6 +311,7 @@ train_and_save_demand_forecasting_model(mock_data_file_path, mock_model_save_pat
 ```
 
 In this example:
+
 - The `train_and_save_demand_forecasting_model` function takes two parameters: `data_file_path` for the mock demand data and `model_save_path` for the path to save the trained model.
 - Mock demand data is generated using a pandas DataFrame with a date range and mock demand values for demonstration purposes.
 - The function initializes a Prophet model, fits it with the mock demand data, and saves the trained model to a file using the `pickle` module.
@@ -297,23 +322,27 @@ The function allows for training a demand forecasting model using Prophet with m
 ### Types of Users for the Supply Chain Demand Forecasting Application
 
 1. **Data Analyst**
-   - *User Story*: As a data analyst, I need to explore historical demand data, perform data preprocessing, and train demand forecasting models to derive insights and make data-driven decisions.
-   - *File*: `notebooks/data_exploration.ipynb`
+
+   - _User Story_: As a data analyst, I need to explore historical demand data, perform data preprocessing, and train demand forecasting models to derive insights and make data-driven decisions.
+   - _File_: `notebooks/data_exploration.ipynb`
 
 2. **Machine Learning Engineer**
-   - *User Story*: As a machine learning engineer, I need to develop, evaluate, and fine-tune the demand forecasting model, ensuring its accuracy and performance meet the business requirements.
-   - *File*: `src/model/prophet_forecasting.py`
+
+   - _User Story_: As a machine learning engineer, I need to develop, evaluate, and fine-tune the demand forecasting model, ensuring its accuracy and performance meet the business requirements.
+   - _File_: `src/model/prophet_forecasting.py`
 
 3. **Software Developer**
-   - *User Story*: As a software developer, I need to integrate the trained demand forecasting model into the application's API, allowing for real-time demand predictions and seamless integration with other supply chain systems.
-   - *File*: `src/api/app.py`
+
+   - _User Story_: As a software developer, I need to integrate the trained demand forecasting model into the application's API, allowing for real-time demand predictions and seamless integration with other supply chain systems.
+   - _File_: `src/api/app.py`
 
 4. **Business Analyst**
-   - *User Story*: As a business analyst, I need to access demand forecasts and generate reports for strategic decision-making, trend analysis, and resource planning within the supply chain.
-   - *File*: `src/api/app.py`
+
+   - _User Story_: As a business analyst, I need to access demand forecasts and generate reports for strategic decision-making, trend analysis, and resource planning within the supply chain.
+   - _File_: `src/api/app.py`
 
 5. **System Administrator**
-   - *User Story*: As a system administrator, I need to deploy and maintain the demand forecasting application, manage its configurations, and ensure its reliability and availability.
-   - *File*: `deployment/` directory for configuring the deployment environment and scripts for managing the application lifecycle.
+   - _User Story_: As a system administrator, I need to deploy and maintain the demand forecasting application, manage its configurations, and ensure its reliability and availability.
+   - _File_: `deployment/` directory for configuring the deployment environment and scripts for managing the application lifecycle.
 
 Each type of user interacts with different files and components within the application to fulfill their specific roles and responsibilities. By identifying the user stories and the corresponding files, the development and usage of the Supply Chain Demand Forecasting application can be tailored to the needs of each user type, fostering collaboration and ensuring that the application meets diverse user requirements.

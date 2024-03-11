@@ -8,13 +8,15 @@ layout: article
 ## AI GeneAI AI in Genomic Studies Repository
 
 ## Objectives
+
 The AI GeneAI AI in Genomic Studies repository aims to provide a platform for researchers and practitioners in the field of genomic studies to leverage the power of artificial intelligence (AI) for analyzing and interpreting genomic data. The key objectives of this repository include:
- 
+
 1. Developing scalable and efficient AI algorithms for analyzing genomic data to identify patterns, mutations, and associations with diseases.
 2. Providing a platform for building data-intensive AI applications that assist in genomic research and personalized medicine.
 3. Facilitating the integration of machine learning and deep learning techniques with genomic data to derive meaningful insights and predictions.
 
 ## System Design Strategies
+
 The system design for the AI GeneAI repository follows several key strategies to ensure scalability, performance, and flexibility:
 
 1. **Modular Architecture:** The repository is designed with a modular architecture, allowing for the seamless integration of new AI algorithms and genomic analysis techniques.
@@ -23,6 +25,7 @@ The system design for the AI GeneAI repository follows several key strategies to
 4. **Data Storage and Retrieval:** The design incorporates efficient data storage and retrieval mechanisms, leveraging databases and distributed file systems for handling genomic data.
 
 ## Chosen Libraries
+
 To achieve the objectives and system design strategies, the AI GeneAI repository leverages a combination of specialized libraries and frameworks:
 
 1. **TensorFlow:** TensorFlow is utilized for building and training deep learning models for tasks such as genomic sequence analysis, variant calling, and predictive modeling.
@@ -336,23 +339,27 @@ This function provides a hypothetical example of a deep learning algorithm for g
 ### Types of Users for GeneAI AI in Genomic Studies Application
 
 1. **Research Scientist**
-   - *User Story*: As a research scientist, I want to analyze large genomic datasets to identify genetic variations associated with specific diseases.
-   - *File*: The Jupyter notebook `exploratory_analysis.ipynb` in the `notebooks/` directory would assist the research scientist in exploring and analyzing the raw genomic data to gain insights into potential genetic variations linked to diseases.
+
+   - _User Story_: As a research scientist, I want to analyze large genomic datasets to identify genetic variations associated with specific diseases.
+   - _File_: The Jupyter notebook `exploratory_analysis.ipynb` in the `notebooks/` directory would assist the research scientist in exploring and analyzing the raw genomic data to gain insights into potential genetic variations linked to diseases.
 
 2. **Bioinformatics Specialist**
-   - *User Story*: As a bioinformatics specialist, I need to preprocess genomic data and extract relevant features for training machine learning models.
-   - *File*: The Python script `data_preprocessing.py` in the `scripts/` directory provides functionalities for data preprocessing, feature extraction, and transformation required by the bioinformatics specialist in processing genomic data for modeling.
+
+   - _User Story_: As a bioinformatics specialist, I need to preprocess genomic data and extract relevant features for training machine learning models.
+   - _File_: The Python script `data_preprocessing.py` in the `scripts/` directory provides functionalities for data preprocessing, feature extraction, and transformation required by the bioinformatics specialist in processing genomic data for modeling.
 
 3. **Machine Learning Engineer**
-   - *User Story*: As a machine learning engineer, I aim to train and evaluate deep learning models for genomics prediction tasks.
-   - *File*: The Jupyter notebook `model_training.ipynb` in the `notebooks/` directory enables the machine learning engineer to experiment with and train deep learning models leveraging TensorFlow or PyTorch for genomics prediction tasks.
+
+   - _User Story_: As a machine learning engineer, I aim to train and evaluate deep learning models for genomics prediction tasks.
+   - _File_: The Jupyter notebook `model_training.ipynb` in the `notebooks/` directory enables the machine learning engineer to experiment with and train deep learning models leveraging TensorFlow or PyTorch for genomics prediction tasks.
 
 4. **API Developer**
-   - *User Story*: As an API developer, I am responsible for deploying machine learning models as RESTful APIs for integration with other systems.
-   - *File*: The Python script `api_server.py` in the `scripts/` directory facilitates the API developer in setting up and deploying machine learning models as RESTful APIs to serve predictions and insights from the trained models.
+
+   - _User Story_: As an API developer, I am responsible for deploying machine learning models as RESTful APIs for integration with other systems.
+   - _File_: The Python script `api_server.py` in the `scripts/` directory facilitates the API developer in setting up and deploying machine learning models as RESTful APIs to serve predictions and insights from the trained models.
 
 5. **DevOps Engineer**
-   - *User Story*: As a DevOps engineer, I need to orchestrate the deployment and scalability of the AI application using containerization and cloud infrastructure.
-   - *File*: The Dockerfile and Kubernetes configurations in the `containerization/` directory support the DevOps engineer in containerizing the GeneAI application and managing its deployment on cloud infrastructure.
+   - _User Story_: As a DevOps engineer, I need to orchestrate the deployment and scalability of the AI application using containerization and cloud infrastructure.
+   - _File_: The Dockerfile and Kubernetes configurations in the `containerization/` directory support the DevOps engineer in containerizing the GeneAI application and managing its deployment on cloud infrastructure.
 
 Each type of user interacts with specific files and tools within the GeneAI AI in Genomic Studies application, catering to their distinct roles and responsibilities in leveraging AI for genomic research and analysis.

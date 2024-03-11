@@ -8,17 +8,20 @@ layout: article
 ## AI Machine Learning Workflow Automation Repository
 
 ### Objectives
+
 1. Automate the end-to-end machine learning workflows for training, evaluating, and deploying models.
 2. Utilize tools like MLflow and Kubeflow for managing the machine learning lifecycle.
 3. Demonstrate best practices for versioning, experimentation tracking, and model serving.
 
 ### System Design Strategies
+
 1. **Modularity**: Design individual components for data processing, model training, and model serving to ensure flexibility and reusability.
 2. **Scalability**: Utilize containerization and orchestration with Docker and Kubernetes to manage resources effectively.
 3. **Experiment Tracking**: Integrate MLflow for tracking experiments, parameters, and metrics.
 4. **Model Serving**: Use Kubeflow for model serving and monitoring in a production environment.
 
 ### Chosen Libraries and Tools
+
 1. **MLflow**: For experiment tracking, model packaging, and deployment.
 2. **Kubeflow**: For building and deploying portable, scalable ML workflows on Kubernetes.
 3. **Docker**: For containerization of machine learning models and workflows.
@@ -29,16 +32,19 @@ The repository will showcase a structured approach to AI machine learning workfl
 ## Infrastructure for Machine Learning Workflow Automation Repository
 
 ### Objectives
+
 1. Automated infrastructure provisioning for machine learning workflows.
 2. Utilize cloud-native tools and platforms for scalability and flexibility.
 3. Integrate CI/CD pipelines for seamless deployment and version control.
 
 ### System Design Strategies
+
 1. **Cloud-Native Architecture**: Utilize cloud services such as AWS, GCP, or Azure for scalable infrastructure components.
 2. **Infrastructure as Code (IaC)**: Use tools like Terraform or AWS CloudFormation for defining and provisioning infrastructure.
 3. **CI/CD Integration**: Implement automated testing, building, and deployment using tools like Jenkins, CircleCI, or GitLab CI/CD.
 
 ### Chosen Infrastructure Tools
+
 1. **Cloud Services**: Utilize cloud platforms for scalable compute, storage, and networking.
 2. **Terraform**: Define and provision infrastructure as code, enabling repeatability and reliability.
 3. **CI/CD Tools**: Integrate with Jenkins for automation of building, testing, and deployment pipelines.
@@ -164,6 +170,7 @@ deployment/
 ### Explanation
 
 - **mlflow/**: This subdirectory contains resources for deploying machine learning models using MLflow.
+
   - **model_registry/**: This directory organizes the model versions registered in MLflow. Each model version directory contains the serialized model, a `conda.yaml` file specifying the environment dependencies, and an `MLmodel` file describing the model metadata.
 
 - **kubeflow/**: This subdirectory includes resources for deploying machine learning models using Kubeflow.
@@ -213,6 +220,7 @@ def train_and_evaluate_model(data_path):
 ```
 
 In this function, `train_and_evaluate_model`:
+
 - Takes a `data_path` parameter specifying the path to the mock data file.
 - Loads the mock data and prepares the features and target.
 - Splits the data into training and testing sets.
@@ -274,6 +282,7 @@ def train_and_evaluate_deep_learning_model(data_path):
 ```
 
 In this function, `train_and_evaluate_deep_learning_model`:
+
 - Takes a `data_path` parameter specifying the path to the mock data file.
 - Loads the mock data and prepares the features and target.
 - Splits the data into training and testing sets and performs feature scaling.
@@ -287,27 +296,32 @@ The `data_path` can be the file path to a mock CSV data file containing the nece
 ### Types of Users for Machine Learning Workflow Automation Application
 
 1. **Data Scientist**
-   - *User Story*: As a data scientist, I want to be able to track and compare different experiments and model versions easily to improve the model's performance.
-   - *File*: `notebooks/exploratory_analysis.ipynb` - Data scientists use this notebook to explore and analyze data, and `src/model_training` - Data scientists use this source code to train and experiment with different models.
+
+   - _User Story_: As a data scientist, I want to be able to track and compare different experiments and model versions easily to improve the model's performance.
+   - _File_: `notebooks/exploratory_analysis.ipynb` - Data scientists use this notebook to explore and analyze data, and `src/model_training` - Data scientists use this source code to train and experiment with different models.
 
 2. **Machine Learning Engineer**
-   - *User Story*: As a machine learning engineer, I want to automate the machine learning pipeline for seamless model training and deployment.
-   - *File*: `pipelines/model_training_pipeline.py` - ML engineers use this pipeline definition to automate the model training process.
+
+   - _User Story_: As a machine learning engineer, I want to automate the machine learning pipeline for seamless model training and deployment.
+   - _File_: `pipelines/model_training_pipeline.py` - ML engineers use this pipeline definition to automate the model training process.
 
 3. **DevOps Engineer**
-   - *User Story*: As a DevOps engineer, I want to provision and maintain the infrastructure required for the machine learning workflow, and ensure smooth deployment of models.
-   - *File*: `infrastructure/terraform` - DevOps engineers use Terraform configurations to define and provision the required infrastructure.
+
+   - _User Story_: As a DevOps engineer, I want to provision and maintain the infrastructure required for the machine learning workflow, and ensure smooth deployment of models.
+   - _File_: `infrastructure/terraform` - DevOps engineers use Terraform configurations to define and provision the required infrastructure.
 
 4. **Data Engineer**
-   - *User Story*: As a data engineer, I want to manage the data pipelines and ensure the data processing and feature engineering steps are optimized.
-   - *File*: `pipelines/data_ingestion_pipeline.py` - Data engineers use this pipeline definition to automate data ingestion processes.
+
+   - _User Story_: As a data engineer, I want to manage the data pipelines and ensure the data processing and feature engineering steps are optimized.
+   - _File_: `pipelines/data_ingestion_pipeline.py` - Data engineers use this pipeline definition to automate data ingestion processes.
 
 5. **Business Analyst**
-   - *User Story*: As a business analyst, I want to have access to insights and predictions generated by the machine learning models for making business decisions.
-   - *File*: `src/model_serving/model_evaluation.py` - Business analysts use this source code to evaluate model performance and generate predictions.
+
+   - _User Story_: As a business analyst, I want to have access to insights and predictions generated by the machine learning models for making business decisions.
+   - _File_: `src/model_serving/model_evaluation.py` - Business analysts use this source code to evaluate model performance and generate predictions.
 
 6. **System Administrator**
-   - *User Story*: As a system administrator, I want to manage and monitor the deployment and scaling of machine learning model serving infrastructure.
-   - *File*: `deployment/kubeflow/kubernetes_resources` - System administrators use Kubernetes resource configurations to manage deployed machine learning models.
+   - _User Story_: As a system administrator, I want to manage and monitor the deployment and scaling of machine learning model serving infrastructure.
+   - _File_: `deployment/kubeflow/kubernetes_resources` - System administrators use Kubernetes resource configurations to manage deployed machine learning models.
 
 Each user has distinct use cases and interacts with different files within the repository to accomplish their tasks, demonstrating the collaborative nature of machine learning workflow automation.

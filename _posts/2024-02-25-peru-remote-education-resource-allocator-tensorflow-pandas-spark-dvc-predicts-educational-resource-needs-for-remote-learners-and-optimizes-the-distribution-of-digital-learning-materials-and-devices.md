@@ -8,10 +8,12 @@ layout: article
 ## AI Peru Remote Education Resource Allocator
 
 ## Objectives
+
 - Predict educational resource needs for remote learners
 - Optimize the distribution of digital learning materials and devices repository
 
 ## System Design Strategies
+
 1. **Data Collection**: Gather data on remote learners, their past resource usage, device availability, and current curriculum requirements.
 2. **Data Preprocessing**: Clean and transform the data for training machine learning models.
 3. **Feature Engineering**: Create relevant features like student preferences, past performance, and device compatibility.
@@ -21,6 +23,7 @@ layout: article
 7. **Version Control**: Use DVC for data and model versioning to track changes and improve reproducibility.
 
 ## Chosen Libraries
+
 1. **TensorFlow**: For building and training machine learning models, including neural networks for resource prediction.
 2. **Pandas**: For data manipulation and preprocessing tasks, such as cleaning and transforming datasets.
 3. **Spark**: For distributed computing to handle large-scale data processing and model deployment for optimization.
@@ -29,21 +32,25 @@ layout: article
 ## MLOps Infrastructure for AI Peru Remote Education Resource Allocator
 
 ## Data Pipeline
+
 1. **Data Ingestion**: Collect data on remote learners, resource usage, and curriculum requirements.
 2. **Data Preprocessing**: Use Pandas for data cleaning, transformation, and feature engineering.
 3. **Data Storage**: Store processed data in a scalable data lake or warehouse for easy access and analysis.
 
 ## Model Development
+
 1. **Model Training**: Utilize TensorFlow to build and train machine learning models for predicting resource needs and optimizing distribution.
 2. **Hyperparameter Tuning**: Fine-tune model parameters for optimal performance using tools like TensorFlow's built-in hyperparameter tuning or tools like Optuna.
 3. **Model Evaluation**: Assess model performance using metrics like accuracy, precision, recall, and F1-score.
 
 ## Model Deployment
+
 1. **Model Packaging**: Package trained models for deployment using frameworks like TensorFlow Serving or containerization tools like Docker.
 2. **Scalable Deployment**: Utilize Spark for distributing model predictions and optimizing resource distribution at scale.
 3. **Monitoring and Logging**: Implement monitoring tools to track model performance, detect anomalies, and log system activities for debugging.
 
 ## Data and Model Versioning
+
 1. **DVC Integration**: Use DVC for versioning data and models, ensuring reproducibility and facilitating collaboration among team members.
 2. **Pipeline Automation**: Automate data preprocessing, model training, deployment, and monitoring processes using CI/CD pipelines for efficiency and consistency.
 3. **Continuous Integration/Continuous Deployment (CI/CD)**: Implement CI/CD pipelines to automate testing, deployment, and monitoring of updates to the application.
@@ -53,46 +60,44 @@ By incorporating these MLOps practices and leveraging the specified tools (Tenso
 ## Scalable File Structure for AI Peru Remote Education Resource Allocator
 
 - **data/**
+
   - Contains raw and processed data for the remote learners and educational resources.
-    - *raw_data/*
+    - _raw_data/_
       - Store raw data collected from various sources.
-    - *processed_data/*
+    - _processed_data/_
       - Contains cleaned and transformed data for model training and analysis.
 
 - **models/**
   - Stores trained machine learning models for predicting resource needs and optimizing distribution.
-    - *tensorflow_models/*
+    - _tensorflow_models/_
       - Holds TensorFlow models for resource prediction.
-  
 - **notebooks/**
   - Jupyter notebooks for data exploration, model development, and experimentation.
-  
 - **src/**
   - Source code for the application logic.
-    - *data_processing/*
+    - _data_processing/_
       - Scripts for data preprocessing using Pandas.
-    - *model_training/*
+    - _model_training/_
       - Code for training machine learning models with TensorFlow.
-    - *model_deployment/*
+    - _model_deployment/_
       - Scripts for deploying models using Spark.
-  
 - **config/**
   - Configuration files for the application settings and parameters.
-  
 - **tests/**
   - Unit tests for data processing, model training, and deployment scripts.
-  
 - **docs/**
   - Documentation for the project, including README, user guides, and API reference.
-  
 - **logs/**
+
   - Log files for monitoring and tracking system activities.
 
 - **.gitignore**
+
   - Specifies files and directories to be ignored by version control (e.g., data files, model checkpoints).
 
 - **requirements.txt**
-  - List of Python dependencies required for the project. 
+
+  - List of Python dependencies required for the project.
 
 - **Dockerfile**
   - Docker configuration for containerizing the application.
@@ -103,49 +108,49 @@ This file structure is designed to organize different components of the AI Peru 
 
 - **models/**
   - Contains trained machine learning models for predicting resource needs and optimizing distribution.
-    - *tensorflow_models/*
+    - _tensorflow_models/_
       - Store TensorFlow models for resource prediction.
-        - *resource_prediction_model.h5*
+        - _resource_prediction_model.h5_
           - Trained TensorFlow model file for predicting educational resource needs.
-        - *distribution_optimization_model/*
+        - _distribution_optimization_model/_
           - Contains files related to the model for optimizing distribution using Spark.
-            - *parameters.json*
+            - _parameters.json_
               - Configuration file containing optimized parameters for distribution.
-            - *model.pkl*
+            - _model.pkl_
               - Serialized Spark model for optimizing distribution.
-        - *README.md*
+        - _README.md_
           - Information about the models, data requirements, and how to use them.
 
-In the *models/* directory, we organize the trained machine learning models for the AI Peru Remote Education Resource Allocator project. The *tensorflow_models/* subdirectory stores the TensorFlow model for predicting educational resource needs. Additionally, there is a subdirectory *distribution_optimization_model/* that contains files related to the model for optimizing resource distribution using Spark, including configuration parameters and the serialized Spark model file.
+In the _models/_ directory, we organize the trained machine learning models for the AI Peru Remote Education Resource Allocator project. The _tensorflow_models/_ subdirectory stores the TensorFlow model for predicting educational resource needs. Additionally, there is a subdirectory _distribution_optimization_model/_ that contains files related to the model for optimizing resource distribution using Spark, including configuration parameters and the serialized Spark model file.
 
-The *README.md* file provides documentation on the models, their usage, required data format, and any additional instructions for incorporating them into the application workflow. This structure ensures that models are stored, managed, and accessible for deployment and further development within the project.
+The _README.md_ file provides documentation on the models, their usage, required data format, and any additional instructions for incorporating them into the application workflow. This structure ensures that models are stored, managed, and accessible for deployment and further development within the project.
 
 ## Deployment Directory for AI Peru Remote Education Resource Allocator
 
 - **deployment/**
   - Contains files and scripts for deploying and scaling the AI application.
-    - *docker/*
+    - _docker/_
       - Docker configuration files for containerizing the application components.
-        - *Dockerfile*
+        - _Dockerfile_
           - Docker configuration for building the application image.
-        - *docker-compose.yml*
+        - _docker-compose.yml_
           - Docker Compose file for defining multi-container application services.
-    - *spark_job/*
+    - _spark_job/_
       - Spark job scripts for distributing model predictions and resource optimization.
-        - *resource_optimization_job.py*
+        - _resource_optimization_job.py_
           - Python script for running Spark job to optimize resource distribution.
-    - *deploy_model.py*
+    - _deploy_model.py_
       - Script for deploying machine learning models using TensorFlow Serving or other deployment frameworks.
-    - *run_application.sh*
+    - _run_application.sh_
       - Shell script for launching the application with necessary configurations.
-    - *README.md*
+    - _README.md_
       - Instructions for deploying the application, running Spark jobs, and utilizing the models.
 
-In the *deployment/* directory, we organize the necessary files and scripts for deploying and scaling the AI Peru Remote Education Resource Allocator application. The *docker/* subdirectory contains Docker configuration files, including the *Dockerfile* for building the application image and *docker-compose.yml* for defining multi-container services. This enables easy deployment and management of the application components in a containerized environment.
+In the _deployment/_ directory, we organize the necessary files and scripts for deploying and scaling the AI Peru Remote Education Resource Allocator application. The _docker/_ subdirectory contains Docker configuration files, including the _Dockerfile_ for building the application image and _docker-compose.yml_ for defining multi-container services. This enables easy deployment and management of the application components in a containerized environment.
 
-The *spark_job/* directory stores Spark job scripts for distributing model predictions and optimizing resource distribution. The *deploy_model.py* script facilitates the deployment of machine learning models using TensorFlow Serving or other deployment frameworks, enabling efficient serving of the trained models. The *run_application.sh* shell script provides a convenient way to launch the application with necessary configurations.
+The _spark_job/_ directory stores Spark job scripts for distributing model predictions and optimizing resource distribution. The _deploy_model.py_ script facilitates the deployment of machine learning models using TensorFlow Serving or other deployment frameworks, enabling efficient serving of the trained models. The _run_application.sh_ shell script provides a convenient way to launch the application with necessary configurations.
 
-The *README.md* file serves as a guide for deploying the application, running Spark jobs for resource optimization, and utilizing the trained models within the deployment environment. This structure streamlines the deployment process and ensures the efficient execution of the AI application for predicting educational resource needs and optimizing distribution for remote learners.
+The _README.md_ file serves as a guide for deploying the application, running Spark jobs for resource optimization, and utilizing the trained models within the deployment environment. This structure streamlines the deployment process and ensures the efficient execution of the AI application for predicting educational resource needs and optimizing distribution for remote learners.
 
 I'll provide a Python script for training a TensorFlow model for the Peru Remote Education Resource Allocator using mock data.
 
@@ -197,6 +202,7 @@ model.save('models/tensorflow_models/resource_prediction_model.h5')
 ```
 
 In this script:
+
 - Mock data is generated for training the model.
 - Features are normalized using StandardScaler.
 - A simple TensorFlow neural network model is defined and trained on the mock data.
@@ -247,6 +253,7 @@ spark.stop()
 ```
 
 In this script:
+
 - A more complex machine learning algorithm, Random Forest Regressor, is trained using Spark MLlib.
 - The script uses DVC to access mock data located in a separate repository.
 - The data is preprocessed using VectorAssembler to prepare it for training.
@@ -258,23 +265,27 @@ Save this script in the specified file path: `src/model_training/train_complex_m
 ## Types of Users for the Peru Remote Education Resource Allocator
 
 1. **Admin User**
-   - *User Story*: As an admin user, I want to view and manage the overall system settings and configurations, such as adding new educational resources, updating user profiles, and monitoring resource distribution efficiency.
-   - *File*: *src/admin/manage_system.py*
+
+   - _User Story_: As an admin user, I want to view and manage the overall system settings and configurations, such as adding new educational resources, updating user profiles, and monitoring resource distribution efficiency.
+   - _File_: _src/admin/manage_system.py_
 
 2. **Teacher User**
-   - *User Story*: As a teacher user, I want to access student data, view resource predictions, and request additional resources for specific students to enhance their learning experience.
-   - *File*: *src/teacher/view_student_data.py*
+
+   - _User Story_: As a teacher user, I want to access student data, view resource predictions, and request additional resources for specific students to enhance their learning experience.
+   - _File_: _src/teacher/view_student_data.py_
 
 3. **Student User**
-   - *User Story*: As a student user, I want to view recommended educational resources based on my learning behavior, access digital learning materials, and provide feedback on resource usefulness.
-   - *File*: *src/student/view_resource_recommendations.py*
+
+   - _User Story_: As a student user, I want to view recommended educational resources based on my learning behavior, access digital learning materials, and provide feedback on resource usefulness.
+   - _File_: _src/student/view_resource_recommendations.py_
 
 4. **IT Support User**
-   - *User Story*: As an IT support user, I want to troubleshoot technical issues related to device compatibility, assist in optimizing resource allocation, and ensure smooth operation of the application.
-   - *File*: *src/support/troubleshoot_technical_issues.py*
+
+   - _User Story_: As an IT support user, I want to troubleshoot technical issues related to device compatibility, assist in optimizing resource allocation, and ensure smooth operation of the application.
+   - _File_: _src/support/troubleshoot_technical_issues.py_
 
 5. **Data Analyst User**
-   - *User Story*: As a data analyst user, I want to perform data analysis on resource usage patterns, generate insights for optimizing resource distribution, and collaborate with the development team to enhance the predictive models.
-   - *File*: *src/analyst/data_analysis_insights.py*
+   - _User Story_: As a data analyst user, I want to perform data analysis on resource usage patterns, generate insights for optimizing resource distribution, and collaborate with the development team to enhance the predictive models.
+   - _File_: _src/analyst/data_analysis_insights.py_
 
 Each user type has specific roles and functionalities within the Peru Remote Education Resource Allocator application. The corresponding files listed above will facilitate the implementation of user stories to meet the needs of each user category.

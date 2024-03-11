@@ -10,6 +10,7 @@ layout: article
 ### Objectives
 
 The objectives of the AI Healthcare DigitalFront AI for Digital Healthcare repository are to:
+
 - Develop scalable and data-intensive AI applications for digital healthcare.
 - Leverage machine learning and deep learning algorithms to improve patient care, diagnosis, and treatment.
 - Build a secure and efficient platform for storing and analyzing medical data.
@@ -139,6 +140,7 @@ Healthcare-DigitalFront-AI
 ├── README.md
 └── LICENSE
 ```
+
 In this proposed file structure for the Healthcare DigitalFront AI for Digital Healthcare repository, the project is organized into several main directories:
 
 - **data_processing**: Contains scripts for data preparation, augmentation, cleansing, and other data processing tasks.
@@ -395,23 +397,27 @@ This function demonstrates the training process of a complex deep learning algor
 ### Types of Users
 
 1. **Patients**
-   - *User Story*: As a patient, I want to be able to schedule appointments, access my medical records, and receive personalized health recommendations.
-   - *Accomplished in File*: `web_app/frontend/components/patient_dashboard.vue`
+
+   - _User Story_: As a patient, I want to be able to schedule appointments, access my medical records, and receive personalized health recommendations.
+   - _Accomplished in File_: `web_app/frontend/components/patient_dashboard.vue`
 
 2. **Doctors**
-   - *User Story*: As a doctor, I want to view my patients' medical history, receive alerts for critical patient conditions, and communicate with other healthcare professionals.
-   - *Accomplished in File*: `web_app/frontend/components/doctor_dashboard.vue`
+
+   - _User Story_: As a doctor, I want to view my patients' medical history, receive alerts for critical patient conditions, and communicate with other healthcare professionals.
+   - _Accomplished in File_: `web_app/frontend/components/doctor_dashboard.vue`
 
 3. **Data Analysts/Researchers**
-   - *User Story*: As a data analyst/researcher, I want to access and analyze large volumes of healthcare data, run statistical analysis, and create visualizations for research purposes.
-   - *Accomplished in File*: `data_processing/data_analysis.py`
+
+   - _User Story_: As a data analyst/researcher, I want to access and analyze large volumes of healthcare data, run statistical analysis, and create visualizations for research purposes.
+   - _Accomplished in File_: `data_processing/data_analysis.py`
 
 4. **Administrative Staff**
-   - *User Story*: As an administrative staff member, I want to manage patient appointments, update staff schedules, and handle billing and insurance information.
-   - *Accomplished in File*: `web_app/backend/administration.py`
+
+   - _User Story_: As an administrative staff member, I want to manage patient appointments, update staff schedules, and handle billing and insurance information.
+   - _Accomplished in File_: `web_app/backend/administration.py`
 
 5. **System Administrators**
-   - *User Story*: As a system administrator, I want to monitor system performance, manage user access and permissions, and ensure the security and compliance of the healthcare application.
-   - *Accomplished in File*: `deployment/deployment_scripts/deploy.sh` for managing system deployment and configurations.
+   - _User Story_: As a system administrator, I want to monitor system performance, manage user access and permissions, and ensure the security and compliance of the healthcare application.
+   - _Accomplished in File_: `deployment/deployment_scripts/deploy.sh` for managing system deployment and configurations.
 
 These user stories correspond to different types of users who will interact with the Healthcare DigitalFront AI for Digital Healthcare application, and the specified files where the implementation for each user story can be found within the application's directory structure.

@@ -8,13 +8,17 @@ layout: article
 ## AI Affordable Housing Analysis Repository
 
 ### Objectives
+
 The primary objective of the AI Affordable Housing Analysis repository is to develop a scalable and data-intensive application for urban development that leverages machine learning to analyze and address affordable housing issues. The specific goals of the repository include:
+
 1. Collecting and integrating various datasets related to housing affordability, demographics, and urban development.
 2. Building machine learning models to analyze trends, predict future affordability challenges, and recommend potential solutions.
 3. Developing a user interface to visualize the analysis results and provide actionable insights for policymakers, urban planners, and community organizations.
 
 ### System Design Strategies
+
 To achieve the stated objectives, the repository will implement the following system design strategies:
+
 1. **Scalability**: Utilize scalable data storage and processing technologies to handle large datasets and support future growth in data volume.
 2. **Modularity**: Design the application with modular components to facilitate flexibility, reusability, and maintenance.
 3. **Machine Learning Pipeline**: Implement a robust machine learning pipeline to streamline model training, evaluation, and deployment.
@@ -22,7 +26,9 @@ To achieve the stated objectives, the repository will implement the following sy
 5. **User Interface**: Develop an intuitive and interactive user interface for data visualization and decision support.
 
 ### Chosen Libraries
+
 The repository will leverage several key libraries and tools to accomplish its objectives, including:
+
 1. **Scikit-Learn**: Utilize Scikit-Learn to build and evaluate machine learning models for housing affordability analysis, including regression, classification, and clustering algorithms.
 2. **Pandas**: Employ Pandas for data manipulation, preprocessing, and feature engineering to prepare datasets for machine learning tasks.
 3. **TensorFlow or PyTorch**: Implement TensorFlow or PyTorch for more advanced machine learning tasks, such as deep learning for image recognition or natural language processing for sentiment analysis of housing-related texts.
@@ -36,30 +42,37 @@ By integrating these libraries and tools into the development process, the repos
 To ensure the successful deployment and management of machine learning models in the Affordable Housing Analysis application, an effective MLOps (Machine Learning Operations) infrastructure is essential. The MLOps infrastructure encompasses the end-to-end lifecycle of machine learning, including model development, training, deployment, monitoring, and maintenance. Here's an expanded overview of the MLOps infrastructure for the Affordable Housing Analysis application:
 
 ### Environment and Version Control
+
 - **Git**: Utilize Git for version control of the application codebase, including machine learning models, data preprocessing scripts, and user interface components.
 - **GitHub or GitLab**: Host the repository on a platform like GitHub or GitLab to enable collaborative development, issue tracking, and code reviews.
 
 ### Data Management
+
 - **Data Versioning**: Implement data versioning tools such as DVC (Data Version Control) to track changes in the input datasets and ensure reproducibility of model training.
 - **Data Quality Monitoring**: Integrate data quality monitoring tools to identify and address issues in the input datasets that could impact model performance.
 
 ### Model Development and Training
+
 - **Model Registry**: Use a model registry to store and track trained machine learning models, including metadata, performance metrics, and associated code versions.
 - **Experiment Tracking**: Employ tools like MLflow or Neptune to log and compare model training experiments, as well as record hyperparameters and performance metrics.
 
 ### Continuous Integration/Continuous Deployment (CI/CD)
+
 - **Automated Testing**: Implement automated testing frameworks to validate the functionality of machine learning pipelines, data preprocessing steps, and user interface components.
 - **Continuous Integration**: Set up continuous integration pipelines to build, test, and validate the application codebase with each new commit.
 
 ### Model Deployment and Serving
+
 - **Containerization**: Use containerization tools such as Docker to package the application components, including machine learning models, into portable and reproducible containers.
 - **Model Serving**: Deploy the machine learning models using scalable serving infrastructure such as Kubernetes, AWS SageMaker, or Azure ML, ensuring high availability and reliability.
 
 ### Monitoring and Feedback Loop
+
 - **Model Monitoring**: Implement monitoring and alerting systems to track the performance of deployed models in production, detecting drift and degradation in model accuracy over time.
 - **Feedback Loop**: Establish mechanisms to collect feedback from users and stakeholders, integrating it into the MLOps infrastructure to retrain and update models based on new data and insights.
 
 ### Collaboration and Documentation
+
 - **Communication Tools**: Utilize communication and collaboration tools such as Slack, Microsoft Teams, or Discord to facilitate real-time communication among team members working on different aspects of the application.
 - **Documentation**: Maintain comprehensive documentation for the MLOps infrastructure, including setup instructions, architecture diagrams, and standard operating procedures.
 
@@ -182,13 +195,16 @@ deployment/
 ### Components within the Deployment Directory:
 
 #### app/
+
 - **main.py**: A Python file serving as the primary entry point for the web application, integrating the user interface with the backend functionality, including model loading, data processing, and result visualization.
 - **api.py**: Contains code for RESTful API endpoints to handle model predictions, data retrieval, and other backend services.
 
 #### static/
+
 - **styles.css**: Cascading Style Sheets (CSS) file defining the visual presentation and layout of the web pages, contributing to the application's aesthetic and user experience.
 
 #### templates/
+
 - **index.html**: An HTML template serving as the main page for the web application, containing the structural markup and placeholders for dynamic content, such as dynamically generated visualizations and predictive insights.
 
 Within the deployment directory, these files and subdirectories support the deployment of the application, enabling the user interface to interact with the machine learning models and underlying data processing logic. The deployment architecture may extend to include additional directories for resource management, logging, and scalability considerations, as the application evolves and demands more sophisticated deployment capabilities.
@@ -284,26 +300,32 @@ In this Python script, a Random Forest Regressor, a more complex machine learnin
 ## Types of Users for the Affordable Housing Analysis Application
 
 1. **Urban Planner**
+
    - User Story: As an urban planner, I want to analyze housing affordability trends and demographic patterns to inform urban development strategies and policies.
    - Relevant File: `notebooks/exploratory_analysis.ipynb`
 
 2. **Policy Maker**
+
    - User Story: As a policy maker, I need to understand the factors influencing housing affordability and access insights for designing inclusive housing policies.
    - Relevant File: `notebooks/model_training_evaluation.ipynb`
 
 3. **Community Organizer**
+
    - User Story: As a community organizer, I aim to identify areas at risk of gentrification and advocate for affordable housing initiatives.
    - Relevant File: `models/train_model.py`
 
 4. **Real Estate Developer**
+
    - User Story: As a real estate developer, I want to explore demographic and economic indicators to target areas for affordable housing projects.
    - Relevant File: `models/train_complex_model.py`
 
 5. **Researcher**
+
    - User Story: As a researcher, I am interested in analyzing historical housing data to understand long-term affordability trends and their socio-economic impact.
    - Relevant File: `src/visualization/plot_utils.py`
 
 6. **General Public (Community Resident)**
+
    - User Story: As a community resident, I want to interact with an intuitive web interface to visualize housing affordability metrics and understand the impact on my neighborhood.
    - Relevant File: `deployment/app/main.py`
 

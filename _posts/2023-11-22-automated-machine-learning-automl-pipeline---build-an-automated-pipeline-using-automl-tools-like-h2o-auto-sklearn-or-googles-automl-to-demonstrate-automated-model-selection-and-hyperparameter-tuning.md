@@ -8,15 +8,18 @@ layout: article
 ## AI Automated Machine Learning (AutoML) Pipeline
 
 ## Objectives
+
 The objective of building an automated pipeline using AutoML tools is to streamline the process of model selection and hyperparameter tuning for machine learning and deep learning models. By utilizing AutoML tools, we can automate the end-to-end process of building, training, and deploying machine learning models, thus reducing the manual effort required for experimentation and optimization.
 
 ## System Design Strategies
+
 - **Modularity**: The pipeline should be designed with modular components for data preprocessing, feature engineering, model selection, hyperparameter tuning, and evaluation.
 - **Scalability**: The pipeline should be designed to handle large datasets and scale to accommodate a growing number of machine learning models and experiments.
 - **Flexibility**: The pipeline should allow for flexibility in integrating different AutoML tools and libraries to cater to specific use cases and requirements.
 - **Monitoring and Logging**: Incorporate logging and monitoring capabilities to track the performance of models, hyperparameters, and overall pipeline execution.
 
 ## Chosen Libraries
+
 For building the automated pipeline, we will leverage the following libraries and tools:
 
 1. **H2O**: H2O is an open-source, distributed machine learning platform designed for speed and scalability. It provides AutoML capabilities for automating the model selection and hyperparameter tuning process.
@@ -24,7 +27,9 @@ For building the automated pipeline, we will leverage the following libraries an
 3. **Google's AutoML**: Google's AutoML suite offers a range of AutoML tools for specific tasks such as image recognition, natural language processing, and tabular data analysis. It provides advanced automation capabilities with access to Google Cloud infrastructure for scalability and performance.
 
 ## Repository Structure
+
 The repository structure for the automated pipeline will have the following components:
+
 - **Data Processing Module**: This module will contain scripts for data preprocessing, cleaning, and feature engineering.
 - **Model Training Module**: This module will integrate the chosen AutoML tools (H2O, Auto-sklearn, or Google's AutoML) to automate model selection and hyperparameter tuning.
 - **Evaluation and Deployment Module**: This module will handle model evaluation, comparison, and deployment.
@@ -33,39 +38,47 @@ The automation pipeline will be orchestrated using a workflow management tool su
 
 By using the chosen libraries and following the system design strategies, we aim to build a scalable, data-intensive, AI application that leverages the power of AutoML to automate the process of model selection and hyperparameter tuning.
 
-
 ## Infrastructure for the Automated Machine Learning (AutoML) Pipeline
 
 ## Cloud Infrastructure
+
 To support the automated Machine Learning (AutoML) pipeline, we can leverage cloud infrastructure services such as Amazon Web Services (AWS), Microsoft Azure, or Google Cloud Platform. The cloud infrastructure provides scalable and reliable resources for building, training, and deploying machine learning models. Some key components of the infrastructure are:
 
 ### Compute Resources
+
 - **Virtual Machines (VMs)**: Utilize VM instances for running the AutoML pipeline components including data preprocessing, model training, and evaluation.
 - **Container Orchestration**: Deploy the pipeline components as containerized applications using services like Amazon Elastic Container Service (ECS), Azure Kubernetes Service (AKS), or Google Kubernetes Engine (GKE) to achieve scalability and resource optimization.
 
 ### Storage
+
 - **Object Storage**: Use cloud object storage services (e.g., Amazon S3, Azure Blob Storage, Google Cloud Storage) for storing datasets, model artifacts, and intermediate pipeline outputs.
 - **Database Services**: Utilize managed database services for storing metadata, model configurations, and evaluation results.
 
 ### Networking
+
 - **Virtual Network Configuration**: Set up virtual networks to secure communication between pipeline components and restrict access using network security groups and access control lists.
 - **Load Balancing**: Implement load balancing for distributing incoming traffic to the pipeline components.
 
 ## Data Processing and Integration
+
 In the context of the AutoML pipeline, pre-processing and feature engineering play a crucial role. The infrastructure should accommodate the following:
 
 ### Data Processing Tools
+
 - **Big Data Processing**: Utilize distributed processing frameworks such as Apache Spark or cloud-based big data services for scalable data processing.
 - **Data Integration Services**: Utilize data integration tools (e.g., AWS Glue, Azure Data Factory) to orchestrate data pipelines, extract data from various sources, transform and load it into the required format.
 
 ## Automation and Orchestration
+
 To manage and orchestrate the pipeline, we can utilize the following services:
 
 ### Workflow Orchestration
+
 - **Apache Airflow**: Use Apache Airflow for orchestrating the execution of pipeline components, scheduling tasks, and monitoring workflow execution.
 - **Kubeflow Pipelines**: Utilize Kubeflow Pipelines for building and deploying portable and scalable end-to-end ML workflows. It facilitates deployment on Kubernetes clusters and supports versioning of pipeline components and resources.
 
 ### Monitoring and Logging
+
 - **Logging Services**: Integrate logging services such as CloudWatch, Azure Monitor, or Google Cloud Logging for capturing logs, monitoring pipeline execution, and tracking the performance of AutoML models.
 - **Metric Monitoring**: Set up metric monitoring tools to track resource utilization, model performance metrics, and overall pipeline health.
 
@@ -109,36 +122,45 @@ automl_pipeline/
 ## File Structure Overview
 
 ### `data/`
+
 - **raw_data/**: Contains raw datasets acquired for training and testing the ML models.
 - **processed_data/**: Stores the processed datasets after data preprocessing and cleaning.
 - **feature_engineering/**: Holds scripts and files related to feature engineering and transformation of the datasets.
 
 ### `models/`
+
 - **experiments/**: Stores the configurations, hyperparameters, and versioned experiment results from AutoML tool runs.
 - **trained_models/**: Contains the trained ML models along with metadata and performance metrics.
 
 ### `src/`
+
 - **data_processing/**: Houses scripts and modules for data preprocessing, cleaning, and feature engineering.
 - **model_training/**: Includes modules for integrating and running AutoML tools, exercising model selection, and hyperparameter tuning.
 - **evaluation/**: Consists of scripts for model evaluation, comparison, and performance analysis.
 
 ### `config/`
+
 - **parameters/**: Stores configuration files for tuning parameters, such as hyperparameters, dataset paths, and model configurations.
 - **environment/**: Contains environment-specific settings and variables for the AutoML pipeline.
 
 ### `tests/`
+
 - Holds unit tests, integration tests, and end-to-end tests to ensure the correctness and reliability of the pipeline components.
 
 ### `docs/`
+
 - Contains documentation files, such as project overview, setup instructions, and component-specific documentation.
 
 ### `scripts/`
+
 - Stores utility scripts for various tasks, such as data preprocessing, model evaluation, and deployment.
 
 ### `README.md`
+
 - Provides an overview of the project, instructions for setup, usage, and key information for developers and users.
 
 ### `requirements.txt`
+
 - Lists the project dependencies and required packages for the AutoML pipeline.
 
 By structuring the repository in this manner, we maintain a clear separation of concerns and facilitate scalability and maintainability. This structure enables easy navigation, promotes reusability of components, and streamlines collaboration among team members working on different aspects of the AutoML pipeline.
@@ -176,6 +198,7 @@ models/
 ```
 
 ### `experiments/`
+
 - **experiment_1/, experiment_2/**: Directories for storing different experiments conducted with the AutoML tools.
   - **config.json**: Configuration file capturing the setup and parameters used for the experiment.
   - **hyperparameters.json**: File containing the best hyperparameters identified during the experiment.
@@ -183,6 +206,7 @@ models/
   - **evaluation_metrics.json**: File containing the evaluation metrics and performance of the model on validation or test datasets.
 
 ### `trained_models/`
+
 - **model_1/, model_2/**: Directories for storing the trained ML models after AutoML or custom training.
   - **model_metadata.json**: Metadata file describing the details of the trained model, such as model type, input features, and output classes.
   - **model_artifact.pkl**: Serialized model artifact produced after training.
@@ -229,6 +253,7 @@ deployment/
 ```
 
 ### `model_serving/`
+
 - **model_1/, model_2/**: Directories for storing the deployed models for serving predictions.
   - **model_version_1/, model_version_2/**: Specific versions of the trained models for deployment.
     - **model_artifact.pkl**: Serialized model artifact for the specific version.
@@ -237,6 +262,7 @@ deployment/
     - **requirements.txt**: List of required Python packages and dependencies for running the inference script.
 
 ### `model_monitoring/`
+
 - **model_1/, model_2/**: Directories for storing configuration and logs related to model monitoring in production deployments.
   - **monitoring_config.json**: Configuration file specifying the monitoring setup, such as metrics to track, logging settings, and alert thresholds.
   - **logs/**: Directory for storing runtime logs and performance metrics collected during model serving.
@@ -274,6 +300,7 @@ def complex_machine_learning_algorithm(data_file_path):
 ```
 
 In this function:
+
 - The `complex_machine_learning_algorithm` function takes a file path as input, assuming the file contains mock data in a CSV format.
 - It preprocesses the data, splitting it into features (X) and the target variable (y), and further divides the data into training and testing sets.
 - A Random Forest Classifier model is initialized and trained on the training data.
@@ -335,6 +362,7 @@ def complex_deep_learning_algorithm(data_file_path):
 ```
 
 In this function:
+
 - The `complex_deep_learning_algorithm` function takes a file path as input, assuming the file contains mock data in a CSV format.
 - It preprocesses the data, splitting it into features (X) and the target variable (y), and further divides the data into training and testing sets.
 - The data is standardized using the `StandardScaler` from scikit-learn.
@@ -356,23 +384,27 @@ This function serves as a demonstration of a complex deep learning algorithm tha
 ### Types of Users for the AutoML Pipeline
 
 1. **Data Scientist**
-   - *User Story*: As a data scientist, I want to use the AutoML pipeline to quickly iterate through various machine learning models and hyperparameters to identify the best-performing model for a specific dataset.
-   - *File*: The `model_training/` directory containing scripts to integrate AutoML tools such as H2O, Auto-sklearn, or Google's AutoML, allowing the data scientist to experiment with different algorithms and tuning strategies.
+
+   - _User Story_: As a data scientist, I want to use the AutoML pipeline to quickly iterate through various machine learning models and hyperparameters to identify the best-performing model for a specific dataset.
+   - _File_: The `model_training/` directory containing scripts to integrate AutoML tools such as H2O, Auto-sklearn, or Google's AutoML, allowing the data scientist to experiment with different algorithms and tuning strategies.
 
 2. **Machine Learning Engineer**
-   - *User Story*: As a machine learning engineer, I aim to leverage the AutoML pipeline to automate the selection and configuration of machine learning models, enabling me to focus on more complex model development and deployment tasks.
-   - *File*: The `deployment/` directory, particularly the `model_serving/` subdirectory where the machine learning engineer can access the complete deployment-ready artifacts and scripts for serving the trained models.
+
+   - _User Story_: As a machine learning engineer, I aim to leverage the AutoML pipeline to automate the selection and configuration of machine learning models, enabling me to focus on more complex model development and deployment tasks.
+   - _File_: The `deployment/` directory, particularly the `model_serving/` subdirectory where the machine learning engineer can access the complete deployment-ready artifacts and scripts for serving the trained models.
 
 3. **Data Engineer**
-   - *User Story*: As a data engineer, I need to prepare and store the preprocessed datasets and feature engineering scripts in a format that integrates seamlessly with the AutoML pipeline.
-   - *File*: The `data/` directory, including the `processed_data/` and `feature_engineering/` subdirectories, where the data engineer can work on standardizing the data and creating feature engineering pipelines.
+
+   - _User Story_: As a data engineer, I need to prepare and store the preprocessed datasets and feature engineering scripts in a format that integrates seamlessly with the AutoML pipeline.
+   - _File_: The `data/` directory, including the `processed_data/` and `feature_engineering/` subdirectories, where the data engineer can work on standardizing the data and creating feature engineering pipelines.
 
 4. **DevOps Engineer**
-   - *User Story*: As a DevOps engineer, I want to ensure that the deployment of models through the AutoML pipeline is robust and scalable, with appropriate monitoring and logging mechanisms in place.
-   - *File*: The `deployment/` directory, specifically the `model_monitoring/` subdirectory, which contains configuration and logs for monitoring the model performance in production deployments.
+
+   - _User Story_: As a DevOps engineer, I want to ensure that the deployment of models through the AutoML pipeline is robust and scalable, with appropriate monitoring and logging mechanisms in place.
+   - _File_: The `deployment/` directory, specifically the `model_monitoring/` subdirectory, which contains configuration and logs for monitoring the model performance in production deployments.
 
 5. **Business Analyst**
-   - *User Story*: As a business analyst, I seek to understand the model selection and performance results produced by the AutoML pipeline to make data-driven decisions and gain insights into the predictive capabilities of the deployed models.
-   - *File*: The `models/` directory, especially the `experiments/` subdirectory where the business analyst can access the results of various model experiments and the evaluation metrics.
+   - _User Story_: As a business analyst, I seek to understand the model selection and performance results produced by the AutoML pipeline to make data-driven decisions and gain insights into the predictive capabilities of the deployed models.
+   - _File_: The `models/` directory, especially the `experiments/` subdirectory where the business analyst can access the results of various model experiments and the evaluation metrics.
 
 Each type of user interacts with different aspects of the AutoML pipeline and will rely on different directories and files within the repository to fulfill their specific roles and objectives.

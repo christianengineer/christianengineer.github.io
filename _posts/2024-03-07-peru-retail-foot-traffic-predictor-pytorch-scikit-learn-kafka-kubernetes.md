@@ -23,21 +23,24 @@ For this solution, we will use a Time Series Forecasting model based on Recurren
 
 ## **Sourcing, Preprocessing, Modeling, and Deploying Strategies:**
 
-1. **Sourcing:** 
+1. **Sourcing:**
+
    - **Data Collection:** Collect historical foot traffic data from retail locations in Peru. This data can include timestamps, foot traffic counts, weather information, special events, etc.
    - **Real-Time Data Streaming:** Utilize Kafka for real-time data streaming to continuously feed new data into the model for updates and improvements.
-  
-2. **Preprocessing:** 
+
+2. **Preprocessing:**
+
    - **Data Cleaning:** Handle missing values, outliers, and anomalies in the data.
    - **Feature Engineering:** Create relevant features such as time of day, day of the week, holidays, etc., to improve model performance.
    - **Normalization:** Scale the data to a standard range for better model training.
 
-3. **Modeling:** 
+3. **Modeling:**
+
    - **Build RNN Model:** Develop an RNN model using PyTorch to train on historical foot traffic data for accurate predictions.
    - **Hyperparameter Tuning:** Optimize the model's hyperparameters to improve performance and robustness.
    - **Cross-Validation:** Validate the model using cross-validation techniques to ensure generalization to unseen data.
 
-4. **Deployment:** 
+4. **Deployment:**
    - **Containerization:** Containerize the model using Docker for easy deployment and scalability.
    - **Orchestration:** Deploy the model on Kubernetes to manage and scale the model efficiently in production.
    - **Monitoring and Updates:** Continuously monitor the model's performance and update it with new data for ongoing accuracy and relevance.
@@ -48,7 +51,7 @@ For this solution, we will use a Time Series Forecasting model based on Recurren
 - **Scikit-Learn**: For data preprocessing and model evaluation - [Scikit-Learn](https://scikit-learn.org/)
 - **Kafka**: For real-time data streaming - [Apache Kafka](https://kafka.apache.org/)
 - **Kubernetes**: For model deployment and orchestration - [Kubernetes](https://kubernetes.io/)
-- **Docker**: For containerizing the model - [Docker](https://www.docker.com/) 
+- **Docker**: For containerizing the model - [Docker](https://www.docker.com/)
 
 By following these strategies and utilizing the mentioned tools and libraries, retail businesses in Peru can deploy a scalable, production-ready machine learning solution to predict foot traffic accurately and optimize their operations for increased sales and customer satisfaction.
 
@@ -57,26 +60,32 @@ By following these strategies and utilizing the mentioned tools and libraries, r
 For the Peru Retail Foot Traffic Predictor project, an efficient data sourcing strategy is crucial to ensure the availability of relevant and high-quality data for model training and forecasting. Here are some specific tools and methods that are well-suited for efficiently collecting data related to foot traffic in retail locations:
 
 ### **1. Traffic Counting Sensors:**
+
 - **Tools:** Utilize IoT devices equipped with sensors such as infrared sensors, Wi-Fi tracking devices, or video analytics systems to count foot traffic at retail locations.
 - **Integration:** Integrate IoT devices with a central data collection platform that can aggregate and store foot traffic data in a structured format compatible with the project's technology stack.
 
 ### **2. Point-of-Sale (POS) Systems:**
+
 - **Tools:** Extract foot traffic data indirectly from POS systems by analyzing transaction timestamps, sales volume, and customer interactions.
 - **Integration:** Develop APIs or ETL pipelines to extract relevant foot traffic data from POS systems and transform it into a format that can be seamlessly integrated into the existing data infrastructure.
 
 ### **3. Weather Data APIs:**
+
 - **Tools:** Access weather data APIs such as OpenWeatherMap or AccuWeather to incorporate weather conditions (e.g., temperature, precipitation) that may impact foot traffic patterns.
 - **Integration:** Develop scripts or automated processes to fetch real-time weather data and merge it with the foot traffic dataset to enhance the model's predictive capabilities.
 
 ### **4. Event Calendars and Social Media:**
+
 - **Tools:** Monitor event calendars, social media platforms, and news sources for information on local events, promotions, or holidays that could influence foot traffic.
 - **Integration:** Use web scraping tools or APIs to extract event-related data and enrich the foot traffic dataset with contextual information, enabling the model to capture external factors affecting foot traffic.
 
 ### **5. Mobile App Data:**
+
 - **Tools:** Leverage mobile app analytics tools like Firebase Analytics or Google Analytics to collect anonymized location data and user interactions at retail stores.
 - **Integration:** Integrate mobile app analytics SDKs with the retail store's app to capture foot traffic patterns, user engagement, and behavior data, providing additional insights for the forecasting model.
 
 ### **Integration within Existing Technology Stack:**
+
 To streamline the data collection process and ensure data accessibility in the correct format for analysis and model training, consider the following integration strategies:
 
 - **Data Lake/ Warehouse:** Store collected data in a centralized data lake or warehouse (e.g., AWS S3, Google BigQuery) to consolidate diverse data sources and facilitate data retrieval for analysis and modeling.
@@ -89,53 +98,63 @@ By implementing these tools and methods within the existing technology stack, da
 
 Effective feature extraction and engineering are essential for enhancing the interpretability of data and improving the performance of the machine learning model in the Peru Retail Foot Traffic Predictor project. Here are detailed recommendations for feature extraction and engineering to achieve the project's objectives:
 
-### **1. **Timestamp Features:**
+### **1. **Timestamp Features:\*\*
+
 - **Extraction:** Extract timestamp features such as hour of the day, day of the week, month, and year from the timestamp data.
 - **Engineering:** Encode categorical timestamp features like day of the week or month using one-hot encoding or label encoding.
 
-### **2. **Weather Features:**
+### **2. **Weather Features:\*\*
+
 - **Extraction:** Include weather-related features such as temperature, precipitation, humidity, and weather conditions.
 - **Engineering:** Create binary features for weather conditions (e.g., rainy day, sunny day) using threshold values for precipitation and temperature.
 
-### **3. **Holiday Features:**
+### **3. **Holiday Features:\*\*
+
 - **Extraction:** Identify and extract holiday information from the dataset or external sources.
 - **Engineering:** Generate binary features indicating whether a day is a holiday or not to capture the impact of holidays on foot traffic.
 
-### **4. **Special Event Features:**
+### **4. **Special Event Features:\*\*
+
 - **Extraction:** Gather data on special events, promotions, or sales occurring at retail locations.
 - **Engineering:** Create categorical features representing different types of special events (e.g., clearance sale, promotional event).
 
-### **5. **Historical Foot Traffic Features:**
+### **5. **Historical Foot Traffic Features:\*\*
+
 - **Extraction:** Include lag features representing historical foot traffic counts (e.g., foot traffic yesterday, last week).
 - **Engineering:** Calculate rolling statistics such as moving averages or exponential decay for historical foot traffic to capture trends and seasonality.
 
-### **6. **Location Features:**
+### **6. **Location Features:\*\*
+
 - **Extraction:** Incorporate spatial features like store location, proximity to transportation hubs, or population density.
 - **Engineering:** Use clustering algorithms like k-means to group locations based on foot traffic patterns or demographic characteristics.
 
-### **7. **Interaction Features:**
+### **7. **Interaction Features:\*\*
+
 - **Extraction:** Create interaction features by combining two or more existing features (e.g., temperature multiplied by foot traffic count).
 - **Engineering:** Include polynomial features or interaction terms to capture nonlinear relationships between variables.
 
 ### **Recommendations for Variable Names:**
 
-1. **Numeric Features:** 
-   - `temperature`: Temperature in Celsius 
+1. **Numeric Features:**
+
+   - `temperature`: Temperature in Celsius
    - `precipitation`: Precipitation in mm
    - `humidity`: Relative humidity in %
    - `foot_traffic_count`: Number of people entering the store
 
-2. **Categorical Features:** 
+2. **Categorical Features:**
+
    - `day_of_week`: Day of the week (1-7)
    - `is_holiday`: Binary indicator for holiday (0 or 1)
    - `special_event_type`: Type of special event (e.g., promotion, clearance sale)
 
-3. **Temporal Features:** 
+3. **Temporal Features:**
+
    - `hour_of_day`: Hour of the day (0-23)
    - `month`: Month of the year (1-12)
    - `is_weekend`: Binary indicator for weekend (0 or 1)
 
-4. **Interaction Features:** 
+4. **Interaction Features:**
    - `temperature_x_foot_traffic`: Interaction feature between temperature and foot traffic count
    - `historical_foot_traffic_avg`: Rolling average of historical foot traffic counts
 
@@ -146,31 +165,37 @@ By following these feature extraction and engineering recommendations, the Peru 
 For the success of the Peru Retail Foot Traffic Predictor project, efficient metadata management is critical to ensure the proper organization, tracking, and utilization of data-related information specific to the project's demands. Here are insights directly relevant to the unique demands and characteristics of the project:
 
 ### **1. Location Metadata:**
+
 - **Description:** Store location information, geographical coordinates, and metadata related to each retail location.
 - **Importance:** Essential for spatial analysis, identifying location-specific trends, and optimizing staffing and promotional strategies for individual stores.
 - **Recommendation:** Maintain a location metadata table with store IDs, coordinates, and demographic information to link location-specific features with foot traffic data.
 
 ### **2. Weather Metadata:**
+
 - **Description:** Metadata related to weather data sources, update frequencies, and details of weather features used in the model.
 - **Importance:** Crucial for understanding the impact of weather conditions on foot traffic patterns and enhancing the model's forecasting accuracy.
 - **Recommendation:** Document weather data providers, APIs used for data retrieval, and any data transformations applied to weather features for transparency and reproducibility.
 
 ### **3. Holiday Metadata:**
+
 - **Description:** List of holidays, their significance, and the methodology used to identify and incorporate holidays into the dataset.
 - **Importance:** Helps in accounting for holiday effects on foot traffic, adjusting staffing levels, and planning promotional activities accordingly.
 - **Recommendation:** Maintain a holiday calendar with holiday names, dates, and associated impact factors on foot traffic to ensure consistency in holiday feature engineering.
 
 ### **4. Special Event Metadata:**
+
 - **Description:** Information on special events, promotions, or campaigns affecting foot traffic, including event types and durations.
 - **Importance:** Enables the model to capture the influence of special events on foot traffic dynamics and tailor predictions based on event schedules.
 - **Recommendation:** Create a special event log detailing event descriptions, start/end dates, and corresponding features engineered for modeling special event effects on foot traffic.
 
 ### **5. Model Configuration Metadata:**
+
 - **Description:** Details of the model architecture, hyperparameters, training duration, and versioning for reproducibility and performance tracking.
 - **Importance:** Facilitates model monitoring, comparison of model versions, and fine-tuning parameters based on performance metrics.
 - **Recommendation:** Maintain a model configuration repository documenting model specifications, training dataset versions, evaluation metrics, and model performance results for iterative model improvement and deployment updates.
 
 ### **6. Data Pipeline Metadata:**
+
 - **Description:** Documentation of data sources, preprocessing steps, ETL pipelines, and data transformations applied before model training.
 - **Importance:** Ensures data lineage, quality control, and reproducibility of data processing steps for consistent model training and forecasting.
 - **Recommendation:** Implement data pipeline logging to capture metadata on data transformations, cleaning operations, and feature engineering steps, aiding in debugging and auditing data processing workflows.
@@ -182,32 +207,37 @@ By effectively managing metadata specific to location, weather, holidays, specia
 In the context of the Peru Retail Foot Traffic Predictor project, several specific challenges related to data quality, completeness, and variability may arise, impacting the robustness and reliability of the machine learning models. Here are the potential problems and strategic data preprocessing practices to address these issues effectively:
 
 ### **1. Missing Data:**
+
 - **Problem:** Incomplete or missing data entries for certain timestamps, locations, or features can hinder model training and forecasting accuracy.
-- **Preprocessing Strategy:** 
+- **Preprocessing Strategy:**
   - **Imputation:** Use appropriate techniques (mean imputation, interpolation) to fill missing values in the dataset, ensuring continuity in time series data.
   - **Data Augmentation:** Generate synthetic data points using statistical methods to supplement missing observations and maintain dataset integrity.
 
 ### **2. Outliers and Anomalies:**
+
 - **Problem:** Outliers in foot traffic counts or irregular patterns in the data may distort model predictions and lead to inaccurate forecasting results.
-- **Preprocessing Strategy:** 
+- **Preprocessing Strategy:**
   - **Outlier Detection:** Explore statistical methods (e.g., Z-score, IQR) to identify and filter out outliers that deviate significantly from the normal foot traffic distribution.
   - **Anomaly Detection:** Implement anomaly detection algorithms (e.g., Isolation Forest, One-Class SVM) to detect unusual patterns in foot traffic data and mitigate their impact on model training.
 
 ### **3. Seasonality and Trends:**
+
 - **Problem:** Presence of seasonality, trends, or periodic patterns in foot traffic data can introduce bias and skew model predictions if not appropriately handled.
-- **Preprocessing Strategy:** 
+- **Preprocessing Strategy:**
   - **Detrending:** Apply methods like first-order differencing or polynomial detrending to remove linear trends and make the data stationary for better model performance.
   - **Seasonal Decomposition:** Decompose time series data into trend, seasonal, and residual components using techniques like Seasonal and Trend decomposition using Loess (STL) to capture underlying patterns accurately.
 
 ### **4. Data Scaling and Normalization:**
+
 - **Problem:** Variability in data scales among features (e.g., foot traffic counts, temperature) can adversely affect model convergence and prediction accuracy.
-- **Preprocessing Strategy:** 
+- **Preprocessing Strategy:**
   - **Feature Scaling:** Normalize numerical features to a common scale using techniques like Min-Max scaling or Standardization to prevent dominant features from overshadowing others during model training.
   - **Target Transformation:** Apply transformations (e.g., log transformation) to the target variable (foot traffic count) to stabilize variance and improve model performance, especially for skewed data distributions.
 
 ### **5. Feature Selection and Dimensionality Reduction:**
+
 - **Problem:** Redundant or irrelevant features can introduce noise and complexity into the model, leading to overfitting and reduced interpretability.
-- **Preprocessing Strategy:** 
+- **Preprocessing Strategy:**
   - **Feature Importance:** Utilize techniques like feature importance scores from ensemble models (e.g., Random Forest) to identify key features influencing foot traffic predictions and eliminate less informative variables.
   - **Dimensionality Reduction:** Apply methods such as Principal Component Analysis (PCA) or t-SNE to reduce the dimensionality of the feature space while preserving relevant information and enhancing model efficiency.
 
@@ -252,6 +282,7 @@ data.to_csv('preprocessed_foot_traffic_data.csv', index=False)
 ```
 
 In this code file:
+
 1. We load the raw dataset containing foot traffic data.
 2. Select relevant features important for model training, focusing on foot traffic, temperature, and precipitation.
 3. Impute missing values in temperature and precipitation columns using the mean value to ensure dataset completeness.
@@ -269,21 +300,26 @@ For the Peru Retail Foot Traffic Predictor project, a Time Series Forecasting mo
 ### **Recommended Modeling Strategy:**
 
 1. **Data Preparation:**
+
    - Prepare the preprocessed dataset with engineered features, normalized numerical values, and encoded categorical variables ready for model training.
 
 2. **Model Selection:**
+
    - Implement an RNN architecture using PyTorch to capture sequential patterns in foot traffic data over time.
    - Utilize LSTM (Long Short-Term Memory) cells within the RNN to handle long-term dependencies and learn from past information effectively.
 
 3. **Model Training:**
+
    - Split the dataset into training and validation sets, preserving temporal order to prevent data leakage.
    - Train the RNN model on historical foot traffic data, optimizing hyperparameters and monitoring for overfitting.
 
 4. **Validation and Evaluation:**
+
    - Evaluate the model's performance using metrics like Mean Squared Error (MSE) or Mean Absolute Error (MAE) to assess forecasting accuracy.
    - Perform cross-validation or time series validation techniques to validate the model's generalization ability.
 
 5. **Hyperparameter Optimization:**
+
    - Fine-tune the RNN model's architecture, learning rate, batch size, and other hyperparameters to enhance model performance and robustness.
 
 6. **Interpretation and Visualization:**
@@ -293,14 +329,16 @@ For the Peru Retail Foot Traffic Predictor project, a Time Series Forecasting mo
 
 The most crucial step in the recommended modeling strategy is the Validation and Evaluation phase. In the context of the Peru Retail Foot Traffic Predictor project, where accurate foot traffic predictions are imperative for optimizing staffing and promotional strategies, validating the model's performance is vital for ensuring the reliability and applicability of the forecasting results.
 
-- **Importance for the Project:** 
+- **Importance for the Project:**
+
   - The Validation and Evaluation step ensures that the RNN model accurately captures the complex temporal patterns in foot traffic data, enabling reliable predictions for retail locations in Peru.
   - Accurate evaluation metrics such as MSE or MAE provide insights into the model's forecasting precision, guiding improvements and adjustments to enhance prediction accuracy.
 
-- **Addressing Data Complexity:** 
+- **Addressing Data Complexity:**
+
   - By thoroughly validating the model's performance with appropriate metrics and techniques, the intricacies of working with time series data and the dynamic nature of foot traffic patterns are effectively addressed, leading to robust forecasting capabilities.
 
-- **Goal Achievement:** 
+- **Goal Achievement:**
   - The Validation and Evaluation step not only validates the model's forecasting accuracy but also aligns the model's predictions with the project's overarching goal of maximizing sales opportunities through optimized staffing and promotional planning based on reliable foot traffic forecasts.
 
 By prioritizing the Validation and Evaluation step within the modeling strategy tailored to the project's specific data types and objectives, the Peru Retail Foot Traffic Predictor project can ensure the success of the machine learning solution in accurately predicting foot traffic, ultimately driving strategic decision-making and operational efficiency in retail operations.
@@ -310,6 +348,7 @@ By prioritizing the Validation and Evaluation step within the modeling strategy 
 To effectively implement the modeling strategy for the Peru Retail Foot Traffic Predictor project, the following tools are recommended based on their alignment with the data modeling needs, seamless integration capabilities, and features beneficial for addressing the project's objectives:
 
 1. **PyTorch:**
+
    - **Description:** PyTorch is a popular deep learning framework that provides a flexible and dynamic approach to building and training neural network models, including recurrent architectures like LSTMs.
    - **Fit into Modeling Strategy:** PyTorch allows for the implementation of RNN models, crucial for capturing temporal dependencies in foot traffic data, aligning with the project's modeling strategy.
    - **Integration:** PyTorch integrates well with various data processing libraries and frameworks, making it compatible with the project's existing workflow.
@@ -317,6 +356,7 @@ To effectively implement the modeling strategy for the Peru Retail Foot Traffic 
    - **Documentation:** [PyTorch Documentation](https://pytorch.org/docs/stable/index.html)
 
 2. **scikit-learn:**
+
    - **Description:** scikit-learn is a versatile machine learning library in Python that offers a wide range of tools for data preprocessing, model selection, and evaluation.
    - **Fit into Modeling Strategy:** scikit-learn provides tools for data preprocessing tasks like feature scaling, feature selection, and model evaluation, supporting the project's modeling strategy.
    - **Integration:** scikit-learn seamlessly integrates with PyTorch and other Python libraries, enabling efficient data processing and model development workflows.
@@ -351,13 +391,13 @@ def generate_synthetic_data(num_samples):
         foot_traffic_count = random.randint(50, 200)
         temperature = round(np.random.normal(loc=25, scale=5), 2)
         precipitation = round(np.random.uniform(0, 10), 2)
-        
+
         ## Simulate holiday and special event effects
         is_holiday = 1 if random.random() < 0.1 else 0
         special_event_type = random.choice(['Promotion', 'Sale', 'Event', None])
-        
+
         data.append([timestamp, foot_traffic_count, temperature, precipitation, is_holiday, special_event_type])
-    
+
     df = pd.DataFrame(data, columns=['timestamp', 'foot_traffic_count', 'temperature', 'precipitation', 'is_holiday', 'special_event_type'])
     return df
 
@@ -369,12 +409,14 @@ synthetic_data.to_csv('synthetic_foot_traffic_data.csv', index=False)
 ```
 
 In this script:
+
 - We utilize the Faker library to generate synthetic data resembling real-world entries for foot traffic, temperature, precipitation, holidays, and special events.
 - The function `generate_synthetic_data()` creates synthetic samples with variability based on normal distributions and random factors.
 - A synthetic dataset with 1000 samples is generated and saved to a CSV file for model training and validation.
 
 **Dataset Validation Strategy:**
 To validate the dataset's realism and variability:
+
 - Perform statistical analysis to ensure feature distributions reflect expected ranges (e.g., foot traffic counts, temperature).
 - Visualize time series patterns and special event occurrences to verify the dataset's dynamics.
 - Check for missing values, outliers, and anomalies to assess data quality.
@@ -393,6 +435,7 @@ timestamp,foot_traffic_count,temperature,precipitation,is_holiday,special_event_
 ```
 
 **Data Structure and Formatting:**
+
 - The data is structured in CSV format with the following features:
   - `timestamp`: Date and time of the data entry.
   - `foot_traffic_count`: Number of people entering the store.
@@ -402,6 +445,7 @@ timestamp,foot_traffic_count,temperature,precipitation,is_holiday,special_event_
   - `special_event_type`: Categorical feature indicating special event types (e.g., Promotion, Sale) or None if no event.
 
 **Model Ingestion Formatting:**
+
 - The CSV format enables easy ingestion into machine learning models using libraries like pandas in Python.
 - Numeric and categorical features are appropriately represented to facilitate model training and analysis.
 - Missing values should be handled during preprocessing to ensure data completeness and model performance.
@@ -475,6 +519,7 @@ torch.save(model.state_dict(), 'rnn_foot_traffic_predictor.pth')
 ```
 
 **Code Quality and Structure Standards:**
+
 - Structured code with clear separation of data preprocessing, model building, training, and deployment sections.
 - Meaningful variable names and function definitions following PEP 8 style guidelines.
 - Detailed inline comments explaining the logic, purpose, and functionality of key sections.
@@ -489,41 +534,48 @@ By adhering to these code quality and structure standards observed in large tech
 To effectively deploy the machine learning model into production for the Peru Retail Foot Traffic Predictor project, a customized deployment plan is crucial. Below is a brief outline of the deployment steps tailored to the project's unique demands and characteristics, along with the recommended tools and platforms for each step:
 
 ### **1. Pre-Deployment Checks:**
+
 - **Purpose:** Ensure the model is trained and validated accurately, and all necessary dependencies are in place.
 - **Tools:**
   - **Model Validation:** Utilize scikit-learn for model evaluation - [scikit-learn Documentation](https://scikit-learn.org/stable/documentation.html)
   - **Model Serialization:** Save the model using PyTorch's `torch.save()` - [PyTorch Saving and Loading Models](https://pytorch.org/tutorials/beginner/saving_loading_models.html)
 
 ### **2. Containerization:**
+
 - **Purpose:** Package the model and its dependencies into a container for easier deployment and scalability.
 - **Tools:**
   - **Docker:** Containerize the model and environment - [Docker Docs](https://docs.docker.com/)
   - **DockerHub:** Store and manage Docker images - [DockerHub](https://docs.docker.com/docker-hub/)
 
 ### **3. Orchestration:**
+
 - **Purpose:** Deploy and manage containers effectively in a production environment.
 - **Tools:**
   - **Kubernetes:** Orchestrate containers for scalability and reliability - [Kubernetes Documentation](https://kubernetes.io/docs/)
   - **KubeFlow:** Machine learning toolkit for Kubernetes - [KubeFlow](https://www.kubeflow.org/)
 
 ### **4. Model Serving:**
+
 - **Purpose:** Expose the model as a web service to make predictions in real-time.
 - **Tools:**
   - **Flask:** Build a REST API for model inference - [Flask Documentation](https://flask.palletsprojects.com/en/2.1.x/)
   - **FastAPI:** Create fast and modern APIs - [FastAPI Documentation](https://fastapi.tiangolo.com/)
 
 ### **5. Monitoring and Logging:**
+
 - **Purpose:** Monitor model performance, track predictions, and log errors for debugging.
 - **Tools:**
   - **Prometheus:** Monitoring and alerting toolkit - [Prometheus](https://prometheus.io/)
   - **Grafana:** Visualization tool for monitoring metrics - [Grafana](https://grafana.com/)
 
 ### **6. Integration with Existing Systems:**
+
 - **Purpose:** Seamlessly integrate the model into the live environment for real-world use.
 - **Tools:**
   - **Apache Kafka:** Manage real-time data streams for model inputs - [Apache Kafka Documentation](https://kafka.apache.org/documentation/)
 
 ### **7. Testing and Rollout:**
+
 - **Purpose:** Run thorough tests and gradually rollout the model to ensure stability.
 - **Tools:**
   - **PyTest:** Testing framework for unit and integration testing - [PyTest Documentation](https://docs.pytest.org/)
@@ -554,6 +606,7 @@ CMD ["python", "app.py"]
 ```
 
 **Dockerfile Configuration Breakdown:**
+
 - **Base Image:** Utilizes the official PyTorch base image with CUDA support for GPU acceleration, optimized for machine learning tasks.
 - **Working Directory:** Sets the working directory within the container to `/app` for organization and ease of access.
 - **Dependency Installation:** Installs required Python libraries like pandas, scikit-learn, Torch, and Flask for the model and API functionality.
@@ -565,26 +618,31 @@ By using this Dockerfile configuration tailored to the performance needs of the 
 ### **User Groups and User Stories for Peru Retail Foot Traffic Predictor:**
 
 #### **1. Store Managers:**
+
 - **User Story:** As a store manager, I struggle with inefficient staffing schedules leading to understaffing during peak hours. I need a solution to predict foot traffic accurately to optimize staffing levels and improve customer service.
 - **Solution:** The application uses machine learning models to forecast foot traffic, aiding in staffing planning. Predictions help optimize staff allocation based on expected foot traffic, reducing understaffing and enhancing customer experience.
 - **Relevant Component:** Machine learning model for foot traffic prediction.
 
 #### **2. Marketing Team:**
+
 - **User Story:** The marketing team faces challenges in planning targeted promotions without insights into peak foot traffic times. They require a tool to identify high-traffic periods for effective promotional campaigns.
 - **Solution:** The application forecasts foot traffic patterns, enabling the marketing team to schedule promotions during peak foot traffic times to maximize visibility and engagement.
 - **Relevant Component:** Time series forecasting model for foot traffic patterns.
 
 #### **3. Operations Managers:**
+
 - **User Story:** Operations managers encounter difficulties in inventory management and resource allocation without visibility into foot traffic trends. They need a tool to anticipate demand fluctuations and optimize operational efficiency.
 - **Solution:** The application provides foot traffic predictions, allowing operations managers to align inventory levels and resource allocation with anticipated demand, reducing costs and streamlining operations.
 - **Relevant Component:** Time series forecasting model for foot traffic patterns.
 
 #### **4. Business Owners:**
+
 - **User Story:** Business owners are concerned about revenue fluctuations and uncertain sales performance due to inconsistent foot traffic patterns. They seek a tool to predict foot traffic accurately and enhance business decision-making.
 - **Solution:** The application offers reliable foot traffic forecasts, empowering business owners to make data-driven decisions, optimize staffing and promotional strategies, and maximize sales opportunities.
 - **Relevant Component:** Time series forecasting model for foot traffic patterns.
 
 #### **5. Customer Support Team:**
+
 - **User Story:** The customer support team struggles to handle customer complaints about long wait times and inadequate service during peak hours. They require insights into foot traffic trends to enhance service quality.
 - **Solution:** The application predicts foot traffic variations, allowing the customer support team to proactively adjust service levels during peak traffic hours, improving customer satisfaction and retention.
 - **Relevant Component:** Machine learning model for foot traffic prediction.

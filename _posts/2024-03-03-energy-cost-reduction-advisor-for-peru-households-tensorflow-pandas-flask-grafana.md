@@ -8,11 +8,13 @@ layout: article
 ## Project: AI Energy Cost Reduction Advisor for Peru Households
 
 ### Objectives:
+
 1. Analyze household energy usage patterns to identify areas of improvement.
 2. Provide tailored advice to users on reducing energy bills through efficient practices and renewable energy sources.
 3. Implement a repository of renewable energy sources for users to explore and adopt.
 
 ### System Design:
+
 1. **Data Collection:** Collect household energy usage data using smart meters or IoT devices.
 2. **Data Processing:** Pre-process and analyze the data using TensorFlow and Pandas to extract insights and patterns.
 3. **Machine Learning:** Develop ML models to predict energy usage and recommend cost-saving strategies.
@@ -20,12 +22,14 @@ layout: article
 5. **Data Visualization:** Utilize Grafana for real-time monitoring of energy consumption and cost-saving impact.
 
 ### System Design Strategies:
+
 1. **Scalability:** Implement a scalable architecture to handle a large volume of household data.
 2. **Real-time Processing:** Utilize streaming analytics for real-time insights and recommendations.
 3. **Security:** Implement encryption and authentication mechanisms to protect user data and privacy.
 4. **User Engagement:** Provide interactive visualizations and personalized recommendations to engage users effectively.
 
 ### Chosen Libraries:
+
 1. **TensorFlow:** for building and training machine learning models for energy usage prediction.
 2. **Pandas:** for data manipulation and analysis to preprocess the household energy data efficiently.
 3. **Flask:** for developing the web application to provide personalized advice to users.
@@ -36,28 +40,34 @@ By leveraging these libraries and design strategies, we aim to create a scalable
 ## MLOps Infrastructure for Energy Cost Reduction Advisor
 
 ### Continuous Integration/Continuous Deployment (CI/CD):
+
 1. **Automated Testing:** Implement automated tests to validate data pipelines, ML models, and application functionality.
 2. **Version Control:** Utilize Git for version control to track changes in code, data, and model artifacts.
 3. **CI/CD Pipeline:** Set up a CI/CD pipeline to automate the deployment of new model versions and application updates.
 
 ### Monitoring and Logging:
+
 1. **Model Monitoring:** Implement monitoring tools to track model performance, data drift, and anomalies.
 2. **Application Monitoring:** Monitor application metrics, user interactions, and system performance using Grafana.
 3. **Logging:** Use logging libraries in Flask to capture errors and events for troubleshooting.
 
 ### Infrastructure as Code (IaC):
+
 1. **Containerization:** Dockerize the application components for portability and consistency across environments.
 2. **Orchestration:** Use Kubernetes or Docker Swarm for orchestrating containers and managing the application's deployment and scaling.
 
 ### Data Management:
+
 1. **Data Versioning:** Implement a data versioning system to track changes in input data and ensure reproducibility.
 2. **Data Pipeline Automation:** Build data pipelines using tools like Apache Airflow to automate data processing and model training.
 
 ### Model Deployment and Serving:
+
 1. **Model Serving:** Deploy ML models as REST APIs using Flask or TensorFlow Serving for real-time predictions.
 2. **Batch Inference:** Set up batch inference jobs for processing large datasets and generating insights in bulk.
 
 ### Security and Compliance:
+
 1. **Data Privacy:** Implement encryption and access controls to protect sensitive user data.
 2. **Compliance:** Ensure compliance with data regulations like GDPR and data residency requirements.
 
@@ -101,6 +111,7 @@ energy_cost_reduction_advisor/
 ```
 
 ### Description:
+
 - **data/**: Contains raw and processed energy usage data.
 - **models/**: Includes scripts for model training and deployment.
 - **notebooks/**: Contains Jupyter notebooks for exploratory analysis, data preprocessing, and model training evaluation.
@@ -132,20 +143,22 @@ models/
 ```
 
 ### Description:
+
 - **training/**:
-    - **data_processing.py**: Scripts for pre-processing raw energy data using Pandas.
-    - **feature_engineering.py**: Feature engineering methods to extract relevant features for model training.
-    - **model_training.py**: TensorFlow script to train machine learning models for energy usage prediction.
-  
+  - **data_processing.py**: Scripts for pre-processing raw energy data using Pandas.
+  - **feature_engineering.py**: Feature engineering methods to extract relevant features for model training.
+  - **model_training.py**: TensorFlow script to train machine learning models for energy usage prediction.
 - **deployment/**:
-    - **model.py**: Saved trained model artifacts for deployment.
-    - **inference.py**: Flask API for serving model predictions in the application.
+
+  - **model.py**: Saved trained model artifacts for deployment.
+  - **inference.py**: Flask API for serving model predictions in the application.
 
 - **evaluation/**:
-    - **model_evaluation.py**: Script to evaluate model performance on test data.
-    - **metrics.py**: Utility functions to calculate evaluation metrics like RMSE, MAE, etc.
+  - **model_evaluation.py**: Script to evaluate model performance on test data.
+  - **metrics.py**: Utility functions to calculate evaluation metrics like RMSE, MAE, etc.
 
 ### Explanation:
+
 - The **training/** directory contains scripts for data processing, feature engineering, and model training using TensorFlow. This ensures a structured approach to preparing the data and training the ML models efficiently.
 - The **deployment/** directory stores the trained model artifacts and Flask API for deploying the model for real-time predictions in the application.
 - The **evaluation/** directory contains scripts to evaluate model performance and calculate metrics to assess the accuracy and effectiveness of the model in predicting energy usage patterns.
@@ -173,19 +186,23 @@ deployment/
 ```
 
 ### Description:
+
 - **model/**:
-    - **saved_model.pb**: Saved TensorFlow model graph for inference.
-    - **variables/**: Directory containing model variables and weights.
+
+  - **saved_model.pb**: Saved TensorFlow model graph for inference.
+  - **variables/**: Directory containing model variables and weights.
 
 - **app/**:
-    - **templates/**: HTML templates for the web application interface.
-    - **static/**: Static files like CSS for styling the web UI.
-    - **app.py**: Flask application script for serving model predictions and rendering the UI.
+
+  - **templates/**: HTML templates for the web application interface.
+  - **static/**: Static files like CSS for styling the web UI.
+  - **app.py**: Flask application script for serving model predictions and rendering the UI.
 
 - **Dockerfile**: Configuration for Docker containerizing the application.
 - **requirements.txt**: List of dependencies required for running the application.
 
 ### Explanation:
+
 - The **model/** directory contains the saved TensorFlow model and its variables necessary for making predictions in the deployed application.
 - The **app/** directory includes the necessary files for the Flask application that serves the model predictions and interacts with the user interface.
 - The **templates/** directory stores HTML templates for rendering the UI, while the **static/** directory holds static files like CSS for styling the UI.
@@ -275,23 +292,27 @@ This script can be further extended with hyperparameter tuning, feature engineer
 ### Types of Users for the Energy Cost Reduction Advisor:
 
 1. **Residential Users:**
-   - *User Story*: As a homeowner in Peru, I want to understand my household energy usage patterns to reduce my energy bills and adopt eco-friendly practices.
-   - *Accomplished by*: Utilizing the Flask web application (`src/app/`) to view personalized advice and recommendations.
+
+   - _User Story_: As a homeowner in Peru, I want to understand my household energy usage patterns to reduce my energy bills and adopt eco-friendly practices.
+   - _Accomplished by_: Utilizing the Flask web application (`src/app/`) to view personalized advice and recommendations.
 
 2. **Energy Consultants:**
-   - *User Story*: As an energy consultant, I need a tool to analyze multiple households' energy data to provide tailored recommendations for cost reduction and sustainability.
-   - *Accomplished by*: Using the model training script (`models/training/train_model.py`) to generate insights and recommendations for multiple households.
+
+   - _User Story_: As an energy consultant, I need a tool to analyze multiple households' energy data to provide tailored recommendations for cost reduction and sustainability.
+   - _Accomplished by_: Using the model training script (`models/training/train_model.py`) to generate insights and recommendations for multiple households.
 
 3. **Renewable Energy Providers:**
-   - *User Story*: As a renewable energy provider in Peru, I want to offer solutions based on household energy patterns to encourage the adoption of renewable energy sources.
-   - *Accomplished by*: Leveraging the data processing script (`models/training/train_complex_model.py`) to analyze energy usage patterns and suggest suitable renewable energy options.
+
+   - _User Story_: As a renewable energy provider in Peru, I want to offer solutions based on household energy patterns to encourage the adoption of renewable energy sources.
+   - _Accomplished by_: Leveraging the data processing script (`models/training/train_complex_model.py`) to analyze energy usage patterns and suggest suitable renewable energy options.
 
 4. **Government Agencies:**
-   - *User Story*: As a governmental organization, I aim to promote energy efficiency and sustainability among residents by utilizing data-driven insights.
-   - *Accomplished by*: Accessing real-time energy consumption data through monitoring with Grafana (`src/app/`) for policy-making and awareness campaigns.
+
+   - _User Story_: As a governmental organization, I aim to promote energy efficiency and sustainability among residents by utilizing data-driven insights.
+   - _Accomplished by_: Accessing real-time energy consumption data through monitoring with Grafana (`src/app/`) for policy-making and awareness campaigns.
 
 5. **Smart Home Enthusiasts:**
-   - *User Story*: As a technology enthusiast, I am interested in optimizing my smart home devices based on data to reduce energy costs and environmental impact.
-   - *Accomplished by*: Integrating data visualization tools from Grafana to monitor and optimize energy usage in real-time.
+   - _User Story_: As a technology enthusiast, I am interested in optimizing my smart home devices based on data to reduce energy costs and environmental impact.
+   - _Accomplished by_: Integrating data visualization tools from Grafana to monitor and optimize energy usage in real-time.
 
 Each type of user interacts with the Energy Cost Reduction Advisor application differently, using specific features and functionalities tailored to their needs and objectives. Through these user stories, the application addresses various user requirements and goals, guiding them towards making informed decisions for efficient energy practices and cost reduction in Peru households.

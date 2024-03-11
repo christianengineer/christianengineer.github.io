@@ -8,9 +8,11 @@ layout: article
 ## AI Interactive Voice Response (IVR) Systems using Asterisk (Python)
 
 ## Objectives
+
 The objectives of building an AI Interactive Voice Response (IVR) system using Asterisk and Python are to automate call responses, improve customer experience, and optimize call routing. By leveraging AI to understand and respond to caller queries, the system aims to reduce wait times, increase efficiency, and provide personalized interactions.
 
 ## System Design Strategies
+
 1. **Integration with Asterisk**: Utilize Asterisk, an open-source communications platform, for call handling and routing. Python can be used to extend Asterisk's functionality through its powerful scripting capabilities and APIs.
 
 2. **AI Model Integration**: Integrate machine learning models for speech recognition, natural language processing (NLP), and sentiment analysis. This enables the system to understand caller queries, extract intent, and provide relevant responses.
@@ -22,6 +24,7 @@ The objectives of building an AI Interactive Voice Response (IVR) system using A
 5. **Monitoring and Analytics**: Implement monitoring and analytics capabilities to track call metrics, user interactions, and model performance. This enables continuous improvement and optimization of the system.
 
 ## Chosen Libraries and Technologies
+
 1. **Asterisk**: This open-source PBX system provides the core infrastructure for handling and routing calls. It offers extensive scripting and API support for integrating with external systems.
 
 2. **Python**: Python's versatility and extensive ML/AI libraries make it an ideal choice for building AI-powered IVR systems. Libraries such as TensorFlow or PyTorch can be used for building and integrating ML models.

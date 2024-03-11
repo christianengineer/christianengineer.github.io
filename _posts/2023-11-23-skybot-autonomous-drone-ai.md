@@ -125,17 +125,21 @@ models/
 In the `models/` directory for the SkyBot Autonomous Drone AI application, the subdirectories `perception/` and `decision_making/` contain trained AI models and related utility files for perception and decision-making tasks.
 
 ### Perception Models
+
 1. **object_detection.pb**: This file contains the trained object detection model serialized in the protobuf format. It is used for identifying and localizing objects of interest in the drone's environment.
 2. **scene_segmentation.h5**: This file stores the trained scene segmentation model in HDF5 format, which enables the drone to segment the surroundings into different categories (e.g., ground, obstacles, sky).
 
 In addition, the `perception/` directory includes:
+
 - **perception_utils.py**: This file contains utility functions and helper classes for loading, using, and evaluating the perception models.
 
 ### Decision-Making Models
+
 1. **path_planning.pb**: This file holds the trained path planning model serialized in protobuf format. It determines the optimal path for the drone to follow based on its current location and environmental context.
 2. **obstacle_avoidance.h5**: This file stores the trained obstacle avoidance model in HDF5 format, which assists the drone in real-time decision-making to avoid collisions.
 
 In addition, the `decision_making/` directory includes:
+
 - **decision_utils.py**: This file provides utility functions and helper classes for leveraging the decision-making models, as well as interfacing with the control system of the drone.
 
 The `models/` directory holds the trained AI models in a format compatible with their respective inference engines. Additionally, it includes utility files to facilitate the integration and usage of the perception and decision-making models within the overall AI system of the autonomous drone.
@@ -172,19 +176,24 @@ deployment/
 In the `deployment/` directory for the SkyBot Autonomous Drone AI application, the subdirectories contain files and scripts related to deploying the AI application using containerization, orchestration, and infrastructure management tools.
 
 ### Docker
+
 - **Perception and Decision Making Dockerfiles**: These Dockerfiles define the container images for the perception and decision-making modules, including the necessary dependencies and the setup for running the AI models and algorithms.
 
 ### Kubernetes
+
 - **Perception and Decision Making Deployment Configurations**: These YAML files specify the deployment configurations for the perception and decision-making modules within a Kubernetes cluster, including resource requirements, container images, and scaling parameters.
 - **Service Configuration**: This YAML file describes the Kubernetes service configuration, defining how the AI services are exposed and accessed within the cluster.
 
 ### Helm
+
 - **skybot-autonomous-drone-ai Helm Chart**: This directory contains the Helm chart for deploying the entire AI application, including the perception, decision-making modules, and associated services, with configurable settings and dependencies.
 
 ### Terraform
+
 - **Infrastructure as Code Scripts**: If applicable, this directory includes Terraform scripts for provisioning cloud infrastructure services required for deploying and running the AI application.
 
 ### Scripts
+
 - **Deployment Scripts**: These scripts are used for deploying the perception and decision-making modules on edge devices or cloud instances, facilitating the deployment of the AI application in different environments.
 
 The `deployment/` directory encapsulates the necessary resources and scripts for the deployment of the SkyBot Autonomous Drone AI application, covering containerization, orchestration, and infrastructure provisioning aspects to ensure effective deployment and scaling of the AI system.
@@ -200,32 +209,33 @@ import joblib
 def train_complex_ml_algorithm(data_file_path):
     ## Load mock data from file
     data = pd.read_csv(data_file_path)
-    
+
     ## Preprocessing and feature engineering
     X = data.drop('target_column', axis=1)
     y = data['target_column']
-    
+
     ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-    
+
     ## Initialize and train a complex machine learning algorithm (Random Forest as an example)
     model = RandomForestClassifier(n_estimators=100, random_state=42)
     model.fit(X_train, y_train)
-    
+
     ## Make predictions on the test set
     y_pred = model.predict(X_test)
-    
+
     ## Calculate accuracy
     accuracy = accuracy_score(y_test, y_pred)
-    
+
     ## Save the trained model to a file
     model_file_path = 'trained_models/complex_ml_algorithm_model.pkl'
     joblib.dump(model, model_file_path)
-    
+
     return accuracy, model_file_path
 ```
 
 In this function for the SkyBot Autonomous Drone AI application, the `train_complex_ml_algorithm` function takes a file path as input and performs the following steps:
+
 1. Loads the mock data from the specified file path.
 2. Preprocesses the data and splits it into features (X) and the target variable (y).
 3. Splits the data into training and testing sets.
@@ -247,11 +257,11 @@ import os
 def train_complex_dl_algorithm(data_file_path):
     ## Load mock data from file
     data = pd.read_csv(data_file_path)
-    
+
     ## Preprocessing and feature engineering
     X = data.drop('target_column', axis=1)
     y = data['target_column']
-    
+
     ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
@@ -266,7 +276,7 @@ def train_complex_dl_algorithm(data_file_path):
     model.compile(optimizer='adam',
                   loss='binary_crossentropy',
                   metrics=['accuracy'])
-    
+
     ## Train the model
     model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y_test))
 
@@ -281,6 +291,7 @@ def train_complex_dl_algorithm(data_file_path):
 ```
 
 In this function for the SkyBot Autonomous Drone AI application, the `train_complex_dl_algorithm` function takes a file path as input and performs the following steps:
+
 1. Loads the mock data from the specified file path.
 2. Preprocesses the data and splits it into features (X) and the target variable (y).
 3. Splits the data into training and testing sets.
@@ -294,23 +305,27 @@ This function demonstrates a typical workflow for training a complex deep learni
 ### Types of Users for SkyBot Autonomous Drone AI Application
 
 1. **Pilot**
-   - *User Story*: As a pilot, I want to use the autonomous drone AI application to plan and execute automated flight missions, monitor real-time data, and have the ability to take control of the drone when necessary.
-   - *Accomplished with*: The `src/control/flight_mission_planner.py` file enables the pilot to plan and execute automated flight missions, incorporating real-time data monitoring and manual override capabilities.
+
+   - _User Story_: As a pilot, I want to use the autonomous drone AI application to plan and execute automated flight missions, monitor real-time data, and have the ability to take control of the drone when necessary.
+   - _Accomplished with_: The `src/control/flight_mission_planner.py` file enables the pilot to plan and execute automated flight missions, incorporating real-time data monitoring and manual override capabilities.
 
 2. **AI Developer**
-   - *User Story*: As an AI developer, I want to utilize the application to train and test new machine learning and deep learning algorithms for perception, decision-making, and control of the autonomous drone.
-   - *Accomplished with*: The `models/` directory, containing the perception and decision-making models and associated training scripts, allows AI developers to experiment and train new algorithms for drone AI.
+
+   - _User Story_: As an AI developer, I want to utilize the application to train and test new machine learning and deep learning algorithms for perception, decision-making, and control of the autonomous drone.
+   - _Accomplished with_: The `models/` directory, containing the perception and decision-making models and associated training scripts, allows AI developers to experiment and train new algorithms for drone AI.
 
 3. **Ground Control Station Operator**
-   - *User Story*: As a ground control station operator, I need to use the application to monitor the status of multiple autonomous drones, track their flights, and assess environmental data collected during missions.
-   - *Accomplished with*: The `src/monitoring/ground_control_station.py` file provides the interface for the ground control station operator to visualize drone status, track flights, and analyze environmental data.
+
+   - _User Story_: As a ground control station operator, I need to use the application to monitor the status of multiple autonomous drones, track their flights, and assess environmental data collected during missions.
+   - _Accomplished with_: The `src/monitoring/ground_control_station.py` file provides the interface for the ground control station operator to visualize drone status, track flights, and analyze environmental data.
 
 4. **System Administrator**
-   - *User Story*: As a system administrator, I want to manage the deployment and scaling of the application across different edge devices and cloud environments, ensuring high availability and reliability.
-   - *Accomplished with*: The `deployment/` directory, incorporating Docker, Kubernetes, Helm, and Terraform files, allows the system administrator to manage deployment, scaling, and infrastructure provisioning for the application.
+
+   - _User Story_: As a system administrator, I want to manage the deployment and scaling of the application across different edge devices and cloud environments, ensuring high availability and reliability.
+   - _Accomplished with_: The `deployment/` directory, incorporating Docker, Kubernetes, Helm, and Terraform files, allows the system administrator to manage deployment, scaling, and infrastructure provisioning for the application.
 
 5. **Maintenance Technician**
-   - *User Story*: As a maintenance technician, I aim to utilize the application to diagnose and troubleshoot any issues related to the AI components and ensure the smooth operation of the autonomous drone AI system.
-   - *Accomplished with*: The `tests/` directory, including unit and integration test scripts, allows the maintenance technician to validate and troubleshoot the AI system's functionality and performance.
+   - _User Story_: As a maintenance technician, I aim to utilize the application to diagnose and troubleshoot any issues related to the AI components and ensure the smooth operation of the autonomous drone AI system.
+   - _Accomplished with_: The `tests/` directory, including unit and integration test scripts, allows the maintenance technician to validate and troubleshoot the AI system's functionality and performance.
 
 By addressing the user stories associated with each type of user, the SkyBot Autonomous Drone AI application supports various stakeholders in effectively leveraging the capabilities of autonomous drone technology.

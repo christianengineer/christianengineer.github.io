@@ -8,20 +8,26 @@ layout: article
 ## AI Automated Essay Scoring System
 
 ## Objectives
+
 The primary objectives of the AI Automated Essay Scoring System are:
+
 1. To accurately assess and score essays based on various linguistic and semantic features.
 2. To provide consistent and unbiased scoring, eliminating human subjectivity.
 3. To handle a large volume of essays within a reasonable time frame.
 
 ## System Design Strategies
+
 To achieve the above objectives, the system can adopt the following design strategies:
+
 1. **Natural Language Processing (NLP)**: Utilize NLP techniques to extract linguistic features, analyze grammar, syntax, and semantics, and understand the meaning and context of the essays.
 2. **Machine Learning Models**: Employ machine learning models to learn from annotated essay samples and predict scores for new essays.
 3. **Scalable Architecture**: Design a scalable architecture to handle large volumes of essays concurrently, ensuring efficient processing and scoring.
 4. **Feedback Loop**: Incorporate a feedback loop mechanism where human-annotated scores can be used to improve the performance of the scoring model over time.
 
 ## Chosen Libraries
+
 To implement the AI Automated Essay Scoring System, the following libraries can be leveraged:
+
 1. **NLTK (Natural Language Toolkit)**: for text processing, tokenization, stemming, and part-of-speech tagging.
 2. **SpaCy**: for advanced NLP tasks such as dependency parsing, named entity recognition, and entity linking.
 3. **scikit-learn**: for building machine learning models for regression or classification tasks related to essay scoring.
@@ -37,43 +43,55 @@ Designing a scalable and efficient infrastructure is crucial for the success of 
 ## Components:
 
 ### 1. Data Storage
+
 - **Database**: Utilize a database system (e.g., PostgreSQL or MongoDB) to store essays, associated metadata, and scoring results. The database should be capable of handling large volumes of text data efficiently.
 
 ### 2. NLP Processing
+
 - **NLP Servers/Containers**: Deploy NLP processing servers or containers to handle text preprocessing, feature extraction, and NLP model inference. These servers should be scalable to accommodate varying workload demands.
 
 ### 3. Machine Learning/Deep Learning Models
+
 - **Model Servers/Containers**: Deploy servers or containers to host machine learning or deep learning models responsible for scoring essays. These servers should also be scalable and capable of handling real-time scoring requests.
 
 ### 4. API Gateway
+
 - **RESTful API**: Implement a RESTful API using frameworks like Flask or FastAPI to expose scoring endpoints for the Automated Essay Scoring System.
 
 ### 5. Load Balancer
+
 - **Load Balancing Mechanism**: Introduce a load balancer to distribute incoming scoring requests evenly across NLP and model servers. This helps with scalability and ensures optimal resource utilization.
 
 ### 6. Feedback Mechanism
+
 - **Feedback Processing**: Implement a mechanism to collect and process human-annotated essay scores for model improvement. This feedback loop can involve dedicated servers for model retraining based on the new data.
 
 ### 7. Monitoring and Logging
+
 - **Monitoring Tools**: Integrate monitoring tools (e.g., Prometheus, Grafana) to track system performance, resource utilization, and potential issues. Comprehensive logging should also be in place for traceability and debugging.
 
 ### 8. Scalability and Fault Tolerance
+
 - **Container Orchestration**: Consider container orchestration platforms like Kubernetes to manage, scale, and maintain the system's components.
 - **Redundancy and Disaster Recovery**: Implement redundancy for critical components and have a disaster recovery plan in place to ensure system resilience.
 
 ## Considerations:
 
 ### 1. Infrastructure as Code
+
 - **Automation**: Utilize Infrastructure as Code (IaC) tools like Terraform or AWS CloudFormation to automate the provisioning and management of infrastructure resources.
 
 ### 2. Cloud Deployment
+
 - **Cloud Services**: Leverage cloud computing services (e.g., AWS, GCP, Azure) for scalability, reliability, and flexibility in resource allocation.
 
 ### 3. Security
+
 - **Data Encryption**: Ensure data encryption at rest and in transit to protect sensitive essay content.
 - **Access Control**: Implement robust access control and authentication mechanisms to safeguard system resources.
 
 ### 4. Cost Optimization
+
 - **Resource Allocation**: Continuously monitor and optimize resource allocation to control infrastructure costs without compromising performance.
 
 By carefully designing the infrastructure with the above components and considerations, the Automated Essay Scoring System can effectively handle the processing and scoring of essays using NLP techniques, while being capable of scaling to accommodate growing demand and ensuring robustness and reliability.
@@ -252,6 +270,7 @@ def train_essay_scoring_model(data_file_path):
 Mock data file path: `/path/to/mock_essay_data.csv`
 
 In this function:
+
 - The `train_essay_scoring_model` function reads mock essay data from a CSV file using the provided `data_file_path`.
 - It preprocesses the essays using TF-IDF vectorization and trains a Gradient Boosting Regressor model.
 - The model is then evaluated on training and testing data, with the trained model and evaluation scores being returned.
@@ -317,23 +336,27 @@ This function provides a simplified demonstration of training a deep learning mo
 ## Type of Users for the Automated Essay Scoring System
 
 1. **Teachers/Instructors**
-   - *User Story*: As a teacher, I want to upload essays written by students and receive automated scores to aid in assessing writing proficiency.
-   - *Accomplished via*: Uploading essays through the API endpoint in the `main.py` file.
+
+   - _User Story_: As a teacher, I want to upload essays written by students and receive automated scores to aid in assessing writing proficiency.
+   - _Accomplished via_: Uploading essays through the API endpoint in the `main.py` file.
 
 2. **Students**
-   - *User Story*: As a student, I want to submit my essays to the system and receive automated scores to understand the quality of my writing.
-   - *Accomplished via*: Making POST requests to the API endpoint in the `main.py` file to submit essays for scoring.
+
+   - _User Story_: As a student, I want to submit my essays to the system and receive automated scores to understand the quality of my writing.
+   - _Accomplished via_: Making POST requests to the API endpoint in the `main.py` file to submit essays for scoring.
 
 3. **System Administrators**
-   - *User Story*: As a system administrator, I want to monitor the system's performance, handle user access, and manage the models and data.
-   - *Accomplished via*: Accessing and utilizing various system management scripts and configuration files in the `scripts/` and `configurations/` directories.
+
+   - _User Story_: As a system administrator, I want to monitor the system's performance, handle user access, and manage the models and data.
+   - _Accomplished via_: Accessing and utilizing various system management scripts and configuration files in the `scripts/` and `configurations/` directories.
 
 4. **Data Analysts/Researchers**
-   - *User Story*: As a data analyst, I want to analyze the performance of the scoring models and derive insights from the system's data.
-   - *Accomplished via*: Using the model evaluation script `model_evaluation.py` and accessing the data files in the `data/` directory for analysis.
+
+   - _User Story_: As a data analyst, I want to analyze the performance of the scoring models and derive insights from the system's data.
+   - _Accomplished via_: Using the model evaluation script `model_evaluation.py` and accessing the data files in the `data/` directory for analysis.
 
 5. **Developers/Engineers**
-   - *User Story*: As a developer, I want to enhance and maintain the scoring system by updating models, improving NLP processing, and optimizing the system's infrastructure.
-   - *Accomplished via*: Modifying and updating the scripts in the `src/` directory and the deployment configurations in the `deployment/` directory.
+   - _User Story_: As a developer, I want to enhance and maintain the scoring system by updating models, improving NLP processing, and optimizing the system's infrastructure.
+   - _Accomplished via_: Modifying and updating the scripts in the `src/` directory and the deployment configurations in the `deployment/` directory.
 
 By considering the needs and perspectives of these different users, the Automated Essay Scoring System can be designed to provide valuable functionality and usability to a diverse set of stakeholders. Each type of user interacts with the system through different entry points and utilizes different aspects of the system's files and functionalities to achieve their specific goals.

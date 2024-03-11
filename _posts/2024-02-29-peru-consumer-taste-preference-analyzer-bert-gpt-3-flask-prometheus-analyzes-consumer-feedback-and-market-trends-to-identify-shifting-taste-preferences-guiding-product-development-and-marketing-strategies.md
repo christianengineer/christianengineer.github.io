@@ -8,12 +8,14 @@ layout: article
 ## AI Peru Consumer Taste Preference Analyzer
 
 ### Objectives:
+
 1. **Analyze Consumer Feedback:** Utilize BERT and GPT-3 models to extract insights from consumer feedback data.
 2. **Identify Shifting Taste Preferences:** Analyze market trends to pinpoint changes in consumer preferences over time.
 3. **Guide Product Development:** Provide insights to steer product development strategies according to consumer preferences.
 4. **Optimize Marketing Strategies:** Offer data-driven recommendations for marketing campaigns based on taste preferences.
 
 ### System Design Strategies:
+
 1. **Data Ingestion:** Regularly collect and update consumer feedback data and market trends data.
 2. **Preprocessing:** Clean and preprocess the data to make it suitable for the models.
 3. **Model Integration:** Incorporate BERT and GPT-3 models for natural language processing tasks.
@@ -23,6 +25,7 @@ layout: article
 7. **Monitoring:** Implement Prometheus for monitoring the system's performance.
 
 ### Chosen Libraries and Technologies:
+
 1. **BERT (Bidirectional Encoder Representations from Transformers):** For natural language understanding tasks such as sentiment analysis and text classification.
 2. **GPT-3 (Generative Pre-trained Transformer 3):** For generating human-like text responses and understanding complex queries.
 3. **Flask:** Lightweight web framework for building the application backend and APIs.
@@ -36,30 +39,36 @@ By integrating these libraries and technologies into the system design, the AI P
 ## MLOps Infrastructure for AI Peru Consumer Taste Preference Analyzer
 
 ### Continuous Integration/Continuous Deployment (CI/CD) Pipeline:
+
 1. **Source Code Management:** Utilize Git for version control to manage changes efficiently.
 2. **Automated Testing:** Implement unit tests and integration tests to ensure code quality.
 3. **Containerization:** Use Docker to package the application, models, and dependencies for consistency across different environments.
 
 ### Model Training and Deployment:
+
 1. **Training Pipeline:** Use tools like TensorFlow Extended (TFX) to automate the training process and manage model versions.
 2. **Model Registry:** Store trained models in a centralized repository for easy access and tracking.
 3. **Model Serving:** Deploy models using a scalable infrastructure like Kubernetes for efficient prediction serving.
 
 ### Monitoring and Observability:
+
 1. **Logging:** Implement structured logging to track events and errors for debugging.
 2. **Metrics Collection:** Use Prometheus and Grafana for monitoring performance metrics and system health.
 3. **Alerting:** Set up alerts based on predefined thresholds to proactively address issues.
 
 ### Data Management:
+
 1. **Data Versioning:** Utilize tools like DVC (Data Version Control) to track data changes and ensure reproducibility.
 2. **Feature Store:** Implement a feature store to manage features used for model training and prediction.
 
 ### Security and Compliance:
+
 1. **Access Control:** Enforce role-based access control (RBAC) to restrict access to sensitive data and resources.
 2. **Data Privacy:** Implement encryption mechanisms to protect data in transit and at rest.
 3. **Compliance Checks:** Conduct regular audits to ensure compliance with data protection regulations.
 
 ### Automation and Orchestration:
+
 1. **Workflow Management:** Use Apache Airflow or Kubeflow Pipelines to orchestrate training, testing, and deployment workflows.
 2. **Auto-scaling:** Implement auto-scaling mechanisms to adjust computing resources based on workload demands.
 
@@ -118,6 +127,7 @@ Peru_Consumer_Taste_Preference_Analyzer/
 ```
 
 In this file structure:
+
 - **`app/`** contains the Flask application setup, API endpoint handlers, model integration scripts, business logic services, and utility functions.
 - **`data/`** stores consumer feedback data and market trends data.
 - **`models/`** holds BERT and GPT-3 model files for natural language processing tasks.
@@ -149,7 +159,9 @@ models/
 ```
 
 In the `models/` directory:
+
 - **`bert/`** contains files related to the BERT (Bidirectional Encoder Representations from Transformers) model:
+
   - **`config.json`**: Configuration file specifying model architecture and hyperparameters.
   - **`pytorch_model.bin`**: Pre-trained BERT model weights in PyTorch format for natural language processing tasks.
   - **`tokenizer.pickle`**: Tokenizer object for text preprocessing, enabling encoding and decoding text input for the BERT model.
@@ -183,13 +195,16 @@ deployment/
 ```
 
 In the `deployment/` directory:
+
 - **`Dockerfile`** specifies the instructions for building a Docker image to containerize the AI Peru Consumer Taste Preference Analyzer application, including all necessary dependencies and configurations.
 
 - **`kubernetes/`** contains Kubernetes deployment and service configurations for orchestrating the deployment of the application in a Kubernetes cluster:
+
   - **`deployment.yaml`**: Defines the deployment configuration, including pod specifications and container settings.
   - **`service.yaml`**: Specifies the service configuration to expose the application within the Kubernetes cluster.
 
 - **`prometheus/`** includes files related to setting up monitoring with Prometheus:
+
   - **`prometheus.yml`**: Configuration file for Prometheus detailing the targets to scrape metrics from.
   - **`alert.rules`**: Contains alert rules to define conditions for triggering alerts based on metric thresholds.
 
@@ -243,10 +258,12 @@ print("Trained model saved successfully.")
 ```
 
 ### File Path:
+
 - **File Name**: train_model.py
 - **Location**: `/path/to/Peru_Consumer_Taste_Preference_Analyzer/train_model.py`
 
 In this script:
+
 1. Mock data is loaded from a CSV file.
 2. Features and target variables are separated.
 3. The data is split into training and testing sets.
@@ -316,34 +333,40 @@ print("Trained model saved successfully.")
 ```
 
 ### File Path:
+
 - **File Name**: train_complex_model.py
 - **Location**: `/path/to/Peru_Consumer_Taste_Preference_Analyzer/train_complex_model.py`
 
 In this script:
+
 1. Mock data is loaded from a CSV file.
 2. Features and target variables are separated.
 3. A deep learning model with multiple layers is defined using TensorFlow/Keras.
 4. The model is compiled and trained on the training data.
 5. The model is evaluated on the testing data.
-6. The trained model is saved to a file in HDF5 format. 
+6. The trained model is saved to a file in HDF5 format.
 
 You can modify the model architecture, hyperparameters, and training process as needed for the Peru Consumer Taste Preference Analyzer application.
 
 ## Types of Users for the Peru Consumer Taste Preference Analyzer
 
 1. **Product Development Manager**
+
    - **User Story:** As a Product Development Manager, I want to leverage the Peru Consumer Taste Preference Analyzer to analyze consumer feedback and market trends to identify emerging taste preferences, guiding our product development strategies accordingly.
    - **File Involved:** `app/routes/insights_routes.py` - This file will provide the endpoint for generating insights based on consumer feedback and market trends.
 
 2. **Marketing Strategist**
+
    - **User Story:** As a Marketing Strategist, I need to utilize the Peru Consumer Taste Preference Analyzer to understand shifting taste preferences among consumers and optimize our marketing campaigns based on data-driven insights.
    - **File Involved:** `app/routes/insights_routes.py` - This file will contain the endpoint for retrieving insights for marketing strategies.
 
 3. **Data Analyst**
+
    - **User Story:** As a Data Analyst, I aim to utilize the Peru Consumer Taste Preference Analyzer to extract valuable insights from consumer feedback and market trends data, enabling data-driven decision-making within the organization.
    - **File Involved:** `app/services/insights_service.py` - This file will include the business logic for extracting insights from the data.
 
 4. **System Administrator**
+
    - **User Story:** As a System Administrator, my goal is to monitor the performance and health of the Peru Consumer Taste Preference Analyzer application by setting up Prometheus for collecting metrics and ensuring system reliability.
    - **File Involved:** `deployment/prometheus/prometheus.yml` - This file configures the targets to scrape metrics from and monitors the application's performance.
 

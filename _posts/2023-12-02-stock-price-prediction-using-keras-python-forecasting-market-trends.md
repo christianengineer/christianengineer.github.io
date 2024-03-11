@@ -166,6 +166,7 @@ This well-organized file structure promotes modularity, reusability, and maintai
 The **models/** directory is a critical part of the repository, housing scripts and notebooks essential for defining, training, evaluating, and deploying machine learning models for stock price prediction. Here's a detailed breakdown of the files and subdirectories within the **models/** directory:
 
 ### **models/** Directory Structure
+
 ```
 models/
 │
@@ -202,6 +203,7 @@ By maintaining a well-structured **models/** directory, the repository fosters g
 The **deployment/** directory is crucial for housing files and scripts related to deploying machine learning models, setting up inference services, and incorporating the predictive capabilities into production or real-time systems. Below is a detailed breakdown of the files and subdirectories within the **deployment/** directory:
 
 ### **deployment/** Directory Structure
+
 ```
 deployment/
 │
@@ -289,7 +291,7 @@ def train_stock_price_prediction_model(data_path):
 
     ## Generate predictions
     predictions = model.predict(X_test)
-    
+
     ## Visualize the predictions
     plt.plot(scaler.inverse_transform(y_test.reshape(-1, 1)), label='Actual')
     plt.plot(scaler.inverse_transform(predictions), label='Predicted')
@@ -300,6 +302,7 @@ def train_stock_price_prediction_model(data_path):
 ```
 
 In this function:
+
 - The provided data_path is used to load the mock stock price data.
 - The data is preprocessed and prepared for training an LSTM-based model for stock price prediction.
 - The LSTM model architecture is defined using Keras.
@@ -355,7 +358,7 @@ def train_stock_price_prediction_model(data_path):
 
     ## Generate predictions
     predictions = model.predict(X_test)
-    
+
     ## Visualize the predictions
     plt.plot(scaler.inverse_transform(y_test.reshape(-1, 1)), label='Actual')
     plt.plot(scaler.inverse_transform(predictions), label='Predicted')
@@ -366,6 +369,7 @@ def train_stock_price_prediction_model(data_path):
 ```
 
 In this function:
+
 - The provided data_path is used to load the mock stock price data.
 - The data is preprocessed and prepared for training an LSTM-based model for stock price prediction.
 - The LSTM model architecture is defined using Keras.
@@ -377,23 +381,27 @@ This function can be called with the file path to the mock stock price data to t
 ### Types of Users for Stock Price Prediction Application
 
 1. **Financial Analysts**
-   - *User Story*: As a financial analyst, I want to visualize predicted stock prices alongside actual prices to assess the accuracy of the model's forecasts.
-   - *Accomplished by*: Using the `model_evaluation.ipynb` notebook in the `models/` directory, the financial analyst can visualize and analyze the model's predictive performance.
+
+   - _User Story_: As a financial analyst, I want to visualize predicted stock prices alongside actual prices to assess the accuracy of the model's forecasts.
+   - _Accomplished by_: Using the `model_evaluation.ipynb` notebook in the `models/` directory, the financial analyst can visualize and analyze the model's predictive performance.
 
 2. **Data Scientists/Model Developers**
-   - *User Story*: As a data scientist, I need to train and fine-tune the stock price prediction model using different algorithms and hyperparameters.
-   - *Accomplished by*: The `model_training.ipynb` notebook in the `models/` directory allows data scientists to experiment with various model architectures, loss functions, and optimization techniques to improve the predictive accuracy of the model.
+
+   - _User Story_: As a data scientist, I need to train and fine-tune the stock price prediction model using different algorithms and hyperparameters.
+   - _Accomplished by_: The `model_training.ipynb` notebook in the `models/` directory allows data scientists to experiment with various model architectures, loss functions, and optimization techniques to improve the predictive accuracy of the model.
 
 3. **Software Engineers/Developers**
-   - *User Story*: As a software engineer, I am responsible for deploying the trained stock price prediction model as an API service for real-time predictions.
-   - *Accomplished by*: The `inference_service.py` script in the `deployment/scripts/` directory assists the software engineer in setting up an API endpoint to serve predictions based on the trained model.
+
+   - _User Story_: As a software engineer, I am responsible for deploying the trained stock price prediction model as an API service for real-time predictions.
+   - _Accomplished by_: The `inference_service.py` script in the `deployment/scripts/` directory assists the software engineer in setting up an API endpoint to serve predictions based on the trained model.
 
 4. **Business Stakeholders/Managers**
-   - *User Story*: As a business stakeholder, I want to understand the overall process and implications of using the stock price prediction model to inform strategic decisions.
-   - *Accomplished by*: The `user_manual.md` in the `docs/` directory provides an overview of the system, including the model's purpose, limitations, and potential business impacts.
+
+   - _User Story_: As a business stakeholder, I want to understand the overall process and implications of using the stock price prediction model to inform strategic decisions.
+   - _Accomplished by_: The `user_manual.md` in the `docs/` directory provides an overview of the system, including the model's purpose, limitations, and potential business impacts.
 
 5. **Machine Learning Operations (MLOps) Engineers**
-   - *User Story*: As an MLOps engineer, I am responsible for automating the model training process and deploying new model versions in a production environment.
-   - *Accomplished by*: Utilizing the model training scripts in the `models/` directory, MLOps engineers can automate the training process and manage model versioning using a continuous integration and deployment (CI/CD) pipeline.
+   - _User Story_: As an MLOps engineer, I am responsible for automating the model training process and deploying new model versions in a production environment.
+   - _Accomplished by_: Utilizing the model training scripts in the `models/` directory, MLOps engineers can automate the training process and manage model versioning using a continuous integration and deployment (CI/CD) pipeline.
 
 Each user story aligns with specific files or resources within the application, enabling different stakeholders to interact with the system effectively based on their roles and responsibilities.

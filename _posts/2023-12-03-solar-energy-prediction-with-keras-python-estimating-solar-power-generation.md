@@ -6,9 +6,11 @@ layout: article
 ---
 
 ### Objectives
+
 The primary objective of the AI Solar Energy Prediction system is to accurately estimate solar power generation based on environmental variables and historical solar power generation data. This prediction can be used for optimal grid management, resource planning, and energy trading. The system aims to leverage machine learning techniques to create a robust predictive model.
 
 ### System Design Strategies
+
 1. **Data Collection**: Gather historical solar power generation data and relevant environmental variables such as weather conditions, time of day, and geographical location.
 2. **Data Preprocessing**: Clean and preprocess the collected data to handle missing values, outliers, and normalization.
 3. **Feature Engineering**: Extract relevant features from the data and create new features if necessary.
@@ -17,6 +19,7 @@ The primary objective of the AI Solar Energy Prediction system is to accurately 
 6. **Deployment**: Deploy the trained model as a scalable and real-time prediction system, possibly using cloud infrastructure.
 
 ### Chosen Libraries
+
 1. **Keras**: As the primary deep learning framework, Keras will be used for building and training neural network models for solar power generation prediction.
 2. **NumPy**: For efficient numerical operations and array manipulations required during data preprocessing and model training.
 3. **Pandas**: To handle data manipulation and analysis, including loading, cleaning, and preprocessing the historical solar power generation data.
@@ -28,18 +31,23 @@ By integrating these libraries and adhering to the system design strategies, we 
 ### Infrastructure for Solar Energy Prediction Application
 
 #### 1. Data Storage
+
 The infrastructure will require a reliable data storage solution to store the historical solar power generation data and environmental variables. This could be a cloud-based storage service like Amazon S3, Google Cloud Storage, or Azure Blob Storage. These platforms provide scalable, durable, and highly available storage for large volumes of data.
 
 #### 2. Data Processing
+
 For data preprocessing and feature engineering, a scalable data processing platform such as Apache Spark or Dask can be utilized. These distributed data processing frameworks can handle the cleaning, transformation, and manipulation of large datasets in parallel, which is crucial for handling the potentially massive amounts of solar energy and environmental data.
 
 #### 3. Model Training
+
 The model training phase will require significant computational resources, especially for training deep learning models. Utilizing cloud-based GPU or TPU instances from platforms like Google Cloud AI Platform, Amazon SageMaker, or Azure Machine Learning can provide the necessary computing power to train complex neural network models efficiently.
 
 #### 4. Model Deployment
+
 After the model is trained, it needs to be deployed as a scalable and real-time prediction system. This could involve deploying the model as a REST API using platforms like AWS Lambda, Google Cloud Functions, or Azure Functions. Alternatively, container orchestration platforms like Kubernetes can be used to manage and scale the deployed model inference service.
 
 #### 5. Monitoring and Logging
+
 Implementing monitoring and logging systems, such as Prometheus for metrics monitoring and ELK stack (Elasticsearch, Logstash, Kibana) for log aggregation and visualization, is crucial for maintaining and troubleshooting the application in production. These tools can provide insights into the performance of the prediction system and help identify and address any issues that arise.
 
 By building the infrastructure on scalable and reliable cloud-based services and platforms, the Solar Energy Prediction application can effectively handle the data-intensive and computationally demanding tasks involved in predicting solar power generation with AI and machine learning. Such infrastructure allows for scalability, reliability, and efficient utilization of resources, which are essential for handling large volumes of data and supporting AI-driven applications.
@@ -133,11 +141,10 @@ deployment/
 
 3. **app/**: This directory contains the Python script and configuration files for the prediction service.
 
-    - **prediction_service.py**: The Python script responsible for deploying the trained model as a prediction service. It may include functionality for handling model inference requests, loading the trained model, and making predictions based on incoming data.
-    
-    - **config/**: This subdirectory contains the configuration settings for the prediction service.
-    
-        - **service_config.json**: A JSON file containing configuration settings, such as API endpoints, input data formats, and any relevant environment-specific parameters for the prediction service.
+   - **prediction_service.py**: The Python script responsible for deploying the trained model as a prediction service. It may include functionality for handling model inference requests, loading the trained model, and making predictions based on incoming data.
+   - **config/**: This subdirectory contains the configuration settings for the prediction service.
+
+     - **service_config.json**: A JSON file containing configuration settings, such as API endpoints, input data formats, and any relevant environment-specific parameters for the prediction service.
 
 By organizing the deployment-related files within the `deployment/` directory, the Solar Energy Prediction application streamlines the process of deploying the trained model as a real-time prediction service. This structure promotes consistency, reproducibility, and ease of management for the deployment artifacts and configurations.
 
@@ -188,6 +195,7 @@ def train_solar_energy_prediction_model(data_file_path):
 ```
 
 In this function:
+
 - The `train_solar_energy_prediction_model` function takes in the file path to the mock data as input.
 - It loads the mock data, performs data preprocessing, scales the data, and splits it into training and testing sets.
 - Using Keras, an LSTM (Long Short-Term Memory) neural network model is constructed for solar energy prediction.
@@ -248,6 +256,7 @@ def train_solar_energy_prediction_model(data_file_path):
 ```
 
 In this function:
+
 - The `train_solar_energy_prediction_model` function takes the file path to the mock data as input.
 - It loads the mock data and splits it into features and the target variable.
 - The features are standardized using `StandardScaler` and split into training and testing sets.
@@ -260,23 +269,27 @@ You can replace `data_file_path` with the actual file path of the mock data cont
 ### List of Types of Users
 
 1. **Energy Grid Manager**
-   - *User Story*: As a grid manager, I need to accurately predict solar power generation to efficiently balance the load and supply in the grid, thereby optimizing energy distribution and minimizing operational costs.
-   - *Relevant File*: `model_evaluation.ipynb` in the `models/` directory, which provides performance analysis and evaluation metrics of the trained model.
+
+   - _User Story_: As a grid manager, I need to accurately predict solar power generation to efficiently balance the load and supply in the grid, thereby optimizing energy distribution and minimizing operational costs.
+   - _Relevant File_: `model_evaluation.ipynb` in the `models/` directory, which provides performance analysis and evaluation metrics of the trained model.
 
 2. **Renewable Energy Analyst**
-   - *User Story*: As a renewable energy analyst, I require insights into the predicted solar power generation for resource planning and determining the viability of solar energy projects.
-   - *Relevant File*: `data_analysis.ipynb` in the `notebooks/` directory for data exploration and analysis, providing insights into historical solar power generation trends and patterns.
+
+   - _User Story_: As a renewable energy analyst, I require insights into the predicted solar power generation for resource planning and determining the viability of solar energy projects.
+   - _Relevant File_: `data_analysis.ipynb` in the `notebooks/` directory for data exploration and analysis, providing insights into historical solar power generation trends and patterns.
 
 3. **Data Scientist**
-   - *User Story*: As a data scientist, I need access to the trained model and its configuration details for further experimentation, optimization, or integration with other applications.
-   - *Relevant File*: `trained_model.h5` in the `models/` directory, which contains the serialized format of the trained machine learning model for solar energy prediction.
+
+   - _User Story_: As a data scientist, I need access to the trained model and its configuration details for further experimentation, optimization, or integration with other applications.
+   - _Relevant File_: `trained_model.h5` in the `models/` directory, which contains the serialized format of the trained machine learning model for solar energy prediction.
 
 4. **DevOps Engineer**
-   - *User Story*: As a DevOps engineer, I am responsible for deploying the prediction service and ensuring its scalability and reliability.
-   - *Relevant Files*: The `deployment/` directory, particularly the `dockerfile` and `prediction_service.py`, which together facilitate the deployment of the trained model as a prediction service.
+
+   - _User Story_: As a DevOps engineer, I am responsible for deploying the prediction service and ensuring its scalability and reliability.
+   - _Relevant Files_: The `deployment/` directory, particularly the `dockerfile` and `prediction_service.py`, which together facilitate the deployment of the trained model as a prediction service.
 
 5. **Business Stakeholder**
-   - *User Story*: As a business stakeholder, I rely on accurate solar power generation predictions to make informed decisions regarding energy trading and investment in solar energy initiatives.
-   - *Relevant File*: `model_metrics.json` in the `models/` directory, providing insights into the performance metrics and evaluation results of the trained model.
+   - _User Story_: As a business stakeholder, I rely on accurate solar power generation predictions to make informed decisions regarding energy trading and investment in solar energy initiatives.
+   - _Relevant File_: `model_metrics.json` in the `models/` directory, providing insights into the performance metrics and evaluation results of the trained model.
 
 By considering the needs and user stories of these various types of users, the Solar Energy Prediction application aims to provide valuable insights and predictions while catering to different stakeholder requirements. The application's files and functionalities are designed to support these diverse user needs.

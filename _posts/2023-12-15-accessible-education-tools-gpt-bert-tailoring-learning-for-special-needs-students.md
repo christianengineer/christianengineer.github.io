@@ -6,16 +6,21 @@ layout: article
 ---
 
 ## Objectives
+
 The objective of the AI Accessible Education Tools repository is to develop and deploy AI-powered educational tools that can tailor learning experiences for special needs students. This involves leveraging advanced Natural Language Processing (NLP) models such as GPT and BERT to create personalized and accessible learning environments for students with diverse learning requirements.
 
 ## System Design Strategies
+
 To achieve these objectives, the system design should incorporate the following strategies:
+
 1. **Scalability**: The system should be designed to handle a large number of concurrent users and adapt to varying loads without compromising performance. This can be achieved through distributed computing, load balancing, and scalable storage solutions.
 2. **Modularity**: The system should be designed as a set of interconnected but independent modules, allowing for flexibility and easy integration of new AI models or learning tools.
 3. **Personalization**: The system should be able to personalize learning experiences based on individual student needs, preferences, and learning styles. This requires robust user profiling and adaptive content delivery mechanisms.
 
 ## Chosen Libraries
+
 The following libraries can be considered for building the AI Accessible Education Tools repository:
+
 1. **TensorFlow** and **PyTorch**: These are powerful open-source libraries for developing and training machine learning models, including NLP models such as GPT and BERT.
 2. **Flask** or **Django**: These are popular Python web frameworks that can be utilized to build the backend API for serving AI-powered educational tools.
 3. **Hugging Face Transformers**: This library provides pre-trained NLP models, including GPT and BERT, and allows for easy integration and fine-tuning of these models for specific educational use cases.
@@ -27,27 +32,35 @@ By leveraging these libraries and frameworks, the repository can facilitate the 
 ## MLOps Infrastructure for Accessible Education Tools
 
 ### Continuous Integration/Continuous Deployment (CI/CD) Pipeline
+
 The MLOps infrastructure for the Accessible Education Tools application should include a robust CI/CD pipeline for automating the testing, validation, and deployment of machine learning models and associated code. This pipeline should incorporate version control, automated testing, model training, and deployment stages.
 
 ### Model Training and Experiment Tracking
+
 Utilize a platform like **MLflow** or **Kubeflow** for managing the end-to-end machine learning lifecycle, including experiment tracking, model versioning, and reproducibility. This will allow for easy comparison of different model versions and hyperparameters, ultimately ensuring the best model is deployed.
 
 ### Scalable Model Deployment
+
 Employ containerization using **Docker** to package the machine learning models, and then utilize orchestrators like **Kubernetes** for scalable and efficient deployment. This infrastructure should be able to handle varying loads and adapt to changing requirements.
 
 ### Monitoring and Logging
+
 Integrate monitoring and logging tools like **Prometheus** and **Grafana** to track the performance of deployed models in real-time. This infrastructure should provide insights into model accuracy, latency, and resource utilization.
 
 ### Data Versioning and Management
+
 Leverage tools like **DVC (Data Version Control)** for versioning and managing large datasets. This ensures that changes to training data are tracked and reproducible, maintaining consistency on model training and evaluation.
 
 ### Security and Compliance
+
 Implement security best practices to safeguard the AI models and sensitive educational data. This includes encryption at-rest and in-transit, access controls, and compliance with relevant data privacy regulations like GDPR or CCPA.
 
 ### Automated Testing
+
 Set up automated testing processes that validate the correctness of AI models and the associated infrastructure. This involves unit tests, integration tests, and validation against predefined performance criteria.
 
 ### Collaboration and Documentation
+
 Utilize platforms like **Jupyter Notebooks** and **Collaborative Tools** to facilitate collaboration among data scientists and engineers. Comprehensive documentation about the model development process and infrastructure setup should also be maintained.
 
 By incorporating these elements into the MLOps infrastructure, the Accessible Education Tools application can ensure efficient development, deployment, and management of AI models such as GPT and BERT, tailored to support special needs students in their learning journey.
@@ -92,6 +105,7 @@ Accessible-Education-Tools-Repository
 ```
 
 In this file structure:
+
 - The `app` directory contains the backend and frontend components of the application, with a clear separation of concerns.
 - The `infrastructure` directory houses the deployment, monitoring, and CI/CD configurations for managing the application's operational aspects.
 - The `data` directory stores the training and processed data required for model training and inference.
@@ -136,6 +150,7 @@ deployment
 The `deployment` directory contains two subdirectories: `kubernetes` and `dockerfiles`, which house the deployment configurations for the Accessible Education Tools application.
 
 ### Kubernetes Directory
+
 In the `kubernetes` directory, the following files are present:
 
 - `gpt-deployment.yaml` and `bert-deployment.yaml`: These files specify the Kubernetes deployment configurations for serving the GPT and BERT models. They include details such as the container image to be deployed, resource allocation, and environment variables required for model inference.
@@ -143,6 +158,7 @@ In the `kubernetes` directory, the following files are present:
 - `service.yaml`: This file defines the Kubernetes service configuration for exposing the model endpoints, enabling external access and load balancing for the deployed models.
 
 ### Dockerfiles Directory
+
 In the `dockerfiles` directory, the following files are present:
 
 - `backend.dockerfile`: This Dockerfile contains the instructions for building the backend API service container, including the necessary dependencies, environment setup, and service initialization.
@@ -239,24 +255,29 @@ In this Python file (`complex_model_algorithm.py`), a mock complex machine learn
 This file serves as an example of implementing a complex machine learning algorithm using a BERT model and processing mock data within the Accessible Education Tools application.
 
 ### Types of Users
+
 1. **Students with Special Needs**
-   - *User Story*: As a student with special needs, I want to access personalized educational materials that cater to my unique learning requirements, such as text generation and comprehension.
-   - *Related File*: `app/frontend/src/components/StudentDashboard.vue`
+
+   - _User Story_: As a student with special needs, I want to access personalized educational materials that cater to my unique learning requirements, such as text generation and comprehension.
+   - _Related File_: `app/frontend/src/components/StudentDashboard.vue`
 
 2. **Teachers and Special Education Instructors**
-   - *User Story*: As a teacher or special education instructor, I want to customize learning content and monitor individual student progress to support their diverse learning needs.
-   - *Related File*: `app/backend/api/teacher_functions.py`
+
+   - _User Story_: As a teacher or special education instructor, I want to customize learning content and monitor individual student progress to support their diverse learning needs.
+   - _Related File_: `app/backend/api/teacher_functions.py`
 
 3. **Administrators and System Managers**
-   - *User Story*: As an administrator or system manager, I want to oversee the overall functionality, security, and access control of the education tools platform.
-   - *Related File*: `infrastructure/deployment/kubernetes/admin_configs.yaml`
+
+   - _User Story_: As an administrator or system manager, I want to oversee the overall functionality, security, and access control of the education tools platform.
+   - _Related File_: `infrastructure/deployment/kubernetes/admin_configs.yaml`
 
 4. **Data Scientists and Machine Learning Engineers**
-   - *User Story*: As a data scientist or ML engineer, I want to experiment with and fine-tune machine learning models like GPT and BERT to enhance educational content generation for special needs students.
-   - *Related File*: `data/training/train_model.py`
+
+   - _User Story_: As a data scientist or ML engineer, I want to experiment with and fine-tune machine learning models like GPT and BERT to enhance educational content generation for special needs students.
+   - _Related File_: `data/training/train_model.py`
 
 5. **Parents or Legal Guardians**
-   - *User Story*: As a parent or legal guardian of a special needs student, I want to collaborate with educators and track my child's educational progress within the accessible education platform.
-   - *Related File*: `app/frontend/src/components/ParentDashboard.vue`
+   - _User Story_: As a parent or legal guardian of a special needs student, I want to collaborate with educators and track my child's educational progress within the accessible education platform.
+   - _Related File_: `app/frontend/src/components/ParentDashboard.vue`
 
 These user types and their corresponding user stories demonstrate the diverse stakeholders who utilize the Accessible Education Tools application. For each user type, specific files within the application contribute to fulfilling their needs and requirements.

@@ -6,11 +6,13 @@ layout: article
 ---
 
 ### Objectives:
+
 1. Develop alternative credit scoring models to enable microfinance institutions to offer loans to underserved populations.
 2. Implement a scalable, data-intensive AI application using Scikit-Learn, XGBoost, Airflow, and Kubernetes.
 3. Ensure reliability, scalability, and maintainability of the system to handle large volumes of data and users.
 
 ### System Design Strategies:
+
 1. **Modular Architecture**: Design the system using a modular approach to enable easy scalability and maintainability.
 2. **Microservices**: Implement different components of the system as microservices to enhance flexibility and resilience.
 3. **Data Pipeline**: Create a robust data pipeline using Apache Airflow to automate data ingestion, processing, and model training.
@@ -18,6 +20,7 @@ layout: article
 5. **Machine Learning Models**: Implement credit scoring models using Scikit-Learn and XGBoost to leverage the power of machine learning for accurate credit assessment.
 
 ### Chosen Libraries:
+
 1. **Scikit-Learn**: For building and training machine learning models efficiently with a wide range of algorithms and tools.
 2. **XGBoost**: To create scalable and accurate gradient boosting models for credit scoring tasks.
 3. **Apache Airflow**: For orchestrating the data pipeline, scheduling workflows, and monitoring the system's health and performance.
@@ -28,30 +31,36 @@ By implementing these design strategies and leveraging the chosen libraries, the
 ### MLOps Infrastructure for the Peru Microfinance Credit Scoring AI Application:
 
 #### Data Collection and Ingestion:
+
 - **Source Data**: Collect data from various sources such as customer demographics, financial history, and transactional data.
 - **Data Ingestion**: Use Apache Airflow to schedule data pipelines for extracting, transforming, and loading data into the system.
 
 #### Data Processing and Feature Engineering:
+
 - **Feature Engineering**: Develop features based on historical data and domain knowledge to improve model performance.
 - **Data Preprocessing**: Preprocess the data by handling missing values, encoding categorical variables, and scaling features.
 
 #### Model Development and Training:
+
 - **Model Selection**: Choose appropriate models from Scikit-Learn and XGBoost based on the data characteristics and requirements.
 - **Hyperparameter Tuning**: Utilize techniques like grid search or random search for optimizing model hyperparameters.
 - **Model Training**: Train and validate models on a regular basis using cross-validation to ensure robust performance.
 
 #### Model Deployment and Monitoring:
+
 - **Containerization**: Containerize the models using Docker for portability and consistency across different environments.
 - **Kubernetes Deployment**: Deploy the containerized models on Kubernetes clusters for scalability and fault tolerance.
 - **Model Serving**: Use Kubernetes to manage model serving endpoints and handle incoming prediction requests.
 - **Monitoring and Logging**: Implement logging and monitoring using tools like Prometheus and Grafana to track model performance and system health.
 
 #### Continuous Integration and Deployment (CI/CD):
+
 - **Automated Pipelines**: Set up CI/CD pipelines to automate model training, testing, and deployment processes.
 - **Version Control**: Utilize Git for version control of code, data, and models to ensure reproducibility.
 - **Deployment Strategies**: Implement blue-green or rolling deployment strategies to minimize downtime during updates.
 
 #### Governance and Compliance:
+
 - **Model Governance**: Establish governance processes for model development, deployment, and monitoring to ensure compliance with regulations.
 - **Data Privacy**: Implement data anonymization techniques and secure data handling practices to protect sensitive customer information.
 
@@ -95,6 +104,7 @@ peru_microfinance_credit_scoring_ai/
 ```
 
 ### Description:
+
 - **data/**: Contains raw data, processed data, and train-test split data.
 - **models/**: Stores scripts and artifacts for Scikit-Learn and XGBoost models.
 - **airflow/**: Includes Airflow DAGs for data pipeline automation.
@@ -129,12 +139,15 @@ models/
 ```
 
 ### Description:
+
 - **scikit_learn_models/**:
+
   - **logistic_regression_model.py**: Script that defines and trains a Logistic Regression model using Scikit-Learn.
   - **random_forest_model.py**: Script that implements and trains a Random Forest model using Scikit-Learn.
   - **model_evaluation_utils.py**: Utility functions for evaluating the performance of Scikit-Learn models.
 
 - **xgboost_models/**:
+
   - **xgboost_model.py**: Script that defines and trains an XGBoost model for credit scoring tasks.
   - **xgboost_hyperparameter_tuning.py**: Script for hyperparameter tuning of the XGBoost model to optimize performance.
   - **xgboost_model_evaluation.py**: Script for evaluating the performance of the trained XGBoost model.
@@ -162,7 +175,9 @@ deployment/
 ```
 
 ### Description:
+
 - **kubernetes/**:
+
   - **deployment.yaml**: YAML configuration file specifying the deployment of the AI models within Kubernetes pods.
   - **service.yaml**: YAML file defining a Kubernetes service to expose endpoints for accessing the deployed models.
   - **ingress.yaml**: YAML file defining Kubernetes Ingress to route external traffic to the AI application.
@@ -264,22 +279,27 @@ This script generates mock data, trains a complex XGBoost classifier model, and 
 ### Types of Users for the Peru Microfinance Credit Scoring AI Application:
 
 1. **Data Scientist**
+
    - **User Story**: As a data scientist, I want to experiment with different machine learning algorithms and evaluate their performance using real data.
    - **File**: `scripts/train_model_mock_data.py`
 
 2. **Machine Learning Engineer**
+
    - **User Story**: As a machine learning engineer, I need to fine-tune hyperparameters of the XGBoost model and assess its impact on the model's accuracy.
    - **File**: `scripts/train_complex_model_mock_data.py`
 
 3. **Data Engineer**
+
    - **User Story**: As a data engineer, I am responsible for setting up and managing the data pipeline to ensure seamless data ingestion and processing.
    - **File**: `airflow/dags/DataPipeline.py`
 
 4. **DevOps Engineer**
+
    - **User Story**: As a DevOps engineer, I am tasked with deploying the AI application on Kubernetes clusters and ensuring high availability and scalability.
    - **File**: `deployment/kubernetes/deployment.yaml`
 
 5. **Business Analyst**
+
    - **User Story**: As a business analyst, I want to analyze the credit scoring models' predictions to identify patterns and insights for business strategies.
    - **File**: `models/model_evaluation/evaluation_metrics.py`
 

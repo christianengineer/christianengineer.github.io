@@ -8,21 +8,27 @@ layout: article
 ## AI Automated Disease Vector Tracking Project
 
 ## Objectives
+
 The objectives of the AI Automated Disease Vector Tracking project are to:
+
 1. Develop an AI-powered system for the automated detection and tracking of disease-carrying vectors such as mosquitoes, ticks, and flies.
 2. Utilize machine learning algorithms to identify and categorize disease vectors based on image analysis.
 3. Provide public health authorities with a scalable and efficient tool to monitor and control the spread of vector-borne diseases.
 4. Implement real-time tracking and reporting capabilities to enable timely response to potential disease outbreaks.
 
 ## System Design Strategies
+
 To achieve the objectives, the following system design strategies are proposed:
+
 1. **Data Collection and Preprocessing**: Gather and preprocess a large dataset of images of disease-carrying vectors using OpenCV for image processing and manipulation.
 2. **Machine Learning Models**: Utilize TensorFlow for building and training machine learning models for object detection and classification of disease vectors.
 3. **Real-time Tracking**: Implement a scalable architecture for real-time tracking of disease vectors using edge computing or cloud-based solutions.
 4. **User Interface and Reporting**: Develop a user-friendly interface for public health authorities to visualize and analyze the tracked data and receive automated reports on potential disease outbreaks.
 
 ## Chosen Libraries
+
 The chosen libraries for this project are:
+
 1. **TensorFlow**: TensorFlow will be used for developing and training deep learning models for object detection and classification of disease vectors. Its flexibility and scalability make it suitable for handling large datasets and real-time inference.
 2. **OpenCV**: OpenCV will be utilized for image preprocessing, feature extraction, and manipulation. Its extensive library of computer vision functions makes it ideal for handling the complexity of image analysis in disease vector tracking.
 3. **Keras**: Keras, as a high-level neural networks API running on top of TensorFlow, can be used to simplify the process of building and training deep learning models, enabling rapid iteration and experimentation.
@@ -35,24 +41,31 @@ By leveraging these libraries and design strategies, the AI Automated Disease Ve
 To build an effective MLOps infrastructure for the Automated Disease Vector Tracking system, we will integrate the following components and best practices:
 
 ## Version Control System
+
 Utilize a version control system such as Git to manage the source code, data, and model artifacts. This enables collaboration, tracking changes, and ensuring reproducibility.
 
 ## Continuous Integration and Continuous Deployment (CI/CD)
+
 Implement CI/CD pipelines to automate the training, evaluation, and deployment of machine learning models. This includes automated testing, model validation, and deployment to production or staging environments. Tools like Jenkins or GitLab CI can be utilized for this purpose.
 
 ## Model Registry and Artifact Management
+
 Use a model registry such as MLflow or TensorFlow Serving to store and manage trained models and their associated metadata. This facilitates model versioning, tracking performance metrics, and model serving.
 
 ## Automated Testing and Validation
+
 Integrate automated testing and validation processes into the CI/CD pipeline to ensure the quality and consistency of the machine learning models. This includes unit tests, integration tests, and validation against predefined metrics.
 
 ## Model Monitoring and Performance Tracking
+
 Implement tools for monitoring model performance in production, tracking data drift, and detecting model degradation. This involves the use of platforms like Prometheus and Grafana to monitor key performance indicators and ensure the models continue to provide accurate predictions.
 
 ## Infrastructure as Code
+
 Utilize infrastructure as code tools such as Terraform or Ansible to define and manage the infrastructure required for training, serving, and monitoring machine learning models. This enables reproducibility and scalability of the MLOps infrastructure.
 
 ## Collaboration and Communication
+
 Establish channels for collaboration and communication among the MLOps team, data scientists, and software engineers. This includes using tools like Slack, Jira, or Microsoft Teams for efficient communication and project management.
 
 By integrating these components and best practices, the MLOps infrastructure for the Automated Disease Vector Tracking system will ensure efficient model development, deployment, monitoring, and management, leading to a scalable and reliable AI application for public health.
@@ -64,44 +77,44 @@ AI_Disease_Vector_Tracking/
 │   ├── raw/                    ## Raw data from sources
 │   ├── processed/              ## Processed and labeled data
 │   ├── augmented/              ## Augmented data for model training
-│   
+│
 ├── models/
 │   ├── object_detection/       ## Trained object detection models
 │   ├── classification/         ## Trained classification models
 │   ├── model_artifacts/        ## Serialized model artifacts
-│   
+│
 ├── notebooks/
 │   ├── data_exploration.ipynb  ## Jupyter notebook for data exploration
 │   ├── model_training.ipynb     ## Jupyter notebook for model training
 │   ├── model_evaluation.ipynb   ## Jupyter notebook for model evaluation
-│   
+│
 ├── src/
 │   ├── data_processing/        ## Scripts for data preprocessing
 │   ├── model_training/         ## Scripts for training machine learning models
 │   ├── model_evaluation/       ## Scripts for model evaluation and validation
 │   ├── deployment/             ## Scripts for model deployment
 │   ├── utils/                  ## Utility scripts and functions
-│   
+│
 ├── infrastructure/
 │   ├── dockerfiles/            ## Dockerfiles for model serving and deployment
 │   ├── kubernetes/              ## Kubernetes deployment configurations
 │   ├── terraform/               ## Infrastructure as code for cloud setup
 │   ├── deployment_config/       ## Configuration files for deployment pipelines
-│   
+│
 ├── documentation/
 │   ├── data_dictionary.md      ## Documentation for data attributes and labels
 │   ├── model_architecture.md    ## Documentation for model architecture
 │   ├── deployment_guide.md      ## Deployment instructions and configurations
-│   
+│
 ├── tests/
 │   ├── unit_tests/              ## Unit tests for various modules
 │   ├── integration_tests/       ## Integration tests for end-to-end functionality
-│   
+│
 ├── config/
 │   ├── environment_config.yml   ## Configuration for environment variables
 │   ├── model_config.yml         ## Configuration for model hyperparameters
 │   ├── deployment_config.yml    ## Configuration for deployment settings
-│   
+│
 ├── README.md                    ## Project overview, setup instructions, and guidelines
 ├── requirements.txt             ## Python dependencies
 ├── LICENSE                      ## License information
@@ -118,19 +131,19 @@ models/
 │   │   ├── inference_graph/          ## Frozen inference graph for deployment
 │   │   ├── evaluation_results/       ## Evaluation metrics and validation results
 │   │   ├── training_logs/            ## Logs and checkpoints from model training
-│   
+│
 ├── classification/
 │   ├── resnet50/                     ## Trained classification model
 │   │   ├── saved_model/              ## Serialized model in TensorFlow SavedModel format
 │   │   ├── model_weights/            ## Model weights and configuration
 │   │   ├── evaluation_results/       ## Evaluation metrics and validation results
 │   │   ├── training_logs/            ## Logs and checkpoints from model training
-│   
+│
 ├── model_artifacts/
 │   ├── model_metadata.json           ## Metadata for trained models
 │   ├── performance_metrics.json      ## Model performance metrics
 │   ├── model_version_history.md      ## History of model versions and changes
-│ 
+│
 ```
 
 In the `object_detection/` and `classification/` directories, trained models are organized based on their respective tasks. Each subdirectory includes the serialized model, evaluation results, training logs, and any additional artifacts associated with the models. This structure ensures that the trained models and their artifacts are stored efficiently and are easily accessible for evaluation, deployment, and version tracking.
@@ -332,22 +345,27 @@ This is a simplified example for illustration purposes, and in a real-world scen
 ### Types of Users
 
 1. **Public Health Officials**
+
    - User Story: As a public health official, I want to use the Automated Disease Vector Tracking application to monitor disease-carrying vectors in specific geographical areas and analyze potential disease outbreaks to take timely preventive measures.
    - Relevant File: `deployment/deploy_object_detection_model.sh` for deploying the object detection model.
 
 2. **Field Technicians**
+
    - User Story: As a field technician, I need to use the Automated Disease Vector Tracking application on mobile devices to capture and upload images of disease-carrying vectors from the field for real-time analysis and tracking.
    - Relevant File: `src/model_training/train_model.py` for training the disease vector classification model.
 
 3. **Data Scientists**
+
    - User Story: As a data scientist, I want to use the Automated Disease Vector Tracking application to experiment with different machine learning algorithms and model architectures to improve the accuracy of disease vector identification and tracking.
    - Relevant File: `src/model_training/complex_model_algorithm.py` for defining and training a complex machine learning algorithm for object detection.
 
 4. **System Administrators**
+
    - User Story: As a system administrator, I am responsible for setting up and maintaining the infrastructure required for deploying and serving the disease vector tracking models.
    - Relevant File: `deployment/cloud_deployment/cloud_setup_guide.md` for guidelines on setting up the cloud infrastructure for model deployment.
 
 5. **Public Health Researchers**
+
    - User Story: As a public health researcher, I want to access and analyze the performance metrics and model versions of the Automated Disease Vector Tracking application to assess the effectiveness of disease tracking methods over time.
    - Relevant File: `models/model_artifacts/performance_metrics.json` for accessing the performance metrics of trained models.
 

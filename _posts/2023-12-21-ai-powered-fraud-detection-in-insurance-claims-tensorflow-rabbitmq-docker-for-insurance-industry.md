@@ -8,6 +8,7 @@ layout: article
 ## AI-powered Fraud Detection in Insurance Claims
 
 ## Objectives
+
 The primary objectives of the AI-powered Fraud Detection in Insurance Claims system are:
 
 - Detecting fraudulent insurance claims using machine learning algorithms, specifically TensorFlow.
@@ -16,17 +17,21 @@ The primary objectives of the AI-powered Fraud Detection in Insurance Claims sys
 - Containerizing the system using Docker for easy deployment and scalability.
 
 ## System Design Strategies
+
 To achieve the objectives, the following system design strategies will be implemented:
 
 1. Data Collection and Storage:
+
    - Utilize scalable storage solutions like Amazon S3 or Google Cloud Storage for storing large volumes of insurance claims data.
    - Design a robust data pipeline using technologies like Apache Kafka or Cloud Pub/Sub to ingest and process incoming data in real-time.
 
 2. Model Training and Inference:
+
    - Develop machine learning models for fraud detection using TensorFlow, leveraging its capabilities for training and deploying deep learning models.
    - Employ distributed training techniques to train models on large datasets and optimize model performance.
 
 3. Asynchronous Communication:
+
    - Integrate RabbitMQ as a message broker for asynchronous communication between system components, enabling decoupling and improved fault tolerance.
 
 4. Scalability and Deployment:
@@ -34,7 +39,9 @@ To achieve the objectives, the following system design strategies will be implem
    - Utilize container orchestration platforms like Kubernetes for managing and scaling the deployed infrastructure.
 
 ## Chosen Libraries and Tools
+
 The chosen libraries and tools for implementing the AI-powered Fraud Detection in Insurance Claims system include:
+
 - TensorFlow: For building and training machine learning models, including deep learning models for fraud detection.
 - RabbitMQ: As a message broker for implementing asynchronous communication and decoupling system components.
 - Docker: For containerizing the system components, ensuring consistency and portability across different environments.
@@ -51,12 +58,14 @@ To successfully operationalize the AI-powered Fraud Detection in Insurance Claim
 ## Continuous Integration and Continuous Deployment (CI/CD) Pipeline
 
 ### Model Training Pipeline
+
 - **Data Collection**: Utilize data connectors to ingest insurance claims data from various sources and store it in a centralized data lake.
 - **Data Preprocessing**: Implement data preprocessing steps to clean, transform, and engineer features necessary for training the fraud detection models.
 - **Model Training**: Use TensorFlow for training machine learning models, employing distributed training techniques to handle large volumes of data effectively.
 - **Model Evaluation**: Incorporate model evaluation metrics and validation processes to ensure the performance and accuracy of the trained models.
 
 ### Model Deployment Pipeline
+
 - **Model Versioning**: Implement a model versioning system to track and manage different iterations of trained models.
 - **Containerization**: Utilize Docker to containerize the trained models, ensuring consistent deployment across different environments.
 - **Model Registry**: Employ a model registry to store and manage trained model artifacts, enabling easy retrieval and deployment.
@@ -64,27 +73,33 @@ To successfully operationalize the AI-powered Fraud Detection in Insurance Claim
 ## Monitoring and Governance
 
 ### Model Performance Monitoring
+
 - **Metrics Collection**: Collect relevant metrics such as model accuracy, precision, and recall from deployed models using monitoring tools.
 - **Anomaly Detection**: Implement anomaly detection techniques to identify deviations in model performance that may indicate potential issues or drift.
 
 ### Governance and Compliance
+
 - **Model Governance**: Establish processes for tracking model lineage, ensuring compliance with regulatory frameworks, and maintaining model transparency and accountability.
 
 ## Infrastructure Orchestration
 
 ### Asynchronous Communication with RabbitMQ
+
 - **Integration**: Integrate RabbitMQ for asynchronous communication between different components of the system, ensuring decoupling and fault tolerance.
 
 ### Container Orchestration with Kubernetes
+
 - **Deployment Scalability**: Utilize Kubernetes for orchestrating the deployment of the application, including scaling components based on demand and resource availability.
 
 ## Data Management
 
 ### Data Versioning and Lineage
+
 - **Data Versioning**: Implement data versioning to trace and manage changes in the underlying data used for training and serving the models.
 - **Data Lineage Tracking**: Enable tracking of data lineage to understand the origin and transformations applied to the data throughout the pipeline.
 
 ## Tooling and Infrastructure
+
 - **Infrastructure as Code**: Utilize infrastructure as code (IaC) tools such as Terraform or AWS CloudFormation to define and manage the infrastructure for the MLOps pipeline.
 - **DevOps Collaboration**: Establish collaboration between data scientists, machine learning engineers, and software developers to streamline the integration of machine learning models into the CI/CD pipeline.
 
@@ -151,6 +166,7 @@ models/
 Below, we'll detail the purpose of each file:
 
 ### fraud_detection_model.py
+
 The `fraud_detection_model.py` file contains the code for developing and training the machine learning models specifically designed for fraud detection in insurance claims. This file typically includes the following components:
 
 - **Data Preprocessing**: Preprocessing steps to clean, transform, and engineer features from the insurance claims dataset. This may involve handling missing data, normalizing features, and encoding categorical variables.
@@ -184,6 +200,7 @@ def train_model(train_data, train_labels):
 ```
 
 ### model_evaluation.py
+
 The `model_evaluation.py` file is responsible for evaluating the performance of the trained fraud detection model. This typically involves assessing the model's accuracy, precision, recall, and other relevant metrics using test data. Additionally, it may include functions to conduct inference with the trained model on unseen data to measure its real-world effectiveness.
 
 An example of the structure within `model_evaluation.py` could be:
@@ -220,12 +237,13 @@ deployment/
 Below, we'll detail the purpose of each file and directory:
 
 ### docker-compose.yml
+
 The `docker-compose.yml` file defines the services, networks, and volumes for the application using Docker Compose. It specifies how the various components of the application, such as the fraud detection model, API endpoints, and messaging services like RabbitMQ, should be containerized and connected within the Docker ecosystem.
 
 An example of the contents of `docker-compose.yml` could be:
 
 ```yaml
-version: '3'
+version: "3"
 services:
   fraud_detection_api:
     build: ./app
@@ -247,6 +265,7 @@ volumes:
 ```
 
 ### kubernetes/
+
 The `kubernetes` directory contains Kubernetes deployment configurations for orchestrating the application components within a Kubernetes cluster. The `deployment.yml` file within this directory specifies the deployment, service, and other Kubernetes resources required to run the application in a scalable and resilient manner.
 
 An example of the contents of `deployment.yml` could be:
@@ -269,14 +288,14 @@ spec:
         app: fraud-detection
     spec:
       containers:
-      - name: fraud-detection-api
-        image: your-registry/fraud-detection-api:latest
-        ports:
-        - containerPort: 5000
-      - name: fraud-detection-model
-        image: your-registry/fraud-detection-model:latest
-        ports:
-        ## Define ports for the model service
+        - name: fraud-detection-api
+          image: your-registry/fraud-detection-api:latest
+          ports:
+            - containerPort: 5000
+        - name: fraud-detection-model
+          image: your-registry/fraud-detection-model:latest
+          ports:
+          ## Define ports for the model service
 ---
 apiVersion: v1
 kind: Service
@@ -286,15 +305,16 @@ spec:
   selector:
     app: fraud-detection
   ports:
-  - protocol: TCP
-    port: 80
-    targetPort: 5000
-  - protocol: TCP
-    port: 8080
-    targetPort: 8080
+    - protocol: TCP
+      port: 80
+      targetPort: 5000
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
 ```
 
 ### terraform/
+
 The `terraform` directory contains infrastructure as code (IaC) files, specifically the `main.tf` file, which defines the infrastructure configurations using the Terraform language. This may include resources such as cloud infrastructure, networking, and other components needed to support the AI-powered Fraud Detection in Insurance Claims application.
 
 An example of the contents of `main.tf` could be:
@@ -415,18 +435,22 @@ This file provides a foundation for implementing more complex machine learning a
 ### Types of Users
 
 1. **Data Scientist**
+
    - **User Story**: As a data scientist, I want to be able to develop and train machine learning models using the latest libraries and tools, and integrate them into the fraud detection system.
    - **Accomplished in File**: `models/fraud_detection_model.py`
 
 2. **Machine Learning Engineer**
+
    - **User Story**: As a machine learning engineer, I aim to build scalable and robust model training pipelines and integrate model deployment with the application's infrastructure.
    - **Accomplished in File**: `pipelines/ci/model_training_pipeline.yml`
 
 3. **DevOps Engineer**
+
    - **User Story**: As a DevOps engineer, I need to orchestrate the deployment of the application components, ensuring efficient infrastructure management and scalability.
    - **Accomplished in File**: `deployment/kubernetes/deployment.yml`
 
 4. **Insurance Claims Analyst**
+
    - **User Story**: As an insurance claims analyst, I want to utilize the AI-powered system to efficiently detect potentially fraudulent insurance claims and reduce fraudulent payouts.
    - **Accomplished in File**: `app/main.py`
 

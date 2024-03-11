@@ -190,6 +190,7 @@ print(predictions)
 ```
 
 In this function:
+
 - `vehicle_number_plate_recognition` represents a mock function for the complex machine learning algorithm for number plate recognition.
 - The function takes an `image_path` as input, representing the file path to the vehicle image for number plate recognition.
 - Inside the function, the image is loaded, preprocessed, and fed into a complex machine learning algorithm (in this case, using a ResNet50 model as an example).
@@ -227,6 +228,7 @@ print(predictions)
 ```
 
 In this function:
+
 - `vehicle_number_plate_recognition` represents a mock function for a complex machine learning algorithm for number plate recognition.
 - The function takes an `image_path` as input, representing the file path to the vehicle image for number plate recognition.
 - Inside the function, the image is loaded, preprocessed, and fed into a pre-trained MobileNetV2 model for inference.
@@ -237,23 +239,27 @@ This code demonstrates a simplified implementation of a machine learning algorit
 ### Types of Users
 
 1. **Law Enforcement Agencies**
-   - *User Story*: As a law enforcement officer, I want to use the application to quickly scan and recognize vehicle number plates to identify stolen vehicles or vehicles associated with criminal activities.
-   - *Relevant File*: The API service file (`api/app.py`) will provide the endpoint for law enforcement officers to submit images for number plate recognition.
+
+   - _User Story_: As a law enforcement officer, I want to use the application to quickly scan and recognize vehicle number plates to identify stolen vehicles or vehicles associated with criminal activities.
+   - _Relevant File_: The API service file (`api/app.py`) will provide the endpoint for law enforcement officers to submit images for number plate recognition.
 
 2. **Parking Management Companies**
-   - *User Story*: As a parking management personnel, I need to utilize the application to automate the process of capturing and storing vehicle number plates for parking access control and payment purposes.
-   - *Relevant File*: The API service file (`api/app.py`) will allow parking management personnel to integrate the number plate recognition functionality into their parking management systems.
+
+   - _User Story_: As a parking management personnel, I need to utilize the application to automate the process of capturing and storing vehicle number plates for parking access control and payment purposes.
+   - _Relevant File_: The API service file (`api/app.py`) will allow parking management personnel to integrate the number plate recognition functionality into their parking management systems.
 
 3. **Transportation Authorities**
-   - *User Story*: As a transportation authority employee, I aim to leverage the application to monitor and analyze traffic flow by capturing and recognizing vehicle number plates at key junctions and toll plazas.
-   - *Relevant File*: The deployment configuration files (`deployment/kubernetes/deployment.yaml` and `deployment/kubernetes/service.yaml`) will assist in deploying the application for traffic monitoring at specified locations.
+
+   - _User Story_: As a transportation authority employee, I aim to leverage the application to monitor and analyze traffic flow by capturing and recognizing vehicle number plates at key junctions and toll plazas.
+   - _Relevant File_: The deployment configuration files (`deployment/kubernetes/deployment.yaml` and `deployment/kubernetes/service.yaml`) will assist in deploying the application for traffic monitoring at specified locations.
 
 4. **Commercial Vehicle Fleet Operators**
-   - *User Story*: As a fleet manager, I require the application to track and manage the movement of commercial vehicles by automatically identifying their number plates during entry and exit at distribution centers.
-   - *Relevant File*: The model file (`models/trained/model_checkpoint.ckpt`) will contain the trained model for number plate recognition, which can be utilized in the fleet management system.
+
+   - _User Story_: As a fleet manager, I require the application to track and manage the movement of commercial vehicles by automatically identifying their number plates during entry and exit at distribution centers.
+   - _Relevant File_: The model file (`models/trained/model_checkpoint.ckpt`) will contain the trained model for number plate recognition, which can be utilized in the fleet management system.
 
 5. **Smart City Planners**
-   - *User Story*: As a smart city planner, I seek to employ the application for gathering traffic data and optimizing traffic management strategies based on the analysis of vehicle number plate information.
-   - *Relevant File*: The preprocessing scripts (`src/preprocessing/`) will be crucial for preparing the raw vehicle images and annotations for training the number plate recognition model.
+   - _User Story_: As a smart city planner, I seek to employ the application for gathering traffic data and optimizing traffic management strategies based on the analysis of vehicle number plate information.
+   - _Relevant File_: The preprocessing scripts (`src/preprocessing/`) will be crucial for preparing the raw vehicle images and annotations for training the number plate recognition model.
 
 Each type of user will interact with different aspects of the application, from utilizing the API service for image recognition to deploying the application for specific use cases. The functionality and components of the application cater to the varied needs of these user groups, enabling efficient utilization of vehicle number plate recognition technology.

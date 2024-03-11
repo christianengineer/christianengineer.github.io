@@ -8,13 +8,17 @@ layout: article
 ## AI HR Employee Attrition Analysis with Scikit-Learn (Python)
 
 ## Objectives
+
 The objectives of the AI HR Employee Attrition Analysis project are to:
+
 1. Predict employee turnover within an organization using machine learning techniques.
 2. Identify factors that contribute to employee attrition.
 3. Provide actionable insights to HR teams to reduce attrition rates and improve employee retention.
 
 ## System Design Strategies
+
 To achieve the objectives of the project, the following system design strategies could be employed:
+
 1. Data Collection: Gather relevant employee data including demographics, job satisfaction, performance metrics, and other factors that could potentially influence attrition.
 2. Data Preprocessing: Clean and prepare the collected data for analysis by handling missing values, encoding categorical variables, and scaling numeric features.
 3. Feature Engineering: Extract and create meaningful features from the raw data to enhance the predictive power of the models.
@@ -23,7 +27,9 @@ To achieve the objectives of the project, the following system design strategies
 6. Interpretability: Ensure that the predictive models are interpretable, enabling HR teams to understand the rationale behind the predictions.
 
 ## Chosen Libraries
+
 For implementing the AI HR Employee Attrition Analysis project, the following Python libraries would be valuable to leverage:
+
 1. Scikit-Learn: A powerful machine learning library in Python that provides efficient tools for data analysis and model building. It offers a wide range of algorithms for classification and model evaluation.
 2. Pandas: A versatile data manipulation library for cleaning, transforming, and analyzing structured data, which is essential for preprocessing and feature engineering tasks.
 3. NumPy: A fundamental package for scientific computing with Python, providing support for large, multi-dimensional arrays and matrices. It is crucial for numerical computations within the data analysis pipeline.
@@ -37,27 +43,35 @@ By incorporating these libraries into the project, the development of scalable, 
 When designing the infrastructure for the HR Employee Attrition Analysis application, it is essential to consider scalability, reliability, and performance. The following components can be incorporated into the infrastructure:
 
 ## Data Storage
+
 Utilize a scalable and reliable data storage solution such as Amazon S3 or Google Cloud Storage to store the employee data. This ensures that the data is easily accessible by the application and can handle large volumes of data effectively.
 
 ## Data Processing
+
 Incorporate a data processing layer using Apache Spark or AWS Glue for large-scale data preprocessing and feature engineering. These tools can handle the transformation and cleaning of the raw employee data efficiently, allowing for seamless integration with the machine learning pipeline.
 
 ## Machine Learning Model Training
+
 Utilize scalable machine learning frameworks such as TensorFlow or PyTorch for training and evaluating the predictive models. These frameworks provide distributed training capabilities, enabling the utilization of large computing resources for model training.
 
 ## Model Deployment
+
 Deploy the trained machine learning models using containerization technologies like Docker and container orchestration platforms such as Kubernetes. This allows for easy scaling of the model serving component based on the application's demand.
 
 ## Application Backend
+
 Develop a robust backend for the application using frameworks like Flask or Django. The backend facilitates communication between the frontend and the machine learning models, as well as integration with the data storage and processing layers.
 
 ## Application Frontend
+
 Create an intuitive and responsive frontend using modern web development frameworks such as React or Vue.js. The frontend allows HR teams to interact with the predictive models and visualize the insights generated from the employee attrition analysis.
 
 ## API Gateway
+
 Utilize an API gateway like Amazon API Gateway or Google Cloud Endpoints to expose the machine learning models as RESTful APIs. This enables seamless integration with other HR systems and applications.
 
 ## Monitoring and Logging
+
 Incorporate monitoring and logging tools such as Prometheus and Grafana to track the performance of the application, monitor resource utilization, and identify any potential issues.
 
 By integrating these infrastructure components, the HR Employee Attrition Analysis application can be built to handle large-scale data processing, model training, and deployment, while ensuring reliability and scalability to meet the demands of an enterprise-level AI solution.
@@ -109,7 +123,6 @@ HR_Employee_Attrition_Analysis/
 In this file structure:
 
 - `data/` directory contains subdirectories for `raw_data/` and `processed_data/`, where raw employee data is stored and processed data is saved after preprocessing and feature engineering.
-  
 - `notebooks/` directory holds Jupyter notebooks for exploratory data analysis, data preprocessing, model training, and evaluation.
 
 - `src/` directory contains the source code organized by functionality, such as data collection, data preprocessing, feature engineering, model implementation, application backend, and utility functions.
@@ -174,19 +187,15 @@ deployment/
 - `app/`: This directory holds the main files for the application backend.
 
   - `main.py`: The main entry point for the application backend, including the setup of API endpoints and integration with the machine learning models.
-  
   - `api/`: This subdirectory contains files related to API endpoints for model serving and data access.
-  
+
     - `__init__.py`: Initialization file for the API package.
-    
     - `model_endpoints.py`: File defining the REST API endpoints for model serving, including model prediction and explanation endpoints.
-    
     - `data_endpoints.py`: File defining the endpoints for accessing and updating employee data.
 
 - `config/`: This directory holds configuration files for the application.
 
   - `logging_config.yaml`: Configuration file for logging settings, defining log levels, log format, and log output destinations.
-  
   - `model_config.json`: Configuration file containing model-related settings such as model paths, input data schema, and model hyperparameters.
 
 These files and directories form a structured approach to organizing the deployment components of the HR Employee Attrition Analysis application. The Dockerfile and requirements.txt enable easy environment setup and deployment, while the app/ and config/ directories house the application code and configuration files necessary for serving the machine learning models and managing application settings.
@@ -214,6 +223,7 @@ def predict_employee_attrition(data_file_path, model_file_path):
 ```
 
 In this function:
+
 - `data_file_path` is the file path to the mock data file containing employee attributes.
 - `model_file_path` is the file path to the saved trained machine learning model file.
 
@@ -250,6 +260,7 @@ def predict_employee_attrition(data_file_path, model_file_path):
 ```
 
 In this function:
+
 - `data_file_path` is the file path to the mock data file containing employee attributes.
 - `model_file_path` is the file path to the saved trained machine learning model file.
 
@@ -266,18 +277,22 @@ You can place this function within the "models/" directory of the project reposi
 ### List of Users and User Stories for the HR Employee Attrition Analysis Application
 
 1. HR Manager
+
    - User Story: As an HR manager, I want to analyze employee attrition trends to identify risk factors and take proactive measures to improve workforce retention.
    - Relevant File: The "notebooks/exploratory_analysis.ipynb" notebook provides interactive visualizations and insights into the employee attrition trends, as well as identifying key factors contributing to attrition.
 
 2. Data Analyst
+
    - User Story: As a data analyst, I need access to the preprocessed and engineered employee data to conduct further statistical analysis and generate custom reports.
    - Relevant File: The "data/processed_data/engineered_features.csv" file contains the preprocessed and engineered employee data necessary for conducting in-depth statistical analysis.
 
 3. Machine Learning Engineer
+
    - User Story: As a machine learning engineer, I want to leverage the trained predictive models to integrate employee attrition predictions into the company's HR systems.
    - Relevant File: The individual model files such as "models/logistic_regression_model.py", "models/random_forest_model.py", and "models/gradient_boosting_model.py" provide the trained predictive models that the engineer can integrate for making attrition predictions.
 
 4. Application Developer
+
    - User Story: As an application developer, I need to understand the backend logic for serving machine learning models via APIs to incorporate attrition predictions into the HR Employee Portal.
    - Relevant File: The "deployment/app/main.py" file encompasses the backend logic for setting up API endpoints and integrating with the machine learning models.
 

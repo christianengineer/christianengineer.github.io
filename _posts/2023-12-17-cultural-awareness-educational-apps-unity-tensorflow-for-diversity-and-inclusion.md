@@ -6,6 +6,7 @@ layout: article
 ---
 
 ## Objectives
+
 The objectives of the AI Cultural Awareness Educational Apps repository are to create educational applications that promote diversity and inclusion using AI technologies. The main goals include:
 
 1. **Educational Content:** Develop interactive educational content that raises awareness about cultural diversity and promotes inclusivity.
@@ -13,30 +14,38 @@ The objectives of the AI Cultural Awareness Educational Apps repository are to c
 3. **Scalability:** Design the applications to scale effectively to accommodate increasing user bases and data volumes.
 
 ## System Design Strategies
+
 To achieve the objectives, the following system design strategies can be employed:
 
 ### Modular Architecture
+
 #### Frontend
+
 - **Unity**: Utilize Unity for building interactive, immersive 3D and 2D experiences to engage users in cultural awareness activities.
 - **TensorFlow Lite**: Integrate TensorFlow Lite for on-device ML inference, enabling personalized experiences without requiring constant internet connectivity.
 
 #### Backend
+
 - **Microservices Architecture**: Design the backend using a microservices architecture to enable independent development, scaling, and maintenance of different components.
 - **API Gateway**: Employ an API gateway for unified access to various microservices and to manage requests/responses efficiently.
 
 ### Data Management
+
 - **Data Storage**: Utilize scalable NoSQL databases (e.g., MongoDB, Cassandra) to store user preferences, progress, and personalized content.
 - **Caching**: Implement caching mechanisms (e.g., Redis) to improve the retrieval of frequently accessed data and reduce latency.
 
 ### Machine Learning
+
 - **Data Preprocessing**: Use TensorFlow's data preprocessing libraries to transform and clean the input data for training ML models.
 - **Model Training**: Leverage TensorFlow for training machine learning models to personalize content delivery based on user behavior and preferences.
 
 ### Scalability and Performance
+
 - **Containerization**: Use Docker for containerization to ensure consistent runtime environments and easy scalability.
 - **Load Balancing**: Implement load balancing to distribute incoming traffic across multiple instances to enhance performance and reliability.
 
 ## Chosen Libraries
+
 The chosen libraries for building the AI Cultural Awareness Educational Apps repository are:
 
 - **Unity**: For creating interactive, immersive experiences and simulations to engage users in cultural awareness activities.
@@ -53,28 +62,35 @@ By leveraging these libraries and system design strategies, the AI Cultural Awar
 Building a robust MLOps infrastructure for the Cultural Awareness Educational Apps involves integrating various tools, processes, and practices to streamline the development, deployment, and management of machine learning models and AI-driven features. Below are the components of the MLOps infrastructure tailored for this application:
 
 ### Version Control
+
 - **Git**: Utilize Git for version control to track changes in code, configurations, and model files. Collaborate with the team and maintain a history of all modifications.
 
 ### Continuous Integration/Continuous Deployment (CI/CD)
+
 - **Jenkins**: Implement Jenkins for orchestrating the CI/CD pipeline. Automate the building, testing, and deployment of application updates, including machine learning model changes.
 - **Unit Testing**: Integrate unit tests to ensure the reliability and correctness of the software components, including ML models and data processing pipelines.
 
 ### Infrastructure as Code (IaC)
+
 - **Terraform**: Use Terraform to define and provision the cloud infrastructure in a declarative manner, enabling consistent and reproducible deployment across different environments.
 
 ### Model Registry and Management
+
 - **MLflow**: Employ MLflow for tracking and managing machine learning experiments, packaging ML models, and deploying them into production.
 - **Model Versioning**: Implement a system for versioning and cataloging trained models, enabling easy retrieval and comparison of different model iterations.
 
 ### Monitoring and Logging
+
 - **Prometheus and Grafana**: Set up Prometheus for metrics collection and Grafana for visualization, enabling real-time monitoring of application performance and resource usage.
 - **Logging**: Leverage centralized logging (e.g., ELK stack) to capture and analyze logs from various application and infrastructure components, including ML model inference.
 
 ### Scalability and Orchestration
+
 - **Kubernetes**: Utilize Kubernetes for container orchestration, enabling automatic scaling, fault tolerance, and efficient management of AI applications and associated services.
 - **Horizontal Scaling**: Implement auto-scaling mechanisms to dynamically adjust resources based on application demand, ensuring optimal performance during peak loads.
 
 ### Security and Compliance
+
 - **Identity and Access Management (IAM)**: Apply IAM best practices to manage user roles and permissions, ensuring secure access to resources and sensitive data.
 - **Data Encryption**: Implement encryption at rest and in transit to protect sensitive data, including user preferences and personalized content.
 - **Compliance Monitoring**: Set up processes to monitor compliance with data privacy regulations and industry standards, ensuring the responsible handling of user data.
@@ -186,15 +202,15 @@ Cultural-Awareness-Educational-Apps/
 
 - **user_preferences/**: This subdirectory contains the machine learning model and related files for modeling user preferences. The files include:
 
-    - `user_preferences_model.pth`: Serialized representation of the trained user preferences model, ready for use in the application.
-    - `user_preferences_training_data/`: Directory containing the training data used to train the user preferences model. The data may include CSV files, data preprocessing scripts, or any relevant artifacts used during model training.
-    - `user_preferences_model_documentation.md`: A documentation file that provides details about the model's architecture, hyperparameters, training process, and any relevant information for future reference.
+  - `user_preferences_model.pth`: Serialized representation of the trained user preferences model, ready for use in the application.
+  - `user_preferences_training_data/`: Directory containing the training data used to train the user preferences model. The data may include CSV files, data preprocessing scripts, or any relevant artifacts used during model training.
+  - `user_preferences_model_documentation.md`: A documentation file that provides details about the model's architecture, hyperparameters, training process, and any relevant information for future reference.
 
 - **content_personalization/**: This subdirectory contains the machine learning model and related files for content personalization. The files include:
 
-    - `content_recommender_model.pb`: Serialized representation of the trained content recommender model, suitable for integration within the application.
-    - `content_recommender_training_data/`: Directory containing the training data used to train the content recommender model. Similar to the user preferences model, this directory includes the data used for training, along with relevant documentation or scripts.
-    - `content_recommender_model_documentation.md`: A documentation file that describes the content recommender model, detailing its training process, input/output format, and performance metrics.
+  - `content_recommender_model.pb`: Serialized representation of the trained content recommender model, suitable for integration within the application.
+  - `content_recommender_training_data/`: Directory containing the training data used to train the content recommender model. Similar to the user preferences model, this directory includes the data used for training, along with relevant documentation or scripts.
+  - `content_recommender_model_documentation.md`: A documentation file that describes the content recommender model, detailing its training process, input/output format, and performance metrics.
 
 By organizing the machine learning models and related files in the `models` directory, the Cultural Awareness Educational Apps repository enables efficient management of models, data, and documentation. This structured approach enhances collaboration, reproducibility, and maintenance of the AI-driven features within the application.
 
@@ -231,14 +247,14 @@ Cultural-Awareness-Educational-Apps/
 
 - **unity/**: This subdirectory contains deployment files and configurations specific to the Unity application. The files include:
 
-    - **app_package/**: This subdirectory houses the packaged build of the Unity application, including the executable file (e.g., app_build.exe) and the assets required for the application's functionality and user experience.
-    - **deployment_config/**: This subdirectory holds the deployment configurations for Unity Cloud or any other deployment platforms, encompassing configuration files, deployment scripts, or any necessary artifacts for deployment automation.
-    - **release_notes.md**: A documentation file containing release notes and version history for the Unity application, describing changes, improvements, and bug fixes across different releases.
+  - **app_package/**: This subdirectory houses the packaged build of the Unity application, including the executable file (e.g., app_build.exe) and the assets required for the application's functionality and user experience.
+  - **deployment_config/**: This subdirectory holds the deployment configurations for Unity Cloud or any other deployment platforms, encompassing configuration files, deployment scripts, or any necessary artifacts for deployment automation.
+  - **release_notes.md**: A documentation file containing release notes and version history for the Unity application, describing changes, improvements, and bug fixes across different releases.
 
 - **tensorflow/**: This subdirectory encompasses deployment-related files and configurations specific to TensorFlow serving. The files include:
 
-    - **serving_config/**: This subdirectory contains the configuration files required for TensorFlow Serving, such as `model_config.pbtxt`, which defines the model serving configurations and endpoints.
-    - **deployment_scripts/**: This subdirectory accommodates deployment scripts and related files specifically tailored for deploying TensorFlow models using TensorFlow Serving. It may include deployment automation scripts, model conversion scripts, or any auxiliary artifacts necessary for model deployment.
+  - **serving_config/**: This subdirectory contains the configuration files required for TensorFlow Serving, such as `model_config.pbtxt`, which defines the model serving configurations and endpoints.
+  - **deployment_scripts/**: This subdirectory accommodates deployment scripts and related files specifically tailored for deploying TensorFlow models using TensorFlow Serving. It may include deployment automation scripts, model conversion scripts, or any auxiliary artifacts necessary for model deployment.
 
 By maintaining the deployment configurations and files within the `deployment` directory, the Cultural Awareness Educational Apps repository streamlines the deployment process for both the Unity and TensorFlow components. This organized approach facilitates reproducible and scalable deployments and enables a clear separation of concerns between the deployment artifacts for different parts of the application.
 
@@ -350,19 +366,22 @@ This script provides a starting point for implementing advanced machine learning
 ### Types of Users for the Cultural Awareness Educational Apps
 
 1. **Student User**
-   - *User Story*: As a student, I want to access educational content tailored to my learning style and cultural background to enhance my understanding of diversity and inclusion.
-   - *Accomplishing File*: `frontend/unity/Scenes/EducationalContentScene.unity` (Unity scene for interactive educational content).
+
+   - _User Story_: As a student, I want to access educational content tailored to my learning style and cultural background to enhance my understanding of diversity and inclusion.
+   - _Accomplishing File_: `frontend/unity/Scenes/EducationalContentScene.unity` (Unity scene for interactive educational content).
 
 2. **Educator User**
-   - *User Story*: As an educator, I want to track the progress and engagement of my students with the diversity and inclusion curriculum to provide targeted support and feedback.
-   - *Accomplishing File*: `backend/app/api/controllers/EducatorDashboardController.js` (Backend API for accessing student progress and engagement data).
+
+   - _User Story_: As an educator, I want to track the progress and engagement of my students with the diversity and inclusion curriculum to provide targeted support and feedback.
+   - _Accomplishing File_: `backend/app/api/controllers/EducatorDashboardController.js` (Backend API for accessing student progress and engagement data).
 
 3. **Parent/Guardian User**
-   - *User Story*: As a parent/guardian, I want to review the cultural awareness activities and educational material my child is engaging with to support their learning outside of the classroom.
-   - *Accomplishing File*: `frontend/unity/Scenes/ParentDashboardScene.unity` (Unity dashboard scene for parents/guardians to review educational activities).
+
+   - _User Story_: As a parent/guardian, I want to review the cultural awareness activities and educational material my child is engaging with to support their learning outside of the classroom.
+   - _Accomplishing File_: `frontend/unity/Scenes/ParentDashboardScene.unity` (Unity dashboard scene for parents/guardians to review educational activities).
 
 4. **Diversity and Inclusion Officer User**
-   - *User Story*: As a diversity and inclusion officer, I want to analyze aggregate usage data and feedback from the app to gauge the effectiveness of the educational content and identify areas for improvement.
-   - *Accomplishing File*: `MLops/monitoring/UsageAnalytics.ipynb` (Jupyter notebook for analyzing usage data and feedback).
+   - _User Story_: As a diversity and inclusion officer, I want to analyze aggregate usage data and feedback from the app to gauge the effectiveness of the educational content and identify areas for improvement.
+   - _Accomplishing File_: `MLops/monitoring/UsageAnalytics.ipynb` (Jupyter notebook for analyzing usage data and feedback).
 
 These user stories address the needs of different user types interacting with the Cultural Awareness Educational Apps and are associated with specific files or components within the application that facilitate the accomplishment of each story.

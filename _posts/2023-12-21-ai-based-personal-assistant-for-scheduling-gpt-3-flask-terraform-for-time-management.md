@@ -6,22 +6,29 @@ layout: article
 ---
 
 ## Objectives
+
 The main objectives of the AI-based Personal Assistant for Scheduling are:
+
 1. To automate and optimize the scheduling process for users by leveraging the power of GPT-3 for natural language understanding and generation.
 2. To provide a seamless and intuitive user experience through a web interface built using Flask.
 3. To ensure scalability, reliability, and efficient resource management through the use of Terraform for infrastructure as code.
 
 ## System Design Strategies
+
 ### GPT-3 Integration
+
 The system will utilize OpenAI's GPT-3 for natural language understanding and generation. GPT-3 will be integrated into the backend using OpenAI's API to interpret user input, generate appropriate responses, and assist in scheduling tasks based on the user's preferences.
 
 ### Web Interface with Flask
+
 The frontend of the application will be built using Flask, a lightweight web application framework. The user will interact with the AI-based Personal Assistant through a user-friendly web interface that enables them to input scheduling requests, view and modify their schedule, and receive intelligent suggestions from the AI.
 
 ### Infrastructure as Code with Terraform
+
 To ensure scalability and reliability, the system's infrastructure will be provisioned and managed using Terraform. Terraform will enable automated provisioning of cloud resources, such as virtual machines, databases, and networking components, allowing for easy scaling and maintenance of the application.
 
 ## Chosen Libraries and Technologies
+
 1. GPT-3 API: OpenAI's GPT-3 API will be utilized for natural language processing and generation.
 2. Flask: The web application framework will be used to build the user interface and handle user interactions.
 3. Terraform: Infrastructure as code tool for automating the provisioning of the application's cloud infrastructure.
@@ -33,36 +40,43 @@ By leveraging these technologies and design strategies, the AI-based Personal As
 ## MLOps Infrastructure for AI-based Personal Assistant for Scheduling
 
 ### 1. Data Collection and Storage
+
 - **Objective:** Collect and store user-interaction data for training and improving the GPT-3 model.
 - **Use Cases:** Capture user inputs, scheduling preferences, and feedback for personalized scheduling recommendations.
 - **Technologies:** Use cloud-based data storage solutions such as Amazon S3 or Google Cloud Storage to store interaction logs and user data.
 
 ### 2. Data Preprocessing and Feature Engineering
+
 - **Objective:** Process and prepare the interaction data for model training.
 - **Use Cases:** Clean, transform, and extract features from the interaction data to improve model performance.
 - **Technologies:** Utilize Apache Spark for distributed data processing and feature engineering.
 
 ### 3. Model Training and Evaluation
+
 - **Objective:** Train and evaluate the GPT-3 model using the collected data.
 - **Use Cases:** Continuously retrain the GPT-3 model with newly collected data to improve scheduling recommendations.
 - **Technologies:** Leverage OpenAI's GPT-3 platform for model training, and develop custom evaluation metrics to assess model performance.
 
 ### 4. Model Deployment
+
 - **Objective:** Deploy the trained GPT-3 model for real-time scheduling assistance.
 - **Use Cases:** Serve scheduling recommendations and personalized responses to users through the Flask web application.
 - **Technologies:** Utilize a serverless platform or containerization (e.g., AWS Lambda or Docker) to deploy the GPT-3 model for real-time inference.
 
 ### 5. Monitoring and Logging
+
 - **Objective:** Monitor system performance, user interactions, and model behavior in real time.
 - **Use Cases:** Track user engagement with the scheduling assistant, monitor model inference times, and log errors for troubleshooting.
 - **Technologies:** Implement logging and monitoring solutions such as ELK stack (Elasticsearch, Logstash, Kibana) and Prometheus for real-time observability.
 
 ### 6. Continuous Integration/Continuous Deployment (CI/CD)
+
 - **Objective:** Automate the deployment pipeline for the Flask application and infrastructure changes.
 - **Use Cases:** Streamline the deployment of new feature updates, bug fixes, and infrastructure changes.
 - **Technologies:** Utilize Jenkins, GitLab CI/CD, or GitHub Actions for CI/CD, and version control with Git for managing application code.
 
 ### 7. Scalability and Infrastructure Orchestration
+
 - **Objective:** Ensure the scalability and resilience of the scheduling application and its underlying infrastructure.
 - **Use Cases:** Automatically scale resources based on demand and maintain high availability.
 - **Technologies:** Leverage Terraform for infrastructure provisioning, Kubernetes for container orchestration, and auto-scaling features of cloud platforms such as AWS or GCP.
@@ -149,39 +163,49 @@ models/
 ```
 
 ### 1. `gpt3` Subdirectory
+
 - This subdirectory contains files specifically related to the GPT-3 model.
 
 #### `training_data/` Subdirectory
+
 - Stores the raw and preprocessed training data used for training the GPT-3 model.
 
 - `raw_input_data.txt`: Contains the raw user input data used for GPT-3 training.
 - `preprocessed_data.txt`: Stores the preprocessed data ready for model training.
 
 #### `train.py`
+
 - Python script for training the GPT-3 model using the provided training data.
 
 #### `evaluate.py`
+
 - Script for evaluating the performance of the trained GPT-3 model.
 
 #### `gpt3_model.bin`
+
 - The trained GPT-3 model file, ready for deployment within the application.
 
 ### 2. `custom_ml_model` Subdirectory
+
 - This subdirectory contains files related to any custom machine learning models used in the scheduling application.
 
 #### `model_training.ipynb`
+
 - Jupyter notebook containing the code for exploring, preprocessing, and training the custom machine learning model.
 
 #### `data/` Subdirectory
+
 - Stores the raw and processed data used for training the custom machine learning model.
 
 - `raw_data.csv`: Holds the raw dataset for training the custom ML model.
 - `processed_data.csv`: Contains the processed data after feature engineering and preprocessing.
 
 #### `train.py`
+
 - Python script for training the custom machine learning model.
 
 #### `trained_model.pkl`
+
 - The trained custom machine learning model file, ready for deployment within the application.
 
 By organizing the GPT-3 model-related files and any custom machine learning model-related files within the `models` directory, the AI-based Personal Assistant for Scheduling maintains a clear structure for managing different types of models and their associated data, scripts, and trained model files. This enables easy access, versioning, and integration of models into the scheduling application.
@@ -218,48 +242,63 @@ deployment/
 ```
 
 ### 1. `infra` Subdirectory
+
 - Contains Terraform configurations for provisioning and managing cloud infrastructure.
 
 #### `main.tf`
+
 - Defines the main infrastructure components, such as compute resources, databases, and networking.
 
 #### `variables.tf`
+
 - Declares input variables used in the Terraform configurations.
 
 #### `outputs.tf`
+
 - Specifies the output values to be exposed after the infrastructure is provisioned.
 
 #### `networking/` Subdirectory
+
 - Contains Terraform configurations specifically related to networking components, such as VPC, subnets, and security groups.
 
 #### `services/` Subdirectory
+
 - Contains Terraform configurations for defining and managing infrastructure services, such as serverless functions or managed services.
 
 ### 2. `app` Subdirectory
+
 - Holds files and configurations related to containerization and deployment of the Flask application.
 
 #### `Dockerfile`
+
 - Instructions for building a Docker image of the Flask application.
 
 #### `docker-compose.yml`
+
 - Definition of services, networks, and volumes for multi-container Docker applications.
 
 ### 3. `kubernetes` Subdirectory
+
 - Contains Kubernetes deployment and service configurations for orchestrating the deployment of the application within a Kubernetes cluster.
 
 #### `deployment.yaml`
+
 - Defines the deployment manifest for the Flask application within the Kubernetes cluster.
 
 #### `service.yaml`
+
 - Specifies the service configuration for exposing the deployed application within the Kubernetes cluster.
 
 ### 4. `scripts` Subdirectory
+
 - Includes scripts for automating the deployment processes.
 
 #### `deploy_app.sh`
+
 - Shell script for deploying the Flask application.
 
 #### `deploy_infra.sh`
+
 - Shell script for deploying the infrastructure using Terraform configurations.
 
 By organizing deployment-related files and configurations within the `deployment` directory, the AI-based Personal Assistant for Scheduling maintains a clear structure for managing infrastructure provisioning, application deployment, containerization, and orchestration using tools such as Terraform, Docker, and Kubernetes. This structure facilitates efficient deployment, scaling, and management of the scheduling application and its associated infrastructure.
@@ -366,23 +405,27 @@ This script demonstrates the process of training a complex machine learning algo
 ### Types of Users for the AI-based Personal Assistant for Scheduling
 
 1. **Individual Users**
-   - *User Story*: As an individual user, I want to be able to use the AI-based Personal Assistant for Scheduling to manage my daily tasks, appointments, and reminders efficiently. I'd like to receive intelligent scheduling suggestions and have the ability to interact with the scheduling assistant through a user-friendly web interface.
-   - *File*: The Flask application file that handles user interactions and scheduling requests, such as `app/views.py`.
+
+   - _User Story_: As an individual user, I want to be able to use the AI-based Personal Assistant for Scheduling to manage my daily tasks, appointments, and reminders efficiently. I'd like to receive intelligent scheduling suggestions and have the ability to interact with the scheduling assistant through a user-friendly web interface.
+   - _File_: The Flask application file that handles user interactions and scheduling requests, such as `app/views.py`.
 
 2. **Team Managers/Team Leads**
-   - *User Story*: As a team manager, I need to use the AI-based Personal Assistant for Scheduling to coordinate and manage team members' schedules, meetings, and collaborative tasks. I want the assistant to help streamline the scheduling process and provide recommendations for optimizing team productivity.
-   - *File*: The file responsible for handling team scheduling and coordination logic within the Flask application, such as `app/views.py`.
+
+   - _User Story_: As a team manager, I need to use the AI-based Personal Assistant for Scheduling to coordinate and manage team members' schedules, meetings, and collaborative tasks. I want the assistant to help streamline the scheduling process and provide recommendations for optimizing team productivity.
+   - _File_: The file responsible for handling team scheduling and coordination logic within the Flask application, such as `app/views.py`.
 
 3. **Enterprise Users/HR Managers**
-   - *User Story*: As an HR manager in an enterprise, I rely on the AI-based Personal Assistant for Scheduling to facilitate interview scheduling, candidate coordination, and managing various HR-related appointments. I want the assistant to integrate with our existing HR systems and provide seamless scheduling support for the HR department.
-   - *File*: Integration scripts or modules that connect the scheduling assistant to enterprise HR systems, usually located in the `scripts/` directory.
+
+   - _User Story_: As an HR manager in an enterprise, I rely on the AI-based Personal Assistant for Scheduling to facilitate interview scheduling, candidate coordination, and managing various HR-related appointments. I want the assistant to integrate with our existing HR systems and provide seamless scheduling support for the HR department.
+   - _File_: Integration scripts or modules that connect the scheduling assistant to enterprise HR systems, usually located in the `scripts/` directory.
 
 4. **Administrators/Operations Managers**
-   - *User Story*: As an operations manager, I utilize the AI-based Personal Assistant for Scheduling to manage resource allocation, room bookings, and operational scheduling within the organization. I expect the assistant to provide insights into resource availability, optimize scheduling efficiency, and facilitate seamless coordination.
-   - *File*: The Flask application files handling administrative functionalities and resource allocation logic, such as `app/views.py`.
+
+   - _User Story_: As an operations manager, I utilize the AI-based Personal Assistant for Scheduling to manage resource allocation, room bookings, and operational scheduling within the organization. I expect the assistant to provide insights into resource availability, optimize scheduling efficiency, and facilitate seamless coordination.
+   - _File_: The Flask application files handling administrative functionalities and resource allocation logic, such as `app/views.py`.
 
 5. **Developers/IT Administrators**
-   - *User Story*: As a developer or IT administrator, I want to maintain and manage the infrastructure, deployment, and scaling aspects of the AI-based Personal Assistant for Scheduling. Additionally, I need to ensure the reliability and availability of the scheduling application.
-   - *File*: Infrastructure provisioning and deployment scripts, such as Terraform configurations in the `deployment/infra/` directory and deployment automation scripts in the `deployment/scripts/` directory.
+   - _User Story_: As a developer or IT administrator, I want to maintain and manage the infrastructure, deployment, and scaling aspects of the AI-based Personal Assistant for Scheduling. Additionally, I need to ensure the reliability and availability of the scheduling application.
+   - _File_: Infrastructure provisioning and deployment scripts, such as Terraform configurations in the `deployment/infra/` directory and deployment automation scripts in the `deployment/scripts/` directory.
 
 Each type of user interacts with the AI-based Personal Assistant for Scheduling to accomplish specific tasks or fulfill particular roles. The identified user stories and associated files illustrate how different types of users engage with the application and which sections of the codebase are responsible for addressing their needs.

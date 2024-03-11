@@ -8,11 +8,13 @@ layout: article
 ## AI Educational Access Optimizer for Peru
 
 ### Objectives:
+
 1. Identify areas with significant educational disparities in Peru.
 2. Predict and recommend infrastructure improvements to enhance access to education in these areas.
 3. Develop a scalable and data-intensive AI application leveraging Machine Learning.
 
 ### System Design Strategies:
+
 1. **Data Collection**: Gather relevant data such as educational performance, demographics, infrastructure, and socioeconomic factors.
 2. **Data Preprocessing**: Clean, normalize, and transform the collected data for training models.
 3. **Machine Learning Models**: Use PyTorch and Scikit-Learn to build predictive models to identify areas with educational disparities.
@@ -21,6 +23,7 @@ layout: article
 6. **Monitoring and Visualization**: Employ Grafana for monitoring system performance and visualizing data insights.
 
 ### Chosen Libraries:
+
 1. **PyTorch**: For developing and training deep learning models to predict educational disparities.
 2. **Scikit-Learn**: For implementing traditional machine learning algorithms to complement PyTorch models.
 3. **Flask**: To create a web application for users to input data, view predictions, and receive infrastructure improvement recommendations.
@@ -31,31 +34,38 @@ By leveraging these libraries and following the system design strategies, the AI
 ## MLOps Infrastructure for the AI Educational Access Optimizer for Peru
 
 ### Components:
+
 1. **Model Training Pipeline**:
+
    - Utilize PyTorch and Scikit-Learn for training Machine Learning models on educational data.
    - Implement data preprocessing, feature engineering, model training, and evaluation steps.
    - Automate model training using tools like Jenkins or Airflow.
 
 2. **Model Deployment**:
+
    - Deploy trained models using Flask API for real-time predictions.
    - Utilize containerization tools like Docker for packaging models and their dependencies.
    - Orchestrate model deployment with Kubernetes for scalability and fault tolerance.
 
 3. **Continuous Integration/Continuous Deployment (CI/CD)**:
+
    - Set up CI/CD pipelines to automate testing, deployment, and monitoring of the AI application.
    - Use Git for version control and integrate with CI/CD tools like Jenkins or GitLab CI.
 
 4. **Monitoring and Logging**:
+
    - Instrument models and infrastructure with metrics for monitoring performance.
    - Utilize tools like Prometheus for metrics collection and Grafana for visualization.
    - Implement logging mechanisms to track model predictions, user interactions, and system errors.
 
 5. **Feedback Loop**:
+
    - Capture user feedback on model predictions and infrastructure recommendations.
    - Incorporate feedback into model retraining pipeline to improve prediction accuracy.
    - Use A/B testing to evaluate the effectiveness of different infrastructure improvement strategies.
 
 6. **Security and Compliance**:
+
    - Implement security best practices to protect sensitive data and model integrity.
    - Ensure compliance with data privacy regulations such as GDPR.
    - Conduct regular security audits and penetration testing to identify and mitigate vulnerabilities.
@@ -66,6 +76,7 @@ By leveraging these libraries and following the system design strategies, the AI
    - Monitor system performance and optimize infrastructure components for efficiency.
 
 ### Benefits:
+
 - **Efficiency**: Streamline the development, deployment, and monitoring process for AI models.
 - **Reliability**: Ensure consistent model performance and availability through automation and monitoring.
 - **Scalability**: Scale the application to handle increasing data volumes and user requests.
@@ -124,7 +135,7 @@ educational-access-optimizer-peru/
 │       ├── data_monitoring.py
 │       ├── system_monitoring.py
 │       └── visualize_data.py
-│   
+│
 └── docker/
     ├── Dockerfile
     ├── requirements.txt
@@ -132,6 +143,7 @@ educational-access-optimizer-peru/
 ```
 
 ### Folder Structure Explanation:
+
 - **data/**: Contains raw and processed data used for training the models.
 - **models/**: Stores trained PyTorch deep learning models, ensemble models, and Scikit-Learn models.
 - **src/**: Includes subfolders for different aspects of the application such as data processing, model training, model evaluation, app development, and monitoring.
@@ -158,13 +170,15 @@ models/
 ```
 
 ### Models Explanation:
+
 - **PyTorch Models**:
-    - **deep_learning_model.pt**: Trained PyTorch deep learning model that utilizes neural networks to predict areas with significant educational disparities. This model can handle complex patterns in the data and provide accurate predictions.
-    - **ensemble_model.pkl**: Ensemble model combining multiple deep learning models for improved prediction performance by aggregating their outputs.
+
+  - **deep_learning_model.pt**: Trained PyTorch deep learning model that utilizes neural networks to predict areas with significant educational disparities. This model can handle complex patterns in the data and provide accurate predictions.
+  - **ensemble_model.pkl**: Ensemble model combining multiple deep learning models for improved prediction performance by aggregating their outputs.
 
 - **Scikit-Learn Models**:
-    - **random_forest_model.pkl**: Trained Random Forest model that uses an ensemble of decision trees to predict educational disparities. This model is robust and can handle both numerical and categorical data well.
-    - **linear_regression_model.pkl**: Trained Linear Regression model that establishes linear relationships between input features and educational disparities. This model is interpretable and can provide insights into the impact of different factors on educational access.
+  - **random_forest_model.pkl**: Trained Random Forest model that uses an ensemble of decision trees to predict educational disparities. This model is robust and can handle both numerical and categorical data well.
+  - **linear_regression_model.pkl**: Trained Linear Regression model that establishes linear relationships between input features and educational disparities. This model is interpretable and can provide insights into the impact of different factors on educational access.
 
 The models directory contains both PyTorch deep learning models and Scikit-Learn machine learning models trained to predict educational disparities in Peru. These models leverage different algorithms and techniques to make accurate predictions and recommend infrastructure improvements to enhance access to education in areas with significant disparities.
 
@@ -196,18 +210,21 @@ deployment/
 ```
 
 ### Deployment Explanation:
+
 - **flask_api/**:
-    - **app.py**: Contains the Flask application script that serves as the API for interacting with the trained models to predict educational disparities and recommend infrastructure improvements based on input data.
-    - **templates/**: Stores HTML templates for user interface components, including a form for inputting data and a page for displaying model predictions and recommendations.
+
+  - **app.py**: Contains the Flask application script that serves as the API for interacting with the trained models to predict educational disparities and recommend infrastructure improvements based on input data.
+  - **templates/**: Stores HTML templates for user interface components, including a form for inputting data and a page for displaying model predictions and recommendations.
 
 - **docker/**:
-    - **Dockerfile**: Specifies the instructions for building the Docker container that encapsulates the Flask API and its dependencies. This allows for easy deployment and scalability of the application.
-    - **requirements.txt**: Lists the Python dependencies required for running the Flask application and serving the API.
+
+  - **Dockerfile**: Specifies the instructions for building the Docker container that encapsulates the Flask API and its dependencies. This allows for easy deployment and scalability of the application.
+  - **requirements.txt**: Lists the Python dependencies required for running the Flask application and serving the API.
 
 - **grafana/**:
-    - **dashboards/**:
-        - **educational_disparities.json**: Grafana dashboard configuration file for visualizing educational disparities data and monitoring model predictions and recommendations.
-    - **monitoring_script.py**: Python script for monitoring system performance, tracking data insights, and visualizing educational disparities data using Grafana.
+  - **dashboards/**:
+    - **educational_disparities.json**: Grafana dashboard configuration file for visualizing educational disparities data and monitoring model predictions and recommendations.
+  - **monitoring_script.py**: Python script for monitoring system performance, tracking data insights, and visualizing educational disparities data using Grafana.
 
 The deployment directory contains components essential for deploying the Educational Access Optimizer for Peru application, including the Flask API for serving model predictions, Docker configurations for containerization, and Grafana for monitoring system performance and visualizing data trends in educational disparities. This structure facilitates the deployment and management of the AI application to enhance access to education in Peru.
 
@@ -318,23 +335,27 @@ This script demonstrates training a complex PyTorch model using mock educational
 ## Types of Users for the Educational Access Optimizer Application
 
 1. **Education Policy Maker**
-    - **User Story**: As an Education Policy Maker, I need to identify areas with significant educational disparities to allocate resources effectively and make informed decisions on infrastructure improvements.
-    - **File**: `src/app/app.py`
+
+   - **User Story**: As an Education Policy Maker, I need to identify areas with significant educational disparities to allocate resources effectively and make informed decisions on infrastructure improvements.
+   - **File**: `src/app/app.py`
 
 2. **School Administrator**
-    - **User Story**: As a School Administrator, I want to access predictions on educational disparities in my school's region to implement targeted interventions and improve educational access for students.
-    - **File**: `src/model_training/train_model.py`
+
+   - **User Story**: As a School Administrator, I want to access predictions on educational disparities in my school's region to implement targeted interventions and improve educational access for students.
+   - **File**: `src/model_training/train_model.py`
 
 3. **Community Advocate**
-    - **User Story**: As a Community Advocate, I aim to leverage data-driven insights on educational disparities to advocate for better infrastructure and educational opportunities in underserved communities.
-    - **File**: `src/model_training/train_complex_model.py`
+
+   - **User Story**: As a Community Advocate, I aim to leverage data-driven insights on educational disparities to advocate for better infrastructure and educational opportunities in underserved communities.
+   - **File**: `src/model_training/train_complex_model.py`
 
 4. **Researcher/Educational Analyst**
-    - **User Story**: As a Researcher/Educational Analyst, I seek to analyze trends in educational disparities and infrastructure improvements based on predictive models for scholarly research and data-driven policy recommendations.
-    - **File**: `src/app/templates/index.html`
+
+   - **User Story**: As a Researcher/Educational Analyst, I seek to analyze trends in educational disparities and infrastructure improvements based on predictive models for scholarly research and data-driven policy recommendations.
+   - **File**: `src/app/templates/index.html`
 
 5. **Data Scientist/Engineer**
-    - **User Story**: As a Data Scientist/Engineer, I am responsible for training and evaluating machine learning models to predict educational disparities and recommend infrastructure improvements in the educational access optimization application.
-    - **File**: `src/model_evaluation/evaluate_model_performance.py`
+   - **User Story**: As a Data Scientist/Engineer, I am responsible for training and evaluating machine learning models to predict educational disparities and recommend infrastructure improvements in the educational access optimization application.
+   - **File**: `src/model_evaluation/evaluate_model_performance.py`
 
 By addressing the needs and user stories of these different types of users, the Educational Access Optimizer application can effectively predict areas with significant educational disparities and recommend infrastructure improvements to enhance access to education in Peru. Each user type interacts with a specific aspect of the application through different files and functionalities to achieve their goals.

@@ -8,6 +8,7 @@ layout: article
 ## Objectives
 
 The primary objective of the AI Online Advertising Effectiveness Analysis project is to measure the performance of online advertisements using data analytics and machine learning techniques. The specific goals include:
+
 - Analyzing the effectiveness of online advertising campaigns by analyzing user interaction data
 - Identifying factors that contribute to the success or failure of ad campaigns
 - Building predictive models to forecast the performance of future ad campaigns
@@ -16,6 +17,7 @@ The primary objective of the AI Online Advertising Effectiveness Analysis projec
 ## System Design Strategies
 
 The system design for the AI Online Advertising Effectiveness Analysis project should consider the following strategies:
+
 - Scalability: The system should be able to handle large volumes of data from online advertising platforms and should be designed to scale horizontally to accommodate increasing data volumes.
 - Data Pipeline: Implement a robust data pipeline that can collect, preprocess, and store data from various sources such as ad platforms and user interaction logs.
 - Machine Learning Infrastructure: Build a scalable and efficient machine learning infrastructure to train and deploy predictive models for ad performance analysis.
@@ -25,6 +27,7 @@ The system design for the AI Online Advertising Effectiveness Analysis project s
 ## Chosen Libraries
 
 In this project, we will use the following Python libraries:
+
 - **Pandas**: For data manipulation, cleaning, and analysis. Pandas provides powerful data structures and tools for data preprocessing.
 - **NumPy**: For numerical computing and mathematical operations on large datasets.
 - **Scikit-learn**: For building machine learning models such as regression and classification to forecast ad performance and identify important features.
@@ -38,24 +41,29 @@ By leveraging these libraries, we can efficiently process and analyze large volu
 The infrastructure for the Online Advertising Effectiveness Analysis application should be designed to accommodate data-intensive processing, machine learning computations, and scalability requirements. Below is an outline of the infrastructure components:
 
 ### Data Collection and Storage
+
 - **Data Sources**: Online advertising platforms, user interaction logs, and other relevant sources providing ad performance data.
 - **Data Collection Pipeline**: Implement data collection processes to gather, ingest, and store ad performance data from various sources.
 - **Data Storage**: Utilize scalable and reliable data storage solutions such as Amazon S3, Google Cloud Storage, or a distributed file system like Hadoop HDFS to store the collected ad performance data.
 
 ### Data Preprocessing and Analysis
+
 - **Data Preprocessing**: Use scalable preprocessing tools and techniques to clean, transform, and prepare the ad performance data for analysis. This can involve using distributed processing frameworks like Apache Spark for large-scale data manipulation.
 - **Data Analysis Environment**: Set up scalable compute resources and distributed processing frameworks to handle the volume of data for ad performance analysis.
 
 ### Machine Learning Infrastructure
+
 - **Model Training**: Configure distributed machine learning frameworks like TensorFlow or PyTorch to train predictive models for forecasting ad performance and identifying important features.
 - **Model Deployment**: Implement scalable model deployment infrastructure to serve predictive models for real-time ad performance analysis.
 - **Scalable Compute Resources**: Utilize cloud-based computing resources such as Amazon EC2, Google Compute Engine, or Azure Virtual Machines for scalable processing.
 
 ### Real-time and Batch Processing
+
 - **Real-time Analysis**: Use stream processing frameworks like Apache Kafka and Apache Flink for real-time analysis of ad performance data to generate immediate insights.
 - **Batch Processing**: Employ batch processing frameworks like Apache Spark for in-depth analysis, preprocessing, and model training on large volumes of ad performance data.
 
 ### Monitoring and Security
+
 - **Monitoring and Logging**: Implement monitoring and logging infrastructure to track the performance and health of data processing, machine learning, and ad performance analysis components.
 - **Security Measures**: Ensure data security and privacy measures are in place to protect sensitive ad performance data.
 
@@ -172,12 +180,14 @@ def train_ad_performance_prediction_model(data_path):
 ```
 
 In this function:
+
 - The `train_ad_performance_prediction_model` function takes in a file path `data_path`, which points to the location of the mock data.
 - It loads the data using Pandas, preprocesses it by splitting it into features and the target variable, and then splits it into training and testing sets.
 - It initializes a Random Forest Classifier model, trains the model on the training data, and makes predictions on the testing data.
 - Finally, it evaluates the model's performance by calculating the accuracy and returns the trained model.
 
 To use this function, you can call it with the file path to the mock data as shown below:
+
 ```python
 model = train_ad_performance_prediction_model('data/mock_ad_performance_data.csv')
 ```
@@ -219,32 +229,38 @@ def train_ad_performance_prediction_model(data_path):
 ```
 
 In this function:
+
 - The `train_ad_performance_prediction_model` function takes in a file path `data_path`, which points to the location of the mock data.
 - It loads the data using Pandas, preprocesses it by splitting it into features and the target variable, and then splits it into training and testing sets.
 - It initializes a Random Forest Regressor model, trains the model on the training data, and makes predictions on the testing data.
 - Finally, it evaluates the model's performance by calculating the Mean Squared Error (MSE) and returns the trained model.
 
 To use this function, you can call it with the file path to the mock data as shown below:
+
 ```python
 model = train_ad_performance_prediction_model('data/mock_ad_performance_data.csv')
 ```
 
 ### Types of Users
+
 1. Marketing Manager
 2. Data Analyst
 3. Machine Learning Engineer
 
 #### Marketing Manager
+
 **User Story**: As a marketing manager, I want to be able to upload ad performance data, visualize key metrics, and generate reports to gain insights into the effectiveness of our online advertising campaigns. I also need to be able to access easy-to-understand dashboards that provide a high-level overview of our ad performance metrics.
 
 **Accomplished with**: The `notebooks` directory will contain Jupyter notebooks with visualizations and analysis of ad performance metrics. The marketing manager can use these notebooks to explore the data, create visualizations, and generate reports.
 
 #### Data Analyst
+
 **User Story**: As a data analyst, I need access to the raw ad performance data, as well as the preprocessed and cleaned data. I want to be able to perform in-depth data analysis, identify trends, and create predictive models to forecast ad performance.
 
 **Accomplished with**: The `data` directory will contain subdirectories for raw and processed data, allowing the data analyst to access the data directly. Additionally, the `scripts` and `notebooks` directories will contain Python scripts and Jupyter notebooks for data preprocessing, analysis, and model training using Pandas, NumPy, and Scikit-learn.
 
 #### Machine Learning Engineer
+
 **User Story**: As a machine learning engineer, I need to access the machine learning models and deployment scripts to integrate the predictive models into the application's infrastructure. I also need to be able to monitor the performance of the deployed models in real-time.
 
 **Accomplished with**: The `models` and `deployment` directories will contain the machine learning models, training scripts, and deployment scripts. The machine learning engineer can use these resources to train, deploy, and monitor the performance of the ad performance prediction models. Additionally, the `environment` directory will include configuration files for managing dependencies and virtual environments for model deployment.

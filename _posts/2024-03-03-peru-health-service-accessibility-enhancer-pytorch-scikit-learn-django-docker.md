@@ -8,12 +8,16 @@ layout: article
 ## AI Peru Health Service Accessibility Enhancer
 
 ## Objectives
+
 The main objectives of the AI Peru Health Service Accessibility Enhancer include:
+
 1. Matching low-income families with accessible healthcare services and programs.
 2. Filtering services based on location, family health needs, and eligibility criteria.
 
 ## System Design Strategies
+
 To achieve the objectives, the system can be designed with the following strategies:
+
 1. **User-Friendly Interface:** Develop an intuitive interface for users to input their location, health needs, and eligibility criteria.
 2. **Machine Learning Model:** Build a ML model to match users with suitable healthcare services and programs based on the inputs provided.
 3. **Backend Services:** Utilize Django for backend services to handle user requests, process data, and connect with the ML model.
@@ -21,35 +25,41 @@ To achieve the objectives, the system can be designed with the following strateg
 5. **Microservices Architecture:** Implement a microservices architecture using Docker to deploy and scale different components of the system independently.
 
 ## Chosen Libraries
+
 The system will leveraging the following libraries/frameworks:
+
 1. **PyTorch:** Utilize PyTorch for developing and training machine learning models to match families with healthcare services based on their needs.
 2. **Scikit-Learn:** Use Scikit-Learn for data preprocessing, feature selection, and model evaluation to enhance the ML model's performance.
 3. **Django:** Employ Django for building the backend services, handling user requests, and integrating with the machine learning model.
 4. **Docker:** Utilize Docker for containerizing the application components, enabling scalability, easy deployment, and management of the system.
-
 
 ## MLOps Infrastructure for AI Peru Health Service Accessibility Enhancer
 
 ## Components of MLOps Infrastructure
 
 ### Data Collection and Storage
+
 - Data pipelines fetch and preprocess healthcare services data, family health needs, and eligibility criteria.
 - Use scalable databases like MongoDB or PostgreSQL to store structured data efficiently.
 
 ### Model Training and Deployment
+
 - **PyTorch & Scikit-Learn:** Develop ML models for matching families with healthcare services.
 - Implement CI/CD pipelines to automate model training, validation, and deployment processes.
 - Version control for ML models using Git to track changes effectively.
 
 ### Production Deployment
+
 - Utilize Docker to containerize the application components for consistency and portability.
 - Deploy application on cloud platforms like AWS, GCP, or Azure for scalability and reliability.
 
 ### Monitoring and Logging
+
 - Utilize monitoring tools like Prometheus, Grafana, or ELK stack to monitor system performance and metrics.
 - Implement logging mechanisms to track application events and troubleshoot issues.
 
 ### Feedback Loop and Continuous Improvement
+
 - Collect user feedback to improve matching accuracy and user experience.
 - Update ML models periodically based on new data and feedback.
 
@@ -97,6 +107,7 @@ Peru_Health_Service_Accessibility_Enhancer/
 ```
 
 ## File Structure Overview
+
 1. **app/**: Contains static files and templates for the front-end interface.
 2. **data/**: Manages raw and processed data, as well as stored ML models.
 3. **ml_model/**: Includes directories for PyTorch and Scikit-Learn models, data preprocessing scripts, and model evaluation.
@@ -133,22 +144,26 @@ ml_model/
 ```
 
 ## PyTorch Model Directory
+
 - **model.py**: Defines the architecture of the PyTorch model for matching families with healthcare services.
 - **data_loader.py**: Handles loading and preprocessing data for training the PyTorch model.
 - **train.py**: Script for training the PyTorch model using the provided data.
 - **predict.py**: Script for making predictions using the trained PyTorch model.
 
 ## Scikit-Learn Model Directory
+
 - **model.py**: Contains the implementation of the Scikit-Learn model for matching families with healthcare services.
 - **data_preprocessing.py**: Script to preprocess data before training the Scikit-Learn model.
 - **train.py**: Trains the Scikit-Learn model with the preprocessed data.
 - **predict.py**: Enables making predictions using the trained Scikit-Learn model.
 
 ## Data Preprocessing Directory
+
 - **clean_data.py**: Script for cleaning and preparing raw data for model training.
 - **feature_engineering.py**: Implements feature engineering techniques to extract relevant information from the data.
 
 ## Model Evaluation Directory
+
 - **evaluate_model.py**: Includes functions to evaluate the performance of the ML models using metrics such as accuracy, precision, recall, and F1 score.
 
 This structured organization within the **models** directory facilitates the development, training, evaluation, and deployment of PyTorch and Scikit-Learn models for matching low-income families with accessible healthcare services, ensuring scalability and maintainability of the AI application.
@@ -177,7 +192,7 @@ deployment/
 
 The **deployment** directory streamlines the deployment process of the AI application, incorporating Docker for containerization, scalability, and ease of deployment. By organizing deployment-related files in this directory, it simplifies the setup and management of the application's deployment infrastructure.
 
-I'll provide an example of a Python script for training a PyTorch model using mock data for the Peru Health Service Accessibility Enhancer project. 
+I'll provide an example of a Python script for training a PyTorch model using mock data for the Peru Health Service Accessibility Enhancer project.
 
 ```python
 ## File Path: ml_model/pytorch_model/train_mock_data.py
@@ -195,7 +210,7 @@ class Model(nn.Module):
     def __init__(self):
         super(Model, self).__init__()
         self.fc = nn.Linear(2, 1)
-    
+
     def forward(self, x):
         return torch.sigmoid(self.fc(x))
 
@@ -259,26 +274,31 @@ Please note that for the Random Forest Classifier, there is no need to save the 
 ## Types of Users for Peru Health Service Accessibility Enhancer
 
 ### 1. Family Members
+
 **User Story:** As a family member, I want to easily find accessible healthcare services for my family based on our location, health needs, and eligibility criteria.
 
 **File**: The `views.py` file in the `app/` directory, which handles user requests and interacts with the backend services to filter and display healthcare services.
 
 ### 2. Healthcare Providers
+
 **User Story:** As a healthcare provider, I want to access a platform that connects me with low-income families in need of healthcare services based on their specific requirements.
 
 **File**: The `healthcare_services.py` script in the `services/` directory, which manages data related to healthcare services and enables healthcare providers to offer services to families.
 
 ### 3. Administrators
+
 **User Story:** As an administrator, I need a dashboard to manage and update the eligibility criteria, locations, and healthcare programs available for low-income families.
 
 **File**: The `admin.py` file in the `app/` directory, which includes configurations for the Django admin interface to manage data related to eligibility criteria, locations, and healthcare programs.
 
 ### 4. Data Analysts
+
 **User Story:** As a data analyst, I want access to the system's database to analyze trends, patterns, and user interactions to improve the matching algorithm for families.
 
 **File**: The `data_preprocessing.py` script in the `ml_model/` directory, which prepares and processes raw data for training machine learning models to enhance the matching algorithm.
 
 ### 5. System Administrators
+
 **User Story:** As a system administrator, I aim to ensure the smooth deployment and scalability of the application using Docker containers.
 
 **File**: The `docker-compose.yml` file in the `deployment/` directory, which configures the services, networks, and volumes for deploying the application using Docker containers.

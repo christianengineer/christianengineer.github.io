@@ -8,11 +8,13 @@ layout: article
 ### AI Agricultural Yield Enhancement System
 
 #### Objectives:
+
 - **Maximize Agricultural Productivity:** Provide predictive insights for crop selection, planting schedules, and sustainable farming practices.
 - **Increase Crop Yields:** Enable farmers to make data-driven decisions that lead to higher crop yields.
 - **Promote Sustainable Agriculture:** Encourage the use of sustainable farming practices to preserve the environment and ensure long-term productivity.
 
 #### System Design Strategies:
+
 1. **Data Collection:** Gather data on soil quality, weather patterns, past crop yields, and farming practices.
 2. **Data Preprocessing:** Clean, normalize, and preprocess data for training machine learning models.
 3. **Model Training:** Train machine learning models using TensorFlow and PyTorch to predict optimal crop selection and planting schedules.
@@ -22,6 +24,7 @@ layout: article
 7. **Monitoring:** Implement monitoring tools to track model performance in real-time and make necessary adjustments.
 
 #### Chosen Libraries:
+
 1. **TensorFlow:** For building and training deep learning models for tasks like image recognition and natural language processing.
 2. **PyTorch:** For developing neural network applications with a focus on flexibility and ease of use.
 3. **Spark:** For distributed data processing and model deployment to handle large-scale datasets and computation.
@@ -32,6 +35,7 @@ By combining the power of TensorFlow, PyTorch, Spark, and DVC, the AI Agricultur
 ### MLOps Infrastructure for Agricultural Yield Enhancement AI System
 
 #### Components of MLOps Infrastructure:
+
 1. **Data Pipeline:** Implement a robust data pipeline to collect, preprocess, and store data from various sources such as sensors, satellite imagery, weather data, and historical crop yields.
 2. **Model Training:** Utilize TensorFlow and PyTorch to train machine learning models for predicting crop selection, planting schedules, and recommending sustainable farming practices.
 3. **Model Deployment:** Deploy trained models using Spark for scalability and distributed computing to handle large datasets and real-time predictions.
@@ -42,6 +46,7 @@ By combining the power of TensorFlow, PyTorch, Spark, and DVC, the AI Agricultur
 8. **Scalability and Resource Management:** Design the infrastructure to scale resources based on demand, utilizing cloud computing services for flexibility and cost-effectiveness.
 
 #### Advantages of MLOps Infrastructure:
+
 - **Efficient Model Development:** Enables rapid experimentation with different algorithms and hyperparameters, leading to optimized models.
 - **Reproducibility:** Ensures that model training, deployment, and monitoring processes are reproducible and consistent across environments.
 - **Scalability:** Allows for scaling up or down based on workload requirements, ensuring efficient resource utilization.
@@ -99,6 +104,7 @@ AI-Agricultural-Yield-Enhancement/
 ```
 
 #### Description:
+
 - **data/:** Contains raw and processed datasets used for training and evaluation.
 - **models/:** Stores TensorFlow and PyTorch model implementations, training scripts, and evaluation scripts.
 - **notebooks/:** Jupyter notebooks for data exploration, model training, and model evaluation.
@@ -123,7 +129,7 @@ models/
 │   └── saved_model/
 │       ├── variables/
 │       └── assets/
-│   
+│
 ├── pytorch_model/
 │   ├── model_definition.py
 │   ├── model_training.py
@@ -138,21 +144,24 @@ models/
 ```
 
 ### Description:
+
 - **tf_model/:**
-    - **model_architecture.py:** Contains the TensorFlow model architecture definition for crop selection and planting schedules prediction.
-    - **model_training.py:** Script for training the TensorFlow model using the processed data.
-    - **model_evaluation.py:** Script for evaluating the TensorFlow model performance metrics.
-    - **saved_model/:** Directory to store the saved TensorFlow model with its trained weights.
+
+  - **model_architecture.py:** Contains the TensorFlow model architecture definition for crop selection and planting schedules prediction.
+  - **model_training.py:** Script for training the TensorFlow model using the processed data.
+  - **model_evaluation.py:** Script for evaluating the TensorFlow model performance metrics.
+  - **saved_model/:** Directory to store the saved TensorFlow model with its trained weights.
 
 - **pytorch_model/:**
-    - **model_definition.py:** Includes the PyTorch model architecture definition for sustainable farming practices prediction.
-    - **model_training.py:** Script for training the PyTorch model using the preprocessed data.
-    - **model_evaluation.py:** Script for evaluating the PyTorch model performance metrics.
-    - **saved_model/:** Directory to store the saved PyTorch model with its trained weights.
+
+  - **model_definition.py:** Includes the PyTorch model architecture definition for sustainable farming practices prediction.
+  - **model_training.py:** Script for training the PyTorch model using the preprocessed data.
+  - **model_evaluation.py:** Script for evaluating the PyTorch model performance metrics.
+  - **saved_model/:** Directory to store the saved PyTorch model with its trained weights.
 
 - **spark_model/:**
-    - **model_deployment.py:** Script for deploying the trained TensorFlow and PyTorch models using Spark for scalable and distributed computing.
-    - **saved_model/:** Directory to store the packaged model (e.g., JAR file) for deployment with Spark.
+  - **model_deployment.py:** Script for deploying the trained TensorFlow and PyTorch models using Spark for scalable and distributed computing.
+  - **saved_model/:** Directory to store the packaged model (e.g., JAR file) for deployment with Spark.
 
 This directory structure organizes the implementation, training, evaluation, and deployment of TensorFlow, PyTorch, and Spark models for the Agricultural Yield Enhancement AI system. Each subdirectory contains the necessary scripts and files to manage and utilize the distinct models effectively for predictive insights on crop selection, planting schedules, and sustainable farming practices to maximize agricultural productivity.
 
@@ -178,20 +187,23 @@ deployment/
 ```
 
 ### Description:
+
 - **docker/:**
-    - **Dockerfile:** Configuration file for building a Docker image that contains the application and its dependencies.
-    - **requirements.txt:** List of Python packages required by the application.
-    - **deploy.sh:** Script to automate the deployment of the Docker image.
+
+  - **Dockerfile:** Configuration file for building a Docker image that contains the application and its dependencies.
+  - **requirements.txt:** List of Python packages required by the application.
+  - **deploy.sh:** Script to automate the deployment of the Docker image.
 
 - **kubernetes/:**
-    - **deployment.yaml:** YAML file defining the Kubernetes deployment configuration for running the application.
-    - **service.yaml:** YAML file describing the Kubernetes service configuration to expose the application.
+
+  - **deployment.yaml:** YAML file defining the Kubernetes deployment configuration for running the application.
+  - **service.yaml:** YAML file describing the Kubernetes service configuration to expose the application.
 
 - **spark_cluster/:**
-    - **deploy_script.py:** Python script for deploying the trained TensorFlow and PyTorch models using Spark distributed computing.
-    - **spark_config/:**
-        - **spark-defaults.conf:** Configuration file for Spark properties.
-        - **spark-env.sh:** Environment variables configuration for Spark.
+  - **deploy_script.py:** Python script for deploying the trained TensorFlow and PyTorch models using Spark distributed computing.
+  - **spark_config/:**
+    - **spark-defaults.conf:** Configuration file for Spark properties.
+    - **spark-env.sh:** Environment variables configuration for Spark.
 
 This deployment directory structure is designed to facilitate the deployment of the Agricultural Yield Enhancement AI system using Docker containers, Kubernetes for orchestration, and Spark for scalable computing. Each subdirectory contains the necessary files and scripts for deploying and managing the application in different environments while ensuring predictive insights on crop selection, planting schedules, and sustainable farming practices to maximize agricultural productivity in Peru.
 
@@ -288,18 +300,22 @@ In this script, we utilize TensorFlow to build a complex neural network model fo
 ### Types of Users for the Agricultural Yield Enhancement AI System:
 
 1. **Farmers:**
+
    - **User Story:** As a farmer, I want to receive accurate predictions on crop selection, planting schedules, and sustainable farming practices to improve my agricultural productivity and yield.
    - **File:** The `src/train_model.py` file for training models using mock data can help farmers understand the predictive capabilities of the system.
 
 2. **Agricultural Researchers:**
+
    - **User Story:** As an agricultural researcher, I need insights from the AI system to analyze trends in crop productivity, experiment with different farming practices, and contribute to sustainable agriculture.
    - **File:** The `models/tf_model/complex_algorithm.py` file that implements a complex machine learning algorithm can provide advanced insights for agricultural researchers to study crop performance.
 
 3. **Government Agricultural Agencies:**
+
    - **User Story:** As a government agricultural agency, I want access to the AI system's predictions to support policy-making decisions, provide recommendations to farmers, and enhance overall agricultural practices in Peru.
    - **File:** The `deployment/kubernetes/deployment.yaml` file for setting up the application in a Kubernetes cluster can help government agencies utilize the predictive insights for decision-making.
 
 4. **Crop Advisors and Consultants:**
+
    - **User Story:** As a crop advisor, I rely on the AI system to provide data-driven recommendations for crop selection, planting schedules, and sustainable farming practices to guide my clients towards optimal agricultural outcomes.
    - **File:** The `src/utils.py` file containing utility functions for data preprocessing and handling can be instrumental for crop advisors and consultants in working with the system efficiently.
 

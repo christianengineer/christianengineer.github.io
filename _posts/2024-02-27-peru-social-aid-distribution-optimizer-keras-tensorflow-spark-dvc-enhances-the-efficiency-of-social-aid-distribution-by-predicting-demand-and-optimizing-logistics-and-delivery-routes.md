@@ -8,40 +8,44 @@ layout: article
 ## AI Peru Social Aid Distribution Optimizer
 
 ## Objectives:
+
 - Predict demand for social aid to ensure resources are allocated effectively.
 - Optimize logistics and delivery routes to ensure timely and efficient distribution of aid.
 - Improve efficiency of social aid distribution to reach maximum number of beneficiaries.
 
 ## System Design Strategies:
+
 1. **Data Collection**: Gather historical data on social aid demand, delivery routes, and logistics.
 2. **Data Preprocessing**: Clean and transform data for use in machine learning models.
 3. **Machine Learning Model Development**:
-    - Use Keras and TensorFlow for building deep learning models to predict aid demand.
-    - Utilize Spark for distributed computing to handle large datasets efficiently.
+   - Use Keras and TensorFlow for building deep learning models to predict aid demand.
+   - Utilize Spark for distributed computing to handle large datasets efficiently.
 4. **Optimization Algorithm**:
-    - Implement optimization algorithms to optimize logistics and delivery routes.
+   - Implement optimization algorithms to optimize logistics and delivery routes.
 5. **Model Deployment**:
-    - Deploy models using DVC for versioning and reproducibility.
+   - Deploy models using DVC for versioning and reproducibility.
 6. **Integration**:
-    - Integrate the AI models with existing aid distribution systems for real-time decision making.
+   - Integrate the AI models with existing aid distribution systems for real-time decision making.
 
 ## Chosen Libraries:
+
 1. **Keras and TensorFlow**:
-    - For building and training deep learning models to predict aid demand.
+   - For building and training deep learning models to predict aid demand.
 2. **Spark**:
-    - For distributed computing to handle large datasets and optimize logistics.
+   - For distributed computing to handle large datasets and optimize logistics.
 3. **DVC (Data Version Control)**:
-    - For versioning data, models, and experiments to ensure reproducibility and easier collaboration.
+   - For versioning data, models, and experiments to ensure reproducibility and easier collaboration.
 4. **Optimization Libraries (e.g., SciPy)**:
-    - To implement optimization algorithms for route optimization.
+   - To implement optimization algorithms for route optimization.
 5. **Visualization Libraries (e.g., Matplotlib, Plotly)**:
-    - For visualizing data, model outputs, and optimized routes for better decision making.
+   - For visualizing data, model outputs, and optimized routes for better decision making.
 
 By leveraging these libraries and system design strategies, the AI Peru Social Aid Distribution Optimizer can efficiently predict demand, optimize logistics, and improve the overall efficiency of social aid distribution.
 
 ## MLOps Infrastructure for Peru Social Aid Distribution Optimizer
 
 ## Key Components:
+
 1. **Data Pipeline**:
    - **Data Collection**: Collect historical data on social aid demand, delivery routes, and logistics.
    - **Data Preprocessing**: Clean, transform, and preprocess data for machine learning models.
@@ -58,8 +62,9 @@ By leveraging these libraries and system design strategies, the AI Peru Social A
    - Implement optimization algorithms using Spark for route optimization.
 6. **Integration**:
    - Integrate AI models with existing aid distribution systems for seamless decision-making.
-   
+
 ## Workflow:
+
 1. **Data Collection & Preprocessing**:
    - Data collection pipeline retrieves data and preprocesses it for training and testing.
 2. **Model Development & Training**:
@@ -70,8 +75,9 @@ By leveraging these libraries and system design strategies, the AI Peru Social A
    - Deploy models to production for aiding distribution decisions in real-time.
 4. **Monitoring & Maintenance**:
    - Monitor model performance, data drift, and retrain models as needed.
-   
+
 ## Technologies Used:
+
 1. **Keras & TensorFlow**:
    - For building deep learning models to predict aid demand.
 2. **Spark**:
@@ -92,6 +98,7 @@ By setting up a robust MLOps infrastructure integrating Keras, TensorFlow, Spark
 ## Scalable File Structure for Peru Social Aid Distribution Optimizer
 
 ## Project Structure:
+
 ```
 Peru_Social_Aid_Distribution_Optimizer/
 │
@@ -133,6 +140,7 @@ Peru_Social_Aid_Distribution_Optimizer/
 ```
 
 ## File Structure Explanation:
+
 - **data/**: Contains raw, processed, and preprocessed data used for training and prediction.
 - **models/**: Holds trained models for demand prediction and optimization.
 - **notebooks/**: Jupyter notebooks for exploratory data analysis and model prototyping.
@@ -148,6 +156,7 @@ By organizing the project into distinct directories based on functionality, it b
 ## Models Directory for Peru Social Aid Distribution Optimizer
 
 ## Project Structure:
+
 ```
 models/
 │
@@ -159,7 +168,9 @@ models/
 ```
 
 ## Model Files Explanation:
+
 - **keras_models/**:
+
   - **demand_prediction_model.h5**: Trained deep learning model using Keras and TensorFlow to predict social aid demand. This model takes historical data on aid demand as input and outputs predictions for future demand. It is saved in the Hierarchical Data Format (HDF5) for portability and ease of use.
   - **optimization_model.h5**: Another trained deep learning model using Keras and TensorFlow or a machine learning model optimized for logistic routes. This model optimizes logistics and delivery routes based on input parameters such as location data, traffic conditions, and delivery schedules. It is also saved in HDF5 format for seamless deployment and integration with the optimization engine.
 
@@ -171,6 +182,7 @@ The `models/` directory contains the trained AI models that are crucial for pred
 ## Deployment Directory for Peru Social Aid Distribution Optimizer
 
 ## Project Structure:
+
 ```
 deployment/
 │
@@ -184,7 +196,9 @@ deployment/
 ```
 
 ## File Explanation:
+
 - **deployment_scripts/**:
+
   - **model_deployment.py**: Python script for deploying the trained AI models to production. This script handles the loading of models, making predictions, and integrating them with the existing aid distribution systems for real-time decision-making.
   - **optimize_routes.py**: Script for deploying the optimization engine for route optimization. It utilizes the trained optimization model to optimize logistics and delivery routes based on real-time data and constraints.
 
@@ -236,6 +250,7 @@ print("Training completed. Model saved.")
 ```
 
 In this script:
+
 - We generate mock data for training the demand prediction model.
 - We split the data into training and validation sets.
 - We define a simple feedforward neural network model using Keras.
@@ -305,6 +320,7 @@ spark.stop()
 ```
 
 In this script:
+
 - We create a Spark session to handle distributed computations.
 - We generate mock data for route optimization.
 - We create a DataFrame from the mock data and vectorize the features.
@@ -319,23 +335,27 @@ This script simulates the training and evaluation process of a complex machine l
 ### Types of Users for Peru Social Aid Distribution Optimizer:
 
 1. **Social Aid Administrators**
-    - *User Story*: As a Social Aid Administrator, I want to have an overview of predicted demand for social aid in different regions to allocate resources effectively and efficiently.
-    - *File*: `models/keras_models/demand_prediction_model.h5`
-  
+
+   - _User Story_: As a Social Aid Administrator, I want to have an overview of predicted demand for social aid in different regions to allocate resources effectively and efficiently.
+   - _File_: `models/keras_models/demand_prediction_model.h5`
+
 2. **Logistics Managers**
-    - *User Story*: As a Logistics Manager, I want to have optimized delivery routes to ensure timely and cost-effective distribution of aid.
-    - *File*: `optimization/route_optimization_algorithm.py`
+
+   - _User Story_: As a Logistics Manager, I want to have optimized delivery routes to ensure timely and cost-effective distribution of aid.
+   - _File_: `optimization/route_optimization_algorithm.py`
 
 3. **Data Scientists/Analysts**
-    - *User Story*: As a Data Scientist, I want access to preprocessed data and prototypes of the deep learning model for ad-hoc analysis and model experimentation.
-    - *File*: `notebooks/`, `scripts/data_preprocessing.py`, `scripts/demand_prediction_model.py`
+
+   - _User Story_: As a Data Scientist, I want access to preprocessed data and prototypes of the deep learning model for ad-hoc analysis and model experimentation.
+   - _File_: `notebooks/`, `scripts/data_preprocessing.py`, `scripts/demand_prediction_model.py`
 
 4. **IT Administrators**
-    - *User Story*: As an IT Administrator, I want to deploy and maintain the AI models and systems for smooth operations of the aid distribution process.
-    - *File*: `deployment/deployment_scripts/model_deployment.py`
+
+   - _User Story_: As an IT Administrator, I want to deploy and maintain the AI models and systems for smooth operations of the aid distribution process.
+   - _File_: `deployment/deployment_scripts/model_deployment.py`
 
 5. **Operations Managers**
-    - *User Story*: As an Operations Manager, I want a real-time dashboard to monitor the efficiency of aid distribution based on AI predictions and optimizations.
-    - *File*: `deployment/deployment_scripts/model_deployment.py`
+   - _User Story_: As an Operations Manager, I want a real-time dashboard to monitor the efficiency of aid distribution based on AI predictions and optimizations.
+   - _File_: `deployment/deployment_scripts/model_deployment.py`
 
 Each type of user interacts with the Peru Social Aid Distribution Optimizer in a different capacity, and each has specific user stories that cater to their roles and responsibilities. The accompanying files help fulfill these user stories by providing the necessary models, data, and deployment scripts tailored to each user's needs.

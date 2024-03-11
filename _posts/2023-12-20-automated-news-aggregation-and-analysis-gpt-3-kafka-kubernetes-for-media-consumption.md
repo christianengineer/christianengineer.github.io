@@ -6,14 +6,17 @@ layout: article
 ---
 
 ### Objectives
+
 The AI Automated News Aggregation and Analysis system aims to provide users with personalized, real-time news content by utilizing GPT-3 for natural language processing, Kafka for real-time data streaming, and Kubernetes for scalable container orchestration. The system should be able to gather news from various sources, process and analyze the news content, and deliver relevant news to users based on their preferences.
 
 ### System Design Strategies
+
 - **Microservices Architecture**: Use microservices to modularize the system, allowing for independent development, deployment, and scaling of different components.
 - **Real-time Data Processing**: Utilize Kafka for real-time data streaming to ensure continuous ingestion, processing, and delivery of news content.
 - **Scalable Infrastructure**: Leverage Kubernetes to manage containerized applications, enabling automatic scaling and high availability.
 
 ### Chosen Libraries and Technologies
+
 1. **GPT-3**: OpenAI's GPT-3 will be used for natural language processing and content generation to understand, analyze, and summarize news articles.
 2. **Kafka**: Apache Kafka will serve as the messaging system to enable real-time data streaming and processing of news content.
 3. **Kubernetes**: Kubernetes will be the platform for container orchestration, providing scalability, automated management, and deployment of microservices.
@@ -24,26 +27,32 @@ By integrating these technologies and design strategies, we aim to create a scal
 ### MLOps Infrastructure for Automated News Aggregation and Analysis
 
 #### Data Collection and Ingestion
+
 - **Data Sources**: Harvest news data from various reliable sources such as news websites, RSS feeds, and social media platforms.
 - **Data Ingestion**: Use Kafka as a central data ingestion and streaming platform to collect and process real-time news data from different sources.
 
 #### Data Preprocessing and Feature Engineering
+
 - **Data Preprocessing**: Utilize Apache NiFi or Spark for data preprocessing tasks such as cleaning, normalization, and feature extraction.
 - **Feature Engineering**: Leverage Python libraries like Pandas and NumPy to engineer features from the raw news data, preparing it for input into the ML models.
 
 #### Model Training and Deployment
+
 - **Model Training**: Employ GPT-3 for natural language processing (NLP) and text generation tasks, utilizing OpenAI's API to fine-tune the model on news-specific data.
 - **Model Deployment**: Use Kubernetes for deploying GPT-3 models as microservices within containers, enabling efficient scaling and management of the NLP model instances.
 
 #### Monitoring and Performance Optimization
+
 - **Metric Monitoring**: Implement Prometheus and Grafana for tracking model performance metrics, such as inference latency, throughput, and resource utilization.
 - **Automated Re-training**: Set up a scheduled pipeline for re-training the GPT-3 model based on new data, using tools like Airflow for workflow orchestration.
 
 #### Continuous Integration and Deployment (CI/CD)
+
 - **Version Control**: Utilize Git for version control of ML models, ensuring reproducibility and traceability of model changes.
 - **CI/CD Pipelines**: Implement CI/CD pipelines using Jenkins or GitLab CI to automate model deployment and testing, promoting seamless integration of new model versions.
 
 #### Experimentation and Model Evaluation
+
 - **Model Evaluation**: Utilize A/B testing and canary deployments to compare the performance of different model versions in a production environment.
 - **Experiment Tracking**: Leverage MLflow or Neptune.ai for experiment tracking, enabling the logging and visualization of model performance across different iterations.
 
@@ -89,10 +98,13 @@ This file structure organizes the repository into distinct directories for diffe
 ### `ml_model` Directory for Automated News Aggregation and Analysis
 
 #### `ml_model/gpt3/`
+
 - **`model_training/`**: This directory contains scripts and notebooks for fine-tuning GPT-3 on news data. It includes Python scripts for data pre-processing, model training, and hyperparameter tuning. It may also contain Jupyter notebooks for experiment documentation and analysis of model performance.
+
   - Example files: `preprocess_data.py`, `train_model.py`, `hyperparameter_tuning.ipynb`
 
 - **`inference/`**: Here, you can find the code for utilizing the trained GPT-3 model for inference and text generation. It includes scripts to process incoming news data and generate summarized or personalized content using GPT-3.
+
   - Example files: `inference.py`, `text_generation_utils.py`
 
 - **`deployment/`**: In this directory, you will find Kubernetes deployment manifests and configurations for deploying GPT-3 as microservices within containers. It includes YAML files defining the deployment, service, and scaling specifications for the GPT-3 inference microservice.
@@ -103,6 +115,7 @@ The `ml_model/gpt3/` directory holds all the necessary components for the GPT-3 
 ### `deployment` Directory for Automated News Aggregation and Analysis
 
 #### `infrastructure/kubernetes/`
+
 - **`gpt3-deployment.yaml`**: This file contains the Kubernetes deployment manifest for the GPT-3 model microservice. It specifies the container image, resource limits, environment variables, and any necessary volumes or persistent storage.
 
 - **`gpt3-service.yaml`**: In this file, you will define the Kubernetes service manifest for the GPT-3 model. It includes specifications for load balancing, service discovery, and internal/external access to the GPT-3 inference endpoints.
@@ -114,6 +127,7 @@ The `ml_model/gpt3/` directory holds all the necessary components for the GPT-3 
 - **`ingestion-job.yaml`**: The Kubernetes job manifest for the data ingestion process. This file includes specifications for running a batch job to ingest and process news data, leveraging Kubernetes' job controller for managing the job lifecycle.
 
 #### `infrastructure/docker/`
+
 - **Dockerfiles**: This directory contains Dockerfiles for containerizing the various microservices and components of the Automated News Aggregation and Analysis system. Each microservice, including GPT-3 inference, data pipeline components, and Kafka connectors, will have its Dockerfile defining the container environment and dependencies.
 
 The `deployment` directory within the `infrastructure` encompasses Kubernetes deployment and service manifests, as well as Dockerfiles for containerization. It provides a comprehensive set of configurations and definitions for deploying the system's microservices, data pipelines, and integration components within a scalable and orchestrated environment.
@@ -189,26 +203,32 @@ In this example, the Python script `article_summarization.py` is located within 
 ### Types of Users for the Automated News Aggregation and Analysis Application
 
 #### 1. News Reader
+
 - **User Story**: As a news reader, I want to access personalized and summarized news content to stay informed about current events without spending a lot of time sifting through numerous articles.
 - **Accomplished by**: The `ml_model/gpt3/inference/inference.py` file, which uses GPT-3 for text generation and can be accessed via the application's user interface.
 
 #### 2. Data Engineer
+
 - **User Story**: As a data engineer, I want to manage the data pipeline for collecting and processing news data from various sources in real-time.
 - **Accomplished by**: The `data_pipeline/data_collection` and `data_pipeline/streaming` files, which include scripts for data ingestion and real-time streaming from sources such as Kafka.
 
 #### 3. Machine Learning Engineer
+
 - **User Story**: As a machine learning engineer, I want to fine-tune the GPT-3 model on news-specific data and deploy it for inference.
 - **Accomplished by**: The `ml_model/gpt3/model_training/train_gpt3_model.py` file, which includes scripts for fine-tuning GPT-3 on mock news data and saving the fine-tuned model for inference.
 
 #### 4. DevOps Engineer
+
 - **User Story**: As a DevOps engineer, I want to manage the deployment and scaling of the GPT-3 model microservice and the data ingestion pipeline using Kubernetes.
 - **Accomplished by**: The `infrastructure/kubernetes/gpt3-deployment.yaml`, `infrastructure/kubernetes/kafka-connector-deployment.yaml`, and `infrastructure/kubernetes/ingestion-job.yaml` files, which contain Kubernetes deployment manifests for the GPT-3 model, Kafka connectors, and data ingestion jobs.
 
 #### 5. Product Manager
+
 - **User Story**: As a product manager, I want to monitor the performance of the GPT-3 model and the data pipeline to ensure that the application is providing high-quality and timely news content to users.
 - **Accomplished by**: The `mlops/monitoring` directory, which contains configurations for metrics monitoring using tools like Prometheus and Grafana.
 
 #### 6. Data Scientist
+
 - **User Story**: As a data scientist, I want to experiment with different models and algorithms for news analysis and contribute to the improvement of the application's AI capabilities.
 - **Accomplished by**: The `ml_model/gpt3/article_summarization.py` file, which showcases an example of using GPT-3 for complex natural language processing tasks such as article summarization.
 

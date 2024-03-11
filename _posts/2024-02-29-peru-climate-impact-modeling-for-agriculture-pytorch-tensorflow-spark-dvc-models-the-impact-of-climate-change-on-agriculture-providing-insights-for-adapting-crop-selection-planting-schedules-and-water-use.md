@@ -8,12 +8,14 @@ layout: article
 ## **AI Peru Climate Impact Modeling for Agriculture**
 
 ## **Objectives:**
+
 1. **Modeling Climate Impact**: Develop AI models using PyTorch and TensorFlow to analyze climate data and forecast the impact of climate change on agriculture in Peru.
 2. **Optimizing Crop Selection**: Provide insights on adapting crop selection based on predicted climate conditions to optimize agricultural yield.
 3. **Enhancing Planting Schedules**: Recommend adaptive planting schedules to align with changing climate patterns for improved crop growth.
 4. **Managing Water Use**: Predict water requirements based on climate projections to optimize water usage in agriculture.
 
 ## **System Design Strategies:**
+
 1. **Data Collection**: Gather historical climate data, crop performance data, and water usage information for analysis.
 2. **Data Preprocessing**: Clean and preprocess the data to make it suitable for modeling, including handling missing values and scaling features.
 3. **Model Development**: Build predictive models using PyTorch and TensorFlow to forecast climate impact on agriculture, crop selection, planting schedules, and water use.
@@ -22,6 +24,7 @@ layout: article
 6. **Deployment**: Deploy models as scalable, real-time services to provide timely insights for farmers and agricultural practitioners.
 
 ## **Chosen Libraries:**
+
 1. **PyTorch**: PyTorch offers flexibility and ease of use for developing complex neural network models, well-suited for climate impact analysis and crop prediction.
 2. **TensorFlow**: TensorFlow provides a robust ecosystem for building machine learning models, enabling efficient training and deployment of AI models for agriculture.
 3. **Apache Spark**: Apache Spark facilitates distributed data processing, allowing for parallelized model training on large datasets to handle the scale of climate and agriculture data.
@@ -32,8 +35,8 @@ By leveraging PyTorch, TensorFlow, Spark, and DVC in the design and implementati
 ## **MLOps Infrastructure for Peru Climate Impact Modeling for Agriculture**
 
 ## **Infrastructure Components:**
+
 1. **Data Pipeline**: Set up a robust data pipeline for data collection, preprocessing, and transformation of climate, agriculture, and water data. Use tools like Apache Airflow for orchestrating data workflows.
-   
 2. **Model Development Environment**: Create a development environment for data scientists to build and train AI models using PyTorch and TensorFlow. Utilize Jupyter notebooks and Docker containers for reproducibility.
 
 3. **Model Training and Deployment**: Implement a model training and deployment pipeline using Apache Spark for distributed training of ML models at scale. Use Kubernetes for container orchestration and deployment of models for real-time predictions.
@@ -47,6 +50,7 @@ By leveraging PyTorch, TensorFlow, Spark, and DVC in the design and implementati
 7. **Scalability and Resource Management**: Utilize cloud services like AWS, Google Cloud, or Azure for scalability and resource management. Auto-scaling capabilities can dynamically adjust resources based on workload demand.
 
 ## **Workflow:**
+
 1. **Data Collection and Preprocessing**: Climate, agriculture, and water data are collected, cleaned, and preprocessed in the data pipeline before being fed into the modeling pipeline.
 
 2. **Model Development**: Data scientists leverage PyTorch and TensorFlow in the development environment to create ML models that predict the impact of climate change on agriculture and provide insights for crop selection, planting schedules, and water use optimization.
@@ -56,6 +60,7 @@ By leveraging PyTorch, TensorFlow, Spark, and DVC in the design and implementati
 4. **Continuous Monitoring and Iteration**: Monitor model performance, retrain models as needed, and iterate on the ML pipeline to improve accuracy and adapt to changing climate conditions.
 
 ## **Tools:**
+
 1. **PyTorch and TensorFlow**: Used for building and training deep learning models for climate impact analysis and agricultural insights.
 2. **Apache Spark**: Facilitates distributed training of ML models on large datasets for scalability.
 3. **DVC**: Manages data versioning and model lifecycle for reproducibility and collaboration.
@@ -111,20 +116,23 @@ Peru_Climate_Impact_Modeling/
 ```
 
 ## **File Structure Overview:**
+
 - **data/**: Contains subdirectories for storing raw and processed data related to climate, agriculture, and water.
-  
 - **models/**
+
   - **PyTorch/**: Holds directories for PyTorch models for crop selection and planting schedule predictions.
   - **TensorFlow/**: Stores TensorFlow model for water use predictions.
 
 - **notebooks/**: Includes Jupyter notebooks for data exploration and model training experiments.
 
 - **src/**
+
   - **data_processing/**: Contains scripts for data preprocessing tasks.
   - **model_development/**: Houses scripts for developing machine learning models.
   - **utils/**: Contains utility functions used across the project.
 
 - **pipelines/**
+
   - **data_pipeline/**: Scripts for data processing and transformation pipelines.
   - **model_pipeline/**: Scripts for model training and deployment pipelines.
 
@@ -173,6 +181,7 @@ models/
 - **PyTorch/**: Directory for PyTorch models used in the Peru Climate Impact Modeling for Agriculture application.
 
   - **crop_selection_model/**: Directory for the PyTorch model focusing on crop selection based on climate data.
+
     - **model.py**: Defines the architecture of the crop selection PyTorch model.
     - **train.py**: Script for training the crop selection model.
     - **predict.py**: Script for making predictions using the trained crop selection model.
@@ -355,26 +364,32 @@ This Python script (`train_complex.py`) is located in the `models/PyTorch/planti
 ## **Types of Users for Peru Climate Impact Modeling for Agriculture Application**
 
 1. **Agricultural Researcher**
+
    - **User Story**: As an agricultural researcher, I want to analyze the impact of climate change on agriculture to better understand optimal crop selection, planting schedules, and water use for different regions.
    - **File**: `models/PyTorch/crop_selection_model/train.py`
 
 2. **Farmers**
+
    - **User Story**: As a farmer, I want insights on adapting crop selection and planting schedules based on climate projections to maximize crop yield and optimize water usage.
    - **File**: `models/PyTorch/planting_schedule_model/train_complex.py`
 
 3. **Agricultural Technician**
+
    - **User Story**: As an agricultural technician, I need a tool to provide data-driven recommendations for crop selection, planting schedules, and water management to improve agricultural practices.
    - **File**: `deployment/dockerfiles/tensorflow.Dockerfile`
 
 4. **Government Agriculture Department**
+
    - **User Story**: As a government agriculture department representative, I require AI models to forecast climate impacts on agriculture for policy-making decisions and resource allocation.
    - **File**: `src/model_development/utils.py`
 
 5. **Agro-Meteorologist**
+
    - **User Story**: As an agro-meteorologist, I aim to utilize machine learning models to predict climate patterns and provide guidance on crop selection and planting schedules for sustainable agricultural practices.
    - **File**: `pipelines/data_pipeline/data_processing.py`
 
 6. **Environmental Scientist**
+
    - **User Story**: As an environmental scientist, I want to leverage advanced AI models to assess climate change effects on agriculture and recommend adaptation strategies for ecological sustainability.
    - **File**: `pipelines/model_pipeline/model_training.py`
 

@@ -8,6 +8,7 @@ layout: article
 ## Objectives of the AI Smart Urban Air Quality Monitoring System
 
 The objectives of the AI Smart Urban Air Quality Monitoring System are as follows:
+
 1. Real-time monitoring of air quality in urban areas to help identify pollution hotspots.
 2. Prediction and forecasting of air quality levels using machine learning models.
 3. Providing insights and recommendations to local authorities and citizens for better environmental health management.
@@ -15,6 +16,7 @@ The objectives of the AI Smart Urban Air Quality Monitoring System are as follow
 ## System Design Strategies
 
 The system design will involve the following strategies:
+
 1. Data Ingestion: Collecting air quality data from various sensors and sources in urban areas.
 2. Data Processing: Preprocessing and cleansing the data to remove outliers and inconsistencies.
 3. Machine Learning: Training and deploying machine learning models for air quality prediction and forecasting.
@@ -40,26 +42,32 @@ By leveraging these libraries and technologies, the AI Smart Urban Air Quality M
 The MLOps infrastructure for the Smart Urban Air Quality Monitoring application involves integrating machine learning (ML) lifecycle management with operational practices to ensure seamless development, deployment, and monitoring of ML models. Here are the key components and strategies to establish an effective MLOps infrastructure:
 
 ### 1. Data Versioning and Management
+
 - **Tools:** Git, DVC (Data Version Control)
 - **Strategy:** Utilize Git for version control of code, while DVC can be used for managing large datasets and models, enabling reproducibility and sharing of data.
 
 ### 2. Model Training and Experimentation
+
 - **Tools:** PyTorch, Scikit-learn
 - **Strategy:** Use PyTorch for building and training deep learning models for air quality prediction, and Scikit-learn for traditional machine learning models.
 
 ### 3. Model Serving and Deployment
+
 - **Tools:** Flask, Docker, Kubernetes
 - **Strategy:** Package the trained models using Docker containers, deploy them on Kubernetes for scalability and fault tolerance, and develop a web API using Flask for serving predictions in real-time.
 
 ### 4. Continuous Integration/Continuous Deployment (CI/CD)
+
 - **Tools:** Jenkins, GitLab CI/CD, ArgoCD
 - **Strategy:** Implement CI/CD pipelines using Jenkins or GitLab CI/CD to automate the testing, building, and deployment of new model versions. ArgoCD can be used for managing the deployment of ML models on Kubernetes.
 
 ### 5. Model Monitoring and Observability
+
 - **Tools:** Prometheus, Grafana, ELK Stack
 - **Strategy:** Use Prometheus for monitoring the performance and health of the deployed models, while Grafana can be employed for visualization and analytics. An ELK Stack (Elasticsearch, Logstash, Kibana) can facilitate log monitoring and analysis.
 
 ### 6. Feedback Loops and Model Re-training
+
 - **Strategy:** Implement mechanisms to collect feedback on model predictions from the deployed system, and set up automated triggers to re-train models based on new data or performance degradation.
 
 By integrating these MLOps practices and tools into the Smart Urban Air Quality Monitoring application, the development, deployment, and maintenance of AI and ML components will be streamlined, ensuring scalability, reliability, and efficient management of the entire system.
@@ -234,6 +242,7 @@ torch.save(model.state_dict(), 'models/pytorch/trained_model.pth')
 This Python script represents a file for training a PyTorch model for the Smart Urban Air Quality Monitoring application using mock data. The file is located at `src/model_training/pytorch/train_model.py`.
 
 The script performs the following tasks:
+
 1. Loads the mock data for training from a CSV file
 2. Prepares the data for training by performing data preprocessing and feature engineering
 3. Defines a simple PyTorch neural network model (AirQualityModel)
@@ -306,6 +315,7 @@ torch.save(model.state_dict(), 'models/pytorch/complex_model.pth')
 The provided Python script serves as a file for training a complex PyTorch model for the Smart Urban Air Quality Monitoring application using mock data. The file is located at `src/model_training/pytorch/complex_model.py`.
 
 The script conducts the following tasks:
+
 1. Loads the mock data for training from a CSV file
 2. Performs data preprocessing and feature engineering as necessary
 3. Defines a complex PyTorch neural network model (ComplexAirQualityModel) with multiple hidden layers and dropout for regularization
@@ -318,27 +328,32 @@ This file showcases the process of training a sophisticated PyTorch model for ai
 ### Types of Users for Smart Urban Air Quality Monitoring Application
 
 1. **Citizens**
-   - *User Story*: As a citizen, I want to access real-time air quality information in my city to make informed decisions about outdoor activities and protect my health.
-   - *Accomplishing File*: `deployment/flask_app.py`
+
+   - _User Story_: As a citizen, I want to access real-time air quality information in my city to make informed decisions about outdoor activities and protect my health.
+   - _Accomplishing File_: `deployment/flask_app.py`
 
 2. **Environmental Researchers**
-   - *User Story*: As an environmental researcher, I want to analyze historical air quality data to identify trends and patterns for research purposes.
-   - *Accomplishing File*: `data_processing/data_loader.py`
+
+   - _User Story_: As an environmental researcher, I want to analyze historical air quality data to identify trends and patterns for research purposes.
+   - _Accomplishing File_: `data_processing/data_loader.py`
 
 3. **City Planners**
-   - *User Story*: As a city planner, I want to receive air quality forecasts to make data-driven decisions related to urban development and infrastructure planning.
-   - *Accomplishing File*: `deployment/prometheus_config.yml` for setting up monitoring and alerts.
+
+   - _User Story_: As a city planner, I want to receive air quality forecasts to make data-driven decisions related to urban development and infrastructure planning.
+   - _Accomplishing File_: `deployment/prometheus_config.yml` for setting up monitoring and alerts.
 
 4. **Public Health Officials**
-   - *User Story*: As a public health official, I need access to comprehensive air quality reports and analyses to create targeted policies and interventions for improving air quality.
-   - *Accomplishing File*: `src/data_processing/feature_engineering.py`
+
+   - _User Story_: As a public health official, I need access to comprehensive air quality reports and analyses to create targeted policies and interventions for improving air quality.
+   - _Accomplishing File_: `src/data_processing/feature_engineering.py`
 
 5. **Local Authorities**
-   - *User Story*: As a local authority, I want an interface to manage and monitor air quality sensor data in real-time and receive automatic alerts for pollution spikes.
-   - *Accomplishing File*: `tests/deployment_tests/test_flask_app.py` for testing the functionality.
+
+   - _User Story_: As a local authority, I want an interface to manage and monitor air quality sensor data in real-time and receive automatic alerts for pollution spikes.
+   - _Accomplishing File_: `tests/deployment_tests/test_flask_app.py` for testing the functionality.
 
 6. **Machine Learning Engineers**
-   - *User Story*: As a machine learning engineer, I want to train and deploy advanced machine learning models to improve the accuracy of air quality predictions.
-   - *Accomplishing File*: `src/model_training/pytorch/complex_model.py` to train a complex PyTorch model.
+   - _User Story_: As a machine learning engineer, I want to train and deploy advanced machine learning models to improve the accuracy of air quality predictions.
+   - _Accomplishing File_: `src/model_training/pytorch/complex_model.py` to train a complex PyTorch model.
 
 Each user story aligns with a specific type of user and their need within the context of the Smart Urban Air Quality Monitoring application. The mentioned files contribute to different aspects of the application and address the requirements of diverse user groups.

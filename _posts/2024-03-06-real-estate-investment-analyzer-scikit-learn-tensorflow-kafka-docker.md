@@ -6,33 +6,39 @@ layout: article
 ---
 
 ## Objectives and Benefits:
+
 ### Audience: Urbania Investment Analyst
 
 1. **Objective**: Predict real estate market trends and investment risks
+
    - **Benefit**: Provide insights for making informed investment decisions in Peru's real estate market
- 
+
 2. **Objective**: Utilize historical data and market trends for forecasting real estate values and investment hotspots
    - **Benefit**: Enable proactive identification of investment opportunities and risks
-   
 3. **Objective**: Develop a scalable and production-ready machine learning solution
    - **Benefit**: Increase efficiency in analyzing market trends and making predictions
 
 ## Machine Learning Algorithm:
+
 - **Algorithm**: XGBoost (Extreme Gradient Boosting)
-   - **Reason**: XGBoost is robust, efficient, and widely used for regression and classification problems.
+  - **Reason**: XGBoost is robust, efficient, and widely used for regression and classification problems.
 
 ## Strategies:
+
 1. **Sourcing Data**:
+
    - Utilize Urbania's historical real estate data and market trends
    - Collect external data sources like economic indicators, population growth, and infrastructural developments
 
 2. **Preprocessing Data**:
+
    - Handle missing values and outliers
    - Encode categorical variables
    - Scale numerical features
    - Split data into training and testing sets
 
 3. **Modeling**:
+
    - Train a XGBoost model on the preprocessed data
    - Tune hyperparameters using techniques like Grid Search or Bayesian Optimization
    - Evaluate model performance using metrics like RMSE or MAE
@@ -43,11 +49,14 @@ layout: article
    - Deploy the model on cloud services like AWS or GCP for scalability
 
 ## Tools and Libraries:
+
 1. **Sourcing Data**:
+
    - [Urbania](https://www.urbania.pe/) - Real estate data provider
    - Web scraping tools like Scrapy or BeautifulSoup for additional data
 
 2. **Preprocessing and Modeling**:
+
    - [Scikit-Learn](https://scikit-learn.org/stable/) - Data preprocessing and model building
    - [XGBoost](https://xgboost.readthedocs.io/en/latest/) - Machine learning algorithm
    - [Pandas](https://pandas.pydata.org/) - Data manipulation and analysis
@@ -61,17 +70,21 @@ layout: article
 ## Sourcing Data Strategy Analysis:
 
 ### Relevant Aspects of the Problem Domain:
+
 1. **Historical real estate data**: Understanding past trends and patterns in real estate values and investments is crucial for predicting future trends.
 2. **Market indicators**: External data sources like economic indicators, population growth, and infrastructural developments can impact real estate values.
 3. **Geospatial data**: Location-specific data such as neighborhood demographics, amenities, and accessibility can influence real estate prices.
 
 ### Recommended Tools and Methods:
+
 1. **Web Scraping Tools**:
+
    - **Tool**: Scrapy
      - **Description**: Scrapy is a powerful and flexible web scraping framework in Python that allows for easy extraction of data from websites.
      - **Integration**: Scrapy can be integrated into the data collection pipeline to scrape real estate listings and market indicators from websites like Urbania.
 
 2. **API Integration**:
+
    - **Tool**: Requests library in Python
      - **Description**: Requests is a simple HTTP library for making API requests in Python. It can be used to fetch data from external APIs providing market indicators.
      - **Integration**: Integrate Requests to pull data from APIs of relevant sources like economic databases or government statistics.
@@ -82,42 +95,42 @@ layout: article
      - **Integration**: Incorporate these APIs to fetch geospatial data for enhancing the analysis of real estate data in different locations.
 
 ### Integration into Existing Technology Stack:
+
 - **Scrapy Integration**:
-   - Schedule periodic web scrapes of Urbania and other real estate websites to update the dataset automatically.
+  - Schedule periodic web scrapes of Urbania and other real estate websites to update the dataset automatically.
 - **API Integration**:
-   - Write scripts to fetch market indicators using the Requests library and store them in a database that integrates with the existing data storage.
+  - Write scripts to fetch market indicators using the Requests library and store them in a database that integrates with the existing data storage.
 - **Geospatial Data Integration**:
-   - Use Google Maps or OpenStreetMap APIs in data preprocessing to extract location-specific features for enriching the dataset.
+  - Use Google Maps or OpenStreetMap APIs in data preprocessing to extract location-specific features for enriching the dataset.
 - **Data Storage**:
-   - Centralize all collected data in a data warehouse or database that can be easily accessed by model training pipelines.
+  - Centralize all collected data in a data warehouse or database that can be easily accessed by model training pipelines.
 
 By incorporating these tools and methods into the data collection strategy, we can efficiently gather diverse datasets relevant to the real estate domain, ensuring that the data is readily accessible, up-to-date, and in the correct format for analysis and model training. This streamlined process will enable Urbania Investment Analysts to make data-driven investment decisions based on comprehensive and accurate information.
 
 ## Feature Extraction and Feature Engineering Analysis:
 
 ### Feature Extraction:
+
 1. **Numerical Features**:
    - **Total Rooms**: Extracted from property listings to understand the size of the property.
    - **Area (sq. ft.)**: Extracted to quantify the size of the property.
    - **Year Built**: Extracted to evaluate the age of the property, which can impact its value.
-   
 2. **Categorical Features**:
    - **Property Type**: Extracted to categorize properties into types like apartments, houses, or commercial spaces.
    - **Location**: Extracted to identify the neighborhood or district where the property is situated.
    - **Availability of Amenities**: Extracted to determine the presence of amenities like parking, swimming pool, or gym.
 
 ### Feature Engineering:
+
 1. **Target Variable Transformation**:
    - **Log Transformation of Price**: To handle skewed price distributions and improve model performance.
-   
 2. **Temporal Features**:
    - **Age of Property (Years)**: Calculated as the current year minus the year built to capture the property's aging effect on value.
-   
 3. **Interaction Features**:
    - **Price per Square Foot**: Calculated as the price divided by the area to capture the value proposition of the property.
    - **Combining Amenities**: Create a binary feature indicating if a property has both parking and a swimming pool to assess premium properties.
-   
 4. **Encoding**:
+
    - **One-Hot Encoding**:
      - **Property Type**: Transform categorical property types into binary features.
      - **Location**: Transform categorical locations into binary features.
@@ -128,11 +141,11 @@ By incorporating these tools and methods into the data collection strategy, we c
      - Scale engineered features like age of property to aid model convergence.
 
 ### Recommendations for Variable Names:
+
 1. **Numerical Features**:
    - **total_rooms**
    - **area_sqft**
    - **year_built**
-   
 2. **Categorical Features**:
    - **property_type_apartment**
    - **property_type_house**
@@ -140,27 +153,30 @@ By incorporating these tools and methods into the data collection strategy, we c
    - **location_district_2**
    - **has_parking**
    - **has_swimming_pool**
-   
 3. **Engineered Features**:
    - **log_price**
    - **age_of_property_years**
    - **price_per_sqft**
    - **premium_property**
-  
+
 By effectively extracting relevant features from the data and engineering new features that capture valuable information, we can enhance the interpretability of the data and boost the performance of the machine learning model. These optimized features will provide Urbania Investment Analysts with deeper insights into the real estate market trends and facilitate more accurate predictions for making informed investment decisions.
 
 ## Metadata Management Recommendations:
 
 ### Project-specific Insights:
+
 1. **Real Estate Attributes**:
+
    - **Property Listings**: Metadata for each property listing should include attributes like total rooms, area (sq. ft.), property type, location, amenities, and price.
    - **Historical Data**: Include metadata for each historical data entry, such as the timestamp of the data collection, source, and any relevant notes on data quality.
 
 2. **Feature Engineering Details**:
+
    - **Engineered Features**: Document details of engineered features like price per square foot, age of property, and any interactions created.
    - **Transformation Techniques**: Specify the transformation methods applied, such as log transformation of price or min-max scaling of numerical features.
 
 3. **Data Preprocessing Steps**:
+
    - **Missing Data Handling**: Metadata should capture the approach taken to handle missing data, such as imputation techniques or removal of missing values.
    - **Outlier Detection**: Document outlier detection methods used and how outliers were treated in the preprocessing stage.
 
@@ -169,15 +185,19 @@ By effectively extracting relevant features from the data and engineering new fe
    - **Evaluation Metrics**: Detail the evaluation metrics such as RMSE or MAE used to assess the model's performance.
 
 ### Unique Demands and Characteristics:
+
 1. **Data Source Tracking**:
+
    - **Source Identification**: Maintain metadata linking each data entry to its original source, whether it's Urbania listings, external APIs, or scraped data.
    - **Data Quality Flags**: Include flags or notes indicating the quality of data from different sources to aid in assessing reliability.
 
 2. **Geospatial Information Management**:
+
    - **Location Attributes**: Store metadata related to location data, such as latitude, longitude, and geospatial references for accurate geospatial analysis.
    - **Neighborhood Details**: Capture metadata on neighborhood characteristics for properties, like demographics, amenities, and development projects.
 
 3. **Version Control**:
+
    - **Feature Engineering Versions**: Maintain versions of feature engineering steps and changes made to engineered features for traceability and reproducibility.
    - **Model Versions**: Track different versions of the XGBoost model trained with varying hyperparameters for comparison and model improvement.
 
@@ -190,15 +210,19 @@ By incorporating these project-specific metadata management practices, Urbania I
 ## Data Problems and Preprocessing Strategies:
 
 ### Specific Data Problems in the Project:
+
 1. **Missing Data**:
+
    - **Problem**: Incomplete property listings or market indicator data may lead to missing values, impacting the model's performance.
    - **Preprocessing Strategy**: Employ advanced imputation techniques like mean imputation for numerical features and mode imputation for categorical features. For critical features, consider adding flags to indicate missing values.
 
 2. **Outliers**:
+
    - **Problem**: Extreme values in features like price or area may skew the model's predictions and affect its generalization.
    - **Preprocessing Strategy**: Use robust scaling methods like Z-score normalization or winsorization to mitigate the impact of outliers on model training. Consider removing outliers that are significantly deviant from the majority.
 
 3. **Data Quality Discrepancies**:
+
    - **Problem**: Inconsistencies in data formats or quality across different sources may introduce noise and bias into the analysis.
    - **Preprocessing Strategy**: Implement data validation checks to ensure consistency in data formats and resolve discrepancies through standardization methods. Create quality flags for data integrity assessment.
 
@@ -207,15 +231,19 @@ By incorporating these project-specific metadata management practices, Urbania I
    - **Preprocessing Strategy**: Implement time-based slicing of the data for training and validation to capture temporal patterns. Consider creating lag features to incorporate historical trends into the model.
 
 ### Unique Preprocessing Practices for the Project:
+
 1. **Geospatial Integration**:
+
    - **Challenge**: Geospatial data requires specific preprocessing to extract meaningful insights for real estate analysis.
    - **Strategy**: Utilize geocoding techniques to convert location data into coordinates for spatial analysis. Incorporate spatial clustering to identify hotspots or trends in property values based on location.
 
 2. **Complex Feature Interactions**:
+
    - **Challenge**: Engineered features may interact in complex ways, requiring careful preprocessing to ensure model interpretability.
    - **Strategy**: Conduct feature importance analysis to identify key interactions and eliminate redundant features. Implement feature scaling and transformation techniques specific to interaction effects for better model performance.
 
 3. **Dynamic Data Acquisition**:
+
    - **Challenge**: Continuous data updates and volatility in real estate markets necessitate dynamic preprocessing strategies.
    - **Strategy**: Implement real-time data processing pipelines using tools like Kafka for streaming data ingestion. Develop automated data preprocessing scripts that adapt to changing data distributions.
 
@@ -264,22 +292,29 @@ y_test.to_csv('y_test.csv', index=False)
 ```
 
 ### Preprocessing Steps:
+
 1. **Loading Data**:
+
    - Load the raw real estate data from a CSV file into a pandas DataFrame.
 
 2. **Separating Features and Target**:
+
    - Extract the feature columns (X) and the target variable (y) for model training.
 
 3. **Imputing Missing Values**:
+
    - Impute missing values in numerical features like `area_sqft` and `year_built` with the mean value to ensure completeness.
 
 4. **Scaling Numerical Features**:
+
    - Standardize the `area_sqft` feature to bring all numerical features to a similar scale for model convergence.
 
 5. **One-Hot Encoding**:
+
    - Encode categorical features like `property_type` and `location` using one-hot encoding to convert categorical variables into a format suitable for machine learning models.
 
 6. **Train-Test Split**:
+
    - Split the preprocessed data into training and testing sets to evaluate model performance and prevent overfitting.
 
 7. **Saving Preprocessed Data**:
@@ -290,43 +325,52 @@ By following these preprocessing steps tailored to the project's specific needs,
 ## Recommended Modeling Strategy:
 
 ### Modeling Algorithm:
+
 - **Algorithm Choice**: XGBoost (Extreme Gradient Boosting)
   - **Reasoning**: XGBoost is well-suited for regression problems, handles complex interactions well, and provides high predictive accuracy.
 
 ### Feature Importance Analysis:
+
 - **Step**: Perform Feature Importance Analysis using XGBoost
   - **Importance**: This step is crucial as it helps identify the most influential features in predicting real estate values and investment risks. It guides feature selection, interpretation of the model, and aids in understanding the key factors driving market trends.
 
 ### Advanced Hyperparameter Tuning:
+
 - **Step**: Implement Advanced Hyperparameter Tuning (e.g., Bayesian Optimization)
   - **Importance**: Fine-tuning hyperparameters is critical for optimizing model performance and generalization. Bayesian Optimization efficiently searches the hyperparameter space, ensuring the model is well-optimized for accurate predictions in Peru's fluctuating real estate market.
 
 ### Ensembling Techniques:
+
 - **Step**: Employ Ensembling Techniques (e.g., Stacking or Blending)
   - **Importance**: Ensembling multiple models can enhance prediction accuracy and robustness, especially in a dynamic real estate market. Stacking or blending models leverages diverse algorithms to capture different aspects of market trends and risks.
 
 ### Cross-Validation Strategy:
+
 - **Step**: Implement Stratified K-Fold Cross-Validation
   - **Importance**: Given the variability in real estate data and the need for maintaining data distribution integrity, using stratified K-fold cross-validation ensures the model's robustness and performance evaluation across different data subsets.
 
 ### Crucial Step: Feature Importance Analysis
+
 - **Importance**: The most critical step in the modeling strategy is Feature Importance Analysis. Understanding which features drive real estate market trends and investment risks is paramount for making informed decisions. By identifying the most influential features, Urbania Investment Analysts can prioritize key factors, refine their investment strategies, and enhance the interpretability of the model results. Feature importance analysis bridges the gap between data insights and actionable investment recommendations, making it pivotal for the success of the project.
 
 ### Tools and Technologies Recommendations for Data Modeling:
 
 1. **XGBoost (Extreme Gradient Boosting)**:
+
    - **Description**: XGBoost is a scalable and efficient gradient boosting library that excels in regression tasks with high-dimensional, sparse data, making it ideal for predicting real estate values and investment risks.
    - **Integration**: Seamless integration with Python and popular data science libraries like Scikit-Learn allows for convenient model training and feature importance analysis.
    - **Benefits**: XGBoost offers advanced hyperparameter tuning capabilities, parallel processing for faster model training, and built-in regularization to prevent overfitting.
    - **Documentation**: [XGBoost Documentation](https://xgboost.readthedocs.io/en/latest/)
 
 2. **Bayesian Optimization** (Using `scikit-optimize`):
+
    - **Description**: Bayesian Optimization is a powerful hyperparameter tuning technique that efficiently searches the hyperparameter space to optimize model performance.
    - **Integration**: `scikit-optimize` integrates seamlessly with Scikit-Learn for Bayesian Optimization of XGBoost hyperparameters.
    - **Benefits**: Enhances model accuracy and generalization by finding the best hyperparameters, crucial for accurate predictions in the fluctuating real estate market.
    - **Documentation**: [scikit-optimize Documentation](https://scikit-optimize.github.io/stable/)
 
 3. **Ensembling Techniques (Using `mlxtend`)**:
+
    - **Description**: `mlxtend` is a library offering various ensemble methods like stacking and blending for combining diverse machine learning models to improve prediction accuracy.
    - **Integration**: Integrates easily with Scikit-Learn for implementing ensemble techniques with XGBoost.
    - **Benefits**: Ensembling models can enhance the robustness of predictions by leveraging the strengths of different algorithms, critical in capturing market trends and risks accurately.
@@ -377,22 +421,27 @@ data.to_csv('fictitious_real_estate_data.csv', index=False)
 ```
 
 ### Dataset Generation Strategy:
+
 1. **Random Data Generation**:
+
    - Generate random data for numerical features like `area_sqft` and `year_built` and incorporate variability to simulate real-world conditions.
 
 2. **Categorical Feature Generation**:
+
    - Generate categorical features like `property_type` and `location` with diverse values to capture different property types and locations.
 
 3. **Price Simulation**:
+
    - Simulate the price based on the area, with added noise to reflect market variability and unpredictability.
 
 4. **Data Saving**:
    - Save the generated dataset to a CSV file for model training and validation.
 
 ### Dataset Validation:
+
 - **Dataset Validation Tools**:
   - Utilize tools like pandas profiling or data validation libraries in Python to analyze and validate the generated dataset for consistency, outliers, and potential issues.
-  
+
 By generating this fictitious dataset that closely mimics real-world data relevant to our project's objectives, we can ensure that our model training and validation process aligns with the complexities and variability of the real estate market. The dataset integrates seamlessly with our modeling strategy, enhancing the predictive accuracy and reliability of our machine learning models for real estate investment analysis in Peru.
 
 To provide a visual representation of the mocked dataset that mimics real-world data relevant to our project, I will create a sample CSV file containing a few rows of data with essential features for real estate investment analysis. This example will showcase the structure and composition of the data, including feature names and types, in a format suitable for model ingestion.
@@ -409,14 +458,16 @@ area_sqft,year_built,price,property_type,location
 ```
 
 ### Data Structure and Composition:
+
 - **Feature Names**:
-   - `area_sqft`: Numerical feature representing the area in square feet
-   - `year_built`: Numerical feature indicating the year the property was built
-   - `price`: Numerical target variable representing the price of the property
-   - `property_type`: Categorical feature denoting the type of property (House, Apartment, Office)
-   - `location`: Categorical feature indicating the location of the property (District A, District B, District C)
+  - `area_sqft`: Numerical feature representing the area in square feet
+  - `year_built`: Numerical feature indicating the year the property was built
+  - `price`: Numerical target variable representing the price of the property
+  - `property_type`: Categorical feature denoting the type of property (House, Apartment, Office)
+  - `location`: Categorical feature indicating the location of the property (District A, District B, District C)
 
 ### Model Ingestion Formatting:
+
 - The data is structured in a tabular format with each row representing a real estate property listing.
 - Numerical features like `area_sqft`, `year_built`, and `price` are represented as integers or floats.
 - Categorical features like `property_type` and `location` are represented as strings.
@@ -459,6 +510,7 @@ model.save_model('real_estate_model.model')
 ```
 
 ### Code Structure and Documentation:
+
 1. **Data Loading**: Load the preprocessed training data and split it into training and validation sets for model training and evaluation.
 2. **Model Training**: Train the XGBoost model on the training data to predict real estate prices.
 3. **Model Validation**: Calculate the Root Mean Squared Error (RMSE) on the validation set to assess model performance.
@@ -466,6 +518,7 @@ model.save_model('real_estate_model.model')
 5. **Deployment Notes**: Include instructions for loading the saved model during deployment.
 
 ### Code Quality Standards:
+
 - **Modularity**: Segregate code into logical sections for data loading, model training, validation, and saving to enhance readability and maintainability.
 - **Comments**: Provide detailed inline comments explaining the logic, purpose, and functionality of key sections for better code understanding.
 - **Error Handling**: Implement robust error handling mechanisms to ensure code resilience in production environments.
@@ -479,6 +532,7 @@ By following these conventions and standards, the provided Python script serves 
 ### Step-by-Step Outline:
 
 1. **Pre-Deployment Checks**:
+
    - **Description**: Ensure model readiness and compatibility with the production environment.
    - **Tools**:
      - **Linting**: PyLint or Flake8 for code quality checks.
@@ -486,24 +540,28 @@ By following these conventions and standards, the provided Python script serves 
      - **Dependency Management**: Pipenv or Poetry for managing dependencies.
 
 2. **Docker Containerization**:
+
    - **Description**: Package the model and its dependencies into a Docker container for portability.
    - **Tools**:
      - **Docker**: Containerization tool for creating and managing containers.
      - **Docker Compose**: Define and run multi-container Docker applications.
 
 3. **Model Serving with TensorFlow Serving**:
+
    - **Description**: Deploy the containerized model using TensorFlow Serving for scalable model prediction.
    - **Tools**:
      - **TensorFlow Serving**: A model serving system for serving machine learning models.
      - **gRPC**: Remote Procedure Call framework for communication between client and server.
 
 4. **Kubernetes Orchestration**:
+
    - **Description**: Orchestrate the deployment of TensorFlow Serving instances using Kubernetes.
    - **Tools**:
      - **Kubernetes**: Container orchestration platform for automating deployment and scaling.
      - **Kubernetes API**: Control Kubernetes resources programmatically.
 
 5. **Monitoring and Logging**:
+
    - **Description**: Implement monitoring and logging for tracking model performance and errors in the production environment.
    - **Tools**:
      - **Prometheus**: Monitoring system for collecting metrics.
@@ -517,6 +575,7 @@ By following these conventions and standards, the provided Python script serves 
      - **GitLab CI/CD** or GitHub Actions: CI/CD platforms for automating software development workflows.
 
 ### Resources:
+
 1. **[PyLint Documentation](https://pylint.pycqa.org/en/latest/)**
 2. **[pytest Documentation](https://docs.pytest.org/en/stable/)**
 3. **[Docker Documentation](https://docs.docker.com/)**
@@ -559,19 +618,25 @@ CMD tensorflow_model_server --port=8500 --model_name=real_estate_model --model_b
 ```
 
 ### Dockerfile Configuration:
+
 1. **Base Image**:
+
    - Uses Python 3.8-slim as the base image to minimize the image size.
 
 2. **Working Directory**:
+
    - Sets the working directory in the container to /app for storing the project files.
 
 3. **Dependency Installation**:
+
    - Upgrades pip and installs required Python libraries for machine learning (NumPy, pandas, scikit-learn, XGBoost) and TensorFlow Serving API.
 
 4. **Exposed Port**:
+
    - Exposes port 8500 for communication with the TensorFlow Serving instance.
 
 5. **Environment Variables**:
+
    - Defines an environment variable MODEL_PATH for specifying the saved model path inside the container.
 
 6. **Command to Run**:
@@ -584,36 +649,44 @@ This Dockerfile configuration ensures that the container environment is optimize
 ### 1. **Real Estate Investors**:
 
 #### User Story:
+
 - **Scenario**: As a real estate investor, Maria struggles to predict profitable investment opportunities due to the volatile market conditions in Peru. She needs a tool to analyze historical data and market trends to make informed investment decisions.
 
 #### Solution:
+
 - The application utilizes machine learning to forecast real estate values and identify investment hotspots, aiding investors like Maria in making data-driven decisions for profitable investments.
 - The XGBoost model component of the project analyzes historical data and market trends to predict real estate values, enabling investors to identify lucrative opportunities efficiently.
 
 ### 2. **Financial Advisors**:
 
 #### User Story:
+
 - **Scenario**: John, a financial advisor, faces challenges in advising clients on real estate investments without reliable market insights. He requires a solution to provide accurate forecasts and mitigate investment risks.
 
 #### Solution:
+
 - The application leverages machine learning models to provide accurate predictions of real estate market trends and risks, empowering financial advisors like John to offer strategic investment advice based on data-driven insights.
 - The data preprocessing component of the project ensures that input data is cleaned, transformed, and prepared for model training, facilitating accurate predictions to mitigate investment risks.
 
 ### 3. **Market Analysts**:
 
 #### User Story:
+
 - **Scenario**: Elena, a market analyst, finds it time-consuming to manually analyze market trends and identify investment hotspots for clients. She seeks a tool that can automate data analysis and provide actionable insights.
 
 #### Solution:
+
 - The application automates the analysis of historical real estate data and market trends through machine learning algorithms, enabling market analysts like Elena to efficiently identify investment hotspots and trends for clients.
 - The Kafka pipeline component of the project facilitates real-time data streaming and processing, allowing market analysts to stay updated on market changes and provide timely investment recommendations.
 
 ### 4. **Real Estate Agencies**:
 
 #### User Story:
+
 - **Scenario**: David, a real estate agency manager, struggles to optimize property listings and pricing strategies without accurate market predictions. He needs a solution to enhance listing performance and attract potential buyers.
 
 #### Solution:
+
 - The application offers predictive analytics to forecast real estate values and trends, helping real estate agencies like David optimize property listings and pricing strategies based on market predictions, leading to improved listing performance and increased buyer interest.
 - The model serving component using TensorFlow Serving facilitates efficient model deployment, enabling real-time predictions to guide pricing strategies and enhance property listings for better buyer engagement.
 

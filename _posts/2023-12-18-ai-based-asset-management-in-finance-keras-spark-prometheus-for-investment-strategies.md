@@ -6,14 +6,18 @@ layout: article
 ---
 
 ### Objectives
+
 The AI-based Asset Management in Finance repository aims to leverage cutting-edge technologies such as Keras, Spark, and Prometheus to build scalable, data-intensive AI applications for investment strategies. The primary objectives include:
+
 1. Developing machine learning models to analyze historical financial data.
 2. Building a scalable infrastructure using Spark for processing large volumes of financial data.
 3. Implementing real-time monitoring and alerting using Prometheus for efficient system maintenance and health checks.
 4. Creating investment strategies that are driven by AI and supported by robust data management and monitoring capabilities.
 
 ### System Design Strategies
+
 The system design for AI-based Asset Management in Finance will be focused on building a modular, scalable, and fault-tolerant architecture. The following strategies will be employed:
+
 1. **Microservices Architecture**: Utilize a microservices architecture to decouple the different components of the system, allowing for independent scalability and deployment.
 2. **Event-driven Processing**: Employ event-driven processing to handle real-time data ingestion, processing, and analysis.
 3. **Distributed Processing**: Utilize Spark to perform distributed processing of large datasets, enabling efficient data analysis and model training.
@@ -21,7 +25,9 @@ The system design for AI-based Asset Management in Finance will be focused on bu
 5. **Continuous Monitoring**: Implement continuous monitoring with Prometheus to track system performance, detect anomalies, and ensure high availability.
 
 ### Chosen Libraries
+
 The following libraries and frameworks will be used to achieve the objectives of the AI-based Asset Management in Finance repository:
+
 1. **Keras**: Keras will be utilized for building and training deep learning models for analyzing financial data, including time series analysis and prediction.
 2. **Apache Spark**: Spark will be used for distributed data processing, enabling the system to handle large volumes of financial data efficiently.
 3. **Prometheus**: Prometheus will be integrated for real-time monitoring and alerting, providing insights into the health and performance of the system.
@@ -33,32 +39,39 @@ By leveraging these libraries and frameworks, the system will be equipped to bui
 ### MLOps Infrastructure for AI-based Asset Management in Finance
 
 #### 1. Data Collection and Ingestion
-* **Data Sources**: Identify relevant data sources such as stock market data, economic indicators, and news sentiment data. Use data providers, APIs, and web scraping techniques for data collection.
-* **Data Ingestion**: Implement a robust data ingestion pipeline using Apache Kafka or Apache Nifi to handle high throughput and real-time data streaming.
+
+- **Data Sources**: Identify relevant data sources such as stock market data, economic indicators, and news sentiment data. Use data providers, APIs, and web scraping techniques for data collection.
+- **Data Ingestion**: Implement a robust data ingestion pipeline using Apache Kafka or Apache Nifi to handle high throughput and real-time data streaming.
 
 #### 2. Data Preprocessing and Feature Engineering
-* **Data Cleaning**: Use tools like Apache Spark for data cleaning and transformation to ensure data quality and consistency.
-* **Feature Engineering**: Leverage the power of Spark for feature extraction and transformation to create meaningful input features for machine learning models.
+
+- **Data Cleaning**: Use tools like Apache Spark for data cleaning and transformation to ensure data quality and consistency.
+- **Feature Engineering**: Leverage the power of Spark for feature extraction and transformation to create meaningful input features for machine learning models.
 
 #### 3. Model Development and Training
-* **Model Development**: Utilize Keras for building and training deep learning models for time series analysis, forecasting, and risk assessment.
-* **Experiment Tracking**: Implement tools like MLflow to track and manage machine learning experiments, allowing for easy comparison of model performance and hyperparameter tuning.
+
+- **Model Development**: Utilize Keras for building and training deep learning models for time series analysis, forecasting, and risk assessment.
+- **Experiment Tracking**: Implement tools like MLflow to track and manage machine learning experiments, allowing for easy comparison of model performance and hyperparameter tuning.
 
 #### 4. Model Deployment and Serving
-* **Model Packaging**: Use containerization with Docker to package trained models and their dependencies into deployable artifacts.
-* **Model Serving**: Deploy the models using scalable serving infrastructure such as TensorFlow Serving or FastAPI, allowing for real-time prediction serving.
+
+- **Model Packaging**: Use containerization with Docker to package trained models and their dependencies into deployable artifacts.
+- **Model Serving**: Deploy the models using scalable serving infrastructure such as TensorFlow Serving or FastAPI, allowing for real-time prediction serving.
 
 #### 5. Continuous Monitoring and Feedback Loop
-* **Real-time Monitoring**: Set up Prometheus for real-time monitoring of model performance, system health, and data pipeline metrics.
-* **Feedback Loop**: Implement mechanisms to collect feedback from model predictions, enabling continuous model improvement and retraining.
+
+- **Real-time Monitoring**: Set up Prometheus for real-time monitoring of model performance, system health, and data pipeline metrics.
+- **Feedback Loop**: Implement mechanisms to collect feedback from model predictions, enabling continuous model improvement and retraining.
 
 #### 6. Infrastructure Orchestration and Scaling
-* **Infrastructure Orchestration**: Utilize Kubernetes for orchestrating the deployment and scaling of application components, ensuring high availability and fault tolerance.
-* **Scalability**: Design the system to auto-scale based on workload demands, leveraging Kubernetes' horizontal pod autoscaling capabilities.
+
+- **Infrastructure Orchestration**: Utilize Kubernetes for orchestrating the deployment and scaling of application components, ensuring high availability and fault tolerance.
+- **Scalability**: Design the system to auto-scale based on workload demands, leveraging Kubernetes' horizontal pod autoscaling capabilities.
 
 #### 7. Security and Compliance
-* **Data Security**: Implement encryption at rest and in transit to ensure data security and compliance with industry regulations.
-* **Model Governance**: Establish model versioning and governance processes to track model changes and ensure compliance with regulatory standards.
+
+- **Data Security**: Implement encryption at rest and in transit to ensure data security and compliance with industry regulations.
+- **Model Governance**: Establish model versioning and governance processes to track model changes and ensure compliance with regulatory standards.
 
 By building a comprehensive MLOps infrastructure that integrates the capabilities of Keras, Spark, Prometheus, and other relevant technologies, the AI-based Asset Management in Finance application will be well-equipped to manage the end-to-end lifecycle of machine learning models and ensure the reliability, scalability, and performance of the investment strategies built on AI-driven insights.
 
@@ -95,6 +108,7 @@ By building a comprehensive MLOps infrastructure that integrates the capabilitie
 ```
 
 #### Folder Structure Details:
+
 1. **data/**: Contains subdirectories for raw and processed data files. Raw data is stored in its original format for traceability and reproducibility, while processed data is stored in a more efficient format (e.g., Parquet) for faster access during model training and serving.
 
 2. **models/**: Houses directories for different types of trained models. The subdirectories for Keras and Spark models maintain their respective trained model files.
@@ -128,6 +142,7 @@ This file structure is organized to accommodate the different components of the 
 ```
 
 #### Details of `models` directory:
+
 1. **`keras/`**: This subdirectory contains trained Keras models for different aspects of the finance application, such as stock price prediction and sentiment analysis.
 
    - **`lstm_stock_prediction.h5`**: Trained Keras Long Short-Term Memory (LSTM) model used for predicting future stock prices based on historical data.

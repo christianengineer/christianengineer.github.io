@@ -8,12 +8,14 @@ layout: article
 ## AI Rural Peru E-Library Access System
 
 ## Objectives:
+
 - Provide access to a curated e-library for students and educators in rural Peru.
 - Ensure the e-library is accessible via low-tech solutions to bridge the digital divide.
 - Offer quality learning materials to enhance education in rural areas.
 - Monitor and maintain the system's performance through metrics and alerts.
 
 ## System Design Strategies:
+
 1. **Scalability:** Design the system to handle a large number of users and books efficiently.
 2. **Flexibility:** Use modular design to easily integrate new features and scale the system.
 3. **Accessibility:** Provide multiple access points such as web interface, mobile app, and SMS services.
@@ -22,6 +24,7 @@ layout: article
 6. **Automation:** Utilize Airflow for scheduling tasks and automating workflows.
 
 ## Chosen Libraries and Tools:
+
 1. **Keras:** Use Keras for building and training machine learning models for recommendation systems based on user preferences and behaviors.
 2. **Flask:** Develop the web application using Flask for its lightweight and easy-to-use framework for creating RESTful APIs.
 3. **Airflow:** Schedule and monitor data processing tasks, ensuring smooth data pipelines and automation.
@@ -34,29 +37,36 @@ By leveraging these libraries and tools, we can create an efficient and scalable
 ## MLOps Infrastructure for AI Rural Peru E-Library Access System
 
 ## Objectives:
+
 - Ensure seamless integration of machine learning models into the e-library system.
 - Automate the deployment, monitoring, and management of machine learning pipelines.
 - Maintain high performance and reliability of the system for users in rural areas.
 - Enable efficient data processing and model training workflows.
 
 ## Components of MLOps Infrastructure:
+
 1. **Model Development:**
+
    - Utilize Keras for building and training machine learning models for recommendation systems and content classification.
    - Implement version control using Git to track changes in model code and configurations.
 
 2. **Model Deployment:**
+
    - Integrate trained models into the Flask application to provide personalized recommendations and content filtering.
    - Use Docker for containerization to ensure consistent deployment across different environments.
 
 3. **Automation and Orchestration:**
+
    - Implement Airflow for scheduling and orchestrating machine learning workflows, such as data preprocessing, model training, and model deployment.
    - Utilize Airflow DAGs to define and visualize the workflow tasks and dependencies.
 
 4. **Monitoring and Logging:**
+
    - Set up Prometheus for monitoring key performance metrics of the machine learning models and application.
    - Use Grafana to create dashboards for visualizing performance metrics and alerts.
 
 5. **Data Management:**
+
    - Store metadata and training data in a centralized location using databases like MySQL or SQLite.
    - Implement data versioning and lineage tracking to ensure reproducibility of machine learning experiments.
 
@@ -120,11 +130,13 @@ ml_models/
 ## Files in the `ml_models/` Directory:
 
 ### 1. `recommendation_model.h5`:
+
 - **Description:** This file contains the trained machine learning model for providing personalized recommendations to users based on their preferences and interactions with the e-library.
 - **Technology:** Built using Keras, this model incorporates collaborative filtering techniques or any other relevant recommendation algorithm.
 - **Functionality:** The model takes user interactions and book metadata as input and predicts the likelihood of a user engaging with a particular book, enabling the system to recommend relevant content.
 
 ### 2. `classification_model.h5`:
+
 - **Description:** This file stores the trained machine learning model for classifying content items in the e-library into various categories or genres.
 - **Technology:** Developed using Keras, this model may utilize natural language processing techniques for text classification or image classification methods for book covers.
 - **Functionality:** By leveraging this model, the system can categorize books and learning materials into different genres or subjects, facilitating better content organization and search functionality for users.
@@ -156,20 +168,24 @@ deployment/
 ## Files in the `deployment/` Directory:
 
 ### 1. `Dockerfile`:
+
 - **Description:** This file contains instructions for building a Docker image that encapsulates the Flask application and its dependencies for easy deployment and scalability.
 - **Functionality:** Dockerizing the application ensures consistency across different environments and simplifies the deployment process.
 
 ### 2. `requirements.txt`:
+
 - **Description:** This file lists all Python dependencies required for running the project, including libraries such as Keras, Flask, Airflow, and Prometheus.
 - **Functionality:** By specifying dependencies in a requirements file, it allows for easy installation and setup of the required packages in a virtual environment.
 
 ### 3. `airflow/` Directory:
+
 - **Description:** This directory contains Airflow-specific files for orchestrating machine learning workflows using DAGs.
 - **Files:**
   - `airflow_dags/`: Subdirectory housing Airflow DAG scripts for data processing and model training tasks.
   - `airflow_config.py`: Configuration file for Airflow settings and connections to external services.
 
 ### 4. `monitoring/` Directory:
+
 - **Description:** This directory stores configuration files related to system monitoring using Prometheus and Grafana.
 - **Files:**
   - `prometheus.yml`: Configuration file for setting up Prometheus monitoring service to collect metrics.
@@ -266,18 +282,22 @@ Please customize the script with the appropriate data preprocessing steps, model
 ## Types of Users for the AI Rural Peru E-Library Access System:
 
 1. **Students:**
+
    - **User Story:** As a student, I want to access a wide range of educational materials such as textbooks, research papers, and study guides to support my learning in various subjects.
    - **File:** `web_app/templates/student_dashboard.html`
 
 2. **Teachers:**
+
    - **User Story:** As a teacher, I need to find teaching resources, lesson plans, and educational videos to enhance my classroom instruction and provide quality education to my students.
    - **File:** `web_app/templates/teacher_resources.html`
 
 3. **Parents:**
+
    - **User Story:** As a parent, I want to monitor my child's learning progress, track their reading habits, and recommend suitable books to help them excel academically.
    - **File:** `web_app/templates/parent_dashboard.html`
 
 4. **School Administrators:**
+
    - **User Story:** As a school administrator, I need access to statistical reports, user activity logs, and usage analytics to evaluate the impact of the e-library on student performance and engagement.
    - **File:** `web_app/templates/admin_dashboard.html`
 

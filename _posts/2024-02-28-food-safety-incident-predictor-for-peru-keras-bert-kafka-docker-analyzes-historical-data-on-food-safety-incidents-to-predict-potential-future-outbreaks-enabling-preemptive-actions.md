@@ -8,25 +8,29 @@ layout: article
 ## AI Food Safety Incident Predictor for Peru
 
 ## Objectives:
+
 - Analyze historical data on food safety incidents to predict potential future outbreaks
 - Enable preemptive actions to mitigate risks and ensure safer food consumption
 - Develop a scalable and data-intensive system architecture leveraging AI technologies
 
 ## System Design Strategies:
+
 1. Data Collection:
    - Gather historical data on food safety incidents in Peru
    - Include various data sources such as government reports, industry databases, and news articles
-   
 2. Data Preprocessing:
+
    - Clean and preprocess the data to ensure quality and consistency
    - Extract relevant features and labels for training the AI models
 
 3. Model Development:
+
    - Utilize Keras for building deep learning models for predicting food safety incidents
    - Integrate BERT (Bidirectional Encoder Representations from Transformers) for natural language processing tasks such as text classification
    - Fine-tune BERT on domain-specific data to enhance prediction accuracy
 
 4. System Integration:
+
    - Implement Kafka for real-time data streaming and processing
    - Ensure seamless communication between components for efficient data flow
    - Containerize the application using Docker for easy deployment and scalability
@@ -36,6 +40,7 @@ layout: article
    - Provide actionable insights to stakeholders for preemptive actions
 
 ## Chosen Libraries:
+
 - **Keras**: For building and training deep learning models with ease
 - **BERT**: For natural language processing tasks and enhancing text classification accuracy
 - **Kafka**: For real-time data streaming and processing capabilities
@@ -46,33 +51,40 @@ By following these system design strategies and utilizing the chosen libraries, 
 ## MLOps Infrastructure for the Food Safety Incident Predictor for Peru
 
 ## Components:
+
 1. **Data Pipeline**:
+
    - Ingest historical data on food safety incidents from various sources
    - Preprocess and clean data for model training
    - Store processed data in a scalable and reliable data storage system (e.g., Data Lake)
 
 2. **Model Training and Deployment**:
+
    - Utilize Keras and BERT for building and training deep learning models
    - Implement training workflows using tools like TensorFlow Extended (TFX) or Kubeflow
    - Version models using a model registry (e.g., MLflow)
    - Deploy trained models as REST APIs using frameworks like TensorFlow Serving or FastAPI
 
 3. **Real-Time Data Processing**:
+
    - Integrate Kafka for real-time data streaming of new food safety incident data
    - Ensure seamless communication between data pipeline and model deployment components
    - Process incoming data streams in real-time to feed into the predictive models
 
 4. **Monitoring and Logging**:
+
    - Implement monitoring tools to track model performance and data quality
    - Utilize logging frameworks to capture errors, warnings, and informational messages
    - Set up alerting mechanisms for abnormal model behavior or data issues
 
 5. **Scalability and Containerization**:
+
    - Containerize all components using Docker for easy deployment and reproducibility
    - Orchestrate containers using Kubernetes for scalability and resource management
    - Utilize cloud services like Amazon ECS or Google Kubernetes Engine for managing containerized applications
 
 6. **Model Evaluation and Feedback Loop**:
+
    - Evaluate model performance using metrics relevant to food safety incident prediction
    - Implement A/B testing to compare model versions and performance
    - Gather feedback from stakeholders and incorporate it into model updates
@@ -116,7 +128,7 @@ food_safety_predictor_peru/
 │
 ├── requirements.txt        ## File listing all the required Python dependencies
 ├── README.md               ## Project documentation and instructions
-``` 
+```
 
 In this scalable file structure for the Food Safety Incident Predictor for Peru, the repository is organized into several directories for data, models, infrastructure, source code, notebooks, configuration files, and documentation. This structure ensures modularity, easy navigation, and efficient management of resources for the project.
 
@@ -138,6 +150,7 @@ models/
 In the `models` directory of the Food Safety Incident Predictor for Peru project, there are subdirectories for the Keras deep learning model and the BERT model used for predicting food safety incidents. Here is a breakdown of the files and folders within the `models` directory:
 
 - **keras_model/**
+
   - **keras_food_safety_model.h5**: This file contains the trained Keras deep learning model specifically designed for predicting food safety incidents based on historical data. It can be loaded for inference and deployment in the application.
   - **keras_model_evaluation.ipynb**: This Jupyter notebook is used for evaluating and testing the performance of the Keras model. It includes various analysis and metrics to assess the model's effectiveness.
 
@@ -170,10 +183,9 @@ In the `deployment` directory of the Food Safety Incident Predictor for Peru pro
 - **deployment_config.yml**: Configuration file that stores environment variables, settings, and parameters relevant to the deployment of the application. It may include details such as API endpoints, Kafka configuration, model paths, and other deployment-specific information.
 
 - **scripts/**:
+
   - **start_services.sh**: Bash script for starting up all the necessary services and components of the application. It may include commands to launch Docker containers, initiate data processing pipelines, and set up communication channels.
-  
   - **deploy_model.sh**: Script for deploying the trained Keras and BERT models as REST APIs. It can include commands to load the models, start the server, and expose the APIs for predictions.
-  
   - **monitor_system.sh**: Script for monitoring the deployed system and tracking performance metrics. It may include commands to check the status of services, log data, and generate performance reports.
 
 These deployment files and scripts in the `deployment` directory provide the infrastructure and automation needed to effectively deploy, run, and maintain the Food Safety Incident Predictor application, ensuring scalability and efficiency in analyzing historical data on food safety incidents and predicting potential future outbreaks.
@@ -298,6 +310,7 @@ This script showcases a more sophisticated machine learning algorithm incorporat
 ## Type of Users for Food Safety Incident Predictor for Peru:
 
 ### 1. Food Safety Regulators
+
 **User Story:**  
 As a Food Safety Regulator, I need to utilize the Food Safety Incident Predictor to analyze historical data on food safety incidents in Peru and predict potential future outbreaks. This allows me to take preemptive actions to prevent foodborne illnesses and ensure public safety.
 
@@ -305,6 +318,7 @@ As a Food Safety Regulator, I need to utilize the Food Safety Incident Predictor
 The `train_model.py` file will be used to train the models based on historical data and the `complex_ml_algorithm.py` file will be used to implement more complex machine learning algorithms for accurate predictions.
 
 ### 2. Food Industry Professionals
+
 **User Story:**  
 As a Food Industry Professional, I want to leverage the Food Safety Incident Predictor to identify trends in food safety incidents and proactively enhance our food safety protocols. This assists us in maintaining high standards of food quality and safety.
 
@@ -312,6 +326,7 @@ As a Food Industry Professional, I want to leverage the Food Safety Incident Pre
 The `deployment/docker-compose.yml` file will facilitate the deployment of the application, allowing Food Industry Professionals to access and utilize the prediction system seamlessly.
 
 ### 3. Public Health Officials
+
 **User Story:**  
 As a Public Health Official, I aim to utilize the Food Safety Incident Predictor to monitor and analyze food safety incidents in Peru. By predicting future outbreaks, I can collaborate with relevant authorities to implement preventive measures and safeguard public health.
 
@@ -319,6 +334,7 @@ As a Public Health Official, I aim to utilize the Food Safety Incident Predictor
 The `models/bert_model/bert_model_evaluation.ipynb` notebook will help in evaluating and testing the BERT model used for NLP tasks related to food safety incident prediction, enabling Public Health Officials to assess the model's performance.
 
 ### 4. Data Scientists and AI Engineers
+
 **User Story:**  
 As a Data Scientist or AI Engineer, I need to work on improving the predictive models and optimizing the AI algorithms used in the Food Safety Incident Predictor application. This involves training, tuning, and deploying machine learning models efficiently.
 

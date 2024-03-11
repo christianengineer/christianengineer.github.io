@@ -6,10 +6,12 @@ layout: article
 ---
 
 ## Objectives:
+
 - Deploy an ML model using AWS Lambda for serverless execution to achieve scalability, cost-efficiency, and ease of management.
 - Leverage Serverless architecture to handle unpredictable workloads and minimize operational complexity.
 
 ## System Design Strategies:
+
 1. **Model Packaging**: Preparing the ML model for deployment by packaging it with its dependencies and creating an inference interface.
 2. **Serverless Deployment**: Utilizing AWS Lambda for running the inference code as a serverless function triggered by HTTP requests or other events.
 3. **Scalability**: Ensuring that the system can handle varying loads by leveraging the auto-scaling capabilities of Lambda.
@@ -17,6 +19,7 @@ layout: article
 5. **Security and Monitoring**: Implementing security best practices and setting up monitoring and logging for the deployed model.
 
 ## Chosen Libraries and Tools:
+
 - **AWS Lambda**: Serverless compute service for running code in response to triggers, such as HTTP requests or changes to data in S3.
 - **AWS API Gateway**: To provide a HTTP endpoint to trigger the Lambda function.
 - **AWS S3**: Storage for the ML model artifact and any related data.
@@ -24,6 +27,7 @@ layout: article
 - **Python and Libraries**: Utilizing Python for writing the inference code and leveraging libraries such as NumPy, Pandas, and Scikit-learn for model inference and data manipulation.
 
 ## Next Steps:
+
 1. Prepare the ML model for deployment by packaging it with its dependencies and exposing an inference interface.
 2. Create an AWS Lambda function and trigger it with AWS API Gateway to handle incoming HTTP requests for model inference.
 3. Configure the necessary permissions using AWS IAM to ensure secure access to S3 storage and other resources.
@@ -33,32 +37,39 @@ layout: article
 ### Infrastructure for Serverless ML Model Deployment with AWS Lambda
 
 1. **AWS Lambda Function**:
+
    - The core of the infrastructure is an AWS Lambda function responsible for executing the machine learning model inference code.
    - The function is triggered by HTTP requests via AWS API Gateway or other event sources such as S3 object creations or database updates.
    - It is configured to receive input data, process it through the ML model, and return the inference results.
 
 2. **Machine Learning Model Artifact**:
+
    - The trained machine learning model artifact (e.g., serialized model files) is stored in Amazon S3, which acts as a central repository for the model and related data.
    - The Lambda function retrieves the model artifact from S3 at runtime to perform inference on new input data.
 
 3. **AWS API Gateway**:
+
    - To provide a secure HTTP endpoint for triggering the Lambda function, the AWS API Gateway is utilized.
    - It manages the API requests, authorizes access, and forwards the requests to the Lambda function for processing.
 
 4. **AWS IAM Roles and Policies**:
+
    - IAM roles and policies are used to provide the necessary permissions and secure access to the S3 bucket storing the model artifact, as well as to define the permissions needed for the Lambda function to execute and interact with other AWS services.
 
 5. **Logging and Monitoring**:
+
    - AWS CloudWatch is employed to monitor and log the Lambda function's performance, providing insights into execution duration, errors, and resource usage.
    - CloudWatch Alarms can be set up to trigger notifications based on specific metrics and thresholds, ensuring proactive management of the application's health.
 
 6. **VPC Integration (Optional)**:
+
    - If the ML application requires access to resources in a Virtual Private Cloud (VPC), the Lambda function can be integrated with the VPC, allowing it to securely communicate with VPC-based resources.
 
 7. **Security Measures**:
    - Security best practices, such as encryption of data at rest and in transit, use of AWS Key Management Service (KMS) for managing encryption keys, and implementing AWS WAF (Web Application Firewall) for protecting API Gateway from common web exploits.
 
 ### Benefits of the Infrastructure:
+
 - **Scalability**: The serverless nature of AWS Lambda enables automatic scaling based on the incoming request volume, ensuring the application can handle varying workloads seamlessly.
 - **Cost-Efficiency**: With Lambda, you only pay for the compute time consumed during inference, eliminating the need to manage and pay for idle resources.
 - **Simplicity**: The serverless approach reduces operational complexities, allowing the focus to remain on the ML model and application logic rather than infrastructure management.
@@ -103,6 +114,7 @@ serverless-ml-deployment/
 ```
 
 In this file structure:
+
 - The `model/` directory contains the trained ML model artifact, its dependencies in requirements.txt, and the inference.py file for performing model inference.
 - The `lambda/` directory houses the AWS Lambda function code, along with utility functions and a directory for unit tests.
 - The `infrastructure/` directory includes configurations for the serverless framework, Cloudformation templates, and instructions for deploying the infrastructure.
@@ -129,6 +141,7 @@ model/
 - **trained_model.pkl**: This file contains the serialized trained machine learning model artifact. Depending on the specific model and its requirements, the file format may vary (e.g., .pkl for Scikit-learn, .h5 for Keras/TF, etc.). This file is the core component of the ML model and is used by the inference code to make predictions on new input data.
 
 - **requirements.txt**: This file lists the Python dependencies required for running the model inference code. It typically includes the necessary libraries, such as NumPy, Pandas, Scikit-learn, or any other libraries used for model inference. An example content might be:
+
   ```plaintext
   numpy==1.20.3
   pandas==1.3.2
@@ -136,6 +149,7 @@ model/
   ```
 
 - **inference.py**: This file contains the code for performing model inference using the trained model artifact. It includes functions or classes that take input data, preprocess it if necessary, load the trained model, and generate predictions. The inference code may also handle post-processing or formatting of the prediction results before returning them. Here's an example structure of the `inference.py` file:
+
   ```python
   import numpy as np
   import pandas as pd
@@ -212,10 +226,10 @@ def generate_mock_data():
 def perform_inference():
     ## Load the trained model
     model = load_model(MODEL_FILE_PATH)
-    
+
     ## Generate mock data for inference
     input_data = generate_mock_data()
-    
+
     ## Perform model inference
     predictions = model.predict(input_data)
     return predictions
@@ -231,6 +245,7 @@ def lambda_handler(event, context):
 ```
 
 In this example:
+
 - The `load_model` function loads the serialized trained model artifact using joblib.
 - The `generate_mock_data` function creates mock input data for the model inference. In a real application, this data would be received as input to the Lambda function.
 - The `perform_inference` function loads the trained model and performs inference on the mock data.
@@ -264,10 +279,10 @@ def generate_mock_data():
 def perform_inference():
     ## Load the trained model
     model = load_model(MODEL_FILE_PATH)
-    
+
     ## Generate mock data for inference
     input_data = generate_mock_data()
-    
+
     ## Perform model inference
     predictions = model.predict(input_data)
     return predictions
@@ -283,6 +298,7 @@ def lambda_handler(event, context):
 ```
 
 In this example:
+
 - The `load_model` function loads the serialized trained deep learning model artifact using Keras' `load_model` function.
 - The `generate_mock_data` function creates mock input data for the model inference. In a real application, this data would be received as input to the Lambda function.
 - The `perform_inference` function loads the trained model and performs inference on the mock data.
@@ -293,23 +309,27 @@ Please replace `/path/to/trained_model.h5` with the actual file path where the t
 ### Types of Users for the Serverless ML Model Deployment Application
 
 1. **Data Scientist / Machine Learning Engineer**
-   - *User Story*: As a Data Scientist, I want to deploy and serve my trained machine learning models as serverless APIs to enable real-time predictions for my applications without needing to manage the infrastructure.
-   - *File*: They would primarily interact with the `model/` directory, especially the `trained_model.pkl`, which contains the serialized trained ML model artifact, and the `inference.py` file, which contains the code to perform model inference.
+
+   - _User Story_: As a Data Scientist, I want to deploy and serve my trained machine learning models as serverless APIs to enable real-time predictions for my applications without needing to manage the infrastructure.
+   - _File_: They would primarily interact with the `model/` directory, especially the `trained_model.pkl`, which contains the serialized trained ML model artifact, and the `inference.py` file, which contains the code to perform model inference.
 
 2. **Backend Developer**
-   - *User Story*: As a Backend Developer, I want to integrate the deployed ML model into our existing microservices architecture, so that other services can consume the predictions for specific tasks.
-   - *File*: They would be interested in the `lambda/` directory, particularly the `lambda_function.py`, which contains the AWS Lambda function code and the `utils.py` for any utility functions that may be used by the Lambda function.
+
+   - _User Story_: As a Backend Developer, I want to integrate the deployed ML model into our existing microservices architecture, so that other services can consume the predictions for specific tasks.
+   - _File_: They would be interested in the `lambda/` directory, particularly the `lambda_function.py`, which contains the AWS Lambda function code and the `utils.py` for any utility functions that may be used by the Lambda function.
 
 3. **DevOps Engineer**
-   - *User Story*: As a DevOps Engineer, I need to deploy and manage the AWS infrastructure for running the serverless ML models, ensuring scalability, security, and cost-efficiency.
-   - *File*: They would be interested in the `infrastructure/` directory, specifically the `serverless.yml` file for configuring the serverless framework and `cloudformation/` for any Cloudformation templates used for infrastructure provisioning.
+
+   - _User Story_: As a DevOps Engineer, I need to deploy and manage the AWS infrastructure for running the serverless ML models, ensuring scalability, security, and cost-efficiency.
+   - _File_: They would be interested in the `infrastructure/` directory, specifically the `serverless.yml` file for configuring the serverless framework and `cloudformation/` for any Cloudformation templates used for infrastructure provisioning.
 
 4. **Frontend Developer**
-   - *User Story*: As a Frontend Developer, I need to obtain the API endpoint and documentation for the ML model in order to make HTTP requests and integrate the predictions into the user interface.
-   - *File*: They would be interested in the `api_gateway/` directory, particularly the `api_definition.yaml` file that contains the OpenAPI definition for the API Gateway, and the SDKs for consuming the API.
+
+   - _User Story_: As a Frontend Developer, I need to obtain the API endpoint and documentation for the ML model in order to make HTTP requests and integrate the predictions into the user interface.
+   - _File_: They would be interested in the `api_gateway/` directory, particularly the `api_definition.yaml` file that contains the OpenAPI definition for the API Gateway, and the SDKs for consuming the API.
 
 5. **Data Engineer**
-   - *User Story*: As a Data Engineer, I want to ensure that the data pipelines and data preprocessing practices align with the requirements of the deployed ML model, facilitating smooth integration.
-   - *File*: They may interact with the `model/` directory, especially the `requirements.txt` file that lists the Python dependencies for running the model inference code, alongside the `inference.py` for understanding the data preprocessing and feature engineering required.
+   - _User Story_: As a Data Engineer, I want to ensure that the data pipelines and data preprocessing practices align with the requirements of the deployed ML model, facilitating smooth integration.
+   - _File_: They may interact with the `model/` directory, especially the `requirements.txt` file that lists the Python dependencies for running the model inference code, alongside the `inference.py` for understanding the data preprocessing and feature engineering required.
 
 Each type of user interacts with different aspects of the application by engaging with specific files and directories within the project repository, aligning with their respective roles and responsibilities.

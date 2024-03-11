@@ -6,6 +6,7 @@ layout: article
 ---
 
 ## Objectives of the Repository
+
 The AI Automated Anomaly Detection in Financial Transactions repository aims to build a scalable and data-intensive system for detecting anomalies and potential fraud in financial transactions using machine learning. The key objectives include:
 
 1. Implementing an efficient anomaly detection model using Keras, a high-level neural networks API.
@@ -13,6 +14,7 @@ The AI Automated Anomaly Detection in Financial Transactions repository aims to 
 3. Utilizing Prometheus, a monitoring and alerting toolkit, for tracking the performance and health of the anomaly detection system.
 
 ## System Design Strategies
+
 To achieve the objectives, the following system design strategies can be employed:
 
 1. **Scalable Data Ingestion:** Use Kafka for real-time ingestion of financial transaction data. Kafka's distributed nature allows for horizontal scaling to handle large volumes of data efficiently.
@@ -21,6 +23,7 @@ To achieve the objectives, the following system design strategies can be employe
 4. **Monitoring and Alerting:** Integrate Prometheus for monitoring the performance metrics of the system, enabling proactive identification of issues and anomalies in the anomaly detection process.
 
 ## Chosen Libraries
+
 The following libraries have been selected for their suitability in achieving the objectives of the repository:
 
 1. **Keras:** A high-level neural networks API, offering ease of use, modularity, and extensibility for building complex deep learning models efficiently.
@@ -109,6 +112,7 @@ models/
 ```
 
 ### `anomaly_detection_model.py`
+
 This file contains the implementation of the anomaly detection model using Keras. It includes the following components:
 
 - Model Architecture: Definition of the neural network architecture for anomaly detection, specifying the input layer, hidden layers, and output layer using Keras' sequential or functional API.
@@ -146,6 +150,7 @@ def load_model(model_path):
 ```
 
 ### `preprocessing.py`
+
 This file contains functions for data preprocessing and feature engineering required before model training. It includes:
 
 - Data Cleaning: Functions for handling missing values, outliers, and data imputation.
@@ -190,6 +195,7 @@ deployment/
 ```
 
 ### `mlops_pipeline.yaml`
+
 This file contains the configuration for the CI/CD (Continuous Integration/Continuous Deployment) pipeline responsible for automating the model training, testing, and deployment process. It includes the definition of the steps, triggers, and integrations required to orchestrate the end-to-end pipeline for the anomaly detection model.
 
 ```yaml
@@ -210,6 +216,7 @@ pipeline:
 ```
 
 ### `kafka_config.json`
+
 This JSON file contains the configuration settings for integrating the application with Kafka, the distributed streaming platform. It includes details such as Kafka broker endpoints, topics for data ingestion, consumer group settings, and security configurations if applicable.
 
 ```json
@@ -221,25 +228,27 @@ This JSON file contains the configuration settings for integrating the applicati
 ```
 
 ### `prometheus_alert_rules.yaml`
+
 This YAML file specifies the alert rules and conditions that will trigger alerts in Prometheus based on the metrics and thresholds defined for the anomaly detection system. It includes rules for detecting anomalies, model performance degradation, or infrastructure issues that may impact the fraud prevention application.
 
 ```yaml
 ## Sample structure of prometheus_alert_rules.yaml
 
 groups:
-- name: anomaly_detection_alerts
-  rules:
-  - alert: AnomalyDetected
-    expr: anomaly_detection_score > 0.9
-    for: 1m
-    labels:
-      severity: critical
-    annotations:
-      summary: "Anomaly detected in financial transactions"
-      description: "Potential fraudulent activity detected"
+  - name: anomaly_detection_alerts
+    rules:
+      - alert: AnomalyDetected
+        expr: anomaly_detection_score > 0.9
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Anomaly detected in financial transactions"
+          description: "Potential fraudulent activity detected"
 ```
 
 ### `deploy_scripts/`
+
 This directory contains deployment scripts and code for integrating with Kafka and Prometheus. The scripts may include functionality for deploying the trained anomaly detection model, setting up data ingestion from Kafka, and configuring alerting rules in Prometheus.
 
 ```python
@@ -283,7 +292,7 @@ data = pd.read_csv(data_path)
 
 ## Perform data preprocessing
 ## For the purpose of this example, assume that data preprocessing includes feature engineering and normalization
-## Example: 
+## Example:
 ## data = perform_feature_engineering(data)
 ## ...
 
@@ -341,7 +350,7 @@ data = pd.read_csv(data_path)
 
 ## Perform data preprocessing
 ## For the purpose of this example, assume that data preprocessing includes feature engineering and normalization
-## Example: 
+## Example:
 ## data = perform_feature_engineering(data)
 ## ...
 
@@ -389,22 +398,27 @@ Remember to replace `"path_to_mock_data/financial_transactions.csv"` with the ac
 ### Types of Users for the Automated Anomaly Detection Application
 
 #### 1. Data Scientist:
+
 - **User Story**: As a data scientist, I want to develop and train anomaly detection models using different machine learning algorithms and evaluate their performance with mock data.
 - **Associated File**: The file `complex_ml_algorithm.py` located in the `src/models` directory accomplishes this user story by implementing a complex machine learning algorithm for anomaly detection using Keras and TensorFlow with mock data.
 
 #### 2. Machine Learning Engineer:
+
 - **User Story**: As a machine learning engineer, I want to orchestrate the end-to-end training pipeline for the anomaly detection model, including feature engineering, data preprocessing, model training, and deployment, while leveraging mock data to test the process.
 - **Associated File**: The file `train_model.py` located in the `src` directory accomplishes this user story by performing the training of the anomaly detection model using Keras with mock data.
 
 #### 3. DevOps Engineer:
+
 - **User Story**: As a DevOps engineer, I want to set up and configure the MLOps pipeline for training, testing, and deploying the anomaly detection model with mock data, ensuring the seamless integration of the model with Kafka and Prometheus for real-time data processing and monitoring.
 - **Associated Configuration Files and Scripts**: The `mlops_pipeline.yaml`, `kafka_config.json`, `prometheus_alert_rules.yaml` files, and the scripts within the `deploy_scripts` directory located in the `deployment` directory accomplish this user story by defining the CI/CD pipeline configuration, Kafka integration, and Prometheus alert rules setup.
 
 #### 4. Application Support Specialist:
+
 - **User Story**: As an application support specialist, I want to understand the overall system design and architecture of the anomaly detection application, including the integration with Kafka for real-time data processing and Prometheus for monitoring, in order to provide effective support and troubleshooting.
 - **Associated Documentation**: The `design.md` and `architecture.md` files located in the `docs` directory provide detailed documentation about the system design and MLOps infrastructure, enabling the support specialist to grasp the overall architecture.
 
 #### 5. Business Analyst:
+
 - **User Story**: As a business analyst, I want to comprehend the functionality and capabilities of the anomaly detection system to facilitate better decision-making, risk management, and compliance oversight.
 - **Associated User Guide**: The `user_guide.md` file located in the `docs` directory serves as a comprehensive user guide for the application, providing insights into the functionalities and capabilities of the anomaly detection system, thus enabling the business analyst to understand its potential impact on decision-making processes.
 

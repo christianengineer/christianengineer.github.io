@@ -305,6 +305,7 @@ def train_anomaly_detection_model(data_file_path):
 ```
 
 In this function:
+
 - The `train_anomaly_detection_model` function takes a file path as an input, assuming the file contains mock sensor data for training the anomaly detection model.
 - It loads the mock sensor data using pandas, splits the data into training and testing sets, and then trains a random forest classifier using the training data.
 - The trained model and a classification report based on the testing data are returned.
@@ -347,6 +348,7 @@ def train_activity_recognition_model(data_file_path):
 ```
 
 In this function:
+
 - The `train_activity_recognition_model` function takes a file path as an input, assuming the file contains mock sensor data for training the activity recognition model.
 - It loads the mock sensor data using pandas, preprocesses the data and organizes it in a format suitable for input to an LSTM-based deep learning model.
 - The function then splits the data into training and testing sets, defines a LSTM-based deep learning model using TensorFlow/Keras, compiles the model with appropriate loss function and optimizer, and then trains the model using the training data.
@@ -358,23 +360,27 @@ Note: In a real-world scenario, you would replace the mock data with real sensor
 **Types of Users and User Stories**
 
 1. **Homeowners**
-   - *User Story*: As a homeowner, I want to be able to easily control and monitor various smart home devices, such as thermostats, lights, and security cameras, from a centralized user interface, allowing me to efficiently manage my home environment and ensure security.
-   - *File*: The frontend component files, such as components/HomeDashboard.js and components/DeviceControl.js, will provide the user interface for homeowners to control and monitor their smart home devices.
+
+   - _User Story_: As a homeowner, I want to be able to easily control and monitor various smart home devices, such as thermostats, lights, and security cameras, from a centralized user interface, allowing me to efficiently manage my home environment and ensure security.
+   - _File_: The frontend component files, such as components/HomeDashboard.js and components/DeviceControl.js, will provide the user interface for homeowners to control and monitor their smart home devices.
 
 2. **Guests**
-   - *User Story*: As a guest in a smart home, I want to have temporary access to some smart home functionalities, such as pre-defined lighting and temperature adjustments, for the duration of my stay, without compromising the homeowner's privacy and security settings.
-   - *File*: The backend API files, such as controllers/GuestAccessController.js, will handle the temporary access permissions for guests and provide limited control over certain smart home functionalities.
+
+   - _User Story_: As a guest in a smart home, I want to have temporary access to some smart home functionalities, such as pre-defined lighting and temperature adjustments, for the duration of my stay, without compromising the homeowner's privacy and security settings.
+   - _File_: The backend API files, such as controllers/GuestAccessController.js, will handle the temporary access permissions for guests and provide limited control over certain smart home functionalities.
 
 3. **Maintenance Personnel**
-   - *User Story*: As a maintenance personnel, I want access to smart home system diagnostics and predictive maintenance reports, which provide insights into the health and performance of various smart home devices, enabling proactive maintenance and troubleshooting.
-   - *File*: The backend services and models files, such as services/DiagnosticsService.js and models/PredictiveMaintenanceModel.py, will be responsible for providing access to diagnostic reports and predictive maintenance insights.
+
+   - _User Story_: As a maintenance personnel, I want access to smart home system diagnostics and predictive maintenance reports, which provide insights into the health and performance of various smart home devices, enabling proactive maintenance and troubleshooting.
+   - _File_: The backend services and models files, such as services/DiagnosticsService.js and models/PredictiveMaintenanceModel.py, will be responsible for providing access to diagnostic reports and predictive maintenance insights.
 
 4. **Security Personnel**
-   - *User Story*: As a security personnel, I want to receive real-time alerts and notifications about any security breaches or anomalies detected by the smart home surveillance and security systems, allowing me to take immediate action to ensure the safety and security of the premises.
-   - *File*: The backend services and models files, such as services/SecurityAlertService.js and models/AnomalyDetectionModel.py, will handle the real-time detection of security anomalies and the generation of alerts for security personnel.
+
+   - _User Story_: As a security personnel, I want to receive real-time alerts and notifications about any security breaches or anomalies detected by the smart home surveillance and security systems, allowing me to take immediate action to ensure the safety and security of the premises.
+   - _File_: The backend services and models files, such as services/SecurityAlertService.js and models/AnomalyDetectionModel.py, will handle the real-time detection of security anomalies and the generation of alerts for security personnel.
 
 5. **System Administrators**
-   - *User Story*: As a system administrator, I want to have access to user management functionalities, system configuration settings, and the ability to perform system-wide updates and maintenance tasks, ensuring the smooth operation and security of the smart home system.
-   - *File*: The backend controller files, such as controllers/UserManagementController.js and controllers/SystemConfigurationController.js, will provide the functionality for system administrators to manage users and configure system-wide settings.
+   - _User Story_: As a system administrator, I want to have access to user management functionalities, system configuration settings, and the ability to perform system-wide updates and maintenance tasks, ensuring the smooth operation and security of the smart home system.
+   - _File_: The backend controller files, such as controllers/UserManagementController.js and controllers/SystemConfigurationController.js, will provide the functionality for system administrators to manage users and configure system-wide settings.
 
 These user stories can be implemented across various frontend, backend, and microservices components of the AI HomeSmart AI for Smart Homes application to cater to the diverse needs and roles of the users involved in utilizing and managing the smart home system.

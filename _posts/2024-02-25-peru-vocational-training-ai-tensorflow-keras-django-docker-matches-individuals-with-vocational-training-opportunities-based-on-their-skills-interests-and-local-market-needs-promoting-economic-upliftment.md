@@ -12,56 +12,53 @@ The main objective of the AI Peru Vocational Training project is to match indivi
 ## System Design Strategies
 
 1. **Data Collection**: Gather data on individual skills and interests, as well as information on vocational training programs and local market needs.
-    
 2. **Data Processing**: Preprocess and clean the data to prepare it for analysis and model training.
-    
 3. **Machine Learning Models**: Develop machine learning models using TensorFlow and Keras to analyze the data and generate recommendations based on individual profiles and market demands.
-    
 4. **User Interface**: Build a user interface using Django to allow users to input their information and view personalized recommendations.
-    
 5. **Scalability**: Design the system to handle a large number of users and data points by leveraging containerization with Docker for efficient deployment and scaling.
-    
 6. **Performance Optimization**: Implement strategies to optimize the performance of the machine learning models and data processing pipelines for real-time recommendations.
-    
 7. **Feedback Loop**: Incorporate a feedback loop mechanism to continuously improve the recommendations based on user feedback and outcomes of the recommended training programs.
 
 ## Chosen Libraries
 
 1. **TensorFlow**: TensorFlow will be used for developing and training the machine learning models for analyzing skills, interests, and market demand data.
-    
 2. **Keras**: Keras, as a high-level API built on top of TensorFlow, will simplify the design and training of neural networks for the recommendation system.
-    
 3. **Django**: Django will be used for building the web application and user interface, enabling users to interact with the system and receive personalized recommendations.
-    
 4. **Docker**: Docker will be used for containerizing the application, allowing for easy deployment and scaling of the system to handle varying user loads and data volumes.
 
 ## MLOps Infrastructure for AI Peru Vocational Training Application
 
 ### Continuous Integration/Continuous Deployment (CI/CD) Pipeline
+
 - **Source Code Management**: Utilize Git for version control to track changes to the codebase.
 - **Automated Testing**: Implement unit tests and integration tests to ensure the reliability of the code changes.
 - **CI/CD Orchestration**: Use Jenkins or GitLab CI/CD pipelines to automate the build, test, and deployment processes.
 - **Deployment Automation**: Deploy changes to different environments (e.g., staging, production) using Docker containers for consistency.
 
 ### Model Training and Deployment
+
 - **Model Versioning**: Track different versions of trained models using tools like MLflow or TensorFlow Extended (TFX).
 - **Model Monitoring**: Implement monitoring tools to track model performance metrics in production and detect drift or degradation.
 - **Model Deployment**: Deploy trained models as microservices using Docker containers for scalability and efficiency.
 
 ### Data Pipeline Orchestration
+
 - **Data Processing**: Use Apache Airflow or Prefect for orchestrating data pipelines, including data collection, cleansing, and transformation tasks.
 - **Data Versioning**: Version data sets to ensure reproducibility and consistency in model training.
 - **Data Quality Checks**: Implement data quality checks at each stage of the pipeline to maintain data integrity.
 
 ### Infrastructure Monitoring and Alerting
+
 - **Logging and Monitoring**: Utilize tools like ELK Stack (Elasticsearch, Logstash, Kibana) or Prometheus for logging and monitoring system performance.
 - **Alerting**: Set up alerts to notify the team of any issues or anomalies in the application or infrastructure.
 
 ### Scalability and Resource Management
+
 - **Container Orchestration**: Use Kubernetes for managing and scaling Docker containers efficiently.
 - **Auto-Scaling**: Implement auto-scaling mechanisms to dynamically adjust resources based on the workload.
 
 ### Security and Compliance
+
 - **Data Security**: Encrypt sensitive data at rest and in transit to ensure data privacy.
 - **Access Control**: Implement role-based access control (RBAC) to manage permissions within the system.
 - **Compliance**: Ensure compliance with data protection regulations and industry standards.
@@ -71,6 +68,7 @@ By establishing a robust MLOps infrastructure with these components, the AI Peru
 ## Scalable File Structure for AI Peru Vocational Training Repository
 
 ### Project Structure
+
 - **/app**
   - **/backend**
     - **/src**
@@ -96,6 +94,7 @@ By establishing a robust MLOps infrastructure with these components, the AI Peru
   - Project documentation and instructions for setting up and running the application
 
 ### Backend Structure
+
 - **/src**
   - **/api**
     - API endpoints for interacting with the application
@@ -105,6 +104,7 @@ By establishing a robust MLOps infrastructure with these components, the AI Peru
     - Business logic and services for data processing and recommendation generation
 
 ### Frontend Structure
+
 - **/src**
   - **/components**
     - Reusable components for the user interface
@@ -116,6 +116,7 @@ By establishing a robust MLOps infrastructure with these components, the AI Peru
     - Stylesheets and design assets
 
 ### Data Structure
+
 - **/raw_data**
   - Raw data files collected from various sources
 - **/processed_data**
@@ -126,6 +127,7 @@ By establishing a robust MLOps infrastructure with these components, the AI Peru
   - Scripts for data preprocessing and transformation
 
 ### Model Structure
+
 - **/saved_models**
   - Trained model files and checkpoints
 - **/versioned_models**
@@ -138,30 +140,28 @@ By organizing the AI Peru Vocational Training repository with a clear and scalab
 ## Models Directory Structure for AI Peru Vocational Training Application
 
 ### /models Directory
+
 - **/saved_models**
   - Location for storing serialized trained models ready for deployment.
   - Example: `saved_models/model_name.pkl`, `saved_models/model_name.h5`
-  
 - **/versioned_models**
   - Directory for versioned model files with metadata and training history.
-  - Example: 
+  - Example:
     - `/versioned_models/model_v1`
       - `model.h5`: Main model file
       - `model_metadata.json`: Metadata including model version, training parameters, and evaluation metrics
       - `training_logs.log`: Log file with training history
       - `performance_metrics.txt`: Model evaluation metrics
-  
 - **/model_evaluation**
   - Scripts and files for evaluating model performance and generating metrics.
-  - Example: 
+  - Example:
     - `evaluate_model.py`: Script for evaluating model performance with test data
     - `model_metrics.json`: Performance metrics such as accuracy, precision, recall, and F1-score
 
 ### Explanation
+
 - **/saved_models**: This directory stores the final trained models in a serialized format ready for deployment. These files can be loaded directly for making predictions in the production environment without the need for retraining.
-  
 - **/versioned_models**: Versioned model files are stored here with additional metadata, training history, and evaluation metrics for tracking the evolution of models over time. Each versioned model directory contains the main model file, metadata in a JSON file, training logs, and performance metrics.
-  
 - **/model_evaluation**: This directory includes scripts and files for evaluating the model's performance using test data. It contains a script for running evaluation on the model, generating performance metrics, and storing them in a JSON file for reference.
 
 Having a structured models directory with organized subdirectories and files helps in efficiently managing trained models, tracking versions, evaluating performance, and ensuring reproducibility and transparency in the machine learning lifecycle of the AI Peru Vocational Training application.
@@ -169,30 +169,36 @@ Having a structured models directory with organized subdirectories and files hel
 ## Deployment Directory Structure for AI Peru Vocational Training Application
 
 ### /deployment Directory
+
 - **Dockerfile**
+
   - Configuration file for building a Docker image for the application.
   - Example: `Dockerfile`
 
 - **docker-compose.yml**
+
   - Docker Compose configuration file for defining multi-container application services.
   - Example: `docker-compose.yml`
 
 - **helm-charts**
+
   - Kubernetes Helm charts for deploying the application on a Kubernetes cluster.
   - Example: `helm-charts/vocational-training-app`
 
 - **deployment-scripts**
+
   - Scripts for automating deployment tasks such as building Docker images, pushing to registries, and deploying to servers.
   - Example: `deployment-scripts/deploy.sh`
 
 - **config**
   - Configuration files for different deployment environments like development, staging, and production.
-  - Example: 
+  - Example:
     - `config/development.env`
     - `config/staging.env`
     - `config/production.env`
 
 ### Explanation
+
 - **Dockerfile**: This file contains instructions for building a Docker image that encapsulates the application along with dependencies. It defines the environment and commands needed to run the application in a containerized environment.
 
 - **docker-compose.yml**: Docker Compose configuration file defines services, networks, and volumes needed to run the application in a multi-container setup. It simplifies the deployment process by managing multiple containers as a single application.
@@ -235,6 +241,7 @@ model.save('../saved_models/vocational_training_model.h5')
 ```
 
 ### Explanation:
+
 - This Python script generates mock data for training by creating random features and target arrays.
 - A simple neural network model is defined using Keras with input layer, hidden layers, and output layer.
 - The model is compiled with Adam optimizer and binary crossentropy loss for binary classification.
@@ -277,6 +284,7 @@ print(f"Accuracy of the model: {accuracy}")
 ```
 
 ### Explanation:
+
 - This Python script uses the scikit-learn library to train a Gradient Boosting Classifier model using mock data.
 - Mock data is generated for features and target variables.
 - The data is split into training and testing sets for model evaluation.
@@ -289,33 +297,38 @@ This script demonstrates training a complex machine learning algorithm using a G
 ## Types of Users for Peru Vocational Training AI Application
 
 ### 1. **Individuals Seeking Vocational Training**
-- **User Story**: 
+
+- **User Story**:
   - As a user looking to enhance my skills and find vocational training opportunities, I want to input my skills and interests to receive personalized recommendations for courses that align with my goals and the local market needs.
-- **Associated File**: 
+- **Associated File**:
   - `frontend/components/UserInputForm.vue`: Frontend component allowing users to input their skills and interests.
 
 ### 2. **Vocational Training Providers**
-- **User Story**: 
+
+- **User Story**:
   - As a training provider, I want to access insights into the demand for specific skills in the local market to tailor my course offerings and attract more participants.
-- **Associated File**: 
+- **Associated File**:
   - `backend/services/MarketAnalysisService.py`: Backend service for analyzing local market needs and providing insights to training providers.
 
 ### 3. **Employers and Businesses**
-- **User Story**: 
+
+- **User Story**:
   - As an employer seeking skilled professionals, I want to explore the pool of individuals who have completed vocational training in relevant areas to potentially recruit them for job opportunities.
-- **Associated File**: 
+- **Associated File**:
   - `frontend/pages/RecruitmentPage.vue`: Frontend page displaying profiles of individuals who have completed vocational training.
 
 ### 4. **Government Agencies and Nonprofit Organizations**
-- **User Story**: 
+
+- **User Story**:
   - As a government agency or nonprofit organization focused on economic development, I want to monitor the effectiveness of vocational training programs in uplifting the community and providing opportunities for skill development.
-- **Associated File**: 
+- **Associated File**:
   - `scripts/ImpactAnalysis.py`: Script for analyzing the impact of vocational training programs on economic upliftment.
 
 ### 5. **Data Analysts and Researchers**
-- **User Story**: 
+
+- **User Story**:
   - As a data analyst or researcher, I want to access and analyze the collected data on skills, interests, and training outcomes to identify trends and patterns for further research and insights.
-- **Associated File**: 
+- **Associated File**:
   - `notebooks/DataAnalysis.ipynb`: Jupyter notebook containing analysis of the collected data on vocational training outcomes.
 
 By defining these types of users and their respective user stories, the Peru Vocational Training AI application can cater to a diverse set of stakeholders, including individuals seeking training, vocational training providers, employers, governmental agencies, researchers, and more. Each user story is linked to specific functionalities within the application that are represented by corresponding files in the project structure, facilitating the implementation and fulfillment of user needs.

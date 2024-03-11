@@ -8,9 +8,11 @@ layout: article
 ## AI Refugee Aid Distribution Optimization
 
 ## Objectives
+
 The main objectives of the "AI Refugee Aid Distribution Optimization" project are to effectively and efficiently distribute humanitarian aid to refugees by leveraging machine learning algorithms and data analytics. The specific goals include optimizing the allocation of resources, reducing waste, minimizing transportation costs, and ensuring that aid reaches those in most need in a timely manner.
 
 ## System Design Strategies
+
 To achieve these objectives, we will employ a data-intensive and AI-driven approach that involves the following system design strategies:
 
 1. **Data Collection**: Gather information on refugee camps, population demographics, past aid distribution patterns, transportation infrastructure, and other relevant data sources.
@@ -26,6 +28,7 @@ To achieve these objectives, we will employ a data-intensive and AI-driven appro
 6. **Ethical Considerations**: Ensure that the system's recommendations are fair, unbiased, and considerate of the diverse needs and priorities of refugee populations.
 
 ## Chosen Libraries
+
 For the "AI Refugee Aid Distribution Optimization" system, the following libraries will be utilized:
 
 1. **Scikit-Learn**: This library offers a wide range of machine learning algorithms for classification, regression, clustering, and model selection. It will be used for building predictive models to optimize aid distribution and resource allocation.
@@ -43,11 +46,13 @@ By leveraging these libraries, we aim to build a scalable, data-intensive AI app
 ## MLOps Infrastructure for Refugee Aid Distribution Optimization
 
 ## Introduction
+
 Deploying machine learning models for the "Refugee Aid Distribution Optimization" application involves establishing a robust MLOps (Machine Learning Operations) infrastructure. This infrastructure is crucial for efficiently managing the entire machine learning lifecycle, including model development, training, testing, deployment, monitoring, and maintenance. Here, we'll outline the MLOps infrastructure components tailored for this humanitarian aid application.
 
 ## Components of MLOps Infrastructure
 
 ### 1. Data Pipeline
+
 **Objective**: Acquiring, preprocessing, and feeding data to the training and deployment pipeline.
 
 - **Data Collection**: Implement mechanisms to collect relevant data such as population demographics, aid distribution logs, geographical information, and transportation infrastructure details.
@@ -55,6 +60,7 @@ Deploying machine learning models for the "Refugee Aid Distribution Optimization
 - **Data Preprocessing**: Use tools like Apache Airflow or Prefect for orchestrating data preprocessing tasks, including data cleaning, normalization, and feature engineering.
 
 ### 2. Model Development and Training
+
 **Objective**: Building, training, and validating machine learning models using Scikit-Learn and TensorFlow.
 
 - **Version Control**: Utilize platforms like Git or GitLab for version controlling the machine learning models and associated code to enable collaboration and track changes.
@@ -62,6 +68,7 @@ Deploying machine learning models for the "Refugee Aid Distribution Optimization
 - **Experiment Tracking**: Leverage tools like MLflow or Neptune to track and log experiment parameters, metrics, and artifacts to facilitate model comparison and reproducibility.
 
 ### 3. Model Deployment
+
 **Objective**: Deploying trained models to production environment for inference.
 
 - **Containerization**: Use Docker for packaging the trained models and associated dependencies into containers, ensuring consistency across different environments.
@@ -69,6 +76,7 @@ Deploying machine learning models for the "Refugee Aid Distribution Optimization
 - **Model Serving**: Employ platforms such as TensorFlow Serving or FastAPI for serving machine learning models via RESTful APIs.
 
 ### 4. Monitoring and Governance
+
 **Objective**: Monitoring model performance, ensuring compliance, and managing model versions.
 
 - **Model Monitoring**: Implement monitoring solutions (e.g., Prometheus, Grafana) to observe model performance in production and detect drift or anomalies.
@@ -76,6 +84,7 @@ Deploying machine learning models for the "Refugee Aid Distribution Optimization
 - **Governance and Compliance**: Establish processes for model governance, including versioning, compliance checks, and documentation of model decisions.
 
 ### 5. Feedback loop and Model Maintenance
+
 **Objective**: Incorporating feedback from aid distribution operations and maintaining deployed models.
 
 - **Feedback Integration**: Create mechanisms to collect feedback from aid distribution operations and integrate it into model retraining pipelines.
@@ -83,6 +92,7 @@ Deploying machine learning models for the "Refugee Aid Distribution Optimization
 - **Scheduled Retraining**: Implement scheduled retraining of models to incorporate new data and continuously improve performance. Tools like Kubeflow can help automate this process.
 
 ## Conclusion
+
 By adopting an MLOps infrastructure tailored for the "Refugee Aid Distribution Optimization" application, we can ensure an efficient, scalable, and reliable machine learning system that optimizes the allocation of humanitarian aid to refugee populations. This infrastructure will enable seamless collaboration among data scientists, machine learning engineers, and operations teams while promoting transparency, agility, and best practices in deploying AI-driven solutions for humanitarian aid.
 
 ## Scalable File Structure for Refugee Aid Distribution Optimization Repository
@@ -155,7 +165,6 @@ Each versioned directory within the `models` directory represents a specific tra
 4. **README.md**: This file contains a description and documentation of the trained model, including details on its intended use case, performance characteristics, input/output requirements, and any special considerations for deployment and maintenance. This documentation ensures clarity and consistency in understanding the purpose and usage of each trained model.
 
 By organizing the trained models and associated files within the `models` directory, the project maintains a structured and unified approach to managing machine learning models, streamlining the process of accessing, evaluating, and deploying models within the "Refugee Aid Distribution Optimization" application.
-
 
 The `deployment` directory within the "Refugee Aid Distribution Optimization" application serves as a centralized location for managing deployment-related artifacts and files that are essential for deploying machine learning models for humanitarian aid optimization. Below is an expanded view of the `deployment` directory and its associated files:
 
@@ -278,19 +287,22 @@ The file path for the script would be: `/src/model_training/neural_network_train
 ### Types of Users for the Refugee Aid Distribution Optimization Application
 
 1. **Data Scientists and Machine Learning Engineers**
-   - *User Story*: As a data scientist, I want to explore and preprocess the collected data, train and evaluate machine learning models, and save the trained models for deployment.
-   - *File*: `notebooks/data_exploration.ipynb` for data exploration and `src/model_training/model_training.py` for model training.
+
+   - _User Story_: As a data scientist, I want to explore and preprocess the collected data, train and evaluate machine learning models, and save the trained models for deployment.
+   - _File_: `notebooks/data_exploration.ipynb` for data exploration and `src/model_training/model_training.py` for model training.
 
 2. **Operations Team**
-   - *User Story*: As an operations team member, I want to deploy trained models, monitor model performance, and access model serving configurations.
-   - *File*: `deployment/model_serving/model_server_config.yaml` for model serving configurations, and `deployment/monitoring/monitoring_scripts/monitor_model_performance.sh` for monitoring model performance.
+
+   - _User Story_: As an operations team member, I want to deploy trained models, monitor model performance, and access model serving configurations.
+   - _File_: `deployment/model_serving/model_server_config.yaml` for model serving configurations, and `deployment/monitoring/monitoring_scripts/monitor_model_performance.sh` for monitoring model performance.
 
 3. **Software Developers**
-   - *User Story*: As a software developer, I want to integrate the deployed models into the application's backend/API for aid distribution optimization.
-   - *File*: `src/api/` directory containing API endpoints for model serving.
+
+   - _User Story_: As a software developer, I want to integrate the deployed models into the application's backend/API for aid distribution optimization.
+   - _File_: `src/api/` directory containing API endpoints for model serving.
 
 4. **Project Managers**
-   - *User Story*: As a project manager, I want to access project documentation, technical specifications, and user guides for understanding the application and its deployment process.
-   - *File*: `docs/tech_specs.md` for technical specifications, and `docs/user_guide.md` for user guidance.
+   - _User Story_: As a project manager, I want to access project documentation, technical specifications, and user guides for understanding the application and its deployment process.
+   - _File_: `docs/tech_specs.md` for technical specifications, and `docs/user_guide.md` for user guidance.
 
 By catering to the needs of these distinct user types, the application can effectively support a wide range of stakeholders involved in the deployment, monitoring, integration, and understanding of the Refugee Aid Distribution Optimization system.

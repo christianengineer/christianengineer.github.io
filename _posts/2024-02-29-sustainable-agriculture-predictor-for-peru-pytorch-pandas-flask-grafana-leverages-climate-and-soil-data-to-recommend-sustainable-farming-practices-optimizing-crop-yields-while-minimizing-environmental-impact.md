@@ -8,17 +8,20 @@ layout: article
 ## AI Sustainable Agriculture Predictor for Peru
 
 ### Objectives:
+
 1. **Optimize Crop Yields**: Utilize machine learning to provide recommendations for sustainable farming practices that can optimize crop yields.
 2. **Minimize Environmental Impact**: Recommend practices that not only increase crop yields but also minimize the environmental impact of farming activities.
 3. **Utilize Climate and Soil Data**: Leveraging climate and soil data to make informed predictions and recommendations for farmers in Peru.
 
 ### System Design Strategies:
+
 1. **Data Collection**: Gather climate and soil data from reliable sources and preprocess it for training the machine learning models.
 2. **Machine Learning Models**: Implement machine learning models using PyTorch to analyze the data and provide recommendations for sustainable farming practices.
 3. **API Development**: Build a RESTful API using Flask to allow farmers to access the recommendations easily.
 4. **Data Visualization**: Utilize Grafana to provide visualizations of the data for better understanding and decision-making.
 
 ### Chosen Libraries:
+
 1. **PyTorch**: PyTorch is a popular deep learning library that will be used to build and train the machine learning models for analyzing climate and soil data.
 2. **Pandas**: Pandas will be utilized for data manipulation and preprocessing, making it easier to work with the climate and soil data.
 3. **Flask**: Flask will be used to develop the API through which farmers can interact and receive recommendations from the AI system.
@@ -29,6 +32,7 @@ By leveraging these libraries and following the outlined system design strategie
 ## MLOps Infrastructure for Sustainable Agriculture Predictor for Peru
 
 ### CI/CD Pipeline:
+
 1. **Data Collection and Preprocessing**: Automatic retrieval and preprocessing of climate and soil data using Pandas.
 2. **Model Training**: Automated training of machine learning models using PyTorch based on the updated data.
 3. **Model Evaluation**: Continuous evaluation of model performance using relevant metrics.
@@ -36,16 +40,19 @@ By leveraging these libraries and following the outlined system design strategie
 5. **Monitoring and Logging**: Implement monitoring and logging for tracking model performance in production.
 
 ### Automation and Orchestration:
+
 1. **Containerization**: Dockerize the application components for consistency and portability across environments.
 2. **Orchestration**: Utilize Kubernetes for container orchestration to handle scaling and deployment efficiently.
 3. **Infrastructure as Code**: Use tools like Terraform to define and manage the infrastructure needed for the application.
 
 ### Monitoring and Alerting:
+
 1. **Metrics Monitoring**: Set up monitoring using Grafana to track key metrics such as model accuracy and response times.
 2. **Logging**: Implement centralized logging using tools like ELK stack to aggregate and analyze logs for troubleshooting.
 3. **Alerting**: Set up alerts for critical issues or performance degradation using tools like Prometheus and Grafana.
 
 ### Data Management and Governance:
+
 1. **Data Versioning**: Implement data versioning using tools like DVC to track changes in the dataset over time.
 2. **Data Quality Monitoring**: Set up data pipelines to monitor data quality and ensure consistency.
 3. **Model Governance**: Establish processes for model versioning, tracking changes, and maintaining model performance.
@@ -101,7 +108,6 @@ Sustainable-Agri-Predictor-Peru/
 ### Directory Structure Overview:
 
 1. **data/**: Contains raw and processed data used for training and inference.
-   
 2. **models/**: Holds scripts for model training, evaluation, deployment, and trained model files.
 
 3. **api/**: Houses Flask application for serving the AI models and requirements file for dependencies.
@@ -132,14 +138,17 @@ models/
 ### Files in the `models/` directory:
 
 1. **`model_training.py`**:
+
    - This file contains the code for training machine learning models using PyTorch.
    - It includes functions to load and preprocess the data, define and train the model, and save the trained model.
 
 2. **`model_evaluation.py`**:
+
    - Contains code for evaluating the performance of the trained models.
    - Includes functions to load the trained models, perform evaluation on test data, and generate relevant metrics.
 
 3. **`model_deployment.py`**:
+
    - Code for deploying the trained models as APIs using Flask.
    - Includes functions to load the trained models, define API endpoints for making predictions, and handle model inference.
 
@@ -148,7 +157,8 @@ models/
    - These models are generated after training and evaluation and are used for making predictions in the deployment phase.
 
 ### Functionality of the `models/` directory:
-- **Model Training**: 
+
+- **Model Training**:
   - `model_training.py` is responsible for training machine learning models on climate and soil data to provide recommendations.
 - **Model Evaluation**:
   - `model_evaluation.py` assesses the performance of the trained models before deployment.
@@ -172,10 +182,12 @@ deployment/
 ### Files in the `deployment/` directory:
 
 1. **`app.py`**:
+
    - Flask application file serving as the entry point for the API deployment.
    - Contains API endpoints for receiving input data and providing recommendations based on the trained models.
 
 2. **`requirements.txt`**:
+
    - Lists all the Python dependencies required for the deployment.
    - Including libraries such as Flask, PyTorch, and Pandas necessary for running the application.
 
@@ -184,6 +196,7 @@ deployment/
    - Specifies the base image, environment setup, and commands to run the application inside a container.
 
 ### Functionality of the `deployment/` directory:
+
 - **Flask App**:
   - `app.py` contains the Flask application logic for handling HTTP requests and serving model predictions.
 - **Python Dependencies**:
@@ -192,6 +205,7 @@ deployment/
   - `Dockerfile` provides instructions to build a Docker image for containerizing the application, making it easy to deploy across different environments.
 
 ### Deployment Process:
+
 1. Build Docker image using the `Dockerfile`.
 2. Run the Docker container hosting the Flask application.
 3. API endpoints are accessible for receiving input data and providing sustainable farming recommendations based on the trained models.
@@ -336,23 +350,27 @@ In this file `models/complex_model_training.py`, a complex PyTorch model is trai
 ## Types of Users for the Sustainable Agriculture Predictor for Peru
 
 1. **Farmers in Peru**
-   - *User Story*: As a farmer in Peru, I want to receive data-driven recommendations for sustainable farming practices based on climate and soil data to optimize my crop yields while reducing environmental impact.
-   - *Accomplishing File*: `deployment/app.py` which contains the Flask application serving recommendations.
+
+   - _User Story_: As a farmer in Peru, I want to receive data-driven recommendations for sustainable farming practices based on climate and soil data to optimize my crop yields while reducing environmental impact.
+   - _Accomplishing File_: `deployment/app.py` which contains the Flask application serving recommendations.
 
 2. **Agricultural Scientists**
-   - *User Story*: As an agricultural scientist, I need access to the underlying machine learning model and data visualization tools to analyze trends and patterns in climate and soil data for research purposes.
-   - *Accomplishing File*: `models/complex_model_training.py` for training complex models and `visualization/Grafana_dashboards/` for data visualization.
+
+   - _User Story_: As an agricultural scientist, I need access to the underlying machine learning model and data visualization tools to analyze trends and patterns in climate and soil data for research purposes.
+   - _Accomplishing File_: `models/complex_model_training.py` for training complex models and `visualization/Grafana_dashboards/` for data visualization.
 
 3. **Environmental Activists**
-   - *User Story*: As an environmental activist, I am interested in understanding how sustainable farming practices can help minimize environmental impact. I would like access to environmental impact predictions generated by the application.
-   - *Accomplishing File*: `models/complex_model_training.py` for environmental impact predictions using climate and soil data.
+
+   - _User Story_: As an environmental activist, I am interested in understanding how sustainable farming practices can help minimize environmental impact. I would like access to environmental impact predictions generated by the application.
+   - _Accomplishing File_: `models/complex_model_training.py` for environmental impact predictions using climate and soil data.
 
 4. **Government Agencies**
-   - *User Story*: As a government agency in Peru, we want to leverage the application to provide recommendations to local farmers for sustainable agriculture initiatives that align with national environmental goals.
-   - *Accomplishing File*: `deployment/app.py` for deploying the application and `models/model_training.py` for training machine learning models.
+
+   - _User Story_: As a government agency in Peru, we want to leverage the application to provide recommendations to local farmers for sustainable agriculture initiatives that align with national environmental goals.
+   - _Accomplishing File_: `deployment/app.py` for deploying the application and `models/model_training.py` for training machine learning models.
 
 5. **Non-Profit Organizations**
-   - *User Story*: As a non-profit organization supporting sustainable agriculture efforts, we seek data-driven insights to guide our advocacy and outreach programs in promoting environmentally friendly farming practices.
-   - *Accomplishing File*: `models/model_evaluation.py` for evaluating the model performance and `visualization/Grafana_dashboards/` for generating insights from data visualization.
+   - _User Story_: As a non-profit organization supporting sustainable agriculture efforts, we seek data-driven insights to guide our advocacy and outreach programs in promoting environmentally friendly farming practices.
+   - _Accomplishing File_: `models/model_evaluation.py` for evaluating the model performance and `visualization/Grafana_dashboards/` for generating insights from data visualization.
 
 By catering to these different types of users, the Sustainable Agriculture Predictor for Peru application aims to provide valuable insights and recommendations for sustainable farming practices, ultimately contributing to optimizing crop yields while minimizing environmental impact in the region.

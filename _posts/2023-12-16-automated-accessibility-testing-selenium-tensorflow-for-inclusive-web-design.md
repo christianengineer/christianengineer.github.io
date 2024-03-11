@@ -10,18 +10,21 @@ layout: article
 #### Objectives
 
 The primary objective of the repository is to develop a scalable and data-intensive AI application for automated accessibility testing of web applications. The specific objectives include:
+
 1. Developing an automated testing framework using Selenium for web application interaction.
 2. Leveraging TensorFlow for machine learning-based accessibility testing to identify and categorize accessibility issues.
 3. Ensuring inclusive web design by detecting and addressing accessibility barriers for individuals with disabilities.
 4. Providing a robust and reliable solution for organizations to integrate into their development and testing processes.
 
 #### System Design Strategies
+
 1. **Modular and Extensible Architecture**: Design the system with modular components to allow for easy extensibility and maintenance. This includes separate modules for web interaction using Selenium and accessibility testing using TensorFlow.
 2. **Scalable Data Ingestion and Processing**: Implement efficient data ingestion and processing mechanisms to handle large volumes of web application data and accessibility testing results.
 3. **Containerized Deployment**: Consider using containerization technologies such as Docker to ensure seamless deployment and scalability across different environments.
 4. **Continuous Integration and Deployment (CI/CD)**: Implement CI/CD pipelines to automate testing, deployment, and monitoring of the accessibility testing application.
 
 #### Chosen Libraries and Technologies
+
 1. **Selenium**: Utilize Selenium for web application testing due to its wide adoption, cross-browser support, and rich set of features for automating web interactions.
 2. **TensorFlow**: Leverage TensorFlow for its deep learning capabilities and pre-built models for image recognition and classification, which can be adapted for identifying accessibility issues in web elements.
 3. **Django or Flask**: Use a Python web framework such as Django or Flask to build the backend API and web interface for managing and displaying accessibility testing results.
@@ -32,9 +35,11 @@ By incorporating these objectives, system design strategies, and chosen librarie
 ### MLOps Infrastructure for Automated Accessibility Testing
 
 #### Introduction
+
 MLOps encompasses the practices, tools, and infrastructure required to streamline the development, deployment, and maintenance of machine learning models. In the context of the Automated Accessibility Testing application, the MLOps infrastructure aims to facilitate the seamless integration of machine learning components, such as TensorFlow-based accessibility testing, into the overall development and delivery pipeline.
 
 #### Key Components and Strategies
+
 1. **Data Versioning and Management**: Implement a robust data versioning system to track changes to training and testing datasets. Tools like DVC (Data Version Control) can be employed to version datasets and ensure reproducibility.
 
 2. **Model Training and Experiment Tracking**: Utilize platforms such as MLflow or TensorBoard to manage and track experiments, model training runs, and hyperparameters. This enables the team to effectively monitor model performance and compare different iterations.
@@ -48,9 +53,11 @@ MLOps encompasses the practices, tools, and infrastructure required to streamlin
 6. **Feedback Loop and Model Improvement**: Establish a feedback loop to capture real-world feedback and update models accordingly, ensuring continuous improvement and adaptation to evolving accessibility requirements.
 
 #### Integration with Existing DevOps Practices
+
 The MLOps infrastructure should seamlessly integrate with existing DevOps practices and tooling within the organization. This may include aligning with existing CI/CD pipelines, incorporating version control best practices, and harmonizing deployment processes for both traditional software components and machine learning models.
 
 #### Leveraging Infrastructure as Code
+
 Adopt Infrastructure as Code (IaC) practices to automate the provisioning and configuration of infrastructure components required for machine learning workflows. Tools like Terraform or AWS CloudFormation can be used to define and manage the infrastructure required for training, serving, and monitoring machine learning models.
 
 By implementing these components and strategies, the MLOps infrastructure for the Automated Accessibility Testing application will support the seamless integration, deployment, and management of machine learning components, while aligning with existing DevOps practices and maximizing automation and reproducibility.
@@ -102,7 +109,9 @@ automated-accessibility-testing/
 ```
 
 #### File Structure Explanation
+
 - **app/**: Contains the main application code.
+
   - **api/**: Submodule for API-related functionality.
     - **accessibility_results.py**: Module for handling accessibility testing results.
     - **web_interaction.py**: Module for interacting with web applications using Selenium.
@@ -120,6 +129,7 @@ automated-accessibility-testing/
 - **data/**: Directory for storing training and testing datasets.
 
 - **docker/**: Contains Docker-related files for containerization.
+
   - **Dockerfile**: File defining the Docker image for the application.
   - **requirements.txt**: List of Python dependencies.
   - **docker-compose.yml**: Configuration file for Docker Compose.
@@ -232,6 +242,7 @@ if __name__ == "__main__":
 ```
 
 ### File Path
+
 The `train_model.py` file is located at the following path within the project structure:
 
 ```plaintext
@@ -288,6 +299,7 @@ if __name__ == "__main__":
 ```
 
 ### File Path
+
 The `complex_ml_algorithm.py` file is located at the following path within the project structure:
 
 ```plaintext
@@ -304,23 +316,27 @@ In this example, the script demonstrates the use of mock data for training a com
 ### Types of Users for Automated Accessibility Testing Application
 
 1. **Developers**
-   - *User Story*: As a developer, I want to run automated accessibility tests on web applications to identify and fix accessibility barriers for individuals with disabilities.
-   - *Accomplished by*: The `web_interaction.py` file in the `app/api/` directory allows developers to interact with web applications using Selenium to perform automated accessibility testing.
+
+   - _User Story_: As a developer, I want to run automated accessibility tests on web applications to identify and fix accessibility barriers for individuals with disabilities.
+   - _Accomplished by_: The `web_interaction.py` file in the `app/api/` directory allows developers to interact with web applications using Selenium to perform automated accessibility testing.
 
 2. **Accessibility Testers**
-   - *User Story*: As an accessibility tester, I need to review accessibility testing results and prioritize issues for resolution.
-   - *Accomplished by*: The `accessibility_results.py` file in the `app/api/` directory provides functionality for reviewing and managing accessibility testing results.
+
+   - _User Story_: As an accessibility tester, I need to review accessibility testing results and prioritize issues for resolution.
+   - _Accomplished by_: The `accessibility_results.py` file in the `app/api/` directory provides functionality for reviewing and managing accessibility testing results.
 
 3. **Data Scientists/ML Engineers**
-   - *User Story*: As a data scientist or ML engineer, I want to train and optimize the machine learning model for detecting accessibility issues.
-   - *Accomplished by*: The `train_model.py` file in the `models/` directory facilitates the training and optimization of the machine learning model using TensorFlow, allowing data scientists and ML engineers to iterate on model improvements.
+
+   - _User Story_: As a data scientist or ML engineer, I want to train and optimize the machine learning model for detecting accessibility issues.
+   - _Accomplished by_: The `train_model.py` file in the `models/` directory facilitates the training and optimization of the machine learning model using TensorFlow, allowing data scientists and ML engineers to iterate on model improvements.
 
 4. **Quality Assurance (QA) Engineers**
-   - *User Story*: As a QA engineer, I need to verify that the automated accessibility testing is integrated into the CI/CD pipeline and is executed reliably during the testing phase.
-   - *Accomplished by*: The CI/CD pipeline configuration file, such as `Jenkinsfile` or `gitlab-ci.yml`, ensures the integration and execution of the accessibility testing as part of the automated testing process, promoting reliability and consistency.
+
+   - _User Story_: As a QA engineer, I need to verify that the automated accessibility testing is integrated into the CI/CD pipeline and is executed reliably during the testing phase.
+   - _Accomplished by_: The CI/CD pipeline configuration file, such as `Jenkinsfile` or `gitlab-ci.yml`, ensures the integration and execution of the accessibility testing as part of the automated testing process, promoting reliability and consistency.
 
 5. **Project Managers**
-   - *User Story*: As a project manager, I want to monitor the overall progress of accessibility testing efforts and track improvements in web application accessibility over time.
-   - *Accomplished by*: The web interface provided in the `frontend` directory allows project managers to view and monitor the accessibility testing progress, identify trends, and track improvements in web application accessibility.
+   - _User Story_: As a project manager, I want to monitor the overall progress of accessibility testing efforts and track improvements in web application accessibility over time.
+   - _Accomplished by_: The web interface provided in the `frontend` directory allows project managers to view and monitor the accessibility testing progress, identify trends, and track improvements in web application accessibility.
 
 Each type of user interacts with different components of the application, such as the API, machine learning models, CI/CD pipeline, and web interface, based on their specific roles and responsibilities.

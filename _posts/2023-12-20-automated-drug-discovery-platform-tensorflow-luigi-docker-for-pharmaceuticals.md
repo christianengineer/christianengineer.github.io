@@ -6,14 +6,18 @@ layout: article
 ---
 
 ## Objectives
+
 The AI Automated Drug Discovery Platform aims to utilize machine learning and data-intensive techniques to accelerate the drug discovery process in the pharmaceutical industry. The key objectives include:
+
 1. Streamlining the screening of potential drug compounds through automated data analysis.
 2. Enhancing the prediction accuracy of compound efficacy and safety profiles.
 3. Facilitating the efficient integration and analysis of large-scale biological, chemical, and genomic datasets.
 4. Providing a scalable and reproducible framework for drug discovery research and development.
 
 ## System Design Strategies
+
 To achieve the outlined objectives, the system design should incorporate the following strategies:
+
 1. Modular and Scalable Architecture: The platform should be designed as a set of interconnected but modular components, enabling easy scalability and extensibility.
 2. Data Pipelines: Implementing robust data pipelines for the ingestion, processing, and transformation of diverse biological and chemical data sources.
 3. Model Training and Evaluation: Incorporating machine learning pipelines for training, evaluating, and deploying predictive models for compound efficacy and safety.
@@ -21,6 +25,7 @@ To achieve the outlined objectives, the system design should incorporate the fol
 5. Workflow Management: Utilizing Luigi for orchestrating complex data workflows and managing dependencies between tasks.
 
 ## Chosen Libraries and Frameworks
+
 1. TensorFlow: TensorFlow will be used for building and training machine learning models for tasks such as compound efficacy prediction and bioactivity analysis. Its scalability, flexibility, and support for distributed computing make it a suitable choice for large-scale model training.
 2. Luigi: Luigi will serve as the workflow management system to orchestrate the execution of data processing tasks, model training, and evaluation, ensuring proper dependency management and task scheduling.
 3. Docker: Docker containers will be employed to encapsulate the platform and its dependencies, facilitating easy deployment, versioning, and reproducibility across different environments.
@@ -30,26 +35,32 @@ By incorporating these design strategies and leveraging these libraries and fram
 ## MLOps Infrastructure for Automated Drug Discovery Platform
 
 ### Continuous Integration and Continuous Deployment (CI/CD)
+
 - **Objective**: Establish a streamlined and automated process for integrating code changes, testing, and deploying machine learning models and data pipelines.
 - **Implementation**: Utilize CI/CD tools such as Jenkins or GitLab CI to automate the build, test, and deployment pipelines for the machine learning models and data processing workflows.
 
 ### Model Versioning and Experiment Tracking
+
 - **Objective**: Enable tracking and management of different versions of machine learning models and their associated metadata.
 - **Implementation**: Leverage platforms like MLflow or Kubeflow to track experiments, log parameters, and metrics, and version models. This allows for easy comparison of model performance and reproducibility of experiments.
 
 ### Infrastructure as Code (IaC)
+
 - **Objective**: Ensure consistent and reproducible deployment of the entire system infrastructure, including the machine learning models, data pipelines, and dependencies.
 - **Implementation**: Utilize infrastructure as code tools, such as Terraform or AWS CloudFormation, to define and manage the platform's infrastructure, reducing manual configuration and ensuring consistency across different environments.
 
 ### Monitoring and Alerting
+
 - **Objective**: Establish robust monitoring to track the performance of deployed machine learning models, system resources, and data pipelines, and set up alerts for anomalies or degradation.
 - **Implementation**: Integrate monitoring solutions like Prometheus, Grafana, or DataDog to monitor key performance metrics, such as model inference latency, data pipeline throughput, and resource utilization.
 
 ### Scalability and Resource Management
+
 - **Objective**: Enable automatic scaling of resources to handle varying workloads and optimize resource allocation for cost efficiency.
 - **Implementation**: Leverage Kubernetes for container orchestration to manage the deployment, scaling, and resource allocation of the Dockerized components of the platform, ensuring efficient utilization of compute resources.
 
 ### Security and Compliance
+
 - **Objective**: Implement robust security measures to protect sensitive data and ensure compliance with industry regulations.
 - **Implementation**: Incorporate security best practices such as data encryption, role-based access control, and regular security audits to mitigate potential vulnerabilities and adhere to regulatory requirements.
 
@@ -109,6 +120,7 @@ models/
 In the "models" directory of the Automated Drug Discovery Platform, the subdirectories "tensorflow" and "luigi" house the model-related files for TensorFlow and Luigi, respectively, as follows:
 
 ### TensorFlow
+
 - **`training/`**: Contains scripts for training TensorFlow models, such as `train.py`, which includes the logic for model training, and `hyperparameters.yaml` to specify hyperparameter configurations.
 
 - **`evaluation/`**: Includes the script `evaluate.py` for evaluating the performance of trained TensorFlow models.
@@ -116,7 +128,9 @@ In the "models" directory of the Automated Drug Discovery Platform, the subdirec
 - **`deployment/`**: This directory holds the script `deploy.py` for deploying TensorFlow models for inference or further usage.
 
 ### Luigi
+
 - **`tasks/`**: Contains individual Luigi task files:
+
   - `data_processing.py`: Defines a Luigi task for data processing, which includes tasks such as data cleaning, feature engineering, and transformation.
   - `model_training.py`: Defines a Luigi task for model training, encapsulating the training process within a Luigi task.
   - `model_evaluation.py`: Contains a Luigi task for model evaluation, enabling the evaluation of trained models within the Luigi workflow.
@@ -239,35 +253,42 @@ This script showcases the implementation of a more sophisticated machine learnin
 ### Types of Users for the Automated Drug Discovery Platform
 
 1. **Data Scientist / Machine Learning Engineer**
-   - *User Story*: As a data scientist, I need to train and evaluate machine learning models using the platform's infrastructure to identify potential drug compounds.
-   - *File*: `models/tensorflow/training/train.py` for training simple models.
+
+   - _User Story_: As a data scientist, I need to train and evaluate machine learning models using the platform's infrastructure to identify potential drug compounds.
+   - _File_: `models/tensorflow/training/train.py` for training simple models.
 
 2. **Bioinformatics Researcher**
-   - *User Story*: As a bioinformatics researcher, I need to process and analyze large-scale biological and genomic datasets to identify patterns for potential drug targets.
-   - *File*: `models/luigi/tasks/data_processing.py` for orchestrating data processing tasks.
+
+   - _User Story_: As a bioinformatics researcher, I need to process and analyze large-scale biological and genomic datasets to identify patterns for potential drug targets.
+   - _File_: `models/luigi/tasks/data_processing.py` for orchestrating data processing tasks.
 
 3. **Pharmaceutical Researcher**
-   - *User Story*: As a pharmaceutical researcher, I need to leverage the platform to evaluate the bioactivity and efficacy of newly identified compounds for potential drug development.
-   - *File*: `models/tensorflow/evaluation/evaluate.py` for evaluating the efficacy of trained models.
+
+   - _User Story_: As a pharmaceutical researcher, I need to leverage the platform to evaluate the bioactivity and efficacy of newly identified compounds for potential drug development.
+   - _File_: `models/tensorflow/evaluation/evaluate.py` for evaluating the efficacy of trained models.
 
 4. **System Administrator / DevOps Engineer**
-   - *User Story*: As a system administrator, I need to manage and deploy the Automated Drug Discovery Platform, ensuring high availability and scalability.
-   - *File*: `deployment/deploy.py` for orchestrating the deployment of TensorFlow models and managing platform infrastructure.
+
+   - _User Story_: As a system administrator, I need to manage and deploy the Automated Drug Discovery Platform, ensuring high availability and scalability.
+   - _File_: `deployment/deploy.py` for orchestrating the deployment of TensorFlow models and managing platform infrastructure.
 
 5. **Regulatory Compliance Officer**
-   - *User Story*: As a compliance officer, I need to ensure that the platform adheres to regulatory standards for data privacy and model validation.
-   - *File*: `docs/specifications/` for documentation on regulatory compliance measures and validation processes.
+
+   - _User Story_: As a compliance officer, I need to ensure that the platform adheres to regulatory standards for data privacy and model validation.
+   - _File_: `docs/specifications/` for documentation on regulatory compliance measures and validation processes.
 
 6. **Data Engineer**
-   - *User Story*: As a data engineer, I need to establish and maintain robust data pipelines for the ingestion, transformation, and integration of diverse biological and chemical datasets.
-   - *File*: `models/luigi/tasks/data_processing.py` for defining data processing tasks.
+
+   - _User Story_: As a data engineer, I need to establish and maintain robust data pipelines for the ingestion, transformation, and integration of diverse biological and chemical datasets.
+   - _File_: `models/luigi/tasks/data_processing.py` for defining data processing tasks.
 
 7. **Data Analyst**
-   - *User Story*: As a data analyst, I need to utilize the platform to gain insights from exploratory data analysis and visualization to support drug discovery decision-making.
-   - *File*: `notebooks/exploratory/` and `notebooks/analysis/` for conducting data analysis and visualization.
+
+   - _User Story_: As a data analyst, I need to utilize the platform to gain insights from exploratory data analysis and visualization to support drug discovery decision-making.
+   - _File_: `notebooks/exploratory/` and `notebooks/analysis/` for conducting data analysis and visualization.
 
 8. **End-User / Pharmaceutical Researcher**
-   - *User Story*: As a pharmaceutical researcher, I need to access the platform's trained models for making predictions on the efficacy of new compounds.
-   - *File*: `deployment/deploy.py` for deploying TensorFlow models for inference.
+   - _User Story_: As a pharmaceutical researcher, I need to access the platform's trained models for making predictions on the efficacy of new compounds.
+   - _File_: `deployment/deploy.py` for deploying TensorFlow models for inference.
 
 Each type of user has specific needs and use cases within the Automated Drug Discovery Platform, and the corresponding files and functionalities cater to those user stories to support diverse roles and requirements.

@@ -291,6 +291,7 @@ In the function `complex_deep_learning_algorithm`, we carry out the following st
 This function encapsulates the process of applying a complex deep learning algorithm to the pharmaceutical data, allowing for experimentation, evaluation, and potential integration into the broader PharmaTech AI for the Pharmaceutical Industry application.
 
 ### Types of Users
+
 1. **Data Scientist**
 2. **Pharmaceutical Researcher**
 3. **Healthcare Provider**
@@ -301,18 +302,22 @@ This function encapsulates the process of applying a complex deep learning algor
 ### User Stories
 
 #### 1. Data Scientist
+
 - **User Story**: As a data scientist, I want to train and evaluate machine learning models using pharmaceutical industry datasets to identify potential drug candidates for further research.
 - **File**: `complex_machine_learning_algorithm(data_file_path)` in the `app/api/models/ml_models.py` file will support the data scientist's objective by encapsulating the process of applying complex machine learning algorithms to the pharmaceutical data, allowing for experimentation and evaluation.
 
 #### 2. Pharmaceutical Researcher
+
 - **User Story**: As a pharmaceutical researcher, I want to access and analyze drug interaction data to identify potential adverse events and improve drug safety.
 - **File**: `app/data/processed/interactions_data.csv` contains preprocessed drug interaction data that the pharmaceutical researcher can analyze to identify potential adverse events and improve drug safety.
 
 #### 3. Healthcare Provider
+
 - **User Story**: As a healthcare provider, I want to leverage the application to predict patient response to different drug therapies to personalize treatment plans.
 - **File**: `app/api/controllers/prediction_controller.py` offers an interface for healthcare providers to input patient data and receive predictions on patient response to different drug therapies, facilitating personalized treatment plans.
 
 #### 4. Regulatory Compliance Officer
+
 - **User Story**: As a regulatory compliance officer, I want to access reports on drug safety and efficacy to ensure compliance with regulatory standards and make informed decisions.
 - **File**: `app/data/processed/safety_reports.csv` contains aggregated reports on drug safety and efficacy, enabling regulatory compliance officers to ensure compliance with regulatory standards and make informed decisions.
 

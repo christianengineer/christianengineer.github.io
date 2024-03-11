@@ -8,6 +8,7 @@ layout: article
 ## AI Blockchain-Based Food Traceability System for Peru
 
 ## Objectives
+
 The main objectives of the AI Blockchain-Based Food Traceability system for Peru are:
 
 1. **Transparency:** Provide consumers with detailed information about the origin and journey of food products throughout the supply chain.
@@ -16,6 +17,7 @@ The main objectives of the AI Blockchain-Based Food Traceability system for Peru
 4. **Security:** Utilize blockchain technology to provide a secure and tamper-proof ledger of food transactions.
 
 ## System Design Strategies
+
 To achieve the above objectives, we will implement the following system design strategies:
 
 1. **Blockchain Integration:** Utilize Hyperledger Fabric to create a private, permissioned blockchain network for storing food-related transactions securely.
@@ -24,6 +26,7 @@ To achieve the above objectives, we will implement the following system design s
 4. **Monitoring & Metrics:** Implement Prometheus for tracking system performance, monitoring data flow, and generating insights for continuous improvement.
 
 ## Chosen Libraries
+
 - **Hyperledger Fabric:** To build the blockchain network and smart contracts for secure data storage and sharing.
 - **Scikit-Learn:** For implementing machine learning algorithms for demand forecasting, anomaly detection, and optimization.
 - **Flask:** To develop the web application for stakeholders to interact with the system and access traceability information.
@@ -34,9 +37,11 @@ By combining the power of blockchain technology, machine learning algorithms, we
 ## MLOps Infrastructure for AI Blockchain-Based Food Traceability System
 
 ## Overview
+
 In the context of the Blockchain-Based Food Traceability system for Peru, integrating MLOps practices can enhance the performance and scalability of machine learning models. The MLOps infrastructure will focus on automating the deployment, monitoring, and management of machine learning models within the overall system.
 
 ## Components of MLOps Infrastructure
+
 1. **Model Training Pipeline:** Use Scikit-Learn to train machine learning models for demand forecasting, anomaly detection, and optimization. Implement data pipelines to process and prepare data for model training.
 2. **Model Serving:** Deploy trained machine learning models within the Flask web application to provide real-time predictions and insights to users.
 3. **Model Monitoring:** Utilize Prometheus to monitor the performance of machine learning models, track metrics such as accuracy and latency, and trigger alerts for any deviations.
@@ -45,6 +50,7 @@ In the context of the Blockchain-Based Food Traceability system for Peru, integr
 6. **Scalability & Resource Management:** Implement strategies to scale machine learning workloads based on demand, leveraging cloud resources efficiently.
 
 ## Benefits of MLOps Infrastructure
+
 1. **Improved Model Performance:** Continuous monitoring and retraining of machine learning models based on real-time data can lead to improved performance and accuracy.
 2. **Increased Efficiency:** Automation of deployment and monitoring processes reduces manual intervention and accelerates the delivery of AI capabilities.
 3. **Enhanced Scalability:** Scalable infrastructure ensures that the system can handle varying workloads and data volumes efficiently.
@@ -105,6 +111,7 @@ blockchain_food_traceability_peru/
 ## File Structure Description:
 
 1. **app/**: Contains the Flask web application for interacting with the system.
+
    - **models/**: Directory to store trained machine learning models.
    - **routes/**: API and web routes for handling HTTP requests.
    - **templates/**: HTML templates for the user interface.
@@ -112,19 +119,23 @@ blockchain_food_traceability_peru/
    - **app.py**: Main Flask application file.
 
 2. **blockchain/**: Includes files related to the Hyperledger blockchain network.
+
    - **smart_contracts/**: Smart contracts written in Solidity for the traceability system.
    - **blockchain_network_config.yaml**: Configuration file for the blockchain network.
 
 3. **data/**: Contains raw, processed, and model data used in the system.
+
    - **raw_data/**: Raw data from farms, transportation, and warehouses.
    - **processed_data/**: Data after cleaning and transformation.
    - **models_data/**: Data used for training and evaluation of machine learning models.
 
 4. **monitoring/**: Configuration files for Prometheus monitoring system.
+
    - **prometheus_config.yml**: Prometheus configuration settings.
    - **alert_rules.yml**: Alert rules for monitoring system health.
 
 5. **scripts/**: Utility scripts for data processing, model training, and evaluation.
+
    - **data_processing.py**: Script for cleaning and transforming data.
    - **model_training.py**: Script to train machine learning models.
    - **model_evaluation.py**: Script for evaluating model performance.
@@ -139,14 +150,18 @@ This organized file structure provides a scalable and modular foundation for dev
 ## `models` Directory for AI Blockchain-Based Food Traceability System
 
 ## Purpose:
+
 The `models` directory within the Blockchain-Based Food Traceability system houses the machine learning models that play a crucial role in demand forecasting, anomaly detection, and optimization within the food supply chain. These models are trained using Scikit-Learn and serve as the predictive engines to enhance transparency and traceability from farm to table.
 
 ## Files in `models` Directory:
+
 1. **`demand_forecasting_model.pkl`**:
+
    - **Purpose:** This file contains the trained machine learning model responsible for forecasting the demand for various food products based on historical data, trends, and external factors.
    - **Usage:** The demand forecasting model assists in optimizing inventory management, production planning, and distribution strategies throughout the supply chain.
 
 2. **`anomaly_detection_model.pkl`**:
+
    - **Purpose:** This file stores the machine learning model trained to detect anomalies or irregularities in the food supply chain data, such as unexpected spikes or dips in production or transportation.
    - **Usage:** The anomaly detection model helps identify potential issues or deviations in the supply chain processes, enabling timely intervention and mitigation.
 
@@ -155,6 +170,7 @@ The `models` directory within the Blockchain-Based Food Traceability system hous
    - **Usage:** The optimization model contributes to enhancing the overall efficiency, productivity, and sustainability of the food supply chain by recommending optimal decision-making strategies.
 
 ## Model Deployment:
+
 - The trained machine learning models stored in the `models` directory are integrated into the Flask web application for real-time predictions and insights accessible to stakeholders.
 - APIs within the Flask application can load these models, input new data, and generate predictions or recommendations to support decision-making processes.
 - The Prometheus monitoring system can track the performance metrics of these models, such as accuracy, latency, and resource utilization, ensuring smooth operations and proactive maintenance.
@@ -164,18 +180,23 @@ By organizing and storing the machine learning models in a structured manner wit
 ## `deployment` Directory for AI Blockchain-Based Food Traceability System
 
 ## Purpose:
+
 The `deployment` directory plays a crucial role in managing the deployment and operation of the Blockchain-Based Food Traceability system, ensuring scalability, reliability, and efficiency in delivering traceability and transparency across the food supply chain.
 
 ## Files in `deployment` Directory:
+
 1. **`Dockerfile`**:
+
    - **Purpose:** The Dockerfile provides instructions for building a Docker image that encapsulates the Flask application, Prometheus monitoring system, and other dependencies required for the system's deployment.
    - **Usage:** Docker simplifies the deployment process by creating a portable and isolated environment for running the application across different platforms.
 
 2. **`docker-compose.yml`**:
+
    - **Purpose:** The docker-compose.yml file defines the services, networks, and volumes needed to deploy and run the Blockchain-Based Food Traceability system using Docker Compose.
    - **Usage:** Docker Compose allows the seamless orchestration of multiple containers and services, enabling easy scaling and management of the application components.
 
 3. **`prometheus_config.yml`**:
+
    - **Purpose:** The prometheus_config.yml file contains the configuration settings for the Prometheus monitoring system, specifying the targets, alerting rules, and scraping intervals.
    - **Usage:** Prometheus uses this configuration to collect metrics, monitor system performance, and generate alerts for maintaining the health and reliability of the application.
 
@@ -184,6 +205,7 @@ The `deployment` directory plays a crucial role in managing the deployment and o
    - **Usage:** Alert rules help in proactively identifying potential issues, anomalies, or performance degradation within the application, enabling timely corrective actions.
 
 ## Deployment Process:
+
 - The Dockerfile is used to build a Docker image that encapsulates the Flask web application, Prometheus monitoring system, Hyperledger blockchain components, and other dependencies.
 - The docker-compose.yml file orchestrates the deployment of multiple containers, including the web application, blockchain network, and monitoring system, ensuring seamless integration and scalability.
 - The prometheus_config.yml file configures Prometheus to monitor key metrics such as system performance, resource utilization, and machine learning model accuracy.
@@ -276,22 +298,27 @@ In this file for training a complex machine learning algorithm (Gradient Boostin
 ## Types of Users for Blockchain-Based Food Traceability System:
 
 1. **Farmers**
+
    - **User Story:** As a farmer, I want to record detailed information about the production process of my crops, including planting, harvesting, and packaging, to ensure transparency and traceability.
    - **File:** `api_routes.py` within the `app/routes` directory will handle the API endpoints for farmers to submit and access data related to their farm activities.
 
 2. **Retailers**
+
    - **User Story:** As a retailer, I need to verify the origin and quality of the food products I purchase from suppliers to maintain consumer trust and compliance with food safety regulations.
    - **File:** `web_routes.py` within the `app/routes` directory will serve web pages for retailers to view and track the traceability information of food products using the Flask web application.
 
 3. **Consumers**
+
    - **User Story:** As a consumer, I want to scan a QR code or input a product code to access information about the source, production methods, and journey of the food product I intend to purchase.
    - **File:** `model_prediction.py` within the `app/models` directory will utilize the trained machine learning models to provide real-time predictions and insights to consumers regarding the food product's attributes.
 
 4. **Regulatory Authorities**
+
    - **User Story:** As a regulatory authority, I need access to comprehensive data on food supply chain activities to ensure compliance with food safety standards, investigate incidents, and enforce regulations.
    - **File:** `blockchain_network_config.yaml` within the `blockchain` directory will define the configuration of the Hyperledger blockchain network to store and secure the transaction data accessible to regulatory authorities.
 
 5. **Supply Chain Managers**
+
    - **User Story:** As a supply chain manager, I aim to optimize logistics, reduce waste, and improve efficiency by analyzing data on transportation routes, storage conditions, and demand patterns.
    - **File:** `model_training.py` within the `scripts` directory will train machine learning models on historical supply chain data to forecast demand, detect anomalies, and optimize operations for supply chain managers.
 

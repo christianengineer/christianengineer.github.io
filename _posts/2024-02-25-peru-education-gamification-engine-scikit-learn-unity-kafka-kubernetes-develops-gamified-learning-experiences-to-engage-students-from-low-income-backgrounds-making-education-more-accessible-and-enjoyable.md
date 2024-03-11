@@ -8,6 +8,7 @@ layout: article
 ## AI Peru Education Gamification Engine Project Overview
 
 ## Objectives:
+
 - Develop gamified learning experiences to engage students from low-income backgrounds
 - Make education more accessible and enjoyable for all students
 - Utilize machine learning algorithms to personalize and enhance learning experiences
@@ -15,6 +16,7 @@ layout: article
 - Use technologies such as Scikit-Learn, Unity, Kafka, and Kubernetes to create an efficient and robust system
 
 ## System Design Strategies:
+
 1. **Gamified Learning Experiences**: Design interactive and engaging games that incorporate educational content to motivate and incentivize students to learn.
 2. **Personalization with Machine Learning**: Leverage machine learning models from Scikit-Learn to analyze user behavior and preferences, providing personalized recommendations and content.
 3. **Real-time Data Processing**: Utilize Apache Kafka for real-time data streaming and processing to handle high volumes of user interactions and update game experiences dynamically.
@@ -22,6 +24,7 @@ layout: article
 5. **Data Storage and Analysis**: Implement a data-intensive architecture for storing and analyzing user data to track progress, improve learning outcomes, and optimize game experiences.
 
 ## Chosen Libraries and Technologies:
+
 1. **Scikit-Learn**: Utilize Scikit-Learn for machine learning tasks such as user behavior analysis, recommendation systems, and predictive modeling to enhance personalized learning experiences.
 2. **Unity**: Use Unity for game development to create interactive and visually appealing educational games that engage students and make learning fun.
 3. **Apache Kafka**: Implement Kafka for real-time data streaming and processing to manage user interactions, events, and updates in the gamified learning platform.
@@ -33,9 +36,11 @@ By integrating these technologies and design strategies, the AI Peru Education G
 ## MLOps Infrastructure for AI Peru Education Gamification Engine
 
 ## Overview:
+
 The MLOps infrastructure for the AI Peru Education Gamification Engine plays a crucial role in managing the machine learning lifecycle, from model development to deployment and monitoring. By integrating MLOps practices with technologies such as Scikit-Learn, Unity, Kafka, and Kubernetes, the system ensures the efficient and effective operation of the gamified learning platform.
 
 ## Components and Workflow:
+
 1. **Model Development**: Data scientists use Scikit-Learn to develop machine learning models for user behavior analysis, recommendations, and personalization.
 2. **Training Pipeline**: Training pipelines are set up using frameworks like TensorFlow or PyTorch to train and validate models on scalable infrastructure.
 3. **Model Registry**: Models are stored in a central model registry for version control and easy access by the deployment pipeline.
@@ -46,6 +51,7 @@ The MLOps infrastructure for the AI Peru Education Gamification Engine plays a c
 8. **Feedback Loop**: User feedback and performance metrics are collected to retrain models and continuously improve the gamified learning experiences.
 
 ## Benefits:
+
 1. **Scalability**: Kubernetes enables automatic scaling of resources to handle varying workloads and ensures high availability of the gamified learning platform.
 2. **Automation**: MLOps practices automate model deployment, monitoring, and maintenance, reducing manual effort and ensuring consistency.
 3. **Efficiency**: Real-time data streaming with Kafka and ML-powered personalization optimize user engagement and learning outcomes.
@@ -95,22 +101,26 @@ Peru_Education_Gamification_Engine/
 ```
 
 ## Directory Structure Overview:
+
 1. **ml_models/**: Contains subdirectories for different machine learning models such as user behavior analysis and recommendation systems.
+
    - Each subdirectory includes notebooks for model training and evaluation.
 
 2. **unity_games/**: Stores Unity game projects that incorporate machine learning features.
+
    - Each game directory contains Unity Assets folder with scripts for ML integration.
 
 3. **data_processing/**: Includes notebooks for data preprocessing and augmentation tasks to prepare data for ML models.
 
 4. **kafka_streaming/**: Holds files related to Kafka streaming for real-time data processing.
+
    - Includes configuration file, producer script, and consumer script.
 
 5. **kubernetes_deployment/**: Contains Kubernetes deployment configurations for scaling and managing system components.
+
    - Includes deployment, service, and horizontal pod autoscaler (HPA) YAML files.
 
 6. **README.md**: Provides an overview of the project, instructions for setup, and usage guidelines.
-   
 7. **LICENSE**: Contains the project's licensing information to define how the project can be used.
 
 This structured file system is designed to organize the codebase of the AI Peru Education Gamification Engine repository effectively, making it scalable and easy to manage for developers working on the project.
@@ -144,6 +154,7 @@ ml_models/
 ## Details of ml_models Directory:
 
 1. **user_behavior_analysis/**:
+
    - **data/**: Directory containing user interaction data like user logs, game scores, etc.
    - **model_training.ipynb**: Jupyter notebook for training the machine learning model for user behavior analysis.
    - **model_evaluation.ipynb**: Jupyter notebook for evaluating the performance of the trained model.
@@ -158,6 +169,7 @@ ml_models/
      - **recommendation_system_model.pkl**: Pickled model file for the recommendation system.
 
 ## Model Files Overview:
+
 - **user_behavior_analysis_model.pkl**: Trained model for analyzing user behavior to personalize learning experiences and game interactions.
 - **recommendation_system_model.pkl**: Trained model for providing personalized recommendations to users based on their preferences and interactions.
 
@@ -190,20 +202,24 @@ deployment/
 ## Details of deployment Directory:
 
 1. **model_inference/**:
+
    - **deployment.yaml**: Kubernetes deployment configuration file for deploying and managing ML model inference services.
    - **service.yaml**: Kubernetes service configuration file for exposing the model inference services within the cluster.
 
 2. **unity_games/**:
+
    - **deployment.yaml**: Kubernetes deployment configuration file for deploying and managing Unity game servers.
    - **service.yaml**: Kubernetes service configuration file to expose the Unity games to interact with other system components.
 
 3. **kafka_streaming/**:
+
    - **deployment.yaml**: Kubernetes deployment configuration file for deploying Kafka consumers to process real-time data streams.
    - **service.yaml**: Kubernetes service configuration file for interacting with Kafka brokers and processing messages.
 
 4. **README.md**: Documentation providing instructions for deploying the system components using the Kubernetes configurations in the `deployment/` directory.
 
 ## Deployment Files Overview:
+
 - **deployment.yaml**: Contains specifications for deploying pods, defining resource requirements, and setting up environment variables.
 - **service.yaml**: Includes configurations to create Kubernetes services, exposing the deployed pods to internal or external access.
 
@@ -308,26 +324,31 @@ By executing this training file, a sophisticated algorithm is trained to provide
 ## Types of Users for AI Peru Education Gamification Engine
 
 ## 1. **Students**
+
 **User Story**: As a student, I want to learn in a fun and engaging way through gamified educational experiences tailored to my preferences, to make learning more enjoyable and accessible.
 
 **File**: `unity_games/deployment.yaml` - This file manages the deployment and scaling of Unity games that provide interactive and gamified learning experiences for students.
 
 ## 2. **Teachers**
+
 **User Story**: As a teacher, I want to track and analyze student progress and engagement within the gamified learning platform, to adapt teaching strategies and provide personalized assistance.
 
 **File**: `kafka_streaming/deployment.yaml` - This file deploys Kafka consumers for real-time data streaming to process and analyze user interactions, enabling teachers to monitor student progress.
 
 ## 3. **Data Scientists**
+
 **User Story**: As a data scientist, I want to develop and deploy machine learning models to personalize learning experiences and enhance user engagement, to improve the effectiveness of the gamified learning platform.
 
 **File**: `ml_models/user_behavior_analysis/model_training.ipynb` - This file trains a model for user behavior analysis using mock data to personalize learning experiences based on user interactions.
 
 ## 4. **System Administrators**
+
 **User Story**: As a system administrator, I want to ensure the smooth operation and scalability of the gamification engine, to provide a reliable and accessible learning platform for all users.
 
 **File**: `kubernetes_deployment/deployment.yaml` - This file contains Kubernetes deployment configurations to manage the deployment and scaling of system components, ensuring high availability and efficient resource management.
 
 ## 5. **Parents or Guardians**
+
 **User Story**: As a parent or guardian, I want to monitor my child's progress and engagement within the educational gamification platform, to support their learning journey and provide guidance as needed.
 
 **File**: `model_inference/deployment.yaml` - This file deploys model inference services that analyze user data to provide personalized recommendations and insights, allowing parents to track their child's educational progress.

@@ -8,15 +8,18 @@ layout: article
 ### AI Drug Discovery using DeepChem
 
 #### Objectives:
+
 The objective of the AI Drug Discovery using DeepChem repository is to accelerate pharmaceutical development using machine learning and deep learning techniques. This involves building AI applications that can assist in the identification of potential drug candidates, scaffold hopping, property prediction, and other aspects of drug discovery.
 
 #### System Design Strategies:
+
 1. **Modular Design**: The system should be designed in a modular fashion to allow for easy integration of different machine learning models and algorithms.
 2. **Scalability**: The system should be designed to scale with the increasing volume of molecular and chemical data.
 3. **Flexibility**: The system should be flexible to accommodate different types of molecular and chemical data, as well as various machine learning models and algorithms.
 4. **Performance**: The system should be designed for high performance to handle computationally intensive tasks such as molecular property prediction and ligand-based virtual screening.
 
 #### Chosen Libraries:
+
 1. **DeepChem**: DeepChem is a Python library for deep learning in drug discovery, chemoinformatics, and quantum chemistry. It provides a wide range of tools for working with molecular and chemical data, as well as a variety of pre-built machine learning models.
 2. **TensorFlow or PyTorch**: TensorFlow or PyTorch can be used as the underlying deep learning framework for building and training neural networks for molecular property prediction, ligand-protein interaction modeling, and other drug discovery tasks.
 3. **RDKit**: RDKit is an open-source cheminformatics software library that provides a wide range of tools for working with chemical structures, fingerprints, and molecular descriptors.
@@ -28,23 +31,28 @@ By leveraging these libraries and system design strategies, the AI Drug Discover
 The infrastructure for the Drug Discovery using DeepChem application needs to support the computational and data-intensive nature of the pharmaceutical development process. Below are the key components and considerations for the infrastructure:
 
 #### Cloud-Based Architecture:
+
 1. **Compute Resources**: Utilize cloud-based virtual machines or containers to provide scalable compute resources for running machine learning training, inference, and data processing tasks.
 2. **Storage**: Leverage cloud storage solutions for storing large volumes of molecular and chemical data, as well as model checkpoints, datasets, and experiment results.
 3. **Networking**: Ensure high-speed and reliable networking to facilitate data transfer between different components of the system.
 
 #### Data Processing and Model Training:
+
 1. **Data Pipelines**: Implement data pipelines for preprocessing and cleaning molecular and chemical data before feeding it into the machine learning models.
 2. **Model Training**: Utilize distributed training frameworks to train machine learning models across multiple compute resources in parallel.
 
 #### Model Serving and Inference:
+
 1. **Model Deployment**: Deploy trained machine learning models as RESTful APIs or microservices for real-time inference and predictions.
 2. **Auto-Scaling**: Implement auto-scaling mechanisms to dynamically adjust the number of inference servers based on the incoming workload.
 
 #### Monitoring and Logging:
+
 1. **Logging**: Implement centralized logging for monitoring system and application logs, as well as tracking model training and inference requests and responses.
 2. **Metrics Collection**: Gather performance metrics such as model inference latency, resource utilization, and data processing throughput for performance monitoring and optimization.
 
 #### Security and Compliance:
+
 1. **Data Encryption**: Implement data encryption at rest and in transit to ensure the security and confidentiality of sensitive molecular and chemical data.
 2. **Access Control**: Enforce fine-grained access controls to restrict access to critical systems and data to authorized personnel only.
 3. **Compliance**: Ensure compliance with industry standards and regulations for handling pharmaceutical data and machine learning in healthcare.
@@ -138,11 +146,14 @@ models/
 ### Files and Subdirectories Overview:
 
 1. **data/**: Directory containing scripts for data preprocessing and feature engineering. These files are responsible for preparing the input data for model training.
+
    - **feature_engg.py**: Python script for feature engineering tasks such as molecular fingerprints generation, descriptor calculation, and data transformation.
    - **preprocessing.py**: Python script for data preprocessing tasks such as data cleaning, normalization, and encoding.
 
 2. **training/**: Directory for housing the individual model training subdirectories, each containing the configuration, model implementation, and training script for a specific model.
+
    - **model_1/**: Subdirectory for the first machine learning model.
+
      - **config.json**: Configuration file specifying hyperparameters, model architecture, and training settings for model 1.
      - **model.py**: Python script defining the architecture and implementation of model 1 using DeepChem or any other chosen library.
      - **train.py**: Python script for training model 1 on the provided dataset and saving the trained model artifacts.
@@ -150,7 +161,9 @@ models/
    - **model_2/**: Subdirectory for the second machine learning model, following a similar structure as model_1.
 
 3. **evaluation/**: Directory containing subdirectories for evaluating the trained models and capturing the evaluation metrics.
+
    - **model_1/**: Subdirectory for evaluating model 1.
+
      - **evaluation.ipynb**: Jupyter notebook for evaluating the performance of model 1, including visualizations and analysis.
      - **metrics.json**: JSON file storing the evaluation metrics (e.g., accuracy, precision, recall) for model 1.
 
@@ -184,12 +197,15 @@ deployment/
 ### Files and Subdirectories Overview:
 
 1. **api/**: Directory for the RESTful API code for model serving and inference.
+
    - **app.py**: Main Python file defining the API endpoints and their corresponding functions for serving the machine learning models.
    - **requirements.txt**: File listing all Python dependencies required for the API, enabling easy environment setup.
    - **Dockerfile**: Dockerfile for building a containerized API service, specifying the environment and dependencies required for the API.
 
 2. **model_serving/**: Directory containing subdirectories for each trained model, along with the necessary files for serving the models through the API.
+
    - **model_1/**: Subdirectory for serving the first trained machine learning model.
+
      - **model_1.pkl**: Serialized file containing the trained model parameters for model 1.
      - **model_1_config.json**: Configuration file specifying details about model 1, such as input data format, output format, and metadata.
      - **model_1_service.py**: Python script for creating a service that loads the model_1.pkl and exposes it through the API for making predictions.
@@ -224,7 +240,7 @@ def run_complex_ml_algorithm(input_data_file_path):
     num_features = 75
     mock_data = np.random.rand(num_samples, num_features)  ## Replace with actual mock data from the input file path
     predictions = model.predict_on_batch(mock_data)
-    
+
     return predictions
 ```
 
@@ -259,11 +275,11 @@ def run_complex_ml_algorithm(input_data_file_path):
     num_samples = 100
     mock_features = np.random.rand(num_samples, X.shape[1])  ## Generating mock features for prediction
     predictions = model.predict_on_batch(mock_features)
-    
+
     return predictions
 ```
 
-In this example, we define a `run_complex_ml_algorithm` function for drug discovery using DeepChem. The function takes a file path (`input_data_file_path`) as input, assuming that the data is stored in a specific format. 
+In this example, we define a `run_complex_ml_algorithm` function for drug discovery using DeepChem. The function takes a file path (`input_data_file_path`) as input, assuming that the data is stored in a specific format.
 
 The function first loads and preprocesses the input data from the given file path, trains a GraphConvModel for regression using the preprocessed data, and then uses the trained model to make predictions on mock features. The mock features are generated using random numbers for demonstration purposes.
 
@@ -272,23 +288,27 @@ The actual `load_and_preprocess_data` function should handle the specific data l
 ### Types of Users for Drug Discovery using DeepChem Application
 
 1. **Data Scientist/User**
-    - *User Story*: As a data scientist, I want to explore and analyze the molecular and chemical data using Jupyter notebooks to gain insights into the properties of potential drug candidates.
-    - *File*: `notebooks/`
+
+   - _User Story_: As a data scientist, I want to explore and analyze the molecular and chemical data using Jupyter notebooks to gain insights into the properties of potential drug candidates.
+   - _File_: `notebooks/`
 
 2. **Machine Learning Engineer**
-    - *User Story*: As a machine learning engineer, I want to develop, train, and evaluate complex machine learning models for predicting molecular properties and drug interactions.
-    - *File*: `src/model_training/`, `src/model_evaluation/`
+
+   - _User Story_: As a machine learning engineer, I want to develop, train, and evaluate complex machine learning models for predicting molecular properties and drug interactions.
+   - _File_: `src/model_training/`, `src/model_evaluation/`
 
 3. **API Developer**
-    - *User Story*: As an API developer, I want to deploy the trained machine learning models as RESTful APIs for real-time prediction and inference.
-    - *File*: `deployment/api/`, `deployment/model_serving/`
+
+   - _User Story_: As an API developer, I want to deploy the trained machine learning models as RESTful APIs for real-time prediction and inference.
+   - _File_: `deployment/api/`, `deployment/model_serving/`
 
 4. **Research Scientist**
-    - *User Story*: As a research scientist, I want to access and utilize the trained models for investigating the potential of new drug candidates and their interactions with biological targets.
-    - *File*: `models/training/`, `models/evaluation/`
+
+   - _User Story_: As a research scientist, I want to access and utilize the trained models for investigating the potential of new drug candidates and their interactions with biological targets.
+   - _File_: `models/training/`, `models/evaluation/`
 
 5. **System Administrator/DevOps Engineer**
-    - *User Story*: As a system administrator/DevOps engineer, I want to manage and optimize the infrastructure and deployment of the AI application to ensure scalability, performance, and security.
-    - *File*: `deployment/`, `config/`, `requirements.txt`
+   - _User Story_: As a system administrator/DevOps engineer, I want to manage and optimize the infrastructure and deployment of the AI application to ensure scalability, performance, and security.
+   - _File_: `deployment/`, `config/`, `requirements.txt`
 
 Each type of user interacts with different components of the application and utilizes specific files within the repository based on their roles and responsibilities. These diverse user stories and their corresponding files cater to the needs of various stakeholders involved in the drug discovery process using the DeepChem application.

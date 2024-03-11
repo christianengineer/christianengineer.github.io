@@ -6,10 +6,13 @@ layout: article
 ---
 
 ## Objectives
+
 The objective of the "AI Automated Essay Scoring with NLTK (Python)" repository is to build a system that can automatically grade essays in a more objective and consistent manner. By leveraging Natural Language Processing (NLP) techniques, the system aims to analyze the content, structure, and coherence of essays to assign a score.
 
 ## System Design Strategies
+
 The system design for this project involves several key strategies:
+
 1. **Data Preprocessing**: Cleaning, tokenization, and normalization of text data to prepare it for NLP analysis.
 2. **Feature Extraction**: Extracting relevant features such as word frequency, sentence structure, and semantic coherence from the essays.
 3. **NLP Analysis**: Utilizing techniques from the Natural Language Toolkit (NLTK) library to perform sentiment analysis, part-of-speech tagging, and syntactic parsing.
@@ -17,7 +20,9 @@ The system design for this project involves several key strategies:
 5. **Scalability**: Designing the system architecture to accommodate a large number of essays for grading efficiently.
 
 ## Chosen Libraries
+
 The repository utilizes several key libraries for implementing the AI Automated Essay Scoring system:
+
 1. **NLTK**: The Natural Language Toolkit provides a wide range of tools and resources for NLP tasks, including tokenization, stemming, tagging, parsing, and classification.
 2. **Scikit-learn**: This library offers a comprehensive set of tools for building and deploying machine learning models, including regression and classification algorithms.
 3. **Pandas**: Used for data preprocessing, manipulation, and feature extraction from essays stored in tabular format.
@@ -29,21 +34,26 @@ By leveraging these libraries and adhering to best practices in system design an
 The infrastructure for the Automated Essay Scoring with NLTK (Python) application involves several key components to support the scalable, data-intensive processing required for grading essays objectively. Here's an overview of the infrastructure:
 
 ## Cloud-based Architecture
+
 The application can be deployed on a cloud platform to ensure scalability, reliability, and accessibility. Key components of the cloud-based infrastructure include:
 
 ### 1. Compute Services
+
 - **Virtual Machines (VMs)**: Utilize VM instances to host the application backend, including the model inference and essay scoring components.
 - **Containerization**: Leverage containerization technologies such as Docker and Kubernetes to manage and deploy the application in a scalable and efficient manner.
 
 ### 2. Data Storage
+
 - **Database**: Store essays and their associated metadata in a scalable database such as Amazon DynamoDB, Google Cloud Firestore, or MongoDB to enable efficient querying and retrieval of essay data during the grading process.
 - **Object Storage**: Store any large-scale data assets, such as preprocessed essays or trained machine learning models, in a scalable object storage solution like Amazon S3 or Google Cloud Storage.
 
 ### 3. Networking
+
 - **Load Balancing**: Implement load balancing to evenly distribute incoming traffic across multiple VM instances, ensuring high availability and fault tolerance.
 - **API Gateway**: Utilize a cloud-based API gateway to expose the Automated Essay Scoring APIs for seamless integration with other applications or interfaces.
 
 ## Continuous Integration/Continuous Deployment (CI/CD)
+
 Implement a CI/CD pipeline to automate the testing, building, and deployment processes. Key components of the CI/CD pipeline include:
 
 - **Version Control**: Utilize a version control system like Git for tracking changes and collaborating on the codebase.
@@ -51,6 +61,7 @@ Implement a CI/CD pipeline to automate the testing, building, and deployment pro
 - **Deployment Automation**: Automate the deployment of new application versions using tools like Jenkins, Travis CI, or GitLab CI/CD.
 
 ## Monitoring and Logging
+
 Implement robust monitoring and logging solutions to track and manage the performance and availability of the application. Key components of monitoring and logging include:
 
 - **Logging**: Utilize centralized logging solutions such as ELK stack (Elasticsearch, Logstash, Kibana) or cloud-based logging services for tracking application events and errors.
@@ -140,7 +151,7 @@ In this structure:
 
 - **nlp/**: This directory houses NLP-related modules for processing and analyzing essays. It includes individual modules for various NLP tasks, such as preprocessing, feature extraction, sentiment analysis, and part-of-speech tagging. These modules encapsulate the NLP functionality required for grading essays using NLTK and other NLP libraries.
 
-- **__init__.py**: This file indicates that the `models` directory should be treated as a package, allowing it to be imported and utilized within the application.
+- ****init**.py**: This file indicates that the `models` directory should be treated as a package, allowing it to be imported and utilized within the application.
 
 By organizing the NLP and machine learning-related functionality into separate modules within the `models` directory, the application fosters modularity, maintainability, and reusability of the NLP and ML components. This structure also aligns with best practices for organizing machine learning and NLP-related code, enabling easy integration and expansion of new NLP and ML capabilities in the future.
 
@@ -240,6 +251,7 @@ def train_automated_essay_scoring_model(data_file_path):
 ```
 
 In this function:
+
 - The `train_automated_essay_scoring_model` function takes a file path to a CSV file containing mock data as input.
 - It uses pandas to load the mock data, which includes essays and their corresponding scores.
 - It utilizes scikit-learn's `TfidfVectorizer` for text preprocessing and feature extraction to convert the essays into numerical features.
@@ -250,16 +262,20 @@ In this function:
 This function showcases the process of training a complex machine learning algorithm for essay scoring using NLTK-based natural language processing and machine learning techniques, and it uses the provided data file at the specified file path for training the model.
 
 ### Types of Users
+
 1. **Teachers/Instructors**
 2. **Students/learners**
 3. **Educational Institutions/Departments**
 
 ### User Stories
+
 1. **Teachers/Instructors**
+
    - As a teacher, I want to upload a batch of essays to the system and receive automated scoring to help me efficiently assess and provide feedback to my students.
    - File: `app/api/endpoints/essay_upload.py`
 
 2. **Students/Learners**
+
    - As a student, I want to submit an essay to the system and receive an automated score to gauge the quality of my writing and identify areas for improvement.
    - File: `app/api/endpoints/essay_submission.py`
 

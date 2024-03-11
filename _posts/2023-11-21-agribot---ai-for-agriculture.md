@@ -235,7 +235,7 @@ utils
 
 **4. logging/**: This subdirectory contains modules related to application logging.
 
-- ****init**.py**: This file is used to initialize the `logging` package as a Python package.
+- \***\*init**.py\*\*: This file is used to initialize the `logging` package as a Python package.
 - **config.py**: The `config.py` module holds configurations for the logging system, such as log levels, log file locations, and formatting options.
 - **logger.py**: The `logger.py` module provides functionality for creating and managing loggers to record events and errors that occur during the application's execution.
 

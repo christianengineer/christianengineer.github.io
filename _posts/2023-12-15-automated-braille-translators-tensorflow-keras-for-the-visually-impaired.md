@@ -8,14 +8,17 @@ layout: article
 ## AI Automated Braille Translators
 
 ### Objectives
+
 The primary objective of the AI Automated Braille Translators project is to develop a scalable and accurate system that can automatically translate text into Braille for the visually impaired. The system aims to leverage the power of AI and machine learning to provide a more efficient and reliable method for translating textual information into Braille.
 
 ### System Design Strategies
+
 1. **Data Preprocessing**: The system will need to pre-process textual data to convert it into a format suitable for input into the machine learning models. This may involve tokenization, normalization, and other text preprocessing techniques.
 2. **Model Training**: Utilizing TensorFlow and Keras, the system will implement machine learning models, such as recurrent neural networks (RNNs) or transformer models, to learn the mapping between text and Braille. Training will involve optimizing model architecture, hyperparameters, and loss functions to achieve high accuracy.
 3. **Deployment**: Once the model is trained, it will need to be deployed using an appropriate framework or platform, such as Flask, Tensorflow Serving, or Docker, to ensure scalability and accessibility.
 
 ### Chosen Libraries
+
 1. **TensorFlow**: TensorFlow provides a flexible ecosystem for building and deploying machine learning models, and offers extensive tools for training and serving models at scale.
 2. **Keras**: Keras, as a high-level neural networks API, is integrated into TensorFlow and simplifies the process of building and training deep learning models, making it a powerful choice for this project.
 3. **OpenCV**: In addition to TensorFlow and Keras, OpenCV can be used for image processing and handling Braille data, such as recognizing and interpreting Braille patterns from images.
@@ -25,21 +28,27 @@ By integrating these libraries into the AI Automated Braille Translators project
 ## MLOps Infrastructure for Automated Braille Translators
 
 ### Continuous Integration/Continuous Deployment (CI/CD)
+
 The MLOps infrastructure for the Automated Braille Translators application will incorporate CI/CD pipelines to automate the testing, building, and deployment of machine learning models. This will enable seamless integration of new features and model updates while ensuring the reliability and scalability of the system.
 
 ### Version Control
+
 Utilizing Git for version control will ensure that all changes to the codebase and models are tracked, and it will facilitate collaboration among the team members. Additionally, using tools such as GitHub or GitLab will enable efficient management of the codebase and model artifacts.
 
 ### Model Training and Experiment Tracking
+
 To manage the model training process, the infrastructure will leverage platforms such as MLflow or TensorBoard. These tools will enable tracking of model hyperparameters, metrics, and artifacts, providing visibility into the performance of different model versions and facilitating experimentation and model selection.
 
 ### Model Deployment and Serving
+
 For model deployment and serving, the infrastructure will utilize platforms like TensorFlow Serving or Kubeflow for scalable and efficient serving of trained models. This will enable the application to handle requests from users and provide real-time translations into Braille.
 
 ### Monitoring and Logging
+
 Implementing monitoring and logging solutions, such as Prometheus and Grafana, will allow for the tracking of model performance, system health, and resource utilization. This will ensure that the application is operating optimally and enable proactive identification and resolution of any issues that arise.
 
 ### Auto-scaling and Resource Management
+
 The MLOps infrastructure will incorporate auto-scaling capabilities to dynamically allocate resources based on demand. This will ensure that the application can handle varying workloads efficiently and cost-effectively.
 
 By integrating these MLOps practices and tools into the infrastructure for the Automated Braille Translators application, the system will benefit from improved reliability, scalability, and agility, enabling the delivery of accurate and efficient Braille translation services for the visually impaired.
@@ -163,14 +172,17 @@ In this script, we define a more complex neural network model using Keras, incor
 ### Types of Users for the Automated Braille Translators Application
 
 1. **Visually Impaired Individuals**
+
    - User Story: As a visually impaired individual, I want to use the Braille translation application to convert printed text into Braille to access information independently.
    - Relevant File: `src/app/braille_translation_interface.py` - This file implements the user interface for inputting text and receiving the Braille translation output.
 
 2. **Caregivers/Teachers**
+
    - User Story: As a caregiver or teacher for visually impaired individuals, I want to use the application to convert educational materials into Braille to support the learning of my students.
    - Relevant File: `src/app/braille_translation_interface.py` - This file can accommodate the input of educational materials and provide Braille translations for teaching purposes.
 
 3. **Developers/Technical Support**
+
    - User Story: As a developer or technical support personnel, I want to ensure the smooth operation of the Braille translation application, detecting and resolving any issues that arise.
    - Relevant File: `deployment/dockerfile` and `deployment/serve_model.py` - These files are essential for maintaining and serving the trained models within a production environment, ensuring the application's functionality.
 

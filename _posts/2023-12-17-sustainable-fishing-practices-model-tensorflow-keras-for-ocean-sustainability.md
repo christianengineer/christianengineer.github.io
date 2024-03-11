@@ -8,13 +8,17 @@ layout: article
 ## AI Sustainable Fishing Practices Model
 
 ### Objectives
+
 The AI Sustainable Fishing Practices Model aims to utilize machine learning to promote sustainable fishing practices and ocean conservation. The primary objectives include:
+
 1. Predicting sustainable fishing locations based on environmental factors and historical catch data
 2. Suggesting optimal fishing practices to minimize bycatch and protect endangered species
 3. Providing real-time recommendations to fishermen for responsible fishing practices
 
 ### System Design Strategies
+
 The system will consist of the following components:
+
 1. **Data Ingestion:** Collecting environmental data, historical catch data, and satellite imagery
 2. **Data Processing:** Preprocessing, feature engineering, and integrating various data sources
 3. **Model Training:** Utilizing TensorFlow and Keras to develop machine learning models for prediction and recommendation
@@ -22,7 +26,9 @@ The system will consist of the following components:
 5. **Feedback Loop:** Incorporating feedback from fishermen and environmental agencies to continuously improve the model
 
 ### Chosen Libraries
+
 For implementing the AI Sustainable Fishing Practices Model, the following libraries will be utilized:
+
 1. **TensorFlow:** For building and training deep learning models, and deploying them for inference
 2. **Keras:** As a high-level neural networks API, integrated with TensorFlow for building and training machine learning models
 3. **Pandas:** For data manipulation and analysis
@@ -39,22 +45,27 @@ Building an MLOps infrastructure for the Sustainable Fishing Practices Model inv
 ### Components of MLOps Infrastructure
 
 1. **Data Collection and Management**
+
    - Utilize data pipelines and storage solutions to collect and manage environmental data, historical catch data, and satellite imagery.
    - Consider using tools such as Apache Kafka, Apache Airflow, or AWS S3 for data ingestion and storage.
 
 2. **Model Training and Experimentation**
+
    - Leverage platforms like TensorFlow Extended (TFX) or Kubeflow for orchestrating and automating the model training and experimentation process.
    - Utilize platforms for managing model experiments, such as MLflow or Neptune, to track, compare, and reproduce machine learning experiments.
 
 3. **Model Deployment**
+
    - Use containerization tools like Docker to package the trained models and their dependencies into portable containers.
    - Employ Kubernetes or Apache Mesos for orchestration and management of containerized model deployments for scalability and reliability.
 
 4. **Continuous Integration/Continuous Deployment (CI/CD)**
+
    - Implement CI/CD pipelines using tools like Jenkins, GitLab CI/CD, or CircleCI to automate the testing, integration, and deployment of machine learning models.
    - Integrate testing frameworks for model performance and consistency, ensuring reliable deployments.
 
 5. **Model Monitoring and Governance**
+
    - Implement monitoring solutions such as Prometheus or Grafana to track model performance in production and detect drift or anomalies.
    - Utilize tools for model explainability and fairness, such as IBM AIF360 or Seldon Alibi, to ensure ethical and accountable AI practices.
 
@@ -62,6 +73,7 @@ Building an MLOps infrastructure for the Sustainable Fishing Practices Model inv
    - Establish feedback loops from end-users, environmental agencies, and domain experts to continuously improve the model's predictions and recommendations.
 
 ### Integration with TensorFlow and Keras
+
 - Utilize TensorFlow Serving or TensorFlow Lite for serving the trained models in production.
 - Leverage KubeFlow for managing end-to-end machine learning workflows, providing integration with TensorFlow and Keras for model development and deployment.
 
@@ -194,11 +206,13 @@ These files facilitate the deployment of the Sustainable Fishing Practices Model
 Certainly! Below is an example of a Python script for training a model for the Sustainable Fishing Practices Model using mock data. The script uses TensorFlow and Keras for model development and training.
 
 **File Path:**
+
 ```plaintext
 src/model/train_model.py
 ```
 
 **train_model.py:**
+
 ```python
 import numpy as np
 import pandas as pd
@@ -246,11 +260,13 @@ This script serves as a starting point for training the Sustainable Fishing Prac
 Certainly! Below is an example of a Python script for implementing a complex machine learning algorithm (e.g., a deep learning model) for the Sustainable Fishing Practices Model using mock data. The script utilizes TensorFlow and Keras for model development.
 
 **File Path:**
+
 ```plaintext
 src/model/complex_machine_learning_algorithm.py
 ```
 
 **complex_machine_learning_algorithm.py:**
+
 ```python
 import numpy as np
 import pandas as pd
@@ -311,18 +327,22 @@ This script serves as an example of implementing a more sophisticated machine le
 ### Types of Users
 
 1. **Fishermen**
+
    - **User Story**: As a fisherman, I want to receive real-time recommendations on sustainable fishing locations based on environmental factors and historical catch data, to ensure responsible fishing practices and support ocean conservation efforts.
    - **File**: `deployment/inference_api.py` - This file provides the API endpoint for real-time inference, allowing fishermen to input environmental data and receive recommended fishing practices based on the trained model.
 
 2. **Marine Biologists and Researchers**
+
    - **User Story**: As a marine biologist, I want to analyze historical catch data and environmental factors to understand the impact of fishing activities on marine ecosystems and endangered species.
    - **File**: `notebooks/exploratory_analysis.ipynb` - This notebook enables marine biologists to explore and analyze historical catch data and environmental factors, supporting their research and conservation efforts.
 
 3. **Government Agencies and Policy Makers**
+
    - **User Story**: As a government official, I want to leverage predictive models to make informed decisions and design policies for sustainable fisheries management and marine conservation.
    - **File**: `pipelines/model_training_pipeline.py` - This pipeline automates the training of the Sustainable Fishing Practices Model, providing an updated model that can be used to inform policy decisions and sustainable management practices.
 
 4. **Environmental NGOs and Advocacy Groups**
+
    - **User Story**: As an environmental advocate, I want to access model-based insights and visualizations to raise awareness about sustainable fishing practices and advocate for the protection of ocean ecosystems.
    - **File**: `notebooks/model_training_evaluation.ipynb` - This notebook includes visualizations and model evaluation metrics that can be used by advocacy groups to convey the importance of sustainable fishing practices and the impact of the model on conservation efforts.
 

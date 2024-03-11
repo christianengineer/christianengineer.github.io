@@ -8,30 +8,38 @@ layout: article
 ## AI Continuous Integration/Continuous Deployment (CI/CD) for ML Models
 
 ## Objectives
+
 The objective of implementing a CI/CD pipeline specifically for machine learning (ML) models is to automate the ML model building, training, testing, and deployment processes. This allows for faster iteration and deployment of models, maintains consistency, improves collaboration, and ensures quality through automated testing and validation.
 
 ## System Design Strategies
+
 1. **Version Control**: Use Git for version control to track changes in ML model code and configuration.
 2. **Automation**: Automate the process of data preprocessing, model training, evaluation, and deployment through CI/CD tools.
 3. **Testing**: Implement unit tests, integration tests, and performance tests to ensure the quality of ML models.
 4. **Deployment**: Automate the deployment of ML models to various environments, such as staging and production.
 
 ## Chosen Libraries/Tools
+
 For implementing the CI/CD pipeline for ML models, the following libraries and tools can be used:
 
 ### Jenkins
+
 Jenkins is a popular open-source automation server that can be used to build, test, and deploy ML models. It provides flexibility and extensibility through its plugin ecosystem.
 
 ### GitLab CI
+
 GitLab CI is a part of GitLab, offering a complete DevOps platform. It allows for defining, implementing, and visualizing a CI/CD pipeline for ML models within the GitLab repository.
 
 ### GitHub Actions
+
 GitHub Actions provides CI/CD capabilities natively within GitHub repositories. It allows for automating workflows directly from the repository, making it seamless to integrate CI/CD with ML model development.
 
 ### MLflow
+
 MLflow is an open-source platform for the complete machine learning lifecycle. It can be utilized within the CI/CD pipeline to manage and track experiments, package code into reproducible runs, and share and deploy ML models.
 
 ### Docker
+
 Docker can be used to containerize ML models, ensuring consistency in deployment across different environments. It also facilitates easier integration with various cloud platforms and deployment strategies.
 
 By leveraging these tools and libraries, a robust and scalable CI/CD pipeline for ML models can be implemented, enabling efficient development, testing, and deployment of AI applications.
@@ -41,27 +49,35 @@ By leveraging these tools and libraries, a robust and scalable CI/CD pipeline fo
 When implementing a CI/CD pipeline specifically for machine learning models, it's crucial to design a scalable and efficient infrastructure that supports the automation of model building, testing, and deployment. Here's an outline of the infrastructure components for the CI/CD pipeline:
 
 ### Version Control System
+
 Utilize Git as the version control system to track changes in ML model code and configuration. Git enables collaboration, supports branching strategies, and allows for the integration with CI/CD tools.
 
 ### CI/CD Server
+
 Choose Jenkins, GitLab CI, or GitHub Actions as the CI/CD server to orchestrate the pipeline. The CI/CD server will manage the execution of automated tasks, such as model training and testing, as well as triggering deployment processes.
 
 ### Build Agents or Runners
+
 To execute the ML model build, training, and testing processes, dedicated build agents or runners are required. These could be virtual or physical machines equipped with the necessary dependencies and tooling for ML model development.
 
 ### Model Registry
+
 A centralized model registry, such as MLflow's model registry or a custom solution, is essential for managing trained model versions, tracking artifacts, and enabling collaboration among data scientists and engineers.
 
 ### Artifact Repository
+
 Store artifacts produced during the model training and build process in an artifact repository, such as Artifactory or Amazon S3, to ensure reproducibility and traceability of model versions.
 
 ### Testing Environment
+
 Set up testing environments that mirror production environments as closely as possible to perform unit tests, integration tests, and performance tests on trained ML models.
 
 ### Deployment Targets
+
 Define multiple deployment targets, such as staging and production environments, where ML models will be deployed after successful testing and validation.
 
 ### Containerization (optional)
+
 Consider using Docker to containerize ML models, enabling consistent deployment across different environments and easing integration with various cloud platforms and deployment strategies.
 
 By carefully architecting the infrastructure components and integrating them with the chosen CI/CD tools and libraries, a scalable and resilient CI/CD pipeline for ML models can be established, optimizing the development and deployment of AI applications.
@@ -152,15 +168,13 @@ models/
 
 1. **model_1/**: This is an example subdirectory representing a specific machine learning model.
 
-    - **src/**: Contains the source code related to the model, including the training script `train.py`, inference/prediction script `predict.py`, and a `requirements.txt` file listing the dependencies required by the model code.
-    
-    - **data/**: Holds the data used for training and testing the model.
-    
-        - **training_data/**: Contains the dataset or data used to train the machine learning model.
-        
-        - **testing_data/**: Holds the dataset used to test and evaluate the performance of the trained model.
-        
-    - **README.md**: Documentation specific to the model, which may include descriptions of the model, methods, and important considerations for training, testing, and deployment.
+   - **src/**: Contains the source code related to the model, including the training script `train.py`, inference/prediction script `predict.py`, and a `requirements.txt` file listing the dependencies required by the model code.
+   - **data/**: Holds the data used for training and testing the model.
+
+     - **training_data/**: Contains the dataset or data used to train the machine learning model.
+     - **testing_data/**: Holds the dataset used to test and evaluate the performance of the trained model.
+
+   - **README.md**: Documentation specific to the model, which may include descriptions of the model, methods, and important considerations for training, testing, and deployment.
 
 By organizing the `models/` directory in this manner, it becomes easier to manage and version control multiple machine learning models. The separation of source code, data, and documentation for each model aids in clarity and enables easier integration with CI/CD tools and the overall software development lifecycle.
 
@@ -188,22 +202,19 @@ scripts/
 
 ### Explanation:
 
-1. **data_preprocessing/**: This submodule holds scripts related to data preprocessing and preparation for the ML model. 
+1. **data_preprocessing/**: This submodule holds scripts related to data preprocessing and preparation for the ML model.
 
    - **preprocess_data.py**: A script to preprocess and transform incoming data so that it can be fed into the ML model for prediction.
-   
    - **data_cleanup.py**: Contains scripts to clean and format incoming data, ensuring it meets the requirements for model input.
 
-2. **model_evaluation/**: This submodule includes scripts for evaluating the ML model's performance and generating relevant metrics. 
+2. **model_evaluation/**: This submodule includes scripts for evaluating the ML model's performance and generating relevant metrics.
 
    - **evaluate_model.py**: A script to evaluate the trained model using testing data and produce performance metrics and evaluation results.
-   
    - **performance_metrics.py**: Contains scripts to calculate and visualize performance metrics such as accuracy, precision, or recall.
 
 3. **deployment/**: Contains scripts for deploying the trained ML model to a production environment.
 
    - **deploy_model.py**: Script responsible for deploying the trained model to a specific endpoint or server.
-   
    - **update_model_endpoint.py**: Includes scripts to update an existing model endpoint with a new version of the model.
 
 By organizing the deployment scripts in this manner, the CI/CD pipeline gains seamless integration with the model development and testing processes. Additionally, this structure enables clear delineation between the different deployment-related tasks, such as data preprocessing, model evaluation, and actual model deployment. This strategy facilitates modularization and reusability of the deployment scripts while maintaining an organized and scalable approach to deploying machine learning models through the CI/CD pipeline.
@@ -246,6 +257,7 @@ def complex_machine_learning_algorithm(data_file_path):
 ```
 
 In this example:
+
 - This `complex_machine_learning_algorithm` function represents a machine learning algorithm (specifically a Random Forest Classifier in this case).
 - `data_file_path` is a parameter representing the file path to the dataset. When invoking the function, this should be replaced with the actual file path to the dataset.
 
@@ -289,11 +301,12 @@ def complex_deep_learning_algorithm(data_file_path):
 
     ## Evaluate the model
     _, test_accuracy = model.evaluate(X_test, y_test)
-    
+
     return test_accuracy
 ```
 
 In this example:
+
 - The `complex_deep_learning_algorithm` function represents a deep learning algorithm using TensorFlow/Keras.
 - `data_file_path` is a parameter representing the file path to the dataset. When invoking the function, this should be replaced with the actual file path to the dataset.
 
@@ -302,23 +315,27 @@ When integrating this function into the CI/CD pipeline, the mock data file path 
 Certainly! Here's a list of types of users who may interact with the CI/CD pipeline for ML models, along with a user story for each type of user and the corresponding file that might be involved:
 
 1. **Data Scientist / Machine Learning Engineer**
-   - *User Story*: As a data scientist, I want to be able to commit my model training code and have it automatically tested and deployed to staging for further evaluation.
-   - *File*: `models/model_1/src/train.py` (Training script)
+
+   - _User Story_: As a data scientist, I want to be able to commit my model training code and have it automatically tested and deployed to staging for further evaluation.
+   - _File_: `models/model_1/src/train.py` (Training script)
 
 2. **Software Developer**
-   - *User Story*: As a software developer, I need to ensure that the model deployment process integrates seamlessly with the existing software deployment workflow.
-   - *File*: `deployment/deploy_model.py` (Deployment script)
+
+   - _User Story_: As a software developer, I need to ensure that the model deployment process integrates seamlessly with the existing software deployment workflow.
+   - _File_: `deployment/deploy_model.py` (Deployment script)
 
 3. **Quality Assurance Engineer**
-   - *User Story*: As a QA engineer, I want to run automated tests to ensure the accuracy and performance of the deployed ML models.
-   - *File*: `tests/performance/test_performance.py` (Performance testing script)
+
+   - _User Story_: As a QA engineer, I want to run automated tests to ensure the accuracy and performance of the deployed ML models.
+   - _File_: `tests/performance/test_performance.py` (Performance testing script)
 
 4. **DevOps Engineer**
-   - *User Story*: As a DevOps engineer, I want to configure and manage the CI/CD pipeline to ensure smooth and reliable deployment of ML models.
-   - *File*: `Jenkinsfile` (Jenkins pipeline configuration)
+
+   - _User Story_: As a DevOps engineer, I want to configure and manage the CI/CD pipeline to ensure smooth and reliable deployment of ML models.
+   - _File_: `Jenkinsfile` (Jenkins pipeline configuration)
 
 5. **Product Manager**
-   - *User Story*: As a product manager, I want to monitor the success and effectiveness of the deployed models in the production environment.
-   - *File*: `deployment/update_model_endpoint.py` (Updating model endpoint script)
+   - _User Story_: As a product manager, I want to monitor the success and effectiveness of the deployed models in the production environment.
+   - _File_: `deployment/update_model_endpoint.py` (Updating model endpoint script)
 
 By addressing the user needs and stories for each role, the CI/CD pipeline for ML models can effectively support the collaborative development, testing, and deployment of machine learning applications. Each user story aligns with specific files within the repository that play a key role in achieving the stated objectives for the respective user types.

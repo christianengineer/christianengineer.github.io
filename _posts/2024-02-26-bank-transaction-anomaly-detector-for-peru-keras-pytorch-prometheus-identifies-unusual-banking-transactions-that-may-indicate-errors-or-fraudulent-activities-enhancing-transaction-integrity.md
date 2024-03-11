@@ -8,11 +8,13 @@ layout: article
 **AI Bank Transaction Anomaly Detector for Peru**
 
 ### Objectives:
+
 - Identify unusual banking transactions to enhance transaction integrity repository
 - Detect errors and fraudulent activities in real-time
 - Improve monitoring and security in the banking sector in Peru
 
 ### System Design Strategies:
+
 1. **Data Collection**: Gather transaction data from banking systems in Peru
 2. **Data Preprocessing**: Clean, normalize, and prepare the data for model training
 3. **Feature Engineering**: Extract relevant features from transactions for anomaly detection
@@ -22,21 +24,23 @@ layout: article
 7. **Scalability**: Design system to handle large volumes of transactions efficiently
 
 ### Chosen Libraries:
-1. **Keras**: 
-    - High-level neural networks API that allows for fast experimentation
-    - Well-suited for building and training deep learning models for anomaly detection
+
+1. **Keras**:
+   - High-level neural networks API that allows for fast experimentation
+   - Well-suited for building and training deep learning models for anomaly detection
 2. **PyTorch**:
-    - Deep learning library known for its flexibility and dynamic computation graph
-    - Ideal for building complex neural network architectures and custom models
+   - Deep learning library known for its flexibility and dynamic computation graph
+   - Ideal for building complex neural network architectures and custom models
 3. **Prometheus**:
-    - Time-series database and monitoring system that provides real-time alerting capabilities
-    - Enables monitoring of system performance and anomaly detection in production
+   - Time-series database and monitoring system that provides real-time alerting capabilities
+   - Enables monitoring of system performance and anomaly detection in production
 
 By leveraging the capabilities of Keras and PyTorch for model building and Prometheus for real-time monitoring, the AI Bank Transaction Anomaly Detector for Peru can effectively identify unusual transactions, enhancing transaction integrity and ensuring a more secure banking environment.
 
 ### MLOps Infrastructure for the Bank Transaction Anomaly Detector for Peru
 
 #### Continuous Integration and Continuous Deployment (CI/CD) Pipeline:
+
 1. **Data Collection**: Automatically fetch transaction data from banking systems in Peru
 2. **Data Preprocessing**: Execute preprocessing steps like cleaning and feature engineering
 3. **Model Training**: Train and validate neural network models using Keras or PyTorch
@@ -44,21 +48,25 @@ By leveraging the capabilities of Keras and PyTorch for model building and Prome
 5. **Model Deployment**: Deploy models to production for real-time anomaly detection
 
 #### Monitoring and Alerting System:
+
 1. **Model Performance Monitoring**: Track the performance of deployed models using Prometheus
 2. **Real-time Anomaly Detection**: Monitor incoming transactions and detect anomalies in real-time
 3. **Alerting Mechanism**: Send alerts to stakeholders when unusual transactions are detected
 
 #### Scalability and Resource Management:
+
 1. **Auto-scaling**: Automatically scale resources based on the workload to handle varying transaction volumes
 2. **Resource Optimization**: Optimize resource allocation to reduce costs and improve efficiency
 3. **Fault-Tolerance**: Implement redundancy and failover mechanisms to ensure system reliability
 
 #### Version Control and Experiment Tracking:
+
 1. **Model Versioning**: Keep track of different model versions and their performance metrics
 2. **Experiment Tracking**: Record experiment settings, results, and associated data for reproducibility
 3. **Model Registry**: Store trained models in a central repository for easy access and deployment
 
 #### Security and Compliance:
+
 1. **Data Encryption**: Encrypt sensitive transaction data to ensure privacy and security
 2. **Access Control**: Implement role-based access control to restrict access to sensitive information
 3. **Regulatory Compliance**: Adhere to data protection regulations and banking industry standards
@@ -126,6 +134,7 @@ models/
 ```
 
 1. **Keras Models**:
+
    - **anomaly_detection_model.h5**: The trained Keras model for detecting anomalies in banking transactions.
    - **feature_extraction_model.h5**: Additional Keras model used for feature extraction from the transaction data.
    - **model_evaluation_metrics.json**: A JSON file containing the performance metrics (e.g., precision, recall, F1 score) of the anomaly detection model.
@@ -154,9 +163,11 @@ deployment/
 ```
 
 1. **Dockerfile**:
+
    - Contains instructions for building a Docker image that encapsulates the Bank Transaction Anomaly Detector application, its dependencies, and configurations.
-  
+
 2. **Kubernetes Manifests**:
+
    - **anomaly-detector-deployment.yaml**: Configuration file defining the deployment of the Bank Transaction Anomaly Detector application in a Kubernetes cluster.
    - **anomaly-detector-service.yaml**: Service configuration to expose the application internally or externally within the Kubernetes cluster.
    - **anomaly-detector-hpa.yaml**: Definition for Kubernetes Horizontal Pod Autoscaler to automatically scale the application based on resource utilization.
@@ -229,7 +240,7 @@ for epoch in range(50):
     optimizer.step()
 
 torch.save(model.state_dict(), 'models/pytorch_models/anomaly_detection_model.pt')
-``` 
+```
 
 This script generates mock data, trains a neural network model using Keras and PyTorch for anomaly detection on banking transactions, and saves the trained models in the specified file paths. The trained models can be further evaluated and deployed for real-time anomaly detection in the Bank Transaction Anomaly Detector for Peru application.
 
@@ -310,18 +321,22 @@ This script showcases a complex machine learning algorithm that combines Isolati
 ### Types of Users for the Bank Transaction Anomaly Detector
 
 1. **Bank Operations Manager**
+
    - **User Story**: As a Bank Operations Manager, I want to monitor and analyze unusual banking transactions to ensure the integrity and security of our transaction repository.
    - **File**: `scripts/train_model.py`
 
 2. **Data Scientist**
+
    - **User Story**: As a Data Scientist, I need to build and evaluate complex machine learning algorithms for anomaly detection in banking transactions to improve detection accuracy.
    - **File**: `scripts/complex_algorithm.py`
 
 3. **System Administrator**
+
    - **User Story**: As a System Administrator, I aim to deploy and manage the Bank Transaction Anomaly Detector application on Kubernetes while ensuring scalability and fault tolerance.
    - **File**: `deployment/anomaly-detector-deployment.yaml`
 
 4. **Compliance Officer**
+
    - **User Story**: As a Compliance Officer, I require real-time monitoring and alerting capabilities to quickly respond to potential fraudulent activities and ensure regulatory compliance.
    - **File**: `deployment/prometheus_config/prometheus.yml`
 

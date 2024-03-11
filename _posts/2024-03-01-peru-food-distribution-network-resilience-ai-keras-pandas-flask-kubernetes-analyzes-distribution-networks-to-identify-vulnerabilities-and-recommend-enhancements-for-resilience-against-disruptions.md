@@ -8,86 +8,76 @@ layout: article
 ### AI Peru Food Distribution Network Resilience AI
 
 #### Objectives:
+
 - Analyze distribution networks to identify vulnerabilities and disruptions.
 - Recommend enhancements to improve resilience against disruptions.
 - Utilize AI techniques to optimize distribution network efficiency and minimize risks.
 
 #### System Design Strategies:
+
 1. **Data Collection and Preprocessing:**
    - Use Pandas to clean and preprocess data from the distribution network.
-   
 2. **Machine Learning Model Development:**
    - Use Keras to build a predictive model that identifies vulnerabilities and recommends enhancements.
-   
 3. **API Development:**
    - Use Flask to create an API for interacting with the AI model.
-   
 4. **Scalability:**
    - Utilize Kubernetes for container orchestration to ensure scalability and high availability of the application.
-   
 5. **Monitoring and Logging:**
    - Implement logging and monitoring solutions to track the performance and health of the system.
 
 #### Chosen Libraries:
+
 1. **Keras:**
    - Easy-to-use deep learning library for building and training neural networks.
-   
 2. **Pandas:**
    - Data manipulation library for cleaning, preprocessing, and analyzing data efficiently.
-   
 3. **Flask:**
    - Lightweight web framework for developing APIs that serve the AI model predictions.
-   
 4. **Kubernetes:**
    - Container orchestration platform for deploying, managing, and scaling containerized applications.
-   
+
 By combining these libraries and system design strategies, we can develop a scalable, data-intensive AI application that analyzes Peru's food distribution network, identifies vulnerabilities, and provides actionable recommendations to enhance resilience against disruptions.
 
 ### MLOps Infrastructure for Peru Food Distribution Network Resilience AI
 
 #### Continuous Integration/Continuous Deployment (CI/CD) Pipeline:
+
 1. **Source Code Management:**
    - Utilize Git for version control to manage changes to the codebase.
-   
 2. **Automated Testing:**
    - Implement unit tests and integration tests to ensure the quality and correctness of the code.
-   
 3. **CI/CD Pipeline:**
    - Use tools like Jenkins or GitLab CI to automate the build, test, and deployment processes.
-   
 4. **Artifact Registry:**
    - Store trained models and other artifacts in a repository like Docker registry or AWS S3.
 
 #### Model Training and Deployment:
+
 1. **Training Infrastructure:**
    - Utilize GPU instances on platforms like AWS, Google Cloud, or Azure for faster training of deep learning models.
-   
 2. **Hyperparameter Tuning:**
    - Implement tools like TensorFlow's Tuner or Keras Tuner for optimizing model performance.
-   
 3. **Model Versioning:**
    - Use MLflow or DVC for tracking and managing different versions of the trained models.
-   
 4. **Model Deployment:**
    - Containerize the AI application using Docker and deploy it on Kubernetes for scalability and fault tolerance.
 
 #### Monitoring and Feedback Loop:
+
 1. **Logging and Monitoring:**
    - Integrate tools like Prometheus and Grafana for monitoring key metrics and system performance.
-   
 2. **Alerting System:**
    - Set up alerts to notify the team of any anomalies or issues in the system.
-   
 3. **Feedback Loop:**
    - Collect feedback from end-users and stakeholders to continuously improve the AI model and the application.
 
 #### Data Governance and Security:
+
 1. **Data Privacy and Compliance:**
    - Ensure compliance with data privacy regulations such as GDPR by implementing proper data anonymization techniques.
-   
 2. **Access Control:**
    - Implement role-based access control to restrict access to sensitive data and infrastructure components.
-   
 3. **Data Versioning:**
    - Use tools like Delta Lake or MLflow to track and version data changes for reproducibility.
 
@@ -176,7 +166,9 @@ models/
 ```
 
 #### Description of Files:
+
 1. **model_training/**:
+
    - **train_model.py**: This script contains the code for training the machine learning model using the processed data. It includes data loading, model building, training, and saving the trained model.
    - **hyperparameter_tuning.py**: This file includes code for optimizing the model's hyperparameters to improve performance. It may use techniques like grid search or random search for hyperparameter tuning.
    - **evaluate_model.py**: This script is used to evaluate the performance of the trained model using metrics such as accuracy, precision, recall, and F1 score.
@@ -185,6 +177,7 @@ models/
    - **saved_model.h5**: This file stores the trained machine learning model in a serialized format (e.g., HDF5) after successful training. This saved model can be loaded for inference without the need for retraining.
 
 #### Additional Considerations:
+
 - The `model_training/` directory facilitates model development and training, including hyperparameter tuning and evaluation.
 - The `trained_models/` directory stores the final trained model for deployment and inference.
 - Proper versioning and documentation of trained models are essential for reproducibility and maintaining a history of model improvements.
@@ -204,7 +197,9 @@ infrastructure/
 ```
 
 #### Description of Files:
+
 1. **Dockerfile**:
+
    - The `Dockerfile` contains instructions to build a Docker image that encapsulates the Peru Food Distribution Network Resilience AI application along with its dependencies. It specifies the environment setup and commands needed to run the application in a containerized environment.
 
 2. **kubernetes/**:
@@ -214,6 +209,7 @@ infrastructure/
      - The `service.yaml` file describes the Kubernetes service configuration to expose the AI application internally or externally. It defines the networking aspects, such as ports and selectors, for communicating with the deployed application.
 
 #### Additional Considerations:
+
 - Using a Dockerfile ensures the application's portability and consistency across different environments by containerizing the application and its dependencies.
 - Kubernetes deployment and service configurations in the `kubernetes/` directory provide a scalable, fault-tolerant infrastructure for running and managing the AI application in a production-ready environment.
 - Continuous integration/continuous deployment (CI/CD) pipelines can be integrated to automate the building, testing, and deployment of the AI application with these deployment files.
@@ -302,26 +298,32 @@ By executing this script, you can simulate the application of a sophisticated ma
 ### Types of Users for Peru Food Distribution Network Resilience AI Application:
 
 1. **Data Analyst/Researcher**
+
    - **User Story:** As a data analyst, I need to analyze the distribution networks to identify vulnerabilities and disruptions, so I can provide insights for enhancing resilience and optimizing efficiency.
    - **Accomplished with:** `src/data_processing/data_preprocessing.py`
 
 2. **Machine Learning Engineer**
+
    - **User Story:** As a machine learning engineer, I need to build and train complex ML models to predict vulnerabilities and recommend enhancements for the food distribution network.
    - **Accomplished with:** `models/machine_learning/complex_algorithm_mock_data.py`
 
 3. **Software Developer**
+
    - **User Story:** As a software developer, I need to develop and maintain the Flask API for serving predictions from the ML model to end-users or other systems.
    - **Accomplished with:** `src/api/app.py`
 
 4. **DevOps Engineer**
+
    - **User Story:** As a DevOps engineer, I need to deploy the AI application using Docker and Kubernetes to ensure scalability and reliability.
    - **Accomplished with:** `infrastructure/Dockerfile` and `infrastructure/kubernetes/deployment.yaml`
 
 5. **Business Stakeholder/Decision Maker**
+
    - **User Story:** As a business stakeholder, I need to access reports and insights generated by the AI application to make informed decisions about enhancing resilience in the food distribution network.
    - **Accomplished with:** `models/model_training/train_model_mock_data.py`
 
 6. **Quality Assurance Engineer**
+
    - **User Story:** As a QA engineer, I need to test the AI application's functionality and performance to ensure that it meets the specified requirements and standards.
    - **Accomplished with:** `tests/unit_tests/test_data_processing.py`
 

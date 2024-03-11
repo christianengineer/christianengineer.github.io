@@ -17,32 +17,41 @@ The AI RemoteVision for Remote Sensing repository aims to provide a comprehensiv
 ## System Design Strategies
 
 ## Scalable Data Processing
+
 The system design emphasizes scalability to handle large volumes of remote sensing data. This may involve distributed computing frameworks such as Apache Spark for parallel processing and handling of massive datasets.
 
 ## Modular Architecture
+
 The system is designed to be modular, allowing for easy integration of different components such as data preprocessing, model training, and model evaluation. This promotes reusability and facilitates the implementation of different machine learning algorithms.
 
 ## Cloud-based Infrastructure
+
 Utilizing cloud services such as AWS, Azure, or Google Cloud for storing and processing remote sensing data can provide scalability, reliability, and cost-effectiveness.
 
 ## Model Deployment
+
 Consideration of strategies for deploying machine learning models for real-time or batch processing of remote sensing data.
 
 ## Chosen Libraries
 
 ## TensorFlow / PyTorch
+
 For building and training deep learning models for tasks such as image classification, object detection, and semantic segmentation.
 
 ## Apache Spark
+
 For distributed data processing and analysis, enabling efficient handling of large-scale remote sensing datasets.
 
 ## GDAL (Geospatial Data Abstraction Library)
+
 For geospatial data preprocessing, transformation, and geospatial data format translation.
 
 ## scikit-learn
+
 For traditional machine learning algorithms and model evaluation specific to remote sensing applications.
 
 ## OpenCV
+
 For image processing and computer vision tasks relevant to remote sensing data analysis.
 
 By incorporating these libraries and design strategies, the AI RemoteVision for Remote Sensing repository aims to provide a robust framework for building scalable, data-intensive AI applications that leverage machine learning and deep learning for analyzing and extracting insights from remote sensing data.
@@ -52,36 +61,45 @@ The infrastructure for the RemoteVision AI for Remote Sensing application is a c
 ## Cloud-Based Infrastructure
 
 ## Data Storage
+
 Utilize cloud storage services such as Amazon S3, Google Cloud Storage, or Azure Blob Storage for storing large volumes of remote sensing data. This ensures scalability and durability of the data while providing easy access for processing.
 
 ## Computation
+
 Leverage cloud-based compute resources, such as Amazon EC2, Google Compute Engine, or Azure Virtual Machines, for running data processing tasks, model training, and inference. This allows for scalable and on-demand computational resources, reducing the need for managing physical infrastructure.
 
 ## Data Processing
+
 Utilize cloud-based data processing services such as AWS Lambda, Google Cloud Dataflow, or Azure Data Factory for scalable, serverless data processing. This allows for efficient parallel processing of large datasets and can be integrated with other services for seamless data pipeline orchestration.
 
 ## Scalability and Elasticity
 
 ## Autoscaling
+
 Implement autoscaling mechanisms for compute resources to automatically adjust the number of instances based on workload demands. This ensures that the application can handle varying processing loads efficiently and cost-effectively.
 
 ## Containerization
+
 Utilize containerization technologies such as Docker and orchestration platforms like Kubernetes for managing and scaling application components. Containers enable consistent deployment and execution of the application across different environments, while Kubernetes provides powerful orchestration and scaling capabilities.
 
 ## Security and Compliance
 
 ## Role-Based Access Control
+
 Implement fine-grained access control policies using IAM (Identity and Access Management) services provided by the cloud provider. This ensures that only authorized users and services have access to sensitive data and resources.
 
 ## Encryption
+
 Utilize encryption for data at rest and in transit to ensure the security and privacy of remote sensing data. This can include leveraging services such as AWS Key Management Service (KMS) or Azure Key Vault for managing encryption keys.
 
 ## Monitoring and Logging
 
 ## Logging and Tracing
+
 Implement comprehensive logging and tracing mechanisms using services like AWS CloudWatch, Google Cloud Logging, or Azure Monitor. This provides visibility into application behavior, performance, and errors, aiding in troubleshooting and performance optimization.
 
 ## Monitoring and Alerting
+
 Utilize monitoring and alerting services to track the health and performance of the application infrastructure. This can include setting up metrics-based alarms and notifications using services such as AWS CloudWatch Alarms or Google Cloud Monitoring.
 
 By incorporating these infrastructure components and considerations, the RemoteVision AI for Remote Sensing application can be built to be scalable, resilient, and secure, enabling efficient processing and analysis of remote sensing data using AI and machine learning techniques.
@@ -307,14 +325,14 @@ def train_complex_deep_learning_model(data_file_path):
     ## Assuming the input data contains features and a target variable
     X = data.drop('target_variable', axis=1)
     y = data['target_variable']
-    
+
     ## Normalize or standardize the input features
     scaler = StandardScaler()
     X_scaled = scaler.fit_transform(X)
 
     ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.2, random_state=42)
-    
+
     ## Define a deep learning model using TensorFlow/Keras
     model = tf.keras.models.Sequential([
         tf.keras.layers.Dense(64, activation='relu', input_shape=(X.shape[1],)),
@@ -350,14 +368,17 @@ This function can be further extended and customized to incorporate additional c
 **Types of Users for RemoteVision AI for Remote Sensing Application:**
 
 1. **Data Scientists / Machine Learning Engineers**
+
    - **User Story:** As a data scientist, I want to train and evaluate machine learning models using remote sensing data to extract valuable insights and patterns from the imagery.
    - **File:** The `train_complex_model` and `train_complex_deep_learning_model` functions in the `models/` directory will support this user story. These functions will allow data scientists to develop and assess complex machine learning and deep learning models using mock data, aiding in the analysis of remote sensing data.
 
 2. **Remote Sensing Analysts**
+
    - **User Story:** As a remote sensing analyst, I need an easy-to-use API for running inference on trained models to classify and analyze remote sensing imagery in real-time.
    - **File:** The `APIs/rest_api.py` and `APIs/graphql_api.py` files in the `deployment/APIs/` directory will cater to this user story. These API scripts provide the functionality to serve model inference requests and enable remote sensing analysts to classify and analyze imagery through the AI application.
 
 3. **System Administrators / DevOps Engineers**
+
    - **User Story:** As a system administrator, I want to deploy and manage scalable and reliable infrastructure to support the AI application's remote sensing data processing and model serving capabilities.
    - **File:** The infrastructure configuration and orchestration files, including those for cloud storage, compute resources, and containerization (e.g., Dockerfiles), fall under the infrastructure deployment directory (`deployment/`), and the specifications for these elements are essential for system administrators and DevOps engineers to effectively deploy and manage the application's infrastructure.
 

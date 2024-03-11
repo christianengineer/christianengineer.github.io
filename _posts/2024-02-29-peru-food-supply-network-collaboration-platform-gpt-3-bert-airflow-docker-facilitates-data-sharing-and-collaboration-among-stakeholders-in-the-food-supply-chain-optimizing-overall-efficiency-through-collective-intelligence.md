@@ -8,6 +8,7 @@ layout: article
 **AI Peru Food Supply Network Collaboration Platform**
 
 **Objectives:**
+
 1. Facilitate data sharing and collaboration among stakeholders in the food supply chain.
 2. Optimize overall efficiency through a collective intelligence repository.
 3. Enhance decision-making processes by leveraging AI technologies such as GPT-3 and BERT.
@@ -15,6 +16,7 @@ layout: article
 5. Enable seamless deployment and distribution using Docker containerization.
 
 **System Design Strategies:**
+
 1. **Modular Architecture:** Design the platform with modular components for flexibility and scalability.
 2. **API-Centric Approach:** Implement RESTful APIs for seamless integration with external systems.
 3. **Data Governance:** Establish data governance policies and access controls to maintain data integrity and security.
@@ -24,6 +26,7 @@ layout: article
 7. **Containerization:** Containerize the application components using Docker for easy deployment and management.
 
 **Chosen Libraries:**
+
 1. **GPT-3:** OpenAI's powerful natural language processing model for text generation tasks.
 2. **BERT (Bidirectional Encoder Representations from Transformers):** Google's state-of-the-art language representation model for various NLP tasks.
 3. **Airflow:** Apache Airflow for workflow management, scheduling, and monitoring.
@@ -33,21 +36,22 @@ layout: article
 7. **SQLAlchemy or MongoDB:** Database libraries for managing and querying data in a relational or NoSQL database.
 8. **TensorFlow or PyTorch:** Deep learning frameworks for building and training machine learning models.
 9. **Pandas or NumPy:** Data manipulation and analysis libraries for handling structured data.
-10. **Plotly or Matplotlib:** Visualization libraries for creating interactive data visualizations. 
+10. **Plotly or Matplotlib:** Visualization libraries for creating interactive data visualizations.
 
 By integrating these libraries and following the system design strategies, the AI Peru Food Supply Network Collaboration Platform can effectively leverage AI technologies to optimize the food supply chain and enhance collaboration among stakeholders.
 
 ## MLOps Infrastructure for AI Peru Food Supply Network Collaboration Platform
 
 ### Objectives:
+
 1. Enable seamless integration and management of machine learning models (GPT-3, BERT) within the platform.
 2. Ensure reproducibility, scalability, and reliability of machine learning workflows.
 3. Automate model training, deployment, and monitoring processes for efficient ML lifecycle management.
 4. Facilitate collaboration among data scientists, ML engineers, and stakeholders in the food supply chain.
 
 ### Components of the MLOps Infrastructure:
+
 1. **Data Versioning and Management:** Utilize tools like DVC (Data Version Control) to track and manage datasets used for training ML models.
-   
 2. **Model Registry:** Implement a model registry (e.g., MLflow) to store trained ML models, track experiment results, and simplify model deployment.
 
 3. **Continuous Integration/Continuous Deployment (CI/CD):** Set up a CI/CD pipeline to automate model testing, deployment, and monitoring within the Dockerized environment.
@@ -61,6 +65,7 @@ By integrating these libraries and following the system design strategies, the A
 7. **Experiment Tracking:** Utilize tools like TensorBoard, Neptune, or WandB to track experiments, hyperparameters, and model metrics.
 
 ### Workflow for Model Development and Deployment:
+
 1. **Data Collection and Preprocessing:** Collect and preprocess data from various sources for training GPT-3 and BERT models.
 
 2. **Model Training:** Use Airflow to schedule and manage ML training pipelines, leveraging TensorFlow or Hugging Face Transformers library for GPT-3 and BERT training.
@@ -72,6 +77,7 @@ By integrating these libraries and following the system design strategies, the A
 5. **Integration with Platform:** Integrate deployed models into the collaboration platform for stakeholders to access the AI capabilities seamlessly.
 
 ### Tools and Technologies:
+
 1. **MLflow:** Model registry and experiment tracking.
 2. **Kubernetes:** Container orchestration for scalable deployment.
 3. **Prometheus and Grafana:** Monitoring and logging.
@@ -85,6 +91,7 @@ By implementing a robust MLOps infrastructure using the above components and wor
 ## Scalable File Structure for AI Peru Food Supply Network Collaboration Platform
 
 ### Project Structure:
+
 ```
 AI-Peru-Food-Supply-Network-Collab-Platform/
 │
@@ -129,6 +136,7 @@ AI-Peru-Food-Supply-Network-Collab-Platform/
 ```
 
 ### Explanation of File Structure:
+
 1. **app/**: Contains the application logic including API endpoints, controllers, serializers, and data models.
 
 2. **data/**: Stores datasets for model training and processed data ready for ingestion by ML models.
@@ -154,6 +162,7 @@ This structured file system organizes the application components, ML models, wor
 ## Models Directory for AI Peru Food Supply Network Collaboration Platform
 
 ### models/
+
 ```
 models/
 │
@@ -173,7 +182,9 @@ models/
 ```
 
 ### Explanation of Models Directory:
+
 1. **gpt3/**:
+
    - **train.py**: Python script for training the GPT-3 model using training data.
    - **predict.py**: Python script for generating text using the trained GPT-3 model.
    - **config.json**: Configuration file that defines the hyperparameters and architecture of the GPT-3 model.
@@ -188,6 +199,7 @@ models/
    - **model.pth**: Trained weights of the BERT model saved post-training.
 
 ### Role of the Models Directory:
+
 - **Training Scripts**: Facilitate model training for GPT-3 and BERT using the specified data and configurations.
 - **Prediction Scripts**: Enable the generation of text or text classification using the trained models.
 - **Configuration Files**: Store hyperparameters and model architecture details for easy access and modification.
@@ -199,6 +211,7 @@ By organizing the models directory with structured files for GPT-3 and BERT mode
 ## Deployment Directory for AI Peru Food Supply Network Collaboration Platform
 
 ### deployment/
+
 ```
 deployment/
 │
@@ -223,16 +236,20 @@ deployment/
 ```
 
 ### Explanation of Deployment Directory:
+
 1. **docker/**:
+
    - **Dockerfile**: Specifies instructions for building the Docker image containing the application.
    - **requirements.txt**: Lists Python dependencies required for the Docker image.
 
 2. **airflow/**:
+
    - **airflow.yaml**: Config file for Airflow containing settings like executor type and parallelism.
    - **dags/**: Directory for storing Airflow DAGs that define ML workflows.
    - **plugins/**: Houses custom Airflow plugins for extending Airflow functionality.
 
 3. **scripts/**:
+
    - **deploy_model.sh**: Shell script for deploying trained ML models within the platform.
    - **start_airflow.sh**: Start script for initializing Airflow services and workflows.
    - **update_database.sh**: Script for updating the application database with new data.
@@ -243,6 +260,7 @@ deployment/
    - **deployment_config.yaml**: Contains deployment-specific configurations like server details and API keys.
 
 ### Role of the Deployment Directory:
+
 - **Docker**: Contains files necessary for building the Docker image of the application for deployment.
 - **Airflow**: Stores configuration files and DAGs for orchestrating ML workflows using Airflow.
 - **Scripts**: Includes shell scripts for tasks such as deploying models, starting Airflow, and updating the database.
@@ -253,6 +271,7 @@ By structuring the deployment directory with essential files for deploying, orch
 ### File for Training a Model of Peru Food Supply Network Collaboration Platform
 
 #### Training Script for GPT-3 Model
+
 - **File Path:** `models/gpt3/train.py`
 
 ```python
@@ -291,7 +310,7 @@ model = GPT3LMHeadModel.from_pretrained('gpt3')
 ## Model training logic
 def train_model(dataset, model):
     train_loader = DataLoader(dataset, batch_size=1, shuffle=True)
-    
+
     for batch in train_loader:
         optimizer.zero_grad()
         input_ids = batch['input_ids']
@@ -314,6 +333,7 @@ This training script demonstrates how to train a GPT-3 model using mock data wit
 ### File for Complex Machine Learning Algorithm in Peru Food Supply Network Collaboration Platform
 
 #### Machine Learning Script for BERT Model
+
 - **File Path:** `models/bert/complex_algorithm.py`
 
 ```python
@@ -340,7 +360,7 @@ class CustomBERTClassifier(nn.Module):
         self.bert = bert_model
         self.dropout = nn.Dropout(0.1)
         self.linear = nn.Linear(self.bert.config.hidden_size, 1)
-    
+
     def forward(self, input_ids, attention_mask):
         outputs = self.bert(input_ids=input_ids, attention_mask=attention_mask)
         pooled_output = outputs.pooler_output
@@ -372,10 +392,10 @@ text_dataset = CustomTextDataset(encoded_text_data)
 ## Model training logic with customization
 def train_model_custom(dataset, model):
     train_loader = torch.utils.data.DataLoader(dataset, batch_size=1, shuffle=True)
-    
+
     criterion = nn.BCEWithLogitsLoss()
     optimizer = torch.optim.Adam(model.parameters(), lr=5e-5)
-    
+
     for batch in train_loader:
         optimizer.zero_grad()
         input_ids = batch['input_ids']
@@ -398,30 +418,37 @@ This Python script demonstrates implementing a custom machine learning algorithm
 ### Types of Users for Peru Food Supply Network Collaboration Platform
 
 1. **Food Suppliers**
+
    - **User Story**: As a food supplier, I want to easily share availability and pricing information with other stakeholders in the food supply chain to improve coordination and reduce delays in product delivery.
    - **Accomplished with File**: `app/api/endpoints/supplier_endpoints.py`
 
 2. **Distributors**
+
    - **User Story**: As a distributor, I need access to real-time inventory data and delivery schedules to optimize my operations and ensure timely delivery of goods to customers.
    - **Accomplished with File**: `app/api/endpoints/distributor_endpoints.py`
 
 3. **Retailers**
+
    - **User Story**: As a retailer, I aim to collaborate with suppliers and distributors to streamline replenishment processes, manage stock levels efficiently, and offer a diverse range of products to customers.
    - **Accomplished with File**: `app/api/endpoints/retailer_endpoints.py`
 
 4. **Logistics Providers**
+
    - **User Story**: As a logistics provider, my goal is to access shipment tracking information, efficiently plan routes, and coordinate deliveries to enhance overall supply chain performance and customer satisfaction.
    - **Accomplished with File**: `app/api/endpoints/logistics_endpoints.py`
 
 5. **Data Analysts**
+
    - **User Story**: As a data analyst, I want to leverage machine learning models like GPT-3 and BERT to analyze market trends, predict demand fluctuations, and provide actionable insights to stakeholders in the food supply chain.
    - **Accomplished with File**: `models/bert/complex_algorithm.py`
 
 6. **System Administrators**
+
    - **User Story**: As a system administrator, I aim to monitor system performance, ensure data security and integrity, and manage user access levels to maintain a reliable and secure collaboration platform.
    - **Accomplished with File**: `scripts/update_database.sh`
 
 7. **Business Managers**
+
    - **User Story**: As a business manager, I seek to have access to comprehensive reports and dashboards that provide key performance metrics, facilitate data-driven decision-making, and drive strategic initiatives within the food supply network.
    - **Accomplished with File**: `app/api/endpoints/manager_endpoints.py`
 

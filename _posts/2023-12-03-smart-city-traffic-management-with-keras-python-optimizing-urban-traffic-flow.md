@@ -45,17 +45,19 @@ The infrastructure for the Smart City Traffic Management application involves a 
 
 ### Software Components
 
-1. **Data Ingestion and Processing:** 
+1. **Data Ingestion and Processing:**
+
    - **Data Collection System:** A system to collect data from traffic cameras, sensors, GPS signals, and other sources. This data is either stored locally or transmitted to a centralized server for processing.
-   
    - **Real-time Data Processing:** Real-time data processing systems that can handle the incoming traffic data, perform necessary feature extraction, and prepare the data for machine learning models. Technologies like Apache Kafka or RabbitMQ may be used for real-time stream processing.
 
 2. **Machine Learning and AI Model Infrastructure:**
+
    - **Model Training Infrastructure:** Scalable infrastructure to train machine learning models using historical traffic data. This may involve distributed training using frameworks like TensorFlow Extended (TFX) on a cluster of GPUs.
 
    - **Model Inference Engine:** A system to handle real-time inference of machine learning models for predicting traffic patterns, estimating traffic density, and optimizing traffic signal timings. This can be deployed on cloud infrastructure, using technologies like Kubernetes for container orchestration.
 
 3. **Traffic Signal Control and Integration:**
+
    - **Integration with Traffic Infrastructure:** Systems that can communicate with the traffic signal controllers to dynamically adjust signal timings based on model predictions and real-time traffic conditions. This may involve integrating with the existing traffic management infrastructure using APIs or communication protocols such as MQTT.
 
 4. **User Interface and Visualization:**
@@ -181,7 +183,7 @@ smart-city-traffic-management/
 │   │
 │   ├── logging/
 │   │   ├── logstash_config.yml
-│   │   
+│   │
 │
 ├── documentation/
 │   ├── ...
@@ -309,23 +311,27 @@ Replace `data_file_path` with the actual file path containing the mock data for 
 ### Types of Users for the Smart City Traffic Management System
 
 1. **Traffic Operators**
-   - *User Story*: As a traffic operator, I need to monitor real-time traffic conditions, view predictions, and make manual adjustments to traffic signal timings if required.
-   - *File*: This functionality can be accomplished through the user_interface/dashboard directory, where the traffic operators can access a web-based dashboard for real-time monitoring and control.
+
+   - _User Story_: As a traffic operator, I need to monitor real-time traffic conditions, view predictions, and make manual adjustments to traffic signal timings if required.
+   - _File_: This functionality can be accomplished through the user_interface/dashboard directory, where the traffic operators can access a web-based dashboard for real-time monitoring and control.
 
 2. **City Planners**
-   - *User Story*: As a city planner, I need to analyze historical traffic data and model predictions to make informed decisions about urban development and infrastructure improvements.
-   - *File*: The documentation/data_processing_workflow.md file would be relevant for city planners, as it outlines the workflow for processing traffic data and generating predictive models.
+
+   - _User Story_: As a city planner, I need to analyze historical traffic data and model predictions to make informed decisions about urban development and infrastructure improvements.
+   - _File_: The documentation/data_processing_workflow.md file would be relevant for city planners, as it outlines the workflow for processing traffic data and generating predictive models.
 
 3. **Machine Learning Engineers**
-   - *User Story*: As a machine learning engineer, I need to develop and train machine learning models to predict traffic patterns and optimize traffic flow using historical and real-time data.
-   - *File*: The src/machine_learning/model_training directory contains the necessary files for training machine learning models using Keras and Python. This would be of interest to machine learning engineers.
+
+   - _User Story_: As a machine learning engineer, I need to develop and train machine learning models to predict traffic patterns and optimize traffic flow using historical and real-time data.
+   - _File_: The src/machine_learning/model_training directory contains the necessary files for training machine learning models using Keras and Python. This would be of interest to machine learning engineers.
 
 4. **Traffic Signal Maintenance Crew**
-   - *User Story*: As a member of the traffic signal maintenance crew, I need to understand the deployment configurations and update procedures for the traffic signal control systems when necessary.
-   - *File*: The infrastructure/deployment/ansible directory contains playbooks for deploying and updating traffic signal controller configurations, which would be relevant for the traffic signal maintenance crew.
+
+   - _User Story_: As a member of the traffic signal maintenance crew, I need to understand the deployment configurations and update procedures for the traffic signal control systems when necessary.
+   - _File_: The infrastructure/deployment/ansible directory contains playbooks for deploying and updating traffic signal controller configurations, which would be relevant for the traffic signal maintenance crew.
 
 5. **Data Scientists**
-   - *User Story*: As a data scientist, I need to access the machine learning models, understand their architectures, and possibly retrain them using new data to improve accuracy.
-   - *File*: The data/models/traffic_prediction and data/models/traffic_density_estimation directories contain the trained model files and training history logs, which would be useful for data scientists to understand and potentially retrain the models.
+   - _User Story_: As a data scientist, I need to access the machine learning models, understand their architectures, and possibly retrain them using new data to improve accuracy.
+   - _File_: The data/models/traffic_prediction and data/models/traffic_density_estimation directories contain the trained model files and training history logs, which would be useful for data scientists to understand and potentially retrain the models.
 
 By identifying these types of users and their corresponding user stories, we can tailor the Smart City Traffic Management application to cater to the specific needs and use cases of each user group, enhancing the overall usability and effectiveness of the system.

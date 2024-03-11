@@ -8,6 +8,7 @@ layout: article
 ## AI Digital Literacy Training Tools for Global Education Repository
 
 ### Objectives
+
 The objectives of the AI Digital Literacy Training Tools for Global Education Repository are:
 
 1. Provide a comprehensive repository of educational resources for individuals and organizations to learn and teach AI and machine learning concepts.
@@ -15,6 +16,7 @@ The objectives of the AI Digital Literacy Training Tools for Global Education Re
 3. Empower educators, students, and professionals to develop digital literacy in the field of AI and machine learning through interactive and engaging resources.
 
 ### System Design Strategies
+
 In order to achieve the objectives, the system design should incorporate the following strategies:
 
 1. **Scalability**: The repository should be designed to handle a large volume of educational materials, user-contributed content, and a growing user base.
@@ -26,9 +28,11 @@ In order to achieve the objectives, the system design should incorporate the fol
 ### Chosen Libraries
 
 #### TensorFlow
+
 TensorFlow is a powerful open-source machine learning library that provides a comprehensive ecosystem for building and deploying machine learning models. As a foundational library, it offers scalability, flexibility, and the ability to deploy models across different platforms, making it an ideal choice for the backend infrastructure of the repository. TensorFlow can handle large-scale data processing, model training, and deployment, ensuring that the repository can support a wide range of educational resources and interactive learning tools.
 
 #### GPT-3 (OpenAI's GPT-3 API)
+
 OpenAI's GPT-3 (Generative Pre-trained Transformer 3) is a state-of-the-art natural language processing model that can be leveraged for a variety of educational purposes, including language translation, text generation, and content summarization. Integrating GPT-3 into the repository can enhance the user experience by providing advanced natural language understanding and generation capabilities. This can enable features such as interactive chatbots for learning support, automatic content summarization, and language translation services for a global audience.
 
 By leveraging these libraries, the AI Digital Literacy Training Tools for Global Education Repository can offer a scalable, data-intensive, and AI-powered platform for individuals and organizations to learn and teach AI and machine learning concepts effectively.
@@ -38,25 +42,31 @@ By leveraging these libraries, the AI Digital Literacy Training Tools for Global
 The MLOps infrastructure for the Digital Literacy Training Tools application using TensorFlow and GPT entails the integration of machine learning operations with the software development lifecycle to ensure the seamless deployment and management of AI models. Here's an overview of the key components and considerations for building the MLOps infrastructure:
 
 ### Continuous Integration and Continuous Deployment (CI/CD) Pipeline
+
 The CI/CD pipeline automates the processes of building, testing, and deploying the application and the associated machine learning models. This ensures that changes to the codebase and machine learning models are integrated and deployed in an efficient and reproducible manner.
 
 ### Model Training and Versioning
+
 - **Infrastructure for Model Training**: Utilize scalable infrastructure, such as cloud-based GPU instances, to train machine learning models using TensorFlow for tasks like natural language processing and computer vision.
 - **Model Versioning**: Implement a system for versioning trained models, allowing the tracking of changes and facilitating reproducibility of model deployments.
 
 ### Model Serving and Inference
+
 - **Scalable Model Serving**: Utilize a scalable infrastructure for serving models to handle variable workloads and ensure low-latency responses.
 - **Containerization**: Deploy models as containerized applications using tools like Docker and Kubernetes to ensure consistency across different environments.
 
 ### Monitoring and Logging
+
 - **Model Performance Monitoring**: Implement monitoring systems to track model performance, including metrics like accuracy, latency, and resource utilization.
 - **Application Logs**: Capture logs from the application and model serving infrastructure to facilitate debugging and troubleshooting.
 
 ### Automation and Orchestration
+
 - **Automation of Model Retraining**: Develop automated pipelines for retraining models based on new data and evolving requirements.
 - **Orchestration of Workflows**: Utilize tools like Apache Airflow or Kubeflow for orchestrating complex ML workflows, including data preprocessing, model training, and model deployment.
 
 ### Security and Compliance
+
 - **Secure Model Deployment**: Implement security best practices for securing model endpoints, including authentication, authorization, and encryption.
 - **Compliance Monitoring**: Ensure compliance with relevant data protection and privacy regulations, such as GDPR and HIPAA.
 
@@ -163,20 +173,26 @@ models/
 ### Directory Structure:
 
 #### TensorFlow Models:
-- **image_classification/**: Contains directories for different image classification models.
-    - **model_1/**: Represents a specific image classification model.
-        - **model.py**: Implementation of the model architecture and training procedure using TensorFlow.
-        - **preprocessing.py**: Preprocessing scripts for preparing image data for model training and evaluation.
 
-    - **model_2/**: Represents another image classification model with similar structure.
+- **image_classification/**: Contains directories for different image classification models.
+
+  - **model_1/**: Represents a specific image classification model.
+
+    - **model.py**: Implementation of the model architecture and training procedure using TensorFlow.
+    - **preprocessing.py**: Preprocessing scripts for preparing image data for model training and evaluation.
+
+  - **model_2/**: Represents another image classification model with similar structure.
 
 #### GPT Models:
-- **language_translation/**: Holds directories for various language translation models utilizing GPT.
-    - **model_1/**: Represents a specific language translation model.
-        - **model.py**: Implementation of the language translation model using GPT and TensorFlow.
-        - **tokenizer.py**: Scripts for tokenization and text preprocessing.
 
-    - **model_2/**: Represents another language translation model with similar structure.
+- **language_translation/**: Holds directories for various language translation models utilizing GPT.
+
+  - **model_1/**: Represents a specific language translation model.
+
+    - **model.py**: Implementation of the language translation model using GPT and TensorFlow.
+    - **tokenizer.py**: Scripts for tokenization and text preprocessing.
+
+  - **model_2/**: Represents another language translation model with similar structure.
 
 ### Files Overview:
 
@@ -218,22 +234,26 @@ deployment/
 ### Directory Structure:
 
 #### TensorFlow Deployment:
+
 - **tensorflow_deployment/**: Houses directories for deploying TensorFlow models, categorized based on their respective domains.
 
-    - **image_classification/**: Contains deployment-related files for image classification models.
-        - **deploy_image_classifier.py**: Script for deploying the image classification model. It includes functionalities for model loading, serving, and inference using TensorFlow Serving or other deployment platforms.
+  - **image_classification/**: Contains deployment-related files for image classification models.
 
-        - **requirements.txt**: File specifying the required dependencies and libraries for the deployment script.
+    - **deploy_image_classifier.py**: Script for deploying the image classification model. It includes functionalities for model loading, serving, and inference using TensorFlow Serving or other deployment platforms.
 
-    - **nlp_model/**: Contains deployment files for natural language processing models with similar structure.
+    - **requirements.txt**: File specifying the required dependencies and libraries for the deployment script.
+
+  - **nlp_model/**: Contains deployment files for natural language processing models with similar structure.
 
 #### GPT Deployment:
+
 - **gpt_deployment/**: Contains deployment scripts and files for GPT models, organized based on their specific applications.
 
-    - **language_translation/**: Includes files for deploying language translation models using GPT.
-        - **deploy_translation_model.py**: Script for deploying the language translation model, incorporating model serving and inference logic specific to GPT-based models.
+  - **language_translation/**: Includes files for deploying language translation models using GPT.
 
-        - **requirements.txt**: Specifies the necessary dependencies for the deployment script.
+    - **deploy_translation_model.py**: Script for deploying the language translation model, incorporating model serving and inference logic specific to GPT-based models.
+
+    - **requirements.txt**: Specifies the necessary dependencies for the deployment script.
 
 ### Files Overview:
 
@@ -305,6 +325,7 @@ if __name__ == "__main__":
 ```
 
 In this example:
+
 - The Python script `model_training.py` is located at the path `code/model_training/tensorflow_models/image_classification/model_1/model_training.py`.
 - It includes functions for generating mock data, building a simple convolutional neural network (CNN) model using TensorFlow's Keras API, and training the model using the mock data.
 - After training, the script saves the trained model to a file named `trained_image_classifier_model.h5`.
@@ -354,6 +375,7 @@ if __name__ == "__main__":
 ```
 
 In this example:
+
 - The Python script `gpt_language_model.py` is located at the path `code/model_training/gpt_models/language_translation/gpt_language_model.py`.
 - It utilizes OpenAI's GPT-3 API to demonstrate language translation.
 - The script includes a function to generate mock input text for language translation and another function to translate the input text into a target language using GPT-3.
@@ -364,23 +386,27 @@ This script serves as a basic example for using GPT-3 for language translation, 
 ### Types of Users for the Digital Literacy Training Tools Application
 
 1. **Student**
-    - *User Story*: As a student, I want to access educational materials, practice exercises, and interactive tools for learning AI and machine learning concepts to enhance my digital literacy skills.
-    - *File for User Story*: `data/educational_materials/textbooks/`, `code/model_training/tensorflow_models/`
+
+   - _User Story_: As a student, I want to access educational materials, practice exercises, and interactive tools for learning AI and machine learning concepts to enhance my digital literacy skills.
+   - _File for User Story_: `data/educational_materials/textbooks/`, `code/model_training/tensorflow_models/`
 
 2. **Educator**
-    - *User Story*: As an educator, I want to find resources, lesson plans, and training materials to teach AI and machine learning concepts to my students effectively.
-    - *File for User Story*: `documentation/user_guides/`, `community_contributions/user_projects/`
+
+   - _User Story_: As an educator, I want to find resources, lesson plans, and training materials to teach AI and machine learning concepts to my students effectively.
+   - _File for User Story_: `documentation/user_guides/`, `community_contributions/user_projects/`
 
 3. **AI Enthusiast**
-    - *User Story*: As an AI enthusiast, I want to explore advanced AI models, access research papers, and collaborate with like-minded individuals to deepen my understanding of AI and machine learning.
-    - *File for User Story*: `models/tensorflow_models/`, `community_contributions/discussion_forums/`
+
+   - _User Story_: As an AI enthusiast, I want to explore advanced AI models, access research papers, and collaborate with like-minded individuals to deepen my understanding of AI and machine learning.
+   - _File for User Story_: `models/tensorflow_models/`, `community_contributions/discussion_forums/`
 
 4. **Professional Developer**
-    - *User Story*: As a professional developer, I want to access best practices, deployment resources, and real-world use cases to apply AI and machine learning in my projects.
-    - *File for User Story*: `deployment/tensorflow_deployment/`, `documentation/developer_resources/`
+
+   - _User Story_: As a professional developer, I want to access best practices, deployment resources, and real-world use cases to apply AI and machine learning in my projects.
+   - _File for User Story_: `deployment/tensorflow_deployment/`, `documentation/developer_resources/`
 
 5. **Language Learner**
-    - *User Story*: As a language learner, I want to utilize language translation tools and interactive language learning resources to improve my language skills using AI-powered applications.
-    - *File for User Story*: `models/gpt_models/language_translation/`, `code/model_training/gpt_models/language_translation/`
+   - _User Story_: As a language learner, I want to utilize language translation tools and interactive language learning resources to improve my language skills using AI-powered applications.
+   - _File for User Story_: `models/gpt_models/language_translation/`, `code/model_training/gpt_models/language_translation/`
 
 Each of these types of users will interact with the Digital Literacy Training Tools application in different ways. The application will provide diverse resources and functionalities to cater to the varying needs and goals of these user types. The files and directories mentioned in the user stories will help accomplish specific tasks and provide the necessary resources for each user type.

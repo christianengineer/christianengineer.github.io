@@ -8,21 +8,27 @@ layout: article
 ## AI Automated News Aggregation using BeautifulSoup (Python)
 
 ## Objectives
+
 The objectives of this AI Automated News Aggregation system using BeautifulSoup in Python are:
+
 1. **Automated Data Collection**: The system will automatically collect news articles from various sources and aggregate them into a repository.
 2. **Data Curation**: The system will curate the collected news articles to ensure relevance, accuracy, and quality of the content.
 3. **Scalability and Performance**: The system will be designed to handle a large volume of news articles and scale as the amount of data grows.
 4. **Machine Learning Integration**: The system will leverage machine learning algorithms to categorize and analyze the news content.
 
 ## System Design Strategies
+
 The system design will employ the following strategies to achieve the objectives:
+
 1. **Modular Architecture**: The system will be divided into modules for data collection, data curation, and machine learning processing. This will enable individual components to be developed and maintained independently.
 2. **Scalable Data Pipeline**: The system will implement a scalable data pipeline to handle the incoming news articles, process them, and store the curated data in a repository.
 3. **Machine Learning Integration**: The system will utilize machine learning models for tasks such as natural language processing for content analysis and topic categorization.
 4. **API Integration**: The system will integrate with external APIs to fetch news articles from various sources and leverage their metadata for better organization and categorization.
 
 ## Chosen Libraries
+
 The following libraries will be utilized in the development of the AI Automated News Aggregation system:
+
 1. **BeautifulSoup**: BeautifulSoup will be used for web scraping to extract news content from HTML pages.
 2. **Requests**: The Requests library will be used to make HTTP requests to fetch news articles from external sources.
 3. **Pandas**: Pandas will be used for data manipulation and organization, especially for structuring the extracted news data.
@@ -36,6 +42,7 @@ By incorporating these design strategies and utilizing the chosen libraries, the
 To support the AI Automated News Aggregation system, a robust infrastructure is essential. The infrastructure will encompass various components for scalability, reliability, and performance. Here's a breakdown of the key components:
 
 ### Data Collection Pipeline
+
 The data collection pipeline will be responsible for scraping news articles from various sources and preparing them for further processing. The infrastructure for this pipeline will include:
 
 1. **Web Scraping Servers**: These servers will utilize BeautifulSoup and Requests libraries to crawl websites, extract news content, and save it in a raw data storage layer.
@@ -43,6 +50,7 @@ The data collection pipeline will be responsible for scraping news articles from
 3. **Raw Data Storage**: This storage layer will store the raw news content as well as metadata extracted during the scraping process. It could be a NoSQL database like MongoDB or a distributed file system like Amazon S3.
 
 ### Data Curation and Processing
+
 The curated news content will go through a pipeline for processing, analysis, and storage. The infrastructure for this pipeline will include:
 
 1. **Data Processing Servers**: These servers will handle the raw news content, apply data curation algorithms, and transform the data into a structured format suitable for analysis.
@@ -50,6 +58,7 @@ The curated news content will go through a pipeline for processing, analysis, an
 3. **Structured Data Storage**: The processed and curated news articles will be stored in a structured data storage system such as a relational database (e.g., PostgreSQL) or a data warehouse (e.g., Amazon Redshift) for efficient querying and retrieval.
 
 ### API and Web Service
+
 The API and web service component will offer access to the aggregated news content and provide integration points for machine learning models. The infrastructure for this component will include:
 
 1. **API Servers**: These servers, powered by a framework like Flask or Django, will expose endpoints for fetching news content, submitting search queries, and receiving predictions from machine learning models.
@@ -57,6 +66,7 @@ The API and web service component will offer access to the aggregated news conte
 3. **Caching Layer**: An in-memory caching system like Redis can be used to cache frequently accessed news articles and reduce the load on the backend servers.
 
 ### Monitoring and Logging
+
 An essential part of the infrastructure is monitoring and logging to ensure the system's health and performance. The infrastructure for this component will include:
 
 1. **Monitoring Tools**: Tools like Prometheus, Grafana, and ELK stack (Elasticsearch, Logstash, Kibana) will be used to monitor the health of various infrastructure components, track performance metrics, and generate dashboards for visualization.
@@ -297,22 +307,27 @@ Please note that the preprocessing steps, feature extraction, model selection, a
 ### Types of Users for Automated News Aggregation Application
 
 1. **News Reader**
+
    - User Story: As a news reader, I want to be able to access a user-friendly interface to discover and read curated news articles on various topics of interest.
    - File: `api_web_service/app.py` - This file contains the logic for serving news articles and providing search functionality via the API endpoints.
 
 2. **Data Scientist**
+
    - User Story: As a data scientist, I need access to the curated news dataset for conducting analysis and building machine learning models for further insights.
    - File: `data_processing/processing_server.py` - This file is responsible for pre-processing and structuring the news data, making it ready for use by data scientists.
 
 3. **Content Moderator**
+
    - User Story: As a content moderator, I want to be able to review and moderate the collected news articles for adherence to editorial guidelines and policies.
    - File: `data_processing/processing_server.py` - This file may include functionality for applying content moderation algorithms and presenting the data for review and moderation.
 
 4. **Machine Learning Engineer**
+
    - User Story: As a machine learning engineer, I need to access the trained machine learning models for news categorization and sentiment analysis to integrate them into our production system.
    - File: `models/machine_learning/nlp_models/sentiment_analysis_model.pkl` - This file contains the trained sentiment analysis model, ready for deployment and integration.
 
 5. **System Administrator**
+
    - User Story: As a system administrator, I need to monitor and maintain the infrastructure and deployment of the Automated News Aggregation system.
    - File: `deployment/scripts/monitoring_scripts/monitoring_config.py` - This file includes configurations and scripts for monitoring the performance and health of the system.
 

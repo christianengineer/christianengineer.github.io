@@ -8,28 +8,36 @@ layout: article
 ## AI Automated Data Quality Checks and Balancing
 
 ## Objectives
+
 The objectives of implementing automated data quality checks and balancing in machine learning projects are to ensure that the input data is of high quality, free from inconsistencies and errors, and to address the issue of imbalanced datasets that could lead to biased model performance.
 
 ## System Design Strategies
+
 ### Data Quality Checks
-1. Automated Data Profiling: Perform exploratory data analysis to understand the structure, quality, and distribution of the data. 
+
+1. Automated Data Profiling: Perform exploratory data analysis to understand the structure, quality, and distribution of the data.
 2. Data Validation: Implement checks for missing values, outliers, and inconsistencies.
 3. Schema Validation: Verify that the data conforms to the expected schema and data types.
 
 ### Balancing Imbalanced Datasets
+
 1. Sampling Techniques: Implement oversampling, undersampling, or synthetic data generation techniques to balance the dataset.
 2. Cost-Sensitive Learning: Incorporate class weights or cost-sensitive learning algorithms to give higher importance to minority classes.
 
 ### Automation
+
 1. Scheduled Checks: Set up automated processes to regularly check data quality and balance datasets during data ingestion or preprocessing stages.
 2. Alerting System: Implement alerts or notifications to inform the team of any data quality issues or imbalanced datasets.
 
 ## Chosen Libraries
+
 1. **Data Quality Checks**
+
    - `pandas-profiling`: For automated data profiling and generating detailed data quality reports.
    - `Great Expectations`: To define and validate data expectations, ensuring data integrity and quality.
 
 2. **Balancing Imbalanced Datasets**
+
    - `imbalanced-learn`: Implement various sampling techniques such as SMOTE, RandomOverSampler, RandomUnderSampler, etc.
    - `scikit-learn`: Utilize the built-in functionality for cost-sensitive learning and class weighting.
 
@@ -44,23 +52,28 @@ By integrating these strategies and libraries into the machine learning project 
 To implement automated processes for checking data quality and handling imbalanced datasets in machine learning projects, we need a robust infrastructure that supports scalable, efficient, and reliable data processing. Below are the components and considerations for the infrastructure:
 
 ### Data Pipeline
+
 - **Data Ingestion**: Utilize tools such as Apache Kafka, AWS Kinesis, or Google Cloud Pub/Sub to ingest and stream the incoming data to the processing pipeline.
 - **Data Storage**: Store the incoming data in a scalable and fault-tolerant data storage system like Amazon S3, Google Cloud Storage, or a distributed file system like HDFS.
 - **Data Processing**: Use a distributed processing framework like Apache Spark to perform scalable data processing, including data validation, profiling, and balancing.
 
 ### Automated Data Quality Checks
+
 - **Data Profiling Pipeline**: Use Apache Spark or similar distributed processing frameworks to perform automated data profiling and generate comprehensive quality reports.
 - **Validation Pipeline**: Implement data validation using Apache Spark or custom scripts to identify missing values, outliers, and inconsistencies within the data.
 
 ### Balancing Imbalanced Datasets
+
 - **Sampling Pipeline**: Utilize Apache Spark or custom scripts to implement oversampling, undersampling, or synthetic data generation techniques to balance the datasets.
 - **Cost-Sensitive Learning Pipeline**: Incorporate cost-sensitive learning algorithms within the machine learning models, leveraging distributed processing frameworks for training large models with imbalanced datasets.
 
 ### Automation
+
 - **Workflow Management**: Use workflow management tools like Apache Airflow or Prefect to schedule and orchestrate the automated data quality checks and dataset balancing tasks.
 - **Alerting System Integration**: Integrate with alerting systems using APIs provided by communication platforms such as Slack or email, to notify the team regarding any issues detected during the automated checks.
 
 ### Scalability and Reliability
+
 - **Infrastructure as Code (IaC)**: Deploy the infrastructure using IaC tools like Terraform or AWS CloudFormation to enable repeatable and consistent deployment of the infrastructure.
 - **Containerization**: Use containerization with Docker and container orchestration with Kubernetes to ensure easy scaling and efficient resource allocation for the data processing tasks.
 
@@ -120,19 +133,22 @@ machine_learning_project/
 ```
 
 In this structure:
+
 - **data/**: Contains directories for raw data, processed data, and metadata.
-    - **raw_data/**: Stores the original input data files.
-    - **processed_data/**: Houses balanced data, data quality reports, and other processed data files.
-    - **metadata/**: Stores data schemas and other metadata files.
+
+  - **raw_data/**: Stores the original input data files.
+  - **processed_data/**: Houses balanced data, data quality reports, and other processed data files.
+  - **metadata/**: Stores data schemas and other metadata files.
 
 - **code/**: Contains directories for different scripts related to data processing, model training, and other utilities.
-    - **data_processing/**: Includes scripts for data ingestion, preprocessing, validation, and balancing.
-    - **model_training/**: Holds scripts for feature engineering, model training, and evaluation.
-    - **other_utility_scripts/**: Contains additional utility scripts.
+
+  - **data_processing/**: Includes scripts for data ingestion, preprocessing, validation, and balancing.
+  - **model_training/**: Holds scripts for feature engineering, model training, and evaluation.
+  - **other_utility_scripts/**: Contains additional utility scripts.
 
 - **airflow/**: Houses Airflow-related files for managing and scheduling automated data quality checks and balancing tasks.
-    - **dags/**: Contains DAG (Directed Acyclic Graph) files specifying the workflow for data quality checks and balancing.
-    - **config_files/**: Houses configuration files for Airflow.
+  - **dags/**: Contains DAG (Directed Acyclic Graph) files specifying the workflow for data quality checks and balancing.
+  - **config_files/**: Houses configuration files for Airflow.
 
 This organized structure ensures the separation of concerns and allows for easy navigation, maintenance, and scalability as the project grows. Additionally, it provides a clear delineation of different components of the project, making it easier for team members to collaborate effectively.
 
@@ -166,12 +182,13 @@ machine_learning_project/
 In this structure:
 
 - **models/**: Contains directories for trained models, model evaluation, and model deployment.
-    - **trained_models/**: Stores the trained machine learning models saved in serialized format (e.g., pickle, h5, etc.).
-    - **model_evaluation/**: Houses scripts and files for evaluating the performance of the trained models, including metrics calculation and visualizations.
-    - **model_deployment/**: Consists of directories for deployment scripts and configuration files for deploying the trained models.
 
-    - **deployment_scripts/**: Contains scripts and files for deploying the machine learning models, including model serving and deployment pipeline.
-    - **deployment_config/**: Stores configuration files for model deployment, including parameters and settings for serving the trained models.
+  - **trained_models/**: Stores the trained machine learning models saved in serialized format (e.g., pickle, h5, etc.).
+  - **model_evaluation/**: Houses scripts and files for evaluating the performance of the trained models, including metrics calculation and visualizations.
+  - **model_deployment/**: Consists of directories for deployment scripts and configuration files for deploying the trained models.
+
+  - **deployment_scripts/**: Contains scripts and files for deploying the machine learning models, including model serving and deployment pipeline.
+  - **deployment_config/**: Stores configuration files for model deployment, including parameters and settings for serving the trained models.
 
 By organizing the "models" directory in this manner, the machine learning project can effectively manage the trained models, evaluate their performance, and prepare them for deployment. Additionally, this structure provides clear separation of concerns related to different stages of the machine learning lifecycle, which facilitates collaboration and scalability within the project.
 
@@ -200,10 +217,10 @@ machine_learning_project/
 In this structure:
 
 - **deployment/**: Contains directories for model serving and infrastructure as code for automating deployment setup.
-    - **model_serving/**: Houses files and scripts for serving the machine learning models, including the Flask application file, the requirements file for Python dependencies, the Dockerfile for containerization, and other related files.
-    - **infrastructure_as_code/**: Consists of directories for defining infrastructure as code for automating the deployment setup using cloud service providers.
-        - **cloudformation_templates/**: Contains AWS CloudFormation templates for defining the infrastructure resources required for model deployment.
-        - **terraform_configs/**: Stores Terraform configuration files for defining the infrastructure provisioning and deployment setup.
+  - **model_serving/**: Houses files and scripts for serving the machine learning models, including the Flask application file, the requirements file for Python dependencies, the Dockerfile for containerization, and other related files.
+  - **infrastructure_as_code/**: Consists of directories for defining infrastructure as code for automating the deployment setup using cloud service providers.
+    - **cloudformation_templates/**: Contains AWS CloudFormation templates for defining the infrastructure resources required for model deployment.
+    - **terraform_configs/**: Stores Terraform configuration files for defining the infrastructure provisioning and deployment setup.
 
 By organizing the "deployment" directory in this way, the machine learning project can manage the deployment-related files and infrastructure as code in a structured and scalable manner. This structure facilitates the automation of deployment setup and maintenance, allowing for efficient and consistent deployment of machine learning models in diverse environments and cloud platforms.
 
@@ -218,7 +235,7 @@ import great_expectations as ge
 def automated_data_processing_and_modeling(data_file_path):
     ## Load the data
     data = pd.read_csv(data_file_path)
-    
+
     ## Perform data quality checks using Great Expectations
     expectation_suite = ge.dataset.PandasDataset(data).expect_table()
     data_quality_report = expectation_suite.validate(result_format="html")
@@ -232,16 +249,17 @@ def automated_data_processing_and_modeling(data_file_path):
     y = data['target_column']
     smote = SMOTE(sampling_strategy='auto')
     X_resampled, y_resampled = smote.fit_resample(X, y)
-    
+
     ## Training an XGBoost model on the balanced dataset
     clf = xgb.XGBClassifier()
     clf.fit(X_resampled, y_resampled)
-    
+
     ## Return the trained model
     return clf
 ```
 
 In this function:
+
 - The `automated_data_processing_and_modeling` function takes the file path of the input data as an argument.
 - It loads the mock data from the specified file path and performs data quality checks using the Great Expectations library, generating a data quality report in HTML format.
 - It uses the SMOTE technique from the imbalanced-learn library to handle the imbalanced dataset by oversampling the minority class.
@@ -261,16 +279,16 @@ from sklearn.model_selection import train_test_split
 def automated_deep_learning_modeling(data_file_path):
     ## Load the data
     data = pd.read_csv(data_file_path)
-    
+
     ## Handling imbalanced dataset using SMOTE
     X = data.drop('target_column', axis=1)
     y = data['target_column']
     smote = SMOTE(sampling_strategy='auto')
     X_resampled, y_resampled = smote.fit_resample(X, y)
-    
+
     ## Split the resampled data into training and validation sets
     X_train, X_val, y_train, y_val = train_test_split(X_resampled, y_resampled, test_size=0.2, random_state=42)
-    
+
     ## Build the deep learning model
     model = keras.Sequential([
         keras.layers.Conv2D(32, (3, 3), activation='relu', input_shape=(X_train.shape[1], 1)),
@@ -279,20 +297,21 @@ def automated_deep_learning_modeling(data_file_path):
         keras.layers.Dense(64, activation='relu'),
         keras.layers.Dense(1, activation='sigmoid')
     ])
-    
+
     ## Compile the model
     model.compile(optimizer='adam',
                   loss='binary_crossentropy',
                   metrics=['accuracy'])
-    
+
     ## Train the deep learning model
     model.fit(X_train, y_train, epochs=10, validation_data=(X_val, y_val))
-    
+
     ## Return the trained deep learning model
     return model
 ```
 
 In this function:
+
 - The `automated_deep_learning_modeling` function takes the file path of the input data as an argument.
 - It loads the mock data from the specified file path.
 - It uses the SMOTE technique from the imbalanced-learn library to handle the imbalanced dataset by oversampling the minority class.
@@ -304,23 +323,27 @@ This function encapsulates the automated process of checking data quality and ad
 ### Types of Users for Automated Data Quality Checks and Balancing
 
 1. **Data Scientist**
-    - *User Story*: As a data scientist, I want to ensure that the raw data is of high quality and handle imbalanced datasets effectively before training machine learning models.
-    - *File*: The `automated_data_processing_and_modeling` function, housed in a script within the `code/data_processing/` directory, will accomplish this by performing data quality checks and handling imbalanced datasets.
+
+   - _User Story_: As a data scientist, I want to ensure that the raw data is of high quality and handle imbalanced datasets effectively before training machine learning models.
+   - _File_: The `automated_data_processing_and_modeling` function, housed in a script within the `code/data_processing/` directory, will accomplish this by performing data quality checks and handling imbalanced datasets.
 
 2. **Machine Learning Engineer**
-    - *User Story*: As a machine learning engineer, I need to develop scalable processes to automate data quality checks and balancing for machine learning projects.
-    - *File*: The DAG file for data quality checks and balancing in the `airflow/dags/` directory will accomplish this by orchestrating the automated processes for data quality checks and dataset balancing.
+
+   - _User Story_: As a machine learning engineer, I need to develop scalable processes to automate data quality checks and balancing for machine learning projects.
+   - _File_: The DAG file for data quality checks and balancing in the `airflow/dags/` directory will accomplish this by orchestrating the automated processes for data quality checks and dataset balancing.
 
 3. **DevOps Engineer**
-    - *User Story*: As a DevOps engineer, I want to automate the deployment of machine learning models, ensuring that they can handle imbalanced datasets and maintain data quality.
-    - *File*: The infrastructure as code files in the `deployment/infrastructure_as_code/` directory (e.g., CloudFormation templates or Terraform configurations) will accomplish this by automating the deployment setup and infrastructure provisioning.
+
+   - _User Story_: As a DevOps engineer, I want to automate the deployment of machine learning models, ensuring that they can handle imbalanced datasets and maintain data quality.
+   - _File_: The infrastructure as code files in the `deployment/infrastructure_as_code/` directory (e.g., CloudFormation templates or Terraform configurations) will accomplish this by automating the deployment setup and infrastructure provisioning.
 
 4. **Quality Assurance (QA) Engineer**
-    - *User Story*: As a QA engineer, I need to validate that data quality checks are performed and imbalanced datasets are addressed as part of the machine learning project processes.
-    - *File*: The data quality report generated by the `automated_data_processing_and_modeling` function, housed in the `data/processed_data/data_quality_reports/` directory, will accomplish this by providing detailed reports on data quality checks.
+
+   - _User Story_: As a QA engineer, I need to validate that data quality checks are performed and imbalanced datasets are addressed as part of the machine learning project processes.
+   - _File_: The data quality report generated by the `automated_data_processing_and_modeling` function, housed in the `data/processed_data/data_quality_reports/` directory, will accomplish this by providing detailed reports on data quality checks.
 
 5. **Data Engineer**
-    - *User Story*: As a data engineer, I need to design and maintain the data pipeline to ensure that automated data quality checks and dataset balancing are seamlessly integrated into the machine learning projects.
-    - *File*: The data processing scripts in the `code/data_processing/` directory will accomplish this by implementing the data quality checks and dataset balancing within the data pipeline.
+   - _User Story_: As a data engineer, I need to design and maintain the data pipeline to ensure that automated data quality checks and dataset balancing are seamlessly integrated into the machine learning projects.
+   - _File_: The data processing scripts in the `code/data_processing/` directory will accomplish this by implementing the data quality checks and dataset balancing within the data pipeline.
 
 By addressing the needs of these different types of users, the machine learning project's automated data quality checks and balancing processes can cater to a diverse set of stakeholders, ensuring data integrity and effective handling of imbalanced datasets throughout the project lifecycle.

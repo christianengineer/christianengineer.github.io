@@ -8,9 +8,11 @@ layout: article
 ## AI Customer Segmentation with Pandas (Python)
 
 ## Objectives
+
 The objective of the AI Customer Segmentation system is to group customers based on their behavior in order to understand their preferences, needs, and purchase patterns. This can help businesses tailor their marketing strategies, product offerings, and customer experiences to better meet the needs of different customer segments.
 
 ## System Design Strategies
+
 1. **Data Collection**: Gather customer data from various sources such as transaction history, website interactions, customer surveys, and social media activity.
 2. **Data Preprocessing**: Clean the data, handle missing values, and transform the data into a suitable format for analysis.
 3. **Feature Engineering**: Extract relevant features from the data that can be used for customer segmentation, such as purchase frequency, average order value, and browsing behavior.
@@ -19,34 +21,39 @@ The objective of the AI Customer Segmentation system is to group customers based
 6. **Visualization**: Visualize the customer segments to gain insights and communicate the results effectively.
 
 ## Chosen Libraries
+
 1. **Pandas**: For data manipulation and preprocessing, as well as feature engineering.
 2. **Scikit-learn**: For implementing the clustering algorithm and evaluation metrics.
 3. **Matplotlib/Seaborn**: For visualizing the customer segments and their characteristics.
 
 By leveraging these libraries, we can efficiently handle large volumes of customer data, extract meaningful insights, and create scalable AI applications for customer segmentation.
 
-
 ## Infrastructure for Customer Segmentation with Pandas (Python)
 
 When designing the infrastructure for the Customer Segmentation application, we need to consider scalability, data processing capabilities, and the ability to handle intensive computations. Here's a high-level overview of the infrastructure:
 
 ### Data Storage
+
 1. **Data Warehouse**: Store the customer data in a centralized data warehouse, such as Amazon Redshift, Google BigQuery, or Snowflake, to ensure scalability and easy access for analysis.
 2. **Data Lake**: Utilize a data lake, such as Amazon S3 or Azure Data Lake Storage, to store raw, unstructured data that can be used for future analysis and model training.
 
 ### Data Processing
+
 1. **ETL Pipeline**: Implement an ETL (Extract, Transform, Load) pipeline using Apache Airflow or AWS Glue to extract data from various sources, preprocess it using Pandas, and load it into the data warehouse.
 2. **Streaming Data**: If the customer behavior data is generated in real-time, utilize streaming data platforms such as Apache Kafka or Amazon Kinesis to ingest and process the data as it arrives.
 
 ### Computing Infrastructure
+
 1. **Compute Engine**: Use scalable compute resources, such as Amazon EC2 instances or Google Compute Engine, to perform intensive data processing and model training tasks.
 2. **Containerization**: Utilize container orchestration platforms like Kubernetes to manage and scale the application's containerized components.
 
 ### AI Model Training
+
 1. **Machine Learning Platform**: Leverage a machine learning platform, such as Google AI Platform or Amazon SageMaker, for training and deploying the customer segmentation model.
 2. **Model Versioning**: Implement a model versioning system using MLflow or Kubeflow to track and manage different versions of the segmentation model.
 
 ### Monitoring and Logging
+
 1. **Logging and Monitoring Tools**: Employ logging and monitoring tools such as Prometheus, Grafana, or ELK Stack to track the performance of the application, monitor resource utilization, and detect anomalies.
 
 By setting up this infrastructure, we can ensure that the Customer Segmentation application can handle large volumes of customer data, perform complex data processing tasks, and train machine learning models efficiently. This infrastructure also provides the flexibility to scale based on the application's demands and ensures robustness and reliability.
@@ -104,7 +111,6 @@ In this file structure:
 - The `.gitignore` file specifies untracked files to ignore in version control, preventing unnecessary files from being committed.
 
 This scalable file structure facilitates modular development, efficient collaboration, and straightforward organization of project components.
-
 
 Sure, here's an expanded view of the `models` directory and its files for the Customer Segmentation with Pandas (Python) application:
 
@@ -221,22 +227,23 @@ def customer_segmentation_algorithm(data_file_path, num_clusters):
 
     ## Load customer behavior data
     customer_data = pd.read_csv(data_file_path)  ## Replace with read_excel if using Excel file
-    
+
     ## Perform data preprocessing and feature engineering
     ## ... (code for data preprocessing and feature engineering)
 
     ## Select relevant features for clustering
     feature_data = customer_data[['feature1', 'feature2', 'feature3']]
-    
+
     ## Initialize and fit K-means clustering model
     kmeans = KMeans(n_clusters=num_clusters, random_state=42)
     customer_data['segment'] = kmeans.fit_predict(feature_data)
-    
+
     ## Return dataframe with customer IDs and their assigned segments
     return customer_data[['customer_id', 'segment']]
 ```
 
 In this function:
+
 - `customer_segmentation_algorithm` is a function that takes in the file path to the customer behavior data and the number of clusters as input parameters.
 - It first loads the customer behavior data from the specified file path using Pandas.
 - Then, it performs data preprocessing, feature engineering, and selection of relevant features for clustering.
@@ -244,6 +251,7 @@ In this function:
 - Finally, it returns a DataFrame containing customer IDs and their assigned segments.
 
 To use the function, you would call it with the file path to the customer behavior data and the desired number of clusters:
+
 ```python
 data_file_path = 'path_to_customer_data.csv'  ## Replace with the actual file path
 num_clusters = 4  ## Replace with the desired number of clusters
@@ -255,8 +263,8 @@ print(segmented_customers)
 Replace `path_to_customer_data.csv` with the actual file path to the customer behavior data and `4` with the desired number of clusters for customer segmentation.
 
 def customer_segmentation_algorithm(data_file_path, num_clusters):
-    """
-    Perform customer segmentation using a complex machine learning algorithm.
+"""
+Perform customer segmentation using a complex machine learning algorithm.
 
     Args:
     data_file_path (str): File path to the customer behavior data (e.g., CSV, Excel).
@@ -280,6 +288,7 @@ def customer_segmentation_algorithm(data_file_path, num_clusters):
 
     ## Return dataframe with customer IDs and their assigned segments
     return segmented_customers
+
 ```
 
 In this function:
@@ -294,24 +303,25 @@ To use this function, you would call it with the file path to the customer behav
 
 Certainly! Below are different types of users who may use the Customer Segmentation with Pandas application, along with a user story for each type of user and how they would interact with the system using specific files:
 
-1. **Marketing Analyst**  
+1. **Marketing Analyst**
    *User Story*: As a marketing analyst, I want to utilize customer segmentation to identify distinct groups of customers based on their behavior so that I can create targeted marketing campaigns. I need to access the segmented customer groups and their characteristics for campaign planning.
    - Relevant File: Data analysis and data exploration may be performed using the Jupyter notebook `notebooks/data_exploration.ipynb`.
-  
-2. **Data Engineer**  
+
+2. **Data Engineer**
    *User Story*: As a data engineer, I need to maintain the ETL pipeline to preprocess and transform the raw customer behavior data into a format suitable for modeling. I should be able to execute the ETL pipeline script and ensure the consistency of the processed data.
    - Relevant File: The ETL pipeline script `src/etl_pipeline.py` would handle the data preprocessing and transformation tasks.
 
-3. **Machine Learning Engineer**  
+3. **Machine Learning Engineer**
    *User Story*: As a machine learning engineer, I am responsible for training and deploying the customer segmentation model. I need to evaluate the performance of the trained model and use it to segment new customer data for business use. Furthermore, I should be able to deploy the model as an API.
    - Relevant Files: The Jupyter notebook `notebooks/model_training.ipynb` may be used for training the segmentation model. The `models` directory contains scripts and files related to model training, evaluation, and deployment.
 
-4. **Business Stakeholder**  
+4. **Business Stakeholder**
    *User Story*: As a business stakeholder, I need to access the results of customer segmentation and understand the characteristics of each customer segment in order to make strategic business decisions. I should be able to view the summarized customer segments and their profiles.
    - Relevant File: The Jupyter notebook `notebooks/data_exploration.ipynb` may provide visualizations and summaries of customer segments for strategic decision-making.
 
-5. **System Administrator**  
+5. **System Administrator**
    *User Story*: As a system administrator, I need to deploy and manage the customer segmentation model as an API, ensuring its availability and performance. I should be able to set up the deployment environment and monitor the API's functionality.
    - Relevant Files: The deployment directory contains files such as `deployment/app.py`, `Dockerfile`, and `deployment_config.yaml` for deploying and managing the model as an API.
 
 Each type of user interacts with the Customer Segmentation with Pandas application in distinct ways, utilizing specific files and functionalities within the project's structure to accomplish their respective objectives.
+```

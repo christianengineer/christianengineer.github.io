@@ -23,22 +23,22 @@ The system will be designed as a distributed, scalable, and fault-tolerant archi
 
 ### Data Ingestion
 
-* **Streaming Data**: Utilize Apache Kafka for real-time data ingestion from various social media platforms.
-* **Batch Data**: Implement batch data ingestion through connectors with social media APIs and data storage services.
+- **Streaming Data**: Utilize Apache Kafka for real-time data ingestion from various social media platforms.
+- **Batch Data**: Implement batch data ingestion through connectors with social media APIs and data storage services.
 
 ### Preprocessing
 
-* **Apache Spark**: Use Spark for distributed data preprocessing to handle the large volumes of social media data efficiently.
-* **Data Cleansing**: Apply data cleansing techniques to handle noisy and unstructured social media data.
+- **Apache Spark**: Use Spark for distributed data preprocessing to handle the large volumes of social media data efficiently.
+- **Data Cleansing**: Apply data cleansing techniques to handle noisy and unstructured social media data.
 
 ### Model Training and Serving
 
-* **PyTorch**: Utilize PyTorch for building and training machine learning models to analyze social media trends.
-* **Model Deployment**: Deploy trained models using containerization and orchestration technologies like Docker and Kubernetes for scalability and fault tolerance.
+- **PyTorch**: Utilize PyTorch for building and training machine learning models to analyze social media trends.
+- **Model Deployment**: Deploy trained models using containerization and orchestration technologies like Docker and Kubernetes for scalability and fault tolerance.
 
 ### Visualization
 
-* **Dashboard**: Develop a dashboard using libraries like Plotly or Dash to visualize the insights and trends extracted from social media data.
+- **Dashboard**: Develop a dashboard using libraries like Plotly or Dash to visualize the insights and trends extracted from social media data.
 
 ## Chosen Libraries and Technologies
 
@@ -56,9 +56,9 @@ Docker will be used for containerizing the application, including its dependenci
 
 ### Other Potential Libraries
 
-* **Kafka**: For real-time data ingestion and processing from social media platforms.
-* **Kubernetes**: For container orchestration and management.
-* **Plotly/Dash**: For building interactive dashboards and visualizing the extracted insights from social media data.
+- **Kafka**: For real-time data ingestion and processing from social media platforms.
+- **Kubernetes**: For container orchestration and management.
+- **Plotly/Dash**: For building interactive dashboards and visualizing the extracted insights from social media data.
 
 By leveraging these technologies and libraries, the AI Real-time Social Media Trend Analysis repository aims to enable the development of scalable, data-intensive AI applications for analyzing and predicting social media trends for effective marketing strategies.
 
@@ -70,27 +70,27 @@ The MLOps infrastructure for the Real-time Social Media Trend Analysis applicati
 
 ### 1. Data Pipeline
 
-* **Ingestion**: Implement data ingestion pipelines utilizing Apache Kafka for real-time streaming and connectors for batch data from social media platforms.
-* **Preprocessing**: Use Apache Spark for distributed data preprocessing to handle large volumes of social media data efficiently.
+- **Ingestion**: Implement data ingestion pipelines utilizing Apache Kafka for real-time streaming and connectors for batch data from social media platforms.
+- **Preprocessing**: Use Apache Spark for distributed data preprocessing to handle large volumes of social media data efficiently.
 
 ### 2. ML Training and Deployment Pipelines
 
-* **Training Pipeline**: Create ML training pipelines using PyTorch for building and training machine learning models for social media trend analysis.
-* **Model Registry**: Utilize a model registry system to track, version, and store trained models for deployment.
+- **Training Pipeline**: Create ML training pipelines using PyTorch for building and training machine learning models for social media trend analysis.
+- **Model Registry**: Utilize a model registry system to track, version, and store trained models for deployment.
 
 ### 3. Model Deployment and Serving
 
-* **Containerization**: Employ Docker for packaging the application, along with its dependencies and trained models, for easy deployment and scalability.
-* **Orchestration**: Use container orchestration platforms like Kubernetes for managing and scaling the deployed ML models in a distributed environment.
+- **Containerization**: Employ Docker for packaging the application, along with its dependencies and trained models, for easy deployment and scalability.
+- **Orchestration**: Use container orchestration platforms like Kubernetes for managing and scaling the deployed ML models in a distributed environment.
 
 ### 4. Monitoring and Logging
 
-* **Logging**: Implement centralized logging to monitor the application's behavior and performance during data processing, model training, and prediction.
-* **Metrics and Alerts**: Set up monitoring systems to track performance metrics and generate alerts for any anomalies or performance degradation.
+- **Logging**: Implement centralized logging to monitor the application's behavior and performance during data processing, model training, and prediction.
+- **Metrics and Alerts**: Set up monitoring systems to track performance metrics and generate alerts for any anomalies or performance degradation.
 
 ### 5. Continuous Integration/Continuous Deployment (CI/CD)
 
-* **Automated Pipelines**: Establish CI/CD pipelines for automating the testing, building, and deployment of the application and its machine learning models.
+- **Automated Pipelines**: Establish CI/CD pipelines for automating the testing, building, and deployment of the application and its machine learning models.
 
 ## Infrastructure Workflow
 
@@ -108,10 +108,10 @@ The MLOps infrastructure for the Real-time Social Media Trend Analysis applicati
 
 The MLOps infrastructure for the Real-time Social Media Trend Analysis application provides the following benefits:
 
-* **Scalability**: Easily scale up or down the deployed models to handle varying workloads.
-* **Reliability**: Ensure the reliability and fault tolerance of the application with automated monitoring and alerts.
-* **Consistency**: Maintain consistent deployment and management processes for the application and its machine learning components.
-* **Efficiency**: Automate repetitive tasks, such as model deployment and monitoring, to improve operational efficiency.
+- **Scalability**: Easily scale up or down the deployed models to handle varying workloads.
+- **Reliability**: Ensure the reliability and fault tolerance of the application with automated monitoring and alerts.
+- **Consistency**: Maintain consistent deployment and management processes for the application and its machine learning components.
+- **Efficiency**: Automate repetitive tasks, such as model deployment and monitoring, to improve operational efficiency.
 
 By integrating these components and workflows, the MLOps infrastructure enables the seamless development, deployment, and management of the Real-time Social Media Trend Analysis application, leveraging PyTorch, Spark, and Docker for effective marketing strategies.
 
@@ -486,23 +486,27 @@ This script showcases a more sophisticated machine learning algorithm in the con
 ### Types of Users for the Real-time Social Media Trend Analysis Application
 
 1. **Marketing Analyst**:
-   - *User Story*: As a marketing analyst, I want to explore real-time trend analysis of social media data to understand the sentiments and topics being discussed, and leverage these insights to fine-tune marketing strategies.
-   - *Accomplishing File*: The visualization/dashboard files, such as `dashboard_app.py` or `report_generation.py`, will provide the marketing analyst with dynamic visualizations and reports derived from the trend analysis.
+
+   - _User Story_: As a marketing analyst, I want to explore real-time trend analysis of social media data to understand the sentiments and topics being discussed, and leverage these insights to fine-tune marketing strategies.
+   - _Accomplishing File_: The visualization/dashboard files, such as `dashboard_app.py` or `report_generation.py`, will provide the marketing analyst with dynamic visualizations and reports derived from the trend analysis.
 
 2. **Data Scientist/ML Engineer**:
-   - *User Story*: As a data scientist/ML engineer, I need to train and iterate on machine learning models using the latest trend data from social media platforms to improve trend prediction accuracy.
-   - *Accomplishing File*: The model training file, such as `model_training.py` or `complex_model_training.py`, will execute the training and validation of machine learning models using PyTorch and/or Spark with mock or real-time data.
+
+   - _User Story_: As a data scientist/ML engineer, I need to train and iterate on machine learning models using the latest trend data from social media platforms to improve trend prediction accuracy.
+   - _Accomplishing File_: The model training file, such as `model_training.py` or `complex_model_training.py`, will execute the training and validation of machine learning models using PyTorch and/or Spark with mock or real-time data.
 
 3. **System Administrator/DevOps Engineer**:
-   - *User Story*: As a system administrator/DevOps engineer, I am responsible for managing the deployment and scaling of the Real-time Social Media Trend Analysis application to ensure high availability and performance.
-   - *Accomplishing File*: The deployment-related files, such as `Dockerfile`, `deployment.yml`, or `service.yml`, will be managed by the system administrator/DevOps engineer to deploy and scale the application using Docker and Kubernetes.
+
+   - _User Story_: As a system administrator/DevOps engineer, I am responsible for managing the deployment and scaling of the Real-time Social Media Trend Analysis application to ensure high availability and performance.
+   - _Accomplishing File_: The deployment-related files, such as `Dockerfile`, `deployment.yml`, or `service.yml`, will be managed by the system administrator/DevOps engineer to deploy and scale the application using Docker and Kubernetes.
 
 4. **Business Decision Maker/Manager**:
-   - *User Story*: As a business decision maker/manager, I require access to summarized trend analysis reports and insights to make informed decisions for marketing strategies and resource allocation.
-   - *Accomplishing File*: The report generation file, such as `report_generation.py`, will deliver summarized insights and reports based on the trend analysis.
+
+   - _User Story_: As a business decision maker/manager, I require access to summarized trend analysis reports and insights to make informed decisions for marketing strategies and resource allocation.
+   - _Accomplishing File_: The report generation file, such as `report_generation.py`, will deliver summarized insights and reports based on the trend analysis.
 
 5. **Software Engineer/Developer**:
-   - *User Story*: As a software engineer/developer, I aim to enhance and maintain the application's codebase, including adding new features, optimizing data pipelines, and ensuring code quality and robustness.
-   - *Accomplishing File*: Various code files within the project's directory structure, such as `model_training.py`, `data_preprocessing.py`, and `dashboard_app.py`, may be handled or modified by the software engineer/developer as part of maintaining or enhancing the application's functionality.
+   - _User Story_: As a software engineer/developer, I aim to enhance and maintain the application's codebase, including adding new features, optimizing data pipelines, and ensuring code quality and robustness.
+   - _Accomplishing File_: Various code files within the project's directory structure, such as `model_training.py`, `data_preprocessing.py`, and `dashboard_app.py`, may be handled or modified by the software engineer/developer as part of maintaining or enhancing the application's functionality.
 
 Each type of user interacts with the Real-time Social Media Trend Analysis application in a distinct manner, and specific files within the project's file structure facilitate the accomplishment of tasks relevant to their roles and responsibilities.

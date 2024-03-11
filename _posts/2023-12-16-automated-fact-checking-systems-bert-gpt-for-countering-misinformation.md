@@ -140,6 +140,7 @@ automated-fact-checking/
 ```
 
 In this file structure:
+
 - The `app/` directory contains the main application code, including API endpoints, data processing modules, and machine learning model implementations for BERT and GPT.
 - The `deployment/` directory includes Dockerfile for containerization, Kubernetes deployment files, and scripts for deployment management.
 - The `data/` directory is organized into subdirectories for raw and processed data, facilitating data management and preprocessing.
@@ -174,7 +175,9 @@ models/
 ```
 
 In this directory:
+
 - The `bert/` directory contains files related to the BERT model, including:
+
   - `bert_model.py`: Implementation of the BERT model architecture for fact-checking tasks, including pre-trained model loading and customization for fine-tuning.
   - `bert_fine_tuning.py`: Script for fine-tuning the BERT model on fact-checking data and optimizing model parameters for performance.
   - `bert_tokenizer.py`: Tokenization functions and utilities specific to BERT model input processing.
@@ -206,9 +209,11 @@ deployment/
 ```
 
 In this directory:
+
 - The `Dockerfile` contains instructions for building a Docker image that encapsulates the entire Automated Fact-Checking System, including the application code, machine learning models, dependencies, and configurations.
 
 - The `kubernetes/` directory holds Kubernetes deployment files for orchestrating the deployment of the Fact-Checking System in a Kubernetes cluster. This includes:
+
   - `deployment.yaml`: Configuration file defining the deployment specifications for deploying the application and associated services.
   - `service.yaml`: Configuration file specifying the service definition for exposing the deployed application within the Kubernetes cluster.
 
@@ -234,7 +239,7 @@ def train_bert_fact_checker(train_dataset_path, validation_dataset_path, batch_s
     ## Mock data loaders
     train_dataset = MockFactCheckingDataset(train_dataset_path)
     validation_dataset = MockFactCheckingDataset(validation_dataset_path)
-    
+
     train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
     validation_loader = DataLoader(validation_dataset, batch_size=batch_size, shuffle=False)
 
@@ -320,7 +325,7 @@ def train_complex_fact_checker(train_dataset_path, validation_dataset_path, batc
     ## Mock data loaders
     train_dataset = MockFactCheckingDataset(train_dataset_path)
     validation_dataset = MockFactCheckingDataset(validation_dataset_path)
-    
+
     train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
     validation_loader = DataLoader(validation_dataset, batch_size=batch_size, shuffle=False)
 
@@ -368,24 +373,29 @@ The script assumes the existence of a mock data loader `mock_data_loader.py` and
 This script showcases a simplified demonstration of a complex architecture and can be further extended with additional model components and real-world data integration to meet the specific requirements of the Automated Fact-Checking Systems.
 
 **Types of Users:**
-1. *General Public User (Fact-Checking Portal User)*
-   - *User Story*: As a general public user, I want to access a user-friendly interface to submit factual claims for fact-checking and view the results with transparency and explanations.
-   - *Accomplishing File*: `app/fact_checking_api.py` would facilitate the user-facing API endpoints and interaction with the fact-checking system. It includes functionalities for claim submission, processing, and result retrieval.
 
-2. *Journalist/Reporter (Fact-Checking Integration User)*
-   - *User Story*: As a journalist/reporter, I need to integrate the fact-checking system with our publishing platform to verify and validate factual claims before publishing news articles or reports.
-   - *Accomplishing File*: Integration with the fact-checking system can be achieved by leveraging the `fact_checking_api.py` and relevant deployment files in the `deployment/` directory for seamless integration into the publishing platform.
+1. _General Public User (Fact-Checking Portal User)_
 
-3. *Data Scientist/ML Engineer (Model Enhancement User)*
-   - *User Story*: As a data scientist/ML engineer, I want to explore and enhance the machine learning models used for fact-checking by experimenting with alternative model architectures and fine-tuning strategies.
-   - *Accomplishing File*: The `complex_fact_checking_model.py` script could be utilized for experimenting with complex model architectures, fine-tuning strategies, and incorporating alternative models like BERT and GPT.
+   - _User Story_: As a general public user, I want to access a user-friendly interface to submit factual claims for fact-checking and view the results with transparency and explanations.
+   - _Accomplishing File_: `app/fact_checking_api.py` would facilitate the user-facing API endpoints and interaction with the fact-checking system. It includes functionalities for claim submission, processing, and result retrieval.
 
-4. *System Administrator/DevOps Engineer (System Maintenance User)*
-   - *User Story*: As a system administrator/DevOps engineer, I am responsible for maintaining the system infrastructure and ensuring smooth operations of the fact-checking application including model serving, scaling, and monitoring.
-   - *Accomplishing File*: The deployment directory, including `Dockerfile`, `kubernetes/` deployment files, and deployment scripts (`deploy.sh`, `manage.sh`), supports the system administrator/devops engineer in maintaining and managing the deployment of the Fact-Checking System infrastructure.
+2. _Journalist/Reporter (Fact-Checking Integration User)_
 
-5. *Researcher/Academic User (Data Analysis and Model Evaluation User)*
-   - *User Story*: As a researcher/academic user, I need to analyze the fact-checked data, perform model evaluations, and generate reports to contribute to scholarly publications on misinformation and fact-checking.
-   - *Accomplishing File*: Jupyter notebooks in the `notebooks/` directory, such as `exploratory_analysis.ipynb` and `model_training_evaluation.ipynb`, support the user in conducting data analysis, model evaluations, and generating scholarly reports.
+   - _User Story_: As a journalist/reporter, I need to integrate the fact-checking system with our publishing platform to verify and validate factual claims before publishing news articles or reports.
+   - _Accomplishing File_: Integration with the fact-checking system can be achieved by leveraging the `fact_checking_api.py` and relevant deployment files in the `deployment/` directory for seamless integration into the publishing platform.
+
+3. _Data Scientist/ML Engineer (Model Enhancement User)_
+
+   - _User Story_: As a data scientist/ML engineer, I want to explore and enhance the machine learning models used for fact-checking by experimenting with alternative model architectures and fine-tuning strategies.
+   - _Accomplishing File_: The `complex_fact_checking_model.py` script could be utilized for experimenting with complex model architectures, fine-tuning strategies, and incorporating alternative models like BERT and GPT.
+
+4. _System Administrator/DevOps Engineer (System Maintenance User)_
+
+   - _User Story_: As a system administrator/DevOps engineer, I am responsible for maintaining the system infrastructure and ensuring smooth operations of the fact-checking application including model serving, scaling, and monitoring.
+   - _Accomplishing File_: The deployment directory, including `Dockerfile`, `kubernetes/` deployment files, and deployment scripts (`deploy.sh`, `manage.sh`), supports the system administrator/devops engineer in maintaining and managing the deployment of the Fact-Checking System infrastructure.
+
+5. _Researcher/Academic User (Data Analysis and Model Evaluation User)_
+   - _User Story_: As a researcher/academic user, I need to analyze the fact-checked data, perform model evaluations, and generate reports to contribute to scholarly publications on misinformation and fact-checking.
+   - _Accomplishing File_: Jupyter notebooks in the `notebooks/` directory, such as `exploratory_analysis.ipynb` and `model_training_evaluation.ipynb`, support the user in conducting data analysis, model evaluations, and generating scholarly reports.
 
 Each user type interacts with the fact-checking system in a specific capacity, and the identified files within the application repository cater to fulfilling the respective user stories and serving the needs of each user type.

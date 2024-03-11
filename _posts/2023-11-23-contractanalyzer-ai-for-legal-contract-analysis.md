@@ -8,14 +8,18 @@ layout: article
 ## AI ContractAnalyzer AI for Legal Contract Analysis Repository
 
 ## Objectives
+
 The objectives of the AI ContractAnalyzer repository are to create a scalable and efficient system for analyzing legal contracts using AI and machine learning techniques. The repository aims to provide a solution for extracting key information, identifying clauses, and providing insights into the contents of legal contracts. The specific objectives include:
+
 - Developing a robust text processing and natural language understanding system for analyzing legal documents
 - Implementing machine learning models for entity recognition, clause detection, and sentiment analysis
 - Creating a user-friendly interface for interacting with the AI ContractAnalyzer system
 - Ensuring scalability and performance of the system to handle large volumes of legal documents
 
 ## System Design Strategies
+
 The system design for AI ContractAnalyzer involves several key strategies to achieve scalability, efficiency, and accuracy in contract analysis:
+
 - **Microservices Architecture**: Implementing the system as a collection of microservices allows for independent scalability of different components such as text processing, machine learning models, and user interface.
 - **Asynchronous Processing**: Utilizing asynchronous processing for document ingestion, analysis, and response generation to handle concurrent requests and optimize resource utilization.
 - **Distributed Computing**: Leveraging distributed computing frameworks to handle the computational load of natural language processing and machine learning tasks.
@@ -23,7 +27,9 @@ The system design for AI ContractAnalyzer involves several key strategies to ach
 - **Model Serving**: Implementing model serving infrastructure to enable real-time inference and analysis of legal documents using machine learning models.
 
 ## Chosen Libraries and Frameworks
+
 The AI ContractAnalyzer repository makes use of a variety of libraries and frameworks to support its objectives and system design strategies:
+
 - **Natural Language Processing**: Utilizing libraries such as SpaCy and NLTK for text processing, entity recognition, and syntactic analysis.
 - **Machine Learning**: Leveraging frameworks like TensorFlow and Scikit-learn for building and deploying machine learning models for entity recognition, clause detection, and sentiment analysis.
 - **Microservices**: Implementing microservices using containerization with Docker and orchestration with Kubernetes for scalability and ease of deployment.
@@ -37,28 +43,35 @@ By incorporating these libraries and frameworks, the AI ContractAnalyzer reposit
 The infrastructure for the ContractAnalyzer AI application is designed to accommodate the scalability, performance, and reliability requirements of analyzing legal contracts using AI and machine learning. The infrastructure is composed of several key components and services:
 
 ### 1. Cloud Platform
+
 - **Choice of Cloud Provider**: The application can be deployed on a major cloud provider such as AWS, Google Cloud, or Microsoft Azure to take advantage of their infrastructure services, scalability, and global reach.
 
 ### 2. Compute Resources
+
 - **Virtual Machines**: Utilize virtual machines for hosting various components of the application such as microservices, machine learning model servers, and text processing pipelines.
 
 ### 3. Data Storage
+
 - **Object Storage**: Utilize object storage services for storing legal documents and analysis results. This provides scalability and durability for handling large volumes of documents.
 - **Database**: Implement a database for storing metadata, user preferences, and intermediate processing results.
 
 ### 4. Microservices Architecture
+
 - **Containerization**: Deploy microservices as containers using Docker to achieve portability and isolation.
 - **Service Orchestration**: Utilize Kubernetes or a similar platform for orchestrating the deployment, scaling, and management of microservices.
 
 ### 5. Machine Learning Infrastructure
+
 - **Model Training**: Utilize powerful compute instances for training machine learning models on large datasets.
 - **Model Serving**: Deploy machine learning models using specialized model serving infrastructure for real-time inference and analysis of legal documents.
 
 ### 6. Networking
+
 - **Load Balancing**: Implement load balancing to distribute incoming traffic across multiple instances of microservices for high availability and improved performance.
 - **Security**: Utilize firewalls, network security groups, and encryption to ensure the security and privacy of the legal documents being processed.
 
 ### 7. Monitoring and Logging
+
 - **Logging Infrastructure**: Implement logging infrastructure for capturing and analyzing application logs, performance metrics, and user activities.
 - **Monitoring and Alerting**: Utilize monitoring tools to track the health and performance of the infrastructure components and set up alerts for proactive issue resolution.
 
@@ -174,11 +187,13 @@ This file structure organizes the repository contents in a scalable and modular 
 In the `ml_models/` directory for the ContractAnalyzer AI application:
 
 - `entity_recognition/`: Contains the files related to the entity recognition model.
+
   - `entity_recognition_model.pb`: The serialized model file containing the trained entity recognition model.
   - `entity_recognition_vocab.txt`: The vocabulary file mapping tokens to their numerical identifiers, used for encoding text inputs before model inference.
   - `entity_recognition_config.json`: Configuration file containing model hyperparameters, metadata, and version information.
 
 - `clause_detection/`: Includes the files for the clause detection model.
+
   - `clause_detection_model.pb`: The serialized model file comprising the trained clause detection model.
   - `clause_detection_vocab.txt`: The vocabulary file used for token encoding in the clause detection model.
   - `clause_detection_config.json`: Configuration file containing the model's settings and relevant metadata.
@@ -290,22 +305,27 @@ You would need to supply a CSV file path to the `data_file_path` parameter, cont
 ## Types of Users for ContractAnalyzer AI for Legal Contract Analysis Application
 
 ### 1. Legal Professionals
+
 - **User Story**: As a legal professional, I want to upload a legal contract document and receive a detailed analysis of key clauses, entities, and sentiment to expedite the contract review process.
 - **File**: `app/frontend/index.html` for the user interface and `app/backend/api/contract_analysis.py` for handling the document analysis request.
 
 ### 2. Compliance Officers
+
 - **User Story**: As a compliance officer, I want to batch upload multiple legal contracts and receive summarized reports highlighting potential compliance risks and regulatory issues.
 - **File**: `app/frontend/index.html` for the user interface and `app/backend/api/contract_analysis.py` for handling batch document analysis requests.
 
 ### 3. Business Analysts
+
 - **User Story**: As a business analyst, I want to access insights from contract analysis reports to identify trends, risks, and opportunities for improving contract negotiations and terms.
 - **File**: `app/frontend/index.html` for the user interface and `app/backend/api/contract_analysis.py` for retrieving analyzed contract data.
 
 ### 4. Data Scientists/Developers
+
 - **User Story**: As a data scientist/developer, I want to access the machine learning model endpoints and integrate the contract analysis capabilities into custom applications or workflows.
 - **File**: `app/backend/services/machine_learning.py` for exposing the machine learning model endpoints and `infrastructure/deployment/kubernetes/backend-deployment.yaml` for deployment configurations.
 
 ### 5. System Administrators
+
 - **User Story**: As a system administrator, I want to monitor system performance, handle user management, and maintain the infrastructure supporting the AI application.
 - **File**: `app/backend/api/user_management.py` for user management operations and `infrastructure/` directory for deployment and infrastructure configurations.
 

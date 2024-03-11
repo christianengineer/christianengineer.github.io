@@ -8,10 +8,13 @@ layout: article
 ### AI Financial Inclusion Platforms for Unbanked Populations
 
 #### Objectives
+
 The objective of the AI Financial Inclusion Platforms for unbanked populations repository is to leverage machine learning to provide financial services and products to previously unbanked populations. This includes utilizing TensorFlow and Keras to develop scalable, data-intensive AI applications that can analyze and infer financial behaviors, assess credit risks, and offer personalized financial solutions to individuals and small businesses in underserved communities. The ultimate goal is to promote economic inclusion and empower individuals by providing access to essential financial services.
 
 #### System Design Strategies
+
 To achieve the objectives of the platform, the following design strategies should be considered:
+
 1. **Scalability**: Design the system to handle a large volume of data and user interactions. Use distributed computing and scalable infrastructure to support growth in user base and data volume.
 2. **Data Intensive Processing**: Implement robust data processing pipelines to handle diverse financial data types, including transaction records, account information, and demographic data.
 3. **Machine Learning Model Integration**: Integrate machine learning models trained on TensorFlow/Keras to analyze financial data, predict creditworthiness, and offer personalized financial recommendations.
@@ -19,6 +22,7 @@ To achieve the objectives of the platform, the following design strategies shoul
 5. **User Interface**: Design user-friendly interfaces that take into account the specific needs and constraints of the target population, such as limited digital literacy and access to technology.
 
 #### Chosen Libraries
+
 1. **TensorFlow**: TensorFlow is a widely-used open-source machine learning framework that provides a comprehensive ecosystem for developing and deploying AI applications. It offers extensive support for building and training machine learning models, including tools for data preprocessing, model evaluation, and deployment.
 2. **Keras**: Keras is a high-level neural networks API, written in Python and capable of running on top of TensorFlow. It offers a user-friendly interface for building and training deep learning models, making it an ideal choice for developing AI applications focused on financial inclusion.
 
@@ -31,6 +35,7 @@ Overall, the focus is on leveraging these libraries and design strategies to bui
 In order to effectively operationalize the AI Financial Inclusion Platforms leveraging TensorFlow and Keras for unbanked populations, a robust MLOps infrastructure is essential. MLOps, which stands for Machine Learning Operations, encompasses the practices and tools used to streamline the deployment, monitoring, and management of machine learning models in production environments.
 
 #### Key Components of MLOps Infrastructure
+
 1. **Model Training Pipeline**: Implement an automated pipeline for training and retraining machine learning models. This should include data ingestion, model training, hyperparameter optimization, and model evaluation.
 2. **Model Deployment**: Ensure seamless deployment of trained models into production environments, with support for versioning and rollback capabilities.
 3. **Monitoring and Logging**: Implement monitoring tools to track model performance, data drift, and usage metrics. This includes logging predictions, monitoring model accuracy, and detecting anomalies.
@@ -39,16 +44,20 @@ In order to effectively operationalize the AI Financial Inclusion Platforms leve
 6. **Security and Compliance**: Implement security measures to protect sensitive data and ensure compliance with data privacy regulations. This includes access control, encryption, and audit trails.
 
 #### Integration with TensorFlow and Keras
+
 When integrating MLOps practices with TensorFlow and Keras, several considerations should be accounted for:
+
 1. **Model Versioning**: Implement a version control system to manage different iterations of trained models and track their deployment history.
 2. **Model Serving**: Utilize TensorFlow Serving or Keras serving solutions for efficient deployment of models and handling prediction requests at scale.
 3. **Continuous Integration/Continuous Deployment (CI/CD)**: Automate the CI/CD pipeline for training, validating, and deploying models, utilizing tools like Jenkins, GitLab CI/CD, or CircleCI.
 4. **Model Monitoring**: Leverage TensorFlow Model Analysis (TFMA) or similar tools to monitor model performance, data drift, and model fairness in production.
 
 #### Data Pipeline Orchestration
+
 Incorporate a data pipeline orchestration framework, such as Apache Airflow or Kubeflow Pipelines, to manage the end-to-end process of data processing, model training, and deployment. This allows for systematic scheduling, monitoring, and orchestration of complex workflows involved in the MLOps infrastructure.
 
 #### Continuous Improvement and Feedback Loop
+
 Establish mechanisms for collecting feedback from deployed models, user interactions, and performance metrics. Utilize this feedback to iteratively improve models, retrain them using new data, and update the deployed versions, ensuring continuous improvement and adaptation to changing conditions.
 
 By integrating MLOps best practices with the AI Financial Inclusion Platforms leveraging TensorFlow and Keras, the aim is to establish a well-organized and efficient infrastructure for deploying and managing machine learning models that drive financial inclusion for unbanked populations.
@@ -116,14 +125,14 @@ models/
 │   │   ├── saved_model.pb          ## Serialized representation of the TensorFlow model
 │   │   ├── model_metrics.txt       ## Metrics and evaluation results for the trained model
 │   │   ├── README.md               ## Documentation for this specific trained model
-│   │ 
+│   │
 │   ├── model_2/
 │   │   ├── assets/
 │   │   ├── variables/
 │   │   ├── saved_model.pb
 │   │   ├── model_metrics.txt
 │   │   ├── README.md
-│   │ 
+│   │
 │   ├── ...
 │
 ├── serving/
@@ -256,19 +265,23 @@ Please note that in a real-world scenario, the data would be loaded from real so
 ### Users of the Financial Inclusion Platforms
 
 #### 1. Individual Customers
-   - **User Story**: As an individual customer, I want to be able to access financial services and products tailored to my needs without having a traditional bank account. I want to apply for microloans or savings accounts through the platform.
-   - **File**: The user story for individual customers can be documented in the `docs/user_stories.md` file.
+
+- **User Story**: As an individual customer, I want to be able to access financial services and products tailored to my needs without having a traditional bank account. I want to apply for microloans or savings accounts through the platform.
+- **File**: The user story for individual customers can be documented in the `docs/user_stories.md` file.
 
 #### 2. Small Business Owners
-   - **User Story**: As a small business owner, I want to leverage the platform to access credit facilities, manage business finances, and receive personalized financial insights that can help grow my business.
-   - **File**: The user story for small business owners could also be documented in the `docs/user_stories.md` file.
+
+- **User Story**: As a small business owner, I want to leverage the platform to access credit facilities, manage business finances, and receive personalized financial insights that can help grow my business.
+- **File**: The user story for small business owners could also be documented in the `docs/user_stories.md` file.
 
 #### 3. Financial Service Providers
-   - **User Story**: As a financial service provider, I want to integrate the AI Financial Inclusion platform into our existing systems to expand our service offerings and mitigate risks when providing financial services to unbanked populations.
-   - **File**: This user story can be documented in the `docs/user_stories.md` file as well.
+
+- **User Story**: As a financial service provider, I want to integrate the AI Financial Inclusion platform into our existing systems to expand our service offerings and mitigate risks when providing financial services to unbanked populations.
+- **File**: This user story can be documented in the `docs/user_stories.md` file as well.
 
 #### 4. Data Scientists/ML Engineers
-   - **User Story**: As a data scientist or ML engineer, I want to have access to the data processing and model training scripts to develop and enhance machine learning models that can address the financial inclusion challenges for unbanked populations.
-   - **File**: The access to data processing and model training scripts can be described in the `README.md` file within the `src/` directory.
+
+- **User Story**: As a data scientist or ML engineer, I want to have access to the data processing and model training scripts to develop and enhance machine learning models that can address the financial inclusion challenges for unbanked populations.
+- **File**: The access to data processing and model training scripts can be described in the `README.md` file within the `src/` directory.
 
 By documenting these user stories in the `docs/user_stories.md` file and providing necessary documentation and access to relevant files, the Financial Inclusion Platforms can ensure that the needs and requirements of various types of users are considered and addressed in the development and usage of the application.

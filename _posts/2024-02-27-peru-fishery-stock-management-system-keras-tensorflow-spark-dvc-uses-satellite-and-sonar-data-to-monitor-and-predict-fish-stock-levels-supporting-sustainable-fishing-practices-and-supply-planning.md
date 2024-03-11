@@ -8,11 +8,13 @@ layout: article
 ## AI Peru Fishery Stock Management System
 
 ## Objectives:
+
 - **Monitor and predict fish stock levels:** Utilize satellite and sonar data to monitor the current fish stock levels and predict future stocks.
 - **Support sustainable fishing practices:** Ensure that fishing activities are conducted in a sustainable manner to prevent overfishing and preserve the marine ecosystem.
 - **Supply planning repository:** Assist in planning fishing activities by providing insights into fish stock levels to optimize supply planning.
 
 ## System Design Strategies:
+
 - **Data Collection:** Utilize satellite and sonar data for monitoring fish stock levels.
 - **Data Preprocessing:** Clean, preprocess, and feature engineer the data for model training.
 - **Model Development:** Develop machine learning models using Keras and TensorFlow to predict fish stock levels.
@@ -22,6 +24,7 @@ layout: article
 - **Monitoring and Feedback:** Implement monitoring mechanisms to continuously evaluate model performance and provide feedback for model improvement.
 
 ## Chosen Libraries:
+
 - **Keras and TensorFlow:** Used for building and training deep learning models for fish stock prediction.
 - **Spark:** Employed for distributed computing to handle large-scale data processing and model training.
 - **DVC (Data Version Control):** Utilized for managing and versioning datasets and models, ensuring reproducibility and collaboration in the development process.
@@ -31,25 +34,30 @@ layout: article
 ## Components of MLOps Infrastructure:
 
 1. **Data Ingestion and Processing:**
+
    - **Data Sources:** Satellite and sonar data sources for monitoring fish stock levels.
    - **Data Pipeline:** Implement data pipelines for ingesting, cleaning, and preprocessing the data before model training.
    - **Spark for Data Processing:** Utilize Spark for distributed data processing to handle large volumes of satellite and sonar data efficiently.
 
 2. **Model Development and Training:**
+
    - **Model Development:** Build deep learning models using Keras and TensorFlow for predicting fish stock levels.
    - **Model Training:** Utilize Spark for distributed model training to train models on large datasets.
    - **Hyperparameter Tuning:** Implement hyperparameter tuning to optimize model performance.
 
 3. **Model Deployment:**
+
    - **Containerization:** Dockerize the trained models for easy deployment and scalability.
    - **Orchestration:** Use Kubernetes for orchestrating and managing containerized models in a production environment.
 
 4. **Model Monitoring and Performance Evaluation:**
+
    - **Monitoring Metrics:** Define and monitor key metrics such as prediction accuracy, recall, and precision.
    - **Alerting System:** Implement an alerting system to notify anomalies or model degradation.
    - **Feedback Loop:** Continuously gather feedback from the model predictions to improve model performance over time.
 
 5. **Model Versioning and Management:**
+
    - **DVC Integration:** Utilize DVC for versioning and managing datasets, models, and model configurations.
    - **Reproducibility:** Ensure reproducibility of experiments and model training by tracking changes and versions of datasets and models.
 
@@ -58,6 +66,7 @@ layout: article
    - **Documentation:** Maintain detailed documentation of data sources, preprocessing steps, model architectures, and deployment processes.
 
 ## Benefits of MLOps Infrastructure:
+
 - **Scalability:** Enable scalability in handling large volumes of data and model training with Spark.
 - **Efficiency:** Streamline the model development, training, and deployment processes for faster iterations.
 - **Reliability:** Ensure reliable and consistent performance of models through monitoring and feedback mechanisms.
@@ -73,7 +82,7 @@ peru_fishery_stock_management/
 │   ├── raw_data/
 │   │   ├── satellite_data.csv
 │   │   ├── sonar_data.csv
-│   │   
+│   │
 │   └── processed_data/
 │       ├── clean_data.csv
 │       ├── feature_engineered_data.csv
@@ -82,7 +91,7 @@ peru_fishery_stock_management/
 │   ├── model_1/
 │   │   ├── model_config.yaml
 │   │   ├── model_weights.h5
-│   │   
+│   │
 │   └── model_2/
 │       ├── model_config.yaml
 │       ├── model_weights.h5
@@ -114,35 +123,45 @@ peru_fishery_stock_management/
 ## Directory Structure Overview:
 
 1. **data/:** Contains raw and processed data used for training and prediction.
+
    - **raw_data/:** Store the original satellite and sonar data files.
    - **processed_data/:** Store cleaned and feature-engineered data.
 
 2. **models/:** Holds trained machine learning models.
+
    - Each model has its own directory with configuration files and model weights.
 
 3. **src/:** Store source code for data processing, model training, evaluation, and prediction.
+
    - Separate scripts for each functionality to maintain modularity.
 
 4. **notebooks/:** Houses Jupyter notebooks for data analysis, model training, and evaluation.
+
    - Useful for interactive exploration and documentation of experiments.
 
 5. **config/:** Contains configuration files for Spark, DVC, and model hyperparameters.
+
    - Centralized location for all configuration settings.
 
 6. **Dockerfile:** Defines the environment for containerizing the application.
+
    - Enables consistent deployment and reproducibility.
 
 7. **requirements.txt:** Lists all dependencies for the project.
+
    - Facilitates installation of required libraries.
 
 8. **README.md:** Provides an overview of the project and instructions for setup and usage.
+
    - Helps onboard new team members and users.
 
 9. **.gitignore:** Specifies files and directories to be ignored by version control.
+
    - Prevents unnecessary files from being committed.
 
 10. **LICENSE:** Includes the license information for the project.
-   - Clarifies the permitted uses of the project.
+
+- Clarifies the permitted uses of the project.
 
 This file structure is designed to promote organization, scalability, and maintainability of the Peru Fishery Stock Management System project, making it easier for team members to collaborate and extend the system in the future.
 
@@ -155,7 +174,7 @@ models/
 │   ├── model_config.yaml
 │   ├── model_weights.h5
 │   ├── evaluation_metrics.txt
-│   
+│
 └── model2/
     ├── model_config.yaml
     ├── model_weights.h5
@@ -165,6 +184,7 @@ models/
 ### Model Directory Details:
 
 1. **model1/:**
+
    - **model_config.yaml:** Configuration file storing hyperparameters, model architecture details, and preprocessing steps for model1.
    - **model_weights.h5:** Trained weights of model1 saved after training on satellite and sonar data.
    - **evaluation_metrics.txt:** File containing evaluation metrics (e.g., accuracy, loss) of model1 on validation data.
@@ -220,7 +240,7 @@ deployment/
 │   ├── model_weights.h5
 │   ├── preprocessing_script.py
 │   ├── prediction_script.py
-│   
+│
 └── model2/
     ├── model_weights.h5
     ├── preprocessing_script.py
@@ -230,6 +250,7 @@ deployment/
 ### Deployment Directory Details:
 
 1. **model1/:**
+
    - **model_weights.h5:** Trained weights of model1 for making predictions on fish stock levels.
    - **preprocessing_script.py:** Script for data preprocessing before feeding into model1 for prediction.
    - **prediction_script.py:** Script to deploy model1 and make real-time predictions on new data.
@@ -246,7 +267,7 @@ def preprocess_data(raw_data):
     ## Preprocessing steps for cleaning and feature engineering
     processed_data = clean_data(raw_data)
     features = engineer_features(processed_data)
-    
+
     return features
 ```
 
@@ -261,7 +282,7 @@ def load_model_weights(model_path):
 def predict_fish_stock(data, model):
     preprocessed_data = preprocess_data(data)
     predictions = model.predict(preprocessed_data)
-    
+
     return predictions
 ```
 
@@ -365,18 +386,22 @@ You can run this script to apply a complex machine learning algorithm to the Per
 ## Types of Users for the Peru Fishery Stock Management System
 
 1. **Fishery Manager**
+
    - **User Story:** As a Fishery Manager, I want to view real-time fish stock predictions to make informed decisions on fishing activities.
    - **File:** `/deployment/prediction_script.py`
 
 2. **Data Scientist**
+
    - **User Story:** As a Data Scientist, I want to access and analyze historical fish stock data for research and model development.
    - **File:** `/notebooks/data_analysis.ipynb`
 
 3. **Supply Chain Manager**
+
    - **User Story:** As a Supply Chain Manager, I need accurate fish stock forecasts to optimize supply planning and meet customer demands.
    - **File:** `/deployment/prediction_script.py`
 
 4. **Environmental Conservationist**
+
    - **User Story:** As an Environmental Conservationist, I require insights into fish stock trends to ensure sustainable fishing practices and protect marine ecosystems.
    - **File:** `/notebooks/model_evaluation.ipynb`
 

@@ -6,37 +6,47 @@ layout: article
 ---
 
 ## Objective and Benefits
+
 ## Objective:
+
 The objective of this project is to deploy a scalable, production-ready machine learning solution using Keras and TensorFlow for Pesquera Exalmar. The solution will provide accurate predictions of fish stock levels based on oceanographic data to help ensure sustainable fishing practices.
 
 ## Benefits to the Audience:
+
 - **Improved Decision Making:** By providing accurate predictions of fish stock levels, the fisheries manager can make informed decisions on fishing quotas and practices to sustain fish populations.
 - **Optimized Catch:** The model helps in maximizing catch while ensuring the sustainability of fish populations, leading to increased profitability for Pesquera Exalmar.
 - **Efficient Resource Allocation:** By predicting fish stock levels, resources can be allocated more efficiently, reducing waste and optimizing operations.
 
 ## Machine Learning Algorithm
+
 For this specific project, we will use a **Long Short-Term Memory (LSTM)** network, a type of Recurrent Neural Network (RNN) that is well-suited for sequence prediction tasks, such as time-series forecasting. LSTMs are capable of learning long-term dependencies in sequential data, making them ideal for modeling oceanographic data and predicting fish stock levels over time.
 
 ## Sourcing, Preprocessing, Modeling, and Deploying Strategies
+
 ## Sourcing Data:
+
 - **Oceanographic Data:** Gather historical oceanographic data such as sea surface temperature, chlorophyll levels, salinity, and other relevant features that influence fish populations.
 
 ## Preprocessing Data:
+
 - **Feature Engineering:** Create relevant features such as seasonal trends, lagged variables, and rolling statistics to capture important patterns in the data.
 - **Normalization:** Scale the features to a similar range to aid model convergence.
 - **Sequence Generation:** Create input sequences and target sequences for training the LSTM model.
 
 ## Modeling:
+
 - **LSTM Model:** Build a LSTM neural network architecture using Keras with TensorFlow backend.
 - **Model Tuning:** Optimize hyperparameters, such as the number of LSTM layers, number of units in each layer, batch size, and learning rate, to improve model performance.
 - **Validation:** Evaluate the model using techniques like time-series cross-validation to ensure its robustness and generalization capabilities.
 
 ## Deployment:
+
 - **Scalability:** Deploy the model using scalable cloud services, such as AWS or Google Cloud Platform, to handle varying workloads.
 - **API Integration:** Expose the model through an API endpoint for easy integration into existing systems.
 - **Monitoring:** Implement monitoring tools to track model performance and detect any drift in data or model degradation.
 
 ## Tools and Libraries
+
 - **Keras:** Deep learning library for building neural networks.
 - **TensorFlow:** Deep learning framework for training and deploying ML models.
 - **Pandas:** Data manipulation library for preprocessing and analysis.
@@ -44,34 +54,43 @@ For this specific project, we will use a **Long Short-Term Memory (LSTM)** netwo
 - **Scikit-learn:** Library for machine learning tools and algorithms.
 - **AWS/GCP:** Cloud platforms for deploying and scaling machine learning models.
 
-*Note: Ensure to consult the official documentation of each tool and library for detailed usage instructions.*
+_Note: Ensure to consult the official documentation of each tool and library for detailed usage instructions._
 
 ## Sourcing Data Strategy
+
 ## Data Collection:
+
 To efficiently collect oceanographic data for the Fishery Stock Assessment Model, we can leverage the following tools and methods tailored to cover all relevant aspects of the problem domain:
 
 1. **API Integration:**
+
    - **NOAA API:** The National Oceanic and Atmospheric Administration (NOAA) provides APIs to access a wide range of oceanographic data, including sea surface temperature, chlorophyll levels, and more. Integrate the NOAA API to fetch real-time and historical oceanographic data relevant to fish populations.
 
 2. **Satellite Imagery:**
+
    - **Sentinel Hub:** Utilize Sentinel Hub's satellite imagery API to retrieve high-resolution satellite images capturing sea surface temperature, chlorophyll concentrations, and other important oceanographic features. Process the satellite imagery to extract relevant data for analysis.
 
 3. **Data Providers and Partnerships:**
+
    - **Oceanographic Research Institutions:** Collaborate with oceanographic research institutions and universities that collect and analyze oceanographic data. Establish partnerships to access their data repositories and research findings related to fish stock assessment.
 
 4. **Sensor Networks:**
    - **IoT Sensor Networks:** Deploy IoT sensor networks in key fishing areas to gather real-time data on water temperature, salinity, and other environmental factors impacting fish populations. Use IoT platforms like Thingspeak or AWS IoT to collect and manage sensor data efficiently.
 
 ## Integration within Existing Technology Stack:
+
 To streamline the data collection process and ensure that data is readily accessible and in the correct format for analysis and model training, we can integrate the data sourcing tools within Pesquera Exalmar's existing technology stack:
 
 1. **Data Pipeline Automation:**
+
    - **Apache NiFi:** Implement Apache NiFi for data ingestion, processing, and routing. Create data pipelines that automatically fetch oceanographic data from APIs, satellite imagery sources, and sensor networks, transforming and storing it in a centralized data lake.
 
 2. **Data Storage and Management:**
+
    - **Amazon S3:** Store raw and processed oceanographic data in Amazon S3 buckets for secure and scalable storage. Organize the data using a hierarchical structure to facilitate retrieval and analysis.
 
 3. **Data Preprocessing and Integration:**
+
    - **Apache Spark:** Utilize Apache Spark for large-scale data preprocessing tasks. Clean, transform, and aggregate oceanographic data to generate features relevant to fish stock assessment, ensuring data consistency and quality.
 
 4. **Version Control and Collaboration:**
@@ -82,48 +101,57 @@ By integrating these tools and methods within Pesquera Exalmar's technology stac
 ## Feature Extraction and Engineering Analysis
 
 ## Feature Extraction:
+
 To enhance the interpretability of the data and the performance of the machine learning model for fish stock assessment, we propose extracting the following features from the oceanographic data:
 
 1. **Seasonal Trends:**
+
    - **Feature Name:** `seasonal_trend`
-   - *Description:* Extract seasonal patterns from oceanographic data to capture seasonal variations in environmental factors affecting fish populations.
+   - _Description:_ Extract seasonal patterns from oceanographic data to capture seasonal variations in environmental factors affecting fish populations.
 
 2. **Lagged Variables:**
+
    - **Feature Name:** `lagged_sea_surface_temp`, `lagged_chlorophyll`
-   - *Description:* Include lagged values of sea surface temperature and chlorophyll levels to account for the temporal dependencies in the data and capture delayed effects on fish stocks.
+   - _Description:_ Include lagged values of sea surface temperature and chlorophyll levels to account for the temporal dependencies in the data and capture delayed effects on fish stocks.
 
 3. **Rolling Statistics:**
+
    - **Feature Name:** `rolling_mean_salinity`, `rolling_std_oxygen`
-   - *Description:* Calculate rolling mean and standard deviation of salinity and oxygen levels to capture short-term trends and fluctuations that may impact fish populations.
+   - _Description:_ Calculate rolling mean and standard deviation of salinity and oxygen levels to capture short-term trends and fluctuations that may impact fish populations.
 
 4. **Time of Day:**
    - **Feature Name:** `time_of_day`
-   - *Description:* Encode the time of day (morning, afternoon, evening) to account for diurnal variations in environmental conditions and fish behavior.
+   - _Description:_ Encode the time of day (morning, afternoon, evening) to account for diurnal variations in environmental conditions and fish behavior.
 
 ## Feature Engineering:
+
 In addition to extracting features, we recommend performing the following feature engineering techniques to enrich the data representation and improve the model's performance:
 
 1. **Normalization:**
+
    - **Normalization Method:** Min-Max Scaling
-   - *Description:* Scale numerical features to a common range (e.g., [0, 1]) to prevent bias towards variables with larger magnitudes and aid model convergence.
+   - _Description:_ Scale numerical features to a common range (e.g., [0, 1]) to prevent bias towards variables with larger magnitudes and aid model convergence.
 
 2. **One-Hot Encoding:**
+
    - **Categorical Variable:** `time_of_day`
-   - *Description:* Convert categorical variables like time of day into binary vectors to represent different categories independently.
+   - _Description:_ Convert categorical variables like time of day into binary vectors to represent different categories independently.
 
 3. **Interaction Features:**
-   - *Description:* Create interaction features by combining relevant variables to capture synergistic effects (e.g., sea surface temperature * chlorophyll concentration).
+
+   - _Description:_ Create interaction features by combining relevant variables to capture synergistic effects (e.g., sea surface temperature \* chlorophyll concentration).
 
 4. **Polynomial Features:**
-   - *Description:* Generate polynomial features to capture non-linear relationships between variables and enhance the model's capacity to capture complex patterns.
+   - _Description:_ Generate polynomial features to capture non-linear relationships between variables and enhance the model's capacity to capture complex patterns.
 
 ## Variable Names Recommendations:
+
 To maintain clarity and consistency in variable names, we suggest the following naming conventions for the extracted and engineered features:
 
 - **Extracted Features:**
-   - Prefix: `extracted_` + feature name (e.g., `extracted_seasonal_trend`)
+  - Prefix: `extracted_` + feature name (e.g., `extracted_seasonal_trend`)
 - **Engineered Features:**
-   - Prefix: `engineered_` + feature name (e.g., `engineered_interaction_sea_surface_temp_chlorophyll`)
+  - Prefix: `engineered_` + feature name (e.g., `engineered_interaction_sea_surface_temp_chlorophyll`)
 
 By following these recommendations for feature extraction, feature engineering, and variable naming conventions, we can enhance the interpretability of the data, enrich the model's input representation, and improve the overall performance of the Fishery Stock Assessment Model for Pesquera Exalmar.
 
@@ -132,26 +160,32 @@ By following these recommendations for feature extraction, feature engineering, 
 In the context of the Fishery Stock Assessment Model for Pesquera Exalmar, effective metadata management is crucial to ensure the success of the project and address its unique demands and characteristics:
 
 ## 1. **Data Contextualization:**
+
 - **Fish Species Metadata:** Include metadata related to the specific fish species being assessed, such as biological information, habitat preferences, and historical catch data.
 - **Oceanographic Data Sources Metadata:** Document metadata for each oceanographic data source, detailing parameters measured, sensors used, and data collection methods.
 
 ## 2. **Feature Descriptions:**
+
 - **Feature Transformation Metadata:** Document the transformation methods applied to each feature during preprocessing, including normalization, standardization, encoding, and scaling.
 - **Feature Engineering Metadata:** Record the rationale behind creating engineered features, along with any domain knowledge or research insights driving feature selection.
 
 ## 3. **Temporal Metadata:**
+
 - **Temporal Aggregations:** Maintain metadata on temporal aggregations used for generating time-based features, such as rolling statistics, lagged variables, and seasonal trends.
 - **Time Granularity:** Specify the time granularity of the data, whether it is hourly, daily, or monthly, to ensure alignment with the model's prediction intervals.
 
 ## 4. **Model Training Metadata:**
+
 - **Hyperparameter Tuning:** Document hyperparameters tuned during model training, including the selected values and reasons behind parameter choices.
 - **Model Evaluation Metrics:** Capture the evaluation metrics used to assess model performance, such as Mean Absolute Error (MAE) or Root Mean Squared Error (RMSE).
 
 ## 5. **Data Versioning:**
+
 - **Data Pipeline Versions:** Track versions of data preprocessing pipelines to ensure reproducibility and traceability of data transformations.
 - **Feature Set Versioning:** Maintain versions of feature sets used for model training to facilitate model retraining and comparison.
 
 ## 6. **Integration with Model Serving:**
+
 - **Input Data Schema:** Define the schema for input data expected by the deployed model to ensure data compatibility and consistency during inference.
 - **Output Data Format:** Specify the format of model predictions to facilitate downstream integration with decision-making systems and reporting tools.
 
@@ -160,39 +194,51 @@ By implementing robust metadata management practices tailored to the unique dema
 ## Data Challenges and Preprocessing Strategies for Fishery Stock Assessment Model
 
 ## Specific Data Problems:
+
 ### 1. **Missing Data:**
+
 - **Issue:** Incomplete or missing oceanographic data entries could hinder the model's ability to make accurate predictions.
 - **Strategy:** Impute missing values using techniques like mean imputation or forward/backward fill based on the temporal nature of the data.
 
 ### 2. **Noise in Data:**
+
 - **Issue:** Noisy measurements in oceanographic data may introduce inconsistencies and bias in the model.
 - **Strategy:** Apply noise reduction techniques such as smoothing filters or outlier detection to clean the data before training the model.
 
 ### 3. **Seasonal Variations:**
+
 - **Issue:** Uneven seasonal distribution of fish stock data could lead to biased model predictions.
 - **Strategy:** Normalize seasonal variations by aggregating data over consistent time intervals or incorporating seasonal trend features in the model.
 
 ### 4. **Non-Stationarity:**
+
 - **Issue:** Non-stationary patterns in oceanographic data may affect the model's ability to generalize across different time periods.
 - **Strategy:** Employ techniques like differencing or detrending to make the data stationary and stabilize its statistical properties for modeling.
 
 ## Data Preprocessing Strategies:
+
 ### 1. **Quality Control Checks:**
+
 - **Strategy:** Conduct rigorous data quality checks to identify and correct anomalies, outliers, and inconsistencies in the oceanographic data before preprocessing.
 
 ### 2. **Feature Selection:**
+
 - **Strategy:** Use domain knowledge and feature importance analysis to select relevant features that have a significant impact on fish stock levels, eliminating irrelevant or redundant variables.
 
 ### 3. **Temporal Aggregations:**
+
 - **Strategy:** Aggregate raw data into meaningful time intervals to capture temporal patterns effectively and improve the model's ability to learn dynamic relationships.
 
 ### 4. **Normalization and Scaling:**
+
 - **Strategy:** Scale numerical features to a common range to prevent bias and gradient explosion during model training, ensuring all features contribute proportionally to the model predictions.
 
 ### 5. **Handling Temporal Dynamics:**
+
 - **Strategy:** Incorporate lagged variables, rolling statistics, and other temporal features to capture temporal dependencies and long-term trends in the oceanographic data for better prediction accuracy.
 
 ### 6. **Data Imbalance Handling:**
+
 - **Strategy:** Address data imbalance issues in fish stock data by using techniques like oversampling, undersampling, or synthetic data generation to ensure the model learns from all classes effectively.
 
 By strategically employing these data preprocessing practices tailored to the unique challenges of the Fishery Stock Assessment Model, Pesquera Exalmar can ensure the data remains robust, reliable, and conducive to training high-performing machine learning models for sustainable fishing practices and optimal fish stock assessment.
@@ -236,6 +282,7 @@ y_test.to_csv('y_test.csv', index=False)
 ```
 
 ## Code Comments:
+
 1. **Data Loading:** Read in the raw oceanographic data from a CSV file.
 2. **Missing Data Imputation:** Utilize mean imputation to handle missing values in the data.
 3. **Normalization:** Scale numerical features using Min-Max scaling to bring all features to a common range.
@@ -251,25 +298,33 @@ By following this tailored data preprocessing code file, Pesquera Exalmar can en
 For the Fishery Stock Assessment Model for Pesquera Exalmar, a Long Short-Term Memory (LSTM) neural network is recommended as the primary modeling approach due to its ability to capture long-term dependencies in sequential data and handle the temporal nature of oceanographic data effectively. LSTM networks are well-suited for time-series forecasting tasks, making them ideal for predicting fish stock levels based on historical oceanographic data.
 
 ## Recommended Modeling Strategy:
+
 1. **LSTM Architecture Design:**
+
    - Design a deep LSTM network with multiple layers to capture complex patterns in the oceanographic data and learn from sequential information effectively.
 
 2. **Sequence Generation:**
+
    - Create input sequences and target sequences from the preprocessed oceanographic data to train the LSTM model on historical patterns and predict future fish stock levels.
 
 3. **Hyperparameter Tuning:**
+
    - Optimize hyperparameters such as the number of LSTM layers, number of units in each layer, dropout rates, and learning rate to enhance the model's performance and generalization capabilities.
 
 4. **Temporal Attention Mechanism:**
+
    - Incorporate a temporal attention mechanism in the LSTM architecture to focus on relevant time steps and features, improving the model's ability to weight and interpret input data dynamically.
 
 5. **Ensemble Learning:**
+
    - Implement ensemble learning techniques by training multiple LSTM models with different initializations or architectures and combining their predictions to boost overall model performance and reduce variance.
 
 6. **Regularization Techniques:**
+
    - Apply regularization techniques like L2 regularization or dropout layers to prevent overfitting and improve the model's robustness in handling noisy oceanographic data.
 
 7. **Model Interpretability Analysis:**
+
    - Conduct model interpretability analysis to understand the contributions of different features and time steps towards predicting fish stock levels, providing insights for decision-making and further model refinement.
 
 8. **Crucial Step:**
@@ -283,39 +338,43 @@ By emphasizing the encoding of temporal features within the LSTM architecture, P
 To effectively implement the modeling strategy and address the specific data needs of the Fishery Stock Assessment Model for Pesquera Exalmar, the following tools and technologies are recommended:
 
 ## 1. **TensorFlow with Keras**
+
 - **Description:** TensorFlow with Keras offers a flexible deep learning framework for building and training LSTM models to predict fish stock levels accurately based on oceanographic data.
 - **Integration:** Integrates seamlessly with Python programming language and supports GPU acceleration for faster model training.
 - **Key Features:**
-   - High-level APIs for building LSTM architectures.
-   - TensorBoard for model visualization and performance monitoring.
-   - Customizable callbacks for early stopping and model checkpointing.
+  - High-level APIs for building LSTM architectures.
+  - TensorBoard for model visualization and performance monitoring.
+  - Customizable callbacks for early stopping and model checkpointing.
 - **Documentation:** [TensorFlow](https://www.tensorflow.org/) | [Keras](https://keras.io/)
 
 ## 2. **scikit-learn**
+
 - **Description:** scikit-learn provides a wide range of machine learning algorithms and tools for preprocessing, model evaluation, and ensemble learning techniques to augment LSTM models.
 - **Integration:** Easily integrates with NumPy and Pandas for data manipulation and preprocessing.
 - **Key Features:**
-   - Model selection and hyperparameter tuning capabilities.
-   - Data preprocessing functions like scaling, imputation, and encoding.
-   - Ensemble methods for combining LSTM model predictions.
+  - Model selection and hyperparameter tuning capabilities.
+  - Data preprocessing functions like scaling, imputation, and encoding.
+  - Ensemble methods for combining LSTM model predictions.
 - **Documentation:** [scikit-learn](https://scikit-learn.org/stable/)
 
 ## 3. **AWS SageMaker**
+
 - **Description:** AWS SageMaker is a cloud-based platform that offers scalable infrastructure for training and deploying machine learning models, suitable for handling large-scale oceanographic data processing and analysis.
 - **Integration:** Seamlessly integrates with AWS S3 for data storage and AWS Lambda for serving model predictions through APIs.
 - **Key Features:**
-   - Built-in algorithms for model training and hyperparameter optimization.
-   - Model hosting for deploying LSTM models as web services.
-   - Automatic model scaling and resource management.
+  - Built-in algorithms for model training and hyperparameter optimization.
+  - Model hosting for deploying LSTM models as web services.
+  - Automatic model scaling and resource management.
 - **Documentation:** [AWS SageMaker](https://aws.amazon.com/sagemaker/)
 
 ## 4. **TensorBoard**
+
 - **Description:** TensorBoard is a visualization toolkit for TensorFlow that enables tracking and visualizing model training metrics, model graphs, and embeddings, providing insights into LSTM model performance and interpretation.
 - **Integration:** Compatible with TensorFlow and Keras models, allowing seamless visualization of LSTM model training progress.
 - **Key Features:**
-   - Visualization of training and validation metrics for optimizing hyperparameters.
-   - Model graph visualization for LSTM architecture understanding.
-   - Embedding Projector for exploring high-dimensional data representations.
+  - Visualization of training and validation metrics for optimizing hyperparameters.
+  - Model graph visualization for LSTM architecture understanding.
+  - Embedding Projector for exploring high-dimensional data representations.
 - **Documentation:** [TensorBoard](https://www.tensorflow.org/tensorboard)
 
 By leveraging these tools and technologies tailored to the data modeling needs of the Fishery Stock Assessment Model, Pesquera Exalmar can enhance efficiency, accuracy, and scalability in predicting fish stock levels and guiding sustainable fishing practices. Each tool plays a crucial role in different stages of the modeling process, ensuring a comprehensive and effective solution to the fisheries manager's pain point.
@@ -425,6 +484,7 @@ model.save('fishery_stock_assessment_model.h5')
 ```
 
 ## Code Comments:
+
 1. **Data Loading:** Load the preprocessed dataset containing features and target variable (fish stock levels).
 2. **Data Splitting:** Split the data into training and testing sets for model training and evaluation.
 3. **Data Reshaping:** Reshape the data to fit the input shape required by the LSTM model.
@@ -440,35 +500,42 @@ This code snippet adheres to best practices for readability and maintainability 
 To deploy the Machine Learning model for the Fishery Stock Assessment project, tailored to the unique demands of Pesquera Exalmar, we recommend the following step-by-step deployment plan:
 
 ## 1. **Pre-Deployment Checks:**
+
 - **Ensure Model Readiness:** Verify that the LSTM model is trained, evaluated, and saved in a production-ready format.
 - **Data Integrity Check:** Validate that the preprocessed data used for training the model is consistent and up-to-date.
 
 ## 2. **Model Serialization and Exporting:**
+
 - **Tool:** TensorFlow/Keras for model serialization.
 - **Steps:** Serialize the trained LSTM model to a file format suitable for deployment, such as a SavedModel (.pb) or Hierarchical Data Format (.h5).
 - **Documentation:** [TensorFlow Model Saving](https://www.tensorflow.org/guide/keras/save_and_serialize), [Keras Model Saving](https://keras.io/guides/serialization/)
 
 ## 3. **Setup Cloud Infrastructure:**
+
 - **Tool:** Amazon Web Services (AWS) for cloud hosting.
 - **Steps:** Set up an AWS account, create an S3 bucket for storing model artifacts, and configure necessary permissions for model access.
 - **Documentation:** [AWS Documentation](https://docs.aws.amazon.com/)
 
 ## 4. **Model Deployment:**
+
 - **Tool:** AWS SageMaker for model deployment.
 - **Steps:** Deploy the serialized LSTM model on AWS SageMaker, create an endpoint for serving predictions, and ensure endpoint availability and scalability.
 - **Documentation:** [AWS SageMaker Deploy Model](https://docs.aws.amazon.com/sagemaker/)
 
 ## 5. **API Integration:**
+
 - **Tool:** AWS API Gateway for creating APIs.
 - **Steps:** Create an API using AWS API Gateway to interface with the model endpoint, enabling easy access for data input and receiving predictions.
 - **Documentation:** [AWS API Gateway Documentation](https://docs.aws.amazon.com/apigateway/)
 
 ## 6. **Testing and Monitoring:**
+
 - **Tool:** AWS CloudWatch for monitoring.
 - **Steps:** Set up monitoring and logging using AWS CloudWatch to track model performance, behavior, and any anomalies in real-time deployment.
 - **Documentation:** [AWS CloudWatch Documentation](https://docs.aws.amazon.com/cloudwatch/)
 
 ## 7. **Live Environment Integration:**
+
 - **Tool:** AWS Lambda for serverless computing.
 - **Steps:** Integrate the model API with existing systems or applications using AWS Lambda functions for on-demand computing capabilities and resource management.
 - **Documentation:** [AWS Lambda Documentation](https://docs.aws.amazon.com/lambda/)
@@ -502,21 +569,25 @@ In this optimized Dockerfile for the Fishery Stock Assessment Model deployment, 
 ## User Groups and User Stories
 
 ### 1. **Fisheries Manager:**
+
 - **User Story:** As a Fisheries Manager, I struggle to sustain fish populations while maximizing catch due to inaccurate fish stock assessments.
 - **Solution:** The application provides accurate predictions of fish stock levels based on oceanographic data, enabling informed decision-making on fishing practices to ensure sustainability.
 - **Facilitating Component:** The LSTM model trained on preprocessed oceanographic data facilitates accurate fish stock predictions to guide sustainable fishing practices.
 
 ### 2. **Fishermen:**
+
 - **User Story:** As a Fisherman, I face uncertainties in identifying abundant fishing grounds, impacting catch efficiency and profitability.
 - **Solution:** The application predicts fish stock levels in different fishing areas, helping fishermen locate abundant fish populations and optimize catch for increased profitability.
 - **Facilitating Component:** The model serving script in the Docker container provides real-time predictions for fishing ground selection.
 
 ### 3. **Environmental Researchers:**
+
 - **User Story:** As an Environmental Researcher, I struggle to analyze complex oceanographic data for fish population studies, hindering research progress.
 - **Solution:** The application processes and analyzes oceanographic data using LSTM models, supporting research on fish populations and environmental impact studies.
 - **Facilitating Component:** The data preprocessing script and LSTM model enhance the analysis and interpretation of oceanographic data for research purposes.
 
 ### 4. **Regulatory Authorities:**
+
 - **User Story:** As a Regulatory Authority, I find it challenging to enforce sustainable fishing regulations without accurate fish stock assessments.
 - **Solution:** The application offers reliable fish stock predictions to support regulatory decisions, ensuring compliance with sustainable fishing practices.
 - **Facilitating Component:** The deployment pipeline and monitoring setup enable real-time access to accurate fish stock assessments for regulatory decision-making.

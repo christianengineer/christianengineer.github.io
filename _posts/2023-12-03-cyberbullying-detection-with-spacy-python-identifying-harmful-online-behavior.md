@@ -6,9 +6,11 @@ layout: article
 ---
 
 ## Objectives
+
 The primary objectives of the AI Cyberbullying Detection with SpaCy project are to build a scalable and accurate system for identifying harmful online behavior, particularly cyberbullying. The system aims to leverage natural language processing (NLP) techniques to analyze text data from online sources, detect instances of cyberbullying, and classify them appropriately. The project intends to utilize the SpaCy library for NLP tasks and implement machine learning models to improve detection accuracy.
 
 ## System Design Strategies
+
 1. Data Collection: Retrieve text data from various online sources, such as social media platforms, forums, and chat applications.
 2. Preprocessing: Clean and preprocess the text data to remove noise, perform tokenization, and handle text normalization.
 3. Feature Engineering: Extract relevant features from the text data and create representations suitable for machine learning models.
@@ -16,15 +18,19 @@ The primary objectives of the AI Cyberbullying Detection with SpaCy project are 
 5. Integration: Deploy the trained models into a scalable and accessible system, enabling real-time or batch processing of text data to identify cyberbullying instances.
 
 ## Chosen Libraries
+
 ### SpaCy
+
 - Purpose: SpaCy is chosen for its efficient and production-ready NLP capabilities, including tokenization, part-of-speech tagging, named entity recognition, and dependency parsing.
 - Benefits: It offers high-performance, pre-trained models for various languages and simplifies complex NLP tasks, making it suitable for the cyberbullying detection project.
 
 ### Scikit-learn
+
 - Purpose: Scikit-learn provides a suite of simple and efficient tools for machine learning and statistical modeling, including classification, regression, clustering, and model evaluation.
 - Benefits: It offers a wide range of algorithms and utilities for building and evaluating machine learning models, making it a suitable choice for developing the cyberbullying classification system.
 
 ### TensorFlow or PyTorch
+
 - Purpose: TensorFlow or PyTorch can be used to develop and train deep learning models for NLP tasks, such as text classification, sentiment analysis, and language modeling.
 - Benefits: These libraries provide extensive support for building neural networks, handling text data, and integrating with other parts of the machine learning pipeline in a scalable and efficient manner.
 
@@ -35,25 +41,31 @@ By leveraging these libraries and following the defined system design strategies
 The infrastructure for the Cyberbullying Detection with SpaCy application involves the design and deployment of scalable, data-intensive AI capabilities for identifying harmful online behavior, particularly cyberbullying. The infrastructure encompasses various components to support the processing, analysis, and classification of text data from online sources.
 
 ### 1. Data Collection Layer
+
 - **Data Sources**: Incorporate APIs or data connectors to retrieve text data from social media platforms, forums, chat applications, and other online sources.
 - **Data Ingestion**: Utilize messaging queues or streaming platforms to ingest and process large volumes of text data in real-time while ensuring fault tolerance and scalability.
 
 ### 2. Storage and Processing Layer
+
 - **Data Lake/Cloud Storage**: Store the collected text data in a scalable and cost-effective manner, making it accessible for processing and analysis.
 - **Batch Processing**: Utilize distributed processing frameworks like Apache Spark to perform batch processing on the stored text data for tasks such as data cleaning, feature extraction, and model training.
 
 ### 3. NLP and Machine Learning Layer
+
 - **SpaCy Integration**: Incorporate SpaCy for performing natural language processing tasks such as tokenization, named entity recognition, and syntactic parsing to extract linguistic features from the text data.
 - **Machine Learning Infrastructure**: Utilize scalable machine learning platforms or frameworks to train and deploy machine learning models for cyberbullying detection, leveraging libraries such as Scikit-learn, TensorFlow, or PyTorch for model development and evaluation.
 
 ### 4. Real-time Processing and Inference Layer
+
 - **API Gateway**: Deploy RESTful APIs or GraphQL endpoints to enable real-time inference and classification of text data for cyberbullying detection.
 - **Scalable Compute Infrastructure**: Utilize serverless computing or container orchestration platforms to dynamically scale the processing and inference capabilities based on the incoming workload.
 
 ### 5. Reporting and Visualization Layer
+
 - **Dashboard and Reporting Tools**: Integrate visualization tools and dashboards to present insights and analytics derived from the cyberbullying detection system, allowing users to monitor and analyze trends in online behavior.
 
 ### 6. Security and Compliance
+
 - **Data Encryption**: Implement end-to-end encryption for sensitive text data processed and stored within the infrastructure.
 - **Access Control and Compliance**: Enforce role-based access control and compliance measures to ensure data privacy and regulatory adherence.
 
@@ -178,7 +190,9 @@ models/
 In the `models/` directory for the Cyberbullying Detection with SpaCy application, the following subdirectories and files are present:
 
 ### trained_models/
+
 - **spacy_ner_model/**: Directory containing the trained SpaCy Named Entity Recognition (NER) model.
+
   - **model_meta.json**: Metadata file containing information about the model, such as its configuration and version details.
   - **vocab/**: Subdirectory storing the vocabulary and lexeme data used by the SpaCy model for efficient tokenization and linguistic analysis.
     - **lexemes.bin**: Binary file containing the lexeme data.
@@ -193,6 +207,7 @@ In the `models/` directory for the Cyberbullying Detection with SpaCy applicatio
 - **ml_classifier_model.pkl**: Pickle file storing the serialized machine learning (ML) classifier model used for cyberbullying detection.
 
 ### model_evaluation/
+
 - **model_metrics_report.txt**: Text file containing the evaluation metrics and performance report for the trained models.
 
 By organizing the trained models and their evaluation metrics within the `models/` directory, the application ensures a clear separation of artifacts related to model training, evaluation, and deployment. This structured approach facilitates model versioning, reproducibility, and effective management of the cyberbullying detection models.
@@ -306,23 +321,27 @@ This function demonstrates the application of a complex machine learning algorit
 ### User Types for Cyberbullying Detection with SpaCy Application
 
 1. **Social Media Moderator**
-   - *User Story*: As a social media moderator, I want to use the application to automatically identify and flag potential instances of cyberbullying in user posts and comments, so that I can review and take appropriate action to maintain a positive and safe online community.
-   - *Accomplished with*: The trained machine learning model file (`ml_classifier_model.pkl`) will be used to perform real-time inference on user-generated content.
+
+   - _User Story_: As a social media moderator, I want to use the application to automatically identify and flag potential instances of cyberbullying in user posts and comments, so that I can review and take appropriate action to maintain a positive and safe online community.
+   - _Accomplished with_: The trained machine learning model file (`ml_classifier_model.pkl`) will be used to perform real-time inference on user-generated content.
 
 2. **Content Platform Administrator**
-   - *User Story*: As a content platform administrator, I want to leverage the application to analyze and categorize user-generated content to ensure compliance with community guidelines and to mitigate harmful behavior, thereby fostering a healthy and inclusive online environment.
-   - *Accomplished with*: The evaluation report file (`model_metrics_report.txt`) will provide insights into the model's performance and assist in decision-making regarding content moderation strategies.
+
+   - _User Story_: As a content platform administrator, I want to leverage the application to analyze and categorize user-generated content to ensure compliance with community guidelines and to mitigate harmful behavior, thereby fostering a healthy and inclusive online environment.
+   - _Accomplished with_: The evaluation report file (`model_metrics_report.txt`) will provide insights into the model's performance and assist in decision-making regarding content moderation strategies.
 
 3. **Law Enforcement Official**
-   - *User Story*: As a law enforcement official, I aim to utilize the application to analyze and identify potential instances of cyberbullying in publicly available online data, in order to support investigations and protect individuals from online harassment.
-   - *Accomplished with*: Through the API endpoints and real-time inference scripts in the `inference/` directory, law enforcement officials can integrate the application within their investigation platforms to process and analyze online content.
+
+   - _User Story_: As a law enforcement official, I aim to utilize the application to analyze and identify potential instances of cyberbullying in publicly available online data, in order to support investigations and protect individuals from online harassment.
+   - _Accomplished with_: Through the API endpoints and real-time inference scripts in the `inference/` directory, law enforcement officials can integrate the application within their investigation platforms to process and analyze online content.
 
 4. **Application Developer**
-   - *User Story*: As an application developer, I intend to integrate the cyberbullying detection capabilities into a social media management tool, enabling proactive content filtering and moderation features to safeguard users from harmful online interactions.
-   - *Accomplished with*: The trained SpaCy NER model (`spacy_ner_model/`) and machine learning model file (`ml_classifier_model.pkl`) can be integrated into the developer's application deployment for real-time cyberbullying detection.
+
+   - _User Story_: As an application developer, I intend to integrate the cyberbullying detection capabilities into a social media management tool, enabling proactive content filtering and moderation features to safeguard users from harmful online interactions.
+   - _Accomplished with_: The trained SpaCy NER model (`spacy_ner_model/`) and machine learning model file (`ml_classifier_model.pkl`) can be integrated into the developer's application deployment for real-time cyberbullying detection.
 
 5. **Data Analyst/Researcher**
-   - *User Story*: As a data analyst or researcher, I want to explore the application's performance and potential biases in cyberbullying detection to contribute to scholarly studies and develop strategies for addressing online harms.
-   - *Accomplished with*: The raw and processed data files in the `data/` directory, along with the model evaluation report (`model_metrics_report.txt`), can be utilized to analyze and evaluate the effectiveness of the cyberbullying detection system.
+   - _User Story_: As a data analyst or researcher, I want to explore the application's performance and potential biases in cyberbullying detection to contribute to scholarly studies and develop strategies for addressing online harms.
+   - _Accomplished with_: The raw and processed data files in the `data/` directory, along with the model evaluation report (`model_metrics_report.txt`), can be utilized to analyze and evaluate the effectiveness of the cyberbullying detection system.
 
 By catering to these diverse user needs and stories, the Cyberbullying Detection with SpaCy application aims to provide a comprehensive solution for identifying harmful online behavior and improving online safety.

@@ -8,20 +8,25 @@ layout: article
 ## AI Fair Lending Analysis Tools Repository
 
 ## Objectives
+
 The objectives of the AI Fair Lending Analysis Tools repository are to create tools and frameworks that can be used to combat financial biases in lending practices. This involves developing scalable, data-intensive AI applications that leverage machine learning to analyze and mitigate biases in lending decisions.
 
 ## System Design Strategies
+
 1. **Data Collection and Preprocessing**: Implement processes for collecting and preprocessing large volumes of lending data, ensuring that it is clean, balanced, and representative of diverse demographics.
 2. **Model Training and Evaluation**: Utilize machine learning frameworks like Scikit-Learn and TensorFlow to build models that can predict lending outcomes while accounting for fairness and mitigating biases.
 3. **Interpretability and Explainability**: Incorporate techniques for interpreting and explaining model decisions to ensure transparency and fairness in lending processes.
 4. **Scalability and Performance**: Design systems that can scale to handle large datasets and perform complex computations efficiently.
 
 ## Chosen Libraries
+
 ### Scikit-Learn
+
 - **Advantages**: Scikit-Learn is a powerful library for building machine learning models with a clean and simple interface. It provides a wide range of algorithms for classification, regression, and clustering, which can be used to address various aspects of fair lending analysis.
 - **Use Cases**: Scikit-Learn can be used for preprocessing data, training fairness-aware models, and evaluating model performance with fairness metrics.
 
 ### TensorFlow
+
 - **Advantages**: TensorFlow offers a scalable and flexible platform for building and deploying machine learning models. Its versatility allows for the implementation of custom fairness-aware algorithms and the development of complex neural network architectures.
 - **Use Cases**: TensorFlow can be utilized for training deep learning models that incorporate fairness constraints, as well as for deploying these models in production systems to analyze lending decisions in real-time.
 
@@ -44,10 +49,12 @@ By leveraging these libraries in the development of the AI Fair Lending Analysis
 ## Integration with Scikit-Learn and TensorFlow
 
 ### Scikit-Learn
+
 - **Training Pipelines**: Develop automated training pipelines using platforms like Apache Airflow or Kubeflow to orchestrate the end-to-end training process, including data preprocessing, model training, and evaluation.
 - **Model Versioning**: Use tools like MLflow to track and manage model versions, experiment results, and deployment configurations, facilitating reproducibility and collaboration.
 
 ### TensorFlow
+
 - **Containerized Model Serving**: Implement model serving using TensorFlow Serving within Docker containers, allowing for scalable and efficient deployment of TensorFlow models in production systems.
 - **Model Monitoring**: Integrate TensorFlow Model Analysis (TFMA) for continuous monitoring of model performance and fairness metrics, enabling proactive detection and mitigation of biases.
 
@@ -142,23 +149,29 @@ The models directory within the Fair Lending Analysis Tools repository contains 
 ## scikit-learn Directory
 
 ### fairness_aware_model.pkl
+
 - **Description**: This file contains the serialized trained Scikit-Learn model, which was developed to combat financial biases in lending decisions. It includes the trained model parameters and can be directly loaded into an application for making predictions.
 
 ### scikit_model_metrics.json
+
 - **Description**: JSON file containing performance metrics and fairness metrics evaluated during training and testing of the Scikit-Learn model. It includes accuracy, precision, recall, and fairness-related metrics such as disparate impact and equal opportunity difference.
 
 ### scikit_model_config.yml
+
 - **Description**: YAML file storing the configuration settings and hyperparameters used for training the Scikit-Learn model. It includes information about the preprocessing steps, feature engineering, model selection, and fairness constraints applied during model training.
 
 ## tensorflow Directory
 
 ### deep_learning_model.h5
+
 - **Description**: This file contains the trained deep learning model developed using TensorFlow. It includes the model architecture, weights, and biases, allowing for easy loading and utilization in inference tasks.
 
 ### tensorflow_model_metrics.json
+
 - **Description**: JSON file similar to scikit_model_metrics.json but specific to the TensorFlow model. It contains performance metrics, fairness metrics, and other evaluation results obtained during the training and testing of the TensorFlow model.
 
 ### tensorflow_model_config.yml
+
 - **Description**: YAML file storing the configuration settings and hyperparameters used for training the TensorFlow model. It includes information about the neural network architecture, optimizer settings, regularization parameters, and fairness-related constraints applied during training.
 
 By organizing the trained models and associated files in this structured manner, the Fair Lending Analysis Tools repository allows for easy access, sharing, and integration of machine learning models across different stages of the application development and deployment lifecycle.
@@ -181,17 +194,21 @@ The deployment directory within the Fair Lending Analysis Tools repository conta
 ## scikit-learn Directory
 
 ### deploy_scikit_model.py
+
 - **Description**: Python script that encapsulates the deployment logic for serving the Scikit-Learn model. It includes functionality for exposing the model via an API endpoint, handling input data, and making real-time predictions. This script may leverage frameworks such as Flask or FastAPI for model serving.
 
 ### scikit_model_server_config.yml
+
 - **Description**: YAML file containing configuration settings for deploying the Scikit-Learn model. This includes details about the server environment, input data formats, authentication and authorization settings, and scalability options.
 
 ## tensorflow Directory
 
 ### deploy_tensorflow_model.py
+
 - **Description**: Python script responsible for deploying the TensorFlow model for serving predictions. It handles loading the model, defining the serving endpoint, and managing model inference in real-time. This script may utilize TensorFlow Serving for efficient model deployment.
 
 ### tensorflow_model_server_config.yml
+
 - **Description**: YAML file storing configuration settings specific to the deployment of the TensorFlow model. It includes details about the serving infrastructure, input and output data specifications, model versioning, and performance monitoring settings.
 
 By organizing the deployment scripts and configuration files in this structured manner, the Fair Lending Analysis Tools repository allows for streamlined, consistent, and scalable deployment of machine learning models developed using Scikit-Learn and TensorFlow, facilitating real-time lending decision analysis applications.
@@ -342,23 +359,27 @@ In this example, the file `train_complex_tensorflow_model.py` within the `src/mo
 ### Types of Users for Fair Lending Analysis Tools
 
 1. **Data Scientist**
-   - *User Story*: As a data scientist, I want to explore and preprocess lending data to identify potential biases and train machine learning models for fair lending analysis.
-   - *Accomplished by*: Utilizing the `data_exploration.ipynb` and `model_training_evaluation.ipynb` notebooks to explore data distributions, detect biases, and select appropriate preprocessing techniques before training models.
+
+   - _User Story_: As a data scientist, I want to explore and preprocess lending data to identify potential biases and train machine learning models for fair lending analysis.
+   - _Accomplished by_: Utilizing the `data_exploration.ipynb` and `model_training_evaluation.ipynb` notebooks to explore data distributions, detect biases, and select appropriate preprocessing techniques before training models.
 
 2. **Machine Learning Engineer**
-   - *User Story*: As a machine learning engineer, I want to develop, train, and evaluate machine learning models while ensuring fairness in lending decisions.
-   - *Accomplished by*: Using the `train_scikit_model.py` and `train_complex_tensorflow_model.py` files within the `src/model_training/` directory to train and evaluate Scikit-Learn and TensorFlow models, while incorporating fairness-aware techniques.
+
+   - _User Story_: As a machine learning engineer, I want to develop, train, and evaluate machine learning models while ensuring fairness in lending decisions.
+   - _Accomplished by_: Using the `train_scikit_model.py` and `train_complex_tensorflow_model.py` files within the `src/model_training/` directory to train and evaluate Scikit-Learn and TensorFlow models, while incorporating fairness-aware techniques.
 
 3. **MLOps Engineer**
-   - *User Story*: As an MLOps engineer, I need to orchestrate training pipelines, manage model versions, and set up model monitoring for the fair lending analysis application.
-   - *Accomplished by*: Using the `scikit-learn_training_pipeline.py` and `tensorflow_training_pipeline.py` within the `mlops/training_pipelines/` directory to orchestrate model training, and leveraging `mlflow_config.yml` for model version tracking and `tfma_config.yml` for model monitoring.
+
+   - _User Story_: As an MLOps engineer, I need to orchestrate training pipelines, manage model versions, and set up model monitoring for the fair lending analysis application.
+   - _Accomplished by_: Using the `scikit-learn_training_pipeline.py` and `tensorflow_training_pipeline.py` within the `mlops/training_pipelines/` directory to orchestrate model training, and leveraging `mlflow_config.yml` for model version tracking and `tfma_config.yml` for model monitoring.
 
 4. **Platform Administrator**
-   - *User Story*: As a platform administrator, I am responsible for deploying and managing the infrastructure for serving machine learning models in the fair lending analysis application.
-   - *Accomplished by*: Utilizing the `deploy_scikit_model.py`, `scikit_model_server_config.yml`, `deploy_tensorflow_model.py`, and `tensorflow_model_server_config.yml` files within the `deployment/scikit-learn/` and `deployment/tensorflow/` directories to deploy and manage model serving infrastructure.
+
+   - _User Story_: As a platform administrator, I am responsible for deploying and managing the infrastructure for serving machine learning models in the fair lending analysis application.
+   - _Accomplished by_: Utilizing the `deploy_scikit_model.py`, `scikit_model_server_config.yml`, `deploy_tensorflow_model.py`, and `tensorflow_model_server_config.yml` files within the `deployment/scikit-learn/` and `deployment/tensorflow/` directories to deploy and manage model serving infrastructure.
 
 5. **Compliance Officer**
-   - *User Story*: As a compliance officer, I need to review model performance and ensure that the fair lending analysis application complies with regulatory fairness requirements.
-   - *Accomplished by*: Reviewing the `scikit_model_metrics.json`, `scikit_model_config.yml`, `tensorflow_model_metrics.json`, and `tensorflow_model_config.yml` files within the `models/scikit-learn/` and `models/tensorflow/` directories to assess model performance and fairness considerations.
+   - _User Story_: As a compliance officer, I need to review model performance and ensure that the fair lending analysis application complies with regulatory fairness requirements.
+   - _Accomplished by_: Reviewing the `scikit_model_metrics.json`, `scikit_model_config.yml`, `tensorflow_model_metrics.json`, and `tensorflow_model_config.yml` files within the `models/scikit-learn/` and `models/tensorflow/` directories to assess model performance and fairness considerations.
 
 Each of these user types interacts with different aspects of the Fair Lending Analysis Tools application, utilizing various files and resources within the repository to accomplish their specific goals and responsibilities.

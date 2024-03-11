@@ -6,33 +6,43 @@ layout: article
 ---
 
 ### Objectives
+
 The objectives of the AI Mental Health Monitoring App include:
+
 1. Early detection of mental health issues through analysis of user-generated text and behavior patterns.
 2. Providing support and resources for users based on their identified mental state.
 3. Utilizing machine learning models to improve the accuracy of mental health detection over time.
 
 ### System Design Strategies
+
 #### Data Collection:
+
 - Utilize user-generated text data from social media, journal entries, or communication with the app.
 - Gather user behavior patterns such as activity levels, sleep patterns, and social interactions.
 
 #### Data Processing:
+
 - Utilize Natural Language Processing (NLP) techniques to analyze the sentiment, emotion, and mental state from the text data.
 - Apply machine learning models for analyzing behavior patterns and detecting anomalies indicating potential mental health issues.
 
 #### Model Training and Inference:
+
 - Use TensorFlow for building and training machine learning models for mental health detection.
 - Leverage NLTK (Natural Language Toolkit) for NLP tasks such as tokenization, stemming, and sentiment analysis.
 
 #### User Interface and Support System:
+
 - Design an intuitive user interface for users to engage with the app and access mental health resources.
 - Incorporate a support system that provides personalized recommendations and support based on the user's mental state.
 
 ### Chosen Libraries
+
 #### TensorFlow:
+
 TensorFlow is chosen for its robust machine learning capabilities, including building and training neural network models for mental health detection. Its flexibility and scalability make it suitable for handling the complexity of AI-driven mental health monitoring.
 
 #### NLTK (Natural Language Toolkit):
+
 NLTK is selected for its comprehensive suite of NLP tools and libraries, enabling the app to perform sentiment analysis, tokenization, and other essential text processing tasks. NLTK's extensive functionality supports the app's ability to accurately analyze and interpret user-generated text data.
 
 By incorporating these libraries into the system design, the AI Mental Health Monitoring App aims to provide early detection and support for individuals dealing with mental health issues, ultimately contributing to improved mental well-being through AI-driven insights and interventions.
@@ -40,27 +50,34 @@ By incorporating these libraries into the system design, the AI Mental Health Mo
 ### MLOps Infrastructure for AI Mental Health Monitoring App
 
 #### Version Control System:
+
 - Utilize a version control system such as Git to track changes in machine learning models, data preprocessing scripts, and deployment configurations.
 
 #### Data Management:
+
 - Set up a data pipeline to ingest and preprocess user-generated text and behavioral data.
 - Use data versioning to track changes and updates in the input data for model training and evaluation.
 
 #### Model Training and Deployment:
+
 - Implement a CI/CD pipeline for model training, evaluation, and deployment.
 - Utilize containerization (e.g., Docker) to package the TensorFlow and NLTK-based model and its dependencies.
 
 #### Model Monitoring and Governance:
+
 - Implement monitoring for model performance and data drift to ensure the continued accuracy and relevance of mental health detection models.
 - Enforce governance and compliance standards for handling sensitive mental health data.
 
 #### Collaboration and Communication:
+
 - Utilize collaboration platforms to facilitate communication among data scientists, software engineers, and mental health professionals involved in the app's development and maintenance.
 
 #### Infrastructure as Code (IaC):
+
 - Define the entire MLOps infrastructure as code using tools like Terraform or AWS CloudFormation, enabling reproducibility and scalability of the infrastructure.
 
 #### Continuous Training and AutoML:
+
 - Implement continuous training pipelines to periodically retrain the mental health detection models on new data and incorporate the latest advancements in machine learning techniques.
 - Explore AutoML solutions to automate model selection, hyperparameter tuning, and feature engineering for improved model performance.
 
@@ -154,6 +171,7 @@ models/
 #### Models Directory Structure Explanation:
 
 1. **tensorflow/**: Directory for TensorFlow-based models and related files.
+
    - **training_scripts/**: Contains scripts for model training, evaluation, and hyperparameter configurations.
      - `train_model.py`: Script for training the TensorFlow model on the mental health data.
      - `evaluate_model.py`: Script for evaluating the model's performance.
@@ -199,6 +217,7 @@ deployment/
 #### Deployment Directory Structure Explanation:
 
 1. **tensorflow/**: Directory for deployment-related files specific to the TensorFlow model.
+
    - **dockerfile**: Contains instructions for building a Docker image that encapsulates the TensorFlow model, its dependencies, and the app code.
    - **requirements.txt**: Lists the necessary Python libraries and dependencies required for the deployment environment.
    - **app/**: Directory containing the application code for the deployment of the TensorFlow model.
@@ -250,6 +269,7 @@ evaluate_model(model, X_processed, y)
 ```
 
 In this script, we:
+
 - Import necessary libraries for model creation and training.
 - Define file paths for the mock training data and the location to save the trained model.
 - Load mock training data using a utility function `load_mock_training_data` from the `utils` module.
@@ -303,6 +323,7 @@ evaluate_model(model, X_processed, y)
 ```
 
 In this script, we:
+
 - Import necessary libraries for model creation and training.
 - Define file paths for the mock complex training data and the location to save the trained complex model.
 - Load mock complex training data using a utility function `load_mock_complex_training_data` from the `utils` module.
@@ -318,23 +339,27 @@ This example showcases the use of a complex machine learning algorithm integrate
 ### Types of Users for the Mental Health Monitoring App
 
 1. **Individual Users**
-   - *User Story*: As an individual user, I want to use the app to track my mental health and receive personalized support and resources based on my emotional state.
-   - *Accomplishing File*: The `main.py` file in the `deployment/tensorflow/app/` directory will accomplish this as it serves as the entry point for the app's API, allowing individual users to interact with the system.
+
+   - _User Story_: As an individual user, I want to use the app to track my mental health and receive personalized support and resources based on my emotional state.
+   - _Accomplishing File_: The `main.py` file in the `deployment/tensorflow/app/` directory will accomplish this as it serves as the entry point for the app's API, allowing individual users to interact with the system.
 
 2. **Mental Health Professionals**
-   - *User Story*: As a mental health professional, I want to access aggregated data and insights from the app to monitor the mental well-being of my clients and provide targeted interventions.
-   - *Accomplishing File*: The `model_evaluation.py` file in the `utils/` directory can assist mental health professionals in evaluating the performance of the deployed models, providing insights into the effectiveness of the app's mental health monitoring capabilities.
+
+   - _User Story_: As a mental health professional, I want to access aggregated data and insights from the app to monitor the mental well-being of my clients and provide targeted interventions.
+   - _Accomplishing File_: The `model_evaluation.py` file in the `utils/` directory can assist mental health professionals in evaluating the performance of the deployed models, providing insights into the effectiveness of the app's mental health monitoring capabilities.
 
 3. **App Administrators**
-   - *User Story*: As an app administrator, I need to manage the deployment and scaling of the app's backend services and monitor system health and performance.
-   - *Accomplishing File*: The `dockerfile` in the `deployment/tensorflow/` directory and the associated infrastructure scripts using tools like Terraform or AWS CloudFormation will help app administrators deploy and manage the backend services effectively.
+
+   - _User Story_: As an app administrator, I need to manage the deployment and scaling of the app's backend services and monitor system health and performance.
+   - _Accomplishing File_: The `dockerfile` in the `deployment/tensorflow/` directory and the associated infrastructure scripts using tools like Terraform or AWS CloudFormation will help app administrators deploy and manage the backend services effectively.
 
 4. **Data Scientists and Machine Learning Engineers**
-   - *User Story*: As a data scientist or machine learning engineer, I aim to continually improve the app's AI models based on user feedback and new research in the field of mental health assessment.
-   - *Accomplishing File*: The `train_model.py` script in the `models/tensorflow/training_scripts/` directory will enable data scientists and machine learning engineers to train and update the TensorFlow models using mock data for continuous improvement.
+
+   - _User Story_: As a data scientist or machine learning engineer, I aim to continually improve the app's AI models based on user feedback and new research in the field of mental health assessment.
+   - _Accomplishing File_: The `train_model.py` script in the `models/tensorflow/training_scripts/` directory will enable data scientists and machine learning engineers to train and update the TensorFlow models using mock data for continuous improvement.
 
 5. **Application Support Team**
-   - *User Story*: As a member of the application support team, I want to monitor the app's deployment for any performance issues or anomalies and provide support to users encountering difficulties with the app's functionalities.
-   - *Accomplishing File*: The infrastructure monitoring and logging configurations in the deployment directory, particularly in the `dockerfile` and `app` directories, will support the application support team in monitoring and troubleshooting the app's deployment.
+   - _User Story_: As a member of the application support team, I want to monitor the app's deployment for any performance issues or anomalies and provide support to users encountering difficulties with the app's functionalities.
+   - _Accomplishing File_: The infrastructure monitoring and logging configurations in the deployment directory, particularly in the `dockerfile` and `app` directories, will support the application support team in monitoring and troubleshooting the app's deployment.
 
 Each type of user interacts with different aspects of the Mental Health Monitoring App and may utilize or contribute to specific files within the application's codebase to fulfill their respective roles and responsibilities.

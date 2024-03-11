@@ -10,12 +10,14 @@ layout: article
 The AI Peru Education Access Enhancer aims to improve education access by using predictive analytics to identify communities with significant barriers to education, and recommending targeted interventions. The project leverages TensorFlow and Keras for building and training machine learning models, Airflow for workflow management, and Kubernetes for container orchestration.
 
 ### Objectives:
+
 1. Identify communities with significant barriers to education in Peru.
 2. Utilize predictive analytics to understand factors contributing to these barriers.
 3. Develop models to predict and prioritize areas most in need of intervention.
 4. Recommend targeted interventions to improve education access in identified communities.
 
 ### System Design Strategies:
+
 1. **Data Collection**: Gather socio-economic, demographic, geographic, and education-related data.
 2. **Data Preprocessing**: Clean, normalize, and transform data for model training.
 3. **Model Development**: Use TensorFlow and Keras to build machine learning models for predictive analytics.
@@ -26,6 +28,7 @@ The AI Peru Education Access Enhancer aims to improve education access by using 
 8. **Scalability**: Deploy models on Kubernetes for scalability and resilience.
 
 ### Chosen Libraries:
+
 1. **TensorFlow**: Widely-used machine learning library for building and training neural networks.
 2. **Keras**: High-level neural networks API that runs on top of TensorFlow, enabling rapid model prototyping.
 3. **Airflow**: Open-source platform to programmatically author, schedule, and monitor workflows.
@@ -38,30 +41,37 @@ By leveraging these libraries and tools, the AI Peru Education Access Enhancer p
 The MLOps infrastructure for the Peru Education Access Enhancer project focuses on efficiently deploying machine learning models, automating workflows, and ensuring scalability and reliability. The project utilizes TensorFlow, Keras, Airflow, and Kubernetes to identify communities with significant barriers to education and recommend targeted interventions.
 
 ### Components of MLOps Infrastructure:
-1. **Model Training Pipeline**: 
+
+1. **Model Training Pipeline**:
+
    - Data Collection: Gather relevant datasets including socio-economic, demographic, and education-related data.
    - Data Preprocessing: Clean, transform, and prepare data for training.
    - Model Development: Build neural network models using TensorFlow and Keras.
    - Model Training: Train models on historical data to predict barriers to education.
 
 2. **Model Evaluation and Optimization**:
+
    - Evaluate model performance using metrics like accuracy, precision, recall, and F1-score.
    - Optimize hyperparameters and model architecture to enhance predictions.
 
 3. **Deployment and Inference**:
+
    - Containerize trained models using Docker for portability.
    - Deploy models on Kubernetes for scaling and managing resources efficiently.
    - Expose model endpoints to receive input data for prediction.
 
 4. **Monitoring and Logging**:
+
    - Implement monitoring for model performance, system health, and data drift.
    - Log model predictions, input data, and model versions for traceability.
 
 5. **Automated Workflow Management**:
+
    - Use Airflow for orchestrating data pipelines, model training workflows, and inference tasks.
    - Schedule periodic retraining of models using fresh data to ensure model relevancy.
 
 6. **Continuous Integration/Continuous Deployment (CI/CD)**:
+
    - Implement CI/CD pipelines to automate testing, building, and deployment of model updates.
    - Enable version control for models, datasets, and codebase to track changes.
 
@@ -70,6 +80,7 @@ The MLOps infrastructure for the Peru Education Access Enhancer project focuses 
    - Implement redundancy and fault tolerance mechanisms to ensure system reliability.
 
 ### Benefits of MLOps Infrastructure:
+
 - **Efficiency**: Automating workflows reduces manual intervention and improves overall operational efficiency.
 - **Scalability**: Kubernetes enables seamless scaling of resources to handle varying workloads.
 - **Reliability**: Monitoring and logging ensure system health and performance are maintained.
@@ -114,6 +125,7 @@ Peru_Education_Access_Enhancer/
 ```
 
 ### Overview of the File Structure:
+
 - **`data/`**: Contains raw and processed data used for training and modeling.
 - **`models/`**: Holds scripts for model development, as well as directories for storing trained models.
 - **`notebooks/`**: Includes Jupyter notebooks for exploratory data analysis and model training.
@@ -123,6 +135,7 @@ Peru_Education_Access_Enhancer/
 - **`README.md`**: Provides an overview of the project, setup instructions, and guidelines for contributors.
 
 ### Benefits of the File Structure:
+
 - **Organized**: Data, models, scripts, and workflows are logically organized for easy access.
 - **Modular**: Each directory encapsulates specific functionalities, promoting modularity.
 - **Scalable**: Additional subdirectories can be added as the project grows without clutter.
@@ -155,6 +168,7 @@ models/
 ### Detailed Description:
 
 1. **`model_scripts/`**:
+
    - **`data_augmentation.py`**: Contains functions for augmenting data to increase model diversity and performance.
    - **`model_architecture.py`**: Defines the architecture of the neural network models using TensorFlow and Keras.
    - **`model_training.py`**: Script for training the machine learning models on the processed data.
@@ -166,6 +180,7 @@ models/
    - **`model_version2/`**: Directory for storing saved artifacts of the model trained in version 2.
 
 ### Functions of Files and Directories:
+
 - **`data_augmentation.py`**: Implements data augmentation techniques to enhance model generalization.
 - **`model_architecture.py`**: Defines the neural network architecture tailored to address education barrier prediction.
 - **`model_training.py`**: Orchestrates the training process, including data loading, model training, and saving trained models.
@@ -173,6 +188,7 @@ models/
 - **`variables/`**: Contains checkpoint files storing variable values that the model uses during inference.
 
 ### Benefits:
+
 - **Modular Design**: Separates concerns for data augmentation, model architecture, and training logic.
 - **Versioning**: Organizes trained models by version for easy tracking and management.
 - **Reproducibility**: Saves model artifacts for each version to reproduce results.
@@ -202,10 +218,12 @@ deploy/
 ### Detailed Description:
 
 1. **`dockerfiles/`**:
+
    - **`Dockerfile_model`**: Defines the Docker image for packaging the machine learning model for deployment.
    - **`Dockerfile_airflow`**: Specifies the Docker image for running Airflow services.
 
 2. **`airflow_dags/`**:
+
    - **`education_access_dag.py`**: Airflow DAG file defining the workflow tasks for data processing and model deployment.
 
 3. **`kubernetes_manifests/`**:
@@ -213,6 +231,7 @@ deploy/
    - **`airflow_deployment.yaml`**: Kubernetes manifest for deploying Airflow components such as scheduler and web server.
 
 ### Functions of Files and Directories:
+
 - **`Dockerfile_model`**: Contains instructions to build a Docker image encapsulating the model serving logic.
 - **`Dockerfile_airflow`**: Specifies the environment setup for running Airflow components in containers.
 - **`education_access_dag.py`**: Defines the workflow tasks, dependencies, and scheduling for model training and inference in Airflow.
@@ -220,6 +239,7 @@ deploy/
 - **`airflow_deployment.yaml`**: Contains the configuration for deploying Airflow components on Kubernetes, defining resources and dependencies.
 
 ### Benefits:
+
 - **Containerization**: Utilizes Dockerfiles to encapsulate models and services for consistent deployment.
 - **Orchestration**: Defines Airflow DAGs for managing workflow tasks, scheduling, and monitoring.
 - **Scalability**: Kubernetes manifests enable scaling and managing resources for deployed services.
@@ -265,6 +285,7 @@ model.save('trained_models/model_version1/education_access_model')
 ```
 
 ### Description:
+
 1. **`X`**: Mock feature data generated randomly.
 2. **`y`**: Random binary target labels corresponding to the features.
 3. **`Sequential`**: Defines a sequential neural network model architecture.
@@ -322,6 +343,7 @@ model.save('trained_models/model_version2/complex_education_access_model')
 ```
 
 ### Description:
+
 1. **`X`**: Mock feature data generated randomly.
 2. **`y`**: Random multiclass target labels corresponding to the features.
 3. **`Sequential`**: Defines a sequential neural network model with dense, batch normalization, and dropout layers.
@@ -338,30 +360,37 @@ Please customize the script further based on the specific data characteristics a
 ## Types of Users for Peru Education Access Enhancer Application
 
 ### 1. Data Scientist
+
 **User Story**: As a Data Scientist, I need to explore, preprocess, and build machine learning models to identify communities with barriers to education.
 **File**: `notebooks/exploratory_analysis.ipynb`
-   
+
 ### 2. Machine Learning Engineer
+
 **User Story**: As a Machine Learning Engineer, I need to develop, train, and optimize complex machine learning algorithms for predicting education barriers.
 **File**: `models/model_complex_algorithm.py`
 
 ### 3. Data Engineer
+
 **User Story**: As a Data Engineer, I need to manage data pipelines, preprocess data, and ensure data quality for model training.
 **File**: `scripts/data_preprocessing.py`
 
 ### 4. DevOps Engineer
+
 **User Story**: As a DevOps Engineer, I need to deploy, monitor, and scale the machine learning models and workflows in a production-ready environment.
 **File**: `deploy/kubernetes_manifests/model_deployment.yaml`
 
 ### 5. Project Manager
+
 **User Story**: As a Project Manager, I need to oversee the project progress, ensure deliverables are met, and coordinate efforts across team members.
 **File**: `README.md`
 
 ### 6. Software Engineer
+
 **User Story**: As a Software Engineer, I need to integrate model predictions into the application, ensure system performance, and manage dependencies.
 **File**: `deploy/airflow_dags/education_access_dag.py`
 
 ### 7. End User / Stakeholder
+
 **User Story**: As an End User / Stakeholder, I need to access insights and recommendations generated by the application to support targeted interventions in communities with education barriers.
 **File**: `models/model_training.py` (for understanding the model training process)
 

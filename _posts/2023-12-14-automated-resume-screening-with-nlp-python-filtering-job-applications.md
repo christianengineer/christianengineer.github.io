@@ -6,9 +6,11 @@ layout: article
 ---
 
 ## Objectives
+
 The objective of the AI Automated Resume Screening with NLP (Python) Filtering job applications repository is to implement a scalable and efficient system for automatically screening and filtering job applications using Natural Language Processing (NLP) and machine learning techniques. The system should be capable of processing large volumes of resumes, extracting relevant information, and making decisions based on predefined criteria.
 
 ## System Design Strategies
+
 1. **Scalable Data Pipeline**: Implement a scalable data pipeline to ingest, preprocess, and store resume data efficiently. This could involve using tools like Apache Spark or Apache Flink for distributed data processing.
 
 2. **NLP Processing**: Utilize NLP techniques to extract key information from resumes, such as skills, experience, and education. This could involve using libraries like spaCy or NLTK for text processing and feature extraction.
@@ -20,6 +22,7 @@ The objective of the AI Automated Resume Screening with NLP (Python) Filtering j
 5. **API and Frontend Integration**: Provide an API for interacting with the screening system and develop a frontend dashboard for visualizing and managing the screening results.
 
 ## Chosen Libraries
+
 1. **spaCy**: For NLP processing, including tasks such as named entity recognition, part-of-speech tagging, and entity extraction.
 
 2. **scikit-learn**: For building and training machine learning models for classification and ranking of resumes based on predefined criteria.
@@ -33,27 +36,35 @@ By following these design strategies and leveraging the chosen libraries, we can
 ## MLOps Infrastructure for Automated Resume Screening with NLP
 
 ### Version Control
+
 Utilize a version control system like Git to track changes in the codebase and ensure collaboration among the development team.
 
 ### Continuous Integration/Continuous Deployment (CI/CD)
+
 Implement CI/CD pipelines to automate the testing, building, and deployment of the application. Tools like Jenkins, CircleCI, or GitLab CI/CD can be used to ensure that changes are tested and deployed consistently.
 
 ### Model Versioning
+
 Use a model versioning system to track and manage different iterations of the machine learning models. Tools such as MLflow or DVC can help in tracking experiments, parameters, and metrics associated with the models.
 
 ### Model Training and Serving Infrastructure
+
 Deploy scalable infrastructure for model training and serving. This could involve using platforms like Amazon SageMaker, Google Cloud AI Platform, or building custom Dockerized environments to ensure reproducibility and scalability.
 
 ### Monitoring and Logging
+
 Implement monitoring and logging solutions to track the performance of the application, including model metrics, data quality, and system health. Tools like Prometheus, Grafana, or ELK stack can be used for monitoring and logging.
 
 ### A/B Testing
+
 Set up infrastructure for A/B testing to evaluate the performance of new model versions in production. Tools like Apache Kafka or custom in-house solutions can be used to divert traffic to different model versions and compare their performance.
 
 ### Infrastructure as Code
+
 Utilize infrastructure as code (IaC) principles to define and manage the infrastructure required for the application using tools like Terraform or AWS CloudFormation, ensuring reproducibility and consistency across environments.
 
 ### Security and Compliance
+
 Implement security measures and ensure compliance with data privacy regulations. Use tools like Vault for secret management, and enforce best practices for handling sensitive data and model outputs.
 
 By integrating these MLOps practices into the infrastructure for the Automated Resume Screening with NLP application, we can ensure that the system is robust, maintainable, and scalable, while enabling seamless collaboration, reproducibility, and monitoring of the entire AI application.
@@ -214,23 +225,27 @@ This file demonstrates a more complex example of training a machine learning mod
 ### Types of Users for Automated Resume Screening Application
 
 1. **Recruiters/Hiring Managers**
-   - *User Story*: As a recruiter, I want to upload a batch of resumes, specify job requirements, and receive a ranked list of candidates for further review.
-   - *File*: The "api" directory will contain the API implementation, specifically the file "upload_resumes.py" which allows the user to upload resumes and job requirements, initiating the screening process.
+
+   - _User Story_: As a recruiter, I want to upload a batch of resumes, specify job requirements, and receive a ranked list of candidates for further review.
+   - _File_: The "api" directory will contain the API implementation, specifically the file "upload_resumes.py" which allows the user to upload resumes and job requirements, initiating the screening process.
 
 2. **Data Scientists/ML Engineers**
-   - *User Story*: As a data scientist, I want to train and evaluate new machine learning models using mock data to improve the resume screening accuracy.
-   - *File*: The "src/model_training/" directory will contain the file "train_model.py" for training a basic model on mock data and "train_complex_model.py" for training a complex model on mock data.
+
+   - _User Story_: As a data scientist, I want to train and evaluate new machine learning models using mock data to improve the resume screening accuracy.
+   - _File_: The "src/model_training/" directory will contain the file "train_model.py" for training a basic model on mock data and "train_complex_model.py" for training a complex model on mock data.
 
 3. **System Administrators/DevOps Engineers**
-   - *User Story*: As a system administrator, I want to deploy the Automated Resume Screening application to a Kubernetes cluster for production use.
-   - *File*: The "deployment/kubernetes/" directory will contain the file "screening-service.yaml" for deploying the application to a Kubernetes cluster.
+
+   - _User Story_: As a system administrator, I want to deploy the Automated Resume Screening application to a Kubernetes cluster for production use.
+   - _File_: The "deployment/kubernetes/" directory will contain the file "screening-service.yaml" for deploying the application to a Kubernetes cluster.
 
 4. **Candidates/Job Applicants**
-   - *User Story*: As a job applicant, I want to submit my resume and application and receive feedback on its compatibility with the job requirements.
-   - *File*: This functionality is managed by the backend API, and there could be a specific file in the "api" directory for processing incoming applications, such as "submit_application.py".
+
+   - _User Story_: As a job applicant, I want to submit my resume and application and receive feedback on its compatibility with the job requirements.
+   - _File_: This functionality is managed by the backend API, and there could be a specific file in the "api" directory for processing incoming applications, such as "submit_application.py".
 
 5. **Quality Assurance/Testers**
-   - *User Story*: As a tester, I want to run automated tests to ensure that the application is functioning as expected after new updates are made.
-   - *File*: The "tests/" directory will contain test files such as "test_api.py" for testing API functionality or "test_model_training.py" for testing the model training process.
+   - _User Story_: As a tester, I want to run automated tests to ensure that the application is functioning as expected after new updates are made.
+   - _File_: The "tests/" directory will contain test files such as "test_api.py" for testing API functionality or "test_model_training.py" for testing the model training process.
 
 These user types and their respective user stories help define the different roles and interactions within the Automated Resume Screening with NLP application, along with the corresponding files or directories responsible for fulfilling their needs.

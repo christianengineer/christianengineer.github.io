@@ -8,7 +8,9 @@ layout: article
 ## Machine Learning Solution for Water Resources Planning
 
 ## Objectives and Benefits:
+
 - **Objectives:**
+
   - Predict water demand accurately to optimize distribution schedules.
   - Ensure sustainable water use by efficiently managing water resources.
 
@@ -18,12 +20,14 @@ layout: article
   - Enhanced decision-making capabilities for sustainable water management.
 
 ## Machine Learning Algorithm:
+
 - **Algorithm:** Gradient Boosting Regressor
   - **Reasoning:** Provides high predictive accuracy and handles complex relationships in the data.
 
 ## Strategies:
 
 ### 1. Data Sourcing and Preprocessing:
+
 - **Data Source:** Historical water usage data, weather data, population growth projections.
 - **Preprocessing Steps:**
   - Handling missing values.
@@ -32,6 +36,7 @@ layout: article
   - Encoding categorical variables.
 
 ### 2. Modeling:
+
 - **Model Selection:** Gradient Boosting Regressor
 - **Steps:**
   - Split data into training and testing sets.
@@ -40,6 +45,7 @@ layout: article
   - Evaluate the model using metrics like RMSE, MAE.
 
 ### 3. Deployment:
+
 - **Deployment Platform:** TensorFlow Serving
 - **Strategies:**
   - Convert the trained model to a TensorFlow format.
@@ -47,6 +53,7 @@ layout: article
   - Implement monitoring for model performance.
 
 ## Tools and Libraries:
+
 - **Tools and Libraries:**
   - [TensorFlow](https://www.tensorflow.org/) - for building and deploying ML models.
   - [Scikit-Learn](https://scikit-learn.org/) - for data preprocessing and modeling.
@@ -57,6 +64,7 @@ By following these strategies and utilizing the mentioned tools and libraries, t
 ## Data Sourcing Strategy for Water Demand Prediction
 
 ### 1. Data Sources:
+
 - **Historical Water Usage Data:**
   - Obtain historical water consumption data from sensors, meters, or past records.
 - **Weather Data:**
@@ -65,12 +73,14 @@ By following these strategies and utilizing the mentioned tools and libraries, t
   - Gather demographic data and population growth projections from relevant government agencies or research institutions.
 
 ### 2. Tools and Methods for Efficient Data Collection:
+
 - **Tools Recommendations:**
   - **Apache NiFi:** Use NiFi for data ingestion, where it can collect, transform, and route data from various sources to a central location.
   - **Python Requests:** Use Requests library for accessing APIs and fetching real-time weather data.
   - **SQL Database Integration:** Utilize SQL databases like MySQL or PostgreSQL to store and manage collected data efficiently.
-  
+
 ### 3. Integration within Existing Technology Stack:
+
 - **Data Pipeline Integration:**
   - Integrate Apache NiFi into the existing tech stack to automate data collection processes.
   - Use Python scripts within the pipeline to fetch weather data and other real-time information.
@@ -84,6 +94,7 @@ By incorporating tools like Apache NiFi for data ingestion, Python Requests for 
 ## Feature Extraction and Engineering for Water Demand Prediction
 
 ### 1. Feature Extraction:
+
 - **Temporal Features:**
   - Extract features like day of the week, month, season, and time of day to capture temporal patterns.
 - **Lag Features:**
@@ -94,16 +105,18 @@ By incorporating tools like Apache NiFi for data ingestion, Python Requests for 
   - Utilize population-related features such as demographic data, population density, and growth projections.
 
 ### 2. Feature Engineering:
+
 - **Scaling:**
   - Scale numerical features like water consumption, temperature, and precipitation to a standard range for model efficiency.
 - **One-Hot Encoding:**
   - Encode categorical variables like season, day of the week, or weather conditions for model compatibility.
 - **Interaction Features:**
-  - Create interaction terms between relevant features like temperature*precipitation to capture combined effects.
+  - Create interaction terms between relevant features like temperature\*precipitation to capture combined effects.
 - **Polynomial Features:**
   - Generate polynomial features for numerical variables to capture nonlinear relationships.
 
 ### 3. Variable Naming Recommendations:
+
 - **Temporal Features:**
   - day_of_week, month, season
 - **Lag Features:**
@@ -118,11 +131,13 @@ By incorporating these feature extraction and engineering techniques, the Peruvi
 ## Metadata Management for Water Demand Prediction Project
 
 ### 1. Data Source Metadata:
+
 - **Water Usage Data:**
   - **Source:** Sensor IDs, location information.
   - **Metadata:** Timestamps, unit of measurement, data quality flags.
 
 ### 2. Feature Metadata:
+
 - **Temporal Features:**
   - **Metadata:** Date formats, time zones.
 - **Weather Features:**
@@ -131,6 +146,7 @@ By incorporating these feature extraction and engineering techniques, the Peruvi
   - **Metadata:** Data source, update schedule, population segments covered.
 
 ### 3. Model Metadata:
+
 - **Model Configuration:**
   - **Metadata:** Hyperparameters, model version, training duration.
 - **Feature Importance:**
@@ -139,6 +155,7 @@ By incorporating these feature extraction and engineering techniques, the Peruvi
   - **Metadata:** Evaluation metrics (RMSE, MAE), test dataset used.
 
 ### 4. Integration and Management Strategies:
+
 - **Automated Metadata Tracking:**
   - Utilize tools like MLflow to automatically log metadata related to data sources, features, model training, and performance metrics.
 - **Version Control:**
@@ -151,21 +168,25 @@ By managing metadata specific to data sources, features, and model configuration
 ## Data Challenges and Preprocessing Strategies for Water Demand Prediction
 
 ### Specific Data Challenges:
+
 1. **Missing Data:**
+
    - **Issue:** Incomplete or missing values in water usage, weather, or population data.
-   - **Solution:** 
+   - **Solution:**
      - Imputation techniques like mean, median, or using temporal patterns for filling missing values.
      - Consider using predictive models for imputation based on related features.
 
 2. **Seasonality and Trends:**
+
    - **Issue:** Seasonal variations and long-term trends in water consumption can impact model performance.
-   - **Solution:** 
+   - **Solution:**
      - Detrend data using techniques like seasonal differencing or decomposition.
      - Include seasonality indicators as features to capture recurring patterns.
 
 3. **Outliers:**
+
    - **Issue:** Outliers in water usage data can distort model predictions.
-   - **Solution:** 
+   - **Solution:**
      - Identify and remove outliers based on statistical methods or domain knowledge.
      - Winsorization or capping to limit the impact of extreme values.
 
@@ -176,21 +197,17 @@ By managing metadata specific to data sources, features, and model configuration
      - Use feature selection techniques to identify the most relevant predictors.
 
 ### Data Preprocessing Strategies:
+
 1. **Normalization and Standardization:**
    - **Strategy:** Scale numerical features like water consumption, temperature to the same range.
-   
 2. **Handling Categorical Variables:**
    - **Strategy:** Encode categorical variables like season or weather conditions using one-hot encoding.
-   
 3. **Feature Selection:**
    - **Strategy:** Use techniques like Lasso regression or feature importance from tree-based models to select the most impactful features.
-   
 4. **Time Series Preprocessing:**
    - **Strategy:** Apply time series decomposition to remove trends and seasonality in water usage data.
-   
 5. **Cross-Validation Strategies:**
    - **Strategy:** Implement time-series cross-validation techniques to account for temporal dependencies in the data.
-   
 6. **Data Augmentation:**
    - **Strategy:** Generate synthetic data points for limited observations using techniques like SMOTE for minority classes.
 
@@ -241,6 +258,7 @@ X_preprocessed_df = pd.DataFrame(X_preprocessed, columns=numeric_features + prep
 ```
 
 In the above code:
+
 - We load the raw data, separate features and target variable.
 - We define preprocessing steps for numerical and categorical features.
 - We apply these preprocessing steps using the ColumnTransformer.
@@ -251,10 +269,12 @@ Each preprocessing step is commented to explain its importance and how it addres
 ## Modeling Strategy for Water Demand Prediction
 
 ### Recommended Modeling Approach:
+
 - **Model:** LSTM (Long Short-Term Memory) Neural Network
   - **Reasoning:** LSTM models are well-suited for capturing temporal dependencies in sequential data, making them ideal for modeling water consumption patterns over time.
 
 ### Key Step - Time Series Forecasting with LSTM:
+
 - **Importance:** The most crucial step in this strategy is training an LSTM model for time series forecasting of water demand.
 - **Explanation:**
   - LSTM networks excel at capturing long-term dependencies in sequential data, which is crucial for predicting water demand patterns that exhibit seasonality, trends, and complex temporal dynamics.
@@ -262,6 +282,7 @@ Each preprocessing step is commented to explain its importance and how it addres
   - This step is vital for the success of the project as accurate water demand predictions are essential for optimizing distribution schedules, ensuring efficient water resource management, and addressing the overarching goal of sustainable water use.
 
 ### Steps in the Modeling Strategy:
+
 1. **Data Preparation:** Convert the preprocessed data into sequences suitable for LSTM input.
 2. **Model Architecture:** Design an LSTM neural network with appropriate layers for sequence prediction.
 3. **Training:** Train the LSTM model on historical water demand data.
@@ -269,6 +290,7 @@ Each preprocessing step is commented to explain its importance and how it addres
 5. **Prediction:** Make predictions for future water demand based on the trained LSTM model.
 
 ### Benefits of LSTM for Water Demand Prediction:
+
 - **Sequence Learning:** LSTM excels at learning patterns in sequential data, capturing complex dependencies in water consumption behavior.
 - **Temporal Dynamics:** The model can effectively handle seasonality, trends, and periodic fluctuations in water demand data.
 - **Long-Term Memory:** LSTM's ability to retain information over long sequences ensures robust predictions for sustainable water resource planning.
@@ -278,6 +300,7 @@ By adopting an LSTM-based modeling strategy that focuses on time series forecast
 ## Tools and Technologies Recommendation for Data Modeling in Water Demand Prediction
 
 ### 1. Tool: TensorFlow
+
 - **Description:** TensorFlow is a powerful deep learning framework that provides tools for building and training neural network models, including LSTM networks for time series forecasting.
 - **Fit for Modeling Strategy:** TensorFlow seamlessly integrates with LSTM network architectures, enabling the implementation of complex models to capture temporal dependencies in water consumption data.
 - **Integration:** TensorFlow can be integrated into the existing technology stack for data preprocessing, model training, and deployment using libraries like TensorFlow Serving.
@@ -287,6 +310,7 @@ By adopting an LSTM-based modeling strategy that focuses on time series forecast
 - **Documentation:** [TensorFlow Official Documentation](https://www.tensorflow.org/)
 
 ### 2. Tool: Keras
+
 - **Description:** Keras is a user-friendly deep learning library built on top of TensorFlow for developing neural network models with minimal code.
 - **Fit for Modeling Strategy:** Keras offers a simple yet powerful interface for designing and training LSTM models, making it well-suited for time series forecasting tasks.
 - **Integration:** Keras integrates seamlessly with TensorFlow, allowing for efficient model prototyping and development within the TensorFlow ecosystem.
@@ -296,6 +320,7 @@ By adopting an LSTM-based modeling strategy that focuses on time series forecast
 - **Documentation:** [Keras Official Documentation](https://keras.io/)
 
 ### 3. Tool: MLflow
+
 - **Description:** MLflow is an open-source platform for the end-to-end machine learning lifecycle, including experiment tracking, model versioning, and model deployment.
 - **Fit for Modeling Strategy:** MLflow enables tracking and managing experiments when training LSTM models, facilitating reproducibility and collaboration.
 - **Integration:** MLflow can be integrated with TensorFlow and Keras to log model parameters, metrics, and artifacts for model monitoring and version control.
@@ -317,7 +342,7 @@ from sklearn import preprocessing
 ## Function to generate synthetic data
 def generate_synthetic_data(num_samples):
     fake = Faker()
-    
+
     data = {
         'date': [fake.date_this_year() for _ in range(num_samples)],
         'temperature': np.random.randint(0, 40, num_samples),
@@ -326,7 +351,7 @@ def generate_synthetic_data(num_samples):
         'day_of_week': np.random.choice(['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'], num_samples),
         'water_demand': np.random.randint(100, 1000, num_samples)
     }
-    
+
     df = pd.DataFrame(data)
     return df
 
@@ -347,6 +372,7 @@ synthetic_data.to_csv('synthetic_water_demand_data.csv', index=False)
 ```
 
 In this script:
+
 - We use the Faker library to generate synthetic data for features like date, temperature, precipitation, season, and day of the week.
 - We perform feature engineering by one-hot encoding the categorical variables.
 - We normalize the numerical features using standard scaling.
@@ -366,6 +392,7 @@ date,temperature,precipitation,water_demand,season_Fall,season_Spring,season_Sum
 ```
 
 In this subset:
+
 - Columns represent features like date, temperature, precipitation, water demand, season, and day of the week.
 - Categorical features (season and day of the week) have been one-hot encoded.
 - Numeric features (temperature, precipitation) are standardized for model ingestion.
@@ -423,6 +450,7 @@ open("water_demand_prediction_model.tflite", "wb").write(tflite_model)
 ```
 
 In this script:
+
 - The preprocessed dataset is loaded and split into training and testing sets.
 - Data normalization and reshaping are applied for LSTM input.
 - An LSTM model is built, trained, and saved for deployment.
@@ -433,6 +461,7 @@ The code adheres to best practices for documentation, follows a modular structur
 ## Deployment Plan for Machine Learning Model in Water Demand Prediction
 
 ### 1. Pre-Deployment Checks:
+
 - **Step:** Validate model performance and accuracy on test data before deployment.
 - **Tools:** Pandas for loading preprocessed data, scikit-learn for data preprocessing, TensorFlow for model serving.
 - **Documentation:**
@@ -441,6 +470,7 @@ The code adheres to best practices for documentation, follows a modular structur
   - [TensorFlow Serving Documentation](https://www.tensorflow.org/tfx/guide/serving)
 
 ### 2. Model Deployment:
+
 - **Step:** Deploy the trained model to a production environment for inference.
 - **Tools:** TensorFlow Serving for model serving, Docker for containerization.
 - **Documentation:**
@@ -448,6 +478,7 @@ The code adheres to best practices for documentation, follows a modular structur
   - [Docker Documentation](https://docs.docker.com/)
 
 ### 3. API Development:
+
 - **Step:** Develop an API for model inference and integration with existing systems.
 - **Tools:** Flask for API development, Swagger for API documentation.
 - **Documentation:**
@@ -455,6 +486,7 @@ The code adheres to best practices for documentation, follows a modular structur
   - [Swagger Documentation](https://swagger.io/docs/)
 
 ### 4. Monitoring and Maintenance:
+
 - **Step:** Implement monitoring to track model performance and maintenance for updates.
 - **Tools:** Prometheus for monitoring, Grafana for visualization.
 - **Documentation:**
@@ -462,6 +494,7 @@ The code adheres to best practices for documentation, follows a modular structur
   - [Grafana Documentation](https://grafana.com/docs/)
 
 ### 5. Scalability and Optimization:
+
 - **Step:** Ensure scalability and optimization of the deployed model for varying workloads.
 - **Tools:** Kubernetes for container orchestration, TensorFlow Lite for edge deployment.
 - **Documentation:**
@@ -496,6 +529,7 @@ ENTRYPOINT ["tensorflow_model_server", "--port=8500", "--rest_api_port=8501", "-
 ```
 
 In this Dockerfile:
+
 - It starts with a base image from TensorFlow Serving for serving the model.
 - The model files are copied to the container under the `/models/` directory.
 - Environment variables are set for the model name, base path, and paths.
@@ -507,26 +541,31 @@ This Dockerfile is optimized for performance, scalability, and deployment of the
 ## User Groups and Their User Stories for the Water Demand Prediction Application:
 
 ### 1. Water Distribution Manager:
+
 - **User Story:** As a Water Distribution Manager, I struggle to optimize water distribution schedules efficiently while ensuring sustainable water use.
 - **Solution:** The machine learning model predicts water demand accurately, helping me optimize distribution schedules and reduce water wastage.
 - **Project Component:** The LSTM model in the codebase handles the prediction of water demand based on historical data.
 
 ### 2. Field Operations Team:
+
 - **User Story:** As a member of the Field Operations Team, I find it challenging to coordinate field tasks based on variable water demand.
 - **Solution:** The application provides real-time water demand predictions, assisting in planning field operations effectively.
 - **Project Component:** The scalable API developed using Flask enables real-time access to model predictions for field teams.
 
 ### 3. Environmental Analyst:
+
 - **User Story:** As an Environmental Analyst, I face difficulties in monitoring and managing water resources sustainably.
 - **Solution:** The application's insights help in monitoring water demand trends, supporting informed decision-making for sustainable water management.
 - **Project Component:** The visualizations generated from the mocked dataset support understanding water demand patterns for environmental analysis.
 
 ### 4. Business Development Manager:
+
 - **User Story:** As a Business Development Manager, I aim to optimize water distribution to meet increasing demand efficiently.
 - **Solution:** The application's water demand predictions assist in developing strategies to meet growing water demand while maintaining sustainability.
 - **Project Component:** The Dockerfile for containerizing the model facilitates seamless deployment, ensuring optimal performance for decision-making in business development.
 
 ### 5. Data Scientist:
+
 - **User Story:** As a Data Scientist, I require tools to analyze and model water demand patterns accurately.
 - **Solution:** The application offers a robust machine learning model powered by TensorFlow and Scikit-Learn for accurate water demand prediction.
 - **Project Component:** The Jupyter Notebooks with feature engineering and model training steps provide a comprehensive framework for analyzing and predicting water demand accurately.

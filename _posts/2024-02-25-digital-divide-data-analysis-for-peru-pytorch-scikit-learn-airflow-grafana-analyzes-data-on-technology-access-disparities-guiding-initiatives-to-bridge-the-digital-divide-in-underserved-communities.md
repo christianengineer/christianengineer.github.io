@@ -8,11 +8,13 @@ layout: article
 ## AI Digital Divide Data Analysis for Peru Repository
 
 ### Objectives:
+
 - Analyze data on technology access disparities in Peru to identify areas with digital divide.
 - Guide initiatives to bridge the digital divide in underserved communities.
 - Provide insights and recommendations for policymakers and organizations working towards improving technology access.
 
 ### System Design Strategies:
+
 1. **Data Collection:** Gather data sources on technology access, internet connectivity, devices usage, and demographics in Peru.
 2. **Data Preprocessing:** Clean and preprocess data to handle missing values, outliers, and inconsistencies.
 3. **Exploratory Data Analysis (EDA):** Analyze data to identify patterns, trends, and correlations related to the digital divide.
@@ -21,6 +23,7 @@ layout: article
 6. **Visualization:** Utilize Grafana for creating interactive dashboards to present data analysis results and insights.
 
 ### Chosen Libraries:
+
 1. **PyTorch:** For developing and training deep learning models to understand complex relationships in the data.
 2. **Scikit-Learn:** For implementing machine learning algorithms such as regression, classification, and clustering to analyze the data.
 3. **Apache Airflow:** For orchestrating data pipelines, automating workflows, and monitoring tasks in the data analysis process.
@@ -31,6 +34,7 @@ By following these design strategies and utilizing these libraries, the AI Digit
 ## MLOps Infrastructure for Digital Divide Data Analysis for Peru Application
 
 ### Components:
+
 1. **Data Collection:** Gather data on technology access disparities in Peru from various sources.
 2. **Data Preprocessing:** Clean, transform, and preprocess the data for analysis.
 3. **Model Development:** Develop machine learning models using PyTorch and Scikit-Learn to predict technology access disparities.
@@ -43,6 +47,7 @@ By following these design strategies and utilizing these libraries, the AI Digit
 10. **Visualization:** Use Grafana to create interactive dashboards for visualizing data analysis results and model performance metrics.
 
 ### Tech Stack:
+
 - **PyTorch** and **Scikit-Learn** for model development and training.
 - **Apache Airflow** for managing and scheduling ML workflows and pipelines.
 - **Grafana** for creating visualizations and dashboards for monitoring and reporting.
@@ -52,6 +57,7 @@ By following these design strategies and utilizing these libraries, the AI Digit
 - **CI/CD tools** like Jenkins or GitLab CI for automating testing and deployment processes.
 
 ### Workflow:
+
 1. **Data Collection & Preprocessing:**
    - Raw data collection from various sources.
    - Cleaning, transformation, and feature engineering.
@@ -122,6 +128,7 @@ digital-divide-analysis/
 ```
 
 ### Directory Structure Overview:
+
 - **data/**: Contains raw and processed data files.
 - **models/**: Stores trained machine learning models developed using PyTorch and Scikit-Learn.
 - **notebooks/**: Jupyter notebooks for exploratory data analysis, model training, and evaluation.
@@ -165,7 +172,9 @@ models/
 ```
 
 ### Models Directory Structure Overview:
+
 - **pytorch/**: Directory for PyTorch models used for deep learning-based analysis.
+
   - **model1/**: Directory for the first PyTorch model.
     - **model_config.json**: Configuration file containing hyperparameters, architecture details, and training settings.
     - **model.pth**: Trained model file saved in PyTorch format.
@@ -183,6 +192,7 @@ models/
   - **...**: Additional directories for storing more Scikit-Learn models.
 
 ### Model Directory Details:
+
 - Each model directory contains the trained model file, configuration details, and evaluation metrics for easy reference and reproduction.
 - Model configuration files store hyperparameters, architecture details, and training settings, aiding in model reproducibility.
 - Model evaluation metrics files document the performance of the models on validation or test datasets for comparison and analysis.
@@ -225,19 +235,23 @@ deployment/
 ```
 
 ### Deployment Directory Structure Overview:
+
 - **api/**: Directory for deploying machine learning models as APIs for real-time predictions.
+
   - **requirements.txt**: List of dependencies required for the API deployment.
   - **app.py**: Main Flask application file to set up API endpoints and handle requests.
   - **model_api.py**: Script to load the trained models and perform predictions in response to API requests.
   - **...**: Other relevant files or directories for the API deployment.
 
 - **batch_processing/**: Directory for deploying batch processing jobs using trained models.
+
   - **requirements.txt**: List of dependencies needed for running batch processing scripts.
   - **batch_processor.py**: Script to load models and process data in batch for predictions.
   - **batch_data/**: Directory containing data files for batch processing.
   - **...**: Other relevant files or directories for batch processing deployment.
 
 - **airflow_dags/**: Directory for Apache Airflow Directed Acyclic Graphs (DAGs) configurations for automating data processing and model training workflows.
+
   - **data_processing_dag.py**: DAG configuration for data processing tasks.
   - **model_training_dag.py**: DAG configuration for model training and evaluation tasks.
   - **...**: Additional DAG configurations for other workflows.
@@ -248,6 +262,7 @@ deployment/
   - **...**: Other relevant files or directories for monitoring and visualization.
 
 ### Deployment Details:
+
 - **API and Batch Processing**: Enables deployment of machine learning models for real-time predictions via APIs and batch processing jobs.
 - **Airflow DAGs**: Facilitates automation of data processing and model training workflows for efficient and scalable deployment.
 - **Monitoring Setup**: Includes Grafana dashboard configuration and monitoring scripts for tracking system performance and health.
@@ -294,7 +309,7 @@ print(f'Model Accuracy: {accuracy}')
 joblib.dump(model, 'models/scikit-learn/mock_model.pkl')
 ```
 
-This Python script `train_model.py` trains a mock Scikit-Learn model using randomly generated data for the Digital Divide Data Analysis for Peru application. It loads mock data, splits it into training and testing sets, trains a Random Forest Classifier model, evaluates its accuracy, and finally saves the trained model as `mock_model.pkl` in the `models/scikit-learn` directory. 
+This Python script `train_model.py` trains a mock Scikit-Learn model using randomly generated data for the Digital Divide Data Analysis for Peru application. It loads mock data, splits it into training and testing sets, trains a Random Forest Classifier model, evaluates its accuracy, and finally saves the trained model as `mock_model.pkl` in the `models/scikit-learn` directory.
 
 You can replace the mock data loading process in the script with your actual data loading implementation to train the model on real data for analyzing technology access disparities and guiding initiatives to bridge the digital divide in underserved communities.
 
@@ -314,7 +329,7 @@ class ComplexModel(nn.Module):
         self.fc2 = nn.Linear(64, 32)
         self.fc3 = nn.Linear(32, 1)
         self.relu = nn.ReLU()
-    
+
     def forward(self, x):
         x = self.relu(self.fc1(x))
         x = self.relu(self.fc2(x))
@@ -355,22 +370,27 @@ You can replace the mock data loading process in the script with your actual dat
 ### Types of Users for Digital Divide Data Analysis for Peru Application
 
 1. **Data Analyst**
+
    - **User Story:** As a Data Analyst, I want to explore and analyze the technology access disparities in Peru to identify patterns and trends that can help guide initiatives to bridge the digital divide in underserved communities.
    - **File:** `notebooks/exploratory_data_analysis.ipynb`
 
 2. **Machine Learning Engineer**
+
    - **User Story:** As a Machine Learning Engineer, I need to train and evaluate machine learning models using PyTorch and Scikit-Learn to predict technology access disparities accurately.
    - **File:** `models/train_complex_model.py`, `models/train_model.py`
 
 3. **Data Engineer**
+
    - **User Story:** As a Data Engineer, I am responsible for setting up and managing data pipelines for processing and transforming data efficiently to enable smooth data analysis workflows.
    - **File:** `airflow/data_processing_dag.py`
 
 4. **Policy Maker**
+
    - **User Story:** As a Policy Maker, I rely on the insights and recommendations generated by the data analysis to make informed decisions and implement initiatives that will help bridge the digital divide in underserved communities.
    - **File:** `notebooks/model_training_evaluation.ipynb`
 
 5. **System Administrator**
+
    - **User Story:** As a System Administrator, I focus on maintaining the deployment infrastructure, ensuring scalability, reliability, and performance of the application.
    - **File:** `deployment/monitoring/grafana_dashboard.json`, `deployment/monitoring/monitoring_scripts/`
 

@@ -47,23 +47,28 @@ The infrastructure for the ChatEcomm E-commerce Chatbot AI application needs to 
 1. **Cloud Platform**: Utilize a reliable cloud platform such as Amazon Web Services (AWS), Microsoft Azure, or Google Cloud Platform (GCP) to host and manage the application. Each of these platforms provides a wide range of services for computing, storage, networking, and AI tools that align with the requirements of the e-commerce chatbot AI application.
 
 2. **Compute Resources**:
+
    - **Virtual Machines/Containers**: Deploy application components, such as microservices, NLP processing, and recommendation engine, on virtual machines or containers for efficient resource utilization and isolation.
    - **Serverless Functions**: Utilize serverless computing for event-driven tasks, real-time processing, and scalability without the need to manage infrastructure.
 
 3. **Storage**:
+
    - **Relational Database**: Use a scalable and managed relational database service like Amazon RDS, Azure SQL Database, or Google Cloud SQL for handling user data, product information, and chatbot interactions.
    - **NoSQL Database**: Employ NoSQL databases, such as Amazon DynamoDB, Azure Cosmos DB, or Google Cloud Firestore for storing unstructured data, user sessions, and real-time analytics data.
 
 4. **AI/ML Services**:
+
    - **Managed AI Services**: Leverage platform-specific AI/ML services for tasks like natural language processing, sentiment analysis, and personalized recommendations, such as AWS Comprehend, Azure Cognitive Services, or Google Cloud Natural Language API.
    - **Custom Models**: Train and deploy custom machine learning and deep learning models using services like Amazon SageMaker, Azure Machine Learning, or Google Cloud AI Platform for specific e-commerce use cases.
 
 5. **Message Queues/Streaming Platforms**:
+
    - Utilize managed message queues or streaming platforms like Amazon SQS, Azure Service Bus, or Google Cloud Pub/Sub for real-time processing, event-driven architecture, and decoupling of services.
 
 6. **Content Delivery Network (CDN)**: Integrate a CDN such as Amazon CloudFront, Azure CDN, or Google Cloud CDN to deliver static assets, improve latency, and handle global distribution of chatbot responses and product images.
 
 7. **Monitoring and Logging**:
+
    - Implement centralized monitoring and logging using services like AWS CloudWatch, Azure Monitor, or Google Cloud Operations Suite to track application performance, resource utilization, and user interactions.
 
 8. **Security and Compliance**:
@@ -270,7 +275,7 @@ def train_product_recommendation_model(data_file_path):
         keras.layers.Dense(32, activation='relu'),
         keras.layers.Dense(1, activation='linear')
     ])
-    
+
     model.compile(optimizer='adam', loss='mean_squared_error')
     model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y_test))
 
@@ -278,11 +283,13 @@ def train_product_recommendation_model(data_file_path):
 ```
 
 In this example:
+
 - The function `train_product_recommendation_model` takes the file path to the mock data as input and loads the data into a DataFrame.
 - It preprocesses the data, splits it into training and testing sets, and constructs a deep learning model for product recommendation using the TensorFlow and Keras libraries.
 - The trained model is returned for future use in the application.
 
 Usage example:
+
 ```python
 data_file_path = 'path/to/mock_data.csv'  ## Replace with the actual file path
 trained_model = train_product_recommendation_model(data_file_path)
@@ -328,7 +335,7 @@ def train_deep_learning_model_for_nlp(data_file_path):
         layers.Dense(64, activation='relu'),
         layers.Dense(1, activation='sigmoid')
     ])
-    
+
     model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
     model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y_test))
 
@@ -336,11 +343,13 @@ def train_deep_learning_model_for_nlp(data_file_path):
 ```
 
 In this example:
+
 - The function `train_deep_learning_model_for_nlp` takes the file path to the mock data as input and loads the text and label data into arrays.
 - It preprocesses the text data using Keras Tokenizer and pads the sequences to ensure uniform length.
 - The function then constructs a complex deep learning model for NLP or sentiment analysis using the TensorFlow and Keras libraries, and trains the model on the preprocessed data.
 
 Usage example:
+
 ```python
 data_file_path = 'path/to/mock_nlp_data.csv'  ## Replace with the actual file path
 trained_nlp_model = train_deep_learning_model_for_nlp(data_file_path)
@@ -351,18 +360,22 @@ This function serves to demonstrate training a complex deep learning algorithm f
 **Types of Users and User Stories:**
 
 1. **Customer**
+
    - **User Story**: As a customer, I want to use the chatbot to find and purchase products easily, get personalized recommendations, and receive support in real-time.
    - **File**: The user story for the customer can be captured in a document such as "customer_user_stories.md" or within the "user_stories" directory, covering scenarios such as browsing products, asking for recommendations, and seeking assistance with orders.
 
 2. **E-commerce Store Administrator**
+
    - **User Story**: As an administrator, I want to use the chatbot to manage product listings, handle customer inquiries, and analyze user interactions to improve the chatbot's capabilities.
    - **File**: The user story for the e-commerce store administrator can be documented in a file named "admin_user_stories.md" or within the "user_stories" directory, detailing scenarios related to product management, customer support, and chatbot performance monitoring.
 
 3. **Marketing Manager**
+
    - **User Story**: As a marketing manager, I want to leverage the chatbot to gather insights into customer preferences, launch targeted promotional campaigns, and analyze the effectiveness of marketing initiatives.
    - **File**: The user story for the marketing manager can be outlined in a document such as "marketing_manager_user_stories.md" or within the "user_stories" directory, encompassing scenarios related to customer data analysis, campaign management, and performance metrics tracking.
 
 4. **Data Analyst**
+
    - **User Story**: As a data analyst, I want to access chatbot interaction data for generating reports, performing sentiment analysis, and identifying trends to provide actionable insights for the business.
    - **File**: The user story for the data analyst can be articulated in a file named "data_analyst_user_stories.md" or within the "user_stories" directory, addressing tasks such as data retrieval, analysis techniques, and report generation capabilities.
 

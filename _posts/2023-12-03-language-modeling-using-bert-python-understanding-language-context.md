@@ -8,13 +8,17 @@ layout: article
 ## AI Language Modeling using BERT
 
 ## Objectives
+
 The objective of the AI Language Modeling using BERT repository is to provide a comprehensive understanding of leveraging BERT (Bidirectional Encoder Representations from Transformers) for natural language processing tasks. This includes demonstrating how BERT can be used for tasks such as text classification, named entity recognition, question answering, and more.
 
 ## System Design Strategies
+
 The system design for the repository will focus on utilizing BERT as a pre-trained model and fine-tuning it for specific language processing tasks. This involves integrating BERT into the pipeline for tokenization, input formatting, model fine-tuning, and inference. Additionally, the repository will provide examples of how to handle large-scale text datasets efficiently to train and evaluate the BERT model.
 
 ## Chosen Libraries
+
 The repository will primarily utilize the following libraries for implementing the AI language modeling using BERT:
+
 1. **Transformers (Hugging Face)**: This library provides pre-trained models like BERT and utilities for fine-tuning them on specific NLP tasks.
 2. **PyTorch or TensorFlow**: Depending on the preference or existing infrastructure, the repository will demonstrate how to implement BERT using either PyTorch or TensorFlow for the underlying deep learning framework.
 3. **NLTK or SpaCy**: These libraries can be used for text preprocessing, tokenization, and other NLP-related tasks that complement the use of BERT.
@@ -26,6 +30,7 @@ This repository will serve as a valuable resource for developers and data scient
 ## Infrastructure for Language Modeling using BERT
 
 ## Cloud-based Infrastructure
+
 For the Language Modeling using BERT application, a cloud-based infrastructure can provide the scalability and resources required for training and deploying AI models. The following components can be part of the infrastructure:
 
 1. **Cloud Computing Resources**: Utilize virtual machines or containers on cloud platforms like AWS, Google Cloud, or Microsoft Azure to run intensive training processes for language modeling using BERT. This ensures access to scalable compute resources based on the specific requirements of the AI application.
@@ -37,6 +42,7 @@ For the Language Modeling using BERT application, a cloud-based infrastructure c
 4. **Monitoring and Logging**: Implement monitoring and logging solutions such as CloudWatch, StackDriver, or third-party tools to gather insights into the performance of training jobs, resource utilization, and any potential issues that may arise during the language modeling process.
 
 ## Orchestration and Deployment
+
 In addition to the cloud-based infrastructure, orchestration and deployment strategies can streamline the process of managing and scaling the language modeling application:
 
 1. **Containerization**: Utilize containerization platforms such as Docker and container orchestration frameworks like Kubernetes to encapsulate the language modeling application and its dependencies. This approach provides consistency in deployment across different environments and facilitates easy scaling of computational resources.
@@ -90,6 +96,7 @@ language_modeling_bert/
 ```
 
 In this file structure:
+
 - The `data/` directory contains subdirectories for raw and processed data, enabling separation of original data files from pre-processed datasets.
 - The `models/` directory holds subdirectories for pre-trained and fine-tuned BERT models, facilitating organization and management of model files.
 - The `notebooks/` directory provides Jupyter notebooks for data exploration, preprocessing, model training, and evaluation, serving as a documentation and experimentation space.
@@ -277,23 +284,27 @@ This function demonstrates the use of a pre-trained BERT model and the `transfor
 ### List of User Types for Language Modeling using BERT Application
 
 1. **Data Scientist/ML Engineer**
-   - *User Story*: As a Data Scientist, I want to use the Language Modeling application to fine-tune BERT models for specific NLP tasks, such as sentiment analysis and named entity recognition, to improve the accuracy of language understanding models.
-   - *File*: They would primarily interact with the `src/models/` directory, where the fine-tuning scripts and model evaluation notebooks reside.
+
+   - _User Story_: As a Data Scientist, I want to use the Language Modeling application to fine-tune BERT models for specific NLP tasks, such as sentiment analysis and named entity recognition, to improve the accuracy of language understanding models.
+   - _File_: They would primarily interact with the `src/models/` directory, where the fine-tuning scripts and model evaluation notebooks reside.
 
 2. **NLP Researcher**
-   - *User Story*: As an NLP Researcher, I want to experiment with different BERT architectures and configurations to understand their impact on language modeling tasks, and assess their performance on specific corpora.
-   - *File*: They would make use of the Jupyter notebooks in the `notebooks/` directory for exploration, preprocessing, model training, and evaluation.
+
+   - _User Story_: As an NLP Researcher, I want to experiment with different BERT architectures and configurations to understand their impact on language modeling tasks, and assess their performance on specific corpora.
+   - _File_: They would make use of the Jupyter notebooks in the `notebooks/` directory for exploration, preprocessing, model training, and evaluation.
 
 3. **Software Engineer/Developer**
-   - *User Story*: As a Software Engineer, I want to integrate the BERT language model into our production system to enhance our application's ability to understand user queries and provide accurate responses.
-   - *File*: They would need to access the deployment directory `deployment/` to work on integrating the BERT language model into the production system.
+
+   - _User Story_: As a Software Engineer, I want to integrate the BERT language model into our production system to enhance our application's ability to understand user queries and provide accurate responses.
+   - _File_: They would need to access the deployment directory `deployment/` to work on integrating the BERT language model into the production system.
 
 4. **Business Analyst/Project Manager**
-   - *User Story*: As a Business Analyst, I want to understand the performance and potential use cases of the BERT-based language models, and identify opportunities for leveraging these models within our applications to generate insights and improve user experiences.
-   - *File*: They would benefit from the documentation in the `README.md` file, as well as exploration and evaluation notebooks in the `notebooks/` directory to understand the performance of BERT models.
+
+   - _User Story_: As a Business Analyst, I want to understand the performance and potential use cases of the BERT-based language models, and identify opportunities for leveraging these models within our applications to generate insights and improve user experiences.
+   - _File_: They would benefit from the documentation in the `README.md` file, as well as exploration and evaluation notebooks in the `notebooks/` directory to understand the performance of BERT models.
 
 5. **AI Enthusiast/Student**
-   - *User Story*: As an AI Enthusiast/Student, I want to learn the fundamentals of language modeling using BERT and gain hands-on experience with NLP tasks by experimenting with pre-trained BERT models.
-   - *File*: They would utilize the Jupyter notebooks in the `notebooks/` directory for learning, experimentation, and gaining insights into language modeling using BERT.
+   - _User Story_: As an AI Enthusiast/Student, I want to learn the fundamentals of language modeling using BERT and gain hands-on experience with NLP tasks by experimenting with pre-trained BERT models.
+   - _File_: They would utilize the Jupyter notebooks in the `notebooks/` directory for learning, experimentation, and gaining insights into language modeling using BERT.
 
 Each of the aforementioned user types would interact with different parts of the Language Modeling using BERT application, which includes various files and directories such as Jupyter notebooks, model scripts, and deployment-related files, based on their specific use cases and objectives.

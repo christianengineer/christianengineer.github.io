@@ -8,7 +8,9 @@ layout: article
 ## AI Dynamic Pricing Model for E-commerce
 
 ## Objectives
+
 The main objective of the AI Dynamic Pricing Model for E-commerce is to build a scalable, data-intensive application that leverages machine learning to optimize pricing strategies in real time. The specific objectives include:
+
 1. Developing a machine learning model to analyze market trends, competitor pricing, and customer behavior.
 2. Integrating the model into a scalable, real-time application to dynamically adjust prices based on the analysis.
 3. Utilizing TensorFlow for building and training machine learning models for pricing optimization.
@@ -16,7 +18,9 @@ The main objective of the AI Dynamic Pricing Model for E-commerce is to build a 
 5. Implementing Celery for asynchronous task queuing to handle background processing of pricing updates and data analytics.
 
 ## System Design Strategies
+
 The system design for the AI Dynamic Pricing Model for E-commerce should consider the following strategies:
+
 1. **Microservices Architecture**: Design the application as a set of loosely coupled services, such as price optimization, data streaming, and API services, to ensure scalability and maintainability.
 2. **Real-time Data Processing**: Implement real-time data pipelines to ingest, process, and analyze large volumes of data, enabling quick decision-making for pricing adjustments.
 3. **Machine Learning Infrastructure**: Build a robust infrastructure to support model training, deployment, and monitoring using TensorFlow and related libraries.
@@ -24,6 +28,7 @@ The system design for the AI Dynamic Pricing Model for E-commerce should conside
 5. **API-Driven Development**: Develop APIs using FastAPI to expose the machine learning model and enable seamless integration with other services and components.
 
 ## Chosen Libraries
+
 1. **TensorFlow**: TensorFlow is chosen for its powerful capabilities in building and training machine learning models, particularly for pricing optimization and demand forecasting.
 2. **FastAPI**: FastAPI is selected for its high-performance capabilities, asynchronous support, and easy integration with machine learning models, making it suitable for building real-time APIs for the dynamic pricing model.
 3. **Celery**: Celery is chosen for its robust support for distributed task queues and asynchronous processing, making it suitable for handling background tasks, such as pricing updates and data analytics.
@@ -33,14 +38,18 @@ By incorporating these strategies and utilizing the chosen libraries, we aim to 
 ## MLOps Infrastructure for Dynamic Pricing Model in E-commerce
 
 ## Objectives
+
 The MLOps infrastructure for the Dynamic Pricing Model in e-commerce aims to establish a robust and scalable framework for managing the machine learning lifecycle, including model development, deployment, monitoring, and continuous improvement. The specific objectives include:
+
 1. Implementing a streamlined process for training, validating, and deploying machine learning models using TensorFlow.
 2. Orchestrating the end-to-end workflow from data ingestion to model retraining and deployment using efficient MLOps practices.
 3. Integrating the machine learning model with FastAPI for serving predictions via APIs and interacting with the e-commerce application.
 4. Utilizing Celery for managing asynchronous tasks related to model retraining, updating pricing strategies, and handling background processing for data analytics.
 
 ## MLOps Infrastructure Components and Strategies
+
 The MLOps infrastructure for the Dynamic Pricing Model in e-commerce should incorporate the following components and strategies:
+
 1. **Data Versioning and Management**: Implement a data versioning system to track changes in training and evaluation datasets using tools like DVC or Delta Lake to ensure reproducibility.
 2. **Model Versioning and Registry**: Establish a model registry to manage different versions of trained models and their metadata for traceability using MLflow or Kubeflow.
 3. **Continuous Integration/Continuous Deployment (CI/CD)**: Set up automated pipelines for model training, evaluation, and deployment using tools like Jenkins, GitLab, or Azure DevOps to ensure consistent model updates and deployments.
@@ -48,6 +57,7 @@ The MLOps infrastructure for the Dynamic Pricing Model in e-commerce should inco
 5. **Asynchronous Task Orchestration with Celery**: Integrate Celery for managing asynchronous tasks related to model retraining, hyperparameter optimization, and pricing strategy updates.
 
 ## Leveraging the Chosen Libraries
+
 The MLOps infrastructure will leverage the capabilities of the chosen libraries:
 
 1. **TensorFlow**: Utilize TensorFlow Extended (TFX) for end-to-end ML workflows, including data validation, transformation, training, and serving. TensorFlow Serving can be used for model deployment and serving.
@@ -163,9 +173,10 @@ models/
         └── validation_data.csv  ## Validation dataset
 ```
 
-The *models/* directory for the Dynamic Pricing Model for E-commerce houses two main subdirectories:
+The _models/_ directory for the Dynamic Pricing Model for E-commerce houses two main subdirectories:
 
 - **trained_models/**: Contains subdirectories for different versions of trained models and relevant model artifacts.
+
   - Within each version subdirectory:
     - **model.pb**: The trained TensorFlow model saved in a format suitable for serving (e.g., SavedModel format).
     - **model_metadata.json**: Metadata file containing information about the model, such as its version, training details, and hyperparameters.
@@ -209,19 +220,21 @@ deployment/
     └── ... (other Kubernetes deployment files)
 ```
 
-The *deployment/* directory for the Dynamic Pricing Model for E-commerce contains the following components and files:
+The _deployment/_ directory for the Dynamic Pricing Model for E-commerce contains the following components and files:
 
 - **Dockerfile**: The Dockerfile specifies the instructions for building the Docker image to containerize the application, including the necessary dependencies and environment setup for running the FastAPI application and Celery workers.
 
 - **docker-compose.yml**: The Docker Compose file defines the services, networks, and volumes required to run the application, including the FastAPI application, Celery workers, and any other related services.
 
 - **app/**: This subdirectory contains the main components of the application for serving model predictions using FastAPI:
+
   - **main.py**: The main FastAPI application for handling API requests and serving model predictions.
   - **api/**: Includes the following files for defining API functionality:
     - **schemas.py**: Pydantic schemas for input/output validation of API requests and responses.
     - **routes.py**: API routes for handling model inference requests and responses.
 
 - **celery/**: Contains the necessary files for setting up Celery for asynchronous processing and task queuing:
+
   - **celery_config.py**: Configuration settings for Celery, including broker and result backends.
   - **tasks.py**: Defines Celery tasks for handling asynchronous processing, such as model retraining and pricing updates.
 
@@ -326,23 +339,27 @@ This script showcases the use of a more complex machine learning algorithm (XGBo
 ### User Types for the Dynamic Pricing Model for E-commerce
 
 1. **Data Scientist / Machine Learning Engineer**
-   - *User Story*: As a data scientist, I want to experiment with different machine learning algorithms and analyze the model's performance on historical pricing and sales data to improve the pricing strategies.
-   - *Accomplished by*: Utilizing the `model_training_script.py` file to train and evaluate machine learning models using historical data. This file allows for experimenting with various algorithms and evaluating their performance.
+
+   - _User Story_: As a data scientist, I want to experiment with different machine learning algorithms and analyze the model's performance on historical pricing and sales data to improve the pricing strategies.
+   - _Accomplished by_: Utilizing the `model_training_script.py` file to train and evaluate machine learning models using historical data. This file allows for experimenting with various algorithms and evaluating their performance.
 
 2. **Business Analyst / Pricing Strategist**
-   - *User Story*: As a pricing strategist, I need to analyze the dynamic pricing model's predictions and identify opportunities to optimize pricing strategies to maximize revenue.
-   - *Accomplished by*: Accessing the APIs exposed by the FastAPI application (`main.py`) to fetch model predictions and analyzing the impact of different pricing strategies on revenue and sales.
+
+   - _User Story_: As a pricing strategist, I need to analyze the dynamic pricing model's predictions and identify opportunities to optimize pricing strategies to maximize revenue.
+   - _Accomplished by_: Accessing the APIs exposed by the FastAPI application (`main.py`) to fetch model predictions and analyzing the impact of different pricing strategies on revenue and sales.
 
 3. **Software Developer / DevOps Engineer**
-   - *User Story*: As a developer, I need to ensure that the FastAPI application and Celery workers are scalable and resilient to handle the dynamic pricing model's increasing load.
-   - *Accomplished by*: Working on the `Dockerfile`, `docker-compose.yaml`, and Kubernetes deployment files under the `deployment/` directory to build, deploy, and manage the scalable infrastructure for the FastAPI application and Celery workers.
+
+   - _User Story_: As a developer, I need to ensure that the FastAPI application and Celery workers are scalable and resilient to handle the dynamic pricing model's increasing load.
+   - _Accomplished by_: Working on the `Dockerfile`, `docker-compose.yaml`, and Kubernetes deployment files under the `deployment/` directory to build, deploy, and manage the scalable infrastructure for the FastAPI application and Celery workers.
 
 4. **Business User / Manager**
-   - *User Story*: As a business user, I want to visualize the impact of the dynamic pricing model on sales and revenue trends to make informed business decisions.
-   - *Accomplished by*: Utilizing the outputs generated by the data scientist and the FastAPI application to visualize the model's impact on sales and revenue trends using Jupyter notebooks in the `notebooks/` directory.
+
+   - _User Story_: As a business user, I want to visualize the impact of the dynamic pricing model on sales and revenue trends to make informed business decisions.
+   - _Accomplished by_: Utilizing the outputs generated by the data scientist and the FastAPI application to visualize the model's impact on sales and revenue trends using Jupyter notebooks in the `notebooks/` directory.
 
 5. **Data Engineer / Data Architect**
-   - *User Story*: As a data engineer, I need to ensure the availability and reliability of the data pipelines that feed into the dynamic pricing model's training and inference processes.
-   - *Accomplished by*: Implementing data ingestion and transformation pipelines using scripts in the `src/data_processing/` directory to ensure clean and reliable data for the dynamic pricing model.
+   - _User Story_: As a data engineer, I need to ensure the availability and reliability of the data pipelines that feed into the dynamic pricing model's training and inference processes.
+   - _Accomplished by_: Implementing data ingestion and transformation pipelines using scripts in the `src/data_processing/` directory to ensure clean and reliable data for the dynamic pricing model.
 
 Each user type interacts with the Dynamic Pricing Model for E-commerce through different interfaces and processes within the application, as supported by specific files and components within the project's structure.

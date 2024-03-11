@@ -6,32 +6,42 @@ layout: article
 ---
 
 ## AI Low-Cost Prosthetic Design (TensorFlow, OpenCV)
+
 ## Objectives
+
 The objective of the "AI Low-Cost Prosthetic Design" project is to leverage AI and computer vision technologies to develop affordable and accessible prosthetic designs for healthcare. The project aims to provide an open-source repository that utilizes TensorFlow and OpenCV to build robust, scalable, and cost-effective prosthetic solutions for individuals in need.
 
 ## System Design Strategies
+
 ### 1. Data Collection and Preprocessing
+
 - Utilize OpenCV for image and video processing to capture and preprocess data related to the user's limb movements and muscle signals.
 - Implement data augmentation techniques to enhance the diversity and quantity of training data.
 
 ### 2. Machine Learning Model Development
+
 - Employ TensorFlow for building machine learning models to interpret and classify muscle signals and movement patterns.
 - Develop models for gesture recognition and motion prediction to enable intuitive control of the prosthetic device.
 
 ### 3. Integration with Prosthetic Hardware
+
 - Interface the AI models with the prosthetic hardware to enable real-time feedback and control mechanisms.
 - Utilize efficient communication protocols (e.g., MQTT) for seamless interaction between the AI system and the prosthetic device.
 
 ### 4. Cost Optimization and Accessibility
+
 - Focus on leveraging low-cost sensors and components to make the prosthetic design affordable and accessible to a wider population.
 - Design the system with modular and flexible components, allowing for customization and adaptability to different user requirements.
 
 ## Chosen Libraries
+
 ### TensorFlow
+
 - TensorFlow will be utilized for developing and training deep learning models for gesture recognition, motion prediction, and muscle signal interpretation.
 - The high-level APIs and pre-built layers in TensorFlow will enable efficient model development and deployment.
 
 ### OpenCV
+
 - OpenCV will be used for image and video processing tasks such as capturing and preprocessing data related to limb movements and muscle signals.
 - The extensive set of computer vision algorithms and utilities offered by OpenCV will facilitate robust data processing and feature extraction.
 
@@ -40,38 +50,51 @@ By integrating these libraries, we aim to create a comprehensive solution for lo
 ## MLOps Infrastructure for Low-Cost Prosthetic Design
 
 ## Objectives
+
 The MLOps infrastructure for the Low-Cost Prosthetic Design application aims to enable efficient development, deployment, and management of AI models built using TensorFlow and OpenCV. The primary objectives include automating the ML lifecycle, ensuring model scalability, reproducibility, and maintaining high standards of governance and compliance.
 
 ## Components and Strategies
+
 ### 1. Data Versioning and Management
+
 - Implement a robust data versioning system using tools like DVC (Data Version Control) to track changes in training data and ensure reproducibility of models.
 
 ### 2. Model Training and Testing
+
 - Utilize scalable compute resources such as cloud-based GPU instances for training TensorFlow models, and incorporate automated hyperparameter tuning using tools like TensorFlow Extended (TFX).
 
 ### 3. Model Versioning and Artifact Management
+
 - Establish a central model repository to track different versions of trained models, along with associated artifacts, using platforms like MLflow or Kubeflow.
 
 ### 4. Continuous Integration/Continuous Deployment (CI/CD)
+
 - Implement CI/CD pipelines using tools like Jenkins or GitLab CI to automate model testing, validation, and deployment onto target environments.
 
 ### 5. Model Monitoring and Governance
+
 - Integrate monitoring tools to track model performance, drift detection, and data quality, ensuring that the deployed model continues to meet its defined accuracy and performance criteria.
 
 ### 6. Infrastructure Orchestration
+
 - Utilize containerization technologies such as Docker and orchestration tools like Kubernetes to deploy and manage the application infrastructure in a scalable and efficient manner.
 
 ### 7. Feedback Loop Integration
+
 - Implement feedback mechanisms to capture user interactions and model performance in real-world scenarios, allowing for continuous improvement through retraining or model updates.
 
 ## Tool Selection
+
 ### TensorFlow Extended (TFX)
+
 - TFX provides a comprehensive suite of tools for building end-to-end ML pipelines, covering data validation, preprocessing, model training, and serving.
 
 ### MLflow
+
 - MLflow offers capabilities for tracking experiments, packaging code, executing reproducible runs, and sharing and deploying models, thus serving as a central model repository.
 
 ### Kubeflow
+
 - Kubeflow provides an open-source platform for managing, deploying, and scaling machine learning models in Kubernetes environments, facilitating model serving and orchestration.
 
 By incorporating these MLOps strategies and tools, the Low-Cost Prosthetic Design application can ensure a streamlined and efficient AI development and deployment process, enabling the creation of affordable healthcare devices that leverage the power of machine learning and computer vision.
@@ -123,7 +146,8 @@ low-cost-prosthetic-design/
 ```
 
 In this structure:
-- The `data/` directory holds raw, processed, and augmented data. 
+
+- The `data/` directory holds raw, processed, and augmented data.
 - The `models/` directory contains trained models and evaluation results.
 - The `src/` directory includes subdirectories for data processing, model training, evaluation, and application integration scripts.
 - The `deployment/` directory encompasses deployment-related artifacts such as Dockerfiles, Kubernetes configurations, and CI/CD pipeline scripts.
@@ -160,7 +184,9 @@ models/
 ```
 
 In this structure:
+
 - The `models/training/` directory contains subdirectories for individual models, such as the `gesture_recognition_model/` and `motion_prediction_model/`. Each model directory includes:
+
   - Trained weights of the model (`model_weights.h5`).
   - JSON file describing the architecture of the model (`model_architecture.json`).
   - Training script used to train the model (`training_script.py`) or any other relevant files for model training.
@@ -195,6 +221,7 @@ deployment/
 ```
 
 In this structure:
+
 - The `deployment/docker/` directory contains Dockerfiles for different components of the application, such as data processing, model training, model serving, etc. Each Dockerfile encapsulates the dependencies and configurations specific to the corresponding component.
 
 - The `deployment/kubernetes/` directory includes Kubernetes deployment configurations (`deployment.yaml`), service configurations (`service.yaml`), ingress configurations (`ingress.yaml`), and other Kubernetes-specific resource files for orchestrating and managing the application in a Kubernetes environment.
@@ -234,17 +261,17 @@ def build_cnn_model(input_shape, num_classes):
 def train_model():
     ## Generate mock data
     X_train, y_train = generate_mock_data()
-    
+
     ## Build the model
     input_shape = X_train[0].shape
     num_classes = 10
     model = build_cnn_model(input_shape, num_classes)
-    
+
     ## Compile and train the model
     model.compile(optimizer='adam',
                   loss='sparse_categorical_crossentropy',
                   metrics=['accuracy'])
-    
+
     model.fit(X_train, y_train, epochs=10, validation_split=0.2)
 
 if __name__ == "__main__":
@@ -284,16 +311,16 @@ def build_complex_model(input_dim):
 def train_complex_model():
     ## Generate mock data
     X_train, y_train = generate_mock_data()
-    
+
     ## Build the complex model
     input_dim = X_train.shape[1]
     model = build_complex_model(input_dim)
-    
+
     ## Compile and train the model
     model.compile(optimizer='adam',
                   loss='binary_crossentropy',
                   metrics=['accuracy'])
-    
+
     model.fit(X_train, y_train, epochs=10, validation_split=0.2)
 
 if __name__ == "__main__":
@@ -308,24 +335,28 @@ This script represents a more complex machine learning algorithm using mock data
 
 ### Types of Users for Low-Cost Prosthetic Design Application
 
-1. **End-User (Individual with limb disability)**  
-   - *User Story*: As an end-user, I want to be able to control the prosthetic device intuitively and comfortably, ensuring it seamlessly integrates with my daily activities.
+1. **End-User (Individual with limb disability)**
+
+   - _User Story_: As an end-user, I want to be able to control the prosthetic device intuitively and comfortably, ensuring it seamlessly integrates with my daily activities.
    - Related File: `app_integration/prosthetic_control.py`
 
-2. **Healthcare Professional/Prosthetist**  
-   - *User Story*: As a prosthetist, I want to be able to configure the prosthetic device based on the specific needs and physical characteristics of each patient, ensuring optimal compatibility and functionality.
+2. **Healthcare Professional/Prosthetist**
+
+   - _User Story_: As a prosthetist, I want to be able to configure the prosthetic device based on the specific needs and physical characteristics of each patient, ensuring optimal compatibility and functionality.
    - Related File: `app_integration/prosthetic_configuration.py`
 
-3. **Data Scientist/ML Engineer**  
-   - *User Story*: As a data scientist, I want to be able to train and adapt machine learning models using diverse datasets, ensuring the prosthetic device can recognize a wide range of gestures and movements.
+3. **Data Scientist/ML Engineer**
+
+   - _User Story_: As a data scientist, I want to be able to train and adapt machine learning models using diverse datasets, ensuring the prosthetic device can recognize a wide range of gestures and movements.
    - Related File: `model_training/complex_algorithm_training.py`
 
-4. **Researcher/Academic**  
-   - *User Story*: As a researcher, I want to collaborate on enhancing the AI models used in the prosthetic device, continuously improving its accuracy, responsiveness, and adaptability through innovative algorithms.
+4. **Researcher/Academic**
+
+   - _User Story_: As a researcher, I want to collaborate on enhancing the AI models used in the prosthetic device, continuously improving its accuracy, responsiveness, and adaptability through innovative algorithms.
    - Related File: `model_training/mock_data_training.py`
 
-5. **Biomedical Engineer/Technologist**  
-   - *User Story*: As a biomedical engineer, I want to innovate and test new sensor technologies that can be seamlessly integrated into the design of the prosthetic device, improving its overall performance and user experience.
+5. **Biomedical Engineer/Technologist**
+   - _User Story_: As a biomedical engineer, I want to innovate and test new sensor technologies that can be seamlessly integrated into the design of the prosthetic device, improving its overall performance and user experience.
    - Related File: `src/data_processing/sensor_calibration.py`
 
 Each type of user interacts with the application in different ways, and specific files, such as those mentioned above, cater to their respective needs within the development and usage of the Low-Cost Prosthetic Design application.

@@ -194,7 +194,6 @@ models/
 In this structure:
 
 - **tensorflow/**: Contains subdirectories for specific tasks such as intrusion detection and malware classification, each housing the trained model files (e.g., .pb for TensorFlow, .h5 for Keras), as well as files containing evaluation metrics.
-  
 - **scikit-learn/**: Organizes models for anomaly detection and user behavior profiling, storing the trained model files and associated evaluation metrics.
 
 - **pytorch/**: Holds directories for threat classification and adversarial detection, housing the model files and evaluation metrics.
@@ -267,6 +266,7 @@ def complex_cybersecurity_ml_algorithm(data_file_path):
 ```
 
 In this example:
+
 - The function `complex_cybersecurity_ml_algorithm` takes a file path as input to load mock data for training the model.
 - It performs data preprocessing, feature engineering, and splits the data into training and testing sets.
 - It then initializes, trains, and evaluates a machine learning model (Random Forest classifier in this case) using the provided mock data.
@@ -311,6 +311,7 @@ def complex_cybersecurity_deep_learning_algorithm(data_file_path):
 ```
 
 In this example:
+
 - The function `complex_cybersecurity_deep_learning_algorithm` takes a file path as input to load mock data for training the deep learning model.
 - It performs data preprocessing, including feature scaling, and splits the data into training and testing sets.
 - It then builds and trains a deep learning model using TensorFlow/Keras, consisting of multiple densely connected layers.
@@ -320,34 +321,39 @@ To use this function, you would replace `data_file_path` with the actual path to
 ### Types of Users and Their User Stories
 
 1. **Security Analyst**
-   - *User Story*: As a Security Analyst, I want to access preprocessed data to analyze security incidents and identify potential threats.
+
+   - _User Story_: As a Security Analyst, I want to access preprocessed data to analyze security incidents and identify potential threats.
    - Relevant File: `/data/processed/preprocessed_data/`
 
 2. **Data Scientist**
-   - *User Story*: As a Data Scientist, I need to access the machine learning models and evaluation metrics for further analysis and improvement.
+
+   - _User Story_: As a Data Scientist, I need to access the machine learning models and evaluation metrics for further analysis and improvement.
    - Relevant File: `/models/`
 
 3. **DevOps Engineer**
-   - *User Story*: As a DevOps Engineer, I want to deploy machine learning models using Docker and Kubernetes for real-time threat detection.
-   - Relevant Files: 
+
+   - _User Story_: As a DevOps Engineer, I want to deploy machine learning models using Docker and Kubernetes for real-time threat detection.
+   - Relevant Files:
      - Dockerfiles in `/deployment/dockerfiles/`
      - Kubernetes manifests in `/deployment/kubernetes_manifests/`
 
 4. **Compliance Officer**
-   - *User Story*: As a Compliance Officer, I need to ensure that the deployed models are compliant with regulatory standards, and access security and compliance configurations.
-   - Relevant Files: 
+
+   - _User Story_: As a Compliance Officer, I need to ensure that the deployed models are compliant with regulatory standards, and access security and compliance configurations.
+   - Relevant Files:
      - Security and compliance configuration files in `/infrastructure/security/`
      - Compliance monitoring files in `/infrastructure/security/compliance/`
 
 5. **Machine Learning Engineer**
-   - *User Story*: As a Machine Learning Engineer, I want to access the source code and scripts for training and evaluating machine learning models.
-   - Relevant Files: 
+
+   - _User Story_: As a Machine Learning Engineer, I want to access the source code and scripts for training and evaluating machine learning models.
+   - Relevant Files:
      - Model training scripts in `/src/model_training/`
      - Model evaluation scripts in `/src/model_evaluation/`
 
 6. **System Administrator**
-   - *User Story*: As a System Administrator, I need to monitor the infrastructure, logs, and alerting systems for any potential security incidents.
-   - Relevant Files: 
+   - _User Story_: As a System Administrator, I need to monitor the infrastructure, logs, and alerting systems for any potential security incidents.
+   - Relevant Files:
      - Anomaly detection systems in `/infrastructure/monitoring/anomaly_detection/`
      - Logging and auditing configurations in `/infrastructure/monitoring/logging_and_auditing/`
      - Alerting system configurations in `/infrastructure/monitoring/alerting_systems/`

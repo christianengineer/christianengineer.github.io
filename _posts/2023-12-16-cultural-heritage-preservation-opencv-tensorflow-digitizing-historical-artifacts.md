@@ -6,9 +6,11 @@ layout: article
 ---
 
 ### Objectives
+
 The main objectives of the AI Cultural Heritage Preservation project are to digitize and preserve historical artifacts through the use of computer vision and machine learning technologies. This includes tasks such as digitizing text and images from historical documents, categorizing and tagging artifacts, and creating a repository for digital preservation. The project aims to make these artifacts accessible to scholars, researchers, and the public while ensuring the preservation of cultural heritage.
 
 ### System Design Strategies
+
 1. **Scalability and Performance**: To handle a large volume of historical artifacts, the system should be designed to scale horizontally. This involves using distributed computing frameworks and cloud services to handle the processing and storage requirements.
 
 2. **Data-Intensive Processing**: Given the nature of historical artifacts, the system needs to efficiently manage and process large amounts of image and text data. This requires implementing data pipelines for preprocessing, feature extraction, and indexing.
@@ -18,6 +20,7 @@ The main objectives of the AI Cultural Heritage Preservation project are to digi
 4. **APIs and User Interface**: The system should provide APIs for integrating with external applications and a user interface for browsing and searching the digitized artifacts.
 
 ### Chosen Libraries and Frameworks
+
 1. **OpenCV**: OpenCV is a popular open-source computer vision library that provides a wide range of tools for image processing, object detection, and feature extraction. It will be used for tasks such as image preprocessing, text extraction from images, and basic image analysis.
 
 2. **TensorFlow**: TensorFlow is a powerful machine learning framework that offers a range of tools for training and deploying machine learning models. It will be used for tasks such as training models for image classification, object detection, and natural language processing.
@@ -31,36 +34,46 @@ By leveraging these libraries and framework, the system will be well-equipped to
 ### MLOps Infrastructure for Cultural Heritage Preservation
 
 #### Continuous Integration and Continuous Deployment (CI/CD)
+
 The MLOps infrastructure for the Cultural Heritage Preservation application will encompass the entire ML development lifecycle, from model development to deployment and monitoring.
 
 #### Version Control
+
 Utilize a version control system such as Git to manage code, configurations, and datasets.
 
 #### Data Versioning and Management
+
 Implement tools for versioning and managing large datasets, such as DVC (Data Version Control) or MLflow.
 
 #### Model Training, Packaging, and Deployment
+
 - **Model Development**: Use Jupyter Notebooks or IDEs for developing and training machine learning models using TensorFlow for tasks such as image classification and object detection.
 - **Model Packaging**: Leverage MLflow or TensorFlow Serving to package and serve the trained models as RESTful APIs or Docker containers.
 
 #### Infrastructure as Code (IaC)
+
 Use infrastructure as code tools like Terraform or AWS CloudFormation to define and automate the deployment of scalable cloud resources for model serving and data storage.
 
 #### Orchestration and Workflow Management
+
 Leverage workflow management tools like Apache Airflow or Kubeflow to orchestrate and schedule data pipelines, model training, and deployment processes.
 
 #### Monitoring and Logging
+
 - **Model Monitoring**: Utilize tools like Prometheus and Grafana for monitoring model performance, drift detection, and resource utilization.
 - **Logging**: Implement centralized logging using ELK stack or similar tools to capture and analyze logs from the ML infrastructure components.
 
 #### Experiment Tracking and Model Registry
+
 - Use MLflow or similar platforms to track and manage experiments, model versions, and associated metadata.
 - Create a model registry to store and version trained models, along with relevant metadata and performance metrics.
 
 #### Continuous Validation and Testing
+
 Incorporate automated tests for model performance, data quality, and integration with the overall application stack.
 
 #### Scalable Storage and Compute
+
 Leverage scalable storage solutions such as Amazon S3 or Google Cloud Storage for storing artifacts and datasets. Use scalable compute resources through services like Amazon EC2 or Google Compute Engine for training and inference.
 
 By implementing this MLOps infrastructure, the Cultural Heritage Preservation application will be capable of efficiently developing, deploying, and monitoring AI models built with OpenCV and TensorFlow, ensuring the seamless integration of AI technologies into the digitization and preservation of historical artifacts.
@@ -104,7 +117,7 @@ In this scalable file structure for the Cultural Heritage Preservation repositor
 
 The above file structure provides a scalable and organized layout for the Cultural Heritage Preservation repository, facilitating collaboration, reproducibility, and maintainability of the AI application development process.
 
-The `models` directory in the Cultural Heritage Preservation repository houses the trained machine learning models and model artifacts used for tasks such as image classification, object detection, and natural language processing in the digitization of historical artifacts. 
+The `models` directory in the Cultural Heritage Preservation repository houses the trained machine learning models and model artifacts used for tasks such as image classification, object detection, and natural language processing in the digitization of historical artifacts.
 
 ### Subdirectories and Files:
 
@@ -128,11 +141,13 @@ models/
 ```
 
 1. **artifact_classification/**: Subdirectory containing the artifacts related to the model for artifact classification.
+
    - `model.pb`: Serialized model file for artifact classification, compatible with TensorFlow serving or deployment.
    - `model_checkpoint`: Directory containing checkpoint files for the trained model, enabling model retraining or continuation.
    - `metadata.json`: Metadata file, storing information about the trained artifact classification model, such as training parameters, metrics, and versioning details.
 
 2. **text_extraction/**: Subdirectory housing the files associated with the text extraction model.
+
    - `model.h5`: Saved model file for text extraction, typically in a format compatible with the chosen machine learning framework (e.g., TensorFlow, Keras).
    - `tokenizer.pickle`: Serialized tokenizer, capturing the text pre-processing methods used during model training.
    - `metadata.json`: Metadata file storing details about the trained text extraction model, such as input/output specifications and training configuration.
@@ -168,11 +183,13 @@ deployment/
 ```
 
 1. **artifact_classification/**: Subdirectory containing deployment-related files for the artifact classification model.
+
    - `deployment_config.yaml`: Configuration file specifying the serving details, input/output format, and model references for deploying the artifact classification model.
    - `requirements.txt`: File listing Python dependencies required for serving the artifact classification model (e.g., TensorFlow Serving, Flask).
    - `run_artifact_classification_server.py`: Script responsible for running the server that serves the deployed artifact classification model.
 
 2. **text_extraction/**: Directory housing deployment-related artifacts for the text extraction model.
+
    - `deployment_config.yaml`: Configuration file detailing the deployment specifications, input/output format, and model references for the text extraction model deployment.
    - `requirements.txt`: File enumerating the necessary Python dependencies for the text extraction model deployment (e.g., TensorFlow, Flask).
    - `run_text_extraction_server.py`: Script designed to execute the server responsible for serving the deployed text extraction model.
@@ -187,6 +204,7 @@ By organizing the `deployment` directory in this manner, the Cultural Heritage P
 Certainly! Below is an example of a Python script for training a model for artifact classification using mock data. The script assumes the use of TensorFlow for model training and is intended to be located within the `model_training` directory of the Cultural Heritage Preservation application.
 
 ### File Path:
+
 `Cultural_Heritage_Preservation/src/model_training/train_artifact_classification_model.py`
 
 ```python
@@ -224,6 +242,7 @@ This file would be located within the `model_training` directory of the Cultural
 Certainly! Below is an example of a Python script for a complex machine learning algorithm, in this case, a convolutional neural network (CNN) for image classification using mock data. The script assumes the use of TensorFlow for model training and is intended to be located within the `model_training` directory of the Cultural Heritage Preservation application.
 
 ### File Path:
+
 `Cultural_Heritage_Preservation/src/model_training/train_complex_model.py`
 
 ```python
@@ -266,23 +285,27 @@ This file would be located within the `model_training` directory of the Cultural
 ### Types of Users
 
 1. **Researcher/Scholar**
-   - *User Story*: As a researcher, I want to access high-quality digitized historical artifacts for my studies and research work.
-   - *File*: `Cultural_Heritage_Preservation/src/api/access_artifacts.py`
+
+   - _User Story_: As a researcher, I want to access high-quality digitized historical artifacts for my studies and research work.
+   - _File_: `Cultural_Heritage_Preservation/src/api/access_artifacts.py`
 
 2. **Librarian/Curator**
-   - *User Story*: As a librarian, I want to be able to add metadata and categorize newly digitized artifacts into the repository.
-   - *File*: `Cultural_Heritage_Preservation/src/api/add_artifacts.py`
+
+   - _User Story_: As a librarian, I want to be able to add metadata and categorize newly digitized artifacts into the repository.
+   - _File_: `Cultural_Heritage_Preservation/src/api/add_artifacts.py`
 
 3. **Conservator/Restorer**
-   - *User Story*: As a conservator, I want to be able to use the digitized artifacts to study and plan restoration and preservation efforts.
-   - *File*: `Cultural_Heritage_Preservation/src/api/access_artifacts.py`
+
+   - _User Story_: As a conservator, I want to be able to use the digitized artifacts to study and plan restoration and preservation efforts.
+   - _File_: `Cultural_Heritage_Preservation/src/api/access_artifacts.py`
 
 4. **Educator**
-   - *User Story*: As an educator, I want to access digitized artifacts to create educational materials for students.
-   - *File*: `Cultural_Heritage_Preservation/src/api/access_artifacts.py`
+
+   - _User Story_: As an educator, I want to access digitized artifacts to create educational materials for students.
+   - _File_: `Cultural_Heritage_Preservation/src/api/access_artifacts.py`
 
 5. **General Public**
-   - *User Story*: As a member of the general public, I want to explore digitized historical artifacts for educational or personal interest.
-   - *File*: `Cultural_Heritage_Preservation/src/api/access_artifacts.py`
+   - _User Story_: As a member of the general public, I want to explore digitized historical artifacts for educational or personal interest.
+   - _File_: `Cultural_Heritage_Preservation/src/api/access_artifacts.py`
 
 Each type of user will interact with the application through the `access_artifacts.py` file, which provides API endpoints for accessing and retrieving digitized historical artifacts from the repository. The user stories highlight the diverse needs and requirements of different types of users, showcasing the broad utility and accessibility of the Cultural Heritage Preservation application.
