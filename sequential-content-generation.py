@@ -102,7 +102,7 @@ def generate_responses(repository_name):
 
 def format_title_to_url(title):
     # Truncate the title at the first closing parenthesis ")"
-    first_parenthesis_index = title.find(")")
+    first_parenthesis_index = title.find(",")
     if first_parenthesis_index != -1:
         title = title[: first_parenthesis_index + 1]
 
