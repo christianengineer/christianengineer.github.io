@@ -2,6 +2,7 @@
 title: Supply Chain Analytics Tool with TensorFlow and Pandas for Efficient Logistics - Logistics Coordinator's pain point is managing the supply chain, solution is to employ AI for predictive analytics on supply and demand, improving stock replenishment and reducing logistics costs
 date: 2024-03-11
 permalink: posts/supply-chain-analytics-tool-with-tensorflow-and-pandas-for-efficient-logistics
+layout: article
 ---
 
 ## Objectives and Benefits

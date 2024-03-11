@@ -2,6 +2,7 @@
 title: Customer Behavior Analysis Tool with PyTorch and Scikit-Learn for Enhanced Customer Engagement - Marketing Specialist's pain point is understanding customer preferences, solution is to analyze purchasing data with ML to tailor marketing strategies and improve customer satisfaction
 date: 2024-03-11
 permalink: posts/customer-behavior-analysis-tool-with-pytorch-and-scikit-learn-for-enhanced-customer-engagement
+layout: article
 ---
 
 ### Objectives and Benefits for Marketing Specialists

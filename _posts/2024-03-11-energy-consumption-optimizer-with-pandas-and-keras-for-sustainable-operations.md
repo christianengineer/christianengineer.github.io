@@ -2,6 +2,7 @@
 title: Energy Consumption Optimizer with Pandas and Keras for Sustainable Operations - Facility Manager's pain point is reducing energy costs, solution is to use AI to analyze and optimize energy usage patterns, cutting costs and promoting sustainability
 date: 2024-03-11
 permalink: posts/energy-consumption-optimizer-with-pandas-and-keras-for-sustainable-operations
+layout: article
 ---
 
 ### Objectives and Benefits:

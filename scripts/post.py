@@ -148,7 +148,7 @@ def main():
         if not os.path.exists(markdown_filename):
             with open(markdown_filename, "w") as md_file:
                 md_file.write(
-                    f"---\ntitle: {project_name}\ndate: {today_date}\npermalink: posts/{permalink_url}\n---\n\n"
+                    f"---\ntitle: {project_name}\ndate: {today_date}\npermalink: posts/{permalink_url}\nlayout: article\n---\n\n"
                 )
 
         results = generate_post(project_name)

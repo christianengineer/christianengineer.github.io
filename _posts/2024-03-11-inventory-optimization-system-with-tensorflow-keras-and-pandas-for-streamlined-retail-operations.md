@@ -2,9 +2,10 @@
 title: Inventory Optimization System with TensorFlow, Keras, and Pandas for Streamlined Retail Operations - Store Manager's pain point is managing stock levels efficiently, solution is to leverage AI to forecast demand and optimize inventory levels, reducing overstock and understock situations
 date: 2024-03-11
 permalink: posts/inventory-optimization-system-with-tensorflow-keras-and-pandas-for-streamlined-retail-operations
+layout: article
 ---
 
-# Inventory Optimization System with TensorFlow, Keras, and Pandas
+## Inventory Optimization System with TensorFlow, Keras, and Pandas
 
 In this guide, we will address the pain points of Store Managers by implementing an Inventory Optimization System using TensorFlow, Keras, and Pandas to forecast demand and optimize inventory levels, reducing overstock and understock situations.
 

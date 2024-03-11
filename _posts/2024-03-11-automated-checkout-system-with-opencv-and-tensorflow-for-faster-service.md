@@ -2,6 +2,7 @@
 title: Automated Checkout System with OpenCV and TensorFlow for Faster Service - Cashier's pain point is long checkout lines, solution is to implement an AI-powered system that speeds up the checkout process, enhancing customer experience and reducing wait times
 date: 2024-03-11
 permalink: posts/automated-checkout-system-with-opencv-and-tensorflow-for-faster-service
+layout: article
 ---
 
 ### Objectives and Benefits:
