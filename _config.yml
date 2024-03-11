@@ -1,7 +1,13 @@
-title: Christian Ipanaque
 author:
   name: Christian Ipanaque
   email: "christian.ipanaque@engineer.com"
+  url: https://github.com/christianipanaque
 collections:
   posts:
     output: true
+defaults:
+  - scope:
+      path: ""
+    values:
+      seo_description_max_words: 200
+      image: /assets/images/default-card.png
