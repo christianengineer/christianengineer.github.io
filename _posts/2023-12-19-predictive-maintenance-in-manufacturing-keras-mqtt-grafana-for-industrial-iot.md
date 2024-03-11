@@ -2,6 +2,7 @@
 title: Predictive Maintenance in Manufacturing (Keras, MQTT, Grafana) For industrial IoT
 date: 2023-12-19
 permalink: posts/predictive-maintenance-in-manufacturing-keras-mqtt-grafana-for-industrial-iot
+layout: article
 ---
 
 # AI Predictive Maintenance in Manufacturing - Repository Overview

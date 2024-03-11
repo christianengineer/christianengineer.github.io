@@ -2,6 +2,7 @@
 title: Continuous Integration/Continuous Deployment (CI/CD) for ML Models - Implement a CI/CD pipeline specifically for machine learning models using Jenkins, GitLab CI, or GitHub Actions.
 date: 2023-11-22
 permalink: posts/continuous-integrationcontinuous-deployment-cicd-for-ml-models---implement-a-cicd-pipeline-specifically-for-machine-learning-models-using-jenkins-gitlab-ci-or-github-actions
+layout: article
 ---
 
 # AI Continuous Integration/Continuous Deployment (CI/CD) for ML Models

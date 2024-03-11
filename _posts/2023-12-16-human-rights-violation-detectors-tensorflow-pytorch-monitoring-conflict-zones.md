@@ -2,6 +2,7 @@
 title: Human Rights Violation Detectors (TensorFlow, PyTorch) Monitoring conflict zones
 date: 2023-12-16
 permalink: posts/human-rights-violation-detectors-tensorflow-pytorch-monitoring-conflict-zones
+layout: article
 ---
 
 ### Objectives

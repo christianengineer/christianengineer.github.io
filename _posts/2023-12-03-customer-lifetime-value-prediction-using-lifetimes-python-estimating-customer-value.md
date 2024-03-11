@@ -2,6 +2,7 @@
 title: Customer Lifetime Value Prediction using Lifetimes (Python) Estimating customer value
 date: 2023-12-03
 permalink: posts/customer-lifetime-value-prediction-using-lifetimes-python-estimating-customer-value
+layout: article
 ---
 
 ## Objectives

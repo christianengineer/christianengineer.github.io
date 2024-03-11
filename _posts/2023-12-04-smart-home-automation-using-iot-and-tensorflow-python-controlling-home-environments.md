@@ -2,6 +2,7 @@
 title: Smart Home Automation using IoT and TensorFlow (Python) Controlling home environments
 date: 2023-12-04
 permalink: posts/smart-home-automation-using-iot-and-tensorflow-python-controlling-home-environments
+layout: article
 ---
 
 ## Objectives

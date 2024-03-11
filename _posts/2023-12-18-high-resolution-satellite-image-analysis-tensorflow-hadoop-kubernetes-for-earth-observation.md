@@ -2,6 +2,7 @@
 title: High-resolution Satellite Image Analysis (TensorFlow, Hadoop, Kubernetes) For earth observation
 date: 2023-12-18
 permalink: posts/high-resolution-satellite-image-analysis-tensorflow-hadoop-kubernetes-for-earth-observation
+layout: article
 ---
 
 # AI High-resolution Satellite Image Analysis Repository

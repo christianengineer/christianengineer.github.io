@@ -2,6 +2,7 @@
 title: Speech Recognition using PyTorch (Python) Converting spoken words to text
 date: 2023-12-02
 permalink: posts/speech-recognition-using-pytorch-python-converting-spoken-words-to-text
+layout: article
 ---
 
 # AI Speech Recognition using PyTorch

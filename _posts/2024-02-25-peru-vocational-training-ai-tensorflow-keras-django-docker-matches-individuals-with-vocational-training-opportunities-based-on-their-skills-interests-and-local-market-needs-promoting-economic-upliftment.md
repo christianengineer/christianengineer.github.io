@@ -2,6 +2,7 @@
 title: Peru Vocational Training AI (TensorFlow, Keras, Django, Docker) Matches individuals with vocational training opportunities based on their skills, interests, and local market needs, promoting economic upliftment
 date: 2024-02-25
 permalink: posts/peru-vocational-training-ai-tensorflow-keras-django-docker-matches-individuals-with-vocational-training-opportunities-based-on-their-skills-interests-and-local-market-needs-promoting-economic-upliftment
+layout: article
 ---
 
 ## Project Objectives

@@ -2,6 +2,7 @@
 title: Facial Recognition using Dlib (Python/C++) Identifying individuals from images
 date: 2023-12-03
 permalink: posts/facial-recognition-using-dlib-pythonc-identifying-individuals-from-images
+layout: article
 ---
 
 # AI Facial Recognition using Dlib

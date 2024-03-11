@@ -2,6 +2,7 @@
 title: Peru Skills and Employment Matching Platform (PyTorch, Pandas, Flask, Grafana) Connects learners with employment opportunities based on their newly acquired skills, facilitating economic advancement through education
 date: 2024-02-25
 permalink: posts/peru-skills-and-employment-matching-platform-pytorch-pandas-flask-grafana-connects-learners-with-employment-opportunities-based-on-their-newly-acquired-skills-facilitating-economic-advancement-through-education
+layout: article
 ---
 
 # AI Peru Skills and Employment Matching Platform

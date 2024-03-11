@@ -2,6 +2,7 @@
 title: Exclusive Real Estate Investment Predictor (Keras, TensorFlow, Spark, DVC) for Urbanova, Investment Strategist Pain Point, Identifying undervalued properties Solution, Predictive market analytics to uncover real estate with high appreciation potential, guiding investment decisions in Peru's dynamic urban landscapes
 date: 2024-03-06
 permalink: posts/exclusive-real-estate-investment-predictor-keras-tensorflow-spark-dvc
+layout: article
 ---
 
 # Exclusive Real Estate Investment Predictor (Keras, TensorFlow, Spark, DVC) for Urbanova

@@ -2,6 +2,7 @@
 title: Crime Pattern Analysis (Scikit-Learn, Pandas) For safer communities
 date: 2023-12-15
 permalink: posts/crime-pattern-analysis-scikit-learn-pandas-for-safer-communities
+layout: article
 ---
 
 # AI Crime Pattern Analysis Repository

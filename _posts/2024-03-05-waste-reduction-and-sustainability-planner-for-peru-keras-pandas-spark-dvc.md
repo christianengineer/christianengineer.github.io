@@ -2,6 +2,7 @@
 title: Waste Reduction and Sustainability Planner for Peru (Keras, Pandas, Spark, DVC) Analyzes kitchen waste patterns to suggest reduction strategies and sustainable practices, aligning with consumer expectations for eco-friendliness
 date: 2024-03-05
 permalink: posts/waste-reduction-and-sustainability-planner-for-peru-keras-pandas-spark-dvc
+layout: article
 ---
 
 ### Machine Learning Waste Reduction and Sustainability Planner for Peru

@@ -2,6 +2,7 @@
 title: EcoMonitor - Environmental Monitoring AI
 date: 2023-11-21
 permalink: posts/ecomonitor---environmental-monitoring-ai
+layout: article
 ---
 
 # AI EcoMonitor - Environmental Monitoring AI Repository

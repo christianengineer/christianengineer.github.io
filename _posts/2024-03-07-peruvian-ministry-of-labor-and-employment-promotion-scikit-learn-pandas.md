@@ -2,6 +2,7 @@
 title: Peruvian Ministry of Labor and Employment Promotion (Scikit-Learn, Pandas) Employment Services Coordinator pain point is matching job seekers with vacancies, solution is to implement a machine learning system to match candidates with job listings based on skills and preferences, reducing unemployment
 date: 2024-03-07
 permalink: posts/peruvian-ministry-of-labor-and-employment-promotion-scikit-learn-pandas
+layout: article
 ---
 
 **Objective and Benefits:**

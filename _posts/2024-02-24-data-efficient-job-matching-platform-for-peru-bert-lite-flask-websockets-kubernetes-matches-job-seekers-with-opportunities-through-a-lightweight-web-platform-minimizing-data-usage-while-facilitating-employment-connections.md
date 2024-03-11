@@ -2,6 +2,7 @@
 title: Data-Efficient Job Matching Platform for Peru (BERT Lite, Flask, WebSockets, Kubernetes) Matches job seekers with opportunities through a lightweight web platform, minimizing data usage while facilitating employment connections
 date: 2024-02-24
 permalink: posts/data-efficient-job-matching-platform-for-peru-bert-lite-flask-websockets-kubernetes-matches-job-seekers-with-opportunities-through-a-lightweight-web-platform-minimizing-data-usage-while-facilitating-employment-connections
+layout: article
 ---
 
 # AI Data-Efficient Job Matching Platform for Peru

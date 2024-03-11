@@ -2,6 +2,7 @@
 title: Accessible Education Tools (GPT, BERT) Tailoring learning for special needs students
 date: 2023-12-15
 permalink: posts/accessible-education-tools-gpt-bert-tailoring-learning-for-special-needs-students
+layout: article
 ---
 
 ## Objectives

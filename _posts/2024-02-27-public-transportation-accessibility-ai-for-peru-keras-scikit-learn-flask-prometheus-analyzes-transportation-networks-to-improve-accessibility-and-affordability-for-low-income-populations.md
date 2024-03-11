@@ -2,6 +2,7 @@
 title: Public Transportation Accessibility AI for Peru (Keras, Scikit-Learn, Flask, Prometheus) Analyzes transportation networks to improve accessibility and affordability for low-income populations
 date: 2024-02-27
 permalink: posts/public-transportation-accessibility-ai-for-peru-keras-scikit-learn-flask-prometheus-analyzes-transportation-networks-to-improve-accessibility-and-affordability-for-low-income-populations
+layout: article
 ---
 
 # AI Public Transportation Accessibility Project Overview

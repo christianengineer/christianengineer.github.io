@@ -2,6 +2,7 @@
 title: Large Scale IoT Data Analytics (TensorFlow, Kafka, Terraform) For smart devices
 date: 2023-12-18
 permalink: posts/large-scale-iot-data-analytics-tensorflow-kafka-terraform-for-smart-devices
+layout: article
 ---
 
 # AI Large Scale IoT Data Analytics Repository

@@ -2,6 +2,7 @@
 title: Automated Chatbots for Customer Engagement (GPT-3, Flask, Kubernetes) For customer service
 date: 2023-12-21
 permalink: posts/automated-chatbots-for-customer-engagement-gpt-3-flask-kubernetes-for-customer-service
+layout: article
 ---
 
 ## Objectives

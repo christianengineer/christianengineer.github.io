@@ -2,6 +2,7 @@
 title: Community Solar Power Planning (Scikit-Learn, TensorFlow) Promoting renewable energy
 date: 2023-12-16
 permalink: posts/community-solar-power-planning-scikit-learn-tensorflow-promoting-renewable-energy
+layout: article
 ---
 
 # AI Community Solar Power Planning Repository

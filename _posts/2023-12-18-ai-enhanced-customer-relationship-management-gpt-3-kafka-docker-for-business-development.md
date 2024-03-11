@@ -2,6 +2,7 @@
 title: AI-enhanced Customer Relationship Management (GPT-3, Kafka, Docker) For business development
 date: 2023-12-18
 permalink: posts/ai-enhanced-customer-relationship-management-gpt-3-kafka-docker-for-business-development
+layout: article
 ---
 
 # AI-enhanced Customer Relationship Management System

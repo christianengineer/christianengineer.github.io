@@ -2,6 +2,7 @@
 title: Machine Learning for Efficient Supply Chain Management
 date: 2023-11-18
 permalink: posts/machine-learning-for-efficient-supply-chain-management
+layout: article
 ---
 
 # Technical Specifications Document

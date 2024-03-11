@@ -2,6 +2,7 @@
 title: Scaling AI Models in Production
 date: 2023-09-14
 permalink: posts/scaling-ai-models-production-optimization-guide
+layout: article
 ---
 
 # Scaling AI Models in Production

@@ -2,6 +2,7 @@
 title: RealTimeWatch - Real-Time Monitoring AI
 date: 2023-11-22
 permalink: posts/realtimewatch---real-time-monitoring-ai
+layout: article
 ---
 
 # AI RealTimeWatch - Real-Time Monitoring AI Repository

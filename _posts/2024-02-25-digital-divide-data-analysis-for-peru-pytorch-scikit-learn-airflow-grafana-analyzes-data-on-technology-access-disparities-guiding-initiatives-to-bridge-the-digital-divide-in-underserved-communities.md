@@ -2,6 +2,7 @@
 title: Digital Divide Data Analysis for Peru (PyTorch, Scikit-Learn, Airflow, Grafana) Analyzes data on technology access disparities, guiding initiatives to bridge the digital divide in underserved communities
 date: 2024-02-25
 permalink: posts/digital-divide-data-analysis-for-peru-pytorch-scikit-learn-airflow-grafana-analyzes-data-on-technology-access-disparities-guiding-initiatives-to-bridge-the-digital-divide-in-underserved-communities
+layout: article
 ---
 
 ## AI Digital Divide Data Analysis for Peru Repository

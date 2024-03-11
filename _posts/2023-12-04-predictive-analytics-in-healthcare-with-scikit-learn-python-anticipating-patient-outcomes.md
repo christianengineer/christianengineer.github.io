@@ -2,6 +2,7 @@
 title: Predictive Analytics in Healthcare with Scikit-Learn (Python) Anticipating patient outcomes
 date: 2023-12-04
 permalink: posts/predictive-analytics-in-healthcare-with-scikit-learn-python-anticipating-patient-outcomes
+layout: article
 ---
 
 ## Objectives

@@ -2,6 +2,7 @@
 title: "Architecting the Future: E-commerce Optimizer - A Scalable Predictive Analytics Development Project Infusing AI, Cloud Technologies & Robust Data Strategy"
 date: 2023-08-24
 permalink: posts/future-ecommerce-optimizer-AI-cloud-technologies-predictive-analytics-data-strategy
+layout: article
 ---
 
 ````markdown

@@ -2,6 +2,7 @@
 title: Renewable Energy Forecasting AI with TensorFlow and PyTorch for Enel Perú (Lima, Peru), Energy Analyst's pain point is predicting renewable energy production, solution is to use weather and historical power generation data to forecast energy output, optimizing grid management
 date: 2024-03-06
 permalink: posts/renewable-energy-forecasting-ai-with-tensorflow-and-pytorch-for-enel-per-lima-peru
+layout: article
 ---
 
 # Objectives and Benefits

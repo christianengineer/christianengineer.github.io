@@ -2,6 +2,7 @@
 title: API Design and Development with REST and GraphQL
 date: 2023-11-18
 permalink: posts/ultimate-guide-api-design-development-rest-graphql
+layout: article
 ---
 
 # API Design and Development (REST, GraphQL)

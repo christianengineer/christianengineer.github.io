@@ -2,6 +2,7 @@
 title: Automated Legal Aid (BERT, GPT) Providing accessible legal assistance
 date: 2023-12-15
 permalink: posts/automated-legal-aid-bert-gpt-providing-accessible-legal-assistance
+layout: article
 ---
 
 # AI Automated Legal Aid Repository

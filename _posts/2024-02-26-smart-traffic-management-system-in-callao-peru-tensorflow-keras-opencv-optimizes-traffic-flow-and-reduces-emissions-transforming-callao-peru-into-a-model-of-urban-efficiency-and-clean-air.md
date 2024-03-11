@@ -2,6 +2,7 @@
 title: Smart Traffic Management System in Callao, Peru (TensorFlow, Keras, OpenCV) Optimizes traffic flow and reduces emissions, transforming Callao, Peru into a model of urban efficiency and clean air
 date: 2024-02-26
 permalink: posts/smart-traffic-management-system-in-callao-peru-tensorflow-keras-opencv-optimizes-traffic-flow-and-reduces-emissions-transforming-callao-peru-into-a-model-of-urban-efficiency-and-clean-air
+layout: article
 ---
 
 ## AI Smart Traffic Management System in Callao, Peru

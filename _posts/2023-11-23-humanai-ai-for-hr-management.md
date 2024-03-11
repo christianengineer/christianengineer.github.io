@@ -2,6 +2,7 @@
 title: HumanAI AI for HR Management
 date: 2023-11-23
 permalink: posts/humanai-ai-for-hr-management
+layout: article
 ---
 
 ## AI HumanAI for HR Management Repository

@@ -2,6 +2,7 @@
 title: Sports Betting Odds Prediction using Keras (Python) Analyzing betting markets
 date: 2023-12-04
 permalink: posts/sports-betting-odds-prediction-using-keras-python-analyzing-betting-markets
+layout: article
 ---
 
 ### Objectives of AI Sports Betting Odds Prediction using Keras

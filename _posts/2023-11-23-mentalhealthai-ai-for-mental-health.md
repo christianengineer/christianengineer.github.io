@@ -2,6 +2,7 @@
 title: MentalHealthAI AI for Mental Health
 date: 2023-11-23
 permalink: posts/mentalhealthai-ai-for-mental-health
+layout: article
 ---
 
 ## Objectives of the MentalHealthAI Repository

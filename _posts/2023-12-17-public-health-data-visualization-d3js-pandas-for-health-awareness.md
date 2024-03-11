@@ -2,6 +2,7 @@
 title: Public Health Data Visualization (D3js, Pandas) For health awareness
 date: 2023-12-17
 permalink: posts/public-health-data-visualization-d3js-pandas-for-health-awareness
+layout: article
 ---
 
 # AI Public Health Data Visualization Repository

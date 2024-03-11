@@ -2,6 +2,7 @@
 title: SecureAI Defense and Security AI
 date: 2023-11-22
 permalink: posts/secureai-defense-and-security-ai
+layout: article
 ---
 
 ## AI SecureAI Defense and Security AI Repository

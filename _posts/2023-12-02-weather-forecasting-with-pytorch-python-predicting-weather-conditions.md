@@ -2,6 +2,7 @@
 title: Weather Forecasting with PyTorch (Python) Predicting weather conditions
 date: 2023-12-02
 permalink: posts/weather-forecasting-with-pytorch-python-predicting-weather-conditions
+layout: article
 ---
 
 # AI Weather Forecasting with PyTorch

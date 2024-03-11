@@ -2,6 +2,7 @@
 title: Automated ML Pipeline with Kubeflow Create an end-to-end ML pipeline using Kubeflow on Kubernetes
 date: 2023-11-24
 permalink: posts/automated-ml-pipeline-with-kubeflow-create-an-end-to-end-ml-pipeline-using-kubeflow-on-kubernetes
+layout: article
 ---
 
 # AI Automated ML Pipeline with Kubeflow

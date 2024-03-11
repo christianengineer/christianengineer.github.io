@@ -2,6 +2,7 @@
 title: Serverless ML Model Deployment with AWS Lambda Deploy an ML model using AWS Lambda for serverless execution
 date: 2023-11-24
 permalink: posts/serverless-ml-model-deployment-with-aws-lambda-deploy-an-ml-model-using-aws-lambda-for-serverless-execution
+layout: article
 ---
 
 ## Objectives:

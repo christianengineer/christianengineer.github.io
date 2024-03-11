@@ -2,6 +2,7 @@
 title: Facial Emotion Recognition System Build a system for recognizing emotions from facial expressions
 date: 2023-11-25
 permalink: posts/facial-emotion-recognition-system-build-a-system-for-recognizing-emotions-from-facial-expressions
+layout: article
 ---
 
 # AI Facial Emotion Recognition System

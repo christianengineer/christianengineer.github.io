@@ -2,6 +2,7 @@
 title: Large-scale Network Traffic Analysis (Scikit-Learn, Spark, Docker) For internet management
 date: 2023-12-20
 permalink: posts/large-scale-network-traffic-analysis-scikit-learn-spark-docker-for-internet-management
+layout: article
 ---
 
 ### Objectives

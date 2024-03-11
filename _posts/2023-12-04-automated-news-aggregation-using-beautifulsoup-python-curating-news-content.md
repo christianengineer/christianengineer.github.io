@@ -2,6 +2,7 @@
 title: Automated News Aggregation using BeautifulSoup (Python) Curating news content
 date: 2023-12-04
 permalink: posts/automated-news-aggregation-using-beautifulsoup-python-curating-news-content
+layout: article
 ---
 
 # AI Automated News Aggregation using BeautifulSoup (Python)

@@ -2,6 +2,7 @@
 title: Peru Gourmet Market Analysis Tool (PyTorch, Scikit-Learn, Spark, DVC) Provides in-depth market analysis and consumer behavior insights to fine dining establishments for strategic decision-making
 date: 2024-03-04
 permalink: posts/peru-gourmet-market-analysis-tool-pytorch-scikit-learn-spark-dvc
+layout: article
 ---
 
 # Machine Learning Peru Gourmet Market Analysis Tool

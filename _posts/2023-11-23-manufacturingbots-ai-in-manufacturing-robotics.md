@@ -2,6 +2,7 @@
 title: ManufacturingBots AI in Manufacturing Robotics
 date: 2023-11-23
 permalink: posts/manufacturingbots-ai-in-manufacturing-robotics
+layout: article
 ---
 
 ### Objectives

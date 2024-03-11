@@ -2,6 +2,7 @@
 title: Dynamic Pricing Model for E-commerce (TensorFlow, FastAPI, Celery) For retail strategy
 date: 2023-12-19
 permalink: posts/dynamic-pricing-model-for-e-commerce-tensorflow-fastapi-celery-for-retail-strategy
+layout: article
 ---
 
 # AI Dynamic Pricing Model for E-commerce

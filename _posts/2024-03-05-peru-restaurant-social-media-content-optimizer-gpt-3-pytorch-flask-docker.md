@@ -2,6 +2,7 @@
 title: Peru Restaurant Social Media Content Optimizer (GPT-3, PyTorch, Flask, Docker) Generates optimized social media content and schedules based on analysis of engagement data and trending topics
 date: 2024-03-05
 permalink: posts/peru-restaurant-social-media-content-optimizer-gpt-3-pytorch-flask-docker
+layout: article
 ---
 
 ## Machine Learning Peru Restaurant Social Media Content Optimizer

@@ -2,6 +2,7 @@
 title: PharmaTech AI for the Pharmaceutical Industry
 date: 2023-11-23
 permalink: posts/pharmatech-ai-for-the-pharmaceutical-industry
+layout: article
 ---
 
 ## Objectives of AI PharmaTech Repository

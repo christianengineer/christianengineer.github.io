@@ -2,6 +2,7 @@
 title: Language Modeling using BERT (Python) Understanding language context
 date: 2023-12-03
 permalink: posts/language-modeling-using-bert-python-understanding-language-context
+layout: article
 ---
 
 # AI Language Modeling using BERT

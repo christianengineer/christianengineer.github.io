@@ -2,6 +2,7 @@
 title: EntertainAI AI in Entertainment
 date: 2023-11-23
 permalink: posts/entertainai-ai-in-entertainment
+layout: article
 ---
 
 ### EntertainAI: AI in Entertainment Repository

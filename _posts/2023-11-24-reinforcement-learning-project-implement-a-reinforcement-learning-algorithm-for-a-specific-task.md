@@ -2,6 +2,7 @@
 title: Reinforcement Learning Project Implement a reinforcement learning algorithm for a specific task
 date: 2023-11-24
 permalink: posts/reinforcement-learning-project-implement-a-reinforcement-learning-algorithm-for-a-specific-task
+layout: article
 ---
 
 ### AI Reinforcement Learning Project Expansion

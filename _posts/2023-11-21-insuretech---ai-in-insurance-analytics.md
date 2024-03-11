@@ -2,6 +2,7 @@
 title: InsureTech - AI in Insurance Analytics
 date: 2023-11-21
 permalink: posts/insuretech---ai-in-insurance-analytics
+layout: article
 ---
 
 # AI InsureTech - AI in Insurance Analytics Repository

@@ -2,6 +2,7 @@
 title: Automated Sentiment Analysis for Brand Monitoring (TensorFlow, Apache Beam, Kubernetes) For PR management
 date: 2023-12-21
 permalink: posts/automated-sentiment-analysis-for-brand-monitoring-tensorflow-apache-beam-kubernetes-for-pr-management
+layout: article
 ---
 
 # AI Automated Sentiment Analysis for Brand Monitoring

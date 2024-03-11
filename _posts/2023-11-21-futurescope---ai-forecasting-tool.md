@@ -2,6 +2,7 @@
 title: FutureScope - AI Forecasting Tool
 date: 2023-11-21
 permalink: posts/futurescope---ai-forecasting-tool
+layout: article
 ---
 
 # AI FutureScope - AI Forecasting Tool Repository

@@ -2,6 +2,7 @@
 title: Peruvian Ministry of Health (PyTorch, Pandas) Public Health Analyst pain point is predicting disease outbreaks, solution is to use machine learning to analyze health data trends and predict potential outbreaks, enabling proactive healthcare responses
 date: 2024-03-05
 permalink: posts/peruvian-ministry-of-health-pytorch-pandas
+layout: article
 ---
 
 ### Objectives and Benefits:

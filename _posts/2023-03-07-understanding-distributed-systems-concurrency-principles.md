@@ -2,6 +2,7 @@
 title: Distributed Systems and Concurrency
 date: 2023-03-07
 permalink: posts/understanding-distributed-systems-concurrency-principles
+layout: article
 ---
 
 # Distributed Systems and Concurrency

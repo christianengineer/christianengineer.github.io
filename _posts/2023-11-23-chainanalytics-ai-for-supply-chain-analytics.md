@@ -2,6 +2,7 @@
 title: ChainAnalytics AI for Supply Chain Analytics
 date: 2023-11-23
 permalink: posts/chainanalytics-ai-for-supply-chain-analytics
+layout: article
 ---
 
 # AI ChainAnalytics for Supply Chain Analytics

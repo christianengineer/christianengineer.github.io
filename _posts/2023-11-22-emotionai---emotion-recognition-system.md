@@ -2,6 +2,7 @@
 title: EmotionAI - Emotion Recognition System
 date: 2023-11-22
 permalink: posts/emotionai---emotion-recognition-system
+layout: article
 ---
 
 # AI EmotionAI - Emotion Recognition System Repository

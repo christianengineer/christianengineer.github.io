@@ -2,6 +2,7 @@
 title: Sustainable Operations Planner for Peru Businesses (TensorFlow, Keras, Flask, Grafana) Aids businesses in transitioning to more sustainable operations by identifying areas for improvement and predicting the impact of green initiatives
 date: 2024-03-07
 permalink: posts/sustainable-operations-planner-for-peru-businesses-tensorflow-keras-flask-grafana
+layout: article
 ---
 
 # Sustainable Operations Planner for Peru Businesses

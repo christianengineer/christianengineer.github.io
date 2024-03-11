@@ -2,6 +2,7 @@
 title: Predictive Healthcare Analytics (TensorFlow, Keras) For early disease detection and prevention
 date: 2023-12-15
 permalink: posts/predictive-healthcare-analytics-tensorflow-keras-for-early-disease-detection-and-prevention
+layout: article
 ---
 
 ### AI Predictive Healthcare Analytics Repository

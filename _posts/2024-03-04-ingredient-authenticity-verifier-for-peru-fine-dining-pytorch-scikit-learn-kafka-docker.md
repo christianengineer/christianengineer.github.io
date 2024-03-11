@@ -2,6 +2,7 @@
 title: Ingredient Authenticity Verifier for Peru Fine Dining (PyTorch, Scikit-Learn, Kafka, Docker) Utilizes blockchain and AI to verify the authenticity and quality of high-value ingredients, ensuring culinary excellence
 date: 2024-03-04
 permalink: posts/ingredient-authenticity-verifier-for-peru-fine-dining-pytorch-scikit-learn-kafka-docker
+layout: article
 ---
 
 ## Objective and Benefits:

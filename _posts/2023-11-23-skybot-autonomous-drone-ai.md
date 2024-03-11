@@ -2,6 +2,7 @@
 title: SkyBot Autonomous Drone AI
 date: 2023-11-23
 permalink: posts/skybot-autonomous-drone-ai
+layout: article
 ---
 
 ### Objective

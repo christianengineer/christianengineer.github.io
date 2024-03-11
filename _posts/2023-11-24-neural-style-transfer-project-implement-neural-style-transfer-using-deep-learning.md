@@ -2,6 +2,7 @@
 title: Neural Style Transfer Project Implement neural style transfer using deep learning
 date: 2023-11-24
 permalink: posts/neural-style-transfer-project-implement-neural-style-transfer-using-deep-learning
+layout: article
 ---
 
 ## AI Neural Style Transfer Project

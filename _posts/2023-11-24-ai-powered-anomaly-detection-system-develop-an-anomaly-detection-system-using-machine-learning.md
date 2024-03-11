@@ -2,6 +2,7 @@
 title: AI-powered Anomaly Detection System Develop an anomaly detection system using machine learning
 date: 2023-11-24
 permalink: posts/ai-powered-anomaly-detection-system-develop-an-anomaly-detection-system-using-machine-learning
+layout: article
 ---
 
 ## AI-powered Anomaly Detection System

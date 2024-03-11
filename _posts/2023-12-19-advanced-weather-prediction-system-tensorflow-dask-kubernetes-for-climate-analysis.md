@@ -2,6 +2,7 @@
 title: Advanced Weather Prediction System (TensorFlow, Dask, Kubernetes) For climate analysis
 date: 2023-12-19
 permalink: posts/advanced-weather-prediction-system-tensorflow-dask-kubernetes-for-climate-analysis
+layout: article
 ---
 
 ### Objectives

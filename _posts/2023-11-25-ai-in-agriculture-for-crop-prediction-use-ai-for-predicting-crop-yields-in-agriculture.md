@@ -2,6 +2,7 @@
 title: AI in Agriculture for Crop Prediction Use AI for predicting crop yields in agriculture
 date: 2023-11-25
 permalink: posts/ai-in-agriculture-for-crop-prediction-use-ai-for-predicting-crop-yields-in-agriculture
+layout: article
 ---
 
 # AI in Agriculture for Crop Prediction

@@ -2,6 +2,7 @@
 title: Climate Change Analysis and Prediction Model
 date: 2023-11-18
 permalink: posts/climate-change-analysis-and-prediction-model
+layout: article
 ---
 
 # Climate Change Analysis and Prediction Model Repository

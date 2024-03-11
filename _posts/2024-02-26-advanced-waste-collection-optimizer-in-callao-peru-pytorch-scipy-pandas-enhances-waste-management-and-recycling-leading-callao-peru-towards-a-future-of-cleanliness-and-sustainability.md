@@ -2,6 +2,7 @@
 title: Advanced Waste Collection Optimizer in Callao, Peru (PyTorch, SciPy, Pandas) Enhances waste management and recycling, leading Callao, Peru towards a future of cleanliness and sustainability
 date: 2024-02-26
 permalink: posts/advanced-waste-collection-optimizer-in-callao-peru-pytorch-scipy-pandas-enhances-waste-management-and-recycling-leading-callao-peru-towards-a-future-of-cleanliness-and-sustainability
+layout: article
 ---
 
 # AI Advanced Waste Collection Optimizer in Callao, Peru

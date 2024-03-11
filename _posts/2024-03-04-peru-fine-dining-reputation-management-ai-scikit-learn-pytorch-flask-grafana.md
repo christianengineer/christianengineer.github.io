@@ -2,6 +2,7 @@
 title: Peru Fine Dining Reputation Management AI (Scikit-Learn, PyTorch, Flask, Grafana) Monitors and analyzes online reviews and social media mentions to manage and enhance the restaurant's reputation
 date: 2024-03-04
 permalink: posts/peru-fine-dining-reputation-management-ai-scikit-learn-pytorch-flask-grafana
+layout: article
 ---
 
 # Machine Learning Peru Fine Dining Reputation Management AI

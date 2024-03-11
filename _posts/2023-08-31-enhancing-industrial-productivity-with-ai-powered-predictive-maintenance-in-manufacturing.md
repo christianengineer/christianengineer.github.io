@@ -2,6 +2,7 @@
 title: "Revolutionizing AI-Based Predictive Maintenance: A Holistic Development Plan for Fabricating and Scaling a High-Performance Data-Driven Tool in Manufacturing"
 date: 2023-08-31
 permalink: posts/enhancing-industrial-productivity-with-ai-powered-predictive-maintenance-in-manufacturing
+layout: article
 ---
 
 # Predictive Maintenance Tool for Manufacturing Repository

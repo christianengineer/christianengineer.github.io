@@ -2,6 +2,7 @@
 title: Virtual Personal Assistant Development using Rasa (Python) Building conversational AI
 date: 2023-12-03
 permalink: posts/virtual-personal-assistant-development-using-rasa-python-building-conversational-ai
+layout: article
 ---
 
 ## Objectives

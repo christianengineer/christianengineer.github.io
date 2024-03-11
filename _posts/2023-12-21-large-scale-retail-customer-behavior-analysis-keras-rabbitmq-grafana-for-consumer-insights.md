@@ -2,6 +2,7 @@
 title: Large-scale Retail Customer Behavior Analysis (Keras, RabbitMQ, Grafana) For consumer insights
 date: 2023-12-21
 permalink: posts/large-scale-retail-customer-behavior-analysis-keras-rabbitmq-grafana-for-consumer-insights
+layout: article
 ---
 
 # AI Large-scale Retail Customer Behavior Analysis System

@@ -2,6 +2,7 @@
 title: Sentiment Analysis with Machine Learning Implement sentiment analysis using machine learning
 date: 2023-11-24
 permalink: posts/sentiment-analysis-with-machine-learning-implement-sentiment-analysis-using-machine-learning
+layout: article
 ---
 
 ### Objective

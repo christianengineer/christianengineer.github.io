@@ -2,6 +2,7 @@
 title: AI-based Inventory Forecasting for Retail (TensorFlow, Spark, Prometheus) For supply chain
 date: 2023-12-19
 permalink: posts/ai-based-inventory-forecasting-for-retail-tensorflow-spark-prometheus-for-supply-chain
+layout: article
 ---
 
 ## AI-based Inventory Forecasting for Retail

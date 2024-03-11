@@ -2,6 +2,7 @@
 title: Peruvian Ministry of Education (Gensim, Keras) Curriculum Developer pain point is personalizing learning materials, solution is to use machine learning to tailor educational content to individual student needs, enhancing learning outcomes
 date: 2024-03-07
 permalink: posts/peruvian-ministry-of-education-gensim-keras
+layout: article
 ---
 
 ## Objective and Benefits

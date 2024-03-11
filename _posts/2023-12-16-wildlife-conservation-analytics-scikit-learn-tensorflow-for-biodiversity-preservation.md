@@ -2,6 +2,7 @@
 title: Wildlife Conservation Analytics (Scikit-Learn, TensorFlow) For biodiversity preservation
 date: 2023-12-16
 permalink: posts/wildlife-conservation-analytics-scikit-learn-tensorflow-for-biodiversity-preservation
+layout: article
 ---
 
 # AI Wildlife Conservation Analytics Repository

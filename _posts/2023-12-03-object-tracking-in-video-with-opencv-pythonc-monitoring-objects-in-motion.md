@@ -2,6 +2,7 @@
 title: Object Tracking in Video with OpenCV (Python/C++) Monitoring objects in motion
 date: 2023-12-03
 permalink: posts/object-tracking-in-video-with-opencv-pythonc-monitoring-objects-in-motion
+layout: article
 ---
 
 # AI Object Tracking in Video with OpenCV

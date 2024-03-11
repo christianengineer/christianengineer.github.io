@@ -2,6 +2,7 @@
 title: Gender Equality Analysis Tools (TensorFlow, Scikit-Learn) For social research
 date: 2023-12-17
 permalink: posts/gender-equality-analysis-tools-tensorflow-scikit-learn-for-social-research
+layout: article
 ---
 
 ## Objectives

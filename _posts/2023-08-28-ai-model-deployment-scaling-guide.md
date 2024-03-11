@@ -2,6 +2,7 @@
 title: AI Model Deployment and Scaling
 date: 2023-08-28
 permalink: posts/ai-model-deployment-scaling-guide
+layout: article
 ---
 
 # AI Model Deployment and Scaling

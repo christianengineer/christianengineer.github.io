@@ -2,6 +2,7 @@
 title: Predictive Text Input with GPT (Python) Enhancing typing efficiency
 date: 2023-12-03
 permalink: posts/predictive-text-input-with-gpt-python-enhancing-typing-efficiency
+layout: article
 ---
 
 # AI Predictive Text Input with GPT (Python) Repository

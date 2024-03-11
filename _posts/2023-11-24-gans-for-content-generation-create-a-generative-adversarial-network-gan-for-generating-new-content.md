@@ -2,6 +2,7 @@
 title: GANs for Content Generation Create a Generative Adversarial Network (GAN) for generating new content
 date: 2023-11-24
 permalink: posts/gans-for-content-generation-create-a-generative-adversarial-network-gan-for-generating-new-content
+layout: article
 ---
 
 **Objective:**

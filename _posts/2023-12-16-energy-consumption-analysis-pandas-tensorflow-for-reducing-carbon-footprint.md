@@ -2,6 +2,7 @@
 title: Energy Consumption Analysis (Pandas, TensorFlow) For reducing carbon footprint
 date: 2023-12-16
 permalink: posts/energy-consumption-analysis-pandas-tensorflow-for-reducing-carbon-footprint
+layout: article
 ---
 
 # AI Energy Consumption Analysis Repository

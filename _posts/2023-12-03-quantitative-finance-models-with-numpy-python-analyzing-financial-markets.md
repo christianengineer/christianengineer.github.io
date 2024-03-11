@@ -2,6 +2,7 @@
 title: Quantitative Finance Models with NumPy (Python) Analyzing financial markets
 date: 2023-12-03
 permalink: posts/quantitative-finance-models-with-numpy-python-analyzing-financial-markets
+layout: article
 ---
 
 ## Objectives

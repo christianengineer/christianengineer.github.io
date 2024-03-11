@@ -2,6 +2,7 @@
 title: Peru Agri-FinTech Credit Scoring Model (TensorFlow, PyTorch, Kafka, Docker) Provides credit scoring for farmers and food producers based on alternative data, facilitating access to financial services and supporting the food supply ecosystem
 date: 2024-03-01
 permalink: posts/peru-agri-fintech-credit-scoring-model-tensorflow-pytorch-kafka-docker-provides-credit-scoring-for-farmers-and-food-producers-based-on-alternative-data-facilitating-access-to-financial-services-and-supporting-the-food-supply-ecosystem
+layout: article
 ---
 
 ### Objectives:

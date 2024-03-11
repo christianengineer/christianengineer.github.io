@@ -2,6 +2,7 @@
 title: PrivacyProtector AI for Data Privacy
 date: 2023-11-23
 permalink: posts/privacyprotector-ai-for-data-privacy
+layout: article
 ---
 
 ## AI PrivacyProtector AI for Data Privacy Repository

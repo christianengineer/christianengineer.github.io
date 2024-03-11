@@ -2,6 +2,7 @@
 title: How I started using AI as a Software Engineer
 date: 2023-10-01
 permalink: posts/how-i-started-using-ai
+layout: article
 ---
 
 # How I started using AI as a Software Engineer

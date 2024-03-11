@@ -2,6 +2,7 @@
 title: Peruvian National Superintendence of Customs and Tax Administration SUNAT (TensorFlow, Pandas, Scikit-Learn) Tax evasion and customs fraud, streamline customs and tax collection processes with predictive analytics and anomaly detection
 date: 2024-03-05
 permalink: posts/peruvian-national-superintendence-of-customs-and-tax-administration-sunat-tensorflow-pandas-scikit-learn
+layout: article
 ---
 
 # Machine Learning Solution for SUNAT

@@ -2,6 +2,7 @@
 title: Traffic Flow Prediction with Keras (Python) Managing city traffic efficiently
 date: 2023-12-03
 permalink: posts/traffic-flow-prediction-with-keras-python-managing-city-traffic-efficiently
+layout: article
 ---
 
 ## Objectives of the AI Traffic Flow Prediction with Keras Repository

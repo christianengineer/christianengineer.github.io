@@ -2,6 +2,7 @@
 title: Predictive Analytics for Retail Sales Use machine learning for forecasting retail sales
 date: 2023-11-24
 permalink: posts/predictive-analytics-for-retail-sales-use-machine-learning-for-forecasting-retail-sales
+layout: article
 ---
 
 ### AI Predictive Analytics for Retail Sales

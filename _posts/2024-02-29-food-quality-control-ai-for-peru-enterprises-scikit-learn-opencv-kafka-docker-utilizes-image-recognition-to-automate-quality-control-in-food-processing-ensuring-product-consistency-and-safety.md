@@ -2,6 +2,7 @@
 title: Food Quality Control AI for Peru Enterprises (Scikit-Learn, OpenCV, Kafka, Docker) Utilizes image recognition to automate quality control in food processing, ensuring product consistency and safety
 date: 2024-02-29
 permalink: posts/food-quality-control-ai-for-peru-enterprises-scikit-learn-opencv-kafka-docker-utilizes-image-recognition-to-automate-quality-control-in-food-processing-ensuring-product-consistency-and-safety
+layout: article
 ---
 
 ## AI Food Quality Control System for Peru Enterprises

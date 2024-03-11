@@ -2,6 +2,7 @@
 title: Personalized AI Art Generator
 date: 2023-11-18
 permalink: posts/personalized-ai-art-generator
+layout: article
 ---
 
 # Personalized AI Art Generator Repository Technical Specifications

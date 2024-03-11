@@ -2,6 +2,7 @@
 title: Scalable System Design and Architecture
 date: 2023-11-04
 permalink: posts/scalable-system-design-architecture-guide
+layout: article
 ---
 
 # Scalable System Design and Architecture

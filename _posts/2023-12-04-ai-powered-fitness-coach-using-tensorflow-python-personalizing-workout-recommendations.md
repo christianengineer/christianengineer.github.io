@@ -2,6 +2,7 @@
 title: AI-Powered Fitness Coach using TensorFlow (Python) Personalizing workout recommendations
 date: 2023-12-04
 permalink: posts/ai-powered-fitness-coach-using-tensorflow-python-personalizing-workout-recommendations
+layout: article
 ---
 
 # AI-Powered Fitness Coach using TensorFlow

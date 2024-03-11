@@ -2,6 +2,7 @@
 title: Automated Image Analysis for Clinical Pathology (TensorFlow, Flask, Prometheus) For medical diagnostics
 date: 2023-12-18
 permalink: posts/automated-image-analysis-for-clinical-pathology-tensorflow-flask-prometheus-for-medical-diagnostics
+layout: article
 ---
 
 # AI Automated Image Analysis for Clinical Pathology

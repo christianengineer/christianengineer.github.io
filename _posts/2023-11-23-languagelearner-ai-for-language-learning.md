@@ -2,6 +2,7 @@
 title: LanguageLearner AI for Language Learning
 date: 2023-11-23
 permalink: posts/languagelearner-ai-for-language-learning
+layout: article
 ---
 
 ## AI LanguageLearner Repository

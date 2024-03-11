@@ -2,6 +2,7 @@
 title: Peruvian Ministry of Health (Keras, TensorFlow, PyTorch) Resource allocation and disease outbreak prediction, optimize healthcare services and predict outbreaks using deep learning
 date: 2024-03-05
 permalink: posts/peruvian-ministry-of-health-keras-tensorflow-pytorch
+layout: article
 ---
 
 ## Machine Learning Solution for Peruvian Ministry of Health

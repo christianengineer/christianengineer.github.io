@@ -2,6 +2,7 @@
 title: Tourist Flow Management AI with TensorFlow and OpenCV for PromPerú (Lima, Peru), Marketing Analyst's pain point is optimizing marketing campaigns to attract tourists during off-peak seasons, solution is to analyze tourist flow data and identify patterns, tailoring marketing efforts to increase off-season tourism
 date: 2024-03-06
 permalink: posts/tourist-flow-management-ai-with-tensorflow-and-opencv-for-promper-lima-peru
+layout: article
 ---
 
 # Tourist Flow Management AI for PromPerú

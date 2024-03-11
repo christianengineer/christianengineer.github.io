@@ -2,6 +2,7 @@
 title: Real Estate Investment Analyzer (Scikit-Learn, TensorFlow, Kafka, Docker) for Urbania, Investment Analyst's pain point is difficulty in predicting real estate market trends and investment risks, solution is to utilize historical data and market trends to forecast real estate values and investment hotspots, aiding investors in making informed decisions in Peru’s fluctuating real estate market
 date: 2024-03-06
 permalink: posts/real-estate-investment-analyzer-scikit-learn-tensorflow-kafka-docker
+layout: article
 ---
 
 ## Objectives and Benefits:

@@ -2,6 +2,7 @@
 title: Peru E-commerce Personalization Engine (BERT, Keras, Spark, DVC) Delivers personalized shopping experiences for e-commerce customers, increasing engagement and conversion rates
 date: 2024-03-07
 permalink: posts/peru-e-commerce-personalization-engine-bert-keras-spark-dvc
+layout: article
 ---
 
 # Peru E-commerce Personalization Engine Documentation

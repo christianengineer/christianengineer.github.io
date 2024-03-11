@@ -2,6 +2,7 @@
 title: Natural Language Processing (NLP) Model Build an NLP model for text analysis or generation
 date: 2023-11-24
 permalink: posts/natural-language-processing-nlp-model-build-an-nlp-model-for-text-analysis-or-generation
+layout: article
 ---
 
 # AI NLP Model for Text Analysis or Generation Repository

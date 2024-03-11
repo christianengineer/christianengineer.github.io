@@ -2,6 +2,7 @@
 title: AI for Sustainable Agriculture with TensorFlow (Python) Enhancing agricultural practices
 date: 2023-12-15
 permalink: posts/ai-for-sustainable-agriculture-with-tensorflow-python-enhancing-agricultural-practices
+layout: article
 ---
 
 ### Objectives

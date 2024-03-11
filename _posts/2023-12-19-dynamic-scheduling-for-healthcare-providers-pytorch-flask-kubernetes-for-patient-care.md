@@ -2,6 +2,7 @@
 title: Dynamic Scheduling for Healthcare Providers (PyTorch, Flask, Kubernetes) For patient care
 date: 2023-12-19
 permalink: posts/dynamic-scheduling-for-healthcare-providers-pytorch-flask-kubernetes-for-patient-care
+layout: article
 ---
 
 ## AI Dynamic Scheduling for Healthcare Providers

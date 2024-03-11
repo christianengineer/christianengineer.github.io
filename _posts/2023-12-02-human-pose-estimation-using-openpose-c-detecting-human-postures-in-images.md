@@ -2,6 +2,7 @@
 title: Human Pose Estimation using OpenPose (C++) Detecting human postures in images
 date: 2023-12-02
 permalink: posts/human-pose-estimation-using-openpose-c-detecting-human-postures-in-images
+layout: article
 ---
 
 # AI Human Pose Estimation using OpenPose

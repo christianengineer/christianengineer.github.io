@@ -2,6 +2,7 @@
 title: CyberShield - AI-Based Cybersecurity System
 date: 2023-11-21
 permalink: posts/cybershield---ai-based-cybersecurity-system
+layout: article
 ---
 
 ### AI CyberShield - AI-Based Cybersecurity System Repository

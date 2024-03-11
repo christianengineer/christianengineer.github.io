@@ -2,6 +2,7 @@
 title: Automated ML Model Testing Framework Develop a framework for automated testing of ML models
 date: 2023-11-24
 permalink: posts/automated-ml-model-testing-framework-develop-a-framework-for-automated-testing-of-ml-models
+layout: article
 ---
 
 # Objectives

@@ -2,6 +2,7 @@
 title: Automated Drug Discovery Platform (TensorFlow, Luigi, Docker) For pharmaceuticals
 date: 2023-12-20
 permalink: posts/automated-drug-discovery-platform-tensorflow-luigi-docker-for-pharmaceuticals
+layout: article
 ---
 
 ## Objectives

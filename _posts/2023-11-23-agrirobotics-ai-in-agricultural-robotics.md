@@ -2,6 +2,7 @@
 title: AgriRobotics AI in Agricultural Robotics
 date: 2023-11-23
 permalink: posts/agrirobotics-ai-in-agricultural-robotics
+layout: article
 ---
 
 # AI in Agricultural Robotics Repository

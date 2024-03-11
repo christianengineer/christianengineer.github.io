@@ -2,6 +2,7 @@
 title: Genetic Algorithm for Optimization with DEAP (Python) Solving complex optimization problems
 date: 2023-12-03
 permalink: posts/genetic-algorithm-for-optimization-with-deap-python-solving-complex-optimization-problems
+layout: article
 ---
 
 # AI Genetic Algorithm for Optimization with DEAP (Python)

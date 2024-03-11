@@ -2,6 +2,7 @@
 title: Smart Traffic Control and Optimization System
 date: 2023-11-18
 permalink: posts/smart-traffic-control-and-optimization-system
+layout: article
 ---
 
 # Smart Traffic Control and Optimization System

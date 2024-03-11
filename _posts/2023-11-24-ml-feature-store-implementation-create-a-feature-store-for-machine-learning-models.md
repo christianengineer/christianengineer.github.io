@@ -2,6 +2,7 @@
 title: ML Feature Store Implementation Create a feature store for machine learning models
 date: 2023-11-24
 permalink: posts/ml-feature-store-implementation-create-a-feature-store-for-machine-learning-models
+layout: article
 ---
 
 ## AI ML Feature Store Implementation

@@ -2,6 +2,7 @@
 title: Water Quality Monitoring (Scikit-Learn, Pandas) For environmental health
 date: 2023-12-15
 permalink: posts/water-quality-monitoring-scikit-learn-pandas-for-environmental-health
+layout: article
 ---
 
 # AI Water Quality Monitoring System

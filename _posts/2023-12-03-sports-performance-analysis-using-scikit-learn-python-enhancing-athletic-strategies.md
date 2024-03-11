@@ -2,6 +2,7 @@
 title: Sports Performance Analysis using Scikit-Learn (Python) Enhancing athletic strategies
 date: 2023-12-03
 permalink: posts/sports-performance-analysis-using-scikit-learn-python-enhancing-athletic-strategies
+layout: article
 ---
 
 ## AI Sports Performance Analysis using Scikit-Learn

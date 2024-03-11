@@ -2,6 +2,7 @@
 title: ChatEcomm E-commerce Chatbot AI
 date: 2023-11-23
 permalink: posts/chatecomm-e-commerce-chatbot-ai
+layout: article
 ---
 
 **Objectives:**

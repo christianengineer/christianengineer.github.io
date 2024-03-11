@@ -2,6 +2,7 @@
 title: Rural Connectivity Solutions (TensorFlow, Keras) Bridging the digital divide
 date: 2023-12-17
 permalink: posts/rural-connectivity-solutions-tensorflow-keras-bridging-the-digital-divide
+layout: article
 ---
 
 # AI Rural Connectivity Solutions Repository

@@ -2,6 +2,7 @@
 title: Peru Tech Literacy AI Tutor (BERT, GPT-3, Django, Prometheus) Provides interactive, AI-powered tutoring to improve technological literacy, using natural language processing to adapt lessons to each learner's pace
 date: 2024-02-24
 permalink: posts/peru-tech-literacy-ai-tutor-bert-gpt-3-django-prometheus-provides-interactive-ai-powered-tutoring-to-improve-technological-literacy-using-natural-language-processing-to-adapt-lessons-to-each-learners-pace
+layout: article
 ---
 
 # AI Peru Tech Literacy AI Tutor

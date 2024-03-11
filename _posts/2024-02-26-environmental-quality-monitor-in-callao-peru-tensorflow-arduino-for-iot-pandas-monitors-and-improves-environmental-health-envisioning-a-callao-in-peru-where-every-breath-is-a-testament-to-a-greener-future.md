@@ -2,6 +2,7 @@
 title: Environmental Quality Monitor in Callao, Peru (TensorFlow, Arduino for IoT, Pandas) Monitors and improves environmental health, envisioning a Callao in Peru where every breath is a testament to a greener future
 date: 2024-02-26
 permalink: posts/environmental-quality-monitor-in-callao-peru-tensorflow-arduino-for-iot-pandas-monitors-and-improves-environmental-health-envisioning-a-callao-in-peru-where-every-breath-is-a-testament-to-a-greener-future
+layout: article
 ---
 
 # AI Environmental Quality Monitor in Callao, Peru

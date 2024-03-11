@@ -2,6 +2,7 @@
 title: Predictive Modeling in Insurance with XGBoost (Python) Assessing insurance risks
 date: 2023-12-15
 permalink: posts/predictive-modeling-in-insurance-with-xgboost-python-assessing-insurance-risks
+layout: article
 ---
 
 ### Objectives

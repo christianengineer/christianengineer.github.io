@@ -2,6 +2,7 @@
 title: HR Employee Attrition Analysis with Scikit-Learn (Python) Predicting staff turnover
 date: 2023-12-04
 permalink: posts/hr-employee-attrition-analysis-with-scikit-learn-python-predicting-staff-turnover
+layout: article
 ---
 
 # AI HR Employee Attrition Analysis with Scikit-Learn (Python)

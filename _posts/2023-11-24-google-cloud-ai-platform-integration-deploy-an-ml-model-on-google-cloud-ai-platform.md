@@ -2,6 +2,7 @@
 title: Google Cloud AI Platform Integration Deploy an ML model on Google Cloud AI Platform
 date: 2023-11-24
 permalink: posts/google-cloud-ai-platform-integration-deploy-an-ml-model-on-google-cloud-ai-platform
+layout: article
 ---
 
 # AI Google Cloud AI Platform Integration

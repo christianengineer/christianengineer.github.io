@@ -2,6 +2,7 @@
 title: Agricultural Yield Enhancement AI for Peru (TensorFlow, PyTorch, Spark, DVC) Offers predictive insights on crop selection, planting schedules, and sustainable farming practices to maximize agricultural productivity
 date: 2024-02-27
 permalink: posts/agricultural-yield-enhancement-ai-for-peru-tensorflow-pytorch-spark-dvc-offers-predictive-insights-on-crop-selection-planting-schedules-and-sustainable-farming-practices-to-maximize-agricultural-productivity
+layout: article
 ---
 
 ### AI Agricultural Yield Enhancement System

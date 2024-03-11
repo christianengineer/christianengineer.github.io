@@ -2,6 +2,7 @@
 title: AI-based Credit Scoring System (Scikit-Learn, Flask, Prometheus) For financial assessments
 date: 2023-12-20
 permalink: posts/ai-based-credit-scoring-system-scikit-learn-flask-prometheus-for-financial-assessments
+layout: article
 ---
 
 # AI-Based Credit Scoring System Repository

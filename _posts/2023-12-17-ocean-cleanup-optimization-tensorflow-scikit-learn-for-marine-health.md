@@ -2,6 +2,7 @@
 title: Ocean Cleanup Optimization (TensorFlow, Scikit-Learn) For marine health
 date: 2023-12-17
 permalink: posts/ocean-cleanup-optimization-tensorflow-scikit-learn-for-marine-health
+layout: article
 ---
 
 ## AI Ocean Cleanup Optimization System

@@ -2,6 +2,7 @@
 title: Fraud Detection using Machine Learning Build a fraud detection system using AI
 date: 2023-11-24
 permalink: posts/fraud-detection-using-machine-learning-build-a-fraud-detection-system-using-ai
+layout: article
 ---
 
 # Objectives

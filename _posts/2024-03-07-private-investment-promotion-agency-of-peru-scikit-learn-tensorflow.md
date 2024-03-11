@@ -2,6 +2,7 @@
 title: Private Investment Promotion Agency of Peru (Scikit-Learn, TensorFlow) Investment Analyst pain point is assessing project viability, solution is to use machine learning to evaluate investment projects based on economic and social impact criteria, enhancing decision-making
 date: 2024-03-07
 permalink: posts/private-investment-promotion-agency-of-peru-scikit-learn-tensorflow
+layout: article
 ---
 
 # Private Investment Promotion Agency of Peru - Machine Learning Solution

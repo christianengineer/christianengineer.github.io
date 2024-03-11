@@ -2,6 +2,7 @@
 title: Customer Sentiment Analysis Tool (BERT, TensorFlow, Flask, Grafana) for Rappi Peru, Customer Service Manager's pain point is difficulty in gauging and responding to customer sentiment across various regions in Peru, solution is to analyze customer feedback in real-time, allowing for immediate adjustments to services and products, thus enhancing customer satisfaction in a diverse market
 date: 2024-03-05
 permalink: posts/customer-sentiment-analysis-tool-bert-tensorflow-flask-grafana
+layout: article
 ---
 
 # Customer Sentiment Analysis Tool for Rappi Peru

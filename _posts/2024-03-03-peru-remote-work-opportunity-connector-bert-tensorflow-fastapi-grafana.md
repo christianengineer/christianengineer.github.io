@@ -2,6 +2,7 @@
 title: Peru Remote Work Opportunity Connector (BERT, TensorFlow, FastAPI, Grafana) Screens and matches low-income individuals with remote work opportunities that suit their skills and availability, providing access to stable income sources
 date: 2024-03-03
 permalink: posts/peru-remote-work-opportunity-connector-bert-tensorflow-fastapi-grafana
+layout: article
 ---
 
 **Objectives:**

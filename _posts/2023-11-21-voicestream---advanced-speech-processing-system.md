@@ -2,6 +2,7 @@
 title: VoiceStream - Advanced Speech Processing System
 date: 2023-11-21
 permalink: posts/voicestream---advanced-speech-processing-system
+layout: article
 ---
 
 # AI VoiceStream - Advanced Speech Processing System

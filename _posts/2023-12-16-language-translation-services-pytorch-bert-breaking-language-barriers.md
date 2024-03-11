@@ -2,6 +2,7 @@
 title: Language Translation Services (PyTorch, BERT) Breaking language barriers
 date: 2023-12-16
 permalink: posts/language-translation-services-pytorch-bert-breaking-language-barriers
+layout: article
 ---
 
 # AI Language Translation Services (PyTorch, BERT) Repository Overview

@@ -2,6 +2,7 @@
 title: SQL Database Optimization for AI Systems
 date: 2023-09-24
 permalink: posts/sql-database-optimization-for-ai-systems-guide
+layout: article
 ---
 
 # SQL Database Optimization for AI Systems

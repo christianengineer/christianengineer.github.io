@@ -2,6 +2,7 @@
 title: E-commerce Price Optimization with Scikit-Learn (Python) Dynamic pricing strategies
 date: 2023-12-03
 permalink: posts/e-commerce-price-optimization-with-scikit-learn-python-dynamic-pricing-strategies
+layout: article
 ---
 
 ## Objectives of the AI E-commerce Price Optimization with Scikit-Learn (Python) Dynamic Pricing Strategies Repository

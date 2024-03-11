@@ -2,6 +2,7 @@
 title: Peru Market Demand Forecasting AI (TensorFlow, Scikit-Learn, Airflow, Kubernetes) Predicts market demand for various products, allowing businesses to adjust production and inventory accordingly
 date: 2024-03-05
 permalink: posts/peru-market-demand-forecasting-ai-tensorflow-scikit-learn-airflow-kubernetes
+layout: article
 ---
 
 ### Machine Learning Peru Market Demand Forecasting AI

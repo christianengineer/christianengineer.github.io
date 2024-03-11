@@ -2,6 +2,7 @@
 title: Dynamic Route Optimization for Delivery Services (PyTorch, Apache NiFi, Kubernetes) For logistics
 date: 2023-12-18
 permalink: posts/dynamic-route-optimization-for-delivery-services-pytorch-apache-nifi-kubernetes-for-logistics
+layout: article
 ---
 
 # AI Dynamic Route Optimization for Delivery Services

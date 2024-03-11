@@ -2,6 +2,7 @@
 title: EcoAI AI in Sustainability Analytics
 date: 2023-11-23
 permalink: posts/ecoai-ai-in-sustainability-analytics
+layout: article
 ---
 
 # AI EcoAI in Sustainability Analytics Repository

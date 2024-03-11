@@ -2,6 +2,7 @@
 title: Kubernetes-based ML Model Orchestration Demonstrate deploying ML models using Kubernetes
 date: 2023-11-24
 permalink: posts/kubernetes-based-ml-model-orchestration-demonstrate-deploying-ml-models-using-kubernetes
+layout: article
 ---
 
 # AI Kubernetes-based ML Model Orchestration

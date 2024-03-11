@@ -2,6 +2,7 @@
 title: Peru Agribusiness Market Expansion AI (GPT-3, Scikit-Learn, Flask, Kubernetes) Identifies emerging markets and consumer segments for Peruvian agribusiness products, guiding strategic expansion efforts
 date: 2024-02-28
 permalink: posts/peru-agribusiness-market-expansion-ai-gpt-3-scikit-learn-flask-kubernetes-identifies-emerging-markets-and-consumer-segments-for-peruvian-agribusiness-products-guiding-strategic-expansion-efforts
+layout: article
 ---
 
 # AI Peru Agribusiness Market Expansion Project Overview

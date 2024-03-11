@@ -2,6 +2,7 @@
 title: Predictive AI Analytics for Public Health
 date: 2023-11-18
 permalink: posts/predictive-ai-analytics-for-public-health
+layout: article
 ---
 
 # Predictive AI Analytics for Public Health Technical Specifications

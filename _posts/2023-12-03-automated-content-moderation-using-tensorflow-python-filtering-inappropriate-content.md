@@ -2,6 +2,7 @@
 title: Automated Content Moderation using TensorFlow (Python) Filtering inappropriate content
 date: 2023-12-03
 permalink: posts/automated-content-moderation-using-tensorflow-python-filtering-inappropriate-content
+layout: article
 ---
 
 ### Objectives

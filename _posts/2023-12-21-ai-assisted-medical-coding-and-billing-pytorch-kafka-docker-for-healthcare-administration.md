@@ -2,6 +2,7 @@
 title: AI-assisted Medical Coding and Billing (PyTorch, Kafka, Docker) For healthcare administration
 date: 2023-12-21
 permalink: posts/ai-assisted-medical-coding-and-billing-pytorch-kafka-docker-for-healthcare-administration
+layout: article
 ---
 
 # AI-assisted Medical Coding and Billing Repository

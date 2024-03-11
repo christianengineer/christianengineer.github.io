@@ -2,6 +2,7 @@
 title: HealthDiagnoser AI for Healthcare Diagnosis
 date: 2023-11-24
 permalink: posts/healthdiagnoser-ai-for-healthcare-diagnosis
+layout: article
 ---
 
 # AI HealthDiagnoser AI for Healthcare Diagnosis Repository

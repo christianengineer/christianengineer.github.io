@@ -2,6 +2,7 @@
 title: Peru Nutritional Deficiency Identifier (Keras, TensorFlow, Pandas, Docker) Analyzes health and consumption data to identify regions with high rates of nutritional deficiencies, guiding food assistance programs
 date: 2024-02-26
 permalink: posts/peru-nutritional-deficiency-identifier-keras-tensorflow-pandas-docker-analyzes-health-and-consumption-data-to-identify-regions-with-high-rates-of-nutritional-deficiencies-guiding-food-assistance-programs
+layout: article
 ---
 
 ### AI Peru Nutritional Deficiency Identifier

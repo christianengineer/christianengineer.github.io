@@ -2,6 +2,7 @@
 title: Dynamic Pricing Model for Restaurants in Peru (Scikit-Learn, PyTorch, Airflow, Prometheus) Adjusts menu pricing in real-time based on demand, special events, and competitor pricing to maximize revenue
 date: 2024-03-05
 permalink: posts/dynamic-pricing-model-for-restaurants-in-peru-scikit-learn-pytorch-airflow-prometheus
+layout: article
 ---
 
 ## Machine Learning Dynamic Pricing Model for Restaurants in Peru

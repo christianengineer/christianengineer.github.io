@@ -2,6 +2,7 @@
 title: DataTrendz - Smart Analytics Tool
 date: 2023-11-21
 permalink: posts/datatrendz---smart-analytics-tool
+layout: article
 ---
 
 # DataTrendz - Smart Analytics Tool

@@ -2,6 +2,7 @@
 title: Technical Specifications For A Predictive Analytics for Retail Inventory Management
 date: 2023-11-18
 permalink: posts/technical-specifications-predictive-analytics-for-retail-inventory-management
+layout: article
 ---
 
 # Technical Specifications Document: Predictive Analytics for Retail Inventory Management Repository

@@ -2,6 +2,7 @@
 title: Air Quality Forecasting using TensorFlow (Python) Predicting environmental conditions
 date: 2023-12-03
 permalink: posts/air-quality-forecasting-using-tensorflow-python-predicting-environmental-conditions
+layout: article
 ---
 
 # AI Air Quality Forecasting using TensorFlow

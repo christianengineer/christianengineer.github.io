@@ -2,6 +2,7 @@
 title: Bespoke Philanthropy Impact Model (GPT-3, BERT, Flask, Prometheus) for Fundación Telefónica Peru, CSR Manager Pain Point, Measuring the impact of social programs Solution, AI models to predict and track the effectiveness of philanthropic initiatives, maximizing social benefits across Peru
 date: 2024-03-06
 permalink: posts/bespoke-philanthropy-impact-model-gpt-3-bert-flask-prometheus
+layout: article
 ---
 
 ## Objective and Benefits

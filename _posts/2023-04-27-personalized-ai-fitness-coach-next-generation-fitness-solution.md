@@ -2,6 +2,7 @@
 title: "Revolutionizing Wellness: Designing and Deploying a Scalable, Data-Driven Personalized AI Fitness Coach for Superior User Performance"
 date: 2023-04-27
 permalink: posts/personalized-ai-fitness-coach-next-generation-fitness-solution
+layout: article
 ---
 
 # Personalized AI Fitness Coach Repository

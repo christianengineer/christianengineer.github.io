@@ -2,6 +2,7 @@
 title: "Exponential Elevations: A Holistic Blueprint for Developing and Scaling an AI-Powered Natural Language Query Engine for Superior Data Handling and High Volume User Accessibility"
 date: 2023-06-30
 permalink: posts/understanding-ai-powered-natural-language-query-engine-for-databases
+layout: article
 ---
 
 ### Natural Language Query Engine for Databases

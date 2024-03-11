@@ -2,6 +2,7 @@
 title: "Blueprint for Progress: Creating an Industrially Scalable AI-Powered Image Caption Generator with Optimized Data Handling and Integrated Cloud Technologies"
 date: 2023-08-20
 permalink: posts/ai-powered-image-caption-generator-industrial-scalability-optimized-data-handling-cloud-technologies
+layout: article
 ---
 
 # Blueprint for Progress: Creating an Industrially Scalable AI-Powered Image Caption Generator with Optimized Data Handling and Integrated Cloud Technologies

@@ -2,6 +2,7 @@
 title: ML Experiment Tracking and Management Implement a system for tracking and managing machine learning experiments using tools like Weights & Biases or Cometml
 date: 2023-11-22
 permalink: posts/ml-experiment-tracking-and-management-implement-a-system-for-tracking-and-managing-machine-learning-experiments-using-tools-like-weights-biases-or-cometml
+layout: article
 ---
 
 ### Objectives

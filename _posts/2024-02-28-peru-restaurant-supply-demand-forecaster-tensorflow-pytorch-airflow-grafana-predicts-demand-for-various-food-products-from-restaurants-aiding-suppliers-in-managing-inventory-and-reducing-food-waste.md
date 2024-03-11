@@ -2,6 +2,7 @@
 title: Peru Restaurant Supply Demand Forecaster (TensorFlow, PyTorch, Airflow, Grafana) Predicts demand for various food products from restaurants, aiding suppliers in managing inventory and reducing food waste
 date: 2024-02-28
 permalink: posts/peru-restaurant-supply-demand-forecaster-tensorflow-pytorch-airflow-grafana-predicts-demand-for-various-food-products-from-restaurants-aiding-suppliers-in-managing-inventory-and-reducing-food-waste
+layout: article
 ---
 
 # AI Peru Restaurant Supply Demand Forecaster

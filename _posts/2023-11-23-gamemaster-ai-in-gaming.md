@@ -2,6 +2,7 @@
 title: GameMaster AI in Gaming
 date: 2023-11-23
 permalink: posts/gamemaster-ai-in-gaming
+layout: article
 ---
 
 # AI GameMaster AI in Gaming Repository

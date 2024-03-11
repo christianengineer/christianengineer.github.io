@@ -2,6 +2,7 @@
 title: AI in Healthcare Diagnostic Systems using TensorFlow (Python) Assisting in medical diagnoses
 date: 2023-12-03
 permalink: posts/ai-in-healthcare-diagnostic-systems-using-tensorflow-python-assisting-in-medical-diagnoses
+layout: article
 ---
 
 ## Objectives

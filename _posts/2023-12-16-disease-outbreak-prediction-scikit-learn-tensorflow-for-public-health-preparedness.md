@@ -2,6 +2,7 @@
 title: Disease Outbreak Prediction (Scikit-Learn, TensorFlow) For public health preparedness
 date: 2023-12-16
 permalink: posts/disease-outbreak-prediction-scikit-learn-tensorflow-for-public-health-preparedness
+layout: article
 ---
 
 ### AI Disease Outbreak Prediction Project

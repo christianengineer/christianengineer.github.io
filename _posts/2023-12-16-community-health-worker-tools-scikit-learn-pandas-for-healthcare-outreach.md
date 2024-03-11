@@ -2,6 +2,7 @@
 title: Community Health Worker Tools (Scikit-Learn, Pandas) For healthcare outreach
 date: 2023-12-16
 permalink: posts/community-health-worker-tools-scikit-learn-pandas-for-healthcare-outreach
+layout: article
 ---
 
 # AI Community Health Worker Tools Repository

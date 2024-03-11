@@ -2,6 +2,7 @@
 title: "Designing the Future: A Comprehensive Plan for Developing a Scalable, High-Performance AI-Powered Legal Document Analysis System"
 date: 2023-01-19
 permalink: posts/ai-powered-legal-document-analysis-guide
+layout: article
 ---
 
 # AI-Powered Legal Document Analysis

@@ -2,6 +2,7 @@
 title: Peru Educational Disparity Dashboard (TensorFlow, Dash, Spark, DVC) Visualizes educational disparities across regions, aiding in the targeted allocation of resources and interventions
 date: 2024-02-25
 permalink: posts/peru-educational-disparity-dashboard-tensorflow-dash-spark-dvc-visualizes-educational-disparities-across-regions-aiding-in-the-targeted-allocation-of-resources-and-interventions
+layout: article
 ---
 
 ## AI Peru Educational Disparity Dashboard

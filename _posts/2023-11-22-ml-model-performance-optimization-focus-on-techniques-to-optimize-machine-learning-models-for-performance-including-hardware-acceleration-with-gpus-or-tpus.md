@@ -2,6 +2,7 @@
 title: ML Model Performance Optimization Focus on techniques to optimize machine learning models for performance, including hardware acceleration with GPUs or TPUs
 date: 2023-11-22
 permalink: posts/ml-model-performance-optimization-focus-on-techniques-to-optimize-machine-learning-models-for-performance-including-hardware-acceleration-with-gpus-or-tpus
+layout: article
 ---
 
 # AI/ML Model Performance Optimization

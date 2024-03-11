@@ -2,6 +2,7 @@
 title: Mining Equipment Failure Prediction AI with TensorFlow and Keras for Minera Yanacocha (Lima, Peru), Maintenance Engineer's pain point is preventing unexpected equipment failures, solution is to analyze sensor data to predict equipment malfunctions, reducing downtime and maintenance costs
 date: 2024-03-06
 permalink: posts/mining-equipment-failure-prediction-ai-with-tensorflow-and-keras-for-minera-yanacocha-lima-peru
+layout: article
 ---
 
 # Mining Equipment Failure Prediction AI with TensorFlow and Keras

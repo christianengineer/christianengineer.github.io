@@ -2,6 +2,7 @@
 title: Election Campaign Analysis with Pandas (Python) Analyzing political data
 date: 2023-12-14
 permalink: posts/election-campaign-analysis-with-pandas-python-analyzing-political-data
+layout: article
 ---
 
 # AI Election Campaign Analysis with Pandas (Python)

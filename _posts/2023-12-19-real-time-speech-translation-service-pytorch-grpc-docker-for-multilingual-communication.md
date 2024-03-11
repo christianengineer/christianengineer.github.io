@@ -2,6 +2,7 @@
 title: Real-time Speech Translation Service (PyTorch, gRPC, Docker) For multilingual communication
 date: 2023-12-19
 permalink: posts/real-time-speech-translation-service-pytorch-grpc-docker-for-multilingual-communication
+layout: article
 ---
 
 # AI Real-time Speech Translation Service

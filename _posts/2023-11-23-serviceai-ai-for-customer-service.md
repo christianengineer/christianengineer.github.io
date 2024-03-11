@@ -2,6 +2,7 @@
 title: ServiceAI AI for Customer Service
 date: 2023-11-23
 permalink: posts/serviceai-ai-for-customer-service
+layout: article
 ---
 
 ### AI ServiceAI for Customer Service

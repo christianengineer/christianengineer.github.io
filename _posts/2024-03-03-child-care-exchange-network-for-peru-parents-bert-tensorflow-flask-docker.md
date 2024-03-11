@@ -2,6 +2,7 @@
 title: Child Care Exchange Network for Peru Parents (BERT, TensorFlow, Flask, Docker) Matches low-income families with affordable child care options, supporting parents in maintaining employment and generating income
 date: 2024-03-03
 permalink: posts/child-care-exchange-network-for-peru-parents-bert-tensorflow-flask-docker
+layout: article
 ---
 
 ## AI Child Care Exchange Network for Peru Parents

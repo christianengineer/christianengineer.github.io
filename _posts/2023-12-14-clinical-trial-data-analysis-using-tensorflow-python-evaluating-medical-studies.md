@@ -2,6 +2,7 @@
 title: Clinical Trial Data Analysis using TensorFlow (Python) Evaluating medical studies
 date: 2023-12-14
 permalink: posts/clinical-trial-data-analysis-using-tensorflow-python-evaluating-medical-studies
+layout: article
 ---
 
 # AI Clinical Trial Data Analysis using TensorFlow

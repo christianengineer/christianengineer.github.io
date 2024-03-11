@@ -2,6 +2,7 @@
 title: Peruvian Ministry of Production (NumPy, Pandas) Small Business Advisor pain point is supporting small business growth, solution is to develop a machine learning tool to advise small businesses on market trends and growth opportunities
 date: 2024-03-07
 permalink: posts/peruvian-ministry-of-production-numpy-pandas
+layout: article
 ---
 
 # Solution Overview

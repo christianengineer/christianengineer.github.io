@@ -2,6 +2,7 @@
 title: Real-time Medical Emergency Response System (Keras, RabbitMQ, Kubernetes) For healthcare
 date: 2023-12-18
 permalink: posts/real-time-medical-emergency-response-system-keras-rabbitmq-kubernetes-for-healthcare
+layout: article
 ---
 
 ## AI Real-time Medical Emergency Response System

@@ -2,6 +2,7 @@
 title: TradeAutomate - AI for Automated Trading
 date: 2023-11-21
 permalink: posts/tradeautomate---ai-for-automated-trading
+layout: article
 ---
 
 # AI TradeAutomate - AI for Automated Trading

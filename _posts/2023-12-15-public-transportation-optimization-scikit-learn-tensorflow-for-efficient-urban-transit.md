@@ -2,6 +2,7 @@
 title: Public Transportation Optimization (Scikit-Learn, TensorFlow) For efficient urban transit
 date: 2023-12-15
 permalink: posts/public-transportation-optimization-scikit-learn-tensorflow-for-efficient-urban-transit
+layout: article
 ---
 
 # AI Public Transportation Optimization System

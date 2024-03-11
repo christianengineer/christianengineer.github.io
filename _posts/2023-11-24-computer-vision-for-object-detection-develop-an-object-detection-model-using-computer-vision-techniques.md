@@ -2,6 +2,7 @@
 title: Computer Vision for Object Detection Develop an object detection model using computer vision techniques
 date: 2023-11-24
 permalink: posts/computer-vision-for-object-detection-develop-an-object-detection-model-using-computer-vision-techniques
+layout: article
 ---
 
 # AI Computer Vision for Object Detection

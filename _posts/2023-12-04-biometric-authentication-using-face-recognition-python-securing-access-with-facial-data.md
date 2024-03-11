@@ -2,6 +2,7 @@
 title: Biometric Authentication using Face Recognition (Python) Securing access with facial data
 date: 2023-12-04
 permalink: posts/biometric-authentication-using-face-recognition-python-securing-access-with-facial-data
+layout: article
 ---
 
 **Objectives:**

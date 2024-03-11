@@ -2,6 +2,7 @@
 title: Speech Recognition System Build a speech recognition system using deep learning
 date: 2023-11-24
 permalink: posts/speech-recognition-system-build-a-speech-recognition-system-using-deep-learning
+layout: article
 ---
 
 ### Objectives

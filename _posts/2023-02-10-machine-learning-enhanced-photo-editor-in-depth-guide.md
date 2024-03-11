@@ -2,6 +2,7 @@
 title: "Redefining Digital Imagery: A Comprehensive Blueprint for a Scalable and Cloud-Integrated AI-Based Photo Editor"
 date: 2023-02-10
 permalink: posts/machine-learning-enhanced-photo-editor-in-depth-guide
+layout: article
 ---
 
 # Machine Learning Enhanced Photo Editor

@@ -2,6 +2,7 @@
 title: Machine Learning for Cybersecurity Implement machine learning algorithms for cybersecurity applications
 date: 2023-11-25
 permalink: posts/machine-learning-for-cybersecurity-implement-machine-learning-algorithms-for-cybersecurity-applications
+layout: article
 ---
 
 # Objectives of the AI Machine Learning for Cybersecurity Repository

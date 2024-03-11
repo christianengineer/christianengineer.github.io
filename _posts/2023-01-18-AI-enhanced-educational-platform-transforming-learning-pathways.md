@@ -2,6 +2,7 @@
 title: "Revolutionizing Learning Landscape: A Comprehensive Blueprint for the Design, Development, and Deployment of a Robust, Scalable, and Data-Driven AI-Enhanced Digital Educational Platform"
 date: 2023-01-18
 permalink: posts/AI-enhanced-educational-platform-transforming-learning-pathways
+layout: article
 ---
 
 ```markdown

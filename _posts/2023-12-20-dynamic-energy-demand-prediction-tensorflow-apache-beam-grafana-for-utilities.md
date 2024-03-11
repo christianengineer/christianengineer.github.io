@@ -2,6 +2,7 @@
 title: Dynamic Energy Demand Prediction (TensorFlow, Apache Beam, Grafana) For utilities
 date: 2023-12-20
 permalink: posts/dynamic-energy-demand-prediction-tensorflow-apache-beam-grafana-for-utilities
+layout: article
 ---
 
 ## AI Dynamic Energy Demand Prediction Repository

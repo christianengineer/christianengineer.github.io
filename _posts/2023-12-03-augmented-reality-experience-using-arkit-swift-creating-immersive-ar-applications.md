@@ -2,6 +2,7 @@
 title: Augmented Reality Experience using ARKit (Swift) Creating immersive AR applications
 date: 2023-12-03
 permalink: posts/augmented-reality-experience-using-arkit-swift-creating-immersive-ar-applications
+layout: article
 ---
 
 # AI Augmented Reality Experience using ARKit

@@ -2,6 +2,7 @@
 title: Intelligent Public Transport Planner for Callao, Peru (TensorFlow, Keras, NetworkX) Revolutionizes public transport with AI, offering seamless connectivity and eco-friendly travel in Callao, Peru
 date: 2024-02-26
 permalink: posts/intelligent-public-transport-planner-for-callao-peru-tensorflow-keras-networkx-revolutionizes-public-transport-with-ai-offering-seamless-connectivity-and-eco-friendly-travel-in-callao-peru
+layout: article
 ---
 
 # AI Intelligent Public Transport Planner for Callao, Peru

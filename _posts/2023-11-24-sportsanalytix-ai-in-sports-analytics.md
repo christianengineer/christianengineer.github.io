@@ -2,6 +2,7 @@
 title: SportsAnalytix AI in Sports Analytics
 date: 2023-11-24
 permalink: posts/sportsanalytix-ai-in-sports-analytics
+layout: article
 ---
 
 # AI SportsAnalytix Repository

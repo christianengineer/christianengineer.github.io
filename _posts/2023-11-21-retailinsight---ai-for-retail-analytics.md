@@ -2,6 +2,7 @@
 title: RetailInsight - AI for Retail Analytics
 date: 2023-11-21
 permalink: posts/retailinsight---ai-for-retail-analytics
+layout: article
 ---
 
 # AI RetailInsight Repository

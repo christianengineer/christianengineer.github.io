@@ -2,6 +2,7 @@
 title: AssetManagerAI AI for Asset Management
 date: 2023-11-23
 permalink: posts/assetmanagerai-ai-for-asset-management
+layout: article
 ---
 
 ### AI Asset Manager for Asset Management

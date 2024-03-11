@@ -2,6 +2,7 @@
 title: AI-Enabled Customer Support Chatbot
 date: 2023-11-18
 permalink: posts/ai-enabled-customer-support-chatbot
+layout: article
 ---
 
 # AI-Enabled Customer Support Chatbot

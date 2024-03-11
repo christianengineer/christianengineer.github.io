@@ -2,6 +2,7 @@
 title: Machine Learning and Deep Learning Concepts
 date: 2023-10-05
 permalink: posts/understanding-machine-learning-deep-learning-concepts
+layout: article
 ---
 
 # Machine Learning and Deep Learning Concepts

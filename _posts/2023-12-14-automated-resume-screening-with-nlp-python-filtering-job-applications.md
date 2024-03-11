@@ -2,6 +2,7 @@
 title: Automated Resume Screening with NLP (Python) Filtering job applications
 date: 2023-12-14
 permalink: posts/automated-resume-screening-with-nlp-python-filtering-job-applications
+layout: article
 ---
 
 ## Objectives

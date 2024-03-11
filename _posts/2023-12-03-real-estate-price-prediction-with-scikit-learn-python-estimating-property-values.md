@@ -2,6 +2,7 @@
 title: Real Estate Price Prediction with Scikit-Learn (Python) Estimating property values
 date: 2023-12-03
 permalink: posts/real-estate-price-prediction-with-scikit-learn-python-estimating-property-values
+layout: article
 ---
 
 ## Objectives

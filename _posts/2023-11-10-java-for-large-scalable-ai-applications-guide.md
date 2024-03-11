@@ -2,6 +2,7 @@
 title: Java for Large Scalable AI Applications
 date: 2023-11-10
 permalink: posts/java-for-large-scalable-ai-applications-guide
+layout: article
 ---
 
 # Java for Large Scalable AI Applications

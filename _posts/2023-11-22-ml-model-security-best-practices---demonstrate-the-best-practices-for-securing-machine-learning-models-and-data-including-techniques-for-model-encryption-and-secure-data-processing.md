@@ -2,6 +2,7 @@
 title: ML Model Security Best Practices - Demonstrate the best practices for securing machine learning models and data, including techniques for model encryption and secure data processing.
 date: 2023-11-22
 permalink: posts/ml-model-security-best-practices---demonstrate-the-best-practices-for-securing-machine-learning-models-and-data-including-techniques-for-model-encryption-and-secure-data-processing
+layout: article
 ---
 
 ## AI ML Model Security Best Practices

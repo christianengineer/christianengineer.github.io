@@ -2,6 +2,7 @@
 title: AI-Based Wildlife Monitoring System
 date: 2023-11-18
 permalink: posts/ai-based-wildlife-monitoring-system
+layout: article
 ---
 
 # AI-Based Wildlife Monitoring System - Technical Specifications

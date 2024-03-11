@@ -2,6 +2,7 @@
 title: Predictive Analytics for Public Health Surveillance (Scikit-Learn, Flask, Airflow) For healthcare monitoring
 date: 2023-12-20
 permalink: posts/predictive-analytics-for-public-health-surveillance-scikit-learn-flask-airflow-for-healthcare-monitoring
+layout: article
 ---
 
 ## Objectives

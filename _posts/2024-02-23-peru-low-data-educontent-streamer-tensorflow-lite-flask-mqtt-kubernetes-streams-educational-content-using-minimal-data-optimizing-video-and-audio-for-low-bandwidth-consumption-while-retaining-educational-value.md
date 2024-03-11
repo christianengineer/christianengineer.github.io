@@ -2,6 +2,7 @@
 title: Peru Low-Data EduContent Streamer (TensorFlow Lite, Flask, MQTT, Kubernetes) Streams educational content using minimal data, optimizing video and audio for low-bandwidth consumption while retaining educational value
 date: 2024-02-23
 permalink: posts/peru-low-data-educontent-streamer-tensorflow-lite-flask-mqtt-kubernetes-streams-educational-content-using-minimal-data-optimizing-video-and-audio-for-low-bandwidth-consumption-while-retaining-educational-value
+layout: article
 ---
 
 ### Objectives:

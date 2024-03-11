@@ -2,6 +2,7 @@
 title: Scalable Data Pipelines for ML - Implement a scalable data pipeline using technologies like Apache Kafka, Apache Spark, or Apache Beam.
 date: 2023-11-22
 permalink: posts/scalable-data-pipelines-for-ml---implement-a-scalable-data-pipeline-using-technologies-like-apache-kafka-apache-spark-or-apache-beam
+layout: article
 ---
 
 ## AI Scalable Data Pipelines for ML

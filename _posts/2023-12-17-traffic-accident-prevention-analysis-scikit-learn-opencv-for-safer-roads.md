@@ -2,6 +2,7 @@
 title: Traffic Accident Prevention Analysis (Scikit-Learn, OpenCV) For safer roads
 date: 2023-12-17
 permalink: posts/traffic-accident-prevention-analysis-scikit-learn-opencv-for-safer-roads
+layout: article
 ---
 
 ## AI Traffic Accident Prevention Analysis (Scikit-Learn, OpenCV) For Safer Roads

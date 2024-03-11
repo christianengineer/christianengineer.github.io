@@ -2,6 +2,7 @@
 title: Precision Agriculture using Satellite Imagery (Keras, Hadoop, Kubernetes) For farming efficiency
 date: 2023-12-20
 permalink: posts/precision-agriculture-using-satellite-imagery-keras-hadoop-kubernetes-for-farming-efficiency
+layout: article
 ---
 
 ### AI Precision Agriculture using Satellite Imagery

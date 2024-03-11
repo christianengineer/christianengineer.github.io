@@ -2,6 +2,7 @@
 title: Customized Marketing Campaign Analysis (Keras, Spark, Prometheus) For advertising ROI
 date: 2023-12-21
 permalink: posts/customized-marketing-campaign-analysis-keras-spark-prometheus-for-advertising-roi
+layout: article
 ---
 
 ## Objectives

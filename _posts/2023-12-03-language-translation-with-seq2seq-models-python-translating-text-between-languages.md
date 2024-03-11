@@ -2,6 +2,7 @@
 title: Language Translation with Seq2Seq Models (Python) Translating text between languages
 date: 2023-12-03
 permalink: posts/language-translation-with-seq2seq-models-python-translating-text-between-languages
+layout: article
 ---
 
 # AI Language Translation with Seq2Seq Models

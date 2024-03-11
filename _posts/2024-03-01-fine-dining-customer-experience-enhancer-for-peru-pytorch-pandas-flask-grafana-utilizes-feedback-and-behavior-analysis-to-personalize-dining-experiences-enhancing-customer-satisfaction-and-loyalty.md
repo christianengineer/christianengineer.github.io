@@ -2,6 +2,7 @@
 title: Fine Dining Customer Experience Enhancer for Peru (PyTorch, Pandas, Flask, Grafana) Utilizes feedback and behavior analysis to personalize dining experiences, enhancing customer satisfaction and loyalty
 date: 2024-03-01
 permalink: posts/fine-dining-customer-experience-enhancer-for-peru-pytorch-pandas-flask-grafana-utilizes-feedback-and-behavior-analysis-to-personalize-dining-experiences-enhancing-customer-satisfaction-and-loyalty
+layout: article
 ---
 
 **Objective:**

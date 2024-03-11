@@ -2,6 +2,7 @@
 title: Fair Lending Analysis Tools (Scikit-Learn, TensorFlow) Combating financial biases
 date: 2023-12-16
 permalink: posts/fair-lending-analysis-tools-scikit-learn-tensorflow-combating-financial-biases
+layout: article
 ---
 
 # AI Fair Lending Analysis Tools Repository

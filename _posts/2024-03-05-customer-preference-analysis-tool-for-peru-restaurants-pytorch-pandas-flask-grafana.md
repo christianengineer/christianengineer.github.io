@@ -2,6 +2,7 @@
 title: Customer Preference Analysis Tool for Peru Restaurants (PyTorch, Pandas, Flask, Grafana) Analyzes customer feedback and dining patterns to tailor menu offerings and improve satisfaction
 date: 2024-03-05
 permalink: posts/customer-preference-analysis-tool-for-peru-restaurants-pytorch-pandas-flask-grafana
+layout: article
 ---
 
 # Machine Learning Customer Preference Analysis Tool for Peru Restaurants

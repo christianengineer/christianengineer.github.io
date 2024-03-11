@@ -2,6 +2,7 @@
 title: "Transformative Horizon: A Strategic Blueprint for Designing, Developing, and Deploying a Scalable AI-Powered Virtual Fashion Stylist App with Robust Data Handling and Superior Performance for High User Traffic"
 date: 2023-08-22
 permalink: posts/virtual-fashion-stylist-app-ai-based-personalized-styling-scalable-data-handling
+layout: article
 ---
 
 # Virtual Fashion Stylist App

@@ -2,6 +2,7 @@
 title: Automated Data Quality Checks and Balancing Develop automated processes for checking data quality and handling imbalanced datasets in machine learning projects
 date: 2023-11-22
 permalink: posts/automated-data-quality-checks-and-balancing-develop-automated-processes-for-checking-data-quality-and-handling-imbalanced-datasets-in-machine-learning-projects
+layout: article
 ---
 
 # AI Automated Data Quality Checks and Balancing

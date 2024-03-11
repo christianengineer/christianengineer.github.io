@@ -2,6 +2,7 @@
 title: Information Accessibility Mapping Tool for Peru (Scikit-Learn, GeoPandas, Kafka, Docker) Maps regions with limited access to information and technology, supporting policymakers in infrastructure planning and deployment
 date: 2024-02-24
 permalink: posts/information-accessibility-mapping-tool-for-peru-scikit-learn-geopandas-kafka-docker-maps-regions-with-limited-access-to-information-and-technology-supporting-policymakers-in-infrastructure-planning-and-deployment
+layout: article
 ---
 
 ## AI Information Accessibility Mapping Tool for Peru

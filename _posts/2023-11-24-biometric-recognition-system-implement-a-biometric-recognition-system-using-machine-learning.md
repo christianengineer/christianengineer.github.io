@@ -2,6 +2,7 @@
 title: Biometric Recognition System Implement a biometric recognition system using machine learning
 date: 2023-11-24
 permalink: posts/biometric-recognition-system-implement-a-biometric-recognition-system-using-machine-learning
+layout: article
 ---
 
 ## Objectives

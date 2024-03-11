@@ -2,6 +2,7 @@
 title: Healthcare Data Analysis with ML Analyze healthcare data using machine learning techniques
 date: 2023-11-24
 permalink: posts/healthcare-data-analysis-with-ml-analyze-healthcare-data-using-machine-learning-techniques
+layout: article
 ---
 
 ### Objectives

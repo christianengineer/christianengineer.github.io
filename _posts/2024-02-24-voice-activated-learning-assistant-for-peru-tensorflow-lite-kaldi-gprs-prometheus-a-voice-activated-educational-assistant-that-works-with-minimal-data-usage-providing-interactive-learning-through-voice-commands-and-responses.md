@@ -2,6 +2,7 @@
 title: Voice-Activated Learning Assistant for Peru (TensorFlow Lite, Kaldi, GPRS, Prometheus) A voice-activated educational assistant that works with minimal data usage, providing interactive learning through voice commands and responses
 date: 2024-02-24
 permalink: posts/voice-activated-learning-assistant-for-peru-tensorflow-lite-kaldi-gprs-prometheus-a-voice-activated-educational-assistant-that-works-with-minimal-data-usage-providing-interactive-learning-through-voice-commands-and-responses
+layout: article
 ---
 
 ## AI Voice-Activated Learning Assistant for Peru

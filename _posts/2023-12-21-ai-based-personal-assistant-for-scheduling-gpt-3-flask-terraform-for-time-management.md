@@ -2,6 +2,7 @@
 title: AI-based Personal Assistant for Scheduling (GPT-3, Flask, Terraform) For time management
 date: 2023-12-21
 permalink: posts/ai-based-personal-assistant-for-scheduling-gpt-3-flask-terraform-for-time-management
+layout: article
 ---
 
 ## Objectives

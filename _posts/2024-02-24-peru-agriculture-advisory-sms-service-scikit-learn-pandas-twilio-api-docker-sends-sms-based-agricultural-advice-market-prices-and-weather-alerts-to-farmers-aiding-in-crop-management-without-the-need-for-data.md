@@ -2,6 +2,7 @@
 title: Peru Agriculture Advisory SMS Service (Scikit-Learn, Pandas, Twilio API, Docker) Sends SMS-based agricultural advice, market prices, and weather alerts to farmers, aiding in crop management without the need for data
 date: 2024-02-24
 permalink: posts/peru-agriculture-advisory-sms-service-scikit-learn-pandas-twilio-api-docker-sends-sms-based-agricultural-advice-market-prices-and-weather-alerts-to-farmers-aiding-in-crop-management-without-the-need-for-data
+layout: article
 ---
 
 ## Objectives:

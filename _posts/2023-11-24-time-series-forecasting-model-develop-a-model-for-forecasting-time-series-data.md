@@ -2,6 +2,7 @@
 title: Time Series Forecasting Model Develop a model for forecasting time series data
 date: 2023-11-24
 permalink: posts/time-series-forecasting-model-develop-a-model-for-forecasting-time-series-data
+layout: article
 ---
 
 ### Objectives

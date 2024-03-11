@@ -2,6 +2,7 @@
 title: Consumer Trends and Insights Dashboard for Peru (BERT, GPT-3, Flask, Grafana) Aggregates and analyzes consumer behavior data to provide real-time insights into food consumption trends and preferences
 date: 2024-02-28
 permalink: posts/consumer-trends-and-insights-dashboard-for-peru-bert-gpt-3-flask-grafana-aggregates-and-analyzes-consumer-behavior-data-to-provide-real-time-insights-into-food-consumption-trends-and-preferences
+layout: article
 ---
 
 # AI Consumer Trends and Insights Dashboard for Peru

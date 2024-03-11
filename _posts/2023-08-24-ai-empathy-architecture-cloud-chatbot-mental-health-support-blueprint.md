@@ -2,6 +2,7 @@
 title: "Architecting AI Empathy: A Scalable Cloud-Based Chatbot Development Blueprint for Advanced Mental Health Support"
 date: 2023-08-24
 permalink: posts/ai-empathy-architecture-cloud-chatbot-mental-health-support-blueprint
+layout: article
 ---
 
 # Architecting AI Empathy: A Scalable Cloud-Based Chatbot Development Blueprint for Advanced Mental Health Support

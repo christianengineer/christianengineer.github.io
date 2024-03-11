@@ -2,6 +2,7 @@
 title: EnviroPredict Environmental Forecasting AI
 date: 2023-11-23
 permalink: posts/enviropredict-environmental-forecasting-ai
+layout: article
 ---
 
 # AI EnviroPredict Environmental Forecasting AI Repository

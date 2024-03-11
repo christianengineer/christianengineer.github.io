@@ -2,6 +2,7 @@
 title: Housing Quality Assessment AI for Peru (PyTorch, OpenCV, Flask, Kubernetes) Uses satellite imagery and on-ground sensor data to assess housing quality and infrastructure needs in impoverished areas
 date: 2024-02-27
 permalink: posts/housing-quality-assessment-ai-for-peru-pytorch-opencv-flask-kubernetes-uses-satellite-imagery-and-on-ground-sensor-data-to-assess-housing-quality-and-infrastructure-needs-in-impoverished-areas
+layout: article
 ---
 
 ## Objectives:

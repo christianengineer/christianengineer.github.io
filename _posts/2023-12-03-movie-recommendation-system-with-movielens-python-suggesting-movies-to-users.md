@@ -2,6 +2,7 @@
 title: Movie Recommendation System with MovieLens (Python) Suggesting movies to users
 date: 2023-12-03
 permalink: posts/movie-recommendation-system-with-movielens-python-suggesting-movies-to-users
+layout: article
 ---
 
 # AI Movie Recommendation System with MovieLens

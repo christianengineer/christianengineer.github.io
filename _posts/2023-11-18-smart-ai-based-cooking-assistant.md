@@ -2,6 +2,7 @@
 title: Smart AI-Based Cooking Assistant
 date: 2023-11-18
 permalink: posts/smart-ai-based-cooking-assistant
+layout: article
 ---
 
 # Smart AI-Based Cooking Assistant - Technical Specifications

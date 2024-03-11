@@ -2,6 +2,7 @@
 title: Retail Foot Traffic Predictor (PyTorch, Scikit-Learn, Kafka, Kubernetes) for Plaza Vea, Operations Manager's pain point is inefficient staff and inventory management due to unpredictable customer flow, solution is to predict peak shopping times using historical data, allowing for optimized staff scheduling and inventory management, improving efficiency and customer service
 date: 2024-03-06
 permalink: posts/retail-foot-traffic-predictor-pytorch-scikit-learn-kafka-kubernetes
+layout: article
 ---
 
 # Retail Foot Traffic Predictor for Plaza Vea

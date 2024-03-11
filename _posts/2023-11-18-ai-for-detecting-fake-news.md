@@ -2,6 +2,7 @@
 title: AI for Detecting Fake News
 date: 2023-11-18
 permalink: posts/ai-for-detecting-fake-news
+layout: article
 ---
 
 <<<<<<< HEAD

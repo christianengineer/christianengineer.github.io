@@ -2,6 +2,7 @@
 title: Deep Reinforcement Learning for Gaming Implement a deep reinforcement learning algorithm in a game environment
 date: 2023-11-24
 permalink: posts/deep-reinforcement-learning-for-gaming-implement-a-deep-reinforcement-learning-algorithm-in-a-game-environment
+layout: article
 ---
 
 ### Objectives

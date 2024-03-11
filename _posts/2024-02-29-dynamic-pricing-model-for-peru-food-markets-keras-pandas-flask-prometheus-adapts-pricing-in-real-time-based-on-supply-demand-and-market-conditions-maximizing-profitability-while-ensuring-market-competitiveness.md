@@ -2,6 +2,7 @@
 title: Dynamic Pricing Model for Peru Food Markets (Keras, Pandas, Flask, Prometheus) Adapts pricing in real-time based on supply, demand, and market conditions, maximizing profitability while ensuring market competitiveness
 date: 2024-02-29
 permalink: posts/dynamic-pricing-model-for-peru-food-markets-keras-pandas-flask-prometheus-adapts-pricing-in-real-time-based-on-supply-demand-and-market-conditions-maximizing-profitability-while-ensuring-market-competitiveness
+layout: article
 ---
 
 # AI Dynamic Pricing Model for Peru Food Markets

@@ -2,6 +2,7 @@
 title: Custom Tax Compliance Advisor (BERT, GPT-3, Spark, DVC) for SUNAT, Tax Compliance Officer's pain point is navigating complex and evolving tax regulations, solution is to provide up-to-date, personalized guidance for businesses on tax compliance, reducing errors and penalties, and streamlining the tax filing process in Peru
 date: 2024-03-06
 permalink: posts/custom-tax-compliance-advisor-bert-gpt-3-spark-dvc
+layout: article
 ---
 
 ## Objective and Benefits

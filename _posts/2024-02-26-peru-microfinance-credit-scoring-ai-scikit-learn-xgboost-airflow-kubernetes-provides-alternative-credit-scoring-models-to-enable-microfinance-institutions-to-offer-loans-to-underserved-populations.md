@@ -2,6 +2,7 @@
 title: Peru Microfinance Credit Scoring AI (Scikit-Learn, XGBoost, Airflow, Kubernetes) Provides alternative credit scoring models to enable microfinance institutions to offer loans to underserved populations
 date: 2024-02-26
 permalink: posts/peru-microfinance-credit-scoring-ai-scikit-learn-xgboost-airflow-kubernetes-provides-alternative-credit-scoring-models-to-enable-microfinance-institutions-to-offer-loans-to-underserved-populations
+layout: article
 ---
 
 ### Objectives:

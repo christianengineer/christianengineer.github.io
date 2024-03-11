@@ -2,6 +2,7 @@
 title: Energy Consumption Forecasting with LSTM (Python) Predicting utility usage
 date: 2023-12-04
 permalink: posts/energy-consumption-forecasting-with-lstm-python-predicting-utility-usage
+layout: article
 ---
 
 ## Objectives of the AI Energy Consumption Forecasting with LSTM (Python) Repository

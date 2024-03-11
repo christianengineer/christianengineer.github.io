@@ -2,6 +2,7 @@
 title: Cultural Awareness Educational Apps (Unity, TensorFlow) For diversity and inclusion
 date: 2023-12-17
 permalink: posts/cultural-awareness-educational-apps-unity-tensorflow-for-diversity-and-inclusion
+layout: article
 ---
 
 ## Objectives

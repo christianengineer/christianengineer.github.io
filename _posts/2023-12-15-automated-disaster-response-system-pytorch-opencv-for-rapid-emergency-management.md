@@ -2,6 +2,7 @@
 title: Automated Disaster Response System (PyTorch, OpenCV) For rapid emergency management
 date: 2023-12-15
 permalink: posts/automated-disaster-response-system-pytorch-opencv-for-rapid-emergency-management
+layout: article
 ---
 
 ## AI Automated Disaster Response System

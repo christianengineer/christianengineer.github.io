@@ -2,6 +2,7 @@
 title: Automated Vehicle Number Plate Recognition Create a system for recognizing vehicle number plates
 date: 2023-11-24
 permalink: posts/automated-vehicle-number-plate-recognition-create-a-system-for-recognizing-vehicle-number-plates
+layout: article
 ---
 
 ## Objectives

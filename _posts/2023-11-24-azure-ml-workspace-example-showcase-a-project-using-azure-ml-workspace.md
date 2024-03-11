@@ -2,6 +2,7 @@
 title: Azure ML Workspace Example Showcase a project using Azure ML workspace
 date: 2023-11-24
 permalink: posts/azure-ml-workspace-example-showcase-a-project-using-azure-ml-workspace
+layout: article
 ---
 
 # AI Azure ML Workspace Example Showcase

@@ -2,6 +2,7 @@
 title: Stock Price Prediction using Keras (Python) Forecasting market trends
 date: 2023-12-02
 permalink: posts/stock-price-prediction-using-keras-python-forecasting-market-trends
+layout: article
 ---
 
 ## Objectives of the AI Stock Price Prediction using Keras (Python) Forecasting Market Trends Repository

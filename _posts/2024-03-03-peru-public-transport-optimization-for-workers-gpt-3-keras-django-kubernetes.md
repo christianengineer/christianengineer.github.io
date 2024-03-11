@@ -2,6 +2,7 @@
 title: Peru Public Transport Optimization for Workers (GPT-3, Keras, Django, Kubernetes) Filters and optimizes public transport routes and schedules, reducing commute times and costs for low-income workers
 date: 2024-03-03
 permalink: posts/peru-public-transport-optimization-for-workers-gpt-3-keras-django-kubernetes
+layout: article
 ---
 
 ## Objectives:

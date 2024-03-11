@@ -2,6 +2,7 @@
 title: AI-driven Social Media Analytics Analyze social media data using AI techniques
 date: 2023-11-25
 permalink: posts/ai-driven-social-media-analytics-analyze-social-media-data-using-ai-techniques
+layout: article
 ---
 
 ### Objectives

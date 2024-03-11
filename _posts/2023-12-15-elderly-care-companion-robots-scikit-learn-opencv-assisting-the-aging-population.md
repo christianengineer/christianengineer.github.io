@@ -2,6 +2,7 @@
 title: Elderly Care Companion Robots (Scikit-Learn, OpenCV) Assisting the aging population
 date: 2023-12-15
 permalink: posts/elderly-care-companion-robots-scikit-learn-opencv-assisting-the-aging-population
+layout: article
 ---
 
 # AI Elderly Care Companion Robots Repository

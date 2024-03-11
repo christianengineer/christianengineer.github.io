@@ -2,6 +2,7 @@
 title: Staff Performance and Training Enhancer in Peru (PyTorch, TensorFlow, Airflow, Grafana) Utilizes staff performance data to recommend personalized training programs, enhancing service quality and efficiency
 date: 2024-03-05
 permalink: posts/staff-performance-and-training-enhancer-in-peru-pytorch-tensorflow-airflow-grafana
+layout: article
 ---
 
 # Machine Learning Staff Performance and Training Enhancer

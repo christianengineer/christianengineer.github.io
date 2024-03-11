@@ -2,6 +2,7 @@
 title: Real-time Public Transit Optimization (Keras, RabbitMQ, Docker) For urban transportation
 date: 2023-12-18
 permalink: posts/real-time-public-transit-optimization-keras-rabbitmq-docker-for-urban-transportation
+layout: article
 ---
 
 ### Objectives

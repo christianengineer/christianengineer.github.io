@@ -2,6 +2,7 @@
 title: Large Scale Sentiment Analysis for Social Media (NLTK, Spark, Airflow) For market insights
 date: 2023-12-20
 permalink: posts/large-scale-sentiment-analysis-for-social-media-nltk-spark-airflow-for-market-insights
+layout: article
 ---
 
 # AI Large Scale Sentiment Analysis for Social Media

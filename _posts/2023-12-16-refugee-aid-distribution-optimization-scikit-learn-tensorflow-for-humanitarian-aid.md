@@ -2,6 +2,7 @@
 title: Refugee Aid Distribution Optimization (Scikit-Learn, TensorFlow) For humanitarian aid
 date: 2023-12-16
 permalink: posts/refugee-aid-distribution-optimization-scikit-learn-tensorflow-for-humanitarian-aid
+layout: article
 ---
 
 # AI Refugee Aid Distribution Optimization

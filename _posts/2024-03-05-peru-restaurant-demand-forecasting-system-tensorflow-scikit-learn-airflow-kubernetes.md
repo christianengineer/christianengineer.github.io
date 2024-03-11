@@ -2,6 +2,7 @@
 title: Peru Restaurant Demand Forecasting System (TensorFlow, Scikit-Learn, Airflow, Kubernetes) Predicts customer demand to optimize staffing, inventory, and reduce food waste
 date: 2024-03-05
 permalink: posts/peru-restaurant-demand-forecasting-system-tensorflow-scikit-learn-airflow-kubernetes
+layout: article
 ---
 
 # Machine Learning Peru Restaurant Demand Forecasting System

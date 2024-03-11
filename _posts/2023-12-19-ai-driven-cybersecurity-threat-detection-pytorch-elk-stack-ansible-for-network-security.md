@@ -2,6 +2,7 @@
 title: AI-driven Cybersecurity Threat Detection (PyTorch, ELK Stack, Ansible) For network security
 date: 2023-12-19
 permalink: posts/ai-driven-cybersecurity-threat-detection-pytorch-elk-stack-ansible-for-network-security
+layout: article
 ---
 
 # AI-driven Cybersecurity Threat Detection

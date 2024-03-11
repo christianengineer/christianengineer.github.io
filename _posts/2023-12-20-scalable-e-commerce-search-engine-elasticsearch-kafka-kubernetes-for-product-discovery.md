@@ -2,6 +2,7 @@
 title: Scalable E-commerce Search Engine (Elasticsearch, Kafka, Kubernetes) For product discovery
 date: 2023-12-20
 permalink: posts/scalable-e-commerce-search-engine-elasticsearch-kafka-kubernetes-for-product-discovery
+layout: article
 ---
 
 # Objectives of AI Scalable E-commerce Search Engine

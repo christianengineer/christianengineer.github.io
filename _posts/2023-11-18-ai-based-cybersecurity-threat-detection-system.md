@@ -2,6 +2,7 @@
 title: AI-Based Cybersecurity Threat Detection System
 date: 2023-11-18
 permalink: posts/ai-based-cybersecurity-threat-detection-system
+layout: article
 ---
 
 # AI-Based Cybersecurity Threat Detection System

@@ -2,6 +2,7 @@
 title: AI-Driven Retail Customer Experience Enhancer
 date: 2023-11-18
 permalink: posts/ai-driven-retail-customer-experience-enhancer
+layout: article
 ---
 
 # AI-Driven Retail Customer Experience Enhancer

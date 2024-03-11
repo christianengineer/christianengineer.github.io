@@ -2,6 +2,7 @@
 title: VoicePal - Interactive Voice Assistant
 date: 2023-11-21
 permalink: posts/voicepal---interactive-voice-assistant
+layout: article
 ---
 
 # AI VoicePal - Interactive Voice Assistant Repository

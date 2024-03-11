@@ -2,6 +2,7 @@
 title: Waste Management Optimization AI with Scikit-Learn and TensorFlow for Municipalidad de Miraflores (Lima, Peru), Environmental Planner's pain point is reducing waste collection costs, solution is to use ML to optimize waste collection routes and schedules, enhancing efficiency and sustainability
 date: 2024-03-06
 permalink: posts/waste-management-optimization-ai-with-scikit-learn-and-tensorflow-for-municipalidad-de-miraflores-lima-peru
+layout: article
 ---
 
 # Waste Management Optimization AI Solution for Municipalidad de Miraflores

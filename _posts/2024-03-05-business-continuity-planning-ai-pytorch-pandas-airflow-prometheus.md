@@ -2,6 +2,7 @@
 title: Business Continuity Planning AI (PyTorch, Pandas, Airflow, Prometheus) for Cineplanet, Operations Manager Pain Point, Unpredictable closures due to health crises or natural disasters. Solution, Predictive analytics for minimizing downtime and strategizing rapid response, ensuring business continuity in Peru's volatile environment
 date: 2024-03-05
 permalink: posts/business-continuity-planning-ai-pytorch-pandas-airflow-prometheus
+layout: article
 ---
 
 # Business Continuity Planning AI for Cineplanet

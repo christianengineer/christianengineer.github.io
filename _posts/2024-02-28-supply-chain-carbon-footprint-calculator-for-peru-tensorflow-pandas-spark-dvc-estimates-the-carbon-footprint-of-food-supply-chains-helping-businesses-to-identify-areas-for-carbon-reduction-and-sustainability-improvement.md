@@ -2,6 +2,7 @@
 title: Supply Chain Carbon Footprint Calculator for Peru (TensorFlow, Pandas, Spark, DVC) Estimates the carbon footprint of food supply chains, helping businesses to identify areas for carbon reduction and sustainability improvement
 date: 2024-02-28
 permalink: posts/supply-chain-carbon-footprint-calculator-for-peru-tensorflow-pandas-spark-dvc-estimates-the-carbon-footprint-of-food-supply-chains-helping-businesses-to-identify-areas-for-carbon-reduction-and-sustainability-improvement
+layout: article
 ---
 
 # AI Supply Chain Carbon Footprint Calculator for Peru

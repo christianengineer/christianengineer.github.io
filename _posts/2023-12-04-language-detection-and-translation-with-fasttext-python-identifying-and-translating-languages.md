@@ -2,6 +2,7 @@
 title: Language Detection and Translation with FastText (Python) Identifying and translating languages
 date: 2023-12-04
 permalink: posts/language-detection-and-translation-with-fasttext-python-identifying-and-translating-languages
+layout: article
 ---
 
 ### Objectives

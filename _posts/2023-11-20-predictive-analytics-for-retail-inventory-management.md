@@ -2,6 +2,7 @@
 title: Predictive Analytics for Retail Inventory Management
 date: 2023-11-20
 permalink: posts/predictive-analytics-for-retail-inventory-management
+layout: article
 ---
 
 # Predictive Analytics for Retail Inventory Management

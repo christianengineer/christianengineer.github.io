@@ -2,6 +2,7 @@
 title: "Cloud Computing Platforms: AWS, Azure, GCP"
 date: 2023-10-27
 permalink: posts/comparing-cloud-computing-platforms-aws-azure-gcp-guide
+layout: article
 ---
 
 # Cloud Computing Platforms: AWS, Azure, GCP

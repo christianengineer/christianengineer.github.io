@@ -2,6 +2,7 @@
 title: Smart Water Management System (TensorFlow, Flask, Terraform) For resource conservation
 date: 2023-12-18
 permalink: posts/smart-water-management-system-tensorflow-flask-terraform-for-resource-conservation
+layout: article
 ---
 
 # AI Smart Water Management System

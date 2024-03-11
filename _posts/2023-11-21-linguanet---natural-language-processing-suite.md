@@ -2,6 +2,7 @@
 title: LinguaNet - Natural Language Processing Suite
 date: 2023-11-21
 permalink: posts/linguanet---natural-language-processing-suite
+layout: article
 ---
 
 # AI LinguaNet - Natural Language Processing Suite

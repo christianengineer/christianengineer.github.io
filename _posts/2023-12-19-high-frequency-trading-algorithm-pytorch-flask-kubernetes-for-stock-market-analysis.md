@@ -2,6 +2,7 @@
 title: High-frequency Trading Algorithm (PyTorch, Flask, Kubernetes) For stock market analysis
 date: 2023-12-19
 permalink: posts/high-frequency-trading-algorithm-pytorch-flask-kubernetes-for-stock-market-analysis
+layout: article
 ---
 
 ## Objectives of AI High-frequency Trading Algorithm Repository

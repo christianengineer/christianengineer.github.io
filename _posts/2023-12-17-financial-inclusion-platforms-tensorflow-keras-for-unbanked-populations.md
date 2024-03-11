@@ -2,6 +2,7 @@
 title: Financial Inclusion Platforms (TensorFlow, Keras) For unbanked populations
 date: 2023-12-17
 permalink: posts/financial-inclusion-platforms-tensorflow-keras-for-unbanked-populations
+layout: article
 ---
 
 ### AI Financial Inclusion Platforms for Unbanked Populations

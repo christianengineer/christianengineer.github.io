@@ -2,6 +2,7 @@
 title: Automated Legal Contract Analysis (GPT-3, RabbitMQ, Terraform) For legal services
 date: 2023-12-19
 permalink: posts/automated-legal-contract-analysis-gpt-3-rabbitmq-terraform-for-legal-services
+layout: article
 ---
 
 ### Objectives

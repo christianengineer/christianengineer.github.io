@@ -2,6 +2,7 @@
 title: "Masterplan for Advanced Scalability: Innovating Secure Facial Recognition through Comprehensive Design, Robust AI Integration and Dynamic Cloud Technologies"
 date: 2023-01-12
 permalink: posts/masterplan-advanced-scalability-secure-facial-recognition-robust-ai-integration-dynamic-cloud-technologies
+layout: article
 ---
 
 # Masterplan for Advanced Scalability: Innovating Secure Facial Recognition through Comprehensive Design, Robust AI Integration and Dynamic Cloud Technologies

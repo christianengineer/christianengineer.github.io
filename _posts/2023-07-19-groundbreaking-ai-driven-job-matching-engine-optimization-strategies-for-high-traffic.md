@@ -2,6 +2,7 @@
 title: "Transforming Recruitment Paradigm: A Master Plan for Designing an Ultra-Scalable, AI-Powered, Cloud-Facilitated Job Matching Engine Optimized for High-Volume Data Handling and Traffic Efficiency"
 date: 2023-07-19
 permalink: posts/groundbreaking-ai-driven-job-matching-engine-optimization-strategies-for-high-traffic
+layout: article
 ---
 
 # AI-Driven Job Matching Engine Repository

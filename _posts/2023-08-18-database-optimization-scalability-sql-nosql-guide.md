@@ -2,6 +2,7 @@
 title: "Database Optimization and Scalability with SQL and NoSQL"
 date: 2023-08-18
 permalink: posts/database-optimization-scalability-sql-nosql-guide
+layout: article
 ---
 
 # Database Optimization and Scalability (SQL and NoSQL)

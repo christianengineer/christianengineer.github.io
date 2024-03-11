@@ -2,6 +2,7 @@
 title: Online Review Sentiment Analyzer for Peru Restaurants (BERT, GPT-3, Kafka, Docker) Extracts insights from online reviews, identifying areas for improvement and highlighting strengths
 date: 2024-03-05
 permalink: posts/online-review-sentiment-analyzer-for-peru-restaurants-bert-gpt-3-kafka-docker
+layout: article
 ---
 
 # Machine Learning Online Review Sentiment Analyzer for Peru Restaurants

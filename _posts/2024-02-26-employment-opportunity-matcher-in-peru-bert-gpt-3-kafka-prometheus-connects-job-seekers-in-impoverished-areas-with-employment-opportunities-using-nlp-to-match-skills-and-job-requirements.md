@@ -2,6 +2,7 @@
 title: Employment Opportunity Matcher in Peru (BERT, GPT-3, Kafka, Prometheus) Connects job seekers in impoverished areas with employment opportunities, using NLP to match skills and job requirements
 date: 2024-02-26
 permalink: posts/employment-opportunity-matcher-in-peru-bert-gpt-3-kafka-prometheus-connects-job-seekers-in-impoverished-areas-with-employment-opportunities-using-nlp-to-match-skills-and-job-requirements
+layout: article
 ---
 
 ## AI Employment Opportunity Matcher in Peru

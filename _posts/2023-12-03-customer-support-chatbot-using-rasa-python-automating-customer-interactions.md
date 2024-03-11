@@ -2,6 +2,7 @@
 title: Customer Support Chatbot using Rasa (Python) Automating customer interactions
 date: 2023-12-03
 permalink: posts/customer-support-chatbot-using-rasa-python-automating-customer-interactions
+layout: article
 ---
 
 ### Objectives

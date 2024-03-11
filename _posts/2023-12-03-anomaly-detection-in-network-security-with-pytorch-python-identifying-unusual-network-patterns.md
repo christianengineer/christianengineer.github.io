@@ -2,6 +2,7 @@
 title: Anomaly Detection in Network Security with PyTorch (Python) Identifying unusual network patterns
 date: 2023-12-03
 permalink: posts/anomaly-detection-in-network-security-with-pytorch-python-identifying-unusual-network-patterns
+layout: article
 ---
 
 **Objectives:**

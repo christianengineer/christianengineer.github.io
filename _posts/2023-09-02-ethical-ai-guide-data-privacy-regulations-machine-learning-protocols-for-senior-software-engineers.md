@@ -2,6 +2,7 @@
 title: "Comprehensive Guide to Ethical AI: Navigating Data Privacy Regulations & Machine Learning Protocols for Senior Software Engineers"
 date: 2023-09-02
 permalink: posts/ethical-ai-guide-data-privacy-regulations-machine-learning-protocols-for-senior-software-engineers
+layout: article
 ---
 
 # Comprehensive Guide to Ethical AI: Navigating Data Privacy Regulations & Machine Learning Protocols for Senior Software Engineers

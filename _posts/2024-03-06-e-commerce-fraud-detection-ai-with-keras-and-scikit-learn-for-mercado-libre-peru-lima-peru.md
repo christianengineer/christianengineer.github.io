@@ -2,6 +2,7 @@
 title: E-commerce Fraud Detection AI with Keras and Scikit-Learn for Mercado Libre Peru (Lima, Peru), Fraud Prevention Specialist's pain point is identifying and preventing online fraud, solution is to implement real-time fraud detection algorithms, reducing financial losses and protecting users
 date: 2024-03-06
 permalink: posts/e-commerce-fraud-detection-ai-with-keras-and-scikit-learn-for-mercado-libre-peru-lima-peru
+layout: article
 ---
 
 # E-commerce Fraud Detection AI for Mercado Libre Peru

@@ -2,6 +2,7 @@
 title: PyTorch Model with GPU Acceleration Develop a PyTorch model that leverages GPU for faster training
 date: 2023-11-24
 permalink: posts/pytorch-model-with-gpu-acceleration-develop-a-pytorch-model-that-leverages-gpu-for-faster-training
+layout: article
 ---
 
 ## Objectives

@@ -2,6 +2,7 @@
 title: Automated Invoice Processing with Tesseract OCR (Python) Digitizing financial documents
 date: 2023-12-04
 permalink: posts/automated-invoice-processing-with-tesseract-ocr-python-digitizing-financial-documents
+layout: article
 ---
 
 # AI Automated Invoice Processing with Tesseract OCR (Python)

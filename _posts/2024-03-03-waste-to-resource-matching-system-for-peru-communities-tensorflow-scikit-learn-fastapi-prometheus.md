@@ -2,6 +2,7 @@
 title: Waste-to-Resource Matching System for Peru Communities (TensorFlow, Scikit-Learn, FastAPI, Prometheus) Matches waste producers with recycling and upcycling companies, turning community waste into income-generating resources
 date: 2024-03-03
 permalink: posts/waste-to-resource-matching-system-for-peru-communities-tensorflow-scikit-learn-fastapi-prometheus
+layout: article
 ---
 
 ## AI Waste-to-Resource Matching System for Peru Communities

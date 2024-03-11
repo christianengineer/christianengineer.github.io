@@ -2,6 +2,7 @@
 title: EduMetrics AI for Educational Analytics
 date: 2023-11-23
 permalink: posts/edumetrics-ai-for-educational-analytics
+layout: article
 ---
 
 # AI EduMetrics AI for Educational Analytics

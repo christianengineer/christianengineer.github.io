@@ -2,6 +2,7 @@
 title: MindLearn - Comprehensive Machine Learning Service
 date: 2023-11-21
 permalink: posts/mindlearn---comprehensive-machine-learning-service
+layout: article
 ---
 
 # MindLearn - Comprehensive Machine Learning Service

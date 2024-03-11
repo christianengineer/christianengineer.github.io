@@ -2,6 +2,7 @@
 title: MarketIntel AI for Market Research
 date: 2023-11-23
 permalink: posts/marketintel-ai-for-market-research
+layout: article
 ---
 
 ## AI MarketIntel: AI for Market Research

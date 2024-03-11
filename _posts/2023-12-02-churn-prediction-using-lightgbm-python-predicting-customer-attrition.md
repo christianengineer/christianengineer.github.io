@@ -2,6 +2,7 @@
 title: Churn Prediction using LightGBM (Python) Predicting customer attrition
 date: 2023-12-02
 permalink: posts/churn-prediction-using-lightgbm-python-predicting-customer-attrition
+layout: article
 ---
 
 # AI Churn Prediction using LightGBM

@@ -2,6 +2,7 @@
 title: Automated Sign Language Interpreter (TensorFlow, OpenCV) For the deaf and hard of hearing
 date: 2023-12-16
 permalink: posts/automated-sign-language-interpreter-tensorflow-opencv-for-the-deaf-and-hard-of-hearing
+layout: article
 ---
 
 # AI Automated Sign Language Interpreter for the Deaf and Hard of Hearing

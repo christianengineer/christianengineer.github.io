@@ -2,6 +2,7 @@
 title: "Advancing Global Insights: A Comprehensive Strategy to Launch a Next-Generation, Scalable AI-Powered News Aggregator and Summarizer for High User Traffic Management"
 date: 2023-04-29
 permalink: posts/innovative-ai-news-aggregator-summarizer-technology
+layout: article
 ---
 
 ## AI-Powered News Aggregator and Summarizer

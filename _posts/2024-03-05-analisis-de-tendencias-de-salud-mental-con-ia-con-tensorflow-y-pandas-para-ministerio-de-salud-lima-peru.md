@@ -2,6 +2,7 @@
 title: Análisis de Tendencias de Salud Mental con IA utilizando TensorFlow y Pandas para el Ministerio de Salud (Lima, Perú). El punto de dolor del psicólogo es identificar tendencias y necesidades de salud mental en la comunidad. La solución es analizar datos de redes sociales y de atención sanitaria para identificar patrones en problemas de salud mental, permitiendo programas de intervención dirigidos.
 date: 2024-03-05
 permalink: posts/analisis-de-tendencias-de-salud-mental-con-ia-con-tensorflow-y-pandas-para-ministerio-de-salud-lima-peru
+layout: article
 ---
 
 # Mental Health Trend Analysis AI for Ministerio de Salud (Lima, Peru)

@@ -2,6 +2,7 @@
 title: Automated AI-Powered Blogging Assistant
 date: 2023-11-18
 permalink: posts/automated-ai-powered-blogging-assistant
+layout: article
 ---
 
 **Automated AI-Powered Blogging Assistant Technical Specifications**

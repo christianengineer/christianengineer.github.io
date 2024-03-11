@@ -2,6 +2,7 @@
 title: HealthGenius - AI-Powered Healthcare Solutions
 date: 2023-11-21
 permalink: posts/healthgenius---ai-powered-healthcare-solutions
+layout: article
 ---
 
 # AI HealthGenius - AI-Powered Healthcare Solutions Repository

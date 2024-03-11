@@ -2,6 +2,7 @@
 title: GitLab CI for AI Software Deployment
 date: 2023-09-16
 permalink: posts/gitlab-ci-ai-software-deployment-guide
+layout: article
 ---
 
 # GitLab CI for AI Software Deployment

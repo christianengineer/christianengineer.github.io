@@ -2,6 +2,7 @@
 title: AI-powered Fraud Detection in Insurance Claims (TensorFlow, RabbitMQ, Docker) For insurance industry
 date: 2023-12-21
 permalink: posts/ai-powered-fraud-detection-in-insurance-claims-tensorflow-rabbitmq-docker-for-insurance-industry
+layout: article
 ---
 
 # AI-powered Fraud Detection in Insurance Claims

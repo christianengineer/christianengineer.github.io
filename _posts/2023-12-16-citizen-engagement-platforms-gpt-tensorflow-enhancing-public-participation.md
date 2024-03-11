@@ -2,6 +2,7 @@
 title: Citizen Engagement Platforms (GPT, TensorFlow) Enhancing public participation
 date: 2023-12-16
 permalink: posts/citizen-engagement-platforms-gpt-tensorflow-enhancing-public-participation
+layout: article
 ---
 
 # AI Citizen Engagement Platforms: Enhancing Public Participation Repository

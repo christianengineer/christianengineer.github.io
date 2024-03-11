@@ -2,6 +2,7 @@
 title: LogiTechAI AI for Logistics Optimization
 date: 2023-11-23
 permalink: posts/logitechai-ai-for-logistics-optimization
+layout: article
 ---
 
 ## Objectives of AI LogiTechAI for Logistics Optimization Repository

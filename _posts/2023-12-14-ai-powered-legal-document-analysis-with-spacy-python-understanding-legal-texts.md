@@ -2,6 +2,7 @@
 title: AI-Powered Legal Document Analysis with SpaCy (Python) Understanding legal texts
 date: 2023-12-14
 permalink: posts/ai-powered-legal-document-analysis-with-spacy-python-understanding-legal-texts
+layout: article
 ---
 
 # AI-Powered Legal Document Analysis with SpaCy

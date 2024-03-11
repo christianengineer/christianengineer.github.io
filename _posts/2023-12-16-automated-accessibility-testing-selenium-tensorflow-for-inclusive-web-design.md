@@ -2,6 +2,7 @@
 title: Automated Accessibility Testing (Selenium, TensorFlow) For inclusive web design
 date: 2023-12-16
 permalink: posts/automated-accessibility-testing-selenium-tensorflow-for-inclusive-web-design
+layout: article
 ---
 
 ### AI Automated Accessibility Testing Repository

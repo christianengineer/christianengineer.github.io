@@ -2,6 +2,7 @@
 title: Urban Green Space Planning Tool (Scikit-Learn, TensorFlow) For city livability
 date: 2023-12-17
 permalink: posts/urban-green-space-planning-tool-scikit-learn-tensorflow-for-city-livability
+layout: article
 ---
 
 # AI Urban Green Space Planning Tool

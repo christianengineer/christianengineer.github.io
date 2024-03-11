@@ -2,6 +2,7 @@
 title: Vehicle Number Plate Recognition with TensorFlow (Python) Identifying vehicles
 date: 2023-12-04
 permalink: posts/vehicle-number-plate-recognition-with-tensorflow-python-identifying-vehicles
+layout: article
 ---
 
 ## Objectives

@@ -2,6 +2,7 @@
 title: Peru Dining Experience Virtual Reality Preview (Unity, TensorFlow, Airflow, Kubernetes) Offers potential diners a virtual reality preview of the dining experience, menu items, and ambiance to enhance attraction and reservations
 date: 2024-03-04
 permalink: posts/peru-dining-experience-virtual-reality-preview-unity-tensorflow-airflow-kubernetes
+layout: article
 ---
 
 # Machine Learning Peru Dining Experience Virtual Reality Preview

@@ -2,6 +2,7 @@
 title: Peru Yacht and Luxury Asset Management AI (Scikit-Learn, TensorFlow, Kafka, Docker) Offers predictive maintenance and logistical planning for yachts and other luxury assets, reducing downtime and optimizing usage
 date: 2024-02-26
 permalink: posts/peru-yacht-and-luxury-asset-management-ai-scikit-learn-tensorflow-kafka-docker-offers-predictive-maintenance-and-logistical-planning-for-yachts-and-other-luxury-assets-reducing-downtime-and-optimizing-usage
+layout: article
 ---
 
 ## Objectives:

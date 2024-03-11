@@ -2,6 +2,7 @@
 title: Personalized Learning Recommendation Engine
 date: 2023-11-18
 permalink: posts/personalized-learning-recommendation-engine
+layout: article
 ---
 
 # Personalized Learning Recommendation Engine Technical Specifications

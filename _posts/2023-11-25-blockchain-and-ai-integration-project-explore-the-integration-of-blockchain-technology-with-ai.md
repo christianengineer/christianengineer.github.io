@@ -2,6 +2,7 @@
 title: Blockchain and AI Integration Project Explore the integration of blockchain technology with AI
 date: 2023-11-25
 permalink: posts/blockchain-and-ai-integration-project-explore-the-integration-of-blockchain-technology-with-ai
+layout: article
 ---
 
 ## Project Overview

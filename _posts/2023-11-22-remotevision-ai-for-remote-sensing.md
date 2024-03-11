@@ -2,6 +2,7 @@
 title: RemoteVision AI for Remote Sensing
 date: 2023-11-22
 permalink: posts/remotevision-ai-for-remote-sensing
+layout: article
 ---
 
 # AI RemoteVision for Remote Sensing Repository Overview

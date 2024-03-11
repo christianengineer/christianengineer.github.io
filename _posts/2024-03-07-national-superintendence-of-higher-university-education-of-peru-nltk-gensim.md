@@ -2,6 +2,7 @@
 title: National Superintendence of Higher University Education of Peru (NLTK, Gensim) Accreditation Officer pain point is evaluating university quality, solution is to implement machine learning to analyze academic data and assist in the accreditation of higher education institutions
 date: 2024-03-07
 permalink: posts/national-superintendence-of-higher-university-education-of-peru-nltk-gensim
+layout: article
 ---
 
 ### Machine Learning Solution for Accreditation Officers in Higher Education

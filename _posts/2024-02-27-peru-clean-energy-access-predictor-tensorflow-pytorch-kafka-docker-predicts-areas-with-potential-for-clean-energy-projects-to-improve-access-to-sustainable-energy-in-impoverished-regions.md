@@ -2,6 +2,7 @@
 title: Peru Clean Energy Access Predictor (TensorFlow, PyTorch, Kafka, Docker) Predicts areas with potential for clean energy projects to improve access to sustainable energy in impoverished regions
 date: 2024-02-27
 permalink: posts/peru-clean-energy-access-predictor-tensorflow-pytorch-kafka-docker-predicts-areas-with-potential-for-clean-energy-projects-to-improve-access-to-sustainable-energy-in-impoverished-regions
+layout: article
 ---
 
 ## AI Peru Clean Energy Access Predictor

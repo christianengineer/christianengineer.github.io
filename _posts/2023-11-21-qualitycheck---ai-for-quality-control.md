@@ -2,6 +2,7 @@
 title: QualityCheck - AI for Quality Control
 date: 2023-11-21
 permalink: posts/qualitycheck---ai-for-quality-control
+layout: article
 ---
 
 # AI QualityCheck - AI for Quality Control Repository

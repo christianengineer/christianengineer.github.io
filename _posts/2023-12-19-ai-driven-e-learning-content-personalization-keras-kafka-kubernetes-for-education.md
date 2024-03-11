@@ -2,6 +2,7 @@
 title: AI-driven E-learning Content Personalization (Keras, Kafka, Kubernetes) For education
 date: 2023-12-19
 permalink: posts/ai-driven-e-learning-content-personalization-keras-kafka-kubernetes-for-education
+layout: article
 ---
 
 # AI-driven E-learning Content Personalization Repository

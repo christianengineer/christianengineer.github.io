@@ -2,6 +2,7 @@
 title: Object Detection with YOLO (Python/C++) Identifying objects in real-time
 date: 2023-12-02
 permalink: posts/object-detection-with-yolo-pythonc-identifying-objects-in-real-time
+layout: article
 ---
 
 ## Objectives

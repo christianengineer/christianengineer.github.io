@@ -2,6 +2,7 @@
 title: AI-based Game Development with Unity ML-Agents (C#/Python) Creating intelligent game characters
 date: 2023-12-03
 permalink: posts/ai-based-game-development-with-unity-ml-agents-cpython-creating-intelligent-game-characters
+layout: article
 ---
 
 ## Objectives

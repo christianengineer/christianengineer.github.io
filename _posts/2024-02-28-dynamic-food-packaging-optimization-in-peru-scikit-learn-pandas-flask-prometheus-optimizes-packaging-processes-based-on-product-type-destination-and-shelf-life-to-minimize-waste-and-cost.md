@@ -2,6 +2,7 @@
 title: Dynamic Food Packaging Optimization in Peru (Scikit-Learn, Pandas, Flask, Prometheus) Optimizes packaging processes based on product type, destination, and shelf life to minimize waste and cost
 date: 2024-02-28
 permalink: posts/dynamic-food-packaging-optimization-in-peru-scikit-learn-pandas-flask-prometheus-optimizes-packaging-processes-based-on-product-type-destination-and-shelf-life-to-minimize-waste-and-cost
+layout: article
 ---
 
 ## Objective

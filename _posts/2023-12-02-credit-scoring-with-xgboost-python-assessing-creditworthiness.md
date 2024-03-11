@@ -2,6 +2,7 @@
 title: Credit Scoring with XGBoost (Python) Assessing creditworthiness
 date: 2023-12-02
 permalink: posts/credit-scoring-with-xgboost-python-assessing-creditworthiness
+layout: article
 ---
 
 ### Objectives

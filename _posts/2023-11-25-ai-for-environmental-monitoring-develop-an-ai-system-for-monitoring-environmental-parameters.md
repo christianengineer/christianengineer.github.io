@@ -2,6 +2,7 @@
 title: AI for Environmental Monitoring Develop an AI system for monitoring environmental parameters
 date: 2023-11-25
 permalink: posts/ai-for-environmental-monitoring-develop-an-ai-system-for-monitoring-environmental-parameters
+layout: article
 ---
 
 ### Objectives

@@ -2,6 +2,7 @@
 title: Emergency Shelter Allocation AI (Scikit-Learn, TensorFlow) For disaster relief
 date: 2023-12-17
 permalink: posts/emergency-shelter-allocation-ai-scikit-learn-tensorflow-for-disaster-relief
+layout: article
 ---
 
 ## AI Emergency Shelter Allocation System

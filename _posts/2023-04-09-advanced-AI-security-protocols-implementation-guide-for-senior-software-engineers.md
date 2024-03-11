@@ -2,6 +2,7 @@
 title: "Implementing Advanced Security Protocols in AI Development: A Comprehensive Guide for Senior Software Engineers"
 date: 2023-04-09
 permalink: posts/advanced-AI-security-protocols-implementation-guide-for-senior-software-engineers
+layout: article
 ---
 
 # Implementing Advanced Security Protocols in AI Development: A Comprehensive Guide for Senior Software Engineers

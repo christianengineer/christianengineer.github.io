@@ -2,6 +2,7 @@
 title: "Mastering Real-Time Data Processing: Advanced Techniques and Strategies for Senior Software Engineers"
 date: 2023-08-24
 permalink: posts/advanced-real-time-data-processing-techniques-for-senior-software-engineers
+layout: article
 ---
 
 # Mastering Real-Time Data Processing: Advanced Techniques and Strategies for Senior Software Engineers

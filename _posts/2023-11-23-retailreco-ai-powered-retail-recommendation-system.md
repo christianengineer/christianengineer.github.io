@@ -2,6 +2,7 @@
 title: RetailReco AI-Powered Retail Recommendation System
 date: 2023-11-23
 permalink: posts/retailreco-ai-powered-retail-recommendation-system
+layout: article
 ---
 
 ### Objectives

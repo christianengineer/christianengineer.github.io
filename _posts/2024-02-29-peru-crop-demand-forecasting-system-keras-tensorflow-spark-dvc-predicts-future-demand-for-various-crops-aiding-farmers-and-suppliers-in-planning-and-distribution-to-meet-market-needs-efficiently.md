@@ -2,6 +2,7 @@
 title: Peru Crop Demand Forecasting System (Keras, TensorFlow, Spark, DVC) Predicts future demand for various crops, aiding farmers and suppliers in planning and distribution to meet market needs efficiently
 date: 2024-02-29
 permalink: posts/peru-crop-demand-forecasting-system-keras-tensorflow-spark-dvc-predicts-future-demand-for-various-crops-aiding-farmers-and-suppliers-in-planning-and-distribution-to-meet-market-needs-efficiently
+layout: article
 ---
 
 # AI Peru Crop Demand Forecasting System

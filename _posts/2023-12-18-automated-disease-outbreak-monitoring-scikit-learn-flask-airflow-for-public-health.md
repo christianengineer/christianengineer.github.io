@@ -2,6 +2,7 @@
 title: Automated Disease Outbreak Monitoring (Scikit-Learn, Flask, Airflow) For public health
 date: 2023-12-18
 permalink: posts/automated-disease-outbreak-monitoring-scikit-learn-flask-airflow-for-public-health
+layout: article
 ---
 
 # AI Automated Disease Outbreak Monitoring

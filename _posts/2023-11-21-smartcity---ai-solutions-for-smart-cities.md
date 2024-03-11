@@ -2,6 +2,7 @@
 title: SmartCity - AI Solutions for Smart Cities
 date: 2023-11-21
 permalink: posts/smartcity---ai-solutions-for-smart-cities
+layout: article
 ---
 
 # AI SmartCity - AI Solutions for Smart Cities Repository

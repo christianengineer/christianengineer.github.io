@@ -2,6 +2,7 @@
 title: Azure Cloud Solutions for Artificial Intelligence
 date: 2023-09-01
 permalink: posts/azure-cloud-solutions-ai-technology-guide
+layout: article
 ---
 
 # Azure Cloud Solutions for Artificial Intelligence

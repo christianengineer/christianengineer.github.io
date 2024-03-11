@@ -2,6 +2,7 @@
 title: HomeSmart AI for Smart Homes
 date: 2023-11-23
 permalink: posts/homesmart-ai-for-smart-homes
+layout: article
 ---
 
 **AI HomeSmart AI for Smart Homes Repository**

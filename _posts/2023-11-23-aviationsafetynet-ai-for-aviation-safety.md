@@ -2,6 +2,7 @@
 title: AviationSafetyNet AI for Aviation Safety
 date: 2023-11-23
 permalink: posts/aviationsafetynet-ai-for-aviation-safety
+layout: article
 ---
 
 # AI AviationSafetyNet for Aviation Safety

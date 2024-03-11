@@ -2,6 +2,7 @@
 title: AI-enhanced Pharmaceutical Research (Scikit-Learn, RabbitMQ, Docker) For drug development
 date: 2023-12-19
 permalink: posts/ai-enhanced-pharmaceutical-research-scikit-learn-rabbitmq-docker-for-drug-development
+layout: article
 ---
 
 # AI-enhanced Pharmaceutical Research Repository

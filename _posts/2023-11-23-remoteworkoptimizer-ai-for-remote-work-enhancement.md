@@ -2,6 +2,7 @@
 title: RemoteWorkOptimizer AI for Remote Work Enhancement
 date: 2023-11-23
 permalink: posts/remoteworkoptimizer-ai-for-remote-work-enhancement
+layout: article
 ---
 
 ## AI RemoteWorkOptimizer Repository Expansion

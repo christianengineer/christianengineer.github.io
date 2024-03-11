@@ -2,6 +2,7 @@
 title: Peruvian Ministry of Development and Social Inclusion (TensorFlow, Pandas) Social Program Analyst pain point is allocating social aid effectively, solution is to use machine learning to identify the most needy populations based on social data, improving program impact
 date: 2024-03-07
 permalink: posts/peruvian-ministry-of-development-and-social-inclusion-tensorflow-pandas
+layout: article
 ---
 
 # Machine Learning Solution for Peruvian Ministry of Development and Social Inclusion

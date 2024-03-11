@@ -2,6 +2,7 @@
 title: MelodyAI AI for Music Composition
 date: 2023-11-24
 permalink: posts/melodyai-ai-for-music-composition
+layout: article
 ---
 
 ## AI MelodyAI AI for Music Composition Repository

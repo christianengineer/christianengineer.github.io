@@ -2,6 +2,7 @@
 title: FinanceShield AI for Financial Fraud Detection
 date: 2023-11-23
 permalink: posts/financeshield-ai-for-financial-fraud-detection
+layout: article
 ---
 
 ### Objectives of AI FinanceShield AI for Financial Fraud Detection Repository

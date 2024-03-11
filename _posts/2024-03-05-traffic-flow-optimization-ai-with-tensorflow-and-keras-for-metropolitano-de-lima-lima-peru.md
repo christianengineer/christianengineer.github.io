@@ -2,6 +2,7 @@
 title: Traffic Flow Optimization AI with TensorFlow and Keras for Metropolitano de Lima (Lima, Peru), Transportation Planner's pain point is managing rush-hour congestion, solution is to analyze traffic patterns and optimize bus schedules and routes, reducing delays and improving commuter experience
 date: 2024-03-05
 permalink: posts/traffic-flow-optimization-ai-with-tensorflow-and-keras-for-metropolitano-de-lima-lima-peru
+layout: article
 ---
 
 # Traffic Flow Optimization AI Solution for Metropolitano de Lima

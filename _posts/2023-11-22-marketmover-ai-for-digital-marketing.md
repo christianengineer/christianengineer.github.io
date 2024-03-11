@@ -2,6 +2,7 @@
 title: MarketMover AI for Digital Marketing
 date: 2023-11-22
 permalink: posts/marketmover-ai-for-digital-marketing
+layout: article
 ---
 
 ## AI MarketMover AI for Digital Marketing Repository

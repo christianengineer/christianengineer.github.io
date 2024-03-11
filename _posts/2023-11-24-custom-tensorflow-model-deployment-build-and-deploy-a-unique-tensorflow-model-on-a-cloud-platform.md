@@ -2,6 +2,7 @@
 title: Custom TensorFlow Model Deployment Build and deploy a unique TensorFlow model on a cloud platform
 date: 2023-11-24
 permalink: posts/custom-tensorflow-model-deployment-build-and-deploy-a-unique-tensorflow-model-on-a-cloud-platform
+layout: article
 ---
 
 # AI Custom TensorFlow Model Deployment

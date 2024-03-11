@@ -2,6 +2,7 @@
 title: Real-time Manufacturing Process Optimization (TensorFlow, Kafka, Docker) For production efficiency
 date: 2023-12-18
 permalink: posts/real-time-manufacturing-process-optimization-tensorflow-kafka-docker-for-production-efficiency
+layout: article
 ---
 
 ## AI Real-time Manufacturing Process Optimization Repository

@@ -2,6 +2,7 @@
 title: Scalable NLP-Powered AI Resume Screening System for Efficient Job Application Filtering (TensorFlow, Scikit-Learn, NLTK, Pandas) Talented individuals are matched with the right opportunities
 date: 2024-03-05
 permalink: posts/scalable-nlp-powered-ai-resume-screening-system-for-efficient-job-application-filtering-tensorflow-scikit-learn-nltk-pandas
+layout: article
 ---
 
 # Machine Learning Pipeline for Scalable NLP-Powered AI Resume Screening System

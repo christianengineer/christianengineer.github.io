@@ -2,6 +2,7 @@
 title: Intelligent Urban Planning and Analysis Tool (PyTorch, Hadoop, Kubernetes) For city development
 date: 2023-12-20
 permalink: posts/intelligent-urban-planning-and-analysis-tool-pytorch-hadoop-kubernetes-for-city-development
+layout: article
 ---
 
 ## Objectives of the AI Intelligent Urban Planning and Analysis Tool

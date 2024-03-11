@@ -2,6 +2,7 @@
 title: Peru Food Supply Chain Risk Assessment AI (TensorFlow, Scikit-Learn, Airflow, Kubernetes) Evaluates risks across the supply chain, predicting disruptions from environmental, economic, or logistical factors to enhance resilience
 date: 2024-02-29
 permalink: posts/peru-food-supply-chain-risk-assessment-ai-tensorflow-scikit-learn-airflow-kubernetes-evaluates-risks-across-the-supply-chain-predicting-disruptions-from-environmental-economic-or-logistical-factors-to-enhance-resilience
+layout: article
 ---
 
 # AI Peru Food Supply Chain Risk Assessment System

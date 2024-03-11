@@ -2,6 +2,7 @@
 title: Automated Video Surveillance for Public Safety (OpenCV, Kafka, Kubernetes) For law enforcement
 date: 2023-12-19
 permalink: posts/automated-video-surveillance-for-public-safety-opencv-kafka-kubernetes-for-law-enforcement
+layout: article
 ---
 
 # AI Automated Video Surveillance for Public Safety

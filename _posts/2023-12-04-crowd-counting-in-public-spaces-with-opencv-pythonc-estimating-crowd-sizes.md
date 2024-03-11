@@ -2,6 +2,7 @@
 title: Crowd Counting in Public Spaces with OpenCV (Python/C++) Estimating crowd sizes
 date: 2023-12-04
 permalink: posts/crowd-counting-in-public-spaces-with-opencv-pythonc-estimating-crowd-sizes
+layout: article
 ---
 
 # AI Crowd Counting in Public Spaces with OpenCV

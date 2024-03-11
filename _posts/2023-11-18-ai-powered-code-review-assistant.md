@@ -2,6 +2,7 @@
 title: AI-Powered Code Review Assistant
 date: 2023-11-18
 permalink: posts/ai-powered-code-review-assistant
+layout: article
 ---
 
 # Technical Specifications - AI-Powered Code Review Assistant

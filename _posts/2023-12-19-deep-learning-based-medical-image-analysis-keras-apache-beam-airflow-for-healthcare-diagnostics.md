@@ -2,6 +2,7 @@
 title: Deep Learning-based Medical Image Analysis (Keras, Apache Beam, Airflow) For healthcare diagnostics
 date: 2023-12-19
 permalink: posts/deep-learning-based-medical-image-analysis-keras-apache-beam-airflow-for-healthcare-diagnostics
+layout: article
 ---
 
 # AI Deep Learning-based Medical Image Analysis

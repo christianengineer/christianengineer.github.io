@@ -2,6 +2,7 @@
 title: Retail Sales Forecasting with ARIMA (Python) Predicting sales trends
 date: 2023-12-03
 permalink: posts/retail-sales-forecasting-with-arima-python-predicting-sales-trends
+layout: article
 ---
 
 ### Objectives

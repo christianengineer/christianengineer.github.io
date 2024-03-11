@@ -2,6 +2,7 @@
 title: AgriBot - AI for Agriculture
 date: 2023-11-21
 permalink: posts/agribot---ai-for-agriculture
+layout: article
 ---
 
 # AI AgriBot - AI for Agriculture Repository

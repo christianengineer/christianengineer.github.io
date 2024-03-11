@@ -2,6 +2,7 @@
 title: Food Safety Incident Predictor for Peru (Keras, BERT, Kafka, Docker) Analyzes historical data on food safety incidents to predict potential future outbreaks, enabling preemptive actions
 date: 2024-02-28
 permalink: posts/food-safety-incident-predictor-for-peru-keras-bert-kafka-docker-analyzes-historical-data-on-food-safety-incidents-to-predict-potential-future-outbreaks-enabling-preemptive-actions
+layout: article
 ---
 
 # AI Food Safety Incident Predictor for Peru

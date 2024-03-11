@@ -2,6 +2,7 @@
 title: Peru Retail Foot Traffic Predictor (PyTorch, Scikit-Learn, Kafka, Kubernetes) Forecasts foot traffic in retail locations, aiding in staffing and promotional planning to maximize sales opportunities
 date: 2024-03-07
 permalink: posts/peru-retail-foot-traffic-predictor-pytorch-scikit-learn-kafka-kubernetes
+layout: article
 ---
 
 # **Peru Retail Foot Traffic Predictor Solution**

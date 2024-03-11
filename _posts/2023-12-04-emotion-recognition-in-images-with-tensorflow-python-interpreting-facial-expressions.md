@@ -2,6 +2,7 @@
 title: Emotion Recognition in Images with TensorFlow (Python) Interpreting facial expressions
 date: 2023-12-04
 permalink: posts/emotion-recognition-in-images-with-tensorflow-python-interpreting-facial-expressions
+layout: article
 ---
 
 # AI Emotion Recognition in Images with TensorFlow (Python)

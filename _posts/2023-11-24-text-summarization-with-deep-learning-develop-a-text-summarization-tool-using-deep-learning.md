@@ -2,6 +2,7 @@
 title: Text Summarization with Deep Learning Develop a text summarization tool using deep learning
 date: 2023-11-24
 permalink: posts/text-summarization-with-deep-learning-develop-a-text-summarization-tool-using-deep-learning
+layout: article
 ---
 
 # AI Text Summarization with Deep Learning

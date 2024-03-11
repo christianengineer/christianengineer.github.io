@@ -2,6 +2,7 @@
 title: AI Chatbot with Deep Learning Build a chatbot using deep learning techniques
 date: 2023-11-24
 permalink: posts/ai-chatbot-with-deep-learning-build-a-chatbot-using-deep-learning-techniques
+layout: article
 ---
 
 # Objectives

@@ -2,6 +2,7 @@
 title: Peruvian Superintendence of Banking, Insurance, and Pension Funds (TensorFlow, Scikit-Learn) Financial Regulator pain point is detecting fraudulent financial activities, solution is to employ machine learning algorithms to screen transactions and identify patterns indicative of fraud, protecting the financial system
 date: 2024-03-07
 permalink: posts/peruvian-superintendence-of-banking-insurance-and-pension-funds-tensorflow-scikit-learn
+layout: article
 ---
 
 ## Objectives and Benefits

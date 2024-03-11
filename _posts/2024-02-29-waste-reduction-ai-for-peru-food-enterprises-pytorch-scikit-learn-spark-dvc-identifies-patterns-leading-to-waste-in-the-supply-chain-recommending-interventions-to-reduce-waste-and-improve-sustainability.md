@@ -2,6 +2,7 @@
 title: Waste Reduction AI for Peru Food Enterprises (PyTorch, Scikit-Learn, Spark, DVC) Identifies patterns leading to waste in the supply chain, recommending interventions to reduce waste and improve sustainability
 date: 2024-02-29
 permalink: posts/waste-reduction-ai-for-peru-food-enterprises-pytorch-scikit-learn-spark-dvc-identifies-patterns-leading-to-waste-in-the-supply-chain-recommending-interventions-to-reduce-waste-and-improve-sustainability
+layout: article
 ---
 
 # AI Waste Reduction System for Peru Food Enterprises

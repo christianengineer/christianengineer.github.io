@@ -2,6 +2,7 @@
 title: AI-driven Retail Store Layout Optimization (Keras, Apache Beam, Kubernetes) For retail
 date: 2023-12-18
 permalink: posts/ai-driven-retail-store-layout-optimization-keras-apache-beam-kubernetes-for-retail
+layout: article
 ---
 
 # AI-driven Retail Store Layout Optimization

@@ -2,6 +2,7 @@
 title: Automated Soil Analysis for Agriculture (Scikit-Learn, Hadoop, Prometheus) For farming
 date: 2023-12-18
 permalink: posts/automated-soil-analysis-for-agriculture-scikit-learn-hadoop-prometheus-for-farming
+layout: article
 ---
 
 # AI Automated Soil Analysis for Agriculture

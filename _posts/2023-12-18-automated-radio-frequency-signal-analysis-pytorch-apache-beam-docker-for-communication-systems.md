@@ -2,6 +2,7 @@
 title: Automated Radio Frequency Signal Analysis (PyTorch, Apache Beam, Docker) For communication systems
 date: 2023-12-18
 permalink: posts/automated-radio-frequency-signal-analysis-pytorch-apache-beam-docker-for-communication-systems
+layout: article
 ---
 
 # AI Automated Radio Frequency Signal Analysis Repository

@@ -2,6 +2,7 @@
 title: DevOps Best Practices in AI Startups
 date: 2023-09-20
 permalink: posts/devops-best-practices-ai-startups-guide
+layout: article
 ---
 
 # DevOps Best Practices in AI Startups

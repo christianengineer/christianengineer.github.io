@@ -2,6 +2,7 @@
 title: Peru Agro-Product Traceability System (Blockchain, TensorFlow, Kafka, Kubernetes) Implements blockchain and ML for end-to-end traceability of agro-products, enhancing transparency and consumer trust
 date: 2024-02-29
 permalink: posts/peru-agro-product-traceability-system-blockchain-tensorflow-kafka-kubernetes-implements-blockchain-and-ml-for-end-to-end-traceability-of-agro-products-enhancing-transparency-and-consumer-trust
+layout: article
 ---
 
 ### AI Peru Agro-Product Traceability System

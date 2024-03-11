@@ -2,6 +2,7 @@
 title: AI-powered Personalized Learning Platform (TensorFlow, RabbitMQ, Terraform) For education
 date: 2023-12-19
 permalink: posts/ai-powered-personalized-learning-platform-tensorflow-rabbitmq-terraform-for-education
+layout: article
 ---
 
 ## Objectives of the AI-powered Personalized Learning Platform

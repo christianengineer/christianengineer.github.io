@@ -2,6 +2,7 @@
 title: Music Genre Classification using PyTorch (Python) Categorizing music tracks
 date: 2023-12-04
 permalink: posts/music-genre-classification-using-pytorch-python-categorizing-music-tracks
+layout: article
 ---
 
 # AI Music Genre Classification using PyTorch

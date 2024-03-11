@@ -2,6 +2,7 @@
 title: Water Access and Quality Monitoring System for Peru (Scikit-Learn, TensorFlow, Kafka, Docker) Monitors water access points and predicts areas at risk of water quality issues, guiding infrastructure development
 date: 2024-02-27
 permalink: posts/water-access-and-quality-monitoring-system-for-peru-scikit-learn-tensorflow-kafka-docker-monitors-water-access-points-and-predicts-areas-at-risk-of-water-quality-issues-guiding-infrastructure-development
+layout: article
 ---
 
 # AI Water Access and Quality Monitoring System for Peru

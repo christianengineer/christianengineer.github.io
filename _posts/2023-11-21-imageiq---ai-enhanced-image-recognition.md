@@ -2,6 +2,7 @@
 title: ImageIQ - AI-Enhanced Image Recognition
 date: 2023-11-21
 permalink: posts/imageiq---ai-enhanced-image-recognition
+layout: article
 ---
 
 ## Objectives of AI ImageIQ - AI-Enhanced Image Recognition Repository

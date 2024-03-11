@@ -2,6 +2,7 @@
 title: "Designing the Future: A Blueprint for an Innovative, Scalable, AI-Driven Code Review Tool - Embracing Cloud-Technologies, Robust Data Handling, and Advanced Machine Learning"
 date: 2023-06-30
 permalink: posts/ai-driven-code-review-tool-design-future-scalable-cloud-machine-learning-data-handling
+layout: article
 ---
 
 # Title of the Project: Designing the Future - A Blueprint for an Innovative, Scalable, AI-Driven Code Review Tool

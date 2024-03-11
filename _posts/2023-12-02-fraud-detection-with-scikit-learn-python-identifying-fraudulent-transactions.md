@@ -2,6 +2,7 @@
 title: Fraud Detection with Scikit-Learn (Python) Identifying fraudulent transactions
 date: 2023-12-02
 permalink: posts/fraud-detection-with-scikit-learn-python-identifying-fraudulent-transactions
+layout: article
 ---
 
 ### Objectives

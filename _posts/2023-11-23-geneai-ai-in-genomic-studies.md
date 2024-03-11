@@ -2,6 +2,7 @@
 title: GeneAI AI in Genomic Studies
 date: 2023-11-23
 permalink: posts/geneai-ai-in-genomic-studies
+layout: article
 ---
 
 # AI GeneAI AI in Genomic Studies Repository

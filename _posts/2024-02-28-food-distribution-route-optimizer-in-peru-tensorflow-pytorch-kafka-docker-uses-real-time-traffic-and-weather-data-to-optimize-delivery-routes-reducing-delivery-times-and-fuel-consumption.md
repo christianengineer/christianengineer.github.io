@@ -2,6 +2,7 @@
 title: Food Distribution Route Optimizer in Peru (TensorFlow, PyTorch, Kafka, Docker) Uses real-time traffic and weather data to optimize delivery routes, reducing delivery times and fuel consumption
 date: 2024-02-28
 permalink: posts/food-distribution-route-optimizer-in-peru-tensorflow-pytorch-kafka-docker-uses-real-time-traffic-and-weather-data-to-optimize-delivery-routes-reducing-delivery-times-and-fuel-consumption
+layout: article
 ---
 
 # AI Food Distribution Route Optimizer in Peru

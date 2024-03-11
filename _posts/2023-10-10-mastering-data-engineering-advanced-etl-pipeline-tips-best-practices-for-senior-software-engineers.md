@@ -2,6 +2,7 @@
 title: "Mastering Data Engineering: Advanced Tips, Techniques & Best Practices for Building Efficient ETL Pipelines - A Guide for Senior Software Engineers"
 date: 2023-10-10
 permalink: posts/mastering-data-engineering-advanced-etl-pipeline-tips-best-practices-for-senior-software-engineers
+layout: article
 ---
 
 # Mastering Data Engineering: Advanced Tips, Techniques & Best Practices for Building Efficient ETL Pipelines

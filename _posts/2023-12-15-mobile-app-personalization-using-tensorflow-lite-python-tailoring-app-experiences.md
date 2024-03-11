@@ -2,6 +2,7 @@
 title: Mobile App Personalization using TensorFlow Lite (Python) Tailoring app experiences
 date: 2023-12-15
 permalink: posts/mobile-app-personalization-using-tensorflow-lite-python-tailoring-app-experiences
+layout: article
 ---
 
 # AI Mobile App Personalization using TensorFlow Lite

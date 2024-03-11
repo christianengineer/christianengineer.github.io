@@ -2,6 +2,7 @@
 title: FoodTechAI AI in Food Technology
 date: 2023-11-23
 permalink: posts/foodtechai-ai-in-food-technology
+layout: article
 ---
 
 ### AI FoodTech Repository

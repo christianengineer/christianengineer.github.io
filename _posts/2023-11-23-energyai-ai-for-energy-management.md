@@ -2,6 +2,7 @@
 title: EnergyAI AI for Energy Management
 date: 2023-11-23
 permalink: posts/energyai-ai-for-energy-management
+layout: article
 ---
 
 # AI for Energy Management Repository

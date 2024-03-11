@@ -2,6 +2,7 @@
 title: VoiceBio Voice Biometrics AI
 date: 2023-11-23
 permalink: posts/voicebio-voice-biometrics-ai
+layout: article
 ---
 
 # AI VoiceBio Voice Biometrics AI Repository

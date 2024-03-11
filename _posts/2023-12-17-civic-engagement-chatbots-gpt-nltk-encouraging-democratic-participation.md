@@ -2,6 +2,7 @@
 title: Civic Engagement Chatbots (GPT, NLTK) Encouraging democratic participation
 date: 2023-12-17
 permalink: posts/civic-engagement-chatbots-gpt-nltk-encouraging-democratic-participation
+layout: article
 ---
 
 ### Objectives

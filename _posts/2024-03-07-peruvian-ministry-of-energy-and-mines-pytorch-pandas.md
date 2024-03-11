@@ -2,6 +2,7 @@
 title: Peruvian Ministry of Energy and Mines (PyTorch, Pandas) Energy Analyst pain point is forecasting energy demand, solution use machine learning to predict future energy consumption patterns, aiding in the planning of energy production and distribution
 date: 2024-03-07
 permalink: posts/peruvian-ministry-of-energy-and-mines-pytorch-pandas
+layout: article
 ---
 
 # Project Overview

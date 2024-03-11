@@ -2,6 +2,7 @@
 title: Peru Food Supply Network Collaboration Platform (GPT-3, BERT, Airflow, Docker) Facilitates data sharing and collaboration among stakeholders in the food supply chain, optimizing overall efficiency through collective intelligence
 date: 2024-02-29
 permalink: posts/peru-food-supply-network-collaboration-platform-gpt-3-bert-airflow-docker-facilitates-data-sharing-and-collaboration-among-stakeholders-in-the-food-supply-chain-optimizing-overall-efficiency-through-collective-intelligence
+layout: article
 ---
 
 **AI Peru Food Supply Network Collaboration Platform**

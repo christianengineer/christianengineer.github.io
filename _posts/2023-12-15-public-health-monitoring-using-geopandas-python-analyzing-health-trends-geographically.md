@@ -2,6 +2,7 @@
 title: Public Health Monitoring using Geopandas (Python) Analyzing health trends geographically
 date: 2023-12-15
 permalink: posts/public-health-monitoring-using-geopandas-python-analyzing-health-trends-geographically
+layout: article
 ---
 
 # AI Public Health Monitoring using Geopandas

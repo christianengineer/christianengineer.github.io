@@ -2,6 +2,7 @@
 title: Smart AI Urban Planning Simulation
 date: 2023-11-18
 permalink: posts/smart-ai-urban-planning-simulation
+layout: article
 ---
 
 # Smart AI Urban Planning Simulation Repository

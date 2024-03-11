@@ -2,6 +2,7 @@
 title: Real-time Language Processing for Media Analysis (BERT, Spark, Terraform) For PR
 date: 2023-12-19
 permalink: posts/real-time-language-processing-for-media-analysis-bert-spark-terraform-for-pr
+layout: article
 ---
 
 ## Objectives

@@ -2,6 +2,7 @@
 title: Peru Affordable Housing Locator (Scikit-Learn, GeoPandas, Django, Kubernetes) Matches low-income families with affordable housing options, utilizing filtering algorithms to prioritize based on family size, income, and location preferences
 date: 2024-03-03
 permalink: posts/peru-affordable-housing-locator-scikit-learn-geopandas-django-kubernetes
+layout: article
 ---
 
 ### Objectives:

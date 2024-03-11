@@ -2,6 +2,7 @@
 title: Machine Learning for Music Composition
 date: 2023-11-18
 permalink: posts/machine-learning-for-music-composition
+layout: article
 ---
 
 # Technical Specifications - Machine Learning for Music Composition

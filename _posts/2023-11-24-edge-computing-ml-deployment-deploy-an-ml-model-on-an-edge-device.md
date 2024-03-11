@@ -2,6 +2,7 @@
 title: Edge Computing ML Deployment Deploy an ML model on an edge device
 date: 2023-11-24
 permalink: posts/edge-computing-ml-deployment-deploy-an-ml-model-on-an-edge-device
+layout: article
 ---
 
 ## AI Edge Computing ML Deployment

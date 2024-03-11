@@ -2,6 +2,7 @@
 title: AI-Fueled Personal Finance Advisor
 date: 2023-11-18
 permalink: posts/ai-fueled-personal-finance-advisor
+layout: article
 ---
 
 # AI-Fueled Personal Finance Advisor

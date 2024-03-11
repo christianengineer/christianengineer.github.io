@@ -2,6 +2,7 @@
 title: Waste Reduction and Efficiency AI for Peru Restaurants (TensorFlow, Keras, Spark, DVC) Implements predictive analytics to reduce food waste and improve kitchen efficiency, aligning with sustainability goals
 date: 2024-03-04
 permalink: posts/waste-reduction-and-efficiency-ai-for-peru-restaurants-tensorflow-keras-spark-dvc
+layout: article
 ---
 
 # Machine Learning Waste Reduction and Efficiency AI for Peru Restaurants

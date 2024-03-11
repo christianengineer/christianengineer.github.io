@@ -2,6 +2,7 @@
 title: "Blueprint for Innovation: Advancing Scalable AI-Driven Personal Finance Solutions through Iterative Design, Data Mastery, and Integrated Cloud Technologies"
 date: 2023-06-01
 permalink: posts/innovation-blueprint-for-scalable-ai-personal-finance-solutions-with-data-mastery-and-cloud-technologies
+layout: article
 ---
 
 # Blueprint for Innovation: Advancing Scalable AI-Driven Personal Finance Solutions

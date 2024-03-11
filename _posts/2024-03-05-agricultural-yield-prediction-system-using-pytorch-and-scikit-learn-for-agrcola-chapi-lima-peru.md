@@ -2,6 +2,7 @@
 title: Agricultural Yield Prediction System using PyTorch and Scikit-Learn for Agrícola Chapi (Lima, Peru), Agronomist's pain point is predicting crop yields under varying weather conditions, solution is to use satellite imagery and weather data to accurately forecast yields, aiding in efficient resource allocation
 date: 2024-03-05
 permalink: posts/agricultural-yield-prediction-system-using-pytorch-and-scikit-learn-for-agrcola-chapi-lima-peru
+layout: article
 ---
 
 # Agricultural Yield Prediction System using PyTorch and Scikit-Learn

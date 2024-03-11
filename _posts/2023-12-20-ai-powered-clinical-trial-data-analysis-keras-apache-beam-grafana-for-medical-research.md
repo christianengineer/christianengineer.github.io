@@ -2,6 +2,7 @@
 title: AI-powered Clinical Trial Data Analysis (Keras, Apache Beam, Grafana) For medical research
 date: 2023-12-20
 permalink: posts/ai-powered-clinical-trial-data-analysis-keras-apache-beam-grafana-for-medical-research
+layout: article
 ---
 
 # AI-Powered Clinical Trial Data Analysis

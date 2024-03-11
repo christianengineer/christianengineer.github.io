@@ -2,6 +2,7 @@
 title: Mental Health Monitoring Apps (TensorFlow, NLTK) For early detection and support
 date: 2023-12-15
 permalink: posts/mental-health-monitoring-apps-tensorflow-nltk-for-early-detection-and-support
+layout: article
 ---
 
 ### Objectives

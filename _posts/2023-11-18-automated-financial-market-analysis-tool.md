@@ -2,6 +2,7 @@
 title: Automated Financial Market Analysis Tool
 date: 2023-11-18
 permalink: posts/automated-financial-market-analysis-tool
+layout: article
 ---
 
 # Automated Financial Market Analysis Tool

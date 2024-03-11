@@ -2,6 +2,7 @@
 title: Autonomous Drone Navigation using AirSim (Python/C++) Piloting drones autonomously
 date: 2023-12-03
 permalink: posts/autonomous-drone-navigation-using-airsim-pythonc-piloting-drones-autonomously
+layout: article
 ---
 
 # AI Autonomous Drone Navigation using AirSim Repository

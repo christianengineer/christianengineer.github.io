@@ -2,6 +2,7 @@
 title: National Council of Science, Technology, and Technological Innovation of Peru (TensorFlow, Keras) Research Funding Coordinator pain point is allocating research grants, solution is to deploy machine learning to assess research proposals and predict their potential impact, optimizing fund distribution
 date: 2024-03-07
 permalink: posts/national-council-of-science-technology-and-technological-innovation-of-peru-tensorflow-keras
+layout: article
 ---
 
 # Machine Learning Solution for Research Funding Coordinators

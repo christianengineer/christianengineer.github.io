@@ -2,6 +2,7 @@
 title: "Improve Your Engineering Communication: Dominance vs Leadership"
 date: 2023-09-06
 permalink: posts/engineering-communication-dominance-leadership-teams
+layout: article
 ---
 
 # Improve Your Engineering Communication: Dominance vs Leadership

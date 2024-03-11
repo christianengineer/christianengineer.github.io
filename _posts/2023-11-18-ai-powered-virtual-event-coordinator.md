@@ -2,6 +2,7 @@
 title: AI-Powered Virtual Event Coordinator
 date: 2023-11-18
 permalink: posts/ai-powered-virtual-event-coordinator
+layout: article
 ---
 
 # Technical Specifications: AI-Powered Virtual Event Coordinator Repository

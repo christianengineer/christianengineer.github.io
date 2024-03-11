@@ -2,6 +2,7 @@
 title: "Revolutionizing Video Analysis: A Comprehensive Plan to Develop and Deploy a Scalable AI-Powered Automated Video Content Analysis Tool for High Traffic Scenarios"
 date: 2023-05-12
 permalink: posts/automated-video-content-analysis-tool-ai-driven-scalable-solution
+layout: article
 ---
 
 # Automated Video Content Analysis Tool

@@ -2,6 +2,7 @@
 title: "Implementing AI-Driven Features with Next.js Serverless Functions"
 date: 2023-09-16
 permalink: posts/implementing-aidriven-features-with-nextjs-serverless
+layout: article
 ---
 
 # Implementing AI-Driven Features with Next.js Serverless Functions

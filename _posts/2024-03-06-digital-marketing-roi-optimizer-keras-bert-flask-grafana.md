@@ -2,6 +2,7 @@
 title: Digital Marketing ROI Optimizer (Keras, BERT, Flask, Grafana) for BCP (Banco de Crédito del Perú), Marketing Director Pain Point, Inefficient allocation of digital marketing budget Solution, AI-driven insights into customer behavior to optimize spending and enhance the effectiveness of marketing campaigns in Peru's diverse market
 date: 2024-03-06
 permalink: posts/digital-marketing-roi-optimizer-keras-bert-flask-grafana
+layout: article
 ---
 
 # Digital Marketing ROI Optimizer for BCP: Machine Learning Solution

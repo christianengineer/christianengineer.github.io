@@ -2,6 +2,7 @@
 title: Genetic Algorithms for Optimization Use genetic algorithms for solving optimization problems
 date: 2023-11-24
 permalink: posts/genetic-algorithms-for-optimization-use-genetic-algorithms-for-solving-optimization-problems
+layout: article
 ---
 
 ## Objectives of the Repository

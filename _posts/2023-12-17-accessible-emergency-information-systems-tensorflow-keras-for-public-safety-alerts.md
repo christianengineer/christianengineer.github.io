@@ -2,6 +2,7 @@
 title: Accessible Emergency Information Systems (TensorFlow, Keras) For public safety alerts
 date: 2023-12-17
 permalink: posts/accessible-emergency-information-systems-tensorflow-keras-for-public-safety-alerts
+layout: article
 ---
 
 # AI Accessible Emergency Information Systems

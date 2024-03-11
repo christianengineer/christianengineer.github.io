@@ -2,6 +2,7 @@
 title: Peru Consumer Taste Preference Analyzer (BERT, GPT-3, Flask, Prometheus) Analyzes consumer feedback and market trends to identify shifting taste preferences, guiding product development and marketing strategies
 date: 2024-02-29
 permalink: posts/peru-consumer-taste-preference-analyzer-bert-gpt-3-flask-prometheus-analyzes-consumer-feedback-and-market-trends-to-identify-shifting-taste-preferences-guiding-product-development-and-marketing-strategies
+layout: article
 ---
 
 ## AI Peru Consumer Taste Preference Analyzer

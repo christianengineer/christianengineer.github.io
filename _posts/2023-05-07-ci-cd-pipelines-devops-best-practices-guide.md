@@ -2,6 +2,7 @@
 title: "CI/CD Pipelines and DevOps Practices: A Comprehensive Overview"
 date: 2023-05-07
 permalink: posts/ci-cd-pipelines-devops-best-practices-guide
+layout: article
 ---
 
 # CI/CD Pipelines and DevOps Practices: A Comprehensive Overview

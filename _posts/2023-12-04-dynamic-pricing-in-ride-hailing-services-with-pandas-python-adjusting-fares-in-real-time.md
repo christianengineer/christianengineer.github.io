@@ -2,6 +2,7 @@
 title: Dynamic Pricing in Ride-Hailing Services with Pandas (Python) Adjusting fares in real-time
 date: 2023-12-04
 permalink: posts/dynamic-pricing-in-ride-hailing-services-with-pandas-python-adjusting-fares-in-real-time
+layout: article
 ---
 
 ## Objectives

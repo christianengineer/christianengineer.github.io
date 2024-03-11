@@ -2,6 +2,7 @@
 title: Energy Trading Optimization Model (TensorFlow, Apache NiFi, Kubernetes) For utilities
 date: 2023-12-18
 permalink: posts/energy-trading-optimization-model-tensorflow-apache-nifi-kubernetes-for-utilities
+layout: article
 ---
 
 ### AI Energy Trading Optimization Model

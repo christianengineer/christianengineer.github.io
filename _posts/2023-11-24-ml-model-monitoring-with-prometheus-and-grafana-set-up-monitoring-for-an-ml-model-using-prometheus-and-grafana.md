@@ -2,6 +2,7 @@
 title: ML Model Monitoring with Prometheus and Grafana Set up monitoring for an ML model using Prometheus and Grafana
 date: 2023-11-24
 permalink: posts/ml-model-monitoring-with-prometheus-and-grafana-set-up-monitoring-for-an-ml-model-using-prometheus-and-grafana
+layout: article
 ---
 
 # AI ML Model Monitoring with Prometheus and Grafana

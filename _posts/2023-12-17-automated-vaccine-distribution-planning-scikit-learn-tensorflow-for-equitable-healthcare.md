@@ -2,6 +2,7 @@
 title: Automated Vaccine Distribution Planning (Scikit-Learn, TensorFlow) For equitable healthcare
 date: 2023-12-17
 permalink: posts/automated-vaccine-distribution-planning-scikit-learn-tensorflow-for-equitable-healthcare
+layout: article
 ---
 
 # AI Automated Vaccine Distribution Planning

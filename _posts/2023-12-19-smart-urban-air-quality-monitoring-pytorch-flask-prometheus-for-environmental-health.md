@@ -2,6 +2,7 @@
 title: Smart Urban Air Quality Monitoring (PyTorch, Flask, Prometheus) For environmental health
 date: 2023-12-19
 permalink: posts/smart-urban-air-quality-monitoring-pytorch-flask-prometheus-for-environmental-health
+layout: article
 ---
 
 ## Objectives of the AI Smart Urban Air Quality Monitoring System

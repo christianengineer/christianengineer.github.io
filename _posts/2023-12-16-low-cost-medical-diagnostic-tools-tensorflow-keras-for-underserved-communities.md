@@ -2,6 +2,7 @@
 title: Low-Cost Medical Diagnostic Tools (TensorFlow, Keras) For underserved communities
 date: 2023-12-16
 permalink: posts/low-cost-medical-diagnostic-tools-tensorflow-keras-for-underserved-communities
+layout: article
 ---
 
 ### Objectives

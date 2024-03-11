@@ -2,6 +2,7 @@
 title: Digital Literacy Training Tools (TensorFlow, GPT) For global education
 date: 2023-12-17
 permalink: posts/digital-literacy-training-tools-tensorflow-gpt-for-global-education
+layout: article
 ---
 
 ## AI Digital Literacy Training Tools for Global Education Repository

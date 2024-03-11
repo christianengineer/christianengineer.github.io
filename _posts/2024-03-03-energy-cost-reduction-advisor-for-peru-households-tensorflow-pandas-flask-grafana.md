@@ -2,6 +2,7 @@
 title: Energy Cost Reduction Advisor for Peru Households (TensorFlow, Pandas, Flask, Grafana) Screens household energy usage patterns and matches with tailored advice on reducing energy bills through efficient practices and renewable energy sources
 date: 2024-03-03
 permalink: posts/energy-cost-reduction-advisor-for-peru-households-tensorflow-pandas-flask-grafana
+layout: article
 ---
 
 ## Project: AI Energy Cost Reduction Advisor for Peru Households

@@ -2,6 +2,7 @@
 title: Image Classification using TensorFlow (Python) Distinguishing objects in images
 date: 2023-12-02
 permalink: posts/image-classification-using-tensorflow-python-distinguishing-objects-in-images
+layout: article
 ---
 
 ## Objectives

@@ -2,6 +2,7 @@
 title: InventoryBot AI for Automated Inventory Management
 date: 2023-11-23
 permalink: posts/inventorybot-ai-for-automated-inventory-management
+layout: article
 ---
 
 # AI InventoryBot AI for Automated Inventory Management

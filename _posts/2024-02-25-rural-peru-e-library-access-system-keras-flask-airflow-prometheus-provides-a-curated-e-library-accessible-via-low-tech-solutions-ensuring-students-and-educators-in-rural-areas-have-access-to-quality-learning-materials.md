@@ -2,6 +2,7 @@
 title: Rural Peru E-Library Access System (Keras, Flask, Airflow, Prometheus) Provides a curated e-library accessible via low-tech solutions, ensuring students and educators in rural areas have access to quality learning materials
 date: 2024-02-25
 permalink: posts/rural-peru-e-library-access-system-keras-flask-airflow-prometheus-provides-a-curated-e-library-accessible-via-low-tech-solutions-ensuring-students-and-educators-in-rural-areas-have-access-to-quality-learning-materials
+layout: article
 ---
 
 # AI Rural Peru E-Library Access System

@@ -2,6 +2,7 @@
 title: Python for Full Stack AI Solutions
 date: 2023-11-08
 permalink: posts/full-stack-ai-solutions-using-python-guide
+layout: article
 ---
 
 # Python for Full Stack AI Solutions

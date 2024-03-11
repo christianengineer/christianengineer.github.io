@@ -2,6 +2,7 @@
 title: Blockchain Transaction Analysis with PyTorch (Python) Understanding blockchain networks
 date: 2023-12-03
 permalink: posts/blockchain-transaction-analysis-with-pytorch-python-understanding-blockchain-networks
+layout: article
 ---
 
 # AI Blockchain Transaction Analysis with PyTorch (Python)

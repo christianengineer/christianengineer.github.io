@@ -2,6 +2,7 @@
 title: CustomerInsight - Advanced Customer Portal
 date: 2023-11-21
 permalink: posts/customerinsight---advanced-customer-portal
+layout: article
 ---
 
 # AI CustomerInsight - Advanced Customer Portal Repository

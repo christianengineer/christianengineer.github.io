@@ -2,6 +2,7 @@
 title: Peru Restaurant Health Compliance Monitor (TensorFlow, OpenCV, Flask, Grafana) Uses image recognition to monitor kitchen and dining area cleanliness, ensuring compliance with health regulations
 date: 2024-03-05
 permalink: posts/peru-restaurant-health-compliance-monitor-tensorflow-opencv-flask-grafana
+layout: article
 ---
 
 ### Objectives and Benefits:

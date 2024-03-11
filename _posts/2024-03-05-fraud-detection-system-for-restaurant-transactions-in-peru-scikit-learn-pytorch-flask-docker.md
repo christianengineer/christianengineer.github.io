@@ -2,6 +2,7 @@
 title: Fraud Detection System for Restaurant Transactions in Peru (Scikit-Learn, PyTorch, Flask, Docker) Detects fraudulent transactions in real-time, protecting restaurant revenues and customer information
 date: 2024-03-05
 permalink: posts/fraud-detection-system-for-restaurant-transactions-in-peru-scikit-learn-pytorch-flask-docker
+layout: article
 ---
 
 # Machine Learning Fraud Detection System for Restaurant Transactions in Peru

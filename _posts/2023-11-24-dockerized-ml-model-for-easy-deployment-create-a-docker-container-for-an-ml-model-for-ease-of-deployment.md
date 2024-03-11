@@ -2,6 +2,7 @@
 title: Dockerized ML Model for Easy Deployment Create a Docker container for an ML model for ease of deployment
 date: 2023-11-24
 permalink: posts/dockerized-ml-model-for-easy-deployment-create-a-docker-container-for-an-ml-model-for-ease-of-deployment
+layout: article
 ---
 
 ## Objectives of Dockerized ML Model Deployment

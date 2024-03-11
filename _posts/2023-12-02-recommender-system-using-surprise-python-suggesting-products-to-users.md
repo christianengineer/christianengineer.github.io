@@ -2,6 +2,7 @@
 title: Recommender System using Surprise (Python) Suggesting products to users
 date: 2023-12-02
 permalink: posts/recommender-system-using-surprise-python-suggesting-products-to-users
+layout: article
 ---
 
 # AI Recommender System using Surprise (Python)

@@ -2,6 +2,7 @@
 title: Dynamic Wine Pairing AI for Peru Restaurants (Scikit-Learn, PyTorch, Flask, Kubernetes) Suggests optimal wine pairings for menu items using flavor profile analysis and sommelier knowledge bases
 date: 2024-03-05
 permalink: posts/dynamic-wine-pairing-ai-for-peru-restaurants-scikit-learn-pytorch-flask-kubernetes
+layout: article
 ---
 
 ## Project Overview

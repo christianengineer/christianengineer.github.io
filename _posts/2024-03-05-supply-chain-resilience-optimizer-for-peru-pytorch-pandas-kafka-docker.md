@@ -2,6 +2,7 @@
 title: Supply Chain Resilience Optimizer for Peru (PyTorch, Pandas, Kafka, Docker) Enhances supply chain resilience against disruptions through predictive analytics and scenario planning
 date: 2024-03-05
 permalink: posts/supply-chain-resilience-optimizer-for-peru-pytorch-pandas-kafka-docker
+layout: article
 ---
 
 ## Machine Learning Supply Chain Resilience Optimizer for Peru

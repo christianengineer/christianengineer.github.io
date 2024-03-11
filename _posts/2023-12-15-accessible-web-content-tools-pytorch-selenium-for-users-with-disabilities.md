@@ -2,6 +2,7 @@
 title: Accessible Web Content Tools (PyTorch, Selenium) For users with disabilities
 date: 2023-12-15
 permalink: posts/accessible-web-content-tools-pytorch-selenium-for-users-with-disabilities
+layout: article
 ---
 
 ## Objectives of the Repository

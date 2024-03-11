@@ -2,6 +2,7 @@
 title: Peru Restaurant Loyalty and Rewards Program Designer (Keras, BERT, Airflow, Grafana) Develops personalized loyalty programs based on customer behavior analysis, encouraging repeat business and enhancing customer engagement
 date: 2024-03-05
 permalink: posts/peru-restaurant-loyalty-and-rewards-program-designer-keras-bert-airflow-grafana
+layout: article
 ---
 
 # Machine Learning Peru Restaurant Loyalty and Rewards Program

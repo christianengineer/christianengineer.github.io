@@ -2,6 +2,7 @@
 title: AI-powered Talent Acquisition and Screening (PyTorch, Kafka, Docker) For HR
 date: 2023-12-18
 permalink: posts/ai-powered-talent-acquisition-and-screening-pytorch-kafka-docker-for-hr
+layout: article
 ---
 
 ## Objectives of the AI-powered Talent Acquisition and Screening System

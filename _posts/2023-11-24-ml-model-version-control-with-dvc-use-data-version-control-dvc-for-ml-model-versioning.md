@@ -2,6 +2,7 @@
 title: ML Model Version Control with DVC Use Data Version Control (DVC) for ML model versioning
 date: 2023-11-24
 permalink: posts/ml-model-version-control-with-dvc-use-data-version-control-dvc-for-ml-model-versioning
+layout: article
 ---
 
 ## Objective

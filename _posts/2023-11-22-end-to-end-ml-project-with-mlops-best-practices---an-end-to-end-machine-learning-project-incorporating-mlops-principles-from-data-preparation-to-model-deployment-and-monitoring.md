@@ -2,6 +2,7 @@
 title: End-to-End ML Project with MLOps Best Practices - An end-to-end machine learning project incorporating MLOps principles, from data preparation to model deployment and monitoring.
 date: 2023-11-22
 permalink: posts/end-to-end-ml-project-with-mlops-best-practices---an-end-to-end-machine-learning-project-incorporating-mlops-principles-from-data-preparation-to-model-deployment-and-monitoring
+layout: article
 ---
 
 # AI End-to-End ML Project with MLOps Best Practices

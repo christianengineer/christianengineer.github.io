@@ -2,6 +2,7 @@
 title: Automated Essay Scoring System Develop a system for scoring essays using NLP
 date: 2023-11-24
 permalink: posts/automated-essay-scoring-system-develop-a-system-for-scoring-essays-using-nlp
+layout: article
 ---
 
 # AI Automated Essay Scoring System

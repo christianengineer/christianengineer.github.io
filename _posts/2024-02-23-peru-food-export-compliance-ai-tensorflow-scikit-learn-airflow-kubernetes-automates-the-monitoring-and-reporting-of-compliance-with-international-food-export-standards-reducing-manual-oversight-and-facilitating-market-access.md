@@ -2,6 +2,7 @@
 title: Peru Food Export Compliance AI (TensorFlow, Scikit-Learn, Airflow, Kubernetes) Automates the monitoring and reporting of compliance with international food export standards, reducing manual oversight and facilitating market access
 date: 2024-02-23
 permalink: posts/peru-food-export-compliance-ai-tensorflow-scikit-learn-airflow-kubernetes-automates-the-monitoring-and-reporting-of-compliance-with-international-food-export-standards-reducing-manual-oversight-and-facilitating-market-access
+layout: article
 ---
 
 ### AI Peru Food Export Compliance Application

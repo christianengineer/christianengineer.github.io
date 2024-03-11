@@ -2,6 +2,7 @@
 title: Peru Culinary Trend Analyzer (BERT, GPT-3, Kafka, Docker) Identifies emerging culinary trends and consumer preferences, enabling chefs to innovate and adapt menus dynamically
 date: 2024-03-04
 permalink: posts/peru-culinary-trend-analyzer-bert-gpt-3-kafka-docker
+layout: article
 ---
 
 ## Peru Culinary Trend Analyzer Project Overview

@@ -2,6 +2,7 @@
 title: BlockChainMind AI-Enhanced Blockchain Solutions
 date: 2023-11-24
 permalink: posts/blockchainmind-ai-enhanced-blockchain-solutions
+layout: article
 ---
 
 # AI-Enhanced Blockchain Solutions Repository

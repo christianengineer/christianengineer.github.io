@@ -2,6 +2,7 @@
 title: High-Performance Computing
 date: 2023-08-11
 permalink: posts/high-performance-computing-advancements-and-applications
+layout: article
 ---
 
 # High-Performance Computing (HPC)

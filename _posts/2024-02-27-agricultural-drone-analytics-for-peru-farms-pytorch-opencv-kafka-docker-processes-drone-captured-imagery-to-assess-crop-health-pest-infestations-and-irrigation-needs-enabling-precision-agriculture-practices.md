@@ -2,6 +2,7 @@
 title: Agricultural Drone Analytics for Peru Farms (PyTorch, OpenCV, Kafka, Docker) Processes drone-captured imagery to assess crop health, pest infestations, and irrigation needs, enabling precision agriculture practices
 date: 2024-02-27
 permalink: posts/agricultural-drone-analytics-for-peru-farms-pytorch-opencv-kafka-docker-processes-drone-captured-imagery-to-assess-crop-health-pest-infestations-and-irrigation-needs-enabling-precision-agriculture-practices
+layout: article
 ---
 
 # AI Agricultural Drone Analytics for Peru Farms

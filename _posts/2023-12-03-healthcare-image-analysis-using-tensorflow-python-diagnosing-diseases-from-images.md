@@ -2,6 +2,7 @@
 title: Healthcare Image Analysis using TensorFlow (Python) Diagnosing diseases from images
 date: 2023-12-03
 permalink: posts/healthcare-image-analysis-using-tensorflow-python-diagnosing-diseases-from-images
+layout: article
 ---
 
 # Objectives

@@ -2,6 +2,7 @@
 title: Edge AI - Deploying ML Models on Edge Devices
 date: 2023-11-22
 permalink: posts/edge-ai-deploying-ml-models-on-edge-devices
+layout: article
 ---
 
 # AI Edge AI: Deploying ML Models on Edge Devices

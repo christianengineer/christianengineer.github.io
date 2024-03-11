@@ -2,6 +2,7 @@
 title: AI-driven Content Moderation for Online Platforms (BERT, Flask, Docker) For community safety
 date: 2023-12-18
 permalink: posts/ai-driven-content-moderation-for-online-platforms-bert-flask-docker-for-community-safety
+layout: article
 ---
 
 # AI-driven Content Moderation for Online Platforms

@@ -2,6 +2,7 @@
 title: Low-bandwidth Online Education Platforms (GPT, TensorFlow) For remote learning
 date: 2023-12-17
 permalink: posts/low-bandwidth-online-education-platforms-gpt-tensorflow-for-remote-learning
+layout: article
 ---
 
 ## Objectives of the AI Low-bandwidth Online Education Platform

@@ -2,6 +2,7 @@
 title: AI-Enhanced Legal Document Analysis (BERT, Flask, Kubernetes) For legal services
 date: 2023-12-20
 permalink: posts/ai-enhanced-legal-document-analysis-bert-flask-kubernetes-for-legal-services
+layout: article
 ---
 
 ## Objectives

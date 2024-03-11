@@ -2,6 +2,7 @@
 title: Sustainable Fishing Practices Model (TensorFlow, Keras) For ocean sustainability
 date: 2023-12-17
 permalink: posts/sustainable-fishing-practices-model-tensorflow-keras-for-ocean-sustainability
+layout: article
 ---
 
 ## AI Sustainable Fishing Practices Model

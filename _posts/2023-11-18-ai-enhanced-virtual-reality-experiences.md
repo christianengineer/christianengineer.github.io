@@ -2,6 +2,7 @@
 title: AI-Enhanced Virtual Reality Experiences
 date: 2023-11-18
 permalink: posts/ai-enhanced-virtual-reality-experiences
+layout: article
 ---
 
 # AI-Enhanced Virtual Reality Experiences Repository

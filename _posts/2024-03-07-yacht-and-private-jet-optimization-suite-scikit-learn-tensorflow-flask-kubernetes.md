@@ -2,6 +2,7 @@
 title: Yacht and Private Jet Optimization Suite (Scikit-Learn, TensorFlow, Flask, Kubernetes) for Aerocondor, Fleet Manager Pain Point, Inefficient scheduling and maintenance Solution, AI optimization for maintenance and operational scheduling, reducing downtime and improving service reliability for Peru's high-end transport services
 date: 2024-03-07
 permalink: posts/yacht-and-private-jet-optimization-suite-scikit-learn-tensorflow-flask-kubernetes
+layout: article
 ---
 
 # Machine Learning Solution for Yacht and Private Jet Optimization Suite

@@ -2,6 +2,7 @@
 title: AI for Predictive Maintenance Build a predictive maintenance system using AI
 date: 2023-11-24
 permalink: posts/ai-for-predictive-maintenance-build-a-predictive-maintenance-system-using-ai
+layout: article
 ---
 
 # AI for Predictive Maintenance Repository

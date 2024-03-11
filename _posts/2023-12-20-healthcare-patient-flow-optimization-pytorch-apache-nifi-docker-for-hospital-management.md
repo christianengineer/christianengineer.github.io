@@ -2,6 +2,7 @@
 title: Healthcare Patient Flow Optimization (PyTorch, Apache NiFi, Docker) For hospital management
 date: 2023-12-20
 permalink: posts/healthcare-patient-flow-optimization-pytorch-apache-nifi-docker-for-hospital-management
+layout: article
 ---
 
 # AI Healthcare Patient Flow Optimization System

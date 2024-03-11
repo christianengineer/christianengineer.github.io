@@ -2,6 +2,7 @@
 title: AI-powered Inventory Management System Create an inventory management system using AI algorithms
 date: 2023-11-24
 permalink: posts/ai-powered-inventory-management-system-create-an-inventory-management-system-using-ai-algorithms
+layout: article
 ---
 
 # AI-powered Inventory Management System

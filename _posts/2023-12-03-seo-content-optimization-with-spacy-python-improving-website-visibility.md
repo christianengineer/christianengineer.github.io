@@ -2,6 +2,7 @@
 title: SEO Content Optimization with SpaCy (Python) Improving website visibility
 date: 2023-12-03
 permalink: posts/seo-content-optimization-with-spacy-python-improving-website-visibility
+layout: article
 ---
 
 ### Repository: AI SEO Content Optimization with SpaCy (Python) Improving Website Visibility

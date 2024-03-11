@@ -2,6 +2,7 @@
 title: " Hiring a Senior Full Stack Engineer: How to Assess Their Communication Skills"
 date: 2023-09-24
 permalink: posts/hiring-a-senior-full-stack-engineer-assess-their-communication-skills
+layout: article
 ---
 
 # Hiring a Senior Full Stack Engineer: How to Assess Their Communication Skills

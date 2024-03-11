@@ -2,6 +2,7 @@
 title: National Superintendence of Customs and Tax Administration of Peru (TensorFlow, Scikit-Learn) Customs Officer pain point is identifying underreported goods in customs declarations, solution is to develop a machine learning model to flag discrepancies in shipment declarations, enhancing revenue collection
 date: 2024-03-05
 permalink: posts/national-superintendence-of-customs-and-tax-administration-of-peru-tensorflow-scikit-learn
+layout: article
 ---
 
 ## Machine Learning Solution Overview

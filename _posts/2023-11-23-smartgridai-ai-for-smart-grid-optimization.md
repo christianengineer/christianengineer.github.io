@@ -2,6 +2,7 @@
 title: SmartGridAI AI for Smart Grid Optimization
 date: 2023-11-23
 permalink: posts/smartgridai-ai-for-smart-grid-optimization
+layout: article
 ---
 
 ### Objectives

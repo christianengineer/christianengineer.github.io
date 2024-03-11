@@ -2,6 +2,7 @@
 title: Low-Cost Prosthetic Design (TensorFlow, OpenCV) For affordable healthcare devices
 date: 2023-12-16
 permalink: posts/low-cost-prosthetic-design-tensorflow-opencv-for-affordable-healthcare-devices
+layout: article
 ---
 
 # AI Low-Cost Prosthetic Design (TensorFlow, OpenCV)

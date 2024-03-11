@@ -2,6 +2,7 @@
 title: Affordable Clean Energy Research (TensorFlow, PyTorch) For energy access
 date: 2023-12-17
 permalink: posts/affordable-clean-energy-research-tensorflow-pytorch-for-energy-access
+layout: article
 ---
 
 ## AI Affordable Clean Energy Research Repository

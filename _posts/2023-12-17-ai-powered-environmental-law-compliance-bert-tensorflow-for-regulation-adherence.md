@@ -2,6 +2,7 @@
 title: AI-Powered Environmental Law Compliance (BERT, TensorFlow) For regulation adherence
 date: 2023-12-17
 permalink: posts/ai-powered-environmental-law-compliance-bert-tensorflow-for-regulation-adherence
+layout: article
 ---
 
 # AI-Powered Environmental Law Compliance System

@@ -2,6 +2,7 @@
 title: Peru Education Access Enhancer (TensorFlow, Keras, Airflow, Kubernetes) Utilizes predictive analytics to identify communities with the most significant barriers to education and suggests targeted interventions
 date: 2024-02-24
 permalink: posts/peru-education-access-enhancer-tensorflow-keras-airflow-kubernetes-utilizes-predictive-analytics-to-identify-communities-with-the-most-significant-barriers-to-education-and-suggests-targeted-interventions
+layout: article
 ---
 
 ## AI Peru Education Access Enhancer Project Overview

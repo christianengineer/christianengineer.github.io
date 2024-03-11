@@ -2,6 +2,7 @@
 title: Environmental Assessment and Enforcement Agency of Peru (TensorFlow, Earth Engine API) Environmental Inspector pain point is monitoring environmental compliance, solution is to deploy machine learning models to analyze satellite images for signs of environmental violations, streamlining enforcement
 date: 2024-03-07
 permalink: posts/environmental-assessment-and-enforcement-agency-of-peru-tensorflow-earth-engine-api
+layout: article
 ---
 
 # Machine Learning Solution for Environmental Assessment and Enforcement Agency of Peru

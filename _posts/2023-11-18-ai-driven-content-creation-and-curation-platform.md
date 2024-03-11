@@ -2,6 +2,7 @@
 title: AI-Driven Content Creation and Curation Platform
 date: 2023-11-18
 permalink: posts/ai-driven-content-creation-and-curation-platform
+layout: article
 ---
 
 # Technical Specifications - AI-Driven Content Creation and Curation Platform

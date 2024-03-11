@@ -2,6 +2,7 @@
 title: Cybersecurity Threat Detection with Scikit-Learn (Python) Identifying security risks
 date: 2023-12-03
 permalink: posts/cybersecurity-threat-detection-with-scikit-learn-python-identifying-security-risks
+layout: article
 ---
 
 # AI Cybersecurity Threat Detection with Scikit-Learn

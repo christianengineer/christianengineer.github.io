@@ -2,6 +2,7 @@
 title: RealEstateAnalyzer AI for Real Estate Analytics
 date: 2023-11-23
 permalink: posts/realestateanalyzer-ai-for-real-estate-analytics
+layout: article
 ---
 
 # AI RealEstateAnalyzer Repository

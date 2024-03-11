@@ -2,6 +2,7 @@
 title: SMS-Based Learning System for Peru (Scikit-Learn, NLTK, Twilio API, Docker) Delivers personalized educational lessons and quizzes via SMS, requiring no data or internet, tailored to the Peruvian curriculum
 date: 2024-02-23
 permalink: posts/sms-based-learning-system-for-peru-scikit-learn-nltk-twilio-api-docker-delivers-personalized-educational-lessons-and-quizzes-via-sms-requiring-no-data-or-internet-tailored-to-the-peruvian-curriculum
+layout: article
 ---
 
 # AI SMS-Based Learning System for Peru

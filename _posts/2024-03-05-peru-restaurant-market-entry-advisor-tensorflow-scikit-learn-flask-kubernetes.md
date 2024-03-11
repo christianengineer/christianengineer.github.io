@@ -2,6 +2,7 @@
 title: Peru Restaurant Market Entry Advisor (TensorFlow, Scikit-Learn, Flask, Kubernetes) Assists new restaurants in identifying optimal locations and niches based on market analysis and consumer trends
 date: 2024-03-05
 permalink: posts/peru-restaurant-market-entry-advisor-tensorflow-scikit-learn-flask-kubernetes
+layout: article
 ---
 
 # Machine Learning Peru Restaurant Market Entry Advisor

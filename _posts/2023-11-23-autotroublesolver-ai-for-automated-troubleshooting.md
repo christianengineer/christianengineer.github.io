@@ -2,6 +2,7 @@
 title: AutoTroubleSolver AI for Automated Troubleshooting
 date: 2023-11-23
 permalink: posts/autotroublesolver-ai-for-automated-troubleshooting
+layout: article
 ---
 
 # Objective of AI AutoTroubleSolver Repository

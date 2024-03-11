@@ -2,6 +2,7 @@
 title: Interactive Voice Response (IVR) Systems using Asterisk (Python) Automating call responses
 date: 2023-12-04
 permalink: posts/interactive-voice-response-ivr-systems-using-asterisk-python-automating-call-responses
+layout: article
 ---
 
 # AI Interactive Voice Response (IVR) Systems using Asterisk (Python)

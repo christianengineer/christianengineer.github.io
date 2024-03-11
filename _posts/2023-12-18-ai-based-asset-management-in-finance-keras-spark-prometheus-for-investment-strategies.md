@@ -2,6 +2,7 @@
 title: AI-based Asset Management in Finance (Keras, Spark, Prometheus) For investment strategies
 date: 2023-12-18
 permalink: posts/ai-based-asset-management-in-finance-keras-spark-prometheus-for-investment-strategies
+layout: article
 ---
 
 ### Objectives

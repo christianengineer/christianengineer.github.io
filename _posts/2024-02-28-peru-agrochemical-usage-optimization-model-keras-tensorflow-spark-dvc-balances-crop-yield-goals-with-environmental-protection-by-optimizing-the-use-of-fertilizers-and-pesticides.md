@@ -2,6 +2,7 @@
 title: Peru Agrochemical Usage Optimization Model (Keras, TensorFlow, Spark, DVC) Balances crop yield goals with environmental protection by optimizing the use of fertilizers and pesticides
 date: 2024-02-28
 permalink: posts/peru-agrochemical-usage-optimization-model-keras-tensorflow-spark-dvc-balances-crop-yield-goals-with-environmental-protection-by-optimizing-the-use-of-fertilizers-and-pesticides
+layout: article
 ---
 
 ## AI Peru Agrochemical Usage Optimization Model

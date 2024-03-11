@@ -2,6 +2,7 @@
 title: Peru Fine Dining Table Management System (TensorFlow, Keras, Airflow, Prometheus) Optimizes table allocations and reservations to enhance dining room flow and maximize seating efficiency
 date: 2024-03-04
 permalink: posts/peru-fine-dining-table-management-system-tensorflow-keras-airflow-prometheus
+layout: article
 ---
 
 # Machine Learning Peru Fine Dining Table Management System

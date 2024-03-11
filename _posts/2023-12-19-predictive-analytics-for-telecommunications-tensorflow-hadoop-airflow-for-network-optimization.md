@@ -2,6 +2,7 @@
 title: Predictive Analytics for Telecommunications (TensorFlow, Hadoop, Airflow) For network optimization
 date: 2023-12-19
 permalink: posts/predictive-analytics-for-telecommunications-tensorflow-hadoop-airflow-for-network-optimization
+layout: article
 ---
 
 **Objectives:**

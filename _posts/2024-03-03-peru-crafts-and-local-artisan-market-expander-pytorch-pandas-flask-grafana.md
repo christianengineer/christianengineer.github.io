@@ -2,6 +2,7 @@
 title: Peru Crafts and Local Artisan Market Expander (PyTorch, Pandas, Flask, Grafana) Utilizes AI to match local artisans with online marketplaces and tourist shops, increasing the visibility and sales of their crafts, fostering sustainable income streams
 date: 2024-03-03
 permalink: posts/peru-crafts-and-local-artisan-market-expander-pytorch-pandas-flask-grafana
+layout: article
 ---
 
 ## Objectives: 

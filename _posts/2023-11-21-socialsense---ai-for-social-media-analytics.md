@@ -2,6 +2,7 @@
 title: SocialSense - AI for Social Media Analytics
 date: 2023-11-21
 permalink: posts/socialsense---ai-for-social-media-analytics
+layout: article
 ---
 
 ### AI SocialSense - AI for Social Media Analytics

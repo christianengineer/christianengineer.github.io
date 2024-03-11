@@ -2,6 +2,7 @@
 title: "Strategic Blueprint for an AI-Driven, Cloud-Powered Sentiment Analysis Tool: Harnessing Big Data and Scalable Technologies for Superior Customer Feedback Analysis"
 date: 2023-09-18
 permalink: posts/sentiment-analysis-ai-customer-feedback-tool
+layout: article
 ---
 
 ## Repository: Sentiment Analysis Tool for Customer Feedback

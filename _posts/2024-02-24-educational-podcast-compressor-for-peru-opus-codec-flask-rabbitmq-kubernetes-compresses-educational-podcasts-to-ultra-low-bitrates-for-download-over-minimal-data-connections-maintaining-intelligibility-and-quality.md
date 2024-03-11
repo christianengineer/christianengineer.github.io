@@ -2,6 +2,7 @@
 title: Educational Podcast Compressor for Peru (Opus Codec, Flask, RabbitMQ, Kubernetes) Compresses educational podcasts to ultra-low bitrates for download over minimal data connections, maintaining intelligibility and quality
 date: 2024-02-24
 permalink: posts/educational-podcast-compressor-for-peru-opus-codec-flask-rabbitmq-kubernetes-compresses-educational-podcasts-to-ultra-low-bitrates-for-download-over-minimal-data-connections-maintaining-intelligibility-and-quality
+layout: article
 ---
 
 ## AI Educational Podcast Compressor for Peru

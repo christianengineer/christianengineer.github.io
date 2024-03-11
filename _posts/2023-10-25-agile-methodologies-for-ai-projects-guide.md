@@ -2,6 +2,7 @@
 title: Agile Methodologies for AI Projects
 date: 2023-10-25
 permalink: posts/agile-methodologies-for-ai-projects-guide
+layout: article
 ---
 
 # Agile Methodologies for AI Projects

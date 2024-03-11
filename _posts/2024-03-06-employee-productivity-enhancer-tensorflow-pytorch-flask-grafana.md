@@ -2,6 +2,7 @@
 title: Employee Productivity Enhancer (TensorFlow, PyTorch, Flask, Grafana) for Belcorp, HR Manager's pain point is identifying and addressing productivity bottlenecks in a large, diverse workforce, solution is to use predictive analytics to tailor employee development programs and optimize team compositions, boosting overall productivity and job satisfaction
 date: 2024-03-06
 permalink: posts/employee-productivity-enhancer-tensorflow-pytorch-flask-grafana
+layout: article
 ---
 
 # Employee Productivity Enhancer: Machine Learning Solution

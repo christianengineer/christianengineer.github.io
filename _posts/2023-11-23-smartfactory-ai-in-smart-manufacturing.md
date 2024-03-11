@@ -2,6 +2,7 @@
 title: SmartFactory AI in Smart Manufacturing
 date: 2023-11-23
 permalink: posts/smartfactory-ai-in-smart-manufacturing
+layout: article
 ---
 
 ### AI SmartFactory Repository

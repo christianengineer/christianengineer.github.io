@@ -2,6 +2,7 @@
 title: Microservices Architecture for AI Systems
 date: 2023-11-17
 permalink: posts/microservices-architecture-ai-systems
+layout: article
 ---
 
 # Microservices Architecture for AI Systems

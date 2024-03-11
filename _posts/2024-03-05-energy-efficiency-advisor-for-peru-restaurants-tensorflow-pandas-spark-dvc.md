@@ -2,6 +2,7 @@
 title: Energy Efficiency Advisor for Peru Restaurants (TensorFlow, Pandas, Spark, DVC) Monitors energy usage and recommends adjustments to reduce costs and support environmental sustainability
 date: 2024-03-05
 permalink: posts/energy-efficiency-advisor-for-peru-restaurants-tensorflow-pandas-spark-dvc
+layout: article
 ---
 
 ## Machine Learning Energy Efficiency Advisor for Peru Restaurants

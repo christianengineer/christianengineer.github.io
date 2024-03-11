@@ -2,6 +2,7 @@
 title: Peru Microfinance Loan Matcher (TensorFlow, Scikit-Learn, Flask, Kubernetes) Matches low-income families with microfinance loan opportunities based on their financial needs and capacity, empowering them to start small businesses or expand existing ones
 date: 2024-03-02
 permalink: posts/peru-microfinance-loan-matcher-tensorflow-scikit-learn-flask-kubernetes
+layout: article
 ---
 
 # AI Peru Microfinance Loan Matcher Project Overview

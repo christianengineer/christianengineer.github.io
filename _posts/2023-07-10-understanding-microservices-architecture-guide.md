@@ -2,6 +2,7 @@
 title: "Microservices Architecture: A Comprehensive Guide"
 date: 2023-07-10
 permalink: posts/understanding-microservices-architecture-guide
+layout: article
 ---
 
 # Microservices Architecture: A Comprehensive Guide

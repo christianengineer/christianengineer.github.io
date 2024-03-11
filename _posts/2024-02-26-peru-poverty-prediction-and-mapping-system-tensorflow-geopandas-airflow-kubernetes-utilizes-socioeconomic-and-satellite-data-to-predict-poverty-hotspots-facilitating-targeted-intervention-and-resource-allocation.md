@@ -2,6 +2,7 @@
 title: Peru Poverty Prediction and Mapping System (TensorFlow, GeoPandas, Airflow, Kubernetes) Utilizes socioeconomic and satellite data to predict poverty hotspots, facilitating targeted intervention and resource allocation
 date: 2024-02-26
 permalink: posts/peru-poverty-prediction-and-mapping-system-tensorflow-geopandas-airflow-kubernetes-utilizes-socioeconomic-and-satellite-data-to-predict-poverty-hotspots-facilitating-targeted-intervention-and-resource-allocation
+layout: article
 ---
 
 ## AI Peru Poverty Prediction and Mapping System

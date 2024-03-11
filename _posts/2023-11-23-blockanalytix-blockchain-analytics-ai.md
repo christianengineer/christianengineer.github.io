@@ -2,6 +2,7 @@
 title: BlockAnalytix Blockchain Analytics AI
 date: 2023-11-23
 permalink: posts/blockanalytix-blockchain-analytics-ai
+layout: article
 ---
 
 ### AI BlockAnalytix Blockchain Analytics AI Repository

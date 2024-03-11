@@ -2,6 +2,7 @@
 title: Text Summarization with Hugging Face Transformers (Python) Condensing large text documents
 date: 2023-12-03
 permalink: posts/text-summarization-with-hugging-face-transformers-python-condensing-large-text-documents
+layout: article
 ---
 
 ### Objectives:

@@ -2,6 +2,7 @@
 title: Google Cloud Platform for AI integration
 date: 2023-10-16
 permalink: posts/google-cloud-platform-ai-integration-guide
+layout: article
 ---
 
 # Google Cloud Platform for AI integration

@@ -2,6 +2,7 @@
 title: Interactive Voice Response Educational System for Peru (PyTorch, Twilio API, Flask, Grafana) Offers educational content and tutoring through interactive voice response (IVR) technology, accessible without internet or smartphones
 date: 2024-02-25
 permalink: posts/interactive-voice-response-educational-system-for-peru-pytorch-twilio-api-flask-grafana-offers-educational-content-and-tutoring-through-interactive-voice-response-ivr-technology-accessible-without-internet-or-smartphones
+layout: article
 ---
 
 ## AI Interactive Voice Response Educational System for Peru

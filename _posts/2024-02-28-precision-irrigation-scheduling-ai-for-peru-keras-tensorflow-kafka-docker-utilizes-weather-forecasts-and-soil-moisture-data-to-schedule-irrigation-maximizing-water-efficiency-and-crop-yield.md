@@ -2,6 +2,7 @@
 title: Precision Irrigation Scheduling AI for Peru (Keras, TensorFlow, Kafka, Docker) Utilizes weather forecasts and soil moisture data to schedule irrigation, maximizing water efficiency and crop yield
 date: 2024-02-28
 permalink: posts/precision-irrigation-scheduling-ai-for-peru-keras-tensorflow-kafka-docker-utilizes-weather-forecasts-and-soil-moisture-data-to-schedule-irrigation-maximizing-water-efficiency-and-crop-yield
+layout: article
 ---
 
 ## AI Precision Irrigation Scheduling System Overview

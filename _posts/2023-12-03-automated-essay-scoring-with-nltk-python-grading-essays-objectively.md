@@ -2,6 +2,7 @@
 title: Automated Essay Scoring with NLTK (Python) Grading essays objectively
 date: 2023-12-03
 permalink: posts/automated-essay-scoring-with-nltk-python-grading-essays-objectively
+layout: article
 ---
 
 ## Objectives

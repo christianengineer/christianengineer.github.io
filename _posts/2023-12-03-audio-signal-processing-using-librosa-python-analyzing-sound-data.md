@@ -2,6 +2,7 @@
 title: Audio Signal Processing using Librosa (Python) Analyzing sound data
 date: 2023-12-03
 permalink: posts/audio-signal-processing-using-librosa-python-analyzing-sound-data
+layout: article
 ---
 
 # AI Audio Signal Processing using Librosa

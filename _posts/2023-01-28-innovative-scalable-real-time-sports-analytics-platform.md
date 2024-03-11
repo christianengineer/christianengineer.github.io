@@ -2,6 +2,7 @@
 title: "Revolutionizing the Game: A Strategic Blueprint for a Scalable, AI-Driven Real-Time Sports Analytics Platform"
 date: 2023-01-28
 permalink: posts/innovative-scalable-real-time-sports-analytics-platform
+layout: article
 ---
 
 #Real-Time Sports Analytics Platform

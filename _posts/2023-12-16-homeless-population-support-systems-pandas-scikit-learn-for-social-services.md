@@ -2,6 +2,7 @@
 title: Homeless Population Support Systems (Pandas, Scikit-Learn) For social services
 date: 2023-12-16
 permalink: posts/homeless-population-support-systems-pandas-scikit-learn-for-social-services
+layout: article
 ---
 
 ## Objectives

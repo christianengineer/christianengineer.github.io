@@ -2,6 +2,7 @@
 title: Air Quality Prediction Models (Keras, TensorFlow) To combat air pollution
 date: 2023-12-15
 permalink: posts/air-quality-prediction-models-keras-tensorflow-to-combat-air-pollution
+layout: article
 ---
 
 # Objectives

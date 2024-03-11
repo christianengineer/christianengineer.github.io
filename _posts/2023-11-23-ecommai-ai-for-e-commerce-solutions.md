@@ -2,6 +2,7 @@
 title: EcommAI AI for E-Commerce Solutions
 date: 2023-11-23
 permalink: posts/ecommai-ai-for-e-commerce-solutions
+layout: article
 ---
 
 # AI E-Commerce Solutions Repository

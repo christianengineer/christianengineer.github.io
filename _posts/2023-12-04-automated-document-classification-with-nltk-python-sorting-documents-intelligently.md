@@ -2,6 +2,7 @@
 title: Automated Document Classification with NLTK (Python) Sorting documents intelligently
 date: 2023-12-04
 permalink: posts/automated-document-classification-with-nltk-python-sorting-documents-intelligently
+layout: article
 ---
 
 ## Objectives

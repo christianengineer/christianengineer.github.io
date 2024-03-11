@@ -2,6 +2,7 @@
 title: "Server-Side Languages: Node.js, Python, and Java"
 date: 2023-02-26
 permalink: posts/comparing-server-side-languages-nodejs-python-java
+layout: article
 ---
 
 # Introduction to Server-Side Languages: Node.js, Python, and Java

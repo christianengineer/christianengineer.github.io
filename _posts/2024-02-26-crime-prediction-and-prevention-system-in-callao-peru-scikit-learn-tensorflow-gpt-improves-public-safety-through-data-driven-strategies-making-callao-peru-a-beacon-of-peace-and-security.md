@@ -2,6 +2,7 @@
 title: Crime Prediction and Prevention System in Callao, Peru (Scikit-learn, TensorFlow, GPT) Improves public safety through data-driven strategies, making Callao, Peru a beacon of peace and security
 date: 2024-02-26
 permalink: posts/crime-prediction-and-prevention-system-in-callao-peru-scikit-learn-tensorflow-gpt-improves-public-safety-through-data-driven-strategies-making-callao-peru-a-beacon-of-peace-and-security
+layout: article
 ---
 
 ## AI Crime Prediction and Prevention System in Callao, Peru

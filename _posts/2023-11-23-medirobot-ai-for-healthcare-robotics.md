@@ -2,6 +2,7 @@
 title: MediRobot AI for Healthcare Robotics
 date: 2023-11-23
 permalink: posts/medirobot-ai-for-healthcare-robotics
+layout: article
 ---
 
 ## AI MediRobot AI for Healthcare Robotics Repository

@@ -2,6 +2,7 @@
 title: "Accelerate to Innovate: A Transformative Blueprint for Developing, Deploying & Scaling a Data-Driven, AI-Enabled Smart Home Energy Optimization System."
 date: 2023-04-05
 permalink: posts/smart-home-energy-optimization-ai-technology-in-depth-guide
+layout: article
 ---
 
 # Smart Home Energy Optimization System Repository

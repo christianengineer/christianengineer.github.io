@@ -2,6 +2,7 @@
 title: Automated Image Captioning with CNN-LSTM (Python) Describing images with text
 date: 2023-12-15
 permalink: posts/automated-image-captioning-with-cnn-lstm-python-describing-images-with-text
+layout: article
 ---
 
 # AI Automated Image Captioning with CNN-LSTM

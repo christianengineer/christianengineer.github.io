@@ -2,6 +2,7 @@
 title: Smart Traffic Management System (Scikit-Learn, Apache NiFi, Docker) For urban planning
 date: 2023-12-20
 permalink: posts/smart-traffic-management-system-scikit-learn-apache-nifi-docker-for-urban-planning
+layout: article
 ---
 
 ### AI Smart Traffic Management System for Urban Planning

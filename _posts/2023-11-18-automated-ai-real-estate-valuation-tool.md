@@ -2,6 +2,7 @@
 title: Automated AI Real Estate Valuation Tool
 date: 2023-11-18
 permalink: posts/automated-ai-real-estate-valuation-tool
+layout: article
 ---
 
 ## Automated AI Real Estate Valuation Tool

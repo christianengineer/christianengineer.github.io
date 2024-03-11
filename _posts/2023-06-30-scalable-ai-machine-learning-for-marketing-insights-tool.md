@@ -2,6 +2,7 @@
 title: "Strategic Blueprint for the Next-Gen Scalable, Cloud-based AI: Crafting a High-Traffic Resilient Machine Learning Driven Marketing Insights Tool"
 date: 2023-06-30
 permalink: posts/scalable-ai-machine-learning-for-marketing-insights-tool
+layout: article
 ---
 
 # Machine Learning Driven Marketing Insights Tool

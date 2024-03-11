@@ -2,6 +2,7 @@
 title: Nutritional Deficiency Detection (Scikit-Learn, Pandas) For global health
 date: 2023-12-17
 permalink: posts/nutritional-deficiency-detection-scikit-learn-pandas-for-global-health
+layout: article
 ---
 
 # AI Nutritional Deficiency Detection System

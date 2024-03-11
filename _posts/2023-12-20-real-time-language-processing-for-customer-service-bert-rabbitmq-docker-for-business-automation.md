@@ -2,6 +2,7 @@
 title: Real-time Language Processing for Customer Service (BERT, RabbitMQ, Docker) For business automation
 date: 2023-12-20
 permalink: posts/real-time-language-processing-for-customer-service-bert-rabbitmq-docker-for-business-automation
+layout: article
 ---
 
 ## Objectives of the AI Real-time Language Processing for Customer Service Repository

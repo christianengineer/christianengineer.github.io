@@ -2,6 +2,7 @@
 title: Automated Video Encoding and Optimization (TensorFlow, Apache NiFi, Grafana) For streaming
 date: 2023-12-19
 permalink: posts/automated-video-encoding-and-optimization-tensorflow-apache-nifi-grafana-for-streaming
+layout: article
 ---
 
 ### **AI Automated Video Encoding and Optimization**

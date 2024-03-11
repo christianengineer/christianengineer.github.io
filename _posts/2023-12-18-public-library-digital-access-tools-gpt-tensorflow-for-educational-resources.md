@@ -2,6 +2,7 @@
 title: Public Library Digital Access Tools (GPT, TensorFlow) For educational resources
 date: 2023-12-18
 permalink: posts/public-library-digital-access-tools-gpt-tensorflow-for-educational-resources
+layout: article
 ---
 
 # AI Public Library Digital Access Tools

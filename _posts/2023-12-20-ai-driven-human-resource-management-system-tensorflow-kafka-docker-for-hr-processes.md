@@ -2,6 +2,7 @@
 title: AI-driven Human Resource Management System (TensorFlow, Kafka, Docker) For HR processes
 date: 2023-12-20
 permalink: posts/ai-driven-human-resource-management-system-tensorflow-kafka-docker-for-hr-processes
+layout: article
 ---
 
 **Objectives:**

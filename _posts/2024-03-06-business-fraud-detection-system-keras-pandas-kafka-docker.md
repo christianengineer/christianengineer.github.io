@@ -2,6 +2,7 @@
 title: Business Fraud Detection System (Keras, Pandas, Kafka, Docker) for Banco de Crédito del Perú, Fraud Analyst's pain point is high incidence of sophisticated financial frauds affecting bank operations, solution is to employ advanced machine learning algorithms to detect unusual patterns indicative of fraud, significantly reducing financial losses and increasing customer trust
 date: 2024-03-06
 permalink: posts/business-fraud-detection-system-keras-pandas-kafka-docker
+layout: article
 ---
 
 # Machine Learning Engineer's Guide for Business Fraud Detection System

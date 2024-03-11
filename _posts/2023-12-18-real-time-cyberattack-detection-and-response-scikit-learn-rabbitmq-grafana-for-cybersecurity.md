@@ -2,6 +2,7 @@
 title: Real-time Cyberattack Detection and Response (Scikit-Learn, RabbitMQ, Grafana) For cybersecurity
 date: 2023-12-18
 permalink: posts/real-time-cyberattack-detection-and-response-scikit-learn-rabbitmq-grafana-for-cybersecurity
+layout: article
 ---
 
 # AI Real-time Cyberattack Detection and Response System

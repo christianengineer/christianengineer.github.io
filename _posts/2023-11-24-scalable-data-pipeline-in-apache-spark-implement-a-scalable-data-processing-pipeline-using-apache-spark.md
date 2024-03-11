@@ -2,6 +2,7 @@
 title: Scalable Data Pipeline in Apache Spark Implement a scalable data processing pipeline using Apache Spark
 date: 2023-11-24
 permalink: posts/scalable-data-pipeline-in-apache-spark-implement-a-scalable-data-processing-pipeline-using-apache-spark
+layout: article
 ---
 
 # AI Scalable Data Pipeline in Apache Spark

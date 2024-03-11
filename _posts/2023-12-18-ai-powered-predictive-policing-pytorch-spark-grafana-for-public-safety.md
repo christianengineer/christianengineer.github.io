@@ -2,6 +2,7 @@
 title: AI-powered Predictive Policing (PyTorch, Spark, Grafana) For public safety
 date: 2023-12-18
 permalink: posts/ai-powered-predictive-policing-pytorch-spark-grafana-for-public-safety
+layout: article
 ---
 
 ## Objectives

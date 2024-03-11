@@ -2,6 +2,7 @@
 title: Deep Learning for Image Recognition Implement a deep learning project for image classification
 date: 2023-11-24
 permalink: posts/deep-learning-for-image-recognition-implement-a-deep-learning-project-for-image-classification
+layout: article
 ---
 
 # Objectives

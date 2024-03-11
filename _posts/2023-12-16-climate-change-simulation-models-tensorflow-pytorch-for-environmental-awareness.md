@@ -2,6 +2,7 @@
 title: Climate Change Simulation Models (TensorFlow, PyTorch) For environmental awareness
 date: 2023-12-16
 permalink: posts/climate-change-simulation-models-tensorflow-pytorch-for-environmental-awareness
+layout: article
 ---
 
 # AI Climate Change Simulation Models Repository

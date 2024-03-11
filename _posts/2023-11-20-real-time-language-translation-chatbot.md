@@ -2,6 +2,7 @@
 title: Real-Time Language Translation Chatbot
 date: 2023-11-20
 permalink: posts/real-time-language-translation-chatbot
+layout: article
 ---
 
 ## Real-Time Language Translation Chatbot

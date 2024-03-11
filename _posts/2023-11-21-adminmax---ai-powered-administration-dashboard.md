@@ -2,6 +2,7 @@
 title: AdminMax - AI-Powered Administration Dashboard
 date: 2023-11-21
 permalink: posts/adminmax---ai-powered-administration-dashboard
+layout: article
 ---
 
 # AdminMax - AI-Powered Administration Dashboard

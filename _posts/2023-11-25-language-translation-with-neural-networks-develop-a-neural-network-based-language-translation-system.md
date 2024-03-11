@@ -2,6 +2,7 @@
 title: Language Translation with Neural Networks Develop a neural network-based language translation system
 date: 2023-11-25
 permalink: posts/language-translation-with-neural-networks-develop-a-neural-network-based-language-translation-system
+layout: article
 ---
 
 # Objectives

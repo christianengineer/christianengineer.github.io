@@ -2,6 +2,7 @@
 title: Volunteer Matching Platforms (Scikit-Learn, TensorFlow) For community service
 date: 2023-12-17
 permalink: posts/volunteer-matching-platforms-scikit-learn-tensorflow-for-community-service
+layout: article
 ---
 
 # AI Volunteer Matching Platform for Community Service Repository

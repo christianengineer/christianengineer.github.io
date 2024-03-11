@@ -2,6 +2,7 @@
 title: UrbanPlanner AI for Urban Planning
 date: 2023-11-23
 permalink: posts/urbanplanner-ai-for-urban-planning
+layout: article
 ---
 
 # AI UrbanPlanner Repository

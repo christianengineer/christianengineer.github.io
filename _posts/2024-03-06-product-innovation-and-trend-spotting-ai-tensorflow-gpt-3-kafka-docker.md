@@ -2,6 +2,7 @@
 title: Product Innovation and Trend Spotting AI (TensorFlow, GPT-3, Kafka, Docker) for AJE Group (Big Cola), Product Development Lead Pain Point, Missed opportunities in rapidly changing consumer preferences Solution, Leveraging real-time market data to spot trends and innovate products that cater to the unique tastes of the Peruvian population
 date: 2024-03-06
 permalink: posts/product-innovation-and-trend-spotting-ai-tensorflow-gpt-3-kafka-docker
+layout: article
 ---
 
 # Machine Learning Solution for Product Innovation and Trend Spotting AI (TensorFlow, GPT-3, Kafka, Docker) for AJE Group (Big Cola)

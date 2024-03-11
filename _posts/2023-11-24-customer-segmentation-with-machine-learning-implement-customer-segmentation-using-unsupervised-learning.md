@@ -2,6 +2,7 @@
 title: Customer Segmentation with Machine Learning Implement customer segmentation using unsupervised learning
 date: 2023-11-24
 permalink: posts/customer-segmentation-with-machine-learning-implement-customer-segmentation-using-unsupervised-learning
+layout: article
 ---
 
 # AI Customer Segmentation with Machine Learning

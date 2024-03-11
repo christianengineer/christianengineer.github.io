@@ -2,6 +2,7 @@
 title: Peru Health Intervention Planning Tool (Keras, Pandas, Flask, Grafana) Analyzes public health data to prioritize health interventions in communities most affected by poverty
 date: 2024-02-27
 permalink: posts/peru-health-intervention-planning-tool-keras-pandas-flask-grafana-analyzes-public-health-data-to-prioritize-health-interventions-in-communities-most-affected-by-poverty
+layout: article
 ---
 
 # AI Peru Health Intervention Planning Tool

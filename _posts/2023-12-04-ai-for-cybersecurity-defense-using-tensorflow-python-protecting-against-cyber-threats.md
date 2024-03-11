@@ -2,6 +2,7 @@
 title: AI for Cybersecurity Defense using TensorFlow (Python) Protecting against cyber threats
 date: 2023-12-04
 permalink: posts/ai-for-cybersecurity-defense-using-tensorflow-python-protecting-against-cyber-threats
+layout: article
 ---
 
 # AI for Cybersecurity Defense using TensorFlow

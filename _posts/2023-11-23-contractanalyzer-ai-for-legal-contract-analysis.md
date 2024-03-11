@@ -2,6 +2,7 @@
 title: ContractAnalyzer AI for Legal Contract Analysis
 date: 2023-11-23
 permalink: posts/contractanalyzer-ai-for-legal-contract-analysis
+layout: article
 ---
 
 # AI ContractAnalyzer AI for Legal Contract Analysis Repository

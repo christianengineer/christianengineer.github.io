@@ -2,6 +2,7 @@
 title: Automated Anomaly Detection in Financial Transactions (Keras, Kafka, Prometheus) For fraud prevention
 date: 2023-12-20
 permalink: posts/automated-anomaly-detection-in-financial-transactions-keras-kafka-prometheus-for-fraud-prevention
+layout: article
 ---
 
 ## Objectives of the Repository

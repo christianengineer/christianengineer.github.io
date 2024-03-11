@@ -2,6 +2,7 @@
 title: Fishery Stock Assessment Model with Keras and TensorFlow for Pesquera Exalmar (Lima, Peru), Fisheries Manager's pain point is sustaining fish populations while maximizing catch, solution is to deploy ML models that analyze oceanographic data to predict fish stock levels, ensuring sustainable fishing practices
 date: 2024-03-06
 permalink: posts/fishery-stock-assessment-model-with-keras-and-tensorflow-for-pesquera-exalmar-lima-peru
+layout: article
 ---
 
 # Objective and Benefits

@@ -2,6 +2,7 @@
 title: Algorithmic Music Composition using Magenta (Python) Creating music with AI
 date: 2023-12-14
 permalink: posts/algorithmic-music-composition-using-magenta-python-creating-music-with-ai
+layout: article
 ---
 
 ### Objectives

@@ -2,6 +2,7 @@
 title: Audio Fingerprinting with Dejavu (Python) Recognizing songs from audio snippets
 date: 2023-12-03
 permalink: posts/audio-fingerprinting-with-dejavu-python-recognizing-songs-from-audio-snippets
+layout: article
 ---
 
 # AI Audio Fingerprinting with Dejavu (Python)

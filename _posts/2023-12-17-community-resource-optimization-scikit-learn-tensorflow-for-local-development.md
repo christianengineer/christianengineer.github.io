@@ -2,6 +2,7 @@
 title: Community Resource Optimization (Scikit-Learn, TensorFlow) For local development
 date: 2023-12-17
 permalink: posts/community-resource-optimization-scikit-learn-tensorflow-for-local-development
+layout: article
 ---
 
 # AI Community Resource Optimization System

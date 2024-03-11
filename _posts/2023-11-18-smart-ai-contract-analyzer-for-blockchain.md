@@ -2,6 +2,7 @@
 title: Smart AI Contract Analyzer for Blockchain
 date: 2023-11-18
 permalink: posts/smart-ai-contract-analyzer-for-blockchain
+layout: article
 ---
 
 # Smart AI Contract Analyzer for Blockchain Technical Specifications

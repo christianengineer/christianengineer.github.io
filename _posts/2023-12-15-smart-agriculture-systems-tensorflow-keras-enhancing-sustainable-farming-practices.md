@@ -2,6 +2,7 @@
 title: Smart Agriculture Systems (TensorFlow, Keras) Enhancing sustainable farming practices
 date: 2023-12-15
 permalink: posts/smart-agriculture-systems-tensorflow-keras-enhancing-sustainable-farming-practices
+layout: article
 ---
 
 ## AI Smart Agriculture Systems Repository Overview:

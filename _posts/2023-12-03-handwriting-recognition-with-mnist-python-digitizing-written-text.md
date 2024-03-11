@@ -2,6 +2,7 @@
 title: Handwriting Recognition with MNIST (Python) Digitizing written text
 date: 2023-12-03
 permalink: posts/handwriting-recognition-with-mnist-python-digitizing-written-text
+layout: article
 ---
 
 ## AI Handwriting Recognition with MNIST (Python) Digitizing written text

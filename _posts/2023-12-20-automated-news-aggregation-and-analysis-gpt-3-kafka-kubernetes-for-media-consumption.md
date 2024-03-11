@@ -2,6 +2,7 @@
 title: Automated News Aggregation and Analysis (GPT-3, Kafka, Kubernetes) For media consumption
 date: 2023-12-20
 permalink: posts/automated-news-aggregation-and-analysis-gpt-3-kafka-kubernetes-for-media-consumption
+layout: article
 ---
 
 ### Objectives

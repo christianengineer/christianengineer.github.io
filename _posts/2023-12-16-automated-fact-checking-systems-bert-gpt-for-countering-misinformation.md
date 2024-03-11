@@ -2,6 +2,7 @@
 title: Automated Fact-Checking Systems (BERT, GPT) For countering misinformation
 date: 2023-12-16
 permalink: posts/automated-fact-checking-systems-bert-gpt-for-countering-misinformation
+layout: article
 ---
 
 ## Objectives of AI Automated Fact-Checking Systems

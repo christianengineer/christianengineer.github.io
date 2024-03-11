@@ -2,6 +2,7 @@
 title: AutoNav AI for Autonomous Navigation
 date: 2023-11-23
 permalink: posts/autonav-ai-for-autonomous-navigation
+layout: article
 ---
 
 Sure, let's start by outlining the objectives of the AI AutoNav project, then we can dive into the system design strategies and the chosen libraries.

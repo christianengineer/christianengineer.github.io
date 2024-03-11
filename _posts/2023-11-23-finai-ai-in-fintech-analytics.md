@@ -2,6 +2,7 @@
 title: FinAI AI in Fintech Analytics
 date: 2023-11-23
 permalink: posts/finai-ai-in-fintech-analytics
+layout: article
 ---
 
 ## AI FinAI AI in Fintech Analytics Repository

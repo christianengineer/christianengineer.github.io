@@ -2,6 +2,7 @@
 title: Affordable Telemedicine Services (TensorFlow, PyTorch) For remote healthcare
 date: 2023-12-17
 permalink: posts/affordable-telemedicine-services-tensorflow-pytorch-for-remote-healthcare
+layout: article
 ---
 
 # AI Affordable Telemedicine Services

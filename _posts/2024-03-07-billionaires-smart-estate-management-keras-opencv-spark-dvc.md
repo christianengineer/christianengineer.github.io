@@ -2,6 +2,7 @@
 title: Billionaire's Smart Estate Management (Keras, OpenCV, Spark, DVC) for Grupo Breca, Property Manager Pain Point, Overseeing extensive properties and assets Solution, Integrated smart management systems using AI for efficient monitoring and management, ensuring the highest standards of luxury and security for Peru's most prestigious estates
 date: 2024-03-07
 permalink: posts/billionaires-smart-estate-management-keras-opencv-spark-dvc
+layout: article
 ---
 
 # Billionaire's Smart Estate Management Solution

@@ -2,6 +2,7 @@
 title: Automated Disease Vector Tracking (TensorFlow, OpenCV) For public health
 date: 2023-12-17
 permalink: posts/automated-disease-vector-tracking-tensorflow-opencv-for-public-health
+layout: article
 ---
 
 # AI Automated Disease Vector Tracking Project

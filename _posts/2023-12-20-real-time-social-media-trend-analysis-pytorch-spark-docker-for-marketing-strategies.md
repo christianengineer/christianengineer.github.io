@@ -2,6 +2,7 @@
 title: Real-time Social Media Trend Analysis (PyTorch, Spark, Docker) For marketing strategies
 date: 2023-12-20
 permalink: posts/real-time-social-media-trend-analysis-pytorch-spark-docker-for-marketing-strategies
+layout: article
 ---
 
 # AI Real-time Social Media Trend Analysis (PyTorch, Spark, Docker) Repository

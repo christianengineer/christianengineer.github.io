@@ -2,6 +2,7 @@
 title: AviationAI AI for Aviation
 date: 2023-11-23
 permalink: posts/aviationai-ai-for-aviation
+layout: article
 ---
 
 ## AI for Aviation Repository

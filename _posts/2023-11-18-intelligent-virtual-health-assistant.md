@@ -2,6 +2,7 @@
 title: Intelligent Virtual Health Assistant
 date: 2023-11-18
 permalink: posts/intelligent-virtual-health-assistant
+layout: article
 ---
 
 # Intelligent Virtual Health Assistant Technical Specifications

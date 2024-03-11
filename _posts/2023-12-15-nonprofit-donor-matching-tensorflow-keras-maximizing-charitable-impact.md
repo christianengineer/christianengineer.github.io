@@ -2,6 +2,7 @@
 title: Nonprofit Donor Matching (TensorFlow, Keras) Maximizing charitable impact
 date: 2023-12-15
 permalink: posts/nonprofit-donor-matching-tensorflow-keras-maximizing-charitable-impact
+layout: article
 ---
 
 ### Objectives

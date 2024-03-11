@@ -2,6 +2,7 @@
 title: CrisisAvert AI for Crisis Management
 date: 2023-11-23
 permalink: posts/crisisavert-ai-for-crisis-management
+layout: article
 ---
 
 ## AI CrisisAvert for Crisis Management

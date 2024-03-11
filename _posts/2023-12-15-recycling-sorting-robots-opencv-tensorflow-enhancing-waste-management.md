@@ -2,6 +2,7 @@
 title: Recycling Sorting Robots (OpenCV, TensorFlow) Enhancing waste management
 date: 2023-12-15
 permalink: posts/recycling-sorting-robots-opencv-tensorflow-enhancing-waste-management
+layout: article
 ---
 
 # AI Recycling Sorting Robots 

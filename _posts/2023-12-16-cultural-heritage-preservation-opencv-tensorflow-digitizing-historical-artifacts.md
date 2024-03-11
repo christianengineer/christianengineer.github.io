@@ -2,6 +2,7 @@
 title: Cultural Heritage Preservation (OpenCV, TensorFlow) Digitizing historical artifacts
 date: 2023-12-16
 permalink: posts/cultural-heritage-preservation-opencv-tensorflow-digitizing-historical-artifacts
+layout: article
 ---
 
 ### Objectives

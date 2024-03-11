@@ -2,6 +2,7 @@
 title: Peru Social Aid Distribution Optimizer (Keras, TensorFlow, Spark, DVC) Enhances the efficiency of social aid distribution by predicting demand and optimizing logistics and delivery routes
 date: 2024-02-27
 permalink: posts/peru-social-aid-distribution-optimizer-keras-tensorflow-spark-dvc-enhances-the-efficiency-of-social-aid-distribution-by-predicting-demand-and-optimizing-logistics-and-delivery-routes
+layout: article
 ---
 
 # AI Peru Social Aid Distribution Optimizer

@@ -2,6 +2,7 @@
 title: Cultural Fit Assessment in AI Startups
 date: 2023-11-05
 permalink: posts/cultural-fit-assessment-ai-startups-guide
+layout: article
 ---
 
 # Cultural Fit Assessment in AI Startups

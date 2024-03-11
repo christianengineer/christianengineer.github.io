@@ -2,6 +2,7 @@
 title: CRMPro - AI-Enhanced CRM Solutions
 date: 2023-11-21
 permalink: posts/crmpro---ai-enhanced-crm-solutions
+layout: article
 ---
 
 ### AI CRMPro - AI-Enhanced CRM Solutions Repository

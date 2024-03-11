@@ -2,6 +2,7 @@
 title: AI-Driven Podcast Summarization Tool
 date: 2023-11-18
 permalink: posts/ai-driven-podcast-summarization-tool
+layout: article
 ---
 
 # AI-Driven Podcast Summarization Tool - Technical Specifications

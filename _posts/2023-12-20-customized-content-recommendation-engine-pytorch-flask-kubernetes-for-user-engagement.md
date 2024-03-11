@@ -2,6 +2,7 @@
 title: Customized Content Recommendation Engine (PyTorch, Flask, Kubernetes) For user engagement
 date: 2023-12-20
 permalink: posts/customized-content-recommendation-engine-pytorch-flask-kubernetes-for-user-engagement
+layout: article
 ---
 
 ## AI Customized Content Recommendation Engine

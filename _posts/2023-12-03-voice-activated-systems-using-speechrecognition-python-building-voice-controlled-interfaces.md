@@ -2,6 +2,7 @@
 title: Voice-Activated Systems using SpeechRecognition (Python) Building voice-controlled interfaces
 date: 2023-12-03
 permalink: posts/voice-activated-systems-using-speechrecognition-python-building-voice-controlled-interfaces
+layout: article
 ---
 
 ## AI Voice-Activated Systems using SpeechRecognition (Python)

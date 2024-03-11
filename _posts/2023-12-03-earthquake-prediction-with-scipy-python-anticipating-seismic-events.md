@@ -2,6 +2,7 @@
 title: Earthquake Prediction with SciPy (Python) Anticipating seismic events
 date: 2023-12-03
 permalink: posts/earthquake-prediction-with-scipy-python-anticipating-seismic-events
+layout: article
 ---
 
 ### Objectives

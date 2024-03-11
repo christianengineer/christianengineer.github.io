@@ -2,6 +2,7 @@
 title: Sustainable Sourcing Optimizer for Peru Fine Dining (Keras, TensorFlow, Spark, DVC) Analyzes supply chain data to recommend sustainable and ethical sourcing options for gourmet ingredients
 date: 2024-03-04
 permalink: posts/sustainable-sourcing-optimizer-for-peru-fine-dining-keras-tensorflow-spark-dvc
+layout: article
 ---
 
 ## Machine Learning Sustainable Sourcing Optimizer for Peru Fine Dining

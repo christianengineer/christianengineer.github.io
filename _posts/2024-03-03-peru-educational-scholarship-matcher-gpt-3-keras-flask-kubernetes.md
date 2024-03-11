@@ -2,6 +2,7 @@
 title: Peru Educational Scholarship Matcher (GPT-3, Keras, Flask, Kubernetes) Filters and matches scholarship opportunities with eligible low-income students, supporting their educational aspirations and reducing financial barriers
 date: 2024-03-03
 permalink: posts/peru-educational-scholarship-matcher-gpt-3-keras-flask-kubernetes
+layout: article
 ---
 
 # AI Peru Educational Scholarship Matcher

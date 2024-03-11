@@ -2,6 +2,7 @@
 title: Peru Food Product Lifecycle Management AI (PyTorch, Scikit-Learn, Airflow, Prometheus) Manages the lifecycle of food products from development to market, optimizing for cost, sustainability, and consumer preferences
 date: 2024-02-28
 permalink: posts/peru-food-product-lifecycle-management-ai-pytorch-scikit-learn-airflow-prometheus-manages-the-lifecycle-of-food-products-from-development-to-market-optimizing-for-cost-sustainability-and-consumer-preferences
+layout: article
 ---
 
 ## AI Peru Food Product Lifecycle Management 

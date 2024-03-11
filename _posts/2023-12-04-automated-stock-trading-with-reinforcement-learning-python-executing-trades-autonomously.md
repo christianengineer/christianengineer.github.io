@@ -2,6 +2,7 @@
 title: Automated Stock Trading with Reinforcement Learning (Python) Executing trades autonomously
 date: 2023-12-04
 permalink: posts/automated-stock-trading-with-reinforcement-learning-python-executing-trades-autonomously
+layout: article
 ---
 
 # AI Automated Stock Trading with Reinforcement Learning

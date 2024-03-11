@@ -2,6 +2,7 @@
 title: Sustainable Operations Planner for Businesses (TensorFlow, Keras, Flask, Grafana) for Alicorp, Sustainability Officer's pain point is balancing operational efficiency with environmental sustainability goals, solution is to analyze production data to recommend adjustments that reduce waste and energy consumption, aligning with Peru’s growing emphasis on sustainable business practices
 date: 2024-03-06
 permalink: posts/sustainable-operations-planner-for-businesses-tensorflow-keras-flask-grafana
+layout: article
 ---
 
 # Sustainable Operations Planner for Businesses

@@ -2,6 +2,7 @@
 title: Automated Quality Inspection in Manufacturing (OpenCV, RabbitMQ, Kubernetes) For quality control
 date: 2023-12-20
 permalink: posts/automated-quality-inspection-in-manufacturing-opencv-rabbitmq-kubernetes-for-quality-control
+layout: article
 ---
 
 # AI Automated Quality Inspection in Manufacturing

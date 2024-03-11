@@ -2,6 +2,7 @@
 title: Peru Community Tech Hub Recommender (Keras, TensorFlow, Flask, Kubernetes) Identifies optimal locations for community technology hubs to provide access to information and learning resources
 date: 2024-02-25
 permalink: posts/peru-community-tech-hub-recommender-keras-tensorflow-flask-kubernetes-identifies-optimal-locations-for-community-technology-hubs-to-provide-access-to-information-and-learning-resources
+layout: article
 ---
 
 ### Objectives:

@@ -2,6 +2,7 @@
 title: Bank Transaction Anomaly Detector for Peru (Keras, PyTorch, Prometheus) Identifies unusual banking transactions that may indicate errors or fraudulent activities, enhancing transaction integrity
 date: 2024-02-26
 permalink: posts/bank-transaction-anomaly-detector-for-peru-keras-pytorch-prometheus-identifies-unusual-banking-transactions-that-may-indicate-errors-or-fraudulent-activities-enhancing-transaction-integrity
+layout: article
 ---
 
 **AI Bank Transaction Anomaly Detector for Peru**

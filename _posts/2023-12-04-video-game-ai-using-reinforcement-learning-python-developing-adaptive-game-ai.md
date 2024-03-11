@@ -2,6 +2,7 @@
 title: Video Game AI using Reinforcement Learning (Python) Developing adaptive game AI
 date: 2023-12-04
 permalink: posts/video-game-ai-using-reinforcement-learning-python-developing-adaptive-game-ai
+layout: article
 ---
 
 ## Objectives:

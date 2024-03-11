@@ -2,6 +2,7 @@
 title: AI-Driven E-Learning Platforms using Django (Python) Personalizing online education
 date: 2023-12-04
 permalink: posts/ai-driven-e-learning-platforms-using-django-python-personalizing-online-education
+layout: article
 ---
 
 # AI-Driven E-Learning Platform Using Django

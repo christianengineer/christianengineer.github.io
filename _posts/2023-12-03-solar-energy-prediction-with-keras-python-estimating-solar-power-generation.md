@@ -2,6 +2,7 @@
 title: Solar Energy Prediction with Keras (Python) Estimating solar power generation
 date: 2023-12-03
 permalink: posts/solar-energy-prediction-with-keras-python-estimating-solar-power-generation
+layout: article
 ---
 
 ### Objectives

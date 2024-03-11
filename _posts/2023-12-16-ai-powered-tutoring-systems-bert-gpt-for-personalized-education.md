@@ -2,6 +2,7 @@
 title: AI-Powered Tutoring Systems (BERT, GPT) For personalized education
 date: 2023-12-16
 permalink: posts/ai-powered-tutoring-systems-bert-gpt-for-personalized-education
+layout: article
 ---
 
 ## Objectives of AI-Powered Tutoring Systems

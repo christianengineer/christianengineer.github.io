@@ -2,6 +2,7 @@
 title: Human Trafficking Pattern Detection (TensorFlow, PyTorch) For law enforcement
 date: 2023-12-15
 permalink: posts/human-trafficking-pattern-detection-tensorflow-pytorch-for-law-enforcement
+layout: article
 ---
 
 # AI Human Trafficking Pattern Detection Repository

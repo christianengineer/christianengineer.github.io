@@ -2,6 +2,7 @@
 title: VoiceID - Advanced Voice Recognition System
 date: 2023-11-22
 permalink: posts/voiceid-advanced-voice-recognition-system
+layout: article
 ---
 
 # AI VoiceID - Advanced Voice Recognition System

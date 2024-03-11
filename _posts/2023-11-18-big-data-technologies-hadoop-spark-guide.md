@@ -2,6 +2,7 @@
 title: "Big Data Technologies: A Focus on Hadoop and Spark"
 date: 2023-11-18
 permalink: posts/big-data-technologies-hadoop-spark-guide
+layout: article
 ---
 
 # Big Data Technologies: A Focus on Hadoop and Spark

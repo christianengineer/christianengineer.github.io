@@ -2,6 +2,7 @@
 title: Skill Development Pathway Planner for Peru (GPT-3, Keras, Flask, Prometheus) Filters and recommends personalized skill development and training programs for low-income individuals, aligning them with in-demand job markets to boost employability
 date: 2024-03-03
 permalink: posts/skill-development-pathway-planner-for-peru-gpt-3-keras-flask-prometheus
+layout: article
 ---
 
 # AI Skill Development Pathway Planner for Peru

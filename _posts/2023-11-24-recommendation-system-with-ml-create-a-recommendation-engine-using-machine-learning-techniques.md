@@ -2,6 +2,7 @@
 title: Recommendation System with ML Create a recommendation engine using machine learning techniques
 date: 2023-11-24
 permalink: posts/recommendation-system-with-ml-create-a-recommendation-engine-using-machine-learning-techniques
+layout: article
 ---
 
 ## Objectives

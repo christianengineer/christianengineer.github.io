@@ -2,6 +2,7 @@
 title: Minimal Data Health Tips Service for Peru (TensorFlow Lite, FastAPI, MQTT, Grafana) Provides health and wellness tips via text messages or a lightweight app, designed to operate on minimal cellular data
 date: 2024-02-24
 permalink: posts/minimal-data-health-tips-service-for-peru-tensorflow-lite-fastapi-mqtt-grafana-provides-health-and-wellness-tips-via-text-messages-or-a-lightweight-app-designed-to-operate-on-minimal-cellular-data
+layout: article
 ---
 
 # AI Minimal Data Health Tips Service for Peru

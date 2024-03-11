@@ -2,6 +2,7 @@
 title: E-commerce Personalization Engine (BERT, Keras, Spark, DVC) for Linio Peru, E-commerce Manager's pain point is struggle to provide personalized shopping experiences at scale, solution is to dynamically customize product recommendations and content for each user, driving sales by catering to the unique preferences of the Peruvian online shopper
 date: 2024-03-06
 permalink: posts/e-commerce-personalization-engine-bert-keras-spark-dvc
+layout: article
 ---
 
 # E-commerce Personalization Engine for Linio Peru

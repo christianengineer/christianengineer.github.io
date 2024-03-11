@@ -2,6 +2,7 @@
 title: National Institute of Statistics and Informatics of Peru (NLTK, NumPy) Statistician pain point is processing census data efficiently, solution is to implement an NLP-based machine learning system to automate the extraction and categorization of census information, improving data analysis speed and accuracy
 date: 2024-03-05
 permalink: posts/national-institute-of-statistics-and-informatics-of-peru-nltk-numpy
+layout: article
 ---
 
 ### Project Objective:

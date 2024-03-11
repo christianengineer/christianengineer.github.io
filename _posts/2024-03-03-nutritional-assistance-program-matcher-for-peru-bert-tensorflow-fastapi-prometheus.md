@@ -2,6 +2,7 @@
 title: Nutritional Assistance Program Matcher for Peru (BERT, TensorFlow, FastAPI, Prometheus) Screens for nutritional assistance programs and matches them with low-income families in need, ensuring children and vulnerable populations have access to healthy food
 date: 2024-03-03
 permalink: posts/nutritional-assistance-program-matcher-for-peru-bert-tensorflow-fastapi-prometheus
+layout: article
 ---
 
 # AI Nutritional Assistance Program Matcher for Peru

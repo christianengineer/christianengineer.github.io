@@ -2,6 +2,7 @@
 title: Cloud-based ML Model Deployment Use cloud platforms like AWS, Azure, or Google Cloud for deploying and managing ML models, demonstrating cloud-specific tools and services
 date: 2023-11-22
 permalink: posts/cloud-based-ml-model-deployment-use-cloud-platforms-like-aws-azure-or-google-cloud-for-deploying-and-managing-ml-models-demonstrating-cloud-specific-tools-and-services
+layout: article
 ---
 
 ## Objectives of Cloud-based ML Model Deployment

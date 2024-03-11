@@ -2,6 +2,7 @@
 title: "Architecting The Future: A Blueprint for a Scalable, AI-Driven Smart Inventory Management System Leveraging Advanced Cloud Technologies for High-Volume Data Handling and Hyper-Growth User Traffic"
 date: 2023-01-07
 permalink: posts/smart-inventory-management-system-ai-data-scalability-cloud-integration
+layout: article
 ---
 
 # Smart Inventory Management System

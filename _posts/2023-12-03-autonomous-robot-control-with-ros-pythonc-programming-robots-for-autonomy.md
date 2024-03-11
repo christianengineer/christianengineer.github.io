@@ -2,6 +2,7 @@
 title: Autonomous Robot Control with ROS (Python/C++) Programming robots for autonomy
 date: 2023-12-03
 permalink: posts/autonomous-robot-control-with-ros-pythonc-programming-robots-for-autonomy
+layout: article
 ---
 
 ### AI Autonomous Robot Control with ROS (Python/C++) Repository

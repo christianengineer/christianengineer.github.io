@@ -2,6 +2,7 @@
 title: TelecomAI AI for Telecommunications
 date: 2023-11-23
 permalink: posts/telecomai-ai-for-telecommunications
+layout: article
 ---
 
 ### TelecomAI Repository Overview

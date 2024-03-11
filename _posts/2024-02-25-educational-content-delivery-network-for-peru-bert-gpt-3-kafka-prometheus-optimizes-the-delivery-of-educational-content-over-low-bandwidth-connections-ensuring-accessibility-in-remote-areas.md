@@ -2,6 +2,7 @@
 title: Educational Content Delivery Network for Peru (BERT, GPT-3, Kafka, Prometheus) Optimizes the delivery of educational content over low-bandwidth connections, ensuring accessibility in remote areas
 date: 2024-02-25
 permalink: posts/educational-content-delivery-network-for-peru-bert-gpt-3-kafka-prometheus-optimizes-the-delivery-of-educational-content-over-low-bandwidth-connections-ensuring-accessibility-in-remote-areas
+layout: article
 ---
 
 # AI Educational Content Delivery Network for Peru

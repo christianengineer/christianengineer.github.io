@@ -2,6 +2,7 @@
 title: Agricultural Market Access Optimizer for Peru (PyTorch, Pandas, Django, Docker) Connects smallholder farmers with markets and buyers by filtering and matching crop production data with market demand, increasing sales and profits
 date: 2024-03-02
 permalink: posts/agricultural-market-access-optimizer-for-peru-pytorch-pandas-django-docker
+layout: article
 ---
 
 ### AI Agricultural Market Access Optimizer for Peru

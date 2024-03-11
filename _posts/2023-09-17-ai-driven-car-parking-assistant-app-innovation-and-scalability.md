@@ -2,6 +2,7 @@
 title: "Scalable Horizon: A Comprehensive Blueprint for Designing, Developing, and Deploying an AI-Driven, High-Traffic Car Parking Assistant App with Robust Data Management and Cloud Integration"
 date: 2023-09-17
 permalink: posts/ai-driven-car-parking-assistant-app-innovation-and-scalability
+layout: article
 ---
 
 # AI-Driven Car Parking Assistant App Repository

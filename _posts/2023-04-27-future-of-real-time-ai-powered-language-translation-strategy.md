@@ -2,6 +2,7 @@
 title: "Voice of the Future: A Strategic Vision for Scalable AI-Powered Real-Time Language Translation"
 date: 2023-04-27
 permalink: posts/future-of-real-time-ai-powered-language-translation-strategy
+layout: article
 ---
 
 # Voice of the Future: A Strategic Vision for Scalable AI-Powered Real-Time Language Translation

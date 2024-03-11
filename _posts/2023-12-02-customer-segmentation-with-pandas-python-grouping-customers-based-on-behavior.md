@@ -2,6 +2,7 @@
 title: Customer Segmentation with Pandas (Python) Grouping customers based on behavior
 date: 2023-12-02
 permalink: posts/customer-segmentation-with-pandas-python-grouping-customers-based-on-behavior
+layout: article
 ---
 
 # AI Customer Segmentation with Pandas (Python)

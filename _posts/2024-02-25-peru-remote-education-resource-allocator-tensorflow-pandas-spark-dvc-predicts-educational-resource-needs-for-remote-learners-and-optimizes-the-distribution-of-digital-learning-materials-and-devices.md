@@ -2,6 +2,7 @@
 title: Peru Remote Education Resource Allocator (TensorFlow, Pandas, Spark, DVC) Predicts educational resource needs for remote learners and optimizes the distribution of digital learning materials and devices
 date: 2024-02-25
 permalink: posts/peru-remote-education-resource-allocator-tensorflow-pandas-spark-dvc-predicts-educational-resource-needs-for-remote-learners-and-optimizes-the-distribution-of-digital-learning-materials-and-devices
+layout: article
 ---
 
 # AI Peru Remote Education Resource Allocator

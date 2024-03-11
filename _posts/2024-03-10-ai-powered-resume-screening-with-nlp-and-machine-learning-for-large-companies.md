@@ -2,6 +2,7 @@
 title: AI-Powered Resume Screening with NLP and Machine Learning for Large Companies, Talent Acquisition Specialist's pain point is managing the overwhelming volume of job applications and ensuring no qualified candidate is overlooked, solution is to deploy an advanced AI system that automates the initial screening process, significantly reduces time-to-hire, and enhances the overall quality of candidate selection.
 date: 2024-03-10
 permalink: posts/ai-powered-resume-screening-with-nlp-and-machine-learning-for-large-companies
+layout: article
 ---
 
 # AI-Powered Resume Screening with NLP and Machine Learning

@@ -2,6 +2,7 @@
 title: Financial Risk Modeling with Pandas (Python) Assessing investment risks
 date: 2023-12-03
 permalink: posts/financial-risk-modeling-with-pandas-python-assessing-investment-risks
+layout: article
 ---
 
 ### Objectives

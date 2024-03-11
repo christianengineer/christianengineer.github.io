@@ -2,6 +2,7 @@
 title: SimulAI Advanced Simulation Platform
 date: 2023-11-22
 permalink: posts/simulai-advanced-simulation-platform
+layout: article
 ---
 
 ## AI SimulAI Advanced Simulation Platform Repository

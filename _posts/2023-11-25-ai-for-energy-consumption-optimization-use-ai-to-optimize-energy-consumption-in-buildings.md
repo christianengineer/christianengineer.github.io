@@ -2,6 +2,7 @@
 title: AI for Energy Consumption Optimization Use AI to optimize energy consumption in buildings
 date: 2023-11-25
 permalink: posts/ai-for-energy-consumption-optimization-use-ai-to-optimize-energy-consumption-in-buildings
+layout: article
 ---
 
 # AI for Energy Consumption Optimization

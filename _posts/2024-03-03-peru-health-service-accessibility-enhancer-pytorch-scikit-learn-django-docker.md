@@ -2,6 +2,7 @@
 title: Peru Health Service Accessibility Enhancer (PyTorch, Scikit-Learn, Django, Docker) Matches low-income families with accessible healthcare services and programs, filtering based on location, family health needs, and eligibility criteria
 date: 2024-03-03
 permalink: posts/peru-health-service-accessibility-enhancer-pytorch-scikit-learn-django-docker
+layout: article
 ---
 
 # AI Peru Health Service Accessibility Enhancer

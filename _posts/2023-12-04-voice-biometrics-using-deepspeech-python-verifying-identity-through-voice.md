@@ -2,6 +2,7 @@
 title: Voice Biometrics using DeepSpeech (Python) Verifying identity through voice
 date: 2023-12-04
 permalink: posts/voice-biometrics-using-deepspeech-python-verifying-identity-through-voice
+layout: article
 ---
 
 ### Objectives

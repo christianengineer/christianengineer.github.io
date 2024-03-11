@@ -2,6 +2,7 @@
 title: LangTranslate Automated Language Translation AI
 date: 2023-11-22
 permalink: posts/langtranslate-automated-language-translation-ai
+layout: article
 ---
 
 ## AI LangTranslate Automated Language Translation AI Repository

@@ -2,6 +2,7 @@
 title: Autonomous Vehicle Navigation System (TensorFlow, ROS, Airflow) For self-driving cars
 date: 2023-12-19
 permalink: posts/autonomous-vehicle-navigation-system-tensorflow-ros-airflow-for-self-driving-cars
+layout: article
 ---
 
 # AI Autonomous Vehicle Navigation System Repository

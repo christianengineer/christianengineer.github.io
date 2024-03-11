@@ -2,6 +2,7 @@
 title: Exclusive Event Planner AI for Peru (GPT-3, BERT, Kafka, Grafana) Automates the planning and personalization of exclusive dining events and tastings based on guest preferences and profiles
 date: 2024-03-04
 permalink: posts/exclusive-event-planner-ai-for-peru-gpt-3-bert-kafka-grafana
+layout: article
 ---
 
 # Machine Learning Exclusive Event Planner AI for Peru

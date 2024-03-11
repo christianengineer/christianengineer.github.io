@@ -2,6 +2,7 @@
 title: WatchOver AI for Video Surveillance
 date: 2023-11-23
 permalink: posts/watchover-ai-for-video-surveillance
+layout: article
 ---
 
 # AI WatchOver AI for Video Surveillance

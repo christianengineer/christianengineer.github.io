@@ -2,6 +2,7 @@
 title: Dynamic Energy Grid Management (Keras, Hadoop, Kubernetes) For sustainable power
 date: 2023-12-19
 permalink: posts/dynamic-energy-grid-management-keras-hadoop-kubernetes-for-sustainable-power
+layout: article
 ---
 
 # AI Dynamic Energy Grid Management System

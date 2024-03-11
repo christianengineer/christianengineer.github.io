@@ -2,6 +2,7 @@
 title: AI-Enhanced Medical Imaging Analysis with PyTorch (Python) Improving diagnostic accuracy
 date: 2023-12-04
 permalink: posts/ai-enhanced-medical-imaging-analysis-with-pytorch-python-improving-diagnostic-accuracy
+layout: article
 ---
 
 # AI-Enhanced Medical Imaging Analysis with PyTorch

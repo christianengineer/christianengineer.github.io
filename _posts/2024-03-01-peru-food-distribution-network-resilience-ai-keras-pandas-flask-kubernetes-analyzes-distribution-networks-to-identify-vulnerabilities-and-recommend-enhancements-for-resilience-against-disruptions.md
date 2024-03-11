@@ -2,6 +2,7 @@
 title: Peru Food Distribution Network Resilience AI (Keras, Pandas, Flask, Kubernetes) Analyzes distribution networks to identify vulnerabilities and recommend enhancements for resilience against disruptions
 date: 2024-03-01
 permalink: posts/peru-food-distribution-network-resilience-ai-keras-pandas-flask-kubernetes-analyzes-distribution-networks-to-identify-vulnerabilities-and-recommend-enhancements-for-resilience-against-disruptions
+layout: article
 ---
 
 ### AI Peru Food Distribution Network Resilience AI

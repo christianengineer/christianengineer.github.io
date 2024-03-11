@@ -2,6 +2,7 @@
 title: Automated Image Tagging for Digital Asset Management (TensorFlow, RabbitMQ, Kubernetes) For content management
 date: 2023-12-21
 permalink: posts/automated-image-tagging-for-digital-asset-management-tensorflow-rabbitmq-kubernetes-for-content-management
+layout: article
 ---
 
 # AI Automated Image Tagging for Digital Asset Management

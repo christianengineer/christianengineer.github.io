@@ -2,6 +2,7 @@
 title: Public Health Monitoring System using PyTorch and Pandas for Ministerio de Salud (MINSA), Public Health Analyst's pain point is early detection of disease outbreaks, solution is to analyze health data across regions to identify and respond to outbreaks swiftly, improving public health response
 date: 2024-03-06
 permalink: posts/public-health-monitoring-system-using-pytorch-and-pandas-for-ministerio-de-salud-minsa
+layout: article
 ---
 
 # Public Health Monitoring System using Machine Learning

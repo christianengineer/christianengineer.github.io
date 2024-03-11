@@ -2,6 +2,7 @@
 title: "Revolutionizing Waste Management: From Concept to Deployment - A Strategic Plan For Developing and Scaling an AI-Integrated Smart Waste Management System Harnessing Cloud Technologies"
 date: 2023-04-27
 permalink: posts/smart-waste-management-system-ai-cloud-technology-scalable-solutions
+layout: article
 ---
 
 # Smart Waste Management System

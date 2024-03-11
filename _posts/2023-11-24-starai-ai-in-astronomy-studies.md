@@ -2,6 +2,7 @@
 title: StarAI AI in Astronomy Studies
 date: 2023-11-24
 permalink: posts/starai-ai-in-astronomy-studies
+layout: article
 ---
 
 ## AI StarAI in Astronomy Studies Repository

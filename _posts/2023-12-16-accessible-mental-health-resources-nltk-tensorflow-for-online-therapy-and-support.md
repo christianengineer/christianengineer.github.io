@@ -2,6 +2,7 @@
 title: Accessible Mental Health Resources (NLTK, TensorFlow) For online therapy and support
 date: 2023-12-16
 permalink: posts/accessible-mental-health-resources-nltk-tensorflow-for-online-therapy-and-support
+layout: article
 ---
 
 ## Objectives

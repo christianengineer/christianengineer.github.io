@@ -2,6 +2,7 @@
 title: Luxury Brand Affinity Analysis (PyTorch, Pandas, Kafka, Docker) for Saga Falabella, Luxury Goods Manager Pain Point, Aligning inventory with premium customers' preferences Solution, AI-driven analysis of luxury consumer trends to optimize product selection and inventory, meeting the high expectations of Peru's affluent shoppers
 date: 2024-03-07
 permalink: posts/luxury-brand-affinity-analysis-pytorch-pandas-kafka-docker
+layout: article
 ---
 
 # Luxury Brand Affinity Analysis for Saga Falabella

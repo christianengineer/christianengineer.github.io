@@ -2,6 +2,7 @@
 title: "Designing the Future: A Comprehensive Roadmap for Developing a Scalable, Cloud-Integrated AI-Powered Cybersecurity Threat Detection System for High Traffic Environments"
 date: 2023-03-18
 permalink: posts/ai-powered-cybersecurity-threat-detection-strategies
+layout: article
 ---
 
 # AI-Based Cybersecurity Threat Detection Repository

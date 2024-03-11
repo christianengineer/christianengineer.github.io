@@ -2,6 +2,7 @@
 title: Child Education Game Development (Unity, TensorFlow) For interactive learning
 date: 2023-12-15
 permalink: posts/child-education-game-development-unity-tensorflow-for-interactive-learning
+layout: article
 ---
 
 # AI Child Education Game Development (Unity, TensorFlow)

@@ -2,6 +2,7 @@
 title: Gourmet Menu Design AI for Peru (BERT, GPT-3, Kafka, Docker) Leverages NLP to generate innovative menu descriptions that capture the essence of dishes and entice diners
 date: 2024-03-04
 permalink: posts/gourmet-menu-design-ai-for-peru-bert-gpt-3-kafka-docker
+layout: article
 ---
 
 # Machine Learning Gourmet Menu Design AI for Peru

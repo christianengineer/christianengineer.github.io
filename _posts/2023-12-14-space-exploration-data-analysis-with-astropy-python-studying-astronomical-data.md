@@ -2,6 +2,7 @@
 title: Space Exploration Data Analysis with AstroPy (Python) Studying astronomical data
 date: 2023-12-14
 permalink: posts/space-exploration-data-analysis-with-astropy-python-studying-astronomical-data
+layout: article
 ---
 
 # AI Space Exploration Data Analysis with AstroPy

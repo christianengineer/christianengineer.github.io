@@ -2,6 +2,7 @@
 title: Child Welfare Monitoring System in Peru (Scikit-Learn, Pandas, Airflow, Grafana) Leverages child welfare and educational data to identify children at risk and recommend interventions
 date: 2024-02-27
 permalink: posts/child-welfare-monitoring-system-in-peru-scikit-learn-pandas-airflow-grafana-leverages-child-welfare-and-educational-data-to-identify-children-at-risk-and-recommend-interventions
+layout: article
 ---
 
 ## AI Child Welfare Monitoring System in Peru

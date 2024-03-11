@@ -2,6 +2,7 @@
 title: Renewable Energy Optimization (TensorFlow, PyTorch) For sustainable energy management
 date: 2023-12-15
 permalink: posts/renewable-energy-optimization-tensorflow-pytorch-for-sustainable-energy-management
+layout: article
 ---
 
 ## AI Renewable Energy Optimization Repository

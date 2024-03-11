@@ -2,6 +2,7 @@
 title: Healthcare DigitalFront AI for Digital Healthcare
 date: 2023-11-23
 permalink: posts/healthcare-digitalfront-ai-for-digital-healthcare
+layout: article
 ---
 
 ## AI Healthcare DigitalFront AI for Digital Healthcare Repository

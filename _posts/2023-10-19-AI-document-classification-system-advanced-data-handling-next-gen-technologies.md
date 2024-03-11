@@ -2,6 +2,7 @@
 title: "Project Intelliscale: A Next-Gen AI-Driven Strategy for Developing and Deploying an Ultra-Scalable Intelligent Document Classification System"
 date: 2023-10-19
 permalink: posts/AI-document-classification-system-advanced-data-handling-next-gen-technologies
+layout: article
 ---
 
 ## Intelligent Document Classification System Repository

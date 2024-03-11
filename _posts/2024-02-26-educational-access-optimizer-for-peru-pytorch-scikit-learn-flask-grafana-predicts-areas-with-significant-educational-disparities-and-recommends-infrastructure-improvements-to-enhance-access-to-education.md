@@ -2,6 +2,7 @@
 title: Educational Access Optimizer for Peru (PyTorch, Scikit-Learn, Flask, Grafana) Predicts areas with significant educational disparities and recommends infrastructure improvements to enhance access to education
 date: 2024-02-26
 permalink: posts/educational-access-optimizer-for-peru-pytorch-scikit-learn-flask-grafana-predicts-areas-with-significant-educational-disparities-and-recommends-infrastructure-improvements-to-enhance-access-to-education
+layout: article
 ---
 
 ## AI Educational Access Optimizer for Peru

@@ -2,6 +2,7 @@
 title: Automated Drug Discovery (TensorFlow, Keras) Accelerating medical research
 date: 2023-12-16
 permalink: posts/automated-drug-discovery-tensorflow-keras-accelerating-medical-research
+layout: article
 ---
 
 # AI Automated Drug Discovery Repository

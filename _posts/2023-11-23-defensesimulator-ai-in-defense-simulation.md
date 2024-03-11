@@ -2,6 +2,7 @@
 title: DefenseSimulator AI in Defense Simulation
 date: 2023-11-23
 permalink: posts/defensesimulator-ai-in-defense-simulation
+layout: article
 ---
 
 ### AI DefenseSimulator AI in Defense Simulation Repository

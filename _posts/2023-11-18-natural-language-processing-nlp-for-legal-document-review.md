@@ -2,6 +2,7 @@
 title: Natural Language Processing (NLP) for Legal Document Review
 date: 2023-11-18
 permalink: posts/natural-language-processing-nlp-for-legal-document-review
+layout: article
 ---
 
 # Technical Specifications Document: NLP for Legal Document Review Repository

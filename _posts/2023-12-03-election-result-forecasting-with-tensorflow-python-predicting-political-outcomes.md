@@ -2,6 +2,7 @@
 title: Election Result Forecasting with TensorFlow (Python) Predicting political outcomes
 date: 2023-12-03
 permalink: posts/election-result-forecasting-with-tensorflow-python-predicting-political-outcomes
+layout: article
 ---
 
 # AI Election Result Forecasting with TensorFlow (Python)

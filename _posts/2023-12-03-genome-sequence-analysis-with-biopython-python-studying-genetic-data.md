@@ -2,6 +2,7 @@
 title: Genome Sequence Analysis with Biopython (Python) Studying genetic data
 date: 2023-12-03
 permalink: posts/genome-sequence-analysis-with-biopython-python-studying-genetic-data
+layout: article
 ---
 
 ## AI Genome Sequence Analysis with Biopython (Python)

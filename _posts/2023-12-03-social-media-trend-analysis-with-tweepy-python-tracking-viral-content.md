@@ -2,6 +2,7 @@
 title: Social Media Trend Analysis with Tweepy (Python) Tracking viral content
 date: 2023-12-03
 permalink: posts/social-media-trend-analysis-with-tweepy-python-tracking-viral-content
+layout: article
 ---
 
 ## Objectives

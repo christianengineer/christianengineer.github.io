@@ -2,6 +2,7 @@
 title: Ethical Supply Chain Monitoring (TensorFlow, Pandas) For responsible production
 date: 2023-12-17
 permalink: posts/ethical-supply-chain-monitoring-tensorflow-pandas-for-responsible-production
+layout: article
 ---
 
 # AI Ethical Supply Chain Monitoring

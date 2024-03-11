@@ -2,6 +2,7 @@
 title: Inventory Management AI for Restaurants in Peru (Scikit-Learn, TensorFlow, Kafka, Kubernetes) Predicts inventory needs based on historical data and forecasted demand, reducing overstock and stockouts
 date: 2024-03-05
 permalink: posts/inventory-management-ai-for-restaurants-in-peru-scikit-learn-tensorflow-kafka-kubernetes
+layout: article
 ---
 
 # Machine Learning Inventory Management AI for Restaurants in Peru

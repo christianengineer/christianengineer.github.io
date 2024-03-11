@@ -2,6 +2,7 @@
 title: Employee Productivity Enhancer in Peru (TensorFlow, PyTorch, Flask, Grafana) Utilizes performance data to identify factors affecting employee productivity, offering targeted interventions
 date: 2024-03-07
 permalink: posts/employee-productivity-enhancer-in-peru-tensorflow-pytorch-flask-grafana
+layout: article
 ---
 
 # Employee Productivity Enhancer in Peru - Machine Learning Solution

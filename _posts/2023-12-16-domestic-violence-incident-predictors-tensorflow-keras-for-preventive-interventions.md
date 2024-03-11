@@ -2,6 +2,7 @@
 title: Domestic Violence Incident Predictors (TensorFlow, Keras) For preventive interventions
 date: 2023-12-16
 permalink: posts/domestic-violence-incident-predictors-tensorflow-keras-for-preventive-interventions
+layout: article
 ---
 
 # AI Domestic Violence Incident Predictors

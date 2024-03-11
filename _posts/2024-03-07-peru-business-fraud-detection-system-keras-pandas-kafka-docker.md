@@ -2,6 +2,7 @@
 title: Peru Business Fraud Detection System (Keras, Pandas, Kafka, Docker) Identifies fraudulent transactions and irregularities in financial data, safeguarding business assets and revenues
 date: 2024-03-07
 permalink: posts/peru-business-fraud-detection-system-keras-pandas-kafka-docker
+layout: article
 ---
 
 # Peru Business Fraud Detection System

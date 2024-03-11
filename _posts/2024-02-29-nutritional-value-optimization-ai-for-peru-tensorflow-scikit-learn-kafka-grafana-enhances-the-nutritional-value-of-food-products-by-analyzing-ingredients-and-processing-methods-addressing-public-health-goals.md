@@ -2,6 +2,7 @@
 title: Nutritional Value Optimization AI for Peru (TensorFlow, Scikit-Learn, Kafka, Grafana) Enhances the nutritional value of food products by analyzing ingredients and processing methods, addressing public health goals
 date: 2024-02-29
 permalink: posts/nutritional-value-optimization-ai-for-peru-tensorflow-scikit-learn-kafka-grafana-enhances-the-nutritional-value-of-food-products-by-analyzing-ingredients-and-processing-methods-addressing-public-health-goals
+layout: article
 ---
 
 # AI Nutritional Value Optimization System

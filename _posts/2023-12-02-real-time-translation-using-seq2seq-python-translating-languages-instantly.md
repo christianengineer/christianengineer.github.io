@@ -2,6 +2,7 @@
 title: Real-time Translation using Seq2Seq (Python) Translating languages instantly
 date: 2023-12-02
 permalink: posts/real-time-translation-using-seq2seq-python-translating-languages-instantly
+layout: article
 ---
 
 ## Objectives

@@ -2,6 +2,7 @@
 title: Automated Content Generation for Media (GPT-3, Hadoop, Prometheus) For journalism
 date: 2023-12-18
 permalink: posts/automated-content-generation-for-media-gpt-3-hadoop-prometheus-for-journalism
+layout: article
 ---
 
 # AI Automated Content Generation for Media

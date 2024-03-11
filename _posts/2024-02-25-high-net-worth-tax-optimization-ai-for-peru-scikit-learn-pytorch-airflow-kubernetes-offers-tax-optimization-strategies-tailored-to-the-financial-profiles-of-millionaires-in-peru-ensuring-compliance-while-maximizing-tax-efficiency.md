@@ -2,6 +2,7 @@
 title: High-Net-Worth Tax Optimization AI for Peru (Scikit-Learn, PyTorch, Airflow, Kubernetes) Offers tax optimization strategies tailored to the financial profiles of millionaires in Peru, ensuring compliance while maximizing tax efficiency
 date: 2024-02-25
 permalink: posts/high-net-worth-tax-optimization-ai-for-peru-scikit-learn-pytorch-airflow-kubernetes-offers-tax-optimization-strategies-tailored-to-the-financial-profiles-of-millionaires-in-peru-ensuring-compliance-while-maximizing-tax-efficiency
+layout: article
 ---
 
 ## Project Overview

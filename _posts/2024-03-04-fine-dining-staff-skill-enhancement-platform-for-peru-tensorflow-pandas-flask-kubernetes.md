@@ -2,6 +2,7 @@
 title: Fine Dining Staff Skill Enhancement Platform for Peru (TensorFlow, Pandas, Flask, Kubernetes) Identifies skill gaps in fine dining staff and recommends targeted training programs to elevate service quality
 date: 2024-03-04
 permalink: posts/fine-dining-staff-skill-enhancement-platform-for-peru-tensorflow-pandas-flask-kubernetes
+layout: article
 ---
 
 ## Objective and Benefits:

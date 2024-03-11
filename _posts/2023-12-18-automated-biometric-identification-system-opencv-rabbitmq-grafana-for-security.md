@@ -2,6 +2,7 @@
 title: Automated Biometric Identification System (OpenCV, RabbitMQ, Grafana) For security
 date: 2023-12-18
 permalink: posts/automated-biometric-identification-system-opencv-rabbitmq-grafana-for-security
+layout: article
 ---
 
 # AI Automated Biometric Identification System

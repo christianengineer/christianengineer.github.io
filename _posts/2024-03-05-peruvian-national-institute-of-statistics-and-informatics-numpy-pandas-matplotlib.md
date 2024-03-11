@@ -2,6 +2,7 @@
 title: Peruvian National Institute of Statistics and Informatics (NumPy, Pandas, Matplotlib) Data processing inefficiency, enhance statistical analysis and visualization for informed policy-making
 date: 2024-03-05
 permalink: posts/peruvian-national-institute-of-statistics-and-informatics-numpy-pandas-matplotlib
+layout: article
 ---
 
 ### Objective:

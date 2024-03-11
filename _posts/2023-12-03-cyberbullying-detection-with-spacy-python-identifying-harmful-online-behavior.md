@@ -2,6 +2,7 @@
 title: Cyberbullying Detection with SpaCy (Python) Identifying harmful online behavior
 date: 2023-12-03
 permalink: posts/cyberbullying-detection-with-spacy-python-identifying-harmful-online-behavior
+layout: article
 ---
 
 ## Objectives

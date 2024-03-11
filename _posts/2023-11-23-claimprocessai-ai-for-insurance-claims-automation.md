@@ -2,6 +2,7 @@
 title: ClaimProcessAI AI for Insurance Claims Automation
 date: 2023-11-23
 permalink: posts/claimprocessai-ai-for-insurance-claims-automation
+layout: article
 ---
 
 # AI ClaimProcessAI for Insurance Claims Automation

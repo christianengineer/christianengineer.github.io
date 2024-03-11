@@ -2,6 +2,7 @@
 title: Automated Emergency Dispatch (TensorFlow, Keras) For quick response services
 date: 2023-12-16
 permalink: posts/automated-emergency-dispatch-tensorflow-keras-for-quick-response-services
+layout: article
 ---
 
 ## AI Automated Emergency Dispatch System

@@ -2,6 +2,7 @@
 title: Predictive Maintenance for Industrial Equipment
 date: 2023-11-18
 permalink: posts/predictive-maintenance-for-industrial-equipment
+layout: article
 ---
 
 # Technical Specifications Document - Predictive Maintenance for Industrial Equipment

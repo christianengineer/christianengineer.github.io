@@ -2,6 +2,7 @@
 title: Real-time Fleet Management for Logistics (Scikit-Learn, RabbitMQ, Docker) For transportation
 date: 2023-12-20
 permalink: posts/real-time-fleet-management-for-logistics-scikit-learn-rabbitmq-docker-for-transportation
+layout: article
 ---
 
 # AI Real-time Fleet Management for Logistics 

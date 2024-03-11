@@ -2,6 +2,7 @@
 title: RoboAssist AI in Autonomous Robotics
 date: 2023-11-24
 permalink: posts/roboassist-ai-in-autonomous-robotics
+layout: article
 ---
 
 # AI RoboAssist AI in Autonomous Robotics Repository

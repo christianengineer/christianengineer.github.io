@@ -2,6 +2,7 @@
 title: "Revolutionizing Urban Mobility: A Comprehensive Guide to Developing and Implementing a Scalable, Cloud-Integrated AI-Driven Traffic Management System"
 date: 2023-06-30
 permalink: posts/scalable-ai-traffic-management-system-innovation
+layout: article
 ---
 
 # AI-Driven Traffic Management System

@@ -2,6 +2,7 @@
 title: Machine Learning Model Interpretability Implement techniques for interpreting machine learning models
 date: 2023-11-24
 permalink: posts/machine-learning-model-interpretability-implement-techniques-for-interpreting-machine-learning-models
+layout: article
 ---
 
 ## Objectives

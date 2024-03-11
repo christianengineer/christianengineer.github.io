@@ -2,6 +2,7 @@
 title: AI-driven Project Management Tool (Scikit-Learn, Flask, Prometheus) For business efficiency
 date: 2023-12-21
 permalink: posts/ai-driven-project-management-tool-scikit-learn-flask-prometheus-for-business-efficiency
+layout: article
 ---
 
 ### AI-driven Project Management Tool

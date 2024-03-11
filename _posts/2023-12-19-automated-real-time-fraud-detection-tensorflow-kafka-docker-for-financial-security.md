@@ -2,6 +2,7 @@
 title: Automated Real-time Fraud Detection (TensorFlow, Kafka, Docker) For financial security
 date: 2023-12-19
 permalink: posts/automated-real-time-fraud-detection-tensorflow-kafka-docker-for-financial-security
+layout: article
 ---
 
 # Objectives of the AI Automated Real-time Fraud Detection System

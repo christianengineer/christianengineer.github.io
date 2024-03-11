@@ -2,6 +2,7 @@
 title: Peru Fishery Stock Management System (Keras, TensorFlow, Spark, DVC) Uses satellite and sonar data to monitor and predict fish stock levels, supporting sustainable fishing practices and supply planning
 date: 2024-02-27
 permalink: posts/peru-fishery-stock-management-system-keras-tensorflow-spark-dvc-uses-satellite-and-sonar-data-to-monitor-and-predict-fish-stock-levels-supporting-sustainable-fishing-practices-and-supply-planning
+layout: article
 ---
 
 # AI Peru Fishery Stock Management System

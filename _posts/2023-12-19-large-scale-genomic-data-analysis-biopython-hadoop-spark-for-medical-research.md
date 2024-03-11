@@ -2,6 +2,7 @@
 title: Large-scale Genomic Data Analysis (BioPython, Hadoop, Spark) For medical research
 date: 2023-12-19
 permalink: posts/large-scale-genomic-data-analysis-biopython-hadoop-spark-for-medical-research
+layout: article
 ---
 
 ### Objectives

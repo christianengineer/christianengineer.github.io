@@ -2,6 +2,7 @@
 title: FraudGuard - AI Fraud Detection System
 date: 2023-11-21
 permalink: posts/fraudguard---ai-fraud-detection-system
+layout: article
 ---
 
 ## AI FraudGuard - AI Fraud Detection System

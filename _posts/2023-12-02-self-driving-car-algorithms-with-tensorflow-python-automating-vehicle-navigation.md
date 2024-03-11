@@ -2,6 +2,7 @@
 title: Self-driving Car Algorithms with TensorFlow (Python) Automating vehicle navigation
 date: 2023-12-02
 permalink: posts/self-driving-car-algorithms-with-tensorflow-python-automating-vehicle-navigation
+layout: article
 ---
 
 # AI Self-Driving Car Algorithms with TensorFlow (Python) Repository

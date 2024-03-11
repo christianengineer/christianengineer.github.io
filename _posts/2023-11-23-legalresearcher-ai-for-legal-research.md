@@ -2,6 +2,7 @@
 title: LegalResearcher AI for Legal Research
 date: 2023-11-23
 permalink: posts/legalresearcher-ai-for-legal-research
+layout: article
 ---
 
 ## AI Legal Researcher Repository

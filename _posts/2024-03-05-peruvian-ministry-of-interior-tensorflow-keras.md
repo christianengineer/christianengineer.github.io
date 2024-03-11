@@ -2,6 +2,7 @@
 title: Peruvian Ministry of Interior (TensorFlow, Keras) Crime Analyst pain point is anticipating crime hotspots, solution is to develop a predictive policing model using machine learning to analyze crime data and predict future hotspots, optimizing patrol allocations
 date: 2024-03-05
 permalink: posts/peruvian-ministry-of-interior-tensorflow-keras
+layout: article
 ---
 
 # Building a Predictive Policing Model for Peruvian Ministry of Interior using Machine Learning

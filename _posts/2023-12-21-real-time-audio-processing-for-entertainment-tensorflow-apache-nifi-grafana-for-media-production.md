@@ -2,6 +2,7 @@
 title: Real-time Audio Processing for Entertainment (TensorFlow, Apache NiFi, Grafana) For media production
 date: 2023-12-21
 permalink: posts/real-time-audio-processing-for-entertainment-tensorflow-apache-nifi-grafana-for-media-production
+layout: article
 ---
 
 ### Objectives

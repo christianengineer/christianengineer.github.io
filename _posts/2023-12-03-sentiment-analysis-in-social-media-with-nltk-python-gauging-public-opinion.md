@@ -2,6 +2,7 @@
 title: Sentiment Analysis in Social Media with NLTK (Python) Gauging public opinion
 date: 2023-12-03
 permalink: posts/sentiment-analysis-in-social-media-with-nltk-python-gauging-public-opinion
+layout: article
 ---
 
 ## Objectives

@@ -2,6 +2,7 @@
 title: Supply Chain Demand Forecasting using Prophet (Python) Predicting product demand
 date: 2023-12-03
 permalink: posts/supply-chain-demand-forecasting-using-prophet-python-predicting-product-demand
+layout: article
 ---
 
 ### Objectives

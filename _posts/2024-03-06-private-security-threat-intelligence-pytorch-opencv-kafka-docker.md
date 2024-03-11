@@ -2,6 +2,7 @@
 title: Private Security Threat Intelligence (PyTorch, OpenCV, Kafka, Docker) for Prosegur, Security Operations Coordinator Pain Point, Increasing rates of property crimes Solution, Advanced surveillance analysis to preemptively identify and mitigate security threats, enhancing client safety across Peru
 date: 2024-03-06
 permalink: posts/private-security-threat-intelligence-pytorch-opencv-kafka-docker
+layout: article
 ---
 
 # Private Security Threat Intelligence Solution (PyTorch, OpenCV, Kafka, Docker) for Prosegur

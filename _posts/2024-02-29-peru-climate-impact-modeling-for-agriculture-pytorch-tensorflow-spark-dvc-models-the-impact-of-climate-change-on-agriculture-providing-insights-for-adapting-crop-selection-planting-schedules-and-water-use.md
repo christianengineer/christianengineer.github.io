@@ -2,6 +2,7 @@
 title: Peru Climate Impact Modeling for Agriculture (PyTorch, TensorFlow, Spark, DVC) Models the impact of climate change on agriculture, providing insights for adapting crop selection, planting schedules, and water use
 date: 2024-02-29
 permalink: posts/peru-climate-impact-modeling-for-agriculture-pytorch-tensorflow-spark-dvc-models-the-impact-of-climate-change-on-agriculture-providing-insights-for-adapting-crop-selection-planting-schedules-and-water-use
+layout: article
 ---
 
 # **AI Peru Climate Impact Modeling for Agriculture**

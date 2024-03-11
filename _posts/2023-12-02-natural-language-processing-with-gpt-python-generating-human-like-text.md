@@ -2,6 +2,7 @@
 title: Natural Language Processing with GPT (Python) Generating human-like text
 date: 2023-12-02
 permalink: posts/natural-language-processing-with-gpt-python-generating-human-like-text
+layout: article
 ---
 
 ## Objectives

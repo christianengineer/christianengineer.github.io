@@ -2,6 +2,7 @@
 title: "End-to-End Development Strategy: Scalable AI Powering a Healthcare Diagnostic Chatbot - A Comprehensive Approach to Design, Development and Deployment for Mass User Interaction"
 date: 2023-01-10
 permalink: posts/ai-based-healthcare-diagnosis-chatbot-implementation-guide
+layout: article
 ---
 
 # Healthcare Chatbot for Diagnosis Assistance

@@ -2,6 +2,7 @@
 title: RoboTech - Advanced Robotics AI
 date: 2023-11-21
 permalink: posts/robotech---advanced-robotics-ai
+layout: article
 ---
 
 ### AI RoboTech - Advanced Robotics AI Repository

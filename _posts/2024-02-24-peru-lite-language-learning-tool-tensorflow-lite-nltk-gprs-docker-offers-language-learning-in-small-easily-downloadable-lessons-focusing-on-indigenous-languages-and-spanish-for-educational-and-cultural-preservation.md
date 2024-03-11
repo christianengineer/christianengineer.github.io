@@ -2,6 +2,7 @@
 title: Peru Lite Language Learning Tool (TensorFlow Lite, NLTK, GPRS, Docker) Offers language learning in small, easily downloadable lessons, focusing on indigenous languages and Spanish for educational and cultural preservation
 date: 2024-02-24
 permalink: posts/peru-lite-language-learning-tool-tensorflow-lite-nltk-gprs-docker-offers-language-learning-in-small-easily-downloadable-lessons-focusing-on-indigenous-languages-and-spanish-for-educational-and-cultural-preservation
+layout: article
 ---
 
 ## AI Peru Lite Language Learning Tool

@@ -2,6 +2,7 @@
 title: Containerization of ML Models with Docker - Showcase how to containerize different ML models using Docker for easy deployment and scalability.
 date: 2023-11-22
 permalink: posts/containerization-of-ml-models-with-docker---showcase-how-to-containerize-different-ml-models-using-docker-for-easy-deployment-and-scalability
+layout: article
 ---
 
 ## AI Containerization of ML Models with Docker

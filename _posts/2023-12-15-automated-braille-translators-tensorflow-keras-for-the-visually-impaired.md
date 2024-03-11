@@ -2,6 +2,7 @@
 title: Automated Braille Translators (TensorFlow, Keras) For the visually impaired
 date: 2023-12-15
 permalink: posts/automated-braille-translators-tensorflow-keras-for-the-visually-impaired
+layout: article
 ---
 
 ## AI Automated Braille Translators

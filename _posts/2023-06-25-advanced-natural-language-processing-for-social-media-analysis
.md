@@ -2,6 +2,7 @@
 title: "Project Pinnacle: A Comprehensive Blueprint for Scalable, Cloud-Integrated Natural Language Processing for High-Traffic Social Media Analysis"
 date: 2023-06-25
 permalink: posts/advanced-natural-language-processing-for-social-media-analysis
+layout: article
 ---
 
 # Natural Language Processing for Social Media Analysis Repository

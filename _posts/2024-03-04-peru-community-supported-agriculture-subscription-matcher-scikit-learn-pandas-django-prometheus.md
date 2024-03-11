@@ -2,6 +2,7 @@
 title: Peru Community-Supported Agriculture Subscription Matcher (Scikit-Learn, Pandas, Django, Prometheus) Connects small farmers directly with consumers through a subscription model, ensuring stable income for farmers and fresh produce for families
 date: 2024-03-04
 permalink: posts/peru-community-supported-agriculture-subscription-matcher-scikit-learn-pandas-django-prometheus
+layout: article
 ---
 
 ### Project: AI Peru Community-Supported Agriculture Subscription Matcher

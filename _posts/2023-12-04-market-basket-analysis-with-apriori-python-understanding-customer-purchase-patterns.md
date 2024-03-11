@@ -2,6 +2,7 @@
 title: Market Basket Analysis with Apriori (Python) Understanding customer purchase patterns
 date: 2023-12-04
 permalink: posts/market-basket-analysis-with-apriori-python-understanding-customer-purchase-patterns
+layout: article
 ---
 
 ### Objectives

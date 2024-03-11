@@ -2,6 +2,7 @@
 title: AutoFlow - AI-Driven Automation Platform
 date: 2023-11-21
 permalink: posts/autoflow---ai-driven-automation-platform
+layout: article
 ---
 
 # AutoFlow - AI-Driven Automation Platform

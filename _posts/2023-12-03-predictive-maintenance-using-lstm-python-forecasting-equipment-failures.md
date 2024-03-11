@@ -2,6 +2,7 @@
 title: Predictive Maintenance using LSTM (Python) Forecasting equipment failures
 date: 2023-12-03
 permalink: posts/predictive-maintenance-using-lstm-python-forecasting-equipment-failures
+layout: article
 ---
 
 # AI Predictive Maintenance using LSTM (Python)

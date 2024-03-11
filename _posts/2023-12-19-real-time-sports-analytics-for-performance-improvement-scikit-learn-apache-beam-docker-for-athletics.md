@@ -2,6 +2,7 @@
 title: Real-time Sports Analytics for Performance Improvement (Scikit-Learn, Apache Beam, Docker) For athletics
 date: 2023-12-19
 permalink: posts/real-time-sports-analytics-for-performance-improvement-scikit-learn-apache-beam-docker-for-athletics
+layout: article
 ---
 
 # Objectives

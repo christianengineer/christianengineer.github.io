@@ -2,6 +2,7 @@
 title: Peru Food Supply Chain Optimizer (Keras, TensorFlow, Kafka, Docker) Enhances supply chain logistics by predicting supply needs and identifying efficient sourcing options
 date: 2024-03-05
 permalink: posts/peru-food-supply-chain-optimizer-keras-tensorflow-kafka-docker
+layout: article
 ---
 
 ## Machine Learning Peru Food Supply Chain Optimizer

@@ -2,6 +2,7 @@
 title: "Blueprint for Scalability: Master Plan for an Innovative, AI-Powered Resume Analyzer with Cloud Integration and Advanced Data Handling Capabilities"
 date: 2023-02-17
 permalink: posts/ai-powered-resume-analyzer-scalability-blueprint-cloud-integration-advanced-data-handling
+layout: article
 ---
 
 # Blueprint for Scalability: Master Plan for an Innovative, AI-Powered Resume Analyzer with Cloud Integration and Advanced Data Handling Capabilities

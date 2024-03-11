@@ -2,6 +2,7 @@
 title: Predictive Modeling for Insurance Underwriting (PyTorch, Spark, Docker) For risk assessment
 date: 2023-12-18
 permalink: posts/predictive-modeling-for-insurance-underwriting-pytorch-spark-docker-for-risk-assessment
+layout: article
 ---
 
 # AI Predictive Modeling for Insurance Underwriting

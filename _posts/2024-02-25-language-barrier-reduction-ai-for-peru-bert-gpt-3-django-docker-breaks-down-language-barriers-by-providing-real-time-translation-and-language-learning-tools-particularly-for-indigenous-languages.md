@@ -2,6 +2,7 @@
 title: Language Barrier Reduction AI for Peru (BERT, GPT-3, Django, Docker) Breaks down language barriers by providing real-time translation and language learning tools, particularly for indigenous languages
 date: 2024-02-25
 permalink: posts/language-barrier-reduction-ai-for-peru-bert-gpt-3-django-docker-breaks-down-language-barriers-by-providing-real-time-translation-and-language-learning-tools-particularly-for-indigenous-languages
+layout: article
 ---
 
 ### Project: AI Language Barrier Reduction for Peru

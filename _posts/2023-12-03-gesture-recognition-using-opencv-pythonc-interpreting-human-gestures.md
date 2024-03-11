@@ -2,6 +2,7 @@
 title: Gesture Recognition using OpenCV (Python/C++) Interpreting human gestures
 date: 2023-12-03
 permalink: posts/gesture-recognition-using-opencv-pythonc-interpreting-human-gestures
+layout: article
 ---
 
 # AI Gesture Recognition using OpenCV

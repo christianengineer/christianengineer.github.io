@@ -2,6 +2,7 @@
 title: AI-Based Language Translation for Websites
 date: 2023-11-18
 permalink: posts/ai-based-language-translation-for-websites
+layout: article
 ---
 
 # AI-Based Language Translation for Websites

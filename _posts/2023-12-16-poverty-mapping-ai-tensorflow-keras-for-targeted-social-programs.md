@@ -2,6 +2,7 @@
 title: Poverty Mapping AI (TensorFlow, Keras) For targeted social programs
 date: 2023-12-16
 permalink: posts/poverty-mapping-ai-tensorflow-keras-for-targeted-social-programs
+layout: article
 ---
 
 ### Objectives

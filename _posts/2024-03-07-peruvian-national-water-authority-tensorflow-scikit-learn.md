@@ -2,6 +2,7 @@
 title: Peruvian National Water Authority (TensorFlow, Scikit-Learn) Water Resources Planner pain point is anaging water distribution, solution is to apply machine learning to predict water demand and optimize distribution schedules, ensuring sustainable water use
 date: 2024-03-07
 permalink: posts/peruvian-national-water-authority-tensorflow-scikit-learn
+layout: article
 ---
 
 # Machine Learning Solution for Water Resources Planning

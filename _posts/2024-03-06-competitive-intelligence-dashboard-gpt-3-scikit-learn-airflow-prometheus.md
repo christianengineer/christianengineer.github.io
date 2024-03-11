@@ -2,6 +2,7 @@
 title: Competitive Intelligence Dashboard (GPT-3, Scikit-Learn, Airflow, Prometheus) for Supermercados Peruanos, Market Analyst's pain point is keeping up with rapid market changes and competitor strategies, solution is to provide in-depth insights into competitor pricing, promotions, and customer preferences, enabling data-driven strategic planning in Peru’s competitive retail environment
 date: 2024-03-06
 permalink: posts/competitive-intelligence-dashboard-gpt-3-scikit-learn-airflow-prometheus
+layout: article
 ---
 
 # Competitive Intelligence Dashboard for Supermercados Peruanos

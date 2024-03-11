@@ -2,6 +2,7 @@
 title: EnergySaver - AI for Energy Optimization
 date: 2023-11-21
 permalink: posts/energysaver---ai-for-energy-optimization
+layout: article
 ---
 
 # AI EnergySaver - AI for Energy Optimization

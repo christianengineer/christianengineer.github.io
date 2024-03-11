@@ -2,6 +2,7 @@
 title: Peru Customer Sentiment Analysis Tool (BERT, TensorFlow, Flask, Grafana) Analyzes customer feedback across multiple channels to improve product offerings and customer service strategies
 date: 2024-03-07
 permalink: posts/peru-customer-sentiment-analysis-tool-bert-tensorflow-flask-grafana
+layout: article
 ---
 
 # Peru Customer Sentiment Analysis Tool

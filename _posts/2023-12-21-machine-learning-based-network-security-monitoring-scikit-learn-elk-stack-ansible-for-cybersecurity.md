@@ -2,6 +2,7 @@
 title: Machine Learning-based Network Security Monitoring (Scikit-Learn, ELK Stack, Ansible) For cybersecurity
 date: 2023-12-21
 permalink: posts/machine-learning-based-network-security-monitoring-scikit-learn-elk-stack-ansible-for-cybersecurity
+layout: article
 ---
 
 ### Objectives:

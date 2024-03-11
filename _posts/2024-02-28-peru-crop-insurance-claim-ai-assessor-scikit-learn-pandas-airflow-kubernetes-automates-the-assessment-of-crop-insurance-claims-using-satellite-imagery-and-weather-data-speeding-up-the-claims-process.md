@@ -2,6 +2,7 @@
 title: Peru Crop Insurance Claim AI Assessor (Scikit-Learn, Pandas, Airflow, Kubernetes) Automates the assessment of crop insurance claims using satellite imagery and weather data, speeding up the claims process
 date: 2024-02-28
 permalink: posts/peru-crop-insurance-claim-ai-assessor-scikit-learn-pandas-airflow-kubernetes-automates-the-assessment-of-crop-insurance-claims-using-satellite-imagery-and-weather-data-speeding-up-the-claims-process
+layout: article
 ---
 
 ## AI Peru Crop Insurance Claim AI Assessor

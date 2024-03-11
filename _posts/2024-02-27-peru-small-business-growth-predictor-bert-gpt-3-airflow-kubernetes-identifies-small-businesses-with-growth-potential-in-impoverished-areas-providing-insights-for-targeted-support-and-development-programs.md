@@ -2,6 +2,7 @@
 title: Peru Small Business Growth Predictor (BERT, GPT-3, Airflow, Kubernetes) Identifies small businesses with growth potential in impoverished areas, providing insights for targeted support and development programs
 date: 2024-02-27
 permalink: posts/peru-small-business-growth-predictor-bert-gpt-3-airflow-kubernetes-identifies-small-businesses-with-growth-potential-in-impoverished-areas-providing-insights-for-targeted-support-and-development-programs
+layout: article
 ---
 
 ### AI Peru Small Business Growth Predictor

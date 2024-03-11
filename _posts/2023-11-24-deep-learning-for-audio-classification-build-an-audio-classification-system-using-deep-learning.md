@@ -2,6 +2,7 @@
 title: Deep Learning for Audio Classification Build an audio classification system using deep learning
 date: 2023-11-24
 permalink: posts/deep-learning-for-audio-classification-build-an-audio-classification-system-using-deep-learning
+layout: article
 ---
 
 # AI Deep Learning for Audio Classification Repository

@@ -2,6 +2,7 @@
 title: Smart City Traffic Management with Keras (Python) Optimizing urban traffic flow
 date: 2023-12-03
 permalink: posts/smart-city-traffic-management-with-keras-python-optimizing-urban-traffic-flow
+layout: article
 ---
 
 ### Objectives

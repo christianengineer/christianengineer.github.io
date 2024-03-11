@@ -2,6 +2,7 @@
 title: Online Advertising Effectiveness Analysis with Pandas (Python) Measuring ad performance
 date: 2023-12-04
 permalink: posts/online-advertising-effectiveness-analysis-with-pandas-python-measuring-ad-performance
+layout: article
 ---
 
 ## Objectives
