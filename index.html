@@ -4,32 +4,23 @@ title: Artificial Inteligence Projects
 description: Welcome to my AI Projects Blog, where I dive into the world of artificial intelligence by harnessing the power of the industry's most used tools. My exploration spans TensorFlow and PyTorch for deep learning, Scikit-learn for machine learning algorithms, Keras for neural networks, and Pandas along with NumPy for data manipulation and analysis. I bring visuals to life with Matplotlib and manage projects in Jupyter Notebooks for seamless collaboration. OpenCV guides us through computer vision projects, while FastAI offers an accessible approach to deep learning. Join me as I navigate the complexities and breakthroughs of AI, leveraging these powerful tools to push the boundaries of technology and innovation.
 ---
 
+{% include header_navigation.html %}
 <header>
   <h1>
     AI Project Pipelines for Data Management, Tool Efficiency and Model
     Deployment Success
   </h1>
 </header>
-<!-- <nav>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="articles.html">Articles</a></li>
-    <li><a href="about.html">About Us</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav> -->
 <main>
   <section>
     <h2>Latest Articles</h2>
     {% for post in site.posts %}
     <article>
       <h3>{{ post.title }}</h3>
-      <p>{{ page.date | date: "%B %-d, %Y" }}</p>
+      <p>{{ post.date | date: "%B %-d, %Y" }}</p>
       <a href="{{ post.url | relative_url }}">Read more</a>
     </article>
     {% endfor %}
   </section>
 </main>
-<footer>
-  <p>&copy; 2024 Artificial Intelligence Research. All rights reserved.</p>
-</footer>
+{% include footer_navigation.html %}
