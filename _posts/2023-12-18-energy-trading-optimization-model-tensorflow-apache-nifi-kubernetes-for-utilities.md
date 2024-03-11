@@ -192,24 +192,24 @@ Certainly! Below is an example of a Python script for training a mock model for 
 import tensorflow as tf
 import numpy as np
 
-# Mock data generation
+## Mock data generation
 num_samples = 1000
 input_features = 5
 X = np.random.rand(num_samples, input_features)
 y = np.random.randint(2, size=num_samples)
 
-# Define a simple TensorFlow model
+## Define a simple TensorFlow model
 model = tf.keras.Sequential([
     tf.keras.layers.Dense(10, activation='relu', input_shape=(input_features,)),
     tf.keras.layers.Dense(1, activation='sigmoid')
 ])
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam',
               loss='binary_crossentropy',
               metrics=['accuracy'])
 
-# Train the model
+## Train the model
 model.fit(X, y, epochs=10, validation_split=0.2)
 ```
 
@@ -225,13 +225,13 @@ Certainly! Below is an example of a Python script for a more complex machine lea
 import tensorflow as tf
 import numpy as np
 
-# Mock data generation
+## Mock data generation
 num_samples = 1000
 input_features = 10
 X = np.random.rand(num_samples, input_features)
 y = np.random.rand(num_samples, 1)
 
-# Define a more complex TensorFlow model
+## Define a more complex TensorFlow model
 model = tf.keras.Sequential([
     tf.keras.layers.Dense(64, activation='relu', input_shape=(input_features,)),
     tf.keras.layers.Dense(128, activation='relu'),
@@ -239,12 +239,12 @@ model = tf.keras.Sequential([
     tf.keras.layers.Dense(1)
 ])
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam',
               loss='mean_squared_error',
               metrics=['mae', 'mse'])
 
-# Train the model
+## Train the model
 model.fit(X, y, epochs=20, validation_split=0.2)
 ```
 

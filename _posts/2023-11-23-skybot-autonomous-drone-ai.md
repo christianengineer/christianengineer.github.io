@@ -66,41 +66,41 @@ By integrating these components, the infrastructure for the SkyBot Autonomous Dr
 SkyBot-Autonomous-Drone-AI/
 │
 ├── data/
-│   ├── raw/                    # Raw sensor data from the drone's cameras, LiDAR, GPS, etc.
-│   ├── processed/              # Processed and annotated data for training and testing AI models
+│   ├── raw/                    ## Raw sensor data from the drone's cameras, LiDAR, GPS, etc.
+│   ├── processed/              ## Processed and annotated data for training and testing AI models
 │
 ├── models/
-│   ├── perception/             # Trained models for object recognition, scene understanding, etc.
-│   ├── decision_making/        # Models for real-time decision-making, path planning, etc.
+│   ├── perception/             ## Trained models for object recognition, scene understanding, etc.
+│   ├── decision_making/        ## Models for real-time decision-making, path planning, etc.
 │
 ├── src/
-│   ├── perception/             # Code for perception algorithms (e.g., object detection, tracking)
-│   ├── decision_making/        # Code for decision-making logic and path planning
-│   ├── control/                # Control algorithms for drone navigation and stabilization
-│   ├── utils/                  # Utility functions and modules used across the system
+│   ├── perception/             ## Code for perception algorithms (e.g., object detection, tracking)
+│   ├── decision_making/        ## Code for decision-making logic and path planning
+│   ├── control/                ## Control algorithms for drone navigation and stabilization
+│   ├── utils/                  ## Utility functions and modules used across the system
 │
 ├── tests/
-│   ├── unit/                   # Unit tests for individual components
-│   ├── integration/            # Integration tests for system modules and communication
+│   ├── unit/                   ## Unit tests for individual components
+│   ├── integration/            ## Integration tests for system modules and communication
 │
 ├── configs/
-│   ├── perception_config.yaml  # Configuration files for perception algorithms and models
-│   ├── decision_config.yaml    # Configuration files for decision-making logic and control parameters
-│   ├── system_config.yaml      # General system configuration settings
+│   ├── perception_config.yaml  ## Configuration files for perception algorithms and models
+│   ├── decision_config.yaml    ## Configuration files for decision-making logic and control parameters
+│   ├── system_config.yaml      ## General system configuration settings
 │
 ├── docs/
-│   ├── architecture/           # High-level architecture and system design documentation
-│   ├── api/                    # API documentation for system interfaces and communication protocols
-│   ├── tutorials/              # Tutorials and guides for using and extending the system
+│   ├── architecture/           ## High-level architecture and system design documentation
+│   ├── api/                    ## API documentation for system interfaces and communication protocols
+│   ├── tutorials/              ## Tutorials and guides for using and extending the system
 │
 ├── scripts/
-│   ├── data_processing.py      # Scripts for processing raw sensor data into training-ready format
-│   ├── train_perception.py     # Training scripts for perception models
-│   ├── evaluate_decision.py    # Scripts for evaluating decision-making models
+│   ├── data_processing.py      ## Scripts for processing raw sensor data into training-ready format
+│   ├── train_perception.py     ## Training scripts for perception models
+│   ├── evaluate_decision.py    ## Scripts for evaluating decision-making models
 │
-├── README.md                   # Overview of the project, setup instructions and usage documentation
+├── README.md                   ## Overview of the project, setup instructions and usage documentation
 │
-└── LICENSE                     # Licensing information for the repository
+└── LICENSE                     ## Licensing information for the repository
 ```
 
 The proposed file structure provides a scalable organization for the SkyBot Autonomous Drone AI repository. It separates different components such as data, models, source code, tests, configuration files, documentation, and scripts, ensuring a clear and modular layout for the repository. Each component is further divided into relevant subdirectories, making it easy to locate and manage specific aspects of the AI application.
@@ -109,15 +109,15 @@ The proposed file structure provides a scalable organization for the SkyBot Auto
 models/
 │
 ├── perception/
-│   ├── object_detection.pb      # Trained object detection model in protobuf format
-│   ├── scene_segmentation.h5    # Trained scene segmentation model in HDF5 format
-│   ├── perception_utils.py      # Utility functions for using perception models
+│   ├── object_detection.pb      ## Trained object detection model in protobuf format
+│   ├── scene_segmentation.h5    ## Trained scene segmentation model in HDF5 format
+│   ├── perception_utils.py      ## Utility functions for using perception models
 │   ├── ...
 │
 ├── decision_making/
-│   ├── path_planning.pb         # Trained path planning model in protobuf format
-│   ├── obstacle_avoidance.h5    # Trained obstacle avoidance model in HDF5 format
-│   ├── decision_utils.py        # Utility functions for using decision-making models
+│   ├── path_planning.pb         ## Trained path planning model in protobuf format
+│   ├── obstacle_avoidance.h5    ## Trained obstacle avoidance model in HDF5 format
+│   ├── decision_utils.py        ## Utility functions for using decision-making models
 │   ├── ...
 │
 ```
@@ -144,27 +144,27 @@ The `models/` directory holds the trained AI models in a format compatible with 
 deployment/
 │
 ├── docker/
-│   ├── perception_Dockerfile        # Dockerfile for building the perception module container
-│   ├── decision_making_Dockerfile   # Dockerfile for building the decision-making module container
+│   ├── perception_Dockerfile        ## Dockerfile for building the perception module container
+│   ├── decision_making_Dockerfile   ## Dockerfile for building the decision-making module container
 │   ├── ...
 │
 ├── kubernetes/
-│   ├── perception_deployment.yaml   # Kubernetes deployment configuration for the perception module
-│   ├── decision_making_deployment.yaml  # Kubernetes deployment configuration for the decision-making module
-│   ├── service.yaml                  # Kubernetes service configuration for exposing the AI services
+│   ├── perception_deployment.yaml   ## Kubernetes deployment configuration for the perception module
+│   ├── decision_making_deployment.yaml  ## Kubernetes deployment configuration for the decision-making module
+│   ├── service.yaml                  ## Kubernetes service configuration for exposing the AI services
 │   ├── ...
 │
 ├── helm/
-│   ├── skybot-autonomous-drone-ai/  # Helm chart for deploying the entire AI application on Kubernetes
+│   ├── skybot-autonomous-drone-ai/  ## Helm chart for deploying the entire AI application on Kubernetes
 │   ├── ...
 │
 ├── terraform/
-│   ├── infrastructure_as_code/       # Terraform scripts for provisioning cloud infrastructure (if applicable)
+│   ├── infrastructure_as_code/       ## Terraform scripts for provisioning cloud infrastructure (if applicable)
 │   ├── ...
 │
 ├── scripts/
-│   ├── deploy_perception_module.sh   # Script for deploying the perception module on edge devices
-│   ├── deploy_decision_making_module.sh  # Script for deploying the decision-making module on edge devices
+│   ├── deploy_perception_module.sh   ## Script for deploying the perception module on edge devices
+│   ├── deploy_decision_making_module.sh  ## Script for deploying the decision-making module on edge devices
 │   ├── ...
 │
 ```
@@ -198,27 +198,27 @@ from sklearn.metrics import accuracy_score
 import joblib
 
 def train_complex_ml_algorithm(data_file_path):
-    # Load mock data from file
+    ## Load mock data from file
     data = pd.read_csv(data_file_path)
     
-    # Preprocessing and feature engineering
+    ## Preprocessing and feature engineering
     X = data.drop('target_column', axis=1)
     y = data['target_column']
     
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
     
-    # Initialize and train a complex machine learning algorithm (Random Forest as an example)
+    ## Initialize and train a complex machine learning algorithm (Random Forest as an example)
     model = RandomForestClassifier(n_estimators=100, random_state=42)
     model.fit(X_train, y_train)
     
-    # Make predictions on the test set
+    ## Make predictions on the test set
     y_pred = model.predict(X_test)
     
-    # Calculate accuracy
+    ## Calculate accuracy
     accuracy = accuracy_score(y_test, y_pred)
     
-    # Save the trained model to a file
+    ## Save the trained model to a file
     model_file_path = 'trained_models/complex_ml_algorithm_model.pkl'
     joblib.dump(model, model_file_path)
     
@@ -245,32 +245,32 @@ from tensorflow.keras import layers, models
 import os
 
 def train_complex_dl_algorithm(data_file_path):
-    # Load mock data from file
+    ## Load mock data from file
     data = pd.read_csv(data_file_path)
     
-    # Preprocessing and feature engineering
+    ## Preprocessing and feature engineering
     X = data.drop('target_column', axis=1)
     y = data['target_column']
     
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Define the deep learning model architecture
+    ## Define the deep learning model architecture
     model = models.Sequential([
         layers.Dense(64, activation='relu', input_shape=(X_train.shape[1],)),
         layers.Dense(64, activation='relu'),
         layers.Dense(1, activation='sigmoid')
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam',
                   loss='binary_crossentropy',
                   metrics=['accuracy'])
     
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y_test))
 
-    # Save the trained model to a file
+    ## Save the trained model to a file
     model_dir = 'trained_models'
     if not os.path.exists(model_dir):
         os.makedirs(model_dir)

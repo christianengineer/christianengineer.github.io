@@ -230,31 +230,31 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 
 def train_and_evaluate_model(data_file_path):
-    # Load mock data from the provided file path
+    ## Load mock data from the provided file path
     data = pd.read_csv(data_file_path)
 
-    # Assume the data has features (X) and a target (y) column
+    ## Assume the data has features (X) and a target (y) column
     X = data.drop('target_column', axis=1)
     y = data['target_column']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize a RandomForestClassifier (or any other complex algorithm of choice)
+    ## Initialize a RandomForestClassifier (or any other complex algorithm of choice)
     model = RandomForestClassifier(n_estimators=100, random_state=42)
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train)
 
-    # Make predictions
+    ## Make predictions
     predictions = model.predict(X_test)
 
-    # Evaluate the model
+    ## Evaluate the model
     accuracy = accuracy_score(y_test, predictions)
 
     return model, accuracy
 
-# Example usage
+## Example usage
 data_file_path = 'path_to_mock_data/mock_data.csv'
 trained_model, model_accuracy = train_and_evaluate_model(data_file_path)
 print(f"Trained model accuracy: {model_accuracy}")
@@ -270,34 +270,34 @@ from sklearn.metrics import accuracy_score
 from joblib import dump
 
 def train_and_save_model(data_file_path, saved_model_path):
-    # Load mock data from the provided file path
+    ## Load mock data from the provided file path
     data = pd.read_csv(data_file_path)
 
-    # Assume the data has features (X) and a target (y) column
+    ## Assume the data has features (X) and a target (y) column
     X = data.drop('target_column', axis=1)
     y = data['target_column']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize a RandomForestClassifier (or any other complex algorithm of choice)
+    ## Initialize a RandomForestClassifier (or any other complex algorithm of choice)
     model = RandomForestClassifier(n_estimators=100, random_state=42)
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train)
 
-    # Make predictions
+    ## Make predictions
     predictions = model.predict(X_test)
 
-    # Evaluate the model
+    ## Evaluate the model
     accuracy = accuracy_score(y_test, predictions)
 
-    # Save the trained model to the specified file path
+    ## Save the trained model to the specified file path
     dump(model, saved_model_path)
 
     return accuracy
 
-# Example usage
+## Example usage
 data_file_path = 'path_to_mock_data/mock_data.csv'
 saved_model_path = 'path_to_save_model/trained_model.joblib'
 model_accuracy = train_and_save_model(data_file_path, saved_model_path)

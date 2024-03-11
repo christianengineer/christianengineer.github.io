@@ -5,7 +5,7 @@ permalink: posts/ai-enhanced-pharmaceutical-research-scikit-learn-rabbitmq-docke
 layout: article
 ---
 
-# AI-enhanced Pharmaceutical Research Repository
+## AI-enhanced Pharmaceutical Research Repository
 
 ## Objectives
 The objective of the AI-enhanced Pharmaceutical Research repository is to leverage machine learning to accelerate drug development by analyzing large volumes of biomedical data. The repository aims to build scalable, data-intensive AI applications that can process and analyze diverse biomedical datasets to identify potential drug candidates, predict drug interactions, and optimize drug discovery processes.
@@ -26,7 +26,7 @@ The following libraries and technologies have been selected for the AI-enhanced 
 
 By leveraging these libraries and technologies, the repository aims to build a robust AI infrastructure for pharmaceutical research, allowing for efficient analysis of biomedical data, accelerating the drug discovery process, and ultimately contributing to advancements in medical research and healthcare.
 
-# MLOps Infrastructure for AI-enhanced Pharmaceutical Research
+## MLOps Infrastructure for AI-enhanced Pharmaceutical Research
 
 ## Introduction
 The MLOps infrastructure for the AI-enhanced Pharmaceutical Research application is designed to facilitate the end-to-end lifecycle management of machine learning models, ensuring seamless integration of machine learning into the pharmaceutical research pipeline. The infrastructure encompasses processes, tools, and technologies for model development, training, deployment, monitoring, and maintenance, aiming to enhance the efficiency, scalability, and reliability of the AI application.
@@ -196,40 +196,40 @@ To illustrate a file for training a model within the AI-enhanced Pharmaceutical 
 **File Path**: machine_learning/models/model1/train.py
 
 ```python
-# Necessary imports
+## Necessary imports
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 import joblib
 
-# Load mock data (Replace with actual data loading code)
+## Load mock data (Replace with actual data loading code)
 data = pd.read_csv('mock_data.csv')
 
-# Data preprocessing and feature engineering (Replace with actual data preprocessing and feature engineering code)
-# ...
+## Data preprocessing and feature engineering (Replace with actual data preprocessing and feature engineering code)
+## ...
 
-# Split data into features and target
+## Split data into features and target
 X = data.drop('target_column', axis=1)
 y = data['target_column']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize the model (Replace with actual model initialization and hyperparameter tuning)
+## Initialize the model (Replace with actual model initialization and hyperparameter tuning)
 model = RandomForestClassifier(n_estimators=100, random_state=42)
 
-# Train the model
+## Train the model
 model.fit(X_train, y_train)
 
-# Make predictions on the test set
+## Make predictions on the test set
 y_pred = model.predict(X_test)
 
-# Evaluate the model
+## Evaluate the model
 accuracy = accuracy_score(y_test, y_pred)
 print(f'Model accuracy: {accuracy:.2f}')
 
-# Save the trained model to a file
+## Save the trained model to a file
 joblib.dump(model, 'model1.pkl')
 ```
 
@@ -244,7 +244,7 @@ For the AI-enhanced Pharmaceutical Research application, the following Python sc
 **File Path**: machine_learning/models/model1/train_complex_model.py
 
 ```python
-# Necessary imports
+## Necessary imports
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.svm import SVC
@@ -253,33 +253,33 @@ from sklearn.pipeline import make_pipeline
 from sklearn.metrics import accuracy_score
 import joblib
 
-# Load mock data (Replace with actual data loading code)
+## Load mock data (Replace with actual data loading code)
 data = pd.read_csv('mock_data.csv')
 
-# Data preprocessing and feature engineering (Replace with actual data preprocessing and feature engineering code)
-# ...
+## Data preprocessing and feature engineering (Replace with actual data preprocessing and feature engineering code)
+## ...
 
-# Split data into features and target
+## Split data into features and target
 X = data.drop('target_column', axis=1)
 y = data['target_column']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize the model with preprocessing pipeline
+## Initialize the model with preprocessing pipeline
 model = make_pipeline(StandardScaler(), SVC(kernel='rbf', C=1.0, gamma='scale', random_state=42))
 
-# Train the model
+## Train the model
 model.fit(X_train, y_train)
 
-# Make predictions on the test set
+## Make predictions on the test set
 y_pred = model.predict(X_test)
 
-# Evaluate the model
+## Evaluate the model
 accuracy = accuracy_score(y_test, y_pred)
 print(f'Model accuracy: {accuracy:.2f}')
 
-# Save the trained model to a file
+## Save the trained model to a file
 joblib.dump(model, 'complex_model.pkl')
 ```
 

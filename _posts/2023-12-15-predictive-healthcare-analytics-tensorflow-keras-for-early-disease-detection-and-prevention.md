@@ -216,42 +216,42 @@ from tensorflow import keras
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
-# Load mock dataset (replace with actual data loading)
-# Assume the mock dataset contains features and labels for training
+## Load mock dataset (replace with actual data loading)
+## Assume the mock dataset contains features and labels for training
 mock_data = pd.read_csv('path_to_mock_data.csv')
 
-# Separate features and labels
+## Separate features and labels
 X = mock_data.drop('target_variable', axis=1)
 y = mock_data['target_variable']
 
-# Split data into training and validation sets
+## Split data into training and validation sets
 X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Data preprocessing (replace with actual data preprocessing steps)
+## Data preprocessing (replace with actual data preprocessing steps)
 scaler = StandardScaler()
 X_train_scaled = scaler.fit_transform(X_train)
 X_val_scaled = scaler.transform(X_val)
 
-# Define a simple sequential model using Keras
+## Define a simple sequential model using Keras
 model = keras.Sequential([
     keras.layers.Dense(64, activation='relu', input_shape=(X.shape[1],)),
     keras.layers.Dense(64, activation='relu'),
     keras.layers.Dense(1, activation='sigmoid')
 ])
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam',
               loss='binary_crossentropy',
               metrics=['accuracy'])
 
-# Train the model
+## Train the model
 model.fit(X_train_scaled, y_train, epochs=10, batch_size=32, validation_data=(X_val_scaled, y_val))
 
-# Evaluate the trained model on the validation data
+## Evaluate the trained model on the validation data
 loss, accuracy = model.evaluate(X_val_scaled, y_val)
 print(f'Validation accuracy: {accuracy * 100:.2f}%')
 
-# Save the trained model and preprocessing scaler
+## Save the trained model and preprocessing scaler
 model.save('model_artifacts/model.h5')
 joblib.dump(scaler, 'model_artifacts/scaler.pkl')
 ```
@@ -273,23 +273,23 @@ from tensorflow.keras.layers import Input, Dense, Dropout, BatchNormalization
 from tensorflow.keras.models import Model
 from tensorflow.keras.optimizers import Adam
 
-# Load mock dataset (replace with actual data loading)
-# Assume the mock dataset contains features and labels for training
+## Load mock dataset (replace with actual data loading)
+## Assume the mock dataset contains features and labels for training
 mock_data = pd.read_csv('path_to_mock_data.csv')
 
-# Separate features and labels
+## Separate features and labels
 X = mock_data.drop('target_variable', axis=1)
 y = mock_data['target_variable']
 
-# Split data into training and validation sets
+## Split data into training and validation sets
 X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Data preprocessing (replace with actual data preprocessing steps)
+## Data preprocessing (replace with actual data preprocessing steps)
 scaler = StandardScaler()
 X_train_scaled = scaler.fit_transform(X_train)
 X_val_scaled = scaler.transform(X_val)
 
-# Define a complex deep learning model using Keras Functional API
+## Define a complex deep learning model using Keras Functional API
 inputs = Input(shape=(X_train_scaled.shape[1],))
 x = Dense(128, activation='relu')(inputs)
 x = BatchNormalization()(x)
@@ -301,19 +301,19 @@ outputs = Dense(1, activation='sigmoid')(x)
 
 model = Model(inputs=inputs, outputs=outputs)
 
-# Compile the model
+## Compile the model
 model.compile(optimizer=Adam(learning_rate=0.001),
               loss='binary_crossentropy',
               metrics=['accuracy'])
 
-# Train the model
+## Train the model
 model.fit(X_train_scaled, y_train, epochs=20, batch_size=64, validation_data=(X_val_scaled, y_val))
 
-# Evaluate the trained model on the validation data
+## Evaluate the trained model on the validation data
 loss, accuracy = model.evaluate(X_val_scaled, y_val)
 print(f'Validation accuracy: {accuracy * 100:.2f}%')
 
-# Save the trained model and preprocessing scaler
+## Save the trained model and preprocessing scaler
 model.save('model_artifacts/complex_model.h5')
 joblib.dump(scaler, 'model_artifacts/scaler.pkl')
 ```

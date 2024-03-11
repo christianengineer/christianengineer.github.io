@@ -5,7 +5,7 @@ permalink: posts/smart-water-management-system-tensorflow-flask-terraform-for-re
 layout: article
 ---
 
-# AI Smart Water Management System
+## AI Smart Water Management System
 
 ## Objectives
 The AI Smart Water Management System aims to optimize water usage and conservation through the use of artificial intelligence and data-driven insights. The system will leverage machine learning to analyze water usage patterns, predict demand, detect leaks, and optimize water distribution. 
@@ -248,19 +248,19 @@ In the "deployment" directory within the Smart Water Management System repositor
 This structured organization of the "deployment" directory streamlines the management of deployment-related artifacts, including infrastructure configuration, Dockerization of the backend service, and deployment scripts. It helps maintain consistency, reproducibility, and automation in the deployment process for the Smart Water Management System, enabling efficient orchestration of the application and its supporting infrastructure.
 
 ```python
-# machine_learning/models/demand_prediction/train.py
-# File Path: machine_learning/models/demand_prediction/train.py
+## machine_learning/models/demand_prediction/train.py
+## File Path: machine_learning/models/demand_prediction/train.py
 
 import tensorflow as tf
 from tensorflow import keras
 import numpy as np
 
-# Load mock training data
-# Replace this with actual data loading code
+## Load mock training data
+## Replace this with actual data loading code
 mock_training_data = np.random.rand(100, 5)
 mock_target_labels = np.random.randint(2, size=(100, 1))
 
-# Define and compile the model
+## Define and compile the model
 model = keras.Sequential([
     keras.layers.Dense(10, activation='relu'),
     keras.layers.Dense(1, activation='sigmoid')
@@ -269,23 +269,23 @@ model.compile(optimizer='adam',
               loss='binary_crossentropy',
               metrics=['accuracy'])
 
-# Train the model
+## Train the model
 model.fit(mock_training_data, mock_target_labels, epochs=10)
 ```
 
 ```python
-# machine_learning/models/anomaly_detection/train.py
-# File Path: machine_learning/models/anomaly_detection/train.py
+## machine_learning/models/anomaly_detection/train.py
+## File Path: machine_learning/models/anomaly_detection/train.py
 
 import tensorflow as tf
 import numpy as np
 
-# Load mock training data
-# Replace this with actual data loading code
+## Load mock training data
+## Replace this with actual data loading code
 mock_training_data = np.random.rand(100, 10)
 mock_target_labels = np.random.randint(2, size=(100, 1))
 
-# Define and train a complex anomaly detection model
+## Define and train a complex anomaly detection model
 input_layer = tf.keras.layers.Input(shape=(10,))
 encoder = tf.keras.layers.Dense(7, activation="relu")(input_layer)
 encoder = tf.keras.layers.Dense(5, activation="relu")(encoder)

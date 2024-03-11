@@ -5,7 +5,7 @@ permalink: posts/real-time-cyberattack-detection-and-response-scikit-learn-rabbi
 layout: article
 ---
 
-# AI Real-time Cyberattack Detection and Response System
+## AI Real-time Cyberattack Detection and Response System
 
 ## Objectives
 The objective of the AI Real-time Cyberattack Detection and Response system is to build a scalable, data-intensive application that leverages machine learning to detect and respond to cybersecurity threats in real-time. The system should be able to process large volumes of incoming data, identify potential cyberattacks using machine learning models, and initiate responses to mitigate the impact of these attacks.
@@ -24,7 +24,7 @@ To achieve the stated objectives, the system will be designed to incorporate the
 
 By integrating these libraries and technologies into the system design, we aim to achieve a scalable, real-time cyberattack detection and response solution that leverages the power of machine learning and data-intensive processing.
 
-# MLOps Infrastructure for Real-time Cyberattack Detection and Response
+## MLOps Infrastructure for Real-time Cyberattack Detection and Response
 
 ## Introduction
 In the context of the Real-time Cyberattack Detection and Response system, MLOps (Machine Learning Operations) infrastructure is crucial for effectively managing and scaling machine learning models, ensuring their seamless integration into the overall application, and enabling continuous monitoring and improvement. Below are the key components and practices to be integrated into the MLOps infrastructure for this application.
@@ -74,7 +74,7 @@ real-time-cyberattack-detection/
 │   ├── model_config.yml
 │   └── app_config.yml
 ├── models/
-│   ├── trained_models/  # Folder to store trained models
+│   ├── trained_models/  ## Folder to store trained models
 │   └── model_utils.py
 ├── monitoring/
 │   ├── grafana_dashboard.json
@@ -166,7 +166,7 @@ The deployment directory is essential for managing the deployment process, wheth
 Certainly! Below is an example file for training a model for the Real-time Cyberattack Detection and Response application using Scikit-Learn. The file is named `model_training.py` and it includes the training of a mock model using mock data.
 
 ```python
-# models/model_training.py
+## models/model_training.py
 
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
@@ -174,24 +174,24 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 import joblib
 
-# Load mock data (replace this with actual data ingestion logic)
+## Load mock data (replace this with actual data ingestion logic)
 data = pd.read_csv('path_to_mock_data.csv')
 
-# Preprocessing the data (replace this with actual data preprocessing logic)
+## Preprocessing the data (replace this with actual data preprocessing logic)
 X = data.drop('target_column', axis=1)
 y = data['target_column']
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Training the model (replace this with actual model training logic)
+## Training the model (replace this with actual model training logic)
 model = RandomForestClassifier(n_estimators=100, random_state=42)
 model.fit(X_train, y_train)
 
-# Evaluate the model
+## Evaluate the model
 y_pred = model.predict(X_test)
 accuracy = accuracy_score(y_test, y_pred)
 print(f'Model accuracy: {accuracy:.2f}')
 
-# Save the trained model to the models directory
+## Save the trained model to the models directory
 joblib.dump(model, 'models/trained_models/mock_model.pkl')
 ```
 
@@ -202,7 +202,7 @@ Please note that in a real-world scenario, you would replace the mock data, data
 Certainly! Below is an example file for implementing a complex machine learning algorithm (XGBoost) for the Real-time Cyberattack Detection and Response application using Scikit-Learn. This file is named `xgboost_model_training.py` and it includes the training of a mock model using mock data.
 
 ```python
-# models/xgboost_model_training.py
+## models/xgboost_model_training.py
 
 import pandas as pd
 import xgboost as xgb
@@ -210,24 +210,24 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 import joblib
 
-# Load mock data (replace this with actual data ingestion logic)
+## Load mock data (replace this with actual data ingestion logic)
 data = pd.read_csv('path_to_mock_data.csv')
 
-# Preprocessing the data (replace this with actual data preprocessing logic)
+## Preprocessing the data (replace this with actual data preprocessing logic)
 X = data.drop('target_column', axis=1)
 y = data['target_column']
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Training the XGBoost model (replace this with actual model training logic)
+## Training the XGBoost model (replace this with actual model training logic)
 model = xgb.XGBClassifier(objective="binary:logistic", random_state=42)
 model.fit(X_train, y_train)
 
-# Evaluate the model
+## Evaluate the model
 y_pred = model.predict(X_test)
 accuracy = accuracy_score(y_test, y_pred)
 print(f'Model accuracy: {accuracy:.2f}')
 
-# Save the trained model to the models directory
+## Save the trained model to the models directory
 joblib.dump(model, 'models/trained_models/xgboost_model.pkl')
 ```
 

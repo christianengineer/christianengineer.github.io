@@ -5,7 +5,7 @@ permalink: posts/hybrid-cloud-and-multi-cloud-ml-deployments-demonstrate-deployi
 layout: article
 ---
 
-# AI Hybrid Cloud and Multi-cloud ML Deployments
+## AI Hybrid Cloud and Multi-cloud ML Deployments
 
 ## Objectives
 The objectives of AI hybrid cloud and multi-cloud ML deployments include:
@@ -205,23 +205,23 @@ from sklearn.ensemble import RandomForestClassifier
 from joblib import dump
 
 def complex_machine_learning_algorithm(data_file_path, model_output_path):
-    # Load the mock data
+    ## Load the mock data
     data = pd.read_csv(data_file_path)
 
-    # Preprocessing
+    ## Preprocessing
     X = data.drop('target', axis=1)
     y = data['target']
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Complex machine learning algorithm (Random Forest as an example)
+    ## Complex machine learning algorithm (Random Forest as an example)
     model = RandomForestClassifier(n_estimators=100, max_depth=3, random_state=42)
     model.fit(X_train, y_train)
 
-    # Evaluate the model
+    ## Evaluate the model
     accuracy = model.score(X_test, y_test)
     print(f'Model accuracy: {accuracy}')
 
-    # Save the trained model to the specified output path
+    ## Save the trained model to the specified output path
     dump(model, model_output_path)
 ```
 In this function, the `complex_machine_learning_algorithm` takes two parameters:
@@ -239,33 +239,33 @@ from sklearn.model_selection import train_test_split
 from tensorflow.keras import layers, models
 
 def complex_deep_learning_algorithm(data_file_path, model_output_path):
-    # Load the mock data
+    ## Load the mock data
     data = np.load(data_file_path)
     X = data['features']
     y = data['target']
 
-    # Preprocessing
+    ## Preprocessing
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Deep learning architecture
+    ## Deep learning architecture
     model = models.Sequential()
     model.add(layers.Dense(64, activation='relu', input_shape=(X_train.shape[1],)))
     model.add(layers.Dense(64, activation='relu'))
     model.add(layers.Dense(1, activation='sigmoid'))
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam',
                   loss='binary_crossentropy',
                   metrics=['accuracy'])
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y_test))
 
-    # Evaluate the model
+    ## Evaluate the model
     _, accuracy = model.evaluate(X_test, y_test)
     print(f'Model accuracy: {accuracy}')
 
-    # Save the trained model to the specified output path
+    ## Save the trained model to the specified output path
     model.save(model_output_path)
 ```
 In this function, the `complex_deep_learning_algorithm` takes two parameters:

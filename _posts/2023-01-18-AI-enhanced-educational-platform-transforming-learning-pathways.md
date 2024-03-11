@@ -6,7 +6,7 @@ layout: article
 ---
 
 ```markdown
-# AI-Enhanced Educational Platform Repository
+## AI-Enhanced Educational Platform Repository
 
 ## Description
 
@@ -47,59 +47,59 @@ For a robust and efficient data handling and scalable user traffic, the followin
 ```
 
 ```markdown
-# Scalable File Structure for AI-Enhanced Educational Platform Repository
+## Scalable File Structure for AI-Enhanced Educational Platform Repository
 
 Below is the proposed scalable file structure for the repository:
 ```
 
 ├── AI-Enhanced-Educational-Platform
-│ ├── client # Client side code
-│ │ ├── public # Static files
+│ ├── client ## Client side code
+│ │ ├── public ## Static files
 │ │ │ └── index.html
-│ │ ├── src # React source files
-│ │ │ ├── components # Reusable components
-│ │ │ ├── pages # Pages (Login, Dashboard etc.)
-│ │ │ ├── actions # Redux actions
-│ │ │ ├── reducers # Redux reducers
-│ │ │ ├── store.js # Redux Store
-│ │ │ └── App.js # Main react component
-│ │ ├── tests # Test files for client side
-│ │ └── package.json # Dependency file
+│ │ ├── src ## React source files
+│ │ │ ├── components ## Reusable components
+│ │ │ ├── pages ## Pages (Login, Dashboard etc.)
+│ │ │ ├── actions ## Redux actions
+│ │ │ ├── reducers ## Redux reducers
+│ │ │ ├── store.js ## Redux Store
+│ │ │ └── App.js ## Main react component
+│ │ ├── tests ## Test files for client side
+│ │ └── package.json ## Dependency file
 │  
-│ ├── server # Server side code
-│ │ ├── config # Configuration files
-│ │ ├── controllers # Code logic of APIs
-│ │ ├── models # Database schema
-│ │ ├── routes # API endpoints
-│ │ └── server.js # Server configuration
-│ │ ├── tests # Test files for server side
-│ │ └── package.json # Dependency file
+│ ├── server ## Server side code
+│ │ ├── config ## Configuration files
+│ │ ├── controllers ## Code logic of APIs
+│ │ ├── models ## Database schema
+│ │ ├── routes ## API endpoints
+│ │ └── server.js ## Server configuration
+│ │ ├── tests ## Test files for server side
+│ │ └── package.json ## Dependency file
 │  
-│ ├── AI # AI related modules/files
+│ ├── AI ## AI related modules/files
 │ │ ├── NLP  
 │ │ ├── ML-models  
 │ │ └── data-analytics
 │  
-│ ├── data # All sample data
+│ ├── data ## All sample data
 │  
-│ ├── scripts # Utility scripts  
+│ ├── scripts ## Utility scripts  
 │  
-│ ├── Dockerfile # Dockerfile
+│ ├── Dockerfile ## Dockerfile
 │  
-│ ├── .gitignore # List of items to ignore while committing
+│ ├── .gitignore ## List of items to ignore while committing
 │
-│ ├── .env # Environment variables
+│ ├── .env ## Environment variables
 │
-│ ├── README.md # The top-level README for developers
+│ ├── README.md ## The top-level README for developers
 │  
-│ └── package.json # Dependency file
+│ └── package.json ## Dependency file
 
 ```
 The above scalable file structure makes it possible to expand sections as the features grow. All the important parts of the system are modularized, making it easier to manage, identify issues, and collaborate.
 ```
 
 ````markdown
-# Logic handling file for AI-Enhanced Educational Platform
+## Logic handling file for AI-Enhanced Educational Platform
 
 The file structure for the AI-Enhanced Educational Platform would include a JavaScript file `aiLogic.js`, present in the `controllers` folder inside `server` directory. This file will handle the logic for AI components within the platform.
 

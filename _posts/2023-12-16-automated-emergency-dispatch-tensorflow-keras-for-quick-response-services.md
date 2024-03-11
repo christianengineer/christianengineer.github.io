@@ -238,40 +238,40 @@ This directory structure organizes the deployment-related files and configuratio
 Certainly! Below is an example file `train.py` for training a machine learning model for the Automated Emergency Dispatch application using TensorFlow and Keras. The example includes mock data for demonstration purposes.
 
 ```python
-# train.py
+## train.py
 import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from tensorflow import keras
 from tensorflow.keras import layers
 
-# Load mock data
+## Load mock data
 data_path = 'ml_models/emergency_severity_prediction/data/processed/mock_train_data.csv'
 data = pd.read_csv(data_path)
 
-# Prepare features and target
+## Prepare features and target
 X = data.drop('severity', axis=1)
 y = data['severity']
 
-# Split the data into training and validation sets
+## Split the data into training and validation sets
 X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Define the model architecture
+## Define the model architecture
 model = keras.Sequential([
     layers.Dense(64, activation='relu', input_shape=[len(X.columns)]),
     layers.Dense(64, activation='relu'),
-    layers.Dense(3, activation='softmax')  # Assuming 3 severity levels
+    layers.Dense(3, activation='softmax')  ## Assuming 3 severity levels
 ])
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam',
               loss='sparse_categorical_crossentropy',
               metrics=['accuracy'])
 
-# Train the model
+## Train the model
 history = model.fit(X_train, y_train, validation_data=(X_val, y_val), epochs=50, batch_size=32)
 
-# Save the trained model
+## Save the trained model
 model.save('ml_models/emergency_severity_prediction/trained_model/severity_prediction_model.h5')
 ```
 
@@ -282,7 +282,7 @@ This file demonstrates the training process with mock data, and in a real-world 
 Certainly! Below is an example file `complex_model_training.py` demonstrating a more complex machine learning algorithm for the Automated Emergency Dispatch application using TensorFlow and Keras, with mock data for illustrative purposes. This file can be located in the `ml_models/emergency_severity_prediction/` directory.
 
 ```python
-# complex_model_training.py
+## complex_model_training.py
 import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -291,39 +291,39 @@ from tensorflow.keras import layers
 from tensorflow.keras import regularizers
 from tensorflow.keras.callbacks import EarlyStopping
 
-# Load mock data
+## Load mock data
 data_path = 'ml_models/emergency_severity_prediction/data/processed/mock_train_data.csv'
 data = pd.read_csv(data_path)
 
-# Prepare features and target
+## Prepare features and target
 X = data.drop('severity', axis=1)
 y = data['severity']
 
-# Split the data into training and validation sets
+## Split the data into training and validation sets
 X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Define a more complex model architecture with regularization
+## Define a more complex model architecture with regularization
 model = keras.Sequential([
     layers.Dense(128, activation='relu', input_shape=[len(X.columns)]),
     layers.Dropout(0.3),
     layers.Dense(64, activation='relu', kernel_regularizer=regularizers.l2(0.001)),
     layers.Dropout(0.3),
     layers.Dense(32, activation='relu', kernel_regularizer=regularizers.l2(0.001)),
-    layers.Dense(3, activation='softmax')  # Assuming 3 severity levels
+    layers.Dense(3, activation='softmax')  ## Assuming 3 severity levels
 ])
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam',
               loss='sparse_categorical_crossentropy',
               metrics=['accuracy'])
 
-# Define early stopping to prevent overfitting
+## Define early stopping to prevent overfitting
 early_stopping = EarlyStopping(monitor='val_loss', patience=10, restore_best_weights=True)
 
-# Train the model
+## Train the model
 history = model.fit(X_train, y_train, validation_data=(X_val, y_val), epochs=100, batch_size=64, callbacks=[early_stopping])
 
-# Save the trained model
+## Save the trained model
 model.save('ml_models/emergency_severity_prediction/trained_model/complex_severity_prediction_model.h5')
 ```
 

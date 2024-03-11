@@ -49,28 +49,28 @@ By establishing a robust cloud infrastructure with proper components, automation
 mentalhealthai/
 │
 ├── app/
-│   ├── main.py                 # Main application entry point
-│   ├── models/                 # Directory for storing machine learning models
-│   ├── data/                   # Directory for storing datasets and user data
-│   ├── services/               # Directory for application services (e.g., user management, recommendation engine)
-│   ├── config/                 # Configuration files for the application
+│   ├── main.py                 ## Main application entry point
+│   ├── models/                 ## Directory for storing machine learning models
+│   ├── data/                   ## Directory for storing datasets and user data
+│   ├── services/               ## Directory for application services (e.g., user management, recommendation engine)
+│   ├── config/                 ## Configuration files for the application
 │   └── ...
 │
 ├── web/
-│   ├── templates/              # HTML templates for web interface
-│   ├── static/                 # Static assets (CSS, JS, images)
-│   ├── app.py                  # Backend logic for the web application
+│   ├── templates/              ## HTML templates for web interface
+│   ├── static/                 ## Static assets (CSS, JS, images)
+│   ├── app.py                  ## Backend logic for the web application
 │   └── ...
 │
-├── scripts/                    # Utility scripts for data preprocessing, model training, etc.
+├── scripts/                    ## Utility scripts for data preprocessing, model training, etc.
 │
-├── tests/                      # Test cases and test data
+├── tests/                      ## Test cases and test data
 │
-├── docs/                       # Documentation and manuals
+├── docs/                       ## Documentation and manuals
 │
-├── README.md                   # Project overview and setup instructions
+├── README.md                   ## Project overview and setup instructions
 │
-└── requirements.txt            # Python dependencies for the project
+└── requirements.txt            ## Python dependencies for the project
 ```
 
 In this file structure:
@@ -89,22 +89,22 @@ This scalable file structure provides a clear organization of different componen
 models/
 │
 ├── emotions_detection/
-│   ├── train.py               # Script for training emotion detection models
-│   ├── predict.py             # Script for making predictions using trained models
-│   ├── model/                 # Trained model files
-│   └── data/                  # Data used for training the emotion detection models
+│   ├── train.py               ## Script for training emotion detection models
+│   ├── predict.py             ## Script for making predictions using trained models
+│   ├── model/                 ## Trained model files
+│   └── data/                  ## Data used for training the emotion detection models
 │
 ├── sentiment_analysis/
-│   ├── train.py               # Script for training sentiment analysis models
-│   ├── predict.py             # Script for making predictions using trained models
-│   ├── model/                 # Trained model files
-│   └── data/                  # Data used for training the sentiment analysis models
+│   ├── train.py               ## Script for training sentiment analysis models
+│   ├── predict.py             ## Script for making predictions using trained models
+│   ├── model/                 ## Trained model files
+│   └── data/                  ## Data used for training the sentiment analysis models
 │
 ├── recommendation_engine/
-│   ├── train.py               # Script for training recommendation engine models
-│   ├── predict.py             # Script for generating personalized recommendations
-│   ├── model/                 # Trained model files
-│   └── data/                  # Data used for training the recommendation engine models
+│   ├── train.py               ## Script for training recommendation engine models
+│   ├── predict.py             ## Script for generating personalized recommendations
+│   ├── model/                 ## Trained model files
+│   └── data/                  ## Data used for training the recommendation engine models
 │
 └── ...
 
@@ -123,19 +123,19 @@ Each subdirectory follows a consistent structure, separating the training, predi
 ```
 deployment/
 │
-├── Dockerfile             # Dockerfile for building the application image
-├── docker-compose.yml     # Docker Compose configuration for multi-container deployment
-├── kubernetes/            # Kubernetes deployment configurations
-│   ├── mentalhealthai-deployment.yaml     # Deployment configuration for the application
-│   ├── mentalhealthai-service.yaml        # Service configuration for exposing the application
+├── Dockerfile             ## Dockerfile for building the application image
+├── docker-compose.yml     ## Docker Compose configuration for multi-container deployment
+├── kubernetes/            ## Kubernetes deployment configurations
+│   ├── mentalhealthai-deployment.yaml     ## Deployment configuration for the application
+│   ├── mentalhealthai-service.yaml        ## Service configuration for exposing the application
 │   └── ...
-├── terraform/             # Terraform configurations for infrastructure provisioning
-│   ├── main.tf            # Main Terraform configuration defining infrastructure resources
-│   ├── variables.tf       # Input variables for the Terraform configuration
+├── terraform/             ## Terraform configurations for infrastructure provisioning
+│   ├── main.tf            ## Main Terraform configuration defining infrastructure resources
+│   ├── variables.tf       ## Input variables for the Terraform configuration
 │   └── ...
-├── ansible/               # Ansible playbooks for automated deployment and configuration management
-│   ├── deploy.yml         # Ansible playbook for deploying the application
-│   ├── configure.yml      # Ansible playbook for configuring the deployed application
+├── ansible/               ## Ansible playbooks for automated deployment and configuration management
+│   ├── deploy.yml         ## Ansible playbook for deploying the application
+│   ├── configure.yml      ## Ansible playbook for configuring the deployed application
 │   └── ...
 └── ...
 
@@ -168,27 +168,27 @@ from sklearn.svm import SVC
 from sklearn.metrics import accuracy_score
 
 def train_sentiment_analysis_model(data_file_path):
-    # Load mock data
+    ## Load mock data
     data = pd.read_csv(data_file_path)
 
-    # Preprocessing mock data
+    ## Preprocessing mock data
     vectorizer = TfidfVectorizer(max_features=1000)
     X = vectorizer.fit_transform(data['text'])
     y = data['label']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Training the sentiment analysis model
+    ## Training the sentiment analysis model
     model = SVC(kernel='linear')
     model.fit(X_train, y_train)
 
-    # Evaluate the model
+    ## Evaluate the model
     y_pred = model.predict(X_test)
     accuracy = accuracy_score(y_test, y_pred)
     print("Model accuracy: ", accuracy)
 
-    # Return the trained model
+    ## Return the trained model
     return model
 ```
 
@@ -214,33 +214,33 @@ from tensorflow.keras.preprocessing.text import Tokenizer
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 
 def train_emotion_detection_model(data_file_path, max_sequence_length):
-    # Load mock data
+    ## Load mock data
     data = pd.read_csv(data_file_path)
 
-    # Preprocessing mock data
+    ## Preprocessing mock data
     tokenizer = Tokenizer(num_words=1000, oov_token="<OOV>")
     tokenizer.fit_on_texts(data['text'])
     sequences = tokenizer.texts_to_sequences(data['text'])
     X = pad_sequences(sequences, maxlen=max_sequence_length)
-    y = pd.get_dummies(data['emotion']).values  # Convert emotions to one-hot encoding
+    y = pd.get_dummies(data['emotion']).values  ## Convert emotions to one-hot encoding
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Define the deep learning model
+    ## Define the deep learning model
     model = Sequential()
     model.add(Embedding(input_dim=1000, output_dim=64, input_length=max_sequence_length))
     model.add(SpatialDropout1D(0.2))
     model.add(LSTM(100, dropout=0.2, recurrent_dropout=0.2))
-    model.add(Dense(6, activation='softmax'))  # Assuming 6 emotions for classification
+    model.add(Dense(6, activation='softmax'))  ## Assuming 6 emotions for classification
 
-    # Compile the model
+    ## Compile the model
     model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
 
-    # Train the deep learning model
+    ## Train the deep learning model
     model.fit(X_train, y_train, epochs=10, batch_size=64, validation_data=(X_test, y_test), verbose=1)
 
-    # Return the trained model
+    ## Return the trained model
     return model
 ```
 

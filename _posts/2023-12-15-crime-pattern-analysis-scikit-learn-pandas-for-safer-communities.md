@@ -5,7 +5,7 @@ permalink: posts/crime-pattern-analysis-scikit-learn-pandas-for-safer-communitie
 layout: article
 ---
 
-# AI Crime Pattern Analysis Repository
+## AI Crime Pattern Analysis Repository
 
 ## Objectives
 The objective of the AI Crime Pattern Analysis repository is to develop a data-intensive AI application that leverages machine learning to analyze crime patterns and trends in order to contribute to the creation of safer communities. This involves the use of various data science and machine learning techniques to identify patterns, predict future occurrences, and potentially help law enforcement agencies allocate resources more effectively.
@@ -27,7 +27,7 @@ The AI Crime Pattern Analysis repository will leverage the following libraries a
 
 By utilizing these libraries as part of the system design, the AI Crime Pattern Analysis repository aims to develop a robust and scalable application that can contribute to the creation of safer communities through data-driven insights and predictions.
 
-# MLOps Infrastructure for Crime Pattern Analysis
+## MLOps Infrastructure for Crime Pattern Analysis
 
 In order to effectively develop and deploy the Crime Pattern Analysis application, a robust MLOps (Machine Learning Operations) infrastructure is key to streamline the machine learning lifecycle, from model development to deployment and monitoring. Here's an elaboration on the MLOps infrastructure for the Crime Pattern Analysis application:
 
@@ -173,31 +173,31 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 import joblib
 
-# Load mock crime data
+## Load mock crime data
 file_path = "../data/raw/crime_data.csv"
 crime_data = pd.read_csv(file_path)
 
-# Preprocessing and feature engineering (assuming these are defined in separate files)
+## Preprocessing and feature engineering (assuming these are defined in separate files)
 
-# Assuming X contains the features and y contains the target variable
+## Assuming X contains the features and y contains the target variable
 X = crime_data.drop("target_column", axis=1)
 y = crime_data["target_column"]
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize and train a machine learning model (Random Forest Classifier in this case)
+## Initialize and train a machine learning model (Random Forest Classifier in this case)
 model = RandomForestClassifier(n_estimators=100, random_state=42)
 model.fit(X_train, y_train)
 
-# Make predictions
+## Make predictions
 y_pred = model.predict(X_test)
 
-# Evaluate the model
+## Evaluate the model
 accuracy = accuracy_score(y_test, y_pred)
 print(f"Model Accuracy: {accuracy}")
 
-# Save the trained model
+## Save the trained model
 model_file_path = "../models/trained_model.pkl"
 joblib.dump(model, model_file_path)
 ```
@@ -217,35 +217,35 @@ from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.metrics import accuracy_score, classification_report
 import joblib
 
-# Load mock crime data
+## Load mock crime data
 file_path = "../data/raw/crime_data.csv"
 crime_data = pd.read_csv(file_path)
 
-# Preprocessing and feature engineering (assuming these are defined in separate files)
+## Preprocessing and feature engineering (assuming these are defined in separate files)
 
-# Assuming X contains the features and y contains the target variable
+## Assuming X contains the features and y contains the target variable
 X = crime_data.drop("target_column", axis=1)
 y = crime_data["target_column"]
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize and train a complex machine learning model (Gradient Boosting Classifier)
+## Initialize and train a complex machine learning model (Gradient Boosting Classifier)
 model = GradientBoostingClassifier(n_estimators=100, learning_rate=0.1, max_depth=3, random_state=42)
 model.fit(X_train, y_train)
 
-# Make predictions
+## Make predictions
 y_pred = model.predict(X_test)
 
-# Evaluate the model
+## Evaluate the model
 accuracy = accuracy_score(y_test, y_pred)
 print(f"Model Accuracy: {accuracy}")
 
-# Generate classification report
+## Generate classification report
 print("Classification Report:")
 print(classification_report(y_test, y_pred))
 
-# Save the trained model
+## Save the trained model
 model_file_path = "../models/complex_trained_model.pkl"
 joblib.dump(model, model_file_path)
 ```

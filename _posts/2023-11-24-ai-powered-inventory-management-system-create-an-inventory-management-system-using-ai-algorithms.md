@@ -5,7 +5,7 @@ permalink: posts/ai-powered-inventory-management-system-create-an-inventory-mana
 layout: article
 ---
 
-# AI-powered Inventory Management System
+## AI-powered Inventory Management System
 
 ## Objectives
 The AI-powered Inventory Management System aims to optimize inventory handling processes through the application of AI algorithms, thereby improving efficiency, reducing costs, and minimizing human error. Key objectives include:
@@ -75,7 +75,7 @@ The user interface will be deployed using scalable web hosting services such as 
 
 By adopting this infrastructure, the AI-powered Inventory Management System will be well-positioned to handle large-scale data processing, AI algorithm execution, and user interactions while ensuring high availability, scalability, and performance. Furthermore, it will take advantage of cloud services' managed offerings to reduce operational overhead and accelerate development and deployment processes.
 
-# Scalable File Structure for AI-powered Inventory Management System
+## Scalable File Structure for AI-powered Inventory Management System
 
 To ensure a scalable and well-organized file structure for the AI-powered Inventory Management System, we can adopt a modular approach that aligns with the microservices architecture and separates concerns based on functionality and components. Below is a suggested file structure:
 
@@ -274,28 +274,28 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 
 def train_demand_forecasting_model(data_file_path):
-    # Load mock data from the given file path
+    ## Load mock data from the given file path
     data = pd.read_csv(data_file_path)
 
-    # Perform feature engineering and prepare the dataset
+    ## Perform feature engineering and prepare the dataset
     X = data.drop(columns=['demand'])
     y = data['demand']
 
-    # Split the dataset into training and testing sets
+    ## Split the dataset into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize a Random Forest Regressor model
+    ## Initialize a Random Forest Regressor model
     model = RandomForestRegressor(n_estimators=100, random_state=42)
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train)
 
-    # Evaluate the model on the test set
+    ## Evaluate the model on the test set
     predictions = model.predict(X_test)
     mse = mean_squared_error(y_test, predictions)
     print(f"Mean Squared Error: {mse}")
 
-    # Return the trained model
+    ## Return the trained model
     return model
 ```
 
@@ -306,10 +306,10 @@ In this function:
 
 To use this function with mock data, you can create a mock CSV file containing the inventory demand data and pass the file path to the `train_demand_forecasting_model` function. For example:
 ```python
-# File path to the mock data
+## File path to the mock data
 data_file_path = 'path_to_mock_data/demand_data.csv'
 
-# Train the demand forecasting model using mock data
+## Train the demand forecasting model using mock data
 trained_model = train_demand_forecasting_model(data_file_path)
 ```
 Remember to replace `'path_to_mock_data/demand_data.csv'` with the actual file path to your mock data file.
@@ -326,34 +326,34 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
 def train_demand_forecasting_deep_learning_model(data_file_path):
-    # Load mock data from the given file path
+    ## Load mock data from the given file path
     data = pd.read_csv(data_file_path)
 
-    # Perform feature engineering and prepare the dataset
+    ## Perform feature engineering and prepare the dataset
     X = data.drop(columns=['demand'])
     y = data['demand']
 
-    # Normalize the input features
+    ## Normalize the input features
     scaler = StandardScaler()
     X = scaler.fit_transform(X)
 
-    # Split the dataset into training and testing sets
+    ## Split the dataset into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Define a deep learning model using TensorFlow
+    ## Define a deep learning model using TensorFlow
     model = tf.keras.Sequential([
         tf.keras.layers.Dense(64, activation='relu', input_shape=(X_train.shape[1],)),
         tf.keras.layers.Dense(64, activation='relu'),
         tf.keras.layers.Dense(1)
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam', loss='mean_squared_error')
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train, epochs=50, batch_size=32, validation_data=(X_test, y_test))
 
-    # Return the trained deep learning model
+    ## Return the trained deep learning model
     return model
 ```
 
@@ -365,10 +365,10 @@ In this function:
 To use this function with mock data, you can create a mock CSV file containing the inventory demand data and pass the file path to the function. For example:
 
 ```python
-# File path to the mock data
+## File path to the mock data
 data_file_path = 'path_to_mock_data/demand_data.csv'
 
-# Train the demand forecasting deep learning model using mock data
+## Train the demand forecasting deep learning model using mock data
 trained_model = train_demand_forecasting_deep_learning_model(data_file_path)
 ```
 
@@ -376,7 +376,7 @@ Replace `'path_to_mock_data/demand_data.csv'` with the actual file path to your 
 
 This function serves as a starting point for incorporating deep learning algorithms into the AI-powered Inventory Management System, showcasing how deep learning models can be trained for demand forecasting using mock data.
 
-# User Types for the AI-powered Inventory Management System
+## User Types for the AI-powered Inventory Management System
 
 1. **Inventory Manager**
    - *User Story*: As an inventory manager, I want to be able to view current inventory levels, receive automated replenishment recommendations based on demand forecasts, and track historical inventory performance to make informed decisions about stock levels.

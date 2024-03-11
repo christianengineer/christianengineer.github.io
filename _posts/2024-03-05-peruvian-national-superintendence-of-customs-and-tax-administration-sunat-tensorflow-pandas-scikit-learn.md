@@ -5,7 +5,7 @@ permalink: posts/peruvian-national-superintendence-of-customs-and-tax-administra
 layout: article
 ---
 
-# Machine Learning Solution for SUNAT
+## Machine Learning Solution for SUNAT
 
 ## Objectives:
 - Identify cases of tax evasion and customs fraud.
@@ -211,35 +211,35 @@ import pandas as pd
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 
-# Load the dataset
+## Load the dataset
 data = pd.read_csv('tax_customs_data.csv')
 
-# Drop irrelevant columns or columns with data leakage
+## Drop irrelevant columns or columns with data leakage
 data = data.drop(['irrelevant_column1', 'irrelevant_column2'], axis=1)
 
-# Separate features (X) and target variable (y)
+## Separate features (X) and target variable (y)
 X = data.drop('target_variable', axis=1)
 y = data['target_variable']
 
-# Train-test split
+## Train-test split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Handle missing values (fill with mean)
+## Handle missing values (fill with mean)
 X_train = X_train.fillna(X_train.mean())
 X_test = X_test.fillna(X_train.mean())
 
-# Initialize StandardScaler
+## Initialize StandardScaler
 scaler = StandardScaler()
 
-# Fit and transform on training data
+## Fit and transform on training data
 X_train_scaled = scaler.fit_transform(X_train)
 
-# Transform test data
+## Transform test data
 X_test_scaled = scaler.transform(X_test)
 
-# Additional preprocessing steps (feature scaling, encoding, etc.) can be added here
+## Additional preprocessing steps (feature scaling, encoding, etc.) can be added here
 
-# Save preprocessed data
+## Save preprocessed data
 X_train_scaled.to_csv('X_train_scaled.csv', index=False)
 X_test_scaled.to_csv('X_test_scaled.csv', index=False)
 y_train.to_csv('y_train.csv', index=False)
@@ -322,10 +322,10 @@ import pandas as pd
 import numpy as np
 from faker import Faker
 
-# Create Faker instance for generating fake data
+## Create Faker instance for generating fake data
 fake = Faker()
 
-# Generate a large fictitious dataset
+## Generate a large fictitious dataset
 num_samples = 10000
 
 data = {
@@ -343,19 +343,19 @@ data = {
     'exchange_rate': np.random.uniform(0.5, 3, num_samples),
     'GDP_growth_rate': np.random.uniform(-5, 10, num_samples),
 
-    'target_variable': np.random.choice([0, 1], num_samples)  # Binary target variable for fraud detection
+    'target_variable': np.random.choice([0, 1], num_samples)  ## Binary target variable for fraud detection
 }
 
 df = pd.DataFrame(data)
 
-# Add variability and noise to data
+## Add variability and noise to data
 noise = np.random.normal(0, 50, size=(num_samples, len(df.columns)))
 df += noise
 
-# Save the dataset to a CSV file
+## Save the dataset to a CSV file
 df.to_csv('simulated_tax_customs_data.csv', index=False)
 
-# Validate the dataset
+## Validate the dataset
 print(df.head())
 print(df.info())
 ```
@@ -396,37 +396,37 @@ from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.metrics import classification_report
 import joblib
 
-# Load preprocessed data
+## Load preprocessed data
 X_train_scaled = pd.read_csv('X_train_scaled.csv')
 y_train = pd.read_csv('y_train.csv')
 
-# Initialize Gradient Boosting Classifier
+## Initialize Gradient Boosting Classifier
 clf = GradientBoostingClassifier(random_state=42)
 
-# Train the model
+## Train the model
 clf.fit(X_train_scaled, y_train)
 
-# Save the trained model
+## Save the trained model
 joblib.dump(clf, 'tax_customs_model.pkl')
 
-# Load the model for inference
+## Load the model for inference
 clf = joblib.load('tax_customs_model.pkl')
 
-# Inference example
-X_new = pd.read_csv('X_new_data.csv')  # Load new data for prediction
-X_new_scaled = scaler.transform(X_new)  # Apply the same scaling as during training
-predictions = clf.predict(X_new_scaled)  # Make predictions
+## Inference example
+X_new = pd.read_csv('X_new_data.csv')  ## Load new data for prediction
+X_new_scaled = scaler.transform(X_new)  ## Apply the same scaling as during training
+predictions = clf.predict(X_new_scaled)  ## Make predictions
 
-# Export predictions
+## Export predictions
 pd.DataFrame(predictions, columns=['prediction']).to_csv('predictions.csv', index=False)
 
-# Model evaluation
+## Model evaluation
 X_test_scaled = pd.read_csv('X_test_scaled.csv')
 y_test = pd.read_csv('y_test.csv')
 y_pred = clf.predict(X_test_scaled)
 print(classification_report(y_test, y_pred))
 
-# Commentary: The code loads preprocessed data, trains a Gradient Boosting classifier, saves and loads the model for inference. It also demonstrates an example of making predictions on new data, exporting predictions, and evaluating the model's performance using classification report.
+## Commentary: The code loads preprocessed data, trains a Gradient Boosting classifier, saves and loads the model for inference. It also demonstrates an example of making predictions on new data, exporting predictions, and evaluating the model's performance using classification report.
 ```
 
 ### Code Quality and Structure Conventions:
@@ -483,20 +483,20 @@ By following these conventions and best practices for code quality and structure
 By following this deployment plan tailored to the unique demands of the tax evasion and customs fraud detection project at SUNAT, the machine learning model can be successfully deployed into production, enabling efficient and reliable fraud detection mechanisms.
 
 ```Dockerfile
-# Use a base image with Python and necessary dependencies
+## Use a base image with Python and necessary dependencies
 FROM python:3.8-slim
 
-# Set the working directory in the container
+## Set the working directory in the container
 WORKDIR /app
 
-# Copy the requirements file and install dependencies
+## Copy the requirements file and install dependencies
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the source code into the container
+## Copy the source code into the container
 COPY . .
 
-# Command to start the application
+## Command to start the application
 CMD ["python", "app.py"]
 ```
 

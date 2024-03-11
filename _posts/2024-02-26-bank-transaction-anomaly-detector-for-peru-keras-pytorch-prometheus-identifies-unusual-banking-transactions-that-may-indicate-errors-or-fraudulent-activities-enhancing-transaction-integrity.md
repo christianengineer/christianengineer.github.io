@@ -71,40 +71,40 @@ By establishing a robust MLOps infrastructure that integrates CI/CD processes, m
 bank-transaction-anomaly-detector/
 │
 ├── data/
-│   ├── raw_data/                 # Raw transaction data from banking systems
-│   ├── processed_data/           # Cleaned and preprocessed data for model training
-│   └── anomalies/                # Store detected anomalies for analysis
+│   ├── raw_data/                 ## Raw transaction data from banking systems
+│   ├── processed_data/           ## Cleaned and preprocessed data for model training
+│   └── anomalies/                ## Store detected anomalies for analysis
 │
 ├── models/
-│   ├── keras_models/             # Saved Keras models for anomaly detection
-│   └── pytorch_models/           # Saved PyTorch models for anomaly detection
+│   ├── keras_models/             ## Saved Keras models for anomaly detection
+│   └── pytorch_models/           ## Saved PyTorch models for anomaly detection
 │
 ├── notebooks/
-│   ├── data_preprocessing.ipynb  # Notebook for data cleaning and feature engineering
-│   ├── model_training.ipynb      # Notebook for training neural network models
-│   └── model_evaluation.ipynb    # Notebook for evaluating model performance
+│   ├── data_preprocessing.ipynb  ## Notebook for data cleaning and feature engineering
+│   ├── model_training.ipynb      ## Notebook for training neural network models
+│   └── model_evaluation.ipynb    ## Notebook for evaluating model performance
 │
 ├── scripts/
-│   ├── data_preprocessing.py     # Python script for data preprocessing tasks
-│   ├── model_training.py         # Python script for training neural network models
-│   └── anomaly_detection.py       # Python script for real-time anomaly detection
+│   ├── data_preprocessing.py     ## Python script for data preprocessing tasks
+│   ├── model_training.py         ## Python script for training neural network models
+│   └── anomaly_detection.py       ## Python script for real-time anomaly detection
 │
 ├── config/
-│   ├── model_config.yaml         # Configuration file for model hyperparameters
-│   └── monitoring_config.yaml    # Configuration file for Prometheus monitoring settings
+│   ├── model_config.yaml         ## Configuration file for model hyperparameters
+│   └── monitoring_config.yaml    ## Configuration file for Prometheus monitoring settings
 │
 ├── logs/
-│   ├── model_training.log        # Logs for model training process
-│   └── anomaly_detection.log     # Logs for real-time anomaly detection
+│   ├── model_training.log        ## Logs for model training process
+│   └── anomaly_detection.log     ## Logs for real-time anomaly detection
 │
-├── requirements.txt              # Python dependencies for the project
-├── README.md                     # Project documentation and instructions
-├── LICENSE                       # Project license information
+├── requirements.txt              ## Python dependencies for the project
+├── README.md                     ## Project documentation and instructions
+├── LICENSE                       ## Project license information
 │
 └── deployment/
-    ├── Dockerfile                # Dockerfile for containerizing the application
-    ├── kubernetes_manifests/     # Kubernetes configuration files for deployment
-    └── prometheus_config/        # Prometheus configuration files for monitoring
+    ├── Dockerfile                ## Dockerfile for containerizing the application
+    ├── kubernetes_manifests/     ## Kubernetes configuration files for deployment
+    └── prometheus_config/        ## Prometheus configuration files for monitoring
 ```
 
 This structured approach aims to organize the project components efficiently, making it easier to manage, scale, and collaborate on the Bank Transaction Anomaly Detector for Peru application.
@@ -115,14 +115,14 @@ This structured approach aims to organize the project components efficiently, ma
 models/
 │
 ├── keras_models/
-│   ├── anomaly_detection_model.h5        # Saved Keras model for anomaly detection
-│   ├── feature_extraction_model.h5       # Saved Keras model for feature extraction
-│   └── model_evaluation_metrics.json    # Performance metrics for the anomaly detection model
+│   ├── anomaly_detection_model.h5        ## Saved Keras model for anomaly detection
+│   ├── feature_extraction_model.h5       ## Saved Keras model for feature extraction
+│   └── model_evaluation_metrics.json    ## Performance metrics for the anomaly detection model
 │
 └── pytorch_models/
-    ├── anomaly_detection_model.pt        # Saved PyTorch model for anomaly detection
-    ├── feature_extraction_model.pt       # Saved PyTorch model for feature extraction
-    └── model_evaluation_metrics.json    # Performance metrics for the anomaly detection model
+    ├── anomaly_detection_model.pt        ## Saved PyTorch model for anomaly detection
+    ├── feature_extraction_model.pt       ## Saved PyTorch model for feature extraction
+    └── model_evaluation_metrics.json    ## Performance metrics for the anomaly detection model
 ```
 
 1. **Keras Models**:
@@ -144,13 +144,13 @@ deployment/
 │
 ├── Dockerfile
 ├── kubernetes_manifests/
-│   ├── anomaly-detector-deployment.yaml     # Kubernetes deployment configuration
-│   ├── anomaly-detector-service.yaml        # Kubernetes service configuration
-│   └── anomaly-detector-hpa.yaml            # Kubernetes Horizontal Pod Autoscaler configuration
+│   ├── anomaly-detector-deployment.yaml     ## Kubernetes deployment configuration
+│   ├── anomaly-detector-service.yaml        ## Kubernetes service configuration
+│   └── anomaly-detector-hpa.yaml            ## Kubernetes Horizontal Pod Autoscaler configuration
 │
 └── prometheus_config/
-    ├── prometheus.yml                       # Prometheus configuration file
-    └── prometheus-alerts.yml                 # Prometheus alerting rules
+    ├── prometheus.yml                       ## Prometheus configuration file
+    └── prometheus-alerts.yml                 ## Prometheus alerting rules
 ```
 
 1. **Dockerfile**:
@@ -177,18 +177,18 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 
-# Mock data generation
+## Mock data generation
 np.random.seed(42)
 num_samples = 1000
 num_features = 10
 
 X = np.random.rand(num_samples, num_features)
-y = np.random.randint(0, 2, num_samples)  # Binary classification labels
+y = np.random.randint(0, 2, num_samples)  ## Binary classification labels
 
-# Split data into training and validation sets
+## Split data into training and validation sets
 X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Keras model training
+## Keras model training
 model = keras.Sequential([
     keras.layers.Dense(64, activation='relu', input_shape=(num_features,)),
     keras.layers.Dense(1, activation='sigmoid')
@@ -200,7 +200,7 @@ model.fit(X_train, y_train, epochs=50, validation_data=(X_val, y_val))
 
 model.save('models/keras_models/anomaly_detection_model.h5')
 
-# PyTorch model training
+## PyTorch model training
 class SimpleNN(nn.Module):
     def __init__(self):
         super(SimpleNN, self).__init__()
@@ -244,22 +244,22 @@ import torch.nn as nn
 import torch.optim as optim
 from sklearn.ensemble import IsolationForest
 
-# Mock data generation
+## Mock data generation
 np.random.seed(42)
 num_samples = 1000
 num_features = 15
 
 X = np.random.randn(num_samples, num_features)
-y = np.random.randint(0, 2, num_samples)  # Binary classification labels
+y = np.random.randint(0, 2, num_samples)  ## Binary classification labels
 
-# Split data into training and validation sets
+## Split data into training and validation sets
 X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Complex algorithm using Isolation Forest for anomaly detection
+## Complex algorithm using Isolation Forest for anomaly detection
 isolation_forest = IsolationForest(contamination=0.1, random_state=42)
 isolation_forest.fit(X_train)
 
-# Keras model training
+## Keras model training
 model = keras.Sequential([
     keras.layers.Dense(128, activation='relu', input_shape=(num_features,)),
     keras.layers.Dense(64, activation='relu'),
@@ -272,7 +272,7 @@ model.fit(X_train, y_train, epochs=50, validation_data=(X_val, y_val))
 
 model.save('models/keras_models/anomaly_detection_complex_model.h5')
 
-# PyTorch model training
+## PyTorch model training
 class ComplexNN(nn.Module):
     def __init__(self):
         super(ComplexNN, self).__init__()

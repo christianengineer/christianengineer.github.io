@@ -5,7 +5,7 @@ permalink: posts/mining-equipment-failure-prediction-ai-with-tensorflow-and-kera
 layout: article
 ---
 
-# Mining Equipment Failure Prediction AI with TensorFlow and Keras
+## Mining Equipment Failure Prediction AI with TensorFlow and Keras
 
 ## Audience
 Maintenance Engineers at Minera Yanacocha, Lima, Peru
@@ -214,28 +214,28 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.impute import SimpleImputer
 from imblearn.over_sampling import SMOTE
 
-# Load the sensor data
+## Load the sensor data
 sensor_data = pd.read_csv('sensor_data.csv')
 
-# Separate features and target variable
+## Separate features and target variable
 X = sensor_data.drop('failure_label', axis=1)
 y = sensor_data['failure_label']
 
-# Impute missing values with mean
+## Impute missing values with mean
 imputer = SimpleImputer(strategy='mean')
 X_imputed = imputer.fit_transform(X)
 X = pd.DataFrame(X_imputed, columns=X.columns)
 
-# Scale features using StandardScaler
+## Scale features using StandardScaler
 scaler = StandardScaler()
 X_scaled = scaler.fit_transform(X)
 X = pd.DataFrame(X_scaled, columns=X.columns)
 
-# Upsample minority class using SMOTE
+## Upsample minority class using SMOTE
 smote = SMOTE()
 X_resampled, y_resampled = smote.fit_resample(X, y)
 
-# Data is now preprocessed and ready for model training
+## Data is now preprocessed and ready for model training
 ```
 
 ### Comments:
@@ -335,32 +335,32 @@ import pandas as pd
 from sklearn.preprocessing import StandardScaler
 from sklearn.preprocessing import LabelEncoder
 
-# Define the number of samples in the dataset
+## Define the number of samples in the dataset
 num_samples = 10000
 
-# Generate synthetic sensor data with variability
+## Generate synthetic sensor data with variability
 features = ['temperature', 'pressure', 'vibration', 'load']
 np.random.seed(42)
-data = np.random.rand(num_samples, len(features)) * 100  # Random sensor readings
+data = np.random.rand(num_samples, len(features)) * 100  ## Random sensor readings
 df = pd.DataFrame(data, columns=features)
 
-# Generate synthetic time-based features
+## Generate synthetic time-based features
 df['hour_of_day'] = np.random.randint(0, 24, size=num_samples)
 df['day_of_week'] = np.random.randint(0, 7, size=num_samples)
 
-# Generate synthetic failure labels (binary classification)
+## Generate synthetic failure labels (binary classification)
 df['failure_label'] = np.random.choice([0, 1], num_samples, p=[0.95, 0.05])
 
-# Apply feature scaling to the sensor data
+## Apply feature scaling to the sensor data
 scaler = StandardScaler()
 scaled_data = scaler.fit_transform(df[features])
 df[features] = scaled_data
 
-# Encode categorical features
+## Encode categorical features
 encoder = LabelEncoder()
 df['day_of_week'] = encoder.fit_transform(df['day_of_week'])
 
-# Save the synthetic dataset to a CSV file
+## Save the synthetic dataset to a CSV file
 df.to_csv('synthetic_sensor_data.csv', index=False)
 ```
 
@@ -418,40 +418,40 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import LSTM, Dense
 from sklearn.metrics import accuracy_score
 
-# Load preprocessed dataset
+## Load preprocessed dataset
 data = pd.read_csv('preprocessed_data.csv')
 
-# Separate features and target variable
+## Separate features and target variable
 X = data.drop('failure_label', axis=1)
 y = data['failure_label']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Scale features using StandardScaler
+## Scale features using StandardScaler
 scaler = StandardScaler()
 X_train = scaler.fit_transform(X_train)
 X_test = scaler.transform(X_test)
 
-# Reshape data for LSTM model input
+## Reshape data for LSTM model input
 X_train = X_train.reshape(X_train.shape[0], 1, X_train.shape[1])
 X_test = X_test.reshape(X_test.shape[0], 1, X_test.shape[1])
 
-# Build the LSTM model
+## Build the LSTM model
 model = Sequential()
 model.add(LSTM(units=50, input_shape=(X_train.shape[1], X_train.shape[2])))
 model.add(Dense(units=1, activation='sigmoid'))
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
-# Train the model
+## Train the model
 model.fit(X_train, y_train, epochs=10, batch_size=32)
 
-# Evaluate the model
+## Evaluate the model
 y_pred = model.predict_classes(X_test)
 accuracy = accuracy_score(y_test, y_pred)
 print(f'Model Accuracy: {accuracy}')
 
-# Save the trained model for deployment
+## Save the trained model for deployment
 model.save('equipment_failure_prediction_model.h5')
 ```
 
@@ -533,22 +533,22 @@ By following this step-by-step deployment plan and leveraging the recommended to
 Here is a sample Dockerfile tailored for encapsulating the environment and dependencies of the machine learning model for mining equipment failure prediction. The Dockerfile is optimized for performance and scalability, addressing the unique requirements of the project:
 
 ```Dockerfile
-# Use a TensorFlow base image with GPU support for optimized performance
+## Use a TensorFlow base image with GPU support for optimized performance
 FROM tensorflow/tensorflow:latest-gpu
 
-# Set the working directory in the container
+## Set the working directory in the container
 WORKDIR /app
 
-# Copy the model files into the container
+## Copy the model files into the container
 COPY equipment_failure_prediction_model.h5 /app/equipment_failure_prediction_model.h5
 
-# Install required dependencies
+## Install required dependencies
 RUN pip install pandas scikit-learn flask tensorflow
 
-# Expose the API port
+## Expose the API port
 EXPOSE 5000
 
-# Define the command to run the Flask API for model inference
+## Define the command to run the Flask API for model inference
 CMD ["python", "api/app.py"]
 ```
 

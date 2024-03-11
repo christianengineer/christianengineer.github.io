@@ -5,7 +5,7 @@ permalink: posts/machine-learning-for-music-composition
 layout: article
 ---
 
-# Technical Specifications - Machine Learning for Music Composition
+## Technical Specifications - Machine Learning for Music Composition
 
 ## Description
 
@@ -130,35 +130,35 @@ Path: **machine_learning_for_music_composition/src/core_logic.py**
 This file represents the core logic of the Machine Learning for Music Composition project. It contains the main algorithms, functions, and classes responsible for music composition using machine learning techniques.
 
 ```python
-# Import necessary libraries and modules
+## Import necessary libraries and modules
 
 import tensorflow as tf
 from models import MusicCompositionModel
 from utils import preprocess_data, postprocess_composition
 
-# Define the CoreLogic class
+## Define the CoreLogic class
 
 class CoreLogic:
     def __init__(self, model_path):
         self.model = MusicCompositionModel(model_path)
 
     def compose_music(self, input_sequences):
-        # Preprocess input_sequences
+        ## Preprocess input_sequences
         preprocessed_input = preprocess_data(input_sequences)
 
-        # Use the Machine Learning model to generate music
+        ## Use the Machine Learning model to generate music
         generated_music = self.model.generate_music(preprocessed_input)
 
-        # Postprocess the generated music
+        ## Postprocess the generated music
         postprocessed_music = postprocess_composition(generated_music)
 
         return postprocessed_music
 
-# Create an instance of CoreLogic class
+## Create an instance of CoreLogic class
 
 core_logic = CoreLogic(model_path='models/model_1')
 
-# Example usage:
+## Example usage:
 input_sequences = ...
 composed_music = core_logic.compose_music(input_sequences)
 ```
@@ -181,34 +181,34 @@ Path: **machine_learning_for_music_composition/src/secondary_core_logic.py**
 This file represents a secondary core logic component of the Machine Learning for Music Composition project. It contains unique logic that is essential to the project and integrates with other files to enhance the music composition process.
 
 ```python
-# Import necessary libraries and modules
+## Import necessary libraries and modules
 
 import numpy as np
 from models import MusicGenerationModel
 from utils import preprocess_data, postprocess_composition
 
-# Define the SecondaryCoreLogic class
+## Define the SecondaryCoreLogic class
 
 class SecondaryCoreLogic:
     def __init__(self, model_path):
         self.model = MusicGenerationModel(model_path)
 
     def generate_music(self, input_sequences):
-        # Preprocess input_sequences
+        ## Preprocess input_sequences
         preprocessed_input = preprocess_data(input_sequences)
 
-        # Use the Music Generation model to generate music
+        ## Use the Music Generation model to generate music
         generated_music = self.model.generate_music(preprocessed_input)
 
-        # Postprocess the generated music
+        ## Postprocess the generated music
         postprocessed_music = postprocess_composition(generated_music)
 
         return postprocessed_music
 
-# Create an instance of SecondaryCoreLogic class
+## Create an instance of SecondaryCoreLogic class
 secondary_core_logic = SecondaryCoreLogic(model_path='models/model_2')
 
-# Example usage:
+## Example usage:
 input_sequences = ...
 generated_music = secondary_core_logic.generate_music(input_sequences)
 ```
@@ -231,31 +231,31 @@ Path: **machine_learning_for_music_composition/src/additional_core_logic.py**
 This file represents an additional core logic component of the Machine Learning for Music Composition project. It plays a crucial role in the overall system by providing specialized functionality and integrates with previously outlined files for seamless collaboration and enhanced music composition capabilities.
 
 ```python
-# Import necessary libraries and modules
+## Import necessary libraries and modules
 
 from utils import preprocess_data, postprocess_composition
 
-# Define the AdditionalCoreLogic class
+## Define the AdditionalCoreLogic class
 
 class AdditionalCoreLogic:
     def __init__(self):
-        # Initialize any necessary variables or resources
+        ## Initialize any necessary variables or resources
 
     def customize_music(self, input_sequences):
-        # Preprocess input_sequences
+        ## Preprocess input_sequences
         preprocessed_input = preprocess_data(input_sequences)
 
-        # Perform additional logic to customize the music
+        ## Perform additional logic to customize the music
 
-        # Postprocess the customized music
+        ## Postprocess the customized music
         postprocessed_music = postprocess_composition(customized_music)
 
         return postprocessed_music
 
-# Create an instance of AdditionalCoreLogic class
+## Create an instance of AdditionalCoreLogic class
 additional_core_logic = AdditionalCoreLogic()
 
-# Example usage:
+## Example usage:
 input_sequences = ...
 customized_music = additional_core_logic.customize_music(input_sequences)
 ```

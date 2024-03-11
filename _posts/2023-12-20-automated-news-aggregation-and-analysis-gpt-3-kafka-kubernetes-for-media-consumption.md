@@ -56,32 +56,32 @@ automated-news-aggregation-analysis/
 │
 ├── ml_model/
 │   ├── gpt3/
-│   │   ├── model_training/         # Scripts for fine-tuning GPT-3 on news data
-│   │   ├── inference/              # Code for GPT-3 inference and text generation
-│   │   └── deployment/             # Kubernetes deployment manifests for GPT-3 microservices
+│   │   ├── model_training/         ## Scripts for fine-tuning GPT-3 on news data
+│   │   ├── inference/              ## Code for GPT-3 inference and text generation
+│   │   └── deployment/             ## Kubernetes deployment manifests for GPT-3 microservices
 │
 ├── data_pipeline/
-│   ├── data_collection/            # Code for scraping and ingesting news data from sources
-│   ├── data_preprocessing/         # Scripts for cleaning, normalization, and feature engineering
-│   └── streaming/                  # Kafka configurations for real-time data streaming
+│   ├── data_collection/            ## Code for scraping and ingesting news data from sources
+│   ├── data_preprocessing/         ## Scripts for cleaning, normalization, and feature engineering
+│   └── streaming/                  ## Kafka configurations for real-time data streaming
 │
 ├── mlops/
-│   ├── monitoring/                 # Metrics monitoring configurations using Prometheus and Grafana
-│   ├── ci_cd/                      # CI/CD pipeline scripts for model deployment and testing
-│   ├── retraining/                 # Automated re-training pipeline using tools like Airflow
-│   └── experimentation/            # A/B testing and experiment tracking setup
+│   ├── monitoring/                 ## Metrics monitoring configurations using Prometheus and Grafana
+│   ├── ci_cd/                      ## CI/CD pipeline scripts for model deployment and testing
+│   ├── retraining/                 ## Automated re-training pipeline using tools like Airflow
+│   └── experimentation/            ## A/B testing and experiment tracking setup
 │
 ├── infrastructure/
-│   ├── kubernetes/                 # Kubernetes configurations and manifests for scalable deployment
-│   └── docker/                     # Dockerfiles for containerizing microservices
+│   ├── kubernetes/                 ## Kubernetes configurations and manifests for scalable deployment
+│   └── docker/                     ## Dockerfiles for containerizing microservices
 │
 ├── documentation/
-│   ├── architecture_design.md      # Overview of system design and architecture
-│   ├── ml_model_usage.md           # Usage documentation for the GPT-3 model
-│   ├── data_pipeline_guide.md      # Guide for setting up and running the data pipeline
-│   └── mlops_setup.md              # Instructions for setting up the MLOps infrastructure
+│   ├── architecture_design.md      ## Overview of system design and architecture
+│   ├── ml_model_usage.md           ## Usage documentation for the GPT-3 model
+│   ├── data_pipeline_guide.md      ## Guide for setting up and running the data pipeline
+│   └── mlops_setup.md              ## Instructions for setting up the MLOps infrastructure
 │
-└── README.md                       # Main repository documentation and guide for getting started
+└── README.md                       ## Main repository documentation and guide for getting started
 ```
 
 This file structure organizes the repository into distinct directories for different components of the automated news aggregation and analysis system. It facilitates modularity, clarity, and scalability, allowing for easy navigation and maintenance of the codebase. Each directory contains specific scripts, configurations, and documentation related to its respective functionality, enabling clear separation of concerns and efficient collaboration among developers and teams.
@@ -121,22 +121,22 @@ The `deployment` directory within the `infrastructure` encompasses Kubernetes de
 Certainly! Below is an example of a Python script for training the GPT-3 model for the Automated News Aggregation and Analysis application using mock data. This script assumes the presence of a mock news dataset in CSV format, and utilizes the OpenAI GPT-3 API for fine-tuning the model on news-specific content.
 
 ```python
-# File Path: ml_model/gpt3/model_training/train_gpt3_model.py
+## File Path: ml_model/gpt3/model_training/train_gpt3_model.py
 
 import openai
 import pandas as pd
 
-# Load mock news data from a CSV file
+## Load mock news data from a CSV file
 data_file_path = 'path/to/mock_news_dataset.csv'
 news_data = pd.read_csv(data_file_path)
 
-# Preprocess the news data - Example: Remove unnecessary columns and clean the text
+## Preprocess the news data - Example: Remove unnecessary columns and clean the text
 processed_data = news_data[['title', 'content']].apply(lambda x: x.str.replace('\n', ' '), axis=1)
 
-# Concatenate the title and content to form the input text for training
+## Concatenate the title and content to form the input text for training
 input_text = processed_data['title'] + ': ' + processed_data['content']
 
-# Fine-tune GPT-3 on the news data
+## Fine-tune GPT-3 on the news data
 openai.api_key = 'your_openai_api_key'
 fine_tuned_model = openai.FineTune.create(
     model="text-davinci-003",
@@ -144,7 +144,7 @@ fine_tuned_model = openai.FineTune.create(
     labels=["News"] * len(input_text)
 )
 
-# Save the fine-tuned model for inference
+## Save the fine-tuned model for inference
 fine_tuned_model.save('path/to/save/fine_tuned_gpt3_model')
 ```
 
@@ -153,12 +153,12 @@ In this example, the Python script `train_gpt3_model.py` is located within the d
 As GPT-3 is a language model that can handle a wide range of natural language processing tasks, it can be used for complex machine learning algorithms in the Automated News Aggregation and Analysis system. Below is an example of a Python script that uses GPT-3 to perform advanced natural language processing tasks such as article summarization using mock news data.
 
 ```python
-# File Path: ml_model/gpt3/article_summarization.py
+## File Path: ml_model/gpt3/article_summarization.py
 
 import openai
 import pandas as pd
 
-# Function to summarize an article using GPT-3
+## Function to summarize an article using GPT-3
 def summarize_article(article_text):
     openai.api_key = 'your_openai_api_key'
     response = openai.Completion.create(
@@ -168,14 +168,14 @@ def summarize_article(article_text):
     )
     return response.choices[0].text.strip()
 
-# Load mock news data from a CSV file
+## Load mock news data from a CSV file
 data_file_path = 'path/to/mock_news_dataset.csv'
 news_data = pd.read_csv(data_file_path)
 
-# Select a sample article for summarization
+## Select a sample article for summarization
 article_to_summarize = news_data['content'].iloc[0]
 
-# Generate a summary of the article using GPT-3
+## Generate a summary of the article using GPT-3
 summary = summarize_article(article_to_summarize)
 
 print("Original Article:")

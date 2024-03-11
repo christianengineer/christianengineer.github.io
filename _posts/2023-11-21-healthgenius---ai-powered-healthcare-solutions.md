@@ -5,7 +5,7 @@ permalink: posts/healthgenius---ai-powered-healthcare-solutions
 layout: article
 ---
 
-# AI HealthGenius - AI-Powered Healthcare Solutions Repository
+## AI HealthGenius - AI-Powered Healthcare Solutions Repository
 
 ## Objectives
 
@@ -91,7 +91,7 @@ To automate and manage the deployment of application components and AI model ser
 
 By carefully designing the infrastructure with these components and services, the AI HealthGenius application will have a solid foundation for delivering scalable, data-intensive AI-powered healthcare solutions.
 
-# Scalable File Structure for HealthGenius - AI-Powered Healthcare Solutions Repository
+## Scalable File Structure for HealthGenius - AI-Powered Healthcare Solutions Repository
 
 ```
 healthgenius/
@@ -206,7 +206,7 @@ The `utils/` directory provides a centralized location for housing reusable util
 Certainly! Below is an example of a function for a complex machine learning algorithm in the context of the HealthGenius - AI-Powered Healthcare Solutions application, using mock data.
 
 ```python
-# machine-learning/models/complex_algorithm.py
+## machine-learning/models/complex_algorithm.py
 
 import numpy as np
 from sklearn.ensemble import RandomForestClassifier
@@ -214,28 +214,28 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
 def complex_ml_algorithm(data_path):
-    # Load mock healthcare data
-    data = np.load(data_path)  # Assuming data is stored in a numpy array file
+    ## Load mock healthcare data
+    data = np.load(data_path)  ## Assuming data is stored in a numpy array file
 
-    # Split the data into features and target
+    ## Split the data into features and target
     X = data[:, :-1]
     y = data[:, -1]
 
-    # Split data into training and testing sets
+    ## Split data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize and train the complex machine learning model
+    ## Initialize and train the complex machine learning model
     model = RandomForestClassifier(n_estimators=100, max_depth=10, random_state=42)
     model.fit(X_train, y_train)
 
-    # Make predictions
+    ## Make predictions
     y_pred = model.predict(X_test)
 
-    # Evaluate the model
+    ## Evaluate the model
     accuracy = accuracy_score(y_test, y_pred)
     print(f"Accuracy of the complex ML algorithm: {accuracy:.2f}")
 
-    # Return the trained model for later use
+    ## Return the trained model for later use
     return model
 ```
 
@@ -244,7 +244,7 @@ In the provided example, the `complex_ml_algorithm` function implements a comple
 The function is located in the `machine-learning/models/complex_algorithm.py` file within the HealthGenius repository. The `data_path` parameter represents the file path to the mock healthcare data that the function will utilize for model training and evaluation.
 
 ```python
-# machine-learning/models/complex_deep_learning.py
+## machine-learning/models/complex_deep_learning.py
 
 import numpy as np
 import tensorflow as tf
@@ -252,39 +252,39 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
 def complex_deep_learning_algorithm(data_path):
-    # Load mock healthcare data
-    data = np.load(data_path)  # Assuming data is stored in a numpy array file
+    ## Load mock healthcare data
+    data = np.load(data_path)  ## Assuming data is stored in a numpy array file
 
-    # Split the data into features and target
+    ## Split the data into features and target
     X = data[:, :-1]
     y = data[:, -1]
 
-    # Split data into training and testing sets
+    ## Split data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Preprocess the data
+    ## Preprocess the data
     scaler = StandardScaler()
     X_train = scaler.fit_transform(X_train)
     X_test = scaler.transform(X_test)
 
-    # Build the deep learning model
+    ## Build the deep learning model
     model = tf.keras.models.Sequential([
         tf.keras.layers.Dense(128, activation='relu', input_shape=(X_train.shape[1],)),
         tf.keras.layers.Dense(64, activation='relu'),
         tf.keras.layers.Dense(1, activation='sigmoid')
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y_test))
 
-    # Evaluate the model
+    ## Evaluate the model
     _, accuracy = model.evaluate(X_test, y_test)
     print(f"Accuracy of the complex deep learning algorithm: {accuracy:.2f}")
 
-    # Return the trained model for later use
+    ## Return the trained model for later use
     return model
 ```
 

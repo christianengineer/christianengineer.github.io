@@ -5,7 +5,7 @@ permalink: posts/wildlife-conservation-analytics-scikit-learn-tensorflow-for-bio
 layout: article
 ---
 
-# AI Wildlife Conservation Analytics Repository
+## AI Wildlife Conservation Analytics Repository
 
 ## Objectives
 The primary objective of the AI Wildlife Conservation Analytics repository is to leverage the power of machine learning and AI to aid in biodiversity preservation. This involves developing scalable data-intensive applications that can analyze and interpret vast amounts of wildlife data to provide valuable insights for conservation efforts. The specific objectives include:
@@ -32,7 +32,7 @@ The AI Wildlife Conservation Analytics repository will leverage the following li
 
 By incorporating these libraries into the development of the repository, we can ensure the scalability, efficiency, and effectiveness of the AI Wildlife Conservation Analytics system, enabling it to make a meaningful impact on biodiversity preservation efforts.
 
-# MLOps Infrastructure for Wildlife Conservation Analytics
+## MLOps Infrastructure for Wildlife Conservation Analytics
 
 To effectively operationalize machine learning (ML) and AI models within the Wildlife Conservation Analytics application, a robust MLOps infrastructure is crucial. MLOps encompasses the practices, tools, and automation processes for maintaining, deploying, and monitoring ML models at scale. Here's an expansion on the MLOps infrastructure tailored for the Wildlife Conservation Analytics application leveraging Scikit-Learn and TensorFlow:
 
@@ -65,7 +65,7 @@ CI/CD practices play a vital role in maintaining the quality and consistency of 
 
 By implementing this comprehensive MLOps infrastructure, the Wildlife Conservation Analytics application can effectively harness the power of Scikit-Learn and TensorFlow, enabling the scalable development, deployment, and monitoring of AI models for biodiversity preservation.
 
-# Scalable File Structure for Wildlife Conservation Analytics Repository
+## Scalable File Structure for Wildlife Conservation Analytics Repository
 
 Creating a scalable file structure is essential for organizing the codebase and resources within the Wildlife Conservation Analytics repository. Below is a proposed file structure tailored for the application leveraging Scikit-Learn and TensorFlow:
 
@@ -218,7 +218,7 @@ By organizing the `deployment/` directory in this manner, the Wildlife Conservat
 Certainly! Below is an example of a Python script for training a Scikit-Learn model using mock data within the Wildlife Conservation Analytics application. The example script, `train_scikit_learn_model.py`, demonstrates the process of training a simple RandomForestClassifier using synthetic data:
 
 ```python
-# train_scikit_learn_model.py
+## train_scikit_learn_model.py
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -226,31 +226,31 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 import joblib
 
-# Mock data path
+## Mock data path
 mock_data_path = 'data/processed/mock_wildlife_data.csv'
 
-# Load mock data
+## Load mock data
 data = pd.read_csv(mock_data_path)
 
-# Prepare features and target
+## Prepare features and target
 X = data.drop('target_column', axis=1)
 y = data['target_column']
 
-# Split the data into training and test sets
+## Split the data into training and test sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
 
-# Instantiate and train the model
+## Instantiate and train the model
 rf_model = RandomForestClassifier(n_estimators=100, random_state=42)
 rf_model.fit(X_train, y_train)
 
-# Make predictions
+## Make predictions
 y_pred = rf_model.predict(X_test)
 
-# Evaluate the model
+## Evaluate the model
 accuracy = accuracy_score(y_test, y_pred)
 print(f"Model accuracy: {accuracy}")
 
-# Serialize the trained model
+## Serialize the trained model
 model_path = 'models/trained_models/scikit-learn/random_forest_model.pkl'
 joblib.dump(rf_model, model_path)
 
@@ -267,23 +267,23 @@ This script serves as a demonstration of model training using Scikit-Learn withi
 Certainly! Here's an example of a Python script for training a complex deep learning model using TensorFlow within the Wildlife Conservation Analytics application. The script, `train_tf_complex_model.py`, demonstrates the process of training a deep neural network for biodiversity preservation tasks using synthetic data:
 
 ```python
-# train_tf_complex_model.py
+## train_tf_complex_model.py
 
 import tensorflow as tf
 from sklearn.model_selection import train_test_split
 import numpy as np
 
-# Mock data path
+## Mock data path
 mock_data_path = 'data/processed/mock_wildlife_data.npy'
 
-# Load mock data
+## Load mock data
 data = np.load(mock_data_path, allow_pickle=True)
 X, y = data['features'], data['labels']
 
-# Split the data into training and test sets
+## Split the data into training and test sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
 
-# Define the deep learning model architecture
+## Define the deep learning model architecture
 model = tf.keras.models.Sequential([
     tf.keras.layers.Dense(128, activation='relu', input_shape=X_train.shape[1:]),
     tf.keras.layers.Dropout(0.2),
@@ -292,15 +292,15 @@ model = tf.keras.models.Sequential([
     tf.keras.layers.Dense(10, activation='softmax')
 ])
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam',
               loss='sparse_categorical_crossentropy',
               metrics=['accuracy'])
 
-# Train the model
+## Train the model
 history = model.fit(X_train, y_train, epochs=20, validation_data=(X_test, y_test))
 
-# Serialize the trained model
+## Serialize the trained model
 model_path = 'models/trained_models/tensorflow/complex_model/'
 model.save(model_path)
 

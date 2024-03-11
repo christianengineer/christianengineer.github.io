@@ -5,7 +5,7 @@ permalink: posts/automated-content-generation-for-media-gpt-3-hadoop-prometheus-
 layout: article
 ---
 
-# AI Automated Content Generation for Media
+## AI Automated Content Generation for Media
 
 ## Objectives
 The objectives of the AI Automated Content Generation for Media project are as follows:
@@ -31,7 +31,7 @@ The following libraries and technologies will be utilized in the implementation 
 
 By incorporating these libraries and technologies, the AI Automated Content Generation for Media project will be well-equipped to efficiently generate high-quality, data-intensive journalism content using AI technologies.
 
-# MLOps Infrastructure for Automated Content Generation
+## MLOps Infrastructure for Automated Content Generation
 
 ## Objectives
 The objectives of the MLOps infrastructure for the Automated Content Generation for Media application are as follows:
@@ -189,39 +189,39 @@ These files within the deployment directory provide the necessary configurations
 Certainly! Below is an example of a Python script for training a mock GPT-3 model for the Automated Content Generation for Media application using mock data. The file is named `train_gpt3_model.py` and is located in the `src/models/gpt3` directory of the project.
 
 ```python
-# File: src/models/gpt3/train_gpt3_model.py
+## File: src/models/gpt3/train_gpt3_model.py
 
 import torch
 from transformers import GPT2LMHeadModel, GPT2Tokenizer
 
-# Mock data for training
+## Mock data for training
 mock_training_data = [
     "The quick brown fox jumps over the lazy dog.",
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "In a hole in the ground there lived a hobbit."
-    # ... Additional mock training data
+    ## ... Additional mock training data
 ]
 
-# Initialize the GPT-3 tokenizer
+## Initialize the GPT-3 tokenizer
 tokenizer = GPT2Tokenizer.from_pretrained('gpt2')
 
-# Tokenize the training data
+## Tokenize the training data
 tokenized_data = tokenizer.batch_encode_plus(mock_training_data, return_tensors='pt', pad_to_max_length=True)
 
-# Initialize the GPT-3 model
+## Initialize the GPT-3 model
 model = GPT2LMHeadModel.from_pretrained('gpt2')
 
-# Fine-tune the GPT-3 model on the mock data
+## Fine-tune the GPT-3 model on the mock data
 model.train()
 optimizer = torch.optim.AdamW(model.parameters(), lr=1e-5)
-for epoch in range(3):  # Mock training loop for 3 epochs
+for epoch in range(3):  ## Mock training loop for 3 epochs
     outputs = model(**tokenized_data)
     loss = outputs.loss
     loss.backward()
     optimizer.step()
     optimizer.zero_grad()
 
-# Save the trained model
+## Save the trained model
 model.save_pretrained('models/gpt3/trained_model')
 ```
 
@@ -234,7 +234,7 @@ By running this script, a mock GPT-3 model can be trained on the mock data to si
 Certainly! Here's an example of a Python script for a complex machine learning algorithm (in this case, a deep learning model using PyTorch and TorchText) for the Automated Content Generation for Media application. The file is named `complex_ml_algorithm.py` and is located in the `src/models` directory of the project.
 
 ```python
-# File: src/models/complex_ml_algorithm.py
+## File: src/models/complex_ml_algorithm.py
 
 import torch
 import torch.nn as nn
@@ -242,45 +242,45 @@ import torch.optim as optim
 import torchtext
 from torchtext.data import Field, TabularDataset, BucketIterator
 
-# Create mock data for training (assuming using tabular data)
+## Create mock data for training (assuming using tabular data)
 mock_data_path = "data/processed/mock_journalism_data.csv"
 
-# Define fields for data preprocessing
+## Define fields for data preprocessing
 TEXT = Field(tokenize='spacy', lower=True)
 LABEL = Field(sequential=False, is_target=True)
 
-# Load the mock data from CSV into TabularDataset
+## Load the mock data from CSV into TabularDataset
 data_fields = [('text', TEXT), ('label', LABEL)]
 mock_data = TabularDataset(
     path=mock_data_path, format='csv', fields=data_fields, skip_header=True
 )
 
-# Build vocabulary and create embeddings
+## Build vocabulary and create embeddings
 TEXT.build_vocab(mock_data, max_size=10000, vectors="glove.6B.100d")
 LABEL.build_vocab(mock_data)
 
-# Prepare iterators for the data
+## Prepare iterators for the data
 train_iterator, test_iterator = BucketIterator.splits(
     (mock_data, mock_data), batch_size=32, sort_key=lambda x: len(x.text)
 )
 
-# Define a complex deep learning model
+## Define a complex deep learning model
 class ComplexModel(nn.Module):
     def __init__(self, input_dim, embedding_dim, hidden_dim, output_dim):
         super().__init__()
         self.embedding = nn.Embedding(input_dim, embedding_dim)
-        # Define the rest of the model architecture
+        ## Define the rest of the model architecture
 
     def forward(self, text):
-        # Implement the forward pass of the model
+        ## Implement the forward pass of the model
         pass
 
-# Initialize the complex model and define the loss and optimizer
+## Initialize the complex model and define the loss and optimizer
 complex_model = ComplexModel(len(TEXT.vocab), 100, 256, len(LABEL.vocab))
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(complex_model.parameters(), lr=0.001)
 
-# Train the complex model on the mock data
+## Train the complex model on the mock data
 complex_model.train()
 for batch in train_iterator:
     optimizer.zero_grad()
@@ -289,7 +289,7 @@ for batch in train_iterator:
     loss.backward()
     optimizer.step()
 
-# Save the trained complex model
+## Save the trained complex model
 torch.save(complex_model.state_dict(), 'models/complex_model.pt')
 ```
 

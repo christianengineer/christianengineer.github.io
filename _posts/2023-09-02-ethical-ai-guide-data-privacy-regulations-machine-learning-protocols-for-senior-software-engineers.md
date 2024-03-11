@@ -5,7 +5,7 @@ permalink: posts/ethical-ai-guide-data-privacy-regulations-machine-learning-prot
 layout: article
 ---
 
-# Comprehensive Guide to Ethical AI: Navigating Data Privacy Regulations & Machine Learning Protocols for Senior Software Engineers
+## Comprehensive Guide to Ethical AI: Navigating Data Privacy Regulations & Machine Learning Protocols for Senior Software Engineers
 
 ## Introduction
 
@@ -20,14 +20,14 @@ Today's senior software engineers need to be in-the-know about comprehensive and
 One of the most pressing concerns in terms of ethics and AI is maintaining quality datasets. Poor training data can skew outputs and lead to unintended bias.
 
 ```python
-# Here's a simple way to remove any duplicates from your dataset in Python.
+## Here's a simple way to remove any duplicates from your dataset in Python.
 
 import pandas as pd
 
-# Assuming 'df' is your DataFrame
+## Assuming 'df' is your DataFrame
 df = df.drop_duplicates()
 
-# Be sure to check the quality of your data
+## Be sure to check the quality of your data
 print(df.describe())
 ```
 
@@ -42,17 +42,17 @@ There are various ML tools for model interpretability such as [LIME](https://git
 Before deploying any model, make sure that it performs well and fairly on unseen data. Use cross-validation, Reserve a test set, Conduct A/B testing.
 
 ```python
-# Assuming you're using scikit-learn in Python
+## Assuming you're using scikit-learn in Python
 
 from sklearn.model_selection import train_test_split, cross_val_score
 from sklearn.metrics import accuracy_score
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
 
-# Now we can train our model on the training data
+## Now we can train our model on the training data
 model.fit(X_train, y_train)
 
-# And test its performance on the test data
+## And test its performance on the test data
 y_pred = model.predict(X_test)
 
 print("Accuracy score: ", accuracy_score(y_test, y_pred))
@@ -73,12 +73,12 @@ If you deal with consumers in California, you need to be aware of CCPA. It grant
 According to the GDPR, PbD principles ought to be undertaken at every step of data handling. This includes the incorporation of appropriate technical and organizational measures in an effective manner, both at the time of determination of the means of processing and at the time of processing itself.
 
 ```python
-# For illustration: Imagine you have a dataset and you want to implement k-anonymity.
-# An example of PbD can be applying the 'k-anonymity' in Python:
+## For illustration: Imagine you have a dataset and you want to implement k-anonymity.
+## An example of PbD can be applying the 'k-anonymity' in Python:
 
 import kanonymity as kanon
 
-# Assuming 'df' is your dataset.
+## Assuming 'df' is your dataset.
 k_df = kanon.kanon(df)
 ```
 

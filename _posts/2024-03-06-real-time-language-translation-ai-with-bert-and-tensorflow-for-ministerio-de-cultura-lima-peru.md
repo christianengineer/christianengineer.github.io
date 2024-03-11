@@ -5,7 +5,7 @@ permalink: posts/real-time-language-translation-ai-with-bert-and-tensorflow-for-
 layout: article
 ---
 
-# Real-Time Language Translation AI with BERT and TensorFlow
+## Real-Time Language Translation AI with BERT and TensorFlow
 
 ## Objectives and Benefits
 ### Audience: Ministerio de Cultura (Lima, Peru), Cultural Liaisons
@@ -224,76 +224,76 @@ from nltk.corpus import stopwords
 import string
 import re
 
-# Load and preprocess indigenous language data
+## Load and preprocess indigenous language data
 def preprocess_data(file_path):
-    # Load data
+    ## Load data
     data = pd.read_csv(file_path)
     
-    # Remove duplicates and missing values
+    ## Remove duplicates and missing values
     data.drop_duplicates(inplace=True)
     data.dropna(inplace=True)
     
-    # Split data into input (indigenous language) and target (translated language) columns
+    ## Split data into input (indigenous language) and target (translated language) columns
     X = data['IndigenousLanguageText'].values
     y = data['TranslatedLanguageText'].values
     
-    # Text preprocessing
+    ## Text preprocessing
     X = [preprocess_text(text) for text in X]
     y = [preprocess_text(text) for text in y]
     
-    # Split data into training and validation sets
+    ## Split data into training and validation sets
     X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
     
     return X_train, X_val, y_train, y_val
 
-# Text preprocessing function
+## Text preprocessing function
 def preprocess_text(text):
-    # Tokenization
+    ## Tokenization
     tokens = word_tokenize(text)
     
-    # Remove stopwords and punctuation
-    stop_words = set(stopwords.words('your_indigenous_language'))  # Specify the indigenous language
+    ## Remove stopwords and punctuation
+    stop_words = set(stopwords.words('your_indigenous_language'))  ## Specify the indigenous language
     tokens = [token.lower() for token in tokens if token.lower() not in stop_words and token not in string.punctuation]
     
-    # Remove non-alphabetic characters and numbers
+    ## Remove non-alphabetic characters and numbers
     tokens = [re.sub(r'[^a-zA-Z]', '', token) for token in tokens if token.isalpha()]
     
-    # Join tokens back into a single text
+    ## Join tokens back into a single text
     processed_text = ' '.join(tokens)
     
     return processed_text
 
-# Upsample minority class if needed
+## Upsample minority class if needed
 def upsample_data(X_train, y_train):
-    # Combine input and target data
+    ## Combine input and target data
     df_train = pd.DataFrame({'IndigenousLanguageText': X_train, 'TranslatedLanguageText': y_train})
     
-    # Separate majority and minority classes
+    ## Separate majority and minority classes
     majority_class = df_train[df_train['TranslatedLanguageText'] == 'majority-class']
     minority_class = df_train[df_train['TranslatedLanguageText'] == 'minority-class']
     
-    # Upsample minority class to match the majority class
+    ## Upsample minority class to match the majority class
     minority_upsampled = resample(minority_class, replace=True, n_samples=len(majority_class), random_state=42)
     
-    # Combine majority class and upsampled minority class
+    ## Combine majority class and upsampled minority class
     df_upsampled = pd.concat([majority_class, minority_upsampled])
     
-    # Split upsampled data back into X_train and y_train
+    ## Split upsampled data back into X_train and y_train
     X_train_upsampled = df_upsampled['IndigenousLanguageText'].values
     y_train_upsampled = df_upsampled['TranslatedLanguageText'].values
     
     return X_train_upsampled, y_train_upsampled
 
-# Main script
+## Main script
 if __name__ == '__main__':
-    file_path = 'data/indigenous_language_data.csv'  # Path to the dataset
+    file_path = 'data/indigenous_language_data.csv'  ## Path to the dataset
     
     X_train, X_val, y_train, y_val = preprocess_data(file_path)
     
-    # Upsample minority class if imbalance is detected
+    ## Upsample minority class if imbalance is detected
     X_train_final, y_train_final = upsample_data(X_train, y_train)
     
-    # Further preprocessing or additional steps can be added here before model training
+    ## Further preprocessing or additional steps can be added here before model training
 ```
 
 In the provided Python script, the necessary data preprocessing steps for the real-time language translation project are outlined:
@@ -393,16 +393,16 @@ from faker import Faker
 import random
 import string
 
-# Initialize Faker to generate fake data
+## Initialize Faker to generate fake data
 fake = Faker()
 
-# Define indigenous language families
+## Define indigenous language families
 indigenous_language_families = ['Family_A', 'Family_B', 'Family_C']
 
-# Define translation context categories
+## Define translation context categories
 translation_contexts = ['Greeting', 'Directions', 'Food', 'Customs', 'Expressions']
 
-# Generate fictitious dataset
+## Generate fictitious dataset
 def generate_fake_dataset(num_samples):
     data = {'IndigenousLanguageText': [], 'TranslatedLanguageText': [], 'LanguageFamily': [], 'TranslationContext': []}
 
@@ -420,16 +420,16 @@ def generate_fake_dataset(num_samples):
     df = pd.DataFrame(data)
     return df
 
-# Validate generated dataset
+## Validate generated dataset
 def validate_dataset(df):
-    # Check for missing values
+    ## Check for missing values
     missing_values = df.isnull().sum().sum()
     if missing_values == 0:
         print("Dataset Validation: No missing values found.")
     else:
         print(f"Dataset Validation: {missing_values} missing values found.")
 
-    # Check unique values in categorical columns
+    ## Check unique values in categorical columns
     unique_values = df[['LanguageFamily', 'TranslationContext']].apply(lambda x: len(x.unique()))
     print("Unique values in Language Family and Translation Context columns:")
     print(unique_values)
@@ -438,10 +438,10 @@ if __name__ == '__main__':
     num_samples = 1000
     fake_dataset = generate_fake_dataset(num_samples)
 
-    # Validate the generated dataset
+    ## Validate the generated dataset
     validate_dataset(fake_dataset)
 
-    # Save fake dataset to a CSV file
+    ## Save fake dataset to a CSV file
     fake_dataset.to_csv('fake_dataset.csv', index=False)
 ```
 
@@ -493,18 +493,18 @@ from sklearn.model_selection import train_test_split
 from transformers import BertTokenizer, BertForSequenceClassification, Trainer, TrainingArguments
 from datasets import Dataset
 
-# Load preprocessed dataset
+## Load preprocessed dataset
 def load_dataset(file_path):
     df = pd.read_csv(file_path)
     dataset = Dataset.from_pandas(df)
     return dataset
 
-# Split dataset into training and validation sets
+## Split dataset into training and validation sets
 def split_dataset(dataset):
     train_dataset, eval_dataset = train_test_split(dataset, test_size=0.2, random_state=42)
     return train_dataset, eval_dataset
 
-# Fine-tune BERT model on the training dataset
+## Fine-tune BERT model on the training dataset
 def fine_tune_model(train_dataset, eval_dataset):
     model = BertForSequenceClassification.from_pretrained('bert-base-multilingual-cased')
     tokenizer = BertTokenizer.from_pretrained('bert-base-multilingual-cased')
@@ -527,7 +527,7 @@ def fine_tune_model(train_dataset, eval_dataset):
     return model
 
 if __name__ == '__main__':
-    file_path = 'preprocessed_dataset.csv'  # Path to the preprocessed dataset file
+    file_path = 'preprocessed_dataset.csv'  ## Path to the preprocessed dataset file
     dataset = load_dataset(file_path)
     train_dataset, eval_dataset = split_dataset(dataset)
 
@@ -604,27 +604,27 @@ By adhering to high standards of quality, documentation, and structure in the pr
 By following this step-by-step deployment plan and leveraging the recommended tools and platforms, Ministerio de Cultura can effectively deploy the real-time language translation model into a production environment, ensuring scalability, reliability, and seamless integration for facilitating communication between tourists and indigenous communities.
 
 ```dockerfile
-# Use a Python base image with GPU support
+## Use a Python base image with GPU support
 FROM nvcr.io/nvidia/tensorflow:20.12-tf2-py3
 
-# Set the working directory in the container
+## Set the working directory in the container
 WORKDIR /app
 
-# Copy the requirements file and install dependencies
+## Copy the requirements file and install dependencies
 COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 
-# Copy the model files into the container
+## Copy the model files into the container
 COPY model.pth /app/model.pth
 
-# Define environment variables
+## Define environment variables
 ENV LANG=C.UTF-8
 ENV LC_ALL=C.UTF-8
 
-# Expose the API port
+## Expose the API port
 EXPOSE 5000
 
-# Set the entrypoint command to start the API
+## Set the entrypoint command to start the API
 CMD ["python", "app.py"]
 ```
 

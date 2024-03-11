@@ -5,7 +5,7 @@ permalink: posts/ecomonitor---environmental-monitoring-ai
 layout: article
 ---
 
-# AI EcoMonitor - Environmental Monitoring AI Repository
+## AI EcoMonitor - Environmental Monitoring AI Repository
 
 ## Objectives
 
@@ -274,24 +274,24 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 
 def complex_machine_learning_algorithm(data_file_path):
-    # Load the mock environmental data from the specified file path
+    ## Load the mock environmental data from the specified file path
     data = pd.read_csv(data_file_path)
 
-    # Assume the target variable is 'environmental_quality' and the features are other columns
+    ## Assume the target variable is 'environmental_quality' and the features are other columns
     X = data.drop('environmental_quality', axis=1)
     y = data['environmental_quality']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize and train a Random Forest Regressor model
+    ## Initialize and train a Random Forest Regressor model
     model = RandomForestRegressor(n_estimators=100, random_state=42)
     model.fit(X_train, y_train)
 
-    # Make predictions on the testing set
+    ## Make predictions on the testing set
     y_pred = model.predict(X_test)
 
-    # Evaluate the model performance using Mean Squared Error
+    ## Evaluate the model performance using Mean Squared Error
     mse = mean_squared_error(y_test, y_pred)
 
     return model, mse
@@ -314,35 +314,35 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 
 def complex_deep_learning_algorithm(data_file_path):
-    # Load the mock environmental data from the specified file path
+    ## Load the mock environmental data from the specified file path
     data = pd.read_csv(data_file_path)
 
-    # Assume the target variable is 'environmental_quality' and the features are other columns
+    ## Assume the target variable is 'environmental_quality' and the features are other columns
     X = data.drop('environmental_quality', axis=1)
     y = data['environmental_quality']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Standardize the input features
+    ## Standardize the input features
     scaler = StandardScaler()
     X_train_scaled = scaler.fit_transform(X_train)
     X_test_scaled = scaler.transform(X_test)
 
-    # Build a deep learning model
+    ## Build a deep learning model
     model = Sequential([
         Dense(64, activation='relu', input_shape=(X_train.shape[1],)),
         Dense(64, activation='relu'),
         Dense(1)
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam', loss='mean_squared_error')
 
-    # Train the model
+    ## Train the model
     model.fit(X_train_scaled, y_train, epochs=50, batch_size=32, validation_split=0.2, verbose=0)
 
-    # Evaluate the model performance using Mean Squared Error
+    ## Evaluate the model performance using Mean Squared Error
     mse = model.evaluate(X_test_scaled, y_test)
 
     return model, mse

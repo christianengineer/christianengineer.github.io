@@ -250,24 +250,24 @@ By organizing deployment-related files and scripts in this structure, the Digita
 Certainly! Below is an example of a Python script for training a TensorFlow model using mock data. This script assumes the use of TensorFlow for training an image classification model and contains basic functionalities for illustrative purposes.
 
 ```python
-# File: model_training.py
-# Path: code/model_training/tensorflow_models/image_classification/model_1/model_training.py
+## File: model_training.py
+## Path: code/model_training/tensorflow_models/image_classification/model_1/model_training.py
 
 import tensorflow as tf
 import numpy as np
 
-# Mock data generation (replace with actual data loading and preprocessing)
+## Mock data generation (replace with actual data loading and preprocessing)
 def generate_mock_data():
     num_samples = 1000
-    input_shape = (32, 32, 3)  # Example input shape for image data
+    input_shape = (32, 32, 3)  ## Example input shape for image data
 
-    # Generate random mock images and labels
+    ## Generate random mock images and labels
     mock_images = np.random.rand(num_samples, *input_shape)
-    mock_labels = np.random.randint(0, 10, num_samples)  # Assuming 10 classes for classification
+    mock_labels = np.random.randint(0, 10, num_samples)  ## Assuming 10 classes for classification
 
     return mock_images, mock_labels
 
-# Define the model architecture
+## Define the model architecture
 def build_model(input_shape, num_classes):
     model = tf.keras.Sequential([
         tf.keras.layers.Conv2D(32, (3, 3), activation='relu', input_shape=input_shape),
@@ -283,23 +283,23 @@ def build_model(input_shape, num_classes):
 
     return model
 
-# Training the mock model
+## Training the mock model
 def train_model():
-    # Generate mock data
+    ## Generate mock data
     images, labels = generate_mock_data()
 
-    # Build the model
-    input_shape = (32, 32, 3)  # Example input shape for image data
-    num_classes = 10  # Example number of classes for classification
+    ## Build the model
+    input_shape = (32, 32, 3)  ## Example input shape for image data
+    num_classes = 10  ## Example number of classes for classification
     model = build_model(input_shape, num_classes)
 
-    # Train the model
+    ## Train the model
     model.fit(images, labels, epochs=10, batch_size=32, validation_split=0.2)
 
-    # Save the trained model
+    ## Save the trained model
     model.save('trained_image_classifier_model.h5')
 
-# Entry point for model training
+## Entry point for model training
 if __name__ == "__main__":
     train_model()
 ```
@@ -314,20 +314,20 @@ This script serves as a simple example for training a TensorFlow model using moc
 Certainly! Below is an example of a Python script for a complex machine learning algorithm using GPT for language modeling. This script assumes the use of OpenAI's GPT-3 and contains basic functionalities for illustrative purposes.
 
 ```python
-# File: gpt_language_model.py
-# Path: code/model_training/gpt_models/language_translation/gpt_language_model.py
+## File: gpt_language_model.py
+## Path: code/model_training/gpt_models/language_translation/gpt_language_model.py
 
 import openai
 
-# Set your OpenAI API key
+## Set your OpenAI API key
 api_key = 'YOUR_API_KEY'
 openai.api_key = api_key
 
-# Define function to generate mock input text for language translation
+## Define function to generate mock input text for language translation
 def generate_mock_input_text():
     return "Translate this English text into French."
 
-# Function for language translation using GPT-3
+## Function for language translation using GPT-3
 def translate_text(input_text, target_language="fr"):
     response = openai.Completion.create(
         engine="text-davinci-003",
@@ -336,19 +336,19 @@ def translate_text(input_text, target_language="fr"):
     )
     return response.choices[0].text.strip()
 
-# Main function for language translation
+## Main function for language translation
 def language_translation_demo():
-    # Generate mock input text
+    ## Generate mock input text
     input_text = generate_mock_input_text()
 
-    # Perform language translation using GPT-3
+    ## Perform language translation using GPT-3
     translated_text = translate_text(input_text, target_language="fr")
 
-    # Print the translated text
+    ## Print the translated text
     print("Original English Text:", input_text)
     print("Translated Text (French):", translated_text)
 
-# Entry point for language translation demo
+## Entry point for language translation demo
 if __name__ == "__main__":
     language_translation_demo()
 ```

@@ -77,7 +77,7 @@ The infrastructure for the Stock Price Prediction using Keras (Python) Forecasti
 
 By incorporating these infrastructure components, the Stock Price Prediction using Keras (Python) Forecasting Market Trends application can be deployed and operated at scale, ensuring reliability, performance, and security while effectively leveraging machine learning for market trend forecasting.
 
-# Scalable File Structure for Stock Price Prediction using Keras (Python) Forecasting Market Trends Repository
+## Scalable File Structure for Stock Price Prediction using Keras (Python) Forecasting Market Trends Repository
 
 ```
 stock-price-prediction/
@@ -252,15 +252,15 @@ from sklearn.preprocessing import MinMaxScaler
 import matplotlib.pyplot as plt
 
 def train_stock_price_prediction_model(data_path):
-    # Load the mock stock price data from the provided file path
+    ## Load the mock stock price data from the provided file path
     stock_data = pd.read_csv(data_path)
 
-    # Data preprocessing
+    ## Data preprocessing
     prices = stock_data['Close'].values.reshape(-1, 1)
     scaler = MinMaxScaler(feature_range=(0, 1))
     scaled_prices = scaler.fit_transform(prices)
 
-    # Prepare the data for training
+    ## Prepare the data for training
     look_back = 60
     X, y = [], []
     for i in range(len(prices) - look_back - 1):
@@ -270,27 +270,27 @@ def train_stock_price_prediction_model(data_path):
 
     X = np.reshape(X, (X.shape[0], X.shape[1], 1))
 
-    # Train-test split
+    ## Train-test split
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Define the LSTM model architecture
+    ## Define the LSTM model architecture
     model = Sequential()
     model.add(LSTM(units=50, return_sequences=True, input_shape=(X.shape[1], 1)))
     model.add(LSTM(units=50, return_sequences=False))
     model.add(Dense(units=25))
     model.add(Dense(units=1))
 
-    # Compile and train the model
+    ## Compile and train the model
     model.compile(optimizer='adam', loss='mean_squared_error')
     model.fit(X_train, y_train, epochs=5, batch_size=32)
 
-    # Evaluate the model
+    ## Evaluate the model
     test_loss = model.evaluate(X_test, y_test)
 
-    # Generate predictions
+    ## Generate predictions
     predictions = model.predict(X_test)
     
-    # Visualize the predictions
+    ## Visualize the predictions
     plt.plot(scaler.inverse_transform(y_test.reshape(-1, 1)), label='Actual')
     plt.plot(scaler.inverse_transform(predictions), label='Predicted')
     plt.legend()
@@ -318,15 +318,15 @@ from sklearn.preprocessing import MinMaxScaler
 import matplotlib.pyplot as plt
 
 def train_stock_price_prediction_model(data_path):
-    # Load the mock stock price data from the provided file path
+    ## Load the mock stock price data from the provided file path
     stock_data = pd.read_csv(data_path)
 
-    # Data preprocessing
+    ## Data preprocessing
     prices = stock_data['Close'].values.reshape(-1, 1)
     scaler = MinMaxScaler(feature_range=(0, 1))
     scaled_prices = scaler.fit_transform(prices)
 
-    # Prepare the data for training
+    ## Prepare the data for training
     look_back = 60
     X, y = [], []
     for i in range(len(prices) - look_back - 1):
@@ -336,27 +336,27 @@ def train_stock_price_prediction_model(data_path):
 
     X = np.reshape(X, (X.shape[0], X.shape[1], 1))
 
-    # Train-test split
+    ## Train-test split
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Define the LSTM model architecture
+    ## Define the LSTM model architecture
     model = Sequential()
     model.add(LSTM(units=50, return_sequences=True, input_shape=(X.shape[1], 1)))
     model.add(LSTM(units=50, return_sequences=False))
     model.add(Dense(units=25))
     model.add(Dense(units=1))
 
-    # Compile and train the model
+    ## Compile and train the model
     model.compile(optimizer='adam', loss='mean_squared_error')
     model.fit(X_train, y_train, epochs=5, batch_size=32)
 
-    # Evaluate the model
+    ## Evaluate the model
     test_loss = model.evaluate(X_test, y_test)
 
-    # Generate predictions
+    ## Generate predictions
     predictions = model.predict(X_test)
     
-    # Visualize the predictions
+    ## Visualize the predictions
     plt.plot(scaler.inverse_transform(y_test.reshape(-1, 1)), label='Actual')
     plt.plot(scaler.inverse_transform(predictions), label='Predicted')
     plt.legend()

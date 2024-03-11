@@ -5,7 +5,7 @@ permalink: posts/low-cost-prosthetic-design-tensorflow-opencv-for-affordable-hea
 layout: article
 ---
 
-# AI Low-Cost Prosthetic Design (TensorFlow, OpenCV)
+## AI Low-Cost Prosthetic Design (TensorFlow, OpenCV)
 ## Objectives
 The objective of the "AI Low-Cost Prosthetic Design" project is to leverage AI and computer vision technologies to develop affordable and accessible prosthetic designs for healthcare. The project aims to provide an open-source repository that utilizes TensorFlow and OpenCV to build robust, scalable, and cost-effective prosthetic solutions for individuals in need.
 
@@ -37,7 +37,7 @@ The objective of the "AI Low-Cost Prosthetic Design" project is to leverage AI a
 
 By integrating these libraries, we aim to create a comprehensive solution for low-cost prosthetic design that leverages the power of AI and computer vision to improve the quality of life for individuals in need of affordable healthcare devices.
 
-# MLOps Infrastructure for Low-Cost Prosthetic Design
+## MLOps Infrastructure for Low-Cost Prosthetic Design
 
 ## Objectives
 The MLOps infrastructure for the Low-Cost Prosthetic Design application aims to enable efficient development, deployment, and management of AI models built using TensorFlow and OpenCV. The primary objectives include automating the ML lifecycle, ensuring model scalability, reproducibility, and maintaining high standards of governance and compliance.
@@ -82,38 +82,38 @@ By incorporating these MLOps strategies and tools, the Low-Cost Prosthetic Desig
 low-cost-prosthetic-design/
 │
 ├── data/
-│   ├── raw/                   # Raw data, captured muscle signals and limb movement videos
-│   ├── processed/             # Processed data ready for model training and testing
-│   ├── augmented/             # Augmented data for improved model generalization
+│   ├── raw/                   ## Raw data, captured muscle signals and limb movement videos
+│   ├── processed/             ## Processed data ready for model training and testing
+│   ├── augmented/             ## Augmented data for improved model generalization
 │   └── ...
 │
 ├── models/
-│   ├── training/              # Trained TensorFlow models for gesture recognition and motion prediction
-│   ├── evaluation/            # Model evaluation results and metrics
+│   ├── training/              ## Trained TensorFlow models for gesture recognition and motion prediction
+│   ├── evaluation/            ## Model evaluation results and metrics
 │   └── ...
 │
 ├── src/
-│   ├── data_processing/       # Scripts for data preprocessing, feature extraction, and augmentation
-│   ├── model_training/        # TensorFlow model training scripts and configurations
-│   ├── model_evaluation/      # Scripts for evaluating model performance and generating metrics
-│   ├── app_integration/       # Integration scripts for interfacing with prosthetic hardware
+│   ├── data_processing/       ## Scripts for data preprocessing, feature extraction, and augmentation
+│   ├── model_training/        ## TensorFlow model training scripts and configurations
+│   ├── model_evaluation/      ## Scripts for evaluating model performance and generating metrics
+│   ├── app_integration/       ## Integration scripts for interfacing with prosthetic hardware
 │   └── ...
 │
 ├── deployment/
-│   ├── docker/                # Dockerfiles for containerizing application components
-│   ├── kubernetes/            # Kubernetes configurations for deployment and scaling
-│   ├── CI_CD/                 # Continuous integration/continuous deployment pipeline scripts
+│   ├── docker/                ## Dockerfiles for containerizing application components
+│   ├── kubernetes/            ## Kubernetes configurations for deployment and scaling
+│   ├── CI_CD/                 ## Continuous integration/continuous deployment pipeline scripts
 │   └── ...
 │
 ├── documentation/
-│   ├── design_specification.md       # Detailed design specifications for the prosthetic design application
-│   ├── model_architecture.md          # Documentation of the TensorFlow model architectures
-│   ├── deployment_guide.md           # Instructions for deploying the application in different environments
+│   ├── design_specification.md       ## Detailed design specifications for the prosthetic design application
+│   ├── model_architecture.md          ## Documentation of the TensorFlow model architectures
+│   ├── deployment_guide.md           ## Instructions for deploying the application in different environments
 │   └── ...
 │
 ├── tests/
-│   ├── unit_tests/            # Unit tests for individual application components
-│   ├── integration_tests/     # Integration tests for end-to-end application functionality
+│   ├── unit_tests/            ## Unit tests for individual application components
+│   ├── integration_tests/     ## Integration tests for end-to-end application functionality
 │   └── ...
 │
 ├── LICENSE
@@ -139,21 +139,21 @@ This file structure provides a scalable organization for the Low-Cost Prosthetic
 models/
 │
 ├── training/
-│   ├── gesture_recognition_model/               # Directory for gesture recognition model
-│   │   ├── model_weights.h5                     # Trained weights of the gesture recognition model
-│   │   ├── model_architecture.json               # JSON file describing the architecture of the model
-│   │   ├── training_script.py                   # Script used to train the gesture recognition model
+│   ├── gesture_recognition_model/               ## Directory for gesture recognition model
+│   │   ├── model_weights.h5                     ## Trained weights of the gesture recognition model
+│   │   ├── model_architecture.json               ## JSON file describing the architecture of the model
+│   │   ├── training_script.py                   ## Script used to train the gesture recognition model
 │   │   └── ...
 │   │
-│   └── motion_prediction_model/                 # Directory for motion prediction model
-│       ├── model_weights.h5                     # Trained weights of the motion prediction model
-│       ├── model_architecture.json               # JSON file describing the architecture of the model
-│       ├── training_script.py                   # Script used to train the motion prediction model
+│   └── motion_prediction_model/                 ## Directory for motion prediction model
+│       ├── model_weights.h5                     ## Trained weights of the motion prediction model
+│       ├── model_architecture.json               ## JSON file describing the architecture of the model
+│       ├── training_script.py                   ## Script used to train the motion prediction model
 │       └── ...
 │
 ├── evaluation/
-│   ├── gesture_recognition_metrics.json         # Evaluation metrics for the gesture recognition model
-│   ├── motion_prediction_metrics.json           # Evaluation metrics for the motion prediction model
+│   ├── gesture_recognition_metrics.json         ## Evaluation metrics for the gesture recognition model
+│   ├── motion_prediction_metrics.json           ## Evaluation metrics for the motion prediction model
 │   └── ...
 │
 └── ...
@@ -175,20 +175,20 @@ By organizing the models directory in this manner, it becomes easier to manage, 
 deployment/
 │
 ├── docker/
-│   ├── Dockerfile_data_processing              # Dockerfile for data processing component
-│   ├── Dockerfile_model_training               # Dockerfile for model training component
-│   ├── Dockerfile_model_serving                # Dockerfile for model serving component
+│   ├── Dockerfile_data_processing              ## Dockerfile for data processing component
+│   ├── Dockerfile_model_training               ## Dockerfile for model training component
+│   ├── Dockerfile_model_serving                ## Dockerfile for model serving component
 │   └── ...
 │
 ├── kubernetes/
-│   ├── deployment.yaml                         # Kubernetes deployment configuration for the application
-│   ├── service.yaml                            # Kubernetes service configuration for the application
-│   ├── ingress.yaml                            # Kubernetes ingress configuration for external access
+│   ├── deployment.yaml                         ## Kubernetes deployment configuration for the application
+│   ├── service.yaml                            ## Kubernetes service configuration for the application
+│   ├── ingress.yaml                            ## Kubernetes ingress configuration for external access
 │   └── ...
 │
 ├── CI_CD/
-│   ├── jenkinsfile                             # Jenkins pipeline configuration for CI/CD
-│   ├── gitlab-ci.yml                           # GitLab CI/CD pipeline configuration
+│   ├── jenkinsfile                             ## Jenkins pipeline configuration for CI/CD
+│   ├── gitlab-ci.yml                           ## GitLab CI/CD pipeline configuration
 │   └── ...
 │
 └── ...
@@ -204,19 +204,19 @@ In this structure:
 By organizing the deployment directory in this manner, the necessary artifacts for containerization, orchestration, and automation of the application deployment are clearly delineated, facilitating scalability, maintainability, and reproducibility of the deployment process for the affordable healthcare devices leveraging TensorFlow and OpenCV.
 
 ```python
-# File: model_training/mock_data_training.py
+## File: model_training/mock_data_training.py
 
 import tensorflow as tf
 from tensorflow.keras import layers
 
-# Mock data generation (Replace this with actual data pipeline)
+## Mock data generation (Replace this with actual data pipeline)
 def generate_mock_data():
-    # Generate mock input data
+    ## Generate mock input data
     X_train = tf.random.normal((1000, 32, 32, 3))
     y_train = tf.random.uniform((1000,), maxval=10, dtype=tf.int32)
     return X_train, y_train
 
-# Define a simple convolutional neural network model
+## Define a simple convolutional neural network model
 def build_cnn_model(input_shape, num_classes):
     model = tf.keras.Sequential([
         layers.Conv2D(32, (3, 3), activation='relu', input_shape=input_shape),
@@ -230,17 +230,17 @@ def build_cnn_model(input_shape, num_classes):
     ])
     return model
 
-# Main function for model training
+## Main function for model training
 def train_model():
-    # Generate mock data
+    ## Generate mock data
     X_train, y_train = generate_mock_data()
     
-    # Build the model
+    ## Build the model
     input_shape = X_train[0].shape
     num_classes = 10
     model = build_cnn_model(input_shape, num_classes)
     
-    # Compile and train the model
+    ## Compile and train the model
     model.compile(optimizer='adam',
                   loss='sparse_categorical_crossentropy',
                   metrics=['accuracy'])
@@ -258,20 +258,20 @@ The file path for the `mock_data_training.py` is `model_training/mock_data_train
 This script serves as a starting point for model training and can be replaced with actual data and model architectures in the production implementation of the Low-Cost Prosthetic Design application.
 
 ```python
-# File: model_training/complex_algorithm_training.py
+## File: model_training/complex_algorithm_training.py
 
 import tensorflow as tf
 from tensorflow.keras import layers
 import numpy as np
 
-# Mock data generation (Replace this with actual data pipeline)
+## Mock data generation (Replace this with actual data pipeline)
 def generate_mock_data():
-    # Generate mock input data
-    X_train = np.random.rand(100, 10)  # Example feature data
-    y_train = np.random.randint(2, size=100)  # Example binary labels
+    ## Generate mock input data
+    X_train = np.random.rand(100, 10)  ## Example feature data
+    y_train = np.random.randint(2, size=100)  ## Example binary labels
     return X_train, y_train
 
-# Define a complex machine learning algorithm
+## Define a complex machine learning algorithm
 def build_complex_model(input_dim):
     model = tf.keras.Sequential([
         layers.Dense(64, activation='relu', input_shape=(input_dim,)),
@@ -280,16 +280,16 @@ def build_complex_model(input_dim):
     ])
     return model
 
-# Main function for training the complex model
+## Main function for training the complex model
 def train_complex_model():
-    # Generate mock data
+    ## Generate mock data
     X_train, y_train = generate_mock_data()
     
-    # Build the complex model
+    ## Build the complex model
     input_dim = X_train.shape[1]
     model = build_complex_model(input_dim)
     
-    # Compile and train the model
+    ## Compile and train the model
     model.compile(optimizer='adam',
                   loss='binary_crossentropy',
                   metrics=['accuracy'])

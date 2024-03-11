@@ -162,7 +162,7 @@ import numpy as np
 import os
 from sklearn.utils import shuffle
 
-# Define preprocessing functions
+## Define preprocessing functions
 def load_images_from_folder(folder):
     images = []
     for filename in os.listdir(folder):
@@ -186,31 +186,31 @@ def augment_data(images, labels, augment_factor):
         augmented_images.append(img)
         augmented_labels.append(label)
         for _ in range(augment_factor):
-            # Data augmentation techniques (e.g., flipping, rotation, etc.)
-            # Apply different augmentation techniques based on the project's requirements
-            augmented_img = img  # Placeholder for actual augmentation
+            ## Data augmentation techniques (e.g., flipping, rotation, etc.)
+            ## Apply different augmentation techniques based on the project's requirements
+            augmented_img = img  ## Placeholder for actual augmentation
             augmented_images.append(augmented_img)
             augmented_labels.append(label)
     return augmented_images, augmented_labels
 
-# Load and preprocess data
+## Load and preprocess data
 data_folder = "path/to/data/"
 images = load_images_from_folder(data_folder)
 images = resize_images(images, (224, 224))
 images = normalize_images(images)
-labels = [0, 1, 0, 1, ...]  # Example labels for compliant (0) and non-compliant (1) cleanliness
+labels = [0, 1, 0, 1, ...]  ## Example labels for compliant (0) and non-compliant (1) cleanliness
 
-# Data augmentation
-augment_factor = 2  # Augment each image twice
+## Data augmentation
+augment_factor = 2  ## Augment each image twice
 augmented_images, augmented_labels = augment_data(images, labels, augment_factor)
 
-# Shuffle the data
+## Shuffle the data
 augmented_images, augmented_labels = shuffle(augmented_images, augmented_labels)
 
-# Split data into training and validation sets
-# Perform additional preprocessing steps as needed for model training
+## Split data into training and validation sets
+## Perform additional preprocessing steps as needed for model training
 
-# End of preprocessing code
+## End of preprocessing code
 ```
 
 This code snippet provides a basic outline for loading, resizing, normalizing, and augmenting images as part of the data preprocessing pipeline for the Peru Restaurant Health Compliance Monitor project. Remember to customize the preprocessing functions further based on the specific requirements and characteristics of your dataset and machine learning model.
@@ -340,10 +340,10 @@ import tensorflow as tf
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense
 
-# Load preprocessed data (X_train, y_train, X_val, y_val)
-# Assumes data is already preprocessed and split into training and validation sets
+## Load preprocessed data (X_train, y_train, X_val, y_val)
+## Assumes data is already preprocessed and split into training and validation sets
 
-# Define the CNN model architecture
+## Define the CNN model architecture
 def build_model(input_shape):
     model = Sequential()
     model.add(Conv2D(32, (3, 3), activation='relu', input_shape=input_shape))
@@ -355,15 +355,15 @@ def build_model(input_shape):
     model.add(Dense(1, activation='sigmoid'))
     return model
 
-# Initialize and compile the model
-input_shape = (224, 224, 3)  # Example input shape for images
+## Initialize and compile the model
+input_shape = (224, 224, 3)  ## Example input shape for images
 model = build_model(input_shape)
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
-# Train the model
+## Train the model
 model.fit(X_train, y_train, epochs=10, validation_data=(X_val, y_val))
 
-# Save the trained model for deployment
+## Save the trained model for deployment
 model.save('cleanliness_compliance_model.h5')
 ```
 
@@ -421,23 +421,23 @@ By adhering to these best practices in code quality, documentation, and structur
 By following this step-by-step deployment plan and leveraging the recommended tools and platforms, the team can effectively deploy the machine learning model for the Peru Restaurant Health Compliance Monitor project. This roadmap provides a clear guide for seamless integration of the model into the production environment.
 
 ```Dockerfile
-# Base image with Python and TensorFlow
+## Base image with Python and TensorFlow
 FROM python:3.8-slim
 
-# Set working directory
+## Set working directory
 WORKDIR /app
 
-# Copy and install dependencies
+## Copy and install dependencies
 COPY requirements.txt /app
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy project files
+## Copy project files
 COPY . /app
 
-# Expose the necessary port (if applicable)
-# EXPOSE 5000
+## Expose the necessary port (if applicable)
+## EXPOSE 5000
 
-# Command to run the application
+## Command to run the application
 CMD ["python", "app.py"]
 ```
 

@@ -214,28 +214,28 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
 def complex_machine_learning_algorithm(data_path):
-    # Load mock social media data from the specified file path
+    ## Load mock social media data from the specified file path
     social_media_data = pd.read_csv(data_path)
 
-    # Preprocessing steps (e.g., feature engineering, data cleaning, and encoding)
+    ## Preprocessing steps (e.g., feature engineering, data cleaning, and encoding)
 
-    # Split the data into features and target variable
+    ## Split the data into features and target variable
     X = social_media_data.drop('target', axis=1)
     y = social_media_data['target']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Instantiate the complex machine learning algorithm (Random Forest as an example)
+    ## Instantiate the complex machine learning algorithm (Random Forest as an example)
     model = RandomForestClassifier(n_estimators=100, random_state=42)
 
-    # Train the model on the training data
+    ## Train the model on the training data
     model.fit(X_train, y_train)
 
-    # Make predictions on the testing data
+    ## Make predictions on the testing data
     y_pred = model.predict(X_test)
 
-    # Evaluate the model performance
+    ## Evaluate the model performance
     accuracy = accuracy_score(y_test, y_pred)
 
     return model, accuracy
@@ -262,33 +262,33 @@ from tensorflow.keras.layers import Dense
 from sklearn.model_selection import train_test_split
 
 def complex_deep_learning_algorithm(data_path):
-    # Load mock social media data from the specified file path
+    ## Load mock social media data from the specified file path
     social_media_data = pd.read_csv(data_path)
 
-    # Preprocessing steps (e.g., feature scaling, data cleaning, and encoding)
+    ## Preprocessing steps (e.g., feature scaling, data cleaning, and encoding)
 
-    # Split the data into features and target variable
+    ## Split the data into features and target variable
     X = social_media_data.drop('target', axis=1)
     y = social_media_data['target']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Perform feature scaling
+    ## Perform feature scaling
     scaler = StandardScaler()
     X_train = scaler.fit_transform(X_train)
     X_test = scaler.transform(X_test)
 
-    # Design the deep learning model architecture
+    ## Design the deep learning model architecture
     model = Sequential()
     model.add(Dense(units=64, activation='relu', input_shape=(X_train.shape[1],)))
     model.add(Dense(units=32, activation='relu'))
     model.add(Dense(units=1, activation='sigmoid'))
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
-    # Train the model on the training data
+    ## Train the model on the training data
     model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y_test))
 
     return model

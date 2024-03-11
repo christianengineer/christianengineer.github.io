@@ -5,7 +5,7 @@ permalink: posts/voicestream---advanced-speech-processing-system
 layout: article
 ---
 
-# AI VoiceStream - Advanced Speech Processing System
+## AI VoiceStream - Advanced Speech Processing System
 
 ## Objectives
 
@@ -231,35 +231,35 @@ import pandas as pd
 import librosa
 
 def train_speech_recognition_model(training_data_path):
-    # Load mock training data (assuming it's in CSV format with audio file paths and transcription)
+    ## Load mock training data (assuming it's in CSV format with audio file paths and transcription)
     training_data = pd.read_csv(training_data_path)
 
-    # Feature extraction and preprocessing
+    ## Feature extraction and preprocessing
     X = []
     y = []
     for audio_file_path, transcription in zip(training_data['audio_file_path'], training_data['transcription']):
-        # Load audio file using librosa
+        ## Load audio file using librosa
         audio, sr = librosa.load(audio_file_path, sr=None)
 
-        # Extract features (e.g., MFCCs)
+        ## Extract features (e.g., MFCCs)
         mfccs = librosa.feature.mfcc(y=audio, sr=sr, n_mfcc=13)
 
-        # Assemble feature vector and transcription label
-        X.append(mfccs.T)  # Transpose for proper shape
+        ## Assemble feature vector and transcription label
+        X.append(mfccs.T)  ## Transpose for proper shape
         y.append(transcription)
 
     X = np.array(X)
     y = np.array(y)
 
-    # Train a complex speech recognition model (e.g., deep learning model)
-    # Assuming this involves building a deep learning model using TensorFlow or PyTorch, and training on the extracted features and transcriptions
+    ## Train a complex speech recognition model (e.g., deep learning model)
+    ## Assuming this involves building a deep learning model using TensorFlow or PyTorch, and training on the extracted features and transcriptions
 
-    # Example mock model training steps
-    # model = ...
-    # model.compile(...)
-    # model.fit(X, y, ...)
+    ## Example mock model training steps
+    ## model = ...
+    ## model.compile(...)
+    ## model.fit(X, y, ...)
 
-    # For the sake of this example, we'll return a placeholder result
+    ## For the sake of this example, we'll return a placeholder result
     return "Speech recognition model trained successfully"
 ```
 
@@ -283,41 +283,41 @@ from sklearn.preprocessing import LabelEncoder
 from tensorflow.keras.utils import to_categorical
 
 def train_deep_speech_recognition_model(training_data_path):
-    # Load mock training data (assuming it's in CSV format with audio file paths and transcription)
+    ## Load mock training data (assuming it's in CSV format with audio file paths and transcription)
     training_data = pd.read_csv(training_data_path)
 
-    # Feature extraction and preprocessing
+    ## Feature extraction and preprocessing
     X = []
     y_transcriptions = training_data['transcription']
 
     for audio_file_path in training_data['audio_file_path']:
-        # Load audio file using librosa
+        ## Load audio file using librosa
         audio, sr = librosa.load(audio_file_path, sr=None)
 
-        # Extract features (e.g., MFCCs)
+        ## Extract features (e.g., MFCCs)
         mfccs = librosa.feature.mfcc(y=audio, sr=sr, n_mfcc=40)
 
-        # Assemble feature vector
-        X.append(mfccs.T)  # Transpose for proper shape
+        ## Assemble feature vector
+        X.append(mfccs.T)  ## Transpose for proper shape
 
     X = np.array(X)
 
-    # Encode transcriptions into numerical labels
+    ## Encode transcriptions into numerical labels
     label_encoder = LabelEncoder()
     y = label_encoder.fit_transform(y_transcriptions)
-    y = to_categorical(y)  # Convert to one-hot encoding
+    y = to_categorical(y)  ## Convert to one-hot encoding
 
-    # Define and train a complex deep learning model (e.g., LSTM-based model)
+    ## Define and train a complex deep learning model (e.g., LSTM-based model)
     model = Sequential()
     model.add(LSTM(128, input_shape=(X.shape[1], X.shape[2])))
     model.add(Dropout(0.2))
     model.add(Dense(64, activation='relu'))
-    model.add(Dense(len(label_encoder.classes_), activation='softmax'))  # Output layer with softmax activation
+    model.add(Dense(len(label_encoder.classes_), activation='softmax'))  ## Output layer with softmax activation
 
     model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
     model.fit(X, y, batch_size=32, epochs=10, validation_split=0.2)
 
-    # For the sake of this example, we'll return a placeholder result
+    ## For the sake of this example, we'll return a placeholder result
     return "Deep speech recognition model trained successfully"
 ```
 

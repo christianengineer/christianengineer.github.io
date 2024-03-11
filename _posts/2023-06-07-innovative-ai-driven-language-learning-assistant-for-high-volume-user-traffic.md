@@ -5,7 +5,7 @@ permalink: posts/innovative-ai-driven-language-learning-assistant-for-high-volum
 layout: article
 ---
 
-# AI-Based Language Learning Assistant
+## AI-Based Language Learning Assistant
 
 ## Description
 
@@ -120,7 +120,7 @@ Following is the explanation of the main components:
 Based on the structure I provided earlier, our AI logic would likely go into the 'services' folder, specifically within 'language_service.py'. Here is a simple mock-up to give an idea of what the file might look like:
 
 ```python
-# File: services/language_service.py
+## File: services/language_service.py
 
 import numpy as np
 from keras.models import load_model
@@ -129,27 +129,27 @@ import spacy
 class LanguageService:
 
     def __init__(self):
-        # Initialize the NLP module (using English for example)
+        ## Initialize the NLP module (using English for example)
         self.nlp = spacy.load("en_core_web_sm")
 
-        # Fetch and load the pre-trained models
+        ## Fetch and load the pre-trained models
         self.translation_model = load_model('../machine_learning/models/translation_model.hdf5')
         self.grammar_model = load_model('../machine_learning/models/grammar_model.hdf5')
 
     def is_sentence_correct(self, sentence: str):
-        # Use the grammar model to check if the input sentence is correctly structured
+        ## Use the grammar model to check if the input sentence is correctly structured
         prediction = self.grammar_model.predict(np.array([sentence]))
         return prediction[0][0] > 0.5
 
     def translate_sentence(self, sentence: str, target_language='es'):
-        # Use the translation model to translate the input sentence into the target language
-        # We should already have preprocessed and embedded our input sentence
+        ## Use the translation model to translate the input sentence into the target language
+        ## We should already have preprocessed and embedded our input sentence
         prediction = self.translation_model.predict(np.array([sentence]))
         return self._convert_prediction_to_text(prediction, target_language)
 
     def _convert_prediction_to_text(self, prediction, language='en'):
-        # Function to convert machine-readable text back to human readable
-        # Implementation will depend on how you handle translations
+        ## Function to convert machine-readable text back to human readable
+        ## Implementation will depend on how you handle translations
         raise NotImplementedError('This method should be implemented to convert prediction to text')
 ```
 

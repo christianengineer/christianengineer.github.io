@@ -64,34 +64,34 @@ By establishing a comprehensive MLOps infrastructure that integrates CI/CD pract
 food-quality-control-ai/
 │
 ├── data/
-│   ├── raw_data/           # Raw image data from food processing plants
-│   ├── processed_data/     # Processed image data for model training and evaluation
-│   └── models/             # Trained machine learning models
+│   ├── raw_data/           ## Raw image data from food processing plants
+│   ├── processed_data/     ## Processed image data for model training and evaluation
+│   └── models/             ## Trained machine learning models
 │
-├── notebooks/              # Jupyter notebooks for data exploration and model development
+├── notebooks/              ## Jupyter notebooks for data exploration and model development
 │
 ├── src/
-│   ├── preprocessing/      # Image preprocessing scripts using OpenCV
-│   ├── feature_extraction/  # Feature extraction scripts
-│   ├── model_training/      # Scripts for training machine learning models using Scikit-Learn
-│   ├── model_evaluation/    # Scripts for evaluating model performance
-│   ├── inference/           # Inference scripts for real-time image analysis
-│   └── utils/               # Utility functions and helper scripts
+│   ├── preprocessing/      ## Image preprocessing scripts using OpenCV
+│   ├── feature_extraction/  ## Feature extraction scripts
+│   ├── model_training/      ## Scripts for training machine learning models using Scikit-Learn
+│   ├── model_evaluation/    ## Scripts for evaluating model performance
+│   ├── inference/           ## Inference scripts for real-time image analysis
+│   └── utils/               ## Utility functions and helper scripts
 │
 ├── config/
-│   ├── kafka_config.yml    # Configuration file for Kafka setup
-│   ├── model_config.yml    # Configuration file for model hyperparameters
-│   └── logging_config.yml  # Logging configuration file
+│   ├── kafka_config.yml    ## Configuration file for Kafka setup
+│   ├── model_config.yml    ## Configuration file for model hyperparameters
+│   └── logging_config.yml  ## Logging configuration file
 │
 ├── docker/
-│   ├── Dockerfile          # Dockerfile for building the AI application image
-│   └── docker-compose.yml  # Docker Compose file for managing multiple containers
+│   ├── Dockerfile          ## Dockerfile for building the AI application image
+│   └── docker-compose.yml  ## Docker Compose file for managing multiple containers
 │
-├── tests/                   # Unit tests and integration tests for code validation
+├── tests/                   ## Unit tests and integration tests for code validation
 │
-├── README.md                # Project overview, setup instructions, and guidelines
+├── README.md                ## Project overview, setup instructions, and guidelines
 │
-└── requirements.txt         # Python dependencies for the project
+└── requirements.txt         ## Python dependencies for the project
 ```
 
 In this file structure:
@@ -111,15 +111,15 @@ This scalable file structure organizes the different components of the Food Qual
 ```
 models/
 │
-├── image_classification_model.pkl        # Trained machine learning model for image classification
+├── image_classification_model.pkl        ## Trained machine learning model for image classification
 │
-├── anomaly_detection_model.pkl           # Trained model for anomaly detection in food products
+├── anomaly_detection_model.pkl           ## Trained model for anomaly detection in food products
 │
-├── preprocessing_pipeline.pkl           # Preprocessing pipeline for image data
+├── preprocessing_pipeline.pkl           ## Preprocessing pipeline for image data
 │
-├── image_classification_metrics.txt      # Evaluation metrics for image classification model
+├── image_classification_metrics.txt      ## Evaluation metrics for image classification model
 │
-├── anomaly_detection_metrics.txt         # Evaluation metrics for anomaly detection model
+├── anomaly_detection_metrics.txt         ## Evaluation metrics for anomaly detection model
 ```
 
 In the **models/** directory of the Food Quality Control AI system:
@@ -136,18 +136,18 @@ These files in the **models/** directory capture the trained models, preprocessi
 ```
 deployment/
 │
-├── docker-compose.yml             # Docker Compose file for managing containers
+├── docker-compose.yml             ## Docker Compose file for managing containers
 │
 ├── app/
-│   ├── app.py                     # Flask application for serving model predictions
-│   ├── templates/                 # HTML templates for the web application
-│   └── static/                    # Static files (CSS, JS) for the web application
+│   ├── app.py                     ## Flask application for serving model predictions
+│   ├── templates/                 ## HTML templates for the web application
+│   └── static/                    ## Static files (CSS, JS) for the web application
 │
 ├── kafka/
-│   ├── producer.py                # Kafka producer script for data streaming
-│   └── consumer.py                # Kafka consumer script for processing streamed data
+│   ├── producer.py                ## Kafka producer script for data streaming
+│   └── consumer.py                ## Kafka consumer script for processing streamed data
 │
-└── README.md                      # Deployment instructions and guidelines
+└── README.md                      ## Deployment instructions and guidelines
 ```
 
 In the **deployment/** directory of the Food Quality Control AI system:
@@ -161,7 +161,7 @@ The **deployment/** directory streamlines the deployment process of the Food Qua
 ## Training Script File for Food Quality Control AI
 
 ```python
-# File Path: src/model_training/train_model.py
+## File Path: src/model_training/train_model.py
 
 import numpy as np
 import pandas as pd
@@ -170,26 +170,26 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 
-# Load mock image data for training
+## Load mock image data for training
 data = pd.read_csv('data/mock_image_data.csv')
 X = data.drop('label', axis=1)
 y = data['label']
 
-# Train-test split
+## Train-test split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize and train a Random Forest classifier
+## Initialize and train a Random Forest classifier
 clf = RandomForestClassifier()
 clf.fit(X_train, y_train)
 
-# Make predictions on the test set
+## Make predictions on the test set
 y_pred = clf.predict(X_test)
 
-# Calculate accuracy
+## Calculate accuracy
 accuracy = accuracy_score(y_test, y_pred)
 print(f'Accuracy: {accuracy}')
 
-# Save the trained model
+## Save the trained model
 joblib.dump(clf, 'models/image_classification_model.pkl')
 ```
 
@@ -200,7 +200,7 @@ The script showcases the process of training a machine learning model for image 
 ## Complex Machine Learning Algorithm Script for Food Quality Control AI
 
 ```python
-# File Path: src/model_training/complex_model_algorithm.py
+## File Path: src/model_training/complex_model_algorithm.py
 
 import numpy as np
 import pandas as pd
@@ -208,31 +208,31 @@ import joblib
 from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.metrics import accuracy_score, precision_score, recall_score
 
-# Load mock image data for training
+## Load mock image data for training
 data = pd.read_csv('data/mock_image_data.csv')
 X = data.drop('label', axis=1)
 y = data['label']
 
-# Instantiate a Gradient Boosting classifier with hyperparameters
+## Instantiate a Gradient Boosting classifier with hyperparameters
 clf = GradientBoostingClassifier(n_estimators=100, learning_rate=0.1, max_depth=3)
 
-# Train the model
+## Train the model
 clf.fit(X, y)
 
-# Make predictions on the training data
+## Make predictions on the training data
 y_pred = clf.predict(X)
 
-# Calculate evaluation metrics
+## Calculate evaluation metrics
 accuracy = accuracy_score(y, y_pred)
 precision = precision_score(y, y_pred, average='weighted')
 recall = recall_score(y, y_pred, average='weighted')
 
-# Print evaluation metrics
+## Print evaluation metrics
 print(f'Accuracy: {accuracy}')
 print(f'Precision: {precision}')
 print(f'Recall: {recall}')
 
-# Save the trained model
+## Save the trained model
 joblib.dump(clf, 'models/complex_machine_learning_model.pkl')
 ```
 

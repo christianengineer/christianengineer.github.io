@@ -5,7 +5,7 @@ permalink: posts/sustainable-operations-planner-for-businesses-tensorflow-keras-
 layout: article
 ---
 
-# Sustainable Operations Planner for Businesses
+## Sustainable Operations Planner for Businesses
 
 ## Objectives and Benefits
 ### Audience: Sustainability Officers at Businesses
@@ -252,31 +252,31 @@ import pandas as pd
 from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import StandardScaler
 
-# Load the raw data into a DataFrame
+## Load the raw data into a DataFrame
 data = pd.read_csv("production_data.csv")
 
-# Handling Missing Data
-# Impute missing values in numerical features with the median
+## Handling Missing Data
+## Impute missing values in numerical features with the median
 num_imputer = SimpleImputer(strategy='median')
 data[['energy_consumed', 'waste_generated']] = num_imputer.fit_transform(data[['energy_consumed', 'waste_generated']])
 
-# Outlier Detection and Treatment
-# Implement outlier clipping for energy consumption feature
+## Outlier Detection and Treatment
+## Implement outlier clipping for energy consumption feature
 data['energy_consumed'] = data['energy_consumed'].clip(lower=data['energy_consumed'].quantile(0.05), upper=data['energy_consumed'].quantile(0.95))
 
-# Data Balancing
-# Apply SMOTE for oversampling minority waste types
-# Code here to balance data
+## Data Balancing
+## Apply SMOTE for oversampling minority waste types
+## Code here to balance data
 
-# Feature Scaling
-# Normalize numerical features to ensure consistent scales
+## Feature Scaling
+## Normalize numerical features to ensure consistent scales
 scaler = StandardScaler()
 data[['energy_consumed', 'waste_generated']] = scaler.fit_transform(data[['energy_consumed', 'waste_generated']])
 
-# Feature Selection
-# Code here to select relevant features based on domain knowledge or feature importance ranking
+## Feature Selection
+## Code here to select relevant features based on domain knowledge or feature importance ranking
 
-# Save preprocessed data to a new CSV file
+## Save preprocessed data to a new CSV file
 data.to_csv("preprocessed_data.csv", index=False)
 ```
 
@@ -386,13 +386,13 @@ import numpy as np
 from faker import Faker
 from sklearn import preprocessing
 
-# Set random seed for reproducibility
+## Set random seed for reproducibility
 np.random.seed(42)
 
-# Create a Faker object for generating fake data
+## Create a Faker object for generating fake data
 fake = Faker()
 
-# Generate fictitious data for the dataset
+## Generate fictitious data for the dataset
 num_samples = 1000
 
 data = pd.DataFrame({
@@ -405,14 +405,14 @@ data = pd.DataFrame({
     'waste_type': [fake.random_element(elements=('Plastic', 'Paper', 'Organic')) for _ in range(num_samples)]
 })
 
-# Encode categorical variables
+## Encode categorical variables
 label_encoder = preprocessing.LabelEncoder()
 data['weather_conditions'] = label_encoder.fit_transform(data['weather_conditions'])
 data['waste_type'] = label_encoder.fit_transform(data['waste_type'])
 
-# Add derived features or interaction terms based on feature engineering strategies
+## Add derived features or interaction terms based on feature engineering strategies
 
-# Save fictitious dataset to CSV
+## Save fictitious dataset to CSV
 data.to_csv("fictitious_production_data.csv", index=False)
 ```
 
@@ -460,30 +460,30 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 import joblib
 
-# Load preprocessed dataset
+## Load preprocessed dataset
 data = pd.read_csv("preprocessed_data.csv")
 
-# Split data into features and target
+## Split data into features and target
 X = data.drop('energy_consumed', axis=1)
 y = data['energy_consumed']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize Random Forest Regressor model
+## Initialize Random Forest Regressor model
 model = RandomForestRegressor(n_estimators=100, random_state=42)
 
-# Fit the model on the training data
+## Fit the model on the training data
 model.fit(X_train, y_train)
 
-# Make predictions on the test data
+## Make predictions on the test data
 predictions = model.predict(X_test)
 
-# Evaluate the model
+## Evaluate the model
 mse = mean_squared_error(y_test, predictions)
 print(f'Mean Squared Error: {mse}')
 
-# Save the model for future use
+## Save the model for future use
 joblib.dump(model, 'energy_consumption_model.pkl')
 ```
 
@@ -575,27 +575,27 @@ By following these best practices for code quality, structure, and documentation
 By following this deployment plan tailored to the Sustainable Operations Planner project's unique demands and characteristics, Alicorp can smoothly transition the machine learning model into production, ensuring scalability, reliability, and seamless integration with the existing workflow for sustainable operational practices.
 
 ```dockerfile
-# Use an official Python runtime as a parent image
+## Use an official Python runtime as a parent image
 FROM python:3.8-slim
 
-# Set the working directory in the container
+## Set the working directory in the container
 WORKDIR /app
 
-# Copy the current directory contents into the container at /app
+## Copy the current directory contents into the container at /app
 COPY . /app
 
-# Install any necessary dependencies
+## Install any necessary dependencies
 RUN pip install --upgrade pip
 RUN pip install pandas scikit-learn joblib Flask gunicorn
 
-# Expose the port the app runs on
+## Expose the port the app runs on
 EXPOSE 5000
 
-# Define environment variables
+## Define environment variables
 ENV FLASK_APP=app.py
 ENV FLASK_RUN_HOST=0.0.0.0
 
-# Command to run the application
+## Command to run the application
 CMD ["gunicorn", "-w", "4", "--bind", "0.0.0.0:5000", "app:app"]
 ```
 

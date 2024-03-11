@@ -5,7 +5,7 @@ permalink: posts/rural-peru-e-library-access-system-keras-flask-airflow-promethe
 layout: article
 ---
 
-# AI Rural Peru E-Library Access System
+## AI Rural Peru E-Library Access System
 
 ## Objectives:
 - Provide access to a curated e-library for students and educators in rural Peru.
@@ -31,7 +31,7 @@ layout: article
 
 By leveraging these libraries and tools, we can create an efficient and scalable AI Rural Peru E-Library Access System that caters to the educational needs of rural students and educators in a sustainable and accessible manner.
 
-# MLOps Infrastructure for AI Rural Peru E-Library Access System
+## MLOps Infrastructure for AI Rural Peru E-Library Access System
 
 ## Objectives:
 - Ensure seamless integration of machine learning models into the e-library system.
@@ -66,55 +66,55 @@ By leveraging these libraries and tools, we can create an efficient and scalable
 
 By implementing a robust MLOps infrastructure with these components, the AI Rural Peru E-Library Access System can effectively leverage machine learning capabilities to provide personalized and high-quality learning materials to students and educators in rural areas, while ensuring scalability, reliability, and maintainability of the system.
 
-# Scalable File Structure for AI Rural Peru E-Library Access System
+## Scalable File Structure for AI Rural Peru E-Library Access System
 
 ```
 AI-Rural-Peru-E-Library/
 │
-├── ml_models/  # Directory for storing machine learning models
-│   ├── recommendation_model.h5  # Trained model for personalized recommendations
-│   └── classification_model.h5  # Trained model for content classification
+├── ml_models/  ## Directory for storing machine learning models
+│   ├── recommendation_model.h5  ## Trained model for personalized recommendations
+│   └── classification_model.h5  ## Trained model for content classification
 │
-├── data_processing/  # Scripts for data preprocessing
-│   ├── data_cleaning.py  # Script for cleaning and preprocessing raw data
-│   └── feature_engineering.py  # Script for generating features for machine learning models
+├── data_processing/  ## Scripts for data preprocessing
+│   ├── data_cleaning.py  ## Script for cleaning and preprocessing raw data
+│   └── feature_engineering.py  ## Script for generating features for machine learning models
 │
-├── web_app/  # Flask application for the e-library
-│   ├── templates/  # HTML templates for front-end interface
-│   ├── static/  # Static files like CSS and JavaScript
-│   ├── app.py  # Main Flask application file
-│   └── routes.py  # File defining API endpoints and logic
+├── web_app/  ## Flask application for the e-library
+│   ├── templates/  ## HTML templates for front-end interface
+│   ├── static/  ## Static files like CSS and JavaScript
+│   ├── app.py  ## Main Flask application file
+│   └── routes.py  ## File defining API endpoints and logic
 │
-├── airflow_dags/  # Airflow DAGs for orchestrating ML workflows
-│   ├── data_processing_dag.py  # DAG for scheduling data processing tasks
-│   └── model_training_dag.py  # DAG for scheduling model training and deployment tasks
+├── airflow_dags/  ## Airflow DAGs for orchestrating ML workflows
+│   ├── data_processing_dag.py  ## DAG for scheduling data processing tasks
+│   └── model_training_dag.py  ## DAG for scheduling model training and deployment tasks
 │
-├── monitoring/  # Configuration files for Prometheus and Grafana
-│   ├── prometheus.yml  # Configuration file for Prometheus monitoring
-│   └── dashboard.json  # Grafana dashboard configuration for visualization
+├── monitoring/  ## Configuration files for Prometheus and Grafana
+│   ├── prometheus.yml  ## Configuration file for Prometheus monitoring
+│   └── dashboard.json  ## Grafana dashboard configuration for visualization
 │
-├── config/  # Configuration files for different components
-│   ├── config.py  # Flask and system configuration settings
-│   └── airflow_config.py  # Airflow configuration settings
+├── config/  ## Configuration files for different components
+│   ├── config.py  ## Flask and system configuration settings
+│   └── airflow_config.py  ## Airflow configuration settings
 │
-├── requirements.txt  # List of Python dependencies for the project
-├── Dockerfile  # Dockerfile for containerizing the application
-├── README.md  # Project documentation and setup instructions
-└── LICENSE  # License information for the project
+├── requirements.txt  ## List of Python dependencies for the project
+├── Dockerfile  ## Dockerfile for containerizing the application
+├── README.md  ## Project documentation and setup instructions
+└── LICENSE  ## License information for the project
 ```
 
 This file structure provides a scalable organization for the AI Rural Peru E-Library Access System, separating different components such as machine learning models, data processing scripts, Flask application, Airflow DAGs, monitoring configurations, and other settings. This structure facilitates modularity, ease of maintenance, and collaboration among team members working on different aspects of the project. Each directory contains relevant files and scripts related to its purpose, making it easy to navigate and manage the project as it grows in complexity.
 
-# Models Directory in AI Rural Peru E-Library Access System
+## Models Directory in AI Rural Peru E-Library Access System
 
 The `ml_models/` directory in the AI Rural Peru E-Library Access System contains the machine learning models used for personalized recommendations and content classification. Here is an expanded view of the directory and its files:
 
 ```
 ml_models/
 │
-├── recommendation_model.h5  # Trained model for personalized recommendations
+├── recommendation_model.h5  ## Trained model for personalized recommendations
 │
-└── classification_model.h5  # Trained model for content classification
+└── classification_model.h5  ## Trained model for content classification
 ```
 
 ## Files in the `ml_models/` Directory:
@@ -131,26 +131,26 @@ ml_models/
 
 By storing the trained models in the `ml_models/` directory, the AI Rural Peru E-Library Access System can easily access and deploy these models within the Flask application for delivering personalized recommendations and enhanced content classification features to users. This structured approach enables efficient model management and integration, enhancing the overall user experience of the e-library platform for students and educators in rural areas.
 
-# Deployment Directory in AI Rural Peru E-Library Access System
+## Deployment Directory in AI Rural Peru E-Library Access System
 
 The `deployment/` directory in the AI Rural Peru E-Library Access System contains configuration files and scripts for deploying and running the Flask application, Airflow DAGs, Prometheus monitoring, and other components. Below is an expanded view of the directory and its files:
 
 ```
 deployment/
 │
-├── Dockerfile  # Dockerfile for containerizing the Flask application
+├── Dockerfile  ## Dockerfile for containerizing the Flask application
 │
-├── requirements.txt  # List of Python dependencies for the project
+├── requirements.txt  ## List of Python dependencies for the project
 │
 ├── airflow/
-│   ├── airflow_dags/  # Airflow DAGs for ML workflows
-│   │   ├── data_processing_dag.py  # DAG for data processing tasks
-│   │   └── model_training_dag.py  # DAG for training and deploying models
-│   └── airflow_config.py  # Configuration file for Airflow settings
+│   ├── airflow_dags/  ## Airflow DAGs for ML workflows
+│   │   ├── data_processing_dag.py  ## DAG for data processing tasks
+│   │   └── model_training_dag.py  ## DAG for training and deploying models
+│   └── airflow_config.py  ## Configuration file for Airflow settings
 │
 ├── monitoring/
-│   ├── prometheus.yml  # Configuration file for Prometheus monitoring service
-│   └── dashboard.json  # Grafana dashboard configuration for visualization
+│   ├── prometheus.yml  ## Configuration file for Prometheus monitoring service
+│   └── dashboard.json  ## Grafana dashboard configuration for visualization
 ```
 
 ## Files in the `deployment/` Directory:
@@ -178,38 +178,38 @@ deployment/
 By organizing deployment-related files in the `deployment/` directory, the AI Rural Peru E-Library Access System can streamline the deployment process, automate task scheduling with Airflow, monitor system performance with Prometheus, and ensure scalability and reliability of the application for providing quality learning materials to students and educators in rural areas.
 
 ```python
-# File: train_model.py
-# Description: Training script for the machine learning model of the Rural Peru E-Library Access System using mock data
+## File: train_model.py
+## Description: Training script for the machine learning model of the Rural Peru E-Library Access System using mock data
 
 import numpy as np
 import pandas as pd
 from keras.models import Sequential
 from keras.layers import Dense
 
-# Path to mock dataset for training
+## Path to mock dataset for training
 data_path = 'data/mock_data.csv'
 
-# Load mock data
+## Load mock data
 data = pd.read_csv(data_path)
 
-# Preprocess data (if required)
-# For example: data cleaning, feature engineering, etc.
+## Preprocess data (if required)
+## For example: data cleaning, feature engineering, etc.
 
-# Define features and target variable
+## Define features and target variable
 X = data.drop(columns=['target_column'])
 y = data['target_column']
 
-# Define and compile the neural network model
+## Define and compile the neural network model
 model = Sequential()
 model.add(Dense(64, input_dim=X.shape[1], activation='relu'))
 model.add(Dense(32, activation='relu'))
 model.add(Dense(1, activation='sigmoid'))
 model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
 
-# Train the model
+## Train the model
 model.fit(X, y, epochs=10, batch_size=32, validation_split=0.2)
 
-# Save the trained model
+## Save the trained model
 model.save('ml_models/trained_model.h5')
 ```
 
@@ -218,8 +218,8 @@ In this script (`train_model.py`), a neural network model is trained using mock 
 Please ensure to replace `'data/mock_data.csv'` with the actual path to your mock dataset file, and customize the model architecture, training parameters, and data preprocessing steps based on the requirements of your specific machine learning model for the e-library system.
 
 ```python
-# File: complex_ml_algorithm.py
-# Description: Complex machine learning algorithm for the Rural Peru E-Library Access System using mock data
+## File: complex_ml_algorithm.py
+## Description: Complex machine learning algorithm for the Rural Peru E-Library Access System using mock data
 
 import numpy as np
 import pandas as pd
@@ -228,34 +228,34 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 import joblib
 
-# Path to mock dataset for training
+## Path to mock dataset for training
 data_path = 'data/mock_data.csv'
 
-# Load mock data
+## Load mock data
 data = pd.read_csv(data_path)
 
-# Preprocess data (if required)
-# For example: handling missing values, encoding categorical variables, feature scaling, etc.
+## Preprocess data (if required)
+## For example: handling missing values, encoding categorical variables, feature scaling, etc.
 
-# Define features and target variable
+## Define features and target variable
 X = data.drop(columns=['target_column'])
 y = data['target_column']
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Define and train the Random Forest classifier
+## Define and train the Random Forest classifier
 rf_model = RandomForestClassifier(n_estimators=100, random_state=42)
 rf_model.fit(X_train, y_train)
 
-# Make predictions on the test set
+## Make predictions on the test set
 predictions = rf_model.predict(X_test)
 
-# Calculate accuracy
+## Calculate accuracy
 accuracy = accuracy_score(y_test, predictions)
 print(f'Accuracy: {accuracy}')
 
-# Save the trained model
+## Save the trained model
 joblib.dump(rf_model, 'ml_models/complex_algorithm_model.pkl')
 ```
 

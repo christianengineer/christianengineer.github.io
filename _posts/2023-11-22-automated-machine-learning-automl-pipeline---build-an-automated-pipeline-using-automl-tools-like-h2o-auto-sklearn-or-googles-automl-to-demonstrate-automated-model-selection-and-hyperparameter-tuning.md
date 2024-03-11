@@ -5,7 +5,7 @@ permalink: posts/automated-machine-learning-automl-pipeline---build-an-automated
 layout: article
 ---
 
-# AI Automated Machine Learning (AutoML) Pipeline
+## AI Automated Machine Learning (AutoML) Pipeline
 
 ## Objectives
 The objective of building an automated pipeline using AutoML tools is to streamline the process of model selection and hyperparameter tuning for machine learning and deep learning models. By utilizing AutoML tools, we can automate the end-to-end process of building, training, and deploying machine learning models, thus reducing the manual effort required for experimentation and optimization.
@@ -34,7 +34,7 @@ The automation pipeline will be orchestrated using a workflow management tool su
 By using the chosen libraries and following the system design strategies, we aim to build a scalable, data-intensive, AI application that leverages the power of AutoML to automate the process of model selection and hyperparameter tuning.
 
 
-# Infrastructure for the Automated Machine Learning (AutoML) Pipeline
+## Infrastructure for the Automated Machine Learning (AutoML) Pipeline
 
 ## Cloud Infrastructure
 To support the automated Machine Learning (AutoML) pipeline, we can leverage cloud infrastructure services such as Amazon Web Services (AWS), Microsoft Azure, or Google Cloud Platform. The cloud infrastructure provides scalable and reliable resources for building, training, and deploying machine learning models. Some key components of the infrastructure are:
@@ -71,7 +71,7 @@ To manage and orchestrate the pipeline, we can utilize the following services:
 
 By implementing a robust cloud infrastructure, utilizing data processing and integration tools, and incorporating automation and orchestration capabilities, we can build a scalable, data-intensive AI application that effectively demonstrates automated model selection and hyperparameter tuning using AutoML tools such as H2O, Auto-sklearn, or Google's AutoML.
 
-# Scalable File Structure for the Automated Machine Learning (AutoML) Pipeline Repository
+## Scalable File Structure for the Automated Machine Learning (AutoML) Pipeline Repository
 
 To effectively organize the repository for the automated Machine Learning (AutoML) pipeline, we need a scalable file structure that facilitates modularity, reusability, and ease of maintenance. The suggested file structure is as follows:
 
@@ -250,24 +250,24 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 
 def complex_machine_learning_algorithm(data_file_path):
-    # Load mock data from the specified file path
+    ## Load mock data from the specified file path
     data = pd.read_csv(data_file_path)
 
-    # Preprocessing the data
+    ## Preprocessing the data
     X = data.drop('target', axis=1)
     y = data['target']
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize the model (in this case, a Random Forest Classifier)
+    ## Initialize the model (in this case, a Random Forest Classifier)
     model = RandomForestClassifier(n_estimators=100, random_state=42)
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train)
 
-    # Make predictions
+    ## Make predictions
     y_pred = model.predict(X_test)
 
-    # Evaluate the model
+    ## Evaluate the model
     accuracy = accuracy_score(y_test, y_pred)
 
     return model, accuracy
@@ -283,7 +283,7 @@ In this function:
 To use this function, the file path to the mock data should be passed as an argument. For example:
 
 ```python
-data_file_path = 'path_to_mock_data.csv'  # Replace with the actual file path
+data_file_path = 'path_to_mock_data.csv'  ## Replace with the actual file path
 trained_model, accuracy = complex_machine_learning_algorithm(data_file_path)
 print("Model trained and evaluated with accuracy:", accuracy)
 ```
@@ -299,35 +299,35 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import accuracy_score
 
 def complex_deep_learning_algorithm(data_file_path):
-    # Load mock data from the specified file path
+    ## Load mock data from the specified file path
     data = pd.read_csv(data_file_path)
 
-    # Preprocessing the data
+    ## Preprocessing the data
     X = data.drop('target', axis=1)
     y = data['target']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Standardize the data
+    ## Standardize the data
     scaler = StandardScaler()
     X_train = scaler.fit_transform(X_train)
     X_test = scaler.transform(X_test)
 
-    # Build a deep learning model using TensorFlow/Keras
+    ## Build a deep learning model using TensorFlow/Keras
     model = tf.keras.models.Sequential([
         tf.keras.layers.Dense(64, activation='relu', input_shape=(X_train.shape[1],)),
         tf.keras.layers.Dense(64, activation='relu'),
         tf.keras.layers.Dense(1, activation='sigmoid')
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y_test))
 
-    # Evaluate the model
+    ## Evaluate the model
     y_pred = (model.predict(X_test) > 0.5).astype("int32")
     accuracy = accuracy_score(y_test, y_pred)
 
@@ -346,7 +346,7 @@ In this function:
 To use this function, the file path to the mock data should be passed as an argument. For example:
 
 ```python
-data_file_path = 'path_to_mock_data.csv'  # Replace with the actual file path
+data_file_path = 'path_to_mock_data.csv'  ## Replace with the actual file path
 trained_model, accuracy = complex_deep_learning_algorithm(data_file_path)
 print("Model trained and evaluated with accuracy:", accuracy)
 ```

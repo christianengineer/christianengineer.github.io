@@ -174,37 +174,37 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.impute import SimpleImputer
-from category_encoders import TargetEncoder # Assuming target encoding is used for categorical variables
+from category_encoders import TargetEncoder ## Assuming target encoding is used for categorical variables
 
-# Load the raw data
+## Load the raw data
 data = pd.read_csv('data.csv')
 
-# Separate features (X) and target variable (y)
+## Separate features (X) and target variable (y)
 X = data.drop(columns=['target_column'])
 y = data['target_column']
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Impute missing values in numerical features with mean
+## Impute missing values in numerical features with mean
 imputer = SimpleImputer(strategy='mean')
 X_train[['numerical_column']] = imputer.fit_transform(X_train[['numerical_column']])
 X_test[['numerical_column']] = imputer.transform(X_test[['numerical_column']])
 
-# Target encode categorical variables
+## Target encode categorical variables
 encoder = TargetEncoder(cols=['categorical_column'])
 X_train[['categorical_column']] = encoder.fit_transform(X_train[['categorical_column']], y_train)
 X_test[['categorical_column']] = encoder.transform(X_test[['categorical_column'], y_test)
 
-# Scale numerical features
+## Scale numerical features
 scaler = StandardScaler()
 X_train[['numerical_column']] = scaler.fit_transform(X_train[['numerical_column']])
 X_test[['numerical_column']] = scaler.transform(X_test[['numerical_column']])
 
-# Display the preprocessed data
+## Display the preprocessed data
 print(X_train.head())
 
-# Save the preprocessed data for model training
+## Save the preprocessed data for model training
 X_train.to_csv('X_train.csv', index=False)
 X_test.to_csv('X_test.csv', index=False)
 y_train.to_csv('y_train.csv', index=False)
@@ -330,28 +330,28 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_squared_error
 
-# Load preprocessed data
+## Load preprocessed data
 data = pd.read_csv('preprocessed_data.csv')
 
-# Separate features and target variable
+## Separate features and target variable
 X = data.drop(columns=['Revenue'])
 y = data['Revenue']
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Train a Random Forest Regressor model
+## Train a Random Forest Regressor model
 rf_model = RandomForestRegressor(n_estimators=100, random_state=42)
 rf_model.fit(X_train, y_train)
 
-# Make predictions on the test set
+## Make predictions on the test set
 predictions = rf_model.predict(X_test)
 
-# Calculate Mean Squared Error
+## Calculate Mean Squared Error
 mse = mean_squared_error(y_test, predictions)
 print(f'Mean Squared Error: {mse}')
 
-# Save the trained model
+## Save the trained model
 import joblib
 joblib.dump(rf_model, 'dynamic_pricing_model.pkl')
 ```
@@ -419,27 +419,27 @@ By following these conventions for code quality and structure, the provided code
 By following this deployment plan and utilizing the recommended tools and platforms at each step, your team can effectively deploy the machine learning model into production while ensuring scalability, maintainability, and performance monitoring.
 
 ```Dockerfile
-# Use a base image with Python and required dependencies
+## Use a base image with Python and required dependencies
 FROM python:3.8-slim
 
-# Set the working directory in the container
+## Set the working directory in the container
 WORKDIR /app
 
-# Copy the requirements file and install dependencies
+## Copy the requirements file and install dependencies
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the preprocessed data and the trained model
+## Copy the preprocessed data and the trained model
 COPY preprocessed_data.csv .
 COPY dynamic_pricing_model.pkl .
 
-# Copy the Python script for running the model
+## Copy the Python script for running the model
 COPY model_run.py .
 
-# Expose the API port
+## Expose the API port
 EXPOSE 5000
 
-# Command to run the application
+## Command to run the application
 CMD ["python", "model_run.py"]
 ```
 

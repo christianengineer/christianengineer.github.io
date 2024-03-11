@@ -5,7 +5,7 @@ permalink: posts/smartcity---ai-solutions-for-smart-cities
 layout: article
 ---
 
-# AI SmartCity - AI Solutions for Smart Cities Repository
+## AI SmartCity - AI Solutions for Smart Cities Repository
 
 ## Objectives
 
@@ -256,24 +256,24 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 
 def train_traffic_prediction_model(data_file_path):
-    # Load mock traffic data from the specified file path
+    ## Load mock traffic data from the specified file path
     traffic_data = pd.read_csv(data_file_path)
 
-    # Preprocessing and feature engineering
-    # ...
+    ## Preprocessing and feature engineering
+    ## ...
 
-    # Split the data into features and target variable
+    ## Split the data into features and target variable
     X = traffic_data.drop('traffic_volume', axis=1)
     y = traffic_data['traffic_volume']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize and train a random forest regression model
+    ## Initialize and train a random forest regression model
     model = RandomForestRegressor(n_estimators=100, random_state=42)
     model.fit(X_train, y_train)
 
-    # Evaluate the model on the testing set
+    ## Evaluate the model on the testing set
     y_pred = model.predict(X_test)
     mse = mean_squared_error(y_test, y_pred)
 
@@ -298,25 +298,25 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import mean_squared_error
 
 def train_energy_consumption_model(data_file_path):
-    # Load mock energy consumption data from the specified file path
+    ## Load mock energy consumption data from the specified file path
     energy_data = pd.read_csv(data_file_path)
 
-    # Preprocessing and feature engineering
-    # ...
+    ## Preprocessing and feature engineering
+    ## ...
 
-    # Split the data into features and target variable
+    ## Split the data into features and target variable
     X = energy_data.drop('energy_consumption', axis=1)
     y = energy_data['energy_consumption']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Standardize the features
+    ## Standardize the features
     scaler = StandardScaler()
     X_train_scaled = scaler.fit_transform(X_train)
     X_test_scaled = scaler.transform(X_test)
 
-    # Build a deep learning model using TensorFlow/Keras
+    ## Build a deep learning model using TensorFlow/Keras
     model = tf.keras.Sequential([
         tf.keras.layers.Dense(64, activation='relu', input_shape=(X_train.shape[1],)),
         tf.keras.layers.Dense(64, activation='relu'),
@@ -325,10 +325,10 @@ def train_energy_consumption_model(data_file_path):
 
     model.compile(optimizer='adam', loss='mean_squared_error')
 
-    # Train the model
+    ## Train the model
     model.fit(X_train_scaled, y_train, epochs=50, batch_size=32, validation_split=0.2, verbose=0)
 
-    # Evaluate the model on the testing set
+    ## Evaluate the model on the testing set
     y_pred = model.predict(X_test_scaled)
     mse = mean_squared_error(y_test, y_pred)
 

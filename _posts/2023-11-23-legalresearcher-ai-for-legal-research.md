@@ -250,32 +250,32 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, classification_report
 
 def train_complex_ml_algorithm(data_file_path):
-    # Load mock data from the specified file path
+    ## Load mock data from the specified file path
     data = pd.read_csv(data_file_path)
 
-    # Perform data preprocessing
+    ## Perform data preprocessing
     X = data.drop('target_variable', axis=1)
     y = data['target_variable']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize the complex machine learning algorithm (Random Forest Classifier)
+    ## Initialize the complex machine learning algorithm (Random Forest Classifier)
     model = RandomForestClassifier(n_estimators=100, random_state=42)
 
-    # Train the model on the training data
+    ## Train the model on the training data
     model.fit(X_train, y_train)
 
-    # Make predictions on the testing data
+    ## Make predictions on the testing data
     y_pred = model.predict(X_test)
 
-    # Evaluate the model
+    ## Evaluate the model
     accuracy = accuracy_score(y_test, y_pred)
     report = classification_report(y_test, y_pred)
 
     return model, accuracy, report
 
-# Example usage
+## Example usage
 file_path = 'path/to/mock_data.csv'
 trained_model, accuracy, report = train_complex_ml_algorithm(file_path)
 print(f"Model trained with accuracy: {accuracy}")
@@ -292,38 +292,38 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, classification_report
 
 def train_complex_dl_algorithm(data_file_path):
-    # Load mock data from the specified file path
+    ## Load mock data from the specified file path
     data = pd.read_csv(data_file_path)
 
-    # Perform data preprocessing
+    ## Perform data preprocessing
     X = data.drop('target_variable', axis=1)
     y = data['target_variable']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize the complex deep learning algorithm (Multi-layer Perceptron)
+    ## Initialize the complex deep learning algorithm (Multi-layer Perceptron)
     model = Sequential()
     model.add(Dense(128, activation='relu', input_shape=(X_train.shape[1],)))
     model.add(Dense(64, activation='relu'))
     model.add(Dense(1, activation='sigmoid'))
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
-    # Train the model on the training data
+    ## Train the model on the training data
     model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y_test))
 
-    # Make predictions on the testing data
+    ## Make predictions on the testing data
     y_pred = (model.predict(X_test) > 0.5).astype(int)
 
-    # Evaluate the model
+    ## Evaluate the model
     accuracy = accuracy_score(y_test, y_pred)
     report = classification_report(y_test, y_pred)
 
     return model, accuracy, report
 
-# Example usage
+## Example usage
 file_path = 'path/to/mock_data.csv'
 trained_model, accuracy, report = train_complex_dl_algorithm(file_path)
 print(f"Model trained with accuracy: {accuracy}")

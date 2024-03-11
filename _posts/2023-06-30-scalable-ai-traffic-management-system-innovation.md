@@ -5,7 +5,7 @@ permalink: posts/scalable-ai-traffic-management-system-innovation
 layout: article
 ---
 
-# AI-Driven Traffic Management System
+## AI-Driven Traffic Management System
 
 ## Project Description
 
@@ -99,11 +99,11 @@ AI-Driven-Traffic-Management-System
 
 11. **docker-compose.yml:** This YAML file is a tool for defining and running multi-container Docker applications.
 
-# File Location:
+## File Location:
 
 The AI logic File is located under the `ml` directory. In the `ml` directory, you can find the module responsible for handling the logic related to the AI processing of the traffic management system. Let's call this file `trafficAI.py`.
 
-# File Code (trafficAI.py):
+## File Code (trafficAI.py):
 
 ```python
 
@@ -126,26 +126,26 @@ class AITrafficManagement:
         return prediction
 
     def preprocess_image(self, image):
-        # convert image to grayscale
+        ## convert image to grayscale
         gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-        # normalize the image pixel values
+        ## normalize the image pixel values
         normalized = gray / 255.0
-        # reshape image to fit the model's input shape
+        ## reshape image to fit the model's input shape
         reshaped = np.reshape(normalized, (1, normalized.shape[0], normalized.shape[1], 1))
         return reshaped
 
-    # the method below is used to train the model and update its weights periodically
+    ## the method below is used to train the model and update its weights periodically
     def train_model(self, data, labels):
-        # split data and labels into training and testing sets
+        ## split data and labels into training and testing sets
         train_data, test_data, train_labels, test_labels = train_test_split(data, labels)
-        # compile the model
+        ## compile the model
         self.model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
-        # fit the model to the training data
+        ## fit the model to the training data
         self.model.fit(train_data, train_labels, epochs=10)
-        # evaluate the model using the test data
+        ## evaluate the model using the test data
         test_loss, test_acc = self.model.evaluate(test_data, test_labels, verbose=2)
         print('\nTest accuracy:', test_acc)
-        # save the trained model
+        ## save the trained model
         self.model.save(self.DEFAULT_MODEL_PATH)
 
 ```

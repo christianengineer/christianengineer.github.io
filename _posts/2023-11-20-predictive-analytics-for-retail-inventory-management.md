@@ -5,7 +5,7 @@ permalink: posts/predictive-analytics-for-retail-inventory-management
 layout: article
 ---
 
-# Predictive Analytics for Retail Inventory Management
+## Predictive Analytics for Retail Inventory Management
 
 ## Description
 
@@ -39,7 +39,7 @@ To build a robust Predictive Analytics system for Retail Inventory Management re
 
 These libraries, each with its own specific strengths, are often used in combination to create sophisticated models that deliver actionable insights for retail inventory management.
 
-# Senior Full Stack Software Engineer (AI Startup)
+## Senior Full Stack Software Engineer (AI Startup)
 
 ## Job Description
 
@@ -82,57 +82,57 @@ Creating a scalable file structure for Predictive Analytics for Retail Inventory
 ```plaintext
 PredictiveInventoryManagement/
 │
-├── docs/                    # Documentation files and resources
-│   ├── setup.md             # Setup instructions
-│   ├── usage.md             # Guide on how to use the system
-│   └── api/                 # API documentation
+├── docs/                    ## Documentation files and resources
+│   ├── setup.md             ## Setup instructions
+│   ├── usage.md             ## Guide on how to use the system
+│   └── api/                 ## API documentation
 │
-├── datasets/                # Datasets for training and testing
-│   ├── raw/                 # Unprocessed data, as collected
-│   ├── processed/           # Cleaned and preprocessed data ready for analysis
-│   └── external/            # Any data from external sources
+├── datasets/                ## Datasets for training and testing
+│   ├── raw/                 ## Unprocessed data, as collected
+│   ├── processed/           ## Cleaned and preprocessed data ready for analysis
+│   └── external/            ## Any data from external sources
 │
-├── notebooks/               # Jupyter notebooks for exploration and analysis
-│   ├── exploratory/         # Initial, exploratory data analysis (EDA) notebooks
-│   └── modeling/            # Notebooks for model development and validation
+├── notebooks/               ## Jupyter notebooks for exploration and analysis
+│   ├── exploratory/         ## Initial, exploratory data analysis (EDA) notebooks
+│   └── modeling/            ## Notebooks for model development and validation
 │
-├── src/                     # Source code for the application
-│   ├── __init__.py          # Makes src a Python module
+├── src/                     ## Source code for the application
+│   ├── __init__.py          ## Makes src a Python module
 │   │
-│   ├── api/                 # Code related to the REST API interface
+│   ├── api/                 ## Code related to the REST API interface
 │   │   ├── __init__.py
 │   │   └── app.py
 │   │
-│   ├── data_processing/     # Scripts / modules for data preprocessing
+│   ├── data_processing/     ## Scripts / modules for data preprocessing
 │   │   ├── __init__.py
 │   │   └── processor.py
 │   │
-│   ├── inventory_models/    # Predictive models for inventory management
+│   ├── inventory_models/    ## Predictive models for inventory management
 │   │   ├── __init__.py
 │   │   ├── predictor.py
 │   │   └── trainer.py
 │   │
-│   ├── utils/               # Utility scripts and helper functions
+│   ├── utils/               ## Utility scripts and helper functions
 │   │   ├── __init__.py
 │   │   └── helpers.py
 │   │
-│   └── services/            # Business logic, services and integrations
+│   └── services/            ## Business logic, services and integrations
 │       ├── __init__.py
 │       ├── inventory_service.py
 │       └── external_api_client.py
 │
-├── tests/                   # Automated tests for the application
+├── tests/                   ## Automated tests for the application
 │   ├── __init__.py
 │   ├── test_api.py
 │   ├── test_data_processing.py
 │   ├── test_inventory_models.py
 │   └── test_services.py
 │
-├── requirements.txt         # Project dependencies
-├── .gitignore               # Specifies intentionally untracked files to ignore
-├── config.py                # Configuration variables and environment settings
-├── Dockerfile               # Dockerfile for containerization
-└── README.md                # Overview and instructions for the project
+├── requirements.txt         ## Project dependencies
+├── .gitignore               ## Specifies intentionally untracked files to ignore
+├── config.py                ## Configuration variables and environment settings
+├── Dockerfile               ## Dockerfile for containerization
+└── README.md                ## Overview and instructions for the project
 ```
 
 Each directory and file serves a specific purpose:
@@ -167,7 +167,7 @@ The proposed scalable file structure for the Predictive Analytics for Retail Inv
 
 This structure emphasizes clean modularity and ease of scaling, adapting to the evolving needs of the project while supporting efficient collaboration and development practices.
 
-# File Path: src/inventory_mgmt/models/demand_forecasting.py
+## File Path: src/inventory_mgmt/models/demand_forecasting.py
 
 """
 This module contains the implementation of the DemandForecastingModel, a machine learning
@@ -256,23 +256,23 @@ class DemandForecastingModel:
         self.model = joblib.load(file_path)
 
 
-# Usage example:
-# Assuming the existence of preprocessed datasets
+## Usage example:
+## Assuming the existence of preprocessed datasets
 if __name__ == "__main__":
-    # Load preprocessed data
+    ## Load preprocessed data
     train_features, train_labels = preprocess_data.load_training_data()
     test_features, test_labels = preprocess_data.load_test_data()
 
-    # Initialize and train the demand forecasting model
+    ## Initialize and train the demand forecasting model
     demand_forecaster = DemandForecastingModel()
     demand_forecaster.train(train_features, train_labels)
 
-    # Evaluate and save the model
+    ## Evaluate and save the model
     performance_rmse = demand_forecaster.evaluate(test_features, test_labels)
     print(f"Model RMSE on test set: {performance_rmse}")
     demand_forecaster.save_model('models/demand_forecasting_model.joblib')
 
-    # Predict future demand
+    ## Predict future demand
     future_demand_prediction = demand_forecaster.predict(test_features)
     print(f"Predicted future demand: {future_demand_prediction}")
 ```
@@ -290,7 +290,7 @@ src/predictive_models/forecasting_model.py
 **Contents of forecasting_model.py:**
 
 ```python
-# Import necessary libraries
+## Import necessary libraries
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
@@ -305,14 +305,14 @@ class InventoryForecastingModel:
         Perform data preprocessing activities such as
         cleaning data, feature engineering, and normalization.
         """
-        # Example: Convert categorical data to numeric
+        ## Example: Convert categorical data to numeric
         data = pd.get_dummies(data, columns=['StoreType', 'DayOfWeek', 'PromotionApplied'])
 
-        # Remove any null values
+        ## Remove any null values
         data = data.dropna()
 
-        # Feature engineering: Combine features or create new ones
-        # ...
+        ## Feature engineering: Combine features or create new ones
+        ## ...
 
         return data
 
@@ -341,7 +341,7 @@ class InventoryForecastingModel:
         """
         Save the trained model to a file for later use.
         """
-        # Example: Using joblib to save the scikit-learn model
+        ## Example: Using joblib to save the scikit-learn model
         import joblib
         joblib.dump(self.model, path)
 
@@ -353,36 +353,36 @@ class InventoryForecastingModel:
         self.model = joblib.load(path)
 
 
-# Example usage:
+## Example usage:
 if __name__ == "__main__":
-    # Load your dataset
+    ## Load your dataset
     dataset = pd.read_csv('datasets/processed/inventory_data.csv')
 
-    # Preprocessing
+    ## Preprocessing
     forecasting_model = InventoryForecastingModel()
     processed_data = forecasting_model.preprocess_data(dataset)
 
-    # Features and target variable
+    ## Features and target variable
     X = processed_data.drop('FutureInventoryLevels', axis=1)
     y = processed_data['FutureInventoryLevels']
 
-    # Train/test split
+    ## Train/test split
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Train model
+    ## Train model
     forecasting_model.train(X_train, y_train)
 
-    # Evaluate model
+    ## Evaluate model
     forecasting_model.evaluate(X_test, y_test)
 
-    # Save model
+    ## Save model
     forecasting_model.save_model('models/inventory_forecasting_model.pkl')
 ```
 
 This Python script is highly simplified and is intended for illustration purposes only. The file would be part of a system enabling retail inventory managers to better forecast and manage inventory based on historical sales data, promotional schedules, and other influential factors.
 
 ```python
-# File Path: src/inventory_management/models/forecasting_model.py
+## File Path: src/inventory_management/models/forecasting_model.py
 
 """
 forecasting_model.py
@@ -395,7 +395,7 @@ designed to predict future demand to inform stocking decisions.
 
 """
 
-# Import necessary libraries
+## Import necessary libraries
 import pandas as pd
 import numpy as np
 from sklearn.ensemble import RandomForestRegressor
@@ -403,7 +403,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_absolute_error
 import joblib
 
-# Project-specific modules
+## Project-specific modules
 from src.inventory_management.utils import data_preprocessing
 from src.inventory_management.config import model_config
 
@@ -449,7 +449,7 @@ class InventoryForecastingModel:
         """
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
         self.model.fit(X_train, y_train)
-        # Evaluate the model
+        ## Evaluate the model
         y_pred = self.model.predict(X_test)
         mae = mean_absolute_error(y_test, y_pred)
         print("Model trained with MAE: ", mae)
@@ -487,12 +487,12 @@ class InventoryForecastingModel:
 
 
 if __name__ == "__main__":
-    # For the purpose of demonstrating a simple workflow
+    ## For the purpose of demonstrating a simple workflow
     forecasting_model = InventoryForecastingModel()
     features, target = forecasting_model.load_data()
     forecasting_model.train_model(features, target)
     forecasting_model.save_model()
-    # Load the model and make a prediction for demonstration purposes
+    ## Load the model and make a prediction for demonstration purposes
     forecasting_model.load_model()
     demo_features = pd.DataFrame([list of feature values], columns=[list of feature names])
     print("Predicted sales:", forecasting_model.predict(demo_features))

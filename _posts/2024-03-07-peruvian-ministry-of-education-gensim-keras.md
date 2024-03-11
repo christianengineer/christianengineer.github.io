@@ -189,29 +189,29 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.preprocessing import StandardScaler
 from sklearn.impute import SimpleImputer
 
-# Load the student data and educational content data
+## Load the student data and educational content data
 student_data = pd.read_csv('student_data.csv')
 educational_content = pd.read_csv('educational_content.csv')
 
-# Remove irrelevant columns from student data
+## Remove irrelevant columns from student data
 student_data.drop(['unnecessary_col1', 'unnecessary_col2'], axis=1, inplace=True)
 
-# Fill missing values in student data with the mean
+## Fill missing values in student data with the mean
 imputer = SimpleImputer(strategy='mean')
 student_data['engagement_level'] = imputer.fit_transform(student_data[['engagement_level']])
 
-# Tokenize and preprocess text data from educational content
+## Tokenize and preprocess text data from educational content
 tfidf_vectorizer = TfidfVectorizer(stop_words='english')
 tfidf_matrix = tfidf_vectorizer.fit_transform(educational_content['content_text'])
 
-# Scale numerical features in student data
+## Scale numerical features in student data
 scaler = StandardScaler()
 student_data[['previous_exam_score', 'attendance_rate']] = scaler.fit_transform(student_data[['previous_exam_score', 'attendance_rate']])
 
-# Merge the preprocessed text features with student data
+## Merge the preprocessed text features with student data
 processed_data = pd.concat([student_data, pd.DataFrame(tfidf_matrix.toarray(), columns=tfidf_vectorizer.get_feature_names())], axis=1)
 
-# Save the preprocessed data to a new CSV file
+## Save the preprocessed data to a new CSV file
 processed_data.to_csv('processed_data.csv', index=False)
 ```
 
@@ -300,10 +300,10 @@ Please note that this script is a simplified example and you can expand it furth
 import numpy as np
 import pandas as pd
 
-# Define the number of samples in the dataset
+## Define the number of samples in the dataset
 num_samples = 1000
 
-# Generate synthetic student data
+## Generate synthetic student data
 student_data = pd.DataFrame({
     'student_id': np.arange(1, num_samples+1),
     'age': np.random.randint(5, 18, num_samples),
@@ -313,7 +313,7 @@ student_data = pd.DataFrame({
     'engagement_level': np.random.uniform(1, 5, num_samples)
 })
 
-# Generate synthetic educational content data
+## Generate synthetic educational content data
 educational_content = pd.DataFrame({
     'content_id': np.arange(1, num_samples+1),
     'subject': np.random.choice(['Math', 'Science', 'History'], num_samples),
@@ -321,12 +321,12 @@ educational_content = pd.DataFrame({
     'content_text': ['Sample text']*num_samples
 })
 
-# Define relationships between student data and educational content
-# For illustration purposes only - actual relationships should be more complex
+## Define relationships between student data and educational content
+## For illustration purposes only - actual relationships should be more complex
 educational_content['student_id'] = np.random.choice(student_data['student_id'], num_samples)
 educational_content['student_engagement_score'] = student_data.loc[educational_content['student_id'], 'engagement_level'] + np.random.normal(0, 0.5, num_samples)
 
-# Save the synthetic datasets to CSV files
+## Save the synthetic datasets to CSV files
 student_data.to_csv('synthetic_student_data.csv', index=False)
 educational_content.to_csv('synthetic_educational_content.csv', index=False)
 ```
@@ -396,27 +396,27 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_squared_error
 
-# Load the preprocessed dataset
+## Load the preprocessed dataset
 data = pd.read_csv('processed_data.csv')
 
-# Split data into features and target variable
+## Split data into features and target variable
 X = data.drop(['recommended_material'], axis=1)
 y = data['recommended_material']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Train a Random Forest Regressor model
+## Train a Random Forest Regressor model
 rf_model = RandomForestRegressor(n_estimators=100, random_state=42)
 rf_model.fit(X_train, y_train)
 
-# Make predictions on the test set
+## Make predictions on the test set
 y_pred = rf_model.predict(X_test)
 
-# Calculate Mean Squared Error
+## Calculate Mean Squared Error
 mse = mean_squared_error(y_test, y_pred)
 
-# Print the Mean Squared Error
+## Print the Mean Squared Error
 print(f'Mean Squared Error: {mse}')
 ```
 
@@ -489,25 +489,25 @@ By following this deployment plan with the suggested tools and platforms, your t
 Below is a sample Dockerfile tailored for your machine learning model that recommends personalized learning material for students at the Peruvian Ministry of Education. This Dockerfile encapsulates the environment and dependencies required for your project, optimized for performance and scalability:
 
 ```Dockerfile
-# Use an official Python runtime as the base image
+## Use an official Python runtime as the base image
 FROM python:3.9-slim
 
-# Set the working directory in the container
+## Set the working directory in the container
 WORKDIR /app
 
-# Copy the requirements file into the container
+## Copy the requirements file into the container
 COPY requirements.txt /app/
 
-# Install any needed packages specified in requirements.txt
+## Install any needed packages specified in requirements.txt
 RUN pip install --upgrade pip && pip install --no-cache-dir -r requirements.txt
 
-# Copy the model training script into the container
+## Copy the model training script into the container
 COPY train_model.py /app/
 
-# Set environment variables
+## Set environment variables
 ENV PYTHONUNBUFFERED=TRUE
 
-# Command to run the model training script
+## Command to run the model training script
 CMD ["python", "train_model.py"]
 ```
 

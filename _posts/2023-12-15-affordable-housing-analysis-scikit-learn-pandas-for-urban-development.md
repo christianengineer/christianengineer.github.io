@@ -198,7 +198,7 @@ Here's an example of a Python script for training a Scikit-Learn model for the A
 File Path: `src/models/train_model.py`
 
 ```python
-# src/models/train_model.py
+## src/models/train_model.py
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -206,31 +206,31 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
 import joblib
 
-# Load mock housing data
+## Load mock housing data
 data_path = "../../data/raw/mock_housing_data.csv"
 housing_data = pd.read_csv(data_path)
 
-# Perform data preprocessing and feature engineering (not shown in this example)
+## Perform data preprocessing and feature engineering (not shown in this example)
 
-# Define features and target variable
-X = housing_data.drop("target_column", axis=1)  # Replace "target_column" with actual target variable
-y = housing_data["target_column"]  # Replace "target_column" with actual target variable
+## Define features and target variable
+X = housing_data.drop("target_column", axis=1)  ## Replace "target_column" with actual target variable
+y = housing_data["target_column"]  ## Replace "target_column" with actual target variable
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize and train the model
+## Initialize and train the model
 model = LinearRegression()
 model.fit(X_train, y_train)
 
-# Make predictions
+## Make predictions
 y_pred = model.predict(X_test)
 
-# Evaluate the model
+## Evaluate the model
 mse = mean_squared_error(y_test, y_pred)
 print("Mean Squared Error:", mse)
 
-# Save the trained model
+## Save the trained model
 model_path = "../../models/linear_regression_model.pkl"
 joblib.dump(model, model_path)
 print("Model saved at:", model_path)
@@ -241,7 +241,7 @@ In this script, a Linear Regression model is trained using the mock housing data
 This file demonstrates a simplified model training process and can be further extended with more advanced modeling techniques and data preprocessing steps as needed for the Affordable Housing Analysis application.
 
 ```python
-# File Path: src/models/train_complex_model.py
+## File Path: src/models/train_complex_model.py
 
 import pandas as pd
 from sklearn.ensemble import RandomForestRegressor
@@ -249,31 +249,31 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 import joblib
 
-# Load mock housing data
+## Load mock housing data
 data_path = "../../data/raw/mock_housing_data.csv"
 housing_data = pd.read_csv(data_path)
 
-# Perform data preprocessing and feature engineering (not shown in this example)
+## Perform data preprocessing and feature engineering (not shown in this example)
 
-# Define features and target variable
-X = housing_data.drop("target_column", axis=1)  # Replace "target_column" with actual target variable
-y = housing_data["target_column"]  # Replace "target_column" with actual target variable
+## Define features and target variable
+X = housing_data.drop("target_column", axis=1)  ## Replace "target_column" with actual target variable
+y = housing_data["target_column"]  ## Replace "target_column" with actual target variable
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize and train the model
+## Initialize and train the model
 model = RandomForestRegressor(n_estimators=100, max_depth=10, random_state=42)
 model.fit(X_train, y_train)
 
-# Make predictions
+## Make predictions
 y_pred = model.predict(X_test)
 
-# Evaluate the model
+## Evaluate the model
 mse = mean_squared_error(y_test, y_pred)
 print("Mean Squared Error:", mse)
 
-# Save the trained model
+## Save the trained model
 model_path = "../../models/random_forest_model.pkl"
 joblib.dump(model, model_path)
 print("Model saved at:", model_path)

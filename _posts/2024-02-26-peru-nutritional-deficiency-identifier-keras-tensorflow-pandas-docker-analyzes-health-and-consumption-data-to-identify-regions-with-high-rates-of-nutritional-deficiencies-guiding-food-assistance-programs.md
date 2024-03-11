@@ -74,26 +74,26 @@ To ensure a scalable and organized file structure for the Peru Nutritional Defic
 ```
 peru-nutritional-deficiency-identifier/
     |- data/
-    |   |- raw/              # Raw data files from various sources
-    |   |- processed/        # Processed data to be used for modeling
+    |   |- raw/              ## Raw data files from various sources
+    |   |- processed/        ## Processed data to be used for modeling
     |
-    |- models/               # Trained models and model artifacts
+    |- models/               ## Trained models and model artifacts
     |
-    |- notebooks/            # Jupyter notebooks for data exploration and model development
+    |- notebooks/            ## Jupyter notebooks for data exploration and model development
     |   |- data_preprocessing.ipynb
     |   |- model_training.ipynb
     |
     |- src/
-    |   |- preprocessing/    # Scripts for data cleaning and preprocessing
-    |   |- modeling/         # Scripts for model training and evaluation
-    |   |- inference/        # Scripts for model deployment and inference
+    |   |- preprocessing/    ## Scripts for data cleaning and preprocessing
+    |   |- modeling/         ## Scripts for model training and evaluation
+    |   |- inference/        ## Scripts for model deployment and inference
     |
     |- config/
-    |   |- config.yaml       # Configuration file for hyperparameters and settings
+    |   |- config.yaml       ## Configuration file for hyperparameters and settings
     |
-    |- requirements.txt      # List of required Python packages
-    |- Dockerfile            # Docker setup for containerizing the application
-    |- README.md             # Project description and setup instructions
+    |- requirements.txt      ## List of required Python packages
+    |- Dockerfile            ## Docker setup for containerizing the application
+    |- README.md             ## Project description and setup instructions
 ```
 
 #### File Structure Overview:
@@ -117,17 +117,17 @@ In the context of the Peru Nutritional Deficiency Identifier application that an
 
 ```
 models/
-    |- saved_models/            # Directory to save trained models and associated artifacts
-    |   |- model_1.h5           # Trained Keras model for identifying nutritional deficiencies
-    |   |- model_1_scaler.pkl    # Scaler file used for preprocessing input data
+    |- saved_models/            ## Directory to save trained models and associated artifacts
+    |   |- model_1.h5           ## Trained Keras model for identifying nutritional deficiencies
+    |   |- model_1_scaler.pkl    ## Scaler file used for preprocessing input data
     |
-    |- model_evaluation/        # Directory to store model evaluation metrics and reports
-    |   |- evaluation_metrics.txt  # Text file containing evaluation metrics like accuracy, precision, recall
-    |   |- confusion_matrix.png    # Visual representation of confusion matrix
+    |- model_evaluation/        ## Directory to store model evaluation metrics and reports
+    |   |- evaluation_metrics.txt  ## Text file containing evaluation metrics like accuracy, precision, recall
+    |   |- confusion_matrix.png    ## Visual representation of confusion matrix
     |
-    |- model_performance/       # Directory for storing performance logs and monitoring data
-    |   |- performance_logs.csv    # CSV file logging model performance over time
-    |   |- monitoring_metrics.json # JSON file containing monitoring metrics for the model
+    |- model_performance/       ## Directory for storing performance logs and monitoring data
+    |   |- performance_logs.csv    ## CSV file logging model performance over time
+    |   |- monitoring_metrics.json ## JSON file containing monitoring metrics for the model
 ```
 
 #### Files in `models/` Directory:
@@ -151,21 +151,21 @@ For the Peru Nutritional Deficiency Identifier application, the `deployment/` di
 
 ```
 deployment/
-    |- inference_pipeline/          # Directory containing scripts and files for model inference
-    |   |- preprocess.py            # Script for data preprocessing before model prediction
-    |   |- make_prediction.py       # Script for making predictions using the trained model
+    |- inference_pipeline/          ## Directory containing scripts and files for model inference
+    |   |- preprocess.py            ## Script for data preprocessing before model prediction
+    |   |- make_prediction.py       ## Script for making predictions using the trained model
     |
     |- api/
-    |   |- app.py                   # Flask API script for serving model predictions
-    |   |- requirements.txt         # List of required packages for the API
-    |   |- Dockerfile               # Docker setup for containerizing the API
+    |   |- app.py                   ## Flask API script for serving model predictions
+    |   |- requirements.txt         ## List of required packages for the API
+    |   |- Dockerfile               ## Docker setup for containerizing the API
     |
     |- monitoring/
-    |   |- monitor_model.py         # Script for monitoring model performance and health
-    |   |- alerts.log               # Log file for storing alerts and monitoring events
+    |   |- monitor_model.py         ## Script for monitoring model performance and health
+    |   |- alerts.log               ## Log file for storing alerts and monitoring events
     |
-    |- deployment_pipeline.sh       # Shell script for automating deployment tasks
-    |- run_inference.sh             # Shell script for running model inference
+    |- deployment_pipeline.sh       ## Shell script for automating deployment tasks
+    |- run_inference.sh             ## Shell script for running model inference
 ```
 
 #### Files in `deployment/` Directory:
@@ -199,25 +199,25 @@ import tensorflow as tf
 from tensorflow import keras
 from sklearn.model_selection import train_test_split
 
-# Mock data generation
+## Mock data generation
 data = {
     'height': np.random.randint(140, 200, 1000),
     'weight': np.random.randint(40, 120, 1000),
     'calorie_intake': np.random.randint(1000, 4000, 1000),
     'nutrient_intake': np.random.randint(50, 200, 1000),
-    'nutritional_deficiency': np.random.randint(0, 2, 1000)  # Binary label for nutritional deficiency
+    'nutritional_deficiency': np.random.randint(0, 2, 1000)  ## Binary label for nutritional deficiency
 }
 
 df = pd.DataFrame(data)
 
-# Split data into features and target
+## Split data into features and target
 X = df[['height', 'weight', 'calorie_intake', 'nutrient_intake']]
 y = df['nutritional_deficiency']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Define and train the model
+## Define and train the model
 model = keras.Sequential([
     keras.layers.Dense(64, activation='relu', input_shape=[4]),
     keras.layers.Dense(32, activation='relu'),
@@ -227,7 +227,7 @@ model = keras.Sequential([
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y_test))
 
-# Save the trained model
+## Save the trained model
 model.save('models/trained_model.h5')
 ```
 
@@ -259,29 +259,29 @@ from tensorflow import keras
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
-# Mock data generation
+## Mock data generation
 data = {
     'age': np.random.randint(18, 75, 1000),
     'income': np.random.randint(10000, 100000, 1000),
     'BMI': np.random.uniform(18.5, 40, 1000),
     'exercise_hours': np.random.randint(0, 10, 1000),
-    'nutritional_deficiency': np.random.randint(0, 2, 1000)  # Binary label for nutritional deficiency
+    'nutritional_deficiency': np.random.randint(0, 2, 1000)  ## Binary label for nutritional deficiency
 }
 
 df = pd.DataFrame(data)
 
-# Split data into features and target
+## Split data into features and target
 X = df[['age', 'income', 'BMI', 'exercise_hours']]
 y = df['nutritional_deficiency']
 
-# Normalize the features
+## Normalize the features
 scaler = StandardScaler()
 X_scaled = scaler.fit_transform(X)
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.2, random_state=42)
 
-# Define a more complex neural network model
+## Define a more complex neural network model
 model = keras.Sequential([
     keras.layers.Dense(128, activation='relu', input_shape=[4]),
     keras.layers.Dense(64, activation='relu'),
@@ -292,7 +292,7 @@ model = keras.Sequential([
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 model.fit(X_train, y_train, epochs=20, batch_size=64, validation_data=(X_test, y_test))
 
-# Save the trained model
+## Save the trained model
 model.save('models/complex_trained_model.h5')
 ```
 

@@ -182,7 +182,7 @@ class User(Base):
     email = Column(String, unique=True, nullable=False)
     role = Column(String)
     department = Column(String)
-    # Additional attributes and methods for user model
+    ## Additional attributes and methods for user model
 ```
 
 ### `data.py`
@@ -208,7 +208,7 @@ class RemoteWorkData(Base):
     timestamp = Column(DateTime)
     communication_logs = Column(JSON)
     productivity_metrics = Column(JSON)
-    # Additional attributes and methods for remote work data model
+    ## Additional attributes and methods for remote work data model
 ```
 
 These model files help in defining the structure and organization of the application's data, enabling efficient storage, retrieval, and manipulation of user information and remote work data within the AI RemoteWorkOptimizer application. If the application uses a NoSQL database, the model files could be adjusted to fit the data model for the chosen NoSQL database.
@@ -220,25 +220,25 @@ The Dockerfile is used to define the environment and dependencies required to ru
 
 Sample `Dockerfile` for the AI RemoteWorkOptimizer application:
 ```docker
-# Use an official Python runtime as the base image
+## Use an official Python runtime as the base image
 FROM python:3.8
 
-# Set the working directory in the container
+## Set the working directory in the container
 WORKDIR /app
 
-# Copy the current directory contents into the container at /app
+## Copy the current directory contents into the container at /app
 COPY . /app
 
-# Install any needed packages specified in requirements.txt
+## Install any needed packages specified in requirements.txt
 RUN pip install -r requirements.txt
 
-# Make port 80 available to the world outside this container
+## Make port 80 available to the world outside this container
 EXPOSE 80
 
-# Define environment variable
+## Define environment variable
 ENV NAME RemoteWorkOptimizer
 
-# Run app.py when the container launches
+## Run app.py when the container launches
 CMD ["python", "app.py"]
 ```
 
@@ -266,26 +266,26 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
 def train_and_evaluate_model(data_file_path):
-    # Load mock data from file
+    ## Load mock data from file
     data = pd.read_csv(data_file_path)
 
-    # Preprocessing and feature engineering
+    ## Preprocessing and feature engineering
     X = data.drop('target_column', axis=1)
     y = data['target_column']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize the RandomForestClassifier
+    ## Initialize the RandomForestClassifier
     model = RandomForestClassifier(n_estimators=100, random_state=42)
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train)
 
-    # Make predictions
+    ## Make predictions
     y_pred = model.predict(X_test)
 
-    # Evaluate the model
+    ## Evaluate the model
     accuracy = accuracy_score(y_test, y_pred)
 
     return model, accuracy
@@ -308,32 +308,32 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
 
 def train_deep_learning_model(data_file_path):
-    # Load mock data from file
+    ## Load mock data from file
     data = pd.read_csv(data_file_path)
 
-    # Preprocessing and feature engineering
+    ## Preprocessing and feature engineering
     X = data.drop('target_column', axis=1)
     y = data['target_column']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Standardize the data
+    ## Standardize the data
     scaler = StandardScaler()
     X_train_scaled = scaler.fit_transform(X_train)
     X_test_scaled = scaler.transform(X_test)
 
-    # Define the deep learning model
+    ## Define the deep learning model
     model = Sequential([
         Dense(128, activation='relu', input_shape=(X_train.shape[1],)),
         Dense(64, activation='relu'),
         Dense(1, activation='sigmoid')
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
-    # Train the model
+    ## Train the model
     model.fit(X_train_scaled, y_train, epochs=10, batch_size=32, validation_data=(X_test_scaled, y_test))
 
     return model

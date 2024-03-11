@@ -68,43 +68,43 @@ By incorporating these MLOps practices into the infrastructure for the Dynamic E
 dynamic_energy_demand_prediction/
 │
 ├── data/
-│   ├── raw/                   # Raw data from utilities
-│   ├── processed/             # Preprocessed data for model training
+│   ├── raw/                   ## Raw data from utilities
+│   ├── processed/             ## Preprocessed data for model training
 │
 ├── models/
-│   ├── tensorflow/            # TensorFlow model files
+│   ├── tensorflow/            ## TensorFlow model files
 │
 ├── pipelines/
-│   ├── beam/                  # Apache Beam data preprocessing and pipeline code
+│   ├── beam/                  ## Apache Beam data preprocessing and pipeline code
 │
 ├── src/
-│   ├── app/                   # Application code for serving predictions and integrating with Grafana
+│   ├── app/                   ## Application code for serving predictions and integrating with Grafana
 │
 ├── tests/
-│   ├── unit/                  # Unit tests for code components
-│   ├── integration/           # Integration tests for end-to-end pipelines and system components
+│   ├── unit/                  ## Unit tests for code components
+│   ├── integration/           ## Integration tests for end-to-end pipelines and system components
 │
 ├── config/
-│   ├── model_config.yaml      # Configuration file for model hyperparameters and settings
-│   ├── pipeline_config.yaml   # Configuration file for Apache Beam data processing pipeline
-│   ├── app_config.yaml        # Application configuration for integration with Grafana and utilities systems
+│   ├── model_config.yaml      ## Configuration file for model hyperparameters and settings
+│   ├── pipeline_config.yaml   ## Configuration file for Apache Beam data processing pipeline
+│   ├── app_config.yaml        ## Application configuration for integration with Grafana and utilities systems
 │
 ├── docs/
-│   ├── user_guide.md          # User guide for utilizing the repository and its components
-│   ├── api_reference.md        # API reference for the application and data pipelines
-│   ├── deployment.md          # Deployment instructions and best practices
+│   ├── user_guide.md          ## User guide for utilizing the repository and its components
+│   ├── api_reference.md        ## API reference for the application and data pipelines
+│   ├── deployment.md          ## Deployment instructions and best practices
 │
 ├── scripts/
-│   ├── data_ingestion.py      # Script for ingesting raw data from utilities
-│   ├── train_model.py         # Script for training machine learning models using TensorFlow
-│   ├── deploy_app.py          # Script for deploying the application for serving predictions
+│   ├── data_ingestion.py      ## Script for ingesting raw data from utilities
+│   ├── train_model.py         ## Script for training machine learning models using TensorFlow
+│   ├── deploy_app.py          ## Script for deploying the application for serving predictions
 │
-├── Dockerfile                 # Dockerfile for containerizing the application
+├── Dockerfile                 ## Dockerfile for containerizing the application
 ├── kubernetes/
-│   ├── deployment.yaml        # Kubernetes deployment configuration for the application and model serving
-│   ├── service.yaml           # Kubernetes service configuration for exposing the application
+│   ├── deployment.yaml        ## Kubernetes deployment configuration for the application and model serving
+│   ├── service.yaml           ## Kubernetes service configuration for exposing the application
 │
-├── README.md                  # Repository README with an overview, setup, and usage instructions
+├── README.md                  ## Repository README with an overview, setup, and usage instructions
 ```
 
 This scalable file structure organizes the repository components for the Dynamic Energy Demand Prediction (using TensorFlow, Apache Beam, and Grafana) application. It separates the data, model, pipeline, source code, configuration, documentation, scripts, and deployment-related files into distinct directories, making it easier to maintain and understand the repository's contents. This structure also supports version control, modularity, and collaboration among team members working on the project.
@@ -116,13 +116,13 @@ dynamic_energy_demand_prediction/
 │
 ├── models/
 │   ├── tensorflow/
-│   │   ├── train/             # Training scripts and code for TensorFlow models
-│   │   ├── evaluate/          # Evaluation scripts for assessing model performance
-│   │   ├── export/            # Exported model files for deployment
-│   │   ├── serving/           # Code for serving the trained model predictions
-│   │   ├── notebooks/         # Jupyter notebooks for experimentation and analysis
-│   │   ├── requirements.txt   # Python dependencies for model training and evaluation
-│   │   ├── README.md          # Description of the model files and usage instructions
+│   │   ├── train/             ## Training scripts and code for TensorFlow models
+│   │   ├── evaluate/          ## Evaluation scripts for assessing model performance
+│   │   ├── export/            ## Exported model files for deployment
+│   │   ├── serving/           ## Code for serving the trained model predictions
+│   │   ├── notebooks/         ## Jupyter notebooks for experimentation and analysis
+│   │   ├── requirements.txt   ## Python dependencies for model training and evaluation
+│   │   ├── README.md          ## Description of the model files and usage instructions
 ```
 
 In the `models` directory for the Dynamic Energy Demand Prediction application, the `tensorflow` subdirectory contains the following key components related to TensorFlow models:
@@ -150,12 +150,12 @@ To expand on the deployment-related files for the Dynamic Energy Demand Predicti
 ```
 dynamic_energy_demand_prediction/
 │
-├── Dockerfile                 # Dockerfile for containerizing the application
+├── Dockerfile                 ## Dockerfile for containerizing the application
 ├── kubernetes/
-│   ├── deployment.yaml        # Kubernetes deployment configuration for the application and model serving
-│   ├── service.yaml           # Kubernetes service configuration for exposing the application
+│   ├── deployment.yaml        ## Kubernetes deployment configuration for the application and model serving
+│   ├── service.yaml           ## Kubernetes service configuration for exposing the application
 ├── scripts/
-│   ├── deploy_app.py          # Script for deploying the application for serving predictions
+│   ├── deploy_app.py          ## Script for deploying the application for serving predictions
 ```
 
 1. **Dockerfile**: This file contains instructions for building a Docker container image for the application. It specifies the base image, dependencies, environment setup, and commands to run the application within a container. Docker enables portability and consistency in deploying the application across different environments.
@@ -167,32 +167,32 @@ dynamic_energy_demand_prediction/
 By incorporating these deployment-related files, the Dynamic Energy Demand Prediction application can be effectively containerized, orchestrated, and deployed in a scalable and resilient manner, leveraging the capabilities of Docker and Kubernetes for managing the application infrastructure.
 
 ```python
-# File Path: dynamic_energy_demand_prediction/models/tensorflow/train/train_model.py
+## File Path: dynamic_energy_demand_prediction/models/tensorflow/train/train_model.py
 
 import tensorflow as tf
 from tensorflow import keras
 import numpy as np
 
-# Mock Data (Replace with actual data loading code)
-# Mock features and target labels for training
-features = np.random.rand(100, 10)  # Mock features (100 samples, 10 features)
-labels = np.random.randint(0, 2, size=(100, 1))  # Mock binary labels (0 or 1)
+## Mock Data (Replace with actual data loading code)
+## Mock features and target labels for training
+features = np.random.rand(100, 10)  ## Mock features (100 samples, 10 features)
+labels = np.random.randint(0, 2, size=(100, 1))  ## Mock binary labels (0 or 1)
 
-# Define a simple neural network model
+## Define a simple neural network model
 model = keras.Sequential([
     keras.layers.Dense(10, input_shape=(10,), activation='relu'),
     keras.layers.Dense(1, activation='sigmoid')
 ])
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam',
               loss='binary_crossentropy',
               metrics=['accuracy'])
 
-# Train the model
+## Train the model
 model.fit(features, labels, epochs=10, batch_size=32)
 
-# Save the trained model
+## Save the trained model
 model.save('dynamic_energy_demand_prediction/models/tensorflow/export/trained_model')
 ```
 
@@ -201,7 +201,7 @@ The above Python script (train_model.py) trains a simple neural network model us
 Note: In a real-world scenario, the mock data loading and model training logic would be replaced with actual data loading from sources such as Apache Beam pipelines, real-time data streams, or batch data processing. Additionally, hyperparameter tuning, validation, and evaluation steps are typically included in a comprehensive model training script for real applications.
 
 ```python
-# File Path: dynamic_energy_demand_prediction/models/tensorflow/train/train_complex_model.py
+## File Path: dynamic_energy_demand_prediction/models/tensorflow/train/train_complex_model.py
 
 import tensorflow as tf
 from tensorflow import keras
@@ -209,17 +209,17 @@ import numpy as np
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 
-# Mock Data (Replace with actual data loading code)
-# Mock features and target labels for training
-features = np.random.rand(1000, 20)  # Mock features (1000 samples, 20 features)
-labels = np.random.randint(0, 2, size=(1000, 1))  # Mock binary labels (0 or 1)
+## Mock Data (Replace with actual data loading code)
+## Mock features and target labels for training
+features = np.random.rand(1000, 20)  ## Mock features (1000 samples, 20 features)
+labels = np.random.randint(0, 2, size=(1000, 1))  ## Mock binary labels (0 or 1)
 
-# Data preprocessing
+## Data preprocessing
 scaler = StandardScaler()
 scaled_features = scaler.fit_transform(features)
 X_train, X_test, y_train, y_test = train_test_split(scaled_features, labels, test_size=0.2, random_state=42)
 
-# Define a complex neural network model
+## Define a complex neural network model
 model = keras.Sequential([
     keras.layers.Dense(64, input_shape=(20,), activation='relu'),
     keras.layers.Dropout(0.5),
@@ -227,15 +227,15 @@ model = keras.Sequential([
     keras.layers.Dense(1, activation='sigmoid')
 ])
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam',
               loss='binary_crossentropy',
               metrics=['accuracy'])
 
-# Train the model
+## Train the model
 model.fit(X_train, y_train, validation_data=(X_test, y_test), epochs=20, batch_size=64)
 
-# Save the trained model
+## Save the trained model
 model.save('dynamic_energy_demand_prediction/models/tensorflow/export/complex_trained_model')
 ```
 

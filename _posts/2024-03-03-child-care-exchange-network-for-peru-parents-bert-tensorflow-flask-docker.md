@@ -63,31 +63,31 @@ By establishing a robust MLOps infrastructure, we can ensure the seamless operat
 child_care_exchange_network/
 ├── app/
 │   ├── models/
-│   │   └── bert_model.py          # BERT model implementation using TensorFlow
+│   │   └── bert_model.py          ## BERT model implementation using TensorFlow
 │   ├── routes/
-│   │   └── recommendation_routes.py # Flask routes for handling recommendation requests
+│   │   └── recommendation_routes.py ## Flask routes for handling recommendation requests
 │   ├── templates/
-│   │   └── index.html             # User interface template
+│   │   └── index.html             ## User interface template
 │   ├── static/
 │   │   ├── css/
 │   │   └── js/
-│   └── app.py                     # Flask application setup
+│   └── app.py                     ## Flask application setup
 ├── data/
 │   ├── input/
-│   │   ├── families_data.csv      # Data about low-income families
-│   │   └── providers_data.csv      # Data about child care providers
+│   │   ├── families_data.csv      ## Data about low-income families
+│   │   └── providers_data.csv      ## Data about child care providers
 │   ├── processed/
 │   └── models/
-│       └── bert_model_weights.h5   # Trained BERT model weights
+│       └── bert_model_weights.h5   ## Trained BERT model weights
 ├── scripts/
-│   ├── data_processing.py         # Data preprocessing script
-│   └── model_training.py          # Model training script
+│   ├── data_processing.py         ## Data preprocessing script
+│   └── model_training.py          ## Model training script
 ├── infrastructure/
-│   ├── Dockerfile                 # Docker file for containerization
-│   └── kubernetes.yaml             # Kubernetes configuration for deployment
-├── requirements.txt               # Python dependencies for the project
-├── README.md                      # Project documentation
-└── .gitignore                     # Git ignore file for excluding unnecessary files
+│   ├── Dockerfile                 ## Docker file for containerization
+│   └── kubernetes.yaml             ## Kubernetes configuration for deployment
+├── requirements.txt               ## Python dependencies for the project
+├── README.md                      ## Project documentation
+└── .gitignore                     ## Git ignore file for excluding unnecessary files
 ```
 
 In this file structure:
@@ -105,10 +105,10 @@ This scalable file structure organizes the components of the Child Care Exchange
 
 ```bash
 models/
-├── bert_model.py           # BERT model implementation using TensorFlow for natural language processing
-├── recommendation.py       # Recommendation engine integrating BERT for matching families with child care options
-├── data_processing.py      # Data preprocessing script for cleaning and transforming input data
-└── model_evaluation.py     # Script for evaluating and optimizing model performance
+├── bert_model.py           ## BERT model implementation using TensorFlow for natural language processing
+├── recommendation.py       ## Recommendation engine integrating BERT for matching families with child care options
+├── data_processing.py      ## Data preprocessing script for cleaning and transforming input data
+└── model_evaluation.py     ## Script for evaluating and optimizing model performance
 ```
 
 In the **models/** directory of the Child Care Exchange Network:
@@ -123,9 +123,9 @@ These files in the **models/** directory play a crucial role in the functionalit
 
 ```bash
 deployment/
-├── Dockerfile             # Dockerfile for containerizing the Flask application
-├── kubernetes.yaml         # Kubernetes configuration file for deployment
-└── nginx.conf              # Nginx configuration file for reverse proxying and load balancing
+├── Dockerfile             ## Dockerfile for containerizing the Flask application
+├── kubernetes.yaml         ## Kubernetes configuration file for deployment
+└── nginx.conf              ## Nginx configuration file for reverse proxying and load balancing
 ```
 
 In the **deployment/** directory of the Child Care Exchange Network:
@@ -148,21 +148,21 @@ from sklearn.model_selection import train_test_split
 from bert_model import BERTModel
 import tensorflow as tf
 
-# Load mock data (families and providers)
+## Load mock data (families and providers)
 families_data = pd.read_csv('data/input/families_data.csv')
 providers_data = pd.read_csv('data/input/providers_data.csv')
 
-# Prepare mock labeled data for training
+## Prepare mock labeled data for training
 labeled_data = prepare_labeled_data(families_data, providers_data)
 
-# Split data into training and validation sets
+## Split data into training and validation sets
 train_set, val_set = train_test_split(labeled_data, test_size=0.2)
 
-# Initialize and train BERT model
+## Initialize and train BERT model
 bert_model = BERTModel()
 bert_model.train(train_set, val_set)
 
-# Save trained model weights
+## Save trained model weights
 bert_model.save_model_weights('data/models/bert_model_weights.h5')
 
 print("Model training completed.")
@@ -183,28 +183,28 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 
-# Load mock data (families and providers)
+## Load mock data (families and providers)
 families_data = pd.read_csv('data/input/families_data.csv')
 providers_data = pd.read_csv('data/input/providers_data.csv')
 
-# Prepare mock labeled data for training
+## Prepare mock labeled data for training
 labeled_data = prepare_labeled_data(families_data, providers_data)
 
-# Split data into training and validation sets
+## Split data into training and validation sets
 train_set, val_set = train_test_split(labeled_data, test_size=0.2)
 
-# Initialize and train a complex machine learning algorithm (Random Forest)
+## Initialize and train a complex machine learning algorithm (Random Forest)
 rf_model = RandomForestClassifier()
 rf_model.fit(train_set.drop('label', axis=1), train_set['label'])
 
-# Make predictions on the validation set
+## Make predictions on the validation set
 predictions = rf_model.predict(val_set.drop('label', axis=1))
 
-# Evaluate the model performance
+## Evaluate the model performance
 accuracy = accuracy_score(val_set['label'], predictions)
 print(f"Accuracy of the complex machine learning algorithm: {accuracy}")
 
-# Save the trained model for future use
+## Save the trained model for future use
 joblib.dump(rf_model, 'data/models/complex_ml_algorithm.pkl')
 
 print("Complex machine learning algorithm training completed.")

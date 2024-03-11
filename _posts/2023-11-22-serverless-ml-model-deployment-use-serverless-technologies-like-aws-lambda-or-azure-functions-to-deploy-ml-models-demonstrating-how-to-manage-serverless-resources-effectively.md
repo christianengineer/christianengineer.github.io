@@ -5,10 +5,10 @@ permalink: posts/serverless-ml-model-deployment-use-serverless-technologies-like
 layout: article
 ---
 
-# Objectives
+## Objectives
 The objective of the AI Serverless ML Model Deployment repository is to demonstrate how to deploy machine learning models using serverless technologies like AWS Lambda or Azure Functions. The primary goals include achieving scalable and cost-effective deployment of ML models, efficient resource management, and seamless integration with other AWS or Azure services.
 
-# System Design Strategies
+## System Design Strategies
 The system design for the deployment of ML models using serverless technologies would involve the following strategies:
 - **Serverless Architecture**: Leveraging the serverless architecture to enable on-demand scaling, pay-per-use pricing, and reduced operational overhead.
 - **Model Packaging and Integration**: Developing a strategy for packaging machine learning models along with their dependencies, and integrating them with the serverless functions.
@@ -16,7 +16,7 @@ The system design for the deployment of ML models using serverless technologies 
 - **Performance Optimization**: Implementing strategies to optimize the performance of serverless functions for inference and prediction tasks.
 - **Monitoring and Logging**: Integrating monitoring and logging mechanisms to track the performance and health of the deployed ML models.
 
-# Chosen Libraries
+## Chosen Libraries
 For the implementation of the AI Serverless ML Model Deployment repository, we will consider using the following libraries and frameworks:
 - **AWS Lambda or Azure Functions**: As the core serverless platform for deploying the ML models.
 - **Serverless Framework**: For simplifying the deployment, management, and monitoring of serverless resources.
@@ -157,12 +157,12 @@ For each machine learning model, a `requirements.txt` file is included to specif
 ```
 models/
 ├── model1/
-│   ├── model.pkl        # Serialized machine learning model
-│   ├── scaler.pkl       # Additional model artifacts, if applicable
-│   └── requirements.txt # Dependencies for the model
+│   ├── model.pkl        ## Serialized machine learning model
+│   ├── scaler.pkl       ## Additional model artifacts, if applicable
+│   └── requirements.txt ## Dependencies for the model
 ├── model2/
-│   ├── model.h5         # Trained neural network model
-│   └── requirements.txt # Dependencies for the model
+│   ├── model.h5         ## Trained neural network model
+│   └── requirements.txt ## Dependencies for the model
 └── ...
 ```
 
@@ -200,13 +200,13 @@ Similar to the models directory, each serverless function subdirectory should in
 ```
 serverless_functions/
 ├── function1/
-│   ├── handler.py       # Handler code for the serverless function
-│   ├── serverless.yml   # Configuration file for the Serverless Framework
-│   └── requirements.txt # Dependencies for the serverless function
+│   ├── handler.py       ## Handler code for the serverless function
+│   ├── serverless.yml   ## Configuration file for the Serverless Framework
+│   └── requirements.txt ## Dependencies for the serverless function
 ├── function2/
-│   ├── handler.py       # Handler code for another serverless function
-│   ├── serverless.yml   # Configuration file for this function
-│   └── requirements.txt # Dependencies for this function
+│   ├── handler.py       ## Handler code for another serverless function
+│   ├── serverless.yml   ## Configuration file for this function
+│   └── requirements.txt ## Dependencies for this function
 └── ...
 ```
 
@@ -220,24 +220,24 @@ Certainly! Below is an example of a Python function that represents a complex ma
 ### Example Function Code (handler.py):
 
 ```python
-# File path: serverless_functions/complex_algorithm/handler.py
+## File path: serverless_functions/complex_algorithm/handler.py
 
 import json
 import numpy as np
 from sklearn.ensemble import RandomForestClassifier
 
 def lambda_handler(event, context):
-    # Mock data for demonstration
+    ## Mock data for demonstration
     input_data = [[5.1, 3.5, 1.4, 0.2], [6.2, 3.4, 5.4, 2.3], [4.9, 2.5, 4.5, 1.7]]
     
-    # Perform complex machine learning algorithm (Random Forest classification in this example)
+    ## Perform complex machine learning algorithm (Random Forest classification in this example)
     model = RandomForestClassifier(n_estimators=100, random_state=42)
-    model.fit(X_train, y_train)  # Training not shown for brevity
+    model.fit(X_train, y_train)  ## Training not shown for brevity
     
-    # Perform prediction
+    ## Perform prediction
     predictions = model.predict(input_data)
     
-    # Prepare response
+    ## Prepare response
     response = {
         "statusCode": 200,
         "body": json.dumps({
@@ -266,23 +266,23 @@ Certainly! Below is an example of a Python function that represents a complex de
 ### Example Function Code (handler.py) for Deep Learning Algorithm:
 
 ```python
-# File path: serverless_functions/deep_learning_algorithm/handler.py
+## File path: serverless_functions/deep_learning_algorithm/handler.py
 
 import json
 import numpy as np
 from tensorflow.keras.models import load_model
 
 def lambda_handler(event, context):
-    # Mock data for demonstration
+    ## Mock data for demonstration
     input_data = np.array([[0.2, 0.3, 0.4, 0.1], [0.5, 0.3, 0.9, 0.7], [0.1, 0.5, 0.3, 0.8]])
     
-    # Load pre-trained deep learning model (e.g., a neural network model)
-    model = load_model('path_to_model/model.h5')  # Replace with actual path to the model file
+    ## Load pre-trained deep learning model (e.g., a neural network model)
+    model = load_model('path_to_model/model.h5')  ## Replace with actual path to the model file
     
-    # Perform prediction
+    ## Perform prediction
     predictions = model.predict(input_data)
     
-    # Prepare response
+    ## Prepare response
     response = {
         "statusCode": 200,
         "body": json.dumps({

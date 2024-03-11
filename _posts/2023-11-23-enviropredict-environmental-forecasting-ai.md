@@ -5,7 +5,7 @@ permalink: posts/enviropredict-environmental-forecasting-ai
 layout: article
 ---
 
-# AI EnviroPredict Environmental Forecasting AI Repository
+## AI EnviroPredict Environmental Forecasting AI Repository
 
 ## Objectives
 The AI EnviroPredict repository aims to provide a platform for building environmental forecasting AI applications. The primary objectives of the repository include:
@@ -196,30 +196,30 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 
 def complex_machine_learning_algorithm(data_file_path):
-    # Load mock data
+    ## Load mock data
     data = pd.read_csv(data_file_path)
 
-    # Preprocessing and feature engineering
+    ## Preprocessing and feature engineering
     X = data.drop('target_variable', axis=1)
     y = data['target_variable']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Instantiate the RandomForestRegressor model
+    ## Instantiate the RandomForestRegressor model
     model = RandomForestRegressor(n_estimators=100, random_state=42)
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train)
 
-    # Make predictions
+    ## Make predictions
     y_pred = model.predict(X_test)
 
-    # Evaluate the model
+    ## Evaluate the model
     mse = mean_squared_error(y_test, y_pred)
     print(f"Mean Squared Error: {mse}")
 
-    # Return the trained model for deployment
+    ## Return the trained model for deployment
     return model
 ```
 
@@ -237,21 +237,21 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import mean_squared_error
 
 def complex_deep_learning_algorithm(data_file_path):
-    # Load mock data
+    ## Load mock data
     data = pd.read_csv(data_file_path)
 
-    # Preprocessing and feature engineering
+    ## Preprocessing and feature engineering
     X = data.drop('target_variable', axis=1).values
     y = data['target_variable'].values
 
-    # Data normalization
+    ## Data normalization
     scaler = StandardScaler()
     X = scaler.fit_transform(X)
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Define the deep learning model architecture
+    ## Define the deep learning model architecture
     model = Sequential([
         Dense(64, input_shape=(X_train.shape[1],), activation='relu'),
         Dropout(0.5),
@@ -260,20 +260,20 @@ def complex_deep_learning_algorithm(data_file_path):
         Dense(1)
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam', loss='mean_squared_error')
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train, epochs=50, batch_size=32, validation_data=(X_test, y_test))
 
-    # Make predictions
+    ## Make predictions
     y_pred = model.predict(X_test)
 
-    # Calculate mean squared error
+    ## Calculate mean squared error
     mse = mean_squared_error(y_test, y_pred)
     print(f"Mean Squared Error: {mse}")
 
-    # Return the trained deep learning model for deployment
+    ## Return the trained deep learning model for deployment
     return model
 ```
 

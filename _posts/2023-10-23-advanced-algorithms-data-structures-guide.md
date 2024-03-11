@@ -5,7 +5,7 @@ permalink: posts/advanced-algorithms-data-structures-guide
 layout: article
 ---
 
-# Advanced Algorithms and Data Structures
+## Advanced Algorithms and Data Structures
 
 Algorithms and data structures form the basic building blocks of any software or program. They're essential to understanding how a program works and to increasing its efficiency. The first part of writing any program is understanding algorithms, which describe the steps a program should take, and data structures, which gather and store the data the algorithm will manipulate.
 

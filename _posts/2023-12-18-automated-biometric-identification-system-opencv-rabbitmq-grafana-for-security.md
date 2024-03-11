@@ -5,7 +5,7 @@ permalink: posts/automated-biometric-identification-system-opencv-rabbitmq-grafa
 layout: article
 ---
 
-# AI Automated Biometric Identification System
+## AI Automated Biometric Identification System
 
 ## Objectives
 The objective of this AI Automated Biometric Identification System is to provide a secure and efficient means of identifying individuals through biometric data such as fingerprints, facial recognition, or iris scans. The system aims to leverage AI and machine learning techniques to automate the identification process, enhance security, and provide real-time monitoring and analytics.
@@ -29,7 +29,7 @@ Grafana is a leading open-source platform for monitoring and analytics, offering
 
 By leveraging these libraries and technologies, the AI Automated Biometric Identification System can achieve its objectives of providing efficient and secure biometric identification capabilities while ensuring scalability and real-time monitoring.
 
-# MLOps Infrastructure for the Automated Biometric Identification System
+## MLOps Infrastructure for the Automated Biometric Identification System
 
 ## Overview
 The MLOps infrastructure for the Automated Biometric Identification System is designed to facilitate the efficient deployment, monitoring, and management of machine learning models for biometric identification. This infrastructure integrates with the existing system components such as OpenCV for computer vision, RabbitMQ for messaging, and Grafana for monitoring, in order to create a streamlined workflow for developing, deploying, and maintaining machine learning models.
@@ -207,8 +207,8 @@ The "deployment" directory contains files and scripts related to the deployment 
 The deployment directory and its contents facilitate the seamless deployment, scaling, and management of the Automated Biometric Identification System's services and machine learning models. By leveraging tools such as Docker Compose and Kubernetes, along with deployment scripts, the system can be efficiently deployed and operated in a production environment, integrating OpenCV, RabbitMQ, and Grafana for a secure and scalable security application.
 
 ```python
-# File: model_training.py
-# Path: /models/biometric_model_1/version_1/training_scripts/model_training.py
+## File: model_training.py
+## Path: /models/biometric_model_1/version_1/training_scripts/model_training.py
 
 import numpy as np
 import pandas as pd
@@ -217,31 +217,31 @@ from sklearn.linear_model import LogisticRegression
 import joblib
 import json
 
-# Load mock biometric identification data
+## Load mock biometric identification data
 data = pd.read_csv("path_to_mock_biometric_data.csv")
 
-# Preprocessing
-# ... (data preprocessing steps such as normalization, feature extraction)
+## Preprocessing
+## ... (data preprocessing steps such as normalization, feature extraction)
 
-# Prepare features and labels
+## Prepare features and labels
 X = data.drop('label', axis=1)
 y = data['label']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Model training
+## Model training
 model = LogisticRegression()
 model.fit(X_train, y_train)
 
-# Evaluate model
+## Evaluate model
 accuracy = model.score(X_test, y_test)
 print(f"Model accuracy: {accuracy}")
 
-# Save trained model
+## Save trained model
 joblib.dump(model, 'biometric_model_1_v1.pkl')
 
-# Save model configuration
+## Save model configuration
 model_config = {
     "model_type": "LogisticRegression",
     "features": list(X.columns),
@@ -250,12 +250,12 @@ model_config = {
 with open('biometric_model_1_v1_config.json', 'w') as json_file:
     json.dump(model_config, json_file)
 
-# Save label mapping
+## Save label mapping
 label_mapping = {
     "label_mapping": {
         "0": "John Doe",
         "1": "Jane Smith",
-        # ... (mapping of labels to individuals)
+        ## ... (mapping of labels to individuals)
     }
 }
 with open('label_mapping.json', 'w') as json_file:
@@ -277,8 +277,8 @@ The Python script includes the following key components:
 This file serves as an example of a model training script within the Automated Biometric Identification System, leveraging OpenCV, RabbitMQ, and Grafana, and enables the training and saving of machine learning models using mock data for biometric identification purposes.
 
 ```python
-# File: model_training_complex.py
-# Path: /models/biometric_model_2/version_1/training_scripts/model_training_complex.py
+## File: model_training_complex.py
+## Path: /models/biometric_model_2/version_1/training_scripts/model_training_complex.py
 
 import numpy as np
 import pandas as pd
@@ -287,31 +287,31 @@ from sklearn.model_selection import train_test_split
 import joblib
 import json
 
-# Load mock biometric identification data
+## Load mock biometric identification data
 data = pd.read_csv("path_to_mock_biometric_data.csv")
 
-# Preprocessing
-# ... (data preprocessing steps such as feature scaling, dimensionality reduction)
+## Preprocessing
+## ... (data preprocessing steps such as feature scaling, dimensionality reduction)
 
-# Prepare features and labels
+## Prepare features and labels
 X = data.drop('label', axis=1)
 y = data['label']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Model training
+## Model training
 model = RandomForestClassifier(n_estimators=100, max_depth=10, random_state=42)
 model.fit(X_train, y_train)
 
-# Evaluate model
+## Evaluate model
 accuracy = model.score(X_test, y_test)
 print(f"Model accuracy: {accuracy}")
 
-# Save trained model
+## Save trained model
 joblib.dump(model, 'biometric_model_2_v1.pkl')
 
-# Save model configuration
+## Save model configuration
 model_config = {
     "model_type": "RandomForestClassifier",
     "features": list(X.columns),
@@ -320,12 +320,12 @@ model_config = {
 with open('biometric_model_2_v1_config.json', 'w') as json_file:
     json.dump(model_config, json_file)
 
-# Save label mapping
+## Save label mapping
 label_mapping = {
     "label_mapping": {
         "0": "John Doe",
         "1": "Jane Smith",
-        # ... (mapping of labels to individuals)
+        ## ... (mapping of labels to individuals)
     }
 }
 with open('label_mapping.json', 'w') as json_file:

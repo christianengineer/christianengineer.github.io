@@ -5,7 +5,7 @@ permalink: posts/public-transportation-accessibility-ai-for-peru-keras-scikit-le
 layout: article
 ---
 
-# AI Public Transportation Accessibility Project Overview
+## AI Public Transportation Accessibility Project Overview
 
 ## Objectives:
 - To analyze transportation networks in Peru to identify areas where accessibility and affordability can be improved for low-income populations.
@@ -27,7 +27,7 @@ layout: article
 
 By combining these technologies and strategies, the AI Public Transportation Accessibility project aims to revolutionize public transportation in Peru, making it more accessible and affordable for low-income populations through the power of AI and data-driven insights.
 
-# MLOps Infrastructure for Public Transportation Accessibility AI in Peru
+## MLOps Infrastructure for Public Transportation Accessibility AI in Peru
 
 ## Continuous Integration/Continuous Deployment (CI/CD):
 - **CI/CD Pipeline:** Implement a robust CI/CD pipeline to automate the training, testing, and deployment of machine learning models using Keras and Scikit-Learn.
@@ -54,7 +54,7 @@ By combining these technologies and strategies, the AI Public Transportation Acc
 
 By implementing a comprehensive MLOps infrastructure for the Public Transportation Accessibility AI in Peru, the project aims to streamline the development, deployment, and monitoring of machine learning models, making the application more reliable, scalable, and efficient in improving accessibility and affordability for low-income populations in the region.
 
-# Public Transportation Accessibility AI for Peru - Scalable File Structure
+## Public Transportation Accessibility AI for Peru - Scalable File Structure
 
 ```
 public-transportation-ai-peru/
@@ -121,7 +121,7 @@ public-transportation-ai-peru/
 
 This structured file organization facilitates code maintenance, collaboration, and scalability for the Public Transportation Accessibility AI project in Peru, ensuring that different components are logically separated and easily accessible for developers working on the project.
 
-# Public Transportation Accessibility AI for Peru - Models Directory
+## Public Transportation Accessibility AI for Peru - Models Directory
 
 ```
 models/
@@ -159,7 +159,7 @@ models/
 
 By organizing the models directory in this structured manner, the Public Transportation Accessibility AI for Peru project ensures that each machine learning model has dedicated files for training and deployment, making it easier to manage and update models as needed for improving transportation accessibility and affordability for low-income populations.
 
-# Public Transportation Accessibility AI for Peru - Deployment Directory
+## Public Transportation Accessibility AI for Peru - Deployment Directory
 
 ```
 deployment/
@@ -213,7 +213,7 @@ deployment/
 
 By structuring the deployment directory in this way, the Public Transportation Accessibility AI for Peru project ensures a well-organized and efficient deployment process for making transportation networks more accessible and affordable for low-income populations using AI-driven insights.
 
-# Public Transportation Accessibility AI for Peru - Training Script with Mock Data
+## Public Transportation Accessibility AI for Peru - Training Script with Mock Data
 
 ## File Path: `models/train_affordability_analysis.py`
 
@@ -224,27 +224,27 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_squared_error
 import joblib
 
-# Generate mock data for affordability analysis model training
+## Generate mock data for affordability analysis model training
 np.random.seed(42)
 num_samples = 1000
-X = np.random.rand(num_samples, 3)  # Mock features (e.g., transportation cost, distance, income)
-y = np.random.randint(0, 2, num_samples)  # Mock target (binary: affordable or not)
+X = np.random.rand(num_samples, 3)  ## Mock features (e.g., transportation cost, distance, income)
+y = np.random.randint(0, 2, num_samples)  ## Mock target (binary: affordable or not)
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Train RandomForestRegressor model for affordability analysis
+## Train RandomForestRegressor model for affordability analysis
 model = RandomForestRegressor()
 model.fit(X_train, y_train)
 
-# Make predictions on the test set
+## Make predictions on the test set
 y_pred = model.predict(X_test)
 
-# Evaluate model performance
+## Evaluate model performance
 mse = mean_squared_error(y_test, y_pred)
 print(f"Mean Squared Error: {mse}")
 
-# Serialize and save the trained model
+## Serialize and save the trained model
 joblib.dump(model, "affordability_analysis_model.joblib")
 print("Affordability analysis model training complete. Model saved.")
 ```
@@ -253,7 +253,7 @@ This Python script `models/train_affordability_analysis.py` generates mock data 
 
 This script showcases how to train a machine learning model for affordability analysis using mock data, allowing developers to experiment with model training and understand the workflow before integrating real data from transportation networks in Peru.
 
-# Public Transportation Accessibility AI for Peru - Complex Machine Learning Algorithm Script with Mock Data
+## Public Transportation Accessibility AI for Peru - Complex Machine Learning Algorithm Script with Mock Data
 
 ## File Path: `models/train_demand_prediction.py`
 
@@ -264,28 +264,28 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 import joblib
 
-# Generate mock data for demand prediction model training
+## Generate mock data for demand prediction model training
 np.random.seed(42)
 num_samples = 1000
 num_features = 5
-X = np.random.rand(num_samples, num_features)  # Mock features (e.g., population, income, location data)
-y = np.random.randint(50, 1000, num_samples)  # Mock target (demand levels)
+X = np.random.rand(num_samples, num_features)  ## Mock features (e.g., population, income, location data)
+y = np.random.randint(50, 1000, num_samples)  ## Mock target (demand levels)
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Train GradientBoostingRegressor model for demand prediction
+## Train GradientBoostingRegressor model for demand prediction
 model = GradientBoostingRegressor(n_estimators=100, max_depth=5, random_state=42)
 model.fit(X_train, y_train)
 
-# Make predictions on the test set
+## Make predictions on the test set
 y_pred = model.predict(X_test)
 
-# Evaluate model performance
+## Evaluate model performance
 mse = mean_squared_error(y_test, y_pred)
 print(f"Mean Squared Error: {mse}")
 
-# Serialize and save the trained model
+## Serialize and save the trained model
 joblib.dump(model, "demand_prediction_model.pkl")
 print("Demand prediction model training complete. Model saved.")
 ```
@@ -294,7 +294,7 @@ In this script `models/train_demand_prediction.py`, a complex machine learning a
 
 The model is trained on the mock data, evaluated using mean squared error, and serialized as `demand_prediction_model.pkl` for later use in the application. This script demonstrates how to train a sophisticated machine learning algorithm for demand prediction, providing insights into the nuances of modeling transportation networks to improve accessibility and affordability for low-income populations.
 
-# Types of Users for Public Transportation Accessibility AI in Peru
+## Types of Users for Public Transportation Accessibility AI in Peru
 
 1. **Low-Income Commuter**
     - User Story: As a low-income commuter, I want to find the most affordable and accessible public transportation options to reach my destination.

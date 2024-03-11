@@ -236,26 +236,26 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
 def talent_management_ml_algorithm(data_file_path):
-    # Load mock HR data
+    ## Load mock HR data
     hr_data = pd.read_csv(data_file_path)
 
-    # Preprocess the data (e.g., handle missing values, encode categorical variables)
+    ## Preprocess the data (e.g., handle missing values, encode categorical variables)
 
-    # Split the data into features and target variable
-    X = hr_data.drop('talent_class', axis=1)  # Features
-    y = hr_data['talent_class']  # Target variable
+    ## Split the data into features and target variable
+    X = hr_data.drop('talent_class', axis=1)  ## Features
+    y = hr_data['talent_class']  ## Target variable
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize and train a random forest classifier
+    ## Initialize and train a random forest classifier
     rf_classifier = RandomForestClassifier(n_estimators=100, random_state=42)
     rf_classifier.fit(X_train, y_train)
 
-    # Make predictions
+    ## Make predictions
     y_pred = rf_classifier.predict(X_test)
 
-    # Evaluate the model
+    ## Evaluate the model
     accuracy = accuracy_score(y_test, y_pred)
 
     return rf_classifier, accuracy
@@ -288,25 +288,25 @@ from tensorflow.keras.preprocessing.text import Tokenizer
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 
 def employee_feedback_sentiment_analysis_dl_algorithm(data_file_path):
-    # Load mock HR feedback data
+    ## Load mock HR feedback data
     feedback_data = pd.read_csv(data_file_path)
 
-    # Preprocess the text data (e.g., tokenization, padding)
+    ## Preprocess the text data (e.g., tokenization, padding)
 
-    # Split the data into features (feedback) and target variable (sentiment)
+    ## Split the data into features (feedback) and target variable (sentiment)
     X = feedback_data['feedback']
     y = feedback_data['sentiment']
 
-    # Tokenize the feedback data and convert to sequences
+    ## Tokenize the feedback data and convert to sequences
     tokenizer = Tokenizer(num_words=1000, oov_token='<OOV>')
     tokenizer.fit_on_texts(X)
     X_sequences = tokenizer.texts_to_sequences(X)
     X_padded = pad_sequences(X_sequences, maxlen=100, truncating='post')
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X_padded, y, test_size=0.2, random_state=42)
 
-    # Initialize a sequential model
+    ## Initialize a sequential model
     model = Sequential([
         Embedding(input_dim=1000, output_dim=64, input_length=100),
         LSTM(64, return_sequences=True),
@@ -314,10 +314,10 @@ def employee_feedback_sentiment_analysis_dl_algorithm(data_file_path):
         Dense(1, activation='sigmoid')
     ])
     
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train, epochs=10, validation_data=(X_test, y_test))
 
     return model

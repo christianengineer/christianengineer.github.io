@@ -77,12 +77,12 @@ Neural-Style-Transfer-Project/
 │   │   ├── transfer.html
 │   │
 │   ├── models/
-│   │   ├── vgg19.pth            # Pre-trained VGG19 model weights
+│   │   ├── vgg19.pth            ## Pre-trained VGG19 model weights
 │   │
 │   ├── utils/
-│   │   ├── image_utils.py       # Image processing utilities
-│   │   ├── style_transfer.py    # Neural style transfer implementation
-│   │   ├── model_loader.py      # Loading pre-trained model weights
+│   │   ├── image_utils.py       ## Image processing utilities
+│   │   ├── style_transfer.py    ## Neural style transfer implementation
+│   │   ├── model_loader.py      ## Loading pre-trained model weights
 │
 ├── data/
 │   ├── input/
@@ -90,23 +90,23 @@ Neural-Style-Transfer-Project/
 │   ├── output/
 │
 ├── notebooks/
-│   ├── model_training.ipynb     # Jupyter notebook for model training (optional)
+│   ├── model_training.ipynb     ## Jupyter notebook for model training (optional)
 │
-├── Dockerfile                   # Docker container configuration
-├── requirements.txt             # Python dependencies
-├── app.py                       # Flask web application
-├── config.py                    # Configuration settings
-├── utils.py                     # General utility functions
-├── README.md                    # Project documentation
+├── Dockerfile                   ## Docker container configuration
+├── requirements.txt             ## Python dependencies
+├── app.py                       ## Flask web application
+├── config.py                    ## Configuration settings
+├── utils.py                     ## General utility functions
+├── README.md                    ## Project documentation
 ```
 
 ```plaintext
 models/
-├── vgg19.pth               # Pre-trained VGG19 model weights
-├── transformer_net.py      # Implementation of the style transfer network
-├── loss_functions.py       # Custom loss functions for style transfer
-├── gram_matrix.py          # Utility function for computing Gram matrices
-├── model_loader.py         # Loading and initializing pre-trained models
+├── vgg19.pth               ## Pre-trained VGG19 model weights
+├── transformer_net.py      ## Implementation of the style transfer network
+├── loss_functions.py       ## Custom loss functions for style transfer
+├── gram_matrix.py          ## Utility function for computing Gram matrices
+├── model_loader.py         ## Loading and initializing pre-trained models
 ```
 
 - `vgg19.pth`: This file contains the pre-trained weights of the VGG19 model, which is often used as a feature extractor in neural style transfer. These weights can be obtained from the PyTorch model zoo or other reputable sources.
@@ -123,15 +123,15 @@ These files within the `models` directory collectively form the core components 
 
 ```plaintext
 deployment/
-├── Dockerfile          # Configuration file for building the Docker image
-├── docker-compose.yml  # Docker Compose file for multi-container deployment (optional)
+├── Dockerfile          ## Configuration file for building the Docker image
+├── docker-compose.yml  ## Docker Compose file for multi-container deployment (optional)
 ├── kubernetes/
-│   ├── deployment.yaml     # Kubernetes deployment configuration
-│   ├── service.yaml        # Kubernetes service configuration
-│   ├── ingress.yaml        # Kubernetes ingress configuration (if applicable)
+│   ├── deployment.yaml     ## Kubernetes deployment configuration
+│   ├── service.yaml        ## Kubernetes service configuration
+│   ├── ingress.yaml        ## Kubernetes ingress configuration (if applicable)
 ├── scripts/
-│   ├── start_app.sh        # Script for starting the application
-│   ├── stop_app.sh         # Script for stopping the application
+│   ├── start_app.sh        ## Script for starting the application
+│   ├── stop_app.sh         ## Script for stopping the application
 ```
 
 - `Dockerfile`: This file contains the configuration for building the Docker image for the Neural Style Transfer application. It defines the environment, dependencies, and commands needed to run the application within a containerized environment.
@@ -155,21 +155,21 @@ Sure, here's a Python function for a complex machine learning algorithm for the 
 import torch
 import torchvision.transforms as transforms
 from PIL import Image
-from models.transformer_net import TransformerNet  # Assuming implementation of the style transfer network
-from models.model_loader import load_model_weights  # Function for loading model weights
+from models.transformer_net import TransformerNet  ## Assuming implementation of the style transfer network
+from models.model_loader import load_model_weights  ## Function for loading model weights
 
 def neural_style_transfer(input_image_path, style_image_path, output_image_path):
-    # Load pre-trained model
+    ## Load pre-trained model
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model = TransformerNet()
-    model = load_model_weights(model, 'models/vgg19.pth')  # Loading pre-trained VGG19 weights
+    model = load_model_weights(model, 'models/vgg19.pth')  ## Loading pre-trained VGG19 weights
     model.to(device)
 
-    # Load and preprocess input and style images
+    ## Load and preprocess input and style images
     content_image = Image.open(input_image_path).convert('RGB')
     style_image = Image.open(style_image_path).convert('RGB')
 
-    # Preprocessing transformations
+    ## Preprocessing transformations
     content_transform = transforms.Compose([
         transforms.Resize(256),
         transforms.CenterCrop(256),
@@ -183,19 +183,19 @@ def neural_style_transfer(input_image_path, style_image_path, output_image_path)
         transforms.Normalize((0.485, 0.456, 0.406), (0.229, 0.224, 0.225))
     ])
 
-    # Preprocess the images
+    ## Preprocess the images
     content = content_transform(content_image).unsqueeze(0).to(device)
     style = style_transform(style_image).unsqueeze(0).to(device)
 
-    # Perform style transfer
+    ## Perform style transfer
     generated = model(content, style)
 
-    # Save the output image
+    ## Save the output image
     output_image = generated.clamp(0, 1).squeeze(0).cpu().detach()
     output_image = transforms.ToPILImage()(output_image)
     output_image.save(output_image_path)
 
-# Example usage
+## Example usage
 neural_style_transfer('data/input/input_image.jpg', 'data/styles/style_image.jpg', 'data/output/output_image.jpg')
 ```
 
@@ -215,44 +215,44 @@ Sure, here's a Python function that incorporates a complex deep learning algorit
 import torch
 import torchvision.transforms as transforms
 from PIL import Image
-from models.transformer_net import TransformerNet  # Assuming implementation of the style transfer network
-from models.model_loader import load_model_weights  # Function for loading model weights
+from models.transformer_net import TransformerNet  ## Assuming implementation of the style transfer network
+from models.model_loader import load_model_weights  ## Function for loading model weights
 
 def neural_style_transfer_deep_learning(input_image_path, style_image_path, output_image_path):
-    # Load pre-trained model
+    ## Load pre-trained model
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model = TransformerNet()
-    model = load_model_weights(model, 'models/vgg19.pth')  # Loading pre-trained VGG19 weights
+    model = load_model_weights(model, 'models/vgg19.pth')  ## Loading pre-trained VGG19 weights
     model.to(device)
     model.eval()
 
-    # Load and preprocess input and style images
+    ## Load and preprocess input and style images
     content_image = Image.open(input_image_path).convert('RGB')
     style_image = Image.open(style_image_path).convert('RGB')
 
-    # Preprocessing transformations
+    ## Preprocessing transformations
     preprocess = transforms.Compose([
         transforms.Resize(256),
         transforms.ToTensor(),
         transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
     ])
     
-    # Preprocess the images
+    ## Preprocess the images
     content = preprocess(content_image).unsqueeze(0).to(device)
     style = preprocess(style_image).unsqueeze(0).to(device)
 
-    # Perform style transfer
+    ## Perform style transfer
     with torch.no_grad():
-        output = model(content, style)  # Apply style transfer
+        output = model(content, style)  ## Apply style transfer
 
-    # Post-process the output
+    ## Post-process the output
     output_image = output.clamp(0, 1).cpu().squeeze(0)
     output_image = transforms.ToPILImage()(output_image)
 
-    # Save the output image
+    ## Save the output image
     output_image.save(output_image_path)
 
-# Example usage
+## Example usage
 neural_style_transfer_deep_learning('data/input/input_image.jpg', 'data/styles/style_image.jpg', 'data/output/output_image.jpg')
 ```
 

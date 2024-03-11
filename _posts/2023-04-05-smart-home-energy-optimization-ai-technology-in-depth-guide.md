@@ -5,7 +5,7 @@ permalink: posts/smart-home-energy-optimization-ai-technology-in-depth-guide
 layout: article
 ---
 
-# Smart Home Energy Optimization System Repository
+## Smart Home Energy Optimization System Repository
 
 ## Description
 
@@ -49,7 +49,7 @@ Our system is designed using various libraries to sustain heavy user traffic and
 
 The system's repository is continuously updated, maintained, and kept robust with the latest and most efficient libraries to ensure scalability, security, and efficiency, in line with our objectives.
 
-# File Structure for Smart Home Energy Optimization System Repository
+## File Structure for Smart Home Energy Optimization System Repository
 
 The structure for our repository serves as an ideal layout for our system, ensuring a modular and scalable full-stack codebase. It follows the standard industry practices and provides a clear view of project organization.
 
@@ -115,7 +115,7 @@ SmartHomeEnergyOptimizationSystem/
 - **LICENSE**: Defines the terms under which the project's codebase can be shared or used.
 - **package.json**: Details out the project dependencies, scripts, and brief info about the project. There are separate `package.json` for both client and server side, adhering to their respective dependencies and scripts.
 
-# EnergyOptimizationLogic.js
+## EnergyOptimizationLogic.js
 
 This file, `EnergyOptimizationLogic.js`, implements the core application logic for the Smart Home Energy Optimization System. It is responsible for determining how energy resources are distributed among various home appliances and systems.
 

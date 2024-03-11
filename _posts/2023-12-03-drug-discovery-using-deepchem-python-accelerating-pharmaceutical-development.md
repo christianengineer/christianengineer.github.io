@@ -58,36 +58,36 @@ drug_discovery_deepchem/
 │
 ├── data/
 │   ├── raw_data/
-│   │   └── ...  # Raw input data files
+│   │   └── ...  ## Raw input data files
 │   ├── processed_data/
-│   │   └── ...  # Processed and cleaned data files
+│   │   └── ...  ## Processed and cleaned data files
 │   └── trained_models/
-│       └── ...  # Saved trained model files
+│       └── ...  ## Saved trained model files
 │
 ├── notebooks/
-│   └── ...  # Jupyter notebooks for exploratory data analysis, model development, and experimentation
+│   └── ...  ## Jupyter notebooks for exploratory data analysis, model development, and experimentation
 │
 ├── src/
 │   ├── data_processing/
-│   │   └── ...  # Python scripts for data preprocessing and feature engineering
+│   │   └── ...  ## Python scripts for data preprocessing and feature engineering
 │   ├── model_training/
-│   │   └── ...  # Python scripts for training machine learning models
+│   │   └── ...  ## Python scripts for training machine learning models
 │   ├── model_evaluation/
-│   │   └── ...  # Python scripts for model evaluation and validation
+│   │   └── ...  ## Python scripts for model evaluation and validation
 │   └── model_serving/
-│       └── ...  # Python scripts for deploying and serving trained models
+│       └── ...  ## Python scripts for deploying and serving trained models
 │
 ├── api/
-│   └── ...  # RESTful API code for model serving and inference
+│   └── ...  ## RESTful API code for model serving and inference
 │
 ├── config/
-│   └── ...  # Configuration files for environment variables, model hyperparameters, and deployment settings
+│   └── ...  ## Configuration files for environment variables, model hyperparameters, and deployment settings
 │
 ├── tests/
-│   └── ...  # Unit tests and integration tests for data processing, model training, and model serving
+│   └── ...  ## Unit tests and integration tests for data processing, model training, and model serving
 │
 ├── docs/
-│   └── ...  # Documentation files for the repository, including README, setup instructions, and usage guidelines
+│   └── ...  ## Documentation files for the repository, including README, setup instructions, and usage guidelines
 │
 └── requirements.txt
 ```
@@ -205,11 +205,11 @@ from deepchem.models import GraphConvModel
 from deepchem.molnet import load_tox21
 
 def run_complex_ml_algorithm(input_data_file_path):
-    # Load the example dataset from DeepChem
+    ## Load the example dataset from DeepChem
     tox21_tasks, tox21_datasets, transformers = load_tox21(featurizer='GraphConv')
     train_dataset, valid_dataset, test_dataset = tox21_datasets
 
-    # Create and train a graph convolution model
+    ## Create and train a graph convolution model
     model = GraphConvModel(
         len(tox21_tasks),
         mode='classification',
@@ -219,10 +219,10 @@ def run_complex_ml_algorithm(input_data_file_path):
     )
     model.fit(train_dataset, nb_epoch=50)
 
-    # Use the trained model to make predictions on mock data
+    ## Use the trained model to make predictions on mock data
     num_samples = 100
     num_features = 75
-    mock_data = np.random.rand(num_samples, num_features)  # Replace with actual mock data from the input file path
+    mock_data = np.random.rand(num_samples, num_features)  ## Replace with actual mock data from the input file path
     predictions = model.predict_on_batch(mock_data)
     
     return predictions
@@ -240,24 +240,24 @@ import numpy as np
 from deepchem.models import GraphConvModel
 
 def run_complex_ml_algorithm(input_data_file_path):
-    # Load and preprocess the input data
-    # Assuming the input data is stored in a specific format and needs to be preprocessed
-    # Example code to load and preprocess the input data from the file path
+    ## Load and preprocess the input data
+    ## Assuming the input data is stored in a specific format and needs to be preprocessed
+    ## Example code to load and preprocess the input data from the file path
     input_data = load_and_preprocess_data(input_data_file_path)
 
-    # Define the model architecture
+    ## Define the model architecture
     model = GraphConvModel(1, batch_size=100, mode='regression')
 
-    # Split the input data into features (X) and target (y)
+    ## Split the input data into features (X) and target (y)
     X = input_data['features']
     y = input_data['target']
 
-    # Train the model
+    ## Train the model
     model.fit(X, y, nb_epoch=100)
 
-    # Use the trained model to make predictions
+    ## Use the trained model to make predictions
     num_samples = 100
-    mock_features = np.random.rand(num_samples, X.shape[1])  # Generating mock features for prediction
+    mock_features = np.random.rand(num_samples, X.shape[1])  ## Generating mock features for prediction
     predictions = model.predict_on_batch(mock_features)
     
     return predictions

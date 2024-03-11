@@ -348,34 +348,34 @@ from sklearn.metrics import accuracy_score, classification_report, confusion_mat
 import joblib
 
 def train_predictive_maintenance_model(data_file_path):
-    # Load mock sensor data from a CSV file
+    ## Load mock sensor data from a CSV file
     sensor_data = pd.read_csv(data_file_path)
 
-    # Preprocessing and feature engineering steps
-    # ...
+    ## Preprocessing and feature engineering steps
+    ## ...
 
-    # Split the data into features and target variable
+    ## Split the data into features and target variable
     X = sensor_data.drop('failure', axis=1)
     y = sensor_data['failure']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize the Random Forest classifier
+    ## Initialize the Random Forest classifier
     clf = RandomForestClassifier(n_estimators=100, random_state=42)
 
-    # Train the classifier
+    ## Train the classifier
     clf.fit(X_train, y_train)
 
-    # Make predictions on the test set
+    ## Make predictions on the test set
     y_pred = clf.predict(X_test)
 
-    # Evaluate the model
+    ## Evaluate the model
     accuracy = accuracy_score(y_test, y_pred)
     report = classification_report(y_test, y_pred)
     confusion_mat = confusion_matrix(y_test, y_pred)
 
-    # Save the trained model to a file
+    ## Save the trained model to a file
     model_file_path = 'trained_predictive_maintenance_model.pkl'
     joblib.dump(clf, model_file_path)
 
@@ -406,21 +406,21 @@ from sklearn.preprocessing import LabelEncoder
 import joblib
 
 def train_quality_control_deep_learning_model(image_data_file_path, labels_file_path):
-    # Load mock image data and labels
+    ## Load mock image data and labels
     image_data = np.load(image_data_file_path)
     labels = pd.read_csv(labels_file_path)
 
-    # Preprocessing and normalization
-    # ...
+    ## Preprocessing and normalization
+    ## ...
 
-    # Encode labels to numerical values
+    ## Encode labels to numerical values
     label_encoder = LabelEncoder()
     encoded_labels = label_encoder.fit_transform(labels)
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(image_data, encoded_labels, test_size=0.2, random_state=42)
 
-    # Build a deep learning model using TensorFlow/Keras
+    ## Build a deep learning model using TensorFlow/Keras
     model = tf.keras.Sequential([
         tf.keras.layers.Conv2D(32, (3, 3), activation='relu', input_shape=(64, 64, 3)),
         tf.keras.layers.MaxPooling2D((2, 2)),
@@ -437,10 +437,10 @@ def train_quality_control_deep_learning_model(image_data_file_path, labels_file_
                   loss='sparse_categorical_crossentropy',
                   metrics=['accuracy'])
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train, epochs=10, validation_data=(X_test, y_test))
 
-    # Save the trained model to a file
+    ## Save the trained model to a file
     model_file_path = 'trained_quality_control_model.h5'
     model.save(model_file_path)
 

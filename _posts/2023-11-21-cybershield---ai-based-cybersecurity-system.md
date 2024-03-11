@@ -278,7 +278,7 @@ The `utils` directory serves as a repository for common functionalities and help
 Sure, here's an example of a function for a complex machine learning algorithm that utilizes mock data. For demonstration purposes, let's consider a hypothetical anomaly detection algorithm using Isolation Forest, a popular technique for detecting anomalies in data.
 
 ```python
-# File: AI/anomaly_detection/anomaly_detection_model.py
+## File: AI/anomaly_detection/anomaly_detection_model.py
 
 import pandas as pd
 from sklearn.ensemble import IsolationForest
@@ -287,31 +287,31 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import classification_report, confusion_matrix
 
 def train_anomaly_detection_model(data_file_path):
-    # Load the mock data from the specified file path
+    ## Load the mock data from the specified file path
     data = pd.read_csv(data_file_path)
 
-    # Assume 'feature1', 'feature2', 'feature3' are the relevant features for anomaly detection
+    ## Assume 'feature1', 'feature2', 'feature3' are the relevant features for anomaly detection
     X = data[['feature1', 'feature2', 'feature3']]
 
-    # Normalize the data
+    ## Normalize the data
     scaler = StandardScaler()
     X_scaled = scaler.fit_transform(X)
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test = train_test_split(X_scaled, test_size=0.2, random_state=42)
 
-    # Initialize and train the Isolation Forest model
+    ## Initialize and train the Isolation Forest model
     model = IsolationForest(n_estimators=100, contamination=0.05, random_state=42)
     model.fit(X_train)
 
-    # Make predictions on the test data
+    ## Make predictions on the test data
     y_pred = model.predict(X_test)
 
-    # Evaluate the model's performance
+    ## Evaluate the model's performance
     print("Classification Report:\n", classification_report(y_test, y_pred))
     print("Confusion Matrix:\n", confusion_matrix(y_test, y_pred))
 
-    # Return the trained model for serving
+    ## Return the trained model for serving
     return model
 ```
 
@@ -322,7 +322,7 @@ This function is located in the `anomaly_detection` sub-directory within the `AI
 Here's an example of a function for a complex deep learning algorithm that utilizes mock data. For demonstration purposes, let's consider a hypothetical deep learning algorithm using TensorFlow for network intrusion detection, a common application in cybersecurity.
 
 ```python
-# File: AI/intrusion_detection/intrusion_detection_model.py
+## File: AI/intrusion_detection/intrusion_detection_model.py
 
 import numpy as np
 import pandas as pd
@@ -332,21 +332,21 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import classification_report, confusion_matrix
 
 def train_intrusion_detection_model(data_file_path):
-    # Load the mock data from the specified file path
+    ## Load the mock data from the specified file path
     data = pd.read_csv(data_file_path)
 
-    # Assume 'feature1', 'feature2', 'feature3' are the relevant features for intrusion detection
+    ## Assume 'feature1', 'feature2', 'feature3' are the relevant features for intrusion detection
     X = data[['feature1', 'feature2', 'feature3']]
     y = data['target_variable']
 
-    # Normalize the data
+    ## Normalize the data
     scaler = StandardScaler()
     X_scaled = scaler.fit_transform(X)
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.2, random_state=42)
 
-    # Build the deep learning model using TensorFlow
+    ## Build the deep learning model using TensorFlow
     model = tf.keras.Sequential([
         tf.keras.layers.Dense(64, activation='relu', input_shape=(X_train.shape[1],)),
         tf.keras.layers.Dense(32, activation='relu'),
@@ -355,15 +355,15 @@ def train_intrusion_detection_model(data_file_path):
 
     model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y_test))
 
-    # Evaluate the model's performance
+    ## Evaluate the model's performance
     y_pred = (model.predict(X_test) > 0.5).astype("int32")
     print("Classification Report:\n", classification_report(y_test, y_pred))
     print("Confusion Matrix:\n", confusion_matrix(y_test, y_pred))
 
-    # Return the trained model for serving
+    ## Return the trained model for serving
     return model
 ```
 

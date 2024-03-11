@@ -5,7 +5,7 @@ permalink: posts/intelligent-virtual-health-assistant
 layout: article
 ---
 
-# Intelligent Virtual Health Assistant Technical Specifications
+## Intelligent Virtual Health Assistant Technical Specifications
 
 ## Description
 
@@ -152,7 +152,7 @@ class HealthAssistant:
             "name": user.name,
             "age": user.age,
             "gender": user.gender,
-            # Other user information
+            ## Other user information
         }
 
         return user_info
@@ -166,7 +166,7 @@ class HealthAssistant:
             "record_id": health_record.id,
             "user_id": health_record.user_id,
             "description": health_record.description,
-            # Other information related to health records
+            ## Other information related to health records
         }
 
         return record_info
@@ -179,13 +179,13 @@ class HealthAssistant:
                 "record_id": record.id,
                 "user_id": record.user_id,
                 "description": record.description,
-                # Other information related to health records
+                ## Other information related to health records
             }
             record_list.append(record_info)
 
         return record_list
 
-    # Other methods related to the core logic of the Health Assistant
+    ## Other methods related to the core logic of the Health Assistant
 ```
 
 The `HealthAssistant` class in the `health_assistant.py` file contains methods that interact with the user and health record controllers to retrieve user information, health records, and perform searches based on specific keywords. This is just a simplified example to demonstrate the core logic. Depending on the complexity of the application, you may have additional methods and logic within the `HealthAssistant` class.
@@ -214,7 +214,7 @@ class AppointmentManager:
                 "user_id": appointment.user_id,
                 "doctor_name": appointment.doctor_name,
                 "appointment_date": appointment.appointment_date,
-                # Other appointment information
+                ## Other appointment information
             }
             appointment_list.append(appointment_info)
 
@@ -244,7 +244,7 @@ class AppointmentManager:
         result = self.appointment_controller.cancel_appointment(appointment)
         return result
 
-    # Other methods related to the appointment management functionality
+    ## Other methods related to the appointment management functionality
 
 ```
 
@@ -287,12 +287,12 @@ class SymptomChecker:
             "symptoms": symptoms,
             "diagnosis": diagnosis.diagnosis,
             "treatment": diagnosis.treatment,
-            # Other diagnosis information
+            ## Other diagnosis information
         }
 
         return diagnosis_info
 
-    # Other methods related to the symptom checking functionality
+    ## Other methods related to the symptom checking functionality
 
 ```
 

@@ -5,7 +5,7 @@ permalink: posts/clinical-trial-data-analysis-using-tensorflow-python-evaluating
 layout: article
 ---
 
-# AI Clinical Trial Data Analysis using TensorFlow
+## AI Clinical Trial Data Analysis using TensorFlow
 
 ## Objectives
 The primary objective of the AI Clinical Trial Data Analysis system is to leverage machine learning to analyze and evaluate medical studies repository data. The system aims to:
@@ -41,7 +41,7 @@ The primary objective of the AI Clinical Trial Data Analysis system is to levera
 
 By integrating these strategies and leveraging the chosen libraries and tools, the AI Clinical Trial Data Analysis system can efficiently analyze and evaluate medical studies repository data, contributing to advancements in medical research and decision-making.
 
-# MLOps Infrastructure for Clinical Trial Data Analysis using TensorFlow
+## MLOps Infrastructure for Clinical Trial Data Analysis using TensorFlow
 
 ## 1. Data Pipeline
 - **Data Collection**: Utilize tools like Apache NiFi or custom data collection scripts to gather clinical trial data from various sources into a centralized data lake.
@@ -177,32 +177,32 @@ The deployment directory allows for the organized management of files related to
 Certainly! Below is an example of a file for training a TensorFlow model using mock data for the Clinical Trial Data Analysis application. This Python script assumes the use of TensorFlow and generates mock data for training a simple model.
 
 ```python
-# File Path: models/model_training_scripts/train_model.py
+## File Path: models/model_training_scripts/train_model.py
 
 import tensorflow as tf
 import numpy as np
 
-# Generate mock data
+## Generate mock data
 num_samples = 1000
 num_features = 10
 X = np.random.rand(num_samples, num_features)
 y = np.random.randint(0, 2, size=num_samples)
 
-# Define the model architecture
+## Define the model architecture
 model = tf.keras.models.Sequential([
     tf.keras.layers.Dense(64, activation='relu', input_shape=(num_features,)),
     tf.keras.layers.Dense(1, activation='sigmoid')
 ])
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam',
               loss='binary_crossentropy',
               metrics=['accuracy'])
 
-# Train the model
+## Train the model
 model.fit(X, y, epochs=10, batch_size=32)
 
-# Save the trained model
+## Save the trained model
 model.save('models/model_1/model_artifacts/trained_model')
 ```
 
@@ -216,20 +216,20 @@ In this script:
 This script serves as an example for training a TensorFlow model using mock data for the Clinical Trial Data Analysis application.
 
 ```python
-# File Path: models/model_training_scripts/train_complex_model.py
+## File Path: models/model_training_scripts/train_complex_model.py
 
 import tensorflow as tf
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Dropout
 import numpy as np
 
-# Generate mock data
+## Generate mock data
 num_samples = 1000
 num_features = 20
 X = np.random.rand(num_samples, num_features)
 y = np.random.randint(0, 2, size=num_samples)
 
-# Define the complex model architecture
+## Define the complex model architecture
 model = Sequential([
     Dense(128, activation='relu', input_shape=(num_features,)),
     Dropout(0.5),
@@ -237,15 +237,15 @@ model = Sequential([
     Dense(1, activation='sigmoid')
 ])
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam',
               loss='binary_crossentropy',
               metrics=['accuracy'])
 
-# Train the model
+## Train the model
 model.fit(X, y, epochs=20, batch_size=64)
 
-# Save the trained model
+## Save the trained model
 model.save('models/model_2/model_artifacts/trained_complex_model')
 ```
 

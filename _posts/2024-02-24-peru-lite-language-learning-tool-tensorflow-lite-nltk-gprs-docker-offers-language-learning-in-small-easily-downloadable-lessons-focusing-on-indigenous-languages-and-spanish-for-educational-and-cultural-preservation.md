@@ -68,40 +68,40 @@ By setting up a comprehensive MLOps infrastructure for the AI Peru Lite Language
 - peru-lite-language-learning-tool/
     - src/
         - app/
-            - main.py           # Main application logic
-            - data_processing/   # Data processing utilities
+            - main.py           ## Main application logic
+            - data_processing/   ## Data processing utilities
                 - tokenizer.py
                 - stemming.py
                 - data_loader.py
-            - models/            # TensorFlow Lite models
+            - models/            ## TensorFlow Lite models
                 - speech_recognition_model.tflite
                 - language_translation_model.tflite
-            - services/          # Core services
+            - services/          ## Core services
                 - language_service.py
                 - lesson_service.py
                 - user_service.py
-            - utils/             # Utility functions
+            - utils/             ## Utility functions
                 - logger.py
                 - helpers.py
         - config/
-            - config.py         # Configuration settings
-        - tests/                # Unit tests
+            - config.py         ## Configuration settings
+        - tests/                ## Unit tests
             - test_data_processing.py
             - test_services.py
     - data/
-        - language_lessons/     # Language lesson data
+        - language_lessons/     ## Language lesson data
             - indigenous_languages/
                 - lesson1.txt
                 - lesson2.txt
             - spanish/
                 - lesson1.txt
                 - lesson2.txt
-        - user_data/             # User data storage
+        - user_data/             ## User data storage
             - user1.json
             - user2.json
-    - Dockerfile               # Docker container configuration
-    - requirements.txt         # Python package dependencies
-    - README.md                # Project documentation
+    - Dockerfile               ## Docker container configuration
+    - requirements.txt         ## Python package dependencies
+    - README.md                ## Project documentation
 ```  
 
 This file structure organizes the AI Peru Lite Language Learning Tool codebase into logical components, making it scalable and easy to maintain. The `src/` directory contains the main application logic, data processing utilities, TensorFlow Lite models, core services, and utility functions. The `config/` directory holds configuration settings, while the `tests/` directory contains unit tests for testing various components.
@@ -116,8 +116,8 @@ This organized file structure ensures that different aspects of the AI Peru Lite
 
 ```
 - models/
-    - speech_recognition_model.tflite    # TensorFlow Lite model for speech recognition
-    - language_translation_model.tflite  # TensorFlow Lite model for language translation
+    - speech_recognition_model.tflite    ## TensorFlow Lite model for speech recognition
+    - language_translation_model.tflite  ## TensorFlow Lite model for language translation
 ```
 
 ### `speech_recognition_model.tflite`
@@ -136,14 +136,14 @@ By organizing the models directory with dedicated files for speech recognition a
 
 ```
 - deployment/
-    - Dockerfile            # Docker container configuration for the application
-    - docker-compose.yml    # Docker Compose file for managing multi-container application deployment
+    - Dockerfile            ## Docker container configuration for the application
+    - docker-compose.yml    ## Docker Compose file for managing multi-container application deployment
     - kubernetes/
-        - deployment.yaml    # Kubernetes deployment configuration for scaling application containers
-        - service.yaml       # Kubernetes service configuration for accessing the application
+        - deployment.yaml    ## Kubernetes deployment configuration for scaling application containers
+        - service.yaml       ## Kubernetes service configuration for accessing the application
     - scripts/
-        - deploy.sh          # Bash script for deploying the application
-        - backup_data.sh     # Bash script for backing up user data
+        - deploy.sh          ## Bash script for deploying the application
+        - backup_data.sh     ## Bash script for backing up user data
 ```
 
 ### `Dockerfile`
@@ -171,22 +171,22 @@ By organizing the deployment directory with essential configuration files and sc
 ### Training Script for Peru Lite Language Learning Tool
 
 ```python
-# File Path: training_script.py
+## File Path: training_script.py
 
 import tensorflow as tf
 from nltk.tokenize import word_tokenize
 import numpy as np
 
-# Mock Data
+## Mock Data
 indigenous_language_data = ["Sample indigenous language sentence 1", "Sample indigenous language sentence 2"]
 spanish_data = ["Sample Spanish sentence 1", "Sample Spanish sentence 2"]
-labels = [0, 1]  # Example labels for the sentences
+labels = [0, 1]  ## Example labels for the sentences
 
-# Tokenize and preprocess data
+## Tokenize and preprocess data
 tokenized_data = [word_tokenize(sentence) for sentence in indigenous_language_data + spanish_data]
 padded_data = tf.keras.preprocessing.sequence.pad_sequences(tokenized_data)
 
-# Define and train a simple model
+## Define and train a simple model
 model = tf.keras.Sequential([
     tf.keras.layers.Embedding(input_dim=10000, output_dim=16),
     tf.keras.layers.GlobalAveragePooling1D(),
@@ -197,7 +197,7 @@ model = tf.keras.Sequential([
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 model.fit(padded_data, labels, epochs=10, batch_size=32)
 
-# Save trained model
+## Save trained model
 model.save('language_learning_model.h5')
 ```
 
@@ -212,7 +212,7 @@ By running this training script with mock data, the AI Peru Lite Language Learni
 ### Complex Machine Learning Algorithm Script for Peru Lite Language Learning Tool
 
 ```python
-# File Path: complex_ml_algorithm.py
+## File Path: complex_ml_algorithm.py
 
 import tensorflow as tf
 from nltk.corpus import stopwords
@@ -221,12 +221,12 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.ensemble import RandomForestClassifier
 import numpy as np
 
-# Mock Data
+## Mock Data
 indigenous_language_data = ["Sample indigenous language sentence 1", "Sample indigenous language sentence 2"]
 spanish_data = ["Sample Spanish sentence 1", "Sample Spanish sentence 2"]
-labels = [0, 1]  # Example labels for the sentences
+labels = [0, 1]  ## Example labels for the sentences
 
-# NLTK preprocessing
+## NLTK preprocessing
 stop_words = set(stopwords.words('english'))
 ps = PorterStemmer()
 preprocessed_data = []
@@ -234,22 +234,22 @@ for sentence in indigenous_language_data + spanish_data:
     words = [ps.stem(word) for word in sentence.lower().split() if word not in stop_words]
     preprocessed_data.append(' '.join(words))
 
-# TF-IDF Vectorization
+## TF-IDF Vectorization
 vectorizer = TfidfVectorizer()
 X = vectorizer.fit_transform(preprocessed_data).toarray()
 
-# Build and train RandomForest Classifier
+## Build and train RandomForest Classifier
 model = RandomForestClassifier(n_estimators=100, random_state=42)
 model.fit(X, labels)
 
-# Mock data for prediction
+## Mock data for prediction
 mock_sentence = "Sample sentence to predict"
 
-# Preprocess test data
+## Preprocess test data
 test_data = [ps.stem(word) for word in mock_sentence.lower().split() if word not in stop_words]
 test_vector = vectorizer.transform([' '.join(test_data)]).toarray()
 
-# Make prediction
+## Make prediction
 prediction = model.predict(test_vector)
 print(f"Prediction: {prediction}")
 ```

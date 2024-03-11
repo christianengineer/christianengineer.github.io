@@ -5,7 +5,7 @@ permalink: posts/ai-enhanced-virtual-reality-experiences
 layout: article
 ---
 
-# AI-Enhanced Virtual Reality Experiences Repository
+## AI-Enhanced Virtual Reality Experiences Repository
 
 ## Technical Specifications Document
 

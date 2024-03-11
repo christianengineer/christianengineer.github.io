@@ -57,28 +57,28 @@ vehicle-number-plate-recognition/
 │
 ├── data/
 │   ├── raw/
-│   │   ├── images/            # Raw vehicle images dataset
-│   │   ├── annotations/       # Labeling or annotations for number plates
+│   │   ├── images/            ## Raw vehicle images dataset
+│   │   ├── annotations/       ## Labeling or annotations for number plates
 │   └── processed/
-│       ├── train/             # Processed training images
-│       ├── validation/        # Processed validation images
-│       └── test/              # Processed test images
+│       ├── train/             ## Processed training images
+│       ├── validation/        ## Processed validation images
+│       └── test/              ## Processed test images
 │
 ├── models/
-│   ├── pre-trained/           # Pre-trained models if applicable
-│   └── trained/               # Trained models after training
+│   ├── pre-trained/           ## Pre-trained models if applicable
+│   └── trained/               ## Trained models after training
 │
 ├── src/
-│   ├── preprocessing/         # Scripts for data preprocessing
-│   ├── training/              # Scripts for model training
-│   ├── inference/             # Scripts for number plate inference
-│   └── api/                   # API service for model endpoint
+│   ├── preprocessing/         ## Scripts for data preprocessing
+│   ├── training/              ## Scripts for model training
+│   ├── inference/             ## Scripts for number plate inference
+│   └── api/                   ## API service for model endpoint
 │
-├── requirements.txt           # Python dependencies
-├── Dockerfile                 # Dockerfile for containerization
-├── app.py                     # Application entry point
-├── config.yaml                # Configuration file for model parameters
-└── README.md                  # Documentation and instructions for the repository
+├── requirements.txt           ## Python dependencies
+├── Dockerfile                 ## Dockerfile for containerization
+├── app.py                     ## Application entry point
+├── config.yaml                ## Configuration file for model parameters
+└── README.md                  ## Documentation and instructions for the repository
 ```
 
 In this structure:
@@ -109,13 +109,13 @@ Within the `models/` directory for the Vehicle Number Plate Recognition system u
 models/
 │
 ├── pre-trained/
-│   ├── efficientdet/              # Pre-trained EfficientDet model files
-│   ├── ssd/                       # Pre-trained SSD model files
+│   ├── efficientdet/              ## Pre-trained EfficientDet model files
+│   ├── ssd/                       ## Pre-trained SSD model files
 │   └── ...
 │
 └── trained/
-    ├── model_checkpoint.ckpt       # Trained model checkpoint file
-    ├── model_architecture.json     # Model architecture configuration
+    ├── model_checkpoint.ckpt       ## Trained model checkpoint file
+    ├── model_architecture.json     ## Model architecture configuration
     └── ...
 ```
 
@@ -135,18 +135,18 @@ For the deployment of the Vehicle Number Plate Recognition system using TensorFl
 deployment/
 │
 ├── docker/
-│   ├── Dockerfile              # Dockerfile for building the application image
-│   ├── requirements.txt        # Python dependencies for the deployment image
+│   ├── Dockerfile              ## Dockerfile for building the application image
+│   ├── requirements.txt        ## Python dependencies for the deployment image
 │   └── ...
 │
 ├── kubernetes/
-│   ├── deployment.yaml         # Kubernetes deployment configuration
-│   ├── service.yaml            # Kubernetes service configuration
+│   ├── deployment.yaml         ## Kubernetes deployment configuration
+│   ├── service.yaml            ## Kubernetes service configuration
 │   └── ...
 │
 └── scripts/
-    ├── start_application.sh    # Script for starting the application
-    ├── stop_application.sh     # Script for stopping the application
+    ├── start_application.sh    ## Script for starting the application
+    ├── stop_application.sh     ## Script for stopping the application
     └── ...
 ```
 
@@ -166,24 +166,24 @@ from tensorflow import keras
 import numpy as np
 
 def vehicle_number_plate_recognition(image_path):
-    # Mock data loading and preprocessing
+    ## Mock data loading and preprocessing
     image = tf.io.read_file(image_path)
     image = tf.image.decode_image(image)
-    image = tf.image.resize(image, [224, 224])  # Resize the image to the required input size
+    image = tf.image.resize(image, [224, 224])  ## Resize the image to the required input size
 
-    # Mock complex machine learning algorithm for number plate recognition
-    model = keras.applications.ResNet50(weights='imagenet')  # Example complex model (ResNet50)
+    ## Mock complex machine learning algorithm for number plate recognition
+    model = keras.applications.ResNet50(weights='imagenet')  ## Example complex model (ResNet50)
     preprocess_input = keras.applications.resnet.preprocess_input
     image = preprocess_input(image)
-    image = np.expand_dims(image, axis=0)  # Add batch dimension
+    image = np.expand_dims(image, axis=0)  ## Add batch dimension
     predicted_labels = model.predict(image)
 
-    # Mock post-processing and formatting
+    ## Mock post-processing and formatting
     decoded_predictions = keras.applications.resnet.decode_predictions(predicted_labels, top=1)[0]
 
     return decoded_predictions
 
-# Usage example
+## Usage example
 image_path = 'path/to/vehicle/image.jpg'
 predictions = vehicle_number_plate_recognition(image_path)
 print(predictions)
@@ -202,25 +202,25 @@ import tensorflow as tf
 from tensorflow import keras
 
 def vehicle_number_plate_recognition(image_path):
-    # Load the image from the file path
+    ## Load the image from the file path
     img = tf.io.read_file(image_path)
     img = tf.image.decode_image(img, channels=3)
     img = tf.image.resize(img, [224, 224])
     img = tf.expand_dims(img, axis=0)
 
-    # Load a pre-trained model for number plate recognition
+    ## Load a pre-trained model for number plate recognition
     model = keras.applications.MobileNetV2(weights='imagenet', include_top=True)
 
-    # Preprocess the input image
+    ## Preprocess the input image
     img = keras.applications.mobilenet_v2.preprocess_input(img)
 
-    # Perform inference to recognize the number plate
+    ## Perform inference to recognize the number plate
     predictions = model.predict(img)
     decoded_predictions = keras.applications.mobilenet_v2.decode_predictions(predictions, top=1)[0]
 
     return decoded_predictions
 
-# Example usage
+## Example usage
 image_path = 'path/to/vehicle/image.jpg'
 predictions = vehicle_number_plate_recognition(image_path)
 print(predictions)

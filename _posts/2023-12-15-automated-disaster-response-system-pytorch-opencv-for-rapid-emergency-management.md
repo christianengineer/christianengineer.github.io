@@ -274,11 +274,11 @@ from torch.utils.data import DataLoader, Dataset
 import numpy as np
 import os
 
-# Define a mock dataset for demonstration
+## Define a mock dataset for demonstration
 class MockDisasterDataset(Dataset):
     def __init__(self, data_dir, transform=None):
-        self.data = np.random.rand(100, 3, 224, 224)  # Mock data, 100 samples
-        self.targets = np.random.randint(0, 2, size=100)  # Binary classification (0 - No disaster, 1 - Disaster)
+        self.data = np.random.rand(100, 3, 224, 224)  ## Mock data, 100 samples
+        self.targets = np.random.randint(0, 2, size=100)  ## Binary classification (0 - No disaster, 1 - Disaster)
         self.transform = transform
 
     def __len__(self):
@@ -290,12 +290,12 @@ class MockDisasterDataset(Dataset):
             sample = self.transform(sample)
         return sample, target
 
-# Define a simple CNN model for disaster detection
+## Define a simple CNN model for disaster detection
 class SimpleCNN(nn.Module):
     def __init__(self):
         super(SimpleCNN, self).__init__()
         self.conv1 = nn.Conv2d(in_channels=3, out_channels=16, kernel_size=3, stride=1, padding=1)
-        self.fc = nn.Linear(16*224*224, 2)  # 2 output classes
+        self.fc = nn.Linear(16*224*224, 2)  ## 2 output classes
 
     def forward(self, x):
         x = torch.relu(self.conv1(x))
@@ -303,22 +303,22 @@ class SimpleCNN(nn.Module):
         x = self.fc(x)
         return x
 
-# Define data directory and hyperparameters
-data_dir = 'path_to_mock_data_directory'  # Replace with actual data directory path
+## Define data directory and hyperparameters
+data_dir = 'path_to_mock_data_directory'  ## Replace with actual data directory path
 learning_rate = 0.001
 num_epochs = 10
 
-# Create dataset and data loader
-transform = None  # Add transforms if necessary
+## Create dataset and data loader
+transform = None  ## Add transforms if necessary
 dataset = MockDisasterDataset(data_dir, transform=transform)
 data_loader = DataLoader(dataset, batch_size=8, shuffle=True)
 
-# Initialize the model, loss function, and optimizer
+## Initialize the model, loss function, and optimizer
 model = SimpleCNN()
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters(), lr=learning_rate)
 
-# Training loop
+## Training loop
 for epoch in range(num_epochs):
     for inputs, targets in data_loader:
         optimizer.zero_grad()
@@ -329,8 +329,8 @@ for epoch in range(num_epochs):
 
     print(f'Epoch [{epoch+1}/{num_epochs}], Loss: {loss.item():.4f}')
 
-# Save the trained model
-model_save_path = 'path_to_save_trained_model/disaster_detection_model.pth'  # Replace with desired save path
+## Save the trained model
+model_save_path = 'path_to_save_trained_model/disaster_detection_model.pth'  ## Replace with desired save path
 os.makedirs(os.path.dirname(model_save_path), exist_ok=True)
 torch.save(model.state_dict(), model_save_path)
 print(f'Trained model saved at {model_save_path}')
@@ -353,7 +353,7 @@ from torch.utils.data import DataLoader
 import numpy as np
 import os
 
-# Define a mock dataset for demonstration
+## Define a mock dataset for demonstration
 class MockDisasterDataset(torch.utils.data.Dataset):
     def __init__(self, data, targets, transform=None):
         self.data = data
@@ -369,15 +369,15 @@ class MockDisasterDataset(torch.utils.data.Dataset):
             sample = self.transform(sample)
         return sample, target
 
-# Define a complex deep learning model for disaster detection
+## Define a complex deep learning model for disaster detection
 class ComplexDisasterDetectionModel(nn.Module):
     def __init__(self):
         super(ComplexDisasterDetectionModel, self).__init__()
-        # Define complex model architecture using PyTorch layers
+        ## Define complex model architecture using PyTorch layers
         self.conv1 = nn.Conv2d(in_channels=3, out_channels=64, kernel_size=3, stride=1, padding=1)
         self.conv2 = nn.Conv2d(in_channels=64, out_channels=128, kernel_size=3, stride=1, padding=1)
         self.fc1 = nn.Linear(128*56*56, 256)
-        self.fc2 = nn.Linear(256, 2)  # 2 output classes
+        self.fc2 = nn.Linear(256, 2)  ## 2 output classes
 
     def forward(self, x):
         x = torch.relu(self.conv1(x))
@@ -387,22 +387,22 @@ class ComplexDisasterDetectionModel(nn.Module):
         x = self.fc2(x)
         return x
 
-# Define hyperparameters and mock data
+## Define hyperparameters and mock data
 learning_rate = 0.001
 num_epochs = 10
-mock_data = np.random.rand(100, 3, 224, 224)  # Mock input data
-mock_targets = np.random.randint(0, 2, size=100)  # Mock output labels
+mock_data = np.random.rand(100, 3, 224, 224)  ## Mock input data
+mock_targets = np.random.randint(0, 2, size=100)  ## Mock output labels
 
-# Create dataset and data loader
+## Create dataset and data loader
 dataset = MockDisasterDataset(mock_data, mock_targets)
 data_loader = DataLoader(dataset, batch_size=8, shuffle=True)
 
-# Initialize the complex model, loss function, and optimizer
+## Initialize the complex model, loss function, and optimizer
 model = ComplexDisasterDetectionModel()
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters(), lr=learning_rate)
 
-# Training loop
+## Training loop
 for epoch in range(num_epochs):
     for inputs, targets in data_loader:
         optimizer.zero_grad()
@@ -413,8 +413,8 @@ for epoch in range(num_epochs):
 
     print(f'Epoch [{epoch+1}/{num_epochs}], Loss: {loss.item():.4f}')
 
-# Save the trained complex model
-model_save_path = 'path_to_save_trained_complex_model/disaster_detection_complex_model.pth'  # Replace with desired save path
+## Save the trained complex model
+model_save_path = 'path_to_save_trained_complex_model/disaster_detection_complex_model.pth'  ## Replace with desired save path
 os.makedirs(os.path.dirname(model_save_path), exist_ok=True)
 torch.save(model.state_dict(), model_save_path)
 print(f'Trained complex model saved at {model_save_path}')

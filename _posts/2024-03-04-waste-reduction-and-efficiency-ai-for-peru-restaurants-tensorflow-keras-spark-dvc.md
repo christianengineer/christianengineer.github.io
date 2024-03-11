@@ -5,7 +5,7 @@ permalink: posts/waste-reduction-and-efficiency-ai-for-peru-restaurants-tensorfl
 layout: article
 ---
 
-# Machine Learning Waste Reduction and Efficiency AI for Peru Restaurants
+## Machine Learning Waste Reduction and Efficiency AI for Peru Restaurants
 
 ## Objective:
 The main objective of the Machine Learning Waste Reduction and Efficiency AI for Peru Restaurants project is to leverage predictive analytics using tools like TensorFlow, Keras, Spark, and DVC to reduce food waste and enhance kitchen efficiency in restaurants across Peru. This project aims to align with sustainability goals by providing actionable insights derived from data analysis.
@@ -137,20 +137,20 @@ import pandas as pd
 import numpy as np
 
 def clean_sales_data(sales_data):
-    # Handling missing values in sales data
+    ## Handling missing values in sales data
     sales_data['Quantity Sold'].fillna(sales_data['Quantity Sold'].mean(), inplace=True)
     
-    # Removing outliers in sales data using z-score method
+    ## Removing outliers in sales data using z-score method
     z_scores = np.abs((sales_data['Quantity Sold'] - sales_data['Quantity Sold'].mean()) / sales_data['Quantity Sold'].std())
     sales_data = sales_data[z_scores < 3]
     
     return sales_data
 
 def clean_waste_data(waste_data):
-    # Handling missing values in waste data
+    ## Handling missing values in waste data
     waste_data['Quantity Wasted'].fillna(0, inplace=True)
     
-    # Balancing skewed data distribution in waste data through undersampling
+    ## Balancing skewed data distribution in waste data through undersampling
     waste_reason_counts = waste_data['Reason'].value_counts()
     min_count = min(waste_reason_counts)
     balanced_waste_data = pd.concat([waste_data[waste_data['Reason'] == reason].sample(min_count) for reason in waste_reason_counts.index])
@@ -158,7 +158,7 @@ def clean_waste_data(waste_data):
     return balanced_waste_data
 
 def clean_menu_data(menu_data):
-    # Standardizing ingredient names in menu data
+    ## Standardizing ingredient names in menu data
     menu_data['Ingredients'] = menu_data['Ingredients'].apply(lambda x: x.lower().strip())
     
     return menu_data
@@ -171,7 +171,7 @@ cleaned_sales_data = clean_sales_data(sales_data)
 cleaned_waste_data = clean_waste_data(waste_data)
 cleaned_menu_data = clean_menu_data(menu_data)
 
-# Further preprocessing steps may include data normalization, feature engineering, and merging datasets for modeling
+## Further preprocessing steps may include data normalization, feature engineering, and merging datasets for modeling
 ```
 
 This Python code snippet provides production-ready functions to cleanse the sales, waste, and menu data for the Waste Reduction and Efficiency AI project in Peru Restaurants. The functions handle missing values, outliers, standardize data formats, balance skewed data distribution, and ensure consistency in ingredient names. The data cleansing steps are crucial for preparing the data for modeling and analysis, enhancing the robustness and reliability of the machine learning models.
@@ -288,28 +288,28 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
 import joblib
 
-# Load the preprocessed and cleansed dataset
+## Load the preprocessed and cleansed dataset
 df = pd.read_csv('cleaned_data.csv')
 
-# Feature selection and target variable
-X = df.drop(columns=['Quantity Wasted'])  # Features
-y = df['Quantity Wasted']  # Target variable
+## Feature selection and target variable
+X = df.drop(columns=['Quantity Wasted'])  ## Features
+y = df['Quantity Wasted']  ## Target variable
 
-# Split the dataset into training and testing sets
+## Split the dataset into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize and train the Random Forest Regressor model
+## Initialize and train the Random Forest Regressor model
 rf_model = RandomForestRegressor(n_estimators=100, random_state=42)
 rf_model.fit(X_train, y_train)
 
-# Evaluate the model
+## Evaluate the model
 train_score = rf_model.score(X_train, y_train)
 test_score = rf_model.score(X_test, y_test)
 
-# Save the trained model
+## Save the trained model
 joblib.dump(rf_model, 'waste_reduction_model.pkl')
 
-# Print model performance
+## Print model performance
 print(f'Training R^2 Score: {train_score}')
 print(f'Testing R^2 Score: {test_score}')
 ```
@@ -377,24 +377,24 @@ By adhering to these conventions and best practices, the provided code snippet e
 By following this deployment plan and leveraging the recommended tools and platforms, your team can efficiently deploy the machine learning model into the production environment with confidence and ease.
 
 ```Dockerfile
-# Use a base image with Python and essential libraries pre-installed
+## Use a base image with Python and essential libraries pre-installed
 FROM python:3.8-slim
 
-# Set the working directory in the container
+## Set the working directory in the container
 WORKDIR /app
 
-# Copy and install requirements file for dependencies
+## Copy and install requirements file for dependencies
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the model file and any other necessary files
+## Copy the model file and any other necessary files
 COPY model.pkl .
 COPY app.py .
 
-# Expose the port where the API will run
+## Expose the port where the API will run
 EXPOSE 5000
 
-# Command to start the Flask API
+## Command to start the Flask API
 CMD [ "python", "app.py" ]
 ```
 

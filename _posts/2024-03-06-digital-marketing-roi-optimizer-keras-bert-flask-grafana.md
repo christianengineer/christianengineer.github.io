@@ -5,7 +5,7 @@ permalink: posts/digital-marketing-roi-optimizer-keras-bert-flask-grafana
 layout: article
 ---
 
-# Digital Marketing ROI Optimizer for BCP: Machine Learning Solution
+## Digital Marketing ROI Optimizer for BCP: Machine Learning Solution
 
 ## Objectives and Benefits for Marketing Director Audience:
 - **Objective:** Provide AI-driven insights into customer behavior to optimize spending and enhance the effectiveness of marketing campaigns in Peru's diverse market.
@@ -246,39 +246,39 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.impute import SimpleImputer
 from sklearn.utils import resample
 
-# Load the raw data
+## Load the raw data
 data = pd.read_csv("marketing_data.csv")
 
-# Step 1: Split the data into features and target variable
+## Step 1: Split the data into features and target variable
 X = data.drop(columns=['target_variable'])
 y = data['target_variable']
 
-# Step 2: Text Data Normalization
-# Importance: Standardize text data for consistency in sentiment analysis
+## Step 2: Text Data Normalization
+## Importance: Standardize text data for consistency in sentiment analysis
 X['text_data'] = X['text_data'].str.lower()
 X['text_data'] = X['text_data'].str.replace(r'[^\w\s]', '')
 X['text_data'] = X['text_data'].str.replace(r'\d+', '')
 
-# Step 3: Handling Missing Data
-# Importance: Impute missing values in engagement metrics
+## Step 3: Handling Missing Data
+## Importance: Impute missing values in engagement metrics
 imputer = SimpleImputer(strategy='mean')
 X['engagement_metric'].fillna(X['engagement_metric'].mean(), inplace=True)
 
-# Step 4: Feature Scaling
-# Importance: Normalize numerical features for model convergence
+## Step 4: Feature Scaling
+## Importance: Normalize numerical features for model convergence
 scaler = StandardScaler()
 X[['numerical_feature_1', 'numerical_feature_2']] = scaler.fit_transform(X[['numerical_feature_1', 'numerical_feature_2']])
 
-# Step 5: Text Data Vectorization
-# Importance: Convert text data into numerical vectors for machine learning models
+## Step 5: Text Data Vectorization
+## Importance: Convert text data into numerical vectors for machine learning models
 vectorizer = TfidfVectorizer()
 X_text_vectorized = vectorizer.fit_transform(X['text_data'])
 
-# Step 6: Handling Imbalanced Data
-# Importance: Address imbalance in target variable for unbiased model training
+## Step 6: Handling Imbalanced Data
+## Importance: Address imbalance in target variable for unbiased model training
 X_resampled, y_resampled = resample(X, y, random_state=42)
 
-# Step 7: Train-Test Split
+## Step 7: Train-Test Split
 X_train, X_test, y_train, y_test = train_test_split(X_resampled, y_resampled, test_size=0.2, random_state=42)
 ```
 
@@ -364,13 +364,13 @@ import numpy as np
 import pandas as pd
 from faker import Faker
 
-# Initialize Faker to generate fake data
+## Initialize Faker to generate fake data
 fake = Faker()
 
-# Define the number of samples in the dataset
+## Define the number of samples in the dataset
 num_samples = 10000
 
-# Generate synthetic data for features
+## Generate synthetic data for features
 data = {
     'customer_id': [fake.random_int(min=1, max=1000) for _ in range(num_samples)],
     'text_data': [fake.text(max_nb_chars=200) for _ in range(num_samples)],
@@ -380,13 +380,13 @@ data = {
     'target_variable': [fake.random_element(elements=('positive', 'negative', 'neutral')) for _ in range(num_samples)]
 }
 
-# Create a pandas DataFrame from the generated data
+## Create a pandas DataFrame from the generated data
 df = pd.DataFrame(data)
 
-# Save the synthetic dataset to a CSV file
+## Save the synthetic dataset to a CSV file
 df.to_csv('synthetic_dataset.csv', index=False)
 
-# Validate the generated dataset
+## Validate the generated dataset
 df = pd.read_csv('synthetic_dataset.csv')
 print(df.head())
 ```
@@ -431,29 +431,29 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report
 
-# Load the preprocessed dataset
+## Load the preprocessed dataset
 df = pd.read_csv('preprocessed_dataset.csv')
 
-# Split the data into features (X) and target variable (y)
+## Split the data into features (X) and target variable (y)
 X = df.drop(columns=['target_variable'])
 y = df['target_variable']
 
-# Feature Scaling
+## Feature Scaling
 scaler = StandardScaler()
 X_scaled = scaler.fit_transform(X)
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.2, random_state=42)
 
-# Model Training
+## Model Training
 model = RandomForestClassifier(n_estimators=100, random_state=42)
 model.fit(X_train, y_train)
 
-# Model Evaluation
+## Model Evaluation
 y_pred = model.predict(X_test)
 print(classification_report(y_test, y_pred))
 
-# Save the trained model for deployment
+## Save the trained model for deployment
 import joblib
 joblib.dump(model, 'marketing_roi_model.pkl')
 ```
@@ -529,26 +529,26 @@ By following this deployment plan tailored to the specific needs of the Digital 
 Below is a sample Dockerfile tailored for the Digital Marketing ROI Optimizer project, optimized for performance and scalability requirements:
 
 ```dockerfile
-# Use a Python base image
+## Use a Python base image
 FROM python:3.8-slim
 
-# Set working directory in the container
+## Set working directory in the container
 WORKDIR /app
 
-# Copy the requirements.txt file for dependencies installation
+## Copy the requirements.txt file for dependencies installation
 COPY requirements.txt .
 
-# Install required dependencies
+## Install required dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the model files and preprocessed dataset to the container
+## Copy the model files and preprocessed dataset to the container
 COPY marketing_roi_model.pkl .
 COPY preprocessed_dataset.csv .
 
-# Expose the port for API interaction
+## Expose the port for API interaction
 EXPOSE 5000
 
-# Set the command to start the Flask API (adjust as needed)
+## Set the command to start the Flask API (adjust as needed)
 CMD ["python", "app.py"]
 ```
 

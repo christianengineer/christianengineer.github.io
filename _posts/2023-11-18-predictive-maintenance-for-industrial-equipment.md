@@ -5,7 +5,7 @@ permalink: posts/predictive-maintenance-for-industrial-equipment
 layout: article
 ---
 
-# Technical Specifications Document - Predictive Maintenance for Industrial Equipment
+## Technical Specifications Document - Predictive Maintenance for Industrial Equipment
 
 ## Description
 

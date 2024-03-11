@@ -5,7 +5,7 @@ permalink: posts/ai-model-governance-and-compliance---set-up-a-framework-for-mod
 layout: article
 ---
 
-# Model Governance and Compliance Framework
+## Model Governance and Compliance Framework
 
 ## Objectives
 
@@ -39,7 +39,7 @@ The objective of the Model Governance and Compliance framework is to ensure the 
 
 By incorporating these libraries and design strategies, the Model Governance and Compliance framework will enable the organization to maintain transparency, fairness, and accountability in the development and deployment of AI models while meeting regulatory requirements.
 
-# Infrastructure for AI Model Governance and Compliance
+## Infrastructure for AI Model Governance and Compliance
 
 ## Components
 The infrastructure for the AI Model Governance and Compliance framework consists of the following components:
@@ -261,45 +261,45 @@ from sklearn.metrics import accuracy_score
 import joblib
 
 def train_and_evaluate_model(data_file_path):
-    # Load mock data
+    ## Load mock data
     data = pd.read_csv(data_file_path)
 
-    # Preprocessing and feature engineering steps
-    # ... (e.g., data cleaning, feature selection, and transformation)
+    ## Preprocessing and feature engineering steps
+    ## ... (e.g., data cleaning, feature selection, and transformation)
 
-    # Split data into features and target variable
+    ## Split data into features and target variable
     X = data.drop('target', axis=1)
     y = data['target']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize the machine learning model (e.g., RandomForestClassifier)
+    ## Initialize the machine learning model (e.g., RandomForestClassifier)
     model = RandomForestClassifier(n_estimators=100, random_state=42)
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train)
 
-    # Make predictions on the test set
+    ## Make predictions on the test set
     y_pred = model.predict(X_test)
 
-    # Evaluate the model
+    ## Evaluate the model
     accuracy = accuracy_score(y_test, y_pred)
 
-    # Save the trained model and metadata
+    ## Save the trained model and metadata
     model_file_path = 'models/model_version_1/model_file.pkl'
     metadata_file_path = 'models/model_version_1/metadata.json'
 
-    # Serialize and save the trained model
+    ## Serialize and save the trained model
     joblib.dump(model, model_file_path)
 
-    # Save metadata (e.g., model details, hyperparameters, performance metrics) to a JSON file
+    ## Save metadata (e.g., model details, hyperparameters, performance metrics) to a JSON file
     metadata = {
         'model_version': 'version_1',
         'algorithm': 'RandomForestClassifier',
         'accuracy': accuracy,
         'training_data': data_file_path,
-        # Add other relevant metadata
+        ## Add other relevant metadata
     }
     with open(metadata_file_path, 'w') as file:
         json.dump(metadata, file)
@@ -317,49 +317,49 @@ from sklearn.model_selection import train_test_split
 import json
 
 def train_and_evaluate_deep_learning_model(data_file_path, model_version):
-    # Load mock data
+    ## Load mock data
     data = pd.read_csv(data_file_path)
 
-    # Preprocessing and feature engineering steps
-    # ... (e.g., data cleaning, feature normalization, and transformation)
+    ## Preprocessing and feature engineering steps
+    ## ... (e.g., data cleaning, feature normalization, and transformation)
 
-    # Split data into features and target variable
+    ## Split data into features and target variable
     X = data.drop('target', axis=1).values
     y = data['target'].values
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize the deep learning model (e.g., multi-layer perceptron)
+    ## Initialize the deep learning model (e.g., multi-layer perceptron)
     model = tf.keras.Sequential([
         tf.keras.layers.Dense(64, activation='relu', input_shape=(X_train.shape[1],)),
         tf.keras.layers.Dense(64, activation='relu'),
         tf.keras.layers.Dense(1, activation='sigmoid')
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y_test))
 
-    # Evaluate the model
+    ## Evaluate the model
     _, accuracy = model.evaluate(X_test, y_test)
 
-    # Save the trained model and metadata
+    ## Save the trained model and metadata
     model_file_path = f'models/model_version_{model_version}/model_file.h5'
     metadata_file_path = f'models/model_version_{model_version}/metadata.json'
 
-    # Serialize and save the trained model
+    ## Serialize and save the trained model
     model.save(model_file_path)
 
-    # Save metadata (e.g., model details, hyperparameters, performance metrics) to a JSON file
+    ## Save metadata (e.g., model details, hyperparameters, performance metrics) to a JSON file
     metadata = {
         'model_version': f'version_{model_version}',
         'algorithm': 'Deep Learning (Multi-Layer Perceptron)',
         'accuracy': float(accuracy),
         'training_data': data_file_path,
-        # Add other relevant metadata
+        ## Add other relevant metadata
     }
     with open(metadata_file_path, 'w') as file:
         json.dump(metadata, file)

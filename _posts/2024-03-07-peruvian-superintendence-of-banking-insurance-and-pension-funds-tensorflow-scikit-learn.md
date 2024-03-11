@@ -215,34 +215,34 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 from imblearn.over_sampling import SMOTE
 
-# Load the dataset (replace 'data.csv' with your actual dataset file)
+## Load the dataset (replace 'data.csv' with your actual dataset file)
 data = pd.read_csv('data.csv')
 
-# Separate features and target variable
+## Separate features and target variable
 X = data.drop('fraudulent_activity', axis=1)
 y = data['fraudulent_activity']
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Feature Scaling (standardization)
+## Feature Scaling (standardization)
 scaler = StandardScaler()
 X_train_scaled = scaler.fit_transform(X_train)
 X_test_scaled = scaler.transform(X_test)
 
-# Handling Imbalanced Data (oversampling with SMOTE)
+## Handling Imbalanced Data (oversampling with SMOTE)
 smote = SMOTE(random_state=42)
 X_train_resampled, y_train_resampled = smote.fit_resample(X_train_scaled, y_train)
 
-# Print the shape of the resampled data
+## Print the shape of the resampled data
 print("Shape of X_train_resampled:", X_train_resampled.shape)
 print("Shape of y_train_resampled:", y_train_resampled.shape)
 
-# Further preprocessing steps can be added here as needed for your specific project
+## Further preprocessing steps can be added here as needed for your specific project
 
-# Example: Encoding Categorical Variables, Feature Engineering, etc.
+## Example: Encoding Categorical Variables, Feature Engineering, etc.
 
-# Save the preprocessed data to new CSV files for model training
+## Save the preprocessed data to new CSV files for model training
 pd.DataFrame(X_train_resampled).to_csv('X_train_resampled.csv', index=False)
 pd.DataFrame(X_test_scaled).to_csv('X_test_scaled.csv', index=False)
 pd.DataFrame(y_train_resampled).to_csv('y_train_resampled.csv', index=False)
@@ -342,23 +342,23 @@ import numpy as np
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
 
-# Set random seed for reproducibility
+## Set random seed for reproducibility
 np.random.seed(42)
 
-# Generate synthetic data for features
+## Generate synthetic data for features
 num_samples = 10000
 
-# Simulate Transaction Metadata
+## Simulate Transaction Metadata
 transaction_amount = np.random.uniform(1, 1000, num_samples)
 transaction_datetime = pd.date_range(start='2021-01-01', periods=num_samples, freq='H')
 transaction_type = np.random.choice(['purchase', 'transfer', 'withdrawal'], num_samples)
 account_type = np.random.choice(['checking', 'savings'], num_samples)
 
-# Simulate Account Information
+## Simulate Account Information
 account_balance = np.random.uniform(100, 100000, num_samples)
 account_age_days = np.random.randint(365, 3650, num_samples)
 
-# Create DataFrame with synthetic data
+## Create DataFrame with synthetic data
 data = pd.DataFrame({
     'transaction_amount': transaction_amount,
     'transaction_datetime': transaction_datetime,
@@ -368,15 +368,15 @@ data = pd.DataFrame({
     'account_age_days': account_age_days
 })
 
-# Generate synthetic target variable for fraudulent activity
+## Generate synthetic target variable for fraudulent activity
 data['fraudulent_activity'] = np.random.choice([0, 1], num_samples, p=[0.95, 0.05])
 
-# Feature Scaling
+## Feature Scaling
 scaler = StandardScaler()
 scaled_features = scaler.fit_transform(data[['transaction_amount', 'account_balance', 'account_age_days']])
 data[['transaction_amount', 'account_balance', 'account_age_days']] = scaled_features
 
-# Save the synthetic dataset to a CSV file
+## Save the synthetic dataset to a CSV file
 data.to_csv('synthetic_fraud_dataset.csv', index=False)
 ```
 
@@ -427,30 +427,30 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
 import joblib
 
-# Load the preprocessed dataset
+## Load the preprocessed dataset
 data = pd.read_csv('preprocessed_data.csv')
 
-# Separate features and target variable
+## Separate features and target variable
 X = data.drop('fraudulent_activity', axis=1)
 y = data['fraudulent_activity']
 
-# Initialize and train the RandomForestClassifier model
+## Initialize and train the RandomForestClassifier model
 model = RandomForestClassifier(random_state=42)
 model.fit(X, y)
 
-# Make predictions on the preprocessed dataset
+## Make predictions on the preprocessed dataset
 predictions = model.predict(X)
 
-# Evaluate the model
+## Evaluate the model
 accuracy = accuracy_score(y, predictions)
 precision = precision_score(y, predictions)
 recall = recall_score(y, predictions)
 f1 = f1_score(y, predictions)
 
-# Save the trained model to a file
+## Save the trained model to a file
 joblib.dump(model, 'fraud_detection_model.pkl')
 
-# Display model evaluation metrics
+## Display model evaluation metrics
 print(f'Accuracy: {accuracy:.2f}')
 print(f'Precision: {precision:.2f}')
 print(f'Recall: {recall:.2f}')
@@ -537,31 +537,31 @@ By following this step-by-step deployment plan and utilizing the recommended too
 Here is a sample Dockerfile tailored for your fraud detection project, optimized for performance and scalability requirements:
 
 ```Dockerfile
-# Use a base image with Python 3.8
+## Use a base image with Python 3.8
 FROM python:3.8-slim
 
-# Set working directory
+## Set working directory
 WORKDIR /app
 
-# Copy requirements file
+## Copy requirements file
 COPY requirements.txt .
 
-# Install required Python packages
+## Install required Python packages
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the preprocessed dataset
+## Copy the preprocessed dataset
 COPY preprocessed_data.csv /app/
 
-# Copy the machine learning model file
+## Copy the machine learning model file
 COPY fraud_detection_model.pkl /app/
 
-# Copy the predictor script
+## Copy the predictor script
 COPY predictor.py /app/
 
-# Expose the API port
+## Expose the API port
 EXPOSE 5000
 
-# Command to run the predictor script
+## Command to run the predictor script
 CMD ["python", "predictor.py"]
 ```
 

@@ -5,7 +5,7 @@ permalink: posts/automated-ml-pipeline-with-kubeflow-create-an-end-to-end-ml-pip
 layout: article
 ---
 
-# AI Automated ML Pipeline with Kubeflow
+## AI Automated ML Pipeline with Kubeflow
 
 ## Objectives
 The objective of creating an end-to-end ML pipeline using Kubeflow on Kubernetes is to establish an automated and scalable system for training, deploying, and managing machine learning models. This pipeline will enable efficient experimentation, versioning, and monitoring of models, ensuring reproducibility and scalability.
@@ -205,14 +205,14 @@ from tensorflow.keras import layers, models
 import numpy as np
 
 def train_cnn_model(data_path, labels_path):
-    # Load mock data
-    data = np.load(data_path)  # Assuming mock data is stored in a numpy file
-    labels = np.load(labels_path)  # Assuming labels for the mock data
+    ## Load mock data
+    data = np.load(data_path)  ## Assuming mock data is stored in a numpy file
+    labels = np.load(labels_path)  ## Assuming labels for the mock data
 
-    # Preprocess the data
-    data = data / 255.0  # Normalize the pixel values
+    ## Preprocess the data
+    data = data / 255.0  ## Normalize the pixel values
 
-    # Define the CNN architecture
+    ## Define the CNN architecture
     model = models.Sequential([
         layers.Conv2D(32, (3, 3), activation='relu', input_shape=(28, 28, 1)),
         layers.MaxPooling2D((2, 2)),
@@ -228,13 +228,13 @@ def train_cnn_model(data_path, labels_path):
                   loss='sparse_categorical_crossentropy',
                   metrics=['accuracy'])
 
-    # Train the model
+    ## Train the model
     model.fit(data, labels, epochs=10, validation_split=0.2)
 
-    # Save the trained model
-    model.save('trained_model.h5')  # Save the trained model to a file
+    ## Save the trained model
+    model.save('trained_model.h5')  ## Save the trained model to a file
 
-    return 'trained_model.h5'  # Return the file path of the trained model
+    return 'trained_model.h5'  ## Return the file path of the trained model
 ```
 
 In this example, the `train_cnn_model` function takes in the file paths of the mock data and labels as input. It then loads and preprocesses the data, defines a CNN model using TensorFlow's Keras API, trains the model on the mock data, and saves the trained model to a file. Finally, the function returns the file path of the trained model.
@@ -249,14 +249,14 @@ from tensorflow.keras import layers, models
 import numpy as np
 
 def train_complex_deep_learning_model(data_path, labels_path, model_save_path):
-    # Load mock data
-    data = np.load(data_path)  # Assuming mock data is stored in a numpy file
-    labels = np.load(labels_path)  # Assuming labels for the mock data
+    ## Load mock data
+    data = np.load(data_path)  ## Assuming mock data is stored in a numpy file
+    labels = np.load(labels_path)  ## Assuming labels for the mock data
 
-    # Preprocess the data
-    # ... (perform any required data preprocessing here)
+    ## Preprocess the data
+    ## ... (perform any required data preprocessing here)
 
-    # Define the RNN model
+    ## Define the RNN model
     model = models.Sequential([
         layers.Embedding(input_dim=10000, output_dim=64),
         layers.LSTM(64),
@@ -268,13 +268,13 @@ def train_complex_deep_learning_model(data_path, labels_path, model_save_path):
                   loss='binary_crossentropy',
                   metrics=['accuracy'])
 
-    # Train the model
+    ## Train the model
     model.fit(data, labels, epochs=10, validation_split=0.2)
 
-    # Save the trained model
-    model.save(model_save_path)  # Save the trained model to the specified file path
+    ## Save the trained model
+    model.save(model_save_path)  ## Save the trained model to the specified file path
 
-    return model_save_path  # Return the file path of the trained model
+    return model_save_path  ## Return the file path of the trained model
 ```
 
 In this example, the `train_complex_deep_learning_model` function takes the file paths of the mock data, labels, and the desired file path for saving the trained model as input. It loads the mock data, defines an RNN model using TensorFlow's Keras API, trains the model on the mock data, and then saves the trained model to the specified file path. Finally, the function returns the file path of the trained model.

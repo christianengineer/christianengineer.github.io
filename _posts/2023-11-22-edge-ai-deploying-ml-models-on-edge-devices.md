@@ -5,7 +5,7 @@ permalink: posts/edge-ai-deploying-ml-models-on-edge-devices
 layout: article
 ---
 
-# AI Edge AI: Deploying ML Models on Edge Devices
+## AI Edge AI: Deploying ML Models on Edge Devices
 
 ## Objectives
 
@@ -30,7 +30,7 @@ The objectives of deploying ML models on edge devices include:
 
 By combining TensorFlow Lite with NVIDIA Jetson, the AI application will be able to deploy and run ML models efficiently on edge devices, meeting the objectives of low latency, privacy, offline capabilities, and scalability.
 
-# Infrastructure for Edge AI: Deploying ML Models on Edge Devices
+## Infrastructure for Edge AI: Deploying ML Models on Edge Devices
 
 ## Edge Device Selection
 
@@ -207,29 +207,29 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 
 def train_and_evaluate_model(data_path):
-    # Load mock data from a CSV file
+    ## Load mock data from a CSV file
     data = pd.read_csv(data_path)
 
-    # Preprocessing mock data (Replace with actual preprocessing steps)
+    ## Preprocessing mock data (Replace with actual preprocessing steps)
     X = data.drop('target', axis=1)
     y = data['target']
 
-    # Split mock data into training and testing sets
+    ## Split mock data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize a RandomForestClassifier (Replace with actual ML model)
+    ## Initialize a RandomForestClassifier (Replace with actual ML model)
     model = RandomForestClassifier(n_estimators=100, random_state=42)
 
-    # Train the model on the training data
+    ## Train the model on the training data
     model.fit(X_train, y_train)
 
-    # Evaluate the model on the testing data
+    ## Evaluate the model on the testing data
     y_pred = model.predict(X_test)
     accuracy = accuracy_score(y_test, y_pred)
 
     return model, accuracy
 
-# Example usage of the function with a mock file path
+## Example usage of the function with a mock file path
 mock_data_path = 'path/to/mock/data.csv'
 trained_model, model_accuracy = train_and_evaluate_model(mock_data_path)
 print(f"Trained model accuracy: {model_accuracy}")
@@ -249,17 +249,17 @@ from sklearn.model_selection import train_test_split
 import pandas as pd
 
 def train_and_evaluate_deep_learning_model(data_path):
-    # Load mock data from a CSV file
+    ## Load mock data from a CSV file
     data = pd.read_csv(data_path)
 
-    # Preprocessing mock data (Replace with actual preprocessing steps)
+    ## Preprocessing mock data (Replace with actual preprocessing steps)
     X = data.drop('target', axis=1)
     y = data['target']
 
-    # Split mock data into training and testing sets
+    ## Split mock data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Define a deep learning model architecture (Replace with actual deep learning model)
+    ## Define a deep learning model architecture (Replace with actual deep learning model)
     model = Sequential([
         Dense(64, activation='relu', input_shape=(X_train.shape[1],)),
         Dropout(0.5),
@@ -267,18 +267,18 @@ def train_and_evaluate_deep_learning_model(data_path):
         Dense(1, activation='sigmoid')
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
-    # Train the model on the training data
+    ## Train the model on the training data
     model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y_test))
 
-    # Evaluate the model on the testing data
+    ## Evaluate the model on the testing data
     _, accuracy = model.evaluate(X_test, y_test)
 
     return model, accuracy
 
-# Example usage of the function with a mock file path
+## Example usage of the function with a mock file path
 mock_data_path = 'path/to/mock/data.csv'
 trained_dl_model, dl_model_accuracy = train_and_evaluate_deep_learning_model(mock_data_path)
 print(f"Trained deep learning model accuracy: {dl_model_accuracy}")

@@ -218,16 +218,16 @@ import torch.nn as nn
 import torch.optim as optim
 import numpy as np
 
-# Mock Data Generation
+## Mock Data Generation
 np.random.seed(42)
-X_train = np.random.rand(100, 5)  # Mock features
-y_train = np.random.randint(0, 100, 100)  # Mock target variable
+X_train = np.random.rand(100, 5)  ## Mock features
+y_train = np.random.randint(0, 100, 100)  ## Mock target variable
 
-# Convert mock data to PyTorch tensors
+## Convert mock data to PyTorch tensors
 X_train_tensor = torch.tensor(X_train, dtype=torch.float32)
 y_train_tensor = torch.tensor(y_train, dtype=torch.float32)
 
-# Define PyTorch model architecture
+## Define PyTorch model architecture
 class DemandForecastingModel(nn.Module):
     def __init__(self):
         super(DemandForecastingModel, self).__init__()
@@ -237,12 +237,12 @@ class DemandForecastingModel(nn.Module):
         x = self.fc(x)
         return x
 
-# Initialize model and optimizer
+## Initialize model and optimizer
 model = DemandForecastingModel()
 criterion = nn.MSELoss()
 optimizer = optim.Adam(model.parameters(), lr=0.01)
 
-# Model Training
+## Model Training
 num_epochs = 100
 for epoch in range(num_epochs):
     optimizer.zero_grad()
@@ -254,7 +254,7 @@ for epoch in range(num_epochs):
     if (epoch+1) % 10 == 0:
         print(f'Epoch [{epoch+1}/{num_epochs}], Loss: {loss.item()}')
 
-# Save trained model
+## Save trained model
 torch.save(model.state_dict(), 'models/pytorch_models/demand_forecasting_model.pt')
 ```
 
@@ -274,26 +274,26 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 import joblib
 
-# Mock Data Generation
+## Mock Data Generation
 np.random.seed(42)
-X = np.random.rand(100, 10)  # Mock features
-y = np.random.randint(0, 100, 100)  # Mock target variable
+X = np.random.rand(100, 10)  ## Mock features
+y = np.random.randint(0, 100, 100)  ## Mock target variable
 
-# Split data into train and test sets
+## Split data into train and test sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize and train the Random Forest model
+## Initialize and train the Random Forest model
 rf_model = RandomForestRegressor(n_estimators=100, random_state=42)
 rf_model.fit(X_train, y_train)
 
-# Make predictions on the test set
+## Make predictions on the test set
 y_pred = rf_model.predict(X_test)
 
-# Calculate and print the Mean Squared Error
+## Calculate and print the Mean Squared Error
 mse = mean_squared_error(y_test, y_pred)
 print(f'Mean Squared Error: {mse}')
 
-# Save the trained model
+## Save the trained model
 joblib.dump(rf_model, 'models/sklearn_models/complex_algorithm_model.pkl')
 ```
 

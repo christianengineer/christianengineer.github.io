@@ -179,7 +179,7 @@ By organizing the deployment-related files within the "model_deployment/" direct
 Certainly! Below is an example of a Python script "train_model.py" for training a machine learning model using mock data. This script demonstrates how to use TensorFlow and Scikit-Learn to train models for the Peru Food Export Compliance AI application. Since this is a mock example, the data used here is synthetic and not representative of real-world data. 
 
 ```python
-# train_model.py
+## train_model.py
 
 import numpy as np
 import pandas as pd
@@ -189,26 +189,26 @@ import tensorflow as tf
 from tensorflow.keras import layers, models
 
 def load_mock_data():
-    # Mock data generation for training
-    # Replace this with actual data loading code
-    features = np.random.rand(100, 5)  # Example synthetic features
-    labels = np.random.randint(0, 2, size=100)  # Example synthetic labels
+    ## Mock data generation for training
+    ## Replace this with actual data loading code
+    features = np.random.rand(100, 5)  ## Example synthetic features
+    labels = np.random.randint(0, 2, size=100)  ## Example synthetic labels
     return features, labels
 
 def train_scikit_learn_model(features, labels):
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(features, labels, test_size=0.2, random_state=42)
     
-    # Initialize and train a Scikit-Learn model (Random Forest Classifier in this case)
+    ## Initialize and train a Scikit-Learn model (Random Forest Classifier in this case)
     model = RandomForestClassifier(n_estimators=100, random_state=42)
     model.fit(X_train, y_train)
     
-    # Evaluate the model
+    ## Evaluate the model
     accuracy = model.score(X_test, y_test)
     print(f"Scikit-Learn Model Accuracy: {accuracy}")
 
 def train_tensorflow_model(features, labels):
-    # Define a simple TensorFlow neural network model
+    ## Define a simple TensorFlow neural network model
     model = models.Sequential([
         layers.Dense(64, activation='relu', input_shape=(features.shape[1],)),
         layers.Dense(1, activation='sigmoid')
@@ -216,21 +216,21 @@ def train_tensorflow_model(features, labels):
     
     model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
     
-    # Train the model
+    ## Train the model
     model.fit(features, labels, epochs=10, validation_split=0.2)
     
-    # Evaluate the model
+    ## Evaluate the model
     _, accuracy = model.evaluate(features, labels)
     print(f"TensorFlow Model Accuracy: {accuracy}")
 
 def main():
-    # Load mock data
+    ## Load mock data
     features, labels = load_mock_data()
     
-    # Train a Scikit-Learn model
+    ## Train a Scikit-Learn model
     train_scikit_learn_model(features, labels)
     
-    # Train a TensorFlow model
+    ## Train a TensorFlow model
     train_tensorflow_model(features, labels)
 
 if __name__ == "__main__":
@@ -244,7 +244,7 @@ This script demonstrates loading mock data, training a Scikit-Learn model (Rando
 Certainly! Below is an example of a Python script "complex_ml_algorithm.py" showcasing a complex machine learning algorithm (Random Forest Classifier) using Scikit-Learn with mock data. This script serves as a placeholder for a more sophisticated machine learning algorithm that can be integrated into the Peru Food Export Compliance AI application.
 
 ```python
-# complex_ml_algorithm.py
+## complex_ml_algorithm.py
 
 import numpy as np
 import pandas as pd
@@ -253,39 +253,39 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import classification_report, accuracy_score
 
-# Mock data generation for training
+## Mock data generation for training
 def load_mock_data():
-    # Replace this with actual data loading code
-    features = np.random.rand(100, 10)  # Example synthetic features
-    labels = np.random.randint(0, 2, size=100)  # Example synthetic labels
+    ## Replace this with actual data loading code
+    features = np.random.rand(100, 10)  ## Example synthetic features
+    labels = np.random.randint(0, 2, size=100)  ## Example synthetic labels
     return features, labels
 
 def train_complex_ml_algorithm(features, labels):
-    # Preprocess the data
+    ## Preprocess the data
     scaler = StandardScaler()
     scaled_features = scaler.fit_transform(features)
     
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(scaled_features, labels, test_size=0.2, random_state=42)
     
-    # Initialize and train a complex machine learning algorithm (Random Forest Classifier in this case)
+    ## Initialize and train a complex machine learning algorithm (Random Forest Classifier in this case)
     model = RandomForestClassifier(n_estimators=100, random_state=42)
     model.fit(X_train, y_train)
     
-    # Make predictions
+    ## Make predictions
     y_pred = model.predict(X_test)
     
-    # Evaluate the model
+    ## Evaluate the model
     accuracy = accuracy_score(y_test, y_pred)
     report = classification_report(y_test, y_pred)
     print(f"Complex ML Algorithm Accuracy: {accuracy}")
     print(f"Classification Report:\n{report}")
 
 def main():
-    # Load mock data
+    ## Load mock data
     features, labels = load_mock_data()
     
-    # Train a complex machine learning algorithm
+    ## Train a complex machine learning algorithm
     train_complex_ml_algorithm(features, labels)
 
 if __name__ == "__main__":

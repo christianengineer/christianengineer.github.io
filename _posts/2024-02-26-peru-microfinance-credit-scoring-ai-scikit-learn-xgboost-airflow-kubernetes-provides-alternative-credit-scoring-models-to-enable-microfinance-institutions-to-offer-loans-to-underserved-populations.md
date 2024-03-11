@@ -63,35 +63,35 @@ By building a robust MLOps infrastructure encompassing data processing, model de
 peru_microfinance_credit_scoring_ai/
 │
 ├── data/
-│   ├── raw_data/               # Raw data files
-│   ├── processed_data/         # Processed and feature-engineered data
-│   └── train_test_split/       # Train-test split data for model training
+│   ├── raw_data/               ## Raw data files
+│   ├── processed_data/         ## Processed and feature-engineered data
+│   └── train_test_split/       ## Train-test split data for model training
 │
 ├── models/
-│   ├── scikit_learn_models/    # Scikit-Learn model scripts and artifacts
-│   ├── xgboost_models/         # XGBoost model scripts and artifacts
-│   └── model_evaluation/       # Model evaluation scripts and metrics
+│   ├── scikit_learn_models/    ## Scikit-Learn model scripts and artifacts
+│   ├── xgboost_models/         ## XGBoost model scripts and artifacts
+│   └── model_evaluation/       ## Model evaluation scripts and metrics
 │
 ├── airflow/
-│   ├── dags/                   # Airflow Directed Acyclic Graphs for data pipeline tasks
-│   └── plugins/                # Custom Airflow plugins for specialized tasks
+│   ├── dags/                   ## Airflow Directed Acyclic Graphs for data pipeline tasks
+│   └── plugins/                ## Custom Airflow plugins for specialized tasks
 │
 ├── deployment/
-│   ├── kubernetes/             # Kubernetes deployment configurations
-│   └── docker/                 # Dockerfile for containerizing the application
+│   ├── kubernetes/             ## Kubernetes deployment configurations
+│   └── docker/                 ## Dockerfile for containerizing the application
 │
 ├── scripts/
-│   ├── data_preprocessing.py   # Script for data preprocessing and feature engineering
-│   ├── model_training.py       # Script for training machine learning models
-│   └── model_evaluation.py     # Script for evaluating model performance
+│   ├── data_preprocessing.py   ## Script for data preprocessing and feature engineering
+│   ├── model_training.py       ## Script for training machine learning models
+│   └── model_evaluation.py     ## Script for evaluating model performance
 │
 ├── notebooks/
-│   ├── exploratory_analysis.ipynb  # Jupyter notebook for data exploration
-│   └── model_evaluation.ipynb       # Jupyter notebook for model evaluation
+│   ├── exploratory_analysis.ipynb  ## Jupyter notebook for data exploration
+│   └── model_evaluation.ipynb       ## Jupyter notebook for model evaluation
 │
-├── requirements.txt            # Dependencies for the project
-├── README.md                   # Project overview and instructions
-└── .gitignore                  # Git ignore file for sensitive data/files
+├── requirements.txt            ## Dependencies for the project
+├── README.md                   ## Project overview and instructions
+└── .gitignore                  ## Git ignore file for sensitive data/files
 ```
 
 ### Description:
@@ -113,19 +113,19 @@ This structured file system ensures organization, scalability, and maintainabili
 models/
 │
 ├── scikit_learn_models/
-│   ├── logistic_regression_model.py     # Script for training Logistic Regression model
-│   ├── random_forest_model.py           # Script for training Random Forest model
-│   └── model_evaluation_utils.py        # Utility functions for evaluating Scikit-Learn models
+│   ├── logistic_regression_model.py     ## Script for training Logistic Regression model
+│   ├── random_forest_model.py           ## Script for training Random Forest model
+│   └── model_evaluation_utils.py        ## Utility functions for evaluating Scikit-Learn models
 │
 ├── xgboost_models/
-│   ├── xgboost_model.py                 # Script for training XGBoost model
-│   ├── xgboost_hyperparameter_tuning.py  # Script for hyperparameter tuning of XGBoost model
-│   └── xgboost_model_evaluation.py      # Script for evaluating XGBoost model performance
+│   ├── xgboost_model.py                 ## Script for training XGBoost model
+│   ├── xgboost_hyperparameter_tuning.py  ## Script for hyperparameter tuning of XGBoost model
+│   └── xgboost_model_evaluation.py      ## Script for evaluating XGBoost model performance
 │
 └── model_evaluation/
-    ├── evaluation_metrics.py            # Script containing evaluation metrics functions
-    ├── roc_auc_curve_plotting.py        # Script for plotting ROC-AUC curves
-    └── confusion_matrix_plotting.py     # Script for plotting confusion matrices
+    ├── evaluation_metrics.py            ## Script containing evaluation metrics functions
+    ├── roc_auc_curve_plotting.py        ## Script for plotting ROC-AUC curves
+    └── confusion_matrix_plotting.py     ## Script for plotting confusion matrices
 ```
 
 ### Description:
@@ -152,13 +152,13 @@ By organizing the models directory with separate subdirectories for Scikit-Learn
 deployment/
 │
 ├── kubernetes/
-│   ├── deployment.yaml          # YAML file defining Kubernetes deployment for model serving
-│   ├── service.yaml             # YAML file defining Kubernetes service for exposing model endpoints
-│   └── ingress.yaml             # YAML file defining Kubernetes Ingress for accessing the application
+│   ├── deployment.yaml          ## YAML file defining Kubernetes deployment for model serving
+│   ├── service.yaml             ## YAML file defining Kubernetes service for exposing model endpoints
+│   └── ingress.yaml             ## YAML file defining Kubernetes Ingress for accessing the application
 │
 └── docker/
-    ├── Dockerfile               # File for building a Docker image for the AI application
-    └── requirements.txt          # List of dependencies for setting up the Docker container
+    ├── Dockerfile               ## File for building a Docker image for the AI application
+    └── requirements.txt          ## List of dependencies for setting up the Docker container
 ```
 
 ### Description:
@@ -178,14 +178,14 @@ By organizing the deployment directory with separate subdirectories for Kubernet
 #### File Path: `scripts/train_model_mock_data.py`
 
 ```python
-# Import necessary libraries
+## Import necessary libraries
 import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 
-# Generate mock data (replace with actual data loading in production)
+## Generate mock data (replace with actual data loading in production)
 data = {
     'age': np.random.randint(21, 65, 1000),
     'income': np.random.randint(20000, 100000, 1000),
@@ -196,21 +196,21 @@ data = {
 
 df = pd.DataFrame(data)
 
-# Define features and target variable
+## Define features and target variable
 X = df[['age', 'income', 'loan_amount', 'credit_score']]
 y = df['approved_loan']
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Train a RandomForestClassifier model
+## Train a RandomForestClassifier model
 rf_model = RandomForestClassifier()
 rf_model.fit(X_train, y_train)
 
-# Make predictions on the test set
+## Make predictions on the test set
 y_pred = rf_model.predict(X_test)
 
-# Evaluate model performance
+## Evaluate model performance
 accuracy = accuracy_score(y_test, y_pred)
 print(f"Model Accuracy: {accuracy}")
 ```
@@ -222,14 +222,14 @@ This script generates mock data, trains a RandomForestClassifier model using Sci
 #### File Path: `scripts/train_complex_model_mock_data.py`
 
 ```python
-# Import necessary libraries
+## Import necessary libraries
 import numpy as np
 import pandas as pd
 import xgboost as xgb
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
-# Generate mock data (replace with actual data loading in production)
+## Generate mock data (replace with actual data loading in production)
 data = {
     'age': np.random.randint(21, 65, 1000),
     'income': np.random.randint(20000, 100000, 1000),
@@ -240,21 +240,21 @@ data = {
 
 df = pd.DataFrame(data)
 
-# Define features and target variable
+## Define features and target variable
 X = df[['age', 'income', 'loan_amount', 'credit_score']]
 y = df['approved_loan']
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Train an XGBoost classifier model
+## Train an XGBoost classifier model
 xgb_model = xgb.XGBClassifier()
 xgb_model.fit(X_train, y_train)
 
-# Make predictions on the test set
+## Make predictions on the test set
 y_pred = xgb_model.predict(X_test)
 
-# Evaluate model performance
+## Evaluate model performance
 accuracy = accuracy_score(y_test, y_pred)
 print(f"XGBoost Model Accuracy: {accuracy}")
 ```

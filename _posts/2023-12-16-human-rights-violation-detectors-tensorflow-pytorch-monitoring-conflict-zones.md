@@ -184,7 +184,7 @@ import tensorflow as tf
 from tensorflow.keras import layers
 import numpy as np
 
-# Mock data for training
+## Mock data for training
 num_samples = 1000
 input_shape = (224, 224, 3)
 num_classes = 2
@@ -192,7 +192,7 @@ num_classes = 2
 mock_images = np.random.rand(num_samples, *input_shape)
 mock_labels = np.random.randint(0, num_classes, size=num_samples)
 
-# Define and compile the model
+## Define and compile the model
 model = tf.keras.Sequential([
     layers.Conv2D(32, (3, 3), activation='relu', input_shape=input_shape),
     layers.MaxPooling2D((2, 2)),
@@ -209,7 +209,7 @@ model.compile(optimizer='adam',
               loss='sparse_categorical_crossentropy',
               metrics=['accuracy'])
 
-# Train the model with mock data
+## Train the model with mock data
 model.fit(mock_images, mock_labels, epochs=10, validation_split=0.2)
 ```
 
@@ -222,22 +222,22 @@ The file path `src/model_training/train_tensorflow_model.py` suggests that this 
 File Path: `src/model_training/train_complex_model.py`
 
 ```python
-# Import necessary libraries
+## Import necessary libraries
 import torch
 import torch.nn as nn
 import torch.optim as optim
 import numpy as np
 
-# Mock data for training
+## Mock data for training
 num_samples = 1000
 input_size = 100
 output_size = 10
 
-# Create random mock input and output data
+## Create random mock input and output data
 mock_input = torch.randn(num_samples, input_size)
 mock_output = torch.randint(0, output_size, (num_samples,))
 
-# Define a complex neural network model
+## Define a complex neural network model
 class ComplexModel(nn.Module):
     def __init__(self, input_size, hidden_size, output_size):
         super(ComplexModel, self).__init__()
@@ -251,14 +251,14 @@ class ComplexModel(nn.Module):
         x = self.fc3(x)
         return x
 
-# Instantiate the complex model
+## Instantiate the complex model
 model = ComplexModel(input_size, 128, output_size)
 
-# Define loss function and optimizer
+## Define loss function and optimizer
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters(), lr=0.001)
 
-# Train the complex model with mock data
+## Train the complex model with mock data
 for epoch in range(10):
     outputs = model(mock_input)
     loss = criterion(outputs, mock_output)

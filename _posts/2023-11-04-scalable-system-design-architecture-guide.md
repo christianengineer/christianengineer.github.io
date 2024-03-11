@@ -5,7 +5,7 @@ permalink: posts/scalable-system-design-architecture-guide
 layout: article
 ---
 
-# Scalable System Design and Architecture
+## Scalable System Design and Architecture
 
 When building software systems and applications, scalability is one of the most critical aspects that engineers need to consider. A scalable system is one that can handle an increasing number of users, tasks, or data without suffering a significant decrease in performance or increase in cost.
 
@@ -13,19 +13,19 @@ This article will detail the key principles, strategies, and patterns used in sc
 
 ## Table of Contents
 
-[Definitions](#definitions)
+[Definitions](## efinitions)
 
-[Why Scalability is Important](#why-scalability-is-important)
+[Why Scalability is Important](## hy-scalability-is-important)
 
-[Scaling Strategies](#scaling-strategies)
+[Scaling Strategies](## caling-strategies)
 
-[Design Principles for Scalability](#design-principles-for-scalability)
+[Design Principles for Scalability](## esign-principles-for-scalability)
 
-[Architectural Patterns](#architectural-patterns)
+[Architectural Patterns](## rchitectural-patterns)
 
-[Challenges in Scalable System Design](#challenges-in-scalable-system-design)
+[Challenges in Scalable System Design](## hallenges-in-scalable-system-design)
 
-[Conclusion](#conclusion)
+[Conclusion](## onclusion)
 
 ## Definitions
 
@@ -60,14 +60,14 @@ As noted earlier, there are two main types of scaling:
 - **Vertical Scaling:** This involves making the existing machines more powerful, i.e., adding more CPU, RAM, or SSD. This is often a straightforward and fast process but has an upper limit to how much capacity you can add to a single machine. It also requires downtime and causes a single point of failure.
 
 ```shell
-# Example: Upgrading an AWS EC2 instance type
+## Example: Upgrading an AWS EC2 instance type
 aws ec2 modify-instance-attribute --instance-id i-1234567890abcdef0 --instance-type m5.large
 ```
 
 - **Horizontal Scaling:** This involves adding more machines to the existing pool. While it may require more sophisticated load-balancing and distributed systems knowledge, it is the strategy that major global digital platforms (like Google, Amazon or Facebook) follow. It provides virtually unlimited scalability and improves fault tolerance.
 
 ```shell
-# Example: Adding an instance to an AWS Auto Scaling group
+## Example: Adding an instance to an AWS Auto Scaling group
 aws autoscaling set-desired-capacity --auto-scaling-group-name my-asg --desired-capacity 3
 ```
 

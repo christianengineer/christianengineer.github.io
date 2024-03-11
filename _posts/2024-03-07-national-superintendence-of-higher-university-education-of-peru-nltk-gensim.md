@@ -156,42 +156,42 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 
-# Load the raw data
+## Load the raw data
 data = pd.read_csv('academic_data.csv')
 
-# Handle missing data
+## Handle missing data
 imputer = SimpleImputer(strategy='mean')
 data['average_student_performance'] = imputer.fit_transform(data[['average_student_performance']])
 
-# Text data preprocessing
+## Text data preprocessing
 lemmatizer = WordNetLemmatizer()
 stop_words = set(stopwords.words('english'))
 
-# Function for lemmatization and stopword removal
+## Function for lemmatization and stopword removal
 def preprocess_text(text):
     tokens = text.split()
     processed_text = [lemmatizer.lemmatize(word) for word in tokens if word.lower() not in stop_words]
     return ' '.join(processed_text)
 
-# Apply text preprocessing to course descriptions
+## Apply text preprocessing to course descriptions
 data['processed_course_descriptions'] = data['course_descriptions'].apply(preprocess_text)
 
-# Feature extraction from text data
+## Feature extraction from text data
 tfidf_vectorizer = TfidfVectorizer()
 text_features = tfidf_vectorizer.fit_transform(data['processed_course_descriptions'])
 
-# Data alignment and encoding for categorical variables
+## Data alignment and encoding for categorical variables
 data['accreditation_status'] = data['accreditation_status'].map({'Accredited': 1, 'Not Accredited': 0})
 
-# Data balancing using SMOTE for imbalanced classes
+## Data balancing using SMOTE for imbalanced classes
 from imblearn.over_sampling import SMOTE
 X_resampled, y_resampled = SMOTE().fit_resample(data.drop('accreditation_status', axis=1), data['accreditation_status'])
 
-# Data splitting for model training
+## Data splitting for model training
 from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X_resampled, y_resampled, test_size=0.2, random_state=42)
 
-# Save preprocessed data for model training
+## Save preprocessed data for model training
 X_train.to_csv('X_train.csv', index=False)
 X_test.to_csv('X_test.csv', index=False)
 y_train.to_csv('y_train.csv', index=False)
@@ -267,33 +267,33 @@ import pandas as pd
 import numpy as np
 from faker import Faker
 
-# Set random seed for reproducibility
+## Set random seed for reproducibility
 np.random.seed(42)
 
-# Initialize Faker for generating fake data
+## Initialize Faker for generating fake data
 fake = Faker()
 
-# Generate a fictitious dataset
+## Generate a fictitious dataset
 
-# Basic information
+## Basic information
 data = {'university_name': [fake.company() for _ in range(1000)],
         'location': [fake.city() for _ in range(1000)],
         'founding_year': [fake.year() for _ in range(1000)],
         'program_type': np.random.choice(['Engineering', 'Business', 'Medicine'], size=1000)}
 
-# Academic data
+## Academic data
 data['research_publications'] = np.random.randint(0, 100, size=1000)
 data['faculty_number'] = np.random.randint(50, 500, size=1000)
 data['average_student_performance'] = np.random.uniform(1.0, 4.0, size=1000)
 data['graduation_rate'] = np.random.uniform(0.6, 1.0, size=1000)
 
-# Categorical data
+## Categorical data
 data['accreditation_status'] = np.random.choice(['Accredited', 'Not Accredited'], size=1000)
 
-# Create a DataFrame
+## Create a DataFrame
 df = pd.DataFrame(data)
 
-# Save dataset to CSV
+## Save dataset to CSV
 df.to_csv('fake_accreditation_data.csv', index=False)
 ```
 
@@ -339,25 +339,25 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
-# Load preprocessed data
+## Load preprocessed data
 X = pd.read_csv('preprocessed_data.csv')
 y = pd.read_csv('target_labels.csv')
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize and train the Random Forest model
+## Initialize and train the Random Forest model
 rf_model = RandomForestClassifier(n_estimators=100, max_depth=10, random_state=42)
 rf_model.fit(X_train, y_train)
 
-# Make predictions on the test set
+## Make predictions on the test set
 predictions = rf_model.predict(X_test)
 
-# Calculate the model accuracy
+## Calculate the model accuracy
 accuracy = accuracy_score(y_test, predictions)
 print(f'Model Accuracy: {accuracy}')
 
-# Save the trained model for deployment
+## Save the trained model for deployment
 from joblib import dump
 dump(rf_model, 'accreditation_model.joblib')
 ```
@@ -427,26 +427,26 @@ By following best practices for code quality, readability, and maintainability, 
 By following this deployment plan and utilizing the recommended tools and platforms, your team can efficiently deploy the machine learning model into a live production environment for real-world usage, ensuring scalability, accessibility, and maintainability of the solution.
 
 ```Dockerfile
-# Use an official Python runtime as a base image
+## Use an official Python runtime as a base image
 FROM python:3.8-slim
 
-# Set the working directory in the container
+## Set the working directory in the container
 WORKDIR /app
 
-# Copy the current directory contents into the container at /app
+## Copy the current directory contents into the container at /app
 COPY . /app
 
-# Install any necessary dependencies
+## Install any necessary dependencies
 RUN pip install --upgrade pip
 RUN pip install pandas scikit-learn joblib
 
-# Expose the port the app runs on
+## Expose the port the app runs on
 EXPOSE 8080
 
-# Define environment variable
+## Define environment variable
 ENV NAME AccreditationModel
 
-# Command to run the application
+## Command to run the application
 CMD ["python", "app.py"]
 ```
 

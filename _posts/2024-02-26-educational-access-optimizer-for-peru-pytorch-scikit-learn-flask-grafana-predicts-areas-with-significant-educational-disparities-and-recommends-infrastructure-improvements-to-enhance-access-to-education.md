@@ -146,15 +146,15 @@ models/
 │
 ├── pytorch_models/
 │   │
-│   ├── deep_learning_model.pt        # Trained PyTorch deep learning model for predicting educational disparities
+│   ├── deep_learning_model.pt        ## Trained PyTorch deep learning model for predicting educational disparities
 │   │
-│   └── ensemble_model.pkl            # Trained ensemble model combining multiple deep learning models
+│   └── ensemble_model.pkl            ## Trained ensemble model combining multiple deep learning models
 │
 └── scikit_learn_models/
     │
-    ├── random_forest_model.pkl       # Trained Random Forest model for predicting educational disparities
+    ├── random_forest_model.pkl       ## Trained Random Forest model for predicting educational disparities
     │
-    └── linear_regression_model.pkl    # Trained Linear Regression model for predicting educational disparities
+    └── linear_regression_model.pkl    ## Trained Linear Regression model for predicting educational disparities
 ```
 
 ### Models Explanation:
@@ -175,24 +175,24 @@ deployment/
 │
 ├── flask_api/
 │   │
-│   ├── app.py                    # Flask API script for exposing model predictions and recommendations
+│   ├── app.py                    ## Flask API script for exposing model predictions and recommendations
 │   │
 │   ├── templates/
-│   │   ├── index.html             # HTML template for user interface to input data
-│   │   └── results.html           # HTML template for displaying model predictions and recommendations
+│   │   ├── index.html             ## HTML template for user interface to input data
+│   │   └── results.html           ## HTML template for displaying model predictions and recommendations
 │
 ├── docker/
 │   │
-│   ├── Dockerfile                # Dockerfile for building the application container
+│   ├── Dockerfile                ## Dockerfile for building the application container
 │   │
-│   └── requirements.txt          # Python dependencies for the application
+│   └── requirements.txt          ## Python dependencies for the application
 │
 └── grafana/
     │
     ├── dashboards/
-    │   └── educational_disparities.json   # Grafana dashboard for visualizing educational disparities data
+    │   └── educational_disparities.json   ## Grafana dashboard for visualizing educational disparities data
     │
-    └── monitoring_script.py         # Python script for monitoring system performance and data insights
+    └── monitoring_script.py         ## Python script for monitoring system performance and data insights
 ```
 
 ### Deployment Explanation:
@@ -221,25 +221,25 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
 import joblib
 
-# Load mock educational performance data
+## Load mock educational performance data
 data = pd.read_csv('data/mock_educational_performance_data.csv')
 
-# Prepare features and target variable
+## Prepare features and target variable
 X = data.drop('educational_disparities', axis=1)
 y = data['educational_disparities']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize and train a Random Forest model
+## Initialize and train a Random Forest model
 rf_model = RandomForestRegressor()
 rf_model.fit(X_train, y_train)
 
-# Evaluate model performance
+## Evaluate model performance
 train_score = rf_model.score(X_train, y_train)
 test_score = rf_model.score(X_test, y_test)
 
-# Save the trained model
+## Save the trained model
 joblib.dump(rf_model, 'models/trained_random_forest_model.pkl')
 
 print(f'Training complete. Model saved with training score: {train_score}, testing score: {test_score}')
@@ -260,20 +260,20 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 
-# Load mock educational performance data
+## Load mock educational performance data
 data = pd.read_csv('data/mock_educational_performance_data.csv')
 
-# Feature engineering and preprocessing
-# Add additional features, normalize data, handle missing values, etc.
+## Feature engineering and preprocessing
+## Add additional features, normalize data, handle missing values, etc.
 
-# Prepare features and target variable
+## Prepare features and target variable
 X = data.drop('educational_disparities', axis=1)
 y = data['educational_disparities']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Train a complex PyTorch model
+## Train a complex PyTorch model
 class ComplexModel(nn.Module):
     def __init__(self):
         super(ComplexModel, self).__init__()
@@ -291,11 +291,11 @@ model = ComplexModel()
 optimizer = optim.Adam(model.parameters(), lr=0.001)
 loss_function = nn.MSELoss()
 
-# Convert data to PyTorch tensors
+## Convert data to PyTorch tensors
 X_train_tensor = torch.FloatTensor(X_train.values)
 y_train_tensor = torch.FloatTensor(y_train.values).view(-1, 1)
 
-# Training loop
+## Training loop
 epochs = 1000
 for epoch in range(epochs):
     optimizer.zero_grad()
@@ -304,10 +304,10 @@ for epoch in range(epochs):
     loss.backward()
     optimizer.step()
 
-# Evaluate model performance
-# Make predictions and calculate performance metrics
+## Evaluate model performance
+## Make predictions and calculate performance metrics
 
-# Save the trained model
+## Save the trained model
 torch.save(model.state_dict(), 'models/trained_complex_pytorch_model.pt')
 
 print('Training complete. PyTorch complex model saved.')

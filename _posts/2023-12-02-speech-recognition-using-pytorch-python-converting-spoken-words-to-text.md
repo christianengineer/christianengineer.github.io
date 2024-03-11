@@ -5,7 +5,7 @@ permalink: posts/speech-recognition-using-pytorch-python-converting-spoken-words
 layout: article
 ---
 
-# AI Speech Recognition using PyTorch
+## AI Speech Recognition using PyTorch
 
 ## Objectives
 The objective of this project is to build a speech recognition system that can convert spoken words to text using PyTorch and Python. The system should be able to accurately transcribe spoken words and handle a large vocabulary with high accuracy.
@@ -56,36 +56,36 @@ When organizing a repository for a Speech Recognition project using PyTorch, it'
 speech_recognition_pytorch/
 │
 ├── data/
-│   ├── raw/                  # Raw audio data
-│   ├── processed/            # Processed audio data (e.g., spectrograms)
-│   └── metadata/             # Metadata files for datasets
+│   ├── raw/                  ## Raw audio data
+│   ├── processed/            ## Processed audio data (e.g., spectrograms)
+│   └── metadata/             ## Metadata files for datasets
 │
 ├── models/
-│   ├── model_architecture.py  # PyTorch model architecture definition
-│   └── model_training.py      # Scripts for model training and evaluation
+│   ├── model_architecture.py  ## PyTorch model architecture definition
+│   └── model_training.py      ## Scripts for model training and evaluation
 │
 ├── notebooks/
-│   ├── data_exploration.ipynb # Jupyter notebook for data exploration
-│   ├── model_training.ipynb    # Jupyter notebook for training the model
-│   └── inference_demo.ipynb    # Jupyter notebook for model inference demo
+│   ├── data_exploration.ipynb ## Jupyter notebook for data exploration
+│   ├── model_training.ipynb    ## Jupyter notebook for training the model
+│   └── inference_demo.ipynb    ## Jupyter notebook for model inference demo
 │
 ├── utils/
-│   ├── audio_processing.py    # Utility functions for audio preprocessing
-│   └── data_loading.py         # Utility functions for data loading
+│   ├── audio_processing.py    ## Utility functions for audio preprocessing
+│   └── data_loading.py         ## Utility functions for data loading
 │
 ├── scripts/
-│   ├── data_preprocessing.py   # Script for audio data preprocessing
-│   └── inference_api.py        # Flask API for model inference
+│   ├── data_preprocessing.py   ## Script for audio data preprocessing
+│   └── inference_api.py        ## Flask API for model inference
 │
 ├── tests/
-│   ├── test_data_loading.py    # Unit tests for data loading utilities
-│   └── test_model_training.py  # Unit tests for model training functions
+│   ├── test_data_loading.py    ## Unit tests for data loading utilities
+│   └── test_model_training.py  ## Unit tests for model training functions
 │
 ├── config/
-│   └── config.yaml             # Configuration file for hyperparameters and settings
+│   └── config.yaml             ## Configuration file for hyperparameters and settings
 │
-├── requirements.txt            # Python dependencies
-└── README.md                   # Project overview and setup instructions
+├── requirements.txt            ## Python dependencies
+└── README.md                   ## Project overview and setup instructions
 ```
 
 **Explanation:**
@@ -117,8 +117,8 @@ The models directory in the repository for the Speech Recognition application us
 ```
 models/
 │
-├── model_architecture.py      # PyTorch model architecture definition
-└── model_training.py          # Scripts for model training and evaluation
+├── model_architecture.py      ## PyTorch model architecture definition
+└── model_training.py          ## Scripts for model training and evaluation
 ```
 
 ### 1. model_architecture.py
@@ -162,28 +162,28 @@ import torch.nn as nn
 import torch.optim as optim
 from model_architecture import SpeechRecognitionModel
 
-# Load and preprocess data
-# ...
+## Load and preprocess data
+## ...
 
-# Initialize the model
-input_dim = 10  # Example input dimension
-hidden_dim = 20  # Example hidden dimension
-output_dim = 5  # Example output dimension
+## Initialize the model
+input_dim = 10  ## Example input dimension
+hidden_dim = 20  ## Example hidden dimension
+output_dim = 5  ## Example output dimension
 model = SpeechRecognitionModel(input_dim, hidden_dim, output_dim)
 
-# Define loss function and optimizer
+## Define loss function and optimizer
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters(), lr=0.001)
 
-# Training loop
+## Training loop
 for epoch in range(num_epochs):
-    # Training steps
+    ## Training steps
     for batch in train_loader:
-        # Forward pass, loss computation, backward pass, and optimization
-        # ...
+        ## Forward pass, loss computation, backward pass, and optimization
+        ## ...
 
-# Model evaluation
-# ...
+## Model evaluation
+## ...
 ```
 
 By organizing the model-related files within the models directory, it promotes modularity and maintainability, making it easier to define, train, and evaluate the speech recognition model using PyTorch for the application.
@@ -194,16 +194,16 @@ As the deployment directory and its associated files are crucial for serving the
 deployment/
 │
 ├── model/
-│   ├── trained_model.pth        # Trained PyTorch model weights
-│   └── model_inference.py       # Script for model inference
+│   ├── trained_model.pth        ## Trained PyTorch model weights
+│   └── model_inference.py       ## Script for model inference
 │
 ├── api/
-│   ├── app.py                   # Flask application for serving the model as an API
-│   └── requirements.txt         # Python dependencies specific to the API
+│   ├── app.py                   ## Flask application for serving the model as an API
+│   └── requirements.txt         ## Python dependencies specific to the API
 │
 └── scripts/
-    ├── deployment_setup.sh      # Script for setting up the deployment environment
-    └── start_api.sh              # Script for starting the API server
+    ├── deployment_setup.sh      ## Script for setting up the deployment environment
+    └── start_api.sh              ## Script for starting the API server
 ```
 
 ### 1. model/trained_model.pth
@@ -219,18 +219,18 @@ import torch
 
 class SpeechRecognitionInference:
     def __init__(self, model_path):
-        self.model = torch.load(model_path)  # Load the trained model
-        self.model.eval()  # Set the model to evaluation mode
+        self.model = torch.load(model_path)  ## Load the trained model
+        self.model.eval()  ## Set the model to evaluation mode
 
     def infer(self, input_data):
-        # Data preprocessing
-        # ...
+        ## Data preprocessing
+        ## ...
 
-        # Model inference
+        ## Model inference
         with torch.no_grad():
             output = self.model(input_data)
-            # Post-processing of model output
-            # ...
+            ## Post-processing of model output
+            ## ...
 
         return output
 ```
@@ -246,19 +246,19 @@ from model.model_inference import SpeechRecognitionInference
 
 app = Flask(__name__)
 
-# Initialize the model for inference
+## Initialize the model for inference
 model_path = 'model/trained_model.pth'
 speech_recognition_model = SpeechRecognitionInference(model_path)
 
 @app.route('/predict', methods=['POST'])
 def predict():
-    # Process the input data from the request
+    ## Process the input data from the request
     input_data = request.json['audio_data']
 
-    # Perform inference using the model
+    ## Perform inference using the model
     predictions = speech_recognition_model.infer(input_data)
 
-    # Return the predictions
+    ## Return the predictions
     return jsonify({'predictions': predictions})
 
 if __name__ == '__main__':
@@ -282,27 +282,27 @@ Below is an example of a function for a complex machine learning algorithm using
 import torch
 import torchaudio
 import numpy as np
-from model_inference import SpeechRecognitionInference  # Assuming this is the inference class from the previous example
+from model_inference import SpeechRecognitionInference  ## Assuming this is the inference class from the previous example
 
 def perform_speech_recognition(file_path):
-    # Load the pretrained model
+    ## Load the pretrained model
     model_path = 'model/trained_model.pth'
     speech_recognition_model = SpeechRecognitionInference(model_path)
 
-    # Load and process the mock audio data
+    ## Load and process the mock audio data
     waveform, sample_rate = torchaudio.load(file_path)
-    # Assuming some additional preprocessing steps such as resampling, normalization, and feature extraction
-    processed_data = preprocess_audio_data(waveform, sample_rate)  # Placeholder for actual preprocessing function
+    ## Assuming some additional preprocessing steps such as resampling, normalization, and feature extraction
+    processed_data = preprocess_audio_data(waveform, sample_rate)  ## Placeholder for actual preprocessing function
     
-    # Convert processed data to a PyTorch tensor
-    input_tensor = torch.from_numpy(processed_data).unsqueeze(0)  # Assuming a batch size of 1
+    ## Convert processed data to a PyTorch tensor
+    input_tensor = torch.from_numpy(processed_data).unsqueeze(0)  ## Assuming a batch size of 1
 
-    # Perform inference using the pretrained model
+    ## Perform inference using the pretrained model
     with torch.no_grad():
         output = speech_recognition_model.infer(input_tensor)
 
-    # Post-process the model output to obtain the recognized text
-    recognized_text = post_process_output(output)  # Placeholder for actual post-processing function
+    ## Post-process the model output to obtain the recognized text
+    recognized_text = post_process_output(output)  ## Placeholder for actual post-processing function
 
     return recognized_text
 ```
@@ -321,35 +321,35 @@ Certainly! Below is a Python function for a complex machine learning algorithm u
 import torch
 import torchaudio
 import numpy as np
-from model_inference import SpeechRecognitionInference  # Assuming this is the inference class from the previous example
+from model_inference import SpeechRecognitionInference  ## Assuming this is the inference class from the previous example
 
 def perform_speech_recognition(file_path):
-    # Load the pretrained model
+    ## Load the pretrained model
     model_path = 'model/trained_model.pth'
     speech_recognition_model = SpeechRecognitionInference(model_path)
 
-    # Load and process the mock audio data
+    ## Load and process the mock audio data
     waveform, sample_rate = torchaudio.load(file_path)
     
-    # Preprocessing: Example of resampling to a common sample rate and normalizing the audio data
+    ## Preprocessing: Example of resampling to a common sample rate and normalizing the audio data
     resampler = torchaudio.transforms.Resample(orig_freq=sample_rate, new_freq=16000)
     waveform = resampler(waveform)
     waveform = waveform / torch.max(torch.abs(waveform))
     
-    # Extracting features: Mel Frequency Cepstral Coefficients (MFCC) for speech recognition
+    ## Extracting features: Mel Frequency Cepstral Coefficients (MFCC) for speech recognition
     mfcc_transform = torchaudio.transforms.MFCC(sample_rate=16000)
     mfcc_features = mfcc_transform(waveform)
     
-    # Convert processed data to a PyTorch tensor
-    input_tensor = torch.unsqueeze(mfcc_features, 0)  # Assuming a batch size of 1
+    ## Convert processed data to a PyTorch tensor
+    input_tensor = torch.unsqueeze(mfcc_features, 0)  ## Assuming a batch size of 1
 
-    # Perform inference using the pretrained model
+    ## Perform inference using the pretrained model
     with torch.no_grad():
         output = speech_recognition_model.infer(input_tensor)
         
-    # Decoding the output: Example of converting model output to recognized text
+    ## Decoding the output: Example of converting model output to recognized text
     _, predicted = torch.max(output.data, 1)
-    recognized_text = decode_text_from_labels(predicted)  # Placeholder for actual decoding function
+    recognized_text = decode_text_from_labels(predicted)  ## Placeholder for actual decoding function
 
     return recognized_text
 ```

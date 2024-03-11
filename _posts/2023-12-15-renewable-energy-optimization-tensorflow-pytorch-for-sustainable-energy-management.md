@@ -207,29 +207,29 @@ Certainly! Below is an example file for training a TensorFlow model for the Rene
 import tensorflow as tf
 import numpy as np
 
-# Mock data for training
+## Mock data for training
 num_samples = 1000
 input_features = 5
 output_features = 1
 
-# Generate mock input data
+## Generate mock input data
 X_train = np.random.rand(num_samples, input_features)
-# Generate mock output data
+## Generate mock output data
 y_train = np.random.rand(num_samples, output_features)
 
-# Define the TensorFlow model
+## Define the TensorFlow model
 model = tf.keras.Sequential([
     tf.keras.layers.Dense(10, activation='relu', input_shape=(input_features,)),
     tf.keras.layers.Dense(1)
 ])
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam', loss='mean_squared_error')
 
-# Train the model
+## Train the model
 model.fit(X_train, y_train, epochs=10, batch_size=32)
 
-# Save the trained model
+## Save the trained model
 model.save('solar_energy_prediction_model.h5')
 ```
 
@@ -250,17 +250,17 @@ import torch.nn as nn
 import torch.optim as optim
 import numpy as np
 
-# Mock data for training
+## Mock data for training
 num_samples = 1000
 input_features = 10
 output_features = 1
 
-# Generate mock input data
+## Generate mock input data
 X_train = torch.randn(num_samples, input_features)
-# Generate mock output data
+## Generate mock output data
 y_train = torch.randn(num_samples, output_features)
 
-# Define the PyTorch model
+## Define the PyTorch model
 class WindPredictionModel(nn.Module):
     def __init__(self, input_size, hidden_size, output_size):
         super(WindPredictionModel, self).__init__()
@@ -274,11 +274,11 @@ class WindPredictionModel(nn.Module):
 
 model = WindPredictionModel(input_features, 20, output_features)
 
-# Define loss function and optimizer
+## Define loss function and optimizer
 criterion = nn.MSELoss()
 optimizer = optim.Adam(model.parameters(), lr=0.001)
 
-# Train the model
+## Train the model
 num_epochs = 10
 for epoch in range(num_epochs):
     outputs = model(X_train)
@@ -288,7 +288,7 @@ for epoch in range(num_epochs):
     optimizer.step()
     print(f'Epoch [{epoch+1}/{num_epochs}], Loss: {loss.item()}')
 
-# Save the trained model
+## Save the trained model
 torch.save(model.state_dict(), 'wind_energy_prediction_model.pth')
 ```
 

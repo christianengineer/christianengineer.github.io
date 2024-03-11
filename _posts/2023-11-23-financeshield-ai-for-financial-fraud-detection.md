@@ -206,34 +206,34 @@ from sklearn.ensemble import RandomForestClassifier
 import joblib
 
 def train_fraud_detection_model(data_path, model_save_path):
-    # Load mock data
+    ## Load mock data
     data = pd.read_csv(data_path)
 
-    # Preprocessing steps (e.g., feature engineering, data cleaning, etc.)
-    # ...
+    ## Preprocessing steps (e.g., feature engineering, data cleaning, etc.)
+    ## ...
 
-    # Split data into features and target variable
+    ## Split data into features and target variable
     X = data.drop(columns=['fraud_indicator'])
     y = data['fraud_indicator']
 
-    # Split data into training and testing sets
+    ## Split data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize machine learning model (RandomForestClassifier is used as an example)
+    ## Initialize machine learning model (RandomForestClassifier is used as an example)
     model = RandomForestClassifier(n_estimators=100, max_depth=5, random_state=42)
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train)
 
-    # Evaluate the model
+    ## Evaluate the model
     accuracy = model.score(X_test, y_test)
     print(f"Model accuracy: {accuracy}")
 
-    # Save the trained model to the specified file path
+    ## Save the trained model to the specified file path
     joblib.dump(model, model_save_path)
     print(f"The trained model has been saved to: {model_save_path}")
 
-# Example usage
+## Example usage
 data_file_path = 'data/processed_data/fraud_dataset.csv'
 saved_model_path = 'models/saved_models/fraud_detection_model.pkl'
 train_fraud_detection_model(data_file_path, saved_model_path)
@@ -260,43 +260,43 @@ from tensorflow import keras
 from sklearn.model_selection import train_test_split
 
 def train_deep_learning_fraud_detection_model(data_path, model_save_path):
-    # Load mock data
+    ## Load mock data
     data = pd.read_csv(data_path)
 
-    # Preprocessing steps (e.g., feature engineering, data cleaning, etc.)
-    # ...
+    ## Preprocessing steps (e.g., feature engineering, data cleaning, etc.)
+    ## ...
 
-    # Split data into features and target variable
+    ## Split data into features and target variable
     X = data.drop(columns=['fraud_indicator'])
     y = data['fraud_indicator']
 
-    # Split data into training and testing sets
+    ## Split data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize neural network model using Keras
+    ## Initialize neural network model using Keras
     model = keras.Sequential([
         keras.layers.Dense(64, activation='relu', input_shape=(X_train.shape[1],)),
         keras.layers.Dense(32, activation='relu'),
         keras.layers.Dense(1, activation='sigmoid')
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam',
                   loss='binary_crossentropy',
                   metrics=['accuracy'])
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y_test))
 
-    # Evaluate the model
+    ## Evaluate the model
     loss, accuracy = model.evaluate(X_test, y_test)
     print(f"Model accuracy: {accuracy}")
 
-    # Save the trained model to the specified file path
+    ## Save the trained model to the specified file path
     model.save(model_save_path)
     print(f"The trained model has been saved to: {model_save_path}")
 
-# Example usage
+## Example usage
 data_file_path = 'data/processed_data/fraud_dataset.csv'
 saved_model_path = 'models/saved_models/fraud_detection_deep_learning_model'
 train_deep_learning_fraud_detection_model(data_file_path, saved_model_path)

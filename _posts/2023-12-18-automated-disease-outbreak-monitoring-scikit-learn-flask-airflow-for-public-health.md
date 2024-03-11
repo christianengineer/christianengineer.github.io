@@ -5,7 +5,7 @@ permalink: posts/automated-disease-outbreak-monitoring-scikit-learn-flask-airflo
 layout: article
 ---
 
-# AI Automated Disease Outbreak Monitoring
+## AI Automated Disease Outbreak Monitoring
 
 ## Objectives
 The objectives of the AI Automated Disease Outbreak Monitoring system are as follows:
@@ -32,7 +32,7 @@ To achieve the specified objectives, the following libraries and frameworks will
 
 By utilizing these libraries and frameworks, we can build a scalable, data-intensive AI application for disease outbreak monitoring, effectively leveraging machine learning and real-time data processing.
 
-# MLOps Infrastructure for Automated Disease Outbreak Monitoring
+## MLOps Infrastructure for Automated Disease Outbreak Monitoring
 
 ## Continuous Integration and Continuous Deployment (CI/CD)
 The MLOps infrastructure for the Automated Disease Outbreak Monitoring system will incorporate a CI/CD pipeline to automate the machine learning model development, testing, and deployment processes. This pipeline will ensure that new models can be seamlessly integrated into the production environment with minimal manual intervention.
@@ -212,35 +212,35 @@ The "deployment" directory, along with its contents, provides a structured and o
 Certainly! Below is an example of a Python script for training a machine learning model for the Automated Disease Outbreak Monitoring application using mock data. This script uses Scikit-Learn to train a simple classifier as a placeholder for the actual model training process.
 
 ```python
-# File path: models/model_training.py
+## File path: models/model_training.py
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 import joblib
 
-# Load mock data
+## Load mock data
 data_path = 'path_to_mock_data/mock_outbreak_data.csv'
 mock_data = pd.read_csv(data_path)
 
-# Preprocessing mock data (replace with actual preprocessing steps)
+## Preprocessing mock data (replace with actual preprocessing steps)
 X = mock_data.drop('target_column', axis=1)
 y = mock_data['target_column']
 
-# Split mock data into training and testing sets
+## Split mock data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Train a random forest classifier (replace with actual model training process)
+## Train a random forest classifier (replace with actual model training process)
 model = RandomForestClassifier(n_estimators=100, random_state=42)
 model.fit(X_train, y_train)
 
-# Evaluate model performance (replace with actual evaluation metrics)
+## Evaluate model performance (replace with actual evaluation metrics)
 train_accuracy = model.score(X_train, y_train)
 test_accuracy = model.score(X_test, y_test)
 print(f'Training accuracy: {train_accuracy:.2f}')
 print(f'Testing accuracy: {test_accuracy:.2f}')
 
-# Save the trained model to a file
+## Save the trained model to a file
 model_path = 'models/trained_models/mock_model_version_1/model.pkl'
 joblib.dump(model, model_path)
 ```
@@ -255,35 +255,35 @@ Please note that the above script is using mock data and a simple Random Forest 
 Certainly! Below is an example of a Python script that implements a complex machine learning algorithm (Gradient Boosting Classifier) for the Automated Disease Outbreak Monitoring application using mock data. This example assumes the use of Scikit-Learn for model training and evaluation.
 
 ```python
-# File path: models/model_training_complex.py
+## File path: models/model_training_complex.py
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import GradientBoostingClassifier
 import joblib
 
-# Load mock data
+## Load mock data
 data_path = 'path_to_mock_data/mock_outbreak_data.csv'
 mock_data = pd.read_csv(data_path)
 
-# Preprocessing mock data (replace with actual preprocessing steps)
+## Preprocessing mock data (replace with actual preprocessing steps)
 X = mock_data.drop('target_column', axis=1)
 y = mock_data['target_column']
 
-# Split mock data into training and testing sets
+## Split mock data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Train a gradient boosting classifier (complex ML algorithm)
+## Train a gradient boosting classifier (complex ML algorithm)
 model = GradientBoostingClassifier(n_estimators=100, learning_rate=0.1, random_state=42)
 model.fit(X_train, y_train)
 
-# Evaluate model performance (replace with actual evaluation metrics)
+## Evaluate model performance (replace with actual evaluation metrics)
 train_accuracy = model.score(X_train, y_train)
 test_accuracy = model.score(X_test, y_test)
 print(f'Training accuracy: {train_accuracy:.2f}')
 print(f'Testing accuracy: {test_accuracy:.2f}')
 
-# Save the trained model to a file
+## Save the trained model to a file
 model_path = 'models/trained_models/mock_model_version_1/model.pkl'
 joblib.dump(model, model_path)
 ```

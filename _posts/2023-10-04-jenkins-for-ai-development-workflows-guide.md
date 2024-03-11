@@ -5,7 +5,7 @@ permalink: posts/jenkins-for-ai-development-workflows-guide
 layout: article
 ---
 
-# Jenkins for AI Development Workflows
+## Jenkins for AI Development Workflows
 
 Artificial Intelligence (AI) development involves various complex processes such as data collection, data preprocessing, model training, model verification, and model deployment. To ensure the effective and efficient management of these processes, there is a need for high-level orchestration, automation, and monitoring tools. Jenkins is one of the most powerful and versatile automation servers that can be used to streamline and manage AI development workflows.
 

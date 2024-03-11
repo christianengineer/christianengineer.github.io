@@ -5,7 +5,7 @@ permalink: posts/ai-based-language-translation-for-websites
 layout: article
 ---
 
-# AI-Based Language Translation for Websites
+## AI-Based Language Translation for Websites
 
 ## Description
 

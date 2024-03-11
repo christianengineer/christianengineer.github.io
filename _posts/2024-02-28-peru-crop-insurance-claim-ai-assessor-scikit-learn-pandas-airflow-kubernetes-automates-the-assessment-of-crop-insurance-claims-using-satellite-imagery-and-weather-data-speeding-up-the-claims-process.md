@@ -201,35 +201,35 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, classification_report
 import joblib
 
-# File path to mock data
+## File path to mock data
 data_path = 'data/processed_data/mock_data.csv'
 
-# Load mock data
+## Load mock data
 data = pd.read_csv(data_path)
 
-# Separate features and target variable
+## Separate features and target variable
 X = data.drop('claim_status', axis=1)
 y = data['claim_status']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize and train the model
+## Initialize and train the model
 model = RandomForestClassifier()
 model.fit(X_train, y_train)
 
-# Make predictions
+## Make predictions
 y_pred = model.predict(X_test)
 
-# Evaluate the model
+## Evaluate the model
 accuracy = accuracy_score(y_test, y_pred)
 report = classification_report(y_test, y_pred)
 
-# Save the trained model
+## Save the trained model
 model_path = 'models/model_1/model.pkl'
 joblib.dump(model, model_path)
 
-# Print evaluation results
+## Print evaluation results
 print(f'Model trained and saved successfully.\nAccuracy: {accuracy}\nClassification Report:\n{report}')
 ```
 
@@ -253,35 +253,35 @@ from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.metrics import accuracy_score, classification_report
 import joblib
 
-# File path to mock data
+## File path to mock data
 data_path = 'data/processed_data/mock_data.csv'
 
-# Load mock data
+## Load mock data
 data = pd.read_csv(data_path)
 
-# Separate features and target variable
+## Separate features and target variable
 X = data.drop('claim_status', axis=1)
 y = data['claim_status']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize and train the Gradient Boosting Classifier model
+## Initialize and train the Gradient Boosting Classifier model
 model = GradientBoostingClassifier()
 model.fit(X_train, y_train)
 
-# Make predictions
+## Make predictions
 y_pred = model.predict(X_test)
 
-# Evaluate the model
+## Evaluate the model
 accuracy = accuracy_score(y_test, y_pred)
 report = classification_report(y_test, y_pred)
 
-# Save the trained model
+## Save the trained model
 model_path = 'models/model_2/model.pkl'
 joblib.dump(model, model_path)
 
-# Print evaluation results
+## Print evaluation results
 print(f'Complex model trained and saved successfully.\nAccuracy: {accuracy}\nClassification Report:\n{report}')
 ```
 

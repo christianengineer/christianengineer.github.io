@@ -5,7 +5,7 @@ permalink: posts/customer-segmentation-with-pandas-python-grouping-customers-bas
 layout: article
 ---
 
-# AI Customer Segmentation with Pandas (Python)
+## AI Customer Segmentation with Pandas (Python)
 
 ## Objectives
 The objective of the AI Customer Segmentation system is to group customers based on their behavior in order to understand their preferences, needs, and purchase patterns. This can help businesses tailor their marketing strategies, product offerings, and customer experiences to better meet the needs of different customer segments.
@@ -57,32 +57,32 @@ By setting up this infrastructure, we can ensure that the Customer Segmentation 
 customer_segmentation/
 │
 ├── data/
-│   ├── raw_data/        # Raw unprocessed data files
-│   ├── processed_data/  # Processed data files
-│   └── trained_models/  # Saved trained machine learning models
+│   ├── raw_data/        ## Raw unprocessed data files
+│   ├── processed_data/  ## Processed data files
+│   └── trained_models/  ## Saved trained machine learning models
 │
 ├── notebooks/
-│   ├── data_exploration.ipynb   # Jupyter notebook for exploring the customer data
-│   ├── data_preprocessing.ipynb  # Notebook for data preprocessing and feature engineering
-│   └── model_training.ipynb      # Notebook for training the customer segmentation model
+│   ├── data_exploration.ipynb   ## Jupyter notebook for exploring the customer data
+│   ├── data_preprocessing.ipynb  ## Notebook for data preprocessing and feature engineering
+│   └── model_training.ipynb      ## Notebook for training the customer segmentation model
 │
 ├── src/
-│   ├── etl_pipeline.py       # Script for ETL pipeline to extract, transform, and load data
-│   ├── customer_segmentation.py   # Main script for customer segmentation using Pandas
-│   └── model_evaluation.py    # Script for evaluating the trained segmentation model
+│   ├── etl_pipeline.py       ## Script for ETL pipeline to extract, transform, and load data
+│   ├── customer_segmentation.py   ## Main script for customer segmentation using Pandas
+│   └── model_evaluation.py    ## Script for evaluating the trained segmentation model
 │
 ├── config/
-│   └── config.yaml    # Configuration file for defining parameters and settings
+│   └── config.yaml    ## Configuration file for defining parameters and settings
 │
 ├── tests/
-│   ├── test_data_processing.py  # Unit tests for data processing functions
-│   └── test_model_training.py   # Unit tests for model training and evaluation
+│   ├── test_data_processing.py  ## Unit tests for data processing functions
+│   └── test_model_training.py   ## Unit tests for model training and evaluation
 │
-├── requirements.txt   # List of Python dependencies for the project
+├── requirements.txt   ## List of Python dependencies for the project
 │
-├── README.md   # Project documentation and instructions for running the application
+├── README.md   ## Project documentation and instructions for running the application
 │
-└── .gitignore   # File to specify untracked files to ignore in version control
+└── .gitignore   ## File to specify untracked files to ignore in version control
 ```
 
 In this file structure:
@@ -129,9 +129,9 @@ customer_segmentation/
 │   ├── ...
 │
 ├── models/
-│   ├── kmeans_model.pkl      # Serialized trained K-means clustering model
-│   ├── segmentation_model.py  # Script for loading and using the customer segmentation model
-│   └── model_evaluation.py    # Script for evaluating the trained segmentation model
+│   ├── kmeans_model.pkl      ## Serialized trained K-means clustering model
+│   ├── segmentation_model.py  ## Script for loading and using the customer segmentation model
+│   └── model_evaluation.py    ## Script for evaluating the trained segmentation model
 │
 ├── requirements.txt
 │
@@ -176,11 +176,11 @@ customer_segmentation/
 │   ├── ...
 │
 ├── deployment/
-│   ├── app.py                # Main script for deploying the customer segmentation model as an API
-│   ├── requirements.txt      # Dependencies for the deployment module
-│   ├── Dockerfile            # Dockerfile for containerizing the deployment application
-│   ├── deployment_config.yaml  # Configuration file for deployment settings
-│   └── README.md             # Deployment documentation and instructions
+│   ├── app.py                ## Main script for deploying the customer segmentation model as an API
+│   ├── requirements.txt      ## Dependencies for the deployment module
+│   ├── Dockerfile            ## Dockerfile for containerizing the deployment application
+│   ├── deployment_config.yaml  ## Configuration file for deployment settings
+│   └── README.md             ## Deployment documentation and instructions
 │
 ├── requirements.txt
 │
@@ -219,20 +219,20 @@ def customer_segmentation_algorithm(data_file_path, num_clusters):
     pd.DataFrame: DataFrame with customer IDs and their assigned segments.
     """
 
-    # Load customer behavior data
-    customer_data = pd.read_csv(data_file_path)  # Replace with read_excel if using Excel file
+    ## Load customer behavior data
+    customer_data = pd.read_csv(data_file_path)  ## Replace with read_excel if using Excel file
     
-    # Perform data preprocessing and feature engineering
-    # ... (code for data preprocessing and feature engineering)
+    ## Perform data preprocessing and feature engineering
+    ## ... (code for data preprocessing and feature engineering)
 
-    # Select relevant features for clustering
+    ## Select relevant features for clustering
     feature_data = customer_data[['feature1', 'feature2', 'feature3']]
     
-    # Initialize and fit K-means clustering model
+    ## Initialize and fit K-means clustering model
     kmeans = KMeans(n_clusters=num_clusters, random_state=42)
     customer_data['segment'] = kmeans.fit_predict(feature_data)
     
-    # Return dataframe with customer IDs and their assigned segments
+    ## Return dataframe with customer IDs and their assigned segments
     return customer_data[['customer_id', 'segment']]
 ```
 
@@ -245,8 +245,8 @@ In this function:
 
 To use the function, you would call it with the file path to the customer behavior data and the desired number of clusters:
 ```python
-data_file_path = 'path_to_customer_data.csv'  # Replace with the actual file path
-num_clusters = 4  # Replace with the desired number of clusters
+data_file_path = 'path_to_customer_data.csv'  ## Replace with the actual file path
+num_clusters = 4  ## Replace with the desired number of clusters
 
 segmented_customers = customer_segmentation_algorithm(data_file_path, num_clusters)
 print(segmented_customers)
@@ -266,19 +266,19 @@ def customer_segmentation_algorithm(data_file_path, num_clusters):
     pd.DataFrame: DataFrame with customer IDs and their assigned segments.
     """
 
-    # Load customer behavior data
-    customer_data = pd.read_csv(data_file_path)  # Replace with read_excel if using an Excel file
+    ## Load customer behavior data
+    customer_data = pd.read_csv(data_file_path)  ## Replace with read_excel if using an Excel file
 
-    # Perform data preprocessing and feature engineering
-    # ...
+    ## Perform data preprocessing and feature engineering
+    ## ...
 
-    # Implement a complex machine learning algorithm for customer segmentation
-    # ...
+    ## Implement a complex machine learning algorithm for customer segmentation
+    ## ...
 
-    # Assign customer segments based on the algorithm's outputs
-    # ...
+    ## Assign customer segments based on the algorithm's outputs
+    ## ...
 
-    # Return dataframe with customer IDs and their assigned segments
+    ## Return dataframe with customer IDs and their assigned segments
     return segmented_customers
 ```
 

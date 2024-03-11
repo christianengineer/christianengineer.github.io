@@ -71,50 +71,50 @@ By establishing a robust MLOps infrastructure for the AI Peru Consumer Taste Pre
 Peru_Consumer_Taste_Preference_Analyzer/
 │
 ├── app/
-│   ├── main.py                  # Flask application setup
-│   ├── routes/                  # API endpoint handlers
+│   ├── main.py                  ## Flask application setup
+│   ├── routes/                  ## API endpoint handlers
 │   │   ├── feedback_routes.py
 │   │   ├── market_trends_routes.py
 │   │   └── insights_routes.py
-│   ├── models/                  # Model integration scripts
+│   ├── models/                  ## Model integration scripts
 │   │   ├── bert_model.py
 │   │   ├── gpt3_model.py
 │   │   └── model_utils.py
-│   ├── services/                # Business logic services
+│   ├── services/                ## Business logic services
 │   │   ├── feedback_service.py
 │   │   ├── market_trends_service.py
 │   │   └── insights_service.py
-│   └── utils/                   # Utility functions
+│   └── utils/                   ## Utility functions
 │       ├── data_preprocessing.py
 │       ├── visualization.py
 │       └── logging.py
 │
 ├── data/
-│   ├── feedback_data.csv        # Consumer feedback data
-│   └── market_trends_data.csv   # Market trends data
+│   ├── feedback_data.csv        ## Consumer feedback data
+│   └── market_trends_data.csv   ## Market trends data
 │
 ├── models/
-│   ├── bert/                    # BERT model files
+│   ├── bert/                    ## BERT model files
 │   │   ├── config.json
 │   │   └── pytorch_model.bin
-│   └── gpt3/                    # GPT-3 model files
+│   └── gpt3/                    ## GPT-3 model files
 │       ├── config.json
 │       └── tf_model.h5
 │
 ├── tests/
-│   ├── test_feedback.py         # Unit tests for feedback analysis
-│   ├── test_market_trends.py    # Unit tests for market trends analysis
-│   └── test_insights.py         # Unit tests for insights generation
+│   ├── test_feedback.py         ## Unit tests for feedback analysis
+│   ├── test_market_trends.py    ## Unit tests for market trends analysis
+│   └── test_insights.py         ## Unit tests for insights generation
 │
 ├── config/
-│   ├── app_config.yml           # Application configuration settings
-│   ├── model_config.yml         # Model configuration settings
-│   └── logging_config.yml       # Logging configuration settings
+│   ├── app_config.yml           ## Application configuration settings
+│   ├── model_config.yml         ## Model configuration settings
+│   └── logging_config.yml       ## Logging configuration settings
 │
-├── requirements.txt             # Python dependencies
-├── Dockerfile                  # Docker configuration for containerization
-├── README.md                   # Project documentation
-└── .gitignore                   # Gitignore file
+├── requirements.txt             ## Python dependencies
+├── Dockerfile                  ## Docker configuration for containerization
+├── README.md                   ## Project documentation
+└── .gitignore                   ## Gitignore file
 ```
 
 In this file structure:
@@ -136,14 +136,14 @@ This organized file structure ensures scalability and maintainability of the Per
 models/
 │
 ├── bert/
-│   ├── config.json        # Configuration file for BERT model
-│   ├── pytorch_model.bin  # Pre-trained BERT model weights in PyTorch format
-│   └── tokenizer.pickle    # Tokenizer object for text preprocessing
+│   ├── config.json        ## Configuration file for BERT model
+│   ├── pytorch_model.bin  ## Pre-trained BERT model weights in PyTorch format
+│   └── tokenizer.pickle    ## Tokenizer object for text preprocessing
 │
 └── gpt3/
-    ├── config.json        # Configuration file for GPT-3 model
-    ├── tf_model.h5        # Pre-trained GPT-3 model weights in TensorFlow format
-    └── tokenizers/        # Tokenizers for GPT-3 model
+    ├── config.json        ## Configuration file for GPT-3 model
+    ├── tf_model.h5        ## Pre-trained GPT-3 model weights in TensorFlow format
+    └── tokenizers/        ## Tokenizers for GPT-3 model
         ├── sentencepiece_tokenizer.json
         └── vocabulary.txt
 ```
@@ -168,18 +168,18 @@ These files in the `models/` directory are crucial components of the Peru Consum
 ```
 deployment/
 │
-├── Dockerfile          # Docker configuration file for containerizing the application
+├── Dockerfile          ## Docker configuration file for containerizing the application
 │
 ├── kubernetes/
-│   ├── deployment.yaml  # Kubernetes deployment configuration for deploying the application
-│   └── service.yaml     # Kubernetes service configuration for exposing the application
+│   ├── deployment.yaml  ## Kubernetes deployment configuration for deploying the application
+│   └── service.yaml     ## Kubernetes service configuration for exposing the application
 │
 ├── prometheus/
-│   ├── prometheus.yml    # Prometheus configuration file for monitoring
-│   └── alert.rules       # Alert rules for defining alert conditions
+│   ├── prometheus.yml    ## Prometheus configuration file for monitoring
+│   └── alert.rules       ## Alert rules for defining alert conditions
 │
 └── grafana/
-    └── dashboard.json    # Grafana dashboard configuration for visualizing metrics
+    └── dashboard.json    ## Grafana dashboard configuration for visualizing metrics
 ```
 
 In the `deployment/` directory:
@@ -202,7 +202,7 @@ I'll provide a sample script for training a model using mock data for the Peru C
 ### Training Script for Mock Model (train_model.py)
 
 ```python
-# train_model.py
+## train_model.py
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -210,33 +210,33 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, classification_report
 import joblib
 
-# Load mock data
+## Load mock data
 data_path = "data/mock_data.csv"
 data = pd.read_csv(data_path)
 
-# Separate features and target
+## Separate features and target
 X = data.drop('target_column', axis=1)
 y = data['target_column']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize and train the model
+## Initialize and train the model
 model = RandomForestClassifier()
 model.fit(X_train, y_train)
 
-# Make predictions
+## Make predictions
 y_pred = model.predict(X_test)
 
-# Evaluate the model
+## Evaluate the model
 accuracy = accuracy_score(y_test, y_pred)
 print("Model Accuracy:", accuracy)
 
-# Generate classification report
+## Generate classification report
 print("Classification Report:")
 print(classification_report(y_test, y_pred))
 
-# Save the trained model to a file
+## Save the trained model to a file
 model_output_path = "models/mock_model.pkl"
 joblib.dump(model, model_output_path)
 print("Trained model saved successfully.")
@@ -261,7 +261,7 @@ I'll provide a sample script for training a complex machine learning algorithm u
 ### Training Script for Complex Machine Learning Algorithm (train_complex_model.py)
 
 ```python
-# train_complex_model.py
+## train_complex_model.py
 
 import pandas as pd
 import numpy as np
@@ -272,18 +272,18 @@ from tensorflow.keras.optimizers import Adam
 from sklearn.metrics import accuracy_score, classification_report
 import joblib
 
-# Load mock data (replace with actual data loading code)
+## Load mock data (replace with actual data loading code)
 data_path = "data/mock_data.csv"
 data = pd.read_csv(data_path)
 
-# Separate features and target
+## Separate features and target
 X = data.drop('target_column', axis=1)
 y = data['target_column']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Define the deep learning model
+## Define the deep learning model
 model = Sequential([
     Dense(128, activation='relu', input_shape=(X_train.shape[1],)),
     Dropout(0.3),
@@ -292,24 +292,24 @@ model = Sequential([
     Dense(1, activation='sigmoid')
 ])
 
-# Compile the model
+## Compile the model
 model.compile(loss='binary_crossentropy', optimizer=Adam(learning_rate=0.001), metrics=['accuracy'])
 
-# Train the model
+## Train the model
 model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y_test))
 
-# Make predictions
+## Make predictions
 y_pred = model.predict_classes(X_test)
 
-# Evaluate the model
+## Evaluate the model
 accuracy = accuracy_score(y_test, y_pred)
 print("Model Accuracy:", accuracy)
 
-# Generate classification report
+## Generate classification report
 print("Classification Report:")
 print(classification_report(y_test, y_pred))
 
-# Save the trained model to a file
+## Save the trained model to a file
 model_output_path = "models/complex_model.h5"
 model.save(model_output_path)
 print("Trained model saved successfully.")

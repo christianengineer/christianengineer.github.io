@@ -62,48 +62,48 @@ real-time-language-processing-media-analysis/
 │
 ├── app/
 │   ├── src/
-│   │   ├── main.py              # Main application code for real-time language processing
-│   │   ├── utils/               # Utility functions and helper modules
-│   │   └── models/              # Trained models and model related code
+│   │   ├── main.py              ## Main application code for real-time language processing
+│   │   ├── utils/               ## Utility functions and helper modules
+│   │   └── models/              ## Trained models and model related code
 │   │
-│   ├── config/                  # Configuration files for the application
-│   └── requirements.txt         # Python dependencies for the application
+│   ├── config/                  ## Configuration files for the application
+│   └── requirements.txt         ## Python dependencies for the application
 │
 ├── data/
-│   ├── raw/                     # Raw unprocessed data for media content
-│   ├── processed/               # Processed data and feature vectors
-│   └── datasets/                # Pre-processed datasets for model training and testing
+│   ├── raw/                     ## Raw unprocessed data for media content
+│   ├── processed/               ## Processed data and feature vectors
+│   └── datasets/                ## Pre-processed datasets for model training and testing
 │
 ├── infrastructure/
-│   ├── terraform/               # Terraform configurations for infrastructure as code
-│   │   ├── main.tf              # Main Terraform configurations
-│   │   └── variables.tf         # Input variables for the infrastructure
+│   ├── terraform/               ## Terraform configurations for infrastructure as code
+│   │   ├── main.tf              ## Main Terraform configurations
+│   │   └── variables.tf         ## Input variables for the infrastructure
 │   │
-│   └── ansible/                 # Ansible playbooks for infrastructure provisioning and configuration
+│   └── ansible/                 ## Ansible playbooks for infrastructure provisioning and configuration
 │
 ├── models/
-│   ├── bert/                    # BERT pre-trained models or custom fine-tuned models
-│   └── spark/                   # Spark MLlib models for media analysis
+│   ├── bert/                    ## BERT pre-trained models or custom fine-tuned models
+│   └── spark/                   ## Spark MLlib models for media analysis
 │
 ├── deployment/
-│   ├── Dockerfile              # Dockerfile for containerizing the real-time language processing application
-│   ├── kubernetes/              # Kubernetes deployment configurations
-│   └── helm/                    # Helm charts for deploying the application on Kubernetes
+│   ├── Dockerfile              ## Dockerfile for containerizing the real-time language processing application
+│   ├── kubernetes/              ## Kubernetes deployment configurations
+│   └── helm/                    ## Helm charts for deploying the application on Kubernetes
 │
 ├── tests/
-│   ├── unit/                    # Unit tests for application code
-│   ├── integration/             # Integration tests for the entire system
-│   └── performance/             # Performance tests for scalability and reliability
+│   ├── unit/                    ## Unit tests for application code
+│   ├── integration/             ## Integration tests for the entire system
+│   └── performance/             ## Performance tests for scalability and reliability
 │
 ├── docs/
-│   ├── architecture/            # System architecture diagrams and documentation
-│   └── api/                     # API documentation and examples
+│   ├── architecture/            ## System architecture diagrams and documentation
+│   └── api/                     ## API documentation and examples
 │
 ├── CI_CD/
-│   ├── Jenkinsfile              # Jenkins pipeline configurations for CI/CD
-│   └── CircleCI/                # Configuration files for CircleCI
+│   ├── Jenkinsfile              ## Jenkins pipeline configurations for CI/CD
+│   └── CircleCI/                ## Configuration files for CircleCI
 │
-└── README.md                    # Project overview, setup instructions, and usage guide
+└── README.md                    ## Project overview, setup instructions, and usage guide
 ```
 
 This file structure is designed to organize the various components of the Real-time Language Processing for Media Analysis project, including the application code, data management, infrastructure configurations, models, deployment configurations, testing, documentation, and CI/CD pipeline. This structure promotes modularity, scalability, and ease of maintenance for the project.
@@ -114,14 +114,14 @@ Certainly! Here's an expanded view of the proposed directory structure for the m
 models/
 │
 ├── bert/
-│   ├── pretrained/          # Pretrained BERT models and related files
-│   ├── fine_tuned/          # Fine-tuned BERT models for specific tasks
-│   └── evaluation/          # Evaluation scripts and results for BERT models
+│   ├── pretrained/          ## Pretrained BERT models and related files
+│   ├── fine_tuned/          ## Fine-tuned BERT models for specific tasks
+│   └── evaluation/          ## Evaluation scripts and results for BERT models
 │
 └── spark/
-    ├── classification/     # Trained Spark MLlib models for classification tasks
-    ├── regression/         # Trained Spark MLlib models for regression tasks
-    └── clustering/         # Trained Spark MLlib models for clustering tasks
+    ├── classification/     ## Trained Spark MLlib models for classification tasks
+    ├── regression/         ## Trained Spark MLlib models for regression tasks
+    └── clustering/         ## Trained Spark MLlib models for clustering tasks
 ```
 
 - **bert/**: This directory contains the BERT models and related files used for natural language processing tasks. It includes subdirectories for storing pretrained BERT models, fine-tuned BERT models for specific tasks such as sentiment analysis or named entity recognition, and evaluation scripts and results for assessing the performance of BERT models on media analysis tasks.
@@ -135,20 +135,20 @@ Certainly! Here's an expanded view of the proposed directory structure for the d
 ```plaintext
 deployment/
 │
-├── Dockerfile           # Dockerfile for containerizing the real-time language processing application
-├── kubernetes/          # Kubernetes deployment configurations
-│   ├── deployment.yaml  # Deployment configuration for the real-time language processing application
-│   ├── service.yaml     # Service configuration for exposing the application
-│   └── ingress.yaml     # Ingress configuration for routing external traffic to the application
+├── Dockerfile           ## Dockerfile for containerizing the real-time language processing application
+├── kubernetes/          ## Kubernetes deployment configurations
+│   ├── deployment.yaml  ## Deployment configuration for the real-time language processing application
+│   ├── service.yaml     ## Service configuration for exposing the application
+│   └── ingress.yaml     ## Ingress configuration for routing external traffic to the application
 │
-└── helm/                # Helm charts for deploying the application on Kubernetes
-    ├── Chart.yaml       # Metadata and dependencies for the Helm chart
-    ├── values.yaml      # Default configuration values for the Helm chart
-    ├── templates/       # Kubernetes manifest templates for the application deployment
+└── helm/                ## Helm charts for deploying the application on Kubernetes
+    ├── Chart.yaml       ## Metadata and dependencies for the Helm chart
+    ├── values.yaml      ## Default configuration values for the Helm chart
+    ├── templates/       ## Kubernetes manifest templates for the application deployment
     │   ├── deployment.yaml
     │   ├── service.yaml
     │   └── ingress.yaml
-    └── charts/          # Dependencies for the Helm chart
+    └── charts/          ## Dependencies for the Helm chart
 ```
 
 - **Dockerfile**: This file contains the instructions for building a Docker image for the real-time language processing application, including the necessary dependencies and environment setup.
@@ -169,7 +169,7 @@ By organizing the deployment configurations in this manner, the Real-time Langua
 Certainly! Below is an example of a Python script for training a BERT model for sentiment analysis using mock data. This script assumes the availability of a BERT model, such as those provided by the Hugging Face Transformers library, and uses PyTorch for training. The mock data is assumed to be available in a CSV file named "mock_media_data.csv" in the "data/processed/" directory.
 
 ```python
-# File Path: real-time-language-processing-media-analysis/app/src/train_bert_model.py
+## File Path: real-time-language-processing-media-analysis/app/src/train_bert_model.py
 
 import pandas as pd
 import torch
@@ -181,21 +181,21 @@ from torch.utils.data import TensorDataset, random_split
 from transformers import AdamW, get_linear_schedule_with_warmup
 import numpy as np
 
-# Load mock data from a CSV file
+## Load mock data from a CSV file
 data_path = "../data/processed/mock_media_data.csv"
 mock_data = pd.read_csv(data_path)
 
-# Preprocess the data (e.g., tokenize text, process labels)
+## Preprocess the data (e.g., tokenize text, process labels)
 
-# Split the data into training and validation sets
+## Split the data into training and validation sets
 train_data, validation_data = train_test_split(mock_data, test_size=0.1, random_state=42)
 
-# Define the BERT model and tokenizer
+## Define the BERT model and tokenizer
 model_name = 'bert-base-uncased'
 tokenizer = BertTokenizer.from_pretrained(model_name)
 model = BertForSequenceClassification.from_pretrained(model_name, num_labels=2)
 
-# Data processing and batching (assuming 'text' and 'label' are column names in the DataFrame)
+## Data processing and batching (assuming 'text' and 'label' are column names in the DataFrame)
 class MediaDataset(Dataset):
     def __init__(self, texts, labels, tokenizer, max_len):
         self.texts = texts
@@ -228,7 +228,7 @@ class MediaDataset(Dataset):
             'label': torch.tensor(label, dtype=torch.long)
         }
 
-# Define the data loaders
+## Define the data loaders
 max_len = 128
 batch_size = 32
 
@@ -245,7 +245,7 @@ train_dataloader = DataLoader(
     num_workers=4
 )
 
-# Training the BERT model
+## Training the BERT model
 optimizer = AdamW(model.parameters(), lr=2e-5, eps=1e-8)
 epochs = 3
 total_steps = len(train_dataloader) * epochs
@@ -283,7 +283,7 @@ In the above example, the file "train_bert_model.py" is located within the "app/
 Certainly! Below is an example of a file implementing a complex machine learning algorithm for media analysis using Spark's MLlib to perform text classification on mock data. This script assumes the availability of Spark and PySpark in the environment. The mock data is assumed to be available in a CSV file named "mock_media_data.csv" in the "data/processed/" directory.
 
 ```python
-# File Path: real-time-language-processing-media-analysis/app/src/compute_text_classification_spark.py
+## File Path: real-time-language-processing-media-analysis/app/src/compute_text_classification_spark.py
 
 from pyspark import SparkContext, SparkConf
 from pyspark.sql import SparkSession
@@ -293,14 +293,14 @@ from pyspark.ml import Pipeline
 from pyspark.ml.evaluation import MulticlassClassificationEvaluator
 from pyspark.sql import SQLContext
 
-# Create a Spark session
+## Create a Spark session
 spark = SparkSession.builder.appName("RealTimeMediaAnalysis").getOrCreate()
 
-# Load mock data from a CSV file
+## Load mock data from a CSV file
 data_path = "../data/processed/mock_media_data.csv"
 data = spark.read.csv(data_path, header=True, inferSchema=True)
 
-# Tokenize and transform the data
+## Tokenize and transform the data
 tokenizer = Tokenizer(inputCol="text", outputCol="words")
 wordsData = tokenizer.transform(data)
 
@@ -311,23 +311,23 @@ idf = IDF(inputCol="rawFeatures", outputCol="features")
 idfModel = idf.fit(featurizedData)
 rescaledData = idfModel.transform(featurizedData)
 
-# Split the data into training and test sets
+## Split the data into training and test sets
 train, test = rescaledData.randomSplit([0.7, 0.3])
 
-# Train a logistic regression model
+## Train a logistic regression model
 lr = LogisticRegression(maxIter=10, regParam=0.001)
 pipeline = Pipeline(stages=[lr])
 model = pipeline.fit(train)
 
-# Make predictions
+## Make predictions
 predictions = model.transform(test)
 
-# Compute evaluation metrics
+## Compute evaluation metrics
 evaluator = MulticlassClassificationEvaluator(labelCol="label", predictionCol="prediction", metricName="accuracy")
 accuracy = evaluator.evaluate(predictions)
 print("Test set accuracy = " + str(accuracy))
 
-# Save the trained model
+## Save the trained model
 model.save("path_to_save_model")
 ```
 

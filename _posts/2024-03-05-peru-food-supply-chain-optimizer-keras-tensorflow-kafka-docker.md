@@ -143,16 +143,16 @@ from sklearn.preprocessing import StandardScaler, OneHotEncoder
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 
-# Sample data preprocessing code for the Peru Food Supply Chain Optimizer
+## Sample data preprocessing code for the Peru Food Supply Chain Optimizer
 
-# Load the dataset
+## Load the dataset
 data = pd.read_csv('supply_chain_data.csv')
 
-# Define features and target variable
+## Define features and target variable
 X = data.drop('supply_needs', axis=1)
 y = data['supply_needs']
 
-# Preprocessing pipeline
+## Preprocessing pipeline
 numeric_features = X.select_dtypes(include=['float64']).columns
 categorical_features = X.select_dtypes(include=['object']).columns
 
@@ -172,12 +172,12 @@ preprocessor = ColumnTransformer(
         ('cat', categorical_transformer, categorical_features)
     ])
 
-# Fit and transform the data
+## Fit and transform the data
 X_preprocessed = preprocessor.fit_transform(X)
 
-# Sample code to continue model training using preprocessed data
-# model = YourModel()
-# model.fit(X_preprocessed, y)
+## Sample code to continue model training using preprocessed data
+## model = YourModel()
+## model.fit(X_preprocessed, y)
 ```
 
 This code snippet provides a basic structure for data preprocessing in the Peru Food Supply Chain Optimizer project. It includes steps for handling missing values, scaling numerical features, and encoding categorical variables using pipelines and transformers from scikit-learn. The preprocessed data can then be used for training machine learning models to optimize supply chain logistics in the food industry.
@@ -314,35 +314,35 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import LSTM, Dense
 import numpy as np
 
-# Load preprocessed data
+## Load preprocessed data
 data = pd.read_csv('preprocessed_data.csv')
 
-# Split data into features and target variable
+## Split data into features and target variable
 X = data.drop('supply_needs', axis=1)
 y = data['supply_needs']
 
-# Train-test split
+## Train-test split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Feature scaling
+## Feature scaling
 scaler = StandardScaler()
 X_train = scaler.fit_transform(X_train)
 X_test = scaler.transform(X_test)
 
-# Reshape data for LSTM
+## Reshape data for LSTM
 X_train = np.reshape(X_train, (X_train.shape[0], 1, X_train.shape[1]))
 X_test = np.reshape(X_test, (X_test.shape[0], 1, X_test.shape[1]))
 
-# Initialize LSTM model
+## Initialize LSTM model
 model = Sequential()
 model.add(LSTM(50, input_shape=(X_train.shape[1], X_train.shape[2])))
 model.add(Dense(1))
 model.compile(loss='mse', optimizer='adam')
 
-# Train the model
+## Train the model
 model.fit(X_train, y_train, epochs=50, batch_size=32, validation_data=(X_test, y_test))
 
-# Save the trained model for future use
+## Save the trained model for future use
 model.save('supply_chain_optimizer_model.h5')
 ```
 
@@ -420,25 +420,25 @@ This production-ready code snippet demonstrates a structured approach to trainin
 This deployment plan outlines the steps to take the trained machine learning model from development to production, leveraging tools and platforms to ensure a smooth and efficient deployment process. By following these steps, your team can deploy the Peru Food Supply Chain Optimizer model with confidence and create a scalable, reliable solution for real-world use.
 
 ```Dockerfile
-# Use a base image with GPU support and TensorFlow pre-installed
+## Use a base image with GPU support and TensorFlow pre-installed
 FROM tensorflow/tensorflow:latest-gpu
 
-# Set the working directory in the container
+## Set the working directory in the container
 WORKDIR /app
 
-# Copy the current directory contents into the container at /app
+## Copy the current directory contents into the container at /app
 COPY . /app
 
-# Install additional dependencies
+## Install additional dependencies
 RUN pip install pandas scikit-learn
 
-# Install any other project-specific dependencies
-# RUN pip install ...
+## Install any other project-specific dependencies
+## RUN pip install ...
 
-# Expose the port the app runs on
+## Expose the port the app runs on
 EXPOSE 5000
 
-# Define the command to run your application
+## Define the command to run your application
 CMD ["python", "app.py"]
 ```
 

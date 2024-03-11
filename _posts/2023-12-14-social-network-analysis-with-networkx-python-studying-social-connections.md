@@ -5,7 +5,7 @@ permalink: posts/social-network-analysis-with-networkx-python-studying-social-co
 layout: article
 ---
 
-# AI Social Network Analysis with NetworkX
+## AI Social Network Analysis with NetworkX
 
 ## Objectives
 The objectives of the AI Social Network Analysis with NetworkX project include:
@@ -33,7 +33,7 @@ The following libraries can be used for the AI Social Network Analysis with Netw
 
 By leveraging these libraries and system design strategies, the project can build a robust AI application for social network analysis that is capable of efficiently processing and deriving insights from large-scale social network datasets.
 
-# Infrastructure for Social Network Analysis with NetworkX
+## Infrastructure for Social Network Analysis with NetworkX
 
 To support the Social Network Analysis with NetworkX application, a scalable and reliable infrastructure is essential. The infrastructure should be designed to handle the processing and analysis of large-scale social network data efficiently. Below are the key components of the infrastructure:
 
@@ -68,70 +68,70 @@ By establishing this infrastructure, the Social Network Analysis with NetworkX a
 ```
 social_network_analysis/
 │
-├── data/   # Directory for storing social network datasets
-│   ├── raw/   # Raw social network data
-│   ├── processed/   # Processed social network data
-│   └── external/   # External datasets used for analysis
+├── data/   ## Directory for storing social network datasets
+│   ├── raw/   ## Raw social network data
+│   ├── processed/   ## Processed social network data
+│   └── external/   ## External datasets used for analysis
 │
-├── notebooks/   # Jupyter notebooks for data exploration and analysis
+├── notebooks/   ## Jupyter notebooks for data exploration and analysis
 │
-├── src/   # Source code for data processing and analysis
-│   ├── data_processing/   # Scripts for data preprocessing and cleaning
-│   ├── feature_engineering/   # Scripts for feature engineering and transformation
-│   ├── network_analysis/   # Scripts for performing social network analysis using NetworkX
-│   └── machine_learning/   # Scripts for machine learning models and analysis
+├── src/   ## Source code for data processing and analysis
+│   ├── data_processing/   ## Scripts for data preprocessing and cleaning
+│   ├── feature_engineering/   ## Scripts for feature engineering and transformation
+│   ├── network_analysis/   ## Scripts for performing social network analysis using NetworkX
+│   └── machine_learning/   ## Scripts for machine learning models and analysis
 │
-├── models/   # Directory for storing trained machine learning models
+├── models/   ## Directory for storing trained machine learning models
 │
-├── visualizations/   # Directory for storing visualizations of social network analysis
+├── visualizations/   ## Directory for storing visualizations of social network analysis
 │
-├── config/   # Configuration files for the application
+├── config/   ## Configuration files for the application
 │
-├── requirements.txt   # Dependencies and library versions for reproducibility
+├── requirements.txt   ## Dependencies and library versions for reproducibility
 │
-├── README.md   # Project documentation and instructions
+├── README.md   ## Project documentation and instructions
 │
-└── .gitignore   # Specification of files and directories to be ignored by version control
+└── .gitignore   ## Specification of files and directories to be ignored by version control
 ```
 
 ```
 models/
 │
-├── trained_models/   # Directory for storing trained machine learning models
-│   ├── link_prediction_model.pkl   # Trained model for predicting new connections in the social network
-│   ├── community_detection_model.pkl   # Trained model for detecting communities within the social network
-│   ├── influence_analysis_model.pkl   # Trained model for analyzing the influence of nodes in the network
+├── trained_models/   ## Directory for storing trained machine learning models
+│   ├── link_prediction_model.pkl   ## Trained model for predicting new connections in the social network
+│   ├── community_detection_model.pkl   ## Trained model for detecting communities within the social network
+│   ├── influence_analysis_model.pkl   ## Trained model for analyzing the influence of nodes in the network
 │
-├── model_evaluation/   # Directory for model evaluation results
-│   ├── link_prediction_evaluation_results.csv   # Evaluation metrics for the link prediction model
-│   ├── community_detection_evaluation_results.csv   # Evaluation metrics for the community detection model
-│   └── influence_analysis_evaluation_results.csv   # Evaluation metrics for the influence analysis model
+├── model_evaluation/   ## Directory for model evaluation results
+│   ├── link_prediction_evaluation_results.csv   ## Evaluation metrics for the link prediction model
+│   ├── community_detection_evaluation_results.csv   ## Evaluation metrics for the community detection model
+│   └── influence_analysis_evaluation_results.csv   ## Evaluation metrics for the influence analysis model
 │
-└── model_explanations/   # Directory for model explanations and interpretations
-    ├── link_prediction_explanations.txt   # Explanations and insights from the link prediction model
-    ├── community_detection_explanations.txt   # Explanations and insights from the community detection model
-    └── influence_analysis_explanations.txt   # Explanations and insights from the influence analysis model
+└── model_explanations/   ## Directory for model explanations and interpretations
+    ├── link_prediction_explanations.txt   ## Explanations and insights from the link prediction model
+    ├── community_detection_explanations.txt   ## Explanations and insights from the community detection model
+    └── influence_analysis_explanations.txt   ## Explanations and insights from the influence analysis model
 ```
 
 ```
 deployment/
 │
-├── app/   # Directory for the web application or API deployment
-│   ├── templates/   # HTML templates for the web application
-│   ├── static/   # Static files (e.g., CSS, JavaScript) for the web application
-│   ├── app.py   # Main script for running the web application using Flask or a similar framework
+├── app/   ## Directory for the web application or API deployment
+│   ├── templates/   ## HTML templates for the web application
+│   ├── static/   ## Static files (e.g., CSS, JavaScript) for the web application
+│   ├── app.py   ## Main script for running the web application using Flask or a similar framework
 │
-├── docker/   # Directory for Docker configuration and deployment files
-│   ├── Dockerfile   # Definition of the Docker image for the application
-│   ├── docker-compose.yml   # Docker Compose file for managing multi-container applications
+├── docker/   ## Directory for Docker configuration and deployment files
+│   ├── Dockerfile   ## Definition of the Docker image for the application
+│   ├── docker-compose.yml   ## Docker Compose file for managing multi-container applications
 │
-├── cloud_infrastructure/   # Directory for cloud infrastructure configuration
-│   ├── terraform/   # Terraform configuration for provisioning cloud resources
-│   ├── kubernetes/   # Kubernetes deployment configuration for containerized application
+├── cloud_infrastructure/   ## Directory for cloud infrastructure configuration
+│   ├── terraform/   ## Terraform configuration for provisioning cloud resources
+│   ├── kubernetes/   ## Kubernetes deployment configuration for containerized application
 │
-└── CI_CD/   # Directory for continuous integration and continuous deployment (CI/CD) configuration
-    ├── Jenkinsfile   # Pipeline definition for Jenkins or similar CI/CD tool
-    ├── deploy_script.sh   # Script for deploying the application to production environment
+└── CI_CD/   ## Directory for continuous integration and continuous deployment (CI/CD) configuration
+    ├── Jenkinsfile   ## Pipeline definition for Jenkins or similar CI/CD tool
+    ├── deploy_script.sh   ## Script for deploying the application to production environment
 ```
 
 ```python
@@ -141,27 +141,27 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
 def complex_machine_learning_algorithm(data_file_path):
-    # Load mock data
+    ## Load mock data
     data = pd.read_csv(data_file_path)
 
-    # Preprocessing and feature engineering
-    # ... (Preprocessing code)
+    ## Preprocessing and feature engineering
+    ## ... (Preprocessing code)
 
-    # Split the data into features and target variable
+    ## Split the data into features and target variable
     X = data.drop('target', axis=1)
     y = data['target']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Instantiate and train the machine learning model
+    ## Instantiate and train the machine learning model
     model = RandomForestClassifier(n_estimators=100, random_state=42)
     model.fit(X_train, y_train)
 
-    # Make predictions
+    ## Make predictions
     y_pred = model.predict(X_test)
 
-    # Evaluate the model
+    ## Evaluate the model
     accuracy = accuracy_score(y_test, y_pred)
 
     return model, accuracy
@@ -176,27 +176,27 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
 def complex_machine_learning_algorithm(data_file_path):
-    # Load mock data
+    ## Load mock data
     data = pd.read_csv(data_file_path)
 
-    # Preprocessing and feature engineering
-    # ...
+    ## Preprocessing and feature engineering
+    ## ...
 
-    # Split the data into features and target variable
+    ## Split the data into features and target variable
     X = data.drop('target_variable', axis=1)
     y = data['target_variable']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Instantiate and train the machine learning model
+    ## Instantiate and train the machine learning model
     model = RandomForestClassifier(n_estimators=100, random_state=42)
     model.fit(X_train, y_train)
 
-    # Make predictions
+    ## Make predictions
     y_pred = model.predict(X_test)
 
-    # Evaluate the model
+    ## Evaluate the model
     accuracy = accuracy_score(y_test, y_pred)
 
     return model, accuracy

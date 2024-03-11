@@ -5,7 +5,7 @@ permalink: posts/public-health-monitoring-system-using-pytorch-and-pandas-for-mi
 layout: article
 ---
 
-# Public Health Monitoring System using Machine Learning
+## Public Health Monitoring System using Machine Learning
 
 ## Objective and Benefits
 - **Objective**: To develop a scalable, production-ready machine learning solution for early detection of disease outbreaks across regions.
@@ -194,28 +194,28 @@ import pandas as pd
 from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import StandardScaler
 
-# Load the raw health data into a Pandas DataFrame
+## Load the raw health data into a Pandas DataFrame
 data = pd.read_csv('health_data.csv')
 
-# Impute missing values with mean for numerical features
+## Impute missing values with mean for numerical features
 imputer = SimpleImputer(strategy='mean')
 data[['population_density', 'num_admissions']] = imputer.fit_transform(data[['population_density', 'num_admissions']])
 
-# Impute missing values in categorical features with most frequent value
+## Impute missing values in categorical features with most frequent value
 imputer = SimpleImputer(strategy='most_frequent')
 data['weather_conditions'] = imputer.fit_transform(data[['weather_conditions']])
 
-# Encode categorical variables using one-hot encoding
+## Encode categorical variables using one-hot encoding
 data = pd.get_dummies(data, columns=['weather_conditions'])
 
-# Scale numerical features to a standard range
+## Scale numerical features to a standard range
 scaler = StandardScaler()
 data[['population_density', 'num_admissions']] = scaler.fit_transform(data[['population_density', 'num_admissions']])
 
-# Feature selection and removal of unnecessary columns
+## Feature selection and removal of unnecessary columns
 data = data.drop(columns=['gender_distribution', 'avg_length_of_stay'])
 
-# Save the preprocessed data to a new CSV file
+## Save the preprocessed data to a new CSV file
 data.to_csv('preprocessed_health_data.csv', index=False)
 ```
 
@@ -297,27 +297,27 @@ import numpy as np
 import pandas as pd
 from sklearn import preprocessing
 
-# Generate synthetic data for features
+## Generate synthetic data for features
 num_samples = 10000
 
-# Demographic Features
+## Demographic Features
 population_density = np.random.uniform(50, 1000, num_samples)
 age_distribution = np.random.normal(40, 15, num_samples)
 gender_distribution = np.random.choice(['Male', 'Female'], num_samples)
 
-# Hospital Records Features
+## Hospital Records Features
 num_admissions = np.random.poisson(5, num_samples)
 avg_length_of_stay = np.random.normal(4, 2, num_samples)
 
-# Environmental Features
+## Environmental Features
 weather_conditions = np.random.choice(['Sunny', 'Rainy', 'Cloudy'], num_samples)
 pollution_levels = np.random.uniform(0, 100, num_samples)
 
-# Social Media Features
+## Social Media Features
 disease_mentions_frequency = np.random.poisson(10, num_samples)
 sentiment_analysis = np.random.uniform(-1, 1, num_samples)
 
-# Create a DataFrame with synthetic data
+## Create a DataFrame with synthetic data
 data = pd.DataFrame({
     'population_density': population_density,
     'age_distribution': age_distribution,
@@ -330,16 +330,16 @@ data = pd.DataFrame({
     'sentiment_analysis': sentiment_analysis
 })
 
-# Add noise to simulate real-world variability
+## Add noise to simulate real-world variability
 for col in data.columns:
     if data[col].dtype in ['int64', 'float64']:
         data[col] = data[col] + np.random.normal(0, 0.1*np.std(data[col]), num_samples)
 
-# Data preprocessing steps (scaling numerical features)
+## Data preprocessing steps (scaling numerical features)
 scaler = preprocessing.StandardScaler()
 data[['population_density', 'num_admissions', 'avg_length_of_stay', 'pollution_levels', 'disease_mentions_frequency', 'sentiment_analysis']] = scaler.fit_transform(data[['population_density', 'num_admissions', 'avg_length_of_stay', 'pollution_levels', 'disease_mentions_frequency', 'sentiment_analysis']])
 
-# Save the synthetic dataset to a CSV file
+## Save the synthetic dataset to a CSV file
 data.to_csv('synthetic_health_data.csv', index=False)
 ```
 
@@ -385,35 +385,35 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import accuracy_score
 from sklearn.linear_model import LogisticRegression
 
-# Load preprocessed dataset
+## Load preprocessed dataset
 data = pd.read_csv('preprocessed_health_data.csv')
 
-# Split data into features and target variable
+## Split data into features and target variable
 X = data.drop('disease_outbreak', axis=1)
 y = data['disease_outbreak']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Feature scaling
+## Feature scaling
 scaler = StandardScaler()
 X_train = scaler.fit_transform(X_train)
 X_test = scaler.transform(X_test)
 
-# Initialize the Logistic Regression model
+## Initialize the Logistic Regression model
 model = LogisticRegression()
 
-# Train the model
+## Train the model
 model.fit(X_train, y_train)
 
-# Make predictions on the test set
+## Make predictions on the test set
 y_pred = model.predict(X_test)
 
-# Calculate model accuracy
+## Calculate model accuracy
 accuracy = accuracy_score(y_test, y_pred)
 print(f'Model Accuracy: {accuracy}')
 
-# Save the trained model for deployment
+## Save the trained model for deployment
 import joblib
 joblib.dump(model, 'health_monitoring_model.pkl')
 ```
@@ -480,28 +480,28 @@ By following this step-by-step deployment plan tailored to the specific demands 
 Here is a sample Dockerfile tailored for encapsulating the environment and dependencies of the machine learning model in the Public Health Monitoring System project, optimized for performance and scalability:
 
 ```Dockerfile
-# Use a Python base image
+## Use a Python base image
 FROM python:3.8-slim
 
-# Set working directory in the container
+## Set working directory in the container
 WORKDIR /app
 
-# Copy requirements file and project code
+## Copy requirements file and project code
 COPY requirements.txt /app
 COPY model.py /app
 
-# Install necessary dependencies
+## Install necessary dependencies
 RUN pip install --upgrade pip && pip install -r requirements.txt
 
-# Expose the Flask API port
+## Expose the Flask API port
 EXPOSE 5000
 
-# Define environment variables
+## Define environment variables
 ENV FLASK_APP=model.py
 ENV FLASK_RUN_HOST=0.0.0.0
 ENV FLASK_RUN_PORT=5000
 
-# Command to run the Flask API in production mode
+## Command to run the Flask API in production mode
 CMD ["flask", "run"]
 ```
 

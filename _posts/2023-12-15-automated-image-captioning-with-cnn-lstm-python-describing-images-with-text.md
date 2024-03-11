@@ -5,7 +5,7 @@ permalink: posts/automated-image-captioning-with-cnn-lstm-python-describing-imag
 layout: article
 ---
 
-# AI Automated Image Captioning with CNN-LSTM
+## AI Automated Image Captioning with CNN-LSTM
 
 ## Objectives
 The objective of this project is to build an automated image captioning system using Convolutional Neural Networks (CNN) for image feature extraction and Long Short-Term Memory (LSTM) networks for generating descriptive captions. The system aims to accurately describe images with natural language captions, showcasing the potential of AI in understanding and generating human-like descriptions of visual content.
@@ -38,7 +38,7 @@ The objective of this project is to build an automated image captioning system u
 
 By following these design strategies and utilizing the chosen libraries, the project aims to create an AI system capable of accurately describing images with natural-language captions, demonstrating the power of CNN-LSTM based image captioning.
 
-# MLOps Infrastructure for Automated Image Captioning with CNN-LSTM
+## MLOps Infrastructure for Automated Image Captioning with CNN-LSTM
 
 ## Infrastructure Components
 ### Model Training and Versioning
@@ -204,29 +204,29 @@ By organizing the deployment-related components into a dedicated directory, the 
 Certainly! Below is an example of a Python file for training a CNN-LSTM model for the Automated Image Captioning application using mock data. The file path is `model_training.py`:
 
 ```python
-# model_training.py
+## model_training.py
 
 import numpy as np
 from models.cnn_lstm_model import CNNLSTMModel
 from src.data.data_loader import MockDataLoader
 from src.utils.config import Config
 
-# Mock data paths
+## Mock data paths
 mock_image_data_path = 'data/mock/images/'
 mock_caption_data_path = 'data/mock/captions/'
 
-# Load mock data
+## Load mock data
 data_loader = MockDataLoader(mock_image_data_path, mock_caption_data_path)
 image_data, caption_data = data_loader.load_data()
 
-# Define model configuration
+## Define model configuration
 config = Config()
 config.vocab_size = 1000
 config.embedding_dim = 256
 config.lstm_units = 512
 config.image_shape = (224, 224, 3)
 
-# Initialize and train the CNN-LSTM model
+## Initialize and train the CNN-LSTM model
 cnn_lstm_model = CNNLSTMModel(config)
 cnn_lstm_model.build_model()
 cnn_lstm_model.train_model(image_data, caption_data, epochs=10, batch_size=64)
@@ -245,7 +245,7 @@ This file serves as a mock data-driven training script, enabling the development
 Certainly! Below is an example of a Python file implementing a complex machine learning algorithm for the Automated Image Captioning with CNN-LSTM application using mock data. The file path is `complex_ml_algorithm.py`:
 
 ```python
-# complex_ml_algorithm.py
+## complex_ml_algorithm.py
 
 import numpy as np
 from models.cnn_lstm_model import AttentionCNNLSTMModel
@@ -254,35 +254,35 @@ from src.utils.config import Config
 from src.utils.logger import Logger
 
 def complex_algorithm_main():
-    # Mock data paths
+    ## Mock data paths
     mock_image_data_path = 'data/mock/images/'
     mock_caption_data_path = 'data/mock/captions/'
 
-    # Load mock data
+    ## Load mock data
     data_loader = MockDataLoader(mock_image_data_path, mock_caption_data_path)
     image_data, caption_data = data_loader.load_data()
 
-    # Define model configuration
+    ## Define model configuration
     config = Config()
     config.vocab_size = 10000
     config.embedding_dim = 512
     config.lstm_units = 1024
     config.image_shape = (299, 299, 3)
     
-    # Initialize the complex CNN-LSTM model with attention mechanism
+    ## Initialize the complex CNN-LSTM model with attention mechanism
     model = AttentionCNNLSTMModel(config)
 
-    # Train the model
+    ## Train the model
     logger = Logger()
     model.build_model()
     model.set_logger(logger)
     history = model.train_model(image_data, caption_data, epochs=20, batch_size=64)
 
-    # Evaluate the model
+    ## Evaluate the model
     evaluation_metrics = model.evaluate_model(image_data, caption_data)
     logger.log("Evaluation Metrics: {}".format(evaluation_metrics))
 
-    # Save the trained model and evaluation logs
+    ## Save the trained model and evaluation logs
     model.save_model('trained_models/complex_cnn_lstm_model.h5')
     logger.save_logs('logs/complex_training_logs.txt')
 

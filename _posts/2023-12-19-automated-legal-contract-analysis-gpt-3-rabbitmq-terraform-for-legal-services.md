@@ -197,18 +197,18 @@ automated_legal_contract_analysis/
 
 ### Contents of `train_mock_model.py`:
 ```python
-# train_mock_model.py
+## train_mock_model.py
 
 import random
 import time
 
 def train_mock_model(training_data):
-    # Mock training process
+    ## Mock training process
     print("Starting mock model training...")
     print("Training on the following data:")
     for data in training_data:
         print(data)
-        time.sleep(random.uniform(0.5, 2.0))  # Simulate training time
+        time.sleep(random.uniform(0.5, 2.0))  ## Simulate training time
     print("Mock model training completed.")
 
 if __name__ == "__main__":
@@ -216,7 +216,7 @@ if __name__ == "__main__":
         "Sample legal contract 1",
         "Sample legal contract 2",
         "Sample legal contract 3",
-        # Add more mock data as needed
+        ## Add more mock data as needed
     ]
 
     train_mock_model(mock_training_data)
@@ -239,7 +239,7 @@ automated_legal_contract_analysis/
 
 ### Contents of `complex_ml_algorithm.py`:
 ```python
-# complex_ml_algorithm.py
+## complex_ml_algorithm.py
 
 import random
 import time
@@ -252,45 +252,45 @@ class ComplexMLAlgorithm:
         print(f"Training complex ML model with the following configuration: {self.model_config}")
         print("Starting complex model training...")
         for data in training_data:
-            # Complex training logic (mock implementation)
+            ## Complex training logic (mock implementation)
             print(f"Training on data: {data}")
-            time.sleep(random.uniform(0.5, 2.0))  # Simulate training time
+            time.sleep(random.uniform(0.5, 2.0))  ## Simulate training time
         print("Complex model training completed.")
 
     def predict(self, input_data):
         print("Making predictions using the complex ML model")
-        # Complex prediction logic (mock implementation)
+        ## Complex prediction logic (mock implementation)
         print(f"Predicting with input data: {input_data}")
         prediction = "Mock prediction result"
         return prediction
 
 if __name__ == "__main__":
-    # Mock configuration for the complex ML model
+    ## Mock configuration for the complex ML model
     model_config = {
         "layers": 4,
         "units_per_layer": 128,
         "dropout_rate": 0.2
-        # Add more configuration parameters as needed
+        ## Add more configuration parameters as needed
     }
 
-    # Mock training data for the complex ML model
+    ## Mock training data for the complex ML model
     mock_training_data = [
         "Sample legal contract 1",
         "Sample legal contract 2",
         "Sample legal contract 3",
-        # Add more mock data as needed
+        ## Add more mock data as needed
     ]
 
-    # Instantiate the complex ML model
+    ## Instantiate the complex ML model
     complex_model = ComplexMLAlgorithm(model_config)
 
-    # Train the model
+    ## Train the model
     complex_model.train_model(mock_training_data)
 
-    # Mock data for making predictions
+    ## Mock data for making predictions
     mock_input_data = "Mock legal contract for prediction"
 
-    # Make predictions using the trained model
+    ## Make predictions using the trained model
     prediction_result = complex_model.predict(mock_input_data)
     print("Prediction Result:", prediction_result)
 ```

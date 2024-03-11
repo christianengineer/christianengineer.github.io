@@ -186,36 +186,36 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 
-# Load the dataset
+## Load the dataset
 data = pd.read_csv('energy_data.csv')
 
-# Define features and target variable
+## Define features and target variable
 X = data.drop(['energy_consumption'], axis=1)
 y = data['energy_consumption']
 
-# Define preprocessing steps for numerical and categorical features
+## Define preprocessing steps for numerical and categorical features
 numeric_features = X.select_dtypes(include=['float64', 'int64']).columns
 numeric_transformer = Pipeline(steps=[
     ('imputer', SimpleImputer(strategy='mean')),
     ('scaler', StandardScaler())
 ])
 
-# Apply preprocessing to numerical features
+## Apply preprocessing to numerical features
 preprocessor = ColumnTransformer(transformers=[
     ('num', numeric_transformer, numeric_features)
 ])
 
-# Fit and transform the data
+## Fit and transform the data
 X_preprocessed = preprocessor.fit_transform(X)
 
-# Sample code for model training
+## Sample code for model training
 from sklearn.ensemble import RandomForestRegressor
 
-# Define and train the model
+## Define and train the model
 model = RandomForestRegressor()
 model.fit(X_preprocessed, y)
 
-# Sample code for prediction on new data
+## Sample code for prediction on new data
 new_data = pd.read_csv('new_data.csv')
 new_X = preprocessor.transform(new_data)
 predictions = model.predict(new_X)
@@ -350,29 +350,29 @@ import pandas as pd
 import numpy as np
 from datetime import datetime, timedelta
 
-# Generate mock data for energy consumption, weather, occupancy, and menu items
+## Generate mock data for energy consumption, weather, occupancy, and menu items
 np.random.seed(42)
 num_records = 1000
 
-# Generate dates for the dataset
+## Generate dates for the dataset
 start_date = datetime(2023, 1, 1)
 dates = [start_date + timedelta(days=i) for i in range(num_records)]
 
-# Generate energy consumption data
+## Generate energy consumption data
 energy_consumption = np.random.randint(500, 3000, num_records)
 
-# Generate weather data
+## Generate weather data
 temperature = np.random.uniform(5, 30, num_records)
 humidity = np.random.uniform(30, 90, num_records)
 precipitation = np.random.choice([0, 1], num_records, p=[0.8, 0.2])
 
-# Generate occupancy data
+## Generate occupancy data
 customer_count = np.random.randint(10, 100, num_records)
 
-# Generate menu item sales data
+## Generate menu item sales data
 sales_volume = np.random.randint(50, 200, num_records)
 
-# Create a DataFrame for the fictitious dataset
+## Create a DataFrame for the fictitious dataset
 data = pd.DataFrame({
     'date': dates,
     'energy_consumption': energy_consumption,
@@ -383,7 +383,7 @@ data = pd.DataFrame({
     'sales_volume': sales_volume
 })
 
-# Save the dataset to a CSV file
+## Save the dataset to a CSV file
 data.to_csv('energy_advisor_mock_data.csv', index=False)
 ```
 
@@ -445,30 +445,30 @@ from sklearn.ensemble import GradientBoostingRegressor
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 
-# Load the preprocessed dataset
+## Load the preprocessed dataset
 data = pd.read_csv('preprocessed_data.csv')
 
-# Define features and target variable
+## Define features and target variable
 X = data.drop(['energy_consumption'], axis=1)
 y = data['energy_consumption']
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize the Gradient Boosting Regressor model
+## Initialize the Gradient Boosting Regressor model
 model = GradientBoostingRegressor()
 
-# Train the model
+## Train the model
 model.fit(X_train, y_train)
 
-# Make predictions on the test set
+## Make predictions on the test set
 predictions = model.predict(X_test)
 
-# Calculate the Mean Squared Error
+## Calculate the Mean Squared Error
 mse = mean_squared_error(y_test, predictions)
 print(f'Mean Squared Error: {mse}')
 
-# Save the trained model for deployment
+## Save the trained model for deployment
 import joblib
 joblib.dump(model, 'energy_advisor_model.pkl')
 ```
@@ -537,29 +537,29 @@ This production-ready code snippet demonstrates a structured approach to trainin
 By following this deployment plan and utilizing the recommended tools, your team can seamlessly deploy the machine learning model into a live production environment. This step-by-step guide provides a roadmap for deployment, ensuring smooth integration and confident execution of the deployment process.
 
 ```dockerfile
-# Use a base image with Python and necessary dependencies
+## Use a base image with Python and necessary dependencies
 FROM python:3.8-slim
 
-# Set the working directory in the container
+## Set the working directory in the container
 WORKDIR /app
 
-# Copy the requirements file into the container
+## Copy the requirements file into the container
 COPY requirements.txt .
 
-# Install required Python packages
+## Install required Python packages
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the model and preprocessing scripts into the container
+## Copy the model and preprocessing scripts into the container
 COPY energy_advisor_model.pkl .
 COPY preprocess.py .
 
-# Copy your API script into the container (replace app.py with your actual script name)
+## Copy your API script into the container (replace app.py with your actual script name)
 COPY app.py .
 
-# Expose the port your API will run on
+## Expose the port your API will run on
 EXPOSE 8000
 
-# Command to run your API using Gunicorn (adjust parameters if needed)
+## Command to run your API using Gunicorn (adjust parameters if needed)
 CMD ["gunicorn", "-b", "0.0.0.0:8000", "app:app"]
 ```
 

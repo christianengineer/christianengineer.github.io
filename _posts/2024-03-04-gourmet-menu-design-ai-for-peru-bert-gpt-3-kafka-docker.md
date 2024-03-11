@@ -5,7 +5,7 @@ permalink: posts/gourmet-menu-design-ai-for-peru-bert-gpt-3-kafka-docker
 layout: article
 ---
 
-# Machine Learning Gourmet Menu Design AI for Peru
+## Machine Learning Gourmet Menu Design AI for Peru
 
 ## Objectives
 The objective of the project is to develop a Gourmet Menu Design AI for Peru using state-of-the-art natural language processing (NLP) models such as BERT and GPT-3, alongside tools like Kafka for real-time data streaming and Docker for containerization. The AI will generate innovative menu descriptions that capture the essence of dishes and entice diners, providing a unique and personalized dining experience.
@@ -101,7 +101,7 @@ Sure! Below is a sample code snippet in Python using pandas for data cleansing t
 ```python
 import pandas as pd
 
-# Sample data
+## Sample data
 data = {
     'menu_item_names': ['Ceviche', 'Lomo Saltado', 'Aji de Gallina', 'Arroz con Pollo', ''],
     'ingredients_list': ['Fish, Lime, Onion, Corn', 'Beef, Onions, Tomatoes, French Fries', 'Chicken, Aji Amarillo, Bread, Peanuts', 'Chicken, Rice, Vegetables', ''],
@@ -110,21 +110,21 @@ data = {
     'meta_data': ['Peruvian, Seafood', 'Peruvian, Beef', 'Peruvian, Poultry', 'Peruvian, Rice', '']
 }
 
-# Create a DataFrame
+## Create a DataFrame
 df = pd.DataFrame(data)
 
-# Data cleansing
-# Handling missing values
-df = df.replace('', pd.NA)  # Replace empty strings with pandas missing values
+## Data cleansing
+## Handling missing values
+df = df.replace('', pd.NA)  ## Replace empty strings with pandas missing values
 
-# Standardizing formats
+## Standardizing formats
 for column in df.columns:
     if 'list' in column:
-        df[column] = df[column].str.split(', ')  # Split ingredients by comma for uniform format
+        df[column] = df[column].str.split(', ')  ## Split ingredients by comma for uniform format
 
-# Text preprocessing
+## Text preprocessing
 for text_column in ['dish_descriptions', 'customer_feedback']:
-    df[text_column] = df[text_column].str.lower()  # Convert text to lowercase
+    df[text_column] = df[text_column].str.lower()  ## Convert text to lowercase
 
 print(df)
 ```
@@ -235,38 +235,38 @@ This example dataset provides a glimpse of the structured and varied data types 
 Certainly! Below is a structured Python code file for a production-ready machine learning model utilizing a cleansed dataset for the Gourmet Menu Design AI for Peru project. The code is designed for immediate deployment in a production environment and includes detailed comments to explain key sections, following best practices for documentation:
 
 ```python
-# Import necessary libraries
+## Import necessary libraries
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
 
-# Load the cleansed dataset
+## Load the cleansed dataset
 df = pd.read_csv('cleansed_dataset.csv')
 
-# Feature engineering
+## Feature engineering
 X = df['ingredients_list'] + ' ' + df['dish_descriptions']
 y = df['menu_item_names']
 
-# Split the dataset into training and testing sets
+## Split the dataset into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Text vectorization using TF-IDF
+## Text vectorization using TF-IDF
 tfidf = TfidfVectorizer(max_features=5000)
 X_train_tfidf = tfidf.fit_transform(X_train)
 X_test_tfidf = tfidf.transform(X_test)
 
-# Model training - Logistic Regression
+## Model training - Logistic Regression
 model = LogisticRegression()
 model.fit(X_train_tfidf, y_train)
 
-# Model evaluation
+## Model evaluation
 y_pred = model.predict(X_test_tfidf)
 accuracy = accuracy_score(y_test, y_pred)
 print(f'Accuracy: {accuracy}')
 
-# Save the trained model for future use
+## Save the trained model for future use
 joblib.dump(model, 'menu_item_prediction_model.pkl')
 ```
 
@@ -356,24 +356,24 @@ By adhering to these conventions and best practices, the provided code snippet s
 By following this step-by-step deployment plan and leveraging the recommended tools for each stage, your team can efficiently deploy the machine learning model for the Gourmet Menu Design AI for Peru project into a live production environment. This deployment guide provides a structured roadmap for a successful deployment process while ensuring scalability, reliability, and maintainability of the deployed model.
 
 ```dockerfile
-# Use a base Python image
+## Use a base Python image
 FROM python:3.8-slim
 
-# Set working directory in the container
+## Set working directory in the container
 WORKDIR /app
 
-# Copy requirements file and install dependencies
+## Copy requirements file and install dependencies
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the model and necessary files into the container
+## Copy the model and necessary files into the container
 COPY model.pkl .
 COPY app.py .
 
-# Expose the Flask port
+## Expose the Flask port
 EXPOSE 5000
 
-# Command to run the Flask application
+## Command to run the Flask application
 CMD ["python", "app.py"]
 ```
 

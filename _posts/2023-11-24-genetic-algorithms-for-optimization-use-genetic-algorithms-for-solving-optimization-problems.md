@@ -203,7 +203,7 @@ By including configuration files for containerization platforms like Docker and 
 Certainly! Below is an example of a function for a complex machine learning algorithm within the Genetic Algorithms for Optimization application. This function leverages mock data for demonstration purposes and is placed within the "genetic_algorithm.py" file in the "src/models" directory.
 
 ```python
-# src/models/genetic_algorithm.py
+## src/models/genetic_algorithm.py
 
 import numpy as np
 from sklearn.ensemble import RandomForestRegressor
@@ -219,25 +219,25 @@ def perform_complex_ml_algorithm(data_path):
     Returns:
     - float: Mean cross-validated score of the trained model.
     """
-    # Load mock dataset for training
+    ## Load mock dataset for training
     data = np.load(data_path)
 
-    # Extract features and target variable
+    ## Extract features and target variable
     X = data[:, :-1]
     y = data[:, -1]
 
-    # Initialize the hyperparameters to be optimized by genetic algorithms
-    # Example: max_depth, n_estimators
+    ## Initialize the hyperparameters to be optimized by genetic algorithms
+    ## Example: max_depth, n_estimators
     max_depth = 5
     n_estimators = 100
 
-    # Instantiate a Random Forest Regressor with default hyperparameters
+    ## Instantiate a Random Forest Regressor with default hyperparameters
     reg_model = RandomForestRegressor(max_depth=max_depth, n_estimators=n_estimators, random_state=42)
 
-    # Perform cross-validated training with k-fold validation
+    ## Perform cross-validated training with k-fold validation
     cv_scores = cross_val_score(reg_model, X, y, cv=5, scoring='neg_mean_squared_error')
 
-    # Return the mean cross-validated score as the optimization objective
+    ## Return the mean cross-validated score as the optimization objective
     return np.mean(cv_scores)
 ```
 
@@ -252,7 +252,7 @@ By incorporating this function within the "genetic_algorithm.py" file, the Genet
 Certainly! Below is an example of a function for a complex deep learning algorithm within the Genetic Algorithms for Optimization application. This function utilizes mock data for demonstration purposes and is placed within the "genetic_algorithm.py" file in the "src/models" directory.
 
 ```python
-# src/models/genetic_algorithm.py
+## src/models/genetic_algorithm.py
 
 import numpy as np
 import tensorflow as tf
@@ -268,30 +268,30 @@ def perform_complex_deep_learning_algorithm(data_path):
     Returns:
     - float: Mean squared error (MSE) of the trained deep learning model.
     """
-    # Load mock dataset for training
+    ## Load mock dataset for training
     data = np.load(data_path)
 
-    # Extract features and target variable
+    ## Extract features and target variable
     X = data[:, :-1]
     y = data[:, -1]
 
-    # Split the dataset into training and validation sets
+    ## Split the dataset into training and validation sets
     X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Define the deep learning model architecture
+    ## Define the deep learning model architecture
     model = tf.keras.Sequential([
         tf.keras.layers.Dense(64, activation='relu', input_shape=(X.shape[1],)),
         tf.keras.layers.Dense(64, activation='relu'),
         tf.keras.layers.Dense(1)
     ])
 
-    # Compile the model with optimizer, loss, and metrics
+    ## Compile the model with optimizer, loss, and metrics
     model.compile(optimizer='adam', loss='mean_squared_error', metrics=['mean_squared_error'])
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train, epochs=10, validation_data=(X_val, y_val))
 
-    # Evaluate the model on the validation set and return the MSE as the optimization objective
+    ## Evaluate the model on the validation set and return the MSE as the optimization objective
     val_loss, val_mse = model.evaluate(X_val, y_val, verbose=0)
     return val_mse
 ```

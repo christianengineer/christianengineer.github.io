@@ -5,7 +5,7 @@ permalink: posts/environmental-assessment-and-enforcement-agency-of-peru-tensorf
 layout: article
 ---
 
-# Machine Learning Solution for Environmental Assessment and Enforcement Agency of Peru
+## Machine Learning Solution for Environmental Assessment and Enforcement Agency of Peru
 
 ## Objective and Benefits
 ### Audience: Environmental Inspectors
@@ -270,39 +270,39 @@ import pandas as pd
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.decomposition import PCA
 
-# Load the dataset with features and environmental violation labels
+## Load the dataset with features and environmental violation labels
 data = pd.read_csv('environmental_data.csv')
 
-# Step 1: Handle Missing Data
-# Fill missing values with median or mean for numerical features
+## Step 1: Handle Missing Data
+## Fill missing values with median or mean for numerical features
 data.fillna(data.median(), inplace=True)
 
-# Step 2: Feature Scaling
-# Normalize numerical features to ensure consistent scale
+## Step 2: Feature Scaling
+## Normalize numerical features to ensure consistent scale
 scaler = MinMaxScaler()
 data[['ndvi_feature', 'evi_feature', 'lst_feature']] = scaler.fit_transform(data[['ndvi_feature', 'evi_feature', 'lst_feature']])
 
-# Step 3: Dimensionality Reduction
-# Reduce dimensionality of features using PCA to capture essential information
+## Step 3: Dimensionality Reduction
+## Reduce dimensionality of features using PCA to capture essential information
 pca = PCA(n_components=2)
 data_pca = pca.fit_transform(data[['ndvi_feature', 'evi_feature', 'lst_feature']])
 
-# Step 4: Feature Engineering
-# Include seasonal and spatial indicators as additional features
+## Step 4: Feature Engineering
+## Include seasonal and spatial indicators as additional features
 data['seasonal_indicator'] = data['seasonal_data'].apply(lambda x: 1 if x in ['Spring', 'Summer'] else 0)
-# Add spatial aggregation feature based on region characteristics
+## Add spatial aggregation feature based on region characteristics
 data['spatial_aggregation_feature'] = data.groupby('region')['violation_count'].transform('mean')
 
-# Step 5: Data Balancing
-# Implement oversampling or undersampling techniques to address data imbalance
-# Example: Implement oversampling technique SMOTE
+## Step 5: Data Balancing
+## Implement oversampling or undersampling techniques to address data imbalance
+## Example: Implement oversampling technique SMOTE
 
-# Step 6: Data Splitting
-# Split data into training and testing sets
+## Step 6: Data Splitting
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(data[['ndvi_feature', 'evi_feature', 'lst_feature', 'seasonal_indicator', 'spatial_aggregation_feature']], data['violation_label'], test_size=0.2, random_state=42)
 
-# Step 7: Save Preprocessed Data
-# Save preprocessed data for model training
+## Step 7: Save Preprocessed Data
+## Save preprocessed data for model training
 X_train.to_csv('X_train.csv', index=False)
 X_test.to_csv('X_test.csv', index=False)
 y_train.to_csv('y_train.csv', index=False)
@@ -336,24 +336,24 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
 from tensorflow.keras.optimizers import Adam
 
-# Load pretrained ResNet50 model without classification layer
+## Load pretrained ResNet50 model without classification layer
 base_model = ResNet50(weights='imagenet', include_top=False, input_shape=(224, 224, 3))
 
-# Freeze initial layers to retain learned features
+## Freeze initial layers to retain learned features
 for layer in base_model.layers:
     layer.trainable = False
 
-# Add custom classification layers for environmental violation detection
+## Add custom classification layers for environmental violation detection
 model = Sequential([
     base_model,
     Dense(256, activation='relu'),
     Dense(1, activation='sigmoid')
 ])
 
-# Compile the model with appropriate loss and metrics
+## Compile the model with appropriate loss and metrics
 model.compile(optimizer=Adam(), loss='binary_crossentropy', metrics=['accuracy'])
 
-# Fine-tune the model on the environmental violation dataset
+## Fine-tune the model on the environmental violation dataset
 model.fit(X_train, y_train, epochs=10, validation_data=(X_test, y_test))
 ```
 
@@ -394,13 +394,13 @@ import numpy as np
 import pandas as pd
 from sklearn.preprocessing import MinMaxScaler
 
-# Set random seed for reproducibility
+## Set random seed for reproducibility
 np.random.seed(42)
 
-# Generate synthetic features: NDVI, EVI, LST, Seasonal Indicator, Spatial Aggregation
+## Generate synthetic features: NDVI, EVI, LST, Seasonal Indicator, Spatial Aggregation
 num_samples = 10000
 
-# Generate synthetic data for features
+## Generate synthetic data for features
 ndvi = np.random.uniform(0.1, 0.9, num_samples)
 evi = np.random.uniform(0.05, 0.8, num_samples)
 lst = np.random.uniform(250, 320, num_samples)
@@ -408,7 +408,7 @@ seasonal_indicator = np.random.choice(['Spring', 'Summer', 'Fall', 'Winter'], nu
 region = np.random.choice(['Region A', 'Region B', 'Region C'], num_samples)
 violation_label = np.random.choice([0, 1], num_samples)
 
-# Create a synthetic dataset
+## Create a synthetic dataset
 data = pd.DataFrame({
     'ndvi_feature': ndvi,
     'evi_feature': evi,
@@ -418,11 +418,11 @@ data = pd.DataFrame({
     'violation_label': violation_label
 })
 
-# Feature Scaling
+## Feature Scaling
 scaler = MinMaxScaler()
 data[['ndvi_feature', 'evi_feature', 'lst_feature']] = scaler.fit_transform(data[['ndvi_feature', 'evi_feature', 'lst_feature']])
 
-# Save the synthetic dataset to a CSV file
+## Save the synthetic dataset to a CSV file
 data.to_csv('synthetic_dataset.csv', index=False)
 
 print("Synthetic dataset created and saved successfully!")
@@ -472,39 +472,39 @@ This sample reflects the structure and composition of the mocked dataset, facili
 Below is a structured code snippet for a production-ready machine learning model utilizing the preprocessed dataset for environmental violation detection. This code adheres to best practices for documentation, code quality, and structure commonly adopted in large tech environments:
 
 ```python
-# Import necessary libraries
+## Import necessary libraries
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, classification_report
 
-# Load preprocessed dataset
+## Load preprocessed dataset
 data = pd.read_csv('preprocessed_dataset.csv')
 
-# Split data into features and target variable
+## Split data into features and target variable
 X = data.drop('violation_label', axis=1)
 y = data['violation_label']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize and train a Random Forest Classifier
+## Initialize and train a Random Forest Classifier
 clf = RandomForestClassifier(random_state=42)
 clf.fit(X_train, y_train)
 
-# Make predictions on the test set
+## Make predictions on the test set
 y_pred = clf.predict(X_test)
 
-# Evaluate the model
+## Evaluate the model
 accuracy = accuracy_score(y_test, y_pred)
 report = classification_report(y_test, y_pred)
 
-# Print model evaluation metrics
+## Print model evaluation metrics
 print(f'Accuracy: {accuracy}')
 print('Classification Report:')
 print(report)
 
-# Save the trained model
+## Save the trained model
 import joblib
 joblib.dump(clf, 'environmental_violation_detection_model.pkl')
 ```
@@ -584,28 +584,28 @@ By following this deployment plan tailored to the unique demands of the Environm
 Below is a customized Dockerfile tailored for the Environmental Violation Detection Project, optimized for performance and scalability:
 
 ```Dockerfile
-# Use a base image with required dependencies
+## Use a base image with required dependencies
 FROM python:3.9-slim
 
-# Set working directory
+## Set working directory
 WORKDIR /app
 
-# Copy project files to the container
+## Copy project files to the container
 COPY requirements.txt .
 COPY model.pkl .
 COPY app.py .
 
-# Install project dependencies
+## Install project dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Expose the Flask port
+## Expose the Flask port
 EXPOSE 5000
 
-# Define environment variables
+## Define environment variables
 ENV FLASK_APP=app.py
 ENV FLASK_RUN_HOST=0.0.0.0
 
-# Command to start the Flask application
+## Command to start the Flask application
 CMD ["flask", "run"]
 ```
 

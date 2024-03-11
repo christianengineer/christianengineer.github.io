@@ -5,7 +5,7 @@ permalink: posts/hiring-a-senior-full-stack-engineer
 layout: article
 ---
 
-# Hiring a Senior Full Stack Engineer
+## Hiring a Senior Full Stack Engineer
 
 ## Introduction
 

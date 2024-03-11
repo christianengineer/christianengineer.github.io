@@ -77,48 +77,48 @@ Creating a scalable and well-organized file structure is crucial for managing th
 ```
 blockchain-ai-integration/
 │
-├── contracts/                  # Smart contracts for AI model and data transactions
-│   ├── AIModelContract.sol     # Smart contract for managing AI model transactions
-│   ├── AIDataContract.sol      # Smart contract for managing AI data transactions
+├── contracts/                  ## Smart contracts for AI model and data transactions
+│   ├── AIModelContract.sol     ## Smart contract for managing AI model transactions
+│   ├── AIDataContract.sol      ## Smart contract for managing AI data transactions
 │   └── ...
 │
-├── scripts/                    # Scripts for contract deployment, testing, and interaction
-│   ├── deployContracts.js      # Script for deploying smart contracts on the blockchain
-│   ├── testAIModels.js          # Script for testing AI model transactions
+├── scripts/                    ## Scripts for contract deployment, testing, and interaction
+│   ├── deployContracts.js      ## Script for deploying smart contracts on the blockchain
+│   ├── testAIModels.js          ## Script for testing AI model transactions
 │   └── ...
 │
-├── clientApp/                  # Frontend application for interacting with the decentralized AI repository
+├── clientApp/                  ## Frontend application for interacting with the decentralized AI repository
 │   ├── src/
-│   │   ├── components/         # Reusable UI components
-│   │   ├── pages/              # Application pages
-│   │   ├── services/           # Integration services for interacting with smart contracts
+│   │   ├── components/         ## Reusable UI components
+│   │   ├── pages/              ## Application pages
+│   │   ├── services/           ## Integration services for interacting with smart contracts
 │   │   └── ...
-│   ├── public/                 # Static assets
-│   └── package.json            # Frontend application dependencies and scripts
+│   ├── public/                 ## Static assets
+│   └── package.json            ## Frontend application dependencies and scripts
 │
-├── serverApp/                  # Backend server for handling blockchain interactions and API endpoints
+├── serverApp/                  ## Backend server for handling blockchain interactions and API endpoints
 │   ├── src/
-│   │   ├── controllers/        # Request handlers for API endpoints
-│   │   ├── services/           # Business logic and blockchain interaction services
+│   │   ├── controllers/        ## Request handlers for API endpoints
+│   │   ├── services/           ## Business logic and blockchain interaction services
 │   │   └── ...
-│   └── package.json            # Backend application dependencies and scripts
+│   └── package.json            ## Backend application dependencies and scripts
 │
-├── deployment/                 # Deployment configurations and scripts
-│   ├── docker/                # Docker configurations for containerization
-│   ├── kubernetes/            # Kubernetes deployment configurations
+├── deployment/                 ## Deployment configurations and scripts
+│   ├── docker/                ## Docker configurations for containerization
+│   ├── kubernetes/            ## Kubernetes deployment configurations
 │   └── ...
 │
-├── tests/                      # Test suites for smart contracts, API endpoints, and integration tests
-│   ├── contractTests/          # Tests for smart contracts
-│   ├── apiTests/               # Tests for API endpoints
+├── tests/                      ## Test suites for smart contracts, API endpoints, and integration tests
+│   ├── contractTests/          ## Tests for smart contracts
+│   ├── apiTests/               ## Tests for API endpoints
 │   └── ...
 │
-├── docs/                       # Project documentation, including architecture, APIs, and developer guides
+├── docs/                       ## Project documentation, including architecture, APIs, and developer guides
 │
-├── config/                     # Configuration files for blockchain network, smart contract deployment, etc.
+├── config/                     ## Configuration files for blockchain network, smart contract deployment, etc.
 │
-├── README.md                   # Project overview, setup instructions, and usage guide
-└── .gitignore                  # Git ignore file
+├── README.md                   ## Project overview, setup instructions, and usage guide
+└── .gitignore                  ## Git ignore file
 ```
 
 ### Details:
@@ -144,36 +144,36 @@ In the context of the Blockchain and AI Integration Project, the `models/` direc
 ```
 models/
 │
-├── trained_models/             # Directory for storing trained AI models
-│   ├── model1/                 # Subdirectory for a specific AI model (e.g., by name or identifier)
-│   │   ├── model_file.pkl      # Serialized AI model file
-│   │   ├── metadata.json       # Metadata describing the model (e.g., name, version, description, author)
-│   │   └── deployment/         # Deployment configurations for the model
-│   │       ├── dockerfile      # Dockerfile for containerizing the model
-│   │       ├── kubernetes.yaml  # Kubernetes deployment configurations
+├── trained_models/             ## Directory for storing trained AI models
+│   ├── model1/                 ## Subdirectory for a specific AI model (e.g., by name or identifier)
+│   │   ├── model_file.pkl      ## Serialized AI model file
+│   │   ├── metadata.json       ## Metadata describing the model (e.g., name, version, description, author)
+│   │   └── deployment/         ## Deployment configurations for the model
+│   │       ├── dockerfile      ## Dockerfile for containerizing the model
+│   │       ├── kubernetes.yaml  ## Kubernetes deployment configurations
 │   │       └── ...
-│   ├── model2/                 # Subdirectory for another AI model
+│   ├── model2/                 ## Subdirectory for another AI model
 │   └── ...
 │
-├── datasets/                    # Directory for storing AI datasets
-│   ├── dataset1/                # Subdirectory for a specific dataset
-│   │   ├── data_file.csv        # Data file or dataset artifact
-│   │   ├── metadata.json        # Metadata describing the dataset
+├── datasets/                    ## Directory for storing AI datasets
+│   ├── dataset1/                ## Subdirectory for a specific dataset
+│   │   ├── data_file.csv        ## Data file or dataset artifact
+│   │   ├── metadata.json        ## Metadata describing the dataset
 │   │   └── ...
-│   ├── dataset2/                # Subdirectory for another dataset
+│   ├── dataset2/                ## Subdirectory for another dataset
 │   └── ...
 │
-├── validation/                  # Directory for validation datasets
-│   ├── validation_data1.csv     # Validation dataset for model evaluation
-│   ├── validation_data2.csv     # Another validation dataset
+├── validation/                  ## Directory for validation datasets
+│   ├── validation_data1.csv     ## Validation dataset for model evaluation
+│   ├── validation_data2.csv     ## Another validation dataset
 │   └── ...
 │
-├── utils/                       # Utility scripts for model preprocessing, evaluation, etc.
-│   ├── data_preprocessing.py    # Script for data preprocessing
-│   ├── model_evaluation.py      # Script for evaluating model performance
+├── utils/                       ## Utility scripts for model preprocessing, evaluation, etc.
+│   ├── data_preprocessing.py    ## Script for data preprocessing
+│   ├── model_evaluation.py      ## Script for evaluating model performance
 │   └── ...
 │
-└── README.md                    # Overview of the models directory and its contents
+└── README.md                    ## Overview of the models directory and its contents
 ```
 
 ### Details:
@@ -201,27 +201,27 @@ The `deployment/` directory in the context of the Blockchain and AI Integration 
 ```
 deployment/
 │
-├── docker/                     # Docker configurations for containerization
-│   ├── Dockerfile              # Dockerfile for building AI application container
-│   ├── nginx.conf              # NGINX configuration for reverse proxy/load balancing
+├── docker/                     ## Docker configurations for containerization
+│   ├── Dockerfile              ## Dockerfile for building AI application container
+│   ├── nginx.conf              ## NGINX configuration for reverse proxy/load balancing
 │   └── ...
 │
-├── kubernetes/                 # Kubernetes deployment configurations
-│   ├── ai-models-deployment.yaml   # Kubernetes YAML file for deploying AI models service
-│   ├── blockchain-network-deployment.yaml  # Kubernetes YAML file for deploying blockchain network
+├── kubernetes/                 ## Kubernetes deployment configurations
+│   ├── ai-models-deployment.yaml   ## Kubernetes YAML file for deploying AI models service
+│   ├── blockchain-network-deployment.yaml  ## Kubernetes YAML file for deploying blockchain network
 │   └── ...
 │
-├── scripts/                    # Deployment scripts for setting up the environment
-│   ├── setup_env.sh            # Script for setting up the deployment environment
-│   ├── deploy_blockchain.sh    # Script for deploying the blockchain network
+├── scripts/                    ## Deployment scripts for setting up the environment
+│   ├── setup_env.sh            ## Script for setting up the deployment environment
+│   ├── deploy_blockchain.sh    ## Script for deploying the blockchain network
 │   └── ...
 │
-├── terraform/                  # Infrastructure as Code (IaC) using Terraform
-│   ├── main.tf                 # Main Terraform configuration file
-│   ├── variables.tf            # Variables for Terraform configurations
+├── terraform/                  ## Infrastructure as Code (IaC) using Terraform
+│   ├── main.tf                 ## Main Terraform configuration file
+│   ├── variables.tf            ## Variables for Terraform configurations
 │   └── ...
 │
-└── README.md                   # Overview of the deployment directory and its contents
+└── README.md                   ## Overview of the deployment directory and its contents
 ```
 
 ### Details:
@@ -257,30 +257,30 @@ from sklearn.metrics import accuracy_score
 import joblib
 
 def train_and_save_model(data_file_path, model_output_path):
-    # Load mock data (assumed to be in a CSV file)
+    ## Load mock data (assumed to be in a CSV file)
     data = pd.read_csv(data_file_path)
 
-    # Assume that the last column is the target variable and the rest are features
+    ## Assume that the last column is the target variable and the rest are features
     X = data.iloc[:, :-1]
     y = data.iloc[:, -1]
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize the random forest classifier
+    ## Initialize the random forest classifier
     clf = RandomForestClassifier(n_estimators=100, random_state=42)
 
-    # Train the classifier
+    ## Train the classifier
     clf.fit(X_train, y_train)
 
-    # Make predictions
+    ## Make predictions
     y_pred = clf.predict(X_test)
 
-    # Calculate accuracy
+    ## Calculate accuracy
     accuracy = accuracy_score(y_test, y_pred)
     print(f"Model accuracy: {accuracy:.2f}")
 
-    # Save the trained model to a file
+    ## Save the trained model to a file
     joblib.dump(clf, model_output_path)
     print(f"Trained model saved to: {model_output_path}")
 ```
@@ -303,40 +303,40 @@ from sklearn.model_selection import train_test_split
 import numpy as np
 
 def train_and_save_deep_learning_model(data_file_path, model_output_path):
-    # Load mock data (assumed to be in a Numpy array format)
+    ## Load mock data (assumed to be in a Numpy array format)
     data = np.load(data_file_path)
 
-    # Assume that the last column is the target variable and the rest are features
+    ## Assume that the last column is the target variable and the rest are features
     X = data[:, :-1]
     y = data[:, -1]
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Normalize the input data
+    ## Normalize the input data
     X_train_normalized = X_train / 255.0
     X_test_normalized = X_test / 255.0
 
-    # Define the neural network model
+    ## Define the neural network model
     model = tf.keras.models.Sequential([
         tf.keras.layers.Flatten(input_shape=(X_train.shape[1:])),
         tf.keras.layers.Dense(128, activation='relu'),
         tf.keras.layers.Dense(10, activation='softmax')
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam',
                   loss='sparse_categorical_crossentropy',
                   metrics=['accuracy'])
 
-    # Train the model
+    ## Train the model
     model.fit(X_train_normalized, y_train, epochs=10, validation_data=(X_test_normalized, y_test))
 
-    # Evaluate the model
+    ## Evaluate the model
     loss, accuracy = model.evaluate(X_test_normalized, y_test)
     print(f"Model accuracy: {accuracy:.2f}")
 
-    # Save the trained model to a file
+    ## Save the trained model to a file
     model.save(model_output_path)
     print(f"Trained model saved to: {model_output_path}")
 ```

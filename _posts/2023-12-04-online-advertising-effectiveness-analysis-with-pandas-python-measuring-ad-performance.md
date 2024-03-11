@@ -65,29 +65,29 @@ By designing and implementing this infrastructure, the Online Advertising Effect
 Online_Advertising_Effectiveness_Analysis/
 │
 ├── data/
-│   ├── raw/                    # Raw data from online advertising platforms
-│   ├── processed/              # Cleaned and preprocessed data
-│   └── results/                # Results of ad performance analysis
+│   ├── raw/                    ## Raw data from online advertising platforms
+│   ├── processed/              ## Cleaned and preprocessed data
+│   └── results/                ## Results of ad performance analysis
 │
-├── notebooks/                  # Jupyter notebooks for data exploration and analysis
+├── notebooks/                  ## Jupyter notebooks for data exploration and analysis
 │
 ├── scripts/
-│   ├── data_collection/        # Scripts for data collection from advertising platforms
-│   ├── data_preprocessing/     # Scripts for data cleaning and preprocessing
-│   └── model_training/         # Scripts for training machine learning models
+│   ├── data_collection/        ## Scripts for data collection from advertising platforms
+│   ├── data_preprocessing/     ## Scripts for data cleaning and preprocessing
+│   └── model_training/         ## Scripts for training machine learning models
 │
 ├── src/
-│   ├── data_processing/        # Python modules for scalable data preprocessing using Pandas, NumPy, and Spark
-│   ├── machine_learning/       # Python modules for building and deploying machine learning models using Scikit-learn, TensorFlow, or PyTorch
-│   └── utils/                  # Utility functions and helper modules
+│   ├── data_processing/        ## Python modules for scalable data preprocessing using Pandas, NumPy, and Spark
+│   ├── machine_learning/       ## Python modules for building and deploying machine learning models using Scikit-learn, TensorFlow, or PyTorch
+│   └── utils/                  ## Utility functions and helper modules
 │
-├── config/                     # Configuration files for data collection, preprocessing, and model training
+├── config/                     ## Configuration files for data collection, preprocessing, and model training
 │
-├── environment/                # Environment configuration files for managing dependencies and virtual environments
+├── environment/                ## Environment configuration files for managing dependencies and virtual environments
 │
-├── README.md                   # Project README with overview, setup instructions, and usage guidelines
+├── README.md                   ## Project README with overview, setup instructions, and usage guidelines
 │
-└── requirements.txt            # Python dependencies for the project
+└── requirements.txt            ## Python dependencies for the project
 ```
 
 This file structure is designed to organize the components of the Online Advertising Effectiveness Analysis project in a scalable and maintainable manner. The separation of data, code, and configuration elements enables efficient development, easy collaboration, and streamlined deployment processes. Each directory is dedicated to a specific aspect of the project, making it easier for team members to locate and work on relevant components.
@@ -97,19 +97,19 @@ In the `models` directory, we would organize our machine learning models and rel
 ```
 models/
 │
-├── training/              # Contains scripts and notebooks for training machine learning models
-│   ├── model_training_pipeline.ipynb    # Jupyter notebook for end-to-end model training pipeline
-│   ├── train_regression_model.py        # Python script for training regression models
-│   └── train_classification_model.py    # Python script for training classification models
+├── training/              ## Contains scripts and notebooks for training machine learning models
+│   ├── model_training_pipeline.ipynb    ## Jupyter notebook for end-to-end model training pipeline
+│   ├── train_regression_model.py        ## Python script for training regression models
+│   └── train_classification_model.py    ## Python script for training classification models
 │
-├── evaluation/            # Contains scripts and notebooks for model evaluation and validation
-│   ├── evaluate_model_performance.ipynb # Jupyter notebook for evaluating model performance
-│   └── evaluation_metrics.py           # Python script for calculating evaluation metrics
+├── evaluation/            ## Contains scripts and notebooks for model evaluation and validation
+│   ├── evaluate_model_performance.ipynb ## Jupyter notebook for evaluating model performance
+│   └── evaluation_metrics.py           ## Python script for calculating evaluation metrics
 │
-└── deployment/            # Contains files for deploying trained models
-    ├── model.pkl           # Serialized trained model for deployment
-    ├── model_deployment_pipeline.py    # Python script for deploying trained model for real-time analysis
-    └── batch_inference.py  # Python script for batch inference using the deployed model
+└── deployment/            ## Contains files for deploying trained models
+    ├── model.pkl           ## Serialized trained model for deployment
+    ├── model_deployment_pipeline.py    ## Python script for deploying trained model for real-time analysis
+    └── batch_inference.py  ## Python script for batch inference using the deployed model
 ```
 
 Through this structured organization, the `models` directory enables clear compartmentalization of model training, evaluation, and deployment components. This organization streamlines the management of machine learning models, enhances collaboration, and facilitates maintenance and scalability efforts within the Online Advertising Effectiveness Analysis application.
@@ -119,18 +119,18 @@ In the `deployment` directory, we would manage files and scripts related to the 
 ```
 deployment/
 │
-├── model_serialization/      # Contains files for serializing trained models
-│   ├── serialize_model.py    # Python script for serializing trained model into a format for deployment
-│   └── requirements.txt      # Specific dependencies for the model serialization process
+├── model_serialization/      ## Contains files for serializing trained models
+│   ├── serialize_model.py    ## Python script for serializing trained model into a format for deployment
+│   └── requirements.txt      ## Specific dependencies for the model serialization process
 │
-├── model_deployment/         # Contains files for deploying trained models
-│   ├── deploy_model.py       # Python script for deploying trained model for real-time ad performance analysis
-│   ├── batch_inference.py    # Python script for batch inference using the deployed model
-│   └── requirements.txt      # Specific dependencies for the model deployment process
+├── model_deployment/         ## Contains files for deploying trained models
+│   ├── deploy_model.py       ## Python script for deploying trained model for real-time ad performance analysis
+│   ├── batch_inference.py    ## Python script for batch inference using the deployed model
+│   └── requirements.txt      ## Specific dependencies for the model deployment process
 │
-└── monitoring/               # Contains files for monitoring the deployed models
-    ├── monitor_model_performance.py   # Script for monitoring model performance in real-time deployment
-    └── log_files/             # Directory for storing logs generated during model monitoring
+└── monitoring/               ## Contains files for monitoring the deployed models
+    ├── monitor_model_performance.py   ## Script for monitoring model performance in real-time deployment
+    └── log_files/             ## Directory for storing logs generated during model monitoring
 ```
 
 This organized structure ensures that all aspects of model deployment, including serialization, deployment, and monitoring, are managed and maintained separately, improving ease of use, scalability, and maintenance for the Online Advertising Effectiveness Analysis application.
@@ -144,30 +144,30 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 
 def train_ad_performance_prediction_model(data_path):
-    # Load the mock data from the specified file path
+    ## Load the mock data from the specified file path
     data = pd.read_csv(data_path)
 
-    # Preprocessing: Split the data into features (X) and target variable (y)
+    ## Preprocessing: Split the data into features (X) and target variable (y)
     X = data.drop('ad_performance_label', axis=1)
     y = data['ad_performance_label']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize the Random Forest Classifier model
+    ## Initialize the Random Forest Classifier model
     model = RandomForestClassifier(n_estimators=100, random_state=42)
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train)
 
-    # Make predictions
+    ## Make predictions
     y_pred = model.predict(X_test)
 
-    # Evaluate model performance
+    ## Evaluate model performance
     accuracy = accuracy_score(y_test, y_pred)
     print(f"Model accuracy: {accuracy}")
 
-    # Return the trained model
+    ## Return the trained model
     return model
 ```
 
@@ -191,30 +191,30 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_squared_error
 
 def train_ad_performance_prediction_model(data_path):
-    # Load the mock data from the specified file path
+    ## Load the mock data from the specified file path
     ad_data = pd.read_csv(data_path)
 
-    # Preprocessing: Split the data into features (X) and target variable (y)
-    X = ad_data.drop('click_through_rate', axis=1)  # Assuming 'click_through_rate' is the target variable
+    ## Preprocessing: Split the data into features (X) and target variable (y)
+    X = ad_data.drop('click_through_rate', axis=1)  ## Assuming 'click_through_rate' is the target variable
     y = ad_data['click_through_rate']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize the Random Forest Regressor model
+    ## Initialize the Random Forest Regressor model
     model = RandomForestRegressor(n_estimators=100, random_state=42)
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train)
 
-    # Make predictions
+    ## Make predictions
     y_pred = model.predict(X_test)
 
-    # Evaluate model performance
+    ## Evaluate model performance
     mse = mean_squared_error(y_test, y_pred)
     print(f"Mean Squared Error (MSE) of the model: {mse}")
 
-    # Return the trained model
+    ## Return the trained model
     return model
 ```
 

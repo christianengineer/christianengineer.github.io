@@ -234,31 +234,31 @@ from sklearn import metrics
 import joblib
 
 def train_and_evaluate_model(data_path):
-    # Load mock data from the provided file path
+    ## Load mock data from the provided file path
     data = pd.read_csv(data_path)
 
-    # Prepare the data for training
+    ## Prepare the data for training
     X = data.drop('target_column', axis=1)
     y = data['target_column']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize a RandomForestClassifier
+    ## Initialize a RandomForestClassifier
     model = RandomForestClassifier(n_estimators=100, random_state=42)
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train)
 
-    # Make predictions
+    ## Make predictions
     y_pred = model.predict(X_test)
 
-    # Evaluate the model
+    ## Evaluate the model
     accuracy = metrics.accuracy_score(y_test, y_pred)
     precision = metrics.precision_score(y_test, y_pred)
     recall = metrics.recall_score(y_test, y_pred)
 
-    # Save the trained model
+    ## Save the trained model
     model_file_path = "trained_models/robotics_model.pkl"
     joblib.dump(model, model_file_path)
 
@@ -281,15 +281,15 @@ from tensorflow.keras.layers import Dense, Conv2D, MaxPooling2D, Flatten
 import joblib
 
 def train_and_evaluate_deep_learning_model(data_path):
-    # Load mock data from the provided file path
-    # Assuming the data is in a format suitable for deep learning (e.g., images, time series)
+    ## Load mock data from the provided file path
+    ## Assuming the data is in a format suitable for deep learning (e.g., images, time series)
     data = np.load(data_path)
 
-    # Split the data into input features and target labels
+    ## Split the data into input features and target labels
     X = data['features']
     y = data['labels']
 
-    # Define the deep learning model architecture
+    ## Define the deep learning model architecture
     model = Sequential([
         Conv2D(32, (3, 3), activation='relu', input_shape=(32, 32, 3)),
         MaxPooling2D((2, 2)),
@@ -300,16 +300,16 @@ def train_and_evaluate_deep_learning_model(data_path):
         Dense(10, activation='softmax')
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
 
-    # Train the model
+    ## Train the model
     model.fit(X, y, epochs=10, batch_size=32, validation_split=0.2)
 
-    # Evaluate the model
+    ## Evaluate the model
     evaluation_results = model.evaluate(X, y)
 
-    # Save the trained deep learning model
+    ## Save the trained deep learning model
     model_file_path = "trained_models/robotics_deep_learning_model.h5"
     model.save(model_file_path)
 

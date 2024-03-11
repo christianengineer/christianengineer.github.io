@@ -5,7 +5,7 @@ permalink: posts/skill-development-pathway-planner-for-peru-gpt-3-keras-flask-pr
 layout: article
 ---
 
-# AI Skill Development Pathway Planner for Peru
+## AI Skill Development Pathway Planner for Peru
 
 ## Objectives:
 1. Provide personalized skill development and training programs for low-income individuals.
@@ -27,7 +27,7 @@ layout: article
 
 By combining these libraries and technologies, the AI Skill Development Pathway Planner for Peru can efficiently recommend personalized skill development programs to low-income individuals, helping them gain relevant skills and improve their employability in the job market.
 
-# MLOps Infrastructure for AI Skill Development Pathway Planner for Peru
+## MLOps Infrastructure for AI Skill Development Pathway Planner for Peru
 
 ## Objectives:
 1. **Automate Model Deployment:** Streamline the process of deploying machine learning models for personalized skill recommendations.
@@ -53,48 +53,48 @@ By combining these libraries and technologies, the AI Skill Development Pathway 
 
 By integrating these components and technologies into the MLOps infrastructure for the Skill Development Pathway Planner, we can ensure efficient model deployment, monitoring, and scalability, while safeguarding user privacy and security. This infrastructure will enable the application to continuously improve and provide valuable recommendations to low-income individuals seeking to enhance their skills and employability.
 
-# Scalable File Structure for Skill Development Pathway Planner for Peru
+## Scalable File Structure for Skill Development Pathway Planner for Peru
 
 ```
 Skill_Development_Pathway_Planner/
 │
 ├── app/
-│   ├── main.py             # Flask application for user interface
-│   ├── models/             # Machine learning models for skill recommendations
-│   │   ├── user_profile.py # Model to generate user profiles
-│   │   ├── skill_matching.py # Model for matching skills with job markets
-│   │   ├── recommendations.py # Model for generating personalized recommendations
-│   ├── static/             # Static files for frontend
+│   ├── main.py             ## Flask application for user interface
+│   ├── models/             ## Machine learning models for skill recommendations
+│   │   ├── user_profile.py ## Model to generate user profiles
+│   │   ├── skill_matching.py ## Model for matching skills with job markets
+│   │   ├── recommendations.py ## Model for generating personalized recommendations
+│   ├── static/             ## Static files for frontend
 │   │   ├── css/
 │   │   ├── js/
 │   │   ├── images/
-│   ├── templates/          # HTML templates for web interface
+│   ├── templates/          ## HTML templates for web interface
 │   │   ├── index.html
 │   │   ├── profile.html
 │   │   ├── recommendations.html
 │
 ├── data/
-│   ├── user_data.csv       # Sample user data for training models
-│   ├── job_market_data.csv # Data on in-demand job markets
-│   ├── course_data.csv     # Data on available training courses
+│   ├── user_data.csv       ## Sample user data for training models
+│   ├── job_market_data.csv ## Data on in-demand job markets
+│   ├── course_data.csv     ## Data on available training courses
 │
 ├── notebooks/
-│   ├── data_preprocessing.ipynb # Jupyter notebook for data preprocessing
-│   ├── model_training.ipynb     # Jupyter notebook for training machine learning models
+│   ├── data_preprocessing.ipynb ## Jupyter notebook for data preprocessing
+│   ├── model_training.ipynb     ## Jupyter notebook for training machine learning models
 │
 ├── infrastructure/
-│   ├── Dockerfile          # Dockerfile for containerizing the Flask application
-│   ├── requirements.txt    # Python dependencies
-│   ├── kubernetes/         # Kubernetes deployment configurations
+│   ├── Dockerfile          ## Dockerfile for containerizing the Flask application
+│   ├── requirements.txt    ## Python dependencies
+│   ├── kubernetes/         ## Kubernetes deployment configurations
 │   │   ├── deployment.yaml
 │   │   ├── service.yaml
 │   │   ├── ingress.yaml
 │
 ├── monitoring/
-│   ├── prometheus/         # Prometheus configuration files
+│   ├── prometheus/         ## Prometheus configuration files
 │   │   ├── prometheus.yml
 │   │   ├── alert.rules
-│   ├── grafana/            # Grafana dashboard configurations
+│   ├── grafana/            ## Grafana dashboard configurations
 │   │   ├── dashboard.json
 │
 ├── README.md
@@ -103,32 +103,32 @@ Skill_Development_Pathway_Planner/
 
 This file structure organizes the components of the Skill Development Pathway Planner application into logical directories, making it easier to manage and scale the project. The structure includes directories for the Flask web application, machine learning models, data files, Jupyter notebooks for data preprocessing and model training, infrastructure configurations for containerization and deployment, and monitoring configurations for Prometheus and Grafana. This organized file structure will facilitate collaboration, development, and deployment of the application to provide personalized skill development recommendations for low-income individuals in Peru.
 
-# `models` Directory for Skill Development Pathway Planner
+## `models` Directory for Skill Development Pathway Planner
 
 ```
 models/
 │
-├── user_profile.py          # Model for generating user profiles
-├── skill_matching.py        # Model for matching skills with job markets
-├── recommendations.py       # Model for generating personalized recommendations
+├── user_profile.py          ## Model for generating user profiles
+├── skill_matching.py        ## Model for matching skills with job markets
+├── recommendations.py       ## Model for generating personalized recommendations
 │
 ├── data/
-│   ├── user_data.csv        # Sample user data for training and testing
-│   ├── job_market_data.csv  # Data on in-demand job markets
-│   ├── course_data.csv      # Data on available training courses
+│   ├── user_data.csv        ## Sample user data for training and testing
+│   ├── job_market_data.csv  ## Data on in-demand job markets
+│   ├── course_data.csv      ## Data on available training courses
 │
 ├── preprocessing/
-│   ├── data_preprocessing.py # Module for data preprocessing tasks
-│   ├── feature_engineering.py # Module for feature engineering
+│   ├── data_preprocessing.py ## Module for data preprocessing tasks
+│   ├── feature_engineering.py ## Module for feature engineering
 │
 ├── training/
-│   ├── train_user_profile.py  # Script for training user profile model
-│   ├── train_skill_matching.py # Script for training skill matching model
-│   ├── train_recommendations.py # Script for training recommendations model
+│   ├── train_user_profile.py  ## Script for training user profile model
+│   ├── train_skill_matching.py ## Script for training skill matching model
+│   ├── train_recommendations.py ## Script for training recommendations model
 │
 ├── evaluation/
-│   ├── evaluate_model.py    # Script for evaluating model performance
-│   ├── metrics.py           # Module for defining evaluation metrics
+│   ├── evaluate_model.py    ## Script for evaluating model performance
+│   ├── metrics.py           ## Module for defining evaluation metrics
 ```
 
 ## Models Directory Details:
@@ -162,27 +162,27 @@ models/
 
 By structuring the `models` directory in this way, the Skill Development Pathway Planner can efficiently train, evaluate, and deploy the machine learning models for recommending personalized skill development and training programs to low-income individuals in Peru to boost employability.
 
-# `deployment` Directory for Skill Development Pathway Planner
+## `deployment` Directory for Skill Development Pathway Planner
 
 ```
 deployment/
 │
-├── Dockerfile          # Configuration file for building Docker images
-├── docker-compose.yml  # Docker Compose file for orchestrating the application containers
+├── Dockerfile          ## Configuration file for building Docker images
+├── docker-compose.yml  ## Docker Compose file for orchestrating the application containers
 │
 ├── kubernetes/
-│   ├── deployment.yaml  # Kubernetes deployment configuration for Flask application
-│   ├── service.yaml     # Kubernetes service configuration for Flask application
-│   ├── ingress.yaml     # Kubernetes Ingress configuration for external access
+│   ├── deployment.yaml  ## Kubernetes deployment configuration for Flask application
+│   ├── service.yaml     ## Kubernetes service configuration for Flask application
+│   ├── ingress.yaml     ## Kubernetes Ingress configuration for external access
 │
 ├── scripts/
-│   ├── deploy.sh        # Script for deploying the application using Docker or Kubernetes
-│   ├── start.sh         # Script for starting the deployed application
-│   ├── stop.sh          # Script for stopping the deployed application
+│   ├── deploy.sh        ## Script for deploying the application using Docker or Kubernetes
+│   ├── start.sh         ## Script for starting the deployed application
+│   ├── stop.sh          ## Script for stopping the deployed application
 │
 ├── config/
-│   ├── app_config.yaml  # Configuration file for application settings
-│   ├── model_config.yaml # Configuration file for model settings
+│   ├── app_config.yaml  ## Configuration file for application settings
+│   ├── model_config.yaml ## Configuration file for model settings
 ```
 
 ## Deployment Directory Details:
@@ -213,37 +213,37 @@ deployment/
 By organizing the `deployment` directory in this manner, the Skill Development Pathway Planner application can be efficiently deployed and managed using Docker or Kubernetes, ensuring scalability, reliability, and ease of maintenance for recommending personalized skill development and training programs to low-income individuals in Peru aligning them with in-demand job markets.
 
 ```python
-# File: training_script.py
-# Path: training/train_model.py
+## File: training_script.py
+## Path: training/train_model.py
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 
-# Load mock user data
+## Load mock user data
 user_data_path = 'models/data/user_data.csv'
 user_data = pd.read_csv(user_data_path)
 
-# Define features and target
+## Define features and target
 X = user_data.drop('Target', axis=1)
 y = user_data['Target']
 
-# Split data into train and test sets
+## Split data into train and test sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize and train the RandomForestClassifier model
+## Initialize and train the RandomForestClassifier model
 clf = RandomForestClassifier(random_state=42)
 clf.fit(X_train, y_train)
 
-# Make predictions
+## Make predictions
 y_pred = clf.predict(X_test)
 
-# Evaluate model performance
+## Evaluate model performance
 accuracy = accuracy_score(y_test, y_pred)
 print(f'Model accuracy: {accuracy}')
 
-# Save the trained model
+## Save the trained model
 model_save_path = 'models/trained_model.pkl'
 import joblib
 joblib.dump(clf, model_save_path)
@@ -252,8 +252,8 @@ joblib.dump(clf, model_save_path)
 In this script, we load mock user data from a CSV file, preprocess the data, train a RandomForestClassifier model on the data, evaluate the model's performance, and save the trained model using joblib. The script is saved in the file `training_script.py` located at `training/train_model.py`.
 
 ```python
-# File: complex_model.py
-# Path: models/complex_model.py
+## File: complex_model.py
+## Path: models/complex_model.py
 
 import numpy as np
 import pandas as pd
@@ -261,32 +261,32 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.metrics import accuracy_score
 
-# Load mock data
+## Load mock data
 data_path = 'models/data/mock_data.csv'
 data = pd.read_csv(data_path)
 
-# Feature engineering
+## Feature engineering
 data['new_feature'] = data['feature1'] * data['feature2']
 
-# Define features and target
+## Define features and target
 X = data.drop(['target', 'unimportant_feature'], axis=1)
 y = data['target']
 
-# Split data into train and test sets
+## Split data into train and test sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize and train the Gradient Boosting Classifier model
+## Initialize and train the Gradient Boosting Classifier model
 clf = GradientBoostingClassifier(random_state=42)
 clf.fit(X_train, y_train)
 
-# Make predictions
+## Make predictions
 y_pred = clf.predict(X_test)
 
-# Evaluate model performance
+## Evaluate model performance
 accuracy = accuracy_score(y_test, y_pred)
 print(f'Model accuracy: {accuracy}')
 
-# Save the trained model
+## Save the trained model
 model_save_path = 'models/trained_complex_model.pkl'
 import joblib
 joblib.dump(clf, model_save_path)

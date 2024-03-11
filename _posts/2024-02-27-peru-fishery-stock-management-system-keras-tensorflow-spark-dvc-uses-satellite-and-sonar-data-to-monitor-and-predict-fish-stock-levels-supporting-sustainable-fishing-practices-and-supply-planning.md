@@ -5,7 +5,7 @@ permalink: posts/peru-fishery-stock-management-system-keras-tensorflow-spark-dvc
 layout: article
 ---
 
-# AI Peru Fishery Stock Management System
+## AI Peru Fishery Stock Management System
 
 ## Objectives:
 - **Monitor and predict fish stock levels:** Utilize satellite and sonar data to monitor the current fish stock levels and predict future stocks.
@@ -26,7 +26,7 @@ layout: article
 - **Spark:** Employed for distributed computing to handle large-scale data processing and model training.
 - **DVC (Data Version Control):** Utilized for managing and versioning datasets and models, ensuring reproducibility and collaboration in the development process.
 
-# MLOps Infrastructure for Peru Fishery Stock Management System
+## MLOps Infrastructure for Peru Fishery Stock Management System
 
 ## Components of MLOps Infrastructure:
 
@@ -64,7 +64,7 @@ layout: article
 - **Maintainability:** Facilitate easy model versioning, reproducibility, and collaboration with DVC and Git integration.
 - **Sustainability:** Support sustainable fishing practices by providing accurate fish stock predictions for supply planning.
 
-# Scalable File Structure for Peru Fishery Stock Management System
+## Scalable File Structure for Peru Fishery Stock Management System
 
 ```
 peru_fishery_stock_management/
@@ -243,7 +243,7 @@ deployment/
 
 ```python
 def preprocess_data(raw_data):
-    # Preprocessing steps for cleaning and feature engineering
+    ## Preprocessing steps for cleaning and feature engineering
     processed_data = clean_data(raw_data)
     features = engineer_features(processed_data)
     
@@ -270,7 +270,7 @@ The `deployment/` directory contains serialized model weights, preprocessing scr
 Below is a Python script for training a model for the Peru Fishery Stock Management System using mock data. The script uses Keras, TensorFlow, and DVC for model training and version control.
 
 ```python
-# File Path: src/train_model.py
+## File Path: src/train_model.py
 
 import numpy as np
 import pandas as pd
@@ -278,31 +278,31 @@ from tensorflow import keras
 from sklearn.model_selection import train_test_split
 import dvc.api
 
-# Load mock satellite and sonar data using DVC
+## Load mock satellite and sonar data using DVC
 data_url = 'dvc://data/mock_fishery_data.csv'
 data = pd.read_csv(data_url)
 
-# Separate features and target variable
+## Separate features and target variable
 X = data.drop(columns=['fish_stock_level'])
 y = data['fish_stock_level']
 
-# Split the data into training and validation sets
+## Split the data into training and validation sets
 X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Define a simple neural network model
+## Define a simple neural network model
 model = keras.Sequential([
     keras.layers.Dense(64, activation='relu'),
     keras.layers.Dense(64, activation='relu'),
     keras.layers.Dense(1, activation='linear')
 ])
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam', loss='mean_squared_error')
 
-# Train the model
+## Train the model
 model.fit(X_train, y_train, epochs=50, batch_size=32, validation_data=(X_val, y_val))
 
-# Save the trained model
+## Save the trained model
 model.save('models/trained_model.h5')
 ```
 
@@ -313,7 +313,7 @@ You can run this script to train the model using mock data for the Peru Fishery 
 Below is a Python script for implementing a complex machine learning algorithm, such as a Gradient Boosting Machine (GBM), for the Peru Fishery Stock Management System using mock data. The script utilizes Spark for distributed processing and DVC for data version control.
 
 ```python
-# File Path: src/complex_ml_algorithm.py
+## File Path: src/complex_ml_algorithm.py
 
 from pyspark.sql import SparkSession
 from pyspark.ml.feature import VectorAssembler
@@ -321,40 +321,40 @@ from pyspark.ml.regression import GBTRegressor
 from pyspark.ml.evaluation import RegressionEvaluator
 import dvc.api
 
-# Create a Spark session
+## Create a Spark session
 spark = SparkSession.builder.appName("PeruFisheryStockManagement").getOrCreate()
 
-# Load mock satellite and sonar data using DVC
+## Load mock satellite and sonar data using DVC
 data_url = 'dvc://data/mock_fishery_data.csv'
 data = spark.read.csv(data_url, header=True, inferSchema=True)
 
-# Feature engineering and preparation
+## Feature engineering and preparation
 feature_cols = [col for col in data.columns if col != 'fish_stock_level']
 assembler = VectorAssembler(inputCols=feature_cols, outputCol='features')
 assembled_data = assembler.transform(data)
 
-# Split the data into training and validation sets
+## Split the data into training and validation sets
 train_data, val_data = assembled_data.randomSplit([0.8, 0.2], seed=42)
 
-# Train a Gradient Boosting Machine model
+## Train a Gradient Boosting Machine model
 gbm = GBTRegressor(featuresCol='features', labelCol='fish_stock_level')
 gbm_model = gbm.fit(train_data)
 
-# Make predictions on the validation set
+## Make predictions on the validation set
 predictions = gbm_model.transform(val_data)
 
-# Evaluate the model
+## Evaluate the model
 evaluator = RegressionEvaluator(labelCol='fish_stock_level', predictionCol='prediction', metricName='rmse')
 rmse = evaluator.evaluate(predictions)
 
-# Save the model
+## Save the model
 model_path = 'models/gbm_model'
 gbm_model.save(model_path)
 
-# Print the RMSE score
+## Print the RMSE score
 print(f'Root Mean Squared Error (RMSE) of the GBM model: {rmse}')
 
-# Stop the Spark session
+## Stop the Spark session
 spark.stop()
 ```
 

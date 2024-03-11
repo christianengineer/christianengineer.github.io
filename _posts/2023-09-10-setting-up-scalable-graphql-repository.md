@@ -5,7 +5,7 @@ permalink: posts/setting-up-scalable-graphql-repository
 layout: article
 ---
 
-# Introduction
+## Introduction
 
 In the fast-paced world of technology, particularly for large corporations knee-deep in Big Data, AI, and ML, having an efficient and well-structured GraphQL repository is non-negotiable. This article aims to unfold the untapped power of a properly scaled GraphQL repository in managing colossal data, expediting project delivery, and improving data manipulation capabilities. Intrigued? Let's delve deeper. For a foundational understanding, you can explore GraphQL's impact in large scale applications.
 

@@ -5,7 +5,7 @@ permalink: posts/how-i-started-using-ai
 layout: article
 ---
 
-# How I started using AI as a Software Engineer
+## How I started using AI as a Software Engineer
 
 It was mid summer when our team had already release features to production. We were a greenfield project. In the beginning.
 

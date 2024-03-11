@@ -5,7 +5,7 @@ permalink: posts/adminmax---ai-powered-administration-dashboard
 layout: article
 ---
 
-# AdminMax - AI-Powered Administration Dashboard
+## AdminMax - AI-Powered Administration Dashboard
 
 **Description:**
 
@@ -106,61 +106,61 @@ Below is a scalable directory structure for **AdminMax - AI-Powered Administrati
 ```plaintext
 AdminMax/
 │
-├── client/                       # Frontend directory
-│   ├── public/                   # Static files
+├── client/                       ## Frontend directory
+│   ├── public/                   ## Static files
 │   │   ├── index.html
 │   │   ├── favicon.ico
 │   │   └── ...
 │   ├── src/
-│   │   ├── components/           # UI components
+│   │   ├── components/           ## UI components
 │   │   │   ├── Dashboard/
 │   │   │   ├── Sidebar/
 │   │   │   └── ...
-│   │   ├── services/             # API service-related functions
-│   │   ├── utils/                # Utility functions for the frontend
-│   │   ├── app.js                # Main frontend application
-│   │   ├── index.js              # Entry point for frontend
+│   │   ├── services/             ## API service-related functions
+│   │   ├── utils/                ## Utility functions for the frontend
+│   │   ├── app.js                ## Main frontend application
+│   │   ├── index.js              ## Entry point for frontend
 │   │   └── ...
 │   ├── package.json
 │   └── ...
 │
-├── server/                       # Backend directory
-│   ├── config/                   # Configuration files for the server, db, etc.
-│   ├── controllers/              # Controller classes/functions
-│   ├── models/                   # Database models
-│   ├── routes/                   # Route definitions for the backend API
-│   ├── services/                 # Business logic and service layer
-│   ├── utils/                    # Helper functions shared across the backend
-│   ├── app.js                    # Main backend application
-│   ├── index.js                  # Entry point for the backend
+├── server/                       ## Backend directory
+│   ├── config/                   ## Configuration files for the server, db, etc.
+│   ├── controllers/              ## Controller classes/functions
+│   ├── models/                   ## Database models
+│   ├── routes/                   ## Route definitions for the backend API
+│   ├── services/                 ## Business logic and service layer
+│   ├── utils/                    ## Helper functions shared across the backend
+│   ├── app.js                    ## Main backend application
+│   ├── index.js                  ## Entry point for the backend
 │   └── ...
 │
-├── ai/                           # AI services and model training scripts
-│   ├── models/                   # Trained models and datasets
-│   ├── services/                 # AI-based services, like NLP or image processing
+├── ai/                           ## AI services and model training scripts
+│   ├── models/                   ## Trained models and datasets
+│   ├── services/                 ## AI-based services, like NLP or image processing
 │   └── ...
 │
-├── scripts/                      # Development and deployment scripts
-│   ├── start.sh                  # Script to start the entire platform
-│   ├── deploy.sh                 # Deployment script for CI/CD
+├── scripts/                      ## Development and deployment scripts
+│   ├── start.sh                  ## Script to start the entire platform
+│   ├── deploy.sh                 ## Deployment script for CI/CD
 │   └── ...
 │
-├── tests/                        # Automated tests
-│   ├── client/                   # Frontend tests
-│   ├── server/                   # Backend tests
-│   └── e2e/                      # End to end tests
+├── tests/                        ## Automated tests
+│   ├── client/                   ## Frontend tests
+│   ├── server/                   ## Backend tests
+│   └── e2e/                      ## End to end tests
 │
-├── docs/                         # Documentation files
-│   ├── setup.md                  # Setup instructions
-│   ├── usage.md                  # Usage guide
+├── docs/                         ## Documentation files
+│   ├── setup.md                  ## Setup instructions
+│   ├── usage.md                  ## Usage guide
 │   └── ...
 │
-├── docker-compose.yml            # Docker compose file to orchestrate containers
-├── Dockerfile                    # Dockerfile for containerization setup
-├── .env.example                  # Example environment variable file
-├── .gitignore                    # Specifies intentionally untracked files to ignore
-├── README.md                     # The top-level README for developers using this project
-└── package.json                  # Node project manifest file for the root of the repository
+├── docker-compose.yml            ## Docker compose file to orchestrate containers
+├── Dockerfile                    ## Dockerfile for containerization setup
+├── .env.example                  ## Example environment variable file
+├── .gitignore                    ## Specifies intentionally untracked files to ignore
+├── README.md                     ## The top-level README for developers using this project
+└── package.json                  ## Node project manifest file for the root of the repository
 ```
 
 ### Important notes:

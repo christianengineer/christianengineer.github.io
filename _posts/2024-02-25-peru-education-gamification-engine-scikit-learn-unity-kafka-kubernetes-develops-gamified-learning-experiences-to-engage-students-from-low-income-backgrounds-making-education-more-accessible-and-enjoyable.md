@@ -5,7 +5,7 @@ permalink: posts/peru-education-gamification-engine-scikit-learn-unity-kafka-kub
 layout: article
 ---
 
-# AI Peru Education Gamification Engine Project Overview
+## AI Peru Education Gamification Engine Project Overview
 
 ## Objectives:
 - Develop gamified learning experiences to engage students from low-income backgrounds
@@ -30,7 +30,7 @@ layout: article
 
 By integrating these technologies and design strategies, the AI Peru Education Gamification Engine aims to revolutionize educational experiences for students by providing a scalable, data-intensive platform that leverages the power of AI and gamification to make learning more accessible and enjoyable for all.
 
-# MLOps Infrastructure for AI Peru Education Gamification Engine
+## MLOps Infrastructure for AI Peru Education Gamification Engine
 
 ## Overview:
 The MLOps infrastructure for the AI Peru Education Gamification Engine plays a crucial role in managing the machine learning lifecycle, from model development to deployment and monitoring. By integrating MLOps practices with technologies such as Scikit-Learn, Unity, Kafka, and Kubernetes, the system ensures the efficient and effective operation of the gamified learning platform.
@@ -53,7 +53,7 @@ The MLOps infrastructure for the AI Peru Education Gamification Engine plays a c
 
 By integrating MLOps practices with the AI Peru Education Gamification Engine, the system can effectively leverage machine learning, gamification, and data-intensive technologies to deliver engaging educational experiences to students from low-income backgrounds, making education more accessible and enjoyable for all.
 
-# Scalable File Structure for AI Peru Education Gamification Engine Repository
+## Scalable File Structure for AI Peru Education Gamification Engine Repository
 
 ```
 Peru_Education_Gamification_Engine/
@@ -115,7 +115,7 @@ Peru_Education_Gamification_Engine/
 
 This structured file system is designed to organize the codebase of the AI Peru Education Gamification Engine repository effectively, making it scalable and easy to manage for developers working on the project.
 
-# Models Directory for AI Peru Education Gamification Engine
+## Models Directory for AI Peru Education Gamification Engine
 
 The `ml_models/` directory in the AI Peru Education Gamification Engine repository is a crucial component housing machine learning models developed using Scikit-Learn to enhance user experiences and personalize educational content for students from low-income backgrounds.
 
@@ -163,7 +163,7 @@ ml_models/
 
 The `ml_models` directory encapsulates the machine learning models essential for enhancing the gamified learning experiences in the AI Peru Education Gamification Engine application, contributing to its goal of making education more accessible and enjoyable for students from low-income backgrounds through personalization and engagement.
 
-# Deployment Directory for AI Peru Education Gamification Engine
+## Deployment Directory for AI Peru Education Gamification Engine
 
 The `deployment/` directory in the AI Peru Education Gamification Engine repository holds the Kubernetes deployment configurations essential for scaling and managing the system components, including machine learning models, Unity games, Kafka streaming, and other services. This directory plays a pivotal role in ensuring the seamless operation of the gamified learning platform.
 
@@ -209,44 +209,44 @@ deployment/
 
 The `deployment` directory plays a vital role in orchestrating the deployment of various components of the AI Peru Education Gamification Engine, ensuring scalability, fault tolerance, and efficient resource management using Kubernetes. It serves as a key pillar in the infrastructure setup of the application, contributing to its mission of engaging students from low-income backgrounds in accessible and enjoyable gamified learning experiences.
 
-# Training File for User Behavior Analysis Model
+## Training File for User Behavior Analysis Model
 
 ```python
-# File Path: ml_models/user_behavior_analysis/model_training.ipynb
+## File Path: ml_models/user_behavior_analysis/model_training.ipynb
 
-# Import necessary libraries
+## Import necessary libraries
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 import joblib
 
-# Load mock user interaction data
+## Load mock user interaction data
 data_path = 'ml_models/user_behavior_analysis/data/user_interactions.csv'
 user_interactions = pd.read_csv(data_path)
 
-# Preprocess data
-# Perform data cleaning, feature engineering, and encoding if needed
+## Preprocess data
+## Perform data cleaning, feature engineering, and encoding if needed
 
-# Split data into features and target variable
+## Split data into features and target variable
 X = user_interactions.drop('target', axis=1)
 y = user_interactions['target']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize and train a Random Forest Classifier
+## Initialize and train a Random Forest Classifier
 rf_model = RandomForestClassifier()
 rf_model.fit(X_train, y_train)
 
-# Make predictions on the test set
+## Make predictions on the test set
 y_pred = rf_model.predict(X_test)
 
-# Calculate model accuracy
+## Calculate model accuracy
 accuracy = accuracy_score(y_test, y_pred)
 print(f'Model Accuracy: {accuracy}')
 
-# Save the trained model
+## Save the trained model
 model_path = 'ml_models/user_behavior_analysis/model/user_behavior_analysis_model.pkl'
 joblib.dump(rf_model, model_path)
 ```
@@ -257,44 +257,44 @@ The file preprocesses the data, splits it into training and testing sets, trains
 
 By running this training file, a model is trained to analyze user behavior and personalize learning experiences, contributing to the goal of engaging students from low-income backgrounds in accessible and enjoyable gamified learning experiences.
 
-# File for Training Complex Machine Learning Algorithm
+## File for Training Complex Machine Learning Algorithm
 
 ```python
-# File Path: ml_models/recommendation_system/model_training.ipynb
+## File Path: ml_models/recommendation_system/model_training.ipynb
 
-# Import necessary libraries
+## Import necessary libraries
 import pandas as pd
 from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 import joblib
 
-# Load mock user preferences data
+## Load mock user preferences data
 data_path = 'ml_models/recommendation_system/data/user_preferences.csv'
 user_preferences = pd.read_csv(data_path)
 
-# Preprocess data
-# Perform data cleaning, feature engineering, and encoding if needed
+## Preprocess data
+## Perform data cleaning, feature engineering, and encoding if needed
 
-# Split data into features and target variable
+## Split data into features and target variable
 X = user_preferences.drop('target', axis=1)
 y = user_preferences['target']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize and train a Gradient Boosting Classifier (complex ML algorithm)
+## Initialize and train a Gradient Boosting Classifier (complex ML algorithm)
 gb_model = GradientBoostingClassifier()
 gb_model.fit(X_train, y_train)
 
-# Make predictions on the test set
+## Make predictions on the test set
 y_pred = gb_model.predict(X_test)
 
-# Calculate model accuracy
+## Calculate model accuracy
 accuracy = accuracy_score(y_test, y_pred)
 print(f'Model Accuracy: {accuracy}')
 
-# Save the trained complex model
+## Save the trained complex model
 model_path = 'ml_models/recommendation_system/model/recommendation_system_model.pkl'
 joblib.dump(gb_model, model_path)
 ```
@@ -305,7 +305,7 @@ The script preprocesses the data, splits it into training and testing sets, trai
 
 By executing this training file, a sophisticated algorithm is trained to provide personalized recommendations to users, enhancing the gamified learning experiences and making education more accessible and enjoyable for students from low-income backgrounds.
 
-# Types of Users for AI Peru Education Gamification Engine
+## Types of Users for AI Peru Education Gamification Engine
 
 ## 1. **Students**
 **User Story**: As a student, I want to learn in a fun and engaging way through gamified educational experiences tailored to my preferences, to make learning more enjoyable and accessible.

@@ -204,21 +204,21 @@ from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
 from sklearn.feature_extraction.text import TfidfVectorizer
 
-# Define the function for sentiment analysis using a trained complex machine learning model
+## Define the function for sentiment analysis using a trained complex machine learning model
 def predict_sentiment(text_data, model_file_path, tokenizer_file_path, tfidf_vectorizer_file_path):
-    # Load the trained model
+    ## Load the trained model
     with open(model_file_path, 'rb') as model_file:
         model = pickle.load(model_file)
 
-    # Load tokenizer
+    ## Load tokenizer
     with open(tokenizer_file_path, 'rb') as tokenizer_file:
         tokenizer = pickle.load(tokenizer_file)
 
-    # Load TF-IDF vectorizer
+    ## Load TF-IDF vectorizer
     with open(tfidf_vectorizer_file_path, 'rb') as vectorizer_file:
         tfidf_vectorizer = pickle.load(vectorizer_file)
 
-    # Preprocess the text data
+    ## Preprocess the text data
     def preprocess_text(text):
         tokens = word_tokenize(text)
         tokens = [word for word in tokens if word.isalpha()]
@@ -229,10 +229,10 @@ def predict_sentiment(text_data, model_file_path, tokenizer_file_path, tfidf_vec
 
     preprocessed_data = [preprocess_text(data) for data in text_data]
 
-    # Feature engineering
+    ## Feature engineering
     X = tfidf_vectorizer.transform(preprocessed_data)
 
-    # Make predictions
+    ## Make predictions
     predictions = model.predict(X)
 
     return predictions
@@ -255,18 +255,18 @@ import pickle
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 def analyze_sentiment(text_data, model_file_path, tfidf_vectorizer_path):
-    # Load the trained model
+    ## Load the trained model
     with open(model_file_path, 'rb') as model_file:
         model = pickle.load(model_file)
 
-    # Load the TF-IDF vectorizer
+    ## Load the TF-IDF vectorizer
     with open(tfidf_vectorizer_path, 'rb') as vectorizer_file:
         tfidf_vectorizer = pickle.load(vectorizer_file)
 
-    # Perform TF-IDF vectorization on the input text data
+    ## Perform TF-IDF vectorization on the input text data
     text_vectorized = tfidf_vectorizer.transform(text_data)
 
-    # Make predictions using the loaded model
+    ## Make predictions using the loaded model
     predictions = model.predict(text_vectorized)
 
     return predictions

@@ -5,7 +5,7 @@ permalink: posts/autonomous-vehicle-navigation-system-tensorflow-ros-airflow-for
 layout: article
 ---
 
-# AI Autonomous Vehicle Navigation System Repository
+## AI Autonomous Vehicle Navigation System Repository
 
 ## Objectives
 The primary objectives of the AI Autonomous Vehicle Navigation System repository are:
@@ -36,7 +36,7 @@ The repository leverages the following libraries and frameworks to achieve the s
 
 By leveraging these libraries and frameworks, the AI Autonomous Vehicle Navigation System repository aims to provide a comprehensive and robust platform for developing and testing autonomous driving systems with a focus on scalability, data-intensive processing, and AI-driven decision making.
 
-# MLOps Infrastructure for Autonomous Vehicle Navigation System
+## MLOps Infrastructure for Autonomous Vehicle Navigation System
 
 ## Overview
 The MLOps infrastructure for the Autonomous Vehicle Navigation System aims to provide a robust framework for managing the lifecycle of machine learning models, from development and training to deployment and monitoring. Leveraging TensorFlow, ROS, and Airflow, the infrastructure is designed to integrate AI and machine learning into the autonomous driving application, ensuring scalability, reliability, and efficiency in model development and deployment.
@@ -67,7 +67,7 @@ The MLOps infrastructure for the Autonomous Vehicle Navigation System is designe
 
 By leveraging TensorFlow, ROS, and Airflow within the MLOps infrastructure, the Autonomous Vehicle Navigation System is empowered with a comprehensive framework for seamlessly integrating AI and machine learning into the autonomous driving application, ultimately leading to a scalable, data-intensive, and AI-driven solution.
 
-# Scalable File Structure for Autonomous Vehicle Navigation System Repository
+## Scalable File Structure for Autonomous Vehicle Navigation System Repository
 
 ```
 autonomous_vehicle_navigation/
@@ -203,19 +203,19 @@ from mock_data_loader import MockDataLoader
 from perception_model import PerceptionModel
 from perception_evaluation import evaluate_perception_model
 
-# Load mock training data
+## Load mock training data
 data_loader = MockDataLoader()
 train_data, train_labels = data_loader.load_training_data()
 
-# Define the perception model
+## Define the perception model
 perception_model = PerceptionModel()
 model = perception_model.build_model()
 
-# Train the model
+## Train the model
 model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
 model.fit(train_data, train_labels, epochs=10, batch_size=32, validation_split=0.2)
 
-# Evaluate the trained model
+## Evaluate the trained model
 evaluation_results = evaluate_perception_model(model, test_data, test_labels)
 print(evaluation_results)
 ```
@@ -235,24 +235,24 @@ from decision_model import DecisionModel
 from decision_evaluation import evaluate_decision_model
 from tensorflow.keras.callbacks import ModelCheckpoint, EarlyStopping
 
-# Load mock training and validation data
+## Load mock training and validation data
 data_loader = MockDataLoader()
 train_data, train_labels = data_loader.load_training_data()
 val_data, val_labels = data_loader.load_validation_data()
 
-# Define the decision-making model
+## Define the decision-making model
 decision_model = DecisionModel()
 model = decision_model.build_complex_model()
 
-# Set up callbacks for model training
+## Set up callbacks for model training
 checkpoint = ModelCheckpoint('decision_model_checkpoint.h5', monitor='val_loss', save_best_only=True, mode='min', verbose=1)
 early_stopping = EarlyStopping(monitor='val_loss', patience=5, verbose=1)
 
-# Train the model
+## Train the model
 model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
 history = model.fit(train_data, train_labels, epochs=50, batch_size=64, validation_data=(val_data, val_labels), callbacks=[checkpoint, early_stopping])
 
-# Evaluate the trained model
+## Evaluate the trained model
 evaluation_results = evaluate_decision_model(model, test_data, test_labels)
 print(evaluation_results)
 ```

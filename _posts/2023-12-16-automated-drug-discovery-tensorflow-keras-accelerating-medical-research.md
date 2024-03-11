@@ -5,7 +5,7 @@ permalink: posts/automated-drug-discovery-tensorflow-keras-accelerating-medical-
 layout: article
 ---
 
-# AI Automated Drug Discovery Repository
+## AI Automated Drug Discovery Repository
 
 ## Objectives
 The objective of the AI Automated Drug Discovery repository is to accelerate medical research by leveraging machine learning models to predict the efficacy and safety of potential drug compounds. This will help in identifying promising drug candidates more efficiently, reducing the time and resources required for traditional drug discovery processes.
@@ -24,7 +24,7 @@ The objective of the AI Automated Drug Discovery repository is to accelerate med
 
 By employing these libraries and system design strategies, the AI Automated Drug Discovery repository aims to empower researchers in accelerating the discovery of novel therapeutic compounds through the use of advanced machine learning techniques.
 
-# MLOps Infrastructure for Automated Drug Discovery
+## MLOps Infrastructure for Automated Drug Discovery
 
 ## Infrastructure Components
 1. **Data Versioning and Management**: Utilize a data versioning system such as DVC (Data Version Control) to track changes to datasets and ensure reproducibility of experiments.
@@ -174,7 +174,7 @@ By organizing the deployment directory in this manner, the Automated Drug Discov
 Certainly! Below is an example of a Python script for training a model using mock data for the Automated Drug Discovery application. The file is named `train_model.py` and is located in the `models/` directory of the project.
 
 ```python
-# models/train_model.py
+## models/train_model.py
 
 import pandas as pd
 import numpy as np
@@ -182,27 +182,27 @@ from sklearn.model_selection import train_test_split
 from tensorflow import keras
 from tensorflow.keras import layers
 
-# Load mock data (replace with actual data loading logic)
+## Load mock data (replace with actual data loading logic)
 data = pd.read_csv('data/processed/train/train_data.csv')
 labels = pd.read_csv('data/processed/train/train_labels.csv')
 
-# Split the data into training and validation sets
+## Split the data into training and validation sets
 X_train, X_val, y_train, y_val = train_test_split(data, labels, test_size=0.2, random_state=42)
 
-# Define the neural network architecture
+## Define the neural network architecture
 model = keras.Sequential([
     layers.Dense(64, activation='relu', input_shape=(X_train.shape[1],)),
     layers.Dense(32, activation='relu'),
-    layers.Dense(1)  # Example output layer for regression
+    layers.Dense(1)  ## Example output layer for regression
 ])
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam', loss='mean_squared_error', metrics=['mae'])
 
-# Train the model
+## Train the model
 history = model.fit(X_train, y_train, epochs=50, batch_size=32, validation_data=(X_val, y_val))
 
-# Save the trained model
+## Save the trained model
 model.save('trained_models/drug_discovery_model.h5')
 ```
 
@@ -215,7 +215,7 @@ This file is saved as `train_model.py` in the `models/` directory of the project
 Certainly! Below is an example of a Python script for defining and training a complex machine learning algorithm using mock data for the Automated Drug Discovery application. The file is named `complex_model_training.py` and is located in the `models/` directory of the project.
 
 ```python
-# models/complex_model_training.py
+## models/complex_model_training.py
 
 import pandas as pd
 import numpy as np
@@ -225,19 +225,19 @@ from tensorflow import keras
 from tensorflow.keras import layers
 from tensorflow.keras.callbacks import EarlyStopping
 
-# Load mock data (replace with actual data loading logic)
+## Load mock data (replace with actual data loading logic)
 data = pd.read_csv('data/processed/train/train_data.csv')
 labels = pd.read_csv('data/processed/train/train_labels.csv')
 
-# Split the data into training and validation sets
+## Split the data into training and validation sets
 X_train, X_val, y_train, y_val = train_test_split(data, labels, test_size=0.2, random_state=42)
 
-# Data preprocessing
+## Data preprocessing
 scaler = StandardScaler()
 X_train_scaled = scaler.fit_transform(X_train)
 X_val_scaled = scaler.transform(X_val)
 
-# Define a complex neural network architecture using Keras functional API
+## Define a complex neural network architecture using Keras functional API
 input_dim = X_train.shape[1]
 input_layer = keras.Input(shape=(input_dim,))
 hidden_1 = layers.Dense(128, activation='relu')(input_layer)
@@ -247,17 +247,17 @@ output = layers.Dense(1)(concat)
 
 model = keras.Model(inputs=input_layer, outputs=output)
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam', loss='mean_squared_error', metrics=['mae'])
 
-# Define early stopping callback
+## Define early stopping callback
 early_stopping = EarlyStopping(monitor='val_loss', patience=5)
 
-# Train the model
+## Train the model
 history = model.fit(X_train_scaled, y_train, epochs=100, batch_size=32, 
                     validation_data=(X_val_scaled, y_val), callbacks=[early_stopping])
 
-# Save the trained model
+## Save the trained model
 model.save('trained_models/complex_drug_discovery_model.h5')
 ```
 

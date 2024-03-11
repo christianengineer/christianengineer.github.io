@@ -157,29 +157,29 @@ By structuring the deploy directory in this way, the Peru Public Transport Optim
 I'll provide a sample Python script for training a model for the Peru Public Transport Optimization application using mock data. Below is an example of a file named `train_model.py` located in the `models/` directory:
 
 ```python
-# models/train_model.py
+## models/train_model.py
 
 import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 import joblib
 
-# Mock data for training the model
-X = np.random.rand(100, 1)  # Feature matrix
-y = 2 * X.squeeze() + np.random.normal(0, 1, 100)  # Target variable
+## Mock data for training the model
+X = np.random.rand(100, 1)  ## Feature matrix
+y = 2 * X.squeeze() + np.random.normal(0, 1, 100)  ## Target variable
 
-# Splitting the data into training and testing sets
+## Splitting the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Training a linear regression model
+## Training a linear regression model
 model = LinearRegression()
 model.fit(X_train, y_train)
 
-# Evaluating the model
+## Evaluating the model
 train_score = model.score(X_train, y_train)
 test_score = model.score(X_test, y_test)
 
-# Saving the trained model
+## Saving the trained model
 model_file_path = 'models/trained_models/optimal_route_model.pkl'
 joblib.dump(model, model_file_path)
 
@@ -200,7 +200,7 @@ This file demonstrates a basic example of training a model for the Peru Public T
 Here is an example of a more complex machine learning algorithm using a neural network implemented with Keras for the Peru Public Transport Optimization application. We will use mock data for training the model. Save this file as `complex_model.py` in the `models/` directory:
 
 ```python
-# models/complex_model.py
+## models/complex_model.py
 
 import numpy as np
 from sklearn.model_selection import train_test_split
@@ -208,28 +208,28 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
 from tensorflow.keras.optimizers import Adam
 
-# Mock data for training the model
-X = np.random.rand(100, 5)  # Mock feature matrix with 5 features
-y = np.random.randint(0, 2, 100)  # Binary target variable
+## Mock data for training the model
+X = np.random.rand(100, 5)  ## Mock feature matrix with 5 features
+y = np.random.randint(0, 2, 100)  ## Binary target variable
 
-# Splitting the data into training and testing sets
+## Splitting the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Define a neural network model
+## Define a neural network model
 model = Sequential()
 model.add(Dense(10, input_dim=5, activation='relu'))
 model.add(Dense(1, activation='sigmoid'))
 
-# Compile the model
+## Compile the model
 model.compile(loss='binary_crossentropy', optimizer=Adam(), metrics=['accuracy'])
 
-# Train the model
+## Train the model
 model.fit(X_train, y_train, epochs=50, batch_size=16, verbose=1)
 
-# Evaluate the model
+## Evaluate the model
 _, accuracy = model.evaluate(X_test, y_test)
 
-# Save the trained model
+## Save the trained model
 model_file_path = 'models/trained_models/complex_model.h5'
 model.save(model_file_path)
 

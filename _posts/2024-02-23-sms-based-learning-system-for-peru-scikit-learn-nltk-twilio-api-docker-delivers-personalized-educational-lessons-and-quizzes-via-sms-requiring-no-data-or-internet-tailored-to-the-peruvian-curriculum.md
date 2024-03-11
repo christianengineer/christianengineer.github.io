@@ -5,7 +5,7 @@ permalink: posts/sms-based-learning-system-for-peru-scikit-learn-nltk-twilio-api
 layout: article
 ---
 
-# AI SMS-Based Learning System for Peru
+## AI SMS-Based Learning System for Peru
 
 ## Objectives:
 1. Provide personalized educational lessons and quizzes via SMS.
@@ -28,7 +28,7 @@ layout: article
 4. **Docker**: For containerizing the application, providing scalability and ease of deployment.
 
 
-# MLOps Infrastructure for AI SMS-Based Learning System for Peru
+## MLOps Infrastructure for AI SMS-Based Learning System for Peru
 
 ## Overview:
 The MLOps infrastructure for the AI SMS-Based Learning System in Peru aims to streamline and automate the deployment, monitoring, and management of Machine Learning models and the overall system. This infrastructure ensures the scalability, reliability, and efficiency of the system while delivering personalized educational content via SMS without the need for data or internet connectivity.
@@ -69,7 +69,7 @@ The MLOps infrastructure for the AI SMS-Based Learning System in Peru aims to st
 
 By integrating MLOps practices into the AI SMS-Based Learning System infrastructure, we can ensure a robust, efficient, and scalable platform for delivering personalized educational content tailored to the Peruvian curriculum via SMS.
 
-# Scalable File Structure for AI SMS-Based Learning System
+## Scalable File Structure for AI SMS-Based Learning System
 
 ## Root Directory:
 - **app/**
@@ -103,7 +103,7 @@ By integrating MLOps practices into the AI SMS-Based Learning System infrastruct
 
 By adopting this scalable file structure, the AI SMS-Based Learning System for Peru can maintain organization, efficiency, and flexibility as it delivers personalized educational content via SMS tailored to the Peruvian curriculum, all without requiring data or internet connectivity.
 
-# models Directory for AI SMS-Based Learning System
+## models Directory for AI SMS-Based Learning System
 
 ## Purpose:
 The **models/** directory in the AI SMS-Based Learning System houses the Machine Learning models responsible for personalizing educational content, recommending lessons and quizzes, and improving user engagement. The directory contains scripts for model training, evaluation, and deployment using Scikit-Learn and NLTK libraries.
@@ -142,7 +142,7 @@ The **models/** directory in the AI SMS-Based Learning System houses the Machine
 
 By structuring the **models/** directory in this manner, the SMS-Based Learning System for Peru can effectively manage and leverage Machine Learning models to deliver personalized educational content tailored to the Peruvian curriculum via SMS without requiring data or internet connectivity.
 
-# Deployment Directory for AI SMS-Based Learning System
+## Deployment Directory for AI SMS-Based Learning System
 
 ## Purpose:
 The **deployment/** directory in the AI SMS-Based Learning System plays a crucial role in setting up the system for delivering personalized educational content via SMS. It contains scripts, configurations, and Docker-related files for deploying the application, integrating the Twilio API, and ensuring seamless communication with users.
@@ -194,8 +194,8 @@ The **deployment/** directory in the AI SMS-Based Learning System plays a crucia
 By organizing the **deployment/** directory in this manner, the SMS-Based Learning System for Peru can ensure a smooth deployment process, reliable SMS communication, and efficient system setup for delivering personalized educational content tailored to the Peruvian curriculum without requiring data or internet connectivity.
 
 ```python
-# File: models/train.py
-# Description: Script for training Machine Learning models on mock data for the SMS-Based Learning System for Peru.
+## File: models/train.py
+## Description: Script for training Machine Learning models on mock data for the SMS-Based Learning System for Peru.
 
 import numpy as np
 import pandas as pd
@@ -207,13 +207,13 @@ from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
 
-# File path for mock training data
+## File path for mock training data
 data_path = 'app/data/mock_data.csv'
 
-# Load mock data
+## Load mock data
 data = pd.read_csv(data_path)
 
-# Preprocessing text data
+## Preprocessing text data
 def preprocess_text(text):
     stop_words = set(stopwords.words('english'))
     stemmer = PorterStemmer()
@@ -221,27 +221,27 @@ def preprocess_text(text):
     filtered_text = [stemmer.stem(token) for token in tokens if token.lower() not in stop_words and token.isalpha()]
     return ' '.join(filtered_text)
 
-# Apply text preprocessing
+## Apply text preprocessing
 data['processed_text'] = data['text'].apply(preprocess_text)
 
-# Feature extraction using TF-IDF
+## Feature extraction using TF-IDF
 tfidf_vectorizer = TfidfVectorizer()
 X = tfidf_vectorizer.fit_transform(data['processed_text'])
 y = data['label']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Train a Logistic Regression model
+## Train a Logistic Regression model
 model = LogisticRegression()
 model.fit(X_train, y_train)
 
-# Evaluate model performance
+## Evaluate model performance
 predictions = model.predict(X_test)
 accuracy = accuracy_score(y_test, predictions)
 print(f'Model Accuracy: {accuracy}')
 
-# Save the trained model
+## Save the trained model
 model_file = 'app/models/recommendation_model.pkl'
 joblib.dump(model, model_file)
 
@@ -253,8 +253,8 @@ This `train.py` script trains a Logistic Regression model on mock data for the S
 You can run this file by executing it in the terminal with the command `python models/train.py`. Make sure to have the necessary libraries installed and the mock data available at the specified path (`app/data/mock_data.csv`).
 
 ```python
-# File: models/complex_model.py
-# Description: Script for training a complex Machine Learning algorithm on mock data for the SMS-Based Learning System for Peru.
+## File: models/complex_model.py
+## Description: Script for training a complex Machine Learning algorithm on mock data for the SMS-Based Learning System for Peru.
 
 import numpy as np
 import pandas as pd
@@ -266,13 +266,13 @@ from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 
-# File path for mock training data
+## File path for mock training data
 data_path = 'app/data/mock_data.csv'
 
-# Load mock data
+## Load mock data
 data = pd.read_csv(data_path)
 
-# Preprocessing text data
+## Preprocessing text data
 def preprocess_text(text):
     stop_words = set(stopwords.words('english'))
     lemmatizer = WordNetLemmatizer()
@@ -280,27 +280,27 @@ def preprocess_text(text):
     filtered_text = [lemmatizer.lemmatize(token) for token in tokens if token.lower() not in stop_words and token.isalpha()]
     return ' '.join(filtered_text)
 
-# Apply text preprocessing
+## Apply text preprocessing
 data['processed_text'] = data['text'].apply(preprocess_text)
 
-# Feature extraction using CountVectorizer
+## Feature extraction using CountVectorizer
 count_vectorizer = CountVectorizer()
 X = count_vectorizer.fit_transform(data['processed_text'])
 y = data['label']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Train a Random Forest Classifier
+## Train a Random Forest Classifier
 model = RandomForestClassifier(n_estimators=100, random_state=42)
 model.fit(X_train, y_train)
 
-# Evaluate model performance
+## Evaluate model performance
 predictions = model.predict(X_test)
 accuracy = accuracy_score(y_test, predictions)
 print(f'Model Accuracy: {accuracy}')
 
-# Save the trained model
+## Save the trained model
 model_file = 'app/models/complex_model.pkl'
 joblib.dump(model, model_file)
 
@@ -311,7 +311,7 @@ This `complex_model.py` script trains a **Random Forest Classifier** on mock dat
 
 You can run this file by executing it in the terminal with the command `python models/complex_model.py`. Ensure that you have the necessary libraries installed and the mock data available at the specified path (`app/data/mock_data.csv`).
 
-# Types of Users for the SMS-Based Learning System for Peru
+## Types of Users for the SMS-Based Learning System for Peru
 
 ## 1. **Students**
 **User Story:** As a student, I want to receive personalized educational content and quizzes via SMS, tailored to the Peruvian curriculum, so that I can study and revise topics conveniently without the need for internet connectivity.

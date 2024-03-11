@@ -5,7 +5,7 @@ permalink: posts/peru-fine-dining-reputation-management-ai-scikit-learn-pytorch-
 layout: article
 ---
 
-# Machine Learning Peru Fine Dining Reputation Management AI
+## Machine Learning Peru Fine Dining Reputation Management AI
 
 ## Objective:
 The objective of the Peru Fine Dining Reputation Management AI is to monitor and analyze online reviews and social media mentions to manage and enhance the restaurant's reputation. This AI system will help in understanding customer sentiments, identifying patterns, and providing insights to improve customer experience and overall reputation.
@@ -102,35 +102,35 @@ import pandas as pd
 from nltk.corpus import stopwords
 from sklearn.utils import resample
 
-# Sample data loading
+## Sample data loading
 online_reviews = pd.read_csv('online_reviews.csv')
 metadata = pd.read_csv('metadata.csv')
 
-# Text Preprocessing
+## Text Preprocessing
 stop_words = set(stopwords.words('english'))
 online_reviews['review_text'] = online_reviews['review_text'].apply(lambda x: ' '.join([word for word in x.split() if word.lower() not in stop_words]))
 
-# Handling Missing Values
+## Handling Missing Values
 metadata['user_rating'].fillna(metadata['user_rating'].mean(), inplace=True)
 metadata['timestamp'].fillna(method='ffill', inplace=True)
 
-# Balancing Bias
+## Balancing Bias
 positive_reviews = metadata[metadata['sentiment_label'] == 'positive']
 neutral_reviews = metadata[metadata['sentiment_label'] == 'neutral']
 negative_reviews = metadata[metadata['sentiment_label'] == 'negative']
 
-# Resample to balance sentiment classes
+## Resample to balance sentiment classes
 positive_reviews_resampled = resample(positive_reviews, n_samples=len(neutral_reviews))
 negative_reviews_resampled = resample(negative_reviews, n_samples=len(neutral_reviews))
 metadata_balanced = pd.concat([positive_reviews_resampled, neutral_reviews, negative_reviews_resampled])
 
-# Standardizing Data Formats
+## Standardizing Data Formats
 metadata['timestamp'] = pd.to_datetime(metadata['timestamp'])
 
-# De-Duplication
+## De-Duplication
 metadata.drop_duplicates(keep='first', inplace=True)
 
-# Updated cleaned data
+## Updated cleaned data
 online_reviews.to_csv('cleaned_online_reviews.csv', index=False)
 metadata_balanced.to_csv('cleaned_metadata.csv', index=False)
 ```
@@ -245,47 +245,47 @@ This sample dataset provides a structured representation of the data points rele
 Certainly! Below is a structured Python code snippet for a production-ready script to train and deploy a sentiment analysis model using a cleansed dataset relevant to the Peru Fine Dining Reputation Management AI project.
 
 ```python
-# Import necessary libraries
+## Import necessary libraries
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.model_selection import train_test_split
 from sklearn.svm import SVC
 import joblib
 
-# Load the cleaned dataset
+## Load the cleaned dataset
 data = pd.read_csv('cleaned_dataset.csv')
 
-# Feature engineering
-tfidf = TfidfVectorizer(max_features=5000)  # Limit features for efficiency
+## Feature engineering
+tfidf = TfidfVectorizer(max_features=5000)  ## Limit features for efficiency
 X = tfidf.fit_transform(data['review_text'])
 y = data['sentiment_label']
 
-# Split dataset into training and testing sets
+## Split dataset into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Model training
+## Model training
 model = SVC(kernel='linear')
 model.fit(X_train, y_train)
 
-# Evaluate model
+## Evaluate model
 accuracy = model.score(X_test, y_test)
 print(f'Model Accuracy: {accuracy:.2f}')
 
-# Save the trained model for deployment
+## Save the trained model for deployment
 joblib.dump(model, 'sentiment_analysis_model.pkl')
 joblib.dump(tfidf, 'tfidf_vectorizer.pkl')
 
-# Deployment code - Load the model and vectorizer
+## Deployment code - Load the model and vectorizer
 model = joblib.load('sentiment_analysis_model.pkl')
 tfidf = joblib.load('tfidf_vectorizer.pkl')
 
-# Function to predict sentiment from new text input
+## Function to predict sentiment from new text input
 def predict_sentiment(text):
     text_features = tfidf.transform([text])
     prediction = model.predict(text_features)
     return prediction[0]
 
-# Example usage
+## Example usage
 new_review = "The dishes were outstanding!"
 predicted_sentiment = predict_sentiment(new_review)
 print(f'Predicted Sentiment: {predicted_sentiment}')
@@ -341,32 +341,32 @@ By following this step-by-step deployment plan and utilizing the recommended too
 Here is a sample Dockerfile tailored for your project to encapsulate the environment and dependencies needed for deploying the sentiment analysis model in the Peru Fine Dining Reputation Management AI project:
 
 ```Dockerfile
-# Use a base Python image
+## Use a base Python image
 FROM python:3.8-slim
 
-# Set the working directory in the container
+## Set the working directory in the container
 WORKDIR /app
 
-# Copy the requirements file into the container
+## Copy the requirements file into the container
 COPY requirements.txt requirements.txt
 
-# Install required Python packages
+## Install required Python packages
 RUN pip install --upgrade pip && \
     pip install -r requirements.txt
 
-# Copy the model files and scripts into the container
+## Copy the model files and scripts into the container
 COPY sentiment_analysis_model.pkl /app
 COPY tfidf_vectorizer.pkl /app
 COPY app.py /app
 
-# Expose the port the app runs on
+## Expose the port the app runs on
 EXPOSE 5000
 
-# Define environment variables
+## Define environment variables
 ENV FLASK_APP=app.py
 ENV FLASK_RUN_HOST=0.0.0.0
 
-# Command to run the application
+## Command to run the application
 CMD ["flask", "run"]
 ```
 

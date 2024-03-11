@@ -5,7 +5,7 @@ permalink: posts/ci-cd-pipelines-in-ai-application-deployment-guide
 layout: article
 ---
 
-# CI/CD Pipelines in AI Application Deployment
+## CI/CD Pipelines in AI Application Deployment
 
 Continuous Integration/Continuous Deployment (CI/CD) is a methodology that allows development teams to consistently integrate new code with the existing code and unsuspectingly deploy code changes to production systems. When applied to AI, it helps to accelerate the development cycles and minimize the risk associated with deploying AI models.
 

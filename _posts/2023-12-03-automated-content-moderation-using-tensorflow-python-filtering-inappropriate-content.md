@@ -201,15 +201,15 @@ from tensorflow.keras import layers
 import numpy as np
 
 def train_cnn_model(data_path):
-    # Load mock image data for training
-    train_images = np.load(data_path)  # Assuming mock data is stored in a numpy array file
-    train_labels = np.random.randint(2, size=(len(train_images), 1))  # Generating random labels for mock data
+    ## Load mock image data for training
+    train_images = np.load(data_path)  ## Assuming mock data is stored in a numpy array file
+    train_labels = np.random.randint(2, size=(len(train_images), 1))  ## Generating random labels for mock data
 
-    # Preprocess the data (e.g., normalize, reshape, augmentation)
-    train_images = train_images / 255.0  # Normalize pixel values to be between 0 and 1
-    train_images = train_images.reshape((-1, image_height, image_width, num_channels))  # Reshape images if necessary
+    ## Preprocess the data (e.g., normalize, reshape, augmentation)
+    train_images = train_images / 255.0  ## Normalize pixel values to be between 0 and 1
+    train_images = train_images.reshape((-1, image_height, image_width, num_channels))  ## Reshape images if necessary
 
-    # Define the CNN model architecture
+    ## Define the CNN model architecture
     model = tf.keras.Sequential([
         layers.Conv2D(32, (3, 3), activation='relu', input_shape=(image_height, image_width, num_channels)),
         layers.MaxPooling2D((2, 2)),
@@ -221,12 +221,12 @@ def train_cnn_model(data_path):
         layers.Dense(1, activation='sigmoid')
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam',
                   loss='binary_crossentropy',
                   metrics=['accuracy'])
 
-    # Train the model
+    ## Train the model
     model.fit(train_images, train_labels, epochs=10, batch_size=32, validation_split=0.2)
 
     return model
@@ -249,30 +249,30 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 import numpy as np
 
 def train_rnn_model(data_path):
-    # Load mock text data for training
+    ## Load mock text data for training
     with open(data_path, 'r', encoding='utf-8') as file:
         texts = file.readlines()
 
-    # Tokenize and preprocess the text data
+    ## Tokenize and preprocess the text data
     tokenizer = Tokenizer(num_words=1000, oov_token='<OOV>')
     tokenizer.fit_on_texts(texts)
     sequences = tokenizer.texts_to_sequences(texts)
     padded_sequences = pad_sequences(sequences, maxlen=100, truncating='post')
 
-    # Generate random labels for mock data
+    ## Generate random labels for mock data
     labels = np.random.randint(2, size=len(texts))
 
-    # Define the RNN model architecture
+    ## Define the RNN model architecture
     model = tf.keras.Sequential([
         Embedding(input_dim=1000, output_dim=16, input_length=100),
         LSTM(64),
         Dense(1, activation='sigmoid')
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
-    # Train the model
+    ## Train the model
     model.fit(padded_sequences, labels, epochs=5, batch_size=32, validation_split=0.2)
 
     return model

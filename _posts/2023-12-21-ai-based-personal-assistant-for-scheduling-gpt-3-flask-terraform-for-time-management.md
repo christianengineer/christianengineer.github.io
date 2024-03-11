@@ -267,27 +267,27 @@ By organizing deployment-related files and configurations within the `deployment
 Certainly! Below is an example of a Python script for training a GPT-3 model for the AI-based Personal Assistant for Scheduling using mock data. In this example, we'll assume the mock data is stored in a CSV file named `mock_training_data.csv`. This file contains columns for user input and corresponding scheduling outputs.
 
 ```python
-# File Path: app/models/gpt3/train.py
+## File Path: app/models/gpt3/train.py
 
 import pandas as pd
 from transformers import GPT2LMHeadModel, GPT2Tokenizer
 import torch
 
-# Load mock training data
+## Load mock training data
 data_path = "../../data/mock_training_data.csv"
 mock_data = pd.read_csv(data_path)
 
-# Preprocessing steps (assuming the data is preprocessed)
+## Preprocessing steps (assuming the data is preprocessed)
 
-# Define the GPT-3 tokenizer and model
+## Define the GPT-3 tokenizer and model
 tokenizer = GPT2Tokenizer.from_pretrained("gpt2")
 model = GPT2LMHeadModel.from_pretrained("gpt2")
 
-# Fine-tune the GPT-3 model with the mock training data
+## Fine-tune the GPT-3 model with the mock training data
 inputs = tokenizer(mock_data['user_input'].tolist(), return_tensors='pt', padding=True, truncation=True)
 labels = tokenizer(mock_data['scheduling_output'].tolist(), return_tensors='pt', padding=True, truncation=True)
 
-# Define model training parameters
+## Define model training parameters
 training_args = TrainingArguments(
     output_dir="./gpt3_model",
     num_train_epochs=3,
@@ -296,7 +296,7 @@ training_args = TrainingArguments(
     save_total_limit=2
 )
 
-# Create the Trainer for model training
+## Create the Trainer for model training
 trainer = Trainer(
     model=model,
     args=training_args,
@@ -304,10 +304,10 @@ trainer = Trainer(
     eval_dataset=labels
 )
 
-# Train the GPT-3 model
+## Train the GPT-3 model
 trainer.train()
 
-# Save the trained model
+## Save the trained model
 model_path = "../../models/gpt3/gpt3_model.bin"
 model.save_pretrained(model_path)
 
@@ -321,7 +321,7 @@ This script demonstrates the process of training the GPT-3 model using mock data
 Below is an example of a Python script for training a complex machine learning algorithm for the AI-based Personal Assistant for Scheduling using mock data. In this example, we'll assume the mock data is stored in a CSV file named `mock_training_data.csv`. This file contains columns for features and a target variable for scheduling outputs.
 
 ```python
-# File Path: models/custom_ml_model/model_training.py
+## File Path: models/custom_ml_model/model_training.py
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -329,30 +329,30 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_squared_error
 import joblib
 
-# Load mock training data
+## Load mock training data
 data_path = "path_to_data/mock_training_data.csv"
 mock_data = pd.read_csv(data_path)
 
-# Preprocess the data as needed (assuming preprocessing steps)
+## Preprocess the data as needed (assuming preprocessing steps)
 
-# Split the data into features and target variable
+## Split the data into features and target variable
 X = mock_data.drop('target_variable', axis=1)
 y = mock_data['target_variable']
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize and train the complex machine learning model
+## Initialize and train the complex machine learning model
 model = RandomForestRegressor(n_estimators=100, random_state=42)
 model.fit(X_train, y_train)
 
-# Evaluate the model
+## Evaluate the model
 y_pred = model.predict(X_test)
 mse = mean_squared_error(y_test, y_pred)
 
 print("Mean Squared Error:", mse)
 
-# Save the trained model
+## Save the trained model
 model_path = "path_to_save/trained_model.pkl"
 joblib.dump(model, model_path)
 

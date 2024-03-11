@@ -5,7 +5,7 @@ permalink: posts/human-pose-estimation-using-openpose-c-detecting-human-postures
 layout: article
 ---
 
-# AI Human Pose Estimation using OpenPose
+## AI Human Pose Estimation using OpenPose
 
 ## Objectives
 The objective of building an AI system for human pose estimation using OpenPose is to accurately detect and estimate human postures in images. This involves identifying key points on the human body such as shoulders, elbows, wrists, hips, knees, and ankles, and then constructing the skeletal structure of the human body. The ultimate goal is to enable applications such as fitness tracking, gesture recognition, and human-computer interaction.
@@ -178,33 +178,33 @@ import cv2
 import numpy as np
 
 def perform_pose_estimation(image_path):
-    # Mock function for performing human pose estimation using OpenPose
+    ## Mock function for performing human pose estimation using OpenPose
 
-    # Load the input image
+    ## Load the input image
     input_image = cv2.imread(image_path)
 
-    # Mock algorithm for human pose estimation
-    # Replace this with the actual OpenPose algorithm integration
-    # This could involve using OpenPose's C++ API to perform pose estimation
-    # For demonstration purposes, let's assume we perform some simple processing here
+    ## Mock algorithm for human pose estimation
+    ## Replace this with the actual OpenPose algorithm integration
+    ## This could involve using OpenPose's C++ API to perform pose estimation
+    ## For demonstration purposes, let's assume we perform some simple processing here
 
-    # Example: Identify key points and draw skeletal connections on the input image
-    # This is a mock implementation and does not reflect the actual OpenPose algorithm
-    pose_keypoints = np.array([[100, 200], [120, 180], [90, 190], [105, 150], [95, 160]])  # Example keypoints
-    pose_connections = [(0, 1), (1, 2), (1, 3), (3, 4)]  # Example skeletal connections
+    ## Example: Identify key points and draw skeletal connections on the input image
+    ## This is a mock implementation and does not reflect the actual OpenPose algorithm
+    pose_keypoints = np.array([[100, 200], [120, 180], [90, 190], [105, 150], [95, 160]])  ## Example keypoints
+    pose_connections = [(0, 1), (1, 2), (1, 3), (3, 4)]  ## Example skeletal connections
 
-    # Draw the estimated pose on the input image
+    ## Draw the estimated pose on the input image
     output_image = input_image.copy()
     for connection in pose_connections:
         start_point = tuple(pose_keypoints[connection[0]])
         end_point = tuple(pose_keypoints[connection[1]])
         cv2.line(output_image, start_point, end_point, (0, 255, 0), 3)
 
-    # Save the output image with annotated pose for visualization
+    ## Save the output image with annotated pose for visualization
     output_image_path = "output_annotated.jpg"
     cv2.imwrite(output_image_path, output_image)
 
-    return output_image_path  # Return the file path of the annotated output image
+    return output_image_path  ## Return the file path of the annotated output image
 ```
 
 In this function:
@@ -223,23 +223,23 @@ import subprocess
 import os
 
 def perform_pose_estimation(image_path):
-    # Mock function for performing human pose estimation using OpenPose (C++)
+    ## Mock function for performing human pose estimation using OpenPose (C++)
     
-    # Path to the compiled C++ executable for pose estimation
+    ## Path to the compiled C++ executable for pose estimation
     openpose_executable_path = "/path/to/your/openpose_executable"
     
-    # Check if the OpenPose executable file exists
+    ## Check if the OpenPose executable file exists
     if not os.path.isfile(openpose_executable_path):
         raise FileNotFoundError("OpenPose executable not found at the specified path")
     
-    # Command to execute the OpenPose C++ program with the input image
+    ## Command to execute the OpenPose C++ program with the input image
     command = [openpose_executable_path, "--image_path", image_path]
     
-    # Call the OpenPose executable using subprocess module
+    ## Call the OpenPose executable using subprocess module
     try:
         process_output = subprocess.check_output(command, stderr=subprocess.STDOUT, text=True)
-        # Process the output and extract the annotated pose image path
-        annotated_image_path = process_output.strip()  # Assume the annotated image file path is returned by the OpenPose program
+        ## Process the output and extract the annotated pose image path
+        annotated_image_path = process_output.strip()  ## Assume the annotated image file path is returned by the OpenPose program
         return annotated_image_path
     except subprocess.CalledProcessError as e:
         print(f"Error executing OpenPose: {e.output}")

@@ -5,7 +5,7 @@ permalink: posts/peru-gourmet-ingredient-prediction-ai-tensorflow-scikit-learn-a
 layout: article
 ---
 
-# AI Peru Gourmet Ingredient Prediction Project
+## AI Peru Gourmet Ingredient Prediction Project
 
 ## Objectives
 The objective of the AI Peru Gourmet Ingredient Prediction AI project is to forecast the availability of high-quality, seasonal ingredients to aid in menu planning and sourcing strategies for the culinary industry in Peru. By leveraging Machine Learning techniques, the system aims to provide accurate predictions that help businesses make informed decisions on ingredient procurement and menu creation.
@@ -83,36 +83,36 @@ By setting up a robust MLOps infrastructure incorporating technologies like Tens
 Peru_Gourmet_Ingredient_Prediction_AI/
 │
 ├── data/
-│   ├── raw_data/                   # Raw data from various sources
-│   ├── processed_data/             # Cleaned and preprocessed data
-│   └── models/                      # Trained ML models and model artifacts
+│   ├── raw_data/                   ## Raw data from various sources
+│   ├── processed_data/             ## Cleaned and preprocessed data
+│   └── models/                      ## Trained ML models and model artifacts
 │
 ├── notebooks/
-│   ├── data_exploration.ipynb       # Jupyter notebook for data exploration
-│   └── model_training.ipynb         # Jupyter notebook for model training and evaluation
+│   ├── data_exploration.ipynb       ## Jupyter notebook for data exploration
+│   └── model_training.ipynb         ## Jupyter notebook for model training and evaluation
 │
 ├── src/
-│   ├── data_preprocessing/          # Scripts for data cleaning and feature engineering
-│   ├── model_training/              # Scripts for training ML models using TensorFlow and Scikit-Learn
-│   ├── evaluation/                  # Scripts for model evaluation and validation
-│   └── deployment/                  # Scripts for model deployment on Kubernetes
+│   ├── data_preprocessing/          ## Scripts for data cleaning and feature engineering
+│   ├── model_training/              ## Scripts for training ML models using TensorFlow and Scikit-Learn
+│   ├── evaluation/                  ## Scripts for model evaluation and validation
+│   └── deployment/                  ## Scripts for model deployment on Kubernetes
 │
 ├── config/
-│   ├── airflow/                     # Configuration files for Apache Airflow DAGs
-│   ├── kubernetes/                  # Configuration files for Kubernetes deployments
-│   └── environment.yml              # Conda environment file for dependencies
+│   ├── airflow/                     ## Configuration files for Apache Airflow DAGs
+│   ├── kubernetes/                  ## Configuration files for Kubernetes deployments
+│   └── environment.yml              ## Conda environment file for dependencies
 │
 ├── tests/
-│   ├── unit_tests/                  # Unit tests for code components
-│   ├── integration_tests/           # Integration tests for data pipelines and model training
-│   └── test_data/                    # Test data for testing purposes
+│   ├── unit_tests/                  ## Unit tests for code components
+│   ├── integration_tests/           ## Integration tests for data pipelines and model training
+│   └── test_data/                    ## Test data for testing purposes
 │
 ├── docs/
-│   └── documentation.md              # Documentation for the project
+│   └── documentation.md              ## Documentation for the project
 │
-├── README.md                        # Project README file
-├── requirements.txt                 # Python dependencies
-└── LICENSE                          # Project license file
+├── README.md                        ## Project README file
+├── requirements.txt                 ## Python dependencies
+└── LICENSE                          ## Project license file
 ```
 
 In this scalable file structure for the Peru Gourmet Ingredient Prediction AI project, the organization is centered around key directories for data management, code development, configuration, testing, and documentation. Each directory serves a specific purpose to ensure a clear and organized project structure.
@@ -143,21 +143,21 @@ This scalable file structure promotes organization, collaboration, and efficienc
 models/
 │
 ├── train/
-│   ├── model_training.py              # Script for training ML models on preprocessed data
-│   ├── feature_engineering.py         # Script for feature engineering and data preprocessing
-│   ├── model_selection.py             # Script for hyperparameter tuning and model selection
+│   ├── model_training.py              ## Script for training ML models on preprocessed data
+│   ├── feature_engineering.py         ## Script for feature engineering and data preprocessing
+│   ├── model_selection.py             ## Script for hyperparameter tuning and model selection
 │
 ├── evaluate/
-│   ├── evaluate_model.py              # Script for evaluating model performance on validation data
-│   ├── metrics_util.py                # Utility functions for calculating evaluation metrics
+│   ├── evaluate_model.py              ## Script for evaluating model performance on validation data
+│   ├── metrics_util.py                ## Utility functions for calculating evaluation metrics
 │
 ├── deploy/
-│   ├── deploy_model_kubernetes.py     # Script for deploying trained models on Kubernetes
-│   ├── create_deployment_yaml.py      # Script for creating Kubernetes deployment YAML files
+│   ├── deploy_model_kubernetes.py     ## Script for deploying trained models on Kubernetes
+│   ├── create_deployment_yaml.py      ## Script for creating Kubernetes deployment YAML files
 │
 └── tests/
-    ├── test_model.py                  # Unit tests for model training and evaluation scripts
-    ├── test_deploy.py                 # Unit tests for model deployment scripts
+    ├── test_model.py                  ## Unit tests for model training and evaluation scripts
+    ├── test_deploy.py                 ## Unit tests for model deployment scripts
 ```
 
 In the `models/` directory for the Peru Gourmet Ingredient Prediction AI project, different subdirectories house scripts related to model training, evaluation, deployment, and testing. This structure ensures modularity, organization, and ease of access to specific functionalities within the ML pipeline.
@@ -192,20 +192,20 @@ By organizing scripts related to model training, evaluation, deployment, and tes
 deployment/
 │
 ├── airflow/
-│   ├── ingredient_prediction_dag.py     # Airflow DAG for scheduling data processing and model training tasks
+│   ├── ingredient_prediction_dag.py     ## Airflow DAG for scheduling data processing and model training tasks
 │
 ├── kubernetes/
-│   ├── ml_model_deployment.yaml         # Kubernetes deployment YAML file for serving ML models
-│   ├── service.yaml                     # Kubernetes service YAML file for exposing ML model API
+│   ├── ml_model_deployment.yaml         ## Kubernetes deployment YAML file for serving ML models
+│   ├── service.yaml                     ## Kubernetes service YAML file for exposing ML model API
 │
 ├── scripts/
-│   ├── preprocess_data.sh               # Bash script for data preprocessing tasks
-│   ├── train_model.sh                   # Bash script for triggering model training process
-│   ├── deploy_model.sh                  # Bash script for deploying models on Kubernetes
+│   ├── preprocess_data.sh               ## Bash script for data preprocessing tasks
+│   ├── train_model.sh                   ## Bash script for triggering model training process
+│   ├── deploy_model.sh                  ## Bash script for deploying models on Kubernetes
 │
 └── environments/
-    ├── production.env                   # Environment variables for production deployment
-    ├── staging.env                      # Environment variables for staging deployment
+    ├── production.env                   ## Environment variables for production deployment
+    ├── staging.env                      ## Environment variables for staging deployment
 ```
 
 In the `deployment/` directory for the Peru Gourmet Ingredient Prediction AI project, different subdirectories and files support the deployment and operationalization of Machine Learning models using TensorFlow, Scikit-Learn, Airflow, and Kubernetes.
@@ -235,7 +235,7 @@ By organizing deployment-related files in the `deployment/` directory, the Peru 
 I'll generate a sample Python script for training a model for the Peru Gourmet Ingredient Prediction AI using mock data. The script will showcase how to preprocess the data, train a Machine Learning model using Scikit-Learn, and save the trained model for deployment. Below is the file content:
 
 ```python
-# File Path: /src/model_training/train_model_mock_data.py
+## File Path: /src/model_training/train_model_mock_data.py
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -243,28 +243,28 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_squared_error
 import joblib
 
-# Load mock dataset (replace with actual data loading code)
+## Load mock dataset (replace with actual data loading code)
 data = pd.read_csv('/data/mock_data.csv')
 
-# Data preprocessing
+## Data preprocessing
 X = data.drop('target_column', axis=1)
 y = data['target_column']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize and train a Random Forest model (replace with actual model training code)
+## Initialize and train a Random Forest model (replace with actual model training code)
 rf_model = RandomForestRegressor()
 rf_model.fit(X_train, y_train)
 
-# Make predictions
+## Make predictions
 predictions = rf_model.predict(X_test)
 
-# Evaluate model performance
+## Evaluate model performance
 mse = mean_squared_error(y_test, predictions)
 print(f'Mean Squared Error: {mse}')
 
-# Save the trained model (replace with actual model saving code)
+## Save the trained model (replace with actual model saving code)
 joblib.dump(rf_model, '/models/random_forest_model_mock.pkl')
 ```
 
@@ -281,7 +281,7 @@ This script is a template that can be adapted to work with real data for trainin
 I'll create a Python script for training a complex Machine Learning algorithm on mock data for the Peru Gourmet Ingredient Prediction AI project. This script will demonstrate the usage of a more advanced algorithm, such as a Gradient Boosting Regressor from Scikit-Learn. Here is the file content:
 
 ```python
-# File Path: /src/model_training/train_complex_model_mock_data.py
+## File Path: /src/model_training/train_complex_model_mock_data.py
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -289,28 +289,28 @@ from sklearn.ensemble import GradientBoostingRegressor
 from sklearn.metrics import mean_squared_error
 import joblib
 
-# Load mock dataset (replace with actual data loading code)
+## Load mock dataset (replace with actual data loading code)
 data = pd.read_csv('/data/mock_data.csv')
 
-# Data preprocessing
+## Data preprocessing
 X = data.drop('target_column', axis=1)
 y = data['target_column']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize and train a Gradient Boosting Regressor model (replace with actual model training code)
+## Initialize and train a Gradient Boosting Regressor model (replace with actual model training code)
 gb_model = GradientBoostingRegressor()
 gb_model.fit(X_train, y_train)
 
-# Make predictions
+## Make predictions
 predictions = gb_model.predict(X_test)
 
-# Evaluate model performance
+## Evaluate model performance
 mse = mean_squared_error(y_test, predictions)
 print(f'Mean Squared Error: {mse}')
 
-# Save the trained model (replace with actual model saving code)
+## Save the trained model (replace with actual model saving code)
 joblib.dump(gb_model, '/models/gradient_boosting_model_mock.pkl')
 ```
 

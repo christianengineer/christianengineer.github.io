@@ -62,7 +62,7 @@ The infrastructure for the SimulAI Advanced Simulation Platform application will
 
 By designing the infrastructure for the SimulAI Advanced Simulation Platform with these components and best practices, the application can support the scalability, data intensity, and AI-driven functionality required for building advanced simulations.
 
-# Scalable File Structure for SimulAI Advanced Simulation Platform Repository
+## Scalable File Structure for SimulAI Advanced Simulation Platform Repository
 
 Here's a scalable file structure for organizing the SimulAI Advanced Simulation Platform repository:
 
@@ -181,27 +181,27 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 
 def complex_machine_learning_algorithm(data_file_path):
-    # Load mock data from file
+    ## Load mock data from file
     data = pd.read_csv(data_file_path)
 
-    # Preprocessing and feature engineering
-    # ...
+    ## Preprocessing and feature engineering
+    ## ...
 
-    # Split data into features and target variable
+    ## Split data into features and target variable
     X = data.drop('target', axis=1)
     y = data['target']
 
-    # Split data into training and testing sets
+    ## Split data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize and train a complex machine learning algorithm (e.g., Random Forest)
+    ## Initialize and train a complex machine learning algorithm (e.g., Random Forest)
     model = RandomForestClassifier(n_estimators=100, random_state=42)
     model.fit(X_train, y_train)
 
-    # Make predictions on the test set
+    ## Make predictions on the test set
     predictions = model.predict(X_test)
 
-    # Evaluate the model
+    ## Evaluate the model
     accuracy = accuracy_score(y_test, predictions)
 
     return model, accuracy
@@ -225,20 +225,20 @@ from tensorflow.keras.layers import Dense, Dropout
 from tensorflow.keras.optimizers import Adam
 
 def complex_deep_learning_algorithm(data_file_path):
-    # Load mock data from file
+    ## Load mock data from file
     data = pd.read_csv(data_file_path)
 
-    # Preprocessing and feature engineering
-    # ...
+    ## Preprocessing and feature engineering
+    ## ...
 
-    # Split data into features and target variable
+    ## Split data into features and target variable
     X = data.drop('target', axis=1)
     y = data['target']
 
-    # Split data into training and testing sets
+    ## Split data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize a deep learning model
+    ## Initialize a deep learning model
     model = Sequential([
         Dense(64, input_shape=(X_train.shape[1],), activation='relu'),
         Dropout(0.5),
@@ -247,13 +247,13 @@ def complex_deep_learning_algorithm(data_file_path):
         Dense(1, activation='sigmoid')
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer=Adam(learning_rate=0.001), loss='binary_crossentropy', metrics=['accuracy'])
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train, epochs=10, batch_size=64, validation_data=(X_test, y_test))
 
-    # Evaluate the model
+    ## Evaluate the model
     _, accuracy = model.evaluate(X_test, y_test)
     
     return model, accuracy

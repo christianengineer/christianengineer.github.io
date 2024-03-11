@@ -5,7 +5,7 @@ permalink: posts/mobile-learning-platform-optimizer-for-peru-pytorch-react-nativ
 layout: article
 ---
 
-# AI Mobile Learning Platform Optimizer for Peru
+## AI Mobile Learning Platform Optimizer for Peru
 
 ## Objectives:
 - Personalize mobile learning experiences for users with limited technology access
@@ -28,7 +28,7 @@ layout: article
 
 By combining these technologies and design strategies, the AI Mobile Learning Platform Optimizer for Peru aims to provide a scalable, data-intensive solution that enhances the mobile learning experience for users with limited technology access.
 
-# MLOps Infrastructure for the AI Mobile Learning Platform Optimizer
+## MLOps Infrastructure for the AI Mobile Learning Platform Optimizer
 
 ## Continuous Integration/Continuous Deployment (CI/CD)
 - **Objective**: Automate the testing and deployment process to ensure a seamless integration of new features and models.
@@ -52,7 +52,7 @@ By combining these technologies and design strategies, the AI Mobile Learning Pl
 
 By implementing a robust MLOps infrastructure that encompasses CI/CD, model training and deployment, data pipeline and processing, monitoring and logging, and model versioning and collaboration, the Mobile Learning Platform Optimizer for Peru can streamline the development and deployment of AI-driven features, ensuring a seamless and optimized mobile learning experience for users with limited technology access.
 
-# Scalable File Structure for the Mobile Learning Platform Optimizer
+## Scalable File Structure for the Mobile Learning Platform Optimizer
 
 ## Backend (Flask):
 - **app/**
@@ -123,8 +123,8 @@ class RecommendationModel(nn.Module):
 ### data_preprocessing.py
 ```python
 def preprocess_data(raw_data):
-    # Perform data preprocessing steps such as cleaning, feature engineering, and normalization
-    processed_data = raw_data  # Placeholder for actual preprocessing logic
+    ## Perform data preprocessing steps such as cleaning, feature engineering, and normalization
+    processed_data = raw_data  ## Placeholder for actual preprocessing logic
     return processed_data
 ```
 
@@ -152,8 +152,8 @@ def save_model(model, filepath):
 def evaluate_model(model, test_data, test_labels):
     with torch.no_grad():
         outputs = model(test_data)
-        # Calculate evaluation metrics such as accuracy, precision, recall, etc.
-        evaluation_metrics = {}  # Placeholder for actual evaluation metrics
+        ## Calculate evaluation metrics such as accuracy, precision, recall, etc.
+        evaluation_metrics = {}  ## Placeholder for actual evaluation metrics
     return evaluation_metrics
 ```
 
@@ -172,23 +172,23 @@ In the deployment directory of the Mobile Learning Platform Optimizer, we will c
 
 ### Dockerfile
 ```Dockerfile
-# Define base image
+## Define base image
 FROM python:3.8-slim
 
-# Set working directory
+## Set working directory
 WORKDIR /app
 
-# Copy and install dependencies
+## Copy and install dependencies
 COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 
-# Copy application files
+## Copy application files
 COPY app /app
 
-# Expose port
+## Expose port
 EXPOSE 5000
 
-# Command to start the Flask application
+## Command to start the Flask application
 CMD ["python", "main.py"]
 ```
 
@@ -274,11 +274,11 @@ import torch.nn as nn
 import torch.optim as optim
 import numpy as np
 
-# Mock user data (features)
-mock_data = np.random.rand(100, 5)  # 100 samples with 5 features
-mock_labels = np.random.randint(0, 2, size=100)  # Binary labels for recommendations
+## Mock user data (features)
+mock_data = np.random.rand(100, 5)  ## 100 samples with 5 features
+mock_labels = np.random.randint(0, 2, size=100)  ## Binary labels for recommendations
 
-# Define the PyTorch model
+## Define the PyTorch model
 class RecommendationModel(nn.Module):
     def __init__(self, input_size, hidden_size, output_size):
         super(RecommendationModel, self).__init__()
@@ -290,21 +290,21 @@ class RecommendationModel(nn.Module):
         x = self.output(x)
         return x
 
-# Hyperparameters
+## Hyperparameters
 input_size = 5
 hidden_size = 10
 output_size = 1
 epochs = 10
 lr = 0.001
 
-# Initialize the model
+## Initialize the model
 model = RecommendationModel(input_size, hidden_size, output_size)
 
-# Define loss function and optimizer
+## Define loss function and optimizer
 criterion = nn.BCEWithLogitsLoss()
 optimizer = optim.Adam(model.parameters(), lr=lr)
 
-# Training loop
+## Training loop
 for epoch in range(epochs):
     inputs = torch.from_numpy(mock_data).float()
     labels = torch.from_numpy(mock_labels).float().view(-1, 1)
@@ -318,7 +318,7 @@ for epoch in range(epochs):
     
     print(f'Epoch {epoch+1}/{epochs}, Loss: {loss.item()}')
 
-# Save the trained model
+## Save the trained model
 torch.save(model.state_dict(), 'recommendation_model.pth')
 ```
 
@@ -335,12 +335,12 @@ import torch.nn as nn
 import torch.optim as optim
 from torchvision import datasets, transforms
 
-# Mock image data
+## Mock image data
 mock_transform = transforms.Compose([transforms.ToTensor()])
 mock_dataset = datasets.FakeData(transform=mock_transform)
 mock_loader = torch.utils.data.DataLoader(mock_dataset, batch_size=64, shuffle=True)
 
-# Define the neural network model
+## Define the neural network model
 class ImageClassifier(nn.Module):
     def __init__(self):
         super(ImageClassifier, self).__init__()
@@ -359,18 +359,18 @@ class ImageClassifier(nn.Module):
         x = self.fc2(x)
         return x
 
-# Hyperparameters
+## Hyperparameters
 epochs = 5
 lr = 0.001
 
-# Initialize the model
+## Initialize the model
 model = ImageClassifier()
 
-# Define loss function and optimizer
+## Define loss function and optimizer
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters(), lr=lr)
 
-# Training loop
+## Training loop
 for epoch in range(epochs):
     for inputs, labels in mock_loader:
         optimizer.zero_grad()
@@ -381,7 +381,7 @@ for epoch in range(epochs):
     
     print(f'Epoch {epoch+1}/{epochs}, Loss: {loss.item()}')
 
-# Save the trained model
+## Save the trained model
 torch.save(model.state_dict(), 'image_classifier_model.pth')
 ```
 

@@ -232,25 +232,25 @@ def face_auth_algorithm(input_image_path, stored_feature_vectors, threshold=0.6)
     - authenticated (bool): True if the input image is authenticated, False otherwise.
     - user_id (str): ID of the authenticated user.
     """
-    # Assume that input_image_path leads to a facial image of the user attempting to authenticate
+    ## Assume that input_image_path leads to a facial image of the user attempting to authenticate
     
-    # Extract features from the input facial image using a deep learning model (mock implementation)
-    input_feature_vector = np.random.rand(128)  # Placeholder for the extracted feature vector
+    ## Extract features from the input facial image using a deep learning model (mock implementation)
+    input_feature_vector = np.random.rand(128)  ## Placeholder for the extracted feature vector
     
-    # Compare the input feature vector with stored feature vectors for all users
+    ## Compare the input feature vector with stored feature vectors for all users
     best_match_distance = float('inf')
     authenticated = False
     user_id = None
     
     for stored_user_id, stored_feature_vector in stored_feature_vectors.items():
-        # Calculate similarity between the input and stored feature vectors (mock implementation using Euclidean distance)
+        ## Calculate similarity between the input and stored feature vectors (mock implementation using Euclidean distance)
         similarity_distance = np.linalg.norm(input_feature_vector - stored_feature_vector)
         
         if similarity_distance < best_match_distance:
             best_match_distance = similarity_distance
             user_id = stored_user_id
         
-    # Perform authentication based on the similarity distance and threshold
+    ## Perform authentication based on the similarity distance and threshold
     if best_match_distance <= threshold:
         authenticated = True
 
@@ -284,29 +284,29 @@ def biometric_authentication_face_recognition(input_image_path, stored_encodings
     - authenticated (bool): True if the input image is authenticated, False otherwise.
     - user_id (str): ID of the authenticated user.
     """
-    # Load the input image for authentication
+    ## Load the input image for authentication
     input_image = face_recognition.load_image_file(input_image_path)
 
-    # Obtain the facial encodings (feature vectors) from the input image
+    ## Obtain the facial encodings (feature vectors) from the input image
     input_face_encodings = face_recognition.face_encodings(input_image)
 
-    # If no face is detected in the input image
+    ## If no face is detected in the input image
     if len(input_face_encodings) == 0:
         return False, None
 
-    # Use the first face encoding (assuming one face present in the input image)
+    ## Use the first face encoding (assuming one face present in the input image)
     input_face_encoding = input_face_encodings[0]
 
-    # Compare the input face encoding with stored encodings for all users
+    ## Compare the input face encoding with stored encodings for all users
     authenticated = False
     user_id = None
     for stored_user_id, stored_encoding in stored_encodings.items():
-        # Compare the input face encoding with the stored encodings using a tolerance level
+        ## Compare the input face encoding with the stored encodings using a tolerance level
         match_results = face_recognition.compare_faces([stored_encoding], input_face_encoding, tolerance=tolerance)
-        if match_results[0]:  # If a match is found
+        if match_results[0]:  ## If a match is found
             authenticated = True
             user_id = stored_user_id
-            break  # Break out of the loop once an authenticated user is found
+            break  ## Break out of the loop once an authenticated user is found
     
     return authenticated, user_id
 ```

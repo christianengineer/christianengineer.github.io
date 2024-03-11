@@ -52,7 +52,7 @@ To effectively deploy and manage the Machine Learning (ML) models developed usin
 
 By integrating these components into the MLOps infrastructure for the Gender Equality Analysis Tools, the organization can streamline the ML lifecycle, maintain model quality, and ensure the reliable and scalable deployment of AI solutions for social research applications.
 
-# Scalable File Structure for Gender Equality Analysis Tools Repository
+## Scalable File Structure for Gender Equality Analysis Tools Repository
 
 Creating a scalable and well-organized file structure for the Gender Equality Analysis Tools repository will facilitate collaboration, ease maintenance, and support future expansions. Below is a proposed file structure:
 
@@ -267,26 +267,26 @@ Certainly! Below is an example of a Python script for training a model using moc
 import tensorflow as tf
 import numpy as np
 
-# Generate mock data
+## Generate mock data
 num_samples = 1000
 num_features = 5
 num_classes = 2
 X = np.random.rand(num_samples, num_features)
 y = np.random.choice(num_classes, num_samples)
 
-# Define a simple neural network model
+## Define a simple neural network model
 model = tf.keras.Sequential([
     tf.keras.layers.Dense(64, activation='relu', input_shape=(num_features,)),
     tf.keras.layers.Dense(num_classes, activation='softmax')
 ])
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
 
-# Train the model
+## Train the model
 model.fit(X, y, epochs=10, batch_size=32)
 
-# Save the trained model
+## Save the trained model
 model.save('gender_classification_model')
 ```
 
@@ -300,22 +300,22 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 import joblib
 
-# Generate mock data
+## Generate mock data
 X, y = make_classification(n_samples=1000, n_features=20, random_state=42)
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Instantiate and train the model
+## Instantiate and train the model
 model = RandomForestClassifier(n_estimators=100, random_state=42)
 model.fit(X_train, y_train)
 
-# Evaluate the model
+## Evaluate the model
 y_pred = model.predict(X_test)
 accuracy = accuracy_score(y_test, y_pred)
 print(f'Accuracy: {accuracy:.2f}')
 
-# Save the trained model
+## Save the trained model
 joblib.dump(model, 'gender_analysis_model.pkl')
 ```
 
@@ -331,14 +331,14 @@ import tensorflow as tf
 import numpy as np
 from tensorflow.keras import layers, models
 
-# Generate mock data
+## Generate mock data
 num_samples = 1000
 num_features = 10
 num_classes = 2
 X = np.random.rand(num_samples, num_features)
 y = np.random.choice(num_classes, num_samples)
 
-# Define a complex deep learning model
+## Define a complex deep learning model
 model = models.Sequential([
     layers.Dense(128, activation='relu', input_shape=(num_features,)),
     layers.Dropout(0.2),
@@ -347,13 +347,13 @@ model = models.Sequential([
     layers.Dense(num_classes, activation='softmax')
 ])
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
 
-# Train the model
+## Train the model
 model.fit(X, y, epochs=20, batch_size=32)
 
-# Save the trained model
+## Save the trained model
 model.save('gender_classification_complex_model')
 ```
 
@@ -367,22 +367,22 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 import joblib
 
-# Generate mock data
+## Generate mock data
 X, y = make_classification(n_samples=1000, n_features=20, random_state=42)
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Instantiate a complex model (Random Forest Classifier with parameter tuning)
+## Instantiate a complex model (Random Forest Classifier with parameter tuning)
 model = RandomForestClassifier(n_estimators=500, max_depth=10, random_state=42)
 model.fit(X_train, y_train)
 
-# Evaluate the model
+## Evaluate the model
 y_pred = model.predict(X_test)
 accuracy = accuracy_score(y_test, y_pred)
 print(f'Accuracy: {accuracy:.2f}')
 
-# Save the trained model
+## Save the trained model
 joblib.dump(model, 'gender_analysis_complex_model.pkl')
 ```
 

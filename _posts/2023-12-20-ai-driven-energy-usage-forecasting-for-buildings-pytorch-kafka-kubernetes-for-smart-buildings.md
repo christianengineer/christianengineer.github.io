@@ -5,7 +5,7 @@ permalink: posts/ai-driven-energy-usage-forecasting-for-buildings-pytorch-kafka-
 layout: article
 ---
 
-# AI-driven Energy Usage Forecasting for Buildings Repository
+## AI-driven Energy Usage Forecasting for Buildings Repository
 
 ## Objectives
 The objectives of the AI-driven Energy Usage Forecasting for Buildings repository are to leverage AI and machine learning techniques to forecast energy usage in smart buildings. The system aims to provide accurate predictions of energy consumption, enabling proactive energy management and optimization in real-time. The key objectives include:
@@ -34,7 +34,7 @@ The chosen libraries and technologies for the AI-driven Energy Usage Forecasting
 
 By incorporating these libraries and technologies, the AI-driven Energy Usage Forecasting for Buildings repository aims to build a scalable, data-intensive AI application that leverages machine learning techniques for accurate energy usage forecasting in smart buildings.
 
-# MLOps Infrastructure for AI-driven Energy Usage Forecasting for Buildings
+## MLOps Infrastructure for AI-driven Energy Usage Forecasting for Buildings
 
 ## Overview
 The MLOps infrastructure for the AI-driven Energy Usage Forecasting for Buildings application is designed to facilitate the end-to-end lifecycle management of machine learning models, from development to deployment and monitoring. The infrastructure is built to support the scalability, reliability, and automation of the machine learning workflow, while ensuring seamless integration with the existing system architecture based on PyTorch, Kafka, and Kubernetes for smart buildings.
@@ -82,34 +82,34 @@ The following is a suggested scalable file structure for the AI-driven Energy Us
 AI-driven-Energy-Usage-Forecasting/
 │
 ├── data/
-│   ├── raw/                    # Raw data from IoT devices
-│   ├── processed/              # Preprocessed data for model training
+│   ├── raw/                    ## Raw data from IoT devices
+│   ├── processed/              ## Preprocessed data for model training
 │
 ├── models/
-│   ├── src/                    # Source code for model development
-│   ├── trained/                # Saved trained models
+│   ├── src/                    ## Source code for model development
+│   ├── trained/                ## Saved trained models
 │
 ├── app/
-│   ├── api/                    # API for model serving
-│   ├── kafka_consumer/         # Kafka consumer for real-time data ingestion
+│   ├── api/                    ## API for model serving
+│   ├── kafka_consumer/         ## Kafka consumer for real-time data ingestion
 │
 ├── config/
-│   ├── deployment/             # Kubernetes deployment configurations
-│   ├── kafka/                  # Configuration for Kafka message queue
-│   ├── logging/                # Logging configurations
-│   ├── monitoring/             # Monitoring setup and configurations
+│   ├── deployment/             ## Kubernetes deployment configurations
+│   ├── kafka/                  ## Configuration for Kafka message queue
+│   ├── logging/                ## Logging configurations
+│   ├── monitoring/             ## Monitoring setup and configurations
 │
-├── tests/                      # Unit tests and integration tests
+├── tests/                      ## Unit tests and integration tests
 │
-├── docs/                       # Project documentation
+├── docs/                       ## Project documentation
 │
-├── Dockerfile                  # Dockerfile for containerization
-├── requirements.txt            # Python dependencies for the project
-├── app.py                      # Main application entry point
-├── train.py                    # Script for model training
-├── deploy.yaml                 # Kubernetes deployment manifest
-├── README.md                   # Project README with instructions
-├── LICENSE                     # Project license file
+├── Dockerfile                  ## Dockerfile for containerization
+├── requirements.txt            ## Python dependencies for the project
+├── app.py                      ## Main application entry point
+├── train.py                    ## Script for model training
+├── deploy.yaml                 ## Kubernetes deployment manifest
+├── README.md                   ## Project README with instructions
+├── LICENSE                     ## Project license file
 ```
 
 This file structure is designed to support modularity, scalability, and maintainability of the AI-driven Energy Usage Forecasting for Buildings application. It includes dedicated directories for data management, model development and deployment, application components, configuration settings, testing, documentation, and essential project files. 
@@ -127,13 +127,13 @@ The `models` directory in the AI-driven Energy Usage Forecasting for Buildings r
 models/
 │
 ├── src/
-│   ├── data_loading.py            # Module for loading and preprocessing data
-│   ├── model_training.py          # Script for training the PyTorch model
-│   ├── model_evaluation.py        # Module for evaluating model performance
+│   ├── data_loading.py            ## Module for loading and preprocessing data
+│   ├── model_training.py          ## Script for training the PyTorch model
+│   ├── model_evaluation.py        ## Module for evaluating model performance
 │
 ├── trained/
-│   ├── model.pt                   # Saved PyTorch model weights and architecture
-│   ├── model_config.json          # Configuration file for the trained model
+│   ├── model.pt                   ## Saved PyTorch model weights and architecture
+│   ├── model_config.json          ## Configuration file for the trained model
 ```
 
 ## Description of Files
@@ -163,16 +163,16 @@ The `deployment` directory in the AI-driven Energy Usage Forecasting for Buildin
 deployment/
 │
 ├── k8s/
-│   ├── namespace.yaml              # Kubernetes namespace configuration
+│   ├── namespace.yaml              ## Kubernetes namespace configuration
 │   ├── deployments/
-│   │   ├── model-serving.yaml      # Deployment configuration for model serving
-│   │   ├── kafka-consumer.yaml     # Deployment configuration for Kafka consumer
-│   │   ├── api-server.yaml         # Deployment configuration for API server
-│   │   ├── monitoring-agent.yaml   # Deployment configuration for monitoring agent
+│   │   ├── model-serving.yaml      ## Deployment configuration for model serving
+│   │   ├── kafka-consumer.yaml     ## Deployment configuration for Kafka consumer
+│   │   ├── api-server.yaml         ## Deployment configuration for API server
+│   │   ├── monitoring-agent.yaml   ## Deployment configuration for monitoring agent
 │
 ├── secrets/
-│   ├── kafka-creds.yaml            # Kubernetes secret for Kafka credentials
-│   ├── model-creds.yaml            # Kubernetes secret for model serving credentials
+│   ├── kafka-creds.yaml            ## Kubernetes secret for Kafka credentials
+│   ├── model-creds.yaml            ## Kubernetes secret for model serving credentials
 ```
 
 ## Description of Files
@@ -197,7 +197,7 @@ The `deployment` directory and its files play a critical role in orchestrating t
 Sure, I can provide a sample Python file for training a PyTorch model for the AI-driven Energy Usage Forecasting for Buildings application using mock data. 
 
 ```python
-# models/src/model_training.py
+## models/src/model_training.py
 
 import torch
 import torch.nn as nn
@@ -206,7 +206,7 @@ import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
 
-# Load mock data for training
+## Load mock data for training
 data = {
     'timestamp': pd.date_range(start='2022-01-01', end='2022-12-31', freq='H'),
     'temperature': np.random.uniform(18, 30, 8760),
@@ -218,13 +218,13 @@ df = pd.DataFrame(data)
 X = df[['timestamp', 'temperature', 'humidity', 'occupancy']]
 y = df['energy_usage']
 
-# Preprocessing and feature engineering (e.g., converting timestamp to numerical features, scaling, etc.)
-# ...
+## Preprocessing and feature engineering (e.g., converting timestamp to numerical features, scaling, etc.)
+## ...
 
-# Split the data into training and validation sets
+## Split the data into training and validation sets
 X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Define the PyTorch model
+## Define the PyTorch model
 class EnergyUsagePredictor(nn.Module):
     def __init__(self, input_size, hidden_size, output_size):
         super(EnergyUsagePredictor, self).__init__()
@@ -238,10 +238,10 @@ class EnergyUsagePredictor(nn.Module):
         out = self.fc2(out)
         return out
 
-# Set hyperparameters and initialize the model
-input_size = 3  # Assuming 3 input features (temperature, humidity, occupancy)
+## Set hyperparameters and initialize the model
+input_size = 3  ## Assuming 3 input features (temperature, humidity, occupancy)
 hidden_size = 32
-output_size = 1  # Single output (energy usage)
+output_size = 1  ## Single output (energy usage)
 learning_rate = 0.001
 num_epochs = 100
 
@@ -249,7 +249,7 @@ model = EnergyUsagePredictor(input_size, hidden_size, output_size)
 criterion = nn.MSELoss()
 optimizer = optim.Adam(model.parameters(), lr=learning_rate)
 
-# Training loop
+## Training loop
 for epoch in range(num_epochs):
     inputs = torch.tensor(X_train.values, dtype=torch.float32)
     labels = torch.tensor(y_train.values, dtype=torch.float32)
@@ -263,7 +263,7 @@ for epoch in range(num_epochs):
     if (epoch+1) % 10 == 0:
         print(f'Epoch [{epoch+1}/{num_epochs}], Loss: {loss.item():.4f}')
 
-# Save the trained model
+## Save the trained model
 torch.save(model.state_dict(), 'trained/model.pt')
 ```
 
@@ -278,7 +278,7 @@ Please note that this is a simplified example using mock data and a basic neural
 Certainly! Below is a sample Python script for a complex machine learning algorithm using a recurrent neural network (RNN) for the AI-driven Energy Usage Forecasting for Buildings application with mock data. The script is intended to showcase a more advanced model architecture capable of capturing temporal dependencies within the data.
 
 ```python
-# models/src/model_training_complex.py
+## models/src/model_training_complex.py
 
 import torch
 import torch.nn as nn
@@ -287,7 +287,7 @@ import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
 
-# Load mock data for training
+## Load mock data for training
 data = {
     'timestamp': pd.date_range(start='2022-01-01', end='2022-12-31', freq='H'),
     'temperature': np.random.uniform(18, 30, 8760),
@@ -296,9 +296,9 @@ data = {
     'energy_usage': np.random.uniform(100, 500, 8760)
 }
 df = pd.DataFrame(data)
-# Assuming the data is preprocessed and feature engineered to prepare it for the model
+## Assuming the data is preprocessed and feature engineered to prepare it for the model
 
-# Define the RNN model
+## Define the RNN model
 class EnergyUsageRNN(nn.Module):
     def __init__(self, input_size, hidden_size, output_size, num_layers=2):
         super(EnergyUsageRNN, self).__init__()
@@ -315,10 +315,10 @@ class EnergyUsageRNN(nn.Module):
         out = self.fc(out[:, -1, :])
         return out
 
-# Set hyperparameters and initialize the model
-input_size = 3  # Assuming 3 input features (temperature, humidity, occupancy)
+## Set hyperparameters and initialize the model
+input_size = 3  ## Assuming 3 input features (temperature, humidity, occupancy)
 hidden_size = 64
-output_size = 1  # Single output (energy usage)
+output_size = 1  ## Single output (energy usage)
 learning_rate = 0.001
 num_epochs = 100
 
@@ -326,17 +326,17 @@ model = EnergyUsageRNN(input_size, hidden_size, output_size)
 criterion = nn.MSELoss()
 optimizer = optim.Adam(model.parameters(), lr=learning_rate)
 
-# Prepare the data
+## Prepare the data
 X = df[['temperature', 'humidity', 'occupancy']].values
 y = df['energy_usage'].values.reshape(-1, 1)
 
-# Split the data into training and validation sets
+## Split the data into training and validation sets
 X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Data standardization, scaling, and transformation
-# ...
+## Data standardization, scaling, and transformation
+## ...
 
-# Training loop
+## Training loop
 for epoch in range(num_epochs):
     inputs = torch.tensor(X_train, dtype=torch.float32).view(-1, 1, input_size)
     labels = torch.tensor(y_train, dtype=torch.float32)
@@ -350,7 +350,7 @@ for epoch in range(num_epochs):
     if (epoch+1) % 10 == 0:
         print(f'Epoch [{epoch+1}/{num_epochs}], Loss: {loss.item():.4f}')
 
-# Save the trained model
+## Save the trained model
 torch.save(model.state_dict(), 'trained/complex_model.pt')
 ```
 

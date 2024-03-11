@@ -228,33 +228,33 @@ The deployment directory within the specific version of the TensorFlow model hou
 These files within the deployment directory provide the necessary resources and instructions for effectively deploying the machine learning model in a production environment, enabling real-time predictions for disease outbreak prediction in the public health preparedness application.
 
 ```python
-# File Path: scripts/model_training.py
+## File Path: scripts/model_training.py
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 import joblib
 
-# Load mock data
+## Load mock data
 data_path = 'data/processed/mock_outbreak_data.csv'
 data = pd.read_csv(data_path)
 
-# Prepare features and target variable
+## Prepare features and target variable
 X = data.drop('target_variable', axis=1)
 y = data['target_variable']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize and train the model
+## Initialize and train the model
 model = RandomForestClassifier(n_estimators=100, random_state=42)
 model.fit(X_train, y_train)
 
-# Evaluate model performance
+## Evaluate model performance
 accuracy = model.score(X_test, y_test)
 print(f'Model accuracy: {accuracy:.2f}')
 
-# Save the trained model
+## Save the trained model
 model_path = 'models/scikit-learn/model_version1.pkl'
 joblib.dump(model, model_path)
 ```
@@ -272,7 +272,7 @@ The script performs the following actions:
 This script serves as a demonstration of the model training process for the Disease Outbreak Prediction application using Scikit-Learn and mock data.
 
 ```python
-# File Path: scripts/complex_model_training.py
+## File Path: scripts/complex_model_training.py
 
 import pandas as pd
 import numpy as np
@@ -285,18 +285,18 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
 from tensorflow.keras.optimizers import Adam
 
-# Load mock data
+## Load mock data
 data_path = 'data/processed/mock_outbreak_data.csv'
 data = pd.read_csv(data_path)
 
-# Prepare features and target variable
+## Prepare features and target variable
 X = data.drop('target_variable', axis=1)
 y = data['target_variable']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Preprocessing for complex algorithm
+## Preprocessing for complex algorithm
 scaler = StandardScaler()
 X_train_scaled = scaler.fit_transform(X_train)
 X_test_scaled = scaler.transform(X_test)
@@ -305,7 +305,7 @@ pca = PCA(n_components=50)
 X_train_pca = pca.fit_transform(X_train_scaled)
 X_test_pca = pca.transform(X_test_scaled)
 
-# Initialize and train the complex model
+## Initialize and train the complex model
 model = Sequential([
     Dense(128, activation='relu', input_shape=(50,)),
     Dense(64, activation='relu'),
@@ -315,7 +315,7 @@ model = Sequential([
 model.compile(optimizer=Adam(lr=0.001), loss='binary_crossentropy', metrics=['accuracy'])
 model.fit(X_train_pca, y_train, epochs=10, batch_size=32, validation_data=(X_test_pca, y_test))
 
-# Save the trained model
+## Save the trained model
 model_path = 'models/tensorflow/model_version1'
 model.save(model_path)
 ```

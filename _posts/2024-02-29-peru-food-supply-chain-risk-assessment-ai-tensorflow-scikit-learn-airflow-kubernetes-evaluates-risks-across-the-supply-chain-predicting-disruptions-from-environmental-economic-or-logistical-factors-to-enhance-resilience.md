@@ -5,7 +5,7 @@ permalink: posts/peru-food-supply-chain-risk-assessment-ai-tensorflow-scikit-lea
 layout: article
 ---
 
-# AI Peru Food Supply Chain Risk Assessment System
+## AI Peru Food Supply Chain Risk Assessment System
 
 ## Objectives:
 - Evaluate risks across the supply chain in Peru.
@@ -37,7 +37,7 @@ layout: article
 
 By combining the power of TensorFlow and Scikit-Learn for model development, Airflow for workflow orchestration, and Kubernetes for deployment, the AI Peru Food Supply Chain Risk Assessment system will enable stakeholders to proactively manage risks and enhance the resilience of the food supply chain in Peru.
 
-# MLOps Infrastructure for Peru Food Supply Chain Risk Assessment AI
+## MLOps Infrastructure for Peru Food Supply Chain Risk Assessment AI
 
 ## Objectives:
 - Establish a robust and scalable MLOps infrastructure to support the AI Peru Food Supply Chain Risk Assessment application.
@@ -80,7 +80,7 @@ By combining the power of TensorFlow and Scikit-Learn for model development, Air
 
 By implementing a comprehensive MLOps infrastructure leveraging TensorFlow, Scikit-Learn, Airflow, and Kubernetes, the AI Peru Food Supply Chain Risk Assessment application can facilitate proactive risk management and decision-making in the supply chain industry.
 
-# Scalable File Structure for Peru Food Supply Chain Risk Assessment AI Repository
+## Scalable File Structure for Peru Food Supply Chain Risk Assessment AI Repository
 
 ```
 peru-food-supply-chain-risk-assessment/
@@ -126,7 +126,7 @@ peru-food-supply-chain-risk-assessment/
 
 This file structure organizes the project components in a scalable manner, facilitating collaboration, version control, and reproducibility for the Peru Food Supply Chain Risk Assessment AI application built with TensorFlow, Scikit-Learn, Airflow, and Kubernetes.
 
-# Models Directory for Peru Food Supply Chain Risk Assessment AI
+## Models Directory for Peru Food Supply Chain Risk Assessment AI
 
 ```
 models/
@@ -162,7 +162,7 @@ models/
 
 The models directory organizes the trained machine learning models, evaluation results, and performance metrics for the Peru Food Supply Chain Risk Assessment AI application. This structure facilitates easy access, deployment, and comparison of different models to enhance resilience and preparedness in the supply chain industry.
 
-# Deployment Directory for Peru Food Supply Chain Risk Assessment AI
+## Deployment Directory for Peru Food Supply Chain Risk Assessment AI
 
 ```
 deployment/
@@ -212,8 +212,8 @@ The deployment directory organizes the resources and scripts required for deploy
 I will provide a Python script for training a machine learning model using mock data for the Peru Food Supply Chain Risk Assessment AI. This script will demonstrate model training using Scikit-Learn with mock data. 
 
 ```python
-# File Name: train_model.py
-# File Path: src/model_training/train_model.py
+## File Name: train_model.py
+## File Path: src/model_training/train_model.py
 
 import numpy as np
 from sklearn.model_selection import train_test_split
@@ -221,25 +221,25 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 import joblib
 
-# Mock data generation
-X = np.random.rand(100, 5)  # 100 samples with 5 features
-y = np.random.randint(0, 2, 100)  # Binary labels
+## Mock data generation
+X = np.random.rand(100, 5)  ## 100 samples with 5 features
+y = np.random.randint(0, 2, 100)  ## Binary labels
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Train a RandomForestClassifier model
+## Train a RandomForestClassifier model
 model = RandomForestClassifier()
 model.fit(X_train, y_train)
 
-# Make predictions
+## Make predictions
 y_pred = model.predict(X_test)
 
-# Evaluate the model
+## Evaluate the model
 accuracy = accuracy_score(y_test, y_pred)
 print(f"Accuracy: {accuracy}")
 
-# Save the trained model
+## Save the trained model
 model_filename = 'models/scikit-learn/rf_model.pkl'
 joblib.dump(model, model_filename)
 print(f"Model saved at: {model_filename}")
@@ -257,8 +257,8 @@ This script can be used to train a Scikit-Learn model with mock data for the Per
 I will provide a Python script for training a complex machine learning algorithm, a neural network, using mock data for the Peru Food Supply Chain Risk Assessment AI. This script will demonstrate model training using TensorFlow with Keras API.
 
 ```python
-# File Name: train_neural_network.py
-# File Path: src/model_training/train_neural_network.py
+## File Name: train_neural_network.py
+## File Path: src/model_training/train_neural_network.py
 
 import numpy as np
 from tensorflow.keras.models import Sequential
@@ -267,31 +267,31 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 import joblib
 
-# Mock data generation
-X = np.random.rand(100, 5)  # 100 samples with 5 features
-y = np.random.randint(0, 2, 100)  # Binary labels
+## Mock data generation
+X = np.random.rand(100, 5)  ## 100 samples with 5 features
+y = np.random.randint(0, 2, 100)  ## Binary labels
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Define the neural network model
+## Define the neural network model
 model = Sequential([
     Dense(64, activation='relu', input_shape=(5,)),
     Dense(64, activation='relu'),
     Dense(1, activation='sigmoid')
 ])
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
-# Train the model
+## Train the model
 model.fit(X_train, y_train, epochs=50, batch_size=32, validation_data=(X_test, y_test))
 
-# Evaluate the model
+## Evaluate the model
 _, accuracy = model.evaluate(X_test, y_test)
 print(f"Accuracy: {accuracy}")
 
-# Save the trained model
+## Save the trained model
 model_filename = 'models/tensorflow/nn_model.h5'
 model.save(model_filename)
 print(f"Model saved at: {model_filename}")
@@ -306,7 +306,7 @@ In this script:
 
 This script demonstrates training a complex neural network model using TensorFlow for the Peru Food Supply Chain Risk Assessment AI application.
 
-# Types of Users for the Peru Food Supply Chain Risk Assessment AI Application:
+## Types of Users for the Peru Food Supply Chain Risk Assessment AI Application:
 
 1. **Supply Chain Manager**
    - *User Story*: As a Supply Chain Manager, I need to assess risks across the supply chain in Peru to proactively identify and mitigate disruptions caused by environmental or logistical factors.

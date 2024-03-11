@@ -5,7 +5,7 @@ permalink: posts/advanced-waste-collection-optimizer-in-callao-peru-pytorch-scip
 layout: article
 ---
 
-# AI Advanced Waste Collection Optimizer in Callao, Peru
+## AI Advanced Waste Collection Optimizer in Callao, Peru
 
 ## Objectives:
 
@@ -48,7 +48,7 @@ layout: article
 
 By leveraging PyTorch, SciPy, and Pandas in the design and implementation of the AI Advanced Waste Collection Optimizer, the project aims to revolutionize waste management practices in Callao, Peru, leading towards a cleaner and more sustainable future.
 
-# MLOps Infrastructure for the Advanced Waste Collection Optimizer in Callao, Peru
+## MLOps Infrastructure for the Advanced Waste Collection Optimizer in Callao, Peru
 
 ## Introduction:
 The MLOps infrastructure plays a crucial role in ensuring the seamless development, deployment, and monitoring of the AI Advanced Waste Collection Optimizer application in Callao, Peru. It encompasses the entire machine learning lifecycle, from data preparation to model deployment, to optimize waste management and recycling efforts.
@@ -88,7 +88,7 @@ The MLOps infrastructure plays a crucial role in ensuring the seamless developme
 
 By implementing a robust MLOps infrastructure powered by PyTorch, SciPy, and Pandas, the Advanced Waste Collection Optimizer application can effectively revolutionize waste management practices in Callao, Peru, leading towards a cleaner and more sustainable future.
 
-# Scalable File Structure for the Advanced Waste Collection Optimizer in Callao, Peru
+## Scalable File Structure for the Advanced Waste Collection Optimizer in Callao, Peru
 
 ```
 📁 Advanced_Waste_Collection_Optimizer
@@ -145,7 +145,7 @@ By implementing a robust MLOps infrastructure powered by PyTorch, SciPy, and Pan
 
 This structured file organization promotes modularity, scalability, and maintainability of the Advanced Waste Collection Optimizer project, enabling efficient development and deployment of AI solutions for waste management and recycling in Callao, Peru.
 
-# Models Directory for the Advanced Waste Collection Optimizer in Callao, Peru
+## Models Directory for the Advanced Waste Collection Optimizer in Callao, Peru
 
 ## Overview:
 The `models` directory in the Advanced Waste Collection Optimizer project contains trained PyTorch models that play a crucial role in optimizing waste collection routes and classifying waste types to enhance waste management and recycling efforts in Callao, Peru.
@@ -172,7 +172,7 @@ The `models` directory in the Advanced Waste Collection Optimizer project contai
 
 By leveraging the trained PyTorch models stored in the `models` directory, the Advanced Waste Collection Optimizer in Callao, Peru can enhance waste management practices, promote recycling efforts, and drive the region towards a future of cleanliness, sustainability, and environmental stewardship.
 
-# Deployment Directory for the Advanced Waste Collection Optimizer in Callao, Peru
+## Deployment Directory for the Advanced Waste Collection Optimizer in Callao, Peru
 
 ## Overview:
 The `deployment` directory in the Advanced Waste Collection Optimizer project contains scripts and files related to deploying the AI application for optimizing waste collection and recycling efforts in Callao, Peru.
@@ -209,50 +209,50 @@ In the `notebooks` directory, create a new file named `train_model.ipynb` for tr
 ## Contents of `train_model.ipynb`:
 
 ```python
-# Import necessary libraries
+## Import necessary libraries
 import pandas as pd
 import numpy as np
 import torch
 import torch.nn as nn
 import torch.optim as optim
 
-# Load mock data
+## Load mock data
 data = pd.DataFrame({
     'location': ['Location A', 'Location B', 'Location C'],
     'waste_type': ['Recyclable', 'Non-Recyclable', 'Recyclable'],
     'weight': [100, 150, 120]
 })
 
-# Preprocess the data
-# Add preprocessing steps using Pandas
-# Eg. converting categorical data to numerical, scaling features, etc.
+## Preprocess the data
+## Add preprocessing steps using Pandas
+## Eg. converting categorical data to numerical, scaling features, etc.
 
-# Define PyTorch model architecture
+## Define PyTorch model architecture
 class WasteClassificationModel(nn.Module):
     def __init__(self):
         super(WasteClassificationModel, self).__init__()
-        # Define model layers
+        ## Define model layers
 
     def forward(self, x):
-        # Implement forward pass logic
+        ## Implement forward pass logic
         return x
 
-# Initialize the model
+## Initialize the model
 model = WasteClassificationModel()
 
-# Define loss function and optimizer
+## Define loss function and optimizer
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.SGD(model.parameters(), lr=0.01)
 
-# Train the model
+## Train the model
 for epoch in range(100):
     optimizer.zero_grad()
     outputs = model(data)
-    loss = criterion(outputs, targets)  # Update with actual target values
+    loss = criterion(outputs, targets)  ## Update with actual target values
     loss.backward()
     optimizer.step()
 
-# Save the trained model
+## Save the trained model
 torch.save(model.state_dict(), 'models/waste_classification_model.pth')
 ```
 
@@ -273,37 +273,37 @@ import pandas as pd
 import numpy as np
 from scipy.optimize import minimize
 
-# Load mock data
+## Load mock data
 data = pd.DataFrame({
     'feature1': [1, 2, 3, 4, 5],
     'feature2': [10, 20, 30, 40, 50],
     'target': [0, 1, 0, 1, 0]
 })
 
-# Define a complex machine learning algorithm
+## Define a complex machine learning algorithm
 class ComplexMLAlgorithm:
     def __init__(self):
-        # Define any necessary parameters or hyperparameters
+        ## Define any necessary parameters or hyperparameters
 
     def cost_function(self, params):
-        # Define the cost function for optimization
-        # Use SciPy or custom optimization strategies
+        ## Define the cost function for optimization
+        ## Use SciPy or custom optimization strategies
 
     def train(self, data):
-        initial_params = np.random.rand(data.shape[1])  # Initialize parameters
+        initial_params = np.random.rand(data.shape[1])  ## Initialize parameters
         result = minimize(self.cost_function, initial_params, method='L-BFGS-B')
         self.trained_params = result.x
 
     def predict(self, new_data):
-        # Implement prediction logic using the trained parameters
+        ## Implement prediction logic using the trained parameters
         predictions = np.dot(new_data, self.trained_params)
         return predictions
 
-# Initialize and train the complex ML algorithm
+## Initialize and train the complex ML algorithm
 complex_model = ComplexMLAlgorithm()
 complex_model.train(data)
 
-# Generate predictions for new data
+## Generate predictions for new data
 new_data = np.array([[2, 30]])
 predictions = complex_model.predict(new_data)
 print("Predictions:", predictions)

@@ -5,7 +5,7 @@ permalink: posts/renewable-energy-forecasting-ai-with-tensorflow-and-pytorch-for
 layout: article
 ---
 
-# Objectives and Benefits
+## Objectives and Benefits
 **Audience:** Energy Analyst at Enel Perú  
 **Objective:** To predict the renewable energy production for efficient grid management  
 **Benefits:**  
@@ -13,34 +13,34 @@ layout: article
 2. Optimize resource allocation and reduce operational costs  
 3. Enhance decision-making processes for grid maintenance and energy distribution  
 
-# Machine Learning Algorithm
+## Machine Learning Algorithm
 **Algorithm:** Long Short-Term Memory (LSTM)  
 **Reasoning:** LSTM is well-suited for time series forecasting tasks as it can capture long-term dependencies in sequential data, making it ideal for predicting energy generation patterns that exhibit time-based trends and seasonal variations.
 
-# Sourcing Data
+## Sourcing Data
 1. Weather Data: Source historical weather information including temperature, precipitation, wind speed, etc.  
 2. Power Generation Data: Gather historical power generation data from renewable sources like solar panels and wind turbines.
 
-# Preprocessing Data
+## Preprocessing Data
 1. Merge weather and power generation data based on timestamps  
 2. Normalize data to scale features  
 3. Handle missing values and outliers  
 4. Generate sequences of inputs and outputs for LSTM model 
 
-# Modeling Strategy
+## Modeling Strategy
 1. Split data into training and testing sets  
 2. Build LSTM model architecture using TensorFlow or PyTorch  
 3. Train the model on historical data  
 4. Fine-tune hyperparameters to optimize performance  
 5. Evaluate model performance with metrics like Mean Absolute Error (MAE)  
 
-# Deployment Strategy
+## Deployment Strategy
 1. Save the trained model  
 2. Develop an API using Flask or FastAPI for real-time predictions  
 3. Deploy the model on a cloud platform like Google Cloud AI Platform or AWS Lambda  
 4. Monitor model performance and retrain periodically for accuracy  
 
-# Tools and Libraries
+## Tools and Libraries
 1. TensorFlow: [https://www.tensorflow.org/](https://www.tensorflow.org/)  
 2. PyTorch: [https://pytorch.org/](https://pytorch.org/)  
 3. Pandas: [https://pandas.pydata.org/](https://pandas.pydata.org/)  
@@ -51,7 +51,7 @@ layout: article
 
 By following these steps and utilizing the suggested tools and libraries, Energy Analysts at Enel Perú can build and deploy a scalable, production-ready machine learning solution for Renewable Energy Forecasting to address their pain point effectively.
 
-# Sourcing Data Strategy
+## Sourcing Data Strategy
 
 **1. Weather Data:** 
 - **Source:** Utilize APIs from reputable weather data providers like NOAA, AccuWeather, or OpenWeatherMap for historical weather information. These APIs offer a wealth of data including temperature, humidity, wind speed, precipitation, etc.
@@ -74,7 +74,7 @@ By following these steps and utilizing the suggested tools and libraries, Energy
 
 By leveraging these specific tools and methods for efficiently collecting weather and power generation data, Energy Analysts at Enel Perú can streamline the data collection process, ensuring that the data is readily accessible and in the correct format for analysis and model training. Integrating these tools within the existing technology stack will enhance the overall data collection workflow, allowing for seamless access to relevant data for the Renewable Energy Forecasting project.
 
-# Feature Extraction and Feature Engineering
+## Feature Extraction and Feature Engineering
 
 **1. Feature Extraction:**
 - **Temporal Features**:
@@ -131,7 +131,7 @@ By leveraging these specific tools and methods for efficiently collecting weathe
 
 By incorporating these feature extraction and engineering strategies, Energy Analysts at Enel Perú can enhance the interpretability of the data and improve the performance of the machine learning model for Renewable Energy Forecasting. Adopting the recommended variable names will also ensure clarity and consistency in the dataset, facilitating easier analysis and model training processes.
 
-# Metadata Management for Renewable Energy Forecasting Project
+## Metadata Management for Renewable Energy Forecasting Project
 
 **1. Metadata for Weather Data:**
 - **Data Source:** Specify the source of weather data, including the provider (e.g., OpenWeatherMap), API endpoints, and update frequency.
@@ -160,7 +160,7 @@ By incorporating these feature extraction and engineering strategies, Energy Ana
 
 By maintaining comprehensive metadata tailored to the unique demands of the Renewable Energy Forecasting project, Energy Analysts at Enel Perú can track and optimize data quality, model performance, and data integration processes effectively. This metadata management approach will enhance transparency, reproducibility, and decision-making capabilities, critical for successfully forecasting renewable energy production and optimizing grid management.
 
-# Data Challenges and Preprocessing Strategies for Renewable Energy Forecasting
+## Data Challenges and Preprocessing Strategies for Renewable Energy Forecasting
 
 **1. Data Challenges:**
 - **Missing Data:** Weather sensors or power generation systems may experience downtime, leading to missing data points.
@@ -199,36 +199,36 @@ By strategically employing these data preprocessing practices tailored to the un
 import pandas as pd
 from sklearn.preprocessing import MinMaxScaler
 
-# Load the merged dataset containing weather and power generation data
+## Load the merged dataset containing weather and power generation data
 data = pd.read_csv('merged_data.csv')
 
-# Drop unnecessary columns
+## Drop unnecessary columns
 data = data.drop(['unnecessary_column1', 'unnecessary_column2'], axis=1)
 
-# Convert timestamp to datetime format
+## Convert timestamp to datetime format
 data['timestamp'] = pd.to_datetime(data['timestamp'])
 
-# Sort data by timestamp
+## Sort data by timestamp
 data = data.sort_values('timestamp')
 
-# Impute missing values (filling missing data using interpolation)
+## Impute missing values (filling missing data using interpolation)
 data = data.interpolate()
 
-# Normalize numerical features using Min-Max scaling
+## Normalize numerical features using Min-Max scaling
 scaler = MinMaxScaler()
 numerical_features = ['temperature', 'humidity', 'wind_speed', 'precipitation', 'solar_energy_production']
 data[numerical_features] = scaler.fit_transform(data[numerical_features])
 
-# Create lag features for LSTM model
+## Create lag features for LSTM model
 lagged_data = data.copy()
 for lag in range(1, 6):
     for feature in numerical_features:
         lagged_data[f'{feature}_lag{lag}'] = lagged_data[feature].shift(lag)
 
-# Drop rows with any remaining missing values after lag feature generation
+## Drop rows with any remaining missing values after lag feature generation
 lagged_data = lagged_data.dropna()
 
-# Save preprocessed data to a new CSV file
+## Save preprocessed data to a new CSV file
 lagged_data.to_csv('preprocessed_data.csv', index=False)
 ```
 
@@ -244,7 +244,7 @@ lagged_data.to_csv('preprocessed_data.csv', index=False)
 
 By executing this code file, tailored to the preprocessing strategy for the Renewable Energy Forecasting project, Energy Analysts at Enel Perú can effectively prepare the data for model training, ensuring robustness and readiness for accurate forecasting of renewable energy production.
 
-# Modeling Strategy for Renewable Energy Forecasting
+## Modeling Strategy for Renewable Energy Forecasting
 
 **Recommended Modeling Strategy: Long Short-Term Memory (LSTM) Neural Network**
 
@@ -308,13 +308,13 @@ import pandas as pd
 import numpy as np
 from sklearn.preprocessing import MinMaxScaler
 
-# Define the size of the dataset
+## Define the size of the dataset
 num_samples = 10000
 
-# Generate fictitious timestamps
+## Generate fictitious timestamps
 timestamps = pd.date_range(start='2022-01-01', periods=num_samples, freq='H')
 
-# Generate random weather features
+## Generate random weather features
 weather_data = pd.DataFrame({
     'timestamp': timestamps,
     'temperature': np.random.uniform(10, 30, num_samples),
@@ -324,30 +324,30 @@ weather_data = pd.DataFrame({
     'cloud_cover': np.random.uniform(0, 100, num_samples)
 })
 
-# Generate random power generation data
+## Generate random power generation data
 power_data = pd.DataFrame({
     'timestamp': timestamps,
     'solar_energy_production': np.random.uniform(0, 1000, num_samples),
     'wind_energy_production': np.random.uniform(0, 500, num_samples)
 })
 
-# Merge weather and power data
+## Merge weather and power data
 merged_data = pd.merge(weather_data, power_data, on='timestamp')
 
-# Normalize numerical features using Min-Max scaling 
+## Normalize numerical features using Min-Max scaling 
 scaler = MinMaxScaler()
 numerical_features = ['temperature', 'humidity', 'wind_speed', 'precipitation', 'solar_energy_production', 'wind_energy_production']
 merged_data[numerical_features] = scaler.fit_transform(merged_data[numerical_features])
 
-# Add noise to simulate real-world variability
+## Add noise to simulate real-world variability
 noise = np.random.normal(0, 0.1, merged_data.shape[0])
 merged_data['solar_energy_production'] += merged_data['solar_energy_production'] * noise
 
-# Add seasonality to certain features
-merged_data['temperature'] += 5 * np.sin(2*np.pi*merged_data.index/8760)  # Annual seasonality
-merged_data['wind_speed'] += 2 * np.sin(2*np.pi*merged_data.index/720)  # Monthly seasonality
+## Add seasonality to certain features
+merged_data['temperature'] += 5 * np.sin(2*np.pi*merged_data.index/8760)  ## Annual seasonality
+merged_data['wind_speed'] += 2 * np.sin(2*np.pi*merged_data.index/720)  ## Monthly seasonality
 
-# Save the generated dataset to a CSV file
+## Save the generated dataset to a CSV file
 merged_data.to_csv('generated_dataset.csv', index=False)
 ```
 
@@ -394,35 +394,35 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import LSTM, Dense
 from sklearn.model_selection import train_test_split
 
-# Load the preprocessed dataset
+## Load the preprocessed dataset
 data = pd.read_csv('preprocessed_data.csv')
 
-# Define input features and target variable
+## Define input features and target variable
 X = data[['temperature', 'humidity', 'wind_speed', 'precipitation', 
           'solar_energy_production_lag1', 'solar_energy_production_lag2']]
 y = data['solar_energy_production']
 
-# Split the dataset into training and testing sets
+## Split the dataset into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Reshape input data for LSTM model
+## Reshape input data for LSTM model
 X_train = X_train.values.reshape(X_train.shape[0], 1, X_train.shape[1])
 X_test = X_test.values.reshape(X_test.shape[0], 1, X_test.shape[1])
 
-# Build the LSTM model
+## Build the LSTM model
 model = Sequential()
 model.add(LSTM(64, input_shape=(X_train.shape[1], X_train.shape[2])))
 model.add(Dense(1))
 model.compile(optimizer='adam', loss='mean_squared_error')
 
-# Train the model
+## Train the model
 model.fit(X_train, y_train, epochs=50, batch_size=32, validation_data=(X_test, y_test))
 
-# Evaluate the model
+## Evaluate the model
 loss = model.evaluate(X_test, y_test)
 print(f'Model Loss: {loss}')
 
-# Save the trained model
+## Save the trained model
 model.save('solar_energy_forecasting_model.h5')
 ```
 
@@ -443,7 +443,7 @@ model.save('solar_energy_forecasting_model.h5')
 
 By following these conventions and best practices in code quality and structure, the provided script is well-documented, structured for production deployment, and adheres to standards commonly observed in large tech environments, ensuring a robust and scalable codebase for the Renewable Energy Forecasting project.
 
-# Deployment Plan for Machine Learning Model in Renewable Energy Forecasting
+## Deployment Plan for Machine Learning Model in Renewable Energy Forecasting
 
 ### 1. Pre-Deployment Checks:
 - **Check Model Performance:** Validate the model's accuracy and performance metrics on a test dataset before deployment.
@@ -501,26 +501,26 @@ By following these conventions and best practices in code quality and structure,
 By following this step-by-step deployment plan tailored to the unique demands of the Renewable Energy Forecasting project, Energy Analysts at Enel Perú can effectively transition the machine learning model into production, ensuring reliability, scalability, and efficiency in forecasting renewable energy production for optimized grid management.
 
 ```docker
-# Use a base Python image
+## Use a base Python image
 FROM python:3.8-slim
 
-# Set the working directory in the container
+## Set the working directory in the container
 WORKDIR /app
 
-# Copy the requirements file and install dependencies
+## Copy the requirements file and install dependencies
 COPY requirements.txt requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the preprocessed data file into the container
+## Copy the preprocessed data file into the container
 COPY preprocessed_data.csv preprocessed_data.csv
 
-# Copy the model Python script into the container
+## Copy the model Python script into the container
 COPY model_script.py model_script.py
 
-# Expose the port on which the Flask app will run (optional)
+## Expose the port on which the Flask app will run (optional)
 EXPOSE 5000
 
-# Command to run the model script when the container starts
+## Command to run the model script when the container starts
 CMD ["python", "model_script.py"]
 ```
 

@@ -5,7 +5,7 @@ permalink: posts/nutritional-deficiency-detection-scikit-learn-pandas-for-global
 layout: article
 ---
 
-# AI Nutritional Deficiency Detection System
+## AI Nutritional Deficiency Detection System
 
 ## Objectives
 The objective of the AI Nutritional Deficiency Detection system is to leverage machine learning to analyze nutritional data from around the world and detect potential deficiencies. The system aims to provide insights that can aid in addressing nutritional deficiencies at a global scale.
@@ -23,7 +23,7 @@ The objective of the AI Nutritional Deficiency Detection system is to leverage m
 
 By leveraging Scikit-Learn and Pandas, the system can effectively build and deploy machine learning models to detect nutritional deficiencies, while managing and analyzing the relevant data.
 
-# MLOps Infrastructure for Nutritional Deficiency Detection
+## MLOps Infrastructure for Nutritional Deficiency Detection
 
 ## Overview
 MLOps, an amalgamation of "Machine Learning" and "Operations," refers to the practice of streamlining and automating the process of deploying, managing, and monitoring machine learning models in production. For the Nutritional Deficiency Detection application, an effective MLOps infrastructure is crucial to ensure the scalability, robustness, and reliability of the machine learning models.
@@ -47,7 +47,7 @@ MLOps, an amalgamation of "Machine Learning" and "Operations," refers to the pra
 
 By integrating MLOps principles and infrastructure with the application, the Nutritional Deficiency Detection system can maintain the performance and accuracy of its machine learning models while efficiently handling the complexities of real-world data and deployment.
 
-# Scalable File Structure for Nutritional Deficiency Detection Repository
+## Scalable File Structure for Nutritional Deficiency Detection Repository
 
 ## Overview
 Creating a scalable file structure for the Nutritional Deficiency Detection repository is crucial for maintaining organization, clarity, and scalability as the project evolves and grows. The following structure provides a systematic approach for managing the code, data, models, and documentation associated with the application.
@@ -56,29 +56,29 @@ Creating a scalable file structure for the Nutritional Deficiency Detection repo
 nutritional_deficiency_detection/
 │
 ├── data/
-│   ├── raw/                  # Raw data from various sources
-│   ├── processed/            # Cleaned and preprocessed data
-│   └── external/             # External datasets or references
+│   ├── raw/                  ## Raw data from various sources
+│   ├── processed/            ## Cleaned and preprocessed data
+│   └── external/             ## External datasets or references
 │
-├── notebooks/               # Jupyter notebooks for exploratory data analysis, modeling, and visualization
+├── notebooks/               ## Jupyter notebooks for exploratory data analysis, modeling, and visualization
 │
 ├── src/
-│   ├── data_preprocessing/   # Scripts for data cleaning, feature engineering, and preprocessing
-│   ├── model_training/       # Scripts for training machine learning models using Scikit-Learn
-│   └── model_evaluation/     # Evaluation scripts for model performance assessment
+│   ├── data_preprocessing/   ## Scripts for data cleaning, feature engineering, and preprocessing
+│   ├── model_training/       ## Scripts for training machine learning models using Scikit-Learn
+│   └── model_evaluation/     ## Evaluation scripts for model performance assessment
 │
-├── models/                   # Saved machine learning models and associated metadata
+├── models/                   ## Saved machine learning models and associated metadata
 │
 ├── deployment/
-│   ├── docker/               # Docker configuration files for containerization
-│   ├── kubernetes/           # Kubernetes deployment and orchestration configurations
-│   └── deployment_scripts/   # Scripts for model deployment and serving
+│   ├── docker/               ## Docker configuration files for containerization
+│   ├── kubernetes/           ## Kubernetes deployment and orchestration configurations
+│   └── deployment_scripts/   ## Scripts for model deployment and serving
 │
-├── tests/                    # Unit tests and integration tests for the application
+├── tests/                    ## Unit tests and integration tests for the application
 │
-├── documentation/            # Project documentation, README, and model documentation
+├── documentation/            ## Project documentation, README, and model documentation
 │
-└── requirements.txt          # Python dependencies required for the application
+└── requirements.txt          ## Python dependencies required for the application
 ```
 
 ## Description
@@ -115,18 +115,18 @@ The `models/` directory in the Nutritional Deficiency Detection application is d
 models/
 │
 ├── classification/
-│   ├── model1.pkl             # Trained classification model 1 (e.g., Random Forest, SVM)
-│   ├── model2.pkl             # Trained classification model 2 (e.g., Gradient Boosting, Logistic Regression)
+│   ├── model1.pkl             ## Trained classification model 1 (e.g., Random Forest, SVM)
+│   ├── model2.pkl             ## Trained classification model 2 (e.g., Gradient Boosting, Logistic Regression)
 │   └── ...
 │
 ├── regression/
-│   ├── model1.pkl             # Trained regression model 1 (e.g., Linear Regression, Random Forest)
-│   ├── model2.pkl             # Trained regression model 2 (e.g., XGBoost, Neural Network)
+│   ├── model1.pkl             ## Trained regression model 1 (e.g., Linear Regression, Random Forest)
+│   ├── model2.pkl             ## Trained regression model 2 (e.g., XGBoost, Neural Network)
 │   └── ...
 │
 └── model_metadata/
-    ├── model1_metadata.json   # Metadata and information about model 1
-    ├── model2_metadata.json   # Metadata and information about model 2
+    ├── model1_metadata.json   ## Metadata and information about model 1
+    ├── model2_metadata.json   ## Metadata and information about model 2
     └── ...
 ```
 
@@ -156,17 +156,17 @@ The `deployment/` directory in the Nutritional Deficiency Detection application 
 deployment/
 │
 ├── docker/
-│   ├── Dockerfile           # Configuration file for building container images for model deployment
+│   ├── Dockerfile           ## Configuration file for building container images for model deployment
 │   └── ...
 │
 ├── kubernetes/
-│   ├── deployment.yaml      # Kubernetes deployment configuration for scaling and managing the application
-│   ├── service.yaml         # Kubernetes service configuration for exposing the application
+│   ├── deployment.yaml      ## Kubernetes deployment configuration for scaling and managing the application
+│   ├── service.yaml         ## Kubernetes service configuration for exposing the application
 │   └── ...
 │
 └── deployment_scripts/
-    ├── deploy_model.py      # Script for deploying the trained models within a production environment
-    ├── serve_predictions.py  # Script for serving predictions based on deployed models
+    ├── deploy_model.py      ## Script for deploying the trained models within a production environment
+    ├── serve_predictions.py  ## Script for serving predictions based on deployed models
     └── ...
 ```
 
@@ -199,31 +199,31 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 import joblib
 
-# Load mock nutritional deficiency data
+## Load mock nutritional deficiency data
 data_path = 'data/processed/mock_nutritional_data.csv'
 nutritional_data = pd.read_csv(data_path)
 
-# Prepare the data for model training
+## Prepare the data for model training
 X = nutritional_data.drop('deficiency_label', axis=1)
 y = nutritional_data['deficiency_label']
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize a Random Forest classifier
+## Initialize a Random Forest classifier
 model = RandomForestClassifier(n_estimators=100, random_state=42)
 
-# Train the model
+## Train the model
 model.fit(X_train, y_train)
 
-# Make predictions on the test set
+## Make predictions on the test set
 y_pred = model.predict(X_test)
 
-# Evaluate the model
+## Evaluate the model
 accuracy = accuracy_score(y_test, y_pred)
 print(f"Model Accuracy: {accuracy}")
 
-# Save the trained model to the models directory
+## Save the trained model to the models directory
 model_path = 'models/classification/mock_nutritional_deficiency_model.pkl'
 joblib.dump(model, model_path)
 ```
@@ -249,35 +249,35 @@ from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.metrics import accuracy_score, classification_report
 import joblib
 
-# Load mock nutritional deficiency data
+## Load mock nutritional deficiency data
 data_path = 'data/processed/mock_nutritional_data.csv'
 nutritional_data = pd.read_csv(data_path)
 
-# Prepare the data for model training
+## Prepare the data for model training
 X = nutritional_data.drop('deficiency_label', axis=1)
 y = nutritional_data['deficiency_label']
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize a Gradient Boosting classifier
+## Initialize a Gradient Boosting classifier
 model = GradientBoostingClassifier(n_estimators=100, learning_rate=0.1, max_depth=3, random_state=42)
 
-# Train the model
+## Train the model
 model.fit(X_train, y_train)
 
-# Make predictions on the test set
+## Make predictions on the test set
 y_pred = model.predict(X_test)
 
-# Evaluate the model
+## Evaluate the model
 accuracy = accuracy_score(y_test, y_pred)
 print(f"Model Accuracy: {accuracy}")
 
-# Generate classification report
+## Generate classification report
 print("Classification Report:")
 print(classification_report(y_test, y_pred))
 
-# Save the trained model to the models directory
+## Save the trained model to the models directory
 model_path = 'models/classification/complex_nutritional_deficiency_model.pkl'
 joblib.dump(model, model_path)
 ```

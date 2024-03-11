@@ -5,7 +5,7 @@ permalink: posts/facial-recognition-using-dlib-pythonc-identifying-individuals-f
 layout: article
 ---
 
-# AI Facial Recognition using Dlib
+## AI Facial Recognition using Dlib
 
 ## Objectives
 The objective of the AI Facial Recognition system using Dlib is to accurately identify individuals from a repository of images. This involves the following key objectives:
@@ -191,22 +191,22 @@ import numpy as np
 
 class FaceRecognitionModel:
     def __init__(self, face_embedding_model_path):
-        # Load the pre-trained face embedding model
+        ## Load the pre-trained face embedding model
         self.face_embedding_model = dlib.face_recognition_model_v1(face_embedding_model_path)
 
     def generate_face_embeddings(self, image):
-        # Use dlib to detect and align faces, then extract face embeddings
-        # Return the computed face embeddings as a numpy array
+        ## Use dlib to detect and align faces, then extract face embeddings
+        ## Return the computed face embeddings as a numpy array
         pass
 
     def compare_face_embeddings(self, embedding1, embedding2):
-        # Compute the similarity between two face embeddings (e.g., using cosine similarity)
-        # Return a score representing the similarity
+        ## Compute the similarity between two face embeddings (e.g., using cosine similarity)
+        ## Return a score representing the similarity
         pass
 
     def load_embeddings_from_directory(self, directory_path):
-        # Load precomputed face embeddings from the specified directory
-        # Return a dictionary or list of loaded embeddings
+        ## Load precomputed face embeddings from the specified directory
+        ## Return a dictionary or list of loaded embeddings
         pass
 ```
 
@@ -291,21 +291,21 @@ Certainly! Below is a Python function for a simplified version of a facial recog
 import dlib
 import numpy as np
 
-# Mock face embeddings for demonstration purposes
+## Mock face embeddings for demonstration purposes
 mock_embeddings = {
     'person1': np.random.rand(128),
     'person2': np.random.rand(128),
-    # Add more mock embeddings as needed
+    ## Add more mock embeddings as needed
 }
 
 def facial_recognition_algorithm(image_file_path):
-    # Load the pre-trained face recognition model from Dlib
+    ## Load the pre-trained face recognition model from Dlib
     face_recognition_model = dlib.face_recognition_model_v1('path_to_pretrained_model.dat')
 
-    # Load image using OpenCV or any other library
+    ## Load image using OpenCV or any other library
     image = load_image(image_file_path)
 
-    # Use Dlib to detect and align faces, then extract face embeddings
+    ## Use Dlib to detect and align faces, then extract face embeddings
     detected_faces = dlib.get_frontal_face_detector()(image, 1)
     if len(detected_faces) == 0:
         return "No face detected in the input image."
@@ -316,17 +316,17 @@ def facial_recognition_algorithm(image_file_path):
         face_embedding = np.array(face_recognition_model.compute_face_descriptor(image, shape))
         face_embeddings.append(face_embedding)
 
-    # Compare computed face embeddings with precomputed mock embeddings
+    ## Compare computed face embeddings with precomputed mock embeddings
     for person, mock_embedding in mock_embeddings.items():
         for computed_embedding in face_embeddings:
             similarity_score = np.dot(computed_embedding, mock_embedding) / (np.linalg.norm(computed_embedding) * np.linalg.norm(mock_embedding))
-            if similarity_score > 0.6:  # Adjust the threshold as needed
+            if similarity_score > 0.6:  ## Adjust the threshold as needed
                 return f"The person in the image is identified as {person}."
 
     return "No matching individual found in the database."
 
 def load_image(file_path):
-    # Implement logic to load and preprocess the image using OpenCV or any image processing library
+    ## Implement logic to load and preprocess the image using OpenCV or any image processing library
     pass
 ```
 
@@ -345,13 +345,13 @@ import dlib
 import numpy as np
 
 def facial_recognition_algorithm(image_file_path):
-    # Load the pre-trained face recognition model from Dlib
+    ## Load the pre-trained face recognition model from Dlib
     face_recognition_model = dlib.face_recognition_model_v1('path_to_pretrained_model.dat')
 
-    # Load image using OpenCV or any other library
+    ## Load image using OpenCV or any other library
     image = load_image(image_file_path)
 
-    # Use Dlib to detect and align faces, then extract face embeddings
+    ## Use Dlib to detect and align faces, then extract face embeddings
     detected_faces = dlib.get_frontal_face_detector()(image, 1)
     if len(detected_faces) == 0:
         return "No face detected in the input image."
@@ -362,21 +362,21 @@ def facial_recognition_algorithm(image_file_path):
         face_embedding = np.array(face_recognition_model.compute_face_descriptor(image, shape))
         face_embeddings.append(face_embedding)
 
-    # Perform face recognition by comparing with the pre-existing database
+    ## Perform face recognition by comparing with the pre-existing database
     recognized_individuals = []
     for computed_embedding in face_embeddings:
-        matched_individual = recognize_face(computed_embedding, database)  # database is a pre-existing collection of known face embeddings
+        matched_individual = recognize_face(computed_embedding, database)  ## database is a pre-existing collection of known face embeddings
         recognized_individuals.append(matched_individual)
 
     return recognized_individuals
 
 def load_image(file_path):
-    # Implement logic to load and preprocess the image using OpenCV or any image processing library
+    ## Implement logic to load and preprocess the image using OpenCV or any image processing library
     pass
 
 def recognize_face(embedding, database):
-    # Perform matching with the known embeddings in the database using similarity measures
-    # Return the matched individual's name or ID
+    ## Perform matching with the known embeddings in the database using similarity measures
+    ## Return the matched individual's name or ID
     pass
 ```
 

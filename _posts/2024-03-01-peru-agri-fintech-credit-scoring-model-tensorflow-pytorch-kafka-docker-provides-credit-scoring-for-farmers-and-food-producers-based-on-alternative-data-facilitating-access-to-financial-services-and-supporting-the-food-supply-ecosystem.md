@@ -239,21 +239,21 @@ import tensorflow as tf
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
-# Load mock data
+## Load mock data
 data = pd.read_csv("data/mock_data.csv")
 
-# Feature engineering and target variable separation
+## Feature engineering and target variable separation
 X = data.drop(columns=['credit_score']).values
 y = data['credit_score'].values
 
-# Data preprocessing
+## Data preprocessing
 scaler = StandardScaler()
 X_scaled = scaler.fit_transform(X)
 
-# Split data into train and test sets
+## Split data into train and test sets
 X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.2, random_state=42)
 
-# Define and train a TensorFlow model
+## Define and train a TensorFlow model
 model = tf.keras.models.Sequential([
     tf.keras.layers.Dense(64, activation='relu', input_shape=(X_train.shape[1],)),
     tf.keras.layers.Dense(64, activation='relu'),
@@ -263,7 +263,7 @@ model = tf.keras.models.Sequential([
 model.compile(optimizer='adam', loss='mse')
 model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y_test))
 
-# Save the trained model
+## Save the trained model
 model.save("models/tensorflow_models/trained_model")
 
 print("Training completed and model saved.")
@@ -290,21 +290,21 @@ import torch.optim as optim
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import MinMaxScaler
 
-# Load mock data
+## Load mock data
 data = pd.read_csv("data/mock_data.csv")
 
-# Feature engineering and target variable separation
+## Feature engineering and target variable separation
 X = data.drop(columns=['credit_score']).values
 y = data['credit_score'].values
 
-# Data preprocessing
+## Data preprocessing
 scaler = MinMaxScaler()
 X_scaled = scaler.fit_transform(X)
 
-# Split data into train and test sets
+## Split data into train and test sets
 X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.2, random_state=42)
 
-# Define and train a PyTorch model
+## Define and train a PyTorch model
 class ComplexModel(nn.Module):
     def __init__(self):
         super(ComplexModel, self).__init__()
@@ -327,7 +327,7 @@ optimizer = optim.Adam(model.parameters(), lr=0.001)
 X_train_tensor = torch.tensor(X_train, dtype=torch.float).to(device)
 y_train_tensor = torch.tensor(y_train, dtype=torch.float).view(-1, 1).to(device)
 
-# Training the model
+## Training the model
 for epoch in range(10):
     optimizer.zero_grad()
     output = model(X_train_tensor)
@@ -335,7 +335,7 @@ for epoch in range(10):
     loss.backward()
     optimizer.step()
 
-# Save the trained model
+## Save the trained model
 torch.save(model.state_dict(), "models/pytorch_models/complex_model.pth")
 
 print("Training completed and complex model saved.")

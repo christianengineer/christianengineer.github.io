@@ -152,21 +152,21 @@ from statsmodels.tsa.arima.model import ARIMA
 import joblib
 
 def train_arima_model_and_save(data_file_path, model_save_path):
-    # Load mock sales data from a CSV file
+    ## Load mock sales data from a CSV file
     sales_data = pd.read_csv(data_file_path)
 
-    # Preprocess the sales data if needed (e.g., converting date column to datetime, setting as index)
+    ## Preprocess the sales data if needed (e.g., converting date column to datetime, setting as index)
 
-    # Initialize and train the ARIMA model
-    arima_model = ARIMA(sales_data, order=(5,1,0))  # Example order, can be tuned using grid search or other methods
+    ## Initialize and train the ARIMA model
+    arima_model = ARIMA(sales_data, order=(5,1,0))  ## Example order, can be tuned using grid search or other methods
     trained_model = arima_model.fit()
 
-    # Save the trained ARIMA model to a file
+    ## Save the trained ARIMA model to a file
     joblib.dump(trained_model, model_save_path)
 
     print("ARIMA model trained and saved successfully")
 
-# Example usage
+## Example usage
 data_file_path = 'data/processed_data/mock_sales_data.csv'
 model_save_path = 'models/trained_arima_model.pkl'
 train_arima_model_and_save(data_file_path, model_save_path)
@@ -193,25 +193,25 @@ import pandas as pd
 from statsmodels.tsa.arima.model import ARIMA
 
 def train_and_forecast_arima_model(data_file_path):
-    # Load mock sales data from a CSV file
+    ## Load mock sales data from a CSV file
     sales_data = pd.read_csv(data_file_path)
 
-    # Preprocess the sales data if needed
-    # E.g., convert date column to datetime and set as index
+    ## Preprocess the sales data if needed
+    ## E.g., convert date column to datetime and set as index
     sales_data['date'] = pd.to_datetime(sales_data['date'])
     sales_data.set_index('date', inplace=True)
 
-    # Train the ARIMA model
-    arima_model = ARIMA(sales_data, order=(5, 1, 0))  # Example order, can be tuned using grid search or other methods
+    ## Train the ARIMA model
+    arima_model = ARIMA(sales_data, order=(5, 1, 0))  ## Example order, can be tuned using grid search or other methods
     trained_model = arima_model.fit()
 
-    # Generate sales forecasts for future time periods
-    forecast_horizon = 12  # Example: forecasting sales for the next 12 months
+    ## Generate sales forecasts for future time periods
+    forecast_horizon = 12  ## Example: forecasting sales for the next 12 months
     sales_forecast = trained_model.forecast(steps=forecast_horizon)
 
     return sales_forecast
 
-# Example usage
+## Example usage
 data_file_path = 'data/processed_data/mock_sales_data.csv'
 forecasted_sales = train_and_forecast_arima_model(data_file_path)
 print(forecasted_sales)

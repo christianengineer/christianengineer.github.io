@@ -5,7 +5,7 @@ permalink: posts/exclusive-real-estate-investment-predictor-keras-tensorflow-spa
 layout: article
 ---
 
-# Exclusive Real Estate Investment Predictor (Keras, TensorFlow, Spark, DVC) for Urbanova
+## Exclusive Real Estate Investment Predictor (Keras, TensorFlow, Spark, DVC) for Urbanova
 
 ## Objectives and Benefits to the Audience:
 1. **Objective**: Develop a scalable, production-ready machine learning solution to predict exclusive real estate investments in Peru's urban landscapes.
@@ -68,7 +68,7 @@ layout: article
 - [feature-engine](https://feature-engine.readthedocs.io/en/1.0.x/)
 - [requests](https://docs.python-requests.org/en/latest/)
 
-# Data Sourcing and Collection Strategy for Exclusive Real Estate Investment Predictor
+## Data Sourcing and Collection Strategy for Exclusive Real Estate Investment Predictor
 
 ## Data Collection Strategy:
 To efficiently collect diverse data for the Exclusive Real Estate Investment Predictor project, a comprehensive strategy is needed. We recommend the following tools and methods to cover all relevant aspects of the problem domain while integrating seamlessly within the existing technology stack:
@@ -100,7 +100,7 @@ To efficiently collect diverse data for the Exclusive Real Estate Investment Pre
 
 By leveraging web scraping, API integration, geospatial data processing, and data version control tools like BeautifulSoup, geopandas, and DVC, the data collection process for the Exclusive Real Estate Investment Predictor project can be streamlined. These tools integrate seamlessly within the existing technology stack, ensuring that the data is readily accessible, in the correct format, and continuously updated for analysis and model training.
 
-# Feature Extraction and Engineering for Exclusive Real Estate Investment Predictor
+## Feature Extraction and Engineering for Exclusive Real Estate Investment Predictor
 
 ## Feature Extraction:
 For the Exclusive Real Estate Investment Predictor project, effective feature extraction plays a crucial role in enhancing the interpretability and performance of the machine learning model. We recommend the following features extraction techniques:
@@ -171,7 +171,7 @@ To maintain consistency and clarity in the project, we suggest the following nam
 
 By implementing these feature extraction and engineering strategies and following consistent variable naming conventions, the Exclusive Real Estate Investment Predictor project can enhance both the interpretability of the data and the performance of the machine learning model, ultimately leading to more accurate investment predictions and informed decision-making.
 
-# Metadata Management for Exclusive Real Estate Investment Predictor
+## Metadata Management for Exclusive Real Estate Investment Predictor
 
 In the context of the Exclusive Real Estate Investment Predictor project, efficient metadata management is crucial for ensuring reproducibility, traceability, and scalability. Here are some insights directly relevant to the unique demands and characteristics of our project:
 
@@ -213,7 +213,7 @@ In the context of the Exclusive Real Estate Investment Predictor project, effici
 
 By prioritizing metadata management tailored to the unique demands of the Exclusive Real Estate Investment Predictor project, you can enhance reproducibility, performance tracking, and collaboration, ultimately leading to more informed investment decisions and optimized model outcomes in Peru's dynamic urban real estate landscape.
 
-# Data Challenges and Preprocessing Strategies for Exclusive Real Estate Investment Predictor
+## Data Challenges and Preprocessing Strategies for Exclusive Real Estate Investment Predictor
 
 In the context of the Exclusive Real Estate Investment Predictor project, several specific challenges may arise with the data that require strategic preprocessing practices to ensure the data remains robust, reliable, and suitable for high-performing machine learning models. Here are insights directly relevant to the unique demands and characteristics of our project:
 
@@ -263,34 +263,34 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
-# Load the raw data into a pandas DataFrame
+## Load the raw data into a pandas DataFrame
 data = pd.read_csv('real_estate_data.csv')
 
-# Step 1: Handle Missing Values
-# Replace missing values in numerical features with the median
+## Step 1: Handle Missing Values
+## Replace missing values in numerical features with the median
 data['property_size_sqft'].fillna(data['property_size_sqft'].median(), inplace=True)
 data['num_bedrooms'].fillna(data['num_bedrooms'].median(), inplace=True)
 
-# Step 2: Feature Engineering
-# Create a new feature 'price_per_sqft' as a derived feature
+## Step 2: Feature Engineering
+## Create a new feature 'price_per_sqft' as a derived feature
 data['price_per_sqft'] = data['property_price'] / data['property_size_sqft']
 
-# Step 3: Encode Categorical Variables
-# Implement one-hot encoding for 'property_type' column
+## Step 3: Encode Categorical Variables
+## Implement one-hot encoding for 'property_type' column
 data = pd.get_dummies(data, columns=['property_type'])
 
-# Step 4: Normalize Numerical Features
-# Normalize numerical features like 'property_size_sqft' and 'price_per_sqft' using StandardScaler
+## Step 4: Normalize Numerical Features
+## Normalize numerical features like 'property_size_sqft' and 'price_per_sqft' using StandardScaler
 scaler = StandardScaler()
 data[['property_size_sqft', 'price_per_sqft']] = scaler.fit_transform(data[['property_size_sqft', 'price_per_sqft']])
 
-# Step 5: Train-Test Split
-# Split the data into training and testing sets
+## Step 5: Train-Test Split
+## Split the data into training and testing sets
 X = data.drop('property_price', axis=1)
 y = data['property_price']
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Save the preprocessed data to new CSV files for model training and testing
+## Save the preprocessed data to new CSV files for model training and testing
 X_train.to_csv('X_train.csv', index=False)
 X_test.to_csv('X_test.csv', index=False)
 y_train.to_csv('y_train.csv', index=False)
@@ -308,7 +308,7 @@ In this code file:
 
 By following these tailored preprocessing steps outlined in the code file, the data for the Exclusive Real Estate Investment Predictor project will be effectively prepared for model training and analysis, setting the stage for accurate investment predictions in Peru's urban real estate landscapes.
 
-# Recommended Modeling Strategy for Exclusive Real Estate Investment Predictor
+## Recommended Modeling Strategy for Exclusive Real Estate Investment Predictor
 
 To address the unique challenges and data types presented by the Exclusive Real Estate Investment Predictor project, a modeling strategy leveraging Gradient Boosting Regression is particularly suited. Gradient Boosting Regression is well-equipped to handle complex relationships in the data, handle heterogeneous data types, and provide high predictive accuracy, making it ideal for real estate investment prediction tasks.
 
@@ -381,28 +381,28 @@ import numpy as np
 import pandas as pd
 from sklearn.datasets import make_regression
 
-# Generate synthetic data using scikit-learn's make_regression
+## Generate synthetic data using scikit-learn's make_regression
 X, y = make_regression(n_samples=10000, n_features=10, noise=0.2, random_state=42)
 
-# Create a dataframe with synthetic features
+## Create a dataframe with synthetic features
 data = pd.DataFrame(X, columns=['property_size_sqft', 'num_bedrooms', 'num_bathrooms', 
                                  'price_per_sqft', 'property_type_Apartment', 'property_type_House',
                                  'property_type_Commercial', 'population_density', 'median_income', 'crime_rate'])
 
-# Generate synthetic property prices based on the features
+## Generate synthetic property prices based on the features
 data['property_price'] = 500 * data['property_size_sqft'] + 10000 * data['num_bedrooms'] + 20000 * data['num_bathrooms'] + \
                           250 * data['price_per_sqft'] + 3000 * data['property_type_Apartment'] + \
                           5000 * data['property_type_House'] + 10000 * data['property_type_Commercial'] + \
                           1000 * data['population_density'] - 5000 * data['median_income'] + \
                           300 * data['crime_rate'] + np.random.normal(0, 5000, size=len(data))
 
-# Add variability to the prices for real-world simulation
+## Add variability to the prices for real-world simulation
 data['property_price'] += np.random.normal(0, 20000, size=len(data))
 
-# Save the synthetic dataset to a CSV file
+## Save the synthetic dataset to a CSV file
 data.to_csv('synthetic_real_estate_data.csv', index=False)
 
-# Validate the dataset by checking for NaN values
+## Validate the dataset by checking for NaN values
 if data.isnull().sum().sum() == 0:
     print("Dataset validation successful - No missing values.")
 else:
@@ -446,28 +446,28 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import GradientBoostingRegressor
 import joblib
 
-# Load preprocessed data
+## Load preprocessed data
 data = pd.read_csv('preprocessed_data.csv')
 
-# Split data into features and target
+## Split data into features and target
 X = data.drop('property_price', axis=1)
 y = data['property_price']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize and train the Gradient Boosting Regressor model
+## Initialize and train the Gradient Boosting Regressor model
 model = GradientBoostingRegressor()
 model.fit(X_train, y_train)
 
-# Evaluate the model
+## Evaluate the model
 train_score = model.score(X_train, y_train)
 test_score = model.score(X_test, y_test)
 
-# Save the trained model to a file
+## Save the trained model to a file
 joblib.dump(model, 'real_estate_investment_model.pkl')
 
-# Print evaluation scores
+## Print evaluation scores
 print(f"Training R^2 Score: {train_score}")
 print(f"Testing R^2 Score: {test_score}")
 ```
@@ -487,7 +487,7 @@ In this code snippet:
 
 By following this structured and well-documented code example, the Exclusive Real Estate Investment Predictor project can maintain high standards of quality, readability, and maintainability in the machine learning model codebase, facilitating seamless deployment in a production environment.
 
-# Deployment Plan for Exclusive Real Estate Investment Predictor Model
+## Deployment Plan for Exclusive Real Estate Investment Predictor Model
 
 To deploy the machine learning model for the Exclusive Real Estate Investment Predictor project effectively, tailored to its unique demands, follow this step-by-step deployment guide:
 
@@ -531,29 +531,29 @@ By following this deployment plan and utilizing the recommended tools and platfo
 To create a production-ready Dockerfile tailored to the performance needs of the Exclusive Real Estate Investment Predictor project, optimizing for performance and scalability, follow the configuration below:
 
 ```docker
-# Start with a base Python image
+## Start with a base Python image
 FROM python:3.9-slim
 
-# Set a working directory
+## Set a working directory
 WORKDIR /app
 
-# Copy requirements file
+## Copy requirements file
 COPY requirements.txt .
 
-# Install necessary dependencies
+## Install necessary dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the preprocessed dataset and trained model
+## Copy the preprocessed dataset and trained model
 COPY preprocessed_data.csv .
 COPY real_estate_investment_model.pkl .
 
-# Copy the Flask app for serving predictions
+## Copy the Flask app for serving predictions
 COPY app.py .
 
-# Expose the Flask port
+## Expose the Flask port
 EXPOSE 5000
 
-# Run the Flask app
+## Run the Flask app
 CMD ["python", "app.py"]
 ```
 

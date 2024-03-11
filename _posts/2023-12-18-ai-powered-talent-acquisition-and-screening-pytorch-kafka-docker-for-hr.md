@@ -206,7 +206,7 @@ By organizing deployment configurations in this manner, the `deployment/` direct
 Certainly! Below is an example of a Python script for training a PyTorch model for resume screening using mock data. This script assumes the availability of mock training and validation data in CSV format. The script is saved in the `ml_models/resume_screening/scripts/train.py` file path within the project structure.
 
 ```python
-# ml_models/resume_screening/scripts/train.py
+## ml_models/resume_screening/scripts/train.py
 
 import torch
 import torch.nn as nn
@@ -215,21 +215,21 @@ from sklearn.model_selection import train_test_split
 from torch.utils.data import DataLoader, Dataset
 import torch.optim as optim
 
-# Load mock data
+## Load mock data
 data_path = 'ml_models/resume_screening/data/mock_resume_data.csv'
 data = pd.read_csv(data_path)
 
-# Preprocess mock data
-# ... (preprocessing code)
+## Preprocess mock data
+## ... (preprocessing code)
 
-# Split mock data into features and target
+## Split mock data into features and target
 X = data.drop('target', axis=1)
 y = data['target']
 
-# Split mock data into training and validation sets
+## Split mock data into training and validation sets
 X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Define PyTorch dataset
+## Define PyTorch dataset
 class ResumeDataset(Dataset):
     def __init__(self, X, y):
         self.X = torch.tensor(X.values, dtype=torch.float32)
@@ -244,35 +244,35 @@ class ResumeDataset(Dataset):
 train_dataset = ResumeDataset(X_train, y_train)
 val_dataset = ResumeDataset(X_val, y_val)
 
-# Define PyTorch model
+## Define PyTorch model
 class ResumeScreeningModel(nn.Module):
     def __init__(self, input_dim):
         super(ResumeScreeningModel, self).__init__()
-        # Define model layers
+        ## Define model layers
         self.fc1 = nn.Linear(input_dim, 64)
         self.fc2 = nn.Linear(64, 32)
         self.fc3 = nn.Linear(32, 1)
     
     def forward(self, x):
-        # Define model forward pass
+        ## Define model forward pass
         x = torch.relu(self.fc1(x))
         x = torch.relu(self.fc2(x))
         x = torch.sigmoid(self.fc3(x))
         return x
 
-# Initialize model
+## Initialize model
 input_dim = len(X.columns)
 model = ResumeScreeningModel(input_dim)
 
-# Define loss and optimizer
+## Define loss and optimizer
 criterion = nn.BCELoss()
 optimizer = optim.Adam(model.parameters(), lr=0.001)
 
-# Train the model
+## Train the model
 train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True)
 val_loader = DataLoader(val_dataset, batch_size=len(val_dataset), shuffle=False)
 
-for epoch in range(10):  # Example: 10 epochs
+for epoch in range(10):  ## Example: 10 epochs
     model.train()
     for inputs, targets in train_loader:
         optimizer.zero_grad()
@@ -288,7 +288,7 @@ for epoch in range(10):  # Example: 10 epochs
         val_loss = criterion(val_outputs, val_targets.unsqueeze(1))
         print(f'Epoch {epoch+1}, Validation Loss: {val_loss.item()}')
 
-# Save trained model
+## Save trained model
 model_path = 'ml_models/resume_screening/model/trained_model.pt'
 torch.save(model.state_dict(), model_path)
 ```
@@ -298,7 +298,7 @@ In this example, the training script `train.py` demonstrates the process of load
 This script can serve as a starting point for training machine learning models within the AI-powered Talent Acquisition and Screening application, leveraging PyTorch for model training and manipulation of mock data for experimentation and development.
 
 ```python
-# ml_models/resume_screening/scripts/complex_model_train.py
+## ml_models/resume_screening/scripts/complex_model_train.py
 
 import torch
 import torch.nn as nn
@@ -306,42 +306,42 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 import torch.optim as optim
 
-# Load mock data
+## Load mock data
 data_path = 'ml_models/resume_screening/data/mock_resume_data.csv'
 data = pd.read_csv(data_path)
 
-# Preprocess mock data
-# ... (complex preprocessing code)
+## Preprocess mock data
+## ... (complex preprocessing code)
 
-# Split mock data into features and target
+## Split mock data into features and target
 X = data.drop('target', axis=1)
 y = data['target']
 
-# Split mock data into training and validation sets
+## Split mock data into training and validation sets
 X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Define complex PyTorch model
+## Define complex PyTorch model
 class ComplexResumeScreeningModel(nn.Module):
     def __init__(self, input_dim):
         super(ComplexResumeScreeningModel, self).__init__()
-        # Define complex model layers and architecture
-        # ...
+        ## Define complex model layers and architecture
+        ## ...
 
     def forward(self, x):
-        # Define complex model forward pass
-        # ...
+        ## Define complex model forward pass
+        ## ...
         return x
 
-# Mock complex model training
+## Mock complex model training
 input_dim = len(X.columns)
 model = ComplexResumeScreeningModel(input_dim)
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters(), lr=0.001)
 
-# Train the complex model
-# ... (complex model training code)
+## Train the complex model
+## ... (complex model training code)
 
-# Save trained complex model
+## Save trained complex model
 model_path = 'ml_models/resume_screening/model/complex_trained_model.pt'
 torch.save(model.state_dict(), model_path)
 ```

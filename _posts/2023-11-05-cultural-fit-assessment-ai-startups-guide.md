@@ -5,7 +5,7 @@ permalink: posts/cultural-fit-assessment-ai-startups-guide
 layout: article
 ---
 
-# Cultural Fit Assessment in AI Startups
+## Cultural Fit Assessment in AI Startups
 
 The modern business environment signals the crucial role of Artificial Intelligence (AI) in the business world—a fact best epitomized by the rise of AI startups. As these companies continue to grow and transform the landscape of business operations, one element they must not overlook is the importance of cultural fit in scaling and sustaining their growth. In the realm of hiring for AI companies, cultural fit assessment plays a critical role.
 
@@ -57,7 +57,7 @@ class AICulturalFitAnalyzer:
         self.organizational_culture = organizational_culture
 
     def analyze_fit():
-        # AI-enabled analysis code
+        ## AI-enabled analysis code
         pass
 ```
 

@@ -5,7 +5,7 @@ permalink: posts/augmented-reality-experience-using-arkit-swift-creating-immersi
 layout: article
 ---
 
-# AI Augmented Reality Experience using ARKit
+## AI Augmented Reality Experience using ARKit
 
 ## Objectives
 The objective of creating an immersive AR application repository using ARKit in Swift is to leverage the power of AI and machine learning to build interactive and intelligent experiences in the realm of augmented reality. The key objectives of this project include:

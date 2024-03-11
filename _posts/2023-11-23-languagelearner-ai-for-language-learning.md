@@ -57,7 +57,7 @@ We will implement robust monitoring and logging solutions, such as Prometheus fo
 
 By implementing this infrastructure, the LanguageLearner AI application will be well-equipped to handle the demands of scalable, data-intensive AI language learning, providing an immersive and personalized learning experience for users while ensuring efficient resource utilization and maintenance.
 
-# LanguageLearner AI Repository File Structure
+## LanguageLearner AI Repository File Structure
 
 ```
 language_learner_ai/
@@ -222,29 +222,29 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
 def train_language_understanding_model(data_file_path):
-    # Load mock data
+    ## Load mock data
     data = pd.read_csv(data_file_path)
 
-    # Preprocessing mock data (assuming it contains features and target)
+    ## Preprocessing mock data (assuming it contains features and target)
     X = data.drop('target_column', axis=1)
     y = data['target_column']
 
-    # Split data into training and testing sets
+    ## Split data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize and train the random forest classifier
+    ## Initialize and train the random forest classifier
     clf = RandomForestClassifier(n_estimators=100, random_state=42)
     clf.fit(X_train, y_train)
 
-    # Make predictions on the test data
+    ## Make predictions on the test data
     y_pred = clf.predict(X_test)
 
-    # Calculate accuracy
+    ## Calculate accuracy
     accuracy = accuracy_score(y_test, y_pred)
 
     return clf, accuracy
 
-# Example usage
+## Example usage
 data_file_path = 'data/mock_language_understanding_data.csv'
 trained_model, accuracy = train_language_understanding_model(data_file_path)
 print(f"Model trained with accuracy: {accuracy}")
@@ -264,42 +264,42 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
 def train_deep_language_understanding_model(data_file_path):
-    # Load mock data
+    ## Load mock data
     data = pd.read_csv(data_file_path)
 
-    # Preprocessing mock data (assuming it contains features and target)
+    ## Preprocessing mock data (assuming it contains features and target)
     X = data.drop('target_column', axis=1)
     y = data['target_column']
 
-    # Split data into training and testing sets
+    ## Split data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Standardize the input features
+    ## Standardize the input features
     scaler = StandardScaler()
     X_train = scaler.fit_transform(X_train)
     X_test = scaler.transform(X_test)
 
-    # Initialize a deep learning model
+    ## Initialize a deep learning model
     model = tf.keras.Sequential([
         tf.keras.layers.Dense(64, activation='relu', input_shape=(X_train.shape[1],)),
         tf.keras.layers.Dense(64, activation='relu'),
         tf.keras.layers.Dense(1, activation='sigmoid')
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam',
                   loss='binary_crossentropy',
                   metrics=['accuracy'])
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y_test))
 
-    # Evaluate the model on test data
+    ## Evaluate the model on test data
     _, accuracy = model.evaluate(X_test, y_test)
 
     return model, accuracy
 
-# Example usage
+## Example usage
 data_file_path = 'data/mock_deep_language_understanding_data.csv'
 trained_model, accuracy = train_deep_language_understanding_model(data_file_path)
 print(f"Model trained with accuracy: {accuracy}")

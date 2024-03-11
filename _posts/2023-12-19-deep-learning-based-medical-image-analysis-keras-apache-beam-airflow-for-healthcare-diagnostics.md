@@ -5,7 +5,7 @@ permalink: posts/deep-learning-based-medical-image-analysis-keras-apache-beam-ai
 layout: article
 ---
 
-# AI Deep Learning-based Medical Image Analysis
+## AI Deep Learning-based Medical Image Analysis
 
 ## Objectives
 The objective of the AI Deep Learning-based Medical Image Analysis repository is to build a scalable, data-intensive application for healthcare diagnostics using deep learning techniques. The primary goal is to leverage the power of AI to analyze medical images such as X-rays, MRIs, and CT scans to assist in the early detection and diagnosis of various medical conditions.
@@ -68,7 +68,7 @@ Building a robust MLOps infrastructure is crucial for the successful deployment 
 
 By integrating these components into the MLOps infrastructure, we aim to establish a well-organized, automated, and scalable system for managing the Deep Learning-based Medical Image Analysis application. This infrastructure will support the continuous development, deployment, and monitoring of machine learning models while ensuring reproducibility and reliability in a healthcare diagnostics context.
 
-# Scalable File Structure for Deep Learning-based Medical Image Analysis Repository
+## Scalable File Structure for Deep Learning-based Medical Image Analysis Repository
 
 ```
 .
@@ -233,7 +233,7 @@ The deployment structure allows for the encapsulation of the prediction serving 
 While I can't directly generate a file with a specific file path, I can provide you with a Python script for training a deep learning model for medical image analysis using Keras, along with mock data. You can save this script in your `src/` directory within the project structure. Let's call this script `train_model.py`.
 
 ```python
-# train_model.py
+## train_model.py
 
 import os
 import numpy as np
@@ -241,23 +241,23 @@ from tensorflow import keras
 from tensorflow.keras import layers
 from tensorflow.keras.utils import to_categorical
 
-# Define mock data paths
+## Define mock data paths
 train_data_path = 'data/processed/train'
-mock_data_classes = ['class1', 'class2']  # Replace with actual class names
+mock_data_classes = ['class1', 'class2']  ## Replace with actual class names
 num_classes = len(mock_data_classes)
 
-# Load mock data (replace with actual data loading code)
+## Load mock data (replace with actual data loading code)
 def load_mock_data(data_path):
-    # Assuming data is stored in a structured directory as per the provided file structure
-    images = []  # Placeholder for image data
-    labels = []  # Placeholder for corresponding labels
+    ## Assuming data is stored in a structured directory as per the provided file structure
+    images = []  ## Placeholder for image data
+    labels = []  ## Placeholder for corresponding labels
 
     for idx, class_name in enumerate(mock_data_classes):
         class_path = os.path.join(data_path, class_name)
         class_label = np.array([idx] * len(os.listdir(class_path)))
         for image_file in os.listdir(class_path):
-            # Load and preprocess the image data (e.g., using libraries like PIL or OpenCV)
-            image = np.zeros((64, 64, 3))  # Placeholder for image data
+            ## Load and preprocess the image data (e.g., using libraries like PIL or OpenCV)
+            image = np.zeros((64, 64, 3))  ## Placeholder for image data
             images.append(image)
             labels.append(class_label)
 
@@ -266,7 +266,7 @@ def load_mock_data(data_path):
 
     return images, labels
 
-# Define the model architecture
+## Define the model architecture
 def build_model(input_shape, num_classes):
     model = keras.Sequential([
         layers.Conv2D(filters=32, kernel_size=(3, 3), activation='relu', input_shape=input_shape),
@@ -278,20 +278,20 @@ def build_model(input_shape, num_classes):
     model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
     return model
 
-# Load mock data
+## Load mock data
 train_images, train_labels = load_mock_data(train_data_path)
 input_shape = train_images.shape[1:]
 
-# Preprocess and normalize the data
+## Preprocess and normalize the data
 train_images = train_images.astype('float32') / 255
 train_labels = to_categorical(train_labels, num_classes)
 
-# Build and train the model
+## Build and train the model
 model = build_model(input_shape, num_classes)
 model.fit(train_images, train_labels, epochs=10, batch_size=32)
 
-# Save the model
-model.save('models/mock_model.h5')  # Save the trained model
+## Save the model
+model.save('models/mock_model.h5')  ## Save the trained model
 ```
 
 In this script, we first define paths to mock training data and classes. We then load the mock data, build a simple convolutional neural network architecture using Keras, train the model using the mock data, and save the trained model to a file within the `models/` directory (in this case, `mock_model.h5`).
@@ -301,7 +301,7 @@ You can save this script within the `src/` directory of your project and run it 
 Below is an example of a Python script for training a more complex deep learning model for medical image analysis using Keras, including mock data. This script can be saved in your `src/` directory and named `complex_model_training.py`.
 
 ```python
-# complex_model_training.py
+## complex_model_training.py
 
 import os
 import numpy as np
@@ -309,24 +309,24 @@ from tensorflow import keras
 from tensorflow.keras import layers
 from tensorflow.keras.utils import to_categorical
 
-# Define mock data paths
+## Define mock data paths
 train_data_path = 'data/processed/train'
 validation_data_path = 'data/processed/validation'
-mock_data_classes = ['class1', 'class2']  # Replace with actual class names
+mock_data_classes = ['class1', 'class2']  ## Replace with actual class names
 num_classes = len(mock_data_classes)
 
-# Load mock data (replace with actual data loading code)
+## Load mock data (replace with actual data loading code)
 def load_mock_data(data_path):
-    # Assuming data is stored in a structured directory as per the provided file structure
-    images = []  # Placeholder for image data
-    labels = []  # Placeholder for corresponding labels
+    ## Assuming data is stored in a structured directory as per the provided file structure
+    images = []  ## Placeholder for image data
+    labels = []  ## Placeholder for corresponding labels
 
     for idx, class_name in enumerate(mock_data_classes):
         class_path = os.path.join(data_path, class_name)
         class_label = np.array([idx] * len(os.listdir(class_path)))
         for image_file in os.listdir(class_path):
-            # Load and preprocess the image data (e.g., using libraries like PIL or OpenCV)
-            image = np.zeros((128, 128, 3))  # Placeholder for image data
+            ## Load and preprocess the image data (e.g., using libraries like PIL or OpenCV)
+            image = np.zeros((128, 128, 3))  ## Placeholder for image data
             images.append(image)
             labels.append(class_label)
 
@@ -335,7 +335,7 @@ def load_mock_data(data_path):
 
     return images, labels
 
-# Define the model architecture
+## Define the model architecture
 def build_complex_model(input_shape, num_classes):
     model = keras.Sequential([
         layers.Conv2D(32, (3, 3), activation='relu', input_shape=input_shape),
@@ -352,23 +352,23 @@ def build_complex_model(input_shape, num_classes):
     model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
     return model
 
-# Load mock training and validation data
+## Load mock training and validation data
 train_images, train_labels = load_mock_data(train_data_path)
 validation_images, validation_labels = load_mock_data(validation_data_path)
 input_shape = train_images.shape[1:]
 
-# Preprocess and normalize the data
+## Preprocess and normalize the data
 train_images = train_images.astype('float32') / 255
 validation_images = validation_images.astype('float32') / 255
 train_labels = to_categorical(train_labels, num_classes)
 validation_labels = to_categorical(validation_labels, num_classes)
 
-# Build and train the complex model
+## Build and train the complex model
 complex_model = build_complex_model(input_shape, num_classes)
 complex_model.fit(train_images, train_labels, validation_data=(validation_images, validation_labels), epochs=20, batch_size=32)
 
-# Save the complex model
-complex_model.save('models/complex_mock_model.h5')  # Save the trained complex model
+## Save the complex model
+complex_model.save('models/complex_mock_model.h5')  ## Save the trained complex model
 ```
 
 In this script, a more complex convolutional neural network (CNN) architecture is defined using Keras, including additional convolutional and pooling layers. The script loads the mock training and validation data, preprocesses and normalizes the data, builds and trains the complex model using the mock data, and finally saves the trained complex model to a file within the `models/` directory (in this case, `complex_mock_model.h5`).

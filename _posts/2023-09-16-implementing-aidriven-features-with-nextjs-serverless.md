@@ -5,7 +5,7 @@ permalink: posts/implementing-aidriven-features-with-nextjs-serverless
 layout: article
 ---
 
-# Implementing AI-Driven Features with Next.js Serverless Functions
+## Implementing AI-Driven Features with Next.js Serverless Functions
 
 Next.js, Vercel's highly performant React framework, has been a game-changer for web development. Its built-in serverless functions further elevate its potential, especially when integrating AI-driven features. The convergence of Next.js and AI capabilities opens the door to state-of-the-art web applications that are both fast and intelligent.
 

@@ -5,7 +5,7 @@ permalink: posts/smart-ai-based-cooking-assistant
 layout: article
 ---
 
-# Smart AI-Based Cooking Assistant - Technical Specifications
+## Smart AI-Based Cooking Assistant - Technical Specifications
 
 ## Description
 

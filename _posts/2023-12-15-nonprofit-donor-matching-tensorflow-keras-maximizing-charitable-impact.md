@@ -69,22 +69,22 @@ A well-organized and scalable file structure is crucial for the maintainability 
 
 ```
 ├── app/
-|   ├── api/                            # API code for integrating with other systems
-|   ├── models/                         # Trained ML models and model serving code
-|   └── data_processing/                # Code for data preprocessing and feature engineering
-├── notebooks/                           # Jupyter notebooks for exploratory data analysis and model prototyping
+|   ├── api/                            ## API code for integrating with other systems
+|   ├── models/                         ## Trained ML models and model serving code
+|   └── data_processing/                ## Code for data preprocessing and feature engineering
+├── notebooks/                           ## Jupyter notebooks for exploratory data analysis and model prototyping
 ├── data/
-|   ├── raw/                            # Raw data from various sources
-|   ├── processed/                      # Processed data used for model training and evaluation
-|   └── external/                       # Third-party datasets or data obtained from external sources
+|   ├── raw/                            ## Raw data from various sources
+|   ├── processed/                      ## Processed data used for model training and evaluation
+|   └── external/                       ## Third-party datasets or data obtained from external sources
 ├── config/
-|   ├── model_config.yaml               # Configuration file for model hyperparameters
-|   └── api_config.yaml                 # Configuration file for API endpoints and authentication
-├── tests/                               # Unit tests for the application code
-├── Dockerfile                           # Docker configuration for containerization
-├── requirements.txt                     # Python dependencies for the application
-├── README.md                            # Project documentation and setup instructions
-└── .gitignore                           # Git ignore file to exclude specific files and directories from version control
+|   ├── model_config.yaml               ## Configuration file for model hyperparameters
+|   └── api_config.yaml                 ## Configuration file for API endpoints and authentication
+├── tests/                               ## Unit tests for the application code
+├── Dockerfile                           ## Docker configuration for containerization
+├── requirements.txt                     ## Python dependencies for the application
+├── README.md                            ## Project documentation and setup instructions
+└── .gitignore                           ## Git ignore file to exclude specific files and directories from version control
 ```
 
 This file structure is designed to accommodate the various components of the Nonprofit Donor Matching application while allowing for scalability and maintainability. Here's a brief overview of the purpose of each directory and file:
@@ -108,16 +108,16 @@ The `models/` directory is a key component of the Nonprofit Donor Matching appli
 ```
 models/
 ├── training/
-|   ├── data/                           # Subdirectory for training data used for model training
-|   ├── training_script.py              # Python script for model training and evaluation
-|   └── model_evaluation/               # Subdirectory for model evaluation scripts and metrics
+|   ├── data/                           ## Subdirectory for training data used for model training
+|   ├── training_script.py              ## Python script for model training and evaluation
+|   └── model_evaluation/               ## Subdirectory for model evaluation scripts and metrics
 ├── serving/
-|   ├── model/                          # Subdirectory for storing the trained model artifacts
-|   ├── model_server.py                 # Script for serving the trained model via APIs or endpoints
-|   └── requirements.txt                # Python dependencies for model serving
+|   ├── model/                          ## Subdirectory for storing the trained model artifacts
+|   ├── model_server.py                 ## Script for serving the trained model via APIs or endpoints
+|   └── requirements.txt                ## Python dependencies for model serving
 └── evaluation/
-    ├── evaluation_script.py            # Script for offline model evaluation and performance assessment
-    └── evaluation_metrics/             # Subdirectory for storing evaluation metrics and results
+    ├── evaluation_script.py            ## Script for offline model evaluation and performance assessment
+    └── evaluation_metrics/             ## Subdirectory for storing evaluation metrics and results
 ```
 
 #### `training/` Subdirectory
@@ -147,10 +147,10 @@ The deployment directory within the Nonprofit Donor Matching application houses 
 ### Deployment Directory Structure
 ```
 deployment/
-├── Dockerfile               # Dockerfile for containerizing the application and model serving components
+├── Dockerfile               ## Dockerfile for containerizing the application and model serving components
 └── kubernetes/
-    ├── deployment.yaml       # Kubernetes deployment configuration for deploying the application
-    └── service.yaml          # Kubernetes service configuration for exposing the application via a service
+    ├── deployment.yaml       ## Kubernetes deployment configuration for deploying the application
+    └── service.yaml          ## Kubernetes service configuration for exposing the application via a service
 ```
 
 ### Files within the Deployment Directory
@@ -178,24 +178,24 @@ import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras import layers
 
-# Mock training data (replace with actual data loading and preprocessing)
-X_train = np.random.rand(100, 10)  # Mock feature matrix
-y_train = np.random.randint(2, size=(100, 1))  # Mock target labels
+## Mock training data (replace with actual data loading and preprocessing)
+X_train = np.random.rand(100, 10)  ## Mock feature matrix
+y_train = np.random.randint(2, size=(100, 1))  ## Mock target labels
 
-# Define the Keras model
+## Define the Keras model
 model = keras.Sequential([
     layers.Dense(32, activation='relu', input_shape=(10,)),
     layers.Dense(16, activation='relu'),
     layers.Dense(1, activation='sigmoid')
 ])
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
-# Train the model
+## Train the model
 history = model.fit(X_train, y_train, epochs=10, batch_size=32, validation_split=0.2)
 
-# Save the trained model
+## Save the trained model
 model.save('models/training/trained_model.h5')
 ```
 
@@ -212,11 +212,11 @@ import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras import layers
 
-# Mock training data (replace with actual data loading and preprocessing)
-X_train = np.random.rand(1000, 20)  # Mock feature matrix
-y_train = np.random.randint(2, size=(1000, 1))  # Mock target labels
+## Mock training data (replace with actual data loading and preprocessing)
+X_train = np.random.rand(1000, 20)  ## Mock feature matrix
+y_train = np.random.randint(2, size=(1000, 1))  ## Mock target labels
 
-# Define a more complex deep learning model using Keras
+## Define a more complex deep learning model using Keras
 model = keras.Sequential([
     layers.Dense(128, activation='relu', input_shape=(20,)),
     layers.BatchNormalization(),
@@ -228,15 +228,15 @@ model = keras.Sequential([
     layers.Dense(1, activation='sigmoid')
 ])
 
-# Compile the model
+## Compile the model
 model.compile(optimizer=keras.optimizers.Adam(learning_rate=0.001),
               loss='binary_crossentropy',
               metrics=['accuracy'])
 
-# Train the model
+## Train the model
 history = model.fit(X_train, y_train, epochs=20, batch_size=64, validation_split=0.2)
 
-# Save the trained complex model
+## Save the trained complex model
 model.save('models/training/complex_trained_model.h5')
 ```
 

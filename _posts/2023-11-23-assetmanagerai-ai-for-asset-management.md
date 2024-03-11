@@ -291,30 +291,30 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 
 def train_asset_prediction_model(data_file_path):
-    # Load mock asset data from a CSV file
+    ## Load mock asset data from a CSV file
     asset_data = pd.read_csv(data_file_path)
 
-    # Preprocessing: Split the data into features and target variable
+    ## Preprocessing: Split the data into features and target variable
     X = asset_data.drop('asset_price', axis=1)
     y = asset_data['asset_price']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize the Random Forest Regressor model
+    ## Initialize the Random Forest Regressor model
     model = RandomForestRegressor(n_estimators=100, random_state=42)
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train)
 
-    # Make predictions
+    ## Make predictions
     y_pred = model.predict(X_test)
 
-    # Evaluate the model
+    ## Evaluate the model
     mse = mean_squared_error(y_test, y_pred)
     print(f"Mean Squared Error: {mse}")
 
-    # Return the trained model
+    ## Return the trained model
     return model
 ```
 
@@ -337,22 +337,22 @@ from tensorflow.keras.layers import Dense, Dropout
 from tensorflow.keras.optimizers import Adam
 
 def train_deep_learning_asset_prediction_model(data_file_path):
-    # Load mock asset data from a CSV file
+    ## Load mock asset data from a CSV file
     asset_data = pd.read_csv(data_file_path)
 
-    # Preprocessing: Split the data into features and target variable
+    ## Preprocessing: Split the data into features and target variable
     X = asset_data.drop('asset_price', axis=1)
     y = asset_data['asset_price']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Standardize the data
+    ## Standardize the data
     scaler = StandardScaler()
     X_train = scaler.fit_transform(X_train)
     X_test = scaler.transform(X_test)
 
-    # Build the deep learning model
+    ## Build the deep learning model
     model = Sequential([
         Dense(64, activation='relu', input_shape=(X_train.shape[1],)),
         Dropout(0.2),
@@ -361,13 +361,13 @@ def train_deep_learning_asset_prediction_model(data_file_path):
         Dense(1)
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer=Adam(learning_rate=0.001), loss='mean_squared_error')
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train, epochs=50, batch_size=32, validation_data=(X_test, y_test))
 
-    # Return the trained deep learning model
+    ## Return the trained deep learning model
     return model
 ```
 

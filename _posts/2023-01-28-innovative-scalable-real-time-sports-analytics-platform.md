@@ -5,7 +5,7 @@ permalink: posts/innovative-scalable-real-time-sports-analytics-platform
 layout: article
 ---
 
-#Real-Time Sports Analytics Platform
+## eal-Time Sports Analytics Platform
 
 ##Description
 '**Real-Time Sports Analytics Platform**' is an advanced analytics repository designed to gather, analyze, and provide real-time statistics and data from numerous sports. The primary goal of this platform is to digitize sports data, making it easer for users such as Sports Analysts, Coaches, Players, and Fans to understand the global sports realm better.

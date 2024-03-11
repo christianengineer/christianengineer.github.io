@@ -162,7 +162,7 @@ from sklearn.svm import SVC
 import numpy as np
 
 def train_and_classify_document():
-    # Mock data
+    ## Mock data
     documents = ["This is a mock document about technology.",
                  "The environment is a critical issue for sustainability.",
                  "I love reading books and exploring new cultures."]
@@ -170,7 +170,7 @@ def train_and_classify_document():
 
     new_document = "I am interested in learning about sustainable technologies."
 
-    # Preprocessing using NLTK
+    ## Preprocessing using NLTK
     stop_words = set(stopwords.words('english'))
     stemmer = PorterStemmer()
     processed_documents = []
@@ -179,21 +179,21 @@ def train_and_classify_document():
         filtered = [stemmer.stem(w.lower()) for w in words if w.isalpha() and w.lower() not in stop_words]
         processed_documents.append(' '.join(filtered))
 
-    # Feature extraction using TF-IDF
+    ## Feature extraction using TF-IDF
     vectorizer = TfidfVectorizer()
     X = vectorizer.fit_transform(processed_documents)
 
-    # Training a Support Vector Machine classifier
+    ## Training a Support Vector Machine classifier
     clf = SVC(kernel='linear')
     clf.fit(X, categories)
 
-    # Classifying a new document
+    ## Classifying a new document
     new_document = vectorizer.transform([new_document])
     predicted_category = clf.predict(new_document)
 
     return predicted_category[0]
 
-# Call the function
+## Call the function
 predicted_category = train_and_classify_document()
 print(predicted_category)
 ```
@@ -214,7 +214,7 @@ from sklearn.naive_bayes import MultinomialNB
 import numpy as np
 
 def train_and_classify_document():
-    # Mock data
+    ## Mock data
     documents = [
         "This is a mock document about technology.",
         "The environment is a critical issue for sustainability.",
@@ -224,7 +224,7 @@ def train_and_classify_document():
 
     new_document = "I am interested in learning about sustainable technologies."
 
-    # Preprocessing using NLTK
+    ## Preprocessing using NLTK
     stop_words = set(stopwords.words('english'))
     stemmer = PorterStemmer()
     processed_documents = []
@@ -233,21 +233,21 @@ def train_and_classify_document():
         filtered = [stemmer.stem(w.lower()) for w in words if w.isalpha() and w.lower() not in stop_words]
         processed_documents.append(' '.join(filtered))
 
-    # Feature extraction using TF-IDF
+    ## Feature extraction using TF-IDF
     vectorizer = TfidfVectorizer()
     X = vectorizer.fit_transform(processed_documents)
 
-    # Training a Naive Bayes classifier
+    ## Training a Naive Bayes classifier
     clf = MultinomialNB()
     clf.fit(X, categories)
 
-    # Classifying a new document
+    ## Classifying a new document
     new_document = vectorizer.transform([new_document])
     predicted_category = clf.predict(new_document)
 
     return predicted_category[0]
 
-# Call the function
+## Call the function
 predicted_category = train_and_classify_document()
 print(predicted_category)
 ```

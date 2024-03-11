@@ -5,7 +5,7 @@ permalink: posts/accessible-emergency-information-systems-tensorflow-keras-for-p
 layout: article
 ---
 
-# AI Accessible Emergency Information Systems
+## AI Accessible Emergency Information Systems
 
 ## Objectives
 The primary objective of the AI Accessible Emergency Information Systems is to create a scalable and data-intensive application that leverages machine learning to provide timely and accurate public safety alerts to the public. The system aims to use AI technologies to process large volumes of data from various sources, such as social media, weather reports, and government alerts, to provide relevant and accessible emergency information to users in real-time.
@@ -232,7 +232,7 @@ File Path: `machine-learning/models/tensorflow/public-safety-alerts/training/tra
 import tensorflow as tf
 import numpy as np
 
-# Generate mock training data
+## Generate mock training data
 num_samples = 1000
 input_dim = 10
 output_dim = 2
@@ -240,7 +240,7 @@ output_dim = 2
 X_train = np.random.rand(num_samples, input_dim)
 y_train = np.random.randint(output_dim, size=num_samples)
 
-# Define and compile the neural network model
+## Define and compile the neural network model
 model = tf.keras.Sequential([
     tf.keras.layers.Dense(64, activation='relu', input_shape=(input_dim,)),
     tf.keras.layers.Dense(32, activation='relu'),
@@ -251,10 +251,10 @@ model.compile(optimizer='adam',
               loss='sparse_categorical_crossentropy',
               metrics=['accuracy'])
 
-# Train the model with the mock data
+## Train the model with the mock data
 model.fit(X_train, y_train, epochs=10, batch_size=32)
 
-# Save the trained model
+## Save the trained model
 model.save('public_safety_alerts_model.h5')
 ```
 
@@ -281,7 +281,7 @@ import tensorflow as tf
 from tensorflow.keras import layers, models
 import numpy as np
 
-# Generate mock image data
+## Generate mock image data
 num_samples = 1000
 img_height, img_width = 64, 64
 num_classes = 10
@@ -289,7 +289,7 @@ num_classes = 10
 X_train = np.random.rand(num_samples, img_height, img_width, 3)
 y_train = np.random.randint(num_classes, size=num_samples)
 
-# Define and compile the CNN model
+## Define and compile the CNN model
 model = models.Sequential([
     layers.Conv2D(32, (3, 3), activation='relu', input_shape=(img_height, img_width, 3)),
     layers.MaxPooling2D((2, 2)),
@@ -306,10 +306,10 @@ model.compile(optimizer='adam',
               loss='sparse_categorical_crossentropy',
               metrics=['accuracy'])
 
-# Train the CNN model with the mock data
+## Train the CNN model with the mock data
 model.fit(X_train, y_train, epochs=10, batch_size=32)
 
-# Save the trained CNN model
+## Save the trained CNN model
 model.save('public_safety_cnn_model.h5')
 ```
 

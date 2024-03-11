@@ -5,7 +5,7 @@ permalink: posts/smart-traffic-control-and-optimization-system
 layout: article
 ---
 
-# Smart Traffic Control and Optimization System
+## Smart Traffic Control and Optimization System
 
 ## Description
 

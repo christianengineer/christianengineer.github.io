@@ -5,7 +5,7 @@ permalink: posts/peru-gourmet-market-analysis-tool-pytorch-scikit-learn-spark-dv
 layout: article
 ---
 
-# Machine Learning Peru Gourmet Market Analysis Tool
+## Machine Learning Peru Gourmet Market Analysis Tool
 
 The Peru Gourmet Market Analysis Tool is designed to provide in-depth market analysis and consumer behavior insights to fine dining establishments to support strategic decision-making processes. The tool will leverage the machine learning pipeline to source, cleanse, model, and deploy data efficiently. The primary tools and libraries chosen for this project include PyTorch, Scikit-Learn, Apache Spark, and Data Version Control (DVC).
 
@@ -154,24 +154,24 @@ from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import StandardScaler
 
 def clean_data(data):
-    # Handling Missing Values
+    ## Handling Missing Values
     imputer = SimpleImputer(strategy='mean')
     data_filled = pd.DataFrame(imputer.fit_transform(data), columns=data.columns)
     
-    # Removing Duplicates
+    ## Removing Duplicates
     data_unique = data_filled.drop_duplicates()
     
-    # Outlier Detection and Treatment (Assuming outliers have been identified)
-    # outlier_indices = identify_outliers(data_unique)
-    # data_cleaned = data_unique.drop(outlier_indices)
+    ## Outlier Detection and Treatment (Assuming outliers have been identified)
+    ## outlier_indices = identify_outliers(data_unique)
+    ## data_cleaned = data_unique.drop(outlier_indices)
     
-    # Data Transformation and Standardization
+    ## Data Transformation and Standardization
     scaler = StandardScaler()
     data_scaled = pd.DataFrame(scaler.fit_transform(data_unique), columns=data_unique.columns)
     
     return data_scaled
 
-# Example Usage
+## Example Usage
 data = pd.read_csv('raw_data.csv')
 cleaned_data = clean_data(data)
 cleaned_data.to_csv('cleaned_data.csv', index=False)
@@ -248,10 +248,10 @@ By leveraging these tools for the data modeling strategy, the Peru Gourmet Marke
 import pandas as pd
 import numpy as np
 
-# Generate mocked data for market analysis
+## Generate mocked data for market analysis
 np.random.seed(42)
 
-# Create a fictitious dataset with mock features
+## Create a fictitious dataset with mock features
 num_samples = 10000
 
 data = pd.DataFrame({
@@ -264,7 +264,7 @@ data = pd.DataFrame({
     'satisfaction_score': np.random.randint(1, 5, num_samples)
 })
 
-# Save mock data to CSV file
+## Save mock data to CSV file
 data.to_csv('mocked_market_data.csv', index=False)
 ```
 
@@ -289,28 +289,28 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 
-# Load the mocked data
+## Load the mocked data
 data = pd.read_csv('mocked_market_data.csv')
 
-# Define features and target variable
+## Define features and target variable
 X = data[['age', 'income', 'transaction_amount', 'visit_frequency', 'satisfaction_score']]
-y = data['gender']  # Predicting gender as an example
+y = data['gender']  ## Predicting gender as an example
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize and train a Random Forest Classifier
+## Initialize and train a Random Forest Classifier
 rf_model = RandomForestClassifier(random_state=42)
 rf_model.fit(X_train, y_train)
 
-# Make predictions on the test set
+## Make predictions on the test set
 y_pred = rf_model.predict(X_test)
 
-# Calculate accuracy of the model
+## Calculate accuracy of the model
 accuracy = accuracy_score(y_test, y_pred)
 print(f'Model Accuracy: {accuracy}')
 
-# Save the trained model for deployment
+## Save the trained model for deployment
 import joblib
 joblib.dump(rf_model, 'gender_prediction_model.pkl')
 ```
@@ -319,7 +319,7 @@ This production-ready Python code utilizes a Random Forest Classifier to train a
 
 The code loads the data, splits it into training and testing sets, trains the model, evaluates its accuracy, and saves the trained model as a `.pkl` file for deployment. Adjust the features and target variable as needed for your specific market analysis or predictive modeling task.
 
-# Deployment Plan for the Model
+## Deployment Plan for the Model
 
 ## Step 1: Model Serialization
 - **Objective:** Save the trained model in a serializable format for deployment.
@@ -366,25 +366,25 @@ The code loads the data, splits it into training and testing sets, trains the mo
 By following this step-by-step plan, you can effectively deploy the model, set up an API for making predictions, and ensure the performance and reliability of the deployed solution. Use the provided links to access documentation and resources for each stage of the deployment process.
 
 ```Dockerfile
-# Use an official Python runtime as a base image
+## Use an official Python runtime as a base image
 FROM python:3.8-slim
 
-# Set the working directory in the container
+## Set the working directory in the container
 WORKDIR /app
 
-# Copy the current directory contents into the container at /app
+## Copy the current directory contents into the container at /app
 COPY . /app
 
-# Install any needed packages specified in requirements.txt
+## Install any needed packages specified in requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Define environment variable
+## Define environment variable
 ENV PORT=8000
 
-# Make port 8000 available to the world outside this container
+## Make port 8000 available to the world outside this container
 EXPOSE 8000
 
-# Run app.py when the container launches
+## Run app.py when the container launches
 CMD ["python", "app.py"]
 ```
 

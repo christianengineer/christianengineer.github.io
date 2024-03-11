@@ -228,19 +228,19 @@ from tensorflow.keras import layers, models
 import numpy as np
 
 def train_cnn_model(data_path):
-    # Mock data generation (Replace with actual data loading code)
-    # Assuming mock data has the shape (num_samples, height, width, channels)
+    ## Mock data generation (Replace with actual data loading code)
+    ## Assuming mock data has the shape (num_samples, height, width, channels)
     num_samples = 1000
-    input_shape = (64, 64, 3)  # Example input shape for images
-    num_classes = 10  # Example number of classes
+    input_shape = (64, 64, 3)  ## Example input shape for images
+    num_classes = 10  ## Example number of classes
 
-    # Generate mock training and validation data
+    ## Generate mock training and validation data
     x_train = np.random.rand(num_samples, *input_shape)
     y_train = np.random.randint(num_classes, size=num_samples)
     x_val = np.random.rand(num_samples // 5, *input_shape)
     y_val = np.random.randint(num_classes, size=num_samples // 5)
 
-    # Define a simple CNN model for training (Replace with actual model architecture)
+    ## Define a simple CNN model for training (Replace with actual model architecture)
     model = models.Sequential([
         layers.Conv2D(32, (3, 3), activation='relu', input_shape=input_shape),
         layers.MaxPooling2D((2, 2)),
@@ -256,11 +256,11 @@ def train_cnn_model(data_path):
                   loss='sparse_categorical_crossentropy',
                   metrics=['accuracy'])
 
-    # Train the model
+    ## Train the model
     model.fit(x_train, y_train, epochs=10, validation_data=(x_val, y_val))
 
-    # Save the trained model to a file
-    model.save('trained_cnn_model.h5')  # Save the trained model to a file
+    ## Save the trained model to a file
+    model.save('trained_cnn_model.h5')  ## Save the trained model to a file
 
     return model
 ```
@@ -283,19 +283,19 @@ from tensorflow.keras import layers, models
 import numpy as np
 
 def train_dnn_model(data_path):
-    # Mock data generation (Replace with actual data loading code)
-    # Assuming mock data has the shape (num_samples, feature_dimension)
+    ## Mock data generation (Replace with actual data loading code)
+    ## Assuming mock data has the shape (num_samples, feature_dimension)
     num_samples = 1000
-    feature_dimension = 100  # Example feature dimension
-    num_classes = 10  # Example number of classes
+    feature_dimension = 100  ## Example feature dimension
+    num_classes = 10  ## Example number of classes
 
-    # Generate mock training and validation data
+    ## Generate mock training and validation data
     x_train = np.random.rand(num_samples, feature_dimension)
     y_train = np.random.randint(num_classes, size=num_samples)
     x_val = np.random.rand(num_samples // 5, feature_dimension)
     y_val = np.random.randint(num_classes, size=num_samples // 5)
 
-    # Define a simple deep neural network model for training (Replace with actual model architecture)
+    ## Define a simple deep neural network model for training (Replace with actual model architecture)
     model = models.Sequential([
         layers.Dense(128, activation='relu', input_shape=(feature_dimension,)),
         layers.Dropout(0.5),
@@ -308,11 +308,11 @@ def train_dnn_model(data_path):
                   loss='sparse_categorical_crossentropy',
                   metrics=['accuracy'])
 
-    # Train the model
+    ## Train the model
     model.fit(x_train, y_train, epochs=20, validation_data=(x_val, y_val))
 
-    # Save the trained model to a file
-    model.save('trained_dnn_model.h5')  # Save the trained model to a file
+    ## Save the trained model to a file
+    model.save('trained_dnn_model.h5')  ## Save the trained model to a file
 
     return model
 ```

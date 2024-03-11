@@ -231,32 +231,32 @@ from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
 from sklearn.model_selection import train_test_split
 
-# Load the raw data
+## Load the raw data
 data = pd.read_csv('real_estate_data.csv')
 
-# Separate features and target variable
+## Separate features and target variable
 X = data.drop(columns=['price'])
 y = data['price']
 
-# Impute missing values for numerical features with mean
+## Impute missing values for numerical features with mean
 imputer = SimpleImputer(strategy='mean')
 X['area_sqft'] = imputer.fit_transform(X[['area_sqft']])
 X['year_built'] = imputer.fit_transform(X[['year_built']])
 
-# Scale numerical features
+## Scale numerical features
 scaler = StandardScaler()
 X['area_sqft'] = scaler.fit_transform(X[['area_sqft']])
 
-# One-hot encode categorical features like property_type and location
+## One-hot encode categorical features like property_type and location
 encoder = OneHotEncoder(sparse=False)
 encoded_features = pd.DataFrame(encoder.fit_transform(X[['property_type', 'location']]))
 X = pd.concat([X, encoded_features], axis=1)
 X = X.drop(columns=['property_type', 'location'])
 
-# Train-test split the data
+## Train-test split the data
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Save the preprocessed data for model training
+## Save the preprocessed data for model training
 X_train.to_csv('X_train.csv', index=False)
 X_test.to_csv('X_test.csv', index=False)
 y_train.to_csv('y_train.csv', index=False)
@@ -348,22 +348,22 @@ Below is a Python script for generating a fictitious dataset with relevant featu
 import numpy as np
 import pandas as pd
 
-# Set random seed for reproducibility
+## Set random seed for reproducibility
 np.random.seed(42)
 
-# Generate fictitious data for features
+## Generate fictitious data for features
 n_samples = 10000
 
-# Numerical features
+## Numerical features
 area_sqft = np.random.randint(500, 5000, n_samples)
 year_built = np.random.randint(1980, 2022, n_samples)
 price = 200000 + (area_sqft * 100) + np.random.normal(0, 50000, n_samples)
 
-# Categorical features
+## Categorical features
 property_types = np.random.choice(['Apartment', 'House', 'Office'], n_samples)
 locations = np.random.choice(['District A', 'District B', 'District C'], n_samples)
 
-# Create DataFrame for the fictitious dataset
+## Create DataFrame for the fictitious dataset
 data = pd.DataFrame({
     'area_sqft': area_sqft,
     'year_built': year_built,
@@ -372,7 +372,7 @@ data = pd.DataFrame({
     'location': locations
 })
 
-# Save the generated dataset to a CSV file
+## Save the generated dataset to a CSV file
 data.to_csv('fictitious_real_estate_data.csv', index=False)
 ```
 
@@ -434,28 +434,28 @@ import xgboost as xgb
 from sklearn.metrics import mean_squared_error
 from sklearn.model_selection import train_test_split
 
-# Load the preprocessed data
+## Load the preprocessed data
 X_train = pd.read_csv('X_train.csv')
 y_train = pd.read_csv('y_train.csv')
 
-# Train-test split for validation
+## Train-test split for validation
 X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=0.2, random_state=42)
 
-# Train the XGBoost model
+## Train the XGBoost model
 model = xgb.XGBRegressor()
 model.fit(X_train, y_train)
 
-# Validate the model
+## Validate the model
 y_pred = model.predict(X_val)
 val_rmse = mean_squared_error(y_val, y_pred, squared=False)
 print(f'Validation RMSE: {val_rmse}')
 
-# Save the trained model
+## Save the trained model
 model.save_model('real_estate_model.model')
 
-# For deployment, load the model as follows:
-# loaded_model = xgb.XGBRegressor()
-# loaded_model.load_model('real_estate_model.model')
+## For deployment, load the model as follows:
+## loaded_model = xgb.XGBRegressor()
+## loaded_model.load_model('real_estate_model.model')
 ```
 
 ### Code Structure and Documentation:
@@ -535,26 +535,26 @@ By following this step-by-step deployment plan and leveraging the recommended to
 Below is a tailored Dockerfile for encapsulating the environment and dependencies of our machine learning model for real estate investment analysis, optimized for performance and scalability:
 
 ```dockerfile
-# Use an official Python runtime as a base image
+## Use an official Python runtime as a base image
 FROM python:3.8-slim
 
-# Set the working directory in the container
+## Set the working directory in the container
 WORKDIR /app
 
-# Copy the current directory contents into the container at /app
+## Copy the current directory contents into the container at /app
 COPY . /app
 
-# Install necessary dependencies
+## Install necessary dependencies
 RUN pip install --upgrade pip && \
     pip install numpy pandas scikit-learn xgboost tensorflow-serving-api
 
-# Expose the container port
+## Expose the container port
 EXPOSE 8500
 
-# Define environment variables
+## Define environment variables
 ENV MODEL_PATH=/app/real_estate_model.model
 
-# Command to run the model serving application
+## Command to run the model serving application
 CMD tensorflow_model_server --port=8500 --model_name=real_estate_model --model_base_path=$MODEL_PATH
 ```
 

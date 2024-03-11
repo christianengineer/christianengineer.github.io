@@ -136,29 +136,29 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.preprocessing import OneHotEncoder
 
-# Load the raw data
+## Load the raw data
 raw_data = pd.read_csv('raw_data.csv')
 
-# Handling missing values
-cleaned_data = raw_data.fillna(value=0)  # Filling missing values with 0 for numerical features
+## Handling missing values
+cleaned_data = raw_data.fillna(value=0)  ## Filling missing values with 0 for numerical features
 
-# Define features and target variable
+## Define features and target variable
 X = cleaned_data.drop(columns=['target_column'])
 y = cleaned_data['target_column']
 
-# Encoding categorical variables
+## Encoding categorical variables
 encoder = OneHotEncoder()
-X_encoded = pd.get_dummies(X)  # One-hot encode categorical features
+X_encoded = pd.get_dummies(X)  ## One-hot encode categorical features
 
-# Scaling numerical features
+## Scaling numerical features
 scaler = StandardScaler()
 numerical_cols = ['numerical_feature1', 'numerical_feature2']
 X_encoded[numerical_cols] = scaler.fit_transform(X_encoded[numerical_cols])
 
-# Splitting the data into training and testing sets
+## Splitting the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X_encoded, y, test_size=0.2, random_state=42)
 
-# Display the preprocessed data
+## Display the preprocessed data
 print(X_train.head())
 print(y_train.head())
 ```
@@ -287,30 +287,30 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.ensemble import RandomForestClassifier
 import joblib
 
-# Load preprocessed dataset
+## Load preprocessed dataset
 data = pd.read_csv('preprocessed_data.csv')
 
-# Define features and target variable
+## Define features and target variable
 X = data.drop(columns=['target_column'])
 y = data['target_column']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Feature Scaling
+## Feature Scaling
 scaler = StandardScaler()
 X_train_scaled = scaler.fit_transform(X_train)
 X_test_scaled = scaler.transform(X_test)
 
-# Initialize and train the Random Forest Classifier model
+## Initialize and train the Random Forest Classifier model
 rf_model = RandomForestClassifier()
 rf_model.fit(X_train_scaled, y_train)
 
-# Evaluate the model
+## Evaluate the model
 accuracy = rf_model.score(X_test_scaled, y_test)
 print(f'Model Accuracy: {accuracy}')
 
-# Save the trained model to a file
+## Save the trained model to a file
 joblib.dump(rf_model, 'trained_model.pkl')
 ```
 
@@ -372,26 +372,26 @@ By following this step-by-step deployment plan and utilizing the recommended too
 Here is a sample Dockerfile tailored for deploying your machine learning model optimized for the Waste Reduction and Sustainability project:
 
 ```Dockerfile
-# Use a base image with Python and required dependencies
+## Use a base image with Python and required dependencies
 FROM python:3.8-slim
 
-# Set working directory in the container
+## Set working directory in the container
 WORKDIR /app
 
-# Copy the model and dependencies
+## Copy the model and dependencies
 COPY trained_model.pkl /app
 COPY requirements.txt /app
 
-# Install required libraries
+## Install required libraries
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the model deployment script
+## Copy the model deployment script
 COPY deploy_model.py /app
 
-# Expose the required port
+## Expose the required port
 EXPOSE 5000
 
-# Command to run the model deployment script
+## Command to run the model deployment script
 CMD ["python", "deploy_model.py"]
 ```
 

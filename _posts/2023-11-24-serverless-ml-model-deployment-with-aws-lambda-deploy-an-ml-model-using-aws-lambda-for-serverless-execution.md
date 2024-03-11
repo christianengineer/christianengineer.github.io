@@ -72,34 +72,34 @@ Sure, I can provide a recommended file structure for the Serverless ML Model Dep
 serverless-ml-deployment/
 │
 ├── model/
-│   ├── trained_model.pkl          # Serialized trained ML model artifact
-│   ├── requirements.txt           # Python dependencies
-│   └── inference.py               # Code for model inference
+│   ├── trained_model.pkl          ## Serialized trained ML model artifact
+│   ├── requirements.txt           ## Python dependencies
+│   └── inference.py               ## Code for model inference
 │
 ├── lambda/
-│   ├── lambda_function.py         # AWS Lambda function code
-│   ├── utils.py                   # Utility functions for data preprocessing, etc.
-│   └── tests/                     # Unit tests for the Lambda function
+│   ├── lambda_function.py         ## AWS Lambda function code
+│   ├── utils.py                   ## Utility functions for data preprocessing, etc.
+│   └── tests/                     ## Unit tests for the Lambda function
 │
 ├── infrastructure/
-│   ├── serverless.yml             # Configuration file for serverless framework
-│   ├── cloudformation/            # Cloudformation templates for infrastructure
-│   └── README.md                  # Instructions for deploying infrastructure
+│   ├── serverless.yml             ## Configuration file for serverless framework
+│   ├── cloudformation/            ## Cloudformation templates for infrastructure
+│   └── README.md                  ## Instructions for deploying infrastructure
 │
 ├── api_gateway/
-│   ├── api_definition.yaml        # OpenAPI definition for the API Gateway
-│   ├── sdk/                       # API Gateway SDKs
-│   └── README.md                  # API Gateway setup instructions
+│   ├── api_definition.yaml        ## OpenAPI definition for the API Gateway
+│   ├── sdk/                       ## API Gateway SDKs
+│   └── README.md                  ## API Gateway setup instructions
 │
 ├── reports/
-│   └── performance_report.md      # Report on Lambda function performance
+│   └── performance_report.md      ## Report on Lambda function performance
 │
 ├── tests/
-│   ├── integration/               # Integration tests for the entire ML deployment
-│   └── performance/               # Performance tests for scalability
+│   ├── integration/               ## Integration tests for the entire ML deployment
+│   └── performance/               ## Performance tests for scalability
 │
-├── README.md                      # Project documentation and instructions
-└── LICENSE                        # License information
+├── README.md                      ## Project documentation and instructions
+└── LICENSE                        ## License information
 ```
 
 In this file structure:
@@ -119,11 +119,11 @@ The `model/` directory in the Serverless ML Model Deployment repository contains
 ```plaintext
 model/
 │
-├── trained_model.pkl      # Serialized trained ML model artifact
+├── trained_model.pkl      ## Serialized trained ML model artifact
 │
-├── requirements.txt       # Python dependencies
+├── requirements.txt       ## Python dependencies
 │
-└── inference.py           # Code for model inference
+└── inference.py           ## Code for model inference
 ```
 
 - **trained_model.pkl**: This file contains the serialized trained machine learning model artifact. Depending on the specific model and its requirements, the file format may vary (e.g., .pkl for Scikit-learn, .h5 for Keras/TF, etc.). This file is the core component of the ML model and is used by the inference code to make predictions on new input data.
@@ -139,16 +139,16 @@ model/
   ```python
   import numpy as np
   import pandas as pd
-  from sklearn.externals import joblib  # For loading serialized model artifact
+  from sklearn.externals import joblib  ## For loading serialized model artifact
 
-  # Load the trained model
+  ## Load the trained model
   model = joblib.load('trained_model.pkl')
 
-  # Inference function
+  ## Inference function
   def perform_inference(input_data):
-      # Preprocess input data if needed
+      ## Preprocess input data if needed
       preprocessed_data = preprocess(input_data)
-      # Perform model inference
+      ## Perform model inference
       predictions = model.predict(preprocessed_data)
       return predictions
   ```
@@ -160,13 +160,13 @@ As part of the Serverless ML Model Deployment with AWS Lambda repository, the `d
 ```plaintext
 lambda/
 │
-├── lambda_function.py  # AWS Lambda function code
+├── lambda_function.py  ## AWS Lambda function code
 │
-├── utils.py            # Utility functions for data preprocessing, etc.
+├── utils.py            ## Utility functions for data preprocessing, etc.
 │
-└── tests/              # Directory for unit tests
-    ├── test_lambda_function.py    # Unit tests for the Lambda function
-    ├── test_utils.py              # Unit tests for utility functions
+└── tests/              ## Directory for unit tests
+    ├── test_lambda_function.py    ## Unit tests for the Lambda function
+    ├── test_utils.py              ## Unit tests for utility functions
     └── ...
 ```
 
@@ -187,42 +187,42 @@ Sure, here's an example of a Python function for a complex machine learning algo
 ```python
 import numpy as np
 import pandas as pd
-import joblib  # For loading serialized model artifact
+import joblib  ## For loading serialized model artifact
 import os
 
-# Define the file path for the trained model artifact
+## Define the file path for the trained model artifact
 MODEL_FILE_PATH = '/path/to/trained_model.pkl'
 
-# Load the trained model
+## Load the trained model
 def load_model(model_file):
     model = joblib.load(model_file)
     return model
 
-# Mock data for model inference
+## Mock data for model inference
 def generate_mock_data():
-    # Generating mock data for inference
+    ## Generating mock data for inference
     mock_data = pd.DataFrame({
         'feature1': [0.2, 0.5, 0.1, 0.8],
         'feature2': [10, 25, 31, 14],
-        # Add other features as needed
+        ## Add other features as needed
     })
     return mock_data
 
-# Perform inference on the mock data
+## Perform inference on the mock data
 def perform_inference():
-    # Load the trained model
+    ## Load the trained model
     model = load_model(MODEL_FILE_PATH)
     
-    # Generate mock data for inference
+    ## Generate mock data for inference
     input_data = generate_mock_data()
     
-    # Perform model inference
+    ## Perform model inference
     predictions = model.predict(input_data)
     return predictions
 
-# Entry point for AWS Lambda function
+## Entry point for AWS Lambda function
 def lambda_handler(event, context):
-    # Call the inference function and return the predictions
+    ## Call the inference function and return the predictions
     result = perform_inference()
     return {
         'statusCode': 200,
@@ -246,35 +246,35 @@ import tensorflow as tf
 from tensorflow.keras.models import load_model
 import os
 
-# Define the file path for the trained model artifact
+## Define the file path for the trained model artifact
 MODEL_FILE_PATH = '/path/to/trained_model.h5'
 
-# Load the trained model
+## Load the trained model
 def load_model(model_file):
     model = load_model(model_file)
     return model
 
-# Mock data for model inference
+## Mock data for model inference
 def generate_mock_data():
-    # Generating mock data for inference (reshape as per model input shape)
-    mock_data = np.random.rand(1, 224, 224, 3)  # Example for an image input
+    ## Generating mock data for inference (reshape as per model input shape)
+    mock_data = np.random.rand(1, 224, 224, 3)  ## Example for an image input
     return mock_data
 
-# Perform inference on the mock data
+## Perform inference on the mock data
 def perform_inference():
-    # Load the trained model
+    ## Load the trained model
     model = load_model(MODEL_FILE_PATH)
     
-    # Generate mock data for inference
+    ## Generate mock data for inference
     input_data = generate_mock_data()
     
-    # Perform model inference
+    ## Perform model inference
     predictions = model.predict(input_data)
     return predictions
 
-# Entry point for AWS Lambda function
+## Entry point for AWS Lambda function
 def lambda_handler(event, context):
-    # Call the inference function and return the predictions
+    ## Call the inference function and return the predictions
     result = perform_inference()
     return {
         'statusCode': 200,

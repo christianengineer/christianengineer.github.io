@@ -213,36 +213,36 @@ Here's a sample file path for the training script:
 **File Path:** `src/model_training.py`
 
 ```python
-# src/model_training.py
+## src/model_training.py
 
 import numpy as np
 import tensorflow as tf
 from tensorflow import keras
 from sklearn.model_selection import train_test_split
 
-# Mock data - Replace with actual mock data
-X = np.random.random((100, 10))  # Sample feature matrix
-y = np.random.randint(0, 2, 100)  # Sample target variable
+## Mock data - Replace with actual mock data
+X = np.random.random((100, 10))  ## Sample feature matrix
+y = np.random.randint(0, 2, 100)  ## Sample target variable
 
-# Data preprocessing and splitting
+## Data preprocessing and splitting
 X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Define the model architecture (example: simple feedforward neural network)
+## Define the model architecture (example: simple feedforward neural network)
 model = keras.Sequential([
     keras.layers.Dense(64, activation='relu', input_shape=(10,)),
     keras.layers.Dense(64, activation='relu'),
     keras.layers.Dense(1, activation='sigmoid')
 ])
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam',
               loss='binary_crossentropy',
               metrics=['accuracy'])
 
-# Train the model
+## Train the model
 history = model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_val, y_val))
 
-# Save the trained model
+## Save the trained model
 model.save('models/trained_models/sustainable_farming_model.h5')
 ```
 
@@ -257,7 +257,7 @@ Here's a sample file path for the training script:
 **File Path:** `src/complex_model_training.py`
 
 ```python
-# src/complex_model_training.py
+## src/complex_model_training.py
 
 import numpy as np
 import tensorflow as tf
@@ -265,32 +265,32 @@ from tensorflow import keras
 from sklearn.model_selection import train_test_split
 from tensorflow.keras import layers
 
-# Mock data - Replace with actual mock data
-X = np.random.random((1000, 20))  # Sample feature matrix
-y = np.random.random((1000, 1))   # Sample target variable
+## Mock data - Replace with actual mock data
+X = np.random.random((1000, 20))  ## Sample feature matrix
+y = np.random.random((1000, 1))   ## Sample target variable
 
-# Data preprocessing and splitting
+## Data preprocessing and splitting
 X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Define the complex model architecture (example: deep neural network)
+## Define the complex model architecture (example: deep neural network)
 model = keras.Sequential([
     layers.Dense(64, activation='relu', input_shape=(20,)),
     layers.Dropout(0.3),
     layers.Dense(128, activation='relu'),
     layers.Dropout(0.4),
     layers.Dense(64, activation='relu'),
-    layers.Dense(1)  # Regression without activation, custom output
+    layers.Dense(1)  ## Regression without activation, custom output
 ])
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam',
               loss='mean_squared_error',
               metrics=['mean_absolute_error'])
 
-# Train the model
+## Train the model
 history = model.fit(X_train, y_train, epochs=50, batch_size=32, validation_data=(X_val, y_val))
 
-# Save the trained model
+## Save the trained model
 model.save('models/trained_models/complex_sustainable_farming_model.h5')
 ```
 

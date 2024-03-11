@@ -5,7 +5,7 @@ permalink: posts/scalable-ai-machine-learning-for-marketing-insights-tool
 layout: article
 ---
 
-# Machine Learning Driven Marketing Insights Tool
+## Machine Learning Driven Marketing Insights Tool
 
 ## Project Description
 
@@ -59,7 +59,7 @@ This project will use numerous libraries to ensure efficient data handling and s
 
 The Machine Learning Driven Marketing Insights Tool will simplify complex marketing data and provide valuable insights that will help businesses grow and thrive in today's competitive market.
 
-# Machine Learning Driven Marketing Insights Tool Repository File Structure
+## Machine Learning Driven Marketing Insights Tool Repository File Structure
 
 Below is the proposed scalable file structure for the Machine Learning Driven Marketing Insights Tool project:
 
@@ -117,7 +117,7 @@ Machine-Learning-Marketing-Insights-Tool
 
 This structure maintains a clean separation between the main application server (backend), user interface (frontend), machine learning models, and documentation. This separation promotes greater readability, scalable development and easier deployment.
 
-# Machine Learning Driven Marketing Insights Tool
+## Machine Learning Driven Marketing Insights Tool
 
 ## Folder: ml-models
 
@@ -126,14 +126,14 @@ This structure maintains a clean separation between the main application server 
 Here's an example of a simple fictitious Python file (ml_model.py) that handles the machine learning part of the application. Note that the code does not represent a complete or functional program, it's a basic skeleton intended for demonstration purposes only. Included is a basic structure with data processing, model training, and prediction steps.
 
 ```python
-# Machine Learning Libraries
+## Machine Learning Libraries
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error, r2_score
 
-# For saving the model
+## For saving the model
 import pickle
 
 class MarketingInsightsModel:
@@ -147,13 +147,13 @@ class MarketingInsightsModel:
     def load_data(self, filepath):
         """Load the dataset from a given CSV filepath, perform initial processing"""
         data = pd.read_csv(filepath)
-        # # TODO: your data preprocessing and cleaning goes here
+        ## ## TODO: your data preprocessing and cleaning goes here
 
         return data
 
     def split_data(self, data):
         """Split the dataset into features (X) and target variable (Y)"""
-        # Assuming 'target' is the variable to be predicted
+        ## Assuming 'target' is the variable to be predicted
         X = data.drop('target', axis=1)
         y = data['target']
 

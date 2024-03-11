@@ -200,14 +200,14 @@ from tensorflow.keras.layers import LSTM, Dense
 from sklearn.preprocessing import MinMaxScaler
 
 def train_stock_prediction_model(data_filepath):
-    # Load mock financial data
+    ## Load mock financial data
     financial_data = pd.read_csv(data_filepath)
 
-    # Preprocess the data
+    ## Preprocess the data
     scaler = MinMaxScaler(feature_range=(0, 1))
     scaled_data = scaler.fit_transform(financial_data['Close'].values.reshape(-1, 1))
 
-    # Create the training data
+    ## Create the training data
     window_size = 60
     X, y = [], []
     for i in range(window_size, len(financial_data)):
@@ -215,20 +215,20 @@ def train_stock_prediction_model(data_filepath):
         y.append(scaled_data[i, 0])
     X, y = np.array(X), np.array(y)
 
-    # Reshape the data for LSTM model
+    ## Reshape the data for LSTM model
     X = np.reshape(X, (X.shape[0], X.shape[1], 1))
 
-    # Define the LSTM model
+    ## Define the LSTM model
     model = Sequential()
     model.add(LSTM(units=50, return_sequences=True, input_shape=(X.shape[1], 1)))
     model.add(LSTM(units=50, return_sequences=False))
     model.add(Dense(units=25))
     model.add(Dense(units=1))
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam', loss='mean_squared_error')
 
-    # Train the model
+    ## Train the model
     model.fit(X, y, epochs=20, batch_size=32)
 
     return model
@@ -252,10 +252,10 @@ from tensorflow.keras.preprocessing.text import Tokenizer
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 
 def train_sentiment_analysis_model(data_filepath):
-    # Load the mock financial news data
+    ## Load the mock financial news data
     news_data = pd.read_csv(data_filepath)
 
-    # Preprocess the data
+    ## Preprocess the data
     tokenizer = Tokenizer(num_words=10000, oov_token='<OOV>')
     tokenizer.fit_on_texts(news_data['text'])
     sequences = tokenizer.texts_to_sequences(news_data['text'])
@@ -264,10 +264,10 @@ def train_sentiment_analysis_model(data_filepath):
     label_encoder = LabelEncoder()
     labels = label_encoder.fit_transform(news_data['sentiment'])
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(padded_sequences, labels, test_size=0.2, random_state=42)
 
-    # Define the deep learning model
+    ## Define the deep learning model
     model = Sequential([
         Embedding(input_dim=10000, output_dim=16, input_length=100),
         Bidirectional(LSTM(64, return_sequences=True)),
@@ -276,10 +276,10 @@ def train_sentiment_analysis_model(data_filepath):
         Dense(1, activation='sigmoid')
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train, validation_data=(X_test, y_test), epochs=5, batch_size=64)
 
     return model

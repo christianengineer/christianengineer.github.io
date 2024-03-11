@@ -5,7 +5,7 @@ permalink: posts/consumer-trends-and-insights-dashboard-for-peru-bert-gpt-3-flas
 layout: article
 ---
 
-# AI Consumer Trends and Insights Dashboard for Peru
+## AI Consumer Trends and Insights Dashboard for Peru
 
 ## Objectives:
 - Aggregate and analyze consumer behavior data to provide real-time insights into food consumption trends and preferences in Peru.
@@ -26,7 +26,7 @@ layout: article
 3. **Flask**: Develop the web application using Flask for its lightweight and easy-to-use framework for building scalable applications.
 4. **Grafana**: Employ Grafana for its powerful visualization capabilities, allowing real-time monitoring and analysis of consumer behavior data.
 
-# MLOps Infrastructure for Consumer Trends and Insights Dashboard for Peru
+## MLOps Infrastructure for Consumer Trends and Insights Dashboard for Peru
 
 ## Objectives:
 - Establish a robust MLOps infrastructure to support the AI-driven Consumer Trends and Insights Dashboard for Peru.
@@ -69,7 +69,7 @@ layout: article
 - Facilitates rapid experimentation and deployment of new features to meet changing consumer trends.
 - Ensures the reliability and scalability of the AI application for providing real-time insights into food consumption trends and preferences in Peru.
 
-# Consumer Trends and Insights Dashboard for Peru: Scalable File Structure
+## Consumer Trends and Insights Dashboard for Peru: Scalable File Structure
 
 ```
 consumer_trends_insights_dashboard_peru/
@@ -140,7 +140,7 @@ consumer_trends_insights_dashboard_peru/
 - Facilitates collaboration among team members working on different parts of the application.
 - Scalable and adaptable to accommodate future enhancements and additions to the AI Consumer Trends and Insights Dashboard for Peru.
 
-# Models Directory for Consumer Trends and Insights Dashboard for Peru
+## Models Directory for Consumer Trends and Insights Dashboard for Peru
 
 ```
 models/
@@ -188,7 +188,7 @@ models/
 - **Documentation**: Including a README.md file provides essential information for developers on model usage, file descriptions, and integration guidelines with the application.
 - **Scalability**: The directory structure accommodates adding more models or variations in the future, supporting the growth of the AI Consumer Trends and Insights Dashboard for Peru.
 
-# Deployment Directory for Consumer Trends and Insights Dashboard for Peru
+## Deployment Directory for Consumer Trends and Insights Dashboard for Peru
 
 ```
 deployment/
@@ -227,7 +227,7 @@ deployment/
 - **Ease of Maintenance**: Centralizing deployment files in the `deployment/` directory facilitates maintenance, updates, and efficient deployment of the AI Consumer Trends and Insights Dashboard for Peru.
 
 ```python
-# train_model.py
+## train_model.py
 
 import pandas as pd
 from transformers import BertTokenizer, BertForSequenceClassification
@@ -235,17 +235,17 @@ import torch
 import torch.nn as nn
 from torch.utils.data import Dataset, DataLoader
 
-# Load and preprocess mock consumer behavior data
+## Load and preprocess mock consumer behavior data
 data_path = 'data/mock_consumer_data.csv'
 data = pd.read_csv(data_path)
 
-# Preprocessing steps (tokenization, data cleaning, feature engineering, etc.)
+## Preprocessing steps (tokenization, data cleaning, feature engineering, etc.)
 
-# Define BERT model and tokenizer
+## Define BERT model and tokenizer
 tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
 model = BertForSequenceClassification.from_pretrained('bert-base-uncased')
 
-# Define custom dataset class
+## Define custom dataset class
 class ConsumerDataset(Dataset):
     def __init__(self, data, tokenizer, max_length=128):
         self.data = data
@@ -267,15 +267,15 @@ class ConsumerDataset(Dataset):
             'labels': torch.tensor(label, dtype=torch.long)
         }
 
-# Prepare data and dataloader
+## Prepare data and dataloader
 dataset = ConsumerDataset(data, tokenizer)
 dataloader = DataLoader(dataset, batch_size=32, shuffle=True)
 
-# Define loss function and optimizer
+## Define loss function and optimizer
 criterion = nn.CrossEntropyLoss()
 optimizer = torch.optim.AdamW(model.parameters(), lr=1e-5)
 
-# Training loop
+## Training loop
 for epoch in range(5):
     model.train()
     for batch in dataloader:
@@ -286,7 +286,7 @@ for epoch in range(5):
         loss.backward()
         optimizer.step()
 
-# Save trained model
+## Save trained model
 model_path = 'models/trained_bert_model.pth'
 torch.save(model.state_dict(), model_path)
 ```
@@ -296,29 +296,29 @@ torch.save(model.state_dict(), model_path)
 This Python script loads mock consumer behavior data, preprocesses it, uses a BERT model for sentiment classification, trains the model on the mock data, and saves the trained model to a file. The trained model can then be used for sentiment analysis in the Consumer Trends and Insights Dashboard for Peru application.
 
 ```python
-# complex_ml_algorithm.py
+## complex_ml_algorithm.py
 
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.pipeline import Pipeline
 
-# Load and preprocess mock consumer behavior data
+## Load and preprocess mock consumer behavior data
 data_path = 'data/mock_consumer_data.csv'
 data = pd.read_csv(data_path)
 
-# Preprocessing steps (e.g., text cleaning, feature engineering)
+## Preprocessing steps (e.g., text cleaning, feature engineering)
 
-# Define a complex machine learning pipeline
+## Define a complex machine learning pipeline
 pipeline = Pipeline([
     ('tfidf', TfidfVectorizer()),
     ('clf', RandomForestClassifier(n_estimators=100, random_state=42))
 ])
 
-# Fit the pipeline on the mock data
+## Fit the pipeline on the mock data
 pipeline.fit(data['text'], data['label'])
 
-# Save the trained machine learning pipeline
+## Save the trained machine learning pipeline
 pipeline_path = 'models/trained_complex_ml_pipeline.pkl'
 joblib.dump(pipeline, pipeline_path)
 ```

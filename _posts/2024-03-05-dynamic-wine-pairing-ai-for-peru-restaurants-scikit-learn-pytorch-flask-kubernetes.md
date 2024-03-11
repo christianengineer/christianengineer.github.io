@@ -424,26 +424,26 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 import joblib
 
-# Load synthetic data from CSV file
+## Load synthetic data from CSV file
 data_path = 'data/mock_data.csv'
 data = pd.read_csv(data_path)
 
-# Separate features and target variable
+## Separate features and target variable
 X = data[['flavor_profile_1', 'flavor_profile_2', 'flavor_profile_3']]
 y = data['wine_variant']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Train a Random Forest classifier
+## Train a Random Forest classifier
 rf_model = RandomForestClassifier()
 rf_model.fit(X_train, y_train)
 
-# Evaluate model
+## Evaluate model
 accuracy = rf_model.score(X_test, y_test)
 print(f'Model accuracy: {accuracy}')
 
-# Save the trained model
+## Save the trained model
 model_output_path = 'models/mock_model.pkl'
 joblib.dump(rf_model, model_output_path)
 print(f'Trained model saved at: {model_output_path}')
@@ -518,25 +518,25 @@ By following this step-by-step deployment strategy across local, development, st
 To create a production-ready Dockerfile for the Dynamic Wine Pairing AI project, we can containerize the Flask application along with its dependencies and configurations. Below is an example of a Dockerfile that sets up the environment for running the Flask application in a production-ready Docker container:
 
 ```Dockerfile
-# Use a base Python image
+## Use a base Python image
 FROM python:3.9-slim
 
-# Set the working directory in the container
+## Set the working directory in the container
 WORKDIR /app
 
-# Copy the requirements file and install dependencies
+## Copy the requirements file and install dependencies
 COPY requirements.txt requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the Flask application code into the container
+## Copy the Flask application code into the container
 COPY app.py /app/
 COPY config.py /app/
 COPY models/model.pkl /app/models/
 
-# Expose a port for the Flask application
+## Expose a port for the Flask application
 EXPOSE 5000
 
-# Define the command to run the Flask application
+## Define the command to run the Flask application
 CMD ["python", "app.py"]
 ```
 

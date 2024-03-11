@@ -5,7 +5,7 @@ permalink: posts/e-commerce-personalization-engine-bert-keras-spark-dvc
 layout: article
 ---
 
-# E-commerce Personalization Engine for Linio Peru
+## E-commerce Personalization Engine for Linio Peru
 
 ## Objective:
 The objective is to provide a scalable, production-ready machine learning solution to solve the E-commerce Manager's pain point of struggling to provide personalized shopping experiences at scale. By dynamically customizing product recommendations and content for each user, we aim to drive sales by catering to the unique preferences of the Peruvian online shopper.
@@ -238,27 +238,27 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.impute import SimpleImputer
 from sklearn.feature_extraction.text import TfidfVectorizer
 
-# Load the raw dataset containing user interactions and product details
+## Load the raw dataset containing user interactions and product details
 data = pd.read_csv('ecommerce_data.csv')
 
-# Feature Engineering: Create interaction features
+## Feature Engineering: Create interaction features
 data['interaction_count'] = data.groupby('user_id')['product_id'].transform('count')
 data['average_rating_product'] = data.groupby('product_id')['rating'].transform('mean')
 
-# Preprocessing Step 1: Impute missing values
+## Preprocessing Step 1: Impute missing values
 imputer = SimpleImputer(strategy='mean')
 data['rating'] = imputer.fit_transform(data[['rating']])
 
-# Preprocessing Step 2: Normalize numerical features
+## Preprocessing Step 2: Normalize numerical features
 scaler = StandardScaler()
 data['interaction_count_normalized'] = scaler.fit_transform(data[['interaction_count']])
 
-# Preprocessing Step 3: Feature Extraction for text data
-tfidf_vectorizer = TfidfVectorizer(max_features=1000)  # Extract 1000 features from product descriptions
+## Preprocessing Step 3: Feature Extraction for text data
+tfidf_vectorizer = TfidfVectorizer(max_features=1000)  ## Extract 1000 features from product descriptions
 product_descriptions_tfidf = tfidf_vectorizer.fit_transform(data['product_description'])
 data = pd.concat([data, pd.DataFrame(product_descriptions_tfidf.toarray())], axis=1)
 
-# Save the preprocessed data for model training
+## Save the preprocessed data for model training
 data.to_csv('preprocessed_data.csv', index=False)
 ```
 
@@ -352,16 +352,16 @@ from faker import Faker
 from sklearn.preprocessing import StandardScaler
 from sklearn.feature_extraction.text import TfidfVectorizer
 
-# Initialize Faker for generating fake data
+## Initialize Faker for generating fake data
 fake = Faker()
 
-# Generate user interactions data
+## Generate user interactions data
 user_ids = np.random.randint(1, 1000, 10000)
 product_ids = np.random.randint(1, 500, 10000)
 ratings = np.random.randint(1, 5, 10000)
 interactions = pd.DataFrame({'user_id': user_ids, 'product_id': product_ids, 'rating': ratings})
 
-# Generate product details data
+## Generate product details data
 products = []
 for _ in range(500):
     products.append({
@@ -373,20 +373,20 @@ for _ in range(500):
     })
 products_df = pd.DataFrame(products)
 
-# Feature Engineering: Create additional features
+## Feature Engineering: Create additional features
 products_df['popularity_score'] = np.random.rand(500)
 products_df['average_rating'] = np.random.randint(1, 5, 500)
 
-# Preprocessing: Normalize numerical features
+## Preprocessing: Normalize numerical features
 scaler = StandardScaler()
 products_df['price_normalized'] = scaler.fit_transform(np.array(products_df['price']).reshape(-1, 1))
 
-# Feature Extraction for text data
+## Feature Extraction for text data
 tfidf_vectorizer = TfidfVectorizer(max_features=1000)
 product_descriptions_tfidf = tfidf_vectorizer.fit_transform(products_df['product_description'])
 products_df = pd.concat([products_df, pd.DataFrame(product_descriptions_tfidf.toarray())], axis=1)
 
-# Save the generated dataset
+## Save the generated dataset
 interactions.to_csv('user_interactions_data.csv', index=False)
 products_df.to_csv('product_details_data.csv', index=False)
 ```
@@ -446,35 +446,35 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_squared_error
 
 def load_data(file_path):
-    # Load preprocessed data
+    ## Load preprocessed data
     data = pd.read_csv(file_path)
-    X = data.drop(['target_column'], axis=1)  # Features
-    y = data['target_column']  # Target variable
+    X = data.drop(['target_column'], axis=1)  ## Features
+    y = data['target_column']  ## Target variable
     return X, y
 
 def train_model(X_train, y_train):
-    # Train Random Forest Regressor model
+    ## Train Random Forest Regressor model
     model = RandomForestRegressor()
     model.fit(X_train, y_train)
     return model
 
 def evaluate_model(model, X_test, y_test):
-    # Evaluate model performance
+    ## Evaluate model performance
     y_pred = model.predict(X_test)
     mse = mean_squared_error(y_test, y_pred)
     return mse
 
 def main():
-    # Load data
+    ## Load data
     X, y = load_data('preprocessed_data.csv')
     
-    # Split data into training and testing sets
+    ## Split data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
     
-    # Train the model
+    ## Train the model
     model = train_model(X_train, y_train)
     
-    # Evaluate the model
+    ## Evaluate the model
     mse = evaluate_model(model, X_test, y_test)
     print(f'Mean Squared Error: {mse}')
 
@@ -556,29 +556,29 @@ This production-ready code snippet exemplifies best practices in code structure,
 By following this step-by-step deployment plan tailored to the specific needs of the E-commerce Personalization Engine project, the machine learning model can be efficiently deployed into a production environment, ensuring scalability, reliability, and seamless integration with Linio Peru's systems.
 
 ```Dockerfile
-# Use an official Python runtime as a base image
+## Use an official Python runtime as a base image
 FROM python:3.8-slim
 
-# Set the working directory in the container
+## Set the working directory in the container
 WORKDIR /app
 
-# Copy the requirements file into the container at /app
+## Copy the requirements file into the container at /app
 COPY requirements.txt /app/
 
-# Install any needed dependencies specified in requirements.txt
+## Install any needed dependencies specified in requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the model code into the container at /app
+## Copy the model code into the container at /app
 COPY model_code.py /app/
 
-# Set environment variables
+## Set environment variables
 ENV PORT=8000
 ENV MODEL_PATH=/app/model.pkl
 
-# Expose the port the app runs on
+## Expose the port the app runs on
 EXPOSE $PORT
 
-# Run the application
+## Run the application
 CMD ["python", "model_code.py"]
 ```
 

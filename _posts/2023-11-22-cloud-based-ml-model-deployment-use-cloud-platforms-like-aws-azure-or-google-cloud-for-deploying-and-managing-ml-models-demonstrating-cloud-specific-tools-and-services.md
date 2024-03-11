@@ -102,25 +102,25 @@ By incorporating the specific cloud services and infrastructure components as de
 cloud_ml_deployment/
 │
 ├── model_training/
-│   ├── data/                   # Directory for storing training and validation data
-│   ├── code/                   # Code for data preprocessing, model training, and evaluation
-│   ├── scripts/                # Supporting scripts for automating model training processes
-│   └── README.md               # Documentation for model training process and requirements
+│   ├── data/                   ## Directory for storing training and validation data
+│   ├── code/                   ## Code for data preprocessing, model training, and evaluation
+│   ├── scripts/                ## Supporting scripts for automating model training processes
+│   └── README.md               ## Documentation for model training process and requirements
 │
 ├── model_deployment/
-│   ├── model/                  # Directory for storing trained model artifacts
-│   ├── inference_code/         # Code for model inference and serving (e.g., Flask or FastAPI app)
-│   ├── docker/                 # Dockerfile and related configuration for containerizing the model serving application
-│   ├── kubernetes/             # Configuration files for Kubernetes deployment (if applicable)
-│   ├── serverless/             # Configuration and code for serverless model serving (e.g., AWS Lambda functions)
-│   ├── monitoring/             # Configuration files for monitoring and logging infrastructure
-│   └── README.md               # Documentation for model deployment process and requirements
+│   ├── model/                  ## Directory for storing trained model artifacts
+│   ├── inference_code/         ## Code for model inference and serving (e.g., Flask or FastAPI app)
+│   ├── docker/                 ## Dockerfile and related configuration for containerizing the model serving application
+│   ├── kubernetes/             ## Configuration files for Kubernetes deployment (if applicable)
+│   ├── serverless/             ## Configuration and code for serverless model serving (e.g., AWS Lambda functions)
+│   ├── monitoring/             ## Configuration files for monitoring and logging infrastructure
+│   └── README.md               ## Documentation for model deployment process and requirements
 │
 └── infrastructure_as_code/
-    ├── aws/                    # AWS-specific infrastructure configuration scripts (e.g., CloudFormation or Terraform)
-    ├── azure/                  # Azure-specific infrastructure configuration scripts (e.g., ARM templates or Terraform)
-    ├── gcp/                    # Google Cloud-specific infrastructure configuration scripts (e.g., Deployment Manager or Terraform)
-    └── README.md               # Documentation for infrastructure setup and management
+    ├── aws/                    ## AWS-specific infrastructure configuration scripts (e.g., CloudFormation or Terraform)
+    ├── azure/                  ## Azure-specific infrastructure configuration scripts (e.g., ARM templates or Terraform)
+    ├── gcp/                    ## Google Cloud-specific infrastructure configuration scripts (e.g., Deployment Manager or Terraform)
+    └── README.md               ## Documentation for infrastructure setup and management
 ```
 
 In the provided file structure for Cloud-based ML model deployment, the directory `cloud_ml_deployment` serves as the root directory. It encapsulates separate directories for different stages of the deployment process. This structure promotes modularity, organization, and ease of maintenance.
@@ -133,20 +133,20 @@ In the provided file structure for Cloud-based ML model deployment, the director
 ```plaintext
 model_deployment/
 └── model/
-    ├── model_artifacts/             # Directory for storing trained model artifacts
-    │   ├── model.pb                  # Serialized model file (e.g., TensorFlow SavedModel or ONNX format)
-    │   └── model_metadata.json       # Metadata file containing information about the model (e.g., input/output shapes, version)
+    ├── model_artifacts/             ## Directory for storing trained model artifacts
+    │   ├── model.pb                  ## Serialized model file (e.g., TensorFlow SavedModel or ONNX format)
+    │   └── model_metadata.json       ## Metadata file containing information about the model (e.g., input/output shapes, version)
     │
-    ├── model_versioning/             # Directory for managing different versions of the model
-    │   ├── v1/                       # Subdirectory for version 1 of the model
-    │   │   ├── model.pb              # Serialized model file for version 1
-    │   │   └── model_metadata.json   # Metadata file for version 1
-    │   ├── v2/                       # Subdirectory for version 2 of the model
-    │   │   ├── model.pb              # Serialized model file for version 2
-    │   │   └── model_metadata.json   # Metadata file for version 2
-    │   └── latest -> v2/             # Symbolic link pointing to the latest version of the model
+    ├── model_versioning/             ## Directory for managing different versions of the model
+    │   ├── v1/                       ## Subdirectory for version 1 of the model
+    │   │   ├── model.pb              ## Serialized model file for version 1
+    │   │   └── model_metadata.json   ## Metadata file for version 1
+    │   ├── v2/                       ## Subdirectory for version 2 of the model
+    │   │   ├── model.pb              ## Serialized model file for version 2
+    │   │   └── model_metadata.json   ## Metadata file for version 2
+    │   └── latest -> v2/             ## Symbolic link pointing to the latest version of the model
     │
-    └── README.md                     # Documentation for model artifacts and versioning
+    └── README.md                     ## Documentation for model artifacts and versioning
 ```
 
 In the expanded file structure for Cloud-based ML model deployment, the `model` directory within the `model_deployment` directory is responsible for storing trained model artifacts and managing different versions of the model. This structure supports efficient organization, version control, and documentation of model artifacts.
@@ -163,24 +163,24 @@ This structured approach to organizing model artifacts and versioning supports s
 model_deployment/
 └── deployment/
     ├── model_server/
-    │   ├── app.py                      # Python script for initializing and serving the ML model using a web framework (e.g., Flask or FastAPI)
-    │   ├── requirements.txt            # List of Python dependencies required for running the model serving application
-    │   └── Dockerfile                  # Configuration file for building a Docker image encapsulating the model serving application
+    │   ├── app.py                      ## Python script for initializing and serving the ML model using a web framework (e.g., Flask or FastAPI)
+    │   ├── requirements.txt            ## List of Python dependencies required for running the model serving application
+    │   └── Dockerfile                  ## Configuration file for building a Docker image encapsulating the model serving application
     │
     ├── kubernetes/
-    │   ├── deployment.yaml             # Configuration file defining the deployment, service, and ingress for deploying the model on Kubernetes
-    │   └── resources.yaml              # Additional configuration for Kubernetes resources, such as resource quotas and limits
+    │   ├── deployment.yaml             ## Configuration file defining the deployment, service, and ingress for deploying the model on Kubernetes
+    │   └── resources.yaml              ## Additional configuration for Kubernetes resources, such as resource quotas and limits
     │
     ├── serverless/
-    │   ├── function_handler.py         # Python script containing the handler function for serverless model serving (e.g., AWS Lambda or Azure Functions)
-    │   └── serverless_config.json      # Configuration file specifying the serverless function settings and triggers
+    │   ├── function_handler.py         ## Python script containing the handler function for serverless model serving (e.g., AWS Lambda or Azure Functions)
+    │   └── serverless_config.json      ## Configuration file specifying the serverless function settings and triggers
     │
     ├── monitoring/
-    │   ├── log_config.json             # Configuration file for defining logging settings and handlers
-    │   ├── metrics_config.yaml         # Configuration file for setting up custom metrics tracking
-    │   └── dashboard_config.json       # JSON file specifying the dashboard layout and widgets for monitoring the model deployment
+    │   ├── log_config.json             ## Configuration file for defining logging settings and handlers
+    │   ├── metrics_config.yaml         ## Configuration file for setting up custom metrics tracking
+    │   └── dashboard_config.json       ## JSON file specifying the dashboard layout and widgets for monitoring the model deployment
     │
-    └── README.md                      # Documentation for model deployment configurations and infrastructure setup
+    └── README.md                      ## Documentation for model deployment configurations and infrastructure setup
 ```
 
 In the expanded file structure for Cloud-based ML model deployment, the `deployment` directory within the `model_deployment` encompasses the configuration files and scripts essential for deploying, monitoring, and managing the ML model serving infrastructure on cloud platforms such as AWS, Azure, or Google Cloud.
@@ -202,18 +202,18 @@ import numpy as np
 from sklearn.ensemble import RandomForestClassifier
 
 def complex_ml_algorithm(data_path):
-    # Mock data loading and preprocessing
+    ## Mock data loading and preprocessing
     data = np.load(data_path)
     X = data['X']
     y = data['y']
 
-    # Instantiate the model
+    ## Instantiate the model
     model = RandomForestClassifier(n_estimators=100, max_depth=5, random_state=42)
 
-    # Train the model
+    ## Train the model
     model.fit(X, y)
 
-    # Mock model evaluation
+    ## Mock model evaluation
     training_accuracy = model.score(X, y)
 
     return model, training_accuracy
@@ -231,14 +231,14 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Flatten, Conv2D, MaxPooling2D
 
 def complex_deep_learning_algorithm(data_path):
-    # Mock data loading and preprocessing
-    # Assuming the data is in the form of images (e.g., in numpy array format)
-    # This is a simplified example for illustration
+    ## Mock data loading and preprocessing
+    ## Assuming the data is in the form of images (e.g., in numpy array format)
+    ## This is a simplified example for illustration
     data = np.load(data_path)
     X = data['X']
     y = data['y']
 
-    # Instantiate a deep learning model
+    ## Instantiate a deep learning model
     model = Sequential([
         Conv2D(32, (3, 3), activation='relu', input_shape=(32, 32, 3)),
         MaxPooling2D((2, 2)),
@@ -249,15 +249,15 @@ def complex_deep_learning_algorithm(data_path):
         Dense(10, activation='softmax')
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam',
                   loss='sparse_categorical_crossentropy',
                   metrics=['accuracy'])
 
-    # Train the model
+    ## Train the model
     model.fit(X, y, epochs=10, batch_size=32)
 
-    # Mock model evaluation
+    ## Mock model evaluation
     training_loss, training_accuracy = model.evaluate(X, y)
 
     return model, training_loss, training_accuracy

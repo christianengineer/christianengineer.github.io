@@ -5,7 +5,7 @@ permalink: posts/yacht-and-private-jet-optimization-suite-scikit-learn-tensorflo
 layout: article
 ---
 
-# Machine Learning Solution for Yacht and Private Jet Optimization Suite
+## Machine Learning Solution for Yacht and Private Jet Optimization Suite
 
 ## Objectives and Benefits
 - **Objective**: To optimize scheduling and maintenance processes for Aerocondor's fleet of yachts and private jets, reducing downtime and improving service reliability.
@@ -253,16 +253,16 @@ By implementing robust metadata management specific to the demands of the Yacht 
 
 ### Data Preprocessing Practices Example:
 ```python
-# Handling Missing Data
+## Handling Missing Data
 from sklearn.impute import SimpleImputer
 imputer = SimpleImputer(strategy='mean')
 data['total_flight_hours'] = imputer.fit_transform(data[['total_flight_hours']])
 
-# Removing Outliers
+## Removing Outliers
 from scipy.stats import zscore
 data = data[(np.abs(zscore(data['engine_health_score'])) < 3)]
 
-# Feature Scaling
+## Feature Scaling
 from sklearn.preprocessing import StandardScaler
 scaler = StandardScaler()
 data[['fuel_consumption_rate']] = scaler.fit_transform(data[['fuel_consumption_rate']])
@@ -275,30 +275,30 @@ import pandas as pd
 from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import StandardScaler
 
-# Load the raw data
+## Load the raw data
 data = pd.read_csv('your_data.csv')
 
-# Handling Missing Data
+## Handling Missing Data
 imputer = SimpleImputer(strategy='mean')
 data['total_flight_hours'] = imputer.fit_transform(data[['total_flight_hours']])
-# Impute missing values in 'total_flight_hours' with the mean value
+## Impute missing values in 'total_flight_hours' with the mean value
 
-# Removing Outliers
+## Removing Outliers
 from scipy.stats import zscore
 data = data[(abs(zscore(data['engine_health_score'])) < 3)]
 data = data[(abs(zscore(data['temperature_variance'])) < 3)]
-# Remove outliers in 'engine_health_score' and 'temperature_variance' using Z-score method
+## Remove outliers in 'engine_health_score' and 'temperature_variance' using Z-score method
 
-# Feature Scaling
+## Feature Scaling
 scaler = StandardScaler()
 data[['fuel_consumption_rate']] = scaler.fit_transform(data[['fuel_consumption_rate']])
-# Standardize the 'fuel_consumption_rate' for uniform training of machine learning model
+## Standardize the 'fuel_consumption_rate' for uniform training of machine learning model
 
-# Encode Categorical Variables if needed
+## Encode Categorical Variables if needed
 data = pd.get_dummies(data, columns=['aircraft_type'])
-# Convert categorical variable 'aircraft_type' into dummy/indicator variables
+## Convert categorical variable 'aircraft_type' into dummy/indicator variables
 
-# Save the preprocessed data
+## Save the preprocessed data
 data.to_csv('preprocessed_data.csv', index=False)
 ```
 
@@ -392,30 +392,30 @@ import numpy as np
 from datetime import datetime, timedelta
 from random import choice, uniform
 
-# Set random seed for reproducibility
+## Set random seed for reproducibility
 np.random.seed(42)
 
-# Generate fictitious dataset
+## Generate fictitious dataset
 num_samples = 1000
 
-# Generate random dates for last maintenance date
+## Generate random dates for last maintenance date
 start_date = datetime(2020, 1, 1)
 end_date = datetime(2022, 1, 1)
 last_maintenance_dates = [start_date + timedelta(days=np.random.randint(1, 365)) for _ in range(num_samples)]
 
-# Generate random operational data
+## Generate random operational data
 total_flight_hours = np.random.randint(100, 1000, size=num_samples)
 fuel_consumption_rate = np.random.uniform(5, 30, size=num_samples)
 
-# Generate random performance metrics
+## Generate random performance metrics
 engine_health_score = np.random.uniform(0, 100, size=num_samples)
 temperature_variance = np.random.uniform(1, 10, size=num_samples)
 
-# Generate random aircraft types
+## Generate random aircraft types
 aircraft_types = ['Yacht', 'Private Jet']
 aircraft_type = [choice(aircraft_types) for _ in range(num_samples)]
 
-# Create DataFrame
+## Create DataFrame
 data = pd.DataFrame({
     'last_maintenance_date': last_maintenance_dates,
     'total_flight_hours': total_flight_hours,
@@ -425,7 +425,7 @@ data = pd.DataFrame({
     'aircraft_type': aircraft_type
 })
 
-# Save dataset to CSV
+## Save dataset to CSV
 data.to_csv('simulated_dataset.csv', index=False)
 ```
 
@@ -479,28 +479,28 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 import joblib
 
-# Load preprocessed dataset
+## Load preprocessed dataset
 data = pd.read_csv('preprocessed_data.csv')
 
-# Separate features and target variable
+## Separate features and target variable
 X = data.drop(['next_maintenance_date'], axis=1)
 y = data['next_maintenance_date']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize and train the Random Forest Regressor model
+## Initialize and train the Random Forest Regressor model
 model = RandomForestRegressor(random_state=42)
 model.fit(X_train, y_train)
 
-# Make predictions on the test set
+## Make predictions on the test set
 y_pred = model.predict(X_test)
 
-# Calculate mean squared error
+## Calculate mean squared error
 mse = mean_squared_error(y_test, y_pred)
 print(f'Mean Squared Error: {mse}')
 
-# Save the trained model for future use
+## Save the trained model for future use
 joblib.dump(model, 'maintenance_schedule_model.pkl')
 ```
 
@@ -594,25 +594,25 @@ By following best practices for code quality and structure, adhering to conventi
 By following this step-by-step deployment plan, utilizing the recommended tools and platforms, Aerocondor can seamlessly deploy the machine learning model for the Yacht and Private Jet Optimization Project, ensuring scalability, reliability, and efficient monitoring in a production environment.
 
 ```Dockerfile
-# Use an official Python runtime as a parent image
+## Use an official Python runtime as a parent image
 FROM python:3.9-slim
 
-# Set the working directory in the container
+## Set the working directory in the container
 WORKDIR /app
 
-# Copy the current directory contents into the container at /app
+## Copy the current directory contents into the container at /app
 COPY . /app
 
-# Install any needed dependencies specified in requirements.txt
+## Install any needed dependencies specified in requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Set environment variables
+## Set environment variables
 ENV PYTHONUNBUFFERED 1
 
-# Expose the port the app runs on
+## Expose the port the app runs on
 EXPOSE 5000
 
-# Define the command to run the application
+## Define the command to run the application
 CMD ["python", "app.py"]
 ```
 

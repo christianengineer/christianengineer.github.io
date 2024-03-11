@@ -5,7 +5,7 @@ permalink: posts/understanding-containerization-orchestration-docker-kubernetes-
 layout: article
 ---
 
-# Containerization and Orchestration: An Overview of Docker and Kubernetes
+## Containerization and Orchestration: An Overview of Docker and Kubernetes
 
 Containerization and orchestration are crucial technologies underpinning the future of distributed systems and cloud-native applications. Two key players are at the forefront of these technologies: Docker, which provides an intuitive interface for containerization, and Kubernetes, which handles the orchestration of these containers on a cluster. This article aims to delve into the fundamental principles of these technologies and how they work together.
 
@@ -28,25 +28,25 @@ Docker is one of the most prominent containerization platforms. Using its simple
 A Dockerfile defines a Docker image. It contains a set of instructions to create an image, which can run a fully configured application as a standalone container. Here's a simple Dockerfile for a Node.js app:
 
 ```Dockerfile
-# Use Node.js v12 as the base image
+## Use Node.js v12 as the base image
 FROM node:12
 
-# Set the working directory
+## Set the working directory
 WORKDIR /usr/src/app
 
-# Copy package.json and package-lock.json
+## Copy package.json and package-lock.json
 COPY package*.json ./
 
-# Install npm dependencies
+## Install npm dependencies
 RUN npm install
 
-# Copy the rest of the code
+## Copy the rest of the code
 COPY . .
 
-# Expose the application on port 8080
+## Expose the application on port 8080
 EXPOSE 8080
 
-# Define the command to start the app
+## Define the command to start the app
 CMD [ "node", "server.js" ]
 ```
 

@@ -5,7 +5,7 @@ permalink: posts/election-result-forecasting-with-tensorflow-python-predicting-p
 layout: article
 ---
 
-# AI Election Result Forecasting with TensorFlow (Python)
+## AI Election Result Forecasting with TensorFlow (Python)
 
 ## Objectives
 The primary objective of the AI Election Result Forecasting project is to predict political outcomes using machine learning techniques. This includes forecasting election results based on historical data, polling data, and other relevant factors. The system aims to provide accurate predictions that can be utilized by political analysts, media outlets, and the general public to gain insights into potential election outcomes.
@@ -42,7 +42,7 @@ For the AI Election Result Forecasting project, the following Python libraries c
 
 By utilizing these libraries, we can leverage their capabilities to implement the required system components effectively.
 
-# Infrastructure for Election Result Forecasting with TensorFlow (Python)
+## Infrastructure for Election Result Forecasting with TensorFlow (Python)
 
 ## Cloud Platform
 Utilizing a cloud platform such as Amazon Web Services (AWS), Microsoft Azure, or Google Cloud Platform (GCP) can provide the necessary infrastructure for hosting the Election Result Forecasting application. The cloud platform offers scalability, reliability, and a wide range of services to support the various components of the application.
@@ -185,30 +185,30 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
 
 def train_election_forecasting_model(data_path):
-    # Load mock data
+    ## Load mock data
     data = load_data(data_path)
 
-    # Preprocess the data (e.g., feature engineering, normalization, etc.)
+    ## Preprocess the data (e.g., feature engineering, normalization, etc.)
     processed_data = preprocess_data(data)
 
-    # Split the data into features and target
+    ## Split the data into features and target
     X = processed_data.drop(columns=['target_column'])
     y = processed_data['target_column']
 
-    # Define the neural network model
+    ## Define the neural network model
     model = Sequential([
         Dense(128, activation='relu', input_shape=(X.shape[1],)),
         Dense(64, activation='relu'),
         Dense(1, activation='sigmoid')
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
-    # Train the model
+    ## Train the model
     model.fit(X, y, epochs=10, batch_size=32, validation_split=0.2)
 
-    # Save the trained model
+    ## Save the trained model
     model.save('models/trained_nn_model.h5')
 ```
 
@@ -229,39 +229,39 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
 
 def train_election_forecasting_model(data_path, save_model_path):
-    # Load mock data
+    ## Load mock data
     data = load_mock_data(data_path)
 
-    # Preprocess the data (e.g., feature engineering, normalization, etc.)
+    ## Preprocess the data (e.g., feature engineering, normalization, etc.)
     processed_data = preprocess_data(data)
 
-    # Split the data into features and target
+    ## Split the data into features and target
     X = processed_data.drop(columns=['target_column'])
     y = processed_data['target_column']
 
-    # Define the neural network model
+    ## Define the neural network model
     model = Sequential([
         Dense(128, activation='relu', input_shape=(X.shape[1])),
         Dense(64, activation='relu'),
         Dense(1, activation='sigmoid')
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
-    # Train the model
+    ## Train the model
     model.fit(X, y, epochs=10, batch_size=32, validation_split=0.2)
 
-    # Save the trained model
+    ## Save the trained model
     model.save(save_model_path)
 
-# Mock data loading and preprocessing functions
+## Mock data loading and preprocessing functions
 def load_mock_data(data_path):
-    # Implement mock data loading logic
+    ## Implement mock data loading logic
     pass
 
 def preprocess_data(data):
-    # Implement mock data preprocessing logic
+    ## Implement mock data preprocessing logic
     pass
 ```
 

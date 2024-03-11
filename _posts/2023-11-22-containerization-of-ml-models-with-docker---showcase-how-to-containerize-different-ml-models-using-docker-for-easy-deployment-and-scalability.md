@@ -29,24 +29,24 @@ For containerizing ML models using Docker, the following libraries and tools can
 
 ### Sample Dockerfile (Python-based ML Model using TensorFlow)
 ```Dockerfile
-# Use lightweight Python base image
+## Use lightweight Python base image
 FROM python:3.8-slim
 
-# Set working directory in the container
+## Set working directory in the container
 WORKDIR /app
 
-# Copy the requirements file and install dependencies
+## Copy the requirements file and install dependencies
 COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 
-# Copy the trained ML model and inference script
+## Copy the trained ML model and inference script
 COPY trained_model /app/trained_model
 COPY inference_script.py /app/inference_script.py
 
-# Expose the serving port
+## Expose the serving port
 EXPOSE 8080
 
-# Define the command to start the model serving API
+## Define the command to start the model serving API
 CMD ["python", "inference_script.py"]
 ```
 
@@ -176,24 +176,24 @@ The **models/** directory structure organizes each ML model into separate subdir
 
 **Example Dockerfile (model1/Dockerfile)**
 ```Dockerfile
-# Use a lightweight Python base image
+## Use a lightweight Python base image
 FROM python:3.8-slim
 
-# Set working directory in the container
+## Set working directory in the container
 WORKDIR /app
 
-# Copy the requirements file and install dependencies
+## Copy the requirements file and install dependencies
 COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 
-# Copy the trained ML model and inference script
+## Copy the trained ML model and inference script
 COPY trained_model /app/trained_model
 COPY src /app/src
 
-# Expose the serving port
+## Expose the serving port
 EXPOSE 8080
 
-# Define the command to start the model serving API
+## Define the command to start the model serving API
 CMD ["python", "src/inference_script.py"]
 ```
 
@@ -270,7 +270,7 @@ http {
     upstream models {
         server model1:5000;
         server model2:5000;
-        # Add more model servers as needed
+        ## Add more model servers as needed
     }
 
     server {
@@ -322,19 +322,19 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 
 def complex_ml_algorithm(data_file_path):
-    # Load mock data
+    ## Load mock data
     data = pd.read_csv(data_file_path)
 
-    # Data preprocessing
+    ## Data preprocessing
     X = data.drop('target', axis=1)
     y = data['target']
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Model training
+    ## Model training
     model = RandomForestClassifier(n_estimators=100, random_state=42)
     model.fit(X_train, y_train)
 
-    # Model inference
+    ## Model inference
     y_pred = model.predict(X_test)
     accuracy = accuracy_score(y_test, y_pred)
 
@@ -347,20 +347,20 @@ To containerize this complex machine learning algorithm using Docker, you can cr
 
 **Dockerfile:**
 ```Dockerfile
-# Use a Python base image
+## Use a Python base image
 FROM python:3.8-slim
 
-# Set working directory in the container
+## Set working directory in the container
 WORKDIR /app
 
-# Copy the Python script and data file
+## Copy the Python script and data file
 COPY complex_ml_algorithm.py /app/complex_ml_algorithm.py
 COPY mock_data.csv /app/mock_data.csv
 
-# Install dependencies
+## Install dependencies
 RUN pip install pandas scikit-learn
 
-# Define the command to run the complex ML algorithm
+## Define the command to run the complex ML algorithm
 CMD ["python", "complex_ml_algorithm.py", "mock_data.csv"]
 ```
 
@@ -378,16 +378,16 @@ from tensorflow.keras import layers, models
 from sklearn.model_selection import train_test_split
 
 def complex_deep_learning_algorithm(data_file_path):
-    # Load mock data
+    ## Load mock data
     data = np.load(data_file_path)
     X = data['images']
     y = data['labels']
 
-    # Preprocess the data
-    X = X / 255.0  # Normalize pixel values to the range [0, 1]
+    ## Preprocess the data
+    X = X / 255.0  ## Normalize pixel values to the range [0, 1]
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Create a deep learning model
+    ## Create a deep learning model
     model = models.Sequential([
         layers.Conv2D(32, (3, 3), activation='relu', input_shape=(32, 32, 3)),
         layers.MaxPooling2D((2, 2)),
@@ -399,13 +399,13 @@ def complex_deep_learning_algorithm(data_file_path):
         layers.Dense(10, activation='softmax')
     ])
 
-    # Compile and train the model
+    ## Compile and train the model
     model.compile(optimizer='adam',
                   loss='sparse_categorical_crossentropy',
                   metrics=['accuracy'])
     model.fit(X_train, y_train, epochs=10, validation_data=(X_test, y_test))
 
-    # Evaluate the model
+    ## Evaluate the model
     _, accuracy = model.evaluate(X_test, y_test)
 
     return accuracy
@@ -417,17 +417,17 @@ To containerize this complex deep learning algorithm using Docker, you can creat
 
 **Dockerfile:**
 ```Dockerfile
-# Use a Python and TensorFlow base image
+## Use a Python and TensorFlow base image
 FROM tensorflow/tensorflow:2.6.0
 
-# Set working directory in the container
+## Set working directory in the container
 WORKDIR /app
 
-# Copy the Python script and data file
+## Copy the Python script and data file
 COPY complex_deep_learning_algorithm.py /app/complex_deep_learning_algorithm.py
 COPY mock_data.npz /app/mock_data.npz
 
-# Define the command to run the deep learning algorithm
+## Define the command to run the deep learning algorithm
 CMD ["python", "complex_deep_learning_algorithm.py", "mock_data.npz"]
 ```
 

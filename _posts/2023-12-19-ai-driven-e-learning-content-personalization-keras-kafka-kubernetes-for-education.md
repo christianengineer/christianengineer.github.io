@@ -5,7 +5,7 @@ permalink: posts/ai-driven-e-learning-content-personalization-keras-kafka-kubern
 layout: article
 ---
 
-# AI-driven E-learning Content Personalization Repository
+## AI-driven E-learning Content Personalization Repository
 
 ## Objectives
 The primary objective of the AI-driven E-learning Content Personalization repository is to leverage AI and machine learning techniques to create a personalized learning experience for students. This involves analyzing student behavior, preferences, and learning patterns to deliver custom-tailored educational content.
@@ -28,7 +28,7 @@ To achieve the objectives, the following system design strategies can be employe
 
 By incorporating Keras for machine learning, Kafka for real-time data processing, and Kubernetes for scalable deployment, the E-learning Content Personalization system can be designed to efficiently handle large amounts of data and provide a personalized learning experience to each student.
 
-# MLOps Infrastructure for AI-driven E-learning Content Personalization
+## MLOps Infrastructure for AI-driven E-learning Content Personalization
 
 Building a robust MLOps infrastructure is crucial for the success of the AI-driven E-learning Content Personalization application. This infrastructure should enable seamless integration, deployment, monitoring, and management of machine learning models, while also ensuring scalability and reliability. The chosen stack of Keras, Kafka, and Kubernetes can be leveraged to build an effective MLOps infrastructure as outlined below:
 
@@ -209,7 +209,7 @@ deployment/
 By organizing the deployment-related configurations into the **deployment** directory, the repository maintains a clear separation of concerns and ensures that all the deployment-specific files are centralized and easily accessible. This structure facilitates the scalable and efficient deployment of the AI-driven E-learning Content Personalization application, leveraging Kubernetes and containerization technologies.
 
 ```python
-# File path: data/training_data/mock_student_data.csv
+## File path: data/training_data/mock_student_data.csv
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -217,33 +217,33 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 import joblib
 
-# Load mock student interaction data
+## Load mock student interaction data
 data_path = 'data/training_data/mock_student_data.csv'
 mock_student_data = pd.read_csv(data_path)
 
-# Preprocess the data (example: dropping irrelevant columns and encoding categorical variables)
+## Preprocess the data (example: dropping irrelevant columns and encoding categorical variables)
 processed_data = mock_student_data.drop(columns=['irrelevant_column'])
 processed_data = pd.get_dummies(processed_data, columns=['categorical_column'])
 
-# Divide the data into features and target variable
+## Divide the data into features and target variable
 X = processed_data.drop(columns=['target_column'])
 y = processed_data['target_column']
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize and train the model (Example: Random Forest Classifier)
+## Initialize and train the model (Example: Random Forest Classifier)
 model = RandomForestClassifier()
 model.fit(X_train, y_train)
 
-# Make predictions on the test data
+## Make predictions on the test data
 y_pred = model.predict(X_test)
 
-# Evaluate the model
+## Evaluate the model
 accuracy = accuracy_score(y_test, y_pred)
 print(f'Model Accuracy: {accuracy}')
 
-# Serialize the trained model
+## Serialize the trained model
 model_path = 'app/models/mock_student_model.pkl'
 joblib.dump(model, model_path)
 ```
@@ -262,7 +262,7 @@ The script performs the following steps:
 This file can be used as a starting point for training machine learning models using mock data for the AI-driven E-learning Content Personalization application.
 
 ```python
-# File path: app/models/complex_student_model.py
+## File path: app/models/complex_student_model.py
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -270,32 +270,32 @@ from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.metrics import accuracy_score
 import joblib
 
-# Load mock student interaction data
+## Load mock student interaction data
 data_path = 'data/training_data/mock_student_data.csv'
 mock_student_data = pd.read_csv(data_path)
 
-# Preprocess the data
-# ... (complex data preprocessing steps specific to the algorithm)
+## Preprocess the data
+## ... (complex data preprocessing steps specific to the algorithm)
 
-# Divide the data into features and target variable
+## Divide the data into features and target variable
 X = mock_student_data.drop(columns=['target_column'])
 y = mock_student_data['target_column']
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize and train the complex machine learning model (Example: Gradient Boosting Classifier)
+## Initialize and train the complex machine learning model (Example: Gradient Boosting Classifier)
 model = GradientBoostingClassifier(n_estimators=100, learning_rate=1.0, max_depth=3, random_state=42)
 model.fit(X_train, y_train)
 
-# Make predictions on the test data
+## Make predictions on the test data
 y_pred = model.predict(X_test)
 
-# Evaluate the model
+## Evaluate the model
 accuracy = accuracy_score(y_test, y_pred)
 print(f'Model Accuracy: {accuracy}')
 
-# Serialize the trained model
+## Serialize the trained model
 model_path = 'app/models/complex_student_model.pkl'
 joblib.dump(model, model_path)
 ```

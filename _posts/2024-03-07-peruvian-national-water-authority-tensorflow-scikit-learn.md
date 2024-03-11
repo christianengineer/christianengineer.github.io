@@ -5,7 +5,7 @@ permalink: posts/peruvian-national-water-authority-tensorflow-scikit-learn
 layout: article
 ---
 
-# Machine Learning Solution for Water Resources Planning
+## Machine Learning Solution for Water Resources Planning
 
 ## Objectives and Benefits:
 - **Objectives:**
@@ -204,40 +204,40 @@ from sklearn.preprocessing import StandardScaler, OneHotEncoder
 from sklearn.compose import ColumnTransformer
 from sklearn.impute import SimpleImputer
 
-# Load the raw data
+## Load the raw data
 data = pd.read_csv('water_demand_data.csv')
 
-# Separate features and target variable
+## Separate features and target variable
 X = data.drop('water_demand', axis=1)
 y = data['water_demand']
 
-# Define preprocessing steps for different types of features
+## Define preprocessing steps for different types of features
 numeric_features = ['temperature', 'precipitation']
 numeric_transformer = Pipeline(steps=[
-    ('imputer', SimpleImputer(strategy='mean')),  # Impute missing values with mean
-    ('scaler', StandardScaler())  # Standardize numerical features
+    ('imputer', SimpleImputer(strategy='mean')),  ## Impute missing values with mean
+    ('scaler', StandardScaler())  ## Standardize numerical features
 ])
 
 categorical_features = ['season', 'day_of_week']
 categorical_transformer = Pipeline(steps=[
-    ('imputer', SimpleImputer(strategy='constant', fill_value='missing')),  # Handle missing values
-    ('onehot', OneHotEncoder())  # One-hot encode categorical variables
+    ('imputer', SimpleImputer(strategy='constant', fill_value='missing')),  ## Handle missing values
+    ('onehot', OneHotEncoder())  ## One-hot encode categorical variables
 ])
 
-# Apply preprocessing steps to the features
+## Apply preprocessing steps to the features
 preprocessor = ColumnTransformer(
     transformers=[
         ('num', numeric_transformer, numeric_features),
         ('cat', categorical_transformer, categorical_features)
     ])
 
-# Fit and transform the data using the preprocessor
+## Fit and transform the data using the preprocessor
 X_preprocessed = preprocessor.fit_transform(X)
 
-# Optional: Create a DataFrame with preprocessed data for training
+## Optional: Create a DataFrame with preprocessed data for training
 X_preprocessed_df = pd.DataFrame(X_preprocessed, columns=numeric_features + preprocessor.named_transformers_['cat']['onehot'].get_feature_names_out())
 
-# For model training, use X_preprocessed_df and y
+## For model training, use X_preprocessed_df and y
 ```
 
 In the above code:
@@ -314,7 +314,7 @@ import pandas as pd
 from faker import Faker
 from sklearn import preprocessing
 
-# Function to generate synthetic data
+## Function to generate synthetic data
 def generate_synthetic_data(num_samples):
     fake = Faker()
     
@@ -330,19 +330,19 @@ def generate_synthetic_data(num_samples):
     df = pd.DataFrame(data)
     return df
 
-# Generate synthetic dataset with 1000 samples
+## Generate synthetic dataset with 1000 samples
 synthetic_data = generate_synthetic_data(1000)
 
-# Feature engineering - Dummy encoding for categorical variables
+## Feature engineering - Dummy encoding for categorical variables
 synthetic_data = pd.get_dummies(synthetic_data, columns=['season', 'day_of_week'])
 
-# Metadata management - None needed for synthetic data
+## Metadata management - None needed for synthetic data
 
-# Data normalization
+## Data normalization
 scaler = preprocessing.StandardScaler()
 synthetic_data[['temperature', 'precipitation']] = scaler.fit_transform(synthetic_data[['temperature', 'precipitation']])
 
-# Save synthetic dataset to a CSV file
+## Save synthetic dataset to a CSV file
 synthetic_data.to_csv('synthetic_water_demand_data.csv', index=False)
 ```
 
@@ -385,38 +385,38 @@ from tensorflow.keras.layers import LSTM, Dense
 from sklearn.preprocessing import StandardScaler
 import tensorflow_model_optimization as tfmot
 
-# Load preprocessed dataset
+## Load preprocessed dataset
 data = pd.read_csv('preprocessed_water_demand_data.csv')
 
-# Split features and target variable
+## Split features and target variable
 X = data.drop('water_demand', axis=1).values
 y = data['water_demand'].values
 
-# Train-test split
+## Train-test split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Data normalization
+## Data normalization
 scaler = StandardScaler()
 X_train = scaler.fit_transform(X_train)
 X_test = scaler.transform(X_test)
 
-# Reshape input data for LSTM
+## Reshape input data for LSTM
 X_train = X_train.reshape(X_train.shape[0], 1, X_train.shape[1])
 X_test = X_test.reshape(X_test.shape[0], 1, X_test.shape[1])
 
-# Build LSTM model
+## Build LSTM model
 model = Sequential()
 model.add(LSTM(units=50, input_shape=(X_train.shape[1], X_train.shape[2])))
 model.add(Dense(units=1))
 model.compile(optimizer='adam', loss='mse')
 
-# Train the model
+## Train the model
 model.fit(X_train, y_train, epochs=50, batch_size=32, validation_data=(X_test, y_test))
 
-# Save the trained model
+## Save the trained model
 model.save('water_demand_prediction_model.h5')
 
-# Convert the model to a TensorFlow Lite format for deployment
+## Convert the model to a TensorFlow Lite format for deployment
 converter = tf.lite.TFLiteConverter.from_keras_model(model)
 tflite_model = converter.convert()
 open("water_demand_prediction_model.tflite", "wb").write(tflite_model)
@@ -473,25 +473,25 @@ By following this deployment plan tailored to the unique demands of the water de
 Below is a sample Dockerfile optimized for deploying the machine learning model for water demand prediction, tailored to meet the project's performance needs:
 
 ```dockerfile
-# Use a base image with TensorFlow Serving
+## Use a base image with TensorFlow Serving
 FROM tensorflow/serving
 
-# Copy model files to the container
+## Copy model files to the container
 COPY models/ /models/
 
-# Specify the model name and version for TensorFlow Serving
+## Specify the model name and version for TensorFlow Serving
 ENV MODEL_NAME=water_demand_model
 ENV MODEL_BASE_PATH=/models
 ENV MODEL_PATH=$MODEL_BASE_PATH/$MODEL_NAME
 
-# Expose the gRPC and HTTP ports for TensorFlow Serving
+## Expose the gRPC and HTTP ports for TensorFlow Serving
 EXPOSE 8500
 EXPOSE 8501
 
-# Set up TensorFlow Serving command
+## Set up TensorFlow Serving command
 CMD ["tensorflow_model_server", "--rest_api_port=8501", "--model_name=$MODEL_NAME", "--model_base_path=$MODEL_BASE_PATH"]
 
-# Start TensorFlow Serving when the Docker container launches
+## Start TensorFlow Serving when the Docker container launches
 ENTRYPOINT ["tensorflow_model_server", "--port=8500", "--rest_api_port=8501", "--model_name=$MODEL_NAME", "--model_base_path=$MODEL_BASE_PATH"]
 ```
 

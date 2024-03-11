@@ -5,7 +5,7 @@ permalink: posts/community-solar-power-planning-scikit-learn-tensorflow-promotin
 layout: article
 ---
 
-# AI Community Solar Power Planning Repository
+## AI Community Solar Power Planning Repository
 
 ## Objectives
 The objectives of the AI Community Solar Power Planning repository are to promote the use of renewable energy through the application of AI and machine learning techniques. Specifically, the project aims to:
@@ -36,7 +36,7 @@ For implementing the AI Community Solar Power Planning repository, we will lever
 
 By employing these libraries and following the outlined system design strategies, we can develop scalable, data-intensive AI applications that promote renewable energy through the intelligent planning and utilization of community solar power initiatives.
 
-# MLOps Infrastructure for Community Solar Power Planning Application
+## MLOps Infrastructure for Community Solar Power Planning Application
 
 To facilitate the development, deployment, and maintenance of the Community Solar Power Planning application, a robust MLOps infrastructure is essential. This infrastructure will enable seamless integration of machine learning models into the application, automate the deployment process, and ensure continuous monitoring and improvement of the deployed models. Specifically, the MLOps infrastructure for the application will encompass the following components:
 
@@ -194,7 +194,7 @@ By organizing the deployment directory with these specific files and subdirector
 Certainly! Below is an example file for training a machine learning model using mock data for the Community Solar Power Planning application. The file is named `train_model.py`, and it can be located within the `src/model_training/` directory of the project structure.
 
 ```python
-# src/model_training/train_model.py
+## src/model_training/train_model.py
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -202,32 +202,32 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.ensemble import RandomForestRegressor
 import joblib
 
-# Load mock data (replace with actual data loading code)
+## Load mock data (replace with actual data loading code)
 data = pd.read_csv('path_to_mock_data.csv')
 
-# Perform data preprocessing and feature engineering
-# ...
+## Perform data preprocessing and feature engineering
+## ...
 
-# Split data into features and target variable
+## Split data into features and target variable
 X = data.drop(columns=['target_variable'])
 y = data['target_variable']
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Standardize the features
+## Standardize the features
 scaler = StandardScaler()
 X_train = scaler.fit_transform(X_train)
 X_test = scaler.transform(X_test)
 
-# Train a machine learning model
+## Train a machine learning model
 model = RandomForestRegressor(n_estimators=100, random_state=42)
 model.fit(X_train, y_train)
 
-# Evaluate the model on the test set (replace with actual evaluation code)
-# ...
+## Evaluate the model on the test set (replace with actual evaluation code)
+## ...
 
-# Save the trained model and scaler for deployment
+## Save the trained model and scaler for deployment
 joblib.dump(model, 'models/energy_output_prediction/energy_output_prediction_model.pkl')
 joblib.dump(scaler, 'models/energy_output_prediction/energy_output_prediction_scaler.pkl')
 ```
@@ -241,7 +241,7 @@ In this example:
 This file serves as a template for training machine learning models within the Community Solar Power Planning application, utilizing the capabilities of Scikit-Learn and TensorFlow for promoting renewable energy initiatives.
 
 ```python
-# src/model_training/train_complex_model.py
+## src/model_training/train_complex_model.py
 
 import pandas as pd
 import numpy as np
@@ -251,25 +251,25 @@ import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras import layers
 
-# Load mock data (replace with actual data loading code)
+## Load mock data (replace with actual data loading code)
 data = pd.read_csv('path_to_mock_data.csv')
 
-# Perform data preprocessing and feature engineering
-# ...
+## Perform data preprocessing and feature engineering
+## ...
 
-# Split data into features and target variable
+## Split data into features and target variable
 X = data.drop(columns=['target_variable'])
 y = data['target_variable']
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Standardize the features
+## Standardize the features
 scaler = StandardScaler()
 X_train = scaler.fit_transform(X_train)
 X_test = scaler.transform(X_test)
 
-# Build a complex machine learning model using TensorFlow
+## Build a complex machine learning model using TensorFlow
 model = keras.Sequential([
     layers.Dense(64, activation='relu', input_shape=[X_train.shape[1]]),
     layers.Dense(64, activation='relu'),
@@ -278,13 +278,13 @@ model = keras.Sequential([
 
 model.compile(optimizer='adam', loss='mean_squared_error')
 
-# Train the model
+## Train the model
 model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y_test))
 
-# Evaluate the model on the test set (replace with actual evaluation code)
-# ...
+## Evaluate the model on the test set (replace with actual evaluation code)
+## ...
 
-# Save the trained model for deployment
+## Save the trained model for deployment
 model.save('models/energy_output_prediction/complex_model')
 ```
 

@@ -113,7 +113,7 @@ Utilizing cloud services offers scalability, reliability, and cost-effectiveness
 
 By integrating these infrastructure components and leveraging cloud-based services for scalability and flexibility, the MarketIntel AI for Market Research application can effectively handle the data-intensive and AI-driven requirements of advanced market research.
 
-# Scalable File Structure for MarketIntel AI for Market Research Repository
+## Scalable File Structure for MarketIntel AI for Market Research Repository
 
 Creating a scalable and well-organized file structure is essential for the maintenance, collaboration, and scalability of the MarketIntel AI for Market Research repository. The file structure should reflect a modular and organized approach to accommodate different components of the application. Below is a proposed file structure:
 
@@ -286,31 +286,31 @@ By incorporating these components and files within the `deployment/` directory, 
 Sure, I can provide a Python function that demonstrates a complex machine learning algorithm using mock data. In this example, I'll create a function that applies a Gradient Boosting Regressor algorithm to a dataset and evaluates its performance. Let's assume the function is part of the market analysis module of the MarketIntel AI for Market Research application.
 
 ```python
-# Import necessary libraries
+## Import necessary libraries
 import pandas as pd
 from sklearn.ensemble import GradientBoostingRegressor
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 
 def run_market_analysis_model(data_file_path):
-    # Load mock data from a CSV file
+    ## Load mock data from a CSV file
     data = pd.read_csv(data_file_path)
 
-    # Preprocess the data (Assuming the data is preprocessed)
+    ## Preprocess the data (Assuming the data is preprocessed)
     X = data.drop('target_variable', axis=1)
     y = data['target_variable']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize and train the Gradient Boosting Regressor model
+    ## Initialize and train the Gradient Boosting Regressor model
     model = GradientBoostingRegressor(n_estimators=100, learning_rate=0.1, max_depth=3, random_state=42)
     model.fit(X_train, y_train)
 
-    # Make predictions on the test set
+    ## Make predictions on the test set
     predictions = model.predict(X_test)
 
-    # Evaluate the model's performance
+    ## Evaluate the model's performance
     mse = mean_squared_error(y_test, predictions)
     
     return mse
@@ -326,7 +326,7 @@ Please note that in a real-world scenario, the preprocessing steps, feature engi
 Certainly! Below is an example of a Python function that demonstrates a complex deep learning algorithm using mock data. In this case, I'll create a function that applies a deep learning model using TensorFlow to a dataset and evaluates its performance. This function is assumed to be part of the market analysis module of the MarketIntel AI for Market Research application.
 
 ```python
-# Import necessary libraries
+## Import necessary libraries
 import pandas as pd
 import numpy as np
 import tensorflow as tf
@@ -335,32 +335,32 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import mean_squared_error
 
 def run_deep_learning_model(data_file_path):
-    # Load mock data from a CSV file
+    ## Load mock data from a CSV file
     data = pd.read_csv(data_file_path)
 
-    # Preprocess the data (Assuming the data is preprocessed and normalized)
+    ## Preprocess the data (Assuming the data is preprocessed and normalized)
     X = data.drop('target_variable', axis=1).values
     y = data['target_variable'].values
     scaler = StandardScaler()
     X = scaler.fit_transform(X)
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize and train a deep learning model using TensorFlow
+    ## Initialize and train a deep learning model using TensorFlow
     model = tf.keras.Sequential([
         tf.keras.layers.Dense(units=64, activation='relu', input_shape=(X_train.shape[1],)),
         tf.keras.layers.Dense(units=32, activation='relu'),
-        tf.keras.layers.Dense(units=1)  # Output layer
+        tf.keras.layers.Dense(units=1)  ## Output layer
     ])
 
     model.compile(optimizer='adam', loss='mean_squared_error')
     model.fit(X_train, y_train, epochs=100, batch_size=32, validation_data=(X_test, y_test), verbose=0)
 
-    # Make predictions on the test set
+    ## Make predictions on the test set
     predictions = model.predict(X_test).reshape(-1)
 
-    # Evaluate the model's performance
+    ## Evaluate the model's performance
     mse = mean_squared_error(y_test, predictions)
 
     return mse

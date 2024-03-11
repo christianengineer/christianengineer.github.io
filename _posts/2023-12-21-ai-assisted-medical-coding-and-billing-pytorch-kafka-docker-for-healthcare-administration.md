@@ -5,7 +5,7 @@ permalink: posts/ai-assisted-medical-coding-and-billing-pytorch-kafka-docker-for
 layout: article
 ---
 
-# AI-assisted Medical Coding and Billing Repository
+## AI-assisted Medical Coding and Billing Repository
 
 ## Objectives
 The primary objectives of the AI-assisted Medical Coding and Billing repository are to:
@@ -31,7 +31,7 @@ The repository will utilize the following libraries and frameworks:
 
 By leveraging these libraries and frameworks, the AI-assisted Medical Coding and Billing repository aims to deliver a scalable, data-intensive application that automates healthcare administrative processes, leveraging AI and real-time data processing capabilities.
 
-# MLOps Infrastructure for AI-assisted Medical Coding and Billing Application
+## MLOps Infrastructure for AI-assisted Medical Coding and Billing Application
 
 To support the development and deployment of the AI-assisted Medical Coding and Billing application, a robust MLOps infrastructure will be established. This infrastructure will encompass the machine learning lifecycle, including model development, training, deployment, monitoring, and automation. The key components and strategies of the MLOps infrastructure are as follows:
 
@@ -214,24 +214,24 @@ By organizing the deployment-related files in this manner, it facilitates a clea
 Certainly! Below is an example of a Python script for training a billing model for the AI-assisted Medical Coding and Billing application using PyTorch and mock data. All necessary Python packages can be installed via pip using the `requirements.txt` file. 
 
 ```python
-# File path: AI-assisted-Medical-Coding-Billing/models/billing_model/src/billing_model_training.py
+## File path: AI-assisted-Medical-Coding-Billing/models/billing_model/src/billing_model_training.py
 
 import torch
 import torch.nn as nn
 import torch.optim as optim
 import pandas as pd
 
-# Path to mock training data
+## Path to mock training data
 training_data_path = '../../data/billing_training_data.csv'
 
-# Load mock training data
+## Load mock training data
 training_data = pd.read_csv(training_data_path)
 
-# Prepare input features and target variable
+## Prepare input features and target variable
 X = training_data.drop(['target_variable'], axis=1).values
 y = training_data['target_variable'].values
 
-# Define the billing model architecture using PyTorch
+## Define the billing model architecture using PyTorch
 class BillingModel(nn.Module):
     def __init__(self, input_dim, hidden_dim, output_dim):
         super(BillingModel, self).__init__()
@@ -243,23 +243,23 @@ class BillingModel(nn.Module):
         x = self.fc2(x)
         return x
 
-# Define model dimensions
+## Define model dimensions
 input_dim = X.shape[1]
 hidden_dim = 32
-output_dim = 1  # Assuming a regression task
+output_dim = 1  ## Assuming a regression task
 
-# Instantiate the billing model
+## Instantiate the billing model
 model = BillingModel(input_dim, hidden_dim, output_dim)
 
-# Define loss function and optimizer
+## Define loss function and optimizer
 criterion = nn.MSELoss()
 optimizer = optim.Adam(model.parameters(), lr=0.01)
 
-# Convert input features and target variable to PyTorch tensors
+## Convert input features and target variable to PyTorch tensors
 X_tensor = torch.tensor(X, dtype=torch.float32)
 y_tensor = torch.tensor(y, dtype=torch.float32).view(-1, 1)
 
-# Train the billing model
+## Train the billing model
 num_epochs = 100
 for epoch in range(num_epochs):
     optimizer.zero_grad()
@@ -270,7 +270,7 @@ for epoch in range(num_epochs):
     if (epoch+1) % 10 == 0:
         print(f'Epoch [{epoch+1}/{num_epochs}], Loss: {loss.item()}')
 
-# Save the trained model
+## Save the trained model
 torch.save(model.state_dict(), 'billing_model.pth')
 ```
 
@@ -286,7 +286,7 @@ This script can be placed in the `AI-assisted-Medical-Coding-Billing/models/bill
 Certainly! Below is an example of a Python script for a complex machine learning algorithm (e.g., a deep learning model) for the AI-assisted Medical Coding and Billing application using PyTorch and mock data. All necessary Python packages can be installed via pip using the `requirements.txt` file. This script is a mock example and should be adapted and extended for a real-world use case.
 
 ```python
-# File path: AI-assisted-Medical-Coding-Billing/models/coding_model/src/coding_model_training.py
+## File path: AI-assisted-Medical-Coding-Billing/models/coding_model/src/coding_model_training.py
 
 import torch
 import torch.nn as nn
@@ -294,20 +294,20 @@ import torch.optim as optim
 import pandas as pd
 from sklearn.model_selection import train_test_split
 
-# Path to mock training data
+## Path to mock training data
 training_data_path = '../../data/coding_training_data.csv'
 
-# Load mock training data
+## Load mock training data
 training_data = pd.read_csv(training_data_path)
 
-# Prepare input features and target variable
+## Prepare input features and target variable
 X = training_data.drop(['target_variable'], axis=1).values
 y = training_data['target_variable'].values
 
-# Split data into training and validation sets
+## Split data into training and validation sets
 X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Define a complex deep learning model using PyTorch
+## Define a complex deep learning model using PyTorch
 class CodingModel(nn.Module):
     def __init__(self, input_dim, output_dim):
         super(CodingModel, self).__init__()
@@ -325,22 +325,22 @@ class CodingModel(nn.Module):
         x = self.fc3(x)
         return x
 
-# Define model dimensions
+## Define model dimensions
 input_dim = X.shape[1]
-output_dim = 1  # For regression or appropriate output units for classification
+output_dim = 1  ## For regression or appropriate output units for classification
 
-# Instantiate the coding model
+## Instantiate the coding model
 model = CodingModel(input_dim, output_dim)
 
-# Define loss function and optimizer
-criterion = nn.MSELoss()  # For regression, use appropriate loss for classification
+## Define loss function and optimizer
+criterion = nn.MSELoss()  ## For regression, use appropriate loss for classification
 optimizer = optim.Adam(model.parameters(), lr=0.001)
 
-# Convert input features and target variable to PyTorch tensors
+## Convert input features and target variable to PyTorch tensors
 X_train_tensor = torch.tensor(X_train, dtype=torch.float32)
 y_train_tensor = torch.tensor(y_train, dtype=torch.float32).view(-1, 1)
 
-# Train the coding model
+## Train the coding model
 num_epochs = 100
 for epoch in range(num_epochs):
     optimizer.zero_grad()
@@ -351,7 +351,7 @@ for epoch in range(num_epochs):
     if (epoch+1) % 10 == 0:
         print(f'Epoch [{epoch+1}/{num_epochs}], Loss: {loss.item()}')
 
-# Save the trained model
+## Save the trained model
 torch.save(model.state_dict(), 'coding_model.pth')
 ```
 

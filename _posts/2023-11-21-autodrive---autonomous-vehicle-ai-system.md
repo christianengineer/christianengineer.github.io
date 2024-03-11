@@ -5,7 +5,7 @@ permalink: posts/autodrive---autonomous-vehicle-ai-system
 layout: article
 ---
 
-# AI AutoDrive - Autonomous Vehicle AI System
+## AI AutoDrive - Autonomous Vehicle AI System
 
 ## Objectives
 
@@ -75,7 +75,7 @@ The infrastructure for the AutoDrive Autonomous Vehicle AI System must be robust
 
 By integrating these components and considerations, the infrastructure for the AutoDrive Autonomous Vehicle AI System can support the development and deployment of a highly capable and safe autonomous driving solution.
 
-# AutoDrive - Autonomous Vehicle AI System Repository File Structure
+## AutoDrive - Autonomous Vehicle AI System Repository File Structure
 
 ```
 AutoDrive/
@@ -242,7 +242,7 @@ By centralizing common utility functions and helper classes within the `utils/` 
 Certainly! Below is a Python function for a complex machine learning algorithm, specifically a Deep Q-Network (DQN) reinforcement learning algorithm, that could be part of the decision-making module within the AutoDrive - Autonomous Vehicle AI System. This function uses mock data and is designed to train a DQN model for decision-making, given a set of observations and actions. The code is provided within a file named `dqn_algorithm.py`.
 
 ```python
-# File: src/AI/decision_making/reinforcement_learning/dqn_algorithm.py
+## File: src/AI/decision_making/reinforcement_learning/dqn_algorithm.py
 
 import numpy as np
 import tensorflow as tf
@@ -250,56 +250,56 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
 from collections import deque
 
-# Define the Deep Q-Network (DQN) algorithm function
+## Define the Deep Q-Network (DQN) algorithm function
 def train_dqn(observation_data, action_data):
-    # Mock data dimensions
+    ## Mock data dimensions
     num_observation_features = observation_data.shape[1]
     num_actions = action_data.shape[1]
 
-    # Define the DQN model architecture
+    ## Define the DQN model architecture
     model = Sequential([
         Dense(64, input_shape=(num_observation_features,), activation='relu'),
         Dense(64, activation='relu'),
         Dense(num_actions, activation='linear')
     ])
 
-    # Compile the DQN model
+    ## Compile the DQN model
     model.compile(loss='mse', optimizer=tf.keras.optimizers.Adam(lr=0.001))
 
-    # DQN training parameters
-    gamma = 0.95  # Discount factor
-    epsilon = 1.0  # Exploration rate
+    ## DQN training parameters
+    gamma = 0.95  ## Discount factor
+    epsilon = 1.0  ## Exploration rate
     epsilon_min = 0.01
     epsilon_decay = 0.995
-    memory = deque(maxlen=2000)  # Experience replay memory
+    memory = deque(maxlen=2000)  ## Experience replay memory
 
-    # DQN training loop
+    ## DQN training loop
     for episode in range(num_episodes):
-        state = observation_data[0]  # Initial state
+        state = observation_data[0]  ## Initial state
         total_reward = 0
         for step in range(num_steps):
             if np.random.rand() <= epsilon:
-                action = np.random.choice(num_actions)  # Explore: Choose random action
+                action = np.random.choice(num_actions)  ## Explore: Choose random action
             else:
-                action = np.argmax(model.predict(state.reshape(1, -1))[0])  # Exploit: Choose action from the Q-network
+                action = np.argmax(model.predict(state.reshape(1, -1))[0])  ## Exploit: Choose action from the Q-network
 
             next_state = observation_data[step]
-            reward = 0  # Mock reward for demonstration
-            done = False  # Mock termination signal for demonstration
+            reward = 0  ## Mock reward for demonstration
+            done = False  ## Mock termination signal for demonstration
 
-            # Add the experience to the replay memory
+            ## Add the experience to the replay memory
             memory.append((state, action, reward, next_state, done))
 
             state = next_state
             total_reward += reward
 
-            # Perform DQN training with mini-batch gradient descent
+            ## Perform DQN training with mini-batch gradient descent
 
-        # Decay exploration rate
+        ## Decay exploration rate
         if epsilon > epsilon_min:
             epsilon *= epsilon_decay
 
-    # Save the trained DQN model
+    ## Save the trained DQN model
     model.save('trained_dqn_model.h5')
 
     return model
@@ -310,22 +310,22 @@ In this example, the `train_dqn` function takes the observation data and action 
 Certainly! Below is a Python function for a complex deep learning algorithm, specifically a Convolutional Neural Network (CNN) for image classification, that could be part of the perception module within the AutoDrive - Autonomous Vehicle AI System. This function uses mock data and is designed to train a CNN model to classify images. The code is provided within a file named `cnn_algorithm.py`.
 
 ```python
-# File: src/AI/perception/model_training/cnn_algorithm.py
+## File: src/AI/perception/model_training/cnn_algorithm.py
 
 import numpy as np
 import tensorflow as tf
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense
 
-# Define the CNN algorithm function
+## Define the CNN algorithm function
 def train_cnn(image_data, labels):
-    # Mock data dimensions
-    input_shape = image_data.shape[1:]  # Assuming shape (height, width, channels)
+    ## Mock data dimensions
+    input_shape = image_data.shape[1:]  ## Assuming shape (height, width, channels)
     num_classes = len(set(labels))
 
-    # Preprocess the image data if necessary (e.g., normalization, resizing)
+    ## Preprocess the image data if necessary (e.g., normalization, resizing)
 
-    # Define the CNN model architecture
+    ## Define the CNN model architecture
     model = Sequential([
         Conv2D(32, kernel_size=(3, 3), activation='relu', input_shape=input_shape),
         MaxPooling2D(pool_size=(2, 2)),
@@ -336,15 +336,15 @@ def train_cnn(image_data, labels):
         Dense(num_classes, activation='softmax')
     ])
 
-    # Compile the CNN model
+    ## Compile the CNN model
     model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
 
-    # Preprocess the labels if necessary (e.g., one-hot encoding)
+    ## Preprocess the labels if necessary (e.g., one-hot encoding)
 
-    # CNN model training
+    ## CNN model training
     model.fit(image_data, labels, batch_size=32, epochs=10, validation_split=0.2)
 
-    # Save the trained CNN model
+    ## Save the trained CNN model
     model.save('trained_cnn_model.h5')
 
     return model

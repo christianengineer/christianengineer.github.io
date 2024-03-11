@@ -171,36 +171,36 @@ By structuring the deployment directory in this organized manner, the AI Peru In
 I would create a Python script for training a model of the Peru Informal Economy Tracker using mock data. Below is an example script named `train_model.py`:
 
 ```python
-# train_model.py
+## train_model.py
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 import joblib
 
-# Load mock data
+## Load mock data
 data_path = "data/mock_data.csv"
 data = pd.read_csv(data_path)
 
-# Prepare data for training
+## Prepare data for training
 X = data.drop(columns=['target_column'])
 y = data['target_column']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Train a linear regression model
+## Train a linear regression model
 model = LinearRegression()
 model.fit(X_train, y_train)
 
-# Evaluate the model
+## Evaluate the model
 train_score = model.score(X_train, y_train)
 test_score = model.score(X_test, y_test)
 
 print(f"Training R^2 score: {train_score}")
 print(f"Testing R^2 score: {test_score}")
 
-# Save the trained model
+## Save the trained model
 model_path = "models/trained_model.pkl"
 joblib.dump(model, model_path)
 
@@ -218,7 +218,7 @@ In this script, replace `"data/mock_data.csv"` with the actual file path of your
 I would create a Python script for implementing a complex machine learning algorithm for the Peru Informal Economy Tracker using mock data. Below is an example script named `complex_model.py`:
 
 ```python
-# complex_model.py
+## complex_model.py
 
 import pandas as pd
 from sklearn.ensemble import RandomForestRegressor
@@ -226,25 +226,25 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 import joblib
 
-# Load the mock data
+## Load the mock data
 data_path = "data/mock_data.csv"
 data = pd.read_csv(data_path)
 
-# Feature engineering
-# Add some more complex feature engineering processes here if needed
+## Feature engineering
+## Add some more complex feature engineering processes here if needed
 
-# Prepare data for training
+## Prepare data for training
 X = data.drop(columns=['target_column'])
 y = data['target_column']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Train a Random Forest Regressor model
+## Train a Random Forest Regressor model
 model = RandomForestRegressor(n_estimators=100, random_state=42)
 model.fit(X_train, y_train)
 
-# Evaluate the model
+## Evaluate the model
 train_preds = model.predict(X_train)
 test_preds = model.predict(X_test)
 
@@ -254,7 +254,7 @@ test_mse = mean_squared_error(y_test, test_preds)
 print(f"Training Mean Squared Error: {train_mse}")
 print(f"Testing Mean Squared Error: {test_mse}")
 
-# Save the trained model
+## Save the trained model
 model_path = "models/complex_model.pkl"
 joblib.dump(model, model_path)
 

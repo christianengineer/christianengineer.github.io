@@ -5,7 +5,7 @@ permalink: posts/java-for-large-scalable-ai-applications-guide
 layout: article
 ---
 
-# Java for Large Scalable AI Applications
+## Java for Large Scalable AI Applications
 
 In the world of artificial intelligence (AI), choice of programming language is crucial to the development and scalability of an application. One of the key options developers often consider is Java, a general-purpose programming language with wide-ranging capabilities. This article aims to explain why Java has become a preferred choice in developing large, scalable AI applications.
 

@@ -60,45 +60,45 @@ Creating a well-organized file structure is essential for scalability and mainta
 poverty-mapping-ai/
 │
 ├── data/
-│   ├── raw/  # Raw data from various sources
-│   ├── processed/  # Preprocessed and feature-engineered data
-│   └── external/  # External datasets used for training and validation
+│   ├── raw/  ## Raw data from various sources
+│   ├── processed/  ## Preprocessed and feature-engineered data
+│   └── external/  ## External datasets used for training and validation
 │
 ├── models/
-│   ├── preprocessing/  # Scripts for data preprocessing
-│   ├── training/  # TensorFlow/Keras model training scripts
-│   └── evaluation/  # Model evaluation and performance monitoring scripts
+│   ├── preprocessing/  ## Scripts for data preprocessing
+│   ├── training/  ## TensorFlow/Keras model training scripts
+│   └── evaluation/  ## Model evaluation and performance monitoring scripts
 │
 ├── notebooks/
-│   ├── exploratory/  # Jupyter notebooks for data exploration and analysis
-│   ├── model_development/  # Notebooks for developing and experimenting with models
-│   └── documentation/  # Notebooks for documenting insights, visualizations, and findings
+│   ├── exploratory/  ## Jupyter notebooks for data exploration and analysis
+│   ├── model_development/  ## Notebooks for developing and experimenting with models
+│   └── documentation/  ## Notebooks for documenting insights, visualizations, and findings
 │
 ├── src/
-│   ├── data/  # Custom data processing and feature engineering scripts
-│   ├── models/  # TensorFlow/Keras model architectures and utilities
-│   ├── pipelines/  # CI/CD pipelines for model training and deployment
-│   └── utils/  # Utility scripts for logging, monitoring, testing, and performance metrics
+│   ├── data/  ## Custom data processing and feature engineering scripts
+│   ├── models/  ## TensorFlow/Keras model architectures and utilities
+│   ├── pipelines/  ## CI/CD pipelines for model training and deployment
+│   └── utils/  ## Utility scripts for logging, monitoring, testing, and performance metrics
 │
 ├── config/
-│   ├── training_config.yaml  # Configuration files for model training
-│   └── deployment_config.yaml  # Configuration files for model deployment
+│   ├── training_config.yaml  ## Configuration files for model training
+│   └── deployment_config.yaml  ## Configuration files for model deployment
 │
 ├── tests/
-│   ├── unit/  # Unit tests for individual components
-│   └── integration/  # Integration tests for end-to-end model workflows
+│   ├── unit/  ## Unit tests for individual components
+│   └── integration/  ## Integration tests for end-to-end model workflows
 │
 ├── docs/
-│   ├── user_manual.md  # User manual for using the AI application
-│   └── api_reference.md  # API reference documentation for model endpoints
+│   ├── user_manual.md  ## User manual for using the AI application
+│   └── api_reference.md  ## API reference documentation for model endpoints
 │
 ├── infrastructure/
-│   ├── docker/  # Dockerfiles for containerizing the application components
-│   └── kubernetes/  # Kubernetes deployment and service configuration files
+│   ├── docker/  ## Dockerfiles for containerizing the application components
+│   └── kubernetes/  ## Kubernetes deployment and service configuration files
 │
-├── .gitignore  # Define which files and directories to ignore in version control
-├── README.md  # Project overview, setup instructions, and usage guidelines
-└── requirements.txt  # Python dependencies and library versions
+├── .gitignore  ## Define which files and directories to ignore in version control
+├── README.md  ## Project overview, setup instructions, and usage guidelines
+└── requirements.txt  ## Python dependencies and library versions
 ```
 
 #### Key Components of the File Structure:
@@ -135,17 +135,17 @@ Within the models directory of the Poverty Mapping AI application, the following
 models/
 │
 ├── preprocessing/
-│   ├── data_preprocessing.py  # Script for data cleaning, feature extraction, and transformation
-│   └── feature_engineering.py  # Code for creating and engineering features from raw data
+│   ├── data_preprocessing.py  ## Script for data cleaning, feature extraction, and transformation
+│   └── feature_engineering.py  ## Code for creating and engineering features from raw data
 │
 ├── training/
-│   ├── model_architecture.py  # Definition of the TensorFlow/Keras model architecture
-│   ├── train.py  # Script for training the machine learning models
-│   └── hyperparameters.yaml  # Configuration file for hyperparameters used in training
+│   ├── model_architecture.py  ## Definition of the TensorFlow/Keras model architecture
+│   ├── train.py  ## Script for training the machine learning models
+│   └── hyperparameters.yaml  ## Configuration file for hyperparameters used in training
 │
 └── evaluation/
-    ├── model_evaluation.py  # Script for model evaluation, metrics calculation, and performance monitoring
-    └── visualize_results.py  # Code for visualizing and interpreting model predictions and performance
+    ├── model_evaluation.py  ## Script for model evaluation, metrics calculation, and performance monitoring
+    └── visualize_results.py  ## Code for visualizing and interpreting model predictions and performance
 ```
 
 #### Explanation of the Model Subdirectories and Files:
@@ -178,26 +178,26 @@ The deployment directory in the Poverty Mapping AI application will contain the 
 deployment/
 │
 ├── api/
-│   ├── app.py  # Flask application for serving the trained model as an API endpoint
-│   ├── requirements.txt  # Python dependencies for the API application
-│   └── Dockerfile  # Dockerfile for containerizing the API application
+│   ├── app.py  ## Flask application for serving the trained model as an API endpoint
+│   ├── requirements.txt  ## Python dependencies for the API application
+│   └── Dockerfile  ## Dockerfile for containerizing the API application
 │
 ├── model/
-│   ├── saved_model/  # Directory to store the saved TensorFlow/Keras model files
-│   ├── model_config.yaml  # Configuration file for model settings and metadata
-│   └── model_versioning.py  # Script for versioning the deployed models and managing model updates
+│   ├── saved_model/  ## Directory to store the saved TensorFlow/Keras model files
+│   ├── model_config.yaml  ## Configuration file for model settings and metadata
+│   └── model_versioning.py  ## Script for versioning the deployed models and managing model updates
 │
 ├── infrastructure/
 │   ├── kubernetes/
-│   │   ├── deployment.yaml  # Kubernetes deployment configuration for scalable model serving
-│   │   └── service.yaml  # Kubernetes service configuration for exposing the model API
+│   │   ├── deployment.yaml  ## Kubernetes deployment configuration for scalable model serving
+│   │   └── service.yaml  ## Kubernetes service configuration for exposing the model API
 │   └── monitoring/
-│       ├── prometheus_config.yml  # Configuration file for Prometheus monitoring setup
-│       └── grafana_dashboard.json  # Grafana dashboard for visualizing model performance metrics
+│       ├── prometheus_config.yml  ## Configuration file for Prometheus monitoring setup
+│       └── grafana_dashboard.json  ## Grafana dashboard for visualizing model performance metrics
 │
 └── scripts/
-    ├── deploy_model.sh  # Bash script for automating model deployment process
-    └── update_model_version.sh  # Bash script for updating the deployed model to a new version
+    ├── deploy_model.sh  ## Bash script for automating model deployment process
+    └── update_model_version.sh  ## Bash script for updating the deployed model to a new version
 ```
 
 #### Explanation of the Deployment Subdirectories and Files:
@@ -235,17 +235,17 @@ By structuring the deployment directory with these components, the Poverty Mappi
 Certainly! Below is a mock Python script for training a TensorFlow/Keras model for the Poverty Mapping AI application using mock data. This script assumes the presence of preprocessed mock data in an appropriate format for training the model. We'll name the file as `train_model.py` and assume the mock data is stored in a directory named `mock_data`.
 
 ```python
-# train_model.py
+## train_model.py
 
 import tensorflow as tf
 from tensorflow.keras import layers, models
 import numpy as np
 
-# Load mock training data (replace with actual data loading code)
-X_train = np.random.rand(100, 64, 64, 3)  # Replace with actual input data
-y_train = np.random.randint(0, 2, size=(100,))  # Replace with actual target labels
+## Load mock training data (replace with actual data loading code)
+X_train = np.random.rand(100, 64, 64, 3)  ## Replace with actual input data
+y_train = np.random.randint(0, 2, size=(100,))  ## Replace with actual target labels
 
-# Define the model architecture using Keras
+## Define the model architecture using Keras
 model = models.Sequential([
     layers.Conv2D(32, (3, 3), activation='relu', input_shape=(64, 64, 3)),
     layers.MaxPooling2D((2, 2)),
@@ -254,19 +254,19 @@ model = models.Sequential([
     layers.Conv2D(128, (3, 3), activation='relu'),
     layers.Flatten(),
     layers.Dense(128, activation='relu'),
-    layers.Dense(1, activation='sigmoid')  # Assuming binary classification for simplicity
+    layers.Dense(1, activation='sigmoid')  ## Assuming binary classification for simplicity
 ])
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam',
-              loss='binary_crossentropy',  # Assuming binary classification for simplicity
+              loss='binary_crossentropy',  ## Assuming binary classification for simplicity
               metrics=['accuracy'])
 
-# Train the model
+## Train the model
 model.fit(X_train, y_train, epochs=10, batch_size=32, validation_split=0.2)
 
-# Save the trained model
-model.save('trained_model.h5')  # Save the trained model for deployment
+## Save the trained model
+model.save('trained_model.h5')  ## Save the trained model for deployment
 ```
 
 In this script, we assume mock data is loaded into `X_train` and `y_train` as input features and target labels, respectively. The model architecture is defined using Keras sequential API, compiled with an optimizer and loss function, and then trained on the mock data. After training, the model is saved to a file named `trained_model.h5`.
@@ -278,19 +278,19 @@ Please note that the mock data and model architecture used in this script are si
 Certainly! Below is an example of a complex machine learning algorithm using a Convolutional Neural Network (CNN) implemented with TensorFlow and Keras. This example assumes the use of image data for poverty mapping and is designed to showcase a more intricate model architecture. We'll name the file as `complex_model.py` and assume the mock data is stored in a directory named `mock_data`.
 
 ```python
-# complex_model.py
+## complex_model.py
 
 import tensorflow as tf
 from tensorflow.keras import layers, models
 import numpy as np
 
-# Load mock training data (replace with actual data loading code)
-X_train = np.random.rand(100, 128, 128, 3)  # Replace with actual input data
-y_train = np.random.randint(0, 2, size=(100,))  # Replace with actual target labels
+## Load mock training data (replace with actual data loading code)
+X_train = np.random.rand(100, 128, 128, 3)  ## Replace with actual input data
+y_train = np.random.randint(0, 2, size=(100,))  ## Replace with actual target labels
 
-# Define a complex CNN model architecture using Keras
+## Define a complex CNN model architecture using Keras
 model = models.Sequential([
-    # Convolutional layers
+    ## Convolutional layers
     layers.Conv2D(32, (3, 3), activation='relu', input_shape=(128, 128, 3)),
     layers.MaxPooling2D((2, 2)),
     layers.Conv2D(64, (3, 3), activation='relu'),
@@ -300,24 +300,24 @@ model = models.Sequential([
     layers.Conv2D(128, (3, 3), activation='relu'),
     layers.MaxPooling2D((2, 2)),
     layers.Flatten(),
-    # Dense layers
+    ## Dense layers
     layers.Dense(512, activation='relu'),
-    layers.Dropout(0.5),  # Regularization
+    layers.Dropout(0.5),  ## Regularization
     layers.Dense(128, activation='relu'),
-    layers.Dropout(0.5),  # Regularization
-    layers.Dense(1, activation='sigmoid')  # Assuming binary classification for simplicity
+    layers.Dropout(0.5),  ## Regularization
+    layers.Dense(1, activation='sigmoid')  ## Assuming binary classification for simplicity
 ])
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam',
-              loss='binary_crossentropy',  # Assuming binary classification for simplicity
+              loss='binary_crossentropy',  ## Assuming binary classification for simplicity
               metrics=['accuracy'])
 
-# Train the model
+## Train the model
 model.fit(X_train, y_train, epochs=20, batch_size=32, validation_split=0.2)
 
-# Save the trained model
-model.save('complex_trained_model.h5')  # Save the trained model for deployment
+## Save the trained model
+model.save('complex_trained_model.h5')  ## Save the trained model for deployment
 ```
 
 In this script, we define a more intricate CNN model for processing image data. The model includes multiple convolutional and pooling layers, followed by dense layers, and includes dropout regularization for improved generalization. We compile the model with an optimizer and a loss function, and then train it on the mock image data. Lastly, the trained model is saved to a file named `complex_trained_model.h5`.

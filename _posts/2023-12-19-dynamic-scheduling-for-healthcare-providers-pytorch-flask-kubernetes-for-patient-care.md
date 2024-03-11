@@ -208,8 +208,8 @@ In the infrastructure/deployment directory for the Dynamic Scheduling for Health
 By organizing the deployment-related files in this manner, the application's deployment process to a Kubernetes cluster is streamlined, allowing for easy management and automation of deployment tasks while maintaining consistency and reproducibility. This structure ensures that the deployment process is well-documented and can be easily followed and executed within the context of the Dynamic Scheduling for Healthcare Providers application.
 
 ```python
-# File: model_training.py
-# Path: dynamic_scheduling_healthcare/src/machine_learning/model_training.py
+## File: model_training.py
+## Path: dynamic_scheduling_healthcare/src/machine_learning/model_training.py
 
 import torch
 import torch.nn as nn
@@ -217,17 +217,17 @@ import torch.optim as optim
 import pandas as pd
 import numpy as np
 
-# Load mock scheduling data
+## Load mock scheduling data
 mock_scheduling_data_path = 'data/processed/mock_scheduling_data.csv'
 scheduling_df = pd.read_csv(mock_scheduling_data_path)
 
-# Preprocess the data (mock preprocessing for illustration purposes)
-# Example: Select relevant features, handle missing values, and perform feature scaling
+## Preprocess the data (mock preprocessing for illustration purposes)
+## Example: Select relevant features, handle missing values, and perform feature scaling
 processed_data = scheduling_df[['feature1', 'feature2', 'feature3']]
-processed_data = processed_data.fillna(0)  # Filling missing values with 0 for illustration
-processed_data = (processed_data - processed_data.mean()) / processed_data.std()  # Standard scaling
+processed_data = processed_data.fillna(0)  ## Filling missing values with 0 for illustration
+processed_data = (processed_data - processed_data.mean()) / processed_data.std()  ## Standard scaling
 
-# Define the model architecture
+## Define the model architecture
 input_size = len(processed_data.columns)
 output_size = 1
 hidden_size = 64
@@ -243,18 +243,18 @@ class SchedulingModel(nn.Module):
         x = self.fc2(x)
         return x
 
-# Instantiate the model
+## Instantiate the model
 model = SchedulingModel()
 
-# Define loss function and optimizer
+## Define loss function and optimizer
 criterion = nn.MSELoss()
 optimizer = optim.Adam(model.parameters(), lr=0.01)
 
-# Prepare input and target data (mock data for illustration purposes)
+## Prepare input and target data (mock data for illustration purposes)
 input_data = torch.tensor(processed_data.values, dtype=torch.float32)
 target_data = torch.tensor(scheduling_df['target_column'].values, dtype=torch.float32).view(-1, 1)
 
-# Train the model
+## Train the model
 num_epochs = 100
 for epoch in range(num_epochs):
     optimizer.zero_grad()
@@ -266,7 +266,7 @@ for epoch in range(num_epochs):
     if (epoch+1) % 10 == 0:
         print(f'Epoch [{epoch+1}/{num_epochs}], Loss: {loss.item()}')
 
-# Save the trained model
+## Save the trained model
 model_save_path = 'models/trained_models/mock_scheduling_model.pth'
 torch.save(model.state_dict(), model_save_path)
 ```
@@ -284,8 +284,8 @@ The script performs the following key tasks:
 This script serves as a simplified representation of the model training process using PyTorch. In a real-world scenario, this script would be more comprehensive, incorporating data validation, hyperparameter tuning, and rigorous model evaluation.
 
 ```python
-# File: complex_model_training.py
-# Path: dynamic_scheduling_healthcare/src/machine_learning/complex_model_training.py
+## File: complex_model_training.py
+## Path: dynamic_scheduling_healthcare/src/machine_learning/complex_model_training.py
 
 import torch
 import torch.nn as nn
@@ -297,31 +297,31 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_squared_error
 
-# Load mock scheduling data
+## Load mock scheduling data
 mock_scheduling_data_path = 'data/processed/mock_scheduling_data.csv'
 scheduling_df = pd.read_csv(mock_scheduling_data_path)
 
-# Feature and target selection
+## Feature and target selection
 X = scheduling_df[['feature1', 'feature2', 'feature3']].values
 y = scheduling_df['target'].values
 
-# Data preprocessing
+## Data preprocessing
 scaler = StandardScaler()
 X_scaled = scaler.fit_transform(X)
 
-# Train-test split
+## Train-test split
 X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.2, random_state=42)
 
-# Define and train a complex machine learning model (Random Forest for demonstration)
+## Define and train a complex machine learning model (Random Forest for demonstration)
 regr = RandomForestRegressor(n_estimators=100, max_depth=10, random_state=42)
 regr.fit(X_train, y_train)
 
-# Evaluate the model
+## Evaluate the model
 y_pred = regr.predict(X_test)
 mse = mean_squared_error(y_test, y_pred)
 print(f'Mean Squared Error: {mse}')
 
-# Save the trained model
+## Save the trained model
 model_save_path = 'models/trained_models/mock_complex_scheduling_model.pkl'
 import joblib
 joblib.dump(regr, model_save_path)

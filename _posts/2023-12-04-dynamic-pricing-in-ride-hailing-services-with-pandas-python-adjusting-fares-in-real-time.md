@@ -225,7 +225,7 @@ The `deployment` directory encapsulates the necessary scripts and configurations
 Certainly! Below is an example of a function that represents a complex machine learning algorithm for demand prediction in the context of dynamic pricing for ride-hailing services. The function utilizes mock data for demonstration purposes. You can store this function in a file named `demand_prediction_model.py` within the `machine_learning` directory of your project.
 
 ```python
-# machine_learning/demand_prediction_model.py
+## machine_learning/demand_prediction_model.py
 
 import pandas as pd
 import numpy as np
@@ -234,34 +234,34 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 
 def train_demand_prediction_model(data_file_path):
-    # Load mock data for demand prediction
+    ## Load mock data for demand prediction
     data = pd.read_csv(data_file_path)
 
-    # Perform feature engineering and preprocessing
-    # ...
+    ## Perform feature engineering and preprocessing
+    ## ...
 
-    # Split the data into features and target variable
+    ## Split the data into features and target variable
     X = data.drop('demand', axis=1)
     y = data['demand']
 
-    # Split data into training and testing sets
+    ## Split data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize and train the machine learning model
+    ## Initialize and train the machine learning model
     model = RandomForestRegressor(n_estimators=100, random_state=42)
     model.fit(X_train, y_train)
 
-    # Evaluate model performance on the test set
+    ## Evaluate model performance on the test set
     y_pred = model.predict(X_test)
     rmse = np.sqrt(mean_squared_error(y_test, y_pred))
     print(f"Root Mean Squared Error: {rmse}")
 
-    # Serialize the trained model for deployment
+    ## Serialize the trained model for deployment
     model_file_path = 'demand_model.pkl'
     with open(model_file_path, 'wb') as file:
         pickle.dump(model, file)
 
-    # Serialize model metadata for version tracking and deployment information
+    ## Serialize model metadata for version tracking and deployment information
     model_metadata = {
         'model_name': 'DemandPredictionModel',
         'training_date': '2023-05-10',
@@ -275,7 +275,7 @@ def train_demand_prediction_model(data_file_path):
 
     return model_file_path, metadata_file_path
 
-# Example usage of the function with mock data file path
+## Example usage of the function with mock data file path
 if __name__ == "__main__":
     mock_data_file_path = 'path/to/mock_data.csv'
     trained_model, model_metadata = train_demand_prediction_model(mock_data_file_path)
@@ -292,7 +292,7 @@ Please ensure to replace `'path/to/mock_data.csv'` with the actual file path to 
 Certainly! Below is an example of a function that represents a complex machine learning algorithm for dynamic pricing optimization in the context of ride-hailing services. This function uses mock data for demonstration purposes and can be stored in a file named `pricing_optimization_model.py` within the `machine_learning` directory of your project.
 
 ```python
-# machine_learning/pricing_optimization_model.py
+## machine_learning/pricing_optimization_model.py
 
 import pandas as pd
 import numpy as np
@@ -303,34 +303,34 @@ import pickle
 import json
 
 def train_pricing_optimization_model(data_file_path):
-    # Load mock data for pricing optimization
+    ## Load mock data for pricing optimization
     data = pd.read_csv(data_file_path)
 
-    # Perform feature engineering and preprocessing
-    # ...
+    ## Perform feature engineering and preprocessing
+    ## ...
 
-    # Split the data into features and target variable
+    ## Split the data into features and target variable
     X = data.drop('fare', axis=1)
     y = data['fare']
 
-    # Split data into training and testing sets
+    ## Split data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize and train the machine learning model
+    ## Initialize and train the machine learning model
     model = RandomForestRegressor(n_estimators=100, random_state=42)
     model.fit(X_train, y_train)
 
-    # Evaluate model performance on the test set
+    ## Evaluate model performance on the test set
     y_pred = model.predict(X_test)
     rmse = np.sqrt(mean_squared_error(y_test, y_pred))
     print(f"Root Mean Squared Error: {rmse}")
 
-    # Serialize the trained model for deployment
+    ## Serialize the trained model for deployment
     model_file_path = 'pricing_model.pkl'
     with open(model_file_path, 'wb') as file:
         pickle.dump(model, file)
 
-    # Serialize model metadata for version tracking and deployment information
+    ## Serialize model metadata for version tracking and deployment information
     model_metadata = {
         'model_name': 'PricingOptimizationModel',
         'training_date': '2023-05-15',
@@ -344,7 +344,7 @@ def train_pricing_optimization_model(data_file_path):
 
     return model_file_path, metadata_file_path
 
-# Example usage of the function with mock data file path
+## Example usage of the function with mock data file path
 if __name__ == "__main__":
     mock_data_file_path = 'path/to/mock_pricing_data.csv'
     trained_model, model_metadata = train_pricing_optimization_model(mock_data_file_path)

@@ -153,25 +153,25 @@ import pandas as pd
 from sklearn import preprocessing
 
 def clean_data(df):
-    # Drop any rows with missing data
+    ## Drop any rows with missing data
     df.dropna(inplace=True)
     
-    # Normalize numerical data
+    ## Normalize numerical data
     min_max_scaler = preprocessing.MinMaxScaler()
     df[['transaction_timestamp']] = min_max_scaler.fit_transform(df[['transaction_timestamp']])
     
-    # Text data preprocessing
+    ## Text data preprocessing
     df['supplier_details'] = df['supplier_details'].apply(lambda x: ' '.join([word for word in x.split() if word.isalpha()]))
     
     return df
 
-# Load the data
+## Load the data
 data = pd.read_csv('data.csv')
 
-# Clean the data
+## Clean the data
 cleaned_data = clean_data(data)
 
-# Save the cleaned data
+## Save the cleaned data
 cleaned_data.to_csv('cleaned_data.csv', index=False)
 ```
 
@@ -301,34 +301,34 @@ from sklearn.ensemble import RandomForestClassifier
 import joblib
 
 def preprocess_data(df):
-    # Separate features and target variable
+    ## Separate features and target variable
     X = df[['transaction_timestamp']]
-    y = df['authenticity_label']  # Assuming a target variable for authenticity verification
+    y = df['authenticity_label']  ## Assuming a target variable for authenticity verification
 
-    # Normalize numerical features
+    ## Normalize numerical features
     scaler = MinMaxScaler()
     X_normalized = scaler.fit_transform(X)
 
     return X_normalized, y
 
-# Load cleaned dataset
+## Load cleaned dataset
 data = pd.read_csv('cleaned_data.csv')
 
-# Preprocess data
+## Preprocess data
 X, y = preprocess_data(data)
 
-# Split data into train and test sets
+## Split data into train and test sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Train a Random Forest Classifier
+## Train a Random Forest Classifier
 clf = RandomForestClassifier()
 clf.fit(X_train, y_train)
 
-# Evaluate the model
+## Evaluate the model
 accuracy = clf.score(X_test, y_test)
 print(f"Model Accuracy: {accuracy}")
 
-# Save the model
+## Save the model
 joblib.dump(clf, 'authenticity_verifier_model.pkl')
 ```
 
@@ -397,24 +397,24 @@ By following these best practices and standards, the provided code snippet ensur
 By following this step-by-step deployment plan and utilizing the recommended tools and platforms, your team can effectively deploy the machine learning model into a production environment with confidence and efficiency. Each tool's official documentation provides detailed guidance on their usage, ensuring a smooth deployment process.
 
 ```dockerfile
-# Use a base image with Python and required dependencies
+## Use a base image with Python and required dependencies
 FROM python:3.9-slim
 
-# Set working directory
+## Set working directory
 WORKDIR /app
 
-# Copy project files into the container
+## Copy project files into the container
 COPY requirements.txt .
 COPY app.py .
 COPY authenticity_verifier_model.pkl .
 
-# Install dependencies
+## Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Expose the port the app runs on
+## Expose the port the app runs on
 EXPOSE 8080
 
-# Command to run the application
+## Command to run the application
 CMD ["python", "app.py"]
 ```
 

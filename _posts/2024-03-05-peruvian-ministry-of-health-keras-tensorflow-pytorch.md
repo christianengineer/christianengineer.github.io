@@ -206,34 +206,34 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.model_selection import train_test_split
 
-# Load the dataset
+## Load the dataset
 data = pd.read_csv('health_records_data.csv')
 
-# Drop irrelevant columns or columns with high missing values
+## Drop irrelevant columns or columns with high missing values
 data.drop(['irrelevant_column1', 'irrelevant_column2'], axis=1, inplace=True)
 
-# Handling missing data
+## Handling missing data
 imputer = SimpleImputer(strategy='mean')
 data['numerical_column'] = imputer.fit_transform(data[['numerical_column']])
 
-# Encoding categorical variables
+## Encoding categorical variables
 data = pd.get_dummies(data, columns=['categorical_column'])
 
-# Text data preprocessing
+## Text data preprocessing
 text_vectorizer = CountVectorizer(lowercase=True, stop_words='english', max_features=100)
 text_features = text_vectorizer.fit_transform(data['text_column'])
 text_df = pd.DataFrame(text_features.toarray(), columns=text_vectorizer.get_feature_names())
 
-# Feature scaling
+## Feature scaling
 scaler = StandardScaler()
 data[['numerical_column']] = scaler.fit_transform(data[['numerical_column']])
 
-# Train-test split
+## Train-test split
 X = data.drop('target_column', axis=1)
 y = data['target_column']
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Save preprocessed data
+## Save preprocessed data
 X_train.to_csv('X_train.csv', index=False)
 X_test.to_csv('X_test.csv', index=False)
 y_train.to_csv('y_train.csv', index=False)
@@ -309,15 +309,15 @@ import pandas as pd
 import numpy as np
 from sklearn.preprocessing import OneHotEncoder
 
-# Generate fictitious health records data
+## Generate fictitious health records data
 np.random.seed(42)
 n_samples = 10000
 
-# Create fictitious temporal features
+## Create fictitious temporal features
 date_range = pd.date_range(start='2021-01-01', end='2021-12-31', freq='D')
 dates = np.random.choice(date_range, n_samples)
 
-# Simulate health records features
+## Simulate health records features
 data = pd.DataFrame({'date': dates})
 data['month'] = data['date'].dt.month
 data['day_of_week'] = data['date'].dt.dayofweek
@@ -327,13 +327,13 @@ data['diagnoses'] = np.random.choice(['flu', 'common cold', 'allergy'], n_sample
 data['treatments'] = np.random.choice(['medication', 'rest', 'hydration'], n_samples)
 data['outcome'] = np.random.choice(['recovered', 'hospitalized', 'deceased'], n_samples)
 
-# Perform one-hot encoding for categorical variables
+## Perform one-hot encoding for categorical variables
 encoder = OneHotEncoder(sparse=False)
 encoded_region = encoder.fit_transform(data[['region']])
 encoded_df = pd.DataFrame(encoded_region, columns=encoder.get_feature_names(['region']))
 data = pd.concat([data, encoded_df], axis=1)
 
-# Save fictitious health records data to CSV
+## Save fictitious health records data to CSV
 data.to_csv('fictitious_health_records_data.csv', index=False)
 ```
 
@@ -358,29 +358,29 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report
 from sklearn.model_selection import train_test_split
 
-# Load preprocessed data
+## Load preprocessed data
 data = pd.read_csv('preprocessed_data.csv')
 
-# Split data into features (X) and target variable (y)
+## Split data into features (X) and target variable (y)
 X = data.drop('outcome', axis=1)
 y = data['outcome']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize Random Forest classifier
+## Initialize Random Forest classifier
 clf = RandomForestClassifier()
 
-# Train the model
+## Train the model
 clf.fit(X_train, y_train)
 
-# Make predictions on the test set
+## Make predictions on the test set
 y_pred = clf.predict(X_test)
 
-# Evaluate the model
+## Evaluate the model
 print(classification_report(y_test, y_pred))
 
-# Save the trained model for deployment
+## Save the trained model for deployment
 joblib.dump(clf, 'trained_model.pkl')
 ```
 
@@ -426,29 +426,29 @@ This code snippet demonstrates a production-ready script for training and evalua
 By following this deployment plan and leveraging the recommended tools and platforms for each step, the Peruvian Ministry of Health can effectively deploy the machine learning model into production, ensuring scalability, reliability, and maintainability to support the project's objectives of optimizing healthcare services and predicting disease outbreaks accurately.
 
 ```docker
-# Use an official Python runtime as a base image
+## Use an official Python runtime as a base image
 FROM python:3.8-slim
 
-# Set the working directory in the container
+## Set the working directory in the container
 WORKDIR /app
 
-# Copy the requirements file into the container
+## Copy the requirements file into the container
 COPY requirements.txt .
 
-# Install any needed dependencies specified in requirements.txt
+## Install any needed dependencies specified in requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the entire project directory into the container
+## Copy the entire project directory into the container
 COPY . .
 
-# Expose the port the app runs on
+## Expose the port the app runs on
 EXPOSE 5000
 
-# Define environment variables
+## Define environment variables
 ENV FLASK_APP=app.py
 ENV FLASK_RUN_PORT=5000
 
-# Command to run on container start
+## Command to run on container start
 CMD ["flask", "run", "--host", "0.0.0.0"]
 ```
 

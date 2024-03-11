@@ -5,7 +5,7 @@ permalink: posts/tradeautomate---ai-for-automated-trading
 layout: article
 ---
 
-# AI TradeAutomate - AI for Automated Trading
+## AI TradeAutomate - AI for Automated Trading
 
 ## Objectives
 
@@ -275,28 +275,28 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
 def complex_machine_learning_algorithm(data_path):
-    # Load mock data from file path
+    ## Load mock data from file path
     data = pd.read_csv(data_path)
 
-    # Preprocessing: Assume the data is preprocessed and features are already prepared
+    ## Preprocessing: Assume the data is preprocessed and features are already prepared
 
-    # Split data into features and target variable
+    ## Split data into features and target variable
     X = data.drop('target', axis=1)
     y = data['target']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize the complex machine learning model
+    ## Initialize the complex machine learning model
     model = RandomForestClassifier(n_estimators=100, random_state=42)
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train)
 
-    # Make predictions
+    ## Make predictions
     predictions = model.predict(X_test)
 
-    # Evaluate the model
+    ## Evaluate the model
     accuracy = accuracy_score(y_test, predictions)
 
     return model, accuracy
@@ -322,22 +322,22 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
 def complex_deep_learning_algorithm(data_path):
-    # Load mock data from file path
+    ## Load mock data from file path
     data = pd.read_csv(data_path)
 
-    # Preprocessing: Assume the data is preprocessed and features are already prepared
+    ## Preprocessing: Assume the data is preprocessed and features are already prepared
     X = data.drop('target', axis=1)
     y = data['target']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Standardize the feature data
+    ## Standardize the feature data
     scaler = StandardScaler()
     X_train = scaler.fit_transform(X_train)
     X_test = scaler.transform(X_test)
 
-    # Initialize the deep learning model
+    ## Initialize the deep learning model
     model = tf.keras.Sequential([
         tf.keras.layers.Dense(64, activation='relu', input_shape=(X_train.shape[1],)),
         tf.keras.layers.Dense(64, activation='relu'),
@@ -346,7 +346,7 @@ def complex_deep_learning_algorithm(data_path):
 
     model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y_test))
 
     return model

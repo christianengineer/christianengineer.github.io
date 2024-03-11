@@ -5,7 +5,7 @@ permalink: posts/automated-video-content-analysis-tool-ai-driven-scalable-soluti
 layout: article
 ---
 
-# Automated Video Content Analysis Tool
+## Automated Video Content Analysis Tool
 
 ## Description
 
@@ -111,7 +111,7 @@ Automated-Video-Content-Analysis-Tool/
 Sure, Below is a fictional Python file that may handle some basic logic for loading and analyzing a video using the OpenCV library. This file could be in the folder: `app/video_analysis/` and filename: `video_processor.py`.
 
 ```plaintext
-# app/video_analysis/video_processor.py
+## app/video_analysis/video_processor.py
 
 import cv2
 import numpy as np
@@ -133,7 +133,7 @@ class VideoProcessor:
         return frames
 
     def analyze_frames(self, frames):
-        # Placeholder method for actual analysis
+        ## Placeholder method for actual analysis
         pass
 
 if __name__ == "__main__":

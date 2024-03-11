@@ -5,7 +5,7 @@ permalink: posts/angular-in-ai-startup-projects
 layout: article
 ---
 
-# Angular in AI Startup Projects
+## Angular in AI Startup Projects
 
 ## Introduction
 

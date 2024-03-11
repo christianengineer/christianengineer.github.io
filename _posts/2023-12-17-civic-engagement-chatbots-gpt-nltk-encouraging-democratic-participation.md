@@ -167,35 +167,35 @@ This directory structure facilitates the deployment of the chatbot and NLP compo
 Certainly! Below is an example of a Python script for training the GPT model using mock data for the Civic Engagement Chatbots application.
 
 ```python
-# File: train_gpt_model.py
+## File: train_gpt_model.py
 import torch
 from transformers import GPT2LMHeadModel, GPT2Tokenizer
 from pathlib import Path
 
-# Define paths for training data and model saving
+## Define paths for training data and model saving
 training_data_path = Path("data/training_data/gpt/gpt_training_data.txt")
 model_save_path = Path("models/gpt/gpt_model_v1")
 
-# Load GPT2 tokenizer and model architecture
+## Load GPT2 tokenizer and model architecture
 tokenizer = GPT2Tokenizer.from_pretrained('gpt2')
 model = GPT2LMHeadModel.from_pretrained('gpt2')
 
-# Dummy training process using mock data
-# Replace this with actual training process using real data
+## Dummy training process using mock data
+## Replace this with actual training process using real data
 mock_training_data = [
     "Mock training sentence 1.",
     "Mock training sentence 2.",
     "Mock training sentence 3."
 ]
 
-# Tokenize the training data
+## Tokenize the training data
 tokenized_text = tokenizer(mock_training_data, return_tensors="pt", padding=True, truncation=True)
 
-# Fine-tune the GPT model on the mock training data
+## Fine-tune the GPT model on the mock training data
 model.train()
 train_results = model(**tokenized_text)
 
-# Save the trained model to the specified path
+## Save the trained model to the specified path
 model.save_pretrained(model_save_path)
 
 print("Training complete. Model saved to:", model_save_path)
@@ -206,7 +206,7 @@ In this example, the file `train_gpt_model.py` is used to train the GPT model us
 Replace the dummy training process with the actual training process using real data when ready to train the model with real training data.
 
 ```python
-# File: complex_ml_algorithm.py
+## File: complex_ml_algorithm.py
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.ensemble import RandomForestClassifier
@@ -215,34 +215,34 @@ from sklearn.metrics import accuracy_score
 from joblib import dump
 from pathlib import Path
 
-# Define paths for training data and model saving
+## Define paths for training data and model saving
 training_data_path = Path("data/training_data/nltk/nltk_training_corpus.csv")
 model_save_path = Path("models/nltk/nltk_model_v1")
 
-# Load mock training data
+## Load mock training data
 mock_training_data = pd.DataFrame({
     'text': ["Mock training text 1", "Mock training text 2", "Mock training text 3"],
-    'label': [1, 0, 1]  # Binary label for classification
+    'label': [1, 0, 1]  ## Binary label for classification
 })
 
-# Preprocess and split the mock training data
+## Preprocess and split the mock training data
 vectorizer = TfidfVectorizer()
 X = vectorizer.fit_transform(mock_training_data['text'])
 y = mock_training_data['label']
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Train a complex machine learning algorithm (e.g., RandomForestClassifier) with the mock training data
+## Train a complex machine learning algorithm (e.g., RandomForestClassifier) with the mock training data
 clf = RandomForestClassifier(n_estimators=100, random_state=42)
 clf.fit(X_train, y_train)
 
-# Make predictions on the test set
+## Make predictions on the test set
 y_pred = clf.predict(X_test)
 
-# Evaluate the model's accuracy using mock data
+## Evaluate the model's accuracy using mock data
 accuracy = accuracy_score(y_test, y_pred)
 print("Model accuracy on mock data:", accuracy)
 
-# Save the trained model to the specified path
+## Save the trained model to the specified path
 dump(clf, model_save_path)
 
 print("Training complete. Model saved to:", model_save_path)

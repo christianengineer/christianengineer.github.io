@@ -57,38 +57,38 @@ Accessible-Education-Tools-Repository
 │
 ├── app
 │   ├── backend
-│   │   ├── api             # API endpoints for serving AI-powered educational tools
-│   │   ├── models          # Trained machine learning models (GPT, BERT) and their configurations
-│   │   ├── services        # Business logic and utility services
-│   │   └── tests           # Unit tests and integration tests for the backend services
+│   │   ├── api             ## API endpoints for serving AI-powered educational tools
+│   │   ├── models          ## Trained machine learning models (GPT, BERT) and their configurations
+│   │   ├── services        ## Business logic and utility services
+│   │   └── tests           ## Unit tests and integration tests for the backend services
 │   │
 │   └── frontend
-│       ├── public          # Static files, entry HTML, and other public assets
-│       └── src             # Source code for the frontend UI components and logic
+│       ├── public          ## Static files, entry HTML, and other public assets
+│       └── src             ## Source code for the frontend UI components and logic
 │
 ├── infrastructure
 │   ├── deployment
-│   │   ├── kubernetes      # Kubernetes deployment configurations for model serving and scaling
-│   │   └── dockerfiles     # Dockerfiles to containerize the application components
+│   │   ├── kubernetes      ## Kubernetes deployment configurations for model serving and scaling
+│   │   └── dockerfiles     ## Dockerfiles to containerize the application components
 │   │
 │   ├── monitoring
-│   │   └── grafana         # Grafana dashboard configurations for monitoring model performance
+│   │   └── grafana         ## Grafana dashboard configurations for monitoring model performance
 │   │
 │   └── ci-cd
-│       ├── github-actions # GitHub Actions workflow for CI/CD pipeline
-│       └── mlflow         # MLflow configuration for experiment tracking and model versioning
+│       ├── github-actions ## GitHub Actions workflow for CI/CD pipeline
+│       └── mlflow         ## MLflow configuration for experiment tracking and model versioning
 │
 ├── data
-│   ├── training           # Training data for fine-tuning the machine learning models
-│   └── processed          # Processed and pre-processed data for model inference
+│   ├── training           ## Training data for fine-tuning the machine learning models
+│   └── processed          ## Processed and pre-processed data for model inference
 │
 ├── documentation
-│   ├── notebooks         # Jupyter notebooks for experimenting with models and data
-│   └── user-manuals      # User manuals and documentation for developers and end-users
+│   ├── notebooks         ## Jupyter notebooks for experimenting with models and data
+│   └── user-manuals      ## User manuals and documentation for developers and end-users
 │
 └── config
-    ├── environment       # Configuration files for different environments (development, production)
-    └── settings          # Application settings and parameters for the backend and frontend components
+    ├── environment       ## Configuration files for different environments (development, production)
+    └── settings          ## Application settings and parameters for the backend and frontend components
 ```
 
 In this file structure:
@@ -104,12 +104,12 @@ This scalable file structure promotes modularity, ease of collaboration, and eff
 models
 │
 ├── gpt
-│   ├── config.json            # Configuration file for GPT model hyperparameters and settings
-│   └── gpt_model.bin          # Serialized binary file for the trained GPT model
+│   ├── config.json            ## Configuration file for GPT model hyperparameters and settings
+│   └── gpt_model.bin          ## Serialized binary file for the trained GPT model
 │
 └── bert
-    ├── config.json            # Configuration file for BERT model hyperparameters and settings
-    └── bert_model.bin         # Serialized binary file for the trained BERT model
+    ├── config.json            ## Configuration file for BERT model hyperparameters and settings
+    └── bert_model.bin         ## Serialized binary file for the trained BERT model
 ```
 
 In the `models` directory, there are subdirectories for each machine learning model used in the Accessible Education Tools application, namely GPT and BERT. Each subdirectory contains the following files:
@@ -124,13 +124,13 @@ By organizing the models in this coherent manner, it simplifies the management, 
 deployment
 │
 ├── kubernetes
-│   ├── gpt-deployment.yaml      # Kubernetes deployment configuration for GPT model serving
-│   ├── bert-deployment.yaml     # Kubernetes deployment configuration for BERT model serving
-│   └── service.yaml             # Kubernetes service configuration for exposing model endpoints
+│   ├── gpt-deployment.yaml      ## Kubernetes deployment configuration for GPT model serving
+│   ├── bert-deployment.yaml     ## Kubernetes deployment configuration for BERT model serving
+│   └── service.yaml             ## Kubernetes service configuration for exposing model endpoints
 │
 └── dockerfiles
-    ├── backend.dockerfile       # Dockerfile for building the backend API service container
-    └── frontend.dockerfile      # Dockerfile for building the frontend UI service container
+    ├── backend.dockerfile       ## Dockerfile for building the backend API service container
+    └── frontend.dockerfile      ## Dockerfile for building the frontend UI service container
 ```
 
 The `deployment` directory contains two subdirectories: `kubernetes` and `dockerfiles`, which house the deployment configurations for the Accessible Education Tools application.
@@ -152,24 +152,24 @@ In the `dockerfiles` directory, the following files are present:
 By structuring the deployment configurations in this manner, the Accessible Education Tools application can be efficiently packaged, deployed, and managed in both local development environments and production Kubernetes clusters.
 
 ```python
-# File: train_model.py
-# Path: data/training/train_model.py
+## File: train_model.py
+## Path: data/training/train_model.py
 
 import torch
 from transformers import GPT2LMHeadModel, GPT2Tokenizer
 
-# Mock training data
+## Mock training data
 mock_training_data = [
     "Mock training input sequence 1.",
     "Another mock training input sequence.",
     "And one more mock training input for variety."
 ]
 
-# Initialize GPT-2 tokenizer and model
+## Initialize GPT-2 tokenizer and model
 tokenizer = GPT2Tokenizer.from_pretrained('gpt2')
 model = GPT2LMHeadModel.from_pretrained('gpt2')
 
-# Tokenize the training data
+## Tokenize the training data
 tokenized_data = tokenizer.batch_encode_plus(
     mock_training_data,
     padding=True,
@@ -177,17 +177,17 @@ tokenized_data = tokenizer.batch_encode_plus(
     return_tensors='pt'
 )
 
-# Fine-tune the GPT-2 model on the mock training data
+## Fine-tune the GPT-2 model on the mock training data
 model.train()
 optimizer = torch.optim.AdamW(model.parameters(), lr=1e-5)
 
-for epoch in range(3):  # 3 mock training epochs
+for epoch in range(3):  ## 3 mock training epochs
     for input_ids in tokenized_data['input_ids']:
         loss = model(input_ids, labels=input_ids)
         loss.backward()
         optimizer.step()
 
-# Save the trained GPT-2 model
+## Save the trained GPT-2 model
 output_model_path = 'models/gpt/mock_trained_gpt_model.pt'
 model.save_pretrained(output_model_path)
 tokenizer.save_pretrained(output_model_path)
@@ -200,34 +200,34 @@ In this Python file (`train_model.py`), the mock training data is defined and us
 This file demonstrates how to train a mock GPT-2 model using mock training data and save the trained model for later use within the Accessible Education Tools application.
 
 ```python
-# File: complex_model_algorithm.py
-# Path: app/backend/models/complex_model_algorithm.py
+## File: complex_model_algorithm.py
+## Path: app/backend/models/complex_model_algorithm.py
 
 import torch
 from transformers import BertModel, BertTokenizer
 import numpy as np
 
-# Mock data
+## Mock data
 mock_input_text = "This is a mock input text for the complex model algorithm."
-mock_embedding_data = np.random.rand(10, 768)  # Mock embedding data for input text
+mock_embedding_data = np.random.rand(10, 768)  ## Mock embedding data for input text
 
-# Initialize BERT tokenizer and model
+## Initialize BERT tokenizer and model
 tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
 model = BertModel.from_pretrained('bert-base-uncased')
 
-# Tokenize the input text
+## Tokenize the input text
 tokenized_input = tokenizer(mock_input_text, return_tensors='pt')
 
-# Run input data through the BERT model
+## Run input data through the BERT model
 output = model(**tokenized_input)
 
-# Perform complex algorithmic operations on the BERT output and mock embedding data
-# ... (Insert complex algorithm operations here)
+## Perform complex algorithmic operations on the BERT output and mock embedding data
+## ... (Insert complex algorithm operations here)
 
-# Generate the output of the complex model algorithm
-mock_output_data = np.random.rand(5, 10)  # Mock output data from complex algorithm
+## Generate the output of the complex model algorithm
+mock_output_data = np.random.rand(5, 10)  ## Mock output data from complex algorithm
 
-# Save the mock output data for future use
+## Save the mock output data for future use
 output_file_path = 'data/processed/mock_complex_model_output.npy'
 np.save(output_file_path, mock_output_data)
 

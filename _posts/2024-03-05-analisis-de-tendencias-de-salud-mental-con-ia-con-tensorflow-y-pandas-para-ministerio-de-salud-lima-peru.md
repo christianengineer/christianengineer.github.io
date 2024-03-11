@@ -5,7 +5,7 @@ permalink: posts/analisis-de-tendencias-de-salud-mental-con-ia-con-tensorflow-y-
 layout: article
 ---
 
-# Mental Health Trend Analysis AI for Ministerio de Salud (Lima, Peru)
+## Mental Health Trend Analysis AI for Ministerio de Salud (Lima, Peru)
 
 ## Objetivos y Beneficios para la Audiencia Específica
 El objetivo principal de esta solución de aprendizaje automático es ayudar a los psicólogos del Ministerio de Salud en Lima, Perú, a identificar tendencias y necesidades de salud mental en la comunidad. Algunos de los beneficios clave incluyen:
@@ -174,38 +174,38 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from imblearn.over_sampling import SMOTE
 
-# Carga de datos
+## Carga de datos
 data = pd.read_csv('datos_salud_mental.csv')
 
-# Paso 1: Limpieza de Texto
+## Paso 1: Limpieza de Texto
 def limpiar_texto(texto):
-    # Eliminar caracteres especiales, números y emojis
-    # Reemplazar menciones y hashtags con espacios en blanco
-    # Convertir texto a minúsculas
+    ## Eliminar caracteres especiales, números y emojis
+    ## Reemplazar menciones y hashtags con espacios en blanco
+    ## Convertir texto a minúsculas
     return texto
 
 data['texto_limpio'] = data['texto'].apply(limpiar_texto)
 
-# Paso 2: Extracción de Características de Texto
+## Paso 2: Extracción de Características de Texto
 tfidf = TfidfVectorizer(max_features=1000)
 X_texto = tfidf.fit_transform(data['texto_limpio']).toarray()
 
-# Paso 3: Preprocesamiento de Datos Numéricos
+## Paso 3: Preprocesamiento de Datos Numéricos
 scaler = StandardScaler()
 X_numericos = scaler.fit_transform(data[['edad', 'genero', 'diagnostico']])
 
-# Paso 4: Combinar Características
+## Paso 4: Combinar Características
 X = np.concatenate((X_texto, X_numericos), axis=1)
 y = data['categoria']
 
-# Paso 5: Manejo del Desbalance de Clases
+## Paso 5: Manejo del Desbalance de Clases
 smote = SMOTE(random_state=42)
 X_resampleado, y_resampleado = smote.fit_resample(X, y)
 
-# Paso 6: División en Conjunto de Entrenamiento y Prueba
+## Paso 6: División en Conjunto de Entrenamiento y Prueba
 X_train, X_test, y_train, y_test = train_test_split(X_resampleado, y_resampleado, test_size=0.2, random_state=42)
 
-# Listo para el entrenamiento del modelo
+## Listo para el entrenamiento del modelo
 ```
 
 Este archivo de código describe los pasos de preprocesamiento necesarios adaptados a la estrategia de preprocesamiento del proyecto de análisis de tendencias de salud mental. A continuación, se detalla la explicación de cada paso:
@@ -277,7 +277,7 @@ import random
 
 fake = Faker()
 
-# Crear un conjunto de datos ficticio con información relevante para el proyecto
+## Crear un conjunto de datos ficticio con información relevante para el proyecto
 data = {'texto_redes_sociales': [],
         'edad': [],
         'genero': [],
@@ -286,7 +286,7 @@ data = {'texto_redes_sociales': [],
         'fecha_publicacion': [],
         'categoria': []}
 
-# Generar datos ficticios
+## Generar datos ficticios
 for _ in range(1000):
     texto = fake.text()
     edad = random.randint(18, 65)
@@ -304,10 +304,10 @@ for _ in range(1000):
     data['fecha_publicacion'].append(fecha_publicacion)
     data['categoria'].append(categoria)
 
-# Crear un DataFrame a partir de los datos generados
+## Crear un DataFrame a partir de los datos generados
 df = pd.DataFrame(data)
 
-# Guardar el conjunto de datos ficticio en un archivo CSV
+## Guardar el conjunto de datos ficticio en un archivo CSV
 df.to_csv('datos_ficticios_salud_mental.csv', index=False)
 ```
 
@@ -341,31 +341,31 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, classification_report
 
-# Cargar el conjunto de datos preprocesado
+## Cargar el conjunto de datos preprocesado
 data = pd.read_csv('datos_preprocesados_salud_mental.csv')
 
-# Dividir datos en variables independientes (X) y variable dependiente (y)
+## Dividir datos en variables independientes (X) y variable dependiente (y)
 X = data.drop('categoria', axis=1)
 y = data['categoria']
 
-# Dividir datos en conjuntos de entrenamiento y prueba
+## Dividir datos en conjuntos de entrenamiento y prueba
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Inicializar y entrenar el modelo de Random Forest
+## Inicializar y entrenar el modelo de Random Forest
 model = RandomForestClassifier()
 model.fit(X_train, y_train)
 
-# Realizar predicciones en el conjunto de prueba
+## Realizar predicciones en el conjunto de prueba
 predictions = model.predict(X_test)
 
-# Calcular precisión del modelo
+## Calcular precisión del modelo
 accuracy = accuracy_score(y_test, predictions)
 print(f'Precisión del modelo: {accuracy}')
 
-# Generar reporte de clasificación
+## Generar reporte de clasificación
 print(classification_report(y_test, predictions))
 
-# Guardar el modelo entrenado para su uso en producción
+## Guardar el modelo entrenado para su uso en producción
 from joblib import dump
 dump(model, 'modelo_salud_mental.joblib')
 ```
@@ -412,24 +412,24 @@ Este plan de despliegue detallado proporciona una guía paso a paso para integra
 A continuación, se presenta un ejemplo de cómo podría ser un Dockerfile adaptado a las necesidades de rendimiento de nuestro proyecto de análisis de tendencias de salud mental. En este Dockerfile, se incluirán las configuraciones optimizadas para manejar los objetivos específicos del proyecto, como el procesamiento de datos complejos y el despliegue de modelos de aprendizaje automático:
 
 ```Dockerfile
-# Utilizar una imagen de Python como base
+## Utilizar una imagen de Python como base
 FROM python:3.8-slim
 
-# Establecer el directorio de trabajo en /app
+## Establecer el directorio de trabajo en /app
 WORKDIR /app
 
-# Copiar los archivos necesarios al directorio de trabajo
+## Copiar los archivos necesarios al directorio de trabajo
 COPY requirements.txt .
 COPY app.py .
 COPY modelo_salud_mental.joblib .
 
-# Instalar las dependencias especificadas en el requirements.txt
+## Instalar las dependencias especificadas en el requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Exponer el puerto en el contenedor
+## Exponer el puerto en el contenedor
 EXPOSE 5000
 
-# Comando para ejecutar la aplicación al iniciar el contenedor
+## Comando para ejecutar la aplicación al iniciar el contenedor
 CMD ["python", "app.py"]
 ```
 

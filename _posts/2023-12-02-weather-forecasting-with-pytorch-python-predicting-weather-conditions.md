@@ -5,7 +5,7 @@ permalink: posts/weather-forecasting-with-pytorch-python-predicting-weather-cond
 layout: article
 ---
 
-# AI Weather Forecasting with PyTorch
+## AI Weather Forecasting with PyTorch
 
 ## Objectives
 The primary objective of the AI Weather Forecasting with PyTorch project is to build a predictive model that can accurately forecast weather conditions based on historical data. The key objectives of the project include:
@@ -64,31 +64,31 @@ By architecting the infrastructure with these components, the Weather Forecastin
 Weather_Forecasting_with_PyTorch/
 │
 ├── data/
-│   ├── raw/                    # Raw weather data
-│   ├── processed/              # Processed and cleaned data
-│   └── external/               # External datasets or APIs
+│   ├── raw/                    ## Raw weather data
+│   ├── processed/              ## Processed and cleaned data
+│   └── external/               ## External datasets or APIs
 │
 ├── models/
-│   ├── trained_models/         # Saved trained PyTorch models
-│   └── model_evaluation/       # Model evaluation results
+│   ├── trained_models/         ## Saved trained PyTorch models
+│   └── model_evaluation/       ## Model evaluation results
 │
 ├── src/
-│   ├── data_preparation/       # Scripts for data collection and preprocessing
-│   ├── model_training/         # Scripts for training PyTorch models
-│   ├── model_inference/        # Code for real-time inference and forecasting
-│   └── api/                    # REST API code using Flask or FastAPI
+│   ├── data_preparation/       ## Scripts for data collection and preprocessing
+│   ├── model_training/         ## Scripts for training PyTorch models
+│   ├── model_inference/        ## Code for real-time inference and forecasting
+│   └── api/                    ## REST API code using Flask or FastAPI
 │
-├── notebooks/                  # Jupyter notebooks for exploratory data analysis and model prototyping
+├── notebooks/                  ## Jupyter notebooks for exploratory data analysis and model prototyping
 │
-├── tests/                      # Unit tests and integration tests
+├── tests/                      ## Unit tests and integration tests
 │
-├── config/                     # Configuration files for model hyperparameters, API settings, etc.
+├── config/                     ## Configuration files for model hyperparameters, API settings, etc.
 │
-├── docs/                       # Documentation and user guides
+├── docs/                       ## Documentation and user guides
 │
-├── requirements.txt            # Python dependencies for the project
+├── requirements.txt            ## Python dependencies for the project
 │
-└── README.md                   # Project overview, setup instructions, and usage guidelines
+└── README.md                   ## Project overview, setup instructions, and usage guidelines
 ```
 
 In this scalable file structure for the Weather Forecasting with PyTorch repository, the project is organized into distinct directories for data, models, source code, notebooks, tests, configuration, documentation, and dependencies. This structure enables modularity, ease of navigation, and clear separation of concerns, fostering maintainability and collaboration within the project.
@@ -97,12 +97,12 @@ In this scalable file structure for the Weather Forecasting with PyTorch reposit
 models/
 │
 ├── trained_models/
-│   ├── model_checkpoint.pth             # Saved PyTorch model checkpoint after training
-│   └── model_config.json                # Configuration file capturing model architecture and hyperparameters
+│   ├── model_checkpoint.pth             ## Saved PyTorch model checkpoint after training
+│   └── model_config.json                ## Configuration file capturing model architecture and hyperparameters
 │
 └── model_evaluation/
-    ├── training_metrics.csv            # CSV file capturing training metrics such as loss, accuracy, etc.
-    └── evaluation_reports/              # Directory containing detailed evaluation reports and visualizations
+    ├── training_metrics.csv            ## CSV file capturing training metrics such as loss, accuracy, etc.
+    └── evaluation_reports/              ## Directory containing detailed evaluation reports and visualizations
 ```
 
 In the `models` directory for the Weather Forecasting with PyTorch application, the `trained_models` subdirectory stores the artifacts related to the trained PyTorch model, including the model checkpoint file (`model_checkpoint.pth`) obtained after training. Additionally, a JSON configuration file (`model_config.json`) captures the model's architecture, hyperparameters, and other relevant settings, facilitating reproducibility and model versioning.
@@ -112,15 +112,15 @@ The `model_evaluation` subdirectory contains the output of the model evaluation 
 ```
 deployment/
 │
-├── Dockerfile            # Configuration file for building the Docker image for model deployment
+├── Dockerfile            ## Configuration file for building the Docker image for model deployment
 │
 ├── kubernetes/
-│   ├── deployment.yaml    # Kubernetes deployment configuration for scaling and managing model inference
-│   └── service.yaml       # Definition of Kubernetes service for exposing the model prediction endpoint
+│   ├── deployment.yaml    ## Kubernetes deployment configuration for scaling and managing model inference
+│   └── service.yaml       ## Definition of Kubernetes service for exposing the model prediction endpoint
 │
 └── api_gateway/
-    ├── api_spec.yaml      # OpenAPI Specification (formerly Swagger) for the REST API
-    └── gateway_config.json  # Configuration file for API gateway setup and authentication
+    ├── api_spec.yaml      ## OpenAPI Specification (formerly Swagger) for the REST API
+    └── gateway_config.json  ## Configuration file for API gateway setup and authentication
 ```
 
 In the `deployment` directory for the Weather Forecasting with PyTorch application, the files represent the infrastructure and tools required for deploying the trained PyTorch model for real-time weather prediction.
@@ -136,14 +136,14 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 
-# Define the complex machine learning algorithm function
+## Define the complex machine learning algorithm function
 def train_weather_forecasting_model(data_path, model_save_path):
-    # Load and preprocess the mock weather data
+    ## Load and preprocess the mock weather data
     weather_data = torch.load(data_path)
     features = weather_data['features']
     targets = weather_data['targets']
 
-    # Define the neural network architecture
+    ## Define the neural network architecture
     input_size = features.shape[1]
     output_size = targets.shape[1]
     hidden_size = 64
@@ -167,11 +167,11 @@ def train_weather_forecasting_model(data_path, model_save_path):
 
     model = WeatherForecastingModel(input_size, hidden_size, num_layers, output_size, dropout)
 
-    # Define loss function and optimizer
+    ## Define loss function and optimizer
     criterion = nn.MSELoss()
     optimizer = optim.Adam(model.parameters(), lr=0.001)
 
-    # Train the model
+    ## Train the model
     num_epochs = 100
     for epoch in range(num_epochs):
         outputs = model(features)
@@ -183,7 +183,7 @@ def train_weather_forecasting_model(data_path, model_save_path):
         if (epoch+1) % 10 == 0:
             print(f'Epoch [{epoch+1}/{num_epochs}], Loss: {loss.item():.4f}')
 
-    # Save the trained model
+    ## Save the trained model
     torch.save(model.state_dict(), model_save_path)
 ```
 
@@ -194,14 +194,14 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 
-# Define the complex machine learning algorithm function
+## Define the complex machine learning algorithm function
 def train_weather_forecasting_model(data_path, model_save_path):
-    # Load and preprocess the mock weather data
+    ## Load and preprocess the mock weather data
     weather_data = torch.load(data_path)
     features = weather_data['features']
     targets = weather_data['targets']
 
-    # Define the neural network architecture
+    ## Define the neural network architecture
     class WeatherForecastingModel(nn.Module):
         def __init__(self, input_size, hidden_size, output_size, num_layers=2, dropout=0.2):
             super(WeatherForecastingModel, self).__init__()
@@ -210,20 +210,20 @@ def train_weather_forecasting_model(data_path, model_save_path):
 
         def forward(self, x):
             lstm_out, _ = self.lstm(x)
-            out = self.fc(lstm_out[:, -1, :])  # Use the last timestep's output for prediction
+            out = self.fc(lstm_out[:, -1, :])  ## Use the last timestep's output for prediction
             return out
 
-    input_size = features.shape[1]  # Determine input size based on the features
-    output_size = targets.shape[1]  # Determine output size based on the targets
+    input_size = features.shape[1]  ## Determine input size based on the features
+    output_size = targets.shape[1]  ## Determine output size based on the targets
     hidden_size = 64
 
     model = WeatherForecastingModel(input_size, hidden_size, output_size)
 
-    # Define the loss function and optimizer
+    ## Define the loss function and optimizer
     criterion = nn.MSELoss()
     optimizer = optim.Adam(model.parameters(), lr=0.001)
 
-    # Training the model
+    ## Training the model
     num_epochs = 100
     for epoch in range(num_epochs):
         optimizer.zero_grad()
@@ -235,7 +235,7 @@ def train_weather_forecasting_model(data_path, model_save_path):
         if (epoch+1) % 10 == 0:
             print(f'Epoch [{epoch+1}/{num_epochs}], Loss: {loss.item():.4f}')
 
-    # Save the trained model
+    ## Save the trained model
     torch.save(model.state_dict(), model_save_path)
 ```
 

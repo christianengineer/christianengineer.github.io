@@ -5,7 +5,7 @@ permalink: posts/inventory-management-ai-for-restaurants-in-peru-scikit-learn-te
 layout: article
 ---
 
-# Machine Learning Inventory Management AI for Restaurants in Peru
+## Machine Learning Inventory Management AI for Restaurants in Peru
 
 ## Objectives:
 - Predict inventory needs based on historical data and forecasted demand
@@ -144,31 +144,31 @@ import pandas as pd
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 
-# Load the raw data
+## Load the raw data
 data = pd.read_csv('inventory_data.csv')
 
-# Drop rows with missing values
+## Drop rows with missing values
 data.dropna(inplace=True)
 
-# Encode categorical variables (Example: day_of_week)
+## Encode categorical variables (Example: day_of_week)
 data = pd.get_dummies(data, columns=['day_of_week'])
 
-# Perform feature scaling on numerical columns
+## Perform feature scaling on numerical columns
 scaler = StandardScaler()
 numerical_cols = ['sales_volume', 'inventory_level', 'temperature', 'precipitation']
 data[numerical_cols] = scaler.fit_transform(data[numerical_cols])
 
-# Create lag features for sales_volume
+## Create lag features for sales_volume
 num_lags = 3
 for i in range(1, num_lags+1):
     data[f'sales_volume_lag_{i}'] = data['sales_volume'].shift(i)
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X = data.drop(['inventory_need'], axis=1)
 y = data['inventory_need']
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Save preprocessed data
+## Save preprocessed data
 X_train.to_csv('X_train.csv', index=False)
 X_test.to_csv('X_test.csv', index=False)
 y_train.to_csv('y_train.csv', index=False)
@@ -290,46 +290,46 @@ import numpy as np
 from faker import Faker
 from datetime import timedelta, datetime
 
-# Initialize Faker to generate realistic data
+## Initialize Faker to generate realistic data
 fake = Faker()
 
-# Generate fictitious data for inventory management
+## Generate fictitious data for inventory management
 n_samples = 10000
 
-# Generate date range for dataset
+## Generate date range for dataset
 start_date = datetime(2020, 1, 1)
 end_date = start_date + timedelta(days=n_samples)
 date_range = pd.date_range(start=start_date, end=end_date, freq='D')
 
 data = pd.DataFrame({'date': date_range})
 
-# Generate sales data
+## Generate sales data
 data['sales_volume'] = np.random.randint(50, 200, size=n_samples)
 
-# Generate inventory levels
+## Generate inventory levels
 data['inventory_level'] = np.random.randint(100, 500, size=n_samples)
 
-# Generate weather data
+## Generate weather data
 data['temperature'] = np.random.uniform(15, 35, size=n_samples)
 data['precipitation'] = np.random.randint(0, 10, size=n_samples)
 
-# Generate additional features (seasonality, lag features, etc.)
+## Generate additional features (seasonality, lag features, etc.)
 data['day_of_week'] = data['date'].dt.dayofweek
 data['month'] = data['date'].dt.month
 
-# Simulate seasonality effects
+## Simulate seasonality effects
 data['seasonality_index'] = np.where(data['month'].isin([6, 7, 8]), 1.2, 1)
 
-# Generate lag features for sales volume
+## Generate lag features for sales volume
 lag_days = [1, 7, 30]
 for lag in lag_days:
     data[f'sales_volume_lag_{lag}'] = data['sales_volume'].shift(lag)
 
-# Add noise to simulate real-world variability
+## Add noise to simulate real-world variability
 data['sales_volume'] = data['sales_volume'] + np.random.normal(0, 20, n_samples)
 data['inventory_need'] = data['sales_volume'] * np.random.uniform(0.6, 1.2, n_samples)
 
-# Save generated dataset to CSV
+## Save generated dataset to CSV
 data.to_csv('mock_dataset.csv', index=False)
 ```
 
@@ -368,24 +368,24 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_squared_error
 import joblib
 
-# Load preprocessed data
+## Load preprocessed data
 X_train = pd.read_csv('X_train.csv')
 y_train = pd.read_csv('y_train.csv')
 
-# Initialize Random Forest Regressor
+## Initialize Random Forest Regressor
 rf = RandomForestRegressor(n_estimators=100, random_state=42)
 
-# Train the Random Forest model
+## Train the Random Forest model
 rf.fit(X_train, y_train)
 
-# Make predictions on the training set
+## Make predictions on the training set
 y_pred = rf.predict(X_train)
 
-# Evaluate model performance
+## Evaluate model performance
 mse = mean_squared_error(y_train, y_pred)
 print(f'Mean Squared Error on Training Set: {mse}')
 
-# Save the trained model
+## Save the trained model
 joblib.dump(rf, 'inventory_management_model.pkl')
 ```
 
@@ -455,25 +455,25 @@ By following best practices for code quality, documentation, and structure, this
 By following this deployment plan tailored to the unique demands of our inventory management project, the machine learning model can be effectively deployed, monitored, and scaled in a production environment. Each step is essential for ensuring a seamless transition from model development to live integration, empowering the team with the tools and knowledge needed to execute the deployment independently.
 
 ```Dockerfile
-# Use a base image with Python
+## Use a base image with Python
 FROM python:3.8-slim
 
-# Set working directory in the container
+## Set working directory in the container
 WORKDIR /app
 
-# Copy requirements file and install dependencies
+## Copy requirements file and install dependencies
 COPY requirements.txt /app/
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the preprocessed data and trained model
+## Copy the preprocessed data and trained model
 COPY X_train.csv /app/
 COPY y_train.csv /app/
 COPY inventory_management_model.pkl /app/
 
-# Copy the Python script for model inference
+## Copy the Python script for model inference
 COPY model_inference.py /app/
 
-# Command to run the model inference script
+## Command to run the model inference script
 CMD ["python", "model_inference.py"]
 ```
 

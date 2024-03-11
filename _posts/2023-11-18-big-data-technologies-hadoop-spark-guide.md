@@ -5,7 +5,7 @@ permalink: posts/big-data-technologies-hadoop-spark-guide
 layout: article
 ---
 
-# Big Data Technologies: A Focus on Hadoop and Spark
+## Big Data Technologies: A Focus on Hadoop and Spark
 
 In today's digital age, where data is more valuable than ever, big data technologies have become vital to businesses across sectors. This article provides an in-depth discussion about two of the most popular of these technologies - Hadoop and Spark - along with use cases, features, and comparisons.
 
@@ -40,13 +40,13 @@ The Hadoop ecosystem is a suite of services that collectively deliver a powerful
 - **Hadoop MapReduce**: A processing module for large data sets.
 
 ```python
-# Python code example using Hadoop MapReduce
+## Python code example using Hadoop MapReduce
 map_input = [1, 2, 3, 4, 5]
 
 def map_fn(x):
     return x*x
 
-print(list(map(map_fn, map_input))) # output: [1, 4, 9, 16, 25]
+print(list(map(map_fn, map_input))) ## output: [1, 4, 9, 16, 25]
 ```
 
 ### Advantages of Hadoop
@@ -77,7 +77,7 @@ Apache Spark is another open-source, big data processing framework that can perf
 - Spark does not have its own distributed storage system.
 
 ```python
-# Spark code example using map and reduce
+## Spark code example using map and reduce
 from pyspark import SparkConf, SparkContext
 
 conf = SparkConf().setAppName("example")
@@ -87,7 +87,7 @@ data = [1, 2, 3, 4, 5]
 distData = sc.parallelize(data)
 
 sum = distData.reduce(lambda a, b: a + b)
-print(sum)  # output: 15
+print(sum)  ## output: 15
 ```
 
 ## Hadoop vs Spark: A Comparison

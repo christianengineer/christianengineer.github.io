@@ -5,7 +5,7 @@ permalink: posts/peruvian-ministry-of-development-and-social-inclusion-tensorflo
 layout: article
 ---
 
-# Machine Learning Solution for Peruvian Ministry of Development and Social Inclusion
+## Machine Learning Solution for Peruvian Ministry of Development and Social Inclusion
 
 ## Audience: Social Program Analyst
 
@@ -76,7 +76,7 @@ layout: article
 
 By following these steps and utilizing the mentioned tools and libraries, the Peruvian Ministry of Development and Social Inclusion can effectively leverage machine learning to identify and support the most needy populations, thereby improving the impact of social programs in Peru.
 
-# Sourcing Data Strategy for Machine Learning Solution
+## Sourcing Data Strategy for Machine Learning Solution
 
 ## Data Collection for Identifying Needy Populations
 
@@ -122,7 +122,7 @@ By following these steps and utilizing the mentioned tools and libraries, the Pe
 
 By incorporating these specific tools and methods into the data collection strategy, the Peruvian Ministry of Development and Social Inclusion can efficiently gather diverse and relevant data sources to accurately identify and support the most needy populations in Peru.
 
-# Feature Extraction and Engineering for Machine Learning Project
+## Feature Extraction and Engineering for Machine Learning Project
 
 ## Data Features for Identifying Needy Populations
 
@@ -186,7 +186,7 @@ By incorporating these specific tools and methods into the data collection strat
 
 By carefully selecting and engineering features with meaningful names, the Peruvian Ministry of Development and Social Inclusion can enhance both the interpretability of the data and the performance of the machine learning model, thereby improving the accuracy of identifying and supporting needy populations effectively.
 
-# Metadata Management for Machine Learning Project Success
+## Metadata Management for Machine Learning Project Success
 
 ## Unique Demands for Identifying Needy Populations
 
@@ -229,7 +229,7 @@ By carefully selecting and engineering features with meaningful names, the Peruv
 
 By addressing these project-specific metadata management requirements, the Peruvian Ministry of Development and Social Inclusion can ensure thorough documentation of key project insights, enhance data interpretability, and maintain transparency and accountability in the process of identifying and supporting needy populations effectively.
 
-# Data Preprocessing Strategies for Robust Machine Learning Models
+## Data Preprocessing Strategies for Robust Machine Learning Models
 
 ## Specific Data Challenges in Identifying Needy Populations
 
@@ -282,32 +282,32 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.impute import SimpleImputer
 from imblearn.over_sampling import SMOTE
 
-# Load the raw data
+## Load the raw data
 data = pd.read_csv('needy_populations_data.csv')
 
-# Split the data into features and target variable
+## Split the data into features and target variable
 X = data.drop(columns=['needy_population_label'])
 y = data['needy_population_label']
 
-# Train-test split
+## Train-test split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Preprocessing steps
-# Impute missing values with median
+## Preprocessing steps
+## Impute missing values with median
 imputer = SimpleImputer(strategy='median')
 X_train = imputer.fit_transform(X_train)
 X_test = imputer.transform(X_test)
 
-# Standardize numerical features
+## Standardize numerical features
 scaler = StandardScaler()
 X_train = scaler.fit_transform(X_train)
 X_test = scaler.transform(X_test)
 
-# Handle data imbalance with SMOTE
+## Handle data imbalance with SMOTE
 smote = SMOTE(random_state=42)
 X_train_resampled, y_train_resampled = smote.fit_resample(X_train, y_train)
 
-# The data is now ready for model training
+## The data is now ready for model training
 ```
 
 ### Comments on Preprocessing Steps:
@@ -322,7 +322,7 @@ X_train_resampled, y_train_resampled = smote.fit_resample(X_train, y_train)
    
 By following these preprocessing steps tailored to the specific needs of the project, the data is prepared effectively for model training, ensuring robustness, reliability, and readiness for analysis in identifying and supporting needy populations accurately.
 
-# Modeling Strategy for Identifying Needy Populations
+## Modeling Strategy for Identifying Needy Populations
 
 ## Recommended Approach: Ensemble Learning with XGBoost
 
@@ -397,29 +397,29 @@ By incorporating these tools and technologies into our data modeling workflow, w
 import pandas as pd
 import numpy as np
 
-# Define the number of samples in the dataset
+## Define the number of samples in the dataset
 num_samples = 10000
 
-# Generate fictitious data for demographic features
+## Generate fictitious data for demographic features
 np.random.seed(42)
 age = np.random.randint(18, 85, num_samples)
 gender = np.random.choice(['Male', 'Female'], num_samples)
 marital_status = np.random.choice(['Married', 'Single', 'Divorced'], num_samples)
 household_size = np.random.randint(1, 10, num_samples)
 
-# Generate fictitious data for socioeconomic features
+## Generate fictitious data for socioeconomic features
 income = np.random.randint(10000, 100000, num_samples)
 employment_status = np.random.choice(['Employed', 'Unemployed', 'Self-Employed'], num_samples)
 education_level = np.random.choice(['High School', 'Bachelor', 'Master', 'PhD'], num_samples)
 housing_condition = np.random.choice(['Good', 'Average', 'Poor'], num_samples)
 
-# Generate fictitious data for health indicators
+## Generate fictitious data for health indicators
 healthcare_access = np.random.choice(['Limited', 'Moderate', 'Good'], num_samples)
 chronic_illnesses = np.random.choice(['Yes', 'No'], num_samples)
 nutrition_status = np.random.choice(['Undernourished', 'Healthy', 'Overnourished'], num_samples)
 disability_status = np.random.choice(['Yes', 'No'], num_samples)
 
-# Create the DataFrame with generated data
+## Create the DataFrame with generated data
 data = pd.DataFrame({
     'Age': age,
     'Gender': gender,
@@ -435,13 +435,13 @@ data = pd.DataFrame({
     'Disability_Status': disability_status
 })
 
-# Save the generated dataset to a CSV file
+## Save the generated dataset to a CSV file
 data.to_csv('simulated_needy_population_data.csv', index=False)
 
-# Perform data validation and exploration as needed for model training and validation
-# Use tools like Pandas for data manipulation and analysis
+## Perform data validation and exploration as needed for model training and validation
+## Use tools like Pandas for data manipulation and analysis
 
-# The fictitious dataset has been successfully created and can now be used for model training and validation
+## The fictitious dataset has been successfully created and can now be used for model training and validation
 ```
 
 ### Dataset Generation Script Explanation:
@@ -483,33 +483,33 @@ from sklearn.preprocessing import StandardScaler
 from xgboost import XGBClassifier
 from sklearn.metrics import accuracy_score
 
-# Load the preprocessed dataset
+## Load the preprocessed dataset
 data = pd.read_csv('preprocessed_needy_population_data.csv')
 
-# Split the data into features and target variable
+## Split the data into features and target variable
 X = data.drop(columns=['needy_population_label'])
 y = data['needy_population_label']
 
-# Train-test split
+## Train-test split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Standardize numerical features
+## Standardize numerical features
 scaler = StandardScaler()
 X_train = scaler.fit_transform(X_train)
 X_test = scaler.transform(X_test)
 
-# Initialize and train the XGBoost classifier
+## Initialize and train the XGBoost classifier
 model = XGBClassifier()
 model.fit(X_train, y_train)
 
-# Make predictions on the test set
+## Make predictions on the test set
 y_pred = model.predict(X_test)
 
-# Calculate model accuracy
+## Calculate model accuracy
 accuracy = accuracy_score(y_test, y_pred)
 print(f'Model Accuracy: {accuracy}')
 
-# Save the trained model for future use in production
+## Save the trained model for future use in production
 model.save_model('needy_population_model.model')
 ```
 
@@ -533,7 +533,7 @@ model.save_model('needy_population_model.model')
 
 By following these best practices and conventions, the provided code snippet can serve as a benchmark for developing a production-ready machine learning model, ensuring robustness, scalability, and maintainability in deployment within the project environment.
 
-# Machine Learning Model Deployment Plan
+## Machine Learning Model Deployment Plan
 
 ## Steps for Deploying the Model into Production
 
@@ -582,26 +582,26 @@ By following these best practices and conventions, the provided code snippet can
 By following this step-by-step deployment plan with relevant tools and platforms tailored to the project's unique requirements, the team can effectively deploy the machine learning model into production, facilitating accurate and efficient identification and support of needy populations in Peru.
 
 ```dockerfile
-# Use a base image with Python pre-installed
+## Use a base image with Python pre-installed
 FROM python:3.8-slim
 
-# Set the working directory in the container
+## Set the working directory in the container
 WORKDIR /app
 
-# Copy the requirements file into the container
+## Copy the requirements file into the container
 COPY requirements.txt /app/
 
-# Install necessary Python packages
+## Install necessary Python packages
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the preprocessed dataset and model file into the container
+## Copy the preprocessed dataset and model file into the container
 COPY preprocessed_needy_population_data.csv /app/
 COPY needy_population_model.model /app/
 
-# Copy the Python script for model deployment into the container
+## Copy the Python script for model deployment into the container
 COPY deploy_model.py /app/
 
-# Define the command to run the Python script for model deployment
+## Define the command to run the Python script for model deployment
 CMD ["python", "deploy_model.py"]
 ```
 

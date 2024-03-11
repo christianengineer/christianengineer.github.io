@@ -5,7 +5,7 @@ permalink: posts/blockchain-based-food-traceability-for-peru-hyperledger-scikit-
 layout: article
 ---
 
-# AI Blockchain-Based Food Traceability System for Peru
+## AI Blockchain-Based Food Traceability System for Peru
 
 ## Objectives
 The main objectives of the AI Blockchain-Based Food Traceability system for Peru are:
@@ -31,7 +31,7 @@ To achieve the above objectives, we will implement the following system design s
 
 By combining the power of blockchain technology, machine learning algorithms, web development tools, and monitoring solutions, the AI Blockchain-Based Food Traceability system will revolutionize the food supply chain in Peru, ensuring transparency, traceability, and security from farm to table.
 
-# MLOps Infrastructure for AI Blockchain-Based Food Traceability System
+## MLOps Infrastructure for AI Blockchain-Based Food Traceability System
 
 ## Overview
 In the context of the Blockchain-Based Food Traceability system for Peru, integrating MLOps practices can enhance the performance and scalability of machine learning models. The MLOps infrastructure will focus on automating the deployment, monitoring, and management of machine learning models within the overall system.
@@ -53,7 +53,7 @@ In the context of the Blockchain-Based Food Traceability system for Peru, integr
 
 By incorporating MLOps practices into the AI Blockchain-Based Food Traceability system, we can ensure the seamless integration and efficient operation of machine learning components within the overall application, enhancing traceability, transparency, and security across the food supply chain in Peru.
 
-# File Structure for AI Blockchain-Based Food Traceability System
+## File Structure for AI Blockchain-Based Food Traceability System
 
 ```
 blockchain_food_traceability_peru/
@@ -136,7 +136,7 @@ blockchain_food_traceability_peru/
 
 This organized file structure provides a scalable and modular foundation for developing the AI Blockchain-Based Food Traceability system, ensuring ease of maintenance, collaboration, and future enhancements.
 
-# `models` Directory for AI Blockchain-Based Food Traceability System
+## `models` Directory for AI Blockchain-Based Food Traceability System
 
 ## Purpose:
 The `models` directory within the Blockchain-Based Food Traceability system houses the machine learning models that play a crucial role in demand forecasting, anomaly detection, and optimization within the food supply chain. These models are trained using Scikit-Learn and serve as the predictive engines to enhance transparency and traceability from farm to table.
@@ -161,7 +161,7 @@ The `models` directory within the Blockchain-Based Food Traceability system hous
 
 By organizing and storing the machine learning models in a structured manner within the `models` directory, the Blockchain-Based Food Traceability system can effectively leverage AI capabilities to promote transparency, traceability, and efficiency in the food supply chain operations in Peru.
 
-# `deployment` Directory for AI Blockchain-Based Food Traceability System
+## `deployment` Directory for AI Blockchain-Based Food Traceability System
 
 ## Purpose:
 The `deployment` directory plays a crucial role in managing the deployment and operation of the Blockchain-Based Food Traceability system, ensuring scalability, reliability, and efficiency in delivering traceability and transparency across the food supply chain.
@@ -192,37 +192,37 @@ The `deployment` directory plays a crucial role in managing the deployment and o
 By maintaining the `deployment` directory with essential files for deployment, configuration, and monitoring, the Blockchain-Based Food Traceability system can be efficiently deployed, managed, and maintained to ensure the smooth operation and effectiveness of the traceability and transparency solutions in the food supply chain in Peru.
 
 ```python
-# File: model_training.py
-# Path: scripts/model_training.py
+## File: model_training.py
+## Path: scripts/model_training.py
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
 import joblib
 
-# Load mock training data
+## Load mock training data
 data_path = "../data/models_data/training_data.csv"
 training_data = pd.read_csv(data_path)
 
-# Split data into features and target
+## Split data into features and target
 X = training_data.drop('target_column', axis=1)
 y = training_data['target_column']
 
-# Split data into training and validation sets
+## Split data into training and validation sets
 X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize and train the RandomForestRegressor model
+## Initialize and train the RandomForestRegressor model
 model = RandomForestRegressor()
 model.fit(X_train, y_train)
 
-# Evaluate the model
+## Evaluate the model
 train_score = model.score(X_train, y_train)
 val_score = model.score(X_val, y_val)
 
 print(f"Training score: {train_score}")
 print(f"Validation score: {val_score}")
 
-# Save the trained model
+## Save the trained model
 model_path = "../app/models/demand_forecasting_model.pkl"
 joblib.dump(model, model_path)
 
@@ -232,8 +232,8 @@ print("Model training and saving completed.")
 In this file for training a demand forecasting model for the Blockchain-Based Food Traceability system, we load mock training data, split it into features and target, train a RandomForestRegressor model, evaluate its performance, and save the trained model as a pickle file. The code snippet is saved as `model_training.py` in the `scripts` directory under the project structure.
 
 ```python
-# File: complex_model_training.py
-# Path: scripts/complex_model_training.py
+## File: complex_model_training.py
+## Path: scripts/complex_model_training.py
 
 import pandas as pd
 from sklearn.ensemble import GradientBoostingClassifier
@@ -241,30 +241,30 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 import joblib
 
-# Load mock training data
+## Load mock training data
 data_path = "../data/models_data/training_data.csv"
 training_data = pd.read_csv(data_path)
 
-# Split data into features and target
+## Split data into features and target
 X = training_data.drop('target_column', axis=1)
 y = training_data['target_column']
 
-# Split data into training and validation sets
+## Split data into training and validation sets
 X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize and train the GradientBoostingClassifier model
+## Initialize and train the GradientBoostingClassifier model
 model = GradientBoostingClassifier()
 model.fit(X_train, y_train)
 
-# Make predictions on the validation set
+## Make predictions on the validation set
 predictions = model.predict(X_val)
 
-# Calculate accuracy
+## Calculate accuracy
 accuracy = accuracy_score(y_val, predictions)
 
 print(f"Accuracy on validation set: {accuracy}")
 
-# Save the trained model
+## Save the trained model
 model_path = "../app/models/complex_model.pkl"
 joblib.dump(model, model_path)
 

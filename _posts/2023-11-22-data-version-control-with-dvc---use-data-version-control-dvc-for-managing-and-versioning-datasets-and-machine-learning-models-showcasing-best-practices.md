@@ -226,30 +226,30 @@ from sklearn.metrics import accuracy_score
 import dvc.api
 
 def complex_machine_learning_algorithm(data_file):
-    # Load mock data using DVC
+    ## Load mock data using DVC
     path = 'data/' + data_file
     data_url = dvc.api.get_url(path=path, repo='https://github.com/your_username/your_project', rev='master')
     data = pd.read_csv(data_url)
 
-    # Preprocessing and feature engineering
+    ## Preprocessing and feature engineering
     X = data.drop(columns=['target'])
     y = data['target']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Define the machine learning model and train it
+    ## Define the machine learning model and train it
     model = RandomForestClassifier(n_estimators=100, random_state=42)
     model.fit(X_train, y_train)
 
-    # Predict the target variable
+    ## Predict the target variable
     y_pred = model.predict(X_test)
 
-    # Evaluate the model
+    ## Evaluate the model
     accuracy = accuracy_score(y_test, y_pred)
     print(f"Model accuracy: {accuracy}")
 
-    # Save the trained model and its artifacts using DVC
+    ## Save the trained model and its artifacts using DVC
     model_path = 'models/classification/model_1/'
     model.write_model(model_path + 'model.joblib')
     with open(model_path + 'metrics.json', 'w') as file:
@@ -275,19 +275,19 @@ from sklearn.model_selection import train_test_split
 import dvc.api
 
 def complex_deep_learning_algorithm(data_file):
-    # Load mock data using DVC
+    ## Load mock data using DVC
     path = 'data/' + data_file
     data_url = dvc.api.get_url(path=path, repo='https://github.com/your_username/your_project', rev='master')
     data = pd.read_csv(data_url)
 
-    # Preprocessing and feature engineering
+    ## Preprocessing and feature engineering
     X = data.drop(columns=['target'])
     y = data['target']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Define and compile the deep learning model
+    ## Define and compile the deep learning model
     model = tf.keras.Sequential([
         tf.keras.layers.Dense(64, activation='relu', input_shape=(X.shape[1],)),
         tf.keras.layers.Dense(64, activation='relu'),
@@ -295,14 +295,14 @@ def complex_deep_learning_algorithm(data_file):
     ])
     model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y_test))
 
-    # Evaluate the model
+    ## Evaluate the model
     _, accuracy = model.evaluate(X_test, y_test)
     print(f"Model accuracy: {accuracy}")
 
-    # Save the trained model and its evaluation metrics using DVC
+    ## Save the trained model and its evaluation metrics using DVC
     model_path = 'models/deep_learning/model_1/'
     model.save(model_path + 'model.h5')
     with open(model_path + 'metrics.txt', 'w') as file:

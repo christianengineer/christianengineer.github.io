@@ -169,29 +169,29 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import LSTM, Dense
 from sklearn.model_selection import train_test_split
 
-# Load mock data (for demonstration purposes)
-# Replace the file path with the actual path to the mock data file
+## Load mock data (for demonstration purposes)
+## Replace the file path with the actual path to the mock data file
 data = pd.read_csv('data/processed_data/mock_sales_data.csv')
 
-# Preprocess the data and split into features and target (y)
-# ... (data preprocessing steps)
+## Preprocess the data and split into features and target (y)
+## ... (data preprocessing steps)
 
-# Split the data into training and validation sets
+## Split the data into training and validation sets
 X_train, X_val, y_train, y_val = train_test_split(features, target, test_size=0.2, random_state=42)
 
-# Define the LSTM model
+## Define the LSTM model
 model = Sequential([
     LSTM(units=128, input_shape=(X_train.shape[1], X_train.shape[2])),
     Dense(units=1)
 ])
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam', loss='mean_squared_error')
 
-# Train the model
+## Train the model
 history = model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_val, y_val))
 
-# Save the trained model
+## Save the trained model
 model.save('models/tf_models/lstm_demand_forecast/trained_model')
 ```
 
@@ -211,39 +211,39 @@ from pyspark.ml.regression import RandomForestRegressor
 from pyspark.ml import Pipeline
 from pyspark.ml.evaluation import RegressionEvaluator
 
-# Initialize Spark session
+## Initialize Spark session
 spark = SparkSession.builder.appName("InventoryForecastingTraining").getOrCreate()
 
-# Load mock data (for demonstration purposes)
-# Replace the file path with the actual path to the mock data file
+## Load mock data (for demonstration purposes)
+## Replace the file path with the actual path to the mock data file
 data = spark.read.csv('data/processed_data/mock_sales_data.csv', header=True, inferSchema=True)
 
-# Data preprocessing and feature engineering
-# ... (data preprocessing steps)
+## Data preprocessing and feature engineering
+## ... (data preprocessing steps)
 
-# Vectorize features
-feature_cols = [...]  # Define the feature columns
+## Vectorize features
+feature_cols = [...]  ## Define the feature columns
 vector_assembler = VectorAssembler(inputCols=feature_cols, outputCol="features")
 data = vector_assembler.transform(data)
 
-# Split the data into training and validation sets
+## Split the data into training and validation sets
 train_data, val_data = data.randomSplit([0.8, 0.2], seed=42)
 
-# Define and train the Random Forest model
+## Define and train the Random Forest model
 rf = RandomForestRegressor(featuresCol="features", labelCol="label")
 pipeline = Pipeline(stages=[rf])
 model = pipeline.fit(train_data)
 
-# Evaluate the model
+## Evaluate the model
 predictions = model.transform(val_data)
 evaluator = RegressionEvaluator(labelCol="label", predictionCol="prediction", metricName="rmse")
 rmse = evaluator.evaluate(predictions)
 print("Root Mean Squared Error (RMSE) on validation data = %g" % rmse)
 
-# Save the trained model
+## Save the trained model
 model.save("models/spark_models/random_forest_demand_forecast")
 
-# Stop the Spark session
+## Stop the Spark session
 spark.stop()
 ```
 

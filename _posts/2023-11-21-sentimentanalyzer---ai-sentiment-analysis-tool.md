@@ -5,7 +5,7 @@ permalink: posts/sentimentanalyzer---ai-sentiment-analysis-tool
 layout: article
 ---
 
-# AI SentimentAnalyzer - AI Sentiment Analysis Tool
+## AI SentimentAnalyzer - AI Sentiment Analysis Tool
 
 ## Objectives
 
@@ -222,10 +222,10 @@ from tensorflow.keras.preprocessing.text import Tokenizer
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 
 def train_sentiment_analysis_model(data_file_path):
-    # Load the data from the file
+    ## Load the data from the file
     data = pd.read_csv(data_file_path)
 
-    # Preprocess the data
+    ## Preprocess the data
     tokenizer = Tokenizer(num_words=10000)
     tokenizer.fit_on_texts(data['text'])
     X = tokenizer.texts_to_sequences(data['text'])
@@ -233,10 +233,10 @@ def train_sentiment_analysis_model(data_file_path):
 
     y = data['sentiment']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Define the deep learning model
+    ## Define the deep learning model
     model = Sequential()
     model.add(Embedding(10000, 128, input_length=100))
     model.add(LSTM(128, dropout=0.2, recurrent_dropout=0.2))
@@ -244,7 +244,7 @@ def train_sentiment_analysis_model(data_file_path):
 
     model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train, epochs=5, batch_size=32, validation_data=(X_test, y_test))
 
     return model
@@ -266,30 +266,30 @@ from tensorflow.keras.preprocessing.text import Tokenizer
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 
 def train_deep_learning_sentiment_analysis_model(data_file_path):
-    # Load the mock data
+    ## Load the mock data
     data = pd.read_csv(data_file_path)
 
-    # Preprocess the data
-    tokenizer = Tokenizer(num_words=10000)  # Initialize the tokenizer
-    tokenizer.fit_on_texts(data['text'])  # Fit tokenizer on the text data
-    X = tokenizer.texts_to_sequences(data['text'])  # Convert text data to sequences
-    X = pad_sequences(X, maxlen=100)  # Pad sequences to a maximum length
+    ## Preprocess the data
+    tokenizer = Tokenizer(num_words=10000)  ## Initialize the tokenizer
+    tokenizer.fit_on_texts(data['text'])  ## Fit tokenizer on the text data
+    X = tokenizer.texts_to_sequences(data['text'])  ## Convert text data to sequences
+    X = pad_sequences(X, maxlen=100)  ## Pad sequences to a maximum length
 
-    y = np.array(data['sentiment'])  # Extract the sentiment labels and convert to NumPy array
+    y = np.array(data['sentiment'])  ## Extract the sentiment labels and convert to NumPy array
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Define the deep learning model
+    ## Define the deep learning model
     model = Sequential()
-    model.add(Embedding(10000, 128, input_length=100))  # Embedding layer
-    model.add(LSTM(128, dropout=0.2, recurrent_dropout=0.2))  # LSTM layer
-    model.add(Dense(1, activation='sigmoid'))  # Output layer
+    model.add(Embedding(10000, 128, input_length=100))  ## Embedding layer
+    model.add(LSTM(128, dropout=0.2, recurrent_dropout=0.2))  ## LSTM layer
+    model.add(Dense(1, activation='sigmoid'))  ## Output layer
 
-    # Compile the model
+    ## Compile the model
     model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train, epochs=5, batch_size=32, validation_data=(X_test, y_test))
 
     return model

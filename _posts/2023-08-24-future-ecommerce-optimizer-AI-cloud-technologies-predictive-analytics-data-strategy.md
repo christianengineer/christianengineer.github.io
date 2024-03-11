@@ -6,7 +6,7 @@ layout: article
 ---
 
 ````markdown
-# ARCHITECTING THE FUTURE: E-COMMERCE OPTIMIZER
+## ARCHITECTING THE FUTURE: E-COMMERCE OPTIMIZER
 
 _A Scalable Predictive Analytics Development Project Infusing AI, Cloud Technologies & Robust Data Strategy_
 

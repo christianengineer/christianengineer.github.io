@@ -203,22 +203,22 @@ By organizing deployment-related files in the `deployment/` directory, the Emplo
 I will provide a Python script file for training a BERT model for the Employment Opportunity Matcher in Peru, using mock data. This script will preprocess the data, train the BERT model, and save the trained model parameters. Below is the file content:
 
 ```python
-# train_bert_model.py
+## train_bert_model.py
 
 import pandas as pd
 from transformers import BertTokenizer, BertForSequenceClassification, Trainer, TrainingArguments
 
-# Load mock data for training
+## Load mock data for training
 job_data = pd.read_csv('data/mock_job_data.csv')
 
-# Preprocess data and tokenize job descriptions
+## Preprocess data and tokenize job descriptions
 tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
 tokenized_job_descriptions = tokenizer(job_data['job_description'].tolist(), padding=True, truncation=True, return_tensors='pt')
 
-# Define BERT model for sequence classification (matching)
+## Define BERT model for sequence classification (matching)
 model = BertForSequenceClassification.from_pretrained('bert-base-uncased', num_labels=2)
 
-# Define training arguments
+## Define training arguments
 training_args = TrainingArguments(
     output_dir='./model_output',
     num_train_epochs=3,
@@ -227,17 +227,17 @@ training_args = TrainingArguments(
     logging_steps=100
 )
 
-# Define trainer for model training
+## Define trainer for model training
 trainer = Trainer(
     model=model,
     args=training_args,
     train_dataset=tokenized_job_descriptions
 )
 
-# Train the BERT model
+## Train the BERT model
 trainer.train()
 
-# Save the trained model
+## Save the trained model
 model.save_pretrained('./model_output')
 ```
 
@@ -254,33 +254,33 @@ Feel free to modify and expand this script based on the specific requirements an
 I will provide a Python script file for a complex machine learning algorithm that leverages both BERT and GPT-3 models for the Employment Opportunity Matcher in Peru application, using mock data. This script will demonstrate the integration of both models for skill-job matching. Below is the file content:
 
 ```python
-# complex_ml_algorithm.py
+## complex_ml_algorithm.py
 
 import pandas as pd
 from transformers import BertTokenizer, BertForSequenceClassification, GPT2LMHeadModel, GPT2Tokenizer
 
-# Load mock data for training
+## Load mock data for training
 job_data = pd.read_csv('data/mock_job_data.csv')
 
-# Preprocess data and tokenize job descriptions
+## Preprocess data and tokenize job descriptions
 bert_tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
 gpt3_tokenizer = GPT2Tokenizer.from_pretrained('gpt2')
 
 tokenized_job_descriptions_bert = bert_tokenizer(job_data['job_description'].tolist(), padding=True, truncation=True, return_tensors='pt')
 tokenized_job_descriptions_gpt3 = gpt3_tokenizer(job_data['job_description'].tolist(), padding=True, truncation=True, return_tensors='pt')
 
-# Define BERT model for sequence classification (matching)
+## Define BERT model for sequence classification (matching)
 bert_model = BertForSequenceClassification.from_pretrained('bert-base-uncased', num_labels=2)
 
-# Define GPT-3 model for text generation
+## Define GPT-3 model for text generation
 gpt3_model = GPT2LMHeadModel.from_pretrained('gpt2')
 
-# Implement complex ML algorithm combining BERT and GPT-3 for skill-job matching
-# Add your custom algorithm logic here
+## Implement complex ML algorithm combining BERT and GPT-3 for skill-job matching
+## Add your custom algorithm logic here
 
-# Save the trained models or algorithm output if required
-# bert_model.save_pretrained('./model_output/bert_model')
-# gpt3_model.save_pretrained('./model_output/gpt3_model')
+## Save the trained models or algorithm output if required
+## bert_model.save_pretrained('./model_output/bert_model')
+## gpt3_model.save_pretrained('./model_output/gpt3_model')
 ```
 
 ### File Path:

@@ -5,7 +5,7 @@ permalink: posts/automated-legal-aid-bert-gpt-providing-accessible-legal-assista
 layout: article
 ---
 
-# AI Automated Legal Aid Repository
+## AI Automated Legal Aid Repository
 
 ## Objectives
 The AI Automated Legal Aid repository aims to provide accessible legal assistance using state-of-the-art natural language processing (NLP) models, such as BERT and GPT, to enable users to ask legal questions and receive accurate and relevant information and guidance.
@@ -52,7 +52,7 @@ To implement the AI Automated Legal Aid repository, the following libraries and 
 
 By leveraging these libraries and technologies and incorporating the mentioned system design strategies, the AI Automated Legal Aid repository can be developed into a scalable, data-intensive application that effectively utilizes machine learning for providing essential legal assistance.
 
-# MLOps Infrastructure for AI Automated Legal Aid
+## MLOps Infrastructure for AI Automated Legal Aid
 
 To establish a robust MLOps (Machine Learning Operations) infrastructure for the Automated Legal Aid application powered by BERT and GPT, the following components and practices can be considered:
 
@@ -89,7 +89,7 @@ To establish a robust MLOps (Machine Learning Operations) infrastructure for the
 
 By incorporating the above MLOps practices and infrastructure components, the AI Automated Legal Aid application can be maintained and evolved effectively, enabling seamless integration of machine learning models and ensuring their reliability, scalability, and robustness in serving legal assistance.
 
-# Scalable File Structure for Automated Legal Aid Repository
+## Scalable File Structure for Automated Legal Aid Repository
 
 A scalable file structure for the Automated Legal Aid repository using BERT and GPT can be organized as follows:
 
@@ -197,7 +197,7 @@ In this file structure:
 
 This file structure provides a scalable and organized layout for the Automated Legal Aid repository, facilitating the management of data, code, models, infrastructure, tests, and documentation in a modular and maintainable manner.
 
-# models Directory for Automated Legal Aid Repository
+## models Directory for Automated Legal Aid Repository
 
 The models directory within the Automated Legal Aid repository contains subdirectories for BERT and GPT models, along with related files for model training and fine-tuning. Below is an expanded view of the structure:
 
@@ -249,7 +249,7 @@ models/
 
 By organizing the models directory in this way, it becomes easier to manage the pre-trained model files, store fine-tuning scripts, and maintain a clear separation between BERT and GPT models along with their associated training processes. This structure enables streamlined model updates, reproducibility, and facilitates collaborative development and experimentation with machine learning models for legal assistance.
 
-# deployment Directory for Automated Legal Aid Repository
+## deployment Directory for Automated Legal Aid Repository
 
 The deployment directory within the Automated Legal Aid repository contains the infrastructure configurations and deployment files necessary for deploying the application and its associated components. Here's an expanded view of the structure:
 
@@ -296,43 +296,43 @@ By organizing the deployment directory in this manner, the repository contains a
 Certainly! Below is an example of a Python script for training a BERT model for the Automated Legal Aid application using mock data. This script assumes the availability of the BERT model-specific fine-tuning scripts, which are typically provided by the Hugging Face Transformers library. The script uses the PyTorch framework for training the BERT model.
 
 ```python
-# File: models/bert/fine_tuning_scripts/train_bert_model.py
+## File: models/bert/fine_tuning_scripts/train_bert_model.py
 import torch
 from transformers import BertTokenizer, BertForSequenceClassification, AdamW
 from torch.utils.data import TensorDataset, DataLoader, RandomSampler, SequentialSampler
 from transformers import get_linear_schedule_with_warmup
 import numpy as np
 
-# Mock data (replace with actual data loading and preprocessing)
+## Mock data (replace with actual data loading and preprocessing)
 input_texts = ["Sample legal text 1", "Sample legal text 2", "Sample legal text 3"]
-labels = [1, 0, 1]  # Example binary labels
+labels = [1, 0, 1]  ## Example binary labels
 
-# BERT-specific setup
+## BERT-specific setup
 tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
 encoded_texts = tokenizer(input_texts, padding=True, truncation=True, return_tensors='pt')
 input_ids = encoded_texts['input_ids']
 attention_masks = encoded_texts['attention_mask']
 labels = torch.tensor(labels)
 
-# Create TensorDataset for training
+## Create TensorDataset for training
 dataset = TensorDataset(input_ids, attention_masks, labels)
 
-# Define model
+## Define model
 model = BertForSequenceClassification.from_pretrained("bert-base-uncased", num_labels=2)
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model.to(device)
 
-# Define data loader
+## Define data loader
 batch_size = 32
 dataloader = DataLoader(dataset, sampler=RandomSampler(dataset), batch_size=batch_size)
 
-# Define optimizer and learning rate scheduler
+## Define optimizer and learning rate scheduler
 optimizer = AdamW(model.parameters(), lr=2e-5, eps=1e-8)
 epochs = 3
 total_steps = len(dataloader) * epochs
 scheduler = get_linear_schedule_with_warmup(optimizer, num_warmup_steps=0, num_training_steps=total_steps)
 
-# Model training
+## Model training
 for epoch in range(epochs):
     for batch in dataloader:
         b_input_ids, b_input_mask, b_labels = batch
@@ -347,7 +347,7 @@ for epoch in range(epochs):
         optimizer.step()
         scheduler.step()
 
-# Save trained model
+## Save trained model
 output_model_file = "models/bert/trained_model/pytorch_model.bin"
 model_to_save = model.module if hasattr(model, 'module') else model
 torch.save(model_to_save.state_dict(), output_model_file)
@@ -360,33 +360,33 @@ Please note that in a real-world scenario, it's important to use an appropriate 
 Certainly! Here's an example of a script for a complex machine learning algorithm using a combination of BERT and GPT models for the Automated Legal Aid application. This script demonstrates how both BERT and GPT models can be leveraged in a sequential manner for a hypothetical legal document summarization task using mock data.
 
 ```python
-# File: models/complex_legal_aid_algorithm.py
+## File: models/complex_legal_aid_algorithm.py
 from transformers import BertTokenizer, BertModel, GPT2Tokenizer, GPT2LMHeadModel
 import torch
 
-# Mock data (replace with actual data loading and preprocessing)
+## Mock data (replace with actual data loading and preprocessing)
 legal_documents = [
     "This is the first legal document.",
     "Here is another legal document discussing relevant case law.",
     "The third document contains important legal arguments."
 ]
 
-# BERT for document embedding
+## BERT for document embedding
 bert_tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
 bert_model = BertModel.from_pretrained('bert-base-uncased')
 
-# GPT-2 for document summarization
+## GPT-2 for document summarization
 gpt_tokenizer = GPT2Tokenizer.from_pretrained('gpt2')
 gpt_model = GPT2LMHeadModel.from_pretrained('gpt2')
 
-# Processing the legal documents with BERT
+## Processing the legal documents with BERT
 encoded_legal_docs = [bert_tokenizer.encode(doc, add_special_tokens=True, return_tensors='pt', max_length=512, truncation=True) for doc in legal_documents]
 bert_outputs = [bert_model(doc) for doc in encoded_legal_docs]
 
-# Extracting BERT document embeddings
+## Extracting BERT document embeddings
 doc_embeddings = [output.last_hidden_state.mean(dim=1) for output in bert_outputs]
 
-# Generating document summaries with GPT-2
+## Generating document summaries with GPT-2
 summaries = []
 for emb, doc in zip(doc_embeddings, legal_documents):
     input_ids = gpt_tokenizer.encode(doc, return_tensors='pt', max_length=1024, truncation=True)
@@ -394,11 +394,11 @@ for emb, doc in zip(doc_embeddings, legal_documents):
     summary = gpt_tokenizer.decode(summary_ids[0], skip_special_tokens=True)
     summaries.append(summary)
 
-# Output the generated summaries
+## Output the generated summaries
 for i, summary in enumerate(summaries):
     print(f"Summary for Document {i + 1}:\n{summary}")
 
-# This script demonstrates a complex machine learning algorithm incorporating both BERT and GPT-2 models. The file path for this script is `models/complex_legal_aid_algorithm.py` within the repository structure.
+## This script demonstrates a complex machine learning algorithm incorporating both BERT and GPT-2 models. The file path for this script is `models/complex_legal_aid_algorithm.py` within the repository structure.
 
 Please note that in a real-world scenario, it's crucial to use appropriate legal data, perform thorough data preprocessing, and handle model outputs carefully to ensure high-quality and legally compliant document summarization.
 

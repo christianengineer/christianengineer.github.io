@@ -222,18 +222,18 @@ import tensorflow as tf
 import numpy as np
 
 def train_gan_with_mock_data(data_path, batch_size=32, num_epochs=100):
-    # Load mock data (replace with actual data loading code)
-    training_data = np.random.randn(1000, 100)  # Mock training data with 1000 samples each having 100 features
+    ## Load mock data (replace with actual data loading code)
+    training_data = np.random.randn(1000, 100)  ## Mock training data with 1000 samples each having 100 features
 
-    # Define and compile the generator model
+    ## Define and compile the generator model
     generator = tf.keras.models.Sequential([
         tf.keras.layers.Dense(128, input_shape=(100,), activation='relu'),
         tf.keras.layers.Dense(256, activation='relu'),
-        tf.keras.layers.Dense(784, activation='sigmoid')  # Assuming image generation with 28x28 pixels
+        tf.keras.layers.Dense(784, activation='sigmoid')  ## Assuming image generation with 28x28 pixels
     ])
     generator.compile(loss='binary_crossentropy', optimizer='adam')
 
-    # Define and compile the discriminator model
+    ## Define and compile the discriminator model
     discriminator = tf.keras.models.Sequential([
         tf.keras.layers.Dense(256, input_shape=(784,), activation='relu'),
         tf.keras.layers.Dense(128, activation='relu'),
@@ -241,17 +241,17 @@ def train_gan_with_mock_data(data_path, batch_size=32, num_epochs=100):
     ])
     discriminator.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
 
-    # Combined GAN model
+    ## Combined GAN model
     gan_input = tf.keras.layers.Input(shape=(100,))
     gan_output = discriminator(generator(gan_input))
     gan = tf.keras.models.Model(gan_input, gan_output)
-    discriminator.trainable = False  # Set discriminator to be untrainable during GAN training
+    discriminator.trainable = False  ## Set discriminator to be untrainable during GAN training
     gan.compile(loss='binary_crossentropy', optimizer='adam')
 
-    # Training loop
+    ## Training loop
     for epoch in range(num_epochs):
         for _ in range(training_data.shape[0] // batch_size):
-            # Train the discriminator
+            ## Train the discriminator
             noise = np.random.randn(batch_size, 100)
             generated_images = generator.predict(noise)
             real_images = training_data[np.random.randint(0, training_data.shape[0], batch_size)]
@@ -259,15 +259,15 @@ def train_gan_with_mock_data(data_path, batch_size=32, num_epochs=100):
             y_combined = np.concatenate([np.ones((batch_size, 1)), np.zeros((batch_size, 1))])
             discriminator_loss = discriminator.train_on_batch(x_combined, y_combined)
 
-            # Train the generator (via the GAN model)
+            ## Train the generator (via the GAN model)
             noise = np.random.randn(batch_size, 100)
             y_mislabeled = np.ones((batch_size, 1))
             generator_loss = gan.train_on_batch(noise, y_mislabeled)
         
-        # Print the losses for each epoch
+        ## Print the losses for each epoch
         print(f"Epoch {epoch+1}/{num_epochs}, Discriminator Loss: {discriminator_loss}, Generator Loss: {generator_loss}")
 
-    # Save trained models (replace with actual model saving code)
+    ## Save trained models (replace with actual model saving code)
     generator.save('generator_model.h5')
     discriminator.save('discriminator_model.h5')
     gan.save('gan_model.h5')
@@ -297,14 +297,14 @@ import numpy as np
 import os
 
 def train_gan_with_mock_data(data_path, epochs=100, batch_size=32, save_interval=10):
-    # Load mock data
-    mock_data = np.random.rand(1000, 100)  # Replace with actual data loading
+    ## Load mock data
+    mock_data = np.random.rand(1000, 100)  ## Replace with actual data loading
 
-    # GAN configuration
+    ## GAN configuration
     latent_dim = 100
-    image_shape = (28, 28, 1)  # Example image shape, replace with actual image dimensions
+    image_shape = (28, 28, 1)  ## Example image shape, replace with actual image dimensions
 
-    # Build generator
+    ## Build generator
     generator = tf.keras.Sequential([
         layers.Dense(128, input_dim=latent_dim),
         layers.LeakyReLU(alpha=0.2),
@@ -319,7 +319,7 @@ def train_gan_with_mock_data(data_path, epochs=100, batch_size=32, save_interval
         layers.Reshape(image_shape)
     ])
 
-    # Build discriminator
+    ## Build discriminator
     discriminator = tf.keras.Sequential([
         layers.Flatten(input_shape=image_shape),
         layers.Dense(512),
@@ -329,20 +329,20 @@ def train_gan_with_mock_data(data_path, epochs=100, batch_size=32, save_interval
         layers.Dense(1, activation='sigmoid')
     ])
 
-    # Compile discriminator
+    ## Compile discriminator
     discriminator.compile(loss='binary_crossentropy', optimizer=tf.keras.optimizers.Adam(0.0002, 0.5), metrics=['accuracy'])
 
-    # Combined GAN model
+    ## Combined GAN model
     z = layers.Input(shape=(latent_dim,))
     img = generator(z)
-    discriminator.trainable = False  # Fix discriminator during GAN training
+    discriminator.trainable = False  ## Fix discriminator during GAN training
     validity = discriminator(img)
     gan = tf.keras.models.Model(z, validity)
     gan.compile(loss='binary_crossentropy', optimizer=tf.keras.optimizers.Adam(0.0002, 0.5))
 
-    # Training the GAN
+    ## Training the GAN
     for epoch in range(epochs):
-        # Train discriminator
+        ## Train discriminator
         idx = np.random.randint(0, mock_data.shape[0], batch_size)
         imgs = mock_data[idx]
         noise = np.random.normal(0, 1, (batch_size, latent_dim))
@@ -352,18 +352,18 @@ def train_gan_with_mock_data(data_path, epochs=100, batch_size=32, save_interval
         d_loss_fake = discriminator.train_on_batch(gen_imgs, np.zeros((batch_size, 1)))
         d_loss = 0.5 * np.add(d_loss_real, d_loss_fake)
 
-        # Train generator
+        ## Train generator
         noise = np.random.normal(0, 1, (batch_size, latent_dim))
         valid_y = np.array([1] * batch_size)
         g_loss = gan.train_on_batch(noise, valid_y)
 
-        # Print progress and save generated images at save_interval
+        ## Print progress and save generated images at save_interval
         if epoch % save_interval == 0:
             print(f"Epoch {epoch}, D Loss: {d_loss[0]}, G Loss: {g_loss}")
-            # Save generated images as a visual validation of the model
+            ## Save generated images as a visual validation of the model
             save_generated_images(epoch, generator)
         
-    # Save trained models
+    ## Save trained models
     save_model_path = 'trained_models/'
     os.makedirs(save_model_path, exist_ok=True)
     generator.save(os.path.join(save_model_path, 'generator_model.h5'))

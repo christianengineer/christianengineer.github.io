@@ -5,7 +5,7 @@ permalink: posts/financesmart---ai-driven-finance-analytics
 layout: article
 ---
 
-# AI FinanceSmart - AI-Driven Finance Analytics Repository
+## AI FinanceSmart - AI-Driven Finance Analytics Repository
 
 ## Objectives
 
@@ -36,7 +36,7 @@ The following libraries and frameworks will be instrumental in implementing the 
 
 By leveraging these libraries and systems, we aim to create a robust and scalable AI-driven finance analytics platform that can provide valuable insights for investment decisions and risk management.
 
-# Infrastructure for FinanceSmart - AI-Driven Finance Analytics Application
+## Infrastructure for FinanceSmart - AI-Driven Finance Analytics Application
 
 In order to support the data-intensive and AI-driven nature of the FinanceSmart application, we will design a robust infrastructure that can handle large volumes of financial data processing and AI model training. The infrastructure will be architected to provide scalability, high availability, and efficient utilization of resources. Below are the key components of the infrastructure:
 
@@ -86,7 +86,7 @@ Each microservice will be containerized using Docker, allowing for consistent an
 
 By implementing this infrastructure, we aim to create a scalable, reliable, and efficient platform for AI-driven finance analytics, capable of handling large volumes of financial data processing and machine learning workloads.
 
-# FinanceSmart - AI-Driven Finance Analytics Repository File Structure
+## FinanceSmart - AI-Driven Finance Analytics Repository File Structure
 
 ```plaintext
 FinanceSmart-AI-Driven-Finance-Analytics/
@@ -264,26 +264,26 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 
 def run_complex_ml_algorithm(data_file_path):
-    # Load mock data from file
+    ## Load mock data from file
     data = pd.read_csv(data_file_path)
 
-    # Assume the data contains features and a target variable
+    ## Assume the data contains features and a target variable
     X = data.drop(columns=['target_column'])
     y = data['target_column']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Instantiate a RandomForestClassifier
+    ## Instantiate a RandomForestClassifier
     model = RandomForestClassifier(n_estimators=100, random_state=42)
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train)
 
-    # Make predictions
+    ## Make predictions
     predictions = model.predict(X_test)
 
-    # Evaluate the model
+    ## Evaluate the model
     accuracy = accuracy_score(y_test, predictions)
 
     return model, accuracy
@@ -313,32 +313,32 @@ from tensorflow.keras.layers import Dense
 from sklearn.metrics import accuracy_score
 
 def run_complex_deep_learning_algorithm(data_file_path):
-    # Load mock data from file
+    ## Load mock data from file
     data = pd.read_csv(data_file_path)
 
-    # Assume the data contains features and a target variable
+    ## Assume the data contains features and a target variable
     X = data.drop(columns=['target_column']).values
     y = data['target_column'].values
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Define the deep learning model
+    ## Define the deep learning model
     model = Sequential()
     model.add(Dense(100, input_dim=X_train.shape[1], activation='relu'))
     model.add(Dense(50, activation='relu'))
     model.add(Dense(1, activation='sigmoid'))
 
-    # Compile the model
+    ## Compile the model
     model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y_test), verbose=1)
 
-    # Make predictions
+    ## Make predictions
     predictions = model.predict_classes(X_test)
 
-    # Evaluate the model
+    ## Evaluate the model
     accuracy = accuracy_score(y_test, predictions)
 
     return model, accuracy

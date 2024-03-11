@@ -223,10 +223,10 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import classification_report, confusion_matrix
 
 def predictive_maintenance_algorithm(data_file_path):
-    # Load mock sensor data from CSV file
+    ## Load mock sensor data from CSV file
     sensor_data = pd.read_csv(data_file_path)
 
-    # Preprocessing: Split features and target, scale features
+    ## Preprocessing: Split features and target, scale features
     X = sensor_data.drop('target_variable', axis=1)
     y = sensor_data['target_variable']
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
@@ -234,14 +234,14 @@ def predictive_maintenance_algorithm(data_file_path):
     X_train = scaler.fit_transform(X_train)
     X_test = scaler.transform(X_test)
 
-    # Train a machine learning model
+    ## Train a machine learning model
     model = RandomForestClassifier(n_estimators=100, random_state=42)
     model.fit(X_train, y_train)
 
-    # Make predictions
+    ## Make predictions
     y_pred = model.predict(X_test)
 
-    # Evaluate the model
+    ## Evaluate the model
     print("Confusion Matrix:")
     print(confusion_matrix(y_test, y_pred))
     print("\nClassification Report:")
@@ -273,10 +273,10 @@ from keras.layers import Dense, Dropout
 from keras.optimizers import Adam
 
 def quality_control_deep_learning_algorithm(data_file_path):
-    # Load mock sensor data from CSV file
+    ## Load mock sensor data from CSV file
     sensor_data = pd.read_csv(data_file_path)
 
-    # Preprocessing: Split features and target, scale features
+    ## Preprocessing: Split features and target, scale features
     X = sensor_data.drop('target_variable', axis=1)
     y = sensor_data['target_variable']
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
@@ -284,18 +284,18 @@ def quality_control_deep_learning_algorithm(data_file_path):
     X_train = scaler.fit_transform(X_train)
     X_test = scaler.transform(X_test)
 
-    # Create a deep learning model
+    ## Create a deep learning model
     model = Sequential()
     model.add(Dense(128, input_dim=X_train.shape[1], activation='relu'))
     model.add(Dropout(0.2))
     model.add(Dense(64, activation='relu'))
     model.add(Dense(1, activation='sigmoid'))
 
-    # Compile the model
+    ## Compile the model
     optimizer = Adam(learning_rate=0.001)
     model.compile(loss='binary_crossentropy', optimizer=optimizer, metrics=['accuracy'])
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train, epochs=50, batch_size=32, validation_data=(X_test, y_test))
 ```
 

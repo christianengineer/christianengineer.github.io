@@ -228,41 +228,41 @@ Certainly! Below is an example of a Python file for training a machine learning 
 The file path for this example training script is: `code/model_training/train_model.py`
 
 ```python
-# train_model.py
+## train_model.py
 from pyspark.sql import SparkSession
 from pyspark.ml.feature import VectorAssembler
 from pyspark.ml.classification import RandomForestClassifier
 from pyspark.ml.evaluation import BinaryClassificationEvaluator
 
-# Create a Spark session
+## Create a Spark session
 spark = SparkSession.builder.appName("GenomicDataAnalysisModelTraining").getOrCreate()
 
-# Load mock genomic data from a Parquet file (replace with actual data source)
+## Load mock genomic data from a Parquet file (replace with actual data source)
 data = spark.read.parquet("hdfs://path_to_mock_genomic_data")
 
-# Perform feature engineering and preparation
+## Perform feature engineering and preparation
 feature_assembler = VectorAssembler(inputCols=["feature1", "feature2", "feature3"], outputCol="features")
 data_with_features = feature_assembler.transform(data)
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 train_data, test_data = data_with_features.randomSplit([0.8, 0.2], seed=42)
 
-# Create and train a Random Forest classifier
+## Create and train a Random Forest classifier
 rf = RandomForestClassifier(labelCol="label", featuresCol="features", numTrees=100)
 model = rf.fit(train_data)
 
-# Make predictions on the test data
+## Make predictions on the test data
 predictions = model.transform(test_data)
 
-# Evaluate the model's performance
+## Evaluate the model's performance
 evaluator = BinaryClassificationEvaluator(labelCol="label", rawPredictionCol="rawPrediction")
 auc = evaluator.evaluate(predictions)
 
-# Output the trained model and evaluation metrics
+## Output the trained model and evaluation metrics
 model.save("hdfs://path_to_save_trained_model")
 print(f"Area Under ROC (AUC) on test data: {auc}")
 
-# Stop the Spark session
+## Stop the Spark session
 spark.stop()
 ```
 
@@ -279,50 +279,50 @@ Please note that the file paths and data processing steps should be adapted to r
 Certainly! Below is an example of a Python file for training a complex machine learning algorithm for the Large-scale Genomic Data Analysis application using mock data. This example uses BioPython for data preprocessing, feature extraction, and Hadoop and Spark for distributed data processing and model training. The file path for this example training script is: `code/model_training/train_complex_model.py`
 
 ```python
-# train_complex_model.py
+## train_complex_model.py
 from pyspark.sql import SparkSession
 from pyspark.ml.feature import VectorAssembler
 from pyspark.ml.classification import GBTClassifier
 from pyspark.ml.evaluation import BinaryClassificationEvaluator
 from Bio import SeqIO
 
-# Create a Spark session
+## Create a Spark session
 spark = SparkSession.builder.appName("GenomicDataAnalysisModelTraining").getOrCreate()
 
-# Load mock genomic data from Hadoop (replace with actual data source)
+## Load mock genomic data from Hadoop (replace with actual data source)
 data_path = "hdfs://path_to_mock_genomic_data"
 data = spark.read.format("parquet").load(data_path)
 
-# Preprocess genomic data using BioPython (example: sequence length as a feature)
+## Preprocess genomic data using BioPython (example: sequence length as a feature)
 def calculate_sequence_length(sequence):
     return len(sequence)
 
-# Apply the sequence length calculation function to each sequence in the dataset
+## Apply the sequence length calculation function to each sequence in the dataset
 data = data.withColumn("sequence_length", calculate_sequence_length_udf(data["sequence_column"]))
 
-# Perform feature engineering to create feature vectors
+## Perform feature engineering to create feature vectors
 feature_assembler = VectorAssembler(inputCols=["feature1", "feature2", "sequence_length"], outputCol="features")
 data_with_features = feature_assembler.transform(data)
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 train_data, test_data = data_with_features.randomSplit([0.8, 0.2], seed=42)
 
-# Create and train a Gradient Boosted Tree classifier
+## Create and train a Gradient Boosted Tree classifier
 gbt = GBTClassifier(labelCol="label", featuresCol="features", maxDepth=5, maxIter=100)
 model = gbt.fit(train_data)
 
-# Make predictions on the test data
+## Make predictions on the test data
 predictions = model.transform(test_data)
 
-# Evaluate the model's performance
+## Evaluate the model's performance
 evaluator = BinaryClassificationEvaluator(labelCol="label", rawPredictionCol="rawPrediction")
 auc = evaluator.evaluate(predictions)
 
-# Output the trained model and evaluation metrics
+## Output the trained model and evaluation metrics
 model.save("hdfs://path_to_save_trained_model")
 print(f"Area Under ROC (AUC) on test data: {auc}")
 
-# Stop the Spark session
+## Stop the Spark session
 spark.stop()
 ```
 

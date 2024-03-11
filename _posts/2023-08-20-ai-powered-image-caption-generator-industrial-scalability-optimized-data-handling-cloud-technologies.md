@@ -5,7 +5,7 @@ permalink: posts/ai-powered-image-caption-generator-industrial-scalability-optim
 layout: article
 ---
 
-# Blueprint for Progress: Creating an Industrially Scalable AI-Powered Image Caption Generator with Optimized Data Handling and Integrated Cloud Technologies
+## Blueprint for Progress: Creating an Industrially Scalable AI-Powered Image Caption Generator with Optimized Data Handling and Integrated Cloud Technologies
 
 ## Introduction
 
@@ -16,12 +16,12 @@ This document outlines a roadmap to create a scalable and robust AI-powered imag
 First, we will focus on designing the entire system as a collection of loosely coupled, independently deployable microservices. This will not only enhance the overall scalability of the system but will also allow multiple developers to work on different microservices simultaneously.
 
 ```shell
-# Microservices structure
+## Microservices structure
 /services
-    /image_upload               # Microservice for image upload functionality
-    /image_processing           # Microservice for image processing
-    /caption_generation         # Microservice for AI caption generation
-    /database_interaction       # Microservice for database interaction
+    /image_upload               ## Microservice for image upload functionality
+    /image_processing           ## Microservice for image processing
+    /caption_generation         ## Microservice for AI caption generation
+    /database_interaction       ## Microservice for database interaction
 ```
 
 ## Data Handling
@@ -37,9 +37,9 @@ We'll leverage Transfer Learning, using pre-trained models like InceptionV3 or R
 For scalability, we can use Kubernetes Jobs & Kubernetes GPU nodes orchestration for parallelizing model training, thereby handling larger datasets effectively.
 
 ```python
-# Transfer Learning
+## Transfer Learning
 from keras.applications.inception_v3 import InceptionV3
-# Load pretrained InceptionV3 model
+## Load pretrained InceptionV3 model
 base_model = InceptionV3(weights='imagenet', include_top=False)
 ```
 

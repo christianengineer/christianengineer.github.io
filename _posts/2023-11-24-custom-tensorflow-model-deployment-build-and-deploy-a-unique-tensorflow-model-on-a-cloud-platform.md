@@ -5,7 +5,7 @@ permalink: posts/custom-tensorflow-model-deployment-build-and-deploy-a-unique-te
 layout: article
 ---
 
-# AI Custom TensorFlow Model Deployment
+## AI Custom TensorFlow Model Deployment
 
 ## Objectives
 The objective is to build and deploy a unique TensorFlow model on a cloud platform repository. This can involve tasks such as preparing and preprocessing the data, building and training the model, deploying the model for inference, and integrating the model into a scalable, data-intensive application.
@@ -26,7 +26,7 @@ The objective is to build and deploy a unique TensorFlow model on a cloud platfo
 
 By combining these tools and strategies, we can build and deploy a scalable, data-intensive AI application that leverages the use of a custom TensorFlow model for machine learning or deep learning tasks.
 
-# Infrastructure for Custom TensorFlow Model Deployment
+## Infrastructure for Custom TensorFlow Model Deployment
 
 To deploy a unique TensorFlow model on a cloud platform application, we need to design an infrastructure that can support the model's training, deployment, and inference processes. The infrastructure should be scalable, reliable, and optimized for handling data-intensive AI workloads. Here's an outline of the infrastructure components and their functionalities:
 
@@ -58,7 +58,7 @@ Utilize auto-scaling capabilities provided by the chosen cloud platform or orche
 
 By architecting the infrastructure with these components in mind, we can build a robust and scalable deployment environment for our unique TensorFlow model on a cloud platform application. This infrastructure will support the end-to-end lifecycle of the model, from training to deployment and ongoing inference.
 
-# Scalable File Structure for Custom TensorFlow Model Deployment
+## Scalable File Structure for Custom TensorFlow Model Deployment
 
 Creating a well-organized and scalable file structure is crucial for managing the code, data, and configuration files associated with the deployment and serving of a TensorFlow model on a cloud platform repository. The following file structure provides a foundation for organizing the components of the deployment pipeline in a scalable and modular manner:
 
@@ -252,11 +252,11 @@ from tensorflow.keras import layers, models
 import numpy as np
 
 def train_convolutional_neural_network(train_images_path, train_labels, test_images_path, test_labels):
-    # Load and preprocess mock image data
-    train_images = np.random.rand(100, 32, 32, 3)  # Mock training images
-    test_images = np.random.rand(20, 32, 32, 3)  # Mock test images
+    ## Load and preprocess mock image data
+    train_images = np.random.rand(100, 32, 32, 3)  ## Mock training images
+    test_images = np.random.rand(20, 32, 32, 3)  ## Mock test images
 
-    # Define the CNN model architecture
+    ## Define the CNN model architecture
     model = models.Sequential([
         layers.Conv2D(32, (3, 3), activation='relu', input_shape=(32, 32, 3)),
         layers.MaxPooling2D((2, 2)),
@@ -265,18 +265,18 @@ def train_convolutional_neural_network(train_images_path, train_labels, test_ima
         layers.Conv2D(64, (3, 3), activation='relu'),
         layers.Flatten(),
         layers.Dense(64, activation='relu'),
-        layers.Dense(10)  # Assuming 10 classes for classification
+        layers.Dense(10)  ## Assuming 10 classes for classification
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam',
                   loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True),
                   metrics=['accuracy'])
 
-    # Train the model
+    ## Train the model
     model.fit(train_images, train_labels, epochs=10, validation_data=(test_images, test_labels))
 
-    # Save the trained model
+    ## Save the trained model
     model.save('trained_cnn_model')
 
     return 'trained_cnn_model'
@@ -299,28 +299,28 @@ from tensorflow.keras.layers import LSTM, Dense, Embedding
 import numpy as np
 
 def train_lstm_model(train_data_path, train_labels, test_data_path, test_labels):
-    # Load and preprocess mock sequential textual data
-    max_features = 10000  # Mock maximum number of words
-    max_len = 500  # Mock maximum sequence length
-    train_data = np.random.randint(1, max_features, size=(100, max_len))  # Mock training textual sequences
-    test_data = np.random.randint(1, max_features, size=(20, max_len))  # Mock test textual sequences
+    ## Load and preprocess mock sequential textual data
+    max_features = 10000  ## Mock maximum number of words
+    max_len = 500  ## Mock maximum sequence length
+    train_data = np.random.randint(1, max_features, size=(100, max_len))  ## Mock training textual sequences
+    test_data = np.random.randint(1, max_features, size=(20, max_len))  ## Mock test textual sequences
 
-    # Define the LSTM model architecture
+    ## Define the LSTM model architecture
     model = Sequential([
         Embedding(max_features, 32),
         LSTM(32),
         Dense(1, activation='sigmoid')
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='rmsprop',
                   loss='binary_crossentropy',
                   metrics=['acc'])
 
-    # Train the model
+    ## Train the model
     model.fit(train_data, train_labels, epochs=10, batch_size=32, validation_data=(test_data, test_labels))
 
-    # Save the trained model
+    ## Save the trained model
     model.save('trained_lstm_model')
 
     return 'trained_lstm_model'

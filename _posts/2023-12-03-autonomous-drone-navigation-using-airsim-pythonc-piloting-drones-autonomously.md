@@ -5,7 +5,7 @@ permalink: posts/autonomous-drone-navigation-using-airsim-pythonc-piloting-drone
 layout: article
 ---
 
-# AI Autonomous Drone Navigation using AirSim Repository
+## AI Autonomous Drone Navigation using AirSim Repository
 
 ## Objectives
 The objectives of the AI Autonomous Drone Navigation using AirSim repository are to develop and demonstrate the capability of piloting drones autonomously using AI and machine learning techniques. The specific objectives may include but are not limited to:
@@ -63,7 +63,7 @@ To build the infrastructure for the Autonomous Drone Navigation using AirSim app
 
 By establishing a well-designed infrastructure encompassing these components, the Autonomous Drone Navigation using AirSim application can effectively simulate, train, and deploy autonomous navigation algorithms for drones, facilitating the development and testing of scalable, data-intensive AI applications in the context of drone navigation.
 
-# Autonomous Drone Navigation using AirSim Repository File Structure
+## Autonomous Drone Navigation using AirSim Repository File Structure
 
 Here's a recommended scalable file structure for the repository:
 
@@ -247,30 +247,30 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
 def train_complex_algorithm(training_data_path):
-    # Load mock training data from the provided file path
+    ## Load mock training data from the provided file path
     training_data = pd.read_csv(training_data_path)
 
-    # Assuming the data includes features and labels
+    ## Assuming the data includes features and labels
     X = training_data.drop('target_label', axis=1)
     y = training_data['target_label']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Instantiate the complex machine learning algorithm (Random Forest Classifier in this example)
+    ## Instantiate the complex machine learning algorithm (Random Forest Classifier in this example)
     model = RandomForestClassifier(n_estimators=100, random_state=42)
 
-    # Train the algorithm on the training data
+    ## Train the algorithm on the training data
     model.fit(X_train, y_train)
 
-    # Make predictions on the testing data
+    ## Make predictions on the testing data
     y_pred = model.predict(X_test)
 
-    # Calculate and print the accuracy of the trained algorithm
+    ## Calculate and print the accuracy of the trained algorithm
     accuracy = accuracy_score(y_test, y_pred)
     print(f"Accuracy of the complex machine learning algorithm: {accuracy}")
 
-    # Return the trained model for later use
+    ## Return the trained model for later use
     return model
 ```
 
@@ -286,30 +286,30 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
 def train_complex_algorithm(training_data_path):
-    # Load mock training data from the provided file path
+    ## Load mock training data from the provided file path
     training_data = pd.read_csv(training_data_path)
 
-    # Assuming the data includes features and labels
+    ## Assuming the data includes features and labels
     X = training_data.drop('target_label', axis=1)
     y = training_data['target_label']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Instantiate the complex machine learning algorithm (Random Forest Classifier in this example)
+    ## Instantiate the complex machine learning algorithm (Random Forest Classifier in this example)
     model = RandomForestClassifier(n_estimators=100, random_state=42)
 
-    # Train the algorithm on the training data
+    ## Train the algorithm on the training data
     model.fit(X_train, y_train)
 
-    # Make predictions on the testing data
+    ## Make predictions on the testing data
     y_pred = model.predict(X_test)
 
-    # Calculate and print the accuracy of the trained algorithm
+    ## Calculate and print the accuracy of the trained algorithm
     accuracy = accuracy_score(y_test, y_pred)
     print(f"Accuracy of the complex machine learning algorithm: {accuracy}")
 
-    # Return the trained model for later use
+    ## Return the trained model for later use
     return model
 ```
 

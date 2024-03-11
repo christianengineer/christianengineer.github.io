@@ -5,7 +5,7 @@ permalink: posts/building-graphql-endpoints-ai-services-multiple-front-end-teams
 layout: article
 ---
 
-# Building GraphQL Endpoints for AI Services That Support Multiple Front End Teams
+## Building GraphQL Endpoints for AI Services That Support Multiple Front End Teams
 
 Modern application development requires developers to support multiple front end teams with their AI services. Building specialized back-end facets to cater to each team can lead to redundant workloads, higher costs, and increased maintenance. GraphQL provides an effective solution to this problem, allowing you to expose a single endpoint and enable each team to query exactly what they need. In this post, we will take a look at how you can leverage the power of GraphQL to build AI service endpoints to support multiple front-end teams.
 

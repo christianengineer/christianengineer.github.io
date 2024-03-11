@@ -5,7 +5,7 @@ permalink: posts/customer-sentiment-analysis-tool-bert-tensorflow-flask-grafana
 layout: article
 ---
 
-# Customer Sentiment Analysis Tool for Rappi Peru
+## Customer Sentiment Analysis Tool for Rappi Peru
 
 ## Objectives and Benefits:
 - **Objectives**:
@@ -208,34 +208,34 @@ from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 import re
 
-# Load the raw customer feedback data into a DataFrame
+## Load the raw customer feedback data into a DataFrame
 data = pd.read_csv('customer_feedback_data.csv')
 
-# Define custom stopwords relevant to customer feedback analysis
+## Define custom stopwords relevant to customer feedback analysis
 custom_stopwords = set(stopwords.words('english')) | {'peru', 'rappi', 'feedback_specific_term'}
 
-# Initialize WordNet Lemmatizer for text normalization
+## Initialize WordNet Lemmatizer for text normalization
 lemmatizer = WordNetLemmatizer()
 
-# Preprocessing Steps
+## Preprocessing Steps
 for index, row in data.iterrows():
-    # Step 1: Lowercasing and removing special characters
+    ## Step 1: Lowercasing and removing special characters
     text = re.sub(r'[^a-zA-Z\s]', '', str(row['text'])).lower()
     
-    # Step 2: Tokenization and removing stopwords
+    ## Step 2: Tokenization and removing stopwords
     tokens = word_tokenize(text)
     tokens = [token for token in tokens if token not in custom_stopwords]
     
-    # Step 3: Lemmatization for word normalization
+    ## Step 3: Lemmatization for word normalization
     tokens = [lemmatizer.lemmatize(token) for token in tokens]
     
-    # Step 4: Concatenating tokens back into preprocessed text
+    ## Step 4: Concatenating tokens back into preprocessed text
     processed_text = ' '.join(tokens)
     
-    # Update the 'text' column with preprocessed text
+    ## Update the 'text' column with preprocessed text
     data.at[index, 'text'] = processed_text
 
-# Save the preprocessed data to a new CSV file
+## Save the preprocessed data to a new CSV file
 data.to_csv('preprocessed_customer_feedback_data.csv', index=False)
 ```
 
@@ -326,16 +326,16 @@ import numpy as np
 from faker import Faker
 import random
 
-# Set up Faker to generate realistic data
+## Set up Faker to generate realistic data
 fake = Faker()
 
-# Define constants
+## Define constants
 NUM_SAMPLES = 1000
 SENTIMENTS = ['positive', 'negative', 'neutral']
 REGIONS = ['Lima', 'Cusco', 'Arequipa']
 FEEDBACK_CHANNELS = ['survey', 'social_media', 'chat']
 
-# Initialize lists to store data
+## Initialize lists to store data
 data = {
     'text': [],
     'sentiment': [],
@@ -343,7 +343,7 @@ data = {
     'feedback_channel': []
 }
 
-# Generate synthetic dataset
+## Generate synthetic dataset
 for _ in range(NUM_SAMPLES):
     text = fake.paragraph()
     sentiment = random.choice(SENTIMENTS)
@@ -355,10 +355,10 @@ for _ in range(NUM_SAMPLES):
     data['region'].append(region)
     data['feedback_channel'].append(feedback_channel)
 
-# Create DataFrame from generated data
+## Create DataFrame from generated data
 df = pd.DataFrame(data)
 
-# Save synthetic dataset to CSV
+## Save synthetic dataset to CSV
 df.to_csv('synthetic_customer_feedback_data.csv', index=False)
 ```
 
@@ -405,29 +405,29 @@ import pandas as pd
 from transformers import BertTokenizer, TFBertForSequenceClassification
 import tensorflow as tf
 
-# Load the preprocessed dataset
+## Load the preprocessed dataset
 df = pd.read_csv('preprocessed_customer_feedback_data.csv')
 
-# Load BERT tokenizer and model
+## Load BERT tokenizer and model
 tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
 model = TFBertForSequenceClassification.from_pretrained('bert-base-uncased')
 
-# Tokenize and prepare input data for BERT model
+## Tokenize and prepare input data for BERT model
 tokenized_text = tokenizer(df['text'].tolist(), padding=True, truncation=True, max_length=128, return_tensors='tf')
 input_data = {key: tokenized_text[key] for key in ['input_ids', 'attention_mask']}
 
-# Convert sentiment labels to numerical values
+## Convert sentiment labels to numerical values
 sentiment_mapping = {'negative': 0, 'neutral': 1, 'positive': 2}
 df['sentiment'] = df['sentiment'].map(sentiment_mapping)
 
-# Prepare target labels
+## Prepare target labels
 target_labels = tf.keras.utils.to_categorical(df['sentiment'], num_classes=len(sentiment_mapping))
 
-# Compile and train the BERT model
+## Compile and train the BERT model
 model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
 model.fit(input_data, target_labels, epochs=3, batch_size=32)
 
-# Save the trained model for future deployment
+## Save the trained model for future deployment
 model.save('sentiment_analysis_model')
 ```
 
@@ -466,7 +466,7 @@ By adhering to these best practices and conventions, the provided code snippet e
 - **Objective**: Serialize the trained model for easy deployment and serving.
 - **Tools**:
   - **Hugging Face Transformers**: Use Hugging Face's `save_pretrained` method to serialize the BERT model.
-  - **Documentation**: [Transformers Serialization Documentation](https://huggingface.co/transformers/main_classes/model.html#transformers.PreTrainedModel.save_pretrained)
+  - **Documentation**: [Transformers Serialization Documentation](https://huggingface.co/transformers/main_classes/model.html## ransformers.PreTrainedModel.save_pretrained)
 
 ### 3. Model Containerization:
 - **Objective**: Containerize the model to ensure consistency across different environments.
@@ -501,25 +501,25 @@ By adhering to these best practices and conventions, the provided code snippet e
 By following these step-by-step deployment guidelines and leveraging the recommended tools and platforms tailored to the unique demands of the Customer Sentiment Analysis Project for Rappi Peru, the team can effectively deploy the machine learning model into a production environment with confidence and efficiency.
 
 ```Dockerfile
-# Use a TensorFlow base image
+## Use a TensorFlow base image
 FROM tensorflow/tensorflow:latest
 
-# Set the working directory
+## Set the working directory
 WORKDIR /app
 
-# Copy the necessary files into the container
+## Copy the necessary files into the container
 COPY requirements.txt .
 COPY sentiment_analysis_model/ /app/sentiment_analysis_model
 COPY app.py .
 
-# Install dependencies
+## Install dependencies
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
-# Expose the Flask port
+## Expose the Flask port
 EXPOSE 5000
 
-# Command to start the Flask application
+## Command to start the Flask application
 CMD ["python", "app.py"]
 ```
 

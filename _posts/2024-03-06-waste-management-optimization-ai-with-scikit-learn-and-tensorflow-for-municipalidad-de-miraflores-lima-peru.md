@@ -5,7 +5,7 @@ permalink: posts/waste-management-optimization-ai-with-scikit-learn-and-tensorfl
 layout: article
 ---
 
-# Waste Management Optimization AI Solution for Municipalidad de Miraflores
+## Waste Management Optimization AI Solution for Municipalidad de Miraflores
 
 ## Objective and Benefits
 - **Objective**: Develop a machine learning solution to optimize waste collection routes and schedules, reducing costs for Municipalidad de Miraflores.
@@ -267,33 +267,33 @@ import pandas as pd
 from sklearn.preprocessing import StandardScaler
 from sklearn.impute import SimpleImputer
 
-# Load the raw data
+## Load the raw data
 data = pd.read_csv('waste_management_data.csv')
 
-# Step 1: Impute missing values in waste volume
+## Step 1: Impute missing values in waste volume
 imputer = SimpleImputer(strategy='mean')
 data['waste_volume'] = imputer.fit_transform(data[['waste_volume']])
 
-# Step 2: Normalize waste volume using StandardScaler
+## Step 2: Normalize waste volume using StandardScaler
 scaler = StandardScaler()
 data['waste_volume_normalized'] = scaler.fit_transform(data[['waste_volume']])
 
-# Step 3: Standardize timestamp format and convert to datetime
+## Step 3: Standardize timestamp format and convert to datetime
 data['collection_timestamp'] = pd.to_datetime(data['collection_timestamp'])
 
-# Step 4: Encode categorical variables (if any)
-# For example: Convert crew availability into binary indicator variables
+## Step 4: Encode categorical variables (if any)
+## For example: Convert crew availability into binary indicator variables
 
-# Step 5: Geocode addresses to extract latitude and longitude
-# Implementation of geocoding functions (not shown)
+## Step 5: Geocode addresses to extract latitude and longitude
+## Implementation of geocoding functions (not shown)
 
-# Step 6: Feature engineering based on geographical data
-# Calculate distance to nearest collection point, landmarks, etc. (not shown)
+## Step 6: Feature engineering based on geographical data
+## Calculate distance to nearest collection point, landmarks, etc. (not shown)
 
-# Step 7: Additional preprocessing steps based on domain knowledge
-# Include specific preprocessing steps related to route optimization constraints, traffic conditions, etc.
+## Step 7: Additional preprocessing steps based on domain knowledge
+## Include specific preprocessing steps related to route optimization constraints, traffic conditions, etc.
 
-# Save the preprocessed data to a new CSV file
+## Save the preprocessed data to a new CSV file
 data.to_csv('preprocessed_waste_management_data.csv', index=False)
 ```
 
@@ -378,13 +378,13 @@ import numpy as np
 from faker import Faker
 import random
 
-# Initialize Faker for generating fake data
+## Initialize Faker for generating fake data
 fake = Faker()
 
-# Define the number of data points in the dataset
+## Define the number of data points in the dataset
 num_data_points = 1000
 
-# Initialize lists to store generated data
+## Initialize lists to store generated data
 data = {
     'latitude': [fake.latitude() for _ in range(num_data_points)],
     'longitude': [fake.longitude() for _ in range(num_data_points)],
@@ -395,20 +395,20 @@ data = {
     'crew_availability': [random.choice(['Available', 'Not Available']) for _ in range(num_data_points)]
 }
 
-# Create a DataFrame from the generated data
+## Create a DataFrame from the generated data
 df = pd.DataFrame(data)
 
-# Add additional features based on feature engineering strategies
+## Add additional features based on feature engineering strategies
 
-# Save the generated dataset to a CSV file
+## Save the generated dataset to a CSV file
 df.to_csv('simulated_waste_management_data.csv', index=False)
 
-# Perform data validation and exploration
-# Example: Checking for missing values
+## Perform data validation and exploration
+## Example: Checking for missing values
 print(df.isnull().sum())
 
-# Data distribution visualization
-# Example: Histogram of waste volume
+## Data distribution visualization
+## Example: Histogram of waste volume
 df['waste_volume'].hist()
 ```
 
@@ -457,27 +457,27 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_squared_error
 
-# Load the preprocessed dataset
+## Load the preprocessed dataset
 data = pd.read_csv('preprocessed_waste_management_data.csv')
 
-# Define features and target variable
+## Define features and target variable
 X = data[['latitude', 'longitude', 'hour_of_collection', 'day_of_week', 'vehicle_capacity', 'crew_availability']]
 y = data['waste_volume']
 
-# Perform one-hot encoding for categorical variable 'crew_availability'
+## Perform one-hot encoding for categorical variable 'crew_availability'
 X = pd.get_dummies(X, columns=['crew_availability'], drop_first=True)
 
-# Split the dataset into training and testing sets
+## Split the dataset into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize and train the Random Forest model
+## Initialize and train the Random Forest model
 model = RandomForestRegressor(n_estimators=100, random_state=42)
 model.fit(X_train, y_train)
 
-# Make predictions on the test set
+## Make predictions on the test set
 y_pred = model.predict(X_test)
 
-# Evaluate the model using Mean Squared Error
+## Evaluate the model using Mean Squared Error
 mse = mean_squared_error(y_test, y_pred)
 print(f'Mean Squared Error: {mse}')
 ```
@@ -558,27 +558,27 @@ By following this step-by-step deployment plan and utilizing the recommended too
 Below is a sample Dockerfile tailored for optimizing performance for the Waste Management Optimization AI project:
 
 ```Dockerfile
-# Use a base image with Python and necessary dependencies
+## Use a base image with Python and necessary dependencies
 FROM python:3.8-slim
 
-# Set the working directory in the container
+## Set the working directory in the container
 WORKDIR /app
 
-# Copy the requirements file and install dependencies
+## Copy the requirements file and install dependencies
 COPY requirements.txt requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the project files to the working directory
+## Copy the project files to the working directory
 COPY . .
 
-# Set environmental variables for Flask
+## Set environmental variables for Flask
 ENV FLASK_APP=app.py
 ENV FLASK_RUN_HOST=0.0.0.0
 
-# Expose the port the app runs on
+## Expose the port the app runs on
 EXPOSE 5000
 
-# Command to run the application
+## Command to run the application
 CMD ["flask", "run"]
 ```
 

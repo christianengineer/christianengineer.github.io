@@ -70,7 +70,7 @@ While setting up the MLOps infrastructure, several challenges and considerations
 
 By carefully designing and implementing the MLOps infrastructure with TensorFlow, Scikit-Learn, and other relevant tools, the Ocean Cleanup Optimization application can effectively manage and operationalize machine learning workflows to support marine health and sustainability efforts.
 
-# Scalable File Structure for Ocean Cleanup Optimization Repository
+## Scalable File Structure for Ocean Cleanup Optimization Repository
 
 ```
 ocean-cleanup-optimization/
@@ -254,12 +254,12 @@ import tensorflow as tf
 from tensorflow.keras import layers, models
 import numpy as np
 
-# Mock data - replace with actual data loading and preprocessing
-# Example mock data for image classification
-train_images = np.random.rand(100, 64, 64, 3)  # 100 images of size 64x64 with 3 channels
-train_labels = np.random.choice([0, 1], size=100)  # Random binary labels for classification
+## Mock data - replace with actual data loading and preprocessing
+## Example mock data for image classification
+train_images = np.random.rand(100, 64, 64, 3)  ## 100 images of size 64x64 with 3 channels
+train_labels = np.random.choice([0, 1], size=100)  ## Random binary labels for classification
 
-# Define the CNN model architecture
+## Define the CNN model architecture
 model = models.Sequential([
     layers.Conv2D(32, (3, 3), activation='relu', input_shape=(64, 64, 3)),
     layers.MaxPooling2D((2, 2)),
@@ -268,19 +268,19 @@ model = models.Sequential([
     layers.Conv2D(64, (3, 3), activation='relu'),
     layers.Flatten(),
     layers.Dense(64, activation='relu'),
-    layers.Dense(2)  # Output layer with 2 classes
+    layers.Dense(2)  ## Output layer with 2 classes
 ])
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam',
               loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True),
               metrics=['accuracy'])
 
-# Train the model using mock data
+## Train the model using mock data
 model.fit(train_images, train_labels, epochs=10)
 
-# Save the trained model
-model.save('models/training/cnn_model')  # Save the trained model to the specified path
+## Save the trained model
+model.save('models/training/cnn_model')  ## Save the trained model to the specified path
 ```
 
 #### File Path: `src/model_training/train_cnn.py`
@@ -297,29 +297,29 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
-# Mock data - replace with actual data loading and preprocessing
-# Example mock data for marine health classification
-features = np.random.rand(100, 10)  # 100 samples with 10 features
-labels = np.random.choice([0, 1], size=100)  # Random binary labels for classification
+## Mock data - replace with actual data loading and preprocessing
+## Example mock data for marine health classification
+features = np.random.rand(100, 10)  ## 100 samples with 10 features
+labels = np.random.choice([0, 1], size=100)  ## Random binary labels for classification
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(features, labels, test_size=0.2, random_state=42)
 
-# Initialize the Random Forest Classifier
+## Initialize the Random Forest Classifier
 clf = RandomForestClassifier(n_estimators=100, random_state=42)
 
-# Train the classifier
+## Train the classifier
 clf.fit(X_train, y_train)
 
-# Make predictions
+## Make predictions
 y_pred = clf.predict(X_test)
 
-# Evaluate the model
+## Evaluate the model
 accuracy = accuracy_score(y_test, y_pred)
 print(f"Test set accuracy: {accuracy:.2f}")
 
-# Save the trained model - Not applicable for scikit-learn models
-# Scikit-Learn models can be serialized using joblib or pickle if needed
+## Save the trained model - Not applicable for scikit-learn models
+## Scikit-Learn models can be serialized using joblib or pickle if needed
 ```
 
 #### File Path: `src/model_training/train_random_forest.py`

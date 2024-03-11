@@ -304,26 +304,26 @@ def train_complex_algorithm(X, y):
     - trained_model: Trained machine learning model
     - accuracy: Accuracy of the trained model
     """
-    # Split the mock data into training and testing sets
+    ## Split the mock data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Instantiate and train the complex machine learning algorithm (RandomForestClassifier in this example)
+    ## Instantiate and train the complex machine learning algorithm (RandomForestClassifier in this example)
     model = RandomForestClassifier(n_estimators=100, random_state=42)
     model.fit(X_train, y_train)
 
-    # Make predictions on the test set
+    ## Make predictions on the test set
     y_pred = model.predict(X_test)
 
-    # Calculate the accuracy of the trained model
+    ## Calculate the accuracy of the trained model
     accuracy = accuracy_score(y_test, y_pred)
 
     return model, accuracy
 
-# Mock data for demonstration purposes
-X_mock = np.random.rand(100, 10)  # Example mock input features
-y_mock = np.random.randint(0, 2, size=100)  # Example mock target labels
+## Mock data for demonstration purposes
+X_mock = np.random.rand(100, 10)  ## Example mock input features
+y_mock = np.random.randint(0, 2, size=100)  ## Example mock target labels
 
-# Training the complex algorithm with mock data
+## Training the complex algorithm with mock data
 trained_model, accuracy = train_complex_algorithm(X_mock, y_mock)
 print("Trained model:", trained_model)
 print("Accuracy:", accuracy)
@@ -355,10 +355,10 @@ def train_complex_deep_learning_algorithm(X, y):
     - trained_model: Trained deep learning model
     - accuracy: Accuracy of the trained model
     """
-    # Split the mock data into training and testing sets
+    ## Split the mock data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Define the complex deep learning model architecture
+    ## Define the complex deep learning model architecture
     model = Sequential([
         Dense(128, activation='relu', input_shape=(X.shape[1],)),
         Dropout(0.5),
@@ -367,22 +367,22 @@ def train_complex_deep_learning_algorithm(X, y):
         Dense(1, activation='sigmoid')
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
-    # Train the deep learning model
+    ## Train the deep learning model
     model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y_test))
 
-    # Evaluate the model on the test set
+    ## Evaluate the model on the test set
     _, accuracy = model.evaluate(X_test, y_test)
 
     return model, accuracy
 
-# Mock data for demonstration purposes
-X_mock = np.random.rand(100, 10)  # Example mock input features
-y_mock = np.random.randint(0, 2, size=100)  # Example mock target labels
+## Mock data for demonstration purposes
+X_mock = np.random.rand(100, 10)  ## Example mock input features
+y_mock = np.random.randint(0, 2, size=100)  ## Example mock target labels
 
-# Training the complex deep learning algorithm with mock data
+## Training the complex deep learning algorithm with mock data
 trained_model, accuracy = train_complex_deep_learning_algorithm(X_mock, y_mock)
 print("Trained model:", trained_model)
 print("Accuracy:", accuracy)

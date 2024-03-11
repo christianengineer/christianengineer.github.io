@@ -108,7 +108,7 @@ Implement backup and disaster recovery strategies for critical data and services
 
 By leveraging the infrastructure components and services provided by leading cloud service providers, the VisioGraph application can be built to be scalable, highly available, and capable of handling large volumes of data for dynamic data visualization and analysis.
 
-# Scalable File Structure for VisioGraph - Dynamic Data Visualization Suite Repository
+## Scalable File Structure for VisioGraph - Dynamic Data Visualization Suite Repository
 
 ```
 visiograph-dynamic-data-visualization-suite/
@@ -249,7 +249,7 @@ The `utils/` directory serves as a centralized location for housing reusable uti
 Sure, here's an example of a function for a complex machine learning algorithm using mock data. Let's consider a classification algorithm using a Random Forest Classifier from the scikit-learn library, applied to a dataset of mock customer data for predicting customer churn.
 
 ```python
-# File: AI/machine_learning/customer_churn_prediction.py
+## File: AI/machine_learning/customer_churn_prediction.py
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -257,30 +257,30 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 
 def customer_churn_prediction(mock_data_file_path):
-    # Load mock customer data
+    ## Load mock customer data
     data = pd.read_csv(mock_data_file_path)
 
-    # Preprocessing: assuming 'Churn' is the target variable and other columns are features
+    ## Preprocessing: assuming 'Churn' is the target variable and other columns are features
     X = data.drop('Churn', axis=1)
     y = data['Churn']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Instantiate the Random Forest Classifier
+    ## Instantiate the Random Forest Classifier
     clf = RandomForestClassifier(n_estimators=100, random_state=42)
 
-    # Train the model
+    ## Train the model
     clf.fit(X_train, y_train)
 
-    # Make predictions
+    ## Make predictions
     y_pred = clf.predict(X_test)
 
-    # Evaluate the model
+    ## Evaluate the model
     accuracy = accuracy_score(y_test, y_pred)
     print(f"Accuracy: {accuracy}")
 
-    return clf  # Returning the trained model for future predictions
+    return clf  ## Returning the trained model for future predictions
 ```
 
 In this example, the `customer_churn_prediction` function loads mock customer data from a CSV file specified by the `mock_data_file_path`. It then preprocesses the data, splits it into training and testing sets, trains a Random Forest Classifier, makes predictions, and evaluates the model's accuracy.
@@ -290,7 +290,7 @@ This function can be used within the VisioGraph application's machine learning m
 The file path for this function is `AI/machine_learning/customer_churn_prediction.py` within the repository's directory structure.
 
 ```python
-# File: AI/deep_learning/image_classification.py
+## File: AI/deep_learning/image_classification.py
 
 import numpy as np
 import tensorflow as tf
@@ -299,15 +299,15 @@ from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense
 from sklearn.model_selection import train_test_split
 
 def image_classification_with_deep_learning(mock_data_path):
-    # Load mock image data and labels
-    # Assuming the mock data contains images and corresponding labels
-    # Replace this with actual code to load mock image data
+    ## Load mock image data and labels
+    ## Assuming the mock data contains images and corresponding labels
+    ## Replace this with actual code to load mock image data
     X, y = load_mock_image_data(mock_data_path)
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Define the deep learning model architecture
+    ## Define the deep learning model architecture
     model = Sequential([
         Conv2D(32, (3, 3), activation='relu', input_shape=(64, 64, 3)),
         MaxPooling2D((2, 2)),
@@ -315,24 +315,24 @@ def image_classification_with_deep_learning(mock_data_path):
         MaxPooling2D((2, 2)),
         Flatten(),
         Dense(128, activation='relu'),
-        Dense(10, activation='softmax')  # Assuming 10 classes for image classification
+        Dense(10, activation='softmax')  ## Assuming 10 classes for image classification
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train, epochs=10, validation_data=(X_test, y_test))
 
-    return model  # Returning the trained deep learning model for future predictions
+    return model  ## Returning the trained deep learning model for future predictions
 
 def load_mock_image_data(mock_data_path):
-    # Replace this with actual code to load mock image data and corresponding labels
-    # Example - load and preprocess mock image data from mock_data_path
-    # Return loaded image data (X) and corresponding labels (y)
-    # This is just a placeholder and should be replaced with actual data loading code
-    X = np.random.rand(100, 64, 64, 3)  # Mock image data of shape (100, 64, 64, 3)
-    y = np.random.randint(0, 10, 100)  # Mock labels (assuming 10 classes)
+    ## Replace this with actual code to load mock image data and corresponding labels
+    ## Example - load and preprocess mock image data from mock_data_path
+    ## Return loaded image data (X) and corresponding labels (y)
+    ## This is just a placeholder and should be replaced with actual data loading code
+    X = np.random.rand(100, 64, 64, 3)  ## Mock image data of shape (100, 64, 64, 3)
+    y = np.random.randint(0, 10, 100)  ## Mock labels (assuming 10 classes)
 
     return X, y
 ```

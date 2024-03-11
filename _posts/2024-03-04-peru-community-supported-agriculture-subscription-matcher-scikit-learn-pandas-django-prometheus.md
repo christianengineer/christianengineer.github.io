@@ -225,34 +225,34 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 import joblib
 
-# Load mock data
+## Load mock data
 farmers_data = pd.read_csv('data/farmers_mock_data.csv')
 consumers_data = pd.read_csv('data/consumers_mock_data.csv')
 produce_data = pd.read_csv('data/produce_mock_data.csv')
 
-# Merge data to create training dataset
+## Merge data to create training dataset
 training_data = pd.merge(farmers_data, consumers_data, on='location')
 training_data = pd.merge(training_data, produce_data, on='produce_type')
 
-# Feature engineering and preprocessing
+## Feature engineering and preprocessing
 X = training_data[['farm_size', 'consumer_diet_preference', 'produce_availability']]
 y = training_data['match']
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Train a Random Forest classifier
+## Train a Random Forest classifier
 model = RandomForestClassifier()
 model.fit(X_train, y_train)
 
-# Make predictions
+## Make predictions
 predictions = model.predict(X_test)
 
-# Evaluate model performance
+## Evaluate model performance
 accuracy = accuracy_score(y_test, predictions)
 print(f'Model accuracy: {accuracy}')
 
-# Save the trained model
+## Save the trained model
 joblib.dump(model, 'models/matching_model.pkl')
 print('Model saved successfully')
 ```
@@ -277,34 +277,34 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 import joblib
 
-# Load mock data
+## Load mock data
 farmers_data = pd.read_csv('data/farmers_mock_data.csv')
 consumers_data = pd.read_csv('data/consumers_mock_data.csv')
 produce_data = pd.read_csv('data/produce_mock_data.csv')
 
-# Merge data to create training dataset
+## Merge data to create training dataset
 training_data = pd.merge(farmers_data, consumers_data, on='location')
 training_data = pd.merge(training_data, produce_data, on='produce_type')
 
-# Feature engineering and preprocessing
+## Feature engineering and preprocessing
 X = training_data[['farm_size', 'consumer_diet_preference', 'produce_availability']]
 y = training_data['match']
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Train a Gradient Boosting classifier
+## Train a Gradient Boosting classifier
 model = GradientBoostingClassifier(n_estimators=100, learning_rate=0.1, max_depth=3)
 model.fit(X_train, y_train)
 
-# Make predictions
+## Make predictions
 predictions = model.predict(X_test)
 
-# Evaluate model performance
+## Evaluate model performance
 accuracy = accuracy_score(y_test, predictions)
 print(f'Model accuracy: {accuracy}')
 
-# Save the trained model
+## Save the trained model
 joblib.dump(model, 'models/complex_matching_model.pkl')
 print('Complex model saved successfully')
 ```

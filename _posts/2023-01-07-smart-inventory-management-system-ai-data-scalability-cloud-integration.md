@@ -5,7 +5,7 @@ permalink: posts/smart-inventory-management-system-ai-data-scalability-cloud-int
 layout: article
 ---
 
-# Smart Inventory Management System
+## Smart Inventory Management System
 
 ## Description
 
@@ -59,7 +59,7 @@ Markdown format may not be the best choice for visualizing a file hierarchy in l
 ```
 Smart_Inventory_Management_System/
 |
-├── client/      # Client-side React application
+├── client/      ## Client-side React application
 │   ├── public/
 │   │    ├── index.html
 │   │    ├── favicon.ico
@@ -77,7 +77,7 @@ Smart_Inventory_Management_System/
 │   ├── package.json
 │   └── ...
 │
-├── server/     # Server-side Express application
+├── server/     ## Server-side Express application
 │   ├── routes/
 │   │    ├── inventory.js
 │   │    ├── orders.js
@@ -88,15 +88,15 @@ Smart_Inventory_Management_System/
 │   │    ├── Order.js
 │   │    ├── Sales.js
 │   │    └── User.js
-│   ├── server.js  # Express server
+│   ├── server.js  ## Express server
 │   ├── package.json
 │   └── ...
 │
-├── database/   # Database related files
+├── database/   ## Database related files
 │   ├── dbconnection.js
 │   └── ...
 │
-├── test/       # Automated tests
+├── test/       ## Automated tests
 │   ├── client/
 │   │    ├── App.test.js
 │   │    └── ...
@@ -107,11 +107,11 @@ Smart_Inventory_Management_System/
 │   │    └── analytics.test.js
 │   └── ...
 │
-├── .env        # Environment variables
-├── .gitignore  # List of files to ignore
-├── README.md   # Documentation for the project
+├── .env        ## Environment variables
+├── .gitignore  ## List of files to ignore
+├── README.md   ## Documentation for the project
 |
-└── package.json  # Lists dependencies and scripts of this project
+└── package.json  ## Lists dependencies and scripts of this project
 ```
 
 Each directory is organized in such a way as to group related files, ensuring efficient navigation and scalability as the system requirements grow.

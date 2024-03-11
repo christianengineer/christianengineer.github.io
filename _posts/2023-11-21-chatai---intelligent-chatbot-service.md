@@ -5,7 +5,7 @@ permalink: posts/chatai---intelligent-chatbot-service
 layout: article
 ---
 
-# AI ChatAI - Intelligent Chatbot Service Repository
+## AI ChatAI - Intelligent Chatbot Service Repository
 
 ## Objectives
 
@@ -220,25 +220,25 @@ import numpy as np
 import tensorflow as tf
 
 def train_intent_classification_model(data_path):
-    # Load mock training data
+    ## Load mock training data
     training_data = np.load(data_path)
 
-    # Define the model architecture
+    ## Define the model architecture
     model = tf.keras.Sequential([
         tf.keras.layers.Dense(128, input_shape=(input_dim,), activation='relu'),
         tf.keras.layers.Dense(64, activation='relu'),
         tf.keras.layers.Dense(num_classes, activation='softmax')
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam',
                   loss='sparse_categorical_crossentropy',
                   metrics=['accuracy'])
 
-    # Train the model
+    ## Train the model
     model.fit(training_data, epochs=10, batch_size=32, validation_split=0.2)
 
-    # Save the trained model
+    ## Save the trained model
     model.save('intent_classifier_model')
 ```
 
@@ -262,24 +262,24 @@ import numpy as np
 import tensorflow as tf
 
 def train_response_generation_model(data_path):
-    # Load mock training data
+    ## Load mock training data
     training_data = np.load(data_path)
 
-    # Define the model architecture (using LSTM for sequence generation)
+    ## Define the model architecture (using LSTM for sequence generation)
     model = tf.keras.Sequential([
         tf.keras.layers.Embedding(input_dim=vocab_size, output_dim=embed_dim, input_length=max_seq_length),
         tf.keras.layers.LSTM(256),
         tf.keras.layers.Dense(vocab_size, activation='softmax')
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam',
                   loss='sparse_categorical_crossentropy')
 
-    # Train the model
+    ## Train the model
     model.fit(training_data, epochs=10, batch_size=64, validation_split=0.2)
 
-    # Save the trained model
+    ## Save the trained model
     model.save('response_generation_model')
 ```
 

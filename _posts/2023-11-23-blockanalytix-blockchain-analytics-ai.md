@@ -95,30 +95,30 @@ To ensure a well-organized and scalable file structure for the BlockAnalytix Blo
 ```plaintext
 blockanalytix_blockchain_analytics_ai/
 ├── data_processing/
-│   ├── ingestors/           # Code for fetching and ingesting blockchain data
-│   ├── preprocessors/       # Data preprocessing and cleaning scripts
-│   └── feature_engineering/ # Scripts for feature engineering and data transformation
+│   ├── ingestors/           ## Code for fetching and ingesting blockchain data
+│   ├── preprocessors/       ## Data preprocessing and cleaning scripts
+│   └── feature_engineering/ ## Scripts for feature engineering and data transformation
 ├── machine_learning/
-│   ├── models/              # Trained machine learning and deep learning models
-│   ├── training/            # Scripts for training machine learning models
-│   └── inference/           # Inference scripts for applying models to new data
-├── data_storage/             # Configuration and scripts for storing and retrieving processed data
+│   ├── models/              ## Trained machine learning and deep learning models
+│   ├── training/            ## Scripts for training machine learning models
+│   └── inference/           ## Inference scripts for applying models to new data
+├── data_storage/             ## Configuration and scripts for storing and retrieving processed data
 ├── visualization/
-│   ├── dashboards/          # Code for interactive visualization dashboards
-│   └── reports/             # Templates and scripts for generating analysis reports
+│   ├── dashboards/          ## Code for interactive visualization dashboards
+│   └── reports/             ## Templates and scripts for generating analysis reports
 ├── app/
-│   ├── api/                 # RESTful API for exposing AI-driven analytics
-│   ├── web/                 # Web interface for interacting with the analytics platform
-│   └── services/            # Backend services for supporting the application
+│   ├── api/                 ## RESTful API for exposing AI-driven analytics
+│   ├── web/                 ## Web interface for interacting with the analytics platform
+│   └── services/            ## Backend services for supporting the application
 ├── infrastructure/
-│   ├── deployment/          # Deployment configurations (e.g., Dockerfiles, Kubernetes manifests)
-│   ├── cloud/               # Cloud infrastructure configuration (IaC scripts, cloud-specific configs)
-│   └── monitoring/          # Scripts and configurations for infrastructure monitoring
-├── tests/                    # Test suites for different components of the AI application
-├── docs/                     # Documentation for the repository
-├── requirements.txt          # Python dependencies for the project
-├── LICENSE                   # License information for the repository
-└── README.md                 # Project overview, setup instructions, and usage guide
+│   ├── deployment/          ## Deployment configurations (e.g., Dockerfiles, Kubernetes manifests)
+│   ├── cloud/               ## Cloud infrastructure configuration (IaC scripts, cloud-specific configs)
+│   └── monitoring/          ## Scripts and configurations for infrastructure monitoring
+├── tests/                    ## Test suites for different components of the AI application
+├── docs/                     ## Documentation for the repository
+├── requirements.txt          ## Python dependencies for the project
+├── LICENSE                   ## License information for the repository
+└── README.md                 ## Project overview, setup instructions, and usage guide
 ```
 
 #### Explanation of the File Structure
@@ -152,11 +152,11 @@ The `models/` directory within the BlockAnalytix Blockchain Analytics AI reposit
 ```plaintext
 machine_learning/
 └── models/
-    ├── preprocessing/             # Scripts for data preprocessing and feature engineering
-    ├── training/                  # Scripts and notebooks for model training
-    ├── evaluation/                # Scripts for model evaluation and performance metrics
-    ├── saved_models/              # Saved trained model artifacts and weights
-    └── deployment/                # Files and configurations for deploying models
+    ├── preprocessing/             ## Scripts for data preprocessing and feature engineering
+    ├── training/                  ## Scripts and notebooks for model training
+    ├── evaluation/                ## Scripts for model evaluation and performance metrics
+    ├── saved_models/              ## Saved trained model artifacts and weights
+    └── deployment/                ## Files and configurations for deploying models
 ```
 
 #### Explanation of `models/` Directory Contents:
@@ -178,9 +178,9 @@ The `deployment/` directory within the BlockAnalytix Blockchain Analytics AI rep
 ```plaintext
 infrastructure/
 └── deployment/
-    ├── machine_learning/          # Deployment configurations and files for machine learning models
-    ├── cloud_infrastructure/      # Infrastructure as Code (IaC) configurations for cloud deployment
-    └── monitoring/                # Scripts and configurations for infrastructure monitoring
+    ├── machine_learning/          ## Deployment configurations and files for machine learning models
+    ├── cloud_infrastructure/      ## Infrastructure as Code (IaC) configurations for cloud deployment
+    └── monitoring/                ## Scripts and configurations for infrastructure monitoring
 ```
 
 #### Explanation of the `deployment/` Directory Contents:
@@ -204,22 +204,22 @@ from tensorflow.keras.layers import Dense, Dropout
 from tensorflow.keras.optimizers import Adam
 
 def train_anomaly_detection_model(data_file_path):
-    # Load mock blockchain transaction data from a CSV file
+    ## Load mock blockchain transaction data from a CSV file
     blockchain_data = pd.read_csv(data_file_path)
 
-    # Preprocessing: Split the data into features and target
-    X = blockchain_data.drop('anomaly_label', axis=1)  # Assuming 'anomaly_label' is the target
+    ## Preprocessing: Split the data into features and target
+    X = blockchain_data.drop('anomaly_label', axis=1)  ## Assuming 'anomaly_label' is the target
     y = blockchain_data['anomaly_label']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Feature scaling
+    ## Feature scaling
     scaler = StandardScaler()
     X_train = scaler.fit_transform(X_train)
     X_test = scaler.transform(X_test)
 
-    # Define the deep learning model architecture
+    ## Define the deep learning model architecture
     model = Sequential([
         Dense(64, activation='relu', input_shape=(X_train.shape[1],)),
         Dropout(0.5),
@@ -228,10 +228,10 @@ def train_anomaly_detection_model(data_file_path):
         Dense(1, activation='sigmoid')
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer=Adam(learning_rate=0.001), loss='binary_crossentropy', metrics=['accuracy'])
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train, epochs=50, batch_size=32, validation_data=(X_test, y_test))
 
     return model
@@ -258,22 +258,22 @@ from tensorflow.keras.models import Model
 from tensorflow.keras.layers import Input, Dense
 
 def train_transaction_clustering_model(data_file_path):
-    # Load mock blockchain transaction data from a CSV file
+    ## Load mock blockchain transaction data from a CSV file
     blockchain_data = pd.read_csv(data_file_path)
 
-    # Preprocessing: Split the data into features and target (unsupervised learning)
-    X = blockchain_data.drop('transaction_id', axis=1)  # Assuming 'transaction_id' is not relevant for clustering
-    y = blockchain_data['transaction_id']  # Assuming the IDs are used for tracking but not for clustering
+    ## Preprocessing: Split the data into features and target (unsupervised learning)
+    X = blockchain_data.drop('transaction_id', axis=1)  ## Assuming 'transaction_id' is not relevant for clustering
+    y = blockchain_data['transaction_id']  ## Assuming the IDs are used for tracking but not for clustering
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, _, _ = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Feature scaling
+    ## Feature scaling
     scaler = StandardScaler()
     X_train = scaler.fit_transform(X_train)
     X_test = scaler.transform(X_test)
 
-    # Define the autoencoder architecture for transaction clustering
+    ## Define the autoencoder architecture for transaction clustering
     input_dim = X_train.shape[1]
     encoding_dim = 32
 
@@ -285,7 +285,7 @@ def train_transaction_clustering_model(data_file_path):
 
     autoencoder.compile(optimizer='adam', loss='mean_squared_error')
 
-    # Train the autoencoder for transaction clustering
+    ## Train the autoencoder for transaction clustering
     autoencoder.fit(X_train, X_train, epochs=50, batch_size=64, shuffle=True, validation_data=(X_test, X_test))
 
     return autoencoder

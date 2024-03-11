@@ -62,29 +62,29 @@ By establishing a robust MLOps infrastructure with these components, the AI Peru
 Peru_Agriculture_Advisory_SMS_Service/
 |_ app/
 |   |_ src/
-|   |   |_ main.py          # Main application logic
-|   |   |_ data_processing/  # Module for data processing tasks
-|   |   |   |_ preprocess.py # Data preprocessing functions
+|   |   |_ main.py          ## Main application logic
+|   |   |_ data_processing/  ## Module for data processing tasks
+|   |   |   |_ preprocess.py ## Data preprocessing functions
 |   |   |
-|   |   |_ machine_learning/ # Module for Machine Learning models
-|   |   |   |_ models.py     # Scikit-Learn models for advice, prices, weather
+|   |   |_ machine_learning/ ## Module for Machine Learning models
+|   |   |   |_ models.py     ## Scikit-Learn models for advice, prices, weather
 |   |   |
-|   |   |_ communication/    # Module for Twilio API integration
-|   |       |_ twilio_api.py # Functions for sending/receiving SMS
+|   |   |_ communication/    ## Module for Twilio API integration
+|   |       |_ twilio_api.py ## Functions for sending/receiving SMS
 |   |
 |_ config/
-|   |_ config.yaml           # Configuration file for API keys, settings
+|   |_ config.yaml           ## Configuration file for API keys, settings
 |
 |_ data/
-|   |_ raw_data/             # Raw data files
-|   |_ processed_data/       # Processed data files
+|   |_ raw_data/             ## Raw data files
+|   |_ processed_data/       ## Processed data files
 |
 |_ models/
-|   |_ trained_models/       # Saved Machine Learning models
+|   |_ trained_models/       ## Saved Machine Learning models
 |
-|_ Dockerfile               # Dockerfile for containerization
-|_ requirements.txt         # Python libraries dependencies
-|_ README.md                # Project documentation
+|_ Dockerfile               ## Dockerfile for containerization
+|_ requirements.txt         ## Python libraries dependencies
+|_ README.md                ## Project documentation
 ```
 
 In this scalable file structure:
@@ -103,14 +103,14 @@ This file structure facilitates modularity, maintainability, and scalability of 
 ```
 models/
 |_ trained_models/
-|   |_ crop_management_model.pkl   # Trained model for crop management advice
-|   |_ price_prediction_model.pkl   # Trained model for market price prediction
-|   |_ weather_analysis_model.pkl   # Trained model for weather analysis
+|   |_ crop_management_model.pkl   ## Trained model for crop management advice
+|   |_ price_prediction_model.pkl   ## Trained model for market price prediction
+|   |_ weather_analysis_model.pkl   ## Trained model for weather analysis
 |
 |_ model_evaluation/
-|   |_ crop_management_metrics.csv   # Evaluation metrics for crop management model
-|   |_ price_prediction_metrics.csv   # Evaluation metrics for price prediction model
-|   |_ weather_analysis_metrics.csv   # Evaluation metrics for weather analysis model
+|   |_ crop_management_metrics.csv   ## Evaluation metrics for crop management model
+|   |_ price_prediction_metrics.csv   ## Evaluation metrics for price prediction model
+|   |_ weather_analysis_metrics.csv   ## Evaluation metrics for weather analysis model
 ```
 
 In the `models/` directory:
@@ -130,14 +130,14 @@ Having a structured `models/` directory allows for easy access, storage, and ret
 ```
 deployment/
 |_ scripts/
-|   |_ deploy.sh                 # Deployment script for deploying the application
-|   |_ start.sh                  # Script to start the application
-|   |_ stop.sh                   # Script to stop the application
-|   |_ monitor.sh                # Script to monitor application performance
+|   |_ deploy.sh                 ## Deployment script for deploying the application
+|   |_ start.sh                  ## Script to start the application
+|   |_ stop.sh                   ## Script to stop the application
+|   |_ monitor.sh                ## Script to monitor application performance
 |
-|_ docker-compose.yml           # Docker Compose file for defining services
-|_ env_vars.env                 # Environment variables file for storing sensitive data
-|_ README.md                    # Deployment instructions and guidelines
+|_ docker-compose.yml           ## Docker Compose file for defining services
+|_ env_vars.env                 ## Environment variables file for storing sensitive data
+|_ README.md                    ## Deployment instructions and guidelines
 ```
 
 In the `deployment/` directory:
@@ -157,37 +157,37 @@ This organized `deployment/` directory streamlines the deployment process, impro
 ### File: `train_model.py` (File Path: `app/src/train_model.py`)
 
 ```python
-# Import necessary libraries
+## Import necessary libraries
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_squared_error
 import joblib
 
-# Load mock data (replace with actual data sources)
+## Load mock data (replace with actual data sources)
 data_path = '../data/mock_data.csv'
 data = pd.read_csv(data_path)
 
-# Data preprocessing
-# (Add data preprocessing steps using Pandas)
+## Data preprocessing
+## (Add data preprocessing steps using Pandas)
 
-# Split data into features and target
+## Split data into features and target
 X = data.drop('target_column', axis=1)
 y = data['target_column']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Train a RandomForestRegressor model
+## Train a RandomForestRegressor model
 model = RandomForestRegressor()
 model.fit(X_train, y_train)
 
-# Evaluate the model
+## Evaluate the model
 predictions = model.predict(X_test)
 mse = mean_squared_error(y_test, predictions)
 print(f'Mean Squared Error: {mse}')
 
-# Save the trained model
+## Save the trained model
 model_path = '../models/trained_models/price_prediction_model.pkl'
 joblib.dump(model, model_path)
 
@@ -206,37 +206,37 @@ By customizing this script and replacing the mock data with actual agricultural,
 ### File: `complex_algorithm.py` (File Path: `app/src/complex_algorithm.py`)
 
 ```python
-# Import necessary libraries
+## Import necessary libraries
 import pandas as pd
 from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 import joblib
 
-# Load mock data (replace with actual data sources)
+## Load mock data (replace with actual data sources)
 data_path = '../data/mock_data.csv'
 data = pd.read_csv(data_path)
 
-# Data preprocessing
-# (Add data preprocessing steps using Pandas)
+## Data preprocessing
+## (Add data preprocessing steps using Pandas)
 
-# Assume the target variable is 'label' for classification
+## Assume the target variable is 'label' for classification
 X = data.drop('label', axis=1)
 y = data['label']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Train a GradientBoostingClassifier model
+## Train a GradientBoostingClassifier model
 model = GradientBoostingClassifier()
 model.fit(X_train, y_train)
 
-# Evaluate the model
+## Evaluate the model
 predictions = model.predict(X_test)
 accuracy = accuracy_score(y_test, predictions)
 print(f'Accuracy: {accuracy}')
 
-# Save the trained model
+## Save the trained model
 model_path = '../models/trained_models/complex_algorithm_model.pkl'
 joblib.dump(model, model_path)
 

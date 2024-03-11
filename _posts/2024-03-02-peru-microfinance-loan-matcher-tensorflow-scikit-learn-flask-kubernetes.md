@@ -5,7 +5,7 @@ permalink: posts/peru-microfinance-loan-matcher-tensorflow-scikit-learn-flask-ku
 layout: article
 ---
 
-# AI Peru Microfinance Loan Matcher Project Overview
+## AI Peru Microfinance Loan Matcher Project Overview
 
 ## Objectives:
 - Match low-income families with suitable microfinance loan opportunities based on their financial needs and capacity.
@@ -44,7 +44,7 @@ layout: article
 
 By leveraging these libraries and design strategies, the AI Peru Microfinance Loan Matcher project aims to efficiently match low-income families with microfinance loan opportunities, empowering them to improve their financial situations through entrepreneurship.
 
-# MLOps Infrastructure for AI Peru Microfinance Loan Matcher
+## MLOps Infrastructure for AI Peru Microfinance Loan Matcher
 
 ## Components of MLOps Infrastructure:
 
@@ -81,7 +81,7 @@ By leveraging these libraries and design strategies, the AI Peru Microfinance Lo
 
 By implementing a robust MLOps infrastructure tailored to the AI Peru Microfinance Loan Matcher application, the project can effectively match low-income families with microfinance loan opportunities, empowering them to pursue entrepreneurial endeavors and improve their financial well-being.
 
-# Scalable File Structure for AI Peru Microfinance Loan Matcher Project
+## Scalable File Structure for AI Peru Microfinance Loan Matcher Project
 
 ```
 Peru-Microfinance-Loan-Matcher/
@@ -142,7 +142,7 @@ Peru-Microfinance-Loan-Matcher/
 
 This structured approach facilitates modularity, scalability, and maintainability of the AI Peru Microfinance Loan Matcher project. Each directory encapsulates specific functionalities, making it easier for developers to collaborate, iterate, and enhance the project components.
 
-# Models Directory for AI Peru Microfinance Loan Matcher Project
+## Models Directory for AI Peru Microfinance Loan Matcher Project
 
 ```
 models/
@@ -184,7 +184,7 @@ models/
 
 These files in the models directory encapsulate the functionalities related to training, evaluating, and utilizing machine learning models for the Peru Microfinance Loan Matcher application. The separation of concerns allows for easier management, updates, and reusability of the models in the project.
 
-# Deployment Directory for AI Peru Microfinance Loan Matcher Project
+## Deployment Directory for AI Peru Microfinance Loan Matcher Project
 
 ```
 deployment/
@@ -219,34 +219,34 @@ These files in the deployment directory facilitate the deployment of the AI Peru
 I will create a Python script for training a decision tree model using mock data for the Peru Microfinance Loan Matcher application. The file will be saved as `train_model.py` in the `models/` directory.
 
 ```python
-# models/train_model.py
+## models/train_model.py
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeClassifier
 from joblib import dump
 
-# Load mock data (replace with actual data loading logic)
+## Load mock data (replace with actual data loading logic)
 data = {
     'income': [2500, 3000, 2000, 1500, 3500],
     'savings': [1000, 500, 200, 300, 150],
     'loan_amount': [500, 1000, 800, 600, 1200],
-    'approved_loan': [1, 0, 1, 1, 0]  # 1: Yes, 0: No
+    'approved_loan': [1, 0, 1, 1, 0]  ## 1: Yes, 0: No
 }
 df = pd.DataFrame(data)
 
-# Prepare features and target variable
+## Prepare features and target variable
 X = df[['income', 'savings', 'loan_amount']]
 y = df['approved_loan']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Train Decision Tree model
+## Train Decision Tree model
 model = DecisionTreeClassifier()
 model.fit(X_train, y_train)
 
-# Save the trained model
+## Save the trained model
 model_path = 'model_selection/decision_tree_model.pkl'
 dump(model, model_path)
 
@@ -258,7 +258,7 @@ This script loads mock data, trains a decision tree model using Scikit-Learn, an
 I will create a Python script for training a neural network model using mock data for the Peru Microfinance Loan Matcher application. The file will be saved as `train_neural_network.py` in the `models/` directory.
 
 ```python
-# models/train_neural_network.py
+## models/train_neural_network.py
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -266,31 +266,31 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.neural_network import MLPClassifier
 from joblib import dump
 
-# Load mock data (replace with actual data loading logic)
+## Load mock data (replace with actual data loading logic)
 data = {
     'income': [2500, 3000, 2000, 1500, 3500],
     'savings': [1000, 500, 200, 300, 150],
     'loan_amount': [500, 1000, 800, 600, 1200],
-    'approved_loan': [1, 0, 1, 1, 0]  # 1: Yes, 0: No
+    'approved_loan': [1, 0, 1, 1, 0]  ## 1: Yes, 0: No
 }
 df = pd.DataFrame(data)
 
-# Prepare features and target variable
+## Prepare features and target variable
 X = df[['income', 'savings', 'loan_amount']]
 y = df['approved_loan']
 
-# Normalize features
+## Normalize features
 scaler = StandardScaler()
 X_scaled = scaler.fit_transform(X)
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.2, random_state=42)
 
-# Train Neural Network model
+## Train Neural Network model
 model = MLPClassifier(hidden_layer_sizes=(100, 50), activation='relu', max_iter=1000)
 model.fit(X_train, y_train)
 
-# Save the trained model
+## Save the trained model
 model_path = 'model_selection/neural_network_model.joblib'
 dump(model, model_path)
 
@@ -299,7 +299,7 @@ print(f"Neural Network model trained and saved at: {model_path}")
 
 This script loads mock data, preprocesses it by normalizing the features, trains a neural network model using Scikit-Learn, and saves the trained model using joblib. You can run this script to train a neural network model with mock data for the AI Peru Microfinance Loan Matcher application.
 
-# Types of Users for Peru Microfinance Loan Matcher Application
+## Types of Users for Peru Microfinance Loan Matcher Application
 
 1. **Low-Income Family**:
    - **User Story**: As a low-income family, I want to find suitable microfinance loan opportunities to start a small business and improve my financial situation.

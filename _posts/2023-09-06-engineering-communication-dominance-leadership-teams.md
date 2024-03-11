@@ -5,7 +5,7 @@ permalink: posts/engineering-communication-dominance-leadership-teams
 layout: article
 ---
 
-# Improve Your Engineering Communication: Dominance vs Leadership
+## Improve Your Engineering Communication: Dominance vs Leadership
 
 | Dominance Phrases                                                                                                               | Leadership Phrases                                                                                                                                |
 | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |

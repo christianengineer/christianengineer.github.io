@@ -5,7 +5,7 @@ permalink: posts/qualitycheck---ai-for-quality-control
 layout: article
 ---
 
-# AI QualityCheck - AI for Quality Control Repository
+## AI QualityCheck - AI for Quality Control Repository
 
 ## Objectives
 
@@ -211,22 +211,22 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
 def complex_machine_learning_algorithm(data_file_path):
-    # Load mock data from file
+    ## Load mock data from file
     data = pd.read_csv(data_file_path)
 
-    # Preprocessing mock data
+    ## Preprocessing mock data
     X = data.drop('label', axis=1)
     y = data['label']
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize and train a Random Forest Classifier
+    ## Initialize and train a Random Forest Classifier
     model = RandomForestClassifier(n_estimators=100, random_state=42)
     model.fit(X_train, y_train)
 
-    # Make predictions
+    ## Make predictions
     predictions = model.predict(X_test)
 
-    # Evaluate the model
+    ## Evaluate the model
     accuracy = accuracy_score(y_test, predictions)
 
     return model, accuracy
@@ -251,20 +251,20 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import accuracy_score
 
 def complex_deep_learning_algorithm(data_file_path):
-    # Load mock data from file
+    ## Load mock data from file
     data = pd.read_csv(data_file_path)
 
-    # Preprocessing mock data
+    ## Preprocessing mock data
     X = data.drop('label', axis=1).values
     y = data['label'].values
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Standardize the data
+    ## Standardize the data
     scaler = StandardScaler()
     X_train = scaler.fit_transform(X_train)
     X_test = scaler.transform(X_test)
 
-    # Build the deep learning model
+    ## Build the deep learning model
     model = tf.keras.models.Sequential([
         tf.keras.layers.Dense(128, activation='relu', input_shape=(X_train.shape[1],)),
         tf.keras.layers.Dense(64, activation='relu'),
@@ -275,10 +275,10 @@ def complex_deep_learning_algorithm(data_file_path):
                   loss='binary_crossentropy',
                   metrics=['accuracy'])
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y_test))
 
-    # Evaluate the model
+    ## Evaluate the model
     test_loss, test_accuracy = model.evaluate(X_test, y_test)
 
     return model, test_accuracy

@@ -232,35 +232,35 @@ from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 import re
 
-# Load the dataset
+## Load the dataset
 df = pd.read_csv('philanthropy_data.csv')
 
-# Preprocessing step: Handle missing values
+## Preprocessing step: Handle missing values
 df.dropna(subset=['program_description'], inplace=True)
 
-# Preprocessing step: Text cleaning and normalization
+## Preprocessing step: Text cleaning and normalization
 lemmatizer = WordNetLemmatizer()
 stop_words = set(stopwords.words('english'))
 
 def clean_text(text):
-    text = re.sub(r'[^a-zA-Z]', ' ', text)  # Remove special characters and numbers
-    text = text.lower().split()  # Convert text to lowercase and tokenize
-    text = [lemmatizer.lemmatize(word) for word in text if word not in stop_words]  # Lemmatization and remove stopwords
+    text = re.sub(r'[^a-zA-Z]', ' ', text)  ## Remove special characters and numbers
+    text = text.lower().split()  ## Convert text to lowercase and tokenize
+    text = [lemmatizer.lemmatize(word) for word in text if word not in stop_words]  ## Lemmatization and remove stopwords
     return ' '.join(text)
 
 df['cleaned_description'] = df['program_description'].apply(clean_text)
 
-# Preprocessing step: Encoding categorical variables
+## Preprocessing step: Encoding categorical variables
 df['region_encoded'] = pd.factorize(df['region'])[0]
 
-# Preprocessing step: Feature engineering - TF-IDF
+## Preprocessing step: Feature engineering - TF-IDF
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 tfidf = TfidfVectorizer()
 tfidf_matrix = tfidf.fit_transform(df['cleaned_description'])
 df_tfidf = pd.DataFrame(tfidf_matrix.toarray(), columns=tfidf.get_feature_names_out())
 
-# Preprocessing step: Feature scaling
+## Preprocessing step: Feature scaling
 from sklearn.preprocessing import StandardScaler
 
 scaler = StandardScaler()
@@ -268,10 +268,10 @@ scaled_features = scaler.fit_transform(df[['region_encoded', 'population_density
 
 df_scaled = pd.DataFrame(scaled_features, columns=['region_encoded_scaled', 'population_density_scaled'])
 
-# Combine preprocessed features
+## Combine preprocessed features
 final_df = pd.concat([df, df_tfidf, df_scaled], axis=1)
 
-# Save preprocessed data to a new file
+## Save preprocessed data to a new file
 final_df.to_csv('preprocessed_philanthropy_data.csv', index=False)
 ```
 
@@ -331,13 +331,13 @@ import numpy as np
 from faker import Faker
 from sklearn.model_selection import train_test_split
 
-# Initialize Faker for generating fake data
+## Initialize Faker for generating fake data
 fake = Faker()
 
-# Define the number of samples
+## Define the number of samples
 num_samples = 10000
 
-# Generate fictitious data for features (program descriptions, regions, population density, temporal data)
+## Generate fictitious data for features (program descriptions, regions, population density, temporal data)
 data = []
 for _ in range(num_samples):
     program_description = fake.text(max_nb_chars=200)
@@ -347,27 +347,27 @@ for _ in range(num_samples):
     
     data.append([program_description, region, population_density, initiation_year])
 
-# Create a DataFrame from the generated data
+## Create a DataFrame from the generated data
 df = pd.DataFrame(data, columns=['program_description', 'region', 'population_density', 'initiation_year'])
 
-# Feature engineering: Add synthetic features or interactions
-# For simplicity, let's consider adding a calculated feature like 'resource_access_score'
+## Feature engineering: Add synthetic features or interactions
+## For simplicity, let's consider adding a calculated feature like 'resource_access_score'
 df['resource_access_score'] = np.random.randint(1, 10, size=num_samples)
 
-# Metadata management: Include metadata columns
+## Metadata management: Include metadata columns
 df['data_source'] = 'Fictitious Data'
 df['created_by'] = 'Automated Script'
 
-# Split the dataset into training and validation sets
+## Split the dataset into training and validation sets
 X = df.drop('resource_access_score', axis=1)
 y = df['resource_access_score']
 X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Save generated dataset to CSV files
+## Save generated dataset to CSV files
 X_train.to_csv('training_data.csv', index=False)
 X_val.to_csv('validation_data.csv', index=False)
 
-# Validate data shapes
+## Validate data shapes
 print(f"Training data shape: {X_train.shape}, Validation data shape: {X_val.shape}")
 ```
 
@@ -416,28 +416,28 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_squared_error
 
-# Load preprocessed dataset
+## Load preprocessed dataset
 df = pd.read_csv('preprocessed_philanthropy_data.csv')
 
-# Define features X and target y
-X = df.drop(['program_description', 'region', 'initiation_year'], axis=1)  # Exclude non-numeric and target columns
+## Define features X and target y
+X = df.drop(['program_description', 'region', 'initiation_year'], axis=1)  ## Exclude non-numeric and target columns
 y = df['resource_access_score']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize and train the Random Forest model
+## Initialize and train the Random Forest model
 model = RandomForestRegressor()
 model.fit(X_train, y_train)
 
-# Make predictions on the test set
+## Make predictions on the test set
 y_pred = model.predict(X_test)
 
-# Evaluate model performance
+## Evaluate model performance
 mse = mean_squared_error(y_test, y_pred)
 print(f'Mean Squared Error: {mse}')
 
-# Save the trained model for future use in production
+## Save the trained model for future use in production
 import joblib
 joblib.dump(model, 'philanthropy_model.pkl')
 ```
@@ -510,29 +510,29 @@ By following this structured deployment plan and utilizing the recommended tools
 Below is a sample Dockerfile tailored for your project to encapsulate the environment and dependencies, optimized for performance and scalability:
 
 ```Dockerfile
-# Use a base image with Python and required dependencies
+## Use a base image with Python and required dependencies
 FROM python:3.8-slim
 
-# Set working directory in the container
+## Set working directory in the container
 WORKDIR /app
 
-# Copy the required files into the container
+## Copy the required files into the container
 COPY requirements.txt /app/
 COPY model.pkl /app/
 COPY app.py /app/
 COPY preprocessing.py /app/
 
-# Install project dependencies
+## Install project dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Expose the port the app runs on
+## Expose the port the app runs on
 EXPOSE 5000
 
-# Define environment variables
+## Define environment variables
 ENV PATH="/.local/bin:${PATH}"
 ENV PYTHONUNBUFFERED 1
 
-# Command to run the Flask application
+## Command to run the Flask application
 CMD ["python", "app.py"]
 ```
 

@@ -97,29 +97,29 @@ By establishing a robust MLOps infrastructure that incorporates CI/CD pipelines,
 Peru-Agrochemical-Optimization/
 │
 ├── data/
-│   ├── raw/                   # Raw data files
-│   ├── processed/             # Processed data files
-│   ├── interim/               # Intermediate data storage
-│   └── external/              # External data sources
+│   ├── raw/                   ## Raw data files
+│   ├── processed/             ## Processed data files
+│   ├── interim/               ## Intermediate data storage
+│   └── external/              ## External data sources
 │
 ├── models/
-│   ├── keras/                 # Saved Keras models
-│   └── tensorflow/            # Saved TensorFlow models
+│   ├── keras/                 ## Saved Keras models
+│   └── tensorflow/            ## Saved TensorFlow models
 │
-├── notebooks/                 # Jupyter notebooks for data exploration and modeling
+├── notebooks/                 ## Jupyter notebooks for data exploration and modeling
 │
 ├── scripts/
-│   ├── data_preprocessing.py  # Scripts for data preprocessing
-│   ├── model_training.py      # Scripts for model training
-│   └── model_evaluation.py    # Scripts for model evaluation
+│   ├── data_preprocessing.py  ## Scripts for data preprocessing
+│   ├── model_training.py      ## Scripts for model training
+│   └── model_evaluation.py    ## Scripts for model evaluation
 │
 ├── config/
-│   ├── parameters.yaml        # Configuration parameters for the model
-│   └── spark_settings.yaml    # Spark settings configuration
+│   ├── parameters.yaml        ## Configuration parameters for the model
+│   └── spark_settings.yaml    ## Spark settings configuration
 │
-├── requirements.txt           # Python dependencies for the project
-├── README.md                  # Project description and setup instructions
-├── LICENSE                    # License information
+├── requirements.txt           ## Python dependencies for the project
+├── README.md                  ## Project description and setup instructions
+├── LICENSE                    ## License information
 
 
 ## Peru Agrochemical Usage Optimization Model - Models Directory
@@ -128,16 +128,16 @@ Peru-Agrochemical-Optimization/
 models/
 │
 ├── keras/
-│   ├── model_architecture.json      # Keras model architecture in JSON format
-│   ├── model_weights.h5             # Keras model weights
-│   ├── model_training_history.log   # Log file capturing training history
-│   └── model_evaluation_results.txt # Model evaluation results
+│   ├── model_architecture.json      ## Keras model architecture in JSON format
+│   ├── model_weights.h5             ## Keras model weights
+│   ├── model_training_history.log   ## Log file capturing training history
+│   └── model_evaluation_results.txt ## Model evaluation results
 │
 └── tensorflow/
-    ├── saved_model/                 # TensorFlow SavedModel format for deployment
-    ├── model_checkpoint/             # TensorFlow model checkpoints for resuming training
-    ├── tensorboard_logs/             # TensorBoard logs for visualization
-    └── model_evaluation_metrics.txt  # Model evaluation metrics for TensorFlow model
+    ├── saved_model/                 ## TensorFlow SavedModel format for deployment
+    ├── model_checkpoint/             ## TensorFlow model checkpoints for resuming training
+    ├── tensorboard_logs/             ## TensorBoard logs for visualization
+    └── model_evaluation_metrics.txt  ## Model evaluation metrics for TensorFlow model
 ```
 
 In the `models` directory of the Peru Agrochemical Usage Optimization Model, there are subdirectories for storing the trained models developed using Keras and TensorFlow.
@@ -175,22 +175,22 @@ By organizing the trained models and related artifacts within the `models` direc
 ```
 deployment/
 │
-├── dockerfile                # Dockerfile for building the model deployment image
+├── dockerfile                ## Dockerfile for building the model deployment image
 │
-├── requirements.txt          # Python dependencies required for model deployment
+├── requirements.txt          ## Python dependencies required for model deployment
 │
 ├── app/
-│   ├── main.py                # Main Python script for model prediction and serving
-│   ├── preprocessing.py       # Script for data preprocessing before model prediction
-│   ├── postprocessing.py      # Script for post-processing model predictions
-│   └── model_utils.py         # Utility functions for model loading and inference
+│   ├── main.py                ## Main Python script for model prediction and serving
+│   ├── preprocessing.py       ## Script for data preprocessing before model prediction
+│   ├── postprocessing.py      ## Script for post-processing model predictions
+│   └── model_utils.py         ## Utility functions for model loading and inference
 │
 ├── config/
-│   ├── deployment_config.yaml # Configuration file for deployment settings
-│   └── environment_variables.sh # Environment variables for deployment
+│   ├── deployment_config.yaml ## Configuration file for deployment settings
+│   └── environment_variables.sh ## Environment variables for deployment
 │
 └── tests/
-    └── test_prediction.py     # Unit tests for model prediction functionality
+    └── test_prediction.py     ## Unit tests for model prediction functionality
 ```
 
 In the `deployment` directory of the Peru Agrochemical Usage Optimization Model, there are files and subdirectories dedicated to deploying and serving the trained models for practical application in optimizing the use of fertilizers and pesticides while balancing crop yield goals with environmental protection.
@@ -229,24 +229,24 @@ import tensorflow as tf
 from tensorflow.keras import layers, models
 import numpy as np
 
-# Create mock data for training
-X_train = np.random.rand(100, 5)  # Mock feature data with 5 input features
-y_train = np.random.rand(100, 1)   # Mock target data
+## Create mock data for training
+X_train = np.random.rand(100, 5)  ## Mock feature data with 5 input features
+y_train = np.random.rand(100, 1)   ## Mock target data
 
-# Define the TensorFlow model architecture
+## Define the TensorFlow model architecture
 model = models.Sequential([
     layers.Dense(64, activation='relu', input_shape=(5,)),
     layers.Dense(64, activation='relu'),
-    layers.Dense(1)  # Output layer for predicting agrochemical usage
+    layers.Dense(1)  ## Output layer for predicting agrochemical usage
 ])
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam', loss='mean_squared_error')
 
-# Train the model with mock data
+## Train the model with mock data
 model.fit(X_train, y_train, epochs=10, batch_size=32)
 
-# Save the trained model
+## Save the trained model
 model.save('models/tensorflow/optimized_agrochemical_model')
 
 print("Model training completed and saved.")
@@ -267,27 +267,27 @@ import tensorflow as tf
 from tensorflow.keras import layers, models
 import numpy as np
 
-# Create mock data for training
-X_train = np.random.rand(1000, 10)  # Mock feature data with 10 input features
-y_train = np.random.rand(1000, 1)   # Mock target data
+## Create mock data for training
+X_train = np.random.rand(1000, 10)  ## Mock feature data with 10 input features
+y_train = np.random.rand(1000, 1)   ## Mock target data
 
-# Define a complex neural network architecture
+## Define a complex neural network architecture
 model = models.Sequential([
     layers.Dense(128, activation='relu', input_shape=(10,)),
     layers.Dropout(0.2),
     layers.Dense(64, activation='relu'),
     layers.Dropout(0.2),
-    layers.Dense(1)  # Output layer for predicting agrochemical usage
+    layers.Dense(1)  ## Output layer for predicting agrochemical usage
 ])
 
-# Compile the model with custom optimizer and loss function
+## Compile the model with custom optimizer and loss function
 opt = tf.keras.optimizers.Adam(learning_rate=0.001)
 model.compile(optimizer=opt, loss='mean_squared_error')
 
-# Train the model with mock data
+## Train the model with mock data
 model.fit(X_train, y_train, epochs=20, batch_size=64)
 
-# Save the trained model
+## Save the trained model
 model.save('models/keras/complex_ml_model')
 
 print("Complex machine learning algorithm training completed and saved.")

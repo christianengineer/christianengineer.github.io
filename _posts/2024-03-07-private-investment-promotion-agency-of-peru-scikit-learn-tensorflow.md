@@ -5,7 +5,7 @@ permalink: posts/private-investment-promotion-agency-of-peru-scikit-learn-tensor
 layout: article
 ---
 
-# Private Investment Promotion Agency of Peru - Machine Learning Solution
+## Private Investment Promotion Agency of Peru - Machine Learning Solution
 
 ## Objectives and Benefits for Investment Analysts:
 - **Objective**: Evaluate investment projects based on economic and social impact criteria.
@@ -55,7 +55,7 @@ layout: article
 
 By following these strategies and utilizing the mentioned tools and libraries, the Private Investment Promotion Agency of Peru can successfully implement a scalable, production-ready machine learning solution to address the Investment Analysts' pain point of evaluating investment projects.
 
-# Sourcing Data Strategy for Investment Project Evaluation
+## Sourcing Data Strategy for Investment Project Evaluation
 
 ## Data Collection Tools and Methods:
 1. **Web Scraping**:
@@ -85,7 +85,7 @@ By following these strategies and utilizing the mentioned tools and libraries, t
 
 By incorporating these tools and methods within the existing technology stack, the data collection process for the project can be streamlined, ensuring that the data is readily accessible, up-to-date, and in the correct format for analysis and model training. This approach will facilitate efficient evaluation of investment projects based on economic and social impact criteria, leading to improved decision-making for Investment Analysts at the Private Investment Promotion Agency of Peru.
 
-# Feature Extraction and Engineering Strategy for Investment Project Evaluation
+## Feature Extraction and Engineering Strategy for Investment Project Evaluation
 
 ## Feature Extraction:
 1. **Economic Indicators**:
@@ -129,7 +129,7 @@ By incorporating these tools and methods within the existing technology stack, t
 
 By incorporating these feature extraction and engineering strategies, the project can enhance both the interpretability of the data and the performance of the machine learning model. The recommended variable names follow a consistent and descriptive naming convention, aiding in better understanding and analysis of the dataset. This approach will optimize the development and effectiveness of the project's objectives, ultimately improving the evaluation of investment projects for Investment Analysts at the Private Investment Promotion Agency of Peru.
 
-# Metadata Management Recommendations for Investment Project Evaluation
+## Metadata Management Recommendations for Investment Project Evaluation
 
 1. **Variable Descriptions**:
    - **Economic Indicators**:
@@ -167,7 +167,7 @@ By incorporating these feature extraction and engineering strategies, the projec
 
 By managing metadata specific to the characteristics and demands of the investment project evaluation, the Private Investment Promotion Agency of Peru can ensure that the data used for model training and analysis is well-understood, accurately represented, and aligned with the unique requirements of the project. Taking into account these insights will enhance the effectiveness and success of the machine learning solution in evaluating investment projects based on economic and social impact criteria.
 
-# Data Challenges and Preprocessing Strategies for Investment Project Evaluation
+## Data Challenges and Preprocessing Strategies for Investment Project Evaluation
 
 ## Specific Data Problems:
 1. **Missing Values**:
@@ -202,39 +202,39 @@ from sklearn.preprocessing import StandardScaler, OneHotEncoder
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 
-# Load the dataset
+## Load the dataset
 data = pd.read_csv('investment_project_data.csv')
 
-# Define features and target variable
+## Define features and target variable
 X = data.drop('target_variable', axis=1)
 y = data['target_variable']
 
-# Preprocessing steps
+## Preprocessing steps
 numeric_features = ['gdp_growth_rate', 'interest_rate', 'inflation_rate', 'employment_rate', 'poverty_rate']
 categorical_features = ['region_encoded', 'sector_encoded']
 
-# Impute missing values in numeric features with median
+## Impute missing values in numeric features with median
 numeric_transformer = Pipeline(steps=[
     ('imputer', SimpleImputer(strategy='median')),
-    ('scaler', StandardScaler())  # Standardize numeric features
+    ('scaler', StandardScaler())  ## Standardize numeric features
 ])
 
-# One-hot encode categorical features
+## One-hot encode categorical features
 categorical_transformer = Pipeline(steps=[
     ('onehot', OneHotEncoder())
 ])
 
-# Combine preprocessing steps
+## Combine preprocessing steps
 preprocessor = ColumnTransformer(
     transformers=[
         ('num', numeric_transformer, numeric_features),
         ('cat', categorical_transformer, categorical_features)
     ])
 
-# Fit preprocessor on the data
+## Fit preprocessor on the data
 X_preprocessed = preprocessor.fit_transform(X)
 
-# Check the shape of preprocessed data
+## Check the shape of preprocessed data
 print(X_preprocessed.shape)
 ```
 
@@ -247,7 +247,7 @@ In the provided code:
 
 These preprocessing steps are tailored to handle specific challenges of the investment project data such as missing values, disparate scales, and categorical variables encoding, preparing the data optimally for effective model training and analysis in evaluating investment projects for the Private Investment Promotion Agency of Peru.
 
-# Modeling Strategy for Investment Project Evaluation
+## Modeling Strategy for Investment Project Evaluation
 
 ## Recommended Modeling Strategy:
 - **Algorithm**: Gradient Boosting Classifier
@@ -300,10 +300,10 @@ import pandas as pd
 import numpy as np
 from sklearn.preprocessing import OneHotEncoder
 
-# Generate a large fictitious dataset
+## Generate a large fictitious dataset
 n_samples = 10000
 
-# Create dummy data for economic indicators
+## Create dummy data for economic indicators
 data = {
     'gdp_growth_rate': np.random.uniform(low=0, high=10, size=n_samples),
     'interest_rate': np.random.uniform(low=1, high=5, size=n_samples),
@@ -317,20 +317,20 @@ data = {
 
 df = pd.DataFrame(data)
 
-# One-hot encode categorical variables
+## One-hot encode categorical variables
 encoder = OneHotEncoder()
 encoded_categorical = encoder.fit_transform(df[['region_encoded', 'sector_encoded']]).toarray()
 encoded_df = pd.concat([df.drop(['region_encoded', 'sector_encoded'], axis=1), pd.DataFrame(encoded_categorical)], axis=1)
 
-# Add noise to simulate real-world variability
+## Add noise to simulate real-world variability
 for col in encoded_df.columns:
     if encoded_df[col].dtype != 'object':
         encoded_df[col] += np.random.normal(0, 1, n_samples)
 
-# Save dataset to CSV
+## Save dataset to CSV
 encoded_df.to_csv('fictional_investment_data.csv', index=False)
 
-# Validate dataset generation
+## Validate dataset generation
 print("Dataset created and saved successfully.")
 ```
 
@@ -371,30 +371,30 @@ from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
-# Load preprocessed dataset
+## Load preprocessed dataset
 data = pd.read_csv('preprocessed_data.csv')
 
-# Define features and target variable
+## Define features and target variable
 X = data.drop('target_variable', axis=1)
 y = data['target_variable']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize Gradient Boosting Classifier
+## Initialize Gradient Boosting Classifier
 model = GradientBoostingClassifier(n_estimators=100, learning_rate=0.1, max_depth=3, random_state=42)
 
-# Train the model
+## Train the model
 model.fit(X_train, y_train)
 
-# Make predictions on the test set
+## Make predictions on the test set
 y_pred = model.predict(X_test)
 
-# Calculate accuracy
+## Calculate accuracy
 accuracy = accuracy_score(y_test, y_pred)
 print(f"Model Accuracy: {accuracy}")
 
-# Save the model for deployment
+## Save the model for deployment
 import joblib
 joblib.dump(model, 'investment_project_model.pkl')
 ```
@@ -407,7 +407,7 @@ In the provided Python code snippet:
 
 By following these standards for quality, readability, and maintainability in the codebase, Investment Analysts at the Private Investment Promotion Agency of Peru can ensure the development of a robust and scalable production-level machine learning model for evaluating investment projects based on economic and social impact criteria.
 
-# Deployment Plan for Machine Learning Model in Investment Project Evaluation
+## Deployment Plan for Machine Learning Model in Investment Project Evaluation
 
 ## Pre-Deployment Checks:
 1. **Model Evaluation**:
@@ -453,29 +453,29 @@ By following these standards for quality, readability, and maintainability in th
 By following this deployment plan tailored to the unique demands of the investment project evaluation, the team at the Private Investment Promotion Agency of Peru can ensure a smooth and efficient transition of the machine learning model into a production environment. Each step is designed to empower the team with the necessary tools and resources to execute the deployment independently, enabling the model to be integrated seamlessly into the live environment for enhancing investment project evaluations.
 
 ```dockerfile
-# Use a base image with Python and required libraries
+## Use a base image with Python and required libraries
 FROM python:3.8-slim
 
-# Set working directory in the container
+## Set working directory in the container
 WORKDIR /app
 
-# Copy the requirements file into the container
+## Copy the requirements file into the container
 COPY requirements.txt .
 
-# Install necessary libraries
+## Install necessary libraries
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the preprocessed data and trained model into the container
+## Copy the preprocessed data and trained model into the container
 COPY preprocessed_data.csv .
 COPY investment_project_model.pkl .
 
-# Copy the Python script for serving the model predictions
+## Copy the Python script for serving the model predictions
 COPY predict.py .
 
-# Expose the API port
+## Expose the API port
 EXPOSE 5000
 
-# Command to run the API for serving model predictions
+## Command to run the API for serving model predictions
 CMD ["python", "predict.py"]
 ```
 

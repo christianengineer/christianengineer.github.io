@@ -5,7 +5,7 @@ permalink: posts/end-to-end-ml-project-with-mlops-best-practices---an-end-to-end
 layout: article
 ---
 
-# AI End-to-End ML Project with MLOps Best Practices
+## AI End-to-End ML Project with MLOps Best Practices
 
 ## Objectives
 The objectives of the AI end-to-end ML project with MLOps best practices are:
@@ -256,29 +256,29 @@ from sklearn.metrics import accuracy_score
 import joblib
 
 def complex_machine_learning_algorithm(data_file_path):
-    # Load mock data from the file path
+    ## Load mock data from the file path
     data = pd.read_csv(data_file_path)
 
-    # Perform data preprocessing here (e.g., encoding categorical variables, feature scaling)
+    ## Perform data preprocessing here (e.g., encoding categorical variables, feature scaling)
 
-    # Split the data into features and target variable
+    ## Split the data into features and target variable
     X = data.drop('target', axis=1)
     y = data['target']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize and train a complex machine learning algorithm (e.g., Random Forest Classifier)
+    ## Initialize and train a complex machine learning algorithm (e.g., Random Forest Classifier)
     model = RandomForestClassifier(n_estimators=100, random_state=42)
     model.fit(X_train, y_train)
 
-    # Make predictions on the test set
+    ## Make predictions on the test set
     y_pred = model.predict(X_test)
 
-    # Calculate the accuracy of the model
+    ## Calculate the accuracy of the model
     accuracy = accuracy_score(y_test, y_pred)
 
-    # Save the trained model to a file
+    ## Save the trained model to a file
     model_file_path = 'trained_models/model.pkl'
     joblib.dump(model, model_file_path)
 
@@ -305,41 +305,41 @@ from tensorflow.keras.layers import Dense
 from tensorflow.keras.callbacks import ModelCheckpoint
 
 def complex_deep_learning_algorithm(data_file_path):
-    # Load mock data from the file path
+    ## Load mock data from the file path
     data = pd.read_csv(data_file_path)
 
-    # Perform data preprocessing here (e.g., encoding categorical variables, feature scaling)
+    ## Perform data preprocessing here (e.g., encoding categorical variables, feature scaling)
 
-    # Split the data into features and target variable
+    ## Split the data into features and target variable
     X = data.drop('target', axis=1)
     y = data['target']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize a deep learning model (e.g., multi-layer perceptron)
+    ## Initialize a deep learning model (e.g., multi-layer perceptron)
     model = Sequential([
         Dense(64, activation='relu', input_shape=(X_train.shape[1],)),
         Dense(64, activation='relu'),
         Dense(1, activation='sigmoid')
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam',
                   loss='binary_crossentropy',
                   metrics=['accuracy'])
 
-    # Use ModelCheckpoint to save the best model during training
+    ## Use ModelCheckpoint to save the best model during training
     checkpoint_path = "trained_models/weights.best.hdf5"
     model_checkpoint = ModelCheckpoint(checkpoint_path, save_best_only=True, monitor='val_loss', mode='min', verbose=1)
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y_test), callbacks=[model_checkpoint])
 
-    # Evaluate the model on the test set
+    ## Evaluate the model on the test set
     eval_loss, eval_accuracy = model.evaluate(X_test, y_test)
 
-    # Save the trained model architecture and weights to files
+    ## Save the trained model architecture and weights to files
     model_architecture_path = 'trained_models/model_architecture.json'
     model_weights_path = 'trained_models/model_weights.h5'
     

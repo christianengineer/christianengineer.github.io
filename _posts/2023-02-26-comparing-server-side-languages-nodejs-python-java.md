@@ -5,7 +5,7 @@ permalink: posts/comparing-server-side-languages-nodejs-python-java
 layout: article
 ---
 
-# Introduction to Server-Side Languages: Node.js, Python, and Java
+## Introduction to Server-Side Languages: Node.js, Python, and Java
 
 In the world of web development, server-side script is the unsung hero, powering every dynamic website from behind the scenes. Whether you're running a simple blog or a multinational eCommerce platform, server-side languages ensure your data gets from server to browser in a secure, efficient manner.
 
@@ -51,7 +51,7 @@ Python is a high-level, interpreted programming language renowned for its clear 
 - Versatility: Python is not purely a server-side language, but its frequent use in server-side scripting earns it a spot on this list.
 
 ```python
-# Code snippet illustrating a simple web server using Flask, a lightweight Python web framework
+## Code snippet illustrating a simple web server using Flask, a lightweight Python web framework
 from flask import Flask
 app = Flask(__name__)
 

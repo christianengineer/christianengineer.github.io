@@ -187,21 +187,21 @@ Certainly! Below is an example of a function that simulates a complex machine le
 import fasttext
 
 def language_detection_with_fasttext(data_file_path):
-    # Load the FastText language identification model
-    language_model_path = 'path_to_language_model.bin'  # Replace with actual file path
+    ## Load the FastText language identification model
+    language_model_path = 'path_to_language_model.bin'  ## Replace with actual file path
     model = fasttext.load_model(language_model_path)
 
-    # Read mock data from the file
+    ## Read mock data from the file
     with open(data_file_path, 'r', encoding='utf-8') as file:
         text_data = file.read()
 
-    # Preprocess the data (e.g., tokenization, lowercasing, etc.)
+    ## Preprocess the data (e.g., tokenization, lowercasing, etc.)
     processed_data = preprocess(text_data)
 
-    # Apply the language identification model to the processed data
+    ## Apply the language identification model to the processed data
     predicted_language = model.predict(processed_data)
 
-    return predicted_language[0][0]  # Return the predicted language
+    return predicted_language[0][0]  ## Return the predicted language
 ```
 
 In this example:
@@ -220,26 +220,26 @@ import fasttext
 import requests
 
 def language_detection_and_translation(data_file_path, target_lang):
-    # Load the FastText language identification model
-    language_model_path = 'path_to_language_model.bin'  # Replace with actual file path
+    ## Load the FastText language identification model
+    language_model_path = 'path_to_language_model.bin'  ## Replace with actual file path
     language_model = fasttext.load_model(language_model_path)
 
-    # Assuming the translation API endpoint
+    ## Assuming the translation API endpoint
     translation_api_url = 'https://translation-api.example.com/translate'
 
-    # Read mock data from the file
+    ## Read mock data from the file
     with open(data_file_path, 'r', encoding='utf-8') as file:
         text_data = file.read()
 
-    # Preprocess the data (e.g., tokenization, lowercasing, etc.)
+    ## Preprocess the data (e.g., tokenization, lowercasing, etc.)
     processed_data = preprocess(text_data)
 
-    # Use the language identification model to predict the language
+    ## Use the language identification model to predict the language
     predicted_language = language_model.predict(processed_text)
 
-    # Perform translation if the detected language is different from the target language
+    ## Perform translation if the detected language is different from the target language
     if predicted_language[0][0] != target_lang:
-        # Call the translation API
+        ## Call the translation API
         translation_payload = {
             'text': processed_text,
             'source_lang': predicted_language[0][0],
@@ -249,7 +249,7 @@ def language_detection_and_translation(data_file_path, target_lang):
         translated_text = translation_response.json()['translated_text']
         return translated_text
     else:
-        # If the detected language is the same as the target language, return the original text
+        ## If the detected language is the same as the target language, return the original text
         return text_data
 ```
 

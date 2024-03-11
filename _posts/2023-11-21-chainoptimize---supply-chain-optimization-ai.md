@@ -231,28 +231,28 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 
 def demand_forecasting_model(file_path):
-    # Load mock data for demand forecasting
+    ## Load mock data for demand forecasting
     data = pd.read_csv(file_path)
 
-    # Preprocessing mock data
-    X = data[['feature1', 'feature2', 'feature3']]  # Example input features
-    y = data['demand']  # Target variable
+    ## Preprocessing mock data
+    X = data[['feature1', 'feature2', 'feature3']]  ## Example input features
+    y = data['demand']  ## Target variable
 
-    # Splitting the data into training and testing sets
+    ## Splitting the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Instantiate and train a machine learning model (Random Forest Regressor)
+    ## Instantiate and train a machine learning model (Random Forest Regressor)
     model = RandomForestRegressor(n_estimators=100, random_state=42)
     model.fit(X_train, y_train)
 
-    # Make predictions
+    ## Make predictions
     y_pred = model.predict(X_test)
 
-    # Evaluate the model
+    ## Evaluate the model
     mse = mean_squared_error(y_test, y_pred)
     print(f"Mean Squared Error: {mse}")
 
-    # Return the trained model for inference
+    ## Return the trained model for inference
     return model
 ```
 
@@ -277,43 +277,43 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 
 def demand_forecasting_deep_learning_model(file_path):
-    # Load mock data for demand forecasting
+    ## Load mock data for demand forecasting
     data = pd.read_csv(file_path)
 
-    # Preprocessing mock data
-    X = data[['feature1', 'feature2', 'feature3']].values  # Example input features
-    y = data['demand'].values  # Target variable
+    ## Preprocessing mock data
+    X = data[['feature1', 'feature2', 'feature3']].values  ## Example input features
+    y = data['demand'].values  ## Target variable
 
-    # Data scaling
+    ## Data scaling
     scaler = StandardScaler()
     X = scaler.fit_transform(X)
 
-    # Splitting the data into training and testing sets
+    ## Splitting the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Reshape the input data for LSTM model
+    ## Reshape the input data for LSTM model
     X_train = X_train.reshape((X_train.shape[0], 1, X_train.shape[1]))
     X_test = X_test.reshape((X_test.shape[0], 1, X_test.shape[1]))
 
-    # Build the LSTM model
+    ## Build the LSTM model
     model = Sequential()
     model.add(LSTM(100, activation='relu', input_shape=(X_train.shape[1], X_train.shape[2])))
     model.add(Dense(1))
     model.compile(optimizer='adam', loss='mse')
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train, epochs=50, batch_size=32, validation_data=(X_test, y_test), shuffle=False)
 
-    # Make predictions
+    ## Make predictions
     y_pred = model.predict(X_test)
 
-    # Inverse transform the predictions and actual values to original scale if needed
+    ## Inverse transform the predictions and actual values to original scale if needed
 
-    # Evaluate the model
+    ## Evaluate the model
     mse = mean_squared_error(y_test, y_pred)
     print(f"Mean Squared Error: {mse}")
 
-    # Return the trained model for inference
+    ## Return the trained model for inference
     return model
 ```
 

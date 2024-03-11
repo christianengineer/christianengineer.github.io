@@ -79,35 +79,35 @@ By implementing the aforementioned infrastructure, the MarketMover - AI for Digi
 marketmover/
 │
 ├── backend/
-│   ├── app.py                # Main application file for backend
-│   ├── models/               # Directory for machine learning models
-│   ├── api/                  # Directory for API implementation
-│   │   ├── endpoints/        # API endpoints for serving AI insights
-│   │   └── middleware/       # Middleware for handling requests
-│   ├── services/             # Business logic and data access services
-│   └── config/               # Configuration files for the backend application
+│   ├── app.py                ## Main application file for backend
+│   ├── models/               ## Directory for machine learning models
+│   ├── api/                  ## Directory for API implementation
+│   │   ├── endpoints/        ## API endpoints for serving AI insights
+│   │   └── middleware/       ## Middleware for handling requests
+│   ├── services/             ## Business logic and data access services
+│   └── config/               ## Configuration files for the backend application
 │
 ├── frontend/
-│   ├── public/               # Static files for the frontend
-│   └── src/                  # Source files for the frontend application
-│       ├── components/       # Reusable UI components
-│       ├── views/            # Views for different pages
-│       ├── services/         # Frontend services for API interaction
-│       └── styles/           # CSS or styling files
+│   ├── public/               ## Static files for the frontend
+│   └── src/                  ## Source files for the frontend application
+│       ├── components/       ## Reusable UI components
+│       ├── views/            ## Views for different pages
+│       ├── services/         ## Frontend services for API interaction
+│       └── styles/           ## CSS or styling files
 │
 ├── data/
-│   ├── raw/                  # Raw, unprocessed data
-│   ├── processed/            # Processed data for model training
-│   └── trained_models/       # Saved trained machine learning models
+│   ├── raw/                  ## Raw, unprocessed data
+│   ├── processed/            ## Processed data for model training
+│   └── trained_models/       ## Saved trained machine learning models
 │
 ├── infrastructure/
-│   ├── deployment/           # Deployment configurations
-│   ├── docker/               # Docker configurations for containerization
-│   └── terraform/            # Infrastructure as Code (IaC) using Terraform
+│   ├── deployment/           ## Deployment configurations
+│   ├── docker/               ## Docker configurations for containerization
+│   └── terraform/            ## Infrastructure as Code (IaC) using Terraform
 │
-├── docs/                     # Project documentation
+├── docs/                     ## Project documentation
 │
-└── README.md                 # Project README with instructions and overview
+└── README.md                 ## Project README with instructions and overview
 ```
 
 The repository structure for MarketMover - AI for Digital Marketing is designed to maintain a modular, organized, and scalable codebase. The structure encompasses backend, frontend, data, infrastructure, and documentation, facilitating efficient development and collaboration. Each directory contains specific components related to its purpose, be it application code, data storage, infrastructure configurations, or project documentation. This structure supports the implementation of scalable AI capabilities for digital marketing while ensuring maintainability and extensibility of the project.
@@ -117,25 +117,25 @@ The `AI` directory within the MarketMover - AI for Digital Marketing application
 ```
 AI/
 ├── models/
-│   ├── regression_model.py        # File containing the implementation of regression model
-│   ├── classification_model.py    # File containing the implementation of classification model
-│   └── natural_language_model.py   # File containing the implementation of natural language processing model
+│   ├── regression_model.py        ## File containing the implementation of regression model
+│   ├── classification_model.py    ## File containing the implementation of classification model
+│   └── natural_language_model.py   ## File containing the implementation of natural language processing model
 │
 ├── data_processing/
-│   ├── data_preprocessing.py      # Script for data cleaning, normalization, and feature engineering
-│   └── data_augmentation.py       # Script for data augmentation and synthesis
+│   ├── data_preprocessing.py      ## Script for data cleaning, normalization, and feature engineering
+│   └── data_augmentation.py       ## Script for data augmentation and synthesis
 │
 ├── feature_engineering/
-│   ├── feature_selection.py       # File for feature selection techniques
-│   └── feature_extraction.py      # File for feature extraction methods
+│   ├── feature_selection.py       ## File for feature selection techniques
+│   └── feature_extraction.py      ## File for feature extraction methods
 │
 ├── evaluation/
-│   ├── model_evaluation.py        # Script for evaluating model performance and metrics
-│   └── A/B_testing.py             # A/B testing implementation for marketing campaign evaluation
+│   ├── model_evaluation.py        ## Script for evaluating model performance and metrics
+│   └── A/B_testing.py             ## A/B testing implementation for marketing campaign evaluation
 │
 ├── utilities/
-│   ├── data_visualization.py      # Script for visualizing data and model outputs
-│   └── anomaly_detection.py       # Utilities for detecting anomalies in marketing data
+│   ├── data_visualization.py      ## Script for visualizing data and model outputs
+│   └── anomaly_detection.py       ## Utilities for detecting anomalies in marketing data
 ```
 
 In this structure, the `models` subdirectory contains files with implementations of various machine learning models, such as regression, classification, and natural language processing models. These files would contain the code for model training, validation, and inference pipelines.
@@ -154,17 +154,17 @@ The `utils` directory within the MarketMover - AI for Digital Marketing applicat
 
 ```plaintext
 utils/
-├── data_preprocessing.py       # Module containing functions for general data preprocessing tasks
-├── data_visualization.py       # Module with utilities for visualizing data and model outputs
-├── model_evaluation.py         # Module containing functions for evaluating model performance and metrics
-├── anomaly_detection.py        # Utilities for detecting anomalies in marketing data
-├── feature_selection.py        # Module for feature selection techniques
-├── feature_extraction.py       # Module for feature extraction methods
-├── text_preprocessing.py       # Module for text data preprocessing and normalization
-├── api_utils.py                # Utilities for interacting with APIs and web services
-├── encryption.py               # Module for data encryption and decryption functions
-├── logging_utils.py            # Utilities for logging and error handling
-└── config.py                   # Module for configuration settings and parameter management
+├── data_preprocessing.py       ## Module containing functions for general data preprocessing tasks
+├── data_visualization.py       ## Module with utilities for visualizing data and model outputs
+├── model_evaluation.py         ## Module containing functions for evaluating model performance and metrics
+├── anomaly_detection.py        ## Utilities for detecting anomalies in marketing data
+├── feature_selection.py        ## Module for feature selection techniques
+├── feature_extraction.py       ## Module for feature extraction methods
+├── text_preprocessing.py       ## Module for text data preprocessing and normalization
+├── api_utils.py                ## Utilities for interacting with APIs and web services
+├── encryption.py               ## Module for data encryption and decryption functions
+├── logging_utils.py            ## Utilities for logging and error handling
+└── config.py                   ## Module for configuration settings and parameter management
 ```
 
 In this structure, the `data_preprocessing.py` module contains functions for general data preprocessing tasks such as cleaning, normalization, and transformation of input data to prepare it for consumption by machine learning and deep learning models.
@@ -195,14 +195,14 @@ First, let's create mock data files for training and testing the model. We can u
 
 ```plaintext
 data/
-├── training_data.csv    # Mock training data file
-└── testing_data.csv     # Mock testing data file
+├── training_data.csv    ## Mock training data file
+└── testing_data.csv     ## Mock testing data file
 ```
 
 Now, let's define a Python function for the deep learning model in a file named `customer_behavior_prediction_model.py`:
 
 ```python
-# customer_behavior_prediction_model.py
+## customer_behavior_prediction_model.py
 
 import pandas as pd
 import numpy as np
@@ -213,20 +213,20 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Dropout
 
 def train_customer_behavior_model(training_data_path, testing_data_path):
-    # Load mock training data
+    ## Load mock training data
     training_data = pd.read_csv(training_data_path)
 
-    # Preprocess the data
+    ## Preprocess the data
     X = training_data.drop('target_variable', axis=1)
     y = training_data['target_variable']
     X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Scale the data
+    ## Scale the data
     scaler = StandardScaler()
     X_train = scaler.fit_transform(X_train)
     X_val = scaler.transform(X_val)
 
-    # Build the deep learning model
+    ## Build the deep learning model
     model = Sequential([
         Dense(128, activation='relu', input_shape=(X_train.shape[1],)),
         Dropout(0.3),
@@ -235,13 +235,13 @@ def train_customer_behavior_model(training_data_path, testing_data_path):
         Dense(1, activation='sigmoid')
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train, validation_data=(X_val, y_val), epochs=50, batch_size=64)
 
-    # Evaluate the model on mock testing data
+    ## Evaluate the model on mock testing data
     testing_data = pd.read_csv(testing_data_path)
     X_test = testing_data.drop('target_variable', axis=1)
     y_test = testing_data['target_variable']
@@ -261,14 +261,14 @@ First, let's create mock data files for training and testing the model. The data
 
 ```plaintext
 data/
-├── product_recommendation_training_data.csv      # Mock training data file
-└── product_recommendation_testing_data.csv       # Mock testing data file
+├── product_recommendation_training_data.csv      ## Mock training data file
+└── product_recommendation_testing_data.csv       ## Mock testing data file
 ```
 
 Now, let's define a Python function for the deep learning model in a file named `product_recommendation_model.py`:
 
 ```python
-# product_recommendation_model.py
+## product_recommendation_model.py
 
 import pandas as pd
 import numpy as np
@@ -279,23 +279,23 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder, StandardScaler
 
 def build_product_recommendation_model(training_data_path, testing_data_path):
-    # Load mock training data
+    ## Load mock training data
     training_data = pd.read_csv(training_data_path)
 
-    # Preprocess the data
+    ## Preprocess the data
     X = training_data[['user_id', 'product_id']]
     y = training_data['purchase_label']
 
-    # Apply label encoding for categorical features
+    ## Apply label encoding for categorical features
     user_encoder = LabelEncoder()
     product_encoder = LabelEncoder()
     X['user_id'] = user_encoder.fit_transform(X['user_id'])
     X['product_id'] = product_encoder.fit_transform(X['product_id'])
 
-    # Split the data into training and validation sets
+    ## Split the data into training and validation sets
     X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Define the deep learning model architecture
+    ## Define the deep learning model architecture
     num_users = len(user_encoder.classes_)
     num_products = len(product_encoder.classes_)
     user_input = Input(shape=(1,))
@@ -314,13 +314,13 @@ def build_product_recommendation_model(training_data_path, testing_data_path):
 
     model = Model(inputs=[user_input, product_input], outputs=output)
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
-    # Train the model
+    ## Train the model
     model.fit([X_train['user_id'], X_train['product_id']], y_train, validation_data=([X_val['user_id'], X_val['product_id']], y_val), epochs=10, batch_size=64)
 
-    # Evaluate the model on mock testing data
+    ## Evaluate the model on mock testing data
     testing_data = pd.read_csv(testing_data_path)
     X_test = testing_data[['user_id', 'product_id']]
     y_test = testing_data['purchase_label']

@@ -5,7 +5,7 @@ permalink: posts/recommender-system-using-surprise-python-suggesting-products-to
 layout: article
 ---
 
-# AI Recommender System using Surprise (Python)
+## AI Recommender System using Surprise (Python)
 
 ## Objectives
 The objective of the AI Recommender System is to leverage machine learning techniques to suggest products to users based on their past behavior and preferences. This aims to improve user engagement, satisfaction, and ultimately drive more personalized recommendations resulting in increased user retention and revenue.
@@ -32,7 +32,7 @@ The objective of the AI Recommender System is to leverage machine learning techn
 
 By leveraging these libraries and following the mentioned system design strategies, we can build a scalable and effective AI recommender system for suggesting products to users.
 
-# Infrastructure for Recommender System using Surprise (Python)
+## Infrastructure for Recommender System using Surprise (Python)
 
 To support the efficient functioning of the AI Recommender System built using Surprise (Python) for suggesting products to users, a robust infrastructure is required. The infrastructure should be designed to handle data processing, model training, real-time recommendations, and scalability.
 
@@ -69,7 +69,7 @@ The infrastructure for the recommender system can be deployed using various opti
 
 By designing and implementing the infrastructure with the aforementioned components and deployment options, the recommender system can effectively handle the data-intensive, machine learning-driven workload for suggesting products to users, while remaining scalable and efficient.
 
-# Scalable File Structure for AI Recommender System using Surprise (Python)
+## Scalable File Structure for AI Recommender System using Surprise (Python)
 
 A well-organized and scalable file structure is essential for the development, maintenance, and collaboration on the AI Recommender System using Surprise in the repository. Below is an organized file structure that supports scalability and maintainability:
 
@@ -246,27 +246,27 @@ from surprise import SVD
 import pandas as pd
 
 def train_and_save_recommendation_model(data_file_path, model_file_path):
-    # Load mock data from a file (e.g., CSV file)
-    data = pd.read_csv(data_file_path)  # Assuming the data file is in CSV format
+    ## Load mock data from a file (e.g., CSV file)
+    data = pd.read_csv(data_file_path)  ## Assuming the data file is in CSV format
 
-    # Define the data reader and the rating scale (e.g., from 1 to 5)
+    ## Define the data reader and the rating scale (e.g., from 1 to 5)
     reader = Reader(rating_scale=(1, 5))
 
-    # Load the dataset from the pandas DataFrame and build the full trainset
+    ## Load the dataset from the pandas DataFrame and build the full trainset
     dataset = Dataset.load_from_df(data[['user_id', 'item_id', 'rating']], reader)
     trainset = dataset.build_full_trainset()
 
-    # Initialize the algorithm (e.g., SVD algorithm)
+    ## Initialize the algorithm (e.g., SVD algorithm)
     model = SVD(n_factors=100, n_epochs=20, lr_all=0.005, reg_all=0.02)
 
-    # Train the model on the full trainset
+    ## Train the model on the full trainset
     model.fit(trainset)
 
-    # Save the trained model to a file
+    ## Save the trained model to a file
     model.save(model_file_path)
     print(f'Trained model saved to: {model_file_path}')
 
-# Example usage of the function
+## Example usage of the function
 mock_data_file_path = '/path/to/mock_data.csv'
 trained_model_file_path = '/path/to/trained_model.pkl'
 train_and_save_recommendation_model(mock_data_file_path, trained_model_file_path)
@@ -289,27 +289,27 @@ from surprise import Dataset, Reader, SVD
 import os
 
 def train_and_save_model(data_file_path, model_file_path):
-    # Load mock data from a file into a pandas DataFrame
-    data = pd.read_csv(data_file_path)  # Assuming the data is in CSV format
+    ## Load mock data from a file into a pandas DataFrame
+    data = pd.read_csv(data_file_path)  ## Assuming the data is in CSV format
 
-    # Specify the rating scale
+    ## Specify the rating scale
     reader = Reader(rating_scale=(1, 5))
 
-    # Load the data into Surprise Dataset format
+    ## Load the data into Surprise Dataset format
     data = Dataset.load_from_df(data[['user_id', 'product_id', 'rating']], reader)
 
-    # Use the SVD algorithm (a complex machine learning algorithm for collaborative filtering)
+    ## Use the SVD algorithm (a complex machine learning algorithm for collaborative filtering)
     model = SVD(n_factors=100, n_epochs=20, lr_all=0.005, reg_all=0.02)
 
-    # Train the model on the dataset
+    ## Train the model on the dataset
     trainset = data.build_full_trainset()
     model.fit(trainset)
 
-    # Save the trained model to a file
+    ## Save the trained model to a file
     model.save(model_file_path)
     print(f"Trained model saved at {model_file_path}")
 
-# Example usage of the function
+## Example usage of the function
 mock_data_path = "/path/to/mock_data.csv"
 trained_model_path = "/path/to/trained_model.pkl"
 train_and_save_model(mock_data_path, trained_model_path)

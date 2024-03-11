@@ -90,42 +90,42 @@ AI-Peru-Food-Supply-Network-Collab-Platform/
 │
 ├── app/
 │   ├── api/
-│   │   ├── endpoints/              # API endpoints for data sharing and collaboration
-│   │   ├── controllers/            # Controllers for handling API requests
-│   │   ├── serializers/             # Serialization logic for data transfer
-│   └── models/                      # Define data models for the application
+│   │   ├── endpoints/              ## API endpoints for data sharing and collaboration
+│   │   ├── controllers/            ## Controllers for handling API requests
+│   │   ├── serializers/             ## Serialization logic for data transfer
+│   └── models/                      ## Define data models for the application
 │
 ├── data/
-│   ├── datasets/                    # Store datasets used for training ML models
-│   └── processed_data/              # Processed data ready for model ingestion
+│   ├── datasets/                    ## Store datasets used for training ML models
+│   └── processed_data/              ## Processed data ready for model ingestion
 │
 ├── ml/
 │   ├── models/
-│   │   ├── gpt3/                    # GPT-3 model implementation
-│   │   └── bert/                    # BERT model implementation
-│   ├── training/                    # Scripts for training ML models
-│   └── inference/                   # Inference scripts for deployed models
+│   │   ├── gpt3/                    ## GPT-3 model implementation
+│   │   └── bert/                    ## BERT model implementation
+│   ├── training/                    ## Scripts for training ML models
+│   └── inference/                   ## Inference scripts for deployed models
 │
 ├── airflow/
-│   ├── dags/                        # Airflow DAGs for ML workflow orchestration
-│   └── plugins/                     # Custom Airflow plugins for extended functionality
+│   ├── dags/                        ## Airflow DAGs for ML workflow orchestration
+│   └── plugins/                     ## Custom Airflow plugins for extended functionality
 │
 ├── docker/
-│   ├── compose/                     # Docker Compose files for local development
-│   ├──files/                        # Dockerfile for building Docker images
+│   ├── compose/                     ## Docker Compose files for local development
+│   ├──files/                        ## Dockerfile for building Docker images
 │
 ├── config/
-│   ├── settings/                    # Application settings and configuration files
-│   ├── environments/                # Environment-specific configurations
-│   └── logging/                     # Log configuration files
+│   ├── settings/                    ## Application settings and configuration files
+│   ├── environments/                ## Environment-specific configurations
+│   └── logging/                     ## Log configuration files
 │
-├── scripts/                         # Utility scripts for data processing and management
+├── scripts/                         ## Utility scripts for data processing and management
 │
-├── tests/                            # Unit tests and integration tests
+├── tests/                            ## Unit tests and integration tests
 │
-├── docs/                             # Documentation for the project
+├── docs/                             ## Documentation for the project
 │
-├── README.md                         # Project overview and setup instructions
+├── README.md                         ## Project overview and setup instructions
 ```
 
 ### Explanation of File Structure:
@@ -158,18 +158,18 @@ This structured file system organizes the application components, ML models, wor
 models/
 │
 ├── gpt3/
-│   ├── train.py                  # Script for training GPT-3 model
-│   ├── predict.py                # Script for generating text using trained GPT-3 model
-│   ├── config.json               # Configuration file for GPT-3 model parameters
-│   ├── tokenizer.py              # Tokenizer logic for GPT-3 model
-│   └── model.pth                 # Trained GPT-3 model weights
+│   ├── train.py                  ## Script for training GPT-3 model
+│   ├── predict.py                ## Script for generating text using trained GPT-3 model
+│   ├── config.json               ## Configuration file for GPT-3 model parameters
+│   ├── tokenizer.py              ## Tokenizer logic for GPT-3 model
+│   └── model.pth                 ## Trained GPT-3 model weights
 │
 ├── bert/
-│   ├── train.py                  # Script for training BERT model
-│   ├── predict.py                # Script for text classification using BERT model
-│   ├── config.json               # Configuration file for BERT model parameters
-│   ├── tokenizer.py              # Tokenizer logic for BERT model
-│   └── model.pth                 # Trained BERT model weights
+│   ├── train.py                  ## Script for training BERT model
+│   ├── predict.py                ## Script for text classification using BERT model
+│   ├── config.json               ## Configuration file for BERT model parameters
+│   ├── tokenizer.py              ## Tokenizer logic for BERT model
+│   └── model.pth                 ## Trained BERT model weights
 ```
 
 ### Explanation of Models Directory:
@@ -203,23 +203,23 @@ By organizing the models directory with structured files for GPT-3 and BERT mode
 deployment/
 │
 ├── docker/
-│   ├── Dockerfile              # Dockerfile for building the application image
-│   └── requirements.txt        # Python dependencies for the Docker image
+│   ├── Dockerfile              ## Dockerfile for building the application image
+│   └── requirements.txt        ## Python dependencies for the Docker image
 │
 ├── airflow/
-│   ├── airflow.yaml            # Airflow configuration file
-│   ├── dags/                   # Airflow DAGs for ML workflows
-│   └── plugins/                # Custom Airflow plugins
+│   ├── airflow.yaml            ## Airflow configuration file
+│   ├── dags/                   ## Airflow DAGs for ML workflows
+│   └── plugins/                ## Custom Airflow plugins
 │
 ├── scripts/
-│   ├── deploy_model.sh         # Script for deploying ML models
-│   ├── start_airflow.sh        # Script for starting Airflow services
-│   └── update_database.sh      # Script for updating the application database
+│   ├── deploy_model.sh         ## Script for deploying ML models
+│   ├── start_airflow.sh        ## Script for starting Airflow services
+│   └── update_database.sh      ## Script for updating the application database
 │
 ├── config/
-│   ├── app_config.yaml         # Application configuration file
-│   ├── airflow_config.yaml     # Airflow configuration settings
-│   └── deployment_config.yaml  # Deployment-specific configurations
+│   ├── app_config.yaml         ## Application configuration file
+│   ├── airflow_config.yaml     ## Airflow configuration settings
+│   └── deployment_config.yaml  ## Deployment-specific configurations
 ```
 
 ### Explanation of Deployment Directory:
@@ -260,19 +260,19 @@ import torch
 from transformers import GPT3Tokenizer, GPT3LMHeadModel
 from torch.utils.data import DataLoader, Dataset
 
-# Load mock data for training
+## Load mock data for training
 mock_data = [
     "Mock data entry 1",
     "Mock data entry 2",
     "Mock data entry 3",
-    # Add more mock data entries as needed
+    ## Add more mock data entries as needed
 ]
 
-# Tokenize and encode the mock data
+## Tokenize and encode the mock data
 tokenizer = GPT3Tokenizer.from_pretrained('gpt3')
 encoded_data = tokenizer(mock_data, padding=True, truncation=True, return_tensors='pt')
 
-# Define dataset class
+## Define dataset class
 class CustomDataset(Dataset):
     def __init__(self, encodings):
         self.encodings = encodings
@@ -285,10 +285,10 @@ class CustomDataset(Dataset):
 
 dataset = CustomDataset(encoded_data)
 
-# Initialize GPT-3 model
+## Initialize GPT-3 model
 model = GPT3LMHeadModel.from_pretrained('gpt3')
 
-# Model training logic
+## Model training logic
 def train_model(dataset, model):
     train_loader = DataLoader(dataset, batch_size=1, shuffle=True)
     
@@ -301,11 +301,11 @@ def train_model(dataset, model):
         loss.backward()
         optimizer.step()
 
-# Train the model
+## Train the model
 optimizer = torch.optim.AdamW(model.parameters(), lr=5e-5)
 train_model(dataset, model)
 
-# Save the trained model
+## Save the trained model
 model.save_pretrained('models/gpt3')
 ```
 
@@ -321,19 +321,19 @@ import torch
 import torch.nn as nn
 from transformers import BertTokenizer, BertModel
 
-# Load mock data for training
+## Load mock data for training
 mock_text_data = [
     "Mock text data entry 1",
     "Mock text data entry 2",
     "Mock text data entry 3",
-    # Add more mock text data entries as needed
+    ## Add more mock text data entries as needed
 ]
 
-# Tokenize and encode the mock text data
+## Tokenize and encode the mock text data
 tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
 encoded_text_data = tokenizer(mock_text_data, padding=True, truncation=True, return_tensors='pt')
 
-# Define a complex machine learning algorithm using a custom neural network architecture
+## Define a complex machine learning algorithm using a custom neural network architecture
 class CustomBERTClassifier(nn.Module):
     def __init__(self, bert_model):
         super(CustomBERTClassifier, self).__init__()
@@ -347,11 +347,11 @@ class CustomBERTClassifier(nn.Module):
         output = self.linear(self.dropout(pooled_output))
         return output
 
-# Initialize BERT model
+## Initialize BERT model
 bert_model = BertModel.from_pretrained('bert-base-uncased')
 custom_model = CustomBERTClassifier(bert_model)
 
-# Define dataset class
+## Define dataset class
 class CustomTextDataset(torch.utils.data.Dataset):
     def __init__(self, encodings):
         self.encodings = encodings
@@ -369,7 +369,7 @@ class CustomTextDataset(torch.utils.data.Dataset):
 
 text_dataset = CustomTextDataset(encoded_text_data)
 
-# Model training logic with customization
+## Model training logic with customization
 def train_model_custom(dataset, model):
     train_loader = torch.utils.data.DataLoader(dataset, batch_size=1, shuffle=True)
     
@@ -380,16 +380,16 @@ def train_model_custom(dataset, model):
         optimizer.zero_grad()
         input_ids = batch['input_ids']
         attention_mask = batch['attention_mask']
-        labels = torch.tensor([1]).unsqueeze(0)  # Mock binary label for demonstration
+        labels = torch.tensor([1]).unsqueeze(0)  ## Mock binary label for demonstration
         output = model(input_ids, attention_mask)
         loss = criterion(output, labels.float())
         loss.backward()
         optimizer.step()
 
-# Train the custom BERT classifier
+## Train the custom BERT classifier
 train_model_custom(text_dataset, custom_model)
 
-# Save the trained custom model
+## Save the trained custom model
 torch.save(custom_model.state_dict(), 'models/bert/custom_model.pth')
 ```
 

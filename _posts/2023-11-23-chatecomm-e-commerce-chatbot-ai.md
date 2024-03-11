@@ -78,17 +78,17 @@ chat_ecomm_chatbot_ai/
 │
 ├── app/
 │   ├── api/
-│   │   ├── endpoints/  # API endpoints for user management, NLP processing, and e-commerce integration
+│   │   ├── endpoints/  ## API endpoints for user management, NLP processing, and e-commerce integration
 │   │   │   ├── user.py
 │   │   │   ├── nlp.py
 │   │   │   ├── ecommerce.py
 │   │   │   └── ...
-│   │   ├── models/  # Data models for user data, product information, and chatbot interactions
+│   │   ├── models/  ## Data models for user data, product information, and chatbot interactions
 │   │   │   ├── user_model.py
 │   │   │   ├── product_model.py
 │   │   │   ├── chatbot_interaction_model.py
 │   │   │   └── ...
-│   │   ├── utils/   # Utilities for authentication, error handling, and data processing
+│   │   ├── utils/   ## Utilities for authentication, error handling, and data processing
 │   │   │   ├── auth.py
 │   │   │   ├── error_handler.py
 │   │   │   ├── data_processing.py
@@ -96,57 +96,57 @@ chat_ecomm_chatbot_ai/
 │   │   └── __init__.py
 │
 ├── services/
-│   ├── nlp_service/  # Natural Language Processing microservice
+│   ├── nlp_service/  ## Natural Language Processing microservice
 │   │   ├── nlp_engine.py
 │   │   ├── tokenizer.py
 │   │   └── ...
-│   ├── recommendation_service/  # Product recommendation microservice
+│   ├── recommendation_service/  ## Product recommendation microservice
 │   │   ├── recommendation_engine.py
 │   │   ├── product_similarity.py
 │   │   └── ...
-│   └── ecommerce_integration_service/  # E-commerce platform integration microservice
+│   └── ecommerce_integration_service/  ## E-commerce platform integration microservice
 │       ├── ecommerce_api.py
 │       ├── data_sync.py
 │       └── ...
 │
 ├── data/
-│   ├── user_data.csv  # Sample user data for testing and development
-│   ├── product_catalog.json  # Sample product catalog for testing and development
+│   ├── user_data.csv  ## Sample user data for testing and development
+│   ├── product_catalog.json  ## Sample product catalog for testing and development
 │   └── ...
 │
 ├── models/
-│   ├── nlp_models/  # Pre-trained NLP models or custom trained models
+│   ├── nlp_models/  ## Pre-trained NLP models or custom trained models
 │   │   ├── nlp_model_1.h5
 │   │   ├── nlp_model_2.h5
 │   │   └── ...
-│   ├── recommendation_models/  # Trained recommendation models
+│   ├── recommendation_models/  ## Trained recommendation models
 │   │   ├── rec_model_1.pkl
 │   │   ├── rec_model_2.pkl
 │   │   └── ...
 │   └── ...
 │
 ├── tests/
-│   ├── unit/  # Unit tests for API endpoints, services, and utility functions
+│   ├── unit/  ## Unit tests for API endpoints, services, and utility functions
 │   │   ├── test_user_api.py
 │   │   ├── test_nlp_service.py
 │   │   └── ...
-│   └── integration/  # Integration tests for end-to-end scenarios
+│   └── integration/  ## Integration tests for end-to-end scenarios
 │       ├── test_user_integration.py
 │       ├── test_chatbot_recommendation.py
 │       └── ...
 │
 ├── config/
-│   ├── settings.py  # Application settings and configurations
+│   ├── settings.py  ## Application settings and configurations
 │   └── ...
 │
 ├── scripts/
-│   ├── data_migration.py  # Scripts for database migrations and data syncing
-│   ├── model_evaluation.py  # Scripts for evaluating model performance
+│   ├── data_migration.py  ## Scripts for database migrations and data syncing
+│   ├── model_evaluation.py  ## Scripts for evaluating model performance
 │   └── ...
 │
-├── Dockerfile  # Containerization configuration for the application
-├── requirements.txt  # Python dependencies for the application
-├── README.md  # Documentation and setup instructions
+├── Dockerfile  ## Containerization configuration for the application
+├── requirements.txt  ## Python dependencies for the application
+├── README.md  ## Documentation and setup instructions
 └── ...
 ```
 
@@ -169,29 +169,29 @@ The `models/` directory in the ChatEcomm E-commerce Chatbot AI application conta
 ```
 models/
 │
-├── nlp_models/  # Directory for NLP (Natural Language Processing) models
-│   ├── nlp_model_1.h5  # Pre-trained NLP model for language understanding
-│   ├── nlp_model_2.h5  # Pre-trained NLP model for sentiment analysis
+├── nlp_models/  ## Directory for NLP (Natural Language Processing) models
+│   ├── nlp_model_1.h5  ## Pre-trained NLP model for language understanding
+│   ├── nlp_model_2.h5  ## Pre-trained NLP model for sentiment analysis
 │   └── ...
 │
-├── recommendation_models/  # Directory for product recommendation models
-│   ├── rec_model_1.pkl  # Trained recommendation model based on user behavior
-│   ├── rec_model_2.pkl  # Trained recommendation model using collaborative filtering
+├── recommendation_models/  ## Directory for product recommendation models
+│   ├── rec_model_1.pkl  ## Trained recommendation model based on user behavior
+│   ├── rec_model_2.pkl  ## Trained recommendation model using collaborative filtering
 │   └── ...
 │
-├── custom_models/  # Directory for custom AI/ML models developed specifically for the application
-│   ├── custom_model_1.pth  # Custom trained deep learning model for chatbot response generation
-│   ├── custom_model_2.pkl  # Custom trained machine learning model for user segmentation
+├── custom_models/  ## Directory for custom AI/ML models developed specifically for the application
+│   ├── custom_model_1.pth  ## Custom trained deep learning model for chatbot response generation
+│   ├── custom_model_2.pkl  ## Custom trained machine learning model for user segmentation
 │   └── ...
 │
-├── model_evaluation/  # Directory for model evaluation scripts and reports
-│   ├── evaluate_nlp_model.py  # Script for evaluating NLP model performance
-│   ├── nlp_model_evaluation_report.txt  # Evaluation report for NLP models
+├── model_evaluation/  ## Directory for model evaluation scripts and reports
+│   ├── evaluate_nlp_model.py  ## Script for evaluating NLP model performance
+│   ├── nlp_model_evaluation_report.txt  ## Evaluation report for NLP models
 │   └── ...
 │
-├── model_serialization/  # Directory for model serialization and storage
-│   ├── serialize_model.py  # Script for serializing trained models
-│   ├── deserialize_model.py  # Script for deserializing models for inference
+├── model_serialization/  ## Directory for model serialization and storage
+│   ├── serialize_model.py  ## Script for serializing trained models
+│   ├── deserialize_model.py  ## Script for deserializing models for inference
 │   └── ...
 │
 └── ...
@@ -213,21 +213,21 @@ Certainly! The `deployment/` directory in the ChatEcomm E-commerce Chatbot AI ap
 deployment/
 │
 ├── docker/
-│   ├── Dockerfile  # Configuration file for building the application Docker image
+│   ├── Dockerfile  ## Configuration file for building the application Docker image
 │   └── ...
 │
 ├── kubernetes/
-│   ├── deployment.yaml  # Kubernetes deployment configuration for the application
-│   └── service.yaml     # Kubernetes service configuration for exposing the application
+│   ├── deployment.yaml  ## Kubernetes deployment configuration for the application
+│   └── service.yaml     ## Kubernetes service configuration for exposing the application
 │
 ├── scripts/
-│   ├── deploy_production.sh  # Script for deploying the application to the production environment
-│   ├── rollback_staging.sh   # Script for rolling back the application in the staging environment
+│   ├── deploy_production.sh  ## Script for deploying the application to the production environment
+│   ├── rollback_staging.sh   ## Script for rolling back the application in the staging environment
 │   └── ...
 │
 ├── terraform/
-│   ├── main.tf         # Terraform configuration for infrastructure provisioning
-│   ├── variables.tf    # Variables definition for the Terraform configuration
+│   ├── main.tf         ## Terraform configuration for infrastructure provisioning
+│   ├── variables.tf    ## Variables definition for the Terraform configuration
 │   └── ...
 │
 └── ...
@@ -254,17 +254,17 @@ from tensorflow import keras
 from sklearn.model_selection import train_test_split
 
 def train_product_recommendation_model(data_file_path):
-    # Load mock data from the file
+    ## Load mock data from the file
     mock_data = pd.read_csv(data_file_path)
 
-    # Preprocess the data (assuming the data is preprocessed and features are extracted)
+    ## Preprocess the data (assuming the data is preprocessed and features are extracted)
     X = mock_data.drop('target_product', axis=1)
     y = mock_data['target_product']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Define and train a deep learning model for product recommendation
+    ## Define and train a deep learning model for product recommendation
     model = keras.Sequential([
         keras.layers.Dense(64, activation='relu', input_shape=(X_train.shape[1],)),
         keras.layers.Dense(32, activation='relu'),
@@ -284,7 +284,7 @@ In this example:
 
 Usage example:
 ```python
-data_file_path = 'path/to/mock_data.csv'  # Replace with the actual file path
+data_file_path = 'path/to/mock_data.csv'  ## Replace with the actual file path
 trained_model = train_product_recommendation_model(data_file_path)
 ```
 
@@ -300,27 +300,27 @@ from tensorflow import keras
 from tensorflow.keras import layers
 
 def train_deep_learning_model_for_nlp(data_file_path):
-    # Load mock data from the file
+    ## Load mock data from the file
     mock_data = pd.read_csv(data_file_path)
 
-    # Preprocess the data (assuming the data is preprocessed and features are extracted)
-    X = np.array(mock_data['text'])  # Assuming 'text' column contains input text data
-    y = np.array(mock_data['label'])  # Assuming 'label' column contains target labels
+    ## Preprocess the data (assuming the data is preprocessed and features are extracted)
+    X = np.array(mock_data['text'])  ## Assuming 'text' column contains input text data
+    y = np.array(mock_data['label'])  ## Assuming 'label' column contains target labels
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Tokenize the input text data (example using Keras Tokenizer)
-    tokenizer = keras.preprocessing.text.Tokenizer(num_words=10000)  # Assuming a vocabulary size of 10,000
+    ## Tokenize the input text data (example using Keras Tokenizer)
+    tokenizer = keras.preprocessing.text.Tokenizer(num_words=10000)  ## Assuming a vocabulary size of 10,000
     tokenizer.fit_on_texts(X_train)
     X_train = tokenizer.texts_to_sequences(X_train)
     X_test = tokenizer.texts_to_sequences(X_test)
 
-    # Padding sequences to ensure uniform length (example using Keras pad_sequences)
-    X_train = keras.preprocessing.sequence.pad_sequences(X_train, maxlen=100)  # Assuming a maximum sequence length of 100
+    ## Padding sequences to ensure uniform length (example using Keras pad_sequences)
+    X_train = keras.preprocessing.sequence.pad_sequences(X_train, maxlen=100)  ## Assuming a maximum sequence length of 100
     X_test = keras.preprocessing.sequence.pad_sequences(X_test, maxlen=100)
 
-    # Define and train a complex deep learning model for NLP or sentiment analysis
+    ## Define and train a complex deep learning model for NLP or sentiment analysis
     model = keras.Sequential([
         layers.Embedding(input_dim=10000, output_dim=100, input_length=100),
         layers.Conv1D(128, 5, activation='relu'),
@@ -342,7 +342,7 @@ In this example:
 
 Usage example:
 ```python
-data_file_path = 'path/to/mock_nlp_data.csv'  # Replace with the actual file path
+data_file_path = 'path/to/mock_nlp_data.csv'  ## Replace with the actual file path
 trained_nlp_model = train_deep_learning_model_for_nlp(data_file_path)
 ```
 

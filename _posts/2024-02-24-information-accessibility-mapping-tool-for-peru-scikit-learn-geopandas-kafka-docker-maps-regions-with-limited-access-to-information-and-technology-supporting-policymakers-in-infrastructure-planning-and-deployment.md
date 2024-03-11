@@ -228,38 +228,38 @@ I will provide a sample Python script `train_model.py` for training a machine le
 
 ### File: `train_model.py`
 ```python
-# Import necessary libraries
+## Import necessary libraries
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 import joblib
 
-# File path for mock data
+## File path for mock data
 data_path = 'data/mock_data.csv'
 
-# Load mock data
+## Load mock data
 data = pd.read_csv(data_path)
 
-# Data preprocessing and feature selection (mock implementation)
+## Data preprocessing and feature selection (mock implementation)
 selected_features = ['population_density', 'internet_access', 'infra_quality']
 X = data[selected_features]
 y = data['limited_access_label']
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize and train the model
+## Initialize and train the model
 model = RandomForestClassifier(n_estimators=100, random_state=42)
 model.fit(X_train, y_train)
 
-# Evaluate the model
+## Evaluate the model
 train_accuracy = model.score(X_train, y_train)
 test_accuracy = model.score(X_test, y_test)
 
 print(f"Training Accuracy: {train_accuracy}")
 print(f"Testing Accuracy: {test_accuracy}")
 
-# Save the trained model
+## Save the trained model
 model_output_path = 'data/model_output/model.pkl'
 joblib.dump(model, model_output_path)
 
@@ -285,40 +285,40 @@ I will provide a sample Python script `complex_model.py` for implementing a more
 
 ### File: `complex_model.py`
 ```python
-# Import necessary libraries
+## Import necessary libraries
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.metrics import accuracy_score
 import joblib
 
-# File path for mock data
+## File path for mock data
 data_path = 'data/mock_data.csv'
 
-# Load mock data
+## Load mock data
 data = pd.read_csv(data_path)
 
-# Data preprocessing and feature selection (mock implementation)
+## Data preprocessing and feature selection (mock implementation)
 selected_features = ['population_density', 'internet_access', 'infra_quality']
 X = data[selected_features]
 y = data['limited_access_label']
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize and train the model (Gradient Boosting Classifier)
+## Initialize and train the model (Gradient Boosting Classifier)
 model = GradientBoostingClassifier(n_estimators=100, learning_rate=0.1, random_state=42)
 model.fit(X_train, y_train)
 
-# Predict on the test set
+## Predict on the test set
 y_pred = model.predict(X_test)
 
-# Evaluate the model
+## Evaluate the model
 accuracy = accuracy_score(y_test, y_pred)
 
 print(f"Model Accuracy: {accuracy}")
 
-# Save the trained model
+## Save the trained model
 model_output_path = 'data/model_output/complex_model.pkl'
 joblib.dump(model, model_output_path)
 

@@ -161,29 +161,29 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 
-# Load the raw data (job listings and job seeker profiles)
+## Load the raw data (job listings and job seeker profiles)
 job_listings = pd.read_csv('job_listings.csv')
 job_seekers = pd.read_csv('job_seekers.csv')
 
-# Preprocessing step: Standardize numerical features
+## Preprocessing step: Standardize numerical features
 numeric_features = ['experience_level']
 numeric_transformer = Pipeline(steps=[
     ('scaler', StandardScaler())
 ])
 
-# Preprocessing step: One-hot encode categorical features (location)
+## Preprocessing step: One-hot encode categorical features (location)
 categorical_features = ['location']
 categorical_transformer = Pipeline(steps=[
     ('onehot', OneHotEncoder())
 ])
 
-# Preprocessing step: TF-IDF transformation for textual data (job descriptions)
+## Preprocessing step: TF-IDF transformation for textual data (job descriptions)
 text_features = ['job_description']
 text_transformer = Pipeline(steps=[
-    ('tfidf', TfidfVectorizer(max_features=1000))  # Limit features for computational efficiency
+    ('tfidf', TfidfVectorizer(max_features=1000))  ## Limit features for computational efficiency
 ])
 
-# Combine all preprocessing steps using ColumnTransformer
+## Combine all preprocessing steps using ColumnTransformer
 preprocessor = ColumnTransformer(
     transformers=[
         ('num', numeric_transformer, numeric_features),
@@ -191,10 +191,10 @@ preprocessor = ColumnTransformer(
         ('text', text_transformer, text_features)
     ])
 
-# Fit and transform the data using the preprocessor pipeline
+## Fit and transform the data using the preprocessor pipeline
 processed_data = preprocessor.fit_transform(job_listings)
 
-# Display the preprocessed data
+## Display the preprocessed data
 print(processed_data)
 ```
 
@@ -278,10 +278,10 @@ import pandas as pd
 import numpy as np
 from faker import Faker
 
-# Initialize Faker to generate fake data
+## Initialize Faker to generate fake data
 fake = Faker()
 
-# Generate a fictitious dataset with relevant features for job listings
+## Generate a fictitious dataset with relevant features for job listings
 num_samples = 1000
 
 job_listings_data = {
@@ -294,7 +294,7 @@ job_listings_data = {
 
 job_listings_df = pd.DataFrame(job_listings_data)
 
-# Generate a fictitious dataset with relevant features for job seekers
+## Generate a fictitious dataset with relevant features for job seekers
 num_samples = 500
 
 job_seeker_data = {
@@ -307,7 +307,7 @@ job_seeker_data = {
 
 job_seeker_df = pd.DataFrame(job_seeker_data)
 
-# Save the generated datasets
+## Save the generated datasets
 job_listings_df.to_csv('generated_job_listings.csv', index=False)
 job_seeker_df.to_csv('generated_job_seekers.csv', index=False)
 ```
@@ -361,29 +361,29 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.ensemble import RandomForestClassifier
 import joblib
 
-# Load preprocessed data
+## Load preprocessed data
 job_listings = pd.read_csv('preprocessed_job_listings.csv')
 job_seekers = pd.read_csv('preprocessed_job_seekers.csv')
 
-# Feature extraction using TF-IDF for job descriptions
+## Feature extraction using TF-IDF for job descriptions
 tfidf_vectorizer = TfidfVectorizer(max_features=1000)
 X_job_descriptions = tfidf_vectorizer.fit_transform(job_listings['job_description'])
 
-# Define the machine learning model pipeline
+## Define the machine learning model pipeline
 model_pipeline = Pipeline([
     ('tfidf', TfidfVectorizer(max_features=1000)),
     ('clf', RandomForestClassifier())
 ])
 
-# Fit the model on the preprocessed data
+## Fit the model on the preprocessed data
 model_pipeline.fit(job_listings['job_description'], job_listings['experience_level'])
 
-# Save the trained model for future use
+## Save the trained model for future use
 joblib.dump(model_pipeline, 'job_matching_model.pkl')
 
-# In a production environment, you can load the model using:
-# model = joblib.load('job_matching_model.pkl')
-# And make predictions using the model.predict() method
+## In a production environment, you can load the model using:
+## model = joblib.load('job_matching_model.pkl')
+## And make predictions using the model.predict() method
 ```
 
 **Code Comments:**
@@ -464,25 +464,25 @@ By implementing these conventions and best practices, the code snippet provided 
 By following this step-by-step deployment plan tailored to the specific demands of your machine learning project, utilizing the recommended tools and platforms, you can effectively deploy your model into a production environment with confidence and clarity.
 
 ```Dockerfile
-# Use an official Python runtime as a parent image
+## Use an official Python runtime as a parent image
 FROM python:3.8-slim
 
-# Set the working directory in the container
+## Set the working directory in the container
 WORKDIR /app
 
-# Copy the current directory contents into the container at /app
+## Copy the current directory contents into the container at /app
 COPY . /app
 
-# Install any needed dependencies specified in requirements.txt
+## Install any needed dependencies specified in requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Set environment variables
+## Set environment variables
 ENV PYTHONUNBUFFERED 1
 
-# Expose the port the app runs on
+## Expose the port the app runs on
 EXPOSE 5000
 
-# Define the command to run the application
+## Define the command to run the application
 CMD ["python", "app.py"]
 ```
 

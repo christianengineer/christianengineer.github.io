@@ -5,7 +5,7 @@ permalink: posts/fraud-detection-system-for-restaurant-transactions-in-peru-scik
 layout: article
 ---
 
-# Machine Learning Fraud Detection System for Restaurant Transactions in Peru
+## Machine Learning Fraud Detection System for Restaurant Transactions in Peru
 
 ## Objectives:
 - Detect fraudulent transactions in real-time for restaurant transactions in Peru.
@@ -48,7 +48,7 @@ layout: article
 - [Matplotlib](https://matplotlib.org/): Library for data visualization.
 - [Seaborn](https://seaborn.pydata.org/): Data visualization library to create attractive and informative statistical graphics.
 
-# Sourcing Data Strategy Analysis
+## Sourcing Data Strategy Analysis
 
 To efficiently collect data for the machine learning Fraud Detection System for Restaurant Transactions in Peru, we need to ensure that we cover all relevant aspects of the problem domain. Below are recommended tools and methods to streamline the data collection process and ensure that the data is readily accessible and in the correct format for analysis and model training:
 
@@ -83,7 +83,7 @@ To efficiently collect data for the machine learning Fraud Detection System for 
 
 By incorporating these tools and methods within the existing technology stack, we can streamline the data collection process, ensure data accessibility, and maintain the correct format for analysis and model training in our Fraud Detection System project efficiently.
 
-# Feature Extraction and Feature Engineering Analysis
+## Feature Extraction and Feature Engineering Analysis
 
 To optimize the development and effectiveness of the Fraud Detection System for Restaurant Transactions in Peru, a detailed analysis of feature extraction and feature engineering is crucial. These processes aim to enhance both the interpretability of the data and the performance of the machine learning model used in the project. Below are recommendations for feature extraction, engineering, and variable naming:
 
@@ -128,7 +128,7 @@ To optimize the development and effectiveness of the Fraud Detection System for 
 
 By following these recommendations for feature extraction, engineering, and variable naming, we can enhance the interpretability of the data, improve the model's performance, and optimize the Fraud Detection System project for restaurant transactions in Peru.
 
-# Data Preprocessing for Fraud Detection System in Restaurant Transactions
+## Data Preprocessing for Fraud Detection System in Restaurant Transactions
 
 ## Specific Problems with Data:
 1. **Imbalanced Data**:
@@ -178,18 +178,18 @@ from sklearn.impute import SimpleImputer
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 
-# Load the dataset
+## Load the dataset
 data = pd.read_csv('restaurant_transactions_data.csv')
 
-# Separate features (X) and target (y)
+## Separate features (X) and target (y)
 X = data.drop(columns=['fraudulent'])
 y = data['fraudulent']
 
-# Define numerical and categorical features
+## Define numerical and categorical features
 numeric_features = ['num_transactions', 'transaction_time']
 categorical_features = ['payment_method', 'transaction_location']
 
-# Preprocessing pipeline
+## Preprocessing pipeline
 numeric_transformer = Pipeline(steps=[
     ('imputer', SimpleImputer(strategy='mean')),
     ('scaler', StandardScaler())
@@ -205,18 +205,18 @@ preprocessor = ColumnTransformer(transformers=[
     ('cat', categorical_transformer, categorical_features)
 ])
 
-# Fit and transform data
+## Fit and transform data
 X_preprocessed = preprocessor.fit_transform(X)
 
-# Convert preprocessed data back to DataFrame (optional)
+## Convert preprocessed data back to DataFrame (optional)
 X_preprocessed_df = pd.DataFrame(X_preprocessed, columns=['scaled_num_transactions', 'scaled_transaction_time', 
                                                           'encoded_payment_method_1', 'encoded_payment_method_2',
                                                           'encoded_transaction_location_1', 'encoded_transaction_location_2'])
 
-# Sample code for further model training
+## Sample code for further model training
 from sklearn.ensemble import RandomForestClassifier
 
-# Initialize and train a Random Forest Classifier on preprocessed data
+## Initialize and train a Random Forest Classifier on preprocessed data
 clf = RandomForestClassifier()
 clf.fit(X_preprocessed, y)
 ```
@@ -225,7 +225,7 @@ In the provided code snippet, we first load the dataset containing restaurant tr
 
 Finally, we demonstrate how the preprocessed data can be used to train a Random Forest Classifier for fraud detection. Remember to adapt the code according to your specific dataset and project requirements before deploying it to production.
 
-# Metadata Management for Fraud Detection System in Restaurant Transactions
+## Metadata Management for Fraud Detection System in Restaurant Transactions
 
 To ensure the success of the Fraud Detection System for Restaurant Transactions in Peru, efficient metadata management is essential. Here are some insights on metadata management tailored to the unique demands and characteristics of our project:
 
@@ -257,7 +257,7 @@ To ensure the success of the Fraud Detection System for Restaurant Transactions 
 
 By incorporating these metadata management strategies tailored to the unique demands and characteristics of the Fraud Detection System for Restaurant Transactions in Peru, we can enhance data governance, model transparency, and project success effectively. This approach ensures that metadata remains organized, informative, and valuable throughout the project lifecycle.
 
-# Modeling Strategy for Fraud Detection System in Restaurant Transactions
+## Modeling Strategy for Fraud Detection System in Restaurant Transactions
 
 To address the unique challenges and data types presented by the Fraud Detection System for Restaurant Transactions in Peru, a modeling strategy tailored to the project's objectives is crucial. The most vital step within this strategy is the selection and optimization of the Anomaly Detection using Isolation Forest algorithm, designed to handle the complexities of detecting fraudulent transactions in real-time while ensuring model interpretability and efficiency.
 
@@ -363,9 +363,9 @@ import numpy as np
 
 fake = Faker()
 
-# Generate synthetic data for mock dataset
+## Generate synthetic data for mock dataset
 n_samples = 10000
-fraudulent_ratio = 0.05  # Simulating 5% fraudulent transactions
+fraudulent_ratio = 0.05  ## Simulating 5% fraudulent transactions
 
 timestamps = pd.date_range(start='2022-01-01', periods=n_samples, freq='H')
 amounts = np.random.normal(100, 50, n_samples)
@@ -428,37 +428,37 @@ This sample dataset provides a clear visual guide on how the mocked data is stru
 Certainly! Below is a sample Python script for deploying the machine learning model for the Fraud Detection System for Restaurant Transactions in production. The code is structured for immediate deployment, with detailed comments explaining key sections and following best practices for documentation:
 
 ```python
-# Import necessary libraries
+## Import necessary libraries
 import pandas as pd
 from sklearn.ensemble import IsolationForest
 from sklearn.preprocessing import StandardScaler
 from sklearn.pipeline import Pipeline
 import joblib
 
-# Load the preprocessed dataset
+## Load the preprocessed dataset
 data = pd.read_csv('preprocessed_data.csv')
 
-# Separate features (X) and target (y)
+## Separate features (X) and target (y)
 X = data.drop(columns=['fraudulent'])
 y = data['fraudulent']
 
-# Define and build the modeling pipeline
+## Define and build the modeling pipeline
 pipeline = Pipeline([
-    ('scaler', StandardScaler()),  # Standardize numerical features
-    ('model', IsolationForest(contamination=0.05))  # Initialize Isolation Forest model
+    ('scaler', StandardScaler()),  ## Standardize numerical features
+    ('model', IsolationForest(contamination=0.05))  ## Initialize Isolation Forest model
 ])
 
-# Fit the pipeline on the preprocessed data
+## Fit the pipeline on the preprocessed data
 pipeline.fit(X)
 
-# Save the trained model to a file
+## Save the trained model to a file
 joblib.dump(pipeline, 'fraud_detection_model.pkl')
 
-# Sample prediction code (for illustration purposes)
-# Load the saved model
+## Sample prediction code (for illustration purposes)
+## Load the saved model
 loaded_model = joblib.load('fraud_detection_model.pkl')
 
-# Make predictions on new data
+## Make predictions on new data
 new_data = pd.DataFrame(data={'num_transactions': [150], 'transaction_time': [10], 
                                'payment_method': ['Visa'], 'transaction_location': ['Peru']})
 prediction = loaded_model.predict(new_data)
@@ -537,27 +537,27 @@ By following this step-by-step deployment plan with the recommended tools, you c
 Below is a sample Dockerfile tailored to encapsulate the environment and dependencies for deploying the machine learning model in the Fraud Detection System for Restaurant Transactions in Peru:
 
 ```Dockerfile
-# Use a minimal base image for efficiency
+## Use a minimal base image for efficiency
 FROM python:3.8-slim
 
-# Set the working directory in the container
+## Set the working directory in the container
 WORKDIR /app
 
-# Copy the necessary files into the container
+## Copy the necessary files into the container
 COPY requirements.txt .
 COPY fraud_detection_model.pkl .
 COPY app.py .
 
-# Install required Python packages
+## Install required Python packages
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Expose the Flask API port
+## Expose the Flask API port
 EXPOSE 5000
 
-# Define environment variables
+## Define environment variables
 ENV MODEL_FILE fraud_detection_model.pkl
 
-# Command to run the Flask application for serving predictions
+## Command to run the Flask application for serving predictions
 CMD ["python", "app.py"]
 ```
 

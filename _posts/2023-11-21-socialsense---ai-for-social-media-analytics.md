@@ -286,7 +286,7 @@ By organizing the utility functions into separate subdirectories based on their 
 Sure, here's a sample function for a complex machine learning algorithm using mock data. In this example, we'll create a function for training a deep learning sentiment analysis model. We'll use the Keras library for building the model and mock data for the training process. For the purpose of this example, we'll assume the function is named `train_sentiment_analysis_model` and the file path is `ai/machine_learning/sentiment_analysis_model.py`.
 
 ```python
-# ai/machine_learning/sentiment_analysis_model.py
+## ai/machine_learning/sentiment_analysis_model.py
 
 import numpy as np
 from tensorflow.keras.models import Sequential
@@ -295,26 +295,26 @@ from tensorflow.keras.preprocessing.text import Tokenizer
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 
 def train_sentiment_analysis_model(data, labels):
-    # Tokenize and pad the input text data
+    ## Tokenize and pad the input text data
     max_words = 1000
     tokenizer = Tokenizer(num_words=max_words, oov_token='<OOV>')
     tokenizer.fit_on_texts(data)
     sequences = tokenizer.texts_to_sequences(data)
     padded_sequences = pad_sequences(sequences, maxlen=100)
 
-    # Define the neural network architecture
+    ## Define the neural network architecture
     model = Sequential()
     model.add(Embedding(max_words, 16))
     model.add(LSTM(64, dropout=0.2, recurrent_dropout=0.2))
     model.add(Dense(1, activation='sigmoid'))
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
-    # Train the model using the mock data
+    ## Train the model using the mock data
     model.fit(padded_sequences, np.array(labels), epochs=10, batch_size=32, validation_split=0.2)
 
-    # Save the trained model to a file
+    ## Save the trained model to a file
     model.save('sentiment_analysis_model.h5')
 
     return model
@@ -329,14 +329,14 @@ In this function:
 This function showcases a simplified example of a complex machine learning algorithm for sentiment analysis within the SocialSense - AI for Social Media Analytics application using mock data.
 
 ```python
-# ai/machine_learning/deep_learning_algorithm.py
+## ai/machine_learning/deep_learning_algorithm.py
 
 import tensorflow as tf
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, LSTM, Embedding, SpatialDropout1D, GlobalMaxPooling1D
 
 def train_deep_learning_model(data, labels):
-    # Define the deep learning model architecture
+    ## Define the deep learning model architecture
     model = Sequential()
     model.add(Embedding(input_dim=1000, output_dim=64, input_length=100))
     model.add(SpatialDropout1D(0.2))
@@ -345,13 +345,13 @@ def train_deep_learning_model(data, labels):
     model.add(Dense(50, activation='relu'))
     model.add(Dense(1, activation='sigmoid'))
 
-    # Compile the model
+    ## Compile the model
     model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
 
-    # Train the model using the mock data
+    ## Train the model using the mock data
     model.fit(data, labels, epochs=10, batch_size=32, validation_split=0.2)
 
-    # Save the trained model to a file
+    ## Save the trained model to a file
     model.save('deep_learning_model.h5')
 
     return model

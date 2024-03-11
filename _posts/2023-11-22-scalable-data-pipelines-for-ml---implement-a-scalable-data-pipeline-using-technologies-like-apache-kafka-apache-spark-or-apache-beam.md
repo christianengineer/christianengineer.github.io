@@ -279,34 +279,34 @@ deployment/
 By organizing the deployment directory in this manner, the Scalable Data Pipelines for ML application gains a structured approach to managing deployment configurations for different environments, whether it's local development with Docker Compose, orchestration on Kubernetes, or Helm-based deployments. These files and configurations support the effective deployment and scaling of the data pipeline components, as well as the management of environment-specific settings and sensitive data.
 
 ```python
-# Function for a Complex Machine Learning Algorithm
+## Function for a Complex Machine Learning Algorithm
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
 def complex_ml_algorithm(data_file_path):
-    # Load mock data from file
+    ## Load mock data from file
     data = pd.read_csv(data_file_path)
 
-    # Preprocessing and feature engineering
-    # ... (add preprocessing and feature engineering steps as necessary)
+    ## Preprocessing and feature engineering
+    ## ... (add preprocessing and feature engineering steps as necessary)
 
-    # Split the data into features and target variable
+    ## Split the data into features and target variable
     X = data.drop('target', axis=1)
     y = data['target']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize and train the machine learning model
+    ## Initialize and train the machine learning model
     model = RandomForestClassifier(n_estimators=100, random_state=42)
     model.fit(X_train, y_train)
 
-    # Make predictions
+    ## Make predictions
     y_pred = model.predict(X_test)
 
-    # Evaluate the model
+    ## Evaluate the model
     accuracy = accuracy_score(y_test, y_pred)
 
     return model, accuracy
@@ -317,8 +317,8 @@ In this example, a complex machine learning algorithm is defined as a function `
 To use this function, replace `data_file_path` with the actual file path of the mock data file.
 
 ```python
-# Example usage of the complex_ml_algorithm function
-data_file_path = 'path_to_mock_data.csv'  # Replace with the actual file path
+## Example usage of the complex_ml_algorithm function
+data_file_path = 'path_to_mock_data.csv'  ## Replace with the actual file path
 trained_model, model_accuracy = complex_ml_algorithm(data_file_path)
 print("Trained model:", trained_model)
 print("Model accuracy:", model_accuracy)
@@ -327,7 +327,7 @@ print("Model accuracy:", model_accuracy)
 This function can be integrated into the data pipeline within the `ml_models` directory of the Scalable Data Pipelines for ML application, such as within a TFX pipeline or a standalone machine learning service, where it can leverage the power of distributed processing frameworks like Apache Spark or Apache Beam to handle large-scale data and train complex machine learning algorithms efficiently.
 
 ```python
-# Function for a Complex Deep Learning Algorithm
+## Function for a Complex Deep Learning Algorithm
 import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -336,23 +336,23 @@ from tensorflow.keras.layers import Dense, Dropout
 from tensorflow.keras.utils import to_categorical
 
 def complex_deep_learning_algorithm(data_file_path):
-    # Load mock data from file
+    ## Load mock data from file
     data = pd.read_csv(data_file_path)
 
-    # Preprocessing and feature engineering
-    # ... (add preprocessing and feature engineering steps as necessary)
+    ## Preprocessing and feature engineering
+    ## ... (add preprocessing and feature engineering steps as necessary)
 
-    # Split the data into features and target variable
+    ## Split the data into features and target variable
     X = data.drop('target', axis=1)
     y = data['target']
 
-    # Convert target variable to categorical if needed
+    ## Convert target variable to categorical if needed
     y_categorical = to_categorical(y)
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y_categorical, test_size=0.2, random_state=42)
 
-    # Define the deep learning model architecture
+    ## Define the deep learning model architecture
     model = Sequential([
         Dense(64, input_shape=(X.shape[1],), activation='relu'),
         Dropout(0.5),
@@ -361,13 +361,13 @@ def complex_deep_learning_algorithm(data_file_path):
         Dense(10, activation='softmax')
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y_test))
 
-    # Evaluate the model
+    ## Evaluate the model
     _, accuracy = model.evaluate(X_test, y_test)
 
     return model, accuracy
@@ -378,8 +378,8 @@ In the above example, a complex deep learning algorithm is defined as a function
 To use this function, replace `data_file_path` with the actual file path of the mock data file.
 
 ```python
-# Example usage of the complex_deep_learning_algorithm function
-data_file_path = 'path_to_mock_data.csv'  # Replace with the actual file path
+## Example usage of the complex_deep_learning_algorithm function
+data_file_path = 'path_to_mock_data.csv'  ## Replace with the actual file path
 trained_model, model_accuracy = complex_deep_learning_algorithm(data_file_path)
 print("Trained model:", trained_model)
 print("Model accuracy:", model_accuracy)

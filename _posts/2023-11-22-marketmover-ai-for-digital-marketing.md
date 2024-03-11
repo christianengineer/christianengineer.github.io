@@ -283,26 +283,26 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
 def complex_ml_algorithm(data_file_path):
-    # Load mock data from the specified file path
+    ## Load mock data from the specified file path
     data = pd.read_csv(data_file_path)
 
-    # Preprocessing: Extract features and target variable
+    ## Preprocessing: Extract features and target variable
     X = data.drop('target_variable', axis=1)
     y = data['target_variable']
 
-    # Split the dataset into training and testing sets
+    ## Split the dataset into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Instantiate the complex machine learning algorithm (e.g., Random Forest Classifier)
+    ## Instantiate the complex machine learning algorithm (e.g., Random Forest Classifier)
     model = RandomForestClassifier(n_estimators=100, random_state=42)
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train)
 
-    # Make predictions
+    ## Make predictions
     y_pred = model.predict(X_test)
 
-    # Evaluate the model
+    ## Evaluate the model
     accuracy = accuracy_score(y_test, y_pred)
 
     return model, accuracy
@@ -327,22 +327,22 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import accuracy_score
 
 def complex_deep_learning_algorithm(data_file_path):
-    # Load mock data from the specified file path
+    ## Load mock data from the specified file path
     data = pd.read_csv(data_file_path)
 
-    # Preprocessing: Extract features and target variable
+    ## Preprocessing: Extract features and target variable
     X = data.drop('target_variable', axis=1)
     y = data['target_variable']
 
-    # Split the dataset into training and testing sets
+    ## Split the dataset into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Data normalization
+    ## Data normalization
     scaler = StandardScaler()
     X_train = scaler.fit_transform(X_train)
     X_test = scaler.transform(X_test)
 
-    # Build a deep learning model using TensorFlow
+    ## Build a deep learning model using TensorFlow
     model = tf.keras.models.Sequential([
         tf.keras.layers.Dense(128, activation='relu', input_shape=(X_train.shape[1],)),
         tf.keras.layers.Dropout(0.5),
@@ -351,13 +351,13 @@ def complex_deep_learning_algorithm(data_file_path):
         tf.keras.layers.Dense(1, activation='sigmoid')
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y_test))
 
-    # Evaluate the model
+    ## Evaluate the model
     y_pred = (model.predict(X_test) > 0.5).astype("int32")
     accuracy = accuracy_score(y_test, y_pred)
 

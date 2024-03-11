@@ -5,7 +5,7 @@ permalink: posts/interactive-voice-response-ivr-systems-using-asterisk-python-au
 layout: article
 ---
 
-# AI Interactive Voice Response (IVR) Systems using Asterisk (Python)
+## AI Interactive Voice Response (IVR) Systems using Asterisk (Python)
 
 ## Objectives
 The objectives of building an AI Interactive Voice Response (IVR) system using Asterisk and Python are to automate call responses, improve customer experience, and optimize call routing. By leveraging AI to understand and respond to caller queries, the system aims to reduce wait times, increase efficiency, and provide personalized interactions.

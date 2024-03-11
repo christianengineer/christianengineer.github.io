@@ -56,30 +56,30 @@ A scalable file structure for ML experiment tracking and management, leveraging 
 project_root/
 │
 ├── data/
-│   ├── raw/                   # Raw input data
-│   ├── processed/             # Processed data
-│   └── external/              # External datasets
+│   ├── raw/                   ## Raw input data
+│   ├── processed/             ## Processed data
+│   └── external/              ## External datasets
 │
 ├── models/
-│   ├── experiments/           # Experiment-specific model files
-│   ├── trained_models/        # Saved trained model files
-│   └── model_utils.py         # Utility functions for model training
+│   ├── experiments/           ## Experiment-specific model files
+│   ├── trained_models/        ## Saved trained model files
+│   └── model_utils.py         ## Utility functions for model training
 │
 ├── code/
-│   ├── notebooks/             # Jupyter notebooks for experimentation
-│   ├── src/                   # Source code for model training, evaluation, and deployment
-│   └── config/                # Configuration files for experiments
+│   ├── notebooks/             ## Jupyter notebooks for experimentation
+│   ├── src/                   ## Source code for model training, evaluation, and deployment
+│   └── config/                ## Configuration files for experiments
 │
 ├── experiments/
-│   ├── experiment_logs/       # Logs generated during model training and evaluation
-│   └── hyperparameter_tuning/ # Results of hyperparameter tuning experiments
+│   ├── experiment_logs/       ## Logs generated during model training and evaluation
+│   └── hyperparameter_tuning/ ## Results of hyperparameter tuning experiments
 │
-├── visuals/                   # Visualizations generated during experiments
+├── visuals/                   ## Visualizations generated during experiments
 │
-├── requirements.txt           # Python dependencies for the project
-├── README.md                  # Project documentation and instructions
-├── .gitignore                 # Git ignore file for specifying files to be ignored
-└── .wbrun                      # Weights & Biases configuration file
+├── requirements.txt           ## Python dependencies for the project
+├── README.md                  ## Project documentation and instructions
+├── .gitignore                 ## Git ignore file for specifying files to be ignored
+└── .wbrun                      ## Weights & Biases configuration file
 ```
 
 ### Description:
@@ -111,27 +111,27 @@ models/
 │
 ├── experiments/
 │   ├── experiment_1/
-│   │   ├── model_architecture.py      # Experiment-specific model architecture
-│   │   ├── hyperparameters.yaml       # Hyperparameters used for this experiment
-│   │   ├── training_script.py         # Script for training the model
-│   │   ├── evaluation_script.py       # Script for evaluating the trained model
+│   │   ├── model_architecture.py      ## Experiment-specific model architecture
+│   │   ├── hyperparameters.yaml       ## Hyperparameters used for this experiment
+│   │   ├── training_script.py         ## Script for training the model
+│   │   ├── evaluation_script.py       ## Script for evaluating the trained model
 │   │   ├── metrics_logs/
-│   │   │   ├── training_metrics.csv   # Metrics logged during model training
-│   │   │   └── evaluation_metrics.csv # Metrics logged during model evaluation
+│   │   │   ├── training_metrics.csv   ## Metrics logged during model training
+│   │   │   └── evaluation_metrics.csv ## Metrics logged during model evaluation
 │   │   ├── model_visualizations/
-│   │   │   ├── loss_curve.png         # Loss curve visualization
-│   │   │   └── accuracy_plot.png      # Accuracy plot visualization
-│   │   └── trained_model/             # Saved model files
+│   │   │   ├── loss_curve.png         ## Loss curve visualization
+│   │   │   └── accuracy_plot.png      ## Accuracy plot visualization
+│   │   └── trained_model/             ## Saved model files
 │   └── experiment_2/
-│       # Directory structure similar to experiment_1
+│       ## Directory structure similar to experiment_1
 │
 └── trained_models/
     ├── model_1/
-    │   └── saved_model.pb              # Trained model file
+    │   └── saved_model.pb              ## Trained model file
     ├── model_2/
-    │   └── saved_model.pb              # Trained model file
+    │   └── saved_model.pb              ## Trained model file
     └── model_3/
-        └── saved_model.pb              # Trained model file
+        └── saved_model.pb              ## Trained model file
 ```
 
 ### Description:
@@ -156,26 +156,26 @@ deployment/
 │
 ├── trained_models/
 │   ├── model_1/
-│   │   └── saved_model.pb              # Trained model file
+│   │   └── saved_model.pb              ## Trained model file
 │   ├── model_2/
-│   │   └── saved_model.pb              # Trained model file
+│   │   └── saved_model.pb              ## Trained model file
 │   └── model_3/
-│       └── saved_model.pb              # Trained model file
+│       └── saved_model.pb              ## Trained model file
 │
 ├── model_servers/
 │   ├── model_1/
-│   │   ├── server_config.yaml          # Configuration file for model serving
-│   │   └── model_server.py              # Script for running the model server
+│   │   ├── server_config.yaml          ## Configuration file for model serving
+│   │   └── model_server.py              ## Script for running the model server
 │   ├── model_2/
-│   │   ├── server_config.yaml          # Configuration file for model serving
-│   │   └── model_server.py              # Script for running the model server
+│   │   ├── server_config.yaml          ## Configuration file for model serving
+│   │   └── model_server.py              ## Script for running the model server
 │   └── model_3/
-│       ├── server_config.yaml          # Configuration file for model serving
-│       └── model_server.py              # Script for running the model server
+│       ├── server_config.yaml          ## Configuration file for model serving
+│       └── model_server.py              ## Script for running the model server
 │
 └── deployment_utils/
-    ├── preprocessing.py                 # Script for data preprocessing before model serving
-    └── postprocessing.py                 # Script for post-processing model outputs
+    ├── preprocessing.py                 ## Script for data preprocessing before model serving
+    └── postprocessing.py                 ## Script for post-processing model outputs
 ```
 
 ### Description:
@@ -200,33 +200,33 @@ from sklearn.metrics import accuracy_score
 import wandb
 
 def complex_machine_learning_algorithm(data_path, project_name):
-    # Load mock data
+    ## Load mock data
     data = pd.read_csv(data_path)
 
-    # Split data into features and target
+    ## Split data into features and target
     X = data.drop('target', axis=1)
     y = data['target']
 
-    # Split data into training and testing sets
+    ## Split data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize Weights & Biases run
+    ## Initialize Weights & Biases run
     wandb.init(project=project_name, entity='your_entity_name')
 
-    # Define and train the model
+    ## Define and train the model
     model = RandomForestClassifier(n_estimators=100, random_state=42)
     model.fit(X_train, y_train)
 
-    # Make predictions
+    ## Make predictions
     y_pred = model.predict(X_test)
 
-    # Calculate accuracy
+    ## Calculate accuracy
     accuracy = accuracy_score(y_test, y_pred)
 
-    # Log metrics to Weights & Biases
+    ## Log metrics to Weights & Biases
     wandb.log({"accuracy": accuracy})
 
-    # Finish the run
+    ## Finish the run
     wandb.finish()
 
     return model
@@ -251,41 +251,41 @@ from sklearn.model_selection import train_test_split
 import wandb
 
 def complex_deep_learning_algorithm(data_path, project_name):
-    # Load mock data
+    ## Load mock data
     data = pd.read_csv(data_path)
 
-    # Split data into features and target
+    ## Split data into features and target
     X = data.drop('target', axis=1)
     y = data['target']
 
-    # Split data into training and testing sets
+    ## Split data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize Weights & Biases run
+    ## Initialize Weights & Biases run
     wandb.init(project=project_name, entity='your_entity_name')
 
-    # Define the deep learning model
+    ## Define the deep learning model
     model = tf.keras.models.Sequential([
         tf.keras.layers.Dense(64, activation='relu', input_shape=(X_train.shape[1],)),
         tf.keras.layers.Dense(64, activation='relu'),
         tf.keras.layers.Dense(1, activation='sigmoid')
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam',
                   loss='binary_crossentropy',
                   metrics=['accuracy'])
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y_test))
 
-    # Evaluate the model
+    ## Evaluate the model
     _, accuracy = model.evaluate(X_test, y_test)
 
-    # Log metrics to Weights & Biases
+    ## Log metrics to Weights & Biases
     wandb.log({"accuracy": accuracy})
 
-    # Finish the run
+    ## Finish the run
     wandb.finish()
 
     return model

@@ -291,11 +291,11 @@ import tensorflow as tf
 import numpy as np
 
 def train_image_classification_model(data_path, num_epochs=10, learning_rate=0.001):
-    # Load mock data for training
-    # Assuming the mock data is stored in the specified data_path
+    ## Load mock data for training
+    ## Assuming the mock data is stored in the specified data_path
     train_data = np.load(data_path)
 
-    # Define the deep learning model using TensorFlow
+    ## Define the deep learning model using TensorFlow
     model = tf.keras.Sequential([
         tf.keras.layers.Conv2D(32, (3,3), activation='relu', input_shape=(64, 64, 3)),
         tf.keras.layers.MaxPooling2D(2, 2),
@@ -306,12 +306,12 @@ def train_image_classification_model(data_path, num_epochs=10, learning_rate=0.0
         tf.keras.layers.Dense(10, activation='softmax')
     ])
     
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=learning_rate),
                   loss='sparse_categorical_crossentropy',
                   metrics=['accuracy'])
 
-    # Train the model
+    ## Train the model
     model.fit(train_data, epochs=num_epochs)
     
     return model
@@ -332,32 +332,32 @@ import tensorflow as tf
 import numpy as np
 
 def train_text_generation_model(data_path, num_epochs=10, sequence_length=100, embedding_dim=256, rnn_units=1024):
-    # Load mock data for training
-    # Assuming the mock data is stored in the specified data_path
+    ## Load mock data for training
+    ## Assuming the mock data is stored in the specified data_path
     text_data = open(data_path, 'r').read()
 
-    # Preprocess the text data
+    ## Preprocess the text data
     vocab = sorted(set(text_data))
     char2idx = {u:i for i, u in enumerate(vocab)}
     idx2char = np.array(vocab)
     text_as_int = np.array([char2idx[c] for c in text_data])
 
-    # Create training examples and targets
+    ## Create training examples and targets
     char_dataset = tf.data.Dataset.from_tensor_slices(text_as_int)
     sequences = char_dataset.batch(sequence_length+1, drop_remainder=True)
     dataset = sequences.map(lambda seq: (seq[:-1], seq[1:]))
 
-    # Define the deep learning model using TensorFlow
+    ## Define the deep learning model using TensorFlow
     model = tf.keras.Sequential([
         tf.keras.layers.Embedding(len(vocab), embedding_dim, batch_input_shape=[1, None]),
         tf.keras.layers.LSTM(rnn_units, return_sequences=True, stateful=True, recurrent_initializer='glorot_uniform'),
         tf.keras.layers.Dense(len(vocab))
     ])
     
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam', loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True))
 
-    # Train the model
+    ## Train the model
     for epoch in range(num_epochs):
         for input_example, target_example in dataset:
             with tf.GradientTape() as tape:

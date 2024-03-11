@@ -5,7 +5,7 @@ permalink: posts/ml-model-monitoring-with-prometheus-and-grafana-set-up-monitori
 layout: article
 ---
 
-# AI ML Model Monitoring with Prometheus and Grafana
+## AI ML Model Monitoring with Prometheus and Grafana
 
 ## Objectives 
 
@@ -80,25 +80,25 @@ To organize the ML Model Monitoring with Prometheus and Grafana repository effec
 ml-model-monitoring/
 │
 ├── prometheus/
-│   ├── prometheus.yml             # Configuration file for Prometheus server
-│   └── alert.rules                # Alerting rules for Prometheus
+│   ├── prometheus.yml             ## Configuration file for Prometheus server
+│   └── alert.rules                ## Alerting rules for Prometheus
 │
 ├── grafana/
 │   ├── provisioning/
-│   │   └── datasources/           # Data source configuration for Prometheus
-│   ├── dashboards/                # Grafana dashboard configurations
-│   └── grafana.ini                # Grafana server configuration
+│   │   └── datasources/           ## Data source configuration for Prometheus
+│   ├── dashboards/                ## Grafana dashboard configurations
+│   └── grafana.ini                ## Grafana server configuration
 │
 ├── model_instrumentation/
-│   └── model_metrics.py           # Model instrumentation code for exposing metrics
+│   └── model_metrics.py           ## Model instrumentation code for exposing metrics
 │
 ├── deployment/
-│   ├── docker-compose.yml         # Docker compose file for local deployment
-│   ├── kubernetes/                # Kubernetes deployment files
-│   └── helm/                      # Helm charts for deploying Prometheus and Grafana
+│   ├── docker-compose.yml         ## Docker compose file for local deployment
+│   ├── kubernetes/                ## Kubernetes deployment files
+│   └── helm/                      ## Helm charts for deploying Prometheus and Grafana
 │
-├── README.md                     # Documentation and setup guide
-└── LICENSE                       # License information
+├── README.md                     ## Documentation and setup guide
+└── LICENSE                       ## License information
 ```
 
 ### Explanation of File Structure:
@@ -124,9 +124,9 @@ ml-model-monitoring/
 │
 ├── models/
 │   ├── model1/
-│   │   ├── model_artifacts/        # Files related to the ML model (e.g., model weights, configuration)
-│   │   ├── model_inference.py      # Script for model inference and serving
-│   │   └── model_metrics.py        # Instrumentation code for exposing model metrics
+│   │   ├── model_artifacts/        ## Files related to the ML model (e.g., model weights, configuration)
+│   │   ├── model_inference.py      ## Script for model inference and serving
+│   │   └── model_metrics.py        ## Instrumentation code for exposing model metrics
 │   │
 │   ├── model2/
 │   │   ├── model_artifacts/
@@ -159,22 +159,22 @@ Certainly! When setting up the deployment directory for the ML Model Monitoring 
 ml-model-monitoring/
 │
 ├── deployment/
-│   ├── docker-compose.yml           # Docker Compose file for local deployment
+│   ├── docker-compose.yml           ## Docker Compose file for local deployment
 │   ├── kubernetes/
 │   │   ├── prometheus/
-│   │   │   └── prometheus-deployment.yaml       # Prometheus deployment configuration
+│   │   │   └── prometheus-deployment.yaml       ## Prometheus deployment configuration
 │   │   ├── grafana/
-│   │   │   └── grafana-deployment.yaml          # Grafana deployment configuration
+│   │   │   └── grafana-deployment.yaml          ## Grafana deployment configuration
 │   │   ├── service-monitors/
-│   │   │   └── model-service-monitor.yaml       # Service monitor for scraping model metrics
+│   │   │   └── model-service-monitor.yaml       ## Service monitor for scraping model metrics
 │   │   └── ...
 │   ├── helm/
 │   │   ├── prometheus/
-│   │   │   └── Chart.yaml                       # Helm chart metadata
+│   │   │   └── Chart.yaml                       ## Helm chart metadata
 │   │   ├── grafana/
-│   │   │   └── Chart.yaml                       # Helm chart metadata
+│   │   │   └── Chart.yaml                       ## Helm chart metadata
 │   │   └── ...
-│   └── README.md                        # Deployment instructions and guidelines
+│   └── README.md                        ## Deployment instructions and guidelines
 ```
 
 ### Explanation of the `deployment` Directory and Files:
@@ -206,36 +206,36 @@ import time
 import random
 from prometheus_client import Counter, Gauge, Histogram, start_http_server
 
-# Define Prometheus metrics
+## Define Prometheus metrics
 inference_counter = Counter('model_inference_count', 'The number of inference requests')
 inference_latency = Histogram('model_inference_latency', 'Latency of the inference requests')
 prediction_distribution = Gauge('model_prediction_distribution', 'Distribution of model predictions')
 
 def complex_ml_algorithm(input_data):
-    # Instrumentation: Increment inference counter
+    ## Instrumentation: Increment inference counter
     inference_counter.inc()
 
-    # Start measuring inference latency
+    ## Start measuring inference latency
     start_time = time.time()
 
-    # Mocking complex ML algorithm processing
-    time.sleep(random.uniform(0.1, 0.5))  # Simulate processing time
-    prediction = random.uniform(0, 1)    # Simulate model prediction (between 0 and 1)
+    ## Mocking complex ML algorithm processing
+    time.sleep(random.uniform(0.1, 0.5))  ## Simulate processing time
+    prediction = random.uniform(0, 1)    ## Simulate model prediction (between 0 and 1)
 
-    # End measuring inference latency
+    ## End measuring inference latency
     latency = time.time() - start_time
     inference_latency.observe(latency)
 
-    # Instrumentation: Track prediction distribution
+    ## Instrumentation: Track prediction distribution
     prediction_distribution.set(prediction)
 
     return prediction
 
 if __name__ == '__main__':
-    # Start Prometheus client server (exposing metrics at http://localhost:8000/metrics)
+    ## Start Prometheus client server (exposing metrics at http://localhost:8000/metrics)
     start_http_server(8000)
 
-    # Example usage of the complex_ml_algorithm function with mock input data
+    ## Example usage of the complex_ml_algorithm function with mock input data
     input_data = [1, 2, 3, 4, 5]
     prediction = complex_ml_algorithm(input_data)
 
@@ -252,7 +252,7 @@ The corresponding Prometheus instrumentation code (e.g., `model_metrics.py`) cou
 ml-model-monitoring/
 │
 ├── model_instrumentation/
-│   └── model_metrics.py     # Instrumentation code for exposing model metrics
+│   └── model_metrics.py     ## Instrumentation code for exposing model metrics
 ```
 
 By incorporating this function and instrumentation code, the ML model can effectively expose metrics that can be scraped by Prometheus for monitoring and analysis within the Grafana dashboard.
@@ -264,37 +264,37 @@ import time
 import random
 from prometheus_client import Counter, Gauge, Histogram, start_http_server
 
-# Define Prometheus metrics
+## Define Prometheus metrics
 inference_counter = Counter('model_inference_count', 'The number of inference requests')
 inference_latency = Histogram('model_inference_latency', 'Latency of the inference requests')
 accuracy_gauge = Gauge('model_accuracy', 'Accuracy metric of the model')
 
 def complex_deep_learning_algorithm(input_data):
-    # Instrumentation: Increment inference counter
+    ## Instrumentation: Increment inference counter
     inference_counter.inc()
 
-    # Start measuring inference latency
+    ## Start measuring inference latency
     start_time = time.time()
 
-    # Mocking complex deep learning algorithm processing
-    time.sleep(random.uniform(0.5, 2.0))  # Simulate processing time
-    prediction = random.choice([0, 1])    # Simulate model prediction (binary classification)
+    ## Mocking complex deep learning algorithm processing
+    time.sleep(random.uniform(0.5, 2.0))  ## Simulate processing time
+    prediction = random.choice([0, 1])    ## Simulate model prediction (binary classification)
 
-    # End measuring inference latency
+    ## End measuring inference latency
     latency = time.time() - start_time
     inference_latency.observe(latency)
 
-    # Instrumentation: Track model accuracy
-    accuracy = random.uniform(0.7, 0.95)  # Simulate model accuracy (between 0.7 and 0.95)
+    ## Instrumentation: Track model accuracy
+    accuracy = random.uniform(0.7, 0.95)  ## Simulate model accuracy (between 0.7 and 0.95)
     accuracy_gauge.set(accuracy)
 
     return prediction
 
 if __name__ == '__main__':
-    # Start Prometheus client server (exposing metrics at http://localhost:8000/metrics)
+    ## Start Prometheus client server (exposing metrics at http://localhost:8000/metrics)
     start_http_server(8000)
 
-    # Example usage of the complex_deep_learning_algorithm function with mock input data
+    ## Example usage of the complex_deep_learning_algorithm function with mock input data
     input_data = [1, 2, 3, 4, 5]
     prediction = complex_deep_learning_algorithm(input_data)
 
@@ -309,7 +309,7 @@ The corresponding Prometheus instrumentation code (e.g., `model_metrics.py`) cou
 ml-model-monitoring/
 │
 ├── model_instrumentation/
-│   └── model_metrics.py     # Instrumentation code for exposing model metrics
+│   └── model_metrics.py     ## Instrumentation code for exposing model metrics
 ```
 
 By incorporating this function and instrumentation code, the deep learning model can effectively expose metrics that can be scraped by Prometheus for monitoring and analysis within the Grafana dashboard.

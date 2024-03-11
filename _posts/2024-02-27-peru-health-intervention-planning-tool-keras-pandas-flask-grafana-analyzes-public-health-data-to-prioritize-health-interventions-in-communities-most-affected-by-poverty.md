@@ -5,7 +5,7 @@ permalink: posts/peru-health-intervention-planning-tool-keras-pandas-flask-grafa
 layout: article
 ---
 
-# AI Peru Health Intervention Planning Tool
+## AI Peru Health Intervention Planning Tool
 
 ## Objectives
 The AI Peru Health Intervention Planning Tool aims to analyze public health data to prioritize health interventions in communities most affected by poverty. The tool will leverage machine learning techniques to identify trends and patterns in the data, allowing for targeted and effective planning of health interventions. 
@@ -30,7 +30,7 @@ The AI Peru Health Intervention Planning Tool aims to analyze public health data
 
 By incorporating these libraries and following the system design strategies outlined above, the AI Peru Health Intervention Planning Tool can effectively analyze public health data and prioritize interventions in communities most affected by poverty.
 
-# MLOps Infrastructure for AI Peru Health Intervention Planning Tool
+## MLOps Infrastructure for AI Peru Health Intervention Planning Tool
 
 ## Objectives
 The MLOps infrastructure for the AI Peru Health Intervention Planning Tool aims to streamline the end-to-end machine learning process, from data ingestion to model deployment. The infrastructure will ensure scalability, reliability, and efficiency in analyzing public health data to prioritize health interventions in communities most affected by poverty.
@@ -180,8 +180,8 @@ deployment/
 The files in the `deployment/` directory facilitate the seamless deployment of the machine learning model as a scalable API for the Peru Health Intervention Planning Tool. By containerizing the application with Docker, managing dependencies with `requirements.txt`, and orchestrating the deployment process with `deploy_model.py`, the deployment directory ensures efficient and reliable deployment of the AI application.
 
 ```python
-# File: model_training.py
-# Path: models/model_training.py
+## File: model_training.py
+## Path: models/model_training.py
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -189,27 +189,27 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 import joblib
 
-# Load mock data
+## Load mock data
 data_path = 'data/processed_data/mock_public_health_data.csv'
 data = pd.read_csv(data_path)
 
-# Split data into features and target
+## Split data into features and target
 X = data.drop('target_variable', axis=1)
 y = data['target_variable']
 
-# Split data into train and test sets
+## Split data into train and test sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Train Random Forest classifier
+## Train Random Forest classifier
 clf = RandomForestClassifier()
 clf.fit(X_train, y_train)
 
-# Evaluate model
+## Evaluate model
 y_pred = clf.predict(X_test)
 accuracy = accuracy_score(y_test, y_pred)
 print(f'Model accuracy: {accuracy}')
 
-# Save trained model
+## Save trained model
 model_path = 'models/trained_models/mock_intervention_model.pkl'
 joblib.dump(clf, model_path)
 ```
@@ -217,8 +217,8 @@ joblib.dump(clf, model_path)
 This `model_training.py` script loads mock public health data, trains a RandomForestClassifier model on the data, evaluates the model's accuracy, and saves the trained model. The file path for this script is `models/model_training.py`.
 
 ```python
-# File: complex_model.py
-# Path: models/complex_model.py
+## File: complex_model.py
+## Path: models/complex_model.py
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -226,27 +226,27 @@ from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.metrics import accuracy_score
 import joblib
 
-# Load mock data
+## Load mock data
 data_path = 'data/processed_data/mock_public_health_data.csv'
 data = pd.read_csv(data_path)
 
-# Split data into features and target
+## Split data into features and target
 X = data.drop('target_variable', axis=1)
 y = data['target_variable']
 
-# Split data into train and test sets
+## Split data into train and test sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Train Gradient Boosting classifier
+## Train Gradient Boosting classifier
 clf = GradientBoostingClassifier()
 clf.fit(X_train, y_train)
 
-# Evaluate model
+## Evaluate model
 y_pred = clf.predict(X_test)
 accuracy = accuracy_score(y_test, y_pred)
 print(f'Model accuracy: {accuracy}')
 
-# Save trained model
+## Save trained model
 model_path = 'models/trained_models/complex_intervention_model.pkl'
 joblib.dump(clf, model_path)
 ```

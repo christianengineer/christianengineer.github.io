@@ -5,7 +5,7 @@ permalink: posts/fair-lending-analysis-tools-scikit-learn-tensorflow-combating-f
 layout: article
 ---
 
-# AI Fair Lending Analysis Tools Repository
+## AI Fair Lending Analysis Tools Repository
 
 ## Objectives
 The objectives of the AI Fair Lending Analysis Tools repository are to create tools and frameworks that can be used to combat financial biases in lending practices. This involves developing scalable, data-intensive AI applications that leverage machine learning to analyze and mitigate biases in lending decisions.
@@ -27,7 +27,7 @@ The objectives of the AI Fair Lending Analysis Tools repository are to create to
 
 By leveraging these libraries in the development of the AI Fair Lending Analysis Tools repository, we can build robust, scalable, and fair lending applications that align with ethical and regulatory standards.
 
-# MLOps Infrastructure for Fair Lending Analysis Tools
+## MLOps Infrastructure for Fair Lending Analysis Tools
 
 ## Key Components and Strategies
 
@@ -53,7 +53,7 @@ By leveraging these libraries in the development of the AI Fair Lending Analysis
 
 By integrating MLOps best practices with the Fair Lending Analysis Tools application, we can ensure the reliability, scalability, and fairness of the AI-powered lending analysis while adhering to ethical and regulatory guidelines.
 
-# Scalable File Structure for Fair Lending Analysis Tools Repository
+## Scalable File Structure for Fair Lending Analysis Tools Repository
 
 ```
 fair-lending-analysis/
@@ -199,7 +199,7 @@ By organizing the deployment scripts and configuration files in this structured 
 Sure, here's an example of a file for training a model using mock data for the Fair Lending Analysis Tools repository. This file will be used to train a Scikit-Learn model for combating financial biases.
 
 ```python
-# File Path: fair-lending-analysis/src/model_training/train_scikit_model.py
+## File Path: fair-lending-analysis/src/model_training/train_scikit_model.py
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -207,45 +207,45 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, classification_report
 import joblib
 
-# Load mock lending data
+## Load mock lending data
 mock_lending_data_path = 'data/processed/mock_lending_data.csv'
 lending_df = pd.read_csv(mock_lending_data_path)
 
-# Preprocessing and feature engineering
-# ... (preprocessing steps such as encoding categorical variables, feature selection, etc.)
+## Preprocessing and feature engineering
+## ... (preprocessing steps such as encoding categorical variables, feature selection, etc.)
 
-# Split data into features and target variable
+## Split data into features and target variable
 X = lending_df.drop('target_column', axis=1)
 y = lending_df['target_column']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Train the fairness-aware Scikit-Learn model
+## Train the fairness-aware Scikit-Learn model
 model = RandomForestClassifier(n_estimators=100, random_state=42)
 model.fit(X_train, y_train)
 
-# Make predictions
+## Make predictions
 y_pred = model.predict(X_test)
 
-# Evaluate model performance
+## Evaluate model performance
 accuracy = accuracy_score(y_test, y_pred)
 print(f'Accuracy: {accuracy}')
 
-# Generate and store model metrics
+## Generate and store model metrics
 model_metrics = classification_report(y_test, y_pred, output_dict=True)
 
-# Save the trained model
+## Save the trained model
 model_output_path = 'models/scikit-learn/fairness_aware_model.pkl'
 joblib.dump(model, model_output_path)
 
-# Save model metrics to a JSON file
+## Save model metrics to a JSON file
 import json
 model_metrics_path = 'models/scikit-learn/scikit_model_metrics.json'
 with open(model_metrics_path, 'w') as f:
     json.dump(model_metrics, f)
 
-# Save model config
+## Save model config
 model_config = {
     'model_type': 'RandomForestClassifier',
     'estimators': 100,
@@ -263,7 +263,7 @@ In this example, the file `train_scikit_model.py` within the `src/model_training
 Certainly! Below is an example of a file for training a complex machine learning algorithm, specifically a deep learning model using TensorFlow, for the Fair Lending Analysis Tools repository. This file will be used to train a TensorFlow model for combating financial biases.
 
 ```python
-# File Path: fair-lending-analysis/src/model_training/train_complex_tensorflow_model.py
+## File Path: fair-lending-analysis/src/model_training/train_complex_tensorflow_model.py
 
 import pandas as pd
 import numpy as np
@@ -272,26 +272,26 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 import joblib
 
-# Load mock lending data
+## Load mock lending data
 mock_lending_data_path = 'data/processed/mock_lending_data.csv'
 lending_df = pd.read_csv(mock_lending_data_path)
 
-# Preprocessing and feature engineering
-# ... (preprocessing steps such as encoding categorical variables, feature scaling, etc.)
+## Preprocessing and feature engineering
+## ... (preprocessing steps such as encoding categorical variables, feature scaling, etc.)
 
-# Split data into features and target variable
+## Split data into features and target variable
 X = lending_df.drop('target_column', axis=1)
 y = lending_df['target_column']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Feature Scaling
+## Feature Scaling
 scaler = StandardScaler()
 X_train = scaler.fit_transform(X_train)
 X_test = scaler.transform(X_test)
 
-# Create a complex deep learning model using TensorFlow
+## Create a complex deep learning model using TensorFlow
 model = tf.keras.Sequential([
     tf.keras.layers.Dense(128, activation='relu', input_shape=(X_train.shape[1],)),
     tf.keras.layers.Dense(64, activation='relu'),
@@ -300,18 +300,18 @@ model = tf.keras.Sequential([
 
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
-# Train the model
+## Train the model
 model.fit(X_train, y_train, epochs=10, batch_size=64, validation_data=(X_test, y_test))
 
-# Evaluate model performance
+## Evaluate model performance
 _, accuracy = model.evaluate(X_test, y_test)
 print(f'Accuracy: {accuracy}')
 
-# Save the trained model
+## Save the trained model
 model_output_path = 'models/tensorflow/complex_deep_learning_model.h5'
 model.save(model_output_path)
 
-# Save model metrics to a JSON file
+## Save model metrics to a JSON file
 model_metrics = {
     'accuracy': accuracy,
     'loss': 'binary_crossentropy',
@@ -323,7 +323,7 @@ import json
 with open(model_metrics_path, 'w') as f:
     json.dump(model_metrics, f)
 
-# Save model config
+## Save model config
 model_config = {
     'model_type': 'DeepLearning',
     'layers': ['Dense(128, activation="relu")', 'Dense(64, activation="relu")', 'Dense(1, activation="sigmoid")'],

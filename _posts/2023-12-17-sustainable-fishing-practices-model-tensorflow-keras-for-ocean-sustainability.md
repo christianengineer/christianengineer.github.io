@@ -205,37 +205,37 @@ import pandas as pd
 from tensorflow import keras
 from tensorflow.keras import layers
 
-# Load mock data (Replace this with actual data loading code)
-# Mock environmental and catch data
+## Load mock data (Replace this with actual data loading code)
+## Mock environmental and catch data
 environmental_data = pd.DataFrame({'temperature': [20, 25, 30, 22], 'salinity': [35, 32, 34, 33]})
 catch_data = pd.DataFrame({'species': ['cod', 'haddock', 'cod', 'haddock'], 'weight_kg': [10, 8, 12, 7]})
 
-# Preprocess mock data (Replace this with actual data preprocessing code)
-# Example: Normalize environmental features and one-hot encode catch species
+## Preprocess mock data (Replace this with actual data preprocessing code)
+## Example: Normalize environmental features and one-hot encode catch species
 normalized_environmental_data = (environmental_data - environmental_data.mean()) / environmental_data.std()
 encoded_catch_data = pd.get_dummies(catch_data['species'])
 
-# Define the model architecture
+## Define the model architecture
 model = keras.Sequential([
     layers.Dense(64, activation='relu', input_shape=(normalized_environmental_data.shape[1],)),
     layers.Dense(64, activation='relu'),
     layers.Dense(encoded_catch_data.shape[1], activation='softmax')
 ])
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
 
-# Train the model using the mock data
+## Train the model using the mock data
 model.fit(normalized_environmental_data, encoded_catch_data, epochs=10, batch_size=32, validation_split=0.2)
 
-# Save the trained model
+## Save the trained model
 model.save('models/trained_model_mock.h5')
 
-# Serialize model architecture to JSON
+## Serialize model architecture to JSON
 with open('models/model_architecture_mock.json', 'w') as f:
     f.write(model.to_json())
 
-# Save model weights
+## Save model weights
 model.save_weights('models/model_weights_mock.h5')
 ```
 
@@ -260,21 +260,21 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import classification_report
 
-# Load mock data (Replace this with actual data loading code)
-# Mock environmental and catch data
+## Load mock data (Replace this with actual data loading code)
+## Mock environmental and catch data
 environmental_data = pd.DataFrame({'temperature': [20, 25, 30, 22], 'salinity': [35, 32, 34, 33]})
 catch_data = pd.DataFrame({'species': ['cod', 'haddock', 'cod', 'haddock'], 'weight_kg': [10, 8, 12, 7]})
 
-# Preprocess mock data (Replace this with actual data preprocessing code)
-# Example: Normalize environmental features and encode catch species
+## Preprocess mock data (Replace this with actual data preprocessing code)
+## Example: Normalize environmental features and encode catch species
 scaler = StandardScaler()
 normalized_environmental_data = scaler.fit_transform(environmental_data)
 encoded_catch_data = pd.get_dummies(catch_data['species'])
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(normalized_environmental_data, encoded_catch_data, test_size=0.2, random_state=42)
 
-# Define a complex deep learning model
+## Define a complex deep learning model
 model = keras.Sequential([
     layers.Dense(128, activation='relu', input_shape=(X_train.shape[1],)),
     layers.Dense(64, activation='relu'),
@@ -283,24 +283,24 @@ model = keras.Sequential([
     layers.Dense(y_train.shape[1], activation='softmax')
 ])
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
 
-# Train the model using the mock data
+## Train the model using the mock data
 model.fit(X_train, y_train, epochs=20, batch_size=32, validation_data=(X_test, y_test))
 
-# Evaluate the model
+## Evaluate the model
 y_pred = model.predict(X_test)
 print(classification_report(np.argmax(y_test, axis=1), np.argmax(y_pred, axis=1)))
 
-# Save the trained model
+## Save the trained model
 model.save('models/trained_complex_model_mock.h5')
 
-# Serialize model architecture to JSON
+## Serialize model architecture to JSON
 with open('models/complex_model_architecture_mock.json', 'w') as f:
     f.write(model.to_json())
 
-# Save model weights
+## Save model weights
 model.save_weights('models/complex_model_weights_mock.h5')
 ```
 

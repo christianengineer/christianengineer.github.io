@@ -5,7 +5,7 @@ permalink: posts/future-of-real-time-ai-powered-language-translation-strategy
 layout: article
 ---
 
-# Voice of the Future: A Strategic Vision for Scalable AI-Powered Real-Time Language Translation
+## Voice of the Future: A Strategic Vision for Scalable AI-Powered Real-Time Language Translation
 
 ## 1. Architectural Design
 
@@ -48,13 +48,13 @@ Illustrative code:
     from pyspark.ml import Pipeline
     from pyspark.ml.classification import RandomForestClassifier
 
-    # Create a RandomForest model.
+    ## Create a RandomForest model.
     rf = RandomForestClassifier(labelCol="indexedLabel", featuresCol="indexedFeatures")
 
-    # Chain the indexers and forest in a Pipeline
+    ## Chain the indexers and forest in a Pipeline
     pipeline = Pipeline(stages=[labelIndexer, featureIndexer, rf])
 
-    # Train model
+    ## Train model
     model = pipeline.fit(trainingData)
 
 ## 4. Seamless API Integration
@@ -71,7 +71,7 @@ Illustrative code:
 
     class TranslationService(Resource):
         def post(self):
-            # code to handle request
+            ## code to handle request
 
     api.add_resource(TranslationService, '/translate')
 

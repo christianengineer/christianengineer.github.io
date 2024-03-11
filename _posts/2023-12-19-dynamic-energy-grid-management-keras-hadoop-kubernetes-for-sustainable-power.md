@@ -5,7 +5,7 @@ permalink: posts/dynamic-energy-grid-management-keras-hadoop-kubernetes-for-sust
 layout: article
 ---
 
-# AI Dynamic Energy Grid Management System
+## AI Dynamic Energy Grid Management System
 
 ## Objectives
 The objective of the AI Dynamic Energy Grid Management system is to create a scalable, data-intensive, and AI-driven application for managing the energy grid in a sustainable manner. This involves leveraging machine learning to predict energy demand, optimize energy distribution, and maximize the utilization of renewable energy sources.
@@ -23,7 +23,7 @@ The objective of the AI Dynamic Energy Grid Management system is to create a sca
 
 By combining the power of Keras for machine learning, Hadoop for data processing, and Kubernetes for scalable infrastructure, the AI Dynamic Energy Grid Management system aims to revolutionize the sustainable management of energy resources.
 
-# MLOps Infrastructure for Dynamic Energy Grid Management
+## MLOps Infrastructure for Dynamic Energy Grid Management
 
 ## Overview
 MLOps refers to the practices and tools used to streamline the deployment, monitoring, and management of machine learning models in production. Building an MLOps infrastructure for the Dynamic Energy Grid Management application involves integrating the machine learning components with the overall system architecture and establishing pipelines for model training, deployment, and monitoring.
@@ -52,7 +52,7 @@ MLOps refers to the practices and tools used to streamline the deployment, monit
 
 By integrating MLOps practices with the existing infrastructure for Dynamic Energy Grid Management, the application can ensure the reliability, scalability, and efficiency of the machine learning components while maintaining sustainable power management.
 
-# Dynamic Energy Grid Management Repository Structure
+## Dynamic Energy Grid Management Repository Structure
 
 ```
 dynamic-energy-grid-management/
@@ -202,7 +202,7 @@ By structuring the deployment directory with Kubernetes manifests, Dockerfiles, 
 
 Below is an example of a Python script for training a machine learning model for energy demand prediction in the context of the Dynamic Energy Grid Management application. The script utilizes mock data for demonstration purposes. It is essential to note that in a real-world scenario, actual energy consumption data and relevant features would be used for training the model.
 ```python
-# File Path: dynamic-energy-grid-management/src/machine_learning/train_demand_prediction_model.py
+## File Path: dynamic-energy-grid-management/src/machine_learning/train_demand_prediction_model.py
 
 import numpy as np
 import pandas as pd
@@ -211,7 +211,7 @@ from keras.layers import Dense
 from keras.optimizers import Adam
 from sklearn.model_selection import train_test_split
 
-# Load mock energy consumption data
+## Load mock energy consumption data
 data = {
     'temperature': np.random.randint(60, 100, size=1000),
     'day_of_week': np.random.randint(0, 7, size=1000),
@@ -221,33 +221,33 @@ data = {
 }
 df = pd.DataFrame(data)
 
-# Prepare input features and target variable
+## Prepare input features and target variable
 X = df[['temperature', 'day_of_week', 'hour_of_day', 'holiday']]
 y = df['energy_consumption']
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Define the neural network model for energy demand prediction
+## Define the neural network model for energy demand prediction
 model = Sequential([
     Dense(64, input_shape=(4,), activation='relu'),
     Dense(32, activation='relu'),
-    Dense(1)  # Output layer
+    Dense(1)  ## Output layer
 ])
 
-# Compile the model
+## Compile the model
 model.compile(optimizer=Adam(), loss='mean_squared_error')
 
-# Train the model
+## Train the model
 model.fit(X_train, y_train, epochs=100, batch_size=32, validation_data=(X_test, y_test))
 
-# Save the trained model and its architecture
+## Save the trained model and its architecture
 model.save('energy_demand_prediction_model.h5')
 model_json = model.to_json()
 with open("energy_demand_prediction_model.json", "w") as json_file:
     json_file.write(model_json)
 
-# Save the model metadata
+## Save the model metadata
 metadata = {
     'input_features': ['temperature', 'day_of_week', 'hour_of_day', 'holiday'],
     'output_variable': 'energy_consumption',
@@ -265,7 +265,7 @@ Please note that in a production environment, real data would be used for traini
 In the context of the Dynamic Energy Grid Management application, a complex machine learning algorithm such as a deep neural network for renewable energy production forecasting represents a critical component. Below is an example of a Python script using Keras for training a deep learning model for renewable energy production forecasting, utilizing mock data for demonstration purposes.
 
 ```python
-# File Path: dynamic-energy-grid-management/src/machine_learning/train_renewable_energy_forecasting_model.py
+## File Path: dynamic-energy-grid-management/src/machine_learning/train_renewable_energy_forecasting_model.py
 
 import numpy as np
 import pandas as pd
@@ -274,37 +274,37 @@ from keras.layers import LSTM, Dense
 from keras.optimizers import Adam
 from sklearn.model_selection import train_test_split
 
-# Load mock renewable energy production data
-# Generating mock data for demonstration purposes
-# Replace with actual renewable energy production data in a real-world scenario
+## Load mock renewable energy production data
+## Generating mock data for demonstration purposes
+## Replace with actual renewable energy production data in a real-world scenario
 time_steps = 1000
 num_features = 5
-X = np.random.rand(time_steps, num_features)  # Mock input features
-y = np.random.rand(time_steps, 1)  # Mock target variable
+X = np.random.rand(time_steps, num_features)  ## Mock input features
+y = np.random.rand(time_steps, 1)  ## Mock target variable
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Define the LSTM neural network model for renewable energy production forecasting
+## Define the LSTM neural network model for renewable energy production forecasting
 model = Sequential([
     LSTM(64, input_shape=(num_features, 1), return_sequences=True),
     LSTM(32, return_sequences=False),
-    Dense(1)  # Output layer
+    Dense(1)  ## Output layer
 ])
 
-# Compile the model
+## Compile the model
 model.compile(optimizer=Adam(), loss='mean_squared_error')
 
-# Train the model
+## Train the model
 model.fit(X_train, y_train, epochs=100, batch_size=32, validation_data=(X_test, y_test))
 
-# Save the trained model and its architecture
+## Save the trained model and its architecture
 model.save('renewable_energy_forecasting_model.h5')
 model_json = model.to_json()
 with open("renewable_energy_forecasting_model.json", "w") as json_file:
     json_file.write(model_json)
 
-# Save the model metadata
+## Save the model metadata
 metadata = {
     'input_features': num_features,
     'output_variable': 'renewable_energy_production',

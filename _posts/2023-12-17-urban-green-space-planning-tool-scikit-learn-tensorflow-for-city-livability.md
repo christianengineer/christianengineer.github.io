@@ -5,7 +5,7 @@ permalink: posts/urban-green-space-planning-tool-scikit-learn-tensorflow-for-cit
 layout: article
 ---
 
-# AI Urban Green Space Planning Tool
+## AI Urban Green Space Planning Tool
 
 ## Objectives
 The AI Urban Green Space Planning Tool aims to leverage machine learning algorithms to aid city planners in optimizing the distribution and design of green spaces within urban environments. The primary objectives of the tool include:
@@ -30,7 +30,7 @@ To achieve the aforementioned system design strategies, the following libraries 
 
 By integrating these libraries within the AI Urban Green Space Planning Tool, we aim to build a scalable, data-intensive application that leverages the power of machine learning to enhance urban planning and livability.
 
-# MLOps Infrastructure for Urban Green Space Planning Tool
+## MLOps Infrastructure for Urban Green Space Planning Tool
 
 In order to effectively deploy and maintain the AI Urban Green Space Planning Tool, a robust MLOps (Machine Learning Operations) infrastructure needs to be established. MLOps encompasses the practices and tools used to streamline the deployment, monitoring, and management of machine learning models in production. Here's an overview of the MLOps infrastructure for the Urban Green Space Planning Tool:
 
@@ -85,7 +85,7 @@ In order to effectively deploy and maintain the AI Urban Green Space Planning To
 
 By establishing this MLOps infrastructure, the Urban Green Space Planning Tool can ensure reliable, scalable, and efficient deployment and management of machine learning models, contributing to the overall success and impact of the application in urban planning and livability improvement.
 
-# Scalable File Structure for Urban Green Space Planning Tool Repository
+## Scalable File Structure for Urban Green Space Planning Tool Repository
 
 In order to maintain a well-organized and scalable codebase for the Urban Green Space Planning Tool, it's important to define a structured file system that promotes modularity, reusability, and ease of maintenance. Below is a proposed file structure for the repository:
 
@@ -260,38 +260,38 @@ Certainly! Below is an example Python script for training a machine learning mod
 File Path: `models/model_training/train_model.py`
 
 ```python
-# models/model_training/train_model.py
+## models/model_training/train_model.py
 
-# import necessary libraries
+## import necessary libraries
 import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
 import joblib
 
-# Load mock data (replace with actual data loading logic)
-# Mock urban features
-X = np.random.rand(100, 3)  # Mock feature matrix (100 samples, 3 features)
-# Mock livability metrics
-y = 2 * X[:, 0] - 3 * X[:, 1] + 5 * X[:, 2] + np.random.normal(scale=0.2, size=100)  # Mock target variable (livability metric)
+## Load mock data (replace with actual data loading logic)
+## Mock urban features
+X = np.random.rand(100, 3)  ## Mock feature matrix (100 samples, 3 features)
+## Mock livability metrics
+y = 2 * X[:, 0] - 3 * X[:, 1] + 5 * X[:, 2] + np.random.normal(scale=0.2, size=100)  ## Mock target variable (livability metric)
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Create and train a linear regression model
+## Create and train a linear regression model
 model = LinearRegression()
 model.fit(X_train, y_train)
 
-# Make predictions on the testing set
+## Make predictions on the testing set
 y_pred = model.predict(X_test)
 
-# Evaluate the model
+## Evaluate the model
 mse = mean_squared_error(y_test, y_pred)
 print(f"Mean Squared Error (MSE): {mse}")
 
-# Save the trained model to a file for later use in deployment
+## Save the trained model to a file for later use in deployment
 model_filename = 'trained_regression_model.pkl'
-joblib.dump(model, f'../trained_models/scikit-learn/{model_filename}')  # Save the trained model
+joblib.dump(model, f'../trained_models/scikit-learn/{model_filename}')  ## Save the trained model
 print(f"Trained model saved as: {model_filename}")
 ```
 
@@ -304,48 +304,48 @@ Certainly! Below is an example Python script for training a complex machine lear
 File Path: `models/model_training/train_complex_model.py`
 
 ```python
-# models/model_training/train_complex_model.py
+## models/model_training/train_complex_model.py
 
-# import necessary libraries
+## import necessary libraries
 import numpy as np
 import tensorflow as tf
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 import joblib
 
-# Load mock data (replace with actual data loading logic)
-# Mock urban features
-X = np.random.rand(100, 3)  # Mock feature matrix (100 samples, 3 features)
-# Mock livability metrics
-y = 2 * X[:, 0] - 3 * X[:, 1] + 5 * X[:, 2] + np.random.normal(scale=0.2, size=100)  # Mock target variable (livability metric)
+## Load mock data (replace with actual data loading logic)
+## Mock urban features
+X = np.random.rand(100, 3)  ## Mock feature matrix (100 samples, 3 features)
+## Mock livability metrics
+y = 2 * X[:, 0] - 3 * X[:, 1] + 5 * X[:, 2] + np.random.normal(scale=0.2, size=100)  ## Mock target variable (livability metric)
 
-# Standardize the features
+## Standardize the features
 scaler = StandardScaler()
 X_scaled = scaler.fit_transform(X)
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.2, random_state=42)
 
-# Build a simple neural network using TensorFlow
+## Build a simple neural network using TensorFlow
 model = tf.keras.Sequential([
     tf.keras.layers.Dense(64, activation='relu', input_shape=(3,)),
     tf.keras.layers.Dense(32, activation='relu'),
     tf.keras.layers.Dense(1)
 ])
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam', loss='mean_squared_error')
 
-# Train the model
+## Train the model
 history = model.fit(X_train, y_train, epochs=50, validation_split=0.2, verbose=0)
 
-# Evaluate the model
+## Evaluate the model
 mse = model.evaluate(X_test, y_test, verbose=0)
 print(f"Mean Squared Error (MSE): {mse}")
 
-# Save the trained model to files for later use in deployment
-model.save('../trained_models/tensorflow/trained_neural_network_model.h5')  # Save the trained model
-joblib.dump(scaler, '../trained_models/tensorflow/preprocessed_data/scaler.pkl')  # Save the scaler for preprocessing data
+## Save the trained model to files for later use in deployment
+model.save('../trained_models/tensorflow/trained_neural_network_model.h5')  ## Save the trained model
+joblib.dump(scaler, '../trained_models/tensorflow/preprocessed_data/scaler.pkl')  ## Save the scaler for preprocessing data
 print("Trained model and scaler saved for TensorFlow")
 ```
 

@@ -5,7 +5,7 @@ permalink: posts/ai-fueled-personal-finance-advisor
 layout: article
 ---
 
-# AI-Fueled Personal Finance Advisor
+## AI-Fueled Personal Finance Advisor
 
 ## Description
 

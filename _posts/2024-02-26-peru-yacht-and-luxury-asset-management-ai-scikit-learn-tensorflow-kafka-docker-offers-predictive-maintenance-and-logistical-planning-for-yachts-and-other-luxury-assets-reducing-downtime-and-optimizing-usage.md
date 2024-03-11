@@ -162,26 +162,26 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
 import joblib
 
-# Load mock data for model training
+## Load mock data for model training
 data_path = "data/processed_data/mock_training_data.csv"
 data = pd.read_csv(data_path)
 
-# Split data into features and target
+## Split data into features and target
 X = data.drop(columns=['target_column'])
 y = data['target_column']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize and train a Random Forest Regressor model
+## Initialize and train a Random Forest Regressor model
 rf_model = RandomForestRegressor()
 rf_model.fit(X_train, y_train)
 
-# Evaluate the model
+## Evaluate the model
 train_score = rf_model.score(X_train, y_train)
 test_score = rf_model.score(X_test, y_test)
 
-# Save the trained model
+## Save the trained model
 model_output_path = "models/scikit_learn_models/mock_reg_model.pkl"
 joblib.dump(rf_model, model_output_path)
 
@@ -205,39 +205,39 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
 import joblib
 
-# Load mock data for model training
+## Load mock data for model training
 data_path = "data/processed_data/mock_data.csv"
 data = pd.read_csv(data_path)
 
-# Split data into features and target
+## Split data into features and target
 X = data.drop(columns=['target_column'])
 y = data['target_column']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Normalize the data
+## Normalize the data
 scaler = StandardScaler()
 X_train_scaled = scaler.fit_transform(X_train)
 X_test_scaled = scaler.transform(X_test)
 
-# Build a neural network model
+## Build a neural network model
 model = Sequential()
 model.add(Dense(128, activation='relu', input_shape=(X_train.shape[1],)))
 model.add(Dense(64, activation='relu'))
 model.add(Dense(1))
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam', loss='mean_squared_error')
 
-# Train the model
+## Train the model
 model.fit(X_train_scaled, y_train, epochs=50, batch_size=32, validation_data=(X_test_scaled, y_test))
 
-# Evaluate the model
+## Evaluate the model
 train_loss = model.evaluate(X_train_scaled, y_train)
 test_loss = model.evaluate(X_test_scaled, y_test)
 
-# Save the trained neural network model
+## Save the trained neural network model
 model_output_path = "models/tensorflow_models/mock_neural_network_model.h5"
 model.save(model_output_path)
 

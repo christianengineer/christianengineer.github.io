@@ -5,7 +5,7 @@ permalink: posts/ai-powered-code-review-assistant
 layout: article
 ---
 
-# Technical Specifications - AI-Powered Code Review Assistant
+## Technical Specifications - AI-Powered Code Review Assistant
 
 ## Description
 

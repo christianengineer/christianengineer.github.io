@@ -5,7 +5,7 @@ permalink: posts/advanced-natural-language-processing-for-social-media-analysis
 layout: article
 ---
 
-# Natural Language Processing for Social Media Analysis Repository
+## Natural Language Processing for Social Media Analysis Repository
 
 ## Description
 
@@ -56,7 +56,7 @@ For efficient and scalable user traffic handling, we will employ the following:
 4. **PostgreSQL**: For efficient and secure database handling.
 
 ```markdown
-# Natural Language Processing for Social Media Analysis: Repository File Structure
+## Natural Language Processing for Social Media Analysis: Repository File Structure
 
 This is a comprehensive and scalable file structure for the Natural Language Processing for Social Media Analysis repository.
 
@@ -64,11 +64,11 @@ The basic structure will be broken down as follows:
 ```
 
 |-- RootProjectDir
-| |-- .gitignore # Git ignore file (files listed are omitted in commits)
-| |-- README.md # An overview of the project, setup, and usage instructions
-| |-- requirements.txt # Required python dependencies
+| |-- .gitignore ## Git ignore file (files listed are omitted in commits)
+| |-- README.md ## An overview of the project, setup, and usage instructions
+| |-- requirements.txt ## Required python dependencies
 |  
-| |-- analytics # Contains files for analytics functions
+| |-- analytics ## Contains files for analytics functions
 | | |-- **init**.py
 | | |-- sentiment_analysis.py
 | | |-- trend_detection.py
@@ -76,23 +76,23 @@ The basic structure will be broken down as follows:
 | | |-- user_behavior_analysis.py
 | | |-- utils.py
 |  
-| |-- data # Contains data files and scripts
+| |-- data ## Contains data files and scripts
 | | |-- **init**.py
-| | |-- raw # Raw data files
-| | |-- processed # Processed data files
-| | |-- data_handler.py # Contains scripts for data extraction, cleaning, and preprocessing
+| | |-- raw ## Raw data files
+| | |-- processed ## Processed data files
+| | |-- data_handler.py ## Contains scripts for data extraction, cleaning, and preprocessing
 |  
-| |-- models # Where model files will be stored
+| |-- models ## Where model files will be stored
 | | |-- **init**.py
-| | |-- nlp_model.py # Contains model training, saving, loading, and prediction functions
+| | |-- nlp_model.py ## Contains model training, saving, loading, and prediction functions
 |  
-| |-- server # Backend server files
+| |-- server ## Backend server files
 | | |-- **init**.py
-| | |-- app.py # Flask/Django application
-| | |-- config.py # Configuration for the server
-| | |-- routes.py # Route configurations
+| | |-- app.py ## Flask/Django application
+| | |-- config.py ## Configuration for the server
+| | |-- routes.py ## Route configurations
 |  
-| |-- tests # Testing files
+| |-- tests ## Testing files
 | | |-- **init**.py
 | | |-- test_analytics.py
 | | |-- test_data.py
@@ -108,14 +108,14 @@ Each component is separated so that any modifications to one part will not affec
 ```
 
 ````markdown
-# File Path:
+## File Path:
 
 `/analytics/nlp_analysis.py`
 
 ---
 
 ```python
-# Natural Language Processing for Social Media Analysis
+## Natural Language Processing for Social Media Analysis
 
 import nltk
 from nltk.corpus import stopwords

@@ -64,7 +64,7 @@ Continuous integration and continuous deployment (CI/CD) practices will be integ
 
 By establishing a cloud-based infrastructure with scalable compute and storage resources, efficient APIs for music generation, and robust monitoring and automation capabilities, the MelodyAI AI for Music Composition application will be well-equipped to deliver a seamless and high-performance experience for users seeking to explore AI-generated music compositions.
 
-# Scalable File Structure for MelodyAI AI for Music Composition Repository
+## Scalable File Structure for MelodyAI AI for Music Composition Repository
 
 ```
 melodyAI/
@@ -152,7 +152,7 @@ melodyAI/
 
 This scalable file structure for the MelodyAI AI for Music Composition repository promotes organization, ease of maintenance, and supports expansion as the project evolves.
 
-# models/ Directory for MelodyAI AI for Music Composition Application
+## models/ Directory for MelodyAI AI for Music Composition Application
 
 The `models/` directory in the MelodyAI AI for Music Composition application focuses on housing the machine learning (ML) and deep learning (DL) models responsible for music generation. This directory is structured to contain subdirectories for different types of models and their associated files.
 
@@ -186,7 +186,7 @@ The `models/` directory in the MelodyAI AI for Music Composition application foc
 
 By adhering to this organized and scalable structure within the `models/` directory, the MelodyAI AI for Music Composition application can effectively manage, develop, and expand its repertoire of ML and DL models for diverse music generation tasks.
 
-# Deployment Directory for MelodyAI AI for Music Composition Application
+## Deployment Directory for MelodyAI AI for Music Composition Application
 
 The `deployment/` directory in the MelodyAI AI for Music Composition application is dedicated to managing deployment-related files and scripts necessary for deploying the application, models, and associated services to production environments.
 
@@ -233,17 +233,17 @@ from sklearn.model_selection import train_test_split
 from tensorflow.keras import layers, models
 
 def train_complex_melody_generation_model(data_file_path):
-    # Load mock data
+    ## Load mock data
     data = pd.read_csv(data_file_path)
 
-    # Preprocess data
+    ## Preprocess data
     X = data.drop(columns=['melody_sequence'])
     y = data['melody_sequence']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Define the neural network architecture
+    ## Define the neural network architecture
     model = models.Sequential([
         layers.Dense(128, activation='relu', input_shape=(X_train.shape[1],)),
         layers.Dense(64, activation='relu'),
@@ -251,10 +251,10 @@ def train_complex_melody_generation_model(data_file_path):
         layers.Dense(1, activation='linear')
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam', loss='mean_squared_error', metrics=['mae'])
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train, epochs=50, batch_size=32, validation_data=(X_test, y_test))
 
     return model
@@ -280,17 +280,17 @@ from sklearn.model_selection import train_test_split
 from tensorflow.keras import layers, models
 
 def train_complex_deep_melody_generation_model(data_file_path):
-    # Load mock data
+    ## Load mock data
     data = pd.read_csv(data_file_path)
 
-    # Preprocess data
+    ## Preprocess data
     X = data.drop(columns=['melody_sequence'])
     y = data['melody_sequence']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Define the deep neural network architecture
+    ## Define the deep neural network architecture
     model = models.Sequential([
         layers.Embedding(input_dim=1000, output_dim=64, input_length=X_train.shape[1]),
         layers.LSTM(128, return_sequences=True),
@@ -299,10 +299,10 @@ def train_complex_deep_melody_generation_model(data_file_path):
         layers.Dense(1, activation='linear')
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam', loss='mean_squared_error', metrics=['mae'])
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train, epochs=50, batch_size=32, validation_data=(X_test, y_test))
 
     return model

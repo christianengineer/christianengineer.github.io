@@ -216,43 +216,43 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# Load dataset
+## Load dataset
 data = pd.read_csv('your_dataset.csv')
 
-# Display basic information about the dataset
+## Display basic information about the dataset
 print(data.head())
 print(data.info())
 
-# Handling missing values
-data.fillna(data.mean(), inplace=True)  # Impute missing values with mean
-# It is crucial to handle missing values to avoid bias in statistical analysis and model training
+## Handling missing values
+data.fillna(data.mean(), inplace=True)  ## Impute missing values with mean
+## It is crucial to handle missing values to avoid bias in statistical analysis and model training
 
-# Encode categorical variables
+## Encode categorical variables
 data = pd.get_dummies(data)
-# One-hot encode categorical variables for numerical representation in machine learning models
+## One-hot encode categorical variables for numerical representation in machine learning models
 
-# Feature scaling
+## Feature scaling
 from sklearn.preprocessing import StandardScaler
 scaler = StandardScaler()
 data_scaled = pd.DataFrame(scaler.fit_transform(data), columns=data.columns)
-# Scale numerical features to have zero mean and unit variance for model convergence and performance
+## Scale numerical features to have zero mean and unit variance for model convergence and performance
 
-# Outlier detection and treatment
+## Outlier detection and treatment
 from scipy import stats
 z_scores = np.abs(stats.zscore(data))
 data_no_outliers = data[(z_scores < 3).all(axis=1)]
-# Remove outliers to prevent skewing statistical analysis and model predictions
+## Remove outliers to prevent skewing statistical analysis and model predictions
 
-# Data visualization
+## Data visualization
 plt.figure(figsize=(12, 6))
 plt.scatter(data['feature1'], data['feature2'])
 plt.title('Scatter plot of Feature1 vs Feature2')
 plt.xlabel('Feature1')
 plt.ylabel('Feature2')
 plt.show()
-# Visualize data relationships for better insights and informed policy-making decisions
+## Visualize data relationships for better insights and informed policy-making decisions
 
-# Save preprocessed data to a new file
+## Save preprocessed data to a new file
 data_scaled.to_csv('preprocessed_data.csv', index=False)
 ```
 
@@ -352,30 +352,30 @@ import numpy as np
 import pandas as pd
 from sklearn.datasets import make_classification
 
-# Generate synthetic dataset with features
-n_samples = 10000  # Number of samples
-n_features = 5  # Number of features
+## Generate synthetic dataset with features
+n_samples = 10000  ## Number of samples
+n_features = 5  ## Number of features
 X, y = make_classification(n_samples=n_samples, n_features=n_features, random_state=42)
 
-# Create a Pandas DataFrame with synthetic data
+## Create a Pandas DataFrame with synthetic data
 columns = ['feature1', 'feature2', 'feature3', 'feature4', 'feature5', 'target']
 df = pd.DataFrame(np.concatenate([X, y.reshape(-1, 1)], axis=1), columns=columns)
 
-# Add more relevant features based on the project's requirements
+## Add more relevant features based on the project's requirements
 df['timestamp'] = pd.date_range(start='1/1/2021', periods=n_samples, freq='D')
 df['category'] = np.random.choice(['A', 'B', 'C'], n_samples)
 df['numerical_feature'] = np.random.rand(n_samples)
 df['text_feature'] = ['Lorem ipsum']*n_samples
-df['target'] = df['target'].astype(int)  # Convert target to integer
+df['target'] = df['target'].astype(int)  ## Convert target to integer
 
-# Incorporate variability in the dataset to mimic real-world conditions
+## Incorporate variability in the dataset to mimic real-world conditions
 df.loc[df['target'] == 1, 'feature1'] += np.random.normal(0, 1, sum(df['target']==1))
 
-# Save the synthetic dataset to a CSV file
+## Save the synthetic dataset to a CSV file
 df.to_csv('synthetic_dataset.csv', index=False)
 
-# Dataset Validation and Verification (Optional)
-# Perform basic checks such as data types, missing values, distributions, and statistical summaries
+## Dataset Validation and Verification (Optional)
+## Perform basic checks such as data types, missing values, distributions, and statistical summaries
 print(df.info())
 print(df.describe())
 ```
@@ -426,28 +426,28 @@ from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
-# Load preprocessed dataset
+## Load preprocessed dataset
 data = pd.read_csv('preprocessed_data.csv')
 
-# Define features and target
+## Define features and target
 X = data.drop('target', axis=1)
 y = data['target']
 
-# Split the dataset into training and testing sets
+## Split the dataset into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize and train the Gradient Boosting Classifier
+## Initialize and train the Gradient Boosting Classifier
 model = GradientBoostingClassifier()
 model.fit(X_train, y_train)
 
-# Make predictions on the test set
+## Make predictions on the test set
 y_pred = model.predict(X_test)
 
-# Calculate accuracy
+## Calculate accuracy
 accuracy = accuracy_score(y_test, y_pred)
 print(f'Model Accuracy: {accuracy}')
 
-# Save the trained model for deployment
+## Save the trained model for deployment
 joblib.dump(model, 'trained_model.pkl')
 ```
 
@@ -532,23 +532,23 @@ By following best practices such as clear documentation, logical structuring, an
 By following this step-by-step deployment plan tailored to the specific demands of the project at the Peruvian National Institute of Statistics and Informatics, the team can effectively deploy the machine learning model into a live production environment with confidence and efficiency, leveraging the recommended tools and platforms to ensure scalability, reliability, and performance.
 
 ```Dockerfile
-# Use a base image with Python and required dependencies
+## Use a base image with Python and required dependencies
 FROM python:3.8-slim
 
 WORKDIR /app
 
-# Copy requirements file and install dependencies
+## Copy requirements file and install dependencies
 COPY requirements.txt /app
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the model and necessary files
+## Copy the model and necessary files
 COPY trained_model.pkl /app
 COPY app.py /app
 
-# Expose the necessary port
+## Expose the necessary port
 EXPOSE 5000
 
-# Command to run the Flask web application
+## Command to run the Flask web application
 CMD ["python", "app.py"]
 ```
 

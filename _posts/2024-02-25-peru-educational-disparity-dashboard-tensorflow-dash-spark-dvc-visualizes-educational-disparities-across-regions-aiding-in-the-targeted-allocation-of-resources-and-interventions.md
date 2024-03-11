@@ -220,28 +220,28 @@ deploy/
 By organizing the deployment directory with specific subdirectories and files tailored for hosting the Dash dashboard application, the Peru Educational Disparity Dashboard project can streamline the deployment process and efficiently showcase educational insights to users for informed decision-making.
 
 ```python
-# File: model_training.py
+## File: model_training.py
 import tensorflow as tf
 from tensorflow.keras import layers, models
 import numpy as np
 
-# Mock data for educational disparities
-X = np.random.rand(100, 5)  # Features: 100 samples, 5 features
-y = np.random.randint(0, 2, size=100)  # Binary labels: 0 or 1
+## Mock data for educational disparities
+X = np.random.rand(100, 5)  ## Features: 100 samples, 5 features
+y = np.random.randint(0, 2, size=100)  ## Binary labels: 0 or 1
 
-# Define a simple neural network model
+## Define a simple neural network model
 model = models.Sequential([
     layers.Dense(10, activation='relu', input_shape=(5,)),
     layers.Dense(1, activation='sigmoid')
 ])
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
-# Train the model on mock data
+## Train the model on mock data
 model.fit(X, y, epochs=10, batch_size=32)
 
-# Save the trained model
+## Save the trained model
 model.save('models/trained_models/mock_model')
 ```
 
@@ -250,29 +250,29 @@ model.save('models/trained_models/mock_model')
 In this script, a simple neural network model is trained on mock data representing educational disparities. The model is compiled, trained for 10 epochs, and saved in the directory `models/trained_models/mock_model`. This file demonstrates the training process for developing machine learning models to analyze educational disparities for the Peru Educational Disparity Dashboard application.
 
 ```python
-# File: complex_model_training.py
+## File: complex_model_training.py
 import tensorflow as tf
 from tensorflow.keras import layers, models
 import numpy as np
 
-# Mock data for educational disparities (complex)
-X = np.random.rand(100, 10)  # Features: 100 samples, 10 features
-y = np.random.randint(0, 3, size=100)  # Multiclass labels: 0, 1, or 2
+## Mock data for educational disparities (complex)
+X = np.random.rand(100, 10)  ## Features: 100 samples, 10 features
+y = np.random.randint(0, 3, size=100)  ## Multiclass labels: 0, 1, or 2
 
-# Define a more complex neural network model
+## Define a more complex neural network model
 model = models.Sequential([
     layers.Dense(20, activation='relu', input_shape=(10,)),
     layers.Dense(10, activation='relu'),
     layers.Dense(3, activation='softmax')
 ])
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
 
-# Train the model on mock data
+## Train the model on mock data
 model.fit(X, y, epochs=20, batch_size=32)
 
-# Save the trained model
+## Save the trained model
 model.save('models/trained_models/complex_model')
 ```
 

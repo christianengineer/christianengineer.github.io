@@ -5,7 +5,7 @@ permalink: posts/ai-based-healthcare-diagnosis-chatbot-implementation-guide
 layout: article
 ---
 
-# Healthcare Chatbot for Diagnosis Assistance
+## Healthcare Chatbot for Diagnosis Assistance
 
 ## Description
 
@@ -46,45 +46,45 @@ Here are the main libraries and technologies we plan to use for efficient data h
 2. **JWT**: For securely transmitting information between parties as a JSON object, it will be used for user authentication and session management.
 
 ```
-# Healthcare Chatbot for Diagnosis Assistance Repository
+## Healthcare Chatbot for Diagnosis Assistance Repository
 
 The following is a proposed scalable file structure:
 
 ```
 
 .
-├── client # React App Front-end
-│   ├── public # Static files
-│   ├── src # Source files
-│   │   ├── components # React components
-│   │   ├── actions # Redux actions
-│   │   ├── reducers # Redux reducers
-│   │   ├── api.js # API calls
-│   │   ├── App.js # Main app component
-│   │   └── index.js # Entry point
-│   ├── package.json # Dependencies
-│   └── README.md # Documentations
-├── server # NodeJS/Express App Back-end
-│   ├── config # Environment variables and configuration related things
-│   ├── models # Schemas for your database models
-│   ├── routes # All routes for the application
-│   ├── controllers # Business logic tied to your routes
-│   ├── middleware # Middleware files
-│   ├── services # Services like Dialogflow API
-│   └── server.js # Entry point
-├── database # MongoDB files
-│   ├── db.js # Database configuration file
-│   └── models # Database schemas
-├── .gitignore # Specifies intentionally untracked files to ignore
-├── README.md # The top-level README for developers using this project
-├── package.json # File that lists the packages/modules installed
-└── package-lock.json # Automatically generated for any operations where npm modifies either the node_modules tree, or package.json
+├── client ## React App Front-end
+│   ├── public ## Static files
+│   ├── src ## Source files
+│   │   ├── components ## React components
+│   │   ├── actions ## Redux actions
+│   │   ├── reducers ## Redux reducers
+│   │   ├── api.js ## API calls
+│   │   ├── App.js ## Main app component
+│   │   └── index.js ## Entry point
+│   ├── package.json ## Dependencies
+│   └── README.md ## Documentations
+├── server ## NodeJS/Express App Back-end
+│   ├── config ## Environment variables and configuration related things
+│   ├── models ## Schemas for your database models
+│   ├── routes ## All routes for the application
+│   ├── controllers ## Business logic tied to your routes
+│   ├── middleware ## Middleware files
+│   ├── services ## Services like Dialogflow API
+│   └── server.js ## Entry point
+├── database ## MongoDB files
+│   ├── db.js ## Database configuration file
+│   └── models ## Database schemas
+├── .gitignore ## Specifies intentionally untracked files to ignore
+├── README.md ## The top-level README for developers using this project
+├── package.json ## File that lists the packages/modules installed
+└── package-lock.json ## Automatically generated for any operations where npm modifies either the node_modules tree, or package.json
 
 ````
 This structure separates the front-end and back-end directories for clear distinction of responsibilities. It makes it easier to manage, test, and maintain the project as it scales, as each aspect of the project has its specific location in the directory structure.
 
 ```markdown
-# File: server/controllers/chatbotController.js
+## File: server/controllers/chatbotController.js
 
 This file contains the main logic for the Healthcare Chatbot for Diagnosis Assistance. It is located in the server `controllers` directory.
 

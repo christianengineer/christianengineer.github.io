@@ -183,27 +183,27 @@ from sklearn.metrics import accuracy_score
 import mlflow
 
 def train_and_evaluate_model(data_path):
-    # Load mock data
+    ## Load mock data
     data = pd.read_csv(data_path)
 
-    # Prepare features and target
+    ## Prepare features and target
     X = data.drop('target', axis=1)
     y = data['target']
 
-    # Split data into training and testing sets
+    ## Split data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Define and train the machine learning model
+    ## Define and train the machine learning model
     model = RandomForestClassifier(n_estimators=100, random_state=42)
     model.fit(X_train, y_train)
 
-    # Make predictions
+    ## Make predictions
     y_pred = model.predict(X_test)
 
-    # Calculate accuracy
+    ## Calculate accuracy
     accuracy = accuracy_score(y_test, y_pred)
 
-    # Log parameters, metrics, and artifacts with MLflow
+    ## Log parameters, metrics, and artifacts with MLflow
     with mlflow.start_run():
         mlflow.log_param("n_estimators", 100)
         mlflow.log_metric("accuracy", accuracy)
@@ -233,38 +233,38 @@ from sklearn.preprocessing import StandardScaler
 import mlflow
 
 def train_and_evaluate_deep_learning_model(data_path):
-    # Load mock data
+    ## Load mock data
     data = pd.read_csv(data_path)
 
-    # Prepare features and target
+    ## Prepare features and target
     X = data.drop('target', axis=1)
     y = data['target']
 
-    # Split data into training and testing sets
+    ## Split data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Feature scaling
+    ## Feature scaling
     sc = StandardScaler()
     X_train = sc.fit_transform(X_train)
     X_test = sc.transform(X_test)
 
-    # Define the deep learning model
+    ## Define the deep learning model
     model = tf.keras.Sequential([
         tf.keras.layers.Dense(128, activation='relu', input_shape=(X_train.shape[1],)),
         tf.keras.layers.Dense(64, activation='relu'),
         tf.keras.layers.Dense(1, activation='sigmoid')
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y_test))
 
-    # Evaluate the model
+    ## Evaluate the model
     _, accuracy = model.evaluate(X_test, y_test)
 
-    # Log parameters, metrics, and artifacts with MLflow
+    ## Log parameters, metrics, and artifacts with MLflow
     with mlflow.start_run():
         mlflow.log_param("epochs", 10)
         mlflow.log_metric("accuracy", accuracy)

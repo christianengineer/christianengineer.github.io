@@ -5,7 +5,7 @@ permalink: posts/automated-news-aggregation-using-beautifulsoup-python-curating-
 layout: article
 ---
 
-# AI Automated News Aggregation using BeautifulSoup (Python)
+## AI Automated News Aggregation using BeautifulSoup (Python)
 
 ## Objectives
 The objectives of this AI Automated News Aggregation system using BeautifulSoup in Python are:
@@ -208,36 +208,36 @@ from sklearn.svm import LinearSVC
 from sklearn.metrics import classification_report, accuracy_score
 
 def train_sentiment_analysis_model(data_file_path):
-    # Load mock data
+    ## Load mock data
     data = {
         'text': ["Great article, very insightful", "Disappointing news about the economy", "Exciting developments in the tech industry", "Mixed feelings about the new policy"],
         'sentiment': ['positive', 'negative', 'positive', 'neutral']
     }
     df = pd.DataFrame(data)
 
-    # Preprocessing mock data
-    # ... (preprocessing steps such as text cleaning, tokenization, etc.)
+    ## Preprocessing mock data
+    ## ... (preprocessing steps such as text cleaning, tokenization, etc.)
 
-    # Split mock data into training and testing sets
+    ## Split mock data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(df['text'], df['sentiment'], test_size=0.2, random_state=42)
 
-    # Feature extraction using TF-IDF
+    ## Feature extraction using TF-IDF
     tfidf_vectorizer = TfidfVectorizer(max_features=1000)
     X_train_tfidf = tfidf_vectorizer.fit_transform(X_train)
     X_test_tfidf = tfidf_vectorizer.transform(X_test)
 
-    # Initialize and train the sentiment analysis model
+    ## Initialize and train the sentiment analysis model
     model = LinearSVC()
     model.fit(X_train_tfidf, y_train)
 
-    # Evaluate the model
+    ## Evaluate the model
     y_pred = model.predict(X_test_tfidf)
     accuracy = accuracy_score(y_test, y_pred)
     report = classification_report(y_test, y_pred)
 
-    # Save the trained model to a file
+    ## Save the trained model to a file
     model_file_path = 'models/machine_learning/nlp_models/sentiment_analysis_model.pkl'
-    # ... (code to save the model using pickle or joblib)
+    ## ... (code to save the model using pickle or joblib)
 
     return accuracy, report, model_file_path
 ```
@@ -258,32 +258,32 @@ from sklearn.ensemble import RandomForestClassifier
 import joblib
 
 def train_topic_classification_model(data_file_path):
-    # Load mock data
+    ## Load mock data
     data = {
         'text': ["New research findings in biotechnology", "Global market trends for renewable energy", "Political developments in the Middle East", "Advancements in artificial intelligence"],
         'topic': ['Technology', 'Business', 'Politics', 'Technology']
     }
     df = pd.DataFrame(data)
 
-    # Preprocessing mock data
-    # ... (preprocessing steps such as text cleaning, tokenization, etc.)
+    ## Preprocessing mock data
+    ## ... (preprocessing steps such as text cleaning, tokenization, etc.)
 
-    # Split mock data into training and testing sets
+    ## Split mock data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(df['text'], df['topic'], test_size=0.2, random_state=42)
 
-    # Feature extraction using TF-IDF
+    ## Feature extraction using TF-IDF
     tfidf_vectorizer = TfidfVectorizer(max_features=1000)
     X_train_tfidf = tfidf_vectorizer.fit_transform(X_train)
     X_test_tfidf = tfidf_vectorizer.transform(X_test)
 
-    # Initialize and train the topic classification model
+    ## Initialize and train the topic classification model
     model = RandomForestClassifier(n_estimators=100, random_state=42)
     model.fit(X_train_tfidf, y_train)
 
-    # Evaluate the model (not mandatory for saving the model)
-    # ...
+    ## Evaluate the model (not mandatory for saving the model)
+    ## ...
 
-    # Save the trained model to a file
+    ## Save the trained model to a file
     model_file_path = 'models/machine_learning/topic_classification/topic_model.pkl'
     joblib.dump(model, model_file_path)
 

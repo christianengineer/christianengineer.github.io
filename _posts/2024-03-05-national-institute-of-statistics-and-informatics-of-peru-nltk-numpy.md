@@ -160,39 +160,39 @@ from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 from sklearn.feature_extraction.text import TfidfVectorizer
 
-# Load the census data into a Pandas DataFrame
+## Load the census data into a Pandas DataFrame
 df = pd.read_csv('census_data.csv')
 
-# Text preprocessing
+## Text preprocessing
 stop_words = set(stopwords.words('english'))
 lemmatizer = WordNetLemmatizer()
 
 def preprocess_text(text):
-    # Tokenize the text
+    ## Tokenize the text
     tokens = word_tokenize(text.lower())
     
-    # Remove stopwords and non-alphabetic tokens
+    ## Remove stopwords and non-alphabetic tokens
     clean_tokens = [token for token in tokens if token.isalpha() and token not in stop_words]
     
-    # Lemmatize tokens
+    ## Lemmatize tokens
     lemmatized_tokens = [lemmatizer.lemmatize(token) for token in clean_tokens]
     
-    # Join lemmatized tokens back into text
+    ## Join lemmatized tokens back into text
     processed_text = ' '.join(lemmatized_tokens)
     
     return processed_text
 
-# Apply text preprocessing to the 'text' column in the DataFrame
+## Apply text preprocessing to the 'text' column in the DataFrame
 df['processed_text'] = df['text'].apply(preprocess_text)
 
-# TF-IDF Vectorization
-tfidf_vectorizer = TfidfVectorizer(max_features=1000)  # Limit to top 1000 features
+## TF-IDF Vectorization
+tfidf_vectorizer = TfidfVectorizer(max_features=1000)  ## Limit to top 1000 features
 tfidf_features = tfidf_vectorizer.fit_transform(df['processed_text'])
 
-# Create a new DataFrame with TF-IDF features
+## Create a new DataFrame with TF-IDF features
 df_tfidf = pd.DataFrame(tfidf_features.toarray(), columns=tfidf_vectorizer.get_feature_names_out())
 
-# Save the preprocessed data with TF-IDF features to a new CSV file
+## Save the preprocessed data with TF-IDF features to a new CSV file
 df_tfidf.to_csv('preprocessed_census_data.csv', index=False)
 ```
 
@@ -284,23 +284,23 @@ import numpy as np
 from faker import Faker
 import random
 
-# Initialize Faker for generating fake data
+## Initialize Faker for generating fake data
 fake = Faker()
 
-# Create a fictitious dataset mimicking census information
+## Create a fictitious dataset mimicking census information
 num_samples = 10000
 
-# Generate random text data for census information
+## Generate random text data for census information
 def generate_text_data():
     return fake.text(max_nb_chars=200)
 
 data = {'text': [generate_text_data() for _ in range(num_samples)]}
 
-# Add categorical labels for classification
+## Add categorical labels for classification
 categories = ['Population', 'Employment', 'Housing', 'Education']
 data['category'] = [random.choice(categories) for _ in range(num_samples)]
 
-# Simulate hierarchical structure of categories
+## Simulate hierarchical structure of categories
 data['subcategory'] = np.where(data['category'] == 'Population', 
                               [random.choice(['Age Distribution', 'Household Size']) for _ in range(num_samples)],
                               np.where(data['category'] == 'Employment',
@@ -309,14 +309,14 @@ data['subcategory'] = np.where(data['category'] == 'Population',
                                                 [random.choice(['Homeownership Rate', 'Housing Type']) for _ in range(num_samples)],
                                                 [random.choice(['School Enrollment Rate', 'Education Level']) for _ in range(num_samples)])))
 
-# Add additional metadata for simulation
+## Add additional metadata for simulation
 data['source'] = [fake.company() for _ in range(num_samples)]
 data['publication_date'] = pd.date_range(start='1/1/2020', periods=num_samples, freq='D')
 
-# Create DataFrame
+## Create DataFrame
 df = pd.DataFrame(data)
 
-# Save the generated dataset to a CSV file
+## Save the generated dataset to a CSV file
 df.to_csv('simulated_census_data.csv', index=False)
 ```
 
@@ -365,29 +365,29 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.svm import SVC
 from sklearn.metrics import classification_report
 
-# Load the preprocessed dataset
+## Load the preprocessed dataset
 df = pd.read_csv('preprocessed_census_data.csv')
 
-# Split data into features (X) and target (y)
+## Split data into features (X) and target (y)
 X = df['processed_text']
 y = df['category']
 
-# TF-IDF Vectorization
+## TF-IDF Vectorization
 tfidf_vectorizer = TfidfVectorizer(max_features=1000)
 X_tfidf = tfidf_vectorizer.fit_transform(X)
 
-# Split into training and testing sets
+## Split into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X_tfidf, y, test_size=0.2, random_state=42)
 
-# Model training
+## Model training
 svm_model = SVC(kernel='linear')
 svm_model.fit(X_train, y_train)
 
-# Model evaluation
+## Model evaluation
 y_pred = svm_model.predict(X_test)
 print(classification_report(y_test, y_pred))
 
-# Save the trained model for deployment
+## Save the trained model for deployment
 import joblib
 joblib.dump(svm_model, 'svm_model.pkl')
 ```
@@ -457,23 +457,23 @@ This production-ready code exemplifies structured, readable, and maintainable co
 By following this step-by-step deployment plan tailored to the unique demands of the project, utilizing the recommended tools and platforms at each stage, the machine learning model can be efficiently deployed into a production environment, ensuring reliability, scalability, and accessibility for the National Institute of Statistics and Informatics of Peru.
 
 ```Dockerfile
-# Use a base image with Python and necessary dependencies
+## Use a base image with Python and necessary dependencies
 FROM python:3.9-slim
 
-# Set working directory in the container
+## Set working directory in the container
 WORKDIR /app
 
-# Copy requirements file and install dependencies
+## Copy requirements file and install dependencies
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the preprocessed data CSV file and serialized model
+## Copy the preprocessed data CSV file and serialized model
 COPY preprocessed_census_data.csv svm_model.pkl ./
 
-# Copy the Python script for running the model
+## Copy the Python script for running the model
 COPY model_script.py ./
 
-# Command to run the Python script
+## Command to run the Python script
 CMD [ "python", "model_script.py" ]
 ```
 

@@ -5,7 +5,7 @@ permalink: posts/peru-restaurant-demand-forecasting-system-tensorflow-scikit-lea
 layout: article
 ---
 
-# Machine Learning Peru Restaurant Demand Forecasting System
+## Machine Learning Peru Restaurant Demand Forecasting System
 
 ## Objectives:
 - Predict customer demand to optimize staffing
@@ -47,7 +47,7 @@ layout: article
 
 By following this pipeline and utilizing the mentioned tools and libraries, Restaurant Owners can effectively forecast customer demand, leading to optimized staffing, inventory management, and reduced food waste in their establishments.
 
-# Feature Engineering and Metadata Management for Peru Restaurant Demand Forecasting System
+## Feature Engineering and Metadata Management for Peru Restaurant Demand Forecasting System
 
 ## Feature Engineering:
 
@@ -85,7 +85,7 @@ By following this pipeline and utilizing the mentioned tools and libraries, Rest
 
 By incorporating robust feature engineering techniques and effective metadata management practices, the interpretability of the data can be enhanced, leading to improved performance of the machine learning model in predicting customer demand accurately for the Peru Restaurant.
 
-# Efficient Data Collection Tools and Methods for Peru Restaurant Demand Forecasting System
+## Efficient Data Collection Tools and Methods for Peru Restaurant Demand Forecasting System
 
 ## Data Collection Tools and Methods:
 
@@ -120,7 +120,7 @@ By incorporating robust feature engineering techniques and effective metadata ma
 
 By integrating these tools and methods within the existing technology stack, the data collection process can be streamlined, ensuring that data is readily accessible in the correct format for analysis and model training. This seamless integration will enhance the efficiency of the Peru Restaurant Demand Forecasting System, enabling accurate predictions and informed decision-making based on the collected data.
 
-# Data Challenges and Preprocessing Strategies for Peru Restaurant Demand Forecasting System
+## Data Challenges and Preprocessing Strategies for Peru Restaurant Demand Forecasting System
 
 ## Specific Data Challenges:
 
@@ -164,14 +164,14 @@ from sklearn.preprocessing import StandardScaler, OneHotEncoder
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 
-# Load the raw data
+## Load the raw data
 data = pd.read_csv('restaurant_data.csv')
 
-# Separate features and target variable
+## Separate features and target variable
 X = data.drop(columns=['demand'])
 y = data['demand']
 
-# Define preprocessing steps for numerical and categorical features
+## Define preprocessing steps for numerical and categorical features
 numeric_features = ['num_customers', 'temperature']
 numeric_transformer = Pipeline(steps=[
     ('imputer', SimpleImputer(strategy='mean')),
@@ -182,16 +182,16 @@ categorical_transformer = Pipeline(steps=[
     ('imputer', SimpleImputer(strategy='most_frequent')),
     ('onehot', OneHotEncoder(handle_unknown='ignore'))])
 
-# Combine preprocessing steps for numerical and categorical features
+## Combine preprocessing steps for numerical and categorical features
 preprocessor = ColumnTransformer(
     transformers=[
         ('num', numeric_transformer, numeric_features),
         ('cat', categorical_transformer, categorical_features)])
 
-# Apply preprocessing to the data
+## Apply preprocessing to the data
 X_preprocessed = preprocessor.fit_transform(X)
 
-# Save preprocessed data to a new CSV file
+## Save preprocessed data to a new CSV file
 preprocessed_data = pd.DataFrame(X_preprocessed, columns=numeric_features + preprocessor.named_transformers_['cat']['onehot'].get_feature_names(categorical_features))
 preprocessed_data['demand'] = y
 preprocessed_data.to_csv('preprocessed_data.csv', index=False)
@@ -352,39 +352,39 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import LSTM, Dense
 from sklearn.preprocessing import StandardScaler
 
-# Load preprocessed dataset
+## Load preprocessed dataset
 data = pd.read_csv('preprocessed_data.csv')
 
-# Split features and target variable
+## Split features and target variable
 X = data.drop(columns=['demand'])
 y = data['demand']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Scale the features
+## Scale the features
 scaler = StandardScaler()
 X_train_scaled = scaler.fit_transform(X_train)
 X_test_scaled = scaler.transform(X_test)
 
-# Reshape data for LSTM input (samples, time steps, features)
+## Reshape data for LSTM input (samples, time steps, features)
 X_train_reshaped = X_train_scaled.reshape(X_train_scaled.shape[0], 1, X_train_scaled.shape[1])
 X_test_reshaped = X_test_scaled.reshape(X_test_scaled.shape[0], 1, X_test_scaled.shape[1])
 
-# Build the LSTM model
+## Build the LSTM model
 model = Sequential()
 model.add(LSTM(units=50, input_shape=(X_train_reshaped.shape[1], X_train_reshaped.shape[2])))
 model.add(Dense(units=1))
 model.compile(optimizer='adam', loss='mean_squared_error')
 
-# Train the model
+## Train the model
 model.fit(X_train_reshaped, y_train, epochs=50, batch_size=32)
 
-# Evaluate the model on the test set
+## Evaluate the model on the test set
 loss = model.evaluate(X_test_reshaped, y_test)
 print(f'Loss on test set: {loss}')
 
-# Save the trained model
+## Save the trained model
 model.save('demand_forecasting_model.h5')
 ```
 
@@ -446,23 +446,23 @@ By following these code quality standards and best practices, the provided code 
 By following this step-by-step deployment plan and leveraging the recommended tools and platforms, you can ensure a seamless transition of the LSTM model for the Peru Restaurant Demand Forecasting System into a live production environment, fostering scalability, reliability, and efficiency in your machine learning solution.
 
 ```Dockerfile
-# Use TensorFlow Docker image as the base image
+## Use TensorFlow Docker image as the base image
 FROM tensorflow/tensorflow:latest
 
-# Set the working directory in the container
+## Set the working directory in the container
 WORKDIR /app
 
-# Copy the necessary files into the container
+## Copy the necessary files into the container
 COPY model.py /app
 COPY preprocessed_data.csv /app
 
-# Install additional dependencies
+## Install additional dependencies
 RUN pip install pandas scikit-learn
 
-# Expose the port on which the application runs
+## Expose the port on which the application runs
 EXPOSE 5000
 
-# Command to run the application when the container starts
+## Command to run the application when the container starts
 CMD ["python", "model.py"]
 ```
 

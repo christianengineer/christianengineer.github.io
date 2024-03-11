@@ -78,35 +78,35 @@ By incorporating these MLOps practices, the infrastructure for the Automated Cha
 automated_chatbots_customer_engagement/
 ├── app/
 │   ├── models/
-│   │   ├── gpt3_model.py          # GPT-3 model implementation
-│   │   └── user_model.py          # User and conversation data models
+│   │   ├── gpt3_model.py          ## GPT-3 model implementation
+│   │   └── user_model.py          ## User and conversation data models
 │   ├── routes/
-│   │   ├── chatbot_routes.py      # API routes for chatbot interactions
-│   │   └── user_routes.py         # API routes for user management
+│   │   ├── chatbot_routes.py      ## API routes for chatbot interactions
+│   │   └── user_routes.py         ## API routes for user management
 │   ├── services/
-│   │   ├── gpt3_service.py        # Service for interacting with GPT-3 API
-│   │   └── user_service.py        # Service for user-related functionalities
+│   │   ├── gpt3_service.py        ## Service for interacting with GPT-3 API
+│   │   └── user_service.py        ## Service for user-related functionalities
 │   ├── utils/
-│   │   ├── helpers.py             # Helper functions and utilities
-│   │   └── validators.py          # Input validation and sanitization functions
-│   ├── app.py                     # Flask application initialization and configuration
-│   └── config.py                  # Configuration settings for the Flask app
+│   │   ├── helpers.py             ## Helper functions and utilities
+│   │   └── validators.py          ## Input validation and sanitization functions
+│   ├── app.py                     ## Flask application initialization and configuration
+│   └── config.py                  ## Configuration settings for the Flask app
 ├── deployments/
 │   ├── kubernetes/
-│   │   ├── deployment.yaml        # Kubernetes deployment configuration
-│   │   ├── service.yaml           # Kubernetes service configuration
-│   │   └── ingress.yaml           # Kubernetes Ingress configuration
-│   └── Dockerfile                 # Dockerfile for containerizing the Flask application
+│   │   ├── deployment.yaml        ## Kubernetes deployment configuration
+│   │   ├── service.yaml           ## Kubernetes service configuration
+│   │   └── ingress.yaml           ## Kubernetes Ingress configuration
+│   └── Dockerfile                 ## Dockerfile for containerizing the Flask application
 ├── data/
-│   ├── conversations/             # Conversation logs and user interactions
-│   └── models/                    # Stored ML models and model artifacts
+│   ├── conversations/             ## Conversation logs and user interactions
+│   └── models/                    ## Stored ML models and model artifacts
 ├── tests/
-│   ├── unit/                      # Unit tests for individual components
-│   └── integration/               # Integration tests for API endpoints
-├── .gitignore                     # Git ignore file for excluding sensitive or generated files
-├── requirements.txt               # Python dependencies for the project
-├── README.md                      # Project documentation and instructions
-└── .env                           # Environment variables for local development
+│   ├── unit/                      ## Unit tests for individual components
+│   └── integration/               ## Integration tests for API endpoints
+├── .gitignore                     ## Git ignore file for excluding sensitive or generated files
+├── requirements.txt               ## Python dependencies for the project
+├── README.md                      ## Project documentation and instructions
+└── .env                           ## Environment variables for local development
 ```
 
 This file structure organizes the Automated Chatbots for Customer Engagement repository into logical components, making it scalable and maintainable. The structure separates concerns, facilitates collaboration, and streamlines development and deployment processes for the GPT-3, Flask, and Kubernetes application.
@@ -157,7 +157,7 @@ By separating deployment configurations and Dockerfile from the application code
 Certainly! Below is an example of a file for training a model for the Automated Chatbots for Customer Engagement application using mock data. The file is named `train_model.py` and can be placed in the root directory of the project.
 
 ```python
-# File: train_model.py
+## File: train_model.py
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -165,28 +165,28 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.svm import LinearSVC
 import joblib
 
-# Load mock conversation data
-conversation_data = pd.read_csv('data/mock_conversations.csv')  # Assuming mock conversations are stored in a CSV
+## Load mock conversation data
+conversation_data = pd.read_csv('data/mock_conversations.csv')  ## Assuming mock conversations are stored in a CSV
 X = conversation_data['user_input']
 y = conversation_data['bot_response']
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Feature engineering: Convert text data to numerical features
+## Feature engineering: Convert text data to numerical features
 vectorizer = TfidfVectorizer()
 X_train_vectorized = vectorizer.fit_transform(X_train)
 
-# Model training
+## Model training
 model = LinearSVC()
 model.fit(X_train_vectorized, y_train)
 
-# Evaluate the model
+## Evaluate the model
 X_test_vectorized = vectorizer.transform(X_test)
 accuracy = model.score(X_test_vectorized, y_test)
 print(f'Model accuracy: {accuracy}')
 
-# Save the trained model and vectorizer for later use
+## Save the trained model and vectorizer for later use
 joblib.dump(model, 'models/chatbot_model.pkl')
 joblib.dump(vectorizer, 'models/tfidf_vectorizer.pkl')
 ```
@@ -200,7 +200,7 @@ This file provides a starting point for experimenting with mock data and trainin
 Certainly! Below is an example of a file for implementing a more complex machine learning algorithm, specifically using a neural network, for the Automated Chatbots for Customer Engagement application. This file is named `neural_network_model.py` and can be placed in the `models` directory of the project.
 
 ```python
-# File: models/neural_network_model.py
+## File: models/neural_network_model.py
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -208,18 +208,18 @@ from tensorflow.keras import Sequential
 from tensorflow.keras.layers import Dense, Dropout
 from tensorflow.keras.optimizers import Adam
 
-# Load mock conversation data
-conversation_data = pd.read_csv('data/mock_conversations.csv')  # Assuming mock conversations are stored in a CSV
+## Load mock conversation data
+conversation_data = pd.read_csv('data/mock_conversations.csv')  ## Assuming mock conversations are stored in a CSV
 X = conversation_data['user_input']
 y = conversation_data['bot_response']
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Feature engineering: Convert text data to numerical features
-# Here you would use advanced NLP techniques or pre-trained models such as GPT-3 for feature extraction, which is beyond the scope of this example
+## Feature engineering: Convert text data to numerical features
+## Here you would use advanced NLP techniques or pre-trained models such as GPT-3 for feature extraction, which is beyond the scope of this example
 
-# Define the neural network model
+## Define the neural network model
 model = Sequential([
     Dense(128, activation='relu', input_shape=(input_shape,)),
     Dropout(0.5),
@@ -227,19 +227,19 @@ model = Sequential([
     Dense(num_classes, activation='softmax')
 ])
 
-# Compile the model
+## Compile the model
 model.compile(optimizer=Adam(learning_rate=0.001),
               loss='categorical_crossentropy',
               metrics=['accuracy'])
 
-# Train the model
+## Train the model
 history = model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y_test))
 
-# Evaluate the model
+## Evaluate the model
 loss, accuracy = model.evaluate(X_test, y_test)
 print(f'Model accuracy: {accuracy}')
 
-# Save the trained model for later use
+## Save the trained model for later use
 model.save('models/neural_network_chatbot_model')
 ```
 

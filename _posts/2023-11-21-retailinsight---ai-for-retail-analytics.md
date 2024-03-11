@@ -5,7 +5,7 @@ permalink: posts/retailinsight---ai-for-retail-analytics
 layout: article
 ---
 
-# AI RetailInsight Repository
+## AI RetailInsight Repository
 
 ## Objectives
 
@@ -40,7 +40,7 @@ To achieve the objectives and system design strategies, the following libraries 
 
 By leveraging these libraries and frameworks, the AI RetailInsight repository can provide a robust foundation for building scalable, data-intensive AI applications for retail analytics.
 
-# Infrastructure for RetailInsight - AI for Retail Analytics Application
+## Infrastructure for RetailInsight - AI for Retail Analytics Application
 
 To support the AI RetailInsight application, a robust and scalable infrastructure is essential. The infrastructure should be designed to handle large volumes of data, support machine learning/deep learning workloads, and provide real-time insights to retail stakeholders. Here is an overview of the infrastructure components:
 
@@ -72,7 +72,7 @@ Implement monitoring and logging solutions such as AWS CloudWatch or GCP Stackdr
 
 By designing the infrastructure with these considerations in mind, the RetailInsight application can efficiently support the demands of AI-driven retail analytics, providing scalable, data-intensive, and real-time insights for stakeholders in the retail industry.
 
-# Scalable File Structure for RetailInsight Repository
+## Scalable File Structure for RetailInsight Repository
 
 Creating a well-organized and scalable file structure is essential for the RetailInsight repository to ensure easy navigation, modular development, and maintainability. Below is a proposed file structure for the repository:
 
@@ -281,29 +281,29 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 
 def train_demand_forecasting_model(data_file_path):
-    # Read mock data from the file
+    ## Read mock data from the file
     data = pd.read_csv(data_file_path)
 
-    # Preprocessing and feature engineering steps (hypothetical)
-    # ...
+    ## Preprocessing and feature engineering steps (hypothetical)
+    ## ...
 
-    # Split the data into features and target variable
+    ## Split the data into features and target variable
     X = data.drop(columns=['demand'])
     y = data['demand']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize and train a Random Forest Regressor model
+    ## Initialize and train a Random Forest Regressor model
     model = RandomForestRegressor(n_estimators=100, random_state=42)
     model.fit(X_train, y_train)
 
-    # Evaluate the model
+    ## Evaluate the model
     y_pred = model.predict(X_test)
     mse = mean_squared_error(y_test, y_pred)
     print(f'Mean Squared Error: {mse}')
 
-    # Return the trained model
+    ## Return the trained model
     return model
 ```
 
@@ -335,28 +335,28 @@ from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense
 from sklearn.model_selection import train_test_split
 
 def train_image_recognition_model(data_directory):
-    # Read mock image data from the directory
+    ## Read mock image data from the directory
     images = []
     labels = []
     for filename in os.listdir(data_directory):
         if filename.endswith(".jpg"):
-            # Load the image and extract features
-            # ...
+            ## Load the image and extract features
+            ## ...
 
-            # Append the features to the images list
-            # ...
+            ## Append the features to the images list
+            ## ...
 
-            # Append the label for the image to the labels list
-            # ...
+            ## Append the label for the image to the labels list
+            ## ...
 
-    # Convert the lists to numpy arrays
+    ## Convert the lists to numpy arrays
     images = np.array(images)
     labels = np.array(labels)
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(images, labels, test_size=0.2, random_state=42)
 
-    # Initialize a deep learning model
+    ## Initialize a deep learning model
     model = Sequential([
         Conv2D(32, (3, 3), activation='relu', input_shape=(100, 100, 3)),
         MaxPooling2D((2, 2)),
@@ -367,15 +367,15 @@ def train_image_recognition_model(data_directory):
         Dense(10, activation='softmax')
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam',
                 loss='sparse_categorical_crossentropy',
                 metrics=['accuracy'])
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y_test))
 
-    # Return the trained model
+    ## Return the trained model
     return model
 ```
 

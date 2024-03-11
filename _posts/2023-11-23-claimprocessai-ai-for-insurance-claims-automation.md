@@ -5,7 +5,7 @@ permalink: posts/claimprocessai-ai-for-insurance-claims-automation
 layout: article
 ---
 
-# AI ClaimProcessAI for Insurance Claims Automation
+## AI ClaimProcessAI for Insurance Claims Automation
 
 ## Objectives
 The objective of the ClaimProcessAI project is to automate the process of handling insurance claims using artificial intelligence. The system aims to reduce manual intervention, improve accuracy, and expedite the processing of insurance claims by leveraging machine learning and deep learning techniques.
@@ -30,7 +30,7 @@ Several libraries and technologies can be leveraged for building ClaimProcessAI:
 
 By adopting these libraries and technologies and following the system design strategies, the ClaimProcessAI system can efficiently automate insurance claims processing while leveraging the power of AI and machine learning.
 
-# Infrastructure for ClaimProcessAI AI for Insurance Claims Automation Application
+## Infrastructure for ClaimProcessAI AI for Insurance Claims Automation Application
 
 To support the AI-driven insurance claims automation application, the infrastructure should be designed to handle the data-intensive and computationally demanding nature of machine learning and deep learning workloads. The infrastructure should also prioritize scalability, reliability, and security. Here's an outline of the infrastructure components:
 
@@ -242,34 +242,34 @@ from sklearn.metrics import accuracy_score
 import joblib
 
 def train_complex_ml_algorithm(data_file_path, model_save_path):
-    # Load mock data from a CSV file
+    ## Load mock data from a CSV file
     data = pd.read_csv(data_file_path)
 
-    # Preprocessing and feature engineering steps (not shown in this mock example)
+    ## Preprocessing and feature engineering steps (not shown in this mock example)
 
-    # Assume the data has been preprocessed and features engineered
+    ## Assume the data has been preprocessed and features engineered
     X = data.drop('claim_status', axis=1)
     y = data['claim_status']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Instantiate and train a complex machine learning algorithm (Random Forest)
+    ## Instantiate and train a complex machine learning algorithm (Random Forest)
     model = RandomForestClassifier(n_estimators=100, max_depth=10, random_state=42)
     model.fit(X_train, y_train)
 
-    # Make predictions
+    ## Make predictions
     y_pred = model.predict(X_test)
 
-    # Evaluate the model
+    ## Evaluate the model
     accuracy = accuracy_score(y_test, y_pred)
     print(f"Model accuracy: {accuracy}")
 
-    # Save the trained model to a file
+    ## Save the trained model to a file
     joblib.dump(model, model_save_path)
     print(f"Trained model saved to: {model_save_path}")
 
-# Example usage
+## Example usage
 data_file_path = 'data/processed_data/feature_engineered_data/mocked_training_data.csv'
 model_save_path = 'models/trained_models/predictive_model/model.pkl'
 train_complex_ml_algorithm(data_file_path, model_save_path)
@@ -293,41 +293,41 @@ from sklearn.model_selection import train_test_split
 import joblib
 
 def train_complex_dl_algorithm(data_file_path, model_save_path):
-    # Load mock data from a CSV file
+    ## Load mock data from a CSV file
     data = pd.read_csv(data_file_path)
 
-    # Preprocessing and feature engineering steps (not shown in this mock example)
-    # For deep learning, assume data is preprocessed and features are prepared as numpy arrays
+    ## Preprocessing and feature engineering steps (not shown in this mock example)
+    ## For deep learning, assume data is preprocessed and features are prepared as numpy arrays
     X = data.drop('claim_status', axis=1).values
     y = data['claim_status'].values
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Build a deep learning model using Keras
+    ## Build a deep learning model using Keras
     model = Sequential([
         Dense(64, activation='relu', input_shape=(X_train.shape[1],)),
         Dense(64, activation='relu'),
         Dense(1, activation='sigmoid')
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam',
                   loss='binary_crossentropy',
                   metrics=['accuracy'])
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y_test))
 
-    # Evaluate the model
+    ## Evaluate the model
     _, accuracy = model.evaluate(X_test, y_test)
     print(f"Model accuracy: {accuracy}")
 
-    # Save the trained model to a file (using joblib or Keras's own model saving functionality)
+    ## Save the trained model to a file (using joblib or Keras's own model saving functionality)
     model.save(model_save_path)
     print(f"Trained model saved to: {model_save_path}")
 
-# Example usage
+## Example usage
 data_file_path = 'data/processed_data/feature_engineered_data/mocked_training_data.csv'
 model_save_path = 'models/trained_models/deep_learning_model'
 train_complex_dl_algorithm(data_file_path, model_save_path)

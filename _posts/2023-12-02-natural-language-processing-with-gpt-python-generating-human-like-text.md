@@ -172,23 +172,23 @@ def generate_text(prompt, model_path, tokenizer_path, max_length=100):
     Returns:
     - generated_text (str): The generated human-like text based on the input prompt.
     """
-    # Load pre-trained model and tokenizer
+    ## Load pre-trained model and tokenizer
     model = GPT2LMHeadModel.from_pretrained(model_path)
     tokenizer = GPT2Tokenizer.from_pretrained(tokenizer_path)
 
-    # Tokenize the input prompt
+    ## Tokenize the input prompt
     input_ids = tokenizer.encode(prompt, return_tensors='pt')
 
-    # Generate text based on the input prompt
+    ## Generate text based on the input prompt
     with torch.no_grad():
         output = model.generate(input_ids, max_length=max_length, num_return_sequences=1)
 
-    # Decode the generated output to text
+    ## Decode the generated output to text
     generated_text = tokenizer.decode(output[0], skip_special_tokens=True)
 
     return generated_text
 
-# Example usage of the function
+## Example usage of the function
 model_path = 'path_to_pretrained_model_directory'
 tokenizer_path = 'path_to_tokenizer_directory'
 input_prompt = "Once upon a time in a land far, far away"
@@ -218,23 +218,23 @@ def generate_text(prompt, model_path, tokenizer_path, max_length=100):
     Returns:
     - generated_text (str): The generated human-like text based on the input prompt.
     """
-    # Load pre-trained model and tokenizer
+    ## Load pre-trained model and tokenizer
     model = GPT2LMHeadModel.from_pretrained(model_path)
     tokenizer = GPT2Tokenizer.from_pretrained(tokenizer_path)
 
-    # Tokenize the input prompt
+    ## Tokenize the input prompt
     input_ids = tokenizer.encode(prompt, return_tensors='pt')
 
-    # Generate text based on the input prompt
+    ## Generate text based on the input prompt
     with torch.no_grad():
         output = model.generate(input_ids, max_length=max_length, num_return_sequences=1)
 
-    # Decode the generated output to text
+    ## Decode the generated output to text
     generated_text = tokenizer.decode(output[0], skip_special_tokens=True)
 
     return generated_text
 
-# Example usage of the function with mock data
+## Example usage of the function with mock data
 model_path = 'path_to_pretrained_model_directory'
 tokenizer_path = 'path_to_tokenizer_directory'
 input_prompt = "Once upon a time in a land far, far away"

@@ -145,46 +145,46 @@ import pandas as pd
 from faker import Faker
 from sklearn import preprocessing
 
-# Create a Faker instance for generating fake data
+## Create a Faker instance for generating fake data
 fake = Faker()
 
-# Set the number of samples in the dataset
+## Set the number of samples in the dataset
 total_samples = 10000
 
-# Generate fictitious data for the dataset
+## Generate fictitious data for the dataset
 data = {
     'product_id': [fake.uuid4() for _ in range(total_samples)],
     'product_category': [fake.random_element(elements=('Electronics', 'Clothing', 'Home & Kitchen')) for _ in range(total_samples)],
     'price': [fake.random_int(min=10, max=200) for _ in range(total_samples)],
     'demand': [fake.random_int(min=50, max=500) for _ in range(total_samples)],
     'promotion_active': [fake.boolean(chance_of_getting_true=50) for _ in range(total_samples)],
-    # Add more relevant features based on the project requirements
+    ## Add more relevant features based on the project requirements
 }
 
-# Create a DataFrame from the generated data
+## Create a DataFrame from the generated data
 df = pd.DataFrame(data)
 
-# Perform feature engineering (creating artificial relationships between features)
-df['lag_demand'] = df['demand'].shift(7)  # Lag feature for demand 7 days ago
-df['moving_avg_30days_demand'] = df['demand'].rolling(window=30).mean()  # 30-day moving average demand
+## Perform feature engineering (creating artificial relationships between features)
+df['lag_demand'] = df['demand'].shift(7)  ## Lag feature for demand 7 days ago
+df['moving_avg_30days_demand'] = df['demand'].rolling(window=30).mean()  ## 30-day moving average demand
 
-# Encode categorical variables for model training
+## Encode categorical variables for model training
 label_encoders = {}
 for col in ['product_category']:
     le = preprocessing.LabelEncoder()
     df[col] = le.fit_transform(df[col])
-    label_encoders[col] = le  # Store LabelEncoders for future use during inference
+    label_encoders[col] = le  ## Store LabelEncoders for future use during inference
 
-# Generate noise/variability in data to simulate real-world conditions
-# Add random noise to numerical features
+## Generate noise/variability in data to simulate real-world conditions
+## Add random noise to numerical features
 
-# Save the preprocessed dataset
+## Save the preprocessed dataset
 df.to_csv("mocked_dataset.csv", index=False)
 
-# Perform train-test split or any other validation strategy required for model training and evaluation
-# Ensure the dataset integrates seamlessly with the model training pipeline and validation processes
+## Perform train-test split or any other validation strategy required for model training and evaluation
+## Ensure the dataset integrates seamlessly with the model training pipeline and validation processes
 
-# Additional steps can be added based on specific requirements and model validation needs
+## Additional steps can be added based on specific requirements and model validation needs
 ```
 
 This Python script generates a fictitious dataset mimicking real-world data relevant to the project by leveraging the Faker library for fake data generation. It incorporates feature engineering to create artificial relationships between features and encoding categorical variables for model training. Additionally, it introduces variability by adding random noise to numerical features to simulate real-world conditions.
@@ -285,30 +285,30 @@ import pandas as pd
 from sklearn.preprocessing import StandardScaler
 
 def preprocess_data(df):
-    # Drop any rows with missing values
+    ## Drop any rows with missing values
     df.dropna(inplace=True)
     
-    # Feature engineering: Create lag features
+    ## Feature engineering: Create lag features
     df['lag_demand'] = df['demand'].shift(7)
     df['moving_avg_30days_demand'] = df['demand'].rolling(window=30).mean()
     
-    # Encode categorical variable 'product_category'
+    ## Encode categorical variable 'product_category'
     df = pd.get_dummies(df, columns=['product_category'])
     
-    # Normalize numerical features
+    ## Normalize numerical features
     scaler = StandardScaler()
     numerical_features = ['price', 'demand', 'lag_demand', 'moving_avg_30days_demand']
     df[numerical_features] = scaler.fit_transform(df[numerical_features])
     
     return df
 
-# Load dataset
+## Load dataset
 df = pd.read_csv("mocked_dataset.csv")
 
-# Preprocess the data
+## Preprocess the data
 preprocessed_df = preprocess_data(df)
 
-# Save preprocessed data to a new CSV file
+## Save preprocessed data to a new CSV file
 preprocessed_df.to_csv("preprocessed_data.csv", index=False)
 ```
 
@@ -389,10 +389,10 @@ def train_prophet_model(data):
     Returns:
     - model (Prophet): Trained Prophet model for demand forecasting.
     """
-    # Prepare data for Prophet model
+    ## Prepare data for Prophet model
     prophet_data = data[['ds', 'y']].rename(columns={'ds': 'ds', 'y': 'y'})
 
-    # Instantiate and fit Prophet model
+    ## Instantiate and fit Prophet model
     model = Prophet()
     model.fit(prophet_data)
     
@@ -409,24 +409,24 @@ def forecast_demand(model, future_periods=30):
     Returns:
     - forecast (DataFrame): Forecasted demand for future periods.
     """
-    # Generate future dates for forecasting
+    ## Generate future dates for forecasting
     future = model.make_future_dataframe(periods=future_periods, freq='D', include_history=False)
     
-    # Make demand forecasts
+    ## Make demand forecasts
     forecast = model.predict(future)
     
     return forecast
 
-# Load preprocessed data
+## Load preprocessed data
 data = pd.read_csv("preprocessed_data.csv")
 
-# Train a Prophet model on the preprocessed data
+## Train a Prophet model on the preprocessed data
 model = train_prophet_model(data)
 
-# Forecast demand for the next 30 days
+## Forecast demand for the next 30 days
 forecast = forecast_demand(model, future_periods=30)
 
-# Save forecasted demand to a CSV file
+## Save forecasted demand to a CSV file
 forecast.to_csv("demand_forecast.csv", index=False)
 ```
 
@@ -498,27 +498,27 @@ By following these conventions and best practices for code quality and structure
 By following this deployment plan with the recommended tools and platforms, you can effectively deploy the Market Demand Forecasting model into a production environment, ensuring scalability, reliability, and real-time monitoring capabilities.
 
 ```dockerfile
-# Use a base Python image
+## Use a base Python image
 FROM python:3.8-slim
 
-# Set working directory in the container
+## Set working directory in the container
 WORKDIR /app
 
-# Copy the requirements.txt file and install dependencies
+## Copy the requirements.txt file and install dependencies
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the preprocessed dataset and model files
+## Copy the preprocessed dataset and model files
 COPY preprocessed_data.csv .
 COPY trained_model.pkl .
 
-# Copy the Python script for model deployment
+## Copy the Python script for model deployment
 COPY app.py .
 
-# Expose the API port
+## Expose the API port
 EXPOSE 5000
 
-# Specify the command to run the API
+## Specify the command to run the API
 CMD ["python", "app.py"]
 ```
 

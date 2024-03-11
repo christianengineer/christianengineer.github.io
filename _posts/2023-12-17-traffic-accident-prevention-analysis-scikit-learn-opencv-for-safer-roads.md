@@ -187,7 +187,7 @@ Additionally, if the application involves additional infrastructure components s
 This structured layout promotes maintainability, scalability, and ease of deployment for the Traffic Accident Prevention Analysis application, aligning with best practices for managing deployment-related resources.
 
 ```python
-# File: model_training_scripts/train_decision_tree_model.py
+## File: model_training_scripts/train_decision_tree_model.py
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -195,33 +195,33 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import accuracy_score, classification_report
 import joblib
 
-# Load mock data for training
+## Load mock data for training
 mock_data_path = 'data/processed_data/mock_traffic_data.csv'
 mock_data = pd.read_csv(mock_data_path)
 
-# Define features and target variable
-X = mock_data.drop('target_variable', axis=1)  # Replace 'target_variable' with the actual target variable name
-y = mock_data['target_variable']  # Replace 'target_variable' with the actual target variable name
+## Define features and target variable
+X = mock_data.drop('target_variable', axis=1)  ## Replace 'target_variable' with the actual target variable name
+y = mock_data['target_variable']  ## Replace 'target_variable' with the actual target variable name
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize and train the decision tree model
+## Initialize and train the decision tree model
 model = DecisionTreeClassifier(random_state=42)
 model.fit(X_train, y_train)
 
-# Make predictions on the test set
+## Make predictions on the test set
 y_pred = model.predict(X_test)
 
-# Evaluate the model
+## Evaluate the model
 accuracy = accuracy_score(y_test, y_pred)
 classification_rep = classification_report(y_test, y_pred)
 
-# Save the trained model
+## Save the trained model
 model_output_path = 'models/saved_models/scikit_learn_models/decision_tree_model.pkl'
 joblib.dump(model, model_output_path)
 
-# Print model evaluation metrics
+## Print model evaluation metrics
 print(f"Accuracy: {accuracy}")
 print("Classification Report:")
 print(classification_rep)
@@ -230,7 +230,7 @@ print(classification_rep)
 In this file, we first load mock traffic data for training the decision tree model from a CSV file. Replace `'data/processed_data/mock_traffic_data.csv'` with the actual mock data file path. We then preprocess the data, split it into training and testing sets, and subsequently train the decision tree model using Scikit-Learn. Finally, the trained model is evaluated, and the evaluation metrics are printed. The trained model is saved as a serialized file at `'models/saved_models/scikit_learn_models/decision_tree_model.pkl'`.
 
 ```python
-# File: model_training_scripts/train_random_forest_model.py
+## File: model_training_scripts/train_random_forest_model.py
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -238,33 +238,33 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, classification_report
 import joblib
 
-# Load mock data for training
+## Load mock data for training
 mock_data_path = 'data/processed_data/mock_traffic_data.csv'
 mock_data = pd.read_csv(mock_data_path)
 
-# Define features and target variable
-X = mock_data.drop('target_variable', axis=1)  # Replace 'target_variable' with the actual target variable name
-y = mock_data['target_variable']  # Replace 'target_variable' with the actual target variable name
+## Define features and target variable
+X = mock_data.drop('target_variable', axis=1)  ## Replace 'target_variable' with the actual target variable name
+y = mock_data['target_variable']  ## Replace 'target_variable' with the actual target variable name
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize and train the random forest model
+## Initialize and train the random forest model
 model = RandomForestClassifier(n_estimators=100, random_state=42)
 model.fit(X_train, y_train)
 
-# Make predictions on the test set
+## Make predictions on the test set
 y_pred = model.predict(X_test)
 
-# Evaluate the model
+## Evaluate the model
 accuracy = accuracy_score(y_test, y_pred)
 classification_rep = classification_report(y_test, y_pred)
 
-# Save the trained model
+## Save the trained model
 model_output_path = 'models/saved_models/scikit_learn_models/random_forest_model.pkl'
 joblib.dump(model, model_output_path)
 
-# Print model evaluation metrics
+## Print model evaluation metrics
 print(f"Accuracy: {accuracy}")
 print("Classification Report:")
 print(classification_rep)

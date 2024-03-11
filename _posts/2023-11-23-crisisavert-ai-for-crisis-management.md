@@ -66,7 +66,7 @@ The CrisisAvert AI for Crisis Management application infrastructure is designed 
 
 By leveraging cloud-based infrastructure and real-time data processing technologies, the CrisisAvert AI for Crisis Management application can effectively handle the demands of processing and analyzing data during crisis events. The infrastructure is designed to be scalable, reliable, and capable of supporting the application's machine learning and real-time analytics requirements.
 
-# CrisisAvert AI for Crisis Management Repository File Structure
+## CrisisAvert AI for Crisis Management Repository File Structure
 
 The file structure for the CrisisAvert AI for Crisis Management repository should be organized in a scalable and modular manner to facilitate effective development, testing, and deployment of the AI-powered crisis management system.
 
@@ -297,20 +297,20 @@ def train_and_save_model(data, labels, model_file_path):
     - None
     """
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(data, labels, test_size=0.2, random_state=42)
 
-    # Initialize the random forest classifier
+    ## Initialize the random forest classifier
     clf = RandomForestClassifier(n_estimators=100, random_state=42)
 
-    # Train the classifier on the training data
+    ## Train the classifier on the training data
     clf.fit(X_train, y_train)
 
-    # Evaluate the classifier on the testing data
+    ## Evaluate the classifier on the testing data
     accuracy = clf.score(X_test, y_test)
     print(f"Model accuracy: {accuracy}")
 
-    # Save the trained model to a file
+    ## Save the trained model to a file
     dump(clf, model_file_path)
     print(f"Trained model saved to: {model_file_path}")
 ```
@@ -319,14 +319,14 @@ In this function, the `train_and_save_model` function takes the input data, corr
 
 You can call this function with mock data and a file path for saving the trained model, for example:
 ```python
-# Mock data
-data = np.random.rand(100, 10)  # Replace with your actual data
-labels = np.random.randint(0, 2, 100)  # Replace with your actual labels
+## Mock data
+data = np.random.rand(100, 10)  ## Replace with your actual data
+labels = np.random.randint(0, 2, 100)  ## Replace with your actual labels
 
-# File path for saving the trained model
+## File path for saving the trained model
 model_file_path = "models/trained_model.joblib"
 
-# Call the function
+## Call the function
 train_and_save_model(data, labels, model_file_path)
 ```
 
@@ -354,28 +354,28 @@ def train_and_save_deep_learning_model(data, labels, model_file_path):
     - None
     """
 
-    # Define the deep learning model
+    ## Define the deep learning model
     model = Sequential([
         Dense(64, activation='relu', input_shape=(data.shape[1],)),
         Dropout(0.5),
         Dense(64, activation='relu'),
         Dropout(0.5),
-        Dense(3)  # Replace 3 with the number of output classes
+        Dense(3)  ## Replace 3 with the number of output classes
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer=Adam(learning_rate=0.001),
                   loss=SparseCategoricalCrossentropy(from_logits=True),
                   metrics=['accuracy'])
 
-    # Train the model on the data and labels
+    ## Train the model on the data and labels
     model.fit(data, labels, epochs=10, batch_size=32, validation_split=0.2)
 
-    # Evaluate the model
+    ## Evaluate the model
     loss, accuracy = model.evaluate(data, labels, batch_size=32)
     print(f"Model accuracy: {accuracy}")
 
-    # Save the trained model to a file
+    ## Save the trained model to a file
     model.save(model_file_path)
     print(f"Trained model saved to: {model_file_path}")
 ```
@@ -384,14 +384,14 @@ In this function, the `train_and_save_deep_learning_model` function takes the in
 
 You can call this function with mock data and a file path for saving the trained model, for example:
 ```python
-# Mock data
-data = ...  # Replace with your actual data
-labels = ...  # Replace with your actual labels
+## Mock data
+data = ...  ## Replace with your actual data
+labels = ...  ## Replace with your actual labels
 
-# File path for saving the trained model
+## File path for saving the trained model
 model_file_path = "models/trained_deep_learning_model.h5"
 
-# Call the function
+## Call the function
 train_and_save_deep_learning_model(data, labels, model_file_path)
 ```
 

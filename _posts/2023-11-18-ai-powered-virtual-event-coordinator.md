@@ -5,7 +5,7 @@ permalink: posts/ai-powered-virtual-event-coordinator
 layout: article
 ---
 
-# Technical Specifications: AI-Powered Virtual Event Coordinator Repository
+## Technical Specifications: AI-Powered Virtual Event Coordinator Repository
 
 ## Description
 

@@ -71,41 +71,41 @@ By establishing a robust MLOps infrastructure with the aforementioned tools and 
 
 ```
 ├── data/
-│   ├── raw/                  # Raw data from high-net-worth individuals
-│   ├── processed/            # Preprocessed data ready for model training
-│   └── external/             # External datasets or resources
+│   ├── raw/                  ## Raw data from high-net-worth individuals
+│   ├── processed/            ## Preprocessed data ready for model training
+│   └── external/             ## External datasets or resources
 
 ├── models/
-│   ├── scikit-learn/         # Scikit-Learn models for tax optimization
-│   └── pytorch/              # PyTorch models for complex pattern recognition
+│   ├── scikit-learn/         ## Scikit-Learn models for tax optimization
+│   └── pytorch/              ## PyTorch models for complex pattern recognition
 
 ├── notebooks/                
-│   ├── exploratory_analysis/  # Jupyter notebooks for data exploration and analysis
-│   ├── model_training/        # Notebooks for model training and evaluation
-│   └── model_evaluation/      # Notebooks for model evaluation and optimization
+│   ├── exploratory_analysis/  ## Jupyter notebooks for data exploration and analysis
+│   ├── model_training/        ## Notebooks for model training and evaluation
+│   └── model_evaluation/      ## Notebooks for model evaluation and optimization
 
 ├── src/
-│   ├── data_processing/      # Scripts for data preprocessing and feature engineering
-│   ├── model_training/       # Scripts for training machine learning models
-│   ├── model_evaluation/     # Scripts for evaluating and optimizing models
-│   └── utils/                # Utility functions and helper scripts
+│   ├── data_processing/      ## Scripts for data preprocessing and feature engineering
+│   ├── model_training/       ## Scripts for training machine learning models
+│   ├── model_evaluation/     ## Scripts for evaluating and optimizing models
+│   └── utils/                ## Utility functions and helper scripts
 
 ├── airflow/
-│   ├── dags/                 # Airflow Directed Acyclic Graphs for workflow automation
-│   └── plugins/              # Custom Airflow plugins for specific tasks
+│   ├── dags/                 ## Airflow Directed Acyclic Graphs for workflow automation
+│   └── plugins/              ## Custom Airflow plugins for specific tasks
 
 ├── deployment/
-│   ├── Dockerfile            # Dockerfile for containerizing the AI application
-│   ├── kubernetes/           # Kubernetes configuration files for deploying and managing containers
-│   └── helm/                 # Helm charts for managing Kubernetes applications
+│   ├── Dockerfile            ## Dockerfile for containerizing the AI application
+│   ├── kubernetes/           ## Kubernetes configuration files for deploying and managing containers
+│   └── helm/                 ## Helm charts for managing Kubernetes applications
 
 ├── config/
-│   ├── config.yaml           # Configuration file for model hyperparameters and settings
-│   └── airflow.cfg            # Configuration file for Airflow settings and connections
+│   ├── config.yaml           ## Configuration file for model hyperparameters and settings
+│   └── airflow.cfg            ## Configuration file for Airflow settings and connections
 
-├── docs/                     # Documentation for the project
+├── docs/                     ## Documentation for the project
 │   
-├── tests/                    # Unit tests and integration tests for the application
+├── tests/                    ## Unit tests and integration tests for the application
 
 ├── LICENSE
 └── README.md
@@ -130,14 +130,14 @@ This structured file layout ensures organization, scalability, and ease of maint
 ```
 ├── models/
 │   ├── scikit-learn/
-│   │   ├── regression_model.pkl       # Serialized Scikit-Learn regression model for tax optimization
-│   │   ├── classification_model.pkl   # Serialized Scikit-Learn classification model for compliance prediction
-│   │   └── feature_engineering.py     # Script for feature engineering for Scikit-Learn models
+│   │   ├── regression_model.pkl       ## Serialized Scikit-Learn regression model for tax optimization
+│   │   ├── classification_model.pkl   ## Serialized Scikit-Learn classification model for compliance prediction
+│   │   └── feature_engineering.py     ## Script for feature engineering for Scikit-Learn models
    
 │   └── pytorch/
-│       ├── neural_network.pth          # Trained PyTorch neural network model for complex pattern recognition
-│       ├── data_loader.py              # Script for data loading and preprocessing for PyTorch models
-│       └── model_definition.py         # Script defining the architecture of the PyTorch neural network
+│       ├── neural_network.pth          ## Trained PyTorch neural network model for complex pattern recognition
+│       ├── data_loader.py              ## Script for data loading and preprocessing for PyTorch models
+│       └── model_definition.py         ## Script defining the architecture of the PyTorch neural network
 ```
 
 In the `models/` directory:
@@ -157,22 +157,22 @@ Having a structured `models/` directory segmented by the machine learning librar
 
 ```
 ├── deployment/
-│   ├── Dockerfile                    # Dockerfile for containerizing the AI application
+│   ├── Dockerfile                    ## Dockerfile for containerizing the AI application
 │   ├── kubernetes/
-│   │   ├── deployment.yaml           # Kubernetes deployment configuration for the AI application
-│   │   ├── service.yaml              # Kubernetes service configuration for exposing the application
-│   │   └── ingress.yaml              # Kubernetes Ingress configuration for routing external traffic
+│   │   ├── deployment.yaml           ## Kubernetes deployment configuration for the AI application
+│   │   ├── service.yaml              ## Kubernetes service configuration for exposing the application
+│   │   └── ingress.yaml              ## Kubernetes Ingress configuration for routing external traffic
 
 │   ├── helm/
 │   │   ├── charts/
 │   │   │   ├── high-net-worth-tax-optimization/
-│   │   │   │   ├── Chart.yaml        # Helm chart metadata
-│   │   │   │   ├── values.yaml       # Helm chart default values
-│   │   │   │   └── templates/        # Kubernetes YAML templates for deployment, service, and ingress
+│   │   │   │   ├── Chart.yaml        ## Helm chart metadata
+│   │   │   │   ├── values.yaml       ## Helm chart default values
+│   │   │   │   └── templates/        ## Kubernetes YAML templates for deployment, service, and ingress
 
 │   └── scripts/
-│       ├── startup.sh                # Script for starting up the AI application and required services
-│       └── init_db.sql               # SQL script for initializing the database
+│       ├── startup.sh                ## Script for starting up the AI application and required services
+│       └── init_db.sql               ## SQL script for initializing the database
 
 ```
 
@@ -194,7 +194,7 @@ In the `deployment/` directory:
 This structure provides a clear organization of deployment-related files and configurations required for effectively deploying the High-Net-Worth Tax Optimization AI application on Kubernetes, facilitating scalability, management, and maintenance of the application in a production environment.
 
 ```python
-# File Path: src/model_training/train_model.py
+## File Path: src/model_training/train_model.py
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -204,27 +204,27 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 
-# Load mock data
+## Load mock data
 data_path = 'data/processed/mock_data.csv'
 data = pd.read_csv(data_path)
 
-# Define features and target
+## Define features and target
 X = data.drop('tax_optimization', axis=1)
 y = data['tax_optimization']
 
-# Split data into training and validation sets
+## Split data into training and validation sets
 X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Train Scikit-Learn regression model
+## Train Scikit-Learn regression model
 model_sklearn = LinearRegression()
 model_sklearn.fit(X_train, y_train)
 
-# Evaluate Scikit-Learn model
+## Evaluate Scikit-Learn model
 y_pred = model_sklearn.predict(X_val)
 mse = mean_squared_error(y_val, y_pred)
 print(f'Scikit-Learn Model Mean Squared Error: {mse}')
 
-# Define PyTorch neural network
+## Define PyTorch neural network
 class NeuralNetwork(nn.Module):
     def __init__(self):
         super(NeuralNetwork, self).__init()
@@ -233,7 +233,7 @@ class NeuralNetwork(nn.Module):
     def forward(self, x):
         return self.fc(x)
 
-# Train PyTorch neural network
+## Train PyTorch neural network
 model_pytorch = NeuralNetwork()
 criterion = nn.MSELoss()
 optimizer = optim.SGD(model_pytorch.parameters(), lr=0.01)
@@ -248,14 +248,14 @@ for epoch in range(100):
     loss.backward()
     optimizer.step()
 
-# Save PyTorch model
+## Save PyTorch model
 torch.save(model_pytorch.state_dict(), 'models/pytorch/neural_network.pth')
 ```
 
 This Python script `train_model.py` loads mock data, trains a Scikit-Learn linear regression model and a PyTorch neural network using the data, and saves the trained PyTorch model in the specified file path `models/pytorch/neural_network.pth`. It demonstrates the training process for both Scikit-Learn and PyTorch models for the High-Net-Worth Tax Optimization AI application in Peru using mock data.
 
 ```python
-# File Path: src/model_training/train_complex_model.py
+## File Path: src/model_training/train_complex_model.py
 
 import pandas as pd
 import numpy as np
@@ -263,15 +263,15 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 
-# Load mock data
+## Load mock data
 data_path = 'data/processed/mock_data.csv'
 data = pd.read_csv(data_path)
 
-# Define features and target
+## Define features and target
 X = data.drop('tax_optimization', axis=1).values
 y = data['tax_optimization'].values
 
-# Define PyTorch neural network architecture
+## Define PyTorch neural network architecture
 class ComplexNeuralNetwork(nn.Module):
     def __init__(self):
         super(ComplexNeuralNetwork, self).__init__()
@@ -285,18 +285,18 @@ class ComplexNeuralNetwork(nn.Module):
         x = self.fc3(x)
         return x
 
-# Convert data to PyTorch tensors
+## Convert data to PyTorch tensors
 X_tensor = torch.tensor(X, dtype=torch.float32)
 y_tensor = torch.tensor(y, dtype=torch.float32)
 
-# Initialize neural network model
+## Initialize neural network model
 model = ComplexNeuralNetwork()
 
-# Define loss function and optimizer
+## Define loss function and optimizer
 criterion = nn.MSELoss()
 optimizer = optim.Adam(model.parameters(), lr=0.001)
 
-# Train the neural network
+## Train the neural network
 num_epochs = 100
 for epoch in range(num_epochs):
     optimizer.zero_grad()
@@ -305,7 +305,7 @@ for epoch in range(num_epochs):
     loss.backward()
     optimizer.step()
 
-# Save the trained complex PyTorch model
+## Save the trained complex PyTorch model
 model_path = 'models/pytorch/complex_neural_network.pth'
 torch.save(model.state_dict(), model_path)
 ```

@@ -5,7 +5,7 @@ permalink: posts/chainanalytics-ai-for-supply-chain-analytics
 layout: article
 ---
 
-# AI ChainAnalytics for Supply Chain Analytics
+## AI ChainAnalytics for Supply Chain Analytics
 
 ## Objectives
 The AI ChainAnalytics project aims to utilize AI and machine learning techniques to provide advanced analytics and insights for supply chain operations. The primary objectives include:
@@ -229,33 +229,33 @@ from sklearn.metrics import mean_squared_error
 import joblib
 
 def train_demand_forecasting_model(data_file_path, model_save_path):
-    # Load mock supply chain data
+    ## Load mock supply chain data
     supply_chain_data = pd.read_csv(data_file_path)
 
-    # Assume data preprocessing and feature engineering steps are performed
-    # Split the data into features and target variable
+    ## Assume data preprocessing and feature engineering steps are performed
+    ## Split the data into features and target variable
     X = supply_chain_data.drop(columns=['demand'])
     y = supply_chain_data['demand']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize and train the demand forecasting model
+    ## Initialize and train the demand forecasting model
     demand_forecasting_model = RandomForestRegressor(n_estimators=100, random_state=42)
     demand_forecasting_model.fit(X_train, y_train)
 
-    # Make predictions on the test set
+    ## Make predictions on the test set
     y_pred = demand_forecasting_model.predict(X_test)
 
-    # Evaluate the model
+    ## Evaluate the model
     mse = mean_squared_error(y_test, y_pred)
     print(f"Mean Squared Error: {mse}")
 
-    # Save the trained model to the specified path
+    ## Save the trained model to the specified path
     joblib.dump(demand_forecasting_model, model_save_path)
     print("Demand forecasting model trained and saved successfully")
 
-# Example usage of the function
+## Example usage of the function
 data_file_path = 'data/processed_data/supply_chain_data.csv'
 model_save_path = 'models/trained_models/demand_forecasting_model.pkl'
 train_demand_forecasting_model(data_file_path, model_save_path)
@@ -284,14 +284,14 @@ from tensorflow.keras.layers import Dense, LSTM
 import joblib
 
 def train_deep_learning_demand_forecasting_model(data_file_path, model_save_path):
-    # Load mock supply chain data
+    ## Load mock supply chain data
     supply_chain_data = pd.read_csv(data_file_path)
 
-    # Data preprocessing
+    ## Data preprocessing
     scaler = MinMaxScaler()
     scaled_data = scaler.fit_transform(supply_chain_data['demand'].values.reshape(-1, 1))
 
-    # Create sequences and labels
+    ## Create sequences and labels
     def create_sequences_and_labels(data, seq_len):
         X, y = [], []
         for i in range(len(data) - seq_len):
@@ -302,10 +302,10 @@ def train_deep_learning_demand_forecasting_model(data_file_path, model_save_path
     sequence_length = 10
     X, y = create_sequences_and_labels(scaled_data, sequence_length)
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, shuffle=False)
 
-    # Define the deep learning model
+    ## Define the deep learning model
     model = Sequential([
         LSTM(50, return_sequences=True, input_shape=(sequence_length, 1)),
         LSTM(50, return_sequences=False),
@@ -315,18 +315,18 @@ def train_deep_learning_demand_forecasting_model(data_file_path, model_save_path
 
     model.compile(optimizer='adam', loss='mean_squared_error')
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train, batch_size=32, epochs=100)
 
-    # Evaluate the model
+    ## Evaluate the model
     mse = model.evaluate(X_test, y_test)
     print(f"Mean Squared Error: {mse}")
 
-    # Save the trained model to the specified path
+    ## Save the trained model to the specified path
     model.save(model_save_path)
     print("Deep learning demand forecasting model trained and saved successfully")
 
-# Example usage of the function
+## Example usage of the function
 data_file_path = 'data/processed_data/supply_chain_data.csv'
 model_save_path = 'models/trained_models/deep_learning_demand_forecasting_model'
 train_deep_learning_demand_forecasting_model(data_file_path, model_save_path)

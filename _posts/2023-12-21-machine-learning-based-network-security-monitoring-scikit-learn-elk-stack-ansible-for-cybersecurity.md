@@ -285,26 +285,26 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import IsolationForest
 import joblib
 
-# Load mock data for training (replace with actual data source)
+## Load mock data for training (replace with actual data source)
 data_path = 'data/processed/feature_engineered_data.csv'
 data = pd.read_csv(data_path)
 
-# Assuming 'is_anomalous' is the target variable denoting anomalies
+## Assuming 'is_anomalous' is the target variable denoting anomalies
 X = data.drop(columns=['is_anomalous'])
 y = data['is_anomalous']
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize and train the Isolation Forest model for anomaly detection
+## Initialize and train the Isolation Forest model for anomaly detection
 isolation_forest = IsolationForest(contamination=0.1, random_state=42)
 isolation_forest.fit(X_train)
 
-# Evaluate the model
+## Evaluate the model
 train_predictions = isolation_forest.predict(X_train)
 test_predictions = isolation_forest.predict(X_test)
 
-# Save the trained model to the models/training directory
+## Save the trained model to the models/training directory
 model_path = 'models/training/anomaly_detection_model.pkl'
 joblib.dump(isolation_forest, model_path)
 
@@ -328,33 +328,33 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report
 import joblib
 
-# Load mock data for training (replace with actual data source)
+## Load mock data for training (replace with actual data source)
 data_path = 'data/processed/feature_engineered_data.csv'
 data = pd.read_csv(data_path)
 
-# Assuming 'threat_type' is the target variable denoting threat classifications
+## Assuming 'threat_type' is the target variable denoting threat classifications
 X = data.drop(columns=['threat_type'])
 y = data['threat_type']
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize and train the Random Forest Classifier for threat classification
+## Initialize and train the Random Forest Classifier for threat classification
 random_forest = RandomForestClassifier(n_estimators=100, max_depth=10, random_state=42)
 random_forest.fit(X_train, y_train)
 
-# Evaluate the model
+## Evaluate the model
 train_predictions = random_forest.predict(X_train)
 test_predictions = random_forest.predict(X_test)
 
-# Generate a classification report for model evaluation
+## Generate a classification report for model evaluation
 evaluation_report = classification_report(y_test, test_predictions)
 
-# Save the trained model to the models/training directory
+## Save the trained model to the models/training directory
 model_path = 'models/training/threat_classification_model.pkl'
 joblib.dump(random_forest, model_path)
 
-# Save the evaluation report to the models/evaluation directory
+## Save the evaluation report to the models/evaluation directory
 evaluation_report_path = 'models/evaluation/threat_classification_evaluation_report.txt'
 with open(evaluation_report_path, 'w') as file:
     file.write(evaluation_report)

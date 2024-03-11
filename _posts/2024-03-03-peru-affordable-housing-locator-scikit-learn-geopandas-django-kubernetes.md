@@ -217,28 +217,28 @@ The files in the `deployment/` directory play a crucial role in enabling the sea
 #### File: `machine_learning/model_training.py`
 
 ```python
-# Import necessary libraries
+## Import necessary libraries
 import pandas as pd
 from sklearn.cluster import KMeans
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import silhouette_score
 
-# Load mock housing data
+## Load mock housing data
 housing_data = pd.read_csv('path/to/mock/housing_data.csv')
 
-# Perform data preprocessing
+## Perform data preprocessing
 features = housing_data[['income', 'family_size', 'latitude', 'longitude']]
 scaler = StandardScaler()
 scaled_features = scaler.fit_transform(features)
 
-# Train KMeans clustering model
+## Train KMeans clustering model
 kmeans_model = KMeans(n_clusters=3, random_state=42)
 kmeans_model.fit(scaled_features)
 
-# Evaluate model performance
+## Evaluate model performance
 silhouette_score_val = silhouette_score(scaled_features, kmeans_model.labels_)
 
-# Save the trained model
+## Save the trained model
 model_filepath = 'path/to/save/trained_model.pkl'
 joblib.dump(kmeans_model, model_filepath)
 
@@ -257,36 +257,36 @@ By running this script, you can train a model for the Peru Affordable Housing Lo
 #### File: `machine_learning/complex_algorithm.py`
 
 ```python
-# Import necessary libraries
+## Import necessary libraries
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_squared_error
 
-# Load mock housing data
+## Load mock housing data
 housing_data = pd.read_csv('path/to/mock/housing_data.csv')
 
-# Perform feature engineering
+## Perform feature engineering
 housing_data['age_of_property'] = 2022 - housing_data['year_built']
 
-# Split data into features(X) and target(y)
+## Split data into features(X) and target(y)
 X = housing_data[['income', 'family_size', 'age_of_property', 'latitude', 'longitude']]
 y = housing_data['price']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Train a Random Forest Regressor model
+## Train a Random Forest Regressor model
 rf_model = RandomForestRegressor(n_estimators=100, random_state=42)
 rf_model.fit(X_train, y_train)
 
-# Make predictions
+## Make predictions
 y_pred = rf_model.predict(X_test)
 
-# Evaluate model performance
+## Evaluate model performance
 mse = mean_squared_error(y_test, y_pred)
 
-# Save the trained model
+## Save the trained model
 model_filepath = 'path/to/save/complex_model.pkl'
 joblib.dump(rf_model, model_filepath)
 

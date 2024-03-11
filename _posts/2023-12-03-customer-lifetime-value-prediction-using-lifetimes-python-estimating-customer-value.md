@@ -184,14 +184,14 @@ from lifetimes.utils import summary_data_from_transaction_data
 from lifetimes import BetaGeoFitter
 
 def train_clv_model_with_mock_data(mock_transaction_data_file_path, mock_customer_data_file_path):
-    # Load mock transaction data and customer profile data
+    ## Load mock transaction data and customer profile data
     transactions = pd.read_csv(mock_transaction_data_file_path)
     customers = pd.read_csv(mock_customer_data_file_path)
 
-    # Preprocess data using Lifetimes library
+    ## Preprocess data using Lifetimes library
     summary = summary_data_from_transaction_data(transactions, 'customer_id', 'date', monetary_value_col='monetary_value')
 
-    # Fit the Beta Geo Fitter model
+    ## Fit the Beta Geo Fitter model
     bgf = BetaGeoFitter()
     bgf.fit(summary['frequency'], summary['recency'], summary['T'])
 
@@ -233,14 +233,14 @@ def train_clv_model_with_mock_data(mock_transaction_data_file_path, mock_custome
     Returns:
     - model: Trained CLV prediction model (BetaGeoFitter).
     """
-    # Load mock transaction data and customer profiles
+    ## Load mock transaction data and customer profiles
     transactions = pd.read_csv(mock_transaction_data_file_path)
     customers = pd.read_csv(mock_customer_data_file_path)
 
-    # Preprocess data using Lifetimes library
+    ## Preprocess data using Lifetimes library
     summary = summary_data_from_transaction_data(transactions, 'customer_id', 'date', monetary_value_col='monetary_value')
 
-    # Fit the Beta Geo Fitter model
+    ## Fit the Beta Geo Fitter model
     bgf = BetaGeoFitter()
     bgf.fit(summary['frequency'], summary['recency'], summary['T'])
 

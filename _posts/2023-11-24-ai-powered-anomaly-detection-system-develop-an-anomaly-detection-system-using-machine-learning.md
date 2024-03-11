@@ -218,19 +218,19 @@ import pandas as pd
 from sklearn.ensemble import IsolationForest
 
 def train_anomaly_detection_model(data_path):
-    # Load data from the specified file path
+    ## Load data from the specified file path
     data = pd.read_csv(data_path)
 
-    # Feature engineering and preprocessing (if necessary)
-    # ...
+    ## Feature engineering and preprocessing (if necessary)
+    ## ...
 
-    # Initialize the anomaly detection model
+    ## Initialize the anomaly detection model
     model = IsolationForest(n_estimators=100, contamination=0.05, random_state=42)
 
-    # Train the anomaly detection model
+    ## Train the anomaly detection model
     model.fit(data)
 
-    # Save the trained model to a file
+    ## Save the trained model to a file
     model.save_model('anomaly_detection_model.pkl')
 
     return model
@@ -241,10 +241,10 @@ In the above function, `train_anomaly_detection_model` takes the file path of th
 To use this function with mock data, you would call it as follows:
 
 ```python
-# Assuming the mock data is stored in a file named 'mock_data.csv'
+## Assuming the mock data is stored in a file named 'mock_data.csv'
 mock_data_path = 'path_to_mock_data/mock_data.csv'
 
-# Train the anomaly detection model using the mock data
+## Train the anomaly detection model using the mock data
 trained_model = train_anomaly_detection_model(mock_data_path)
 ```
 
@@ -257,24 +257,24 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, LSTM
 
 def train_deep_learning_anomaly_detection_model(data_path):
-    # Load data from the specified file path
+    ## Load data from the specified file path
     data = np.load(data_path)
 
-    # Preprocess data if required
-    # ...
+    ## Preprocess data if required
+    ## ...
 
-    # Define the deep learning model architecture
+    ## Define the deep learning model architecture
     model = Sequential()
     model.add(LSTM(64, input_shape=(data.shape[1], data.shape[2])))
     model.add(Dense(1))
 
-    # Compile the model
+    ## Compile the model
     model.compile(loss='mse', optimizer='adam')
 
-    # Train the deep learning model
+    ## Train the deep learning model
     model.fit(data, epochs=10, batch_size=32)
 
-    # Save the trained model to a file
+    ## Save the trained model to a file
     model.save('deep_learning_anomaly_detection_model.h5')
 
     return model
@@ -285,10 +285,10 @@ In the above function, `train_deep_learning_anomaly_detection_model` takes the f
 To use this function with mock data, you would call it as follows:
 
 ```python
-# Assuming the mock data is stored in a file named 'mock_data.npy'
+## Assuming the mock data is stored in a file named 'mock_data.npy'
 mock_data_path = 'path_to_mock_data/mock_data.npy'
 
-# Train the deep learning-based anomaly detection model using the mock data
+## Train the deep learning-based anomaly detection model using the mock data
 trained_model = train_deep_learning_anomaly_detection_model(mock_data_path)
 ```
 

@@ -195,36 +195,36 @@ Certainly! Below is an example of a Python script for training a TensorFlow-base
 Here's the file content:
 
 ```python
-# train_model.py
+## train_model.py
 
 import tensorflow as tf
 import numpy as np
 from models.accessibility_model import AccessibilityModel
-from data.mock_data_loader import MockDataLoader  # Assuming the use of mock data loader
+from data.mock_data_loader import MockDataLoader  ## Assuming the use of mock data loader
 
 def main():
-    # Initialize the model
+    ## Initialize the model
     accessibility_model = AccessibilityModel()
 
-    # Load mock training data
+    ## Load mock training data
     data_loader = MockDataLoader()
     X_train, y_train = data_loader.load_training_data()
 
-    # Data preprocessing and normalization
+    ## Data preprocessing and normalization
     X_train = normalize_data(X_train)
 
-    # Define and compile the TensorFlow model
+    ## Define and compile the TensorFlow model
     model = accessibility_model.build_model()
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train, epochs=10, batch_size=32, validation_split=0.2)
 
-    # Serialize and save the trained model
+    ## Serialize and save the trained model
     accessibility_model.save_model(model, 'accessibility_model.h5')
 
 def normalize_data(data):
-    # Perform data normalization
-    normalized_data = ...  # Add data normalization logic
+    ## Perform data normalization
+    normalized_data = ...  ## Add data normalization logic
     return normalized_data
 
 if __name__ == "__main__":
@@ -249,23 +249,23 @@ Certainly! Below is an example of a Python script implementing a complex machine
 Here's the file content:
 
 ```python
-# complex_ml_algorithm.py
+## complex_ml_algorithm.py
 
 import tensorflow as tf
 from models.preprocessing import data_preprocessing
 from models.feature_engineering import feature_engineering
-from data.mock_data_loader import MockDataLoader  # Assuming the use of mock data loader
+from data.mock_data_loader import MockDataLoader  ## Assuming the use of mock data loader
 
 def main():
-    # Load mock training data
+    ## Load mock training data
     data_loader = MockDataLoader()
     X_train, y_train = data_loader.load_training_data()
 
-    # Preprocessing and feature engineering
+    ## Preprocessing and feature engineering
     X_train = data_preprocessing(X_train)
     X_train = feature_engineering(X_train)
 
-    # Define a complex machine learning algorithm using TensorFlow
+    ## Define a complex machine learning algorithm using TensorFlow
     model = tf.keras.Sequential([
         tf.keras.layers.Dense(100, activation='relu', input_shape=X_train.shape[1:]),
         tf.keras.layers.Dropout(0.5),
@@ -273,13 +273,13 @@ def main():
         tf.keras.layers.Dense(1, activation='sigmoid')
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train, epochs=10, batch_size=32, validation_split=0.2)
 
-    # Evaluate the model
+    ## Evaluate the model
     loss, accuracy = model.evaluate(X_train, y_train)
     print(f"Training accuracy: {accuracy}")
 

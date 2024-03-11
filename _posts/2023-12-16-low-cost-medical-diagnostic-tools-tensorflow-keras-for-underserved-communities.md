@@ -162,17 +162,17 @@ By organizing these files within the `deployment` directory, the repository ensu
 Certainly! Below is a Python script for training a machine learning model for the Low-Cost Medical Diagnostic Tools application using mock data. The script is named `train_model.py` and is located within the `src/models` directory of the project.
 
 ```python
-# File path: Low-Cost-Medical-Diagnostic-Tools/src/models/train_model.py
+## File path: Low-Cost-Medical-Diagnostic-Tools/src/models/train_model.py
 
 import numpy as np
 from tensorflow import keras
 from tensorflow.keras import layers
 
-# Mock data (replace with actual data loading and preprocessing)
-X_train = np.random.rand(100, 64, 64, 3)  # Example input data
-y_train = np.random.randint(0, 2, 100)    # Example target labels
+## Mock data (replace with actual data loading and preprocessing)
+X_train = np.random.rand(100, 64, 64, 3)  ## Example input data
+y_train = np.random.randint(0, 2, 100)    ## Example target labels
 
-# Define the model architecture (replace with actual model definition)
+## Define the model architecture (replace with actual model definition)
 model = keras.Sequential([
     layers.Conv2D(32, (3, 3), activation='relu', input_shape=(64, 64, 3)),
     layers.MaxPooling2D((2, 2)),
@@ -184,17 +184,17 @@ model = keras.Sequential([
     layers.Dense(1, activation='sigmoid')
 ])
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam',
               loss='binary_crossentropy',
               metrics=['accuracy'])
 
-# Train the model
+## Train the model
 model.fit(X_train, y_train, epochs=10, batch_size=32)
 
-# Save the trained model and its architecture
-model.save('model_weights.h5')  # Save the trained weights
-model.save('model_architecture.json', save_format='json')  # Save the model architecture
+## Save the trained model and its architecture
+model.save('model_weights.h5')  ## Save the trained weights
+model.save('model_architecture.json', save_format='json')  ## Save the model architecture
 ```
 
 In this example, the script initializes mock input data and model architecture for demonstration purposes. In a real-world scenario, the `X_train` and `y_train` would be loaded from actual datasets, and the model architecture would be carefully designed based on the specific diagnostic task at hand.
@@ -204,17 +204,17 @@ The provided file path directly references the `train_model.py` script located w
 Certainly! Below is a Python script for a complex machine learning algorithm for the Low-Cost Medical Diagnostic Tools application using mock data. The script is named `complex_model.py` and is located within the `src/models` directory of the project.
 
 ```python
-# File path: Low-Cost-Medical-Diagnostic-Tools/src/models/complex_model.py
+## File path: Low-Cost-Medical-Diagnostic-Tools/src/models/complex_model.py
 
 import numpy as np
 from tensorflow import keras
 from tensorflow.keras import layers
 
-# Mock data (replace with actual data loading and preprocessing)
-X_train = np.random.rand(100, 64, 64, 3)  # Example input data
-y_train = np.random.randint(0, 2, 100)    # Example target labels
+## Mock data (replace with actual data loading and preprocessing)
+X_train = np.random.rand(100, 64, 64, 3)  ## Example input data
+y_train = np.random.randint(0, 2, 100)    ## Example target labels
 
-# Define a complex model architecture (replace with actual model definition)
+## Define a complex model architecture (replace with actual model definition)
 input_layer = keras.Input(shape=(64, 64, 3))
 x = layers.Conv2D(32, 3, activation='relu')(input_layer)
 x = layers.MaxPooling2D(2)(x)
@@ -225,20 +225,20 @@ x = layers.Flatten()(x)
 x = layers.Dense(64, activation='relu')(x)
 output_layer = layers.Dense(1, activation='sigmoid')(x)
 
-# Create the model
+## Create the model
 model = keras.Model(inputs=input_layer, outputs=output_layer)
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam',
               loss='binary_crossentropy',
               metrics=['accuracy'])
 
-# Train the model
+## Train the model
 model.fit(X_train, y_train, epochs=10, batch_size=32)
 
-# Save the trained model and its architecture
-model.save('complex_model_weights.h5')  # Save the trained weights
-model.save('complex_model_architecture.json', save_format='json')  # Save the model architecture
+## Save the trained model and its architecture
+model.save('complex_model_weights.h5')  ## Save the trained weights
+model.save('complex_model_architecture.json', save_format='json')  ## Save the model architecture
 ```
 
 In this example, the script demonstrates a more complex model architecture using Keras functional API, but the mock data is still used for demonstration purposes. In a real-world scenario, the `X_train` and `y_train` would be loaded from actual datasets, and the model architecture would be designed based on the specific medical diagnostic task.

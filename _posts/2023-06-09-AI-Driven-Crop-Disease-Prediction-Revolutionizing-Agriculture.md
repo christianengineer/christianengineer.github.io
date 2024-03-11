@@ -5,7 +5,7 @@ permalink: posts/AI-Driven-Crop-Disease-Prediction-Revolutionizing-Agriculture
 layout: article
 ---
 
-# AI-Based Crop Disease Prediction App
+## AI-Based Crop Disease Prediction App
 
 **Description:**
 
@@ -125,7 +125,7 @@ Here's a simple example of a Python file that might handle some of the logic for
 `app/api/utilities/disease_predictor.py`:
 
 ```python
-# Import necessary libraries
+## Import necessary libraries
 import numpy as np
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image

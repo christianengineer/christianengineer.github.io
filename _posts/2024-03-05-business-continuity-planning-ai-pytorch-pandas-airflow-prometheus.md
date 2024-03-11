@@ -5,7 +5,7 @@ permalink: posts/business-continuity-planning-ai-pytorch-pandas-airflow-promethe
 layout: article
 ---
 
-# Business Continuity Planning AI for Cineplanet
+## Business Continuity Planning AI for Cineplanet
 
 ## Objectives for the Audience:
 - **Minimize Downtime**: Predictive analytics to anticipate potential closures due to health crises or natural disasters, allowing for rapid response and mitigation strategies.
@@ -202,37 +202,37 @@ By strategically employing data preprocessing practices tailored to address the 
 import pandas as pd
 from sklearn.preprocessing import MinMaxScaler
 
-# Load the raw data into a DataFrame
+## Load the raw data into a DataFrame
 raw_data = pd.read_csv("cineplanet_data.csv")
 
-# Feature Engineering: Calculate days since last closure
+## Feature Engineering: Calculate days since last closure
 raw_data['days_since_last_closure'] = raw_data.groupby('location')['closure_date'].diff().dt.days
 
-# Handling Missing Data: Impute missing values with median
+## Handling Missing Data: Impute missing values with median
 raw_data['days_since_last_closure'].fillna(raw_data['days_since_last_closure'].median(), inplace=True)
 
-# Feature Scaling: Normalize numerical features
+## Feature Scaling: Normalize numerical features
 scaler = MinMaxScaler()
 raw_data[['average_temperature', 'precipitation_volume']] = scaler.fit_transform(
     raw_data[['average_temperature', 'precipitation_volume']]
 )
 
-# Feature Selection: Keep relevant features for model training
+## Feature Selection: Keep relevant features for model training
 selected_data = raw_data[['days_since_last_closure', 'average_temperature', 'precipitation_volume', 'crisis_alert_level', 'target_variable']]
 
-# Data Split: Separate features and target variable
+## Data Split: Separate features and target variable
 X = selected_data.drop('target_variable', axis=1)
 y = selected_data['target_variable']
 
-# Data Formatting: Ensure data is in the correct format for model input
-# X should be a 2D array and y should be a 1D array
+## Data Formatting: Ensure data is in the correct format for model input
+## X should be a 2D array and y should be a 1D array
 
-# Sample code for splitting data into training and testing sets
+## Sample code for splitting data into training and testing sets
 from sklearn.model_selection import train_test_split
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Print information about the preprocessed data
+## Print information about the preprocessed data
 print("Preprocessing steps completed.")
 print("X_train shape:", X_train.shape)
 print("X_test shape:", X_test.shape)
@@ -315,10 +315,10 @@ import numpy as np
 from faker import Faker
 from datetime import timedelta, datetime
 
-# Generate fictitious dataset using Faker library
+## Generate fictitious dataset using Faker library
 fake = Faker()
 
-# Generate closure data
+## Generate closure data
 locations = ['Location A', 'Location B', 'Location C']
 date_range = pd.date_range(start='2021-01-01', end='2021-12-31', freq='D')
 closure_data = pd.DataFrame(columns=['location', 'closure_date'])
@@ -328,7 +328,7 @@ for _ in range(500):
     closure_date = fake.date_time_between_dates(datetime_start=date_range[0], datetime_end=date_range[-1])
     closure_data = closure_data.append({'location': location, 'closure_date': closure_date}, ignore_index=True)
 
-# Generate weather data
+## Generate weather data
 weather_data = pd.DataFrame(columns=['location', 'date', 'average_temperature', 'precipitation_volume'])
 
 for location in locations:
@@ -339,23 +339,23 @@ for location in locations:
                                             'average_temperature': average_temperature, 'precipitation_volume': precipitation_volume}, 
                                            ignore_index=True)
 
-# Generate health crisis data
+## Generate health crisis data
 crisis_data = pd.DataFrame(columns=['date', 'crisis_alert_level'])
 
 for date in date_range:
     crisis_alert_level = np.random.choice(['Low', 'Medium', 'High'])
     crisis_data = crisis_data.append({'date': date, 'crisis_alert_level': crisis_alert_level}, ignore_index=True)
 
-# Merge datasets
+## Merge datasets
 full_dataset = closure_data.copy()
 full_dataset['date'] = full_dataset['closure_date'].apply(lambda x: x.date())
 full_dataset = full_dataset.merge(weather_data, on=['location', 'date'], how='left')
 full_dataset = full_dataset.merge(crisis_data, on='date', how='left')
 
-# Save dataset to CSV
+## Save dataset to CSV
 full_dataset.to_csv('simulated_dataset.csv', index=False)
 
-# Validate generated dataset
+## Validate generated dataset
 print("Simulated dataset created and saved successfully.")
 print("Dataset size:", full_dataset.shape)
 print("Sample data:")
@@ -405,7 +405,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
-# Define the LSTM model architecture
+## Define the LSTM model architecture
 class LSTMModel(nn.Module):
     def __init__(self, input_size, hidden_size, num_layers, output_size):
         super(LSTMModel, self).__init__()
@@ -417,25 +417,25 @@ class LSTMModel(nn.Module):
         out = self.fc(out[:, -1, :])
         return out
 
-# Load the preprocessed dataset
+## Load the preprocessed dataset
 dataset = pd.read_csv("preprocessed_dataset.csv")
 
-# Split features and target variable
+## Split features and target variable
 X = dataset.drop('target_variable', axis=1).values
 y = dataset['target_variable'].values
 
-# Standardize features
+## Standardize features
 scaler = StandardScaler()
 X = scaler.fit_transform(X)
 
-# Convert data to PyTorch tensors
+## Convert data to PyTorch tensors
 X = torch.tensor(X, dtype=torch.float32)
 y = torch.tensor(y.reshape(-1, 1), dtype=torch.float32)
 
-# Split the data into training and validation sets
+## Split the data into training and validation sets
 X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Define dataset and dataloader
+## Define dataset and dataloader
 class CustomDataset(Dataset):
     def __init__(self, X, y):
         self.X = X
@@ -450,7 +450,7 @@ class CustomDataset(Dataset):
 train_dataset = CustomDataset(X_train, y_train)
 train_dataloader = DataLoader(train_dataset, batch_size=32, shuffle=True)
 
-# Initialize the LSTM model
+## Initialize the LSTM model
 input_size = X.shape[1]
 hidden_size = 64
 num_layers = 2
@@ -458,11 +458,11 @@ output_size = 1
 
 model = LSTMModel(input_size, hidden_size, num_layers, output_size)
 
-# Define loss function and optimizer
+## Define loss function and optimizer
 criterion = nn.MSELoss()
 optimizer = optim.Adam(model.parameters(), lr=0.001)
 
-# Training loop
+## Training loop
 epochs = 50
 for epoch in range(epochs):
     for inputs, labels in train_dataloader:
@@ -472,7 +472,7 @@ for epoch in range(epochs):
         loss.backward()
         optimizer.step()
 
-    # Validation
+    ## Validation
     model.eval()
     with torch.no_grad():
         val_outputs = model(X_val)
@@ -480,7 +480,7 @@ for epoch in range(epochs):
     
     print(f"Epoch {epoch+1}/{epochs}, Training Loss: {loss.item()}, Validation Loss: {val_loss.item()}")
 
-# Save the trained model
+## Save the trained model
 torch.save(model.state_dict(), 'trained_model.pth')
 ```
 
@@ -541,25 +541,25 @@ The code follows conventions and standards commonly adopted in large tech enviro
 By following this step-by-step deployment plan tailored to the unique demands of your project, utilizing the recommended tools and platforms, your team can effectively deploy the machine learning model into production with confidence and efficiency.
 
 ```dockerfile
-# Use a Python runtime as a base image
+## Use a Python runtime as a base image
 FROM python:3.8-slim
 
-# Set the working directory in the container
+## Set the working directory in the container
 WORKDIR /app
 
-# Copy the requirements file into the container
+## Copy the requirements file into the container
 COPY requirements.txt .
 
-# Install dependencies
+## Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy all project files into the container
+## Copy all project files into the container
 COPY . .
 
-# Expose the port on which the API will run
+## Expose the port on which the API will run
 EXPOSE 8000
 
-# Command to run the API
+## Command to run the API
 CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]
 ```
 

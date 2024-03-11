@@ -5,7 +5,7 @@ permalink: posts/ai-empathy-architecture-cloud-chatbot-mental-health-support-blu
 layout: article
 ---
 
-# Architecting AI Empathy: A Scalable Cloud-Based Chatbot Development Blueprint for Advanced Mental Health Support
+## Architecting AI Empathy: A Scalable Cloud-Based Chatbot Development Blueprint for Advanced Mental Health Support
 
 This blueprint describes an advanced modular approach to build a highly scalable, multilingual, and performant AI-driven chatbot for providing mental health support.
 
@@ -38,9 +38,9 @@ def get_reply():
     """
     request_data = request.get_json()
     user_input = request_data['message']
-    # Process and Predict
+    ## Process and Predict
     result = process_and_predict(user_input)
-    # Send the result back
+    ## Send the result back
     return {"reply": result}
 ```
 

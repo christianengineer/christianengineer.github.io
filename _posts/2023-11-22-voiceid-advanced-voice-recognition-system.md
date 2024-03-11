@@ -5,7 +5,7 @@ permalink: posts/voiceid-advanced-voice-recognition-system
 layout: article
 ---
 
-# AI VoiceID - Advanced Voice Recognition System
+## AI VoiceID - Advanced Voice Recognition System
 
 ## Objectives
 
@@ -249,32 +249,32 @@ Certainly! Below is an example of a function for a complex machine learning algo
 import numpy as np
 
 def train_voice_feature_extraction_model(data_path):
-    # Load mock voice data (assuming it's stored in a numpy file)
-    voice_data = np.load(data_path)  # Load the voice data from the file path
+    ## Load mock voice data (assuming it's stored in a numpy file)
+    voice_data = np.load(data_path)  ## Load the voice data from the file path
 
-    # Preprocess the voice data (e.g., normalization, reshaping, etc.)
+    ## Preprocess the voice data (e.g., normalization, reshaping, etc.)
     preprocessed_data = preprocess_data(voice_data)
 
-    # Define a complex deep learning architecture for voice feature extraction
+    ## Define a complex deep learning architecture for voice feature extraction
     model = create_voice_feature_extraction_model(input_shape=preprocessed_data.shape[1:])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam', loss='mean_squared_error', metrics=['accuracy'])
 
-    # Train the model using the voice data
+    ## Train the model using the voice data
     model.fit(preprocessed_data, labels, epochs=10, batch_size=32, validation_split=0.2)
 
-    # Return the trained model for further use
+    ## Return the trained model for further use
     return model
 
 def preprocess_data(data):
-    # Perform any necessary data preprocessing such as normalization, scaling, reshaping, etc.
-    preprocessed_data = data  # Placeholder for actual data preprocessing steps
+    ## Perform any necessary data preprocessing such as normalization, scaling, reshaping, etc.
+    preprocessed_data = data  ## Placeholder for actual data preprocessing steps
     return preprocessed_data
 
 def create_voice_feature_extraction_model(input_shape):
-    # Define a complex deep learning architecture for voice feature extraction using TensorFlow/Keras
-    # Example architecture for illustrative purposes
+    ## Define a complex deep learning architecture for voice feature extraction using TensorFlow/Keras
+    ## Example architecture for illustrative purposes
     model = Sequential()
     model.add(Conv2D(32, kernel_size=(3, 3), activation='relu', input_shape=input_shape))
     model.add(MaxPooling2D(pool_size=(2, 2)))
@@ -300,31 +300,31 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import LSTM, Dense
 
 def train_speaker_recognition_model(data_path):
-    # Load mock voice data (assuming it's stored in a numpy file)
-    voice_data = np.load(data_path)  # Load the voice data from the file path
+    ## Load mock voice data (assuming it's stored in a numpy file)
+    voice_data = np.load(data_path)  ## Load the voice data from the file path
 
-    # Preprocess the voice data (e.g., normalization, reshaping, etc.)
+    ## Preprocess the voice data (e.g., normalization, reshaping, etc.)
     preprocessed_data = preprocess_data(voice_data)
 
-    # Define a complex deep learning architecture for speaker recognition using an RNN with LSTM units
+    ## Define a complex deep learning architecture for speaker recognition using an RNN with LSTM units
     model = create_speaker_recognition_model(input_shape=preprocessed_data.shape[1:])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
 
-    # Train the model using the voice data
+    ## Train the model using the voice data
     model.fit(preprocessed_data, labels, epochs=10, batch_size=32, validation_split=0.2)
 
-    # Return the trained model for further use
+    ## Return the trained model for further use
     return model
 
 def preprocess_data(data):
-    # Perform any necessary data preprocessing such as normalization, scaling, reshaping, etc.
-    preprocessed_data = data  # Placeholder for actual data preprocessing steps
+    ## Perform any necessary data preprocessing such as normalization, scaling, reshaping, etc.
+    preprocessed_data = data  ## Placeholder for actual data preprocessing steps
     return preprocessed_data
 
 def create_speaker_recognition_model(input_shape):
-    # Define a complex deep learning architecture for speaker recognition using an RNN with LSTM units
+    ## Define a complex deep learning architecture for speaker recognition using an RNN with LSTM units
     model = Sequential()
     model.add(LSTM(128, input_shape=input_shape, return_sequences=True))
     model.add(LSTM(64, return_sequences=True))

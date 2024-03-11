@@ -5,7 +5,7 @@ permalink: posts/customer-preference-analysis-tool-for-peru-restaurants-pytorch-
 layout: article
 ---
 
-# Machine Learning Customer Preference Analysis Tool for Peru Restaurants
+## Machine Learning Customer Preference Analysis Tool for Peru Restaurants
 
 ## Objective:
 The main objective of the machine learning Customer Preference Analysis Tool for Peru Restaurants is to analyze customer feedback and dining patterns in order to tailor menu offerings and improve satisfaction. By leveraging machine learning algorithms, the tool can provide valuable insights that help restaurants understand customer preferences better and make data-driven decisions to enhance the overall dining experience.
@@ -179,38 +179,38 @@ from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 import re
 
-# Load the raw data
+## Load the raw data
 data = pd.read_csv("customer_feedback_data.csv")
 
-# Drop irrelevant columns
+## Drop irrelevant columns
 data = data.drop(["irrelevant_column1", "irrelevant_column2"], axis=1)
 
-# Handle missing data
+## Handle missing data
 imputer = SimpleImputer(strategy='mean')
 data['numerical_feature'] = imputer.fit_transform(data[['numerical_feature']])
 
-# Text data cleaning
+## Text data cleaning
 stop_words = set(stopwords.words('english'))
 lemmatizer = WordNetLemmatizer()
 
 def text_preprocessing(text):
-    text = text.lower()  # Convert text to lowercase
-    text = re.sub(r'[^\w\s]', '', text)  # Remove special characters
+    text = text.lower()  ## Convert text to lowercase
+    text = re.sub(r'[^\w\s]', '', text)  ## Remove special characters
     words = text.split()
-    words = [word for word in words if word not in stop_words]  # Remove stopwords
-    words = [lemmatizer.lemmatize(word) for word in words]  # Lemmatize words
+    words = [word for word in words if word not in stop_words]  ## Remove stopwords
+    words = [lemmatizer.lemmatize(word) for word in words]  ## Lemmatize words
     return ' '.join(words)
 
 data['textual_feedback'] = data['textual_feedback'].apply(text_preprocessing)
 
-# Normalize numerical features
+## Normalize numerical features
 scaler = StandardScaler()
 data[['numerical_feature']] = scaler.fit_transform(data[['numerical_feature']])
 
-# One-hot encode categorical features if needed
-# data = pd.get_dummies(data, columns=['categorical_feature'])
+## One-hot encode categorical features if needed
+## data = pd.get_dummies(data, columns=['categorical_feature'])
 
-# Save the preprocessed data
+## Save the preprocessed data
 data.to_csv("preprocessed_data.csv", index=False)
 ```
 
@@ -350,30 +350,30 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 
-# Load the preprocessed data
+## Load the preprocessed data
 data = pd.read_csv("preprocessed_data.csv")
 
-# Define features and target variable
+## Define features and target variable
 X = data.drop(columns=["target_column"])
 y = data["target_column"]
 
-# Split the data into training and validation sets (80% train, 20% validation)
+## Split the data into training and validation sets (80% train, 20% validation)
 X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Instantiate the Random Forest Classifier
+## Instantiate the Random Forest Classifier
 rf_classifier = RandomForestClassifier()
 
-# Train the model
+## Train the model
 rf_classifier.fit(X_train, y_train)
 
-# Predict on the validation set
+## Predict on the validation set
 y_pred = rf_classifier.predict(X_val)
 
-# Calculate accuracy
+## Calculate accuracy
 accuracy = accuracy_score(y_val, y_pred)
 print(f"Validation set accuracy: {accuracy}")
 
-# Save the trained model for deployment
+## Save the trained model for deployment
 joblib.dump(rf_classifier, "trained_model.pkl")
 ```
 
@@ -458,29 +458,29 @@ By incorporating these best practices and standards into the codebase, you can e
 By following this step-by-step deployment plan and utilizing the recommended tools and platforms, your team can efficiently deploy the machine learning model into production, ensuring a seamless transition from development to a live environment with proper monitoring and maintenance practices in place.
 
 ```Dockerfile
-# Use an official Python runtime as a base image
+## Use an official Python runtime as a base image
 FROM python:3.9-slim
 
-# Set the working directory in the container
+## Set the working directory in the container
 WORKDIR /app
 
-# Copy the requirements file into the container at /app
+## Copy the requirements file into the container at /app
 COPY requirements.txt /app/
 
-# Install any needed dependencies specified in requirements.txt
+## Install any needed dependencies specified in requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the application code into the container at /app
+## Copy the application code into the container at /app
 COPY . /app
 
-# Expose the port the app runs on
+## Expose the port the app runs on
 EXPOSE 5000
 
-# Define environment variables
+## Define environment variables
 ENV FLASK_APP=app.py
 ENV FLASK_RUN_HOST=0.0.0.0
 
-# Define the command to run the application when the container starts
+## Define the command to run the application when the container starts
 CMD ["flask", "run"]
 ```
 

@@ -5,7 +5,7 @@ permalink: posts/automated-image-analysis-for-clinical-pathology-tensorflow-flas
 layout: article
 ---
 
-# AI Automated Image Analysis for Clinical Pathology
+## AI Automated Image Analysis for Clinical Pathology
 
 ## Objectives
 The objectives of the AI Automated Image Analysis for Clinical Pathology system are to:
@@ -31,7 +31,7 @@ The following libraries and frameworks will be utilized in the development of th
 
 By leveraging these libraries and frameworks, the AI Automated Image Analysis for Clinical Pathology system can be built to be scalable, efficient, and capable of handling the data-intensive nature of medical image analysis.
 
-# MLOps Infrastructure for Automated Image Analysis for Clinical Pathology
+## MLOps Infrastructure for Automated Image Analysis for Clinical Pathology
 
 To support the development and deployment of the Automated Image Analysis for Clinical Pathology application, a robust MLOps infrastructure must be established. MLOps, which stands for machine learning operations, involves the practices and tools used to standardize and streamline the machine learning lifecycle, including training, deployment, and monitoring. Here's an outline of the MLOps infrastructure for the system:
 
@@ -181,19 +181,19 @@ By organizing the deployment-related components in this structured manner, it fa
 Certainly! Below is an example of a Python script for training a model for the Automated Image Analysis for Clinical Pathology using mock data. This script demonstrates the training process and utilizes TensorFlow for building and training the machine learning model. The script is saved as `train_model.py` within the `models/training/` directory of the project.
 
 ```python
-# models/training/train_model.py
+## models/training/train_model.py
 
 import tensorflow as tf
 import numpy as np
 
-# Mock data for training (replace with actual data loading code)
+## Mock data for training (replace with actual data loading code)
 def load_mock_data():
-    # Generate mock images and labels
-    X_train = np.random.rand(100, 64, 64, 3)  # Mock images with shape (100, 64, 64, 3)
-    y_train = np.random.randint(0, 2, size=(100,))  # Mock labels (binary classification)
+    ## Generate mock images and labels
+    X_train = np.random.rand(100, 64, 64, 3)  ## Mock images with shape (100, 64, 64, 3)
+    y_train = np.random.randint(0, 2, size=(100,))  ## Mock labels (binary classification)
     return X_train, y_train
 
-# Define the model architecture
+## Define the model architecture
 def build_model():
     model = tf.keras.Sequential([
         tf.keras.layers.Conv2D(32, (3, 3), activation='relu', input_shape=(64, 64, 3)),
@@ -209,17 +209,17 @@ def build_model():
     return model
 
 if __name__ == "__main__":
-    # Load mock data
+    ## Load mock data
     X_train, y_train = load_mock_data()
 
-    # Build the model
+    ## Build the model
     model = build_model()
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train, epochs=10, batch_size=32)
 
-    # Save the trained model
-    model.save('trained_models/mock_model')  # Save the trained model to models/trained_models/mock_model
+    ## Save the trained model
+    model.save('trained_models/mock_model')  ## Save the trained model to models/trained_models/mock_model
 ```
 
 In this script, the `load_mock_data` function generates mock images and labels for training. The `build_model` function defines a simple convolutional neural network (CNN) model using TensorFlow's Keras API. The script then trains the model using the mock data and saves the trained model to the `models/trained_models/mock_model` directory.
@@ -229,48 +229,48 @@ This script serves as a basic example for training a model using mock data. In a
 Certainly! Below is an example of a Python script for a complex machine learning algorithm used in the Automated Image Analysis for Clinical Pathology application. The script demonstrates the use of a convolutional neural network (CNN) for image classification, utilizing TensorFlow for model building and training. This script is saved as `complex_ml_algorithm.py` within the `models/training/` directory of the project.
 
 ```python
-# models/training/complex_ml_algorithm.py
+## models/training/complex_ml_algorithm.py
 
 import tensorflow as tf
 import numpy as np
 from tensorflow.keras import layers, models
 
-# Mock data for training (replace with actual data loading code)
+## Mock data for training (replace with actual data loading code)
 def load_mock_data():
-    # Generate mock images and labels
-    X_train = np.random.rand(100, 128, 128, 3)  # Mock images with shape (100, 128, 128, 3)
-    y_train = np.random.randint(0, 2, size=(100,))  # Mock labels (binary classification)
+    ## Generate mock images and labels
+    X_train = np.random.rand(100, 128, 128, 3)  ## Mock images with shape (100, 128, 128, 3)
+    y_train = np.random.randint(0, 2, size=(100,))  ## Mock labels (binary classification)
     return X_train, y_train
 
 if __name__ == "__main__":
-    # Load mock data
+    ## Load mock data
     X_train, y_train = load_mock_data()
 
-    # Define complex CNN architecture
+    ## Define complex CNN architecture
     model = models.Sequential([
-        # Convolutional layers
+        ## Convolutional layers
         layers.Conv2D(32, (3, 3), activation='relu', input_shape=(128, 128, 3)),
         layers.MaxPooling2D((2, 2)),
         layers.Conv2D(64, (3, 3), activation='relu'),
         layers.MaxPooling2D((2, 2)),
         layers.Conv2D(128, (3, 3), activation='relu'),
         layers.MaxPooling2D((2, 2)),
-        # Dense layers
+        ## Dense layers
         layers.Flatten(),
         layers.Dense(128, activation='relu'),
         layers.Dense(1, activation='sigmoid')
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam',
                   loss='binary_crossentropy',
                   metrics=['accuracy'])
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train, epochs=10, batch_size=32)
 
-    # Save the trained model
-    model.save('trained_models/complex_model')  # Save the trained model to models/trained_models/complex_model
+    ## Save the trained model
+    model.save('trained_models/complex_model')  ## Save the trained model to models/trained_models/complex_model
 ```
 
 In this script, the `load_mock_data` function generates mock images and labels for training. The script then defines a complex CNN architecture using TensorFlow's Keras API and trains the model using the mock data. Finally, the trained model is saved to the `models/trained_models/complex_model` directory.

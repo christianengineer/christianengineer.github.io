@@ -5,7 +5,7 @@ permalink: posts/smart-ai-contract-analyzer-for-blockchain
 layout: article
 ---
 
-# Smart AI Contract Analyzer for Blockchain Technical Specifications
+## Smart AI Contract Analyzer for Blockchain Technical Specifications
 
 ## Description
 

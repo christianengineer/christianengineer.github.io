@@ -5,7 +5,7 @@ permalink: posts/energysaver---ai-for-energy-optimization
 layout: article
 ---
 
-# AI EnergySaver - AI for Energy Optimization
+## AI EnergySaver - AI for Energy Optimization
 
 ## Objectives
 
@@ -222,29 +222,29 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 
 def complex_energy_prediction_model(data_file_path):
-    # Load the mock energy usage data from the specified file path
+    ## Load the mock energy usage data from the specified file path
     energy_data = pd.read_csv(data_file_path)
 
-    # Feature engineering and preprocessing
-    # ... (code for feature engineering and preprocessing)
+    ## Feature engineering and preprocessing
+    ## ... (code for feature engineering and preprocessing)
 
-    # Split the data into features and target variable
+    ## Split the data into features and target variable
     X = energy_data.drop('energy_consumption', axis=1)
     y = energy_data['energy_consumption']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Instantiate the complex machine learning algorithm (Random Forest Regressor in this example)
+    ## Instantiate the complex machine learning algorithm (Random Forest Regressor in this example)
     model = RandomForestRegressor(n_estimators=100, random_state=42)
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train)
 
-    # Make predictions
+    ## Make predictions
     y_pred = model.predict(X_test)
 
-    # Evaluate the model
+    ## Evaluate the model
     mse = mean_squared_error(y_test, y_pred)
 
     return model, mse
@@ -263,45 +263,45 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 
 def complex_energy_deep_learning_model(data_file_path):
-    # Load the mock energy usage data from the specified file path
+    ## Load the mock energy usage data from the specified file path
     energy_data = pd.read_csv(data_file_path)
 
-    # Feature engineering and preprocessing
-    # ... (code for feature engineering and preprocessing)
+    ## Feature engineering and preprocessing
+    ## ... (code for feature engineering and preprocessing)
 
-    # Split the data into features and target variable
+    ## Split the data into features and target variable
     X = energy_data.drop('energy_consumption', axis=1)
     y = energy_data['energy_consumption']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Standardize the data
+    ## Standardize the data
     scaler = StandardScaler()
     X_train_scaled = scaler.fit_transform(X_train)
     X_test_scaled = scaler.transform(X_test)
 
-    # Define a complex deep learning model
+    ## Define a complex deep learning model
     model = tf.keras.Sequential([
         tf.keras.layers.Dense(128, activation='relu', input_shape=(X_train.shape[1],)),
         tf.keras.layers.Dense(64, activation='relu'),
-        tf.keras.layers.Dense(1)  # Output layer
+        tf.keras.layers.Dense(1)  ## Output layer
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam', loss='mean_squared_error')
 
-    # Train the model
+    ## Train the model
     model.fit(X_train_scaled, y_train, epochs=50, batch_size=32, validation_data=(X_test_scaled, y_test))
 
-    # Make predictions
+    ## Make predictions
     y_pred = model.predict(X_test_scaled)
 
-    # Invert the scaling for evaluation
+    ## Invert the scaling for evaluation
     y_pred = scaler.inverse_transform(y_pred).flatten()
     y_test = scaler.inverse_transform(y_test.values.reshape(-1, 1)).flatten()
 
-    # Evaluate the model
+    ## Evaluate the model
     mse = mean_squared_error(y_test, y_pred)
 
     return model, mse

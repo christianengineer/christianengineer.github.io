@@ -83,34 +83,34 @@ A scalable and organized file structure for the energy consumption forecasting r
 energy-consumption-forecasting-lstm/
 │
 ├── data/
-│   ├── raw_data/               # Raw energy consumption data
-│   └── processed_data/         # Processed and preprocessed data for modeling
+│   ├── raw_data/               ## Raw energy consumption data
+│   └── processed_data/         ## Processed and preprocessed data for modeling
 │
 ├── models/
-│   ├── lstm_model.py           # Implementation of LSTM model
-│   └── model_evaluation.py     # Evaluation of trained models
+│   ├── lstm_model.py           ## Implementation of LSTM model
+│   └── model_evaluation.py     ## Evaluation of trained models
 │
 ├── notebooks/
-│   ├── data_preprocessing.ipynb  # Jupyter notebook for data preprocessing
-│   ├── model_training.ipynb       # Jupyter notebook for LSTM model training
-│   └── model_evaluation.ipynb     # Jupyter notebook for model evaluation
+│   ├── data_preprocessing.ipynb  ## Jupyter notebook for data preprocessing
+│   ├── model_training.ipynb       ## Jupyter notebook for LSTM model training
+│   └── model_evaluation.ipynb     ## Jupyter notebook for model evaluation
 │
 ├── scripts/
-│   ├── data_download.py        # Script to download raw data
-│   └── data_preprocessing.py   # Script for data preprocessing
+│   ├── data_download.py        ## Script to download raw data
+│   └── data_preprocessing.py   ## Script for data preprocessing
 │
 ├── app/
-│   ├── api_server.py           # REST API server for providing energy consumption forecasts
-│   └── requirements.txt        # Dependencies for deployment
+│   ├── api_server.py           ## REST API server for providing energy consumption forecasts
+│   └── requirements.txt        ## Dependencies for deployment
 │
 ├── tests/
-│   ├── test_data_preprocessing.py    # Unit tests for data preprocessing
-│   ├── test_lstm_model.py            # Unit tests for LSTM model
-│   └── test_api_server.py            # Integration tests for the API server
+│   ├── test_data_preprocessing.py    ## Unit tests for data preprocessing
+│   ├── test_lstm_model.py            ## Unit tests for LSTM model
+│   └── test_api_server.py            ## Integration tests for the API server
 │
-├── README.md                   # Repository documentation
-├── requirements.txt            # Python dependencies for the project
-└── .gitignore                  # Git ignore file
+├── README.md                   ## Repository documentation
+├── requirements.txt            ## Python dependencies for the project
+└── .gitignore                  ## Git ignore file
 ```
 
 ### Description of the Proposed File Structure:
@@ -134,8 +134,8 @@ Within the "models/" directory of the Energy Consumption Forecasting with LSTM (
 ```plaintext
 models/
 │
-├── lstm_model.py           # Implementation of LSTM model
-└── model_evaluation.py     # Evaluation of trained models
+├── lstm_model.py           ## Implementation of LSTM model
+└── model_evaluation.py     ## Evaluation of trained models
 ```
 
 ### Description of Files within the "models/" Directory:
@@ -166,8 +166,8 @@ Within the "app/" directory of the Energy Consumption Forecasting with LSTM (Pyt
 ```plaintext
 app/
 │
-├── api_server.py       # REST API server for providing energy consumption forecasts
-└── requirements.txt    # Dependencies for deployment
+├── api_server.py       ## REST API server for providing energy consumption forecasts
+└── requirements.txt    ## Dependencies for deployment
 ```
 
 ### Description of Files within the "app/" Directory:
@@ -200,20 +200,20 @@ import pandas as pd
 from tensorflow.keras.models import load_model
 
 def energy_consumption_forecast(file_path):
-    # Load the trained LSTM model
-    trained_model = load_model(file_path)  # Example: 'models/trained_lstm_model.h5'
+    ## Load the trained LSTM model
+    trained_model = load_model(file_path)  ## Example: 'models/trained_lstm_model.h5'
 
-    # Mock data for demonstration (replace with actual data)
+    ## Mock data for demonstration (replace with actual data)
     mock_data = pd.DataFrame({
         'timestamp': ['2023-01-01 00:00:00', '2023-01-01 01:00:00', '2023-01-01 02:00:00'],
         'energy_consumption': [100, 110, 105]
     })
 
-    # Preprocess the mock data to the format expected by the LSTM model
-    # ...
+    ## Preprocess the mock data to the format expected by the LSTM model
+    ## ...
 
-    # Use the trained model to make energy consumption forecasts
-    predicted_consumption = trained_model.predict(mock_processed_data)  # Replace mock_processed_data with actual processed data
+    ## Use the trained model to make energy consumption forecasts
+    predicted_consumption = trained_model.predict(mock_processed_data)  ## Replace mock_processed_data with actual processed data
 
     return predicted_consumption
 ```
@@ -234,17 +234,17 @@ import pandas as pd
 from tensorflow.keras.models import load_model
 
 def energy_consumption_forecast(file_path, mock_data_path):
-    # Load the trained LSTM model
-    trained_model = load_model(file_path)  # Example: 'models/trained_lstm_model.h5'
+    ## Load the trained LSTM model
+    trained_model = load_model(file_path)  ## Example: 'models/trained_lstm_model.h5'
 
-    # Load mock data for demonstration (replace with actual data)
-    mock_data = pd.read_csv(mock_data_path)  # Example: 'data/mock_energy_data.csv'
+    ## Load mock data for demonstration (replace with actual data)
+    mock_data = pd.read_csv(mock_data_path)  ## Example: 'data/mock_energy_data.csv'
 
-    # Preprocess the mock data to the format expected by the LSTM model
-    # ...
+    ## Preprocess the mock data to the format expected by the LSTM model
+    ## ...
 
-    # Use the trained model to make energy consumption forecasts
-    predicted_consumption = trained_model.predict(mock_processed_data)  # Replace mock_processed_data with actual processed data
+    ## Use the trained model to make energy consumption forecasts
+    predicted_consumption = trained_model.predict(mock_processed_data)  ## Replace mock_processed_data with actual processed data
 
     return predicted_consumption
 ```

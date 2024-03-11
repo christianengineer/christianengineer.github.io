@@ -5,7 +5,7 @@ permalink: posts/peru-luxury-dining-fraud-detection-system-keras-tensorflow-airf
 layout: article
 ---
 
-# Machine Learning Peru Luxury Dining Fraud Detection System
+## Machine Learning Peru Luxury Dining Fraud Detection System
 
 ## Objective:
 The main objective of the Peru Luxury Dining Fraud Detection System is to detect and prevent fraudulent transactions in real-time to protect revenue and enhance customer trust. This system will utilize Keras and TensorFlow for building and deploying the machine learning models, Airflow for orchestrating the machine learning pipeline, and Prometheus for monitoring model performance.
@@ -35,7 +35,7 @@ The Peru Luxury Dining Fraud Detection System will work with various types of da
 
 By integrating these tools and libraries into the Peru Luxury Dining Fraud Detection System, we can create a robust and scalable solution for detecting and preventing fraudulent transactions effectively.
 
-# Analysis of Types of Data and Variable Selection
+## Analysis of Types of Data and Variable Selection
 
 ## Types of Data:
 1. **Transaction Data**:
@@ -93,7 +93,7 @@ By integrating these tools and libraries into the Peru Luxury Dining Fraud Detec
 
 By incorporating these tools and methods into the existing technology stack, the data collection process can be optimized for real-time ingestion, storage, and processing, leading to improved model performance and interpretability in the Peru Luxury Dining Fraud Detection System.
 
-# Potential Data Problems and Strategic Data Cleansing Practices
+## Potential Data Problems and Strategic Data Cleansing Practices
 
 ## Specific Problems with the Data:
 1. **Missing Values**: Incomplete or missing transaction, user, or device data can lead to biased model training and inaccurate predictions.
@@ -131,28 +131,28 @@ from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import StandardScaler
 
 def clean_data(data):
-    # Drop columns not needed for modeling
+    ## Drop columns not needed for modeling
     data_cleaned = data.drop(['user_id', 'device_id'], axis=1)
 
-    # Impute missing values in 'transaction_amount' with the median
+    ## Impute missing values in 'transaction_amount' with the median
     imputer = SimpleImputer(strategy='median')
     data_cleaned['transaction_amount'] = imputer.fit_transform(data_cleaned['transaction_amount'].values.reshape(-1, 1))
 
-    # Standardize numerical features
+    ## Standardize numerical features
     scaler = StandardScaler()
     numerical_cols = ['transaction_amount', 'age']
     data_cleaned[numerical_cols] = scaler.fit_transform(data_cleaned[numerical_cols])
 
     return data_cleaned
 
-# Sample data
+## Sample data
 data = pd.DataFrame({
     'transaction_amount': [100, 150, None, 80, 200],
     'location': ['Lima', 'Cusco', 'Arequipa', 'Trujillo', 'Lima'],
     'age': [35, 28, 45, None, 39]
 })
 
-# Clean the data
+## Clean the data
 cleaned_data = clean_data(data)
 print(cleaned_data)
 ```
@@ -161,7 +161,7 @@ This Python code snippet includes a `clean_data` function that performs data cle
 
 You can customize this code further based on the specific characteristics of your data and additional cleansing requirements. Remember to adapt the code to your project's data schema and cleansing needs for optimal performance.
 
-# Recommended Modeling Strategy for Peru Luxury Dining Fraud Detection System
+## Recommended Modeling Strategy for Peru Luxury Dining Fraud Detection System
 
 ## Modeling Strategy:
 1. **Anomaly Detection with Isolation Forest**:
@@ -271,28 +271,28 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
-# Load the cleansed dataset
+## Load the cleansed dataset
 data = pd.read_csv('cleansed_data.csv')
 
-# Define features and target variable
+## Define features and target variable
 X = data.drop(['is_fraudulent'], axis=1)
 y = data['is_fraudulent']
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize and train the Random Forest model
+## Initialize and train the Random Forest model
 rf_model = RandomForestClassifier(n_estimators=100, random_state=42)
 rf_model.fit(X_train, y_train)
 
-# Make predictions on the test set
+## Make predictions on the test set
 y_pred = rf_model.predict(X_test)
 
-# Calculate model accuracy
+## Calculate model accuracy
 accuracy = accuracy_score(y_test, y_pred)
 print(f'Model Accuracy: {accuracy}')
 
-# Save the trained model for deployment
+## Save the trained model for deployment
 import joblib
 joblib.dump(rf_model, 'fraud_detection_model.pkl')
 ```
@@ -313,7 +313,7 @@ joblib.dump(rf_model, 'fraud_detection_model.pkl')
 
 By adhering to these best practices, the provided code snippet establishes a robust foundation for deploying the machine learning model in a production environment for the Peru Luxury Dining Fraud Detection System project.
 
-# Machine Learning Model Deployment Plan
+## Machine Learning Model Deployment Plan
 
 ## Step-by-Step Deployment Plan:
 
@@ -361,24 +361,24 @@ By adhering to these best practices, the provided code snippet establishes a rob
 By following this step-by-step deployment plan and leveraging the recommended tools and platforms at each stage, the machine learning model for the Peru Luxury Dining Fraud Detection System can be efficiently deployed into a live production environment with scalability, maintainability, and monitoring capabilities.
 
 ```Dockerfile
-# Use a base Python image
+## Use a base Python image
 FROM python:3.9-slim
 
-# Set the working directory in the container
+## Set the working directory in the container
 WORKDIR /app
 
-# Copy the requirements file and install dependencies
+## Copy the requirements file and install dependencies
 COPY requirements.txt requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy model files and data processing scripts
+## Copy model files and data processing scripts
 COPY model.pkl model.pkl
 COPY data_processing.py data_processing.py
 
-# Expose the necessary port for the API
+## Expose the necessary port for the API
 EXPOSE 5000
 
-# Command to run the API service
+## Command to run the API service
 CMD ["python", "api.py"]
 ```
 

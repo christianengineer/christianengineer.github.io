@@ -192,21 +192,21 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
 def train_anomaly_detection_model(data_path):
-    # Load mock data (replace with real data loading logic)
+    ## Load mock data (replace with real data loading logic)
     data = pd.read_csv(data_path)
 
-    # Preprocessing mock data (replace with actual preprocessing steps)
+    ## Preprocessing mock data (replace with actual preprocessing steps)
     features = data.drop(columns=['timestamp', 'label'])
     target = data['label']
 
-    # Standardize the features
+    ## Standardize the features
     scaler = StandardScaler()
     scaled_features = scaler.fit_transform(features)
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(scaled_features, target, test_size=0.2, random_state=42)
 
-    # Define and train the anomaly detection model using TensorFlow (replace with actual model definition and training logic)
+    ## Define and train the anomaly detection model using TensorFlow (replace with actual model definition and training logic)
     model = tf.keras.Sequential([
         tf.keras.layers.Dense(64, activation='relu'),
         tf.keras.layers.Dense(32, activation='relu'),
@@ -216,11 +216,11 @@ def train_anomaly_detection_model(data_path):
     model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
     model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y_test))
 
-    # Evaluate the model (replace with actual evaluation logic)
+    ## Evaluate the model (replace with actual evaluation logic)
     loss, accuracy = model.evaluate(X_test, y_test)
     print(f'Accuracy: {accuracy:.2f}')
 
-    # Return the trained model for further usage
+    ## Return the trained model for further usage
     return model
 ```
 
@@ -242,32 +242,32 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
 def train_anomaly_detection_model(data_path):
-    # Load mock data (replace with real data loading logic)
+    ## Load mock data (replace with real data loading logic)
     data = pd.read_csv(data_path)
 
-    # Preprocessing mock data (replace with actual preprocessing steps)
+    ## Preprocessing mock data (replace with actual preprocessing steps)
     features = data[['feature1', 'feature2', 'feature3']]
     target = data['anomaly_label']
 
-    # Standardize the features
+    ## Standardize the features
     scaler = StandardScaler()
     scaled_features = scaler.fit_transform(features)
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(scaled_features, target, test_size=0.2, random_state=42)
 
-    # Define and train the anomaly detection model using Isolation Forest (replace with actual model and training logic)
+    ## Define and train the anomaly detection model using Isolation Forest (replace with actual model and training logic)
     model = IsolationForest(contamination=0.1, random_state=42)
     model.fit(X_train)
 
-    # Evaluate the model (replace with actual evaluation logic)
+    ## Evaluate the model (replace with actual evaluation logic)
     train_preds = model.predict(X_train)
     test_preds = model.predict(X_test)
     train_accuracy = list(train_preds).count(1) / len(train_preds)
     test_accuracy = list(test_preds).count(1) / len(test_preds)
     print(f'Training Accuracy: {train_accuracy:.2f}, Testing Accuracy: {test_accuracy:.2f}')
 
-    # Return the trained model for further usage
+    ## Return the trained model for further usage
     return model
 ```
 

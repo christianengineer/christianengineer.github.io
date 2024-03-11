@@ -60,30 +60,30 @@ Sure, here's a scalable file structure for the AI for Sustainable Agriculture wi
 ```
 AI_for_Sustainable_Agriculture/
 ├── data/
-│   ├── raw/  # Raw data collected from various sources
-│   ├── processed/  # Processed and cleaned data for model training
-│   └── external/  # External datasets and resources
+│   ├── raw/  ## Raw data collected from various sources
+│   ├── processed/  ## Processed and cleaned data for model training
+│   └── external/  ## External datasets and resources
 ├── models/
-│   ├── trained_models/  # Saved trained models
-│   └── model_development/  # Jupyter notebooks or Python scripts for model development
+│   ├── trained_models/  ## Saved trained models
+│   └── model_development/  ## Jupyter notebooks or Python scripts for model development
 ├── app/
-│   ├── api/  # REST API for model serving
-│   ├── preprocessing/  # Data preprocessing scripts
-│   └── deployment/  # Configuration files for model deployment
+│   ├── api/  ## REST API for model serving
+│   ├── preprocessing/  ## Data preprocessing scripts
+│   └── deployment/  ## Configuration files for model deployment
 ├── infrastructure/
-│   ├── docker/  # Dockerfiles for model containerization
-│   └── kubernetes/  # Kubernetes deployment configurations
+│   ├── docker/  ## Dockerfiles for model containerization
+│   └── kubernetes/  ## Kubernetes deployment configurations
 ├── CI_CD/
-│   ├── tests/  # Automated tests for models and application components
-│   ├── pipelines/  # CI/CD pipeline configurations
-│   └── scripts/  # Scripts for automation
+│   ├── tests/  ## Automated tests for models and application components
+│   ├── pipelines/  ## CI/CD pipeline configurations
+│   └── scripts/  ## Scripts for automation
 ├── documentation/
-│   ├── data_dictionary/  # Documentation for the datasets and their schema
-│   ├── model_documentation/  # Documentation for model development and evaluation
-│   └── system_architecture/  # High-level system architecture and design diagrams
+│   ├── data_dictionary/  ## Documentation for the datasets and their schema
+│   ├── model_documentation/  ## Documentation for model development and evaluation
+│   └── system_architecture/  ## High-level system architecture and design diagrams
 ├── utils/
-│   ├── data_processing/  # Utility functions for data preprocessing
-│   └── model_evaluation/  # Utility functions for model evaluation
+│   ├── data_processing/  ## Utility functions for data preprocessing
+│   └── model_evaluation/  ## Utility functions for model evaluation
 └── README.md
 ```
 
@@ -94,17 +94,17 @@ Certainly! The "models" directory in the AI for Sustainable Agriculture with Ten
 ```
 models/
 ├── trained_models/
-│   ├── crop_disease_detection_model/  # Directory for the crop disease detection model
-│   │   ├── model.pb  # Serialized model file
-│   │   └── model_metadata.json  # Metadata and version information for the model
-│   ├── yield_prediction_model/  # Directory for the yield prediction model
+│   ├── crop_disease_detection_model/  ## Directory for the crop disease detection model
+│   │   ├── model.pb  ## Serialized model file
+│   │   └── model_metadata.json  ## Metadata and version information for the model
+│   ├── yield_prediction_model/  ## Directory for the yield prediction model
 │   │   ├── model.pb
 │   │   └── model_metadata.json
-│   └── soil_health_analysis_model/  # Directory for the soil health analysis model
+│   └── soil_health_analysis_model/  ## Directory for the soil health analysis model
 │       ├── model.pb
 │       └── model_metadata.json
 └── model_development/
-    ├── crop_disease_detection_model.ipynb  # Jupyter notebook for model development
+    ├── crop_disease_detection_model.ipynb  ## Jupyter notebook for model development
     ├── yield_prediction_model.ipynb
     └── soil_health_analysis_model.ipynb
 ```
@@ -120,12 +120,12 @@ The "deployment" directory in the AI for Sustainable Agriculture with TensorFlow
 ```
 app/
 └── deployment/
-    ├── docker-compose.yml  # Docker Compose file for multi-container application setup
-    ├── Dockerfile  # Dockerfile for building the application image
+    ├── docker-compose.yml  ## Docker Compose file for multi-container application setup
+    ├── Dockerfile  ## Dockerfile for building the application image
     └── kubernetes/
-        ├── deployment.yaml  # Kubernetes deployment configuration for the application
-        ├── service.yaml  # Kubernetes service configuration for exposing the application
-        └── ingress.yaml  # Kubernetes Ingress configuration for routing external traffic
+        ├── deployment.yaml  ## Kubernetes deployment configuration for the application
+        ├── service.yaml  ## Kubernetes service configuration for exposing the application
+        └── ingress.yaml  ## Kubernetes Ingress configuration for routing external traffic
 ```
 
 In this expanded structure:
@@ -143,23 +143,23 @@ This structured deployment directory facilitates the process of containerizing t
 Sure, here's an example of a Python script for training a model for the AI for Sustainable Agriculture with TensorFlow application using mock data. 
 
 ```python
-# File Path: models/model_development/training_model.py
+## File Path: models/model_development/training_model.py
 
 import tensorflow as tf
 import numpy as np
 
-# Mock data generation
-# Replace this with actual data loading and preprocessing for training
+## Mock data generation
+## Replace this with actual data loading and preprocessing for training
 def generate_mock_data():
-    # Generate mock features (e.g., environmental, soil, and other relevant data)
-    X = np.random.rand(100, 10)  # Assuming 100 samples and 10 features
+    ## Generate mock features (e.g., environmental, soil, and other relevant data)
+    X = np.random.rand(100, 10)  ## Assuming 100 samples and 10 features
 
-    # Generate mock target variable (e.g., crop yield prediction)
-    y = np.random.randint(0, 2, size=(100, 1))  # Binary classification for example
+    ## Generate mock target variable (e.g., crop yield prediction)
+    y = np.random.randint(0, 2, size=(100, 1))  ## Binary classification for example
 
     return X, y
 
-# Model training
+## Model training
 def train_model(X, y):
     model = tf.keras.models.Sequential([
         tf.keras.layers.Dense(32, activation='relu', input_shape=(X.shape[1],)),
@@ -169,14 +169,14 @@ def train_model(X, y):
     model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
     model.fit(X, y, epochs=10, batch_size=32)
 
-    # Save the trained model
+    ## Save the trained model
     model.save('trained_model.h5')
 
 if __name__ == "__main__":
-    # Generate mock data
+    ## Generate mock data
     X, y = generate_mock_data()
 
-    # Train and save the model
+    ## Train and save the model
     train_model(X, y)
 ```
 
@@ -191,21 +191,21 @@ This file serves as an example of how to develop a model training script for the
 Certainly! Below is an example of a Python script for a complex machine learning algorithm (e.g., a Convolutional Neural Network for image analysis) for the AI for Sustainable Agriculture with TensorFlow. The script uses mock data for demonstration purposes.
 
 ```python
-# File Path: models/model_development/complex_model.py
+## File Path: models/model_development/complex_model.py
 
 import tensorflow as tf
 import numpy as np
 
-# Mock data generation for image analysis
-# Replace this with actual data loading and preprocessing for training
+## Mock data generation for image analysis
+## Replace this with actual data loading and preprocessing for training
 def generate_mock_image_data():
-    # Assuming mock image data with 100 samples, 64x64 pixels, and 3 channels (RGB)
+    ## Assuming mock image data with 100 samples, 64x64 pixels, and 3 channels (RGB)
     X = np.random.rand(100, 64, 64, 3)
-    y = np.random.randint(0, 2, size=(100, 1))  # Binary classification for example
+    y = np.random.randint(0, 2, size=(100, 1))  ## Binary classification for example
 
     return X, y
 
-# Complex model training (e.g., Convolutional Neural Network for image analysis)
+## Complex model training (e.g., Convolutional Neural Network for image analysis)
 def train_complex_model(X, y):
     model = tf.keras.models.Sequential([
         tf.keras.layers.Conv2D(32, (3, 3), activation='relu', input_shape=(64, 64, 3)),
@@ -222,14 +222,14 @@ def train_complex_model(X, y):
     model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
     model.fit(X, y, epochs=10, batch_size=32)
 
-    # Save the trained model
+    ## Save the trained model
     model.save('trained_complex_model.h5')
 
 if __name__ == "__main__":
-    # Generate mock image data
+    ## Generate mock image data
     X, y = generate_mock_image_data()
 
-    # Train and save the complex model
+    ## Train and save the complex model
     train_complex_model(X, y)
 ```
 

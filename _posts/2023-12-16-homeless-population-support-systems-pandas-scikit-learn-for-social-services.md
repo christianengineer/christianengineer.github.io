@@ -47,7 +47,7 @@ Incorporating MLOps (Machine Learning Operations) infrastructure for the Homeles
 
 By implementing these MLOps practices and leveraging Pandas and Scikit-Learn, the Homeless Population Support Systems can maintain reliable, scalable, and efficient machine learning workflows, ultimately contributing to the improvement of social services for the homeless population.
 
-# Scalable File Structure for Homeless Population Support Systems Repository
+## Scalable File Structure for Homeless Population Support Systems Repository
 
 Creating a scalable file structure for the Homeless Population Support Systems repository involves organizing the codebase in a way that promotes modularity, maintainability, and scalability. Below is a recommended file structure for the repository:
 
@@ -55,32 +55,32 @@ Creating a scalable file structure for the Homeless Population Support Systems r
 homeless_population_support/
 │
 ├── data/
-│   ├── raw/                  # Raw data sources
-│   ├── processed/            # Processed and cleaned data
-│   └── features/             # Extracted features or engineered features
+│   ├── raw/                  ## Raw data sources
+│   ├── processed/            ## Processed and cleaned data
+│   └── features/             ## Extracted features or engineered features
 │
 ├── models/
-│   ├── trained_models/       # Saved trained machine learning models
-│   └── model_evaluation/     # Model evaluation results and metrics
+│   ├── trained_models/       ## Saved trained machine learning models
+│   └── model_evaluation/     ## Model evaluation results and metrics
 │
-├── notebooks/                # Jupyter notebooks for exploratory data analysis and model prototyping
+├── notebooks/                ## Jupyter notebooks for exploratory data analysis and model prototyping
 │
 ├── src/
-│   ├── data_processing/      # Code for data preprocessing and feature engineering
-│   ├── model_training/       # Scripts for training machine learning models
-│   ├── model_evaluation/     # Code for model evaluation and performance metrics
-│   ├── deployment/           # Deployment scripts and configurations
-│   └── utils/                # Utility functions and helper scripts
+│   ├── data_processing/      ## Code for data preprocessing and feature engineering
+│   ├── model_training/       ## Scripts for training machine learning models
+│   ├── model_evaluation/     ## Code for model evaluation and performance metrics
+│   ├── deployment/           ## Deployment scripts and configurations
+│   └── utils/                ## Utility functions and helper scripts
 │
-├── config/                   # Configuration files for model hyperparameters, logging, etc.
+├── config/                   ## Configuration files for model hyperparameters, logging, etc.
 │
-├── tests/                    # Unit tests and integration tests
+├── tests/                    ## Unit tests and integration tests
 │
-├── docs/                     # Documentation, project reports, and data dictionaries
+├── docs/                     ## Documentation, project reports, and data dictionaries
 │
-├── requirements.txt          # Python dependencies for the project
+├── requirements.txt          ## Python dependencies for the project
 │
-└── README.md                 # Project overview, setup instructions, and usage guide
+└── README.md                 ## Project overview, setup instructions, and usage guide
 ```
 
 In this scalable file structure:
@@ -103,17 +103,17 @@ The **models/** directory in the Homeless Population Support Systems repository 
 models/
 │
 ├── trained_models/
-│   ├── homelessness_trend_prediction_model.pkl     # Serialized trained model for predicting homelessness trends
-│   ├── risk_assessment_model.joblib                # Serialized trained model for assessing the risk of homelessness
-│   └── resource_optimization_model/                # Directory for a set of models related to resource optimization
-│       ├── model_1.pkl                             # Trained model 1 for resource optimization
-│       └── model_2.pkl                             # Trained model 2 for resource optimization
+│   ├── homelessness_trend_prediction_model.pkl     ## Serialized trained model for predicting homelessness trends
+│   ├── risk_assessment_model.joblib                ## Serialized trained model for assessing the risk of homelessness
+│   └── resource_optimization_model/                ## Directory for a set of models related to resource optimization
+│       ├── model_1.pkl                             ## Trained model 1 for resource optimization
+│       └── model_2.pkl                             ## Trained model 2 for resource optimization
 │
 └── model_evaluation/
-    ├── model_performance_metrics.txt               # Text file containing model performance metrics and evaluation results
-    └── evaluation_visualizations/                  # Directory for visualizations of model evaluation results
-        ├── confusion_matrix.png                    # Visualization of the confusion matrix
-        └── roc_curve.png                           # Visualization of the ROC curve
+    ├── model_performance_metrics.txt               ## Text file containing model performance metrics and evaluation results
+    └── evaluation_visualizations/                  ## Directory for visualizations of model evaluation results
+        ├── confusion_matrix.png                    ## Visualization of the confusion matrix
+        └── roc_curve.png                           ## Visualization of the ROC curve
 ```
 
 In the **models/** directory:
@@ -130,24 +130,24 @@ The **deployment/** directory in the Homeless Population Support Systems reposit
 deployment/
 │
 ├── model_deployment_scripts/
-│   ├── deploy_homelessness_trend_model.py       # Script for deploying the homelessness trend prediction model as a REST API
-│   ├── deploy_risk_assessment_model.py         # Script for deploying the risk assessment model as a microservice
-│   └── deploy_resource_optimization_models/     # Directory for deployment scripts for resource optimization models
-│       ├── deploy_model_1.py                    # Script for deploying the resource optimization model 1
-│       └── deploy_model_2.py                    # Script for deploying the resource optimization model 2
+│   ├── deploy_homelessness_trend_model.py       ## Script for deploying the homelessness trend prediction model as a REST API
+│   ├── deploy_risk_assessment_model.py         ## Script for deploying the risk assessment model as a microservice
+│   └── deploy_resource_optimization_models/     ## Directory for deployment scripts for resource optimization models
+│       ├── deploy_model_1.py                    ## Script for deploying the resource optimization model 1
+│       └── deploy_model_2.py                    ## Script for deploying the resource optimization model 2
 │
 ├── infrastructure_config/
-│   ├── deployment_config.yaml                   # Configuration file containing deployment settings and environment variables
-│   └── monitoring_config/                       # Directory containing monitoring configuration files
-│       ├── prometheus_config.yml                # Configuration for Prometheus monitoring
-│       └── grafana_dashboard.json                # Dashboard configuration for Grafana monitoring
+│   ├── deployment_config.yaml                   ## Configuration file containing deployment settings and environment variables
+│   └── monitoring_config/                       ## Directory containing monitoring configuration files
+│       ├── prometheus_config.yml                ## Configuration for Prometheus monitoring
+│       └── grafana_dashboard.json                ## Dashboard configuration for Grafana monitoring
 │
 └── cloud_resources/
-    ├── kubernetes_deployment.yaml               # YAML file defining the Kubernetes deployment for the models
-    ├── serverless_function_config.json          # Configuration file for deploying models as serverless functions
-    └── cloud_storage/                           # Directory for cloud storage configurations and resources
-        ├── model_artifacts/                     # Storage for serialized model artifacts
-        └── data_assets/                         # Storage for data assets required for model serving
+    ├── kubernetes_deployment.yaml               ## YAML file defining the Kubernetes deployment for the models
+    ├── serverless_function_config.json          ## Configuration file for deploying models as serverless functions
+    └── cloud_storage/                           ## Directory for cloud storage configurations and resources
+        ├── model_artifacts/                     ## Storage for serialized model artifacts
+        └── data_assets/                         ## Storage for data assets required for model serving
 ```
 
 In the **deployment/** directory:
@@ -171,36 +171,36 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 import joblib
 
-# File path for the mock dataset
+## File path for the mock dataset
 mock_data_file_path = 'data/mock_homelessness_data.csv'
 
-# Load mock dataset into a Pandas DataFrame
+## Load mock dataset into a Pandas DataFrame
 data = pd.read_csv(mock_data_file_path)
 
-# Preprocessing and feature engineering
-# Your preprocessing and feature engineering code goes here
+## Preprocessing and feature engineering
+## Your preprocessing and feature engineering code goes here
 
-# Split data into features and target variable
-X = data.drop('target_column', axis=1)  # Features
-y = data['target_column']  # Target variable
+## Split data into features and target variable
+X = data.drop('target_column', axis=1)  ## Features
+y = data['target_column']  ## Target variable
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Instantiate a machine learning model (e.g., Random Forest classifier)
+## Instantiate a machine learning model (e.g., Random Forest classifier)
 model = RandomForestClassifier(n_estimators=100, random_state=42)
 
-# Train the model
+## Train the model
 model.fit(X_train, y_train)
 
-# Make predictions on the test set
+## Make predictions on the test set
 y_pred = model.predict(X_test)
 
-# Evaluate model performance
+## Evaluate model performance
 accuracy = accuracy_score(y_test, y_pred)
 print(f'Model accuracy: {accuracy}')
 
-# Serialize the trained model to a file
+## Serialize the trained model to a file
 model_file_path = 'models/trained_models/homelessness_prediction_model.joblib'
 joblib.dump(model, model_file_path)
 print(f'Trained model saved to: {model_file_path}')
@@ -228,40 +228,40 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import classification_report
 import joblib
 
-# File path for the mock dataset
+## File path for the mock dataset
 mock_data_file_path = 'data/mock_homelessness_data.csv'
 
-# Load mock dataset into a Pandas DataFrame
+## Load mock dataset into a Pandas DataFrame
 data = pd.read_csv(mock_data_file_path)
 
-# Preprocessing and feature engineering
-# Your preprocessing and feature engineering code goes here
+## Preprocessing and feature engineering
+## Your preprocessing and feature engineering code goes here
 
-# Split data into features and target variable
-X = data.drop('target_column', axis=1)  # Features
-y = data['target_column']  # Target variable
+## Split data into features and target variable
+X = data.drop('target_column', axis=1)  ## Features
+y = data['target_column']  ## Target variable
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Feature scaling using StandardScaler
+## Feature scaling using StandardScaler
 scaler = StandardScaler()
 X_train_scaled = scaler.fit_transform(X_train)
 X_test_scaled = scaler.transform(X_test)
 
-# Instantiate a Support Vector Machine (SVM) classifier
+## Instantiate a Support Vector Machine (SVM) classifier
 model = SVC(kernel='rbf', C=1.0, gamma='scale')
 
-# Train the model
+## Train the model
 model.fit(X_train_scaled, y_train)
 
-# Make predictions on the test set
+## Make predictions on the test set
 y_pred = model.predict(X_test_scaled)
 
-# Evaluate model performance
+## Evaluate model performance
 print(classification_report(y_test, y_pred))
 
-# Serialize the trained model to a file
+## Serialize the trained model to a file
 model_file_path = 'models/trained_models/homelessness_svm_model.pkl'
 joblib.dump(model, model_file_path)
 print(f'Trained SVM model saved to: {model_file_path}')

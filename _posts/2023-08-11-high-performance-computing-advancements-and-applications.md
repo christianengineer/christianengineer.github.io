@@ -5,7 +5,7 @@ permalink: posts/high-performance-computing-advancements-and-applications
 layout: article
 ---
 
-# High-Performance Computing (HPC)
+## High-Performance Computing (HPC)
 
 High-Performance Computing (HPC) is a section of computing that focuses on high speed data processing and powerful computational tasks. HPC systems utilize both parallel processing techniques and supercomputers to deliver far more performance than an average desktop or laptop. These supercomputers are used for problems requiring complex computations, including fields like quantum mechanics, weather forecasting, climate research, oil and gas exploration, molecular modeling, and physical simulations.
 

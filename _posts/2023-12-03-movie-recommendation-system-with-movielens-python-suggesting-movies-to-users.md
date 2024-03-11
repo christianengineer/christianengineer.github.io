@@ -5,7 +5,7 @@ permalink: posts/movie-recommendation-system-with-movielens-python-suggesting-mo
 layout: article
 ---
 
-# AI Movie Recommendation System with MovieLens
+## AI Movie Recommendation System with MovieLens
 
 ## Objectives
 
@@ -104,39 +104,39 @@ By employing this infrastructure, the Movie Recommendation System can achieve sc
 ```plaintext
 movie-recommendation-system/
 ├── backend/
-│   ├── app.py                  # Main Flask application for handling recommendation requests
-│   ├── models/                 # Directory for storing machine learning models
-│   │   ├── collaborative_filtering_model.pkl    # Trained model for collaborative filtering
-│   ├── services/               # Directory for backend services
-│   │   ├── recommendation_service.py   # Service for generating movie recommendations
-│   │   ├── data_service.py      # Service for interacting with the database
-│   └── tests/                  # Directory for backend tests
-│       ├── test_recommendation_service.py   # Unit tests for recommendation service
-│       ├── test_data_service.py      # Unit tests for data service
+│   ├── app.py                  ## Main Flask application for handling recommendation requests
+│   ├── models/                 ## Directory for storing machine learning models
+│   │   ├── collaborative_filtering_model.pkl    ## Trained model for collaborative filtering
+│   ├── services/               ## Directory for backend services
+│   │   ├── recommendation_service.py   ## Service for generating movie recommendations
+│   │   ├── data_service.py      ## Service for interacting with the database
+│   └── tests/                  ## Directory for backend tests
+│       ├── test_recommendation_service.py   ## Unit tests for recommendation service
+│       ├── test_data_service.py      ## Unit tests for data service
 ├── frontend/
-│   ├── public/                 # Public assets and files
-│   ├── src/                    # Source files for the frontend application
-│   │   ├── components/         # Reusable UI components
-│   │   ├── pages/              # Pages for displaying movie recommendations
-│   │   ├── services/           # Frontend services for interacting with backend APIs
-│   └── tests/                  # Directory for frontend tests
-│       ├── test_movie_recommendations.js      # Unit tests for movie recommendation components
+│   ├── public/                 ## Public assets and files
+│   ├── src/                    ## Source files for the frontend application
+│   │   ├── components/         ## Reusable UI components
+│   │   ├── pages/              ## Pages for displaying movie recommendations
+│   │   ├── services/           ## Frontend services for interacting with backend APIs
+│   └── tests/                  ## Directory for frontend tests
+│       ├── test_movie_recommendations.js      ## Unit tests for movie recommendation components
 ├── data/
-│   ├── movies.csv              # Movie metadata (title, genres, etc.)
-│   ├── ratings.csv             # User movie ratings data
-├── Dockerfile                  # Dockerfile for containerizing the application
-├── requirements.txt            # Python dependencies for backend application
-├── package.json                # Node.js dependencies for frontend application
-├── README.md                   # Project documentation and setup instructions
-└── .gitignore                  # Git ignore file for specifying ignored files and directories
+│   ├── movies.csv              ## Movie metadata (title, genres, etc.)
+│   ├── ratings.csv             ## User movie ratings data
+├── Dockerfile                  ## Dockerfile for containerizing the application
+├── requirements.txt            ## Python dependencies for backend application
+├── package.json                ## Node.js dependencies for frontend application
+├── README.md                   ## Project documentation and setup instructions
+└── .gitignore                  ## Git ignore file for specifying ignored files and directories
 ```
 
 ```plaintext
 models/
-├── collaborative_filtering_model.pkl    # Trained model for collaborative filtering
-├── content_based_model.pkl              # Trained model for content-based filtering
-├── matrix_factorization_model.pkl       # Trained model for matrix factorization
-└── ensemble_model.pkl                   # Trained ensemble model combining multiple recommendation approaches
+├── collaborative_filtering_model.pkl    ## Trained model for collaborative filtering
+├── content_based_model.pkl              ## Trained model for content-based filtering
+├── matrix_factorization_model.pkl       ## Trained model for matrix factorization
+└── ensemble_model.pkl                   ## Trained ensemble model combining multiple recommendation approaches
 ```
 
 In the models directory for the Movie Recommendation System, multiple trained machine learning models are stored to facilitate diverse recommendation approaches. This includes:
@@ -153,14 +153,14 @@ These models facilitate a variety of recommendation strategies, providing flexib
 
 ```plaintext
 deployment/
-├── docker-compose.yml       # Configuration file for Docker Compose to orchestrate multi-container Docker applications
+├── docker-compose.yml       ## Configuration file for Docker Compose to orchestrate multi-container Docker applications
 ├── kubernetes/
-│   ├── deployment.yaml      # Kubernetes deployment configuration for backend and frontend services
-│   ├── service.yaml         # Kubernetes service configuration for exposing backend API
+│   ├── deployment.yaml      ## Kubernetes deployment configuration for backend and frontend services
+│   ├── service.yaml         ## Kubernetes service configuration for exposing backend API
 ├── scripts/
-│   ├── deploy.sh            # Deployment script for executing the deployment process
-│   ├── setup-env.sh         # Script for setting up environment variables and dependencies
-└── README.md                # Deployment instructions and documentation
+│   ├── deploy.sh            ## Deployment script for executing the deployment process
+│   ├── setup-env.sh         ## Script for setting up environment variables and dependencies
+└── README.md                ## Deployment instructions and documentation
 ```
 
 In the deployment directory for the Movie Recommendation System, essential configurations and scripts are provided to facilitate the deployment process. This includes:
@@ -179,23 +179,23 @@ With these files and configurations in the deployment directory, the Movie Recom
 import pandas as pd
 
 def complex_movie_recommendation_algorithm(user_id, movie_data_path, user_ratings_path):
-    # Load movie data
+    ## Load movie data
     movies = pd.read_csv(movie_data_path)
 
-    # Load user ratings
+    ## Load user ratings
     user_ratings = pd.read_csv(user_ratings_path)
 
-    # Implement complex machine learning algorithm here
-    # Example: Collaborative Filtering with Matrix Factorization
-    # (This is a simplified example for demonstration purposes)
+    ## Implement complex machine learning algorithm here
+    ## Example: Collaborative Filtering with Matrix Factorization
+    ## (This is a simplified example for demonstration purposes)
 
-    # Merge user ratings with movie data
+    ## Merge user ratings with movie data
     movie_user_ratings = pd.merge(movies, user_ratings, on='movieId')
 
-    # Perform matrix factorization or any complex algorithm to generate recommendations
-    # Recommendation algorithm code goes here
+    ## Perform matrix factorization or any complex algorithm to generate recommendations
+    ## Recommendation algorithm code goes here
 
-    # Example: Return top 10 movie recommendations for the user
+    ## Example: Return top 10 movie recommendations for the user
     top_recommendations = movie_user_ratings.groupby('title')['rating'].mean().sort_values(ascending=False).head(10)
 
     return top_recommendations
@@ -209,30 +209,30 @@ When using real data, the recommendation algorithm implementation will depend on
 import pandas as pd
 
 def complex_movie_recommendation_algorithm(user_id, movie_data_path, user_ratings_path):
-    # Load movie data
+    ## Load movie data
     movies = pd.read_csv(movie_data_path)
 
-    # Load user ratings
+    ## Load user ratings
     user_ratings = pd.read_csv(user_ratings_path)
 
-    # Implement complex machine learning algorithm here
-    # Example: Collaborative Filtering with Matrix Factorization
-    # (This is a simplified example for demonstration purposes)
+    ## Implement complex machine learning algorithm here
+    ## Example: Collaborative Filtering with Matrix Factorization
+    ## (This is a simplified example for demonstration purposes)
 
-    # Merge user ratings with movie data
+    ## Merge user ratings with movie data
     movie_user_ratings = pd.merge(movies, user_ratings, on='movieId')
 
-    # Perform matrix factorization or any complex algorithm to generate recommendations
-    # Example: Use a machine learning model to predict movie ratings for the user
-    # (This example assumes a pre-trained model is used for demonstration)
-    # Replace this with actual model inference logic in a real-world scenario
-    predicted_ratings = [4.5, 3.8, 4.0, 5.0, 2.5]  # Example of predicted ratings for movies
+    ## Perform matrix factorization or any complex algorithm to generate recommendations
+    ## Example: Use a machine learning model to predict movie ratings for the user
+    ## (This example assumes a pre-trained model is used for demonstration)
+    ## Replace this with actual model inference logic in a real-world scenario
+    predicted_ratings = [4.5, 3.8, 4.0, 5.0, 2.5]  ## Example of predicted ratings for movies
 
-    # Map predicted ratings to movie titles
+    ## Map predicted ratings to movie titles
     movie_titles = movie_user_ratings['title'].unique()
     predictions = dict(zip(movie_titles, predicted_ratings))
 
-    # Example: Return top 10 movie recommendations based on predicted ratings
+    ## Example: Return top 10 movie recommendations based on predicted ratings
     top_recommendations = sorted(predictions, key=predictions.get, reverse=True)[:10]
 
     return top_recommendations

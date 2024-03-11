@@ -5,7 +5,7 @@ permalink: posts/high-resolution-satellite-image-analysis-tensorflow-hadoop-kube
 layout: article
 ---
 
-# AI High-resolution Satellite Image Analysis Repository
+## AI High-resolution Satellite Image Analysis Repository
 
 ## Objectives
 The objective of the AI High-resolution Satellite Image Analysis repository is to develop a scalable, data-intensive system for analyzing high-resolution satellite images using machine learning techniques. The system aims to process large volumes of satellite imagery data, extract useful information, and provide actionable insights for earth observation applications such as urban planning, environmental monitoring, and disaster response.
@@ -47,7 +47,7 @@ OpenCV is used for image processing and computer vision tasks, offering a wide r
 
 By integrating these libraries and frameworks, the AI High-resolution Satellite Image Analysis repository aims to build a scalable, data-intensive system capable of extracting valuable insights from high-resolution satellite imagery for various earth observation applications.
 
-# MLOps Infrastructure for High-resolution Satellite Image Analysis
+## MLOps Infrastructure for High-resolution Satellite Image Analysis
 
 ## Overview
 The MLOps infrastructure for the High-resolution Satellite Image Analysis system encompasses the end-to-end lifecycle management of machine learning models, from development and training to deployment and monitoring. This infrastructure aims to ensure seamless integration of machine learning workflows with the existing software development and operations processes, leveraging the chosen technologies of TensorFlow, Hadoop, and Kubernetes.
@@ -211,13 +211,13 @@ Overall, this organization of the `deployment` directory aims to centralize the 
 Certainly! Below is an example of a Python script for training a machine learning model using TensorFlow for the High-resolution Satellite Image Analysis application. This example uses mock data for demonstration purposes.
 
 ```python
-# File Path: model_training_script.py
+## File Path: model_training_script.py
 
 import tensorflow as tf
 from tensorflow.keras import layers, models
 import numpy as np
 
-# Mock data generation
+## Mock data generation
 num_samples = 1000
 image_height = 128
 image_width = 128
@@ -226,7 +226,7 @@ num_channels = 3
 mock_images = np.random.rand(num_samples, image_height, image_width, num_channels)
 mock_labels = np.random.randint(0, 2, size=num_samples)
 
-# Define the model architecture
+## Define the model architecture
 model = models.Sequential([
     layers.Conv2D(32, (3, 3), activation='relu', input_shape=(image_height, image_width, num_channels)),
     layers.MaxPooling2D((2, 2)),
@@ -238,29 +238,29 @@ model = models.Sequential([
     layers.Dense(1, activation='sigmoid')
 ])
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam',
               loss='binary_crossentropy',
               metrics=['accuracy'])
 
-# Train the model
+## Train the model
 model.fit(mock_images, mock_labels, epochs=10, batch_size=32)
 
-# Save the trained model
+## Save the trained model
 model.save('trained_model.h5')
 ```
 
 In this script, mock data is generated for training a simple convolutional neural network using TensorFlow. The trained model is saved to a file named `trained_model.h5`. This script is an example and would typically be adapted to use actual satellite image data and more complex model architectures for the High-resolution Satellite Image Analysis application.
 
 ```python
-# File Path: complex_model_training_script.py
+## File Path: complex_model_training_script.py
 
-# Import necessary libraries
+## Import necessary libraries
 import tensorflow as tf
 from tensorflow.keras import layers, models
 import numpy as np
 
-# Mock data generation
+## Mock data generation
 num_samples = 1000
 image_height = 256
 image_width = 256
@@ -269,7 +269,7 @@ num_channels = 3
 mock_images = np.random.rand(num_samples, image_height, image_width, num_channels)
 mock_labels = np.random.randint(0, 2, size=num_samples)
 
-# Define a complex deep learning model architecture
+## Define a complex deep learning model architecture
 model = models.Sequential([
     layers.Conv2D(64, (3, 3), activation='relu', input_shape=(image_height, image_width, num_channels)),
     layers.MaxPooling2D((2, 2)),
@@ -283,15 +283,15 @@ model = models.Sequential([
     layers.Dense(1, activation='sigmoid')
 ])
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam',
               loss='binary_crossentropy',
               metrics=['accuracy'])
 
-# Train the model
+## Train the model
 model.fit(mock_images, mock_labels, epochs=20, batch_size=32)
 
-# Save the trained model
+## Save the trained model
 model.save('trained_complex_model.h5')
 ```
 

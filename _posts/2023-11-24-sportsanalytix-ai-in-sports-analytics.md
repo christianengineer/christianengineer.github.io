@@ -5,7 +5,7 @@ permalink: posts/sportsanalytix-ai-in-sports-analytics
 layout: article
 ---
 
-# AI SportsAnalytix Repository
+## AI SportsAnalytix Repository
 
 ## Objectives
 The AI SportsAnalytix repository aims to leverage AI and machine learning techniques to analyze and generate insights from sports data. The primary objectives of the repository are:
@@ -41,7 +41,7 @@ The AI SportsAnalytix repository aims to leverage AI and machine learning techni
 
 By employing these strategies and leveraging these libraries, the AI SportsAnalytix repository can achieve its objectives of building scalable, data-intensive AI applications for sports analytics.
 
-# Infrastructure for SportsAnalytix AI in Sports Analytics Application
+## Infrastructure for SportsAnalytix AI in Sports Analytics Application
 
 ## Cloud-Based Architecture
 The SportsAnalytix AI in Sports Analytics application leverages a cloud-based infrastructure to provide the necessary scalability, availability, and performance for handling large volumes of sports data and conducting AI-driven analytics. The infrastructure is designed to support data-intensive processing, machine learning model training and deployment, and real-time data streaming and analysis.
@@ -221,32 +221,32 @@ from sklearn.metrics import accuracy_score
 import joblib
 
 def train_complex_ml_algorithm(data_path):
-    # Load mock data
+    ## Load mock data
     data = pd.read_csv(data_path)
 
-    # Preprocessing and feature engineering
-    # ... (preprocessing code)
+    ## Preprocessing and feature engineering
+    ## ... (preprocessing code)
 
-    # Split data into features and target variable
+    ## Split data into features and target variable
     X = data.drop('target_column', axis=1)
     y = data['target_column']
 
-    # Split data into training and testing sets
+    ## Split data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize the complex machine learning algorithm
+    ## Initialize the complex machine learning algorithm
     model = RandomForestClassifier(n_estimators=100, max_depth=10, random_state=42)
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train)
 
-    # Make predictions
+    ## Make predictions
     y_pred = model.predict(X_test)
 
-    # Evaluate the model
+    ## Evaluate the model
     accuracy = accuracy_score(y_test, y_pred)
 
-    # Save the trained model to a file
+    ## Save the trained model to a file
     model_file_path = 'path_to_save_model/model.pkl'
     joblib.dump(model, model_file_path)
 
@@ -274,37 +274,37 @@ from tensorflow.keras.layers import Dense, Dropout
 from tensorflow.keras.callbacks import ModelCheckpoint
 
 def train_complex_deep_learning_algorithm(data_path):
-    # Load mock data
+    ## Load mock data
     data = pd.read_csv(data_path)
 
-    # Preprocessing and feature engineering
-    # ... (preprocessing code)
+    ## Preprocessing and feature engineering
+    ## ... (preprocessing code)
 
-    # Split data into features and target variable
+    ## Split data into features and target variable
     X = data.drop('target_column', axis=1)
     y = data['target_column']
 
-    # Split data into training and testing sets
+    ## Split data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize the deep learning model
+    ## Initialize the deep learning model
     model = Sequential()
     model.add(Dense(64, input_dim=X_train.shape[1], activation='relu'))
     model.add(Dropout(0.2))
     model.add(Dense(32, activation='relu'))
     model.add(Dense(1, activation='sigmoid'))
 
-    # Compile the model
+    ## Compile the model
     model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
 
-    # Define model checkpoints to save the best model during training
+    ## Define model checkpoints to save the best model during training
     checkpoint_path = 'path_to_save_model/model_checkpoint.h5'
     checkpoint = ModelCheckpoint(checkpoint_path, monitor='val_accuracy', save_best_only=True, mode='max', verbose=1)
 
-    # Train the model
+    ## Train the model
     history = model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y_test), callbacks=[checkpoint])
 
-    # Save the trained model to a file
+    ## Save the trained model to a file
     model_file_path = 'path_to_save_model/model.h5'
     model.save(model_file_path)
 

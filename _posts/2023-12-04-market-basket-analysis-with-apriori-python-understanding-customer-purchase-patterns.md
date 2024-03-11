@@ -55,22 +55,22 @@ By establishing this infrastructure, the Market Basket Analysis with Apriori (Py
 market_basket_analysis/
 ├── data/
 │   ├── raw_data/  
-│   │   ├── transaction_data.csv   # Raw transactional data
+│   │   ├── transaction_data.csv   ## Raw transactional data
 │   ├── processed_data/
-│   │   ├── preprocessed_data.csv  # Preprocessed transactional data
-│   │   ├── association_rules.csv  # Output of Apriori algorithm
+│   │   ├── preprocessed_data.csv  ## Preprocessed transactional data
+│   │   ├── association_rules.csv  ## Output of Apriori algorithm
 ├── notebooks/
-│   ├── data_exploration.ipynb     # Jupyter notebook for data exploration
-│   ├── market_basket_analysis.ipynb  # Jupyter notebook for Apriori algorithm implementation
+│   ├── data_exploration.ipynb     ## Jupyter notebook for data exploration
+│   ├── market_basket_analysis.ipynb  ## Jupyter notebook for Apriori algorithm implementation
 ├── src/
-│   ├── preprocessing.py           # Module for data preprocessing functions
-│   ├── apriori_algorithm.py       # Module for Apriori algorithm implementation
+│   ├── preprocessing.py           ## Module for data preprocessing functions
+│   ├── apriori_algorithm.py       ## Module for Apriori algorithm implementation
 ├── app/
-│   ├── static/                    # Static files for web interface
-│   ├── templates/                 # HTML templates for web interface
-│   ├── app.py                     # Flask web application for visualization
-├── requirements.txt               # Python dependencies
-├── README.md                      # Description and usage of the repository
+│   ├── static/                    ## Static files for web interface
+│   ├── templates/                 ## HTML templates for web interface
+│   ├── app.py                     ## Flask web application for visualization
+├── requirements.txt               ## Python dependencies
+├── README.md                      ## Description and usage of the repository
 ```
 
 In this file structure:
@@ -86,8 +86,8 @@ This structure allows for modularity, organization, and scalability, making it e
 ```
 market_basket_analysis/
 ├── models/
-│   ├── apriori_model.pkl          # Serialized Apriori model for inference
-│   ├── association_rules.pkl      # Serialized association rules for recommendation
+│   ├── apriori_model.pkl          ## Serialized Apriori model for inference
+│   ├── association_rules.pkl      ## Serialized association rules for recommendation
 ```
 
 In the `models` directory:
@@ -99,12 +99,12 @@ Having these files in the `models` directory allows for easy access and deployme
 ```
 market_basket_analysis/
 ├── deployment/
-│   ├── Dockerfile              # Dockerfile for containerizing the application
-│   ├── app.yaml                # Configuration for cloud deployment (e.g., Google App Engine)
+│   ├── Dockerfile              ## Dockerfile for containerizing the application
+│   ├── app.yaml                ## Configuration for cloud deployment (e.g., Google App Engine)
 │   ├── kubernetes/
-│   │   ├── deployment.yaml     # Kubernetes deployment configuration
-│   │   ├── service.yaml        # Kubernetes service configuration
-│   │   ├── ingress.yaml        # Kubernetes ingress configuration
+│   │   ├── deployment.yaml     ## Kubernetes deployment configuration
+│   │   ├── service.yaml        ## Kubernetes service configuration
+│   │   ├── ingress.yaml        ## Kubernetes ingress configuration
 ```
 
 In the `deployment` directory:
@@ -131,24 +131,24 @@ def market_basket_analysis_apriori(data_file_path, min_support=0.01, min_thresho
     Returns:
     pd.DataFrame: DataFrame containing the generated association rules.
     """
-    # Load transactional data from file
+    ## Load transactional data from file
     transaction_data = pd.read_csv(data_file_path)
 
-    # Perform one-hot encoding to convert data into transaction sets
+    ## Perform one-hot encoding to convert data into transaction sets
     one_hot_encoded = transaction_data.groupby(['TransactionID', 'Item'])['Item'].count().unstack().reset_index().fillna(0).set_index('TransactionID')
 
-    # Convert all values greater than 1 to 1 (to indicate the presence of item in that transaction)
+    ## Convert all values greater than 1 to 1 (to indicate the presence of item in that transaction)
     one_hot_encoded = one_hot_encoded.applymap(lambda x: 1 if x > 0 else 0)
 
-    # Apriori algorithm to find frequent item sets
+    ## Apriori algorithm to find frequent item sets
     frequent_itemsets = apriori(one_hot_encoded, min_support=min_support, use_colnames=True)
 
-    # Generate association rules
+    ## Generate association rules
     rules = association_rules(frequent_itemsets, metric="lift", min_threshold=min_threshold)
 
     return rules
 
-# Example usage
+## Example usage
 file_path = 'data/raw_data/transaction_data.csv'
 association_rules_df = market_basket_analysis_apriori(file_path, min_support=0.05, min_threshold=1.2)
 print(association_rules_df)
@@ -178,27 +178,27 @@ def market_basket_analysis_apriori(data_file_path, min_support=0.01, min_thresho
     pd.DataFrame: DataFrame containing the generated association rules.
     """
 
-    # Mock data for demo purposes
+    ## Mock data for demo purposes
     transaction_data = pd.DataFrame({
         'TransactionID': [1, 1, 2, 2, 2, 3],
         'Item': ['A', 'B', 'A', 'C', 'D', 'B']
     })
 
-    # Perform one-hot encoding to convert data into transaction sets
+    ## Perform one-hot encoding to convert data into transaction sets
     one_hot_encoded = transaction_data.groupby(['TransactionID', 'Item'])['Item'].count().unstack().reset_index().fillna(0).set_index('TransactionID')
 
-    # Convert all values greater than 1 to 1 (to indicate the presence of item in that transaction)
+    ## Convert all values greater than 1 to 1 (to indicate the presence of item in that transaction)
     one_hot_encoded = one_hot_encoded.applymap(lambda x: 1 if x > 0 else 0)
 
-    # Apriori algorithm to find frequent item sets
+    ## Apriori algorithm to find frequent item sets
     frequent_itemsets = apriori(one_hot_encoded, min_support=min_support, use_colnames=True)
 
-    # Generate association rules
+    ## Generate association rules
     rules = association_rules(frequent_itemsets, metric="lift", min_threshold=min_threshold)
 
     return rules
 
-# Example usage
+## Example usage
 file_path = 'data/raw_data/transaction_data.csv'
 association_rules_df = market_basket_analysis_apriori(file_path, min_support=0.05, min_threshold=1.2)
 print(association_rules_df)

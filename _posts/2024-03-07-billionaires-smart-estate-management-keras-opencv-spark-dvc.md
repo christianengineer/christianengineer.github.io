@@ -5,7 +5,7 @@ permalink: posts/billionaires-smart-estate-management-keras-opencv-spark-dvc
 layout: article
 ---
 
-# Billionaire's Smart Estate Management Solution
+## Billionaire's Smart Estate Management Solution
 
 ## Objective:
 The objective is to create an integrated smart management system using machine learning to efficiently monitor and manage extensive properties and assets, ensuring the highest standards of luxury and security for Grupo Breca's prestigious estates in Peru.
@@ -148,31 +148,31 @@ By strategically employing data preprocessing practices that address the unique 
 import cv2
 import numpy as np
 
-# Define preprocessing function
+## Define preprocessing function
 def preprocess_image(image):
-    # Convert image to grayscale
+    ## Convert image to grayscale
     gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
     
-    # Resize image to a consistent size for model input
+    ## Resize image to a consistent size for model input
     resized_image = cv2.resize(gray_image, (224, 224))
     
-    # Apply Gaussian blur to reduce noise
+    ## Apply Gaussian blur to reduce noise
     blurred_image = cv2.GaussianBlur(resized_image, (5, 5), 0)
     
-    # Normalize image pixel values to a 0-1 range
+    ## Normalize image pixel values to a 0-1 range
     normalized_image = blurred_image / 255.0
     
     return normalized_image
 
-# Load and preprocess image data
+## Load and preprocess image data
 image = cv2.imread('image.jpg')
 preprocessed_image = preprocess_image(image)
 
-# Display original and preprocessed images
+## Display original and preprocessed images
 cv2.imshow('Original Image', image)
 cv2.imshow('Preprocessed Image', preprocessed_image)
 
-# Wait for any key press and close windows
+## Wait for any key press and close windows
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
@@ -242,26 +242,26 @@ import numpy as np
 import pandas as pd
 import random
 
-# Generate a large fictitious dataset mimicking real-world data for luxury estate properties
+## Generate a large fictitious dataset mimicking real-world data for luxury estate properties
 num_samples = 10000
 luxury_estate_data = {
     'image_path': ['image_{}.jpg'.format(i) for i in range(num_samples)],
     'property_id': [random.randint(1000, 9999) for _ in range(num_samples)],
     'anomaly_label': [random.choice(['normal', 'anomaly']) for _ in range(num_samples)],
     'time_of_day': [random.choice(['morning', 'afternoon', 'evening', 'night']) for _ in range(num_samples)],
-    # Add more features relevant to luxury property attributes and security details here
+    ## Add more features relevant to luxury property attributes and security details here
 }
 
-# Create a DataFrame from the generated data
+## Create a DataFrame from the generated data
 luxury_estate_df = pd.DataFrame(luxury_estate_data)
 
-# Save the dataset to a CSV file
+## Save the dataset to a CSV file
 luxury_estate_df.to_csv('luxury_estate_dataset.csv', index=False)
 
-# Validate the dataset
+## Validate the dataset
 valid_dataset = pd.read_csv('luxury_estate_dataset.csv')
 
-# Verify dataset characteristics and features
+## Verify dataset characteristics and features
 print(valid_dataset.head())
 print(valid_dataset.info())
 ```
@@ -309,24 +309,24 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense
 from tensorflow.keras.optimizers import Adam
 
-# Load preprocessed dataset
+## Load preprocessed dataset
 dataset = pd.read_csv('luxury_estate_dataset.csv')
 
-# Perform label encoding for categorical features
+## Perform label encoding for categorical features
 label_encoders = {}
 for col in ['anomaly_label', 'time_of_day']:
     le = LabelEncoder()
     dataset[col] = le.fit_transform(dataset[col])
     label_encoders[col] = le
 
-# Split dataset into features and target
+## Split dataset into features and target
 X = dataset.drop(['image_path', 'anomaly_label'], axis=1)
 y = dataset['anomaly_label']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Define the CNN model architecture
+## Define the CNN model architecture
 model = Sequential([
     Conv2D(32, (3, 3), activation='relu', input_shape=(32, 32, 1)),
     MaxPooling2D((2, 2)),
@@ -335,13 +335,13 @@ model = Sequential([
     Dense(1, activation='sigmoid')
 ])
 
-# Compile the model
+## Compile the model
 model.compile(optimizer=Adam(), loss='binary_crossentropy', metrics=['accuracy'])
 
-# Train the model
+## Train the model
 model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y_test))
 
-# Evaluate the model
+## Evaluate the model
 loss, accuracy = model.evaluate(X_test, y_test)
 print(f'Test Loss: {loss}, Test Accuracy: {accuracy}')
 ```
@@ -393,24 +393,24 @@ With a well-structured, documented, and high-quality code exemplar like the one 
 By following this deployment plan tailored to the unique demands of the Billionaire's Smart Estate Management project, Grupo Breca can navigate the deployment process effectively, ensuring a seamless transition of the machine learning model into a production environment.
 
 ```dockerfile
-# Use a base image with Python and TensorFlow installed
+## Use a base image with Python and TensorFlow installed
 FROM tensorflow/tensorflow:latest
 
-# Set the working directory in the container
+## Set the working directory in the container
 WORKDIR /app
 
-# Copy the necessary project files into the container
+## Copy the necessary project files into the container
 COPY requirements.txt .
 COPY model.py .
 COPY luxury_estate_dataset.csv .
 
-# Install required Python packages
+## Install required Python packages
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Expose the port for the model endpoint
+## Expose the port for the model endpoint
 EXPOSE 5000
 
-# Define the command to run the model server
+## Define the command to run the model server
 CMD ["python", "model.py"]
 ```
 

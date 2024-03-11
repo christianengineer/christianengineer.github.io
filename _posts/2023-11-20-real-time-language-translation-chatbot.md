@@ -72,51 +72,51 @@ A candidate’s contribution to such a project would demonstrate a strong skill 
 ```
 real-time-translation-chatbot/
 │
-├── backend/                   # All server-side code
-│   ├── app/                       # Core application logic
-│   │   ├── api/                       # Endpoints and API-related operations
-│   │   │   ├── v1/                         # Versioned API routes
-│   │   │   │   ├── chat/                           # Chat-related operations
-│   │   │   │   ├── users/                          # User account management
-│   │   │   │   └── ...                             # Additional endpoints
-│   │   ├── core/                      # Application configuration, startup scripts
-│   │   ├── models/                    # Database models
-│   │   ├── services/                  # Business logic and services like translation
-│   │   └── ...                        # Other modules
-│   ├── tests/                     # Automated tests
-│   ├── utils/                     # Utility scripts and helper functions
-│   └── main.py                    # Application entry point
+├── backend/                   ## All server-side code
+│   ├── app/                       ## Core application logic
+│   │   ├── api/                       ## Endpoints and API-related operations
+│   │   │   ├── v1/                         ## Versioned API routes
+│   │   │   │   ├── chat/                           ## Chat-related operations
+│   │   │   │   ├── users/                          ## User account management
+│   │   │   │   └── ...                             ## Additional endpoints
+│   │   ├── core/                      ## Application configuration, startup scripts
+│   │   ├── models/                    ## Database models
+│   │   ├── services/                  ## Business logic and services like translation
+│   │   └── ...                        ## Other modules
+│   ├── tests/                     ## Automated tests
+│   ├── utils/                     ## Utility scripts and helper functions
+│   └── main.py                    ## Application entry point
 │
-├── ai_models/                  # AI models and their management
-│   ├── nlp/                         # NLP models and scripts
-│   ├── train/                       # Training pipelines and datasets
-│   └── inference/                   # Inference utilities and models loading
+├── ai_models/                  ## AI models and their management
+│   ├── nlp/                         ## NLP models and scripts
+│   ├── train/                       ## Training pipelines and datasets
+│   └── inference/                   ## Inference utilities and models loading
 │
-├── frontend/                   # All client-side code
-│   ├── public/                      # Static files, index.html and manifests
-│   ├── src/                         # Source files for the frontend application
-│   │   ├── components/                  # Reusable UI components
-│   │   ├── views/                       # Pages and routed components
-│   │   ├── services/                    # Frontend services (e.g., API calls)
-│   │   ├── app.js                       # Main React/Vue app initialization
-│   │   └── ...                          # Additional dirs for state management, etc.
-│   ├── tests/                     # Frontend tests
-│   └── ...                       # Other configuration files (e.g., for webpack, babel)
+├── frontend/                   ## All client-side code
+│   ├── public/                      ## Static files, index.html and manifests
+│   ├── src/                         ## Source files for the frontend application
+│   │   ├── components/                  ## Reusable UI components
+│   │   ├── views/                       ## Pages and routed components
+│   │   ├── services/                    ## Frontend services (e.g., API calls)
+│   │   ├── app.js                       ## Main React/Vue app initialization
+│   │   └── ...                          ## Additional dirs for state management, etc.
+│   ├── tests/                     ## Frontend tests
+│   └── ...                       ## Other configuration files (e.g., for webpack, babel)
 │
-├── scripts/                   # Utility scripts
-│   ├── deployment/                # Scripts related to deployment (Docker, CI/CD)
-│   └── setup/                     # Set up scripts for dev environment
+├── scripts/                   ## Utility scripts
+│   ├── deployment/                ## Scripts related to deployment (Docker, CI/CD)
+│   └── setup/                     ## Set up scripts for dev environment
 │
-├── docs/                       # Project documentation
-│   ├── api/                         # API documentation
-│   └── project/                     # Project reports, architecture, and design
+├── docs/                       ## Project documentation
+│   ├── api/                         ## API documentation
+│   └── project/                     ## Project reports, architecture, and design
 │
-├── .env.example                # Example environment variables for setup
-├── docker-compose.yml          # Docker compose for local development/testing
-├── Dockerfile                  # Dockerfile for deployment
-├── package.json                # Project metadata and dependencies for frontend
-├── requirements.txt            # Python dependencies for backend
-└── README.md                   # Repository README with installation, usage, and contribution guide
+├── .env.example                ## Example environment variables for setup
+├── docker-compose.yml          ## Docker compose for local development/testing
+├── Dockerfile                  ## Dockerfile for deployment
+├── package.json                ## Project metadata and dependencies for frontend
+├── requirements.txt            ## Python dependencies for backend
+└── README.md                   ## Repository README with installation, usage, and contribution guide
 ```
 
 This file structure organizes the real-time translation chatbot repository into distinct sections for backend, AI models, and frontend development, ensuring separation of concerns and scalable management. The inclusion of automated tests, documentation, and example configurations support clear setup instructions and maintainability. Utility scripts facilitate deployment and developer setup, streamlining the entire development process.
@@ -213,21 +213,21 @@ async def translate_text(translation_input: TranslationInput):
 
 
 class TranslationService:
-    # Placeholder for translation service logic
+    ## Placeholder for translation service logic
     def translate(self, text: str, source_language: str, target_language: str) -> str:
-        # The translation logic would be much more complex and involve AI models,
-        # but this is a simplified example.
+        ## The translation logic would be much more complex and involve AI models,
+        ## but this is a simplified example.
         if source_language == target_language:
             return text
         else:
-            # Here, actual translation model or API call would take place.
+            ## Here, actual translation model or API call would take place.
             translated_text = self.dummy_translation(text, target_language)
             return translated_text
 
     @staticmethod
     def dummy_translation(text: str, _target_language: str) -> str:
-        # In a real-world scenario, this would interface with an ML model or
-        # a third-party translation service.
+        ## In a real-world scenario, this would interface with an ML model or
+        ## a third-party translation service.
         return f'Translated "{text}" to {_target_language} language.'
 
 ```
@@ -239,12 +239,12 @@ This file represents the API routes for a real-time language translation chatbot
 File Path: `/ai_models/nlp/translation_model.py`
 
 ```python
-# translation_model.py
+## translation_model.py
 
 import torch
 from transformers import MarianMTModel, MarianTokenizer
 
-# TranslationModel encapsulates the MarianMT Model for translation
+## TranslationModel encapsulates the MarianMT Model for translation
 class TranslationModel:
     def __init__(self, source_lang: str, target_lang: str):
         """
@@ -257,7 +257,7 @@ class TranslationModel:
         self.tokenizer = MarianTokenizer.from_pretrained(model_name)
         self.model = MarianMTModel.from_pretrained(model_name)
 
-        # Device setup for utilizing GPU when available
+        ## Device setup for utilizing GPU when available
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         self.model.to(self.device)
 
@@ -268,12 +268,12 @@ class TranslationModel:
         :param text: Text in the source language to be translated
         :return: Translated text in the target language
         """
-        # Preprocess and tokenize the input text
+        ## Preprocess and tokenize the input text
         preprocessed_text = self._preprocess(text)
         tokenized_text = self.tokenizer.encode(preprocessed_text, return_tensors="pt")
         tokenized_text = tokenized_text.to(self.device)
 
-        # Perform the translation and decode the output
+        ## Perform the translation and decode the output
         translated = self.model.generate(tokenized_text)
         translated_text = self.tokenizer.decode(translated[0], skip_special_tokens=True)
 
@@ -286,11 +286,11 @@ class TranslationModel:
         :param text: Raw text input
         :return: Preprocessed text input
         """
-        # Here we can include text cleaning and normalization steps if needed
+        ## Here we can include text cleaning and normalization steps if needed
         return text.strip()
 
 if __name__ == "__main__":
-    # Example usage
+    ## Example usage
     source_language = "en"
     target_language = "es"
     translator = TranslationModel(source_language, target_language)
@@ -312,7 +312,7 @@ Certainly! Below is an example of a Python script that could be responsible for 
 Keep in mind, this code is fictional and may not be fully functional or optimized. It is meant to illustrate the type of content and file structure that might be included in a candidate's project.
 
 ```python
-# File Path: /real-time-translation-chatbot/ai_models/nlp/translation_service.py
+## File Path: /real-time-translation-chatbot/ai_models/nlp/translation_service.py
 
 from transformers import MarianMTModel, MarianTokenizer
 
@@ -333,27 +333,27 @@ class TranslationService:
         :param tgt_lang: str, the target language code (ISO 639-1).
         :return: str, the translated text.
         """
-        # Constructing the model name based on the source and target languages
+        ## Constructing the model name based on the source and target languages
         model_name = f'Helsinki-NLP/opus-mt-{src_lang}-{tgt_lang}'
 
-        # Reinitialize the tokenizer and model in case of language change
+        ## Reinitialize the tokenizer and model in case of language change
         self.tokenizer = MarianTokenizer.from_pretrained(model_name)
         self.model = MarianMTModel.from_pretrained(model_name)
 
-        # Tokenize and prepare input for the model
+        ## Tokenize and prepare input for the model
         tokenized_text = self.tokenizer(text, return_tensors="pt", padding=True)
 
-        # Perform translation
+        ## Perform translation
         translated = self.model.generate(**tokenized_text)
 
-        # Decode the output tokens to a string
+        ## Decode the output tokens to a string
         translation = self.tokenizer.decode(translated[0], skip_special_tokens=True)
 
         return translation
 
-# Example usage
+## Example usage
 if __name__ == "__main__":
-    # Translate English to Spanish
+    ## Translate English to Spanish
     translator = TranslationService('Helsinki-NLP/opus-mt-en-es')
     sample_text = "Hello, world! This is an example translation."
     print(f"Original: {sample_text}")
@@ -368,7 +368,7 @@ The file should be placed in the project directory dedicated to translation mode
 ```
 
 ```python
-# translation_routes.py
+## translation_routes.py
 
 from fastapi import APIRouter, WebSocket, WebSocketDisconnect
 from fastapi.responses import JSONResponse
@@ -384,11 +384,11 @@ async def websocket_translation_endpoint(websocket: WebSocket, user_id: int):
     await websocket.accept()
     try:
         while True:
-            # Wait for a message from the client
+            ## Wait for a message from the client
             data = await websocket.receive_text()
             chat_message = ChatMessage.parse_raw(data)
 
-            # Perform the translation
+            ## Perform the translation
             translation = await translation_service.translate_text(
                 chat_message.text,
                 chat_message.source_language,
@@ -402,15 +402,15 @@ async def websocket_translation_endpoint(websocket: WebSocket, user_id: int):
                 target_language=chat_message.target_language
             )
 
-            # Send the translated message back to the client
+            ## Send the translated message back to the client
             await websocket.send_json(translated_message.dict())
     except WebSocketDisconnect:
         print(f"WebSocket disconnected for user_id: {user_id}")
-        # Handle disconnection, e.g., clean up, log, etc.
+        ## Handle disconnection, e.g., clean up, log, etc.
 
 @router.post("/translate")
 async def translate_text_endpoint(chat_message: ChatMessage):
-    # Translate text using translation service
+    ## Translate text using translation service
     translation = await translation_service.translate_text(
         chat_message.text,
         chat_message.source_language,
@@ -424,7 +424,7 @@ async def translate_text_endpoint(chat_message: ChatMessage):
         target_language=chat_message.target_language
     )
 
-    # Return JSON response with the translated message
+    ## Return JSON response with the translated message
     return JSONResponse(status_code=200, content=translated_message.dict())
 ```
 

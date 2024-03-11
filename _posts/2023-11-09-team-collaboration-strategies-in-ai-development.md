@@ -5,7 +5,7 @@ permalink: posts/team-collaboration-strategies-in-ai-development
 layout: article
 ---
 
-# Team Collaboration in AI Development
+## Team Collaboration in AI Development
 
 The world of Artificial Intelligence (AI) is complex and constantly evolving. It demands a high level of expertise and collaboration to build intelligent systems. Project managers, data scientists, AI engineers, and other stakeholders need to harmonize their efforts to produce high-quality AI solutions. Team collaboration in AI development is an integral part of the process and calls for a carefully planned strategy and effective tools.
 
@@ -42,7 +42,7 @@ Many tools are available to facilitate better team collaboration in AI developme
 GitHub is a platform where developers can collaborate on projects, commit code, and examine the changes made by other coders. It also allows the team to track and manage bugs.
 
 ```python
-# Sample Python code for a simple AI model
+## Sample Python code for a simple AI model
 import numpy as np
 from sklearn.linear_model import LogisticRegression
 
@@ -65,10 +65,10 @@ Jira is a project management tool designed for agile teams. It helps track issue
 DVC is an open-source tool that version-controls data and models. It's designed to handle large files, datasets, machine learning models without storing the data itself on Git, but instead offering mechanisms to manage files and directories on your data storage.
 
 ```bash
-# Track dataset
+## Track dataset
 $ dvc add data.csv
 
-# Track ML model
+## Track ML model
 $ dvc add model.pkl
 ```
 

@@ -206,29 +206,29 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
 import joblib
 
-# Load mock data
+## Load mock data
 data_path = "../data/processed_data/mock_data.csv"
 data = pd.read_csv(data_path)
 
-# Split data into features (X) and target (y)
+## Split data into features (X) and target (y)
 X = data.drop('yield', axis=1)
 y = data['yield']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Train a RandomForestRegressor model
+## Train a RandomForestRegressor model
 model = RandomForestRegressor()
 model.fit(X_train, y_train)
 
-# Evaluate the model
+## Evaluate the model
 train_score = model.score(X_train, y_train)
 test_score = model.score(X_test, y_test)
 
 print(f"Training R-squared score: {train_score}")
 print(f"Testing R-squared score: {test_score}")
 
-# Save the trained model
+## Save the trained model
 model_path = "../models/mock_model.pkl"
 joblib.dump(model, model_path)
 ```
@@ -245,21 +245,21 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Dropout
 from sklearn.model_selection import train_test_split
 
-# Load mock data for neural network training
+## Load mock data for neural network training
 data_path = "../../data/processed_data/mock_data.csv"
 data = pd.read_csv(data_path)
 
-# Split data into features (X) and target (y)
+## Split data into features (X) and target (y)
 X = data.drop('yield', axis=1)
 y = data['yield']
 
-# Normalize data
+## Normalize data
 X = (X - X.mean()) / X.std()
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Build a neural network model
+## Build a neural network model
 model = Sequential([
     Dense(128, activation='relu', input_shape=(X.shape[1],)),
     Dropout(0.2),
@@ -268,17 +268,17 @@ model = Sequential([
     Dense(1)
 ])
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam', loss='mean_squared_error')
 
-# Train the model
+## Train the model
 model.fit(X_train, y_train, epochs=50, batch_size=32, validation_data=(X_test, y_test))
 
-# Evaluate the model
+## Evaluate the model
 loss = model.evaluate(X_test, y_test)
 print(f"Mean Squared Error on test data: {loss}")
 
-# Save the trained model
+## Save the trained model
 model_path = "models/tf_model/complex_model"
 model.save(model_path)
 ```

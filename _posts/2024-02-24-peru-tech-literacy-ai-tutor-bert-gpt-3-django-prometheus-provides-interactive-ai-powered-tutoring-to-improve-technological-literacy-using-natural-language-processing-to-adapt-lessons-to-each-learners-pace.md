@@ -5,7 +5,7 @@ permalink: posts/peru-tech-literacy-ai-tutor-bert-gpt-3-django-prometheus-provid
 layout: article
 ---
 
-# AI Peru Tech Literacy AI Tutor
+## AI Peru Tech Literacy AI Tutor
 
 ## Objectives:
 1. Provide interactive and AI-powered tutoring to enhance technological literacy.
@@ -28,7 +28,7 @@ layout: article
 
 By combining these technologies and system design strategies, the AI Peru Tech Literacy AI Tutor can deliver a personalized and engaging tutoring experience to learners, helping them improve their technological literacy through interactive AI-powered lessons.
 
-# MLOps Infrastructure for Peru Tech Literacy AI Tutor
+## MLOps Infrastructure for Peru Tech Literacy AI Tutor
 
 ## MLOps Components:
 1. **Data Collection and Management**:
@@ -177,27 +177,27 @@ deployment/
 In the `deployment/` directory of the Peru Tech Literacy AI Tutor project, essential deployment artifacts like Docker configuration files for local development and Kubernetes manifests for cluster deployment are organized, along with scripts to streamline deployment and monitoring operations for the AI-powered tutoring application.
 
 ```python
-# train_model.py
+## train_model.py
 import pandas as pd
 from transformers import BertTokenizer, TFBertForSequenceClassification
 import tensorflow as tf
 
-# Load mock data
+## Load mock data
 df = pd.read_csv("data/mock_user_data.csv")
 
-# Tokenize user input using BERT tokenizer
+## Tokenize user input using BERT tokenizer
 tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
 encoded_inputs = tokenizer(df['input_text'].tolist(), padding=True, truncation=True, max_length=128, return_tensors='tf')
 
-# Load pre-trained BERT model
+## Load pre-trained BERT model
 model = TFBertForSequenceClassification.from_pretrained('bert-base-uncased')
 optimizer = tf.keras.optimizers.Adam(learning_rate=5e-5)
 model.compile(optimizer=optimizer, loss=model.compute_loss)
 
-# Train the BERT model
+## Train the BERT model
 model.fit(encoded_inputs, df['label'].values, epochs=3)
 
-# Save the trained model
+## Save the trained model
 model.save_pretrained("models/trained_bert_model")
 ```
 
@@ -206,29 +206,29 @@ File Path: `scripts/train_model.py`
 This Python script `train_model.py` loads mock user data, tokenizes user input texts using BERT tokenizer, loads a pre-trained BERT model for sequence classification, compiles the model, trains it on the encoded inputs and corresponding labels, and finally saves the trained BERT model in the `models/trained_bert_model` directory within the Peru Tech Literacy AI Tutor project. The script leverages TensorFlow and Hugging Face's Transformers library for BERT model training with mock data.
 
 ```python
-# complex_ml_algorithm.py
+## complex_ml_algorithm.py
 import pandas as pd
 from transformers import GPT2Tokenizer, GPT2LMHeadModel
 import torch
 
-# Load mock data
+## Load mock data
 df = pd.read_csv("data/mock_lesson_data.csv")
 
-# Initialize GPT-3 tokenizer and model
+## Initialize GPT-3 tokenizer and model
 tokenizer = GPT2Tokenizer.from_pretrained('gpt2')
 model = GPT2LMHeadModel.from_pretrained('gpt2')
 
-# Tokenize lesson content
+## Tokenize lesson content
 input_ids = tokenizer(df['lesson_text'], return_tensors='pt', padding=True, truncation=True)
 
-# Generate responses using GPT-3
+## Generate responses using GPT-3
 output = model.generate(input_ids, max_length=200, num_return_sequences=1, temperature=0.7, num_beams=5)
 
-# Decode and display generated responses
+## Decode and display generated responses
 decoded_output = tokenizer.decode(output[0], skip_special_tokens=True)
 print(decoded_output)
 
-# Save generated responses
+## Save generated responses
 df['generated_response'] = decoded_output
 df.to_csv("data/generated_responses.csv", index=False)
 ```

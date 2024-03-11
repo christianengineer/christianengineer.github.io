@@ -5,7 +5,7 @@ permalink: posts/public-transportation-optimization-scikit-learn-tensorflow-for-
 layout: article
 ---
 
-# AI Public Transportation Optimization System
+## AI Public Transportation Optimization System
 
 ## Objectives
 
@@ -42,7 +42,7 @@ The objective of the AI Public Transportation Optimization system is to improve 
 ## Summary
 The AI Public Transportation Optimization system aims to leverage machine learning techniques, such as those provided by Scikit-Learn and TensorFlow, to analyze transportation data, optimize transit systems, and provide real-time recommendations. By employing scalable infrastructure, real-time processing, and user-friendly interfaces, the system can bring about tangible improvements in urban transit efficiency.
 
-# MLOps Infrastructure for Public Transportation Optimization
+## MLOps Infrastructure for Public Transportation Optimization
 
 To ensure the efficient operation and management of the AI Public Transportation Optimization system, a robust MLOps infrastructure is essential. MLOps, which stands for machine learning operations, focuses on the best practices and tools for deploying, operating, and monitoring machine learning models in production. In the context of the Public Transportation Optimization application, the MLOps infrastructure aims to support the deployment and continuous improvement of models that leverage Scikit-Learn and TensorFlow for optimizing urban transit.
 
@@ -92,7 +92,7 @@ To ensure the efficient operation and management of the AI Public Transportation
 
 The MLOps infrastructure designed for the Public Transportation Optimization application integrates best practices and tools for automating model deployment, monitoring model performance, managing the model lifecycle, and ensuring infrastructure flexibility and scalability. By establishing a robust MLOps framework, the application can maintain the reliability and effectiveness of the ML models and contribute to continuous improvements in urban transit efficiency.
 
-# Scalable File Structure for Public Transportation Optimization Repository
+## Scalable File Structure for Public Transportation Optimization Repository
 
 When organizing a repository for the Public Transportation Optimization application that leverages Scikit-Learn and TensorFlow, it is essential to establish a scalable and well-structured file organization to facilitate collaboration, maintainability, and ease of access to different components of the system. The following presents a recommended scalable file structure for the repository:
 
@@ -100,33 +100,33 @@ When organizing a repository for the Public Transportation Optimization applicat
 public-transportation-optimization/
 │
 ├── data/
-│   ├── raw/  # Raw data from transportation agencies
-│   └── processed/  # Preprocessed and cleaned data for model training
+│   ├── raw/  ## Raw data from transportation agencies
+│   └── processed/  ## Preprocessed and cleaned data for model training
 │
 ├── models/
-│   ├── scikit-learn/  # Scikit-Learn based models
-│   └── tensorflow/  # TensorFlow based models
+│   ├── scikit-learn/  ## Scikit-Learn based models
+│   └── tensorflow/  ## TensorFlow based models
 │
 ├── notebooks/
-│   ├── exploratory_analysis.ipynb  # Jupyter notebook for initial data exploration
-│   └── model_evaluation.ipynb  # Jupyter notebook for model evaluation and comparison
+│   ├── exploratory_analysis.ipynb  ## Jupyter notebook for initial data exploration
+│   └── model_evaluation.ipynb  ## Jupyter notebook for model evaluation and comparison
 │
 ├── src/
-│   ├── data_processing/  # Scripts for data preprocessing
-│   ├── model_training/  # Scripts for training Scikit-Learn and TensorFlow models
-│   └── deployment/  # Scripts and configurations for model deployment and inference
+│   ├── data_processing/  ## Scripts for data preprocessing
+│   ├── model_training/  ## Scripts for training Scikit-Learn and TensorFlow models
+│   └── deployment/  ## Scripts and configurations for model deployment and inference
 │
 ├── tests/
-│   ├── unit/  # Unit tests for individual components
-│   └── integration/  # Integration tests for end-to-end functionality
+│   ├── unit/  ## Unit tests for individual components
+│   └── integration/  ## Integration tests for end-to-end functionality
 │
-├── docs/  # Documentation, user guides, and system architecture diagrams
+├── docs/  ## Documentation, user guides, and system architecture diagrams
 │
-├── pipelines/  # CI/CD pipelines for automated testing, model deployment, and retraining
+├── pipelines/  ## CI/CD pipelines for automated testing, model deployment, and retraining
 │
-├── config/  # Configuration files for environment setup, model hyperparameters, and deployment settings
+├── config/  ## Configuration files for environment setup, model hyperparameters, and deployment settings
 │
-└── README.md  # Overview of the Public Transportation Optimization application and instructions for getting started with the repository
+└── README.md  ## Overview of the Public Transportation Optimization application and instructions for getting started with the repository
 ```
 
 ## Key Components
@@ -160,7 +160,7 @@ The repository root contains a README file that provides an overview of the Publ
 
 Adopting this scalable file structure will effectively organize the Public Transportation Optimization repository, supporting collaboration, maintenance, and the seamless integration of Scikit-Learn and TensorFlow-based machine learning components.
 
-# `models` Directory for Public Transportation Optimization
+## `models` Directory for Public Transportation Optimization
 
 Within the `models` directory of the Public Transportation Optimization repository, we organize the machine learning models built using Scikit-Learn and TensorFlow. Each library-specific subdirectory contains the following files and directories:
 
@@ -169,21 +169,21 @@ models/
 │
 ├── scikit-learn/
 │   ├── demand_prediction/
-│   │   ├── model.pkl  # Serialized Scikit-Learn model for demand prediction
-│   │   └── preprocessing.py  # Script for data preprocessing for demand prediction
+│   │   ├── model.pkl  ## Serialized Scikit-Learn model for demand prediction
+│   │   └── preprocessing.py  ## Script for data preprocessing for demand prediction
 │   │
 │   └── resource_optimization/
-│       ├── model.pkl  # Serialized Scikit-Learn model for resource optimization
-│       └── feature_engineering.py  # Script for feature engineering for resource optimization
+│       ├── model.pkl  ## Serialized Scikit-Learn model for resource optimization
+│       └── feature_engineering.py  ## Script for feature engineering for resource optimization
 │
 └── tensorflow/
     ├── travel_time_forecasting/
-    │   ├── saved_model/  # TensorFlow SavedModel format for travel time forecasting
-    │   └── data_preparation.ipynb  # Jupyter notebook for data preparation for travel time forecasting
+    │   ├── saved_model/  ## TensorFlow SavedModel format for travel time forecasting
+    │   └── data_preparation.ipynb  ## Jupyter notebook for data preparation for travel time forecasting
     │
     └── reinforcement_learning/
-        ├── model/  # TensorFlow model and training script for reinforcement learning
-        └── environment.py  # Custom environment implementation for reinforcement learning
+        ├── model/  ## TensorFlow model and training script for reinforcement learning
+        └── environment.py  ## Custom environment implementation for reinforcement learning
 ```
 
 ## `scikit-learn/` Subdirectory
@@ -210,7 +210,7 @@ The `tensorflow` subdirectory is devoted to models built with TensorFlow, coveri
 
 By organizing the models using this structure, the repository facilitates clear separation and management of Scikit-Learn and TensorFlow-based models for the Public Transportation Optimization application. This setup allows for easy access, maintainability, and deployment of the machine learning models, ensuring an efficient and scalable approach to managing the AI-driven urban transit optimization system.
 
-# `deployment` Directory for Public Transportation Optimization
+## `deployment` Directory for Public Transportation Optimization
 
 The `deployment` directory within the Public Transportation Optimization repository houses the scripts and configuration files essential for deploying and serving the Scikit-Learn and TensorFlow models, as well as managing the model inference and overall system operation. This directory includes the following structure and files:
 
@@ -219,18 +219,18 @@ deployment/
 │
 ├── scikit-learn/
 │   ├── demand_prediction/
-│   │   └── inference_service.py  # Script for creating an inference service for the demand prediction Scikit-Learn model
+│   │   └── inference_service.py  ## Script for creating an inference service for the demand prediction Scikit-Learn model
 │   │
 │   └── resource_optimization/
-│       └── inference_service.py  # Script for building an inference service for the resource optimization Scikit-Learn model
+│       └── inference_service.py  ## Script for building an inference service for the resource optimization Scikit-Learn model
 │
 └── tensorflow/
     ├── travel_time_forecasting/
-    │   └── serve_model.py  # Script for serving the TensorFlow travel time forecasting model
+    │   └── serve_model.py  ## Script for serving the TensorFlow travel time forecasting model
     │
     └── reinforcement_learning/
-        ├── serve_model.py  # Script for serving the reinforcement learning TensorFlow model
-        └── update_model.py  # Script for updating the reinforcement learning model based on real-time data
+        ├── serve_model.py  ## Script for serving the reinforcement learning TensorFlow model
+        └── update_model.py  ## Script for updating the reinforcement learning model based on real-time data
 ```
 
 ## `scikit-learn/` Subdirectory
@@ -266,28 +266,28 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
 
-# Mock data for training demand prediction model
-X = np.array([[1, 2, 3, 4, 5]]).T  # Example input features
-y = np.array([2, 4, 5, 4, 5])     # Example target variable (demand)
+## Mock data for training demand prediction model
+X = np.array([[1, 2, 3, 4, 5]]).T  ## Example input features
+y = np.array([2, 4, 5, 4, 5])     ## Example target variable (demand)
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Create and train the linear regression model
+## Create and train the linear regression model
 model = LinearRegression()
 model.fit(X_train, y_train)
 
-# Evaluate the model
+## Evaluate the model
 train_predictions = model.predict(X_train)
 test_predictions = model.predict(X_test)
 train_rmse = mean_squared_error(y_train, train_predictions, squared=False)
 test_rmse = mean_squared_error(y_test, test_predictions, squared=False)
 
-# Print model evaluation metrics
+## Print model evaluation metrics
 print("Train RMSE:", train_rmse)
 print("Test RMSE:", test_rmse)
 
-# Save the trained model to a file
+## Save the trained model to a file
 import joblib
 model_file_path = 'models/scikit-learn/demand_prediction/model.pkl'
 joblib.dump(model, model_file_path)
@@ -309,41 +309,41 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import mean_squared_error
 
-# Mock data for training travel time forecasting model
-X = np.random.rand(100, 5)  # Example input features (e.g., historical travel data)
-y = np.random.rand(100)     # Example target variable (e.g., travel time)
+## Mock data for training travel time forecasting model
+X = np.random.rand(100, 5)  ## Example input features (e.g., historical travel data)
+y = np.random.rand(100)     ## Example target variable (e.g., travel time)
 
-# Data preprocessing
+## Data preprocessing
 scaler = StandardScaler()
 X = scaler.fit_transform(X)
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Build the TensorFlow model
+## Build the TensorFlow model
 model = tf.keras.models.Sequential([
     tf.keras.layers.Dense(64, activation='relu', input_shape=(X_train.shape[1],)),
     tf.keras.layers.Dense(64, activation='relu'),
     tf.keras.layers.Dense(1)
 ])
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam', loss='mean_squared_error')
 
-# Train the model
+## Train the model
 history = model.fit(X_train, y_train, epochs=50, batch_size=32, validation_data=(X_test, y_test), verbose=0)
 
-# Evaluate the model
+## Evaluate the model
 train_predictions = model.predict(X_train).flatten()
 test_predictions = model.predict(X_test).flatten()
 train_rmse = mean_squared_error(y_train, train_predictions, squared=False)
 test_rmse = mean_squared_error(y_test, test_predictions, squared=False)
 
-# Print model evaluation metrics
+## Print model evaluation metrics
 print("Train RMSE:", train_rmse)
 print("Test RMSE:", test_rmse)
 
-# Save the trained model
+## Save the trained model
 model_dir = 'models/tensorflow/travel_time_forecasting'
 model.save(model_dir)
 print("Trained model saved to", model_dir)
@@ -353,7 +353,7 @@ In this example, we train a complex travel time forecasting model using TensorFl
 
 This script can be used as a foundation for training complex machine learning algorithms using real data to optimize urban transit in the Public Transportation Optimization application.
 
-# Types of Users for Public Transportation Optimization Application
+## Types of Users for Public Transportation Optimization Application
 
 ## 1. Transportation Planners and Operators
 

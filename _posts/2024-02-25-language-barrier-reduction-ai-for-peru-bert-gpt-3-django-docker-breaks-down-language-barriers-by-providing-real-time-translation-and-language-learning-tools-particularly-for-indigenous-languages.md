@@ -238,32 +238,32 @@ deployment/
 
 ### Example `Dockerfile`:
 ```Dockerfile
-# Base image
+## Base image
 FROM python:3.9-slim
 
-# Set working directory
+## Set working directory
 WORKDIR /app
 
-# Copy requirements file
+## Copy requirements file
 COPY requirements.txt .
 
-# Install dependencies
+## Install dependencies
 RUN pip install -r requirements.txt
 
-# Copy application code
+## Copy application code
 COPY backend/ /app/backend
 COPY frontend/ /app/frontend
 COPY models/ /app/models
 COPY data/ /app/data
 
-# Set environment variables
+## Set environment variables
 ENV PORT=8000
 ENV DJANGO_SETTINGS_MODULE=backend.settings
 
-# Expose port
+## Expose port
 EXPOSE $PORT
 
-# Run the application
+## Run the application
 CMD ["python", "manage.py", "runserver", "0.0.0.0:$PORT"]
 ```
 
@@ -300,29 +300,29 @@ import torch
 from transformers import BertTokenizer, BertModel
 import numpy as np
 
-# Mock data for training
+## Mock data for training
 mock_sentences = ["Hello, how are you?", "I love to learn new languages.", "What is your name?"]
 mock_labels = ["Hola, ¿cómo estás?", "Me encanta aprender nuevos idiomas.", "¿Cuál es tu nombre?"]
 
-# BERT tokenizer
+## BERT tokenizer
 tokenizer = BertTokenizer.from_pretrained('bert-base-multilingual-cased')
 
-# Tokenize input sentences
+## Tokenize input sentences
 tokenized_inputs = tokenizer(mock_sentences, padding=True, truncation=True, return_tensors='pt')
 
-# BERT model
+## BERT model
 model = BertModel.from_pretrained('bert-base-multilingual-cased')
 
-# Forward pass
+## Forward pass
 outputs = model(**tokenized_inputs)
 
-# Mock training process
-# Replace with actual training steps using the mock data
+## Mock training process
+## Replace with actual training steps using the mock data
 
-# Generate mock predictions
+## Generate mock predictions
 mock_predictions = ["Hola, ¿cómo estás?", "Me encanta aprender nuevos idiomas.", "¿Cuál es tu nombre?"]
 
-# Calculate accuracy
+## Calculate accuracy
 accuracy = np.mean([1 if pred == label else 0 for pred, label in zip(mock_predictions, mock_labels)])
 
 print(f"Mock Training Completed. Accuracy: {accuracy}")
@@ -339,24 +339,24 @@ import torch
 from transformers import GPT2LMHeadModel, GPT2Tokenizer
 import numpy as np
 
-# Mock data for the GPT-3 model
+## Mock data for the GPT-3 model
 mock_prompt = "Translate the following sentence to Spanish: 'How are you doing today?'"
 mock_target = "¿Cómo estás hoy?"
 
-# Initialize GPT-3 model and tokenizer
+## Initialize GPT-3 model and tokenizer
 model = GPT2LMHeadModel.from_pretrained('gpt2')
 tokenizer = GPT2Tokenizer.from_pretrained('gpt2')
 
-# Tokenize the prompt
+## Tokenize the prompt
 input_ids = tokenizer.encode(mock_prompt, return_tensors='pt')
 
-# Generate text based on the prompt using GPT-3 model
+## Generate text based on the prompt using GPT-3 model
 output = model.generate(input_ids, max_length=50, num_return_sequences=1, pad_token_id=tokenizer.eos_token_id)
 
-# Decode the generated text
+## Decode the generated text
 decoded_output = tokenizer.decode(output[0])
 
-# Calculate similarity score between generated text and target
+## Calculate similarity score between generated text and target
 similarity_score = np.random.uniform(0.7, 0.95)
 
 print(f"Generated Translation: {decoded_output}")

@@ -185,29 +185,29 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_squared_error
 
 def train_and_evaluate_model(data_file_path):
-    # Load the data
+    ## Load the data
     data = pd.read_csv(data_file_path)
 
-    # Perform data preprocessing and feature engineering
-    # ...
+    ## Perform data preprocessing and feature engineering
+    ## ...
 
-    # Split the data into features and target variable
+    ## Split the data into features and target variable
     X = data.drop(columns=['target_column'])
     y = data['target_column']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize the machine learning model
+    ## Initialize the machine learning model
     model = RandomForestRegressor(n_estimators=100, random_state=42)
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train)
 
-    # Make predictions on the test set
+    ## Make predictions on the test set
     y_pred = model.predict(X_test)
 
-    # Evaluate the model
+    ## Evaluate the model
     mse = mean_squared_error(y_test, y_pred)
 
     return model, mse
@@ -232,40 +232,40 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 
 def train_and_evaluate_deep_learning_model(data_file_path):
-    # Load the data
+    ## Load the data
     data = pd.read_csv(data_file_path)
 
-    # Perform data preprocessing and feature engineering
-    # ...
+    ## Perform data preprocessing and feature engineering
+    ## ...
 
-    # Split the data into features and target variable
+    ## Split the data into features and target variable
     X = data.drop(columns=['target_column'])
     y = data['target_column']
 
-    # Scale the features
+    ## Scale the features
     scaler = StandardScaler()
     X_scaled = scaler.fit_transform(X)
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.2, random_state=42)
 
-    # Define the deep learning model
+    ## Define the deep learning model
     model = tf.keras.models.Sequential([
         tf.keras.layers.Dense(64, activation='relu', input_shape=(X_train.shape[1],)),
         tf.keras.layers.Dense(32, activation='relu'),
         tf.keras.layers.Dense(1)
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam', loss='mean_squared_error')
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train, epochs=50, batch_size=32, validation_data=(X_test, y_test))
 
-    # Make predictions on the test set
+    ## Make predictions on the test set
     y_pred = model.predict(X_test)
 
-    # Calculate mean squared error
+    ## Calculate mean squared error
     mse = mean_squared_error(y_test, y_pred)
 
     return model, mse

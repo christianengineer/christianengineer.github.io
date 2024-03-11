@@ -5,7 +5,7 @@ permalink: posts/react-for-ai-driven-user-interfaces
 layout: article
 ---
 
-# React.js for AI-driven User Interfaces
+## React.js for AI-driven User Interfaces
 
 ## Introduction
 

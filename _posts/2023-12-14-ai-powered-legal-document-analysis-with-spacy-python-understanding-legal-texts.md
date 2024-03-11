@@ -5,7 +5,7 @@ permalink: posts/ai-powered-legal-document-analysis-with-spacy-python-understand
 layout: article
 ---
 
-# AI-Powered Legal Document Analysis with SpaCy
+## AI-Powered Legal Document Analysis with SpaCy
 
 ## Objectives
 The main objective of the AI-Powered Legal Document Analysis system is to leverage advanced NLP techniques to extract meaningful insights and information from legal texts. This includes tasks such as entity recognition, relationship extraction, sentiment analysis, and summarization. These insights can be used to automate legal document analysis, improve search functionalities, and provide valuable information for decision-making in legal contexts.
@@ -34,7 +34,7 @@ The main objective of the AI-Powered Legal Document Analysis system is to levera
 
 By utilizing these libraries and technologies, the AI-Powered Legal Document Analysis system can be designed to be scalable, data-intensive, and capable of leveraging machine learning for advanced NLP tasks.
 
-# MLOps Infrastructure for AI-Powered Legal Document Analysis
+## MLOps Infrastructure for AI-Powered Legal Document Analysis
 
 To build a robust MLOps infrastructure for the AI-Powered Legal Document Analysis application, we need to consider the entire machine learning lifecycle, from data collection and model development to deployment and monitoring. The MLOps infrastructure should support continuous integration, continuous deployment, and automation of the machine learning pipeline while ensuring scalability, reproducibility, and reliability. Below are the key components and strategies for the MLOps infrastructure:
 
@@ -261,50 +261,50 @@ By providing these deployment resources within the deployment directory, the AI-
 Here's an example file for training a named entity recognition (NER) model for the AI-Powered Legal Document Analysis using SpaCy with mock data. This file can be placed within the modeling directory of the source code (as per the previously provided file structure) under the name `train_ner_model.py`.
 
 ```python
-# train_ner_model.py
+## train_ner_model.py
 import spacy
 import random
 import json
 
-# Load mock training data
+## Load mock training data
 with open('data/processed/mock_training_data.json', 'r') as file:
     mock_training_data = json.load(file)
 
-# Initialize a blank SpaCy NLP pipeline
+## Initialize a blank SpaCy NLP pipeline
 nlp = spacy.blank("en")
 
-# Create a new entity type for legal entities
+## Create a new entity type for legal entities
 nlp.entity.add_label('LEGAL_ENTITY')
 
-# Initialize the NER component
+## Initialize the NER component
 ner = nlp.create_pipe("ner")
 nlp.add_pipe(ner, last=True)
 
-# Add mock training examples to the NER component
+## Add mock training examples to the NER component
 for _, annotations in mock_training_data:
     for ent in annotations.get('entities'):
         ner.add_label(ent[2])
 
-# Other components could be added to the pipeline such as tokenization, part-of-speech tagging, etc.
+## Other components could be added to the pipeline such as tokenization, part-of-speech tagging, etc.
 
-# Disable other pipes during training
+## Disable other pipes during training
 other_pipes = [pipe for pipe in nlp.pipe_names if pipe != 'ner']
 with nlp.disable_pipes(*other_pipes):
-    # Begin training the NER model
+    ## Begin training the NER model
     optimizer = nlp.begin_training()
-    for itn in range(10):  # Example: 10 iterations
+    for itn in range(10):  ## Example: 10 iterations
         random.shuffle(mock_training_data)
         losses = {}
         for text, annotations in mock_training_data:
             nlp.update(
-                [text],  # batch of texts
-                [annotations],  # batch of annotations
-                drop=0.5,  # dropout - make it harder to memorize data
-                sgd=optimizer,  # the optimizer
+                [text],  ## batch of texts
+                [annotations],  ## batch of annotations
+                drop=0.5,  ## dropout - make it harder to memorize data
+                sgd=optimizer,  ## the optimizer
                 losses=losses)
         print(losses)
 
-# Save the trained model to disk
+## Save the trained model to disk
 nlp.to_disk('models/spacy/entity_recognition/ner_legal_entity_model')
 ```
 
@@ -319,7 +319,7 @@ Keep in mind that the actual structure and code may vary based on the specific a
 Below is an example file for a complex machine learning algorithm, such as a legal document classifier, for the AI-Powered Legal Document Analysis with SpaCy. This file can be placed within the `src/modeling` directory of the source code (as per the previously provided file structure) under the name `legal_doc_classifier.py`.
 
 ```python
-# legal_doc_classifier.py
+## legal_doc_classifier.py
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -327,29 +327,29 @@ from sklearn.svm import LinearSVC
 from sklearn.metrics import classification_report, accuracy_score
 import joblib
 
-# Load mock data
+## Load mock data
 mock_data = pd.read_csv('data/processed/mock_legal_documents.csv')
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(mock_data['text'], mock_data['label'], test_size=0.2, random_state=42)
 
-# Initialize the TF-IDF vectorizer
+## Initialize the TF-IDF vectorizer
 tfidf_vectorizer = TfidfVectorizer(max_features=1000)
 X_train_vectorized = tfidf_vectorizer.fit_transform(X_train)
 X_test_vectorized = tfidf_vectorizer.transform(X_test)
 
-# Initialize and train the classifier (e.g., LinearSVC)
+## Initialize and train the classifier (e.g., LinearSVC)
 classifier = LinearSVC()
 classifier.fit(X_train_vectorized, y_train)
 
-# Make predictions on the test set
+## Make predictions on the test set
 y_pred = classifier.predict(X_test_vectorized)
 
-# Evaluate the classifier
+## Evaluate the classifier
 print(classification_report(y_test, y_pred))
 print("Accuracy:", accuracy_score(y_test, y_pred))
 
-# Save the trained classifier to disk
+## Save the trained classifier to disk
 joblib.dump(classifier, 'models/custom_ml_models/legal_doc_classifier.pkl')
 ```
 

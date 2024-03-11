@@ -5,7 +5,7 @@ permalink: posts/legalmind---ai-for-legal-analysis
 layout: article
 ---
 
-# AI LegalMind - AI for Legal Analysis Repository
+## AI LegalMind - AI for Legal Analysis Repository
 
 ## Objectives
 
@@ -67,7 +67,7 @@ Implement robust monitoring and logging solutions to track the performance, heal
 
 By leveraging a cloud-based infrastructure, containerization, orchestration, and monitoring/logging tools, the LegalMind AI application can achieve a scalable, reliable, and efficient environment for legal analysis using AI.
 
-# Scalable File Structure for LegalMind - AI for Legal Analysis Repository
+## Scalable File Structure for LegalMind - AI for Legal Analysis Repository
 
 ```plaintext
 legalmind_ai/
@@ -272,30 +272,30 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics import classification_report
 
 def train_legal_document_classifier(data_file_path):
-    # Load mock data
+    ## Load mock data
     data = pd.read_csv(data_file_path)
 
-    # Split data into features and target
-    X = data['text']  # Assuming 'text' column contains the legal document text
-    y = data['label']  # Assuming 'label' column contains the document category labels
+    ## Split data into features and target
+    X = data['text']  ## Assuming 'text' column contains the legal document text
+    y = data['label']  ## Assuming 'label' column contains the document category labels
 
-    # Split data into training and testing sets
+    ## Split data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Convert text data to numerical features using TF-IDF vectorization
+    ## Convert text data to numerical features using TF-IDF vectorization
     tfidf_vectorizer = TfidfVectorizer()
     X_train_tfidf = tfidf_vectorizer.fit_transform(X_train)
     X_test_tfidf = tfidf_vectorizer.transform(X_test)
 
-    # Train a Support Vector Machine (SVM) model
+    ## Train a Support Vector Machine (SVM) model
     svm_classifier = SVC(kernel='linear')
     svm_classifier.fit(X_train_tfidf, y_train)
 
-    # Evaluate the model
+    ## Evaluate the model
     y_pred = svm_classifier.predict(X_test_tfidf)
     print(classification_report(y_test, y_pred))
 
-    # Return the trained model for later use
+    ## Return the trained model for later use
     return svm_classifier
 ```
 
@@ -321,26 +321,26 @@ from tensorflow.keras.layers import Embedding, LSTM, Dense
 from tensorflow.keras.utils import to_categorical
 
 def train_legal_document_rnn(data_file_path):
-    # Load mock data
+    ## Load mock data
     data = pd.read_csv(data_file_path)
 
-    # Split data into features and target
-    X = data['text']  # Assuming 'text' column contains the legal document text
-    y = data['label']  # Assuming 'label' column contains the document category labels
+    ## Split data into features and target
+    X = data['text']  ## Assuming 'text' column contains the legal document text
+    y = data['label']  ## Assuming 'label' column contains the document category labels
 
-    # Convert class labels to categorical form
+    ## Convert class labels to categorical form
     y_categorical = to_categorical(y)
 
-    # Tokenize the text data and convert to sequences
-    tokenizer = Tokenizer(num_words=10000)  # Assuming a maximum of 10000 unique words
+    ## Tokenize the text data and convert to sequences
+    tokenizer = Tokenizer(num_words=10000)  ## Assuming a maximum of 10000 unique words
     tokenizer.fit_on_texts(X)
     X_sequences = tokenizer.texts_to_sequences(X)
-    X_padded = pad_sequences(X_sequences, maxlen=100)  # Assuming a maximum sequence length of 100
+    X_padded = pad_sequences(X_sequences, maxlen=100)  ## Assuming a maximum sequence length of 100
 
-    # Split data into training and testing sets
+    ## Split data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X_padded, y_categorical, test_size=0.2, random_state=42)
 
-    # Build and train the RNN model
+    ## Build and train the RNN model
     model = Sequential()
     model.add(Embedding(10000, 100, input_length=100))
     model.add(LSTM(64, dropout=0.2, recurrent_dropout=0.2))
@@ -350,7 +350,7 @@ def train_legal_document_rnn(data_file_path):
     model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
     model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y_test))
 
-    # Return the trained RNN model for later use
+    ## Return the trained RNN model for later use
     return model
 ```
 

@@ -61,41 +61,41 @@ A well-organized and scalable file structure is crucial for maintaining clarity,
 financial-inclusion-platforms/
 │
 ├── data/
-│   ├── raw/                        # Raw data sources
-│   ├── processed/                  # Processed and preprocessed data
+│   ├── raw/                        ## Raw data sources
+│   ├── processed/                  ## Processed and preprocessed data
 │
 ├── models/
-│   ├── training/                   # Trained model files
-│   ├── serving/                    # Model serving and deployment configurations
+│   ├── training/                   ## Trained model files
+│   ├── serving/                    ## Model serving and deployment configurations
 │
 ├── notebooks/
-│   ├── exploratory/                # Jupyter notebooks for exploratory data analysis
-│   ├── preprocessing/              # Notebooks for data preprocessing and feature engineering
-│   ├── model_training/             # Notebooks for model training and evaluation
+│   ├── exploratory/                ## Jupyter notebooks for exploratory data analysis
+│   ├── preprocessing/              ## Notebooks for data preprocessing and feature engineering
+│   ├── model_training/             ## Notebooks for model training and evaluation
 │
 ├── src/
-│   ├── data/                       # Data processing and data pipeline code
-│   ├── models/                     # TensorFlow/Keras model definitions and training scripts
-│   ├── deployment/                 # Scripts for model deployment and serving
-│   ├── monitoring/                 # Code for model monitoring and performance tracking
+│   ├── data/                       ## Data processing and data pipeline code
+│   ├── models/                     ## TensorFlow/Keras model definitions and training scripts
+│   ├── deployment/                 ## Scripts for model deployment and serving
+│   ├── monitoring/                 ## Code for model monitoring and performance tracking
 │
 ├── config/
-│   ├── model_config.yaml           # Configuration files for model hyperparameters and settings
-│   ├── deployment_config.yaml      # Configuration for deployment settings and environment variables
-│   ├── logging_config.yaml         # Logging configurations for monitoring and tracking
+│   ├── model_config.yaml           ## Configuration files for model hyperparameters and settings
+│   ├── deployment_config.yaml      ## Configuration for deployment settings and environment variables
+│   ├── logging_config.yaml         ## Logging configurations for monitoring and tracking
 │
 ├── tests/
-│   ├── unit/                       # Unit tests for individual components
-│   ├── integration/                # Integration tests for end-to-end model pipeline
+│   ├── unit/                       ## Unit tests for individual components
+│   ├── integration/                ## Integration tests for end-to-end model pipeline
 │
 ├── docs/
-│   ├── architecture.md             # Documentation on system architecture and design
-│   ├── data_dictionary.md          # Description of the data schema and attributes
-│   ├── deployment_guide.md         # Instructions for deploying and managing the application
+│   ├── architecture.md             ## Documentation on system architecture and design
+│   ├── data_dictionary.md          ## Description of the data schema and attributes
+│   ├── deployment_guide.md         ## Instructions for deploying and managing the application
 │
-├── requirements.txt                # Python dependencies for the project
-├── README.md                       # Project overview, setup instructions, and usage guide
-├── LICENSE                         # License information for the project
+├── requirements.txt                ## Python dependencies for the project
+├── README.md                       ## Project overview, setup instructions, and usage guide
+├── LICENSE                         ## License information for the project
 ```
 
 This file structure promotes modularity, separation of concerns, and clarity in different stages of the AI financial inclusion project, from data processing and model development to deployment and monitoring. It also incorporates documentation, testing, and configuration management, enabling a holistic view of the project and its components.
@@ -110,12 +110,12 @@ The "models" directory within the Financial Inclusion Platforms repository plays
 models/
 │
 ├── training/
-│   ├── model_1/                    # Directory for specific version or iteration of trained model
-│   │   ├── assets/                 # Additional files such as label mapping or vocabulary
-│   │   ├── variables/              # Saved model weights and other variables
-│   │   ├── saved_model.pb          # Serialized representation of the TensorFlow model
-│   │   ├── model_metrics.txt       # Metrics and evaluation results for the trained model
-│   │   ├── README.md               # Documentation for this specific trained model
+│   ├── model_1/                    ## Directory for specific version or iteration of trained model
+│   │   ├── assets/                 ## Additional files such as label mapping or vocabulary
+│   │   ├── variables/              ## Saved model weights and other variables
+│   │   ├── saved_model.pb          ## Serialized representation of the TensorFlow model
+│   │   ├── model_metrics.txt       ## Metrics and evaluation results for the trained model
+│   │   ├── README.md               ## Documentation for this specific trained model
 │   │ 
 │   ├── model_2/
 │   │   ├── assets/
@@ -127,11 +127,11 @@ models/
 │   ├── ...
 │
 ├── serving/
-│   ├── deployment_config.yaml      # Configuration for model serving setup (e.g., input/output format, protocols)
-│   ├── requirements.txt            # Libraries and dependencies required for model serving
+│   ├── deployment_config.yaml      ## Configuration for model serving setup (e.g., input/output format, protocols)
+│   ├── requirements.txt            ## Libraries and dependencies required for model serving
 │   │
-│   ├── serving_script.py           # Script to load and serve the trained model as an API endpoint
-│   ├── README.md                   # Instructions for setting up and utilizing the model serving component
+│   ├── serving_script.py           ## Script to load and serve the trained model as an API endpoint
+│   ├── README.md                   ## Instructions for setting up and utilizing the model serving component
 ```
 
 In the "models" directory, the "training" subdirectory contains subdirectories for each trained model version, where each version directory holds the artifacts specific to that trained model, such as model assets, variables, the serialized model file, model evaluation metrics, and documentation. This structure allows for tracking and managing multiple model versions and their associated artifacts.
@@ -147,12 +147,12 @@ The "deployment" directory within the Financial Inclusion Platforms repository h
 ```plaintext
 deployment/
 │
-├── model_deployment_script.py       # Script for deploying the trained model, handling inputs & outputs
-├── environment_setup.sh             # Shell script for setting up the deployment environment
+├── model_deployment_script.py       ## Script for deploying the trained model, handling inputs & outputs
+├── environment_setup.sh             ## Shell script for setting up the deployment environment
 │
-├── deployment_config.yaml           # Configuration file for deployment settings and environment variables
-├── requirements.txt                 # Libraries and dependencies required for model deployment
-├── README.md                        # Instructions for deploying and managing the trained models
+├── deployment_config.yaml           ## Configuration file for deployment settings and environment variables
+├── requirements.txt                 ## Libraries and dependencies required for model deployment
+├── README.md                        ## Instructions for deploying and managing the trained models
 ```
 
 The "model_deployment_script.py" file contains the script responsible for loading the trained model, handling input data, performing model inference, and providing output predictions. This script serves as the core component for integrating the trained model into the deployment environment, whether it's through an API endpoint, a batch processing system, or any other deployment mechanism.
@@ -170,36 +170,36 @@ By structuring the deployment directory in this manner, the essential artifacts,
 Certainly! Below is an example of a Python script for training a TensorFlow/Keras model for the Financial Inclusion Platforms using mock data. The file is named `train_model.py` and resides in the `models/training/` directory as shown in the previously defined file structure.
 
 ```python
-# File: models/training/train_model.py
+## File: models/training/train_model.py
 
 import tensorflow as tf
 from tensorflow import keras
 import numpy as np
 
-# Mock data generation (replace with actual data loading/preprocessing in real scenario)
+## Mock data generation (replace with actual data loading/preprocessing in real scenario)
 num_samples = 1000
 input_dim = 10
 output_dim = 1
 X_train = np.random.rand(num_samples, input_dim)
-y_train = np.random.randint(2, size=num_samples)  # Binary classification, replace with actual labels
+y_train = np.random.randint(2, size=num_samples)  ## Binary classification, replace with actual labels
 
-# Define the Keras model architecture
+## Define the Keras model architecture
 model = keras.Sequential([
     keras.layers.Dense(64, activation='relu', input_dim=input_dim),
     keras.layers.Dense(64, activation='relu'),
-    keras.layers.Dense(output_dim, activation='sigmoid')  # Output layer for binary classification
+    keras.layers.Dense(output_dim, activation='sigmoid')  ## Output layer for binary classification
 ])
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam',
-              loss='binary_crossentropy',  # Binary cross-entropy for binary classification
+              loss='binary_crossentropy',  ## Binary cross-entropy for binary classification
               metrics=['accuracy'])
 
-# Train the model
+## Train the model
 model.fit(X_train, y_train, epochs=10, batch_size=32, validation_split=0.2)
 
-# Save the trained model artifacts
-model.save('models/training/trained_model')  # Save the entire model
+## Save the trained model artifacts
+model.save('models/training/trained_model')  ## Save the entire model
 ```
 
 In this example, the script `train_model.py` initializes mock data for training, defines a simple feedforward neural network using Keras, compiles the model with optimizer and loss function, and trains the model on the mock data. After training, the script saves the trained model's artifacts in the `models/training/trained_model` directory.
@@ -211,20 +211,20 @@ Using the defined file path, the script is located at `models/training/train_mod
 For a complex machine learning algorithm using TensorFlow and Keras within the Financial Inclusion Platforms project, one can create a more intricate model, such as a deep neural network for a specific task. Below is an example of a Python script for a complex machine learning algorithm using mock data. The file is named `complex_model.py` and resides in the `src/models/` directory as shown in the previously defined file structure.
 
 ```python
-# File: src/models/complex_model.py
+## File: src/models/complex_model.py
 
 import tensorflow as tf
 from tensorflow import keras
 import numpy as np
 
-# Mock data generation (replace with actual data loading/preprocessing in real scenario)
+## Mock data generation (replace with actual data loading/preprocessing in real scenario)
 num_samples = 1000
 input_dim = 20
 output_dim = 3
 X_train = np.random.rand(num_samples, input_dim)
-y_train = np.random.randint(3, size=num_samples)  # Multiclass classification, replace with actual labels
+y_train = np.random.randint(3, size=num_samples)  ## Multiclass classification, replace with actual labels
 
-# Define a complex deep learning model using Keras
+## Define a complex deep learning model using Keras
 model = keras.Sequential([
     keras.layers.Dense(128, activation='relu', input_dim=input_dim),
     keras.layers.BatchNormalization(),
@@ -232,19 +232,19 @@ model = keras.Sequential([
     keras.layers.Dropout(0.3),
     keras.layers.Dense(128, activation='relu'),
     keras.layers.Dropout(0.2),
-    keras.layers.Dense(output_dim, activation='softmax')  # Output layer for multiclass classification
+    keras.layers.Dense(output_dim, activation='softmax')  ## Output layer for multiclass classification
 ])
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam',
-              loss='sparse_categorical_crossentropy',  # Sparse categorical cross-entropy for multiclass classification
+              loss='sparse_categorical_crossentropy',  ## Sparse categorical cross-entropy for multiclass classification
               metrics=['accuracy'])
 
-# Train the model
+## Train the model
 model.fit(X_train, y_train, epochs=20, batch_size=64, validation_split=0.2)
 
-# Save the trained model artifacts
-model.save('src/models/trained_complex_model')  # Save the entire model
+## Save the trained model artifacts
+model.save('src/models/trained_complex_model')  ## Save the entire model
 ```
 
 In this example, the script `complex_model.py` defines a more complex deep learning model, including layers for batch normalization, dropout, and a softmax output layer for multiclass classification. The model is trained and then the trained model artifacts are saved in the `src/models/trained_complex_model` directory.

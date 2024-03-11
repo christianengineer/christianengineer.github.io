@@ -230,25 +230,25 @@ from tensorflow import keras
 from tensorflow.keras.layers import Dense
 from tensorflow.keras.models import Sequential
 
-# Mock data for transit demand prediction model training
+## Mock data for transit demand prediction model training
 num_samples = 1000
 num_features = 5
 X_train = np.random.rand(num_samples, num_features)
 y_train = np.random.rand(num_samples)
 
-# Define and compile the Keras model
+## Define and compile the Keras model
 model = Sequential([
     Dense(64, activation='relu', input_shape=(num_features,)),
     Dense(64, activation='relu'),
-    Dense(1)  # Output layer for regression
+    Dense(1)  ## Output layer for regression
 ])
 
 model.compile(optimizer='adam', loss='mean_squared_error')
 
-# Train the model
+## Train the model
 model.fit(X_train, y_train, epochs=10, batch_size=32)
 
-# Save the trained model
+## Save the trained model
 model.save('trained_models/transit_demand_prediction_model.h5')
 ```
 
@@ -271,7 +271,7 @@ from tensorflow.keras.layers import Input, Dense, LSTM, Embedding, Dropout, conc
 from tensorflow.keras.models import Model
 from tensorflow.keras.optimizers import Adam
 
-# Mock data for training the complex machine learning model
+## Mock data for training the complex machine learning model
 num_samples = 1000
 num_features_transit = 10
 num_features_weather = 5
@@ -279,7 +279,7 @@ transit_data = np.random.rand(num_samples, num_features_transit)
 weather_data = np.random.rand(num_samples, num_features_weather)
 target_variable = np.random.rand(num_samples)
 
-# Define the architecture of the complex machine learning model
+## Define the architecture of the complex machine learning model
 input_transit = Input(shape=(num_features_transit,), name='transit_input')
 dense_transit = Dense(64, activation='relu')(input_transit)
 
@@ -294,10 +294,10 @@ output_layer = Dense(1, name='output')(dropout_layer)
 model = Model(inputs=[input_transit, input_weather], outputs=output_layer)
 model.compile(optimizer=Adam(lr=0.001), loss='mean_squared_error')
 
-# Train the complex machine learning model
+## Train the complex machine learning model
 model.fit({'transit_input': transit_data, 'weather_input': weather_data}, target_variable, epochs=10, batch_size=32)
 
-# Save the trained model
+## Save the trained model
 model.save('trained_models/complex_model.h5')
 ```
 

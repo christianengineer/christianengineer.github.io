@@ -5,17 +5,17 @@ permalink: posts/understanding-machine-learning-deep-learning-concepts
 layout: article
 ---
 
-# Machine Learning and Deep Learning Concepts
+## Machine Learning and Deep Learning Concepts
 
 Machine Learning (ML) and Deep Learning (DL) are two advanced technologies currently driving the artificial intelligence (AI) revolution. Simply put, ML is a subset of AI that involves teaching machines how to learn from data, while DL is a specialized subset of ML that employs layered neural networks to simulate human decision-making. These technologies hold tremendous potential in various domains, from healthcare to finance, from commerce to transportation.
 
 **Table of Contents**
 
-1. [Understanding Machine Learning](#Understanding-Machine-Learning)
-2. [Supervised, Unsupervised and Reinforcement Learning](#Supervised,-Unsupervised-and-Reinforcement-Learning)
-3. [Deep Learning Concepts](#Deep-Learning-Concepts)
-4. [Neural Networks](#Neural-Networks)
-5. [Convolutional Neural Networks](#Convolutional-Neural-Networks)
+1. [Understanding Machine Learning](## nderstanding-Machine-Learning)
+2. [Supervised, Unsupervised and Reinforcement Learning](## upervised,-Unsupervised-and-Reinforcement-Learning)
+3. [Deep Learning Concepts](## eep-Learning-Concepts)
+4. [Neural Networks](## eural-Networks)
+5. [Convolutional Neural Networks](## onvolutional-Neural-Networks)
 
 ## Understanding Machine Learning
 
@@ -37,15 +37,15 @@ Here's a simple Python example using `scikit-learn` library's `LinearRegression`
 from sklearn.linear_model import LinearRegression
 from sklearn.datasets import make_regression
 
-# generate a 2D dataset
+## generate a 2D dataset
 data = make_regression(n_samples=100, n_features=1, noise=0.1)
 x, y = data
 
-# train a linear regression model
+## train a linear regression model
 model = LinearRegression()
 model.fit(x, y)
 
-# making prediction
+## making prediction
 y_pred = model.predict(x)
 ```
 
@@ -73,13 +73,13 @@ One of the popular Python libraries for deep learning is `TensorFlow`. Here's a 
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
 
-# create model
+## create model
 model = Sequential()
 model.add(Dense(12, input_dim=8, activation='relu'))
 model.add(Dense(8, activation='relu'))
 model.add(Dense(1, activation='sigmoid'))
 
-# Compile model
+## Compile model
 model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
 ```
 

@@ -5,7 +5,7 @@ permalink: posts/online-review-sentiment-analyzer-for-peru-restaurants-bert-gpt-
 layout: article
 ---
 
-# Machine Learning Online Review Sentiment Analyzer for Peru Restaurants
+## Machine Learning Online Review Sentiment Analyzer for Peru Restaurants
 
 ## Overview
 The Online Review Sentiment Analyzer for Peru Restaurants leverages cutting-edge machine learning algorithms such as BERT, GPT-3, Kafka, and Docker to extract insights from online reviews. It identifies areas for improvement and highlights strengths of restaurants based on the sentiment analysis of the reviews.
@@ -51,7 +51,7 @@ The Online Review Sentiment Analyzer for Peru Restaurants leverages cutting-edge
 
 By following these strategies and utilizing the mentioned tools and libraries, the Online Review Sentiment Analyzer for Peru Restaurants can effectively analyze online reviews, provide valuable insights, and help improve customer satisfaction and restaurant performance.
 
-# Feature Engineering and Metadata Management for Online Review Sentiment Analyzer
+## Feature Engineering and Metadata Management for Online Review Sentiment Analyzer
 
 ## Feature Engineering
 Feature engineering plays a crucial role in enhancing both the interpretability of data and the performance of machine learning models for the Online Review Sentiment Analyzer project. The following strategies can be implemented:
@@ -90,7 +90,7 @@ Effective metadata management ensures that relevant information is utilized in t
 
 By focusing on feature engineering techniques such as text and sentiment features, along with effective metadata management strategies, the Online Review Sentiment Analyzer project can enhance both the interpretability of data and the performance of the machine learning model. This comprehensive approach will enable better analysis of online reviews and provide actionable insights for restaurant owners and managers.
 
-# Data Collection Tools and Integration Strategies for Online Review Sentiment Analyzer
+## Data Collection Tools and Integration Strategies for Online Review Sentiment Analyzer
 
 ## Data Collection Tools
 Efficient data collection is essential for the success of the Online Review Sentiment Analyzer project. The following tools and methods can be employed to collect data covering all relevant aspects of the problem domain:
@@ -128,7 +128,7 @@ Integrating these data collection tools within the existing technology stack can
 
 By incorporating these data collection tools and integration strategies within the existing technology stack, the Online Review Sentiment Analyzer project can efficiently gather comprehensive review data, ensure data accessibility and consistency, and streamline the data collection process for analysis and model training. This approach will enable the project to leverage diverse data sources and deliver robust sentiment analysis insights for Peru Restaurants.
 
-# Data Challenges and Preprocessing Strategies for Online Review Sentiment Analyzer
+## Data Challenges and Preprocessing Strategies for Online Review Sentiment Analyzer
 
 ## Specific Data Challenges
 The Online Review Sentiment Analyzer project faces unique data challenges that could impact the quality and performance of machine learning models:
@@ -181,51 +181,51 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from imblearn.over_sampling import SMOTE
 from sklearn.model_selection import train_test_split
 
-# Load and preprocess data
+## Load and preprocess data
 def preprocess_data(data):
-    # Text cleaning
+    ## Text cleaning
     data['review_text'] = data['review_text'].apply(lambda x: clean_text(x))
     
-    # Balancing sentiment labels using SMOTE
+    ## Balancing sentiment labels using SMOTE
     X = data['review_text']
     y = data['sentiment_label']
     smote = SMOTE(random_state=42)
     X_resampled, y_resampled = smote.fit_resample(X.values.reshape(-1, 1), y)
     
-    # Feature engineering - TF-IDF
+    ## Feature engineering - TF-IDF
     tfidf_vectorizer = TfidfVectorizer(stop_words='english')
     X_tfidf = tfidf_vectorizer.fit_transform(X_resampled.reshape(-1))
     
     return X_tfidf, y_resampled
 
-# Text cleaning function
+## Text cleaning function
 def clean_text(text):
-    # Convert text to lowercase
+    ## Convert text to lowercase
     text = text.lower()
-    # Remove special characters, numbers, and extra whitespaces
+    ## Remove special characters, numbers, and extra whitespaces
     text = re.sub(r'[^a-zA-Z\s]', '', text)
-    # Tokenize text
+    ## Tokenize text
     tokens = word_tokenize(text)
-    # Remove stopwords
+    ## Remove stopwords
     tokens = [word for word in tokens if word not in stopwords.words('english')]
-    # Lemmatize words
+    ## Lemmatize words
     lemmatizer = WordNetLemmatizer()
     tokens = [lemmatizer.lemmatize(word) for word in tokens]
-    # Join tokens back into text
+    ## Join tokens back into text
     cleaned_text = ' '.join(tokens)
     
     return cleaned_text
 
-# Load data
+## Load data
 data = pd.read_csv('restaurant_reviews.csv')
 
-# Preprocess data
+## Preprocess data
 X_processed, y_processed = preprocess_data(data)
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X_processed, y_processed, test_size=0.2, random_state=42)
 
-# Save preprocessed data
+## Save preprocessed data
 np.save('X_train.npy', X_train)
 np.save('X_test.npy', X_test)
 np.save('y_train.npy', y_train)
@@ -234,7 +234,7 @@ np.save('y_test.npy', y_test)
 
 This production-ready code snippet performs data preprocessing for the Online Review Sentiment Analyzer project, including text cleaning, sentiment label balancing using SMOTE, TF-IDF feature engineering, and data splitting for model training and testing. The code also saves the preprocessed data into numpy files for further model development and deployment. Make sure to adapt the code to your specific dataset and requirements before execution.
 
-# Modeling Strategy for Online Review Sentiment Analyzer
+## Modeling Strategy for Online Review Sentiment Analyzer
 
 ## Recommended Modeling Strategy
 Given the unique challenges and data characteristics of the Online Review Sentiment Analyzer project, a hybrid modeling approach combining deep learning and ensemble learning techniques is well-suited to achieve accurate sentiment analysis results. Specifically, the strategy involves the following steps:
@@ -378,28 +378,28 @@ import numpy as np
 from sklearn.ensemble import GradientBoostingClassifier
 from joblib import dump
 
-# Load preprocessed data
+## Load preprocessed data
 X_train = np.load('X_train.npy')
 y_train = np.load('y_train.npy')
 
-# Train the Gradient Boosting model
+## Train the Gradient Boosting model
 model = GradientBoostingClassifier()
 model.fit(X_train, y_train)
 
-# Save the trained model
+## Save the trained model
 dump(model, 'sentiment_analysis_model.joblib')
 
-# Function to load and predict with the trained model
+## Function to load and predict with the trained model
 def predict_sentiment(review_text):
-    preprocessed_review = preprocess_text(review_text)  # Assume preprocess_text function is defined
-    vectorized_review = tfidf_vectorizer.transform([preprocessed_review])  # Assume tfidf_vectorizer is defined
+    preprocessed_review = preprocess_text(review_text)  ## Assume preprocess_text function is defined
+    vectorized_review = tfidf_vectorizer.transform([preprocessed_review])  ## Assume tfidf_vectorizer is defined
     prediction = model.predict(vectorized_review)
     return prediction[0]
 
-# Sample review for prediction
+## Sample review for prediction
 sample_review = "The food was amazing and the service was exceptional!"
 
-# Make a prediction using the trained model
+## Make a prediction using the trained model
 prediction = predict_sentiment(sample_review)
 print(f"Predicted sentiment for the sample review: {prediction}")
 ```
@@ -481,28 +481,28 @@ By following this step-by-step deployment plan and utilizing the recommended too
 Here is a sample Dockerfile optimized for deploying the Online Review Sentiment Analyzer project with a focus on performance and scalability:
 
 ```dockerfile
-# Use a base image with Python and required dependencies
+## Use a base image with Python and required dependencies
 FROM python:3.8-slim
 
-# Set the working directory in the container
+## Set the working directory in the container
 WORKDIR /app
 
-# Copy the requirements file and install dependencies
+## Copy the requirements file and install dependencies
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the preprocessed data and model
+## Copy the preprocessed data and model
 COPY X_train.npy .
 COPY y_train.npy .
 COPY sentiment_analysis_model.joblib .
 
-# Copy the Python script for model prediction
+## Copy the Python script for model prediction
 COPY predict_sentiment.py .
 
-# Expose the port for the FastAPI application
+## Expose the port for the FastAPI application
 EXPOSE 8000
 
-# Command to run the FastAPI application for serving model predictions
+## Command to run the FastAPI application for serving model predictions
 CMD ["uvicorn", "predict_sentiment:app", "--host", "0.0.0.0", "--port", "8000"]
 ```
 

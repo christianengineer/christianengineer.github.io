@@ -5,7 +5,7 @@ permalink: posts/text-summarization-with-deep-learning-develop-a-text-summarizat
 layout: article
 ---
 
-# AI Text Summarization with Deep Learning
+## AI Text Summarization with Deep Learning
 
 ## Objectives
 The objectives of the AI text summarization tool using deep learning repository are to:
@@ -75,7 +75,7 @@ Building a scalable and efficient infrastructure for the text summarization tool
 
 By carefully designing and implementing this infrastructure, the text summarization tool using deep learning can effectively handle large-scale text processing and provide reliable, scalable, and secure services to users and applications.
 
-# Scalable File Structure for Text Summarization with Deep Learning Repository
+## Scalable File Structure for Text Summarization with Deep Learning Repository
 
 A well-organized file structure is crucial for the maintainability and scalability of the repository. Below is a scalable file structure for the text summarization with deep learning repository:
 
@@ -219,18 +219,18 @@ Sure, below is a Python function that represents a complex machine learning algo
 import os
 
 def text_summarization_with_deep_learning(input_text):
-    # Replace this with actual deep learning model for text summarization
+    ## Replace this with actual deep learning model for text summarization
     mock_summary = "This is a mock summary of the input text. It demonstrates the summarization result using deep learning."
 
-    # Create a directory for results if it does not exist
+    ## Create a directory for results if it does not exist
     results_directory = 'results'
     if not os.path.exists(results_directory):
         os.makedirs(results_directory)
 
-    # Define file path for saving the summarization result
+    ## Define file path for saving the summarization result
     result_file_path = os.path.join(results_directory, 'summarized_text.txt')
 
-    # Save the summarization result to a file
+    ## Save the summarization result to a file
     with open(result_file_path, 'w') as file:
         file.write(mock_summary)
 
@@ -252,25 +252,25 @@ Certainly! Below is a Python function that represents a complex deep learning al
 import os
 
 def deep_learning_text_summarization(input_text):
-    # Replace this with actual deep learning model for text summarization
-    # Here, we use a placeholder function to generate a mock summary
+    ## Replace this with actual deep learning model for text summarization
+    ## Here, we use a placeholder function to generate a mock summary
     def placeholder_deep_learning_model(input_text):
-        # Placeholder logic for generating a mock summary
+        ## Placeholder logic for generating a mock summary
         mock_summary = "This is a mock summary of the input text using a deep learning model."
         return mock_summary
 
-    # Generate summary using the deep learning model
+    ## Generate summary using the deep learning model
     summary = placeholder_deep_learning_model(input_text)
 
-    # Create a directory for results if it does not exist
+    ## Create a directory for results if it does not exist
     results_directory = 'results'
     if not os.path.exists(results_directory):
         os.makedirs(results_directory)
 
-    # Define file path for saving the summarization result
+    ## Define file path for saving the summarization result
     result_file_path = os.path.join(results_directory, 'summarized_text.txt')
 
-    # Save the summarization result to a file
+    ## Save the summarization result to a file
     with open(result_file_path, 'w') as file:
         file.write(summary)
 

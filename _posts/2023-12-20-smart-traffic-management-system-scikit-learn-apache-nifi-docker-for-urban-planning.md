@@ -139,28 +139,28 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
 import joblib
 
-# Load mock traffic flow data from a CSV file
+## Load mock traffic flow data from a CSV file
 data_file = 'data/raw/traffic_data.csv'
 traffic_data = pd.read_csv(data_file)
 
-# Perform feature engineering and preprocessing
-# ...
+## Perform feature engineering and preprocessing
+## ...
 
-# Split the data into features and target variable
+## Split the data into features and target variable
 X = traffic_data.drop(['target_column'], axis=1)
 y = traffic_data['target_column']
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Train a random forest regressor model
+## Train a random forest regressor model
 model = RandomForestRegressor(n_estimators=100, random_state=42)
 model.fit(X_train, y_train)
 
-# Evaluate the model
-# ...
+## Evaluate the model
+## ...
 
-# Save the trained model to a file
+## Save the trained model to a file
 model_file = 'models/trained_models/traffic_flow_prediction.pkl'
 joblib.dump(model, model_file)
 ```
@@ -178,28 +178,28 @@ from sklearn.ensemble import GradientBoostingRegressor
 from sklearn.model_selection import train_test_split
 import joblib
 
-# Load mock traffic flow data from a CSV file
+## Load mock traffic flow data from a CSV file
 data_file = 'data/raw/traffic_data.csv'
 traffic_data = pd.read_csv(data_file)
 
-# Feature engineering and data preprocessing
-# ...
+## Feature engineering and data preprocessing
+## ...
 
-# Split the data into features and target variable
+## Split the data into features and target variable
 X = traffic_data.drop(['target_column'], axis=1)
 y = traffic_data['target_column']
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Train a Gradient Boosting Regressor model
+## Train a Gradient Boosting Regressor model
 model = GradientBoostingRegressor(n_estimators=100, learning_rate=0.1, max_depth=3, random_state=42)
 model.fit(X_train, y_train)
 
-# Evaluate the model
-# ...
+## Evaluate the model
+## ...
 
-# Save the trained model to a file
+## Save the trained model to a file
 model_file = 'models/trained_models/complex_traffic_flow_prediction_model.pkl'
 joblib.dump(model, model_file)
 ```

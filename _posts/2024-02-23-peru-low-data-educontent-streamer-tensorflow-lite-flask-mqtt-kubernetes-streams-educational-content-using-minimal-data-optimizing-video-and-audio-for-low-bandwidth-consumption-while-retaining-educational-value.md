@@ -202,19 +202,19 @@ These deployment files in the `deployment/` directory are essential for setting 
 ### `train_model.py` for Peru Low-Data EduContent Streamer:
 
 ```python
-# train_model.py
+## train_model.py
 
 import tensorflow as tf
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense
 
-# Define and train the video optimization model using mock data
+## Define and train the video optimization model using mock data
 def train_video_optimization_model():
-    # Load and preprocess mock video data
-    X_train_video = ... # Load mock video data
-    y_train_video = ... # Define target video optimization labels
+    ## Load and preprocess mock video data
+    X_train_video = ... ## Load mock video data
+    y_train_video = ... ## Define target video optimization labels
 
-    # Define a simple convolutional neural network model
+    ## Define a simple convolutional neural network model
     model = Sequential([
         Conv2D(32, (3, 3), activation='relu', input_shape=(64, 64, 3)),
         MaxPooling2D((2, 2)),
@@ -222,16 +222,16 @@ def train_video_optimization_model():
         MaxPooling2D((2, 2)),
         Flatten(),
         Dense(64, activation='relu'),
-        Dense(3, activation='softmax')  # Adjust output nodes based on target labels
+        Dense(3, activation='softmax')  ## Adjust output nodes based on target labels
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
 
-    # Train the model
+    ## Train the model
     model.fit(X_train_video, y_train_video, epochs=10, batch_size=32)
 
-    # Save the trained model for video optimization
+    ## Save the trained model for video optimization
     model.save('models/tensorflow_lite_models/video_optimization_model.h5')
 
 if __name__ == '__main__':
@@ -249,33 +249,33 @@ if __name__ == '__main__':
 ### File for Complex Machine Learning Algorithm in Peru Low-Data EduContent Streamer:
 
 ```python
-# complex_algorithm.py
+## complex_algorithm.py
 
 import tensorflow as tf
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import LSTM, Dense
 
-# Define and train a complex LSTM-based machine learning algorithm using mock data
+## Define and train a complex LSTM-based machine learning algorithm using mock data
 def train_complex_algorithm():
-    # Load and preprocess mock audio data
-    X_train_audio = ... # Load mock audio data
-    y_train_audio = ... # Define target audio optimization labels
+    ## Load and preprocess mock audio data
+    X_train_audio = ... ## Load mock audio data
+    y_train_audio = ... ## Define target audio optimization labels
 
-    # Define a complex LSTM model for audio optimization
+    ## Define a complex LSTM model for audio optimization
     model = Sequential([
         LSTM(128, input_shape=(X_train_audio.shape[1], X_train_audio.shape[2])),
         Dense(64, activation='relu'),
         Dense(32, activation='relu'),
-        Dense(3, activation='softmax')  # Adjust output nodes based on target labels
+        Dense(3, activation='softmax')  ## Adjust output nodes based on target labels
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
 
-    # Train the model
+    ## Train the model
     model.fit(X_train_audio, y_train_audio, epochs=20, batch_size=64)
 
-    # Save the trained model for audio optimization
+    ## Save the trained model for audio optimization
     model.save('models/tensorflow_lite_models/audio_optimization_model.h5')
 
 if __name__ == '__main__':

@@ -5,7 +5,7 @@ permalink: posts/azure-cloud-solutions-ai-technology-guide
 layout: article
 ---
 
-# Azure Cloud Solutions for Artificial Intelligence
+## Azure Cloud Solutions for Artificial Intelligence
 
 Azure is a cloud computing service offered by Microsoft with an array of database, analytics, and AI services. Azure AI solutions cater to various business needs, such as analytics, machine learning, knowledge mining, and AI apps & agents. Powered with flexible infrastructure, robust security, and integrated tools, Azure AI offers comprehensive solutions for building and deploying AI models. This article explores various AI offerings provided by Azure, detailing their functionalities and applications.
 

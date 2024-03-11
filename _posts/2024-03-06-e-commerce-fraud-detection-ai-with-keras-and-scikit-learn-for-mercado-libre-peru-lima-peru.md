@@ -5,7 +5,7 @@ permalink: posts/e-commerce-fraud-detection-ai-with-keras-and-scikit-learn-for-m
 layout: article
 ---
 
-# E-commerce Fraud Detection AI for Mercado Libre Peru
+## E-commerce Fraud Detection AI for Mercado Libre Peru
 
 ## Objective:
 Implement a real-time fraud detection system to reduce financial losses and protect users by accurately identifying and preventing online fraud in the E-commerce platform.
@@ -222,39 +222,39 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
 from imblearn.over_sampling import SMOTE
 
-# Load the raw data
+## Load the raw data
 data = pd.read_csv("data.csv")
 
-# Separate features and target variable
+## Separate features and target variable
 X = data.drop('fraudulent', axis=1)
 y = data['fraudulent']
 
-# Split data into train and test sets
+## Split data into train and test sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Step 1: Handle Missing Values
-# Impute missing values with mean for numerical features and mode for categorical features
+## Step 1: Handle Missing Values
+## Impute missing values with mean for numerical features and mode for categorical features
 X_train.fillna(X_train.mean(), inplace=True)
 X_test.fillna(X_train.mean(), inplace=True)
 
-# Step 2: Handle Categorical Variables
-# Perform one-hot encoding to convert categorical variables into numerical representations
+## Step 2: Handle Categorical Variables
+## Perform one-hot encoding to convert categorical variables into numerical representations
 encoder = OneHotEncoder(handle_unknown='ignore')
 X_train_encoded = pd.get_dummies(X_train, columns=['device_type', 'ip_country'])
 X_test_encoded = pd.get_dummies(X_test, columns=['device_type', 'ip_country'])
 
-# Step 3: Feature Scaling
-# Normalize numerical features to ensure all features are on the same scale
+## Step 3: Feature Scaling
+## Normalize numerical features to ensure all features are on the same scale
 scaler = StandardScaler()
 X_train_scaled = scaler.fit_transform(X_train_encoded)
 X_test_scaled = scaler.transform(X_test_encoded)
 
-# Step 4: Handle Imbalanced Data
-# Use SMOTE to oversample the minority class to balance the data
+## Step 4: Handle Imbalanced Data
+## Use SMOTE to oversample the minority class to balance the data
 smote = SMOTE()
 X_train_balanced, y_train_balanced = smote.fit_resample(X_train_scaled, y_train)
 
-# Output processed data for model training
+## Output processed data for model training
 X_train_balanced.to_csv("X_train_processed.csv", index=False)
 y_train_balanced.to_csv("y_train_processed.csv", index=False)
 X_test_scaled.to_csv("X_test_processed.csv", index=False)
@@ -342,10 +342,10 @@ import pandas as pd
 import numpy as np
 from faker import Faker
 
-# Initialize Faker for synthesizing fake data
+## Initialize Faker for synthesizing fake data
 fake = Faker()
 
-# Generate synthetic data for the dataset
+## Generate synthetic data for the dataset
 num_records = 10000
 
 data = {
@@ -361,13 +361,13 @@ data = {
     'fraudulent': np.random.choice([0, 1], num_records)
 }
 
-# Create a DataFrame
+## Create a DataFrame
 df = pd.DataFrame(data)
 
-# Introduce variability in the fraudulent flag for a realistic dataset
+## Introduce variability in the fraudulent flag for a realistic dataset
 df.loc[df['fraudulent'] == 1, 'fraudulent'] = np.random.choice([1, 0], len(df[df['fraudulent'] == 1]), p=[0.1, 0.9])
 
-# Save the generated dataset to a CSV file
+## Save the generated dataset to a CSV file
 df.to_csv('synthetic_data.csv', index=False)
 ```
 
@@ -418,25 +418,25 @@ from sklearn.model_selection import train_test_split
 from xgboost import XGBClassifier
 from sklearn.metrics import classification_report
 
-# Load preprocessed data
+## Load preprocessed data
 X_train = pd.read_csv("X_train_processed.csv")
 y_train = pd.read_csv("y_train_processed.csv")
 X_test = pd.read_csv("X_test_processed.csv")
 y_test = pd.read_csv("y_test_processed.csv")
 
-# Initialize XGBoost model
+## Initialize XGBoost model
 model = XGBClassifier(random_state=42)
 
-# Train the model
+## Train the model
 model.fit(X_train, y_train)
 
-# Make predictions on the test set
+## Make predictions on the test set
 y_pred = model.predict(X_test)
 
-# Evaluate model performance
+## Evaluate model performance
 print(classification_report(y_test, y_pred))
 
-# Save the trained model for deployment
+## Save the trained model for deployment
 model.save_model("fraud_detection_model.model")
 ```
 
@@ -510,25 +510,25 @@ By following this step-by-step deployment plan, utilizing the recommended tools 
 Here is a sample Dockerfile tailored for the deployment of the E-commerce Fraud Detection AI model, optimized for handling the project's performance needs and ensuring scalability:
 
 ```Dockerfile
-# Use a base Python image that includes necessary libraries
+## Use a base Python image that includes necessary libraries
 FROM python:3.9-slim
 
-# Set the working directory in the container
+## Set the working directory in the container
 WORKDIR /app
 
-# Copy the requirements file into the container
+## Copy the requirements file into the container
 COPY requirements.txt .
 
-# Install required libraries
+## Install required libraries
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy all project files into the container
+## Copy all project files into the container
 COPY . .
 
-# Expose port for the API
+## Expose port for the API
 EXPOSE 5000
 
-# Command to run the API when the container launches
+## Command to run the API when the container launches
 CMD ["python", "app.py"]
 ```
 

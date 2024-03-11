@@ -200,11 +200,11 @@ import numpy as np
 from keras.models import Sequential
 from keras.layers import Dense
 
-# Mock data generation
-X_train = np.random.rand(100, 2)  # Mock features
-y_train = np.random.randint(0, 2, 100)  # Mock target
+## Mock data generation
+X_train = np.random.rand(100, 2)  ## Mock features
+y_train = np.random.randint(0, 2, 100)  ## Mock target
 
-# Define and train a Keras model
+## Define and train a Keras model
 model = Sequential()
 model.add(Dense(10, input_dim=2, activation='relu'))
 model.add(Dense(1, activation='sigmoid'))
@@ -212,7 +212,7 @@ model.add(Dense(1, activation='sigmoid'))
 model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
 model.fit(X_train, y_train, epochs=10, batch_size=10)
 
-# Save the trained model
+## Save the trained model
 model.save('models/keras_model/trained_model.h5')
 ```
 
@@ -228,11 +228,11 @@ import tensorflow as tf
 from tensorflow.keras.layers import Input, Dense
 from tensorflow.keras.models import Model
 
-# Mock data generation
-X_train = np.random.rand(100, 5)  # Mock features with 5 dimensions
-y_train = np.random.randint(0, 2, 100)  # Mock binary target variable
+## Mock data generation
+X_train = np.random.rand(100, 5)  ## Mock features with 5 dimensions
+y_train = np.random.randint(0, 2, 100)  ## Mock binary target variable
 
-# Define a complex TensorFlow model
+## Define a complex TensorFlow model
 inputs = Input(shape=(5,))
 hidden1 = Dense(20, activation='relu')(inputs)
 hidden2 = Dense(10, activation='relu')(hidden1)
@@ -241,10 +241,10 @@ output = Dense(1, activation='sigmoid')(hidden2)
 model = Model(inputs=inputs, outputs=output)
 model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
 
-# Train the complex model
+## Train the complex model
 model.fit(X_train, y_train, epochs=10, batch_size=10)
 
-# Save the trained model
+## Save the trained model
 model.save('models/tensorflow_model/trained_model')
 ```
 

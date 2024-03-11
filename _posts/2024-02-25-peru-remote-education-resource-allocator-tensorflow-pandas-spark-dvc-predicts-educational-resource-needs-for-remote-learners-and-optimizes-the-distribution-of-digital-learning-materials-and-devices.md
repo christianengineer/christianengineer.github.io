@@ -5,7 +5,7 @@ permalink: posts/peru-remote-education-resource-allocator-tensorflow-pandas-spar
 layout: article
 ---
 
-# AI Peru Remote Education Resource Allocator
+## AI Peru Remote Education Resource Allocator
 
 ## Objectives
 - Predict educational resource needs for remote learners
@@ -26,7 +26,7 @@ layout: article
 3. **Spark**: For distributed computing to handle large-scale data processing and model deployment for optimization.
 4. **DVC (Data Version Control)**: For versioning data and models, enabling collaboration and reproducibility in the development process.
 
-# MLOps Infrastructure for AI Peru Remote Education Resource Allocator
+## MLOps Infrastructure for AI Peru Remote Education Resource Allocator
 
 ## Data Pipeline
 1. **Data Ingestion**: Collect data on remote learners, resource usage, and curriculum requirements.
@@ -50,7 +50,7 @@ layout: article
 
 By incorporating these MLOps practices and leveraging the specified tools (TensorFlow, Pandas, Spark, DVC), the AI Peru Remote Education Resource Allocator can effectively predict educational resource needs and optimize distribution for remote learners in a scalable and efficient manner.
 
-# Scalable File Structure for AI Peru Remote Education Resource Allocator
+## Scalable File Structure for AI Peru Remote Education Resource Allocator
 
 - **data/**
   - Contains raw and processed data for the remote learners and educational resources.
@@ -99,7 +99,7 @@ By incorporating these MLOps practices and leveraging the specified tools (Tenso
 
 This file structure is designed to organize different components of the AI Peru Remote Education Resource Allocator project, making it easy to navigate, maintain, and scale as the application evolves.
 
-# Models Directory for AI Peru Remote Education Resource Allocator
+## Models Directory for AI Peru Remote Education Resource Allocator
 
 - **models/**
   - Contains trained machine learning models for predicting resource needs and optimizing distribution.
@@ -120,7 +120,7 @@ In the *models/* directory, we organize the trained machine learning models for 
 
 The *README.md* file provides documentation on the models, their usage, required data format, and any additional instructions for incorporating them into the application workflow. This structure ensures that models are stored, managed, and accessible for deployment and further development within the project.
 
-# Deployment Directory for AI Peru Remote Education Resource Allocator
+## Deployment Directory for AI Peru Remote Education Resource Allocator
 
 - **deployment/**
   - Contains files and scripts for deploying and scaling the AI application.
@@ -150,14 +150,14 @@ The *README.md* file serves as a guide for deploying the application, running Sp
 I'll provide a Python script for training a TensorFlow model for the Peru Remote Education Resource Allocator using mock data.
 
 ```python
-# File Path: src/model_training/train_model.py
+## File Path: src/model_training/train_model.py
 
 import pandas as pd
 import tensorflow as tf
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
-# Mock Data Generation
+## Mock Data Generation
 data = {
     'student_id': [1, 2, 3, 4, 5],
     'resource_usage': [0.7, 0.5, 0.3, 0.9, 0.6],
@@ -166,18 +166,18 @@ data = {
 }
 df = pd.DataFrame(data)
 
-# Feature and Target Split
+## Feature and Target Split
 X = df[['resource_usage', 'device_compatibility']]
 y = df['resource_need']
 
-# Data Preprocessing
+## Data Preprocessing
 scaler = StandardScaler()
 X_scaled = scaler.fit_transform(X)
 
-# Train-Test Split
+## Train-Test Split
 X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.2, random_state=42)
 
-# TensorFlow Model
+## TensorFlow Model
 model = tf.keras.Sequential([
     tf.keras.layers.Dense(2, activation='relu', input_shape=(2,)),
     tf.keras.layers.Dense(1)
@@ -185,14 +185,14 @@ model = tf.keras.Sequential([
 
 model.compile(optimizer='adam', loss='mean_squared_error')
 
-# Model Training
+## Model Training
 model.fit(X_train, y_train, epochs=50, verbose=1)
 
-# Evaluation
+## Evaluation
 loss = model.evaluate(X_test, y_test)
 print(f'Test Loss: {loss}')
 
-# Save trained model
+## Save trained model
 model.save('models/tensorflow_models/resource_prediction_model.h5')
 ```
 
@@ -205,7 +205,7 @@ In this script:
 You can save this script in the specified file path: `src/model_training/train_model.py`.
 
 ```python
-# File Path: src/model_training/train_complex_model.py
+## File Path: src/model_training/train_complex_model.py
 
 import pandas as pd
 from pyspark.sql import SparkSession
@@ -214,35 +214,35 @@ from pyspark.ml.regression import RandomForestRegressor
 from pyspark.ml.evaluation import RegressionEvaluator
 import dvc.api
 
-# Initialize Spark session
+## Initialize Spark session
 spark = SparkSession.builder.appName("ResourceAllocator").getOrCreate()
 
-# Mock Data Location using DVC
+## Mock Data Location using DVC
 data_url = dvc.api.get_url('data/mock_data.csv', repo='mock_data', rev='main')
 df = spark.read.csv(data_url, header=True, inferSchema=True)
 
-# Feature Engineering
+## Feature Engineering
 assembler = VectorAssembler(inputCols=['resource_usage', 'device_compatibility'], outputCol='features')
 data = assembler.transform(df)
 
-# Train-Test Split
+## Train-Test Split
 train_data, test_data = data.randomSplit([0.8, 0.2])
 
-# Random Forest Regressor
+## Random Forest Regressor
 rf = RandomForestRegressor(featuresCol='features', labelCol='resource_need')
 model = rf.fit(train_data)
 
-# Model Evaluation
+## Model Evaluation
 predictions = model.transform(test_data)
 evaluator = RegressionEvaluator(labelCol='resource_need', predictionCol='prediction', metricName='rmse')
 rmse = evaluator.evaluate(predictions)
 print(f'Root Mean Squared Error: {rmse}')
 
-# Save model and configuration
+## Save model and configuration
 model.save('models/tensorflow_models/distribution_optimization_model')
 model.write().overwrite().save('models/tensorflow_models/distribution_optimization_model')
 
-# Stop Spark session
+## Stop Spark session
 spark.stop()
 ```
 

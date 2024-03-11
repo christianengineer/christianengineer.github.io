@@ -56,41 +56,41 @@ A scalable file structure in the repository can help organize the code, configur
 ```plaintext
 automated-anomaly-detection/
 │
-├── docs/  # Documentation
-│   ├── design.md  # System design documentation
-│   ├── architecture.md  # MLOps infrastructure architecture
-│   └── user_guide.md  # User guide for the application
+├── docs/  ## Documentation
+│   ├── design.md  ## System design documentation
+│   ├── architecture.md  ## MLOps infrastructure architecture
+│   └── user_guide.md  ## User guide for the application
 │
-├── src/  # Source code
+├── src/  ## Source code
 │   ├── models/
-│   │   ├── anomaly_detection_model.py  # Anomaly detection model using Keras
-│   │   └── preprocessing.py  # Data preprocessing functions
+│   │   ├── anomaly_detection_model.py  ## Anomaly detection model using Keras
+│   │   └── preprocessing.py  ## Data preprocessing functions
 │   ├── data_processing/
-│   │   ├── kafka_ingestion.py  # Kafka data ingestion scripts
-│   │   └── data_quality_monitoring.py  # Data quality monitoring scripts
+│   │   ├── kafka_ingestion.py  ## Kafka data ingestion scripts
+│   │   └── data_quality_monitoring.py  ## Data quality monitoring scripts
 │   ├── infrastructure/
-│   │   ├── mlops_pipeline.yaml  # CI/CD pipeline configuration
-│   │   ├── kafka_config.json  # Configuration for Kafka setup
-│   │   └── prometheus_alert_rules.yaml  # Alert rules for Prometheus
-│   ├── app.py  # Main application logic integrating anomaly detection model with Kafka and Prometheus
+│   │   ├── mlops_pipeline.yaml  ## CI/CD pipeline configuration
+│   │   ├── kafka_config.json  ## Configuration for Kafka setup
+│   │   └── prometheus_alert_rules.yaml  ## Alert rules for Prometheus
+│   ├── app.py  ## Main application logic integrating anomaly detection model with Kafka and Prometheus
 │   └── utils/
-│       ├── logging.py  # Logging utilities
-│       └── security.py  # Security functions
+│       ├── logging.py  ## Logging utilities
+│       └── security.py  ## Security functions
 │
-├── tests/  # Unit tests and integration tests
+├── tests/  ## Unit tests and integration tests
 │   ├── test_anomaly_detection_model.py
 │   ├── test_data_processing.py
 │   ├── test_infrastructure.py
 │   └── test_integration.py
 │
-├── config/  # Configuration files
-│   ├── kafka_config_dev.json  # Development Kafka configuration
-│   ├── kafka_config_prod.json  # Production Kafka configuration
-│   └── prometheus_config.yml  # Prometheus configuration
+├── config/  ## Configuration files
+│   ├── kafka_config_dev.json  ## Development Kafka configuration
+│   ├── kafka_config_prod.json  ## Production Kafka configuration
+│   └── prometheus_config.yml  ## Prometheus configuration
 │
-├── requirements.txt  # Python dependencies
-├── LICENSE.md  # License information
-└── README.md  # Project overview and setup instructions
+├── requirements.txt  ## Python dependencies
+├── LICENSE.md  ## License information
+└── README.md  ## Project overview and setup instructions
 ```
 
 This file structure provides clear organization and separation of concerns, making it easier for developers to locate and work with specific components of the application. The structure incorporates directories for documentation, source code, tests, configuration files, and dependencies, promoting maintainability and collaboration.
@@ -104,8 +104,8 @@ The `models` directory in the Automated Anomaly Detection in Financial Transacti
 ```plaintext
 models/
 │
-├── anomaly_detection_model.py  # Anomaly detection model using Keras
-└── preprocessing.py  # Data preprocessing functions
+├── anomaly_detection_model.py  ## Anomaly detection model using Keras
+└── preprocessing.py  ## Data preprocessing functions
 ```
 
 ### `anomaly_detection_model.py`
@@ -116,7 +116,7 @@ This file contains the implementation of the anomaly detection model using Keras
 - Model Serialization: Functions for saving and loading trained model weights and architecture to facilitate model deployment and reusability.
 
 ```python
-# Sample structure of anomaly_detection_model.py
+## Sample structure of anomaly_detection_model.py
 
 import keras
 from keras.models import Sequential
@@ -124,25 +124,25 @@ from keras.layers import Dense, Activation
 
 def build_anomaly_detection_model(input_dim, hidden_layers, output_dim):
     model = Sequential()
-    # Add layers and activation functions
-    # ...
+    ## Add layers and activation functions
+    ## ...
     return model
 
 def train_anomaly_detection_model(model, X_train, y_train):
-    # Training process using Keras
-    # ...
+    ## Training process using Keras
+    ## ...
 
 def evaluate_model_performance(model, X_test, y_test):
-    # Evaluation of model performance using metrics
-    # ...
+    ## Evaluation of model performance using metrics
+    ## ...
 
 def save_model(model, model_path):
-    # Serialization of the trained model
-    # ...
+    ## Serialization of the trained model
+    ## ...
 
 def load_model(model_path):
-    # Loading the pre-trained model
-    # ...
+    ## Loading the pre-trained model
+    ## ...
 ```
 
 ### `preprocessing.py`
@@ -154,23 +154,23 @@ This file contains functions for data preprocessing and feature engineering requ
 - Data Splitting: Partitioning the dataset into training, validation, and testing subsets.
 
 ```python
-# Sample structure of preprocessing.py
+## Sample structure of preprocessing.py
 
 def clean_data(data):
-    # Data cleaning operations
-    # ...
+    ## Data cleaning operations
+    ## ...
 
 def scale_features(data):
-    # Feature scaling operations
-    # ...
+    ## Feature scaling operations
+    ## ...
 
 def engineer_features(data):
-    # Feature engineering operations
-    # ...
+    ## Feature engineering operations
+    ## ...
 
 def split_data(data, test_size):
-    # Data splitting into training, validation, and testing sets
-    # ...
+    ## Data splitting into training, validation, and testing sets
+    ## ...
 ```
 
 By maintaining these files within the `models` directory, the application ensures that the development and maintenance of the anomaly detection model are organized and easily accessible. This structure supports scalability, reusability, and collaboration among team members working on different aspects of the machine learning model.
@@ -180,20 +180,20 @@ The `deployment` directory is a critical component of the MLOps infrastructure f
 ```plaintext
 deployment/
 │
-├── mlops_pipeline.yaml  # CI/CD pipeline configuration
-├── kafka_config.json  # Configuration for Kafka setup
-├── prometheus_alert_rules.yaml  # Alert rules for Prometheus
+├── mlops_pipeline.yaml  ## CI/CD pipeline configuration
+├── kafka_config.json  ## Configuration for Kafka setup
+├── prometheus_alert_rules.yaml  ## Alert rules for Prometheus
 └── deploy_scripts/
-    ├── deploy_model.py  # Script for deploying the anomaly detection model
-    ├── kafka_integration.py  # Code for integrating with Kafka
-    └── prometheus_setup.py  # Script for setting up alerting rules in Prometheus
+    ├── deploy_model.py  ## Script for deploying the anomaly detection model
+    ├── kafka_integration.py  ## Code for integrating with Kafka
+    └── prometheus_setup.py  ## Script for setting up alerting rules in Prometheus
 ```
 
 ### `mlops_pipeline.yaml`
 This file contains the configuration for the CI/CD (Continuous Integration/Continuous Deployment) pipeline responsible for automating the model training, testing, and deployment process. It includes the definition of the steps, triggers, and integrations required to orchestrate the end-to-end pipeline for the anomaly detection model.
 
 ```yaml
-# Sample structure of mlops_pipeline.yaml
+## Sample structure of mlops_pipeline.yaml
 
 pipeline:
   - name: model_training
@@ -224,7 +224,7 @@ This JSON file contains the configuration settings for integrating the applicati
 This YAML file specifies the alert rules and conditions that will trigger alerts in Prometheus based on the metrics and thresholds defined for the anomaly detection system. It includes rules for detecting anomalies, model performance degradation, or infrastructure issues that may impact the fraud prevention application.
 
 ```yaml
-# Sample structure of prometheus_alert_rules.yaml
+## Sample structure of prometheus_alert_rules.yaml
 
 groups:
 - name: anomaly_detection_alerts
@@ -243,23 +243,23 @@ groups:
 This directory contains deployment scripts and code for integrating with Kafka and Prometheus. The scripts may include functionality for deploying the trained anomaly detection model, setting up data ingestion from Kafka, and configuring alerting rules in Prometheus.
 
 ```python
-# Sample structure of deploy_model.py
+## Sample structure of deploy_model.py
 
 def deploy_model(model_artifacts_path, deployment_server):
-    # Deployment script for the anomaly detection model
-    # ...
+    ## Deployment script for the anomaly detection model
+    ## ...
 
-# Sample structure of kafka_integration.py
+## Sample structure of kafka_integration.py
 
 def ingest_from_kafka(topic, kafka_config, data_processor):
-    # Script for consuming data from Kafka and processing it
-    # ...
+    ## Script for consuming data from Kafka and processing it
+    ## ...
 
-# Sample structure of prometheus_setup.py
+## Sample structure of prometheus_setup.py
 
 def setup_alert_rules(alert_rules_config, prometheus_endpoint):
-    # Script for configuring alerting rules in Prometheus
-    # ...
+    ## Script for configuring alerting rules in Prometheus
+    ## ...
 ```
 
 By maintaining these files and scripts within the `deployment` directory, the application ensures that the deployment, integration, and monitoring aspects are well-organized and readily accessible. This structure supports smooth CI/CD pipeline orchestration, seamless integration with Kafka for real-time data processing, and effective setup of alerting rules in Prometheus for proactive monitoring and incident response.
@@ -267,7 +267,7 @@ By maintaining these files and scripts within the `deployment` directory, the ap
 Certainly! Below is a sample file for training a model for the Automated Anomaly Detection in Financial Transactions application using mock data. This file demonstrates the training process for the anomaly detection model using Keras. For the purpose of this example, let's assume that the file is named `train_model.py` and is located in the `src` directory of the project:
 
 ```python
-# File: automated-anomaly-detection/src/train_model.py
+## File: automated-anomaly-detection/src/train_model.py
 
 import pandas as pd
 import numpy as np
@@ -277,45 +277,45 @@ from keras.models import Sequential
 from keras.layers import Dense
 from keras.optimizers import Adam
 
-# Load mock financial transactions data
+## Load mock financial transactions data
 data_path = "path_to_mock_data/financial_transactions.csv"
 data = pd.read_csv(data_path)
 
-# Perform data preprocessing
-# For the purpose of this example, assume that data preprocessing includes feature engineering and normalization
-# Example: 
-# data = perform_feature_engineering(data)
-# ...
+## Perform data preprocessing
+## For the purpose of this example, assume that data preprocessing includes feature engineering and normalization
+## Example: 
+## data = perform_feature_engineering(data)
+## ...
 
-# Define input features and target variable
+## Define input features and target variable
 X = data.drop(columns=['transaction_id', 'label_column'])
 y = data['label_column']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Feature scaling
+## Feature scaling
 scaler = StandardScaler()
 X_train = scaler.fit_transform(X_train)
 X_test = scaler.transform(X_test)
 
-# Build the anomaly detection model using Keras
+## Build the anomaly detection model using Keras
 model = Sequential()
 model.add(Dense(64, input_dim=X.shape[1], activation='relu'))
 model.add(Dense(32, activation='relu'))
 model.add(Dense(1, activation='sigmoid'))
 
-# Compile the model
+## Compile the model
 model.compile(loss='binary_crossentropy', optimizer=Adam(learning_rate=0.001), metrics=['accuracy'])
 
-# Train the model
+## Train the model
 model.fit(X_train, y_train, epochs=20, batch_size=32, validation_data=(X_test, y_test))
 
-# Evaluate model performance
+## Evaluate model performance
 loss, accuracy = model.evaluate(X_test, y_test)
 print(f'Model Evaluation - Loss: {loss}, Accuracy: {accuracy}')
 
-# Save the trained model
+## Save the trained model
 model.save("path_to_save_model/anomaly_detection_model.h5")
 ```
 
@@ -326,7 +326,7 @@ Remember to replace `"path_to_mock_data/financial_transactions.csv"` with the ac
 Certainly! Below is a sample file for a complex machine learning algorithm for the Automated Anomaly Detection in Financial Transactions application using mock data. This example demonstrates the implementation of a deep learning algorithm for anomaly detection using Keras and TensorFlow. For the purpose of this example, let's assume that the file is named `complex_ml_algorithm.py` and is located in the `src/models` directory of the project:
 
 ```python
-# File: automated-anomaly-detection/src/models/complex_ml_algorithm.py
+## File: automated-anomaly-detection/src/models/complex_ml_algorithm.py
 
 import pandas as pd
 import numpy as np
@@ -335,29 +335,29 @@ from sklearn.preprocessing import StandardScaler
 import tensorflow as tf
 from tensorflow.keras import layers, models, callbacks
 
-# Load mock financial transactions data
+## Load mock financial transactions data
 data_path = "path_to_mock_data/financial_transactions.csv"
 data = pd.read_csv(data_path)
 
-# Perform data preprocessing
-# For the purpose of this example, assume that data preprocessing includes feature engineering and normalization
-# Example: 
-# data = perform_feature_engineering(data)
-# ...
+## Perform data preprocessing
+## For the purpose of this example, assume that data preprocessing includes feature engineering and normalization
+## Example: 
+## data = perform_feature_engineering(data)
+## ...
 
-# Define input features and target variable
+## Define input features and target variable
 X = data.drop(columns=['transaction_id', 'label_column'])
 y = data['label_column']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Feature scaling
+## Feature scaling
 scaler = StandardScaler()
 X_train = scaler.fit_transform(X_train)
 X_test = scaler.transform(X_test)
 
-# Build a complex deep learning model for anomaly detection
+## Build a complex deep learning model for anomaly detection
 model = models.Sequential([
     layers.Dense(128, input_shape=(X.shape[1],), activation='relu'),
     layers.Dropout(0.5),
@@ -366,19 +366,19 @@ model = models.Sequential([
     layers.Dense(1, activation='sigmoid')
 ])
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
-# Train the model with early stopping
+## Train the model with early stopping
 early_stopping = callbacks.EarlyStopping(monitor='val_loss', patience=5, restore_best_weights=True)
 
 history = model.fit(X_train, y_train, epochs=50, batch_size=32, validation_data=(X_test, y_test), callbacks=[early_stopping])
 
-# Evaluate model performance
+## Evaluate model performance
 loss, accuracy = model.evaluate(X_test, y_test)
 print(f'Model Evaluation - Loss: {loss}, Accuracy: {accuracy}')
 
-# Save the trained model
+## Save the trained model
 model.save("path_to_save_model/complex_anomaly_detection_model.h5")
 ```
 

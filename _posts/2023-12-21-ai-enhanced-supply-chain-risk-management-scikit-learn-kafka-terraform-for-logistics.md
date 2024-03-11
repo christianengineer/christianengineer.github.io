@@ -144,33 +144,33 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
 import joblib
 
-# Load mock data (replace with actual data loading code)
+## Load mock data (replace with actual data loading code)
 data_path = 'data/mock_risk_data.csv'
 mock_data = pd.read_csv(data_path)
 
-# Preprocessing and feature engineering (replace with actual data preprocessing code)
+## Preprocessing and feature engineering (replace with actual data preprocessing code)
 X = mock_data[['feature1', 'feature2', 'feature3']]
 y = mock_data['risk_label']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize and train the logistic regression model
+## Initialize and train the logistic regression model
 model = LogisticRegression()
 model.fit(X_train, y_train)
 
-# Make predictions on the test set
+## Make predictions on the test set
 y_pred = model.predict(X_test)
 
-# Evaluate model performance
+## Evaluate model performance
 accuracy = accuracy_score(y_test, y_pred)
 print(f'Model accuracy: {accuracy:.2f}')
 
-# Save the trained model to a file
+## Save the trained model to a file
 model_output_path = 'models/trained_models/risk_prediction_model_v1.pkl'
 joblib.dump(model, model_output_path)
 
-# Additional metadata and versioning (create and save model metadata JSON file)
+## Additional metadata and versioning (create and save model metadata JSON file)
 metadata = {
     'model_type': 'Logistic Regression',
     'features': ['feature1', 'feature2', 'feature3'],
@@ -204,33 +204,33 @@ from sklearn.metrics import accuracy_score
 import joblib
 import json
 
-# Load mock data (replace with actual data loading code)
+## Load mock data (replace with actual data loading code)
 data_path = 'data/mock_risk_data.csv'
 mock_data = pd.read_csv(data_path)
 
-# Preprocessing and feature engineering (replace with actual data preprocessing code)
+## Preprocessing and feature engineering (replace with actual data preprocessing code)
 X = mock_data[['feature1', 'feature2', 'feature3']]
 y = mock_data['risk_label']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize and train the random forest classifier model
+## Initialize and train the random forest classifier model
 model = RandomForestClassifier(n_estimators=100, max_depth=5, random_state=42)
 model.fit(X_train, y_train)
 
-# Make predictions on the test set
+## Make predictions on the test set
 y_pred = model.predict(X_test)
 
-# Evaluate model performance
+## Evaluate model performance
 accuracy = accuracy_score(y_test, y_pred)
 print(f'Model accuracy: {accuracy:.2f}')
 
-# Save the trained model to a file
+## Save the trained model to a file
 model_output_path = 'models/trained_models/complex_model_v1.pkl'
 joblib.dump(model, model_output_path)
 
-# Additional metadata and versioning (create and save model metadata JSON file)
+## Additional metadata and versioning (create and save model metadata JSON file)
 metadata = {
     'model_type': 'Random Forest Classifier',
     'features': ['feature1', 'feature2', 'feature3'],

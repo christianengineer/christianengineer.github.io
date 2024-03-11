@@ -5,7 +5,7 @@ permalink: posts/google-cloud-ai-platform-integration-deploy-an-ml-model-on-goog
 layout: article
 ---
 
-# AI Google Cloud AI Platform Integration
+## AI Google Cloud AI Platform Integration
 
 ## Objectives
 The objective of integrating with Google Cloud AI Platform is to deploy and manage machine learning models in a scalable and efficient manner. This integration allows us to leverage the infrastructure, tools, and services provided by Google Cloud to build, train, and deploy machine learning models.
@@ -54,7 +54,7 @@ When deploying a machine learning model on Google Cloud AI Platform, the infrast
 
 By leveraging these infrastructure components, the Google Cloud AI Platform integration can provide a scalable, reliable, and secure environment for deploying and managing machine learning models, enabling efficient utilization of resources and ensuring high performance for data-intensive AI applications.
 
-# Scalable File Structure for Google Cloud AI Platform Integration
+## Scalable File Structure for Google Cloud AI Platform Integration
 
 When structuring a repository for deploying machine learning models on Google Cloud AI Platform, it's essential to organize the codebase in a modular and scalable manner to facilitate easy maintenance, collaboration, and deployment. The following is a suggested file structure for the repository:
 
@@ -62,35 +62,35 @@ When structuring a repository for deploying machine learning models on Google Cl
 project_root/
 │
 ├── data/
-│   ├── raw/                    # Raw data files
-│   ├── processed/              # Processed and pre-processed data
+│   ├── raw/                    ## Raw data files
+│   ├── processed/              ## Processed and pre-processed data
 │   └── ...
 │
 ├── models/
-│   ├── trained_models/         # Trained model artifacts
-│   ├── model_code/             # Code specific to the model architecture
+│   ├── trained_models/         ## Trained model artifacts
+│   ├── model_code/             ## Code specific to the model architecture
 │   └── ...
 │
-├── notebooks/                  # Jupyter notebooks for data exploration, model development, and analysis
+├── notebooks/                  ## Jupyter notebooks for data exploration, model development, and analysis
 │
-├── scripts/                    # Utility and helper scripts
+├── scripts/                    ## Utility and helper scripts
 │
 ├── src/
-│   ├── data_preprocessing/     # Code for data preprocessing and feature engineering
-│   ├── model_training/         # Scripts for training machine learning models
-│   ├── model_evaluation/       # Evaluation and validation scripts
-│   ├── model_deployment/       # Deployment scripts for Google Cloud AI Platform
+│   ├── data_preprocessing/     ## Code for data preprocessing and feature engineering
+│   ├── model_training/         ## Scripts for training machine learning models
+│   ├── model_evaluation/       ## Evaluation and validation scripts
+│   ├── model_deployment/       ## Deployment scripts for Google Cloud AI Platform
 │   └── ...
 │
-├── config/                     # Configuration files for model hyperparameters, GCP credentials, etc.
+├── config/                     ## Configuration files for model hyperparameters, GCP credentials, etc.
 │
-├── tests/                      # Unit tests and integration tests
+├── tests/                      ## Unit tests and integration tests
 │
-├── requirements.txt            # Python dependencies for the project
+├── requirements.txt            ## Python dependencies for the project
 │
-├── README.md                   # Project documentation and instructions
+├── README.md                   ## Project documentation and instructions
 │
-└── LICENSE                     # License information
+└── LICENSE                     ## License information
 ```
 
 In this file structure:
@@ -118,21 +118,21 @@ models/
 │
 ├── trained_models/
 │   ├── model_1/
-│   │   ├── version_1/            # Specific version of the trained model
-│   │   │   ├── saved_model/       # Exported model in TensorFlow's SavedModel format
-│   │   │   ├── assets/            # Additional files used by the model
-│   │   │   └── variables/         # Saved model variables
+│   │   ├── version_1/            ## Specific version of the trained model
+│   │   │   ├── saved_model/       ## Exported model in TensorFlow's SavedModel format
+│   │   │   ├── assets/            ## Additional files used by the model
+│   │   │   └── variables/         ## Saved model variables
 │   │   └── ...
 │   └── model_2/
 │       └── ...
 │
 ├── model_code/
-│   ├── model_architecture.py      # Code defining the model architecture (e.g., in TensorFlow/Keras)
-│   ├── data_preprocessing.py       # Script for data preprocessing steps specific to the model
-│   ├── postprocessing.py           # Logic for post-processing of model predictions
+│   ├── model_architecture.py      ## Code defining the model architecture (e.g., in TensorFlow/Keras)
+│   ├── data_preprocessing.py       ## Script for data preprocessing steps specific to the model
+│   ├── postprocessing.py           ## Logic for post-processing of model predictions
 │   └── ...
 │
-└── model_metadata.json            # Metadata file containing details about the trained models
+└── model_metadata.json            ## Metadata file containing details about the trained models
 ```
 
 ### `trained_models/`
@@ -156,25 +156,25 @@ Here's an expanded view of the contents within the `deployment/` directory:
 deployment/
 │
 ├── cloud_functions/
-│   ├── preprocess_data.py          # Cloud Function for preprocessing input data before prediction
-│   ├── postprocess_prediction.py   # Cloud Function for post-processing model predictions
+│   ├── preprocess_data.py          ## Cloud Function for preprocessing input data before prediction
+│   ├── postprocess_prediction.py   ## Cloud Function for post-processing model predictions
 │   └── ...
 │
 ├── cloud_run/
-│   ├── Dockerfile                  # Dockerfile for building the containerized prediction service
-│   ├── requirements.txt             # Python dependencies required for the containerized service
-│   ├── app.py                       # Flask application for serving model predictions
+│   ├── Dockerfile                  ## Dockerfile for building the containerized prediction service
+│   ├── requirements.txt             ## Python dependencies required for the containerized service
+│   ├── app.py                       ## Flask application for serving model predictions
 │   └── ...
 │
 ├── ai_platform/
-│   ├── deploy_model.sh             # Script for deploying the trained model to Google Cloud AI Platform
-│   ├── create_endpoint.yaml        # Configuration file for creating the prediction endpoint
-│   ├── update_endpoint.yaml        # Configuration file for updating the prediction endpoint
+│   ├── deploy_model.sh             ## Script for deploying the trained model to Google Cloud AI Platform
+│   ├── create_endpoint.yaml        ## Configuration file for creating the prediction endpoint
+│   ├── update_endpoint.yaml        ## Configuration file for updating the prediction endpoint
 │   └── ...
 │
 └── kube_deploy/
-    ├── deployment.yaml             # Kubernetes deployment configuration for serving model predictions
-    ├── service.yaml                # Kubernetes service configuration for exposing the prediction service
+    ├── deployment.yaml             ## Kubernetes deployment configuration for serving model predictions
+    ├── service.yaml                ## Kubernetes service configuration for exposing the prediction service
     └── ...
 ```
 
@@ -196,27 +196,27 @@ By organizing the `deployment/` directory in this manner, we ensure that the nec
 import joblib
 import numpy as np
 
-# Example function for a complex machine learning algorithm
+## Example function for a complex machine learning algorithm
 def complex_ml_algorithm(input_data):
-    # Load the trained model
-    model_path = 'models/trained_models/model_1/version_1'  # Replace with the actual file path
-    model = joblib.load(model_path)  # Load the trained model using joblib or appropriate library
+    ## Load the trained model
+    model_path = 'models/trained_models/model_1/version_1'  ## Replace with the actual file path
+    model = joblib.load(model_path)  ## Load the trained model using joblib or appropriate library
 
-    # Perform data preprocessing
-    preprocessed_data = preprocess_input_data(input_data)  # Assuming a function preprocess_input_data exists
+    ## Perform data preprocessing
+    preprocessed_data = preprocess_input_data(input_data)  ## Assuming a function preprocess_input_data exists
 
-    # Model prediction
+    ## Model prediction
     predictions = model.predict(preprocessed_data)
 
-    # Post-processing of predictions
-    postprocessed_predictions = postprocess_predictions(predictions)  # Assuming a function postprocess_predictions exists
+    ## Post-processing of predictions
+    postprocessed_predictions = postprocess_predictions(predictions)  ## Assuming a function postprocess_predictions exists
 
     return postprocessed_predictions
 
-# Mock data for testing the function
-mock_input_data = np.array([[1, 2, 3, 4], [5, 6, 7, 8]])  # Replace with actual mock input data
+## Mock data for testing the function
+mock_input_data = np.array([[1, 2, 3, 4], [5, 6, 7, 8]])  ## Replace with actual mock input data
 
-# Example usage of the complex_ml_algorithm function
+## Example usage of the complex_ml_algorithm function
 model_output = complex_ml_algorithm(mock_input_data)
 print(model_output)
 ```
@@ -232,29 +232,29 @@ This function demonstrates the usage of a complex machine learning algorithm wit
 ```python
 import tensorflow as tf
 
-# Example function for a complex deep learning algorithm
+## Example function for a complex deep learning algorithm
 def complex_deep_learning_algorithm(input_data):
-    # Replace with the actual file path to the trained model
+    ## Replace with the actual file path to the trained model
     model_path = 'gs://your-bucket-name/your-model-path'  
 
-    # Load the trained model
+    ## Load the trained model
     model = tf.keras.models.load_model(model_path)
 
-    # Perform any necessary data preprocessing
-    preprocessed_data = preprocess_input_data(input_data)  # Assuming a function preprocess_input_data exists
+    ## Perform any necessary data preprocessing
+    preprocessed_data = preprocess_input_data(input_data)  ## Assuming a function preprocess_input_data exists
     
-    # Model prediction
+    ## Model prediction
     predictions = model.predict(preprocessed_data)
 
-    # Post-process the predictions if needed
-    postprocessed_predictions = postprocess_predictions(predictions)  # Assuming a function postprocess_predictions exists
+    ## Post-process the predictions if needed
+    postprocessed_predictions = postprocess_predictions(predictions)  ## Assuming a function postprocess_predictions exists
 
     return postprocessed_predictions
 
-# Mock data for testing the function
-mock_input_data = ...  # Replace with actual mock input data
+## Mock data for testing the function
+mock_input_data = ...  ## Replace with actual mock input data
 
-# Example usage of the complex_deep_learning_algorithm function
+## Example usage of the complex_deep_learning_algorithm function
 model_output = complex_deep_learning_algorithm(mock_input_data)
 print(model_output)
 ```

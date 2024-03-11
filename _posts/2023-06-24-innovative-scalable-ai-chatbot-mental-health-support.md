@@ -179,13 +179,13 @@ def check_in_response(user_response):
 
 ## Developing a response for the user, using NLP and AI Model
 def generate_response(user_input):
-    # Normalizing input
+    ## Normalizing input
     normalized_input = nlp.normalize(user_input)
 
-    # Get index of most relevant response using AI model
+    ## Get index of most relevant response using AI model
     most_relevant_index = ai_model.get_most_relevant_response(normalized_input)
 
-    # Get most relevant response detail
+    ## Get most relevant response detail
     response_detail = chatbot.get_response_detail(most_relevant_index)
 
     return response_detail

@@ -5,7 +5,7 @@ permalink: posts/personalized-ai-fitness-coach-next-generation-fitness-solution
 layout: article
 ---
 
-# Personalized AI Fitness Coach Repository
+## Personalized AI Fitness Coach Repository
 
 ## Description:
 
@@ -45,34 +45,34 @@ The technologies that we might utilize in this project include but are not limit
 
 Please remember this is just a short list of potential libraries and tools we may use. We'll be adjusting and revising this list as we continue to develop and optimize our AI Fitness Coach.
 
-# File Structure of the Personalized AI Fitness Coach repository
+## File Structure of the Personalized AI Fitness Coach repository
 
 Below you will find a suggested file structure for the Personalized AI Fitness Coach repository. This structure aims to keep components modular and scalable for easier collaboration and development.
 
 ```
 Personalised-AI-Fitness-Coach/
 │
-├── backend/       # Backend source code
-│   ├── app/       # Application source code
-│   ├── tests/     # Automated tests
-│   ├── models/    # Store trained ML models
-│   ├── config/    # Configuration files
-│   └── Dockerfile # For Docker
+├── backend/       ## Backend source code
+│   ├── app/       ## Application source code
+│   ├── tests/     ## Automated tests
+│   ├── models/    ## Store trained ML models
+│   ├── config/    ## Configuration files
+│   └── Dockerfile ## For Docker
 │
-├── frontend/      # Frontend source code
-│   ├── public/    # Static files
-│   ├── src/       # Component source code
-│   ├── tests/     # Test files
-│   ├── package.json  # npm dependencies
-│   └── Dockerfile # For Docker
+├── frontend/      ## Frontend source code
+│   ├── public/    ## Static files
+│   ├── src/       ## Component source code
+│   ├── tests/     ## Test files
+│   ├── package.json  ## npm dependencies
+│   └── Dockerfile ## For Docker
 │
-├── db/           # Database scripts
+├── db/           ## Database scripts
 │
-├── docs/         # Documentation
+├── docs/         ## Documentation
 │
-├── .gitignore    # Files and paths that should be ignored by git
+├── .gitignore    ## Files and paths that should be ignored by git
 │
-└── README.md     # Overview of project, setup notes
+└── README.md     ## Overview of project, setup notes
 ```
 
 This file structure separates the project based on functionality which aligns with the concept of Separation of Concerns.
@@ -93,7 +93,7 @@ backend/app/ai_coach.py
 ```
 
 ```python
-#  ai_coach.py
+##  ai_coach.py
 
 from sklearn import datasets
 from sklearn.model_selection import train_test_split
@@ -134,7 +134,7 @@ class AIFitnessCoach:
         """
 
 if __name__ == "__main__":
-    # Instantiate the AIFitnessCoach class with user data
+    ## Instantiate the AIFitnessCoach class with user data
 ```
 
 This file is merely a simplified representation and may not encompass the full complexity of the AI logic required for a personalized fitness coach. It's intended to give a basic idea of what the file could potentially contain. The actual file would, of course, include complete function definitions along with the necessary dataset import, data preprocessing, model creation, model training, recommendations, and progress tracking code.

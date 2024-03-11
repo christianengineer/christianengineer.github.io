@@ -165,8 +165,8 @@ deployment/
 The deployment directory encapsulates essential files for containerization and orchestration of the AI application, ensuring seamless deployment, scalability, and management of the Crime Prediction and Prevention System in Callao, Peru.
 
 ```python
-# File: model_training.py
-# Path: crime_prediction_system_callao_peru/scripts/model_training.py
+## File: model_training.py
+## Path: crime_prediction_system_callao_peru/scripts/model_training.py
 
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
@@ -178,27 +178,27 @@ from tensorflow.keras.layers import Dense
 import numpy as np
 from transformers import GPT2LMHeadModel, GPT2Tokenizer
 
-# Load mock data (replace with actual data source)
+## Load mock data (replace with actual data source)
 data_path = '../data/processed_data/cleaned_data.csv'
 data = pd.read_csv(data_path)
 
-# Feature and target variables
+## Feature and target variables
 X = data.drop('crime_type', axis=1)
 y = data['crime_type']
 
-# Train-test split
+## Train-test split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Train a Random Forest classifier
+## Train a Random Forest classifier
 rf_model = RandomForestClassifier()
 rf_model.fit(X_train, y_train)
 
-# Evaluate Random Forest model
+## Evaluate Random Forest model
 rf_predictions = rf_model.predict(X_test)
 rf_accuracy = accuracy_score(y_test, rf_predictions)
 print(f'Random Forest Model Accuracy: {rf_accuracy}')
 
-# Train a neural network model using TensorFlow
+## Train a neural network model using TensorFlow
 model = Sequential([
     Dense(64, input_shape=(X_train.shape[1],), activation='relu'),
     Dense(32, activation='relu'),
@@ -207,11 +207,11 @@ model = Sequential([
 model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
 model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y_test))
 
-# Train GPT language model
+## Train GPT language model
 tokenizer = GPT2Tokenizer.from_pretrained('gpt2')
 model = GPT2LMHeadModel.from_pretrained('gpt2')
 
-# Generate text using GPT model (mock example)
+## Generate text using GPT model (mock example)
 inputs = tokenizer("Crime incident:", return_tensors="pt")
 outputs = model.generate(inputs.input_ids, max_length=100, num_return_sequences=1, early_stopping=True)
 
@@ -223,8 +223,8 @@ This Python script (`model_training.py`) is used to train machine learning model
 Please ensure to replace the mock data with actual data sources and customize the training process based on the specific requirements and data available for the Crime Prediction and Prevention System in Callao, Peru.
 
 ```python
-# File: complex_model_training.py
-# Path: crime_prediction_system_callao_peru/scripts/complex_model_training.py
+## File: complex_model_training.py
+## Path: crime_prediction_system_callao_peru/scripts/complex_model_training.py
 
 import pandas as pd
 import numpy as np
@@ -234,7 +234,7 @@ from tensorflow.keras.layers import LSTM, Dense
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 
-# Load and preprocess mock data (replace with actual data source)
+## Load and preprocess mock data (replace with actual data source)
 data_path = '../data/processed_data/cleaned_data.csv'
 data = pd.read_csv(data_path)
 
@@ -244,10 +244,10 @@ y = data['crime_type']
 scaler = StandardScaler()
 X_scaled = scaler.fit_transform(X)
 
-# Split data into training and test sets
+## Split data into training and test sets
 X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.2, random_state=42)
 
-# Build and train a Long Short-Term Memory (LSTM) model using TensorFlow
+## Build and train a Long Short-Term Memory (LSTM) model using TensorFlow
 model = Sequential([
     LSTM(64, input_shape=(X_train.shape[1], 1)),
     Dense(32, activation='relu'),

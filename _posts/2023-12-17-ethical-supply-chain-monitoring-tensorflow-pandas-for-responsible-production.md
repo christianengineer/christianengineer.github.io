@@ -5,7 +5,7 @@ permalink: posts/ethical-supply-chain-monitoring-tensorflow-pandas-for-responsib
 layout: article
 ---
 
-# AI Ethical Supply Chain Monitoring
+## AI Ethical Supply Chain Monitoring
 
 ## Objectives
 The objective of the "AI Ethical Supply Chain Monitoring" repository is to develop a scalable, data-intensive application that leverages machine learning to monitor and ensure responsible production within the supply chain. This involves tracking various ethical considerations such as labor practices, environmental impact, and product authenticity, among others. The system aims to provide real-time monitoring, analysis, and reporting of supply chain activities to ensure compliance with ethical standards.
@@ -22,7 +22,7 @@ The objective of the "AI Ethical Supply Chain Monitoring" repository is to devel
 
 By leveraging TensorFlow for machine learning and Pandas for data processing, the system will be equipped to effectively monitor and analyze supply chain activities, ultimately supporting responsible production practices.
 
-# MLOps Infrastructure for Ethical Supply Chain Monitoring
+## MLOps Infrastructure for Ethical Supply Chain Monitoring
 
 ## Overview
 The MLOps infrastructure for the Ethical Supply Chain Monitoring application will be designed to support the end-to-end machine learning lifecycle, including model development, training, deployment, and monitoring. This infrastructure will enable efficient collaboration between data scientists, ML engineers, and operations teams, ensuring that the machine learning models are seamlessly integrated into the responsible production application.
@@ -229,7 +229,7 @@ These deployment-specific files and scripts provide the necessary infrastructure
 Certainly! Below is an example of a Python script for training a machine learning model for the Ethical Supply Chain Monitoring application using mock data. This mock data is assumed to be stored in a CSV file named `mock_supply_chain_data.csv` within the `data/` directory of the project.
 
 ```python
-# File Path: src/model_training/train_model.py
+## File Path: src/model_training/train_model.py
 
 import pandas as pd
 import tensorflow as tf
@@ -237,26 +237,26 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import accuracy_score, classification_report
 
-# Load mock supply chain data
+## Load mock supply chain data
 data_path = '../data/mock_supply_chain_data.csv'
 supply_chain_data = pd.read_csv(data_path)
 
-# Preprocess the data
-# ... (Data preprocessing steps using Pandas)
+## Preprocess the data
+## ... (Data preprocessing steps using Pandas)
 
-# Define features and target variable
+## Define features and target variable
 X = supply_chain_data.drop(columns=['target_column'])
 y = supply_chain_data['target_column']
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Feature scaling
+## Feature scaling
 scaler = StandardScaler()
 X_train_scaled = scaler.fit_transform(X_train)
 X_test_scaled = scaler.transform(X_test)
 
-# Define and train a TensorFlow model
+## Define and train a TensorFlow model
 model = tf.keras.models.Sequential([
     tf.keras.layers.Dense(64, activation='relu', input_shape=(X_train.shape[1],)),
     tf.keras.layers.Dense(32, activation='relu'),
@@ -266,7 +266,7 @@ model = tf.keras.models.Sequential([
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 model.fit(X_train_scaled, y_train, epochs=10, batch_size=32, validation_data=(X_test_scaled, y_test))
 
-# Evaluate the trained model
+## Evaluate the trained model
 y_pred = model.predict_classes(X_test_scaled)
 print(f'Accuracy: {accuracy_score(y_test, y_pred)}')
 print(classification_report(y_test, y_pred))
@@ -281,7 +281,7 @@ The file path for this script is `src/model_training/train_model.py` within the 
 Certainly! Below is an example of a Python script defining a complex machine learning algorithm for the Ethical Supply Chain Monitoring application using mock data, alongside relevant module imports, and appropriate file paths. This script, `complex_model_algorithm.py`, resides within the `src/model_training/` directory of the project structure.
 
 ```python
-# File Path: src/model_training/complex_model_algorithm.py
+## File Path: src/model_training/complex_model_algorithm.py
 
 import pandas as pd
 import numpy as np
@@ -291,31 +291,31 @@ from sklearn.metrics import classification_report, accuracy_score
 from sklearn.preprocessing import StandardScaler
 import tensorflow as tf
 
-# Load mock supply chain data
+## Load mock supply chain data
 data_path = '../data/mock_supply_chain_data.csv'
 supply_chain_data = pd.read_csv(data_path)
 
-# Preprocess the data using Pandas
-# ... (Data preprocessing steps)
+## Preprocess the data using Pandas
+## ... (Data preprocessing steps)
 
-# Define features and target variable
+## Define features and target variable
 X = supply_chain_data.drop(columns=['target_column'])
 y = supply_chain_data['target_column']
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Example of complex machine learning algorithm
-# Feature scaling
+## Example of complex machine learning algorithm
+## Feature scaling
 scaler = StandardScaler()
 X_train_scaled = scaler.fit_transform(X_train)
 X_test_scaled = scaler.transform(X_test)
 
-# Random Forest Classifier
+## Random Forest Classifier
 random_forest_model = RandomForestClassifier(n_estimators=100, max_depth=3, random_state=42)
 random_forest_model.fit(X_train_scaled, y_train)
 
-# Neural Network Model using TensorFlow
+## Neural Network Model using TensorFlow
 model = tf.keras.Sequential([
     tf.keras.layers.Dense(64, activation='relu', input_shape=(X_train.shape[1],)),
     tf.keras.layers.Dense(32, activation='relu'),
@@ -325,7 +325,7 @@ model = tf.keras.Sequential([
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 model.fit(X_train_scaled, y_train, epochs=10, batch_size=32, validation_data=(X_test_scaled, y_test))
 
-# Evaluating both models
+## Evaluating both models
 y_pred_rf = random_forest_model.predict(X_test_scaled)
 print("Random Forest Classifier:")
 print(classification_report(y_test, y_pred_rf))

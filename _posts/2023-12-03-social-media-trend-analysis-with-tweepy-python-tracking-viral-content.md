@@ -48,7 +48,7 @@ By implementing these system design strategies and utilizing the chosen librarie
 
 By integrating these infrastructure components, we can build a robust and scalable application for social media trend analysis with Tweepy in Python, ensuring efficient data collection, storage, processing, machine learning model deployment, and scalability for handling large volumes of social media data.
 
-# Scalable File Structure for Social Media Trend Analysis Application
+## Scalable File Structure for Social Media Trend Analysis Application
 
 ```
 social_media_trend_analysis/
@@ -153,22 +153,22 @@ By centralizing the deployment-related files into the `deployment` directory, we
 import pandas as pd
 
 def complex_machine_learning_algorithm(data_path):
-    # Load mock social media data
+    ## Load mock social media data
     social_media_data = pd.read_csv(data_path)
 
-    # Data preprocessing and feature engineering
-    # ...
-    # Complex data preprocessing and feature engineering steps here
+    ## Data preprocessing and feature engineering
+    ## ...
+    ## Complex data preprocessing and feature engineering steps here
 
-    # Model training
-    # ...
-    # Complex machine learning model training algorithm here
+    ## Model training
+    ## ...
+    ## Complex machine learning model training algorithm here
 
-    # Model evaluation
-    # ...
-    # Complex model evaluation and performance metrics calculation here
+    ## Model evaluation
+    ## ...
+    ## Complex model evaluation and performance metrics calculation here
 
-    # Return insights or predictions
+    ## Return insights or predictions
     return insights_or_predictions
 ```
 
@@ -196,29 +196,29 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 
 def run_complex_ml_algorithm(data_path):
-    # Load mock social media data
+    ## Load mock social media data
     social_media_data = pd.read_csv(data_path)
 
-    # Data preprocessing and feature engineering
-    # ... Perform complex data preprocessing and feature engineering
+    ## Data preprocessing and feature engineering
+    ## ... Perform complex data preprocessing and feature engineering
 
-    # Split data into features and target variable
+    ## Split data into features and target variable
     X = social_media_data.drop(columns=['target_variable'])
     y = social_media_data['target_variable']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize a complex machine learning model (e.g., Random Forest Classifier)
+    ## Initialize a complex machine learning model (e.g., Random Forest Classifier)
     model = RandomForestClassifier(n_estimators=100, random_state=42)
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train)
 
-    # Make predictions on the test data
+    ## Make predictions on the test data
     predictions = model.predict(X_test)
 
-    # Evaluate the model
+    ## Evaluate the model
     accuracy = accuracy_score(y_test, predictions)
 
     return accuracy, predictions

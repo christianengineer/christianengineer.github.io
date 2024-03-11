@@ -214,23 +214,23 @@ import numpy as np
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
 
-# Generate mock data for training
-X_train = np.random.rand(100, 10)  # Mock features data
-y_train = np.random.randint(0, 2, 100)  # Mock target data
+## Generate mock data for training
+X_train = np.random.rand(100, 10)  ## Mock features data
+y_train = np.random.randint(0, 2, 100)  ## Mock target data
 
-# Define a simple neural network model using Keras
+## Define a simple neural network model using Keras
 model = Sequential()
 model.add(Dense(64, activation='relu', input_shape=(10,)))
 model.add(Dense(32, activation='relu'))
 model.add(Dense(1, activation='sigmoid'))
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
-# Train the model using mock data
+## Train the model using mock data
 model.fit(X_train, y_train, epochs=10, batch_size=32)
 
-# Save the trained model
+## Save the trained model
 model.save('../saved_models/vocational_training_model.h5')
 ```
 
@@ -253,26 +253,26 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 import numpy as np
 
-# Generate mock data for training
-X = np.random.rand(100, 10)  # Mock features data
-y = np.random.randint(0, 2, 100)  # Mock target data
+## Generate mock data for training
+X = np.random.rand(100, 10)  ## Mock features data
+y = np.random.randint(0, 2, 100)  ## Mock target data
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize and train the Gradient Boosting Classifier
+## Initialize and train the Gradient Boosting Classifier
 gb_classifier = GradientBoostingClassifier(n_estimators=100, learning_rate=0.1, max_depth=3)
 gb_classifier.fit(X_train, y_train)
 
-# Make predictions on the test set
+## Make predictions on the test set
 y_pred = gb_classifier.predict(X_test)
 
-# Calculate the accuracy of the model
+## Calculate the accuracy of the model
 accuracy = accuracy_score(y_test, y_pred)
 print(f"Accuracy of the model: {accuracy}")
 
-# Save the trained model (if needed)
-# Note: This specific model does not need to be saved as it is not neural network based.
+## Save the trained model (if needed)
+## Note: This specific model does not need to be saved as it is not neural network based.
 
 ```
 

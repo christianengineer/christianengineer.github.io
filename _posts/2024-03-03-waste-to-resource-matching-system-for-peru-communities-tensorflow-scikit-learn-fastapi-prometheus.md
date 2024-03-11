@@ -70,29 +70,29 @@ By implementing a robust MLOps infrastructure with TensorFlow, Scikit-Learn, Fas
 ### Project Structure:
 ```
 waste-resource-matching-system/
-|   ├── data/                           # Data storage and processing
-|   |   ├── raw_data/                   # Raw data from waste producers and companies
-|   |   └── processed_data/             # Cleaned and preprocessed data
+|   ├── data/                           ## Data storage and processing
+|   |   ├── raw_data/                   ## Raw data from waste producers and companies
+|   |   └── processed_data/             ## Cleaned and preprocessed data
 |
-|   ├── models/                         # Machine learning models
-|   |   ├── waste_matching_model/       # TensorFlow model for waste-to-resource matching
-|   |   └── waste_classification_model/  # Scikit-Learn model for waste type classification
+|   ├── models/                         ## Machine learning models
+|   |   ├── waste_matching_model/       ## TensorFlow model for waste-to-resource matching
+|   |   └── waste_classification_model/  ## Scikit-Learn model for waste type classification
 |
-|   ├── api/                            # FastAPI backend for API endpoints
-|   |   ├── main.py                     # Main FastAPI application
-|   |   ├── routers/                    # API routers for different functionalities
-|   |   └── schemas/                    # Pydantic schemas for request/response validation
+|   ├── api/                            ## FastAPI backend for API endpoints
+|   |   ├── main.py                     ## Main FastAPI application
+|   |   ├── routers/                    ## API routers for different functionalities
+|   |   └── schemas/                    ## Pydantic schemas for request/response validation
 |
-|   ├── monitoring/                     # Prometheus monitoring setup
-|   |   └── prometheus_config.yml       # Prometheus configuration file
+|   ├── monitoring/                     ## Prometheus monitoring setup
+|   |   └── prometheus_config.yml       ## Prometheus configuration file
 |
-|   ├── utils/                          # Utility functions and helpers
-|   |   ├── data_processing.py          # Data preprocessing functions
-|   |   └── model_utils.py              # Model utilities and helper functions
+|   ├── utils/                          ## Utility functions and helpers
+|   |   ├── data_processing.py          ## Data preprocessing functions
+|   |   └── model_utils.py              ## Model utilities and helper functions
 |
-|   ├── config.py                       # Configuration file for constants and environment variables
-|   ├── requirements.txt                # Python dependencies
-|   └── README.md                       # Project documentation
+|   ├── config.py                       ## Configuration file for constants and environment variables
+|   ├── requirements.txt                ## Python dependencies
+|   └── README.md                       ## Project documentation
 ```
 
 ### Explanation:
@@ -119,17 +119,17 @@ By organizing the Waste-to-Resource Matching System's codebase into a structured
 ### Project Structure:
 ```
 models/
-|   ├── waste_matching_model/           # TensorFlow model for waste-to-resource matching
-|   |   ├── train.py                    # Script for training the waste matching model
-|   |   ├── predict.py                  # Script for making predictions using the trained model
-|   |   ├── model/                      # Trained model files
-|   |   └── utils/                      # Model-specific utility functions
+|   ├── waste_matching_model/           ## TensorFlow model for waste-to-resource matching
+|   |   ├── train.py                    ## Script for training the waste matching model
+|   |   ├── predict.py                  ## Script for making predictions using the trained model
+|   |   ├── model/                      ## Trained model files
+|   |   └── utils/                      ## Model-specific utility functions
 |
-|   └── waste_classification_model/      # Scikit-Learn model for waste type classification
-|       ├── train.py                    # Script for training the waste classification model
-|       ├── predict.py                  # Script for making predictions using the trained model
-|       ├── model.pkl                   # Serialized model file
-|       └── utils/                      # Model-specific utility functions
+|   └── waste_classification_model/      ## Scikit-Learn model for waste type classification
+|       ├── train.py                    ## Script for training the waste classification model
+|       ├── predict.py                  ## Script for making predictions using the trained model
+|       ├── model.pkl                   ## Serialized model file
+|       └── utils/                      ## Model-specific utility functions
 ```
 
 ### Explanation:
@@ -152,20 +152,20 @@ By structuring the `models/` directory in this way, it separates the TensorFlow 
 ### Project Structure:
 ```
 deployment/
-|   ├── docker-compose.yml              # Docker Compose file for defining services
+|   ├── docker-compose.yml              ## Docker Compose file for defining services
 |   ├── kubernetes/
-|   |   ├── waste_matching_model.yaml    # Kubernetes deployment configuration for TensorFlow model
-|   |   ├── waste_classification_model.yaml  # Kubernetes deployment configuration for Scikit-Learn model
-|   |   └── fastapi_app.yaml             # Kubernetes deployment configuration for the FastAPI application
+|   |   ├── waste_matching_model.yaml    ## Kubernetes deployment configuration for TensorFlow model
+|   |   ├── waste_classification_model.yaml  ## Kubernetes deployment configuration for Scikit-Learn model
+|   |   └── fastapi_app.yaml             ## Kubernetes deployment configuration for the FastAPI application
 |
 |   ├── scripts/
-|   |   ├── deploy_models.sh             # Script for deploying machine learning models
-|   |   ├── deploy_fastapi.sh            # Script for deploying FastAPI application
-|   |   └── deploy_monitoring.sh         # Script for deploying Prometheus monitoring
+|   |   ├── deploy_models.sh             ## Script for deploying machine learning models
+|   |   ├── deploy_fastapi.sh            ## Script for deploying FastAPI application
+|   |   └── deploy_monitoring.sh         ## Script for deploying Prometheus monitoring
 |
 |   └── monitoring/
-|       ├── prometheus_config.yml        # Prometheus configuration for monitoring
-|       └── grafana_dashboard.json       # Grafana dashboard configuration
+|       ├── prometheus_config.yml        ## Prometheus configuration for monitoring
+|       └── grafana_dashboard.json       ## Grafana dashboard configuration
 ```
 
 ### Explanation:
@@ -198,25 +198,25 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 import joblib
 
-# Load mock data
+## Load mock data
 data = pd.read_csv('data/processed_data/mock_waste_matching_data.csv')
 
-# Feature engineering and target variable
+## Feature engineering and target variable
 X = data.drop('recycling_partner_id', axis=1)
 y = data['recycling_partner_id']
 
-# Train-test split
+## Train-test split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Instantiate and train the model
+## Instantiate and train the model
 model = RandomForestClassifier()
 model.fit(X_train, y_train)
 
-# Evaluate model
+## Evaluate model
 accuracy = model.score(X_test, y_test)
 print(f'Model Accuracy: {accuracy}')
 
-# Save the trained model
+## Save the trained model
 joblib.dump(model, 'models/waste_matching_model/model/random_forest_model.pkl')
 ```
 
@@ -240,32 +240,32 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import accuracy_score
 import joblib
 
-# Load mock data
+## Load mock data
 data = pd.read_csv('data/processed_data/mock_waste_matching_data.csv')
 
-# Feature engineering and target variable
+## Feature engineering and target variable
 X = data.drop('recycling_partner_id', axis=1)
 y = data['recycling_partner_id']
 
-# Feature scaling
+## Feature scaling
 scaler = StandardScaler()
 X_scaled = scaler.fit_transform(X)
 
-# Train-test split
+## Train-test split
 X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.2, random_state=42)
 
-# Instantiate and train the SVM model
+## Instantiate and train the SVM model
 model = SVC(kernel='rbf', C=1.0, gamma='scale')
 model.fit(X_train, y_train)
 
-# Make predictions
+## Make predictions
 y_pred = model.predict(X_test)
 
-# Evaluate model
+## Evaluate model
 accuracy = accuracy_score(y_test, y_pred)
 print(f'Model Accuracy: {accuracy}')
 
-# Save the trained model
+## Save the trained model
 joblib.dump(model, 'models/waste_matching_model/model/svm_model.pkl')
 ```
 

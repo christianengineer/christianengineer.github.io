@@ -5,7 +5,7 @@ permalink: posts/supply-chain-carbon-footprint-calculator-for-peru-tensorflow-pa
 layout: article
 ---
 
-# AI Supply Chain Carbon Footprint Calculator for Peru
+## AI Supply Chain Carbon Footprint Calculator for Peru
 
 ## Objectives:
 - Estimate the carbon footprint of food supply chains in Peru
@@ -51,7 +51,7 @@ layout: article
 
 By employing these system design strategies and leveraging libraries like TensorFlow, Pandas, Spark, and DVC, we can develop a robust AI Supply Chain Carbon Footprint Calculator for Peru that assists businesses in making informed decisions towards sustainability and carbon reduction.
 
-# MLOps Infrastructure for Supply Chain Carbon Footprint Calculator
+## MLOps Infrastructure for Supply Chain Carbon Footprint Calculator
 
 ## Components of MLOps Infrastructure:
 1. **Data Collection and Storage:**
@@ -110,43 +110,43 @@ By employing these system design strategies and leveraging libraries like Tensor
 
 By establishing a robust MLOps infrastructure with the selected libraries (TensorFlow, Pandas, Spark, DVC), we can effectively build, deploy, and maintain the Supply Chain Carbon Footprint Calculator for Peru. This infrastructure will enable businesses to make data-driven decisions for carbon reduction and sustainability improvements in their supply chains.
 
-# Scalable File Structure for Supply Chain Carbon Footprint Calculator
+## Scalable File Structure for Supply Chain Carbon Footprint Calculator
 
 ```
 ├── data/
 │   ├── raw_data/
-│   │   ├── input_files/        # Raw input data files
+│   │   ├── input_files/        ## Raw input data files
 │   ├── processed_data/
-│   │   ├── cleaned_data/       # Cleaned and preprocessed data
+│   │   ├── cleaned_data/       ## Cleaned and preprocessed data
 │
 ├── models/
-│   ├── saved_models/           # Trained TensorFlow models
+│   ├── saved_models/           ## Trained TensorFlow models
 │
 ├── notebooks/
-│   ├── data_exploration.ipynb  # Jupyter notebook for data exploration
-│   ├── model_training.ipynb     # Jupyter notebook for model training
+│   ├── data_exploration.ipynb  ## Jupyter notebook for data exploration
+│   ├── model_training.ipynb     ## Jupyter notebook for model training
 │
 ├── scripts/
-│   ├── data_preprocessing.py   # Script for data preprocessing using Pandas/Spark
-│   ├── model_training.py       # Script for training models using TensorFlow
-│   ├── inference.py            # Script for model inference
+│   ├── data_preprocessing.py   ## Script for data preprocessing using Pandas/Spark
+│   ├── model_training.py       ## Script for training models using TensorFlow
+│   ├── inference.py            ## Script for model inference
 │
 ├── reports/
-│   ├── carbon_footprint_report.pdf    # Generated reports and insights
+│   ├── carbon_footprint_report.pdf    ## Generated reports and insights
 │
 ├── app/
-│   ├── main.py                 # Main application code for interacting with models
+│   ├── main.py                 ## Main application code for interacting with models
 │
 ├── config/
-│   ├── config.yaml             # Configuration file for hyperparameters and settings
+│   ├── config.yaml             ## Configuration file for hyperparameters and settings
 │
-├── requirements.txt            # Python dependencies
+├── requirements.txt            ## Python dependencies
 │
-├── Dockerfile                  # Dockerfile for containerization
+├── Dockerfile                  ## Dockerfile for containerization
 │
-├── .gitignore                  # Files to be ignored by version control
+├── .gitignore                  ## Files to be ignored by version control
 │
-├── README.md                   # Project documentation
+├── README.md                   ## Project documentation
 ```
 
 ## Description:
@@ -167,16 +167,16 @@ This file structure is designed to maintain a clear organization of files and di
 ```
 ├── models/
 │   ├── saved_models/
-│   │   ├── model_1.h5         # Trained TensorFlow model for carbon footprint estimation
-│   │   ├── model_2.h5         # Additional trained model for experimentation
+│   │   ├── model_1.h5         ## Trained TensorFlow model for carbon footprint estimation
+│   │   ├── model_2.h5         ## Additional trained model for experimentation
 │
-│   ├── model_training.py      # Script for training Machine Learning models using TensorFlow
-│   ├── model_evaluation.py    # Script for evaluating model performance
-│   ├── model_inference.py     # Script for using trained models to make predictions
+│   ├── model_training.py      ## Script for training Machine Learning models using TensorFlow
+│   ├── model_evaluation.py    ## Script for evaluating model performance
+│   ├── model_inference.py     ## Script for using trained models to make predictions
 │
 │   ├── pipelines/
-│   │   ├── data_preprocessing_pipeline.py   # Data preprocessing pipeline using Pandas/Spark
-│   │   ├── feature_engineering_pipeline.py  # Feature engineering pipeline for data transformation
+│   │   ├── data_preprocessing_pipeline.py   ## Data preprocessing pipeline using Pandas/Spark
+│   │   ├── feature_engineering_pipeline.py  ## Feature engineering pipeline for data transformation
 ```
 
 ## Description:
@@ -201,18 +201,18 @@ The `models/` directory stores trained models, model training and evaluation scr
 
 ```
 ├── deployment/
-│   ├── docker-compose.yaml     # Docker Compose configuration for multi-container deployment
-│   ├── Dockerfile              # Dockerfile for building the production container
-│   ├── requirements.txt        # Production Python dependencies
+│   ├── docker-compose.yaml     ## Docker Compose configuration for multi-container deployment
+│   ├── Dockerfile              ## Dockerfile for building the production container
+│   ├── requirements.txt        ## Production Python dependencies
 │
 │   ├── app/
-│   │   ├── main.py             # Main application code for interacting with models
-│   │   ├── app_config.yaml     # Configuration file for application settings
-│   │   ├── templates/           # HTML templates for web interface
-│   │   ├── static/              # Static files for web interface (CSS, JS)
+│   │   ├── main.py             ## Main application code for interacting with models
+│   │   ├── app_config.yaml     ## Configuration file for application settings
+│   │   ├── templates/           ## HTML templates for web interface
+│   │   ├── static/              ## Static files for web interface (CSS, JS)
 │
 │   ├── scripts/
-│   │   ├── start_app.sh         # Script for starting the application server
+│   │   ├── start_app.sh         ## Script for starting the application server
 ```
 
 ## Description:
@@ -235,13 +235,13 @@ The `deployment/` directory holds essential files and configurations for deployi
 Below is an example Python script file for training a model of the Supply Chain Carbon Footprint Calculator for Peru using mock data. The script utilizes TensorFlow for model training, Pandas for data manipulation, and DVC for data version control. This file can be named `train_model.py` and saved in the `scripts/` directory.
 
 ```python
-# train_model.py
+## train_model.py
 
 import pandas as pd
 import tensorflow as tf
 from sklearn.model_selection import train_test_split
 
-# Mock data generation (replace with actual data loading)
+## Mock data generation (replace with actual data loading)
 data = {
     'feature1': [1, 2, 3, 4, 5],
     'feature2': [10, 20, 30, 40, 50],
@@ -249,27 +249,27 @@ data = {
 }
 df = pd.DataFrame(data)
 
-# Split data into features and target
+## Split data into features and target
 X = df[['feature1', 'feature2']]
 y = df['carbon_footprint']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Define TensorFlow model architecture
+## Define TensorFlow model architecture
 model = tf.keras.models.Sequential([
     tf.keras.layers.Dense(64, activation='relu', input_shape=(2,)),
     tf.keras.layers.Dense(64, activation='relu'),
     tf.keras.layers.Dense(1)
 ])
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam', loss='mean_squared_error')
 
-# Train the model
+## Train the model
 model.fit(X_train, y_train, epochs=50, batch_size=2, validation_split=0.2)
 
-# Save the trained model
+## Save the trained model
 model.save('models/saved_models/mock_model.h5')
 
 print("Model training completed and model saved successfully.")
@@ -282,14 +282,14 @@ This script demonstrates training a TensorFlow model using mock data to estimate
 Below is an example Python script file for a complex machine learning algorithm training of the Supply Chain Carbon Footprint Calculator for Peru using mock data. The script leverages TensorFlow for building a deep learning model, Pandas for data preprocessing, Spark for distributed computing, and DVC for data version control. This file can be named `train_complex_model.py` and saved in the `scripts/` directory.
 
 ```python
-# train_complex_model.py
+## train_complex_model.py
 
 import pandas as pd
 import tensorflow as tf
 from pyspark.sql import SparkSession
 from sklearn.model_selection import train_test_split
 
-# Mock data generation (replace with actual data loading)
+## Mock data generation (replace with actual data loading)
 data = {
     'feature1': [1, 2, 3, 4, 5],
     'feature2': [10, 20, 30, 40, 50],
@@ -297,24 +297,24 @@ data = {
 }
 df = pd.DataFrame(data)
 
-# Spark session initialization
+## Spark session initialization
 spark = SparkSession.builder.appName("CarbonFootprint").getOrCreate()
 spark_df = spark.createDataFrame(df)
 
-# Preprocessing data with Spark
-# Perform any necessary Spark transformations here
+## Preprocessing data with Spark
+## Perform any necessary Spark transformations here
 
-# Convert Spark DataFrame back to Pandas DataFrame
+## Convert Spark DataFrame back to Pandas DataFrame
 df_processed = spark_df.toPandas()
 
-# Split data into features and target
+## Split data into features and target
 X = df_processed[['feature1', 'feature2']]
 y = df_processed['carbon_footprint']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Define a complex neural network model
+## Define a complex neural network model
 model = tf.keras.models.Sequential([
     tf.keras.layers.Dense(128, activation='relu', input_shape=(2,)),
     tf.keras.layers.Dense(128, activation='relu'),
@@ -322,13 +322,13 @@ model = tf.keras.models.Sequential([
     tf.keras.layers.Dense(1)
 ])
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam', loss='mean_squared_error')
 
-# Train the model
+## Train the model
 model.fit(X_train, y_train, epochs=100, batch_size=4, validation_split=0.2)
 
-# Save the trained model
+## Save the trained model
 model.save('models/saved_models/complex_model.h5')
 
 print("Complex model training completed and model saved successfully.")

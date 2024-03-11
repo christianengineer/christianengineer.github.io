@@ -260,30 +260,30 @@ deployment/
 By structuring the **deployment/** directory in this way, the Peru Poverty Prediction and Mapping System can streamline the deployment process and ensure efficient orchestration and scalability of the AI application utilizing socioeconomic and satellite data for predicting poverty hotspots and facilitating targeted interventions.
 
 ```python
-# File: model_training.py
-# Path: src/modeling/model_training.py
+## File: model_training.py
+## Path: src/modeling/model_training.py
 
 import tensorflow as tf
 import geopandas as gpd
 import pandas as pd
 
-# Load mock socioeconomic data
+## Load mock socioeconomic data
 socioeconomic_data = pd.read_csv('data/processed_data/train/socioeconomic_data.csv')
 
-# Load mock satellite data
+## Load mock satellite data
 satellite_data = gpd.read_file('data/processed_data/train/satellite_data.geojson')
 
-# Define model architecture using TensorFlow
+## Define model architecture using TensorFlow
 model = tf.keras.models.Sequential([
     tf.keras.layers.Dense(64, activation='relu', input_shape=(len(socioeconomic_data.columns) + len(satellite_data.columns),)),
     tf.keras.layers.Dense(32, activation='relu'),
     tf.keras.layers.Dense(1, activation='sigmoid')
 ])
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
-# Preprocess data and train the model
+## Preprocess data and train the model
 X_train = pd.concat([socioeconomic_data, satellite_data], axis=1)
 y_train = socioeconomic_data['target_column']
 
@@ -303,8 +303,8 @@ model.fit(X_train, y_train, epochs=10)
 This script demonstrates the model training process for the Peru Poverty Prediction and Mapping System, incorporating both socioeconomic and satellite data to predict poverty hotspots and enable targeted intervention and resource allocation.
 
 ```python
-# File: complex_model_training.py
-# Path: src/modeling/complex_model_training.py
+## File: complex_model_training.py
+## Path: src/modeling/complex_model_training.py
 
 import tensorflow as tf
 import geopandas as gpd
@@ -314,29 +314,29 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
-# Load mock socioeconomic data
+## Load mock socioeconomic data
 socioeconomic_data = pd.read_csv('data/processed_data/train/socioeconomic_data.csv')
 
-# Load mock satellite data
+## Load mock satellite data
 satellite_data = gpd.read_file('data/processed_data/train/satellite_data.geojson')
 
-# Preprocess data
+## Preprocess data
 X = pd.concat([socioeconomic_data, satellite_data], axis=1)
 y = socioeconomic_data['target_column']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Feature scaling
+## Feature scaling
 scaler = StandardScaler()
 X_train_scaled = scaler.fit_transform(X_train)
 X_test_scaled = scaler.transform(X_test)
 
-# Train a Random Forest classifier
+## Train a Random Forest classifier
 rf_classifier = RandomForestClassifier(n_estimators=100, random_state=42)
 rf_classifier.fit(X_train_scaled, y_train)
 
-# Evaluate the model on the test set
+## Evaluate the model on the test set
 y_pred = rf_classifier.predict(X_test_scaled)
 accuracy = accuracy_score(y_test, y_pred)
 print(f'Accuracy of the Random Forest classifier: {accuracy}')

@@ -71,7 +71,7 @@ Building an MLOps infrastructure for the Automated Fact-Checking Systems involve
 
 By implementing this MLOps infrastructure, the Automated Fact-Checking System can ensure efficient development, deployment, and monitoring of machine learning models, leading to accurate and reliable fact-checking capabilities in countering misinformation.
 
-# Scalable File Structure for Automated Fact-Checking Systems Repository
+## Scalable File Structure for Automated Fact-Checking Systems Repository
 
 Creating a well-organized and scalable file structure for the Automated Fact-Checking Systems repository is crucial for managing the codebase, machine learning models, data, and related resources effectively. Below is an example of a scalable file structure:
 
@@ -221,28 +221,28 @@ This organized structure within the `deployment` directory facilitates the deplo
 Below is an example of a Python script for training a BERT model for the Automated Fact-Checking Systems using mock data. This script assumes the availability of the BERT model implementation in the `models/bert/bert_model.py` file within the project structure.
 
 ```python
-# train_bert_model.py
+## train_bert_model.py
 import torch
 from models.bert.bert_model import BERTFactChecker
 from torch.utils.data import DataLoader
-from mock_data_loader import MockFactCheckingDataset  # Assuming existence of mock data loader
+from mock_data_loader import MockFactCheckingDataset  ## Assuming existence of mock data loader
 
 def train_bert_fact_checker(train_dataset_path, validation_dataset_path, batch_size=32, num_epochs=5):
-    # Initialize BERT model
-    bert_model = BERTFactChecker()  # Instantiate BERT model
+    ## Initialize BERT model
+    bert_model = BERTFactChecker()  ## Instantiate BERT model
 
-    # Mock data loaders
+    ## Mock data loaders
     train_dataset = MockFactCheckingDataset(train_dataset_path)
     validation_dataset = MockFactCheckingDataset(validation_dataset_path)
     
     train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
     validation_loader = DataLoader(validation_dataset, batch_size=batch_size, shuffle=False)
 
-    # Define loss function and optimizer
+    ## Define loss function and optimizer
     criterion = torch.nn.CrossEntropyLoss()
     optimizer = torch.optim.Adam(bert_model.parameters(), lr=0.001)
 
-    # Training loop
+    ## Training loop
     for epoch in range(num_epochs):
         bert_model.train()
         for data in train_loader:
@@ -253,7 +253,7 @@ def train_bert_fact_checker(train_dataset_path, validation_dataset_path, batch_s
             loss.backward()
             optimizer.step()
 
-        # Validation
+        ## Validation
         bert_model.eval()
         with torch.no_grad():
             for data in validation_loader:
@@ -263,15 +263,15 @@ def train_bert_fact_checker(train_dataset_path, validation_dataset_path, batch_s
 
         print(f'Epoch [{epoch+1}/{num_epochs}], Loss: {loss.item():.4f}, Validation Loss: {val_loss.item():.4f}')
 
-    # Save trained model
+    ## Save trained model
     torch.save(bert_model.state_dict(), 'models/bert/saved_models/bert_trained_model.pth')
 
 if __name__ == "__main__":
-    # Paths to mock training and validation data
+    ## Paths to mock training and validation data
     train_data_path = 'data/mock_train_data.csv'
     validation_data_path = 'data/mock_validation_data.csv'
 
-    # Train BERT fact-checking model
+    ## Train BERT fact-checking model
     train_bert_fact_checker(train_data_path, validation_data_path)
 ```
 
@@ -284,12 +284,12 @@ This script showcases a simplified training process using mock data and can be e
 Certainly! Below is an example of a Python script that demonstrates a complex machine learning algorithm for the Automated Fact-Checking Systems. This script assumes the existence of a complex model architecture that leverages BERT and GPT models for fact-checking tasks, along with the usage of mock data. Please note that the script is a simplified example and should be tailored to the specific needs of the application.
 
 ```python
-# complex_fact_checking_model.py
+## complex_fact_checking_model.py
 import torch
 import torch.nn as nn
 from transformers import BertModel, GPT2Model
 from torch.utils.data import DataLoader
-from mock_data_loader import MockFactCheckingDataset  # Assuming existence of a mock data loader
+from mock_data_loader import MockFactCheckingDataset  ## Assuming existence of a mock data loader
 
 class ComplexFactCheckingModel(nn.Module):
     def __init__(self):
@@ -297,16 +297,16 @@ class ComplexFactCheckingModel(nn.Module):
         self.bert_model = BertModel.from_pretrained('bert-base-uncased')
         self.gpt_model = GPT2Model.from_pretrained('gpt2')
 
-        # Add additional layers for complex architecture
-        self.fc1 = nn.Linear(768, 256)  # Assuming BERT hidden size is 768
-        self.fc2 = nn.Linear(768, 256)  # Assuming GPT2 hidden size is 768
-        self.output_layer = nn.Linear(256, 2)  # 2 classes for fact-checking (True/False)
+        ## Add additional layers for complex architecture
+        self.fc1 = nn.Linear(768, 256)  ## Assuming BERT hidden size is 768
+        self.fc2 = nn.Linear(768, 256)  ## Assuming GPT2 hidden size is 768
+        self.output_layer = nn.Linear(256, 2)  ## 2 classes for fact-checking (True/False)
 
     def forward(self, input_ids, attention_mask, token_type_ids):
         bert_output = self.bert_model(input_ids=input_ids, attention_mask=attention_mask, token_type_ids=token_type_ids).pooler_output
         gpt_output = self.gpt_model(input_ids=input_ids, attention_mask=attention_mask).last_hidden_state.mean(dim=1)
 
-        # Complex architecture
+        ## Complex architecture
         combined_features = torch.cat((bert_output, gpt_output), dim=1)
         x = torch.relu(self.fc1(combined_features))
         x = torch.relu(self.fc2(x))
@@ -314,50 +314,50 @@ class ComplexFactCheckingModel(nn.Module):
         return x
 
 def train_complex_fact_checker(train_dataset_path, validation_dataset_path, batch_size=32, num_epochs=5):
-    # Initialize complex model
+    ## Initialize complex model
     complex_model = ComplexFactCheckingModel()
 
-    # Mock data loaders
+    ## Mock data loaders
     train_dataset = MockFactCheckingDataset(train_dataset_path)
     validation_dataset = MockFactCheckingDataset(validation_dataset_path)
     
     train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
     validation_loader = DataLoader(validation_dataset, batch_size=batch_size, shuffle=False)
 
-    # Define loss function and optimizer
+    ## Define loss function and optimizer
     criterion = nn.CrossEntropyLoss()
     optimizer = torch.optim.Adam(complex_model.parameters(), lr=0.001)
 
-    # Training loop
+    ## Training loop
     for epoch in range(num_epochs):
         complex_model.train()
         for data in train_loader:
             inputs, labels = data
             optimizer.zero_grad()
-            outputs = complex_model(*inputs)  # Unpack inputs for BERT and GPT
+            outputs = complex_model(*inputs)  ## Unpack inputs for BERT and GPT
             loss = criterion(outputs, labels)
             loss.backward()
             optimizer.step()
 
-        # Validation
+        ## Validation
         complex_model.eval()
         with torch.no_grad():
             for data in validation_loader:
                 inputs, labels = data
-                outputs = complex_model(*inputs)  # Unpack inputs for BERT and GPT
+                outputs = complex_model(*inputs)  ## Unpack inputs for BERT and GPT
                 val_loss = criterion(outputs, labels)
 
         print(f'Epoch [{epoch+1}/{num_epochs}], Loss: {loss.item():.4f}, Validation Loss: {val_loss.item():.4f}')
 
-    # Save trained model
+    ## Save trained model
     torch.save(complex_model.state_dict(), 'models/complex_trained_model.pth')
 
 if __name__ == "__main__":
-    # Paths to mock training and validation data
+    ## Paths to mock training and validation data
     train_data_path = 'data/mock_train_data.csv'
     validation_data_path = 'data/mock_validation_data.csv'
 
-    # Train complex fact-checking model
+    ## Train complex fact-checking model
     train_complex_fact_checker(train_data_path, validation_data_path)
 ```
 

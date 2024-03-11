@@ -5,7 +5,7 @@ permalink: posts/emotionai---emotion-recognition-system
 layout: article
 ---
 
-# AI EmotionAI - Emotion Recognition System Repository
+## AI EmotionAI - Emotion Recognition System Repository
 
 ## Objectives
 
@@ -79,7 +79,7 @@ The infrastructure will be integrated with cloud-based AI services, such as AI a
 
 By implementing this infrastructure, the EmotionAI - Emotion Recognition System application will be well-equipped to handle the data-intensive and AI-driven requirements, while ensuring scalability, reliability, and performance.
 
-# EmotionAI - Emotion Recognition System Repository File Structure
+## EmotionAI - Emotion Recognition System Repository File Structure
 
 ```
 emotion_ai/
@@ -261,26 +261,26 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 
 def train_emotion_detection_model(data_file_path):
-    # Load the mock data from the specified file path
+    ## Load the mock data from the specified file path
     data = pd.read_csv(data_file_path)
 
-    # Split the data into features and target variable
+    ## Split the data into features and target variable
     X = data.drop('emotion_label', axis=1)
     y = data['emotion_label']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize the Random Forest classifier
+    ## Initialize the Random Forest classifier
     rf_classifier = RandomForestClassifier(n_estimators=100, random_state=42)
 
-    # Train the classifier on the training data
+    ## Train the classifier on the training data
     rf_classifier.fit(X_train, y_train)
 
-    # Make predictions on the test data
+    ## Make predictions on the test data
     y_pred = rf_classifier.predict(X_test)
 
-    # Evaluate the model performance
+    ## Evaluate the model performance
     accuracy = accuracy_score(y_test, y_pred)
 
     return rf_classifier, accuracy
@@ -306,39 +306,39 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import accuracy_score
 
 def train_deep_emotion_model(data_file_path):
-    # Load the mock data from the specified file path
+    ## Load the mock data from the specified file path
     data = np.load(data_file_path)
 
-    # Assume data is preprocessed and includes features and emotion labels
+    ## Assume data is preprocessed and includes features and emotion labels
 
     X = data['features']
     y = data['emotion_labels']
 
-    # Encode emotion labels to numerical values
+    ## Encode emotion labels to numerical values
     label_encoder = LabelEncoder()
     y = label_encoder.fit_transform(y)
 
-    # Normalize feature data
+    ## Normalize feature data
     scaler = StandardScaler()
     X_normalized = scaler.fit_transform(X)
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X_normalized, y, test_size=0.2, random_state=42)
 
-    # Build a deep learning model using TensorFlow/Keras
+    ## Build a deep learning model using TensorFlow/Keras
     model = tf.keras.Sequential([
         tf.keras.layers.Dense(128, activation='relu', input_shape=(X_train.shape[1],)),
         tf.keras.layers.Dense(64, activation='relu'),
-        tf.keras.layers.Dense(7, activation='softmax)  # Assuming 7 emotion classes
+        tf.keras.layers.Dense(7, activation='softmax)  ## Assuming 7 emotion classes
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y_test))
 
-    # Evaluate the model performance
+    ## Evaluate the model performance
     _, accuracy = model.evaluate(X_test, y_test)
 
     return model, accuracy

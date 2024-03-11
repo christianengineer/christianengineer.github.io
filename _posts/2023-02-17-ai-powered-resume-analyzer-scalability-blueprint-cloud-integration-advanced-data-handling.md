@@ -5,21 +5,21 @@ permalink: posts/ai-powered-resume-analyzer-scalability-blueprint-cloud-integrat
 layout: article
 ---
 
-# Blueprint for Scalability: Master Plan for an Innovative, AI-Powered Resume Analyzer with Cloud Integration and Advanced Data Handling Capabilities
+## Blueprint for Scalability: Master Plan for an Innovative, AI-Powered Resume Analyzer with Cloud Integration and Advanced Data Handling Capabilities
 
 ---
 
 ## Table of Contents
 
-1. [Overview](#overview)
-2. [Architecture](#architecture)
-3. [Development Strategy](#development-strategy)
-4. [Cloud Integration](#cloud-integration)
-5. [Data Handling](#data-handling)
-6. [Machine Learning Model Training](#machine-learning)
-7. [API Integration](#api-integration)
-8. [Testing](#testing)
-9. [Phased Roll-out](#phased-rollout)
+1. [Overview](## verview)
+2. [Architecture](## rchitecture)
+3. [Development Strategy](## evelopment-strategy)
+4. [Cloud Integration](## loud-integration)
+5. [Data Handling](## ata-handling)
+6. [Machine Learning Model Training](## achine-learning)
+7. [API Integration](## pi-integration)
+8. [Testing](## esting)
+9. [Phased Roll-out](## hased-rollout)
 
 ---
 

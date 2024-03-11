@@ -5,7 +5,7 @@ permalink: posts/product-innovation-and-trend-spotting-ai-tensorflow-gpt-3-kafka
 layout: article
 ---
 
-# Machine Learning Solution for Product Innovation and Trend Spotting AI (TensorFlow, GPT-3, Kafka, Docker) for AJE Group (Big Cola)
+## Machine Learning Solution for Product Innovation and Trend Spotting AI (TensorFlow, GPT-3, Kafka, Docker) for AJE Group (Big Cola)
 
 ## Objective and Benefits for AJE Group (Big Cola)
 ### Objectives:
@@ -204,37 +204,37 @@ from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 from sklearn.feature_extraction.text import TfidfVectorizer
 
-# Load data for preprocessing
+## Load data for preprocessing
 data = pd.read_csv('data.csv')
 
-# Text preprocessing
+## Text preprocessing
 def text_preprocessing(text):
-    # Tokenization
+    ## Tokenization
     tokens = word_tokenize(text)
     
-    # Remove stopwords
+    ## Remove stopwords
     clean_tokens = [word for word in tokens if word.lower() not in stopwords.words('english')]
     
-    # Lemmatization
+    ## Lemmatization
     lemmatizer = WordNetLemmatizer()
     clean_text = ' '.join([lemmatizer.lemmatize(word) for word in clean_tokens])
     
     return clean_text
 
-# Apply text preprocessing to 'text' column
+## Apply text preprocessing to 'text' column
 data['clean_text'] = data['text'].apply(lambda x: text_preprocessing(x))
 
-# Feature Engineering: TF-IDF Vectorization
+## Feature Engineering: TF-IDF Vectorization
 tfidf_vectorizer = TfidfVectorizer(max_features=1000)
 tfidf_matrix = tfidf_vectorizer.fit_transform(data['clean_text'])
 
-# Store TF-IDF features in a DataFrame
+## Store TF-IDF features in a DataFrame
 tfidf_df = pd.DataFrame(tfidf_matrix.toarray(), columns=tfidf_vectorizer.get_feature_names())
 
-# Merge TF-IDF features with original data
+## Merge TF-IDF features with original data
 preprocessed_data = pd.concat([data.drop(columns=['text']), tfidf_df], axis=1)
 
-# Save preprocessed data to a new CSV file
+## Save preprocessed data to a new CSV file
 preprocessed_data.to_csv('preprocessed_data.csv', index=False)
 ```
 
@@ -325,10 +325,10 @@ import numpy as np
 import random
 from faker import Faker
 
-# Initialize Faker for generating fake data
+## Initialize Faker for generating fake data
 fake = Faker()
 
-# Create a fictitious dataset with relevant features
+## Create a fictitious dataset with relevant features
 def generate_dataset(num_samples):
     data = pd.DataFrame(columns=['review_text', 'rating', 'product_category', 'sales', 'sentiment_score'])
     
@@ -343,11 +343,11 @@ def generate_dataset(num_samples):
     
     return data
 
-# Generate fictitious dataset with 1000 samples
+## Generate fictitious dataset with 1000 samples
 num_samples = 1000
 fake_data = generate_dataset(num_samples)
 
-# Save generated dataset to a CSV file
+## Save generated dataset to a CSV file
 fake_data.to_csv('fake_dataset.csv', index=False)
 ```
 
@@ -400,28 +400,28 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 
-# Load preprocessed dataset
+## Load preprocessed dataset
 data = pd.read_csv('preprocessed_data.csv')
 
-# Splitting data into features and target
+## Splitting data into features and target
 X = data.drop(columns=['target_column'])
 y = data['target_column']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Training the Random Forest Classifier model
+## Training the Random Forest Classifier model
 rf_model = RandomForestClassifier()
 rf_model.fit(X_train, y_train)
 
-# Making predictions
+## Making predictions
 y_pred = rf_model.predict(X_test)
 
-# Calculating model accuracy
+## Calculating model accuracy
 accuracy = accuracy_score(y_test, y_pred)
 print(f'Model Accuracy: {accuracy}')
 
-# Save the trained model for future use
+## Save the trained model for future use
 joblib.dump(rf_model, 'rf_model.pkl')
 ```
 
@@ -508,27 +508,27 @@ By adhering to these best practices and standards in code quality, structure, an
 By following this step-by-step deployment plan tailored to the unique demands of your project, leveraging tools like Docker, Kubernetes, Flask, Apache Kafka, and CI/CD pipelines, your team can effectively deploy the machine learning model into production with confidence and efficiency, ensuring seamless integration into the live environment for optimal performance and scalability.
 
 ```Dockerfile
-# Use a base image with Python and required dependencies
+## Use a base image with Python and required dependencies
 FROM python:3.9-slim
 
-# Set the working directory in the container
+## Set the working directory in the container
 WORKDIR /app
 
-# Copy requirements file and install dependencies
+## Copy requirements file and install dependencies
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the model and necessary files into the container
+## Copy the model and necessary files into the container
 COPY model.joblib .
 COPY app.py .
 
-# Define environment variables
+## Define environment variables
 ENV FLASK_APP=app.py
 
-# Expose the service port
+## Expose the service port
 EXPOSE 5000
 
-# Command to run the Flask application
+## Command to run the Flask application
 CMD ["flask", "run", "--host=0.0.0.0"]
 ```
 

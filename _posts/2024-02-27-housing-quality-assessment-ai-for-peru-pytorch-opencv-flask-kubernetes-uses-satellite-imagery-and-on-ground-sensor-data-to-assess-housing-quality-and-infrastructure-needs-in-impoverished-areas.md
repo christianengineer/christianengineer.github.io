@@ -255,29 +255,29 @@ from torchvision import datasets, transforms
 from cnn_model import CNNModel
 from utils import load_data, evaluate_model
 
-# Define file paths for mock data (replace with actual file paths)
+## Define file paths for mock data (replace with actual file paths)
 train_data_path = 'data/train_data.pth'
 val_data_path = 'data/val_data.pth'
 
-# Hyperparameters
+## Hyperparameters
 learning_rate = 0.001
 batch_size = 32
 epochs = 10
 
-# Load mock training and validation data
+## Load mock training and validation data
 train_data = load_data(train_data_path)
 val_data = load_data(val_data_path)
 
-# Initialize CNN model
+## Initialize CNN model
 model = CNNModel()
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters(), lr=learning_rate)
 
-# Define DataLoader for training and validation
+## Define DataLoader for training and validation
 train_loader = torch.utils.data.DataLoader(train_data, batch_size=batch_size, shuffle=True)
 val_loader = torch.utils.data.DataLoader(val_data, batch_size=batch_size, shuffle=False)
 
-# Training loop
+## Training loop
 for epoch in range(epochs):
     model.train()
     for inputs, labels in train_loader:
@@ -287,11 +287,11 @@ for epoch in range(epochs):
         loss.backward()
         optimizer.step()
 
-    # Evaluate model on validation set
+    ## Evaluate model on validation set
     val_loss, val_acc = evaluate_model(model, val_loader)
     print(f'Epoch {epoch + 1}/{epochs}, Validation Loss: {val_loss:.4f}, Validation Accuracy: {val_acc:.2f}%')
 
-# Save trained model weights
+## Save trained model weights
 torch.save(model.state_dict(), 'model_weights.pth')
 ```
 
@@ -308,35 +308,35 @@ import cv2
 import numpy as np
 from utils import load_data, preprocess_image
 
-# Define file paths for mock data (replace with actual file paths)
+## Define file paths for mock data (replace with actual file paths)
 image_path = 'data/sample_image.jpg'
 sensor_data_path = 'data/sample_sensor_data.csv'
 
-# Load and preprocess mock data
+## Load and preprocess mock data
 image = cv2.imread(image_path)
 sensor_data = np.loadtxt(sensor_data_path, delimiter=',')
 
-# Preprocess image and sensor data
+## Preprocess image and sensor data
 processed_image = preprocess_image(image)
 normalized_sensor_data = (sensor_data - np.mean(sensor_data)) / np.std(sensor_data)
 
-# Extract features from image using a pre-trained CNN model
+## Extract features from image using a pre-trained CNN model
 feature_extractor = models.resnet50(pretrained=True)
 feature_extractor.eval()
 with torch.no_grad():
     image_tensor = torch.from_numpy(processed_image).unsqueeze(0).permute(0, 3, 1, 2).float()
     features = feature_extractor(image_tensor).squeeze().numpy()
 
-# Combine image and sensor data features
+## Combine image and sensor data features
 combined_features = np.concatenate((features, normalized_sensor_data))
 
-# Define a complex ML algorithm (e.g., ensemble model, hybrid model)
+## Define a complex ML algorithm (e.g., ensemble model, hybrid model)
 class ComplexModel(nn.Module):
     def __init__(self, input_size):
         super(ComplexModel, self).__init__()
         self.fc1 = nn.Linear(input_size, 128)
         self.fc2 = nn.Linear(128, 64)
-        self.fc3 = nn.Linear(64, 2)  # Two classes for housing quality assessment
+        self.fc3 = nn.Linear(64, 2)  ## Two classes for housing quality assessment
 
     def forward(self, x):
         x = torch.relu(self.fc1(x))
@@ -344,21 +344,21 @@ class ComplexModel(nn.Module):
         x = self.fc3(x)
         return x
 
-# Initialize and train the complex ML algorithm
+## Initialize and train the complex ML algorithm
 input_size = combined_features.shape[0]
 model = ComplexModel(input_size)
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters(), lr=0.001)
 
-# Mock labels
-labels = torch.LongTensor([0])  # Example label (0: Poor Quality, 1: Good Quality)
+## Mock labels
+labels = torch.LongTensor([0])  ## Example label (0: Poor Quality, 1: Good Quality)
 outputs = model(torch.from_numpy(combined_features).float())
 loss = criterion(outputs, labels)
 optimizer.zero_grad()
 loss.backward()
 optimizer.step()
 
-# Prediction for the sample data
+## Prediction for the sample data
 with torch.no_grad():
     prediction = torch.argmax(model(torch.from_numpy(combined_features).float()))
 

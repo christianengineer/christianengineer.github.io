@@ -65,42 +65,42 @@ By architecting the infrastructure for the predictive analytics in healthcare ap
 predictive-analytics-healthcare/
 │
 ├── data/
-│   ├── raw/                     # Raw data files
-│   ├── processed/               # Processed data files
-│   ├── features/                # Extracted features
+│   ├── raw/                     ## Raw data files
+│   ├── processed/               ## Processed data files
+│   ├── features/                ## Extracted features
 │   └── ...
 │
 ├── notebooks/
-│   ├── EDA.ipynb                # Exploratory Data Analysis notebook
-│   ├── data_preprocessing.ipynb  # Data preprocessing notebook
-│   ├── model_training.ipynb      # Machine learning model training notebook
-│   ├── model_evaluation.ipynb    # Model evaluation and performance analysis
+│   ├── EDA.ipynb                ## Exploratory Data Analysis notebook
+│   ├── data_preprocessing.ipynb  ## Data preprocessing notebook
+│   ├── model_training.ipynb      ## Machine learning model training notebook
+│   ├── model_evaluation.ipynb    ## Model evaluation and performance analysis
 │   └── ...
 │
 ├── src/
-│   ├── data_preprocessing.py     # Python scripts for data preprocessing
-│   ├── feature_engineering.py    # Scripts for feature engineering
-│   ├── model_training.py         # Scripts for training machine learning models
-│   ├── model_evaluation.py       # Scripts for model evaluation
+│   ├── data_preprocessing.py     ## Python scripts for data preprocessing
+│   ├── feature_engineering.py    ## Scripts for feature engineering
+│   ├── model_training.py         ## Scripts for training machine learning models
+│   ├── model_evaluation.py       ## Scripts for model evaluation
 │   └── ...
 │
 ├── models/
-│   ├── model1.pkl                # Trained machine learning model files
+│   ├── model1.pkl                ## Trained machine learning model files
 │   ├── model2.pkl
 │   └── ...
 │
 ├── app/
-│   ├── api/                      # API endpoints for real-time predictions
-│   ├── batch_processing/         # Scripts for batch prediction processing
+│   ├── api/                      ## API endpoints for real-time predictions
+│   ├── batch_processing/         ## Scripts for batch prediction processing
 │   └── ...
 │
 ├── config/
-│   ├── settings.py               # Configuration settings for the application
-│   ├── logging.conf              # Logging configuration
+│   ├── settings.py               ## Configuration settings for the application
+│   ├── logging.conf              ## Logging configuration
 │   └── ...
 │
-├── requirements.txt              # Python package dependencies
-├── README.md                     # Project README with instructions and documentation
+├── requirements.txt              ## Python package dependencies
+├── README.md                     ## Project README with instructions and documentation
 └── ...
 
 ```
@@ -158,30 +158,30 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
 def train_and_evaluate_model(data_file_path):
-    # Load mock healthcare data from a CSV file
+    ## Load mock healthcare data from a CSV file
     data = pd.read_csv(data_file_path)
 
-    # Assume the 'outcome' column contains the target variable
+    ## Assume the 'outcome' column contains the target variable
     X = data.drop('outcome', axis=1)
     y = data['outcome']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize the RandomForestClassifier model (this could be a complex algorithm)
+    ## Initialize the RandomForestClassifier model (this could be a complex algorithm)
     model = RandomForestClassifier(n_estimators=100, random_state=42)
 
-    # Train the model on the training data
+    ## Train the model on the training data
     model.fit(X_train, y_train)
 
-    # Make predictions on the testing data
+    ## Make predictions on the testing data
     predictions = model.predict(X_test)
 
-    # Evaluate the model's performance
+    ## Evaluate the model's performance
     accuracy = accuracy_score(y_test, predictions)
     print(f'Model accuracy: {accuracy:.2f}')
 
-    # Return the trained model for serialization and deployment
+    ## Return the trained model for serialization and deployment
     return model
 ```
 
@@ -204,35 +204,35 @@ from sklearn.metrics import accuracy_score
 import joblib
 
 def train_predictive_model(data_file_path):
-    # Load mock healthcare data from a CSV file
+    ## Load mock healthcare data from a CSV file
     data = pd.read_csv(data_file_path)
 
-    # Assume the 'outcome' column contains the target variable
+    ## Assume the 'outcome' column contains the target variable
     X = data.drop('outcome', axis=1)
     y = data['outcome']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize the RandomForestClassifier model (complex algorithm)
+    ## Initialize the RandomForestClassifier model (complex algorithm)
     model = RandomForestClassifier(n_estimators=100, random_state=42)
 
-    # Train the model on the training data
+    ## Train the model on the training data
     model.fit(X_train, y_train)
 
-    # Make predictions on the testing data
+    ## Make predictions on the testing data
     y_pred = model.predict(X_test)
 
-    # Evaluate the model's performance
+    ## Evaluate the model's performance
     accuracy = accuracy_score(y_test, y_pred)
     print(f'Model accuracy: {accuracy:.2f}')
 
-    # Serialize and save the trained model to a file
+    ## Serialize and save the trained model to a file
     model_file_path = 'models/predictive_model.pkl'
     joblib.dump(model, model_file_path)
     print(f'Trained model saved to: {model_file_path}')
 
-    return model_file_path  # Return the file path of the saved model
+    return model_file_path  ## Return the file path of the saved model
 ```
 
 In this function:

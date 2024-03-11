@@ -5,7 +5,7 @@ permalink: posts/traffic-flow-optimization-ai-with-tensorflow-and-keras-for-metr
 layout: article
 ---
 
-# Traffic Flow Optimization AI Solution for Metropolitano de Lima
+## Traffic Flow Optimization AI Solution for Metropolitano de Lima
 
 ## Objectives and Benefits
 - **Objectives:** 
@@ -254,25 +254,25 @@ import pandas as pd
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 
-# Load the preprocessed traffic data
+## Load the preprocessed traffic data
 traffic_data = pd.read_csv('traffic_data_preprocessed.csv')
 
-# Extract features and target variable
+## Extract features and target variable
 X = traffic_data[['hour_of_day', 'day_of_week', 'traffic_volume', 'weather_condition']]
 y = traffic_data['bus_delay']
 
-# One-hot encode categorical variables (like weather conditions)
+## One-hot encode categorical variables (like weather conditions)
 X = pd.get_dummies(X, columns=['weather_condition'])
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Standardize numerical features for better model performance
+## Standardize numerical features for better model performance
 scaler = StandardScaler()
 X_train[['hour_of_day', 'day_of_week', 'traffic_volume']] = scaler.fit_transform(X_train[['hour_of_day', 'day_of_week', 'traffic_volume']])
 X_test[['hour_of_day', 'day_of_week', 'traffic_volume']] = scaler.transform(X_test[['hour_of_day', 'day_of_week', 'traffic_volume']])
 
-# Save the preprocessed data for model training
+## Save the preprocessed data for model training
 X_train.to_csv('X_train.csv', index=False)
 X_test.to_csv('X_test.csv', index=False)
 y_train.to_csv('y_train.csv', index=False)
@@ -364,21 +364,21 @@ import numpy as np
 from sklearn.preprocessing import LabelEncoder
 from sklearn.model_selection import train_test_split
 
-# Generate fictitious traffic data
+## Generate fictitious traffic data
 np.random.seed(42)
 n_samples = 10000
 
-# Generate time-related features
+## Generate time-related features
 hour_of_day = np.random.randint(0, 24, n_samples)
 day_of_week = np.random.randint(0, 6, n_samples)
 month = np.random.randint(1, 13, n_samples)
 year = np.random.randint(2010, 2023, n_samples)
 
-# Generate traffic volume and weather conditions
+## Generate traffic volume and weather conditions
 traffic_volume = np.random.randint(50, 500, n_samples)
 weather_conditions = np.random.choice(['clear', 'rainy', 'cloudy', 'sunny'], size=n_samples)
 
-# Create DataFrame with generated features
+## Create DataFrame with generated features
 data = pd.DataFrame({
     'hour_of_day': hour_of_day,
     'day_of_week': day_of_week,
@@ -388,21 +388,21 @@ data = pd.DataFrame({
     'weather_condition': weather_conditions
 })
 
-# Encode categorical variables (weather_condition)
+## Encode categorical variables (weather_condition)
 label_encoder = LabelEncoder()
 data['weather_condition'] = label_encoder.fit_transform(data['weather_condition'])
 
-# Add noise for variability in traffic delays
+## Add noise for variability in traffic delays
 noise = np.random.uniform(low=-5, high=5, size=n_samples)
 data['bus_delay'] = (0.5 * hour_of_day + 0.2 * traffic_volume - 0.1 * day_of_week + 10 * label_encoder.transform(weather_conditions) + noise).astype(int)
 
-# Save the generated dataset
+## Save the generated dataset
 data.to_csv('generated_traffic_data.csv', index=False)
 
-# Split dataset into training and testing sets
+## Split dataset into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(data.drop('bus_delay', axis=1), data['bus_delay'], test_size=0.2, random_state=42)
 
-# Save the training and testing sets
+## Save the training and testing sets
 X_train.to_csv('X_train.csv', index=False)
 X_test.to_csv('X_test.csv', index=False)
 y_train.to_csv('y_train.csv', index=False)
@@ -453,33 +453,33 @@ from sklearn.preprocessing import StandardScaler
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import LSTM, Dense
 
-# Load the preprocessed data
+## Load the preprocessed data
 X_train = pd.read_csv('X_train.csv')
 y_train = pd.read_csv('y_train.csv')
 
-# Standardize numerical features
+## Standardize numerical features
 scaler = StandardScaler()
 X_train = scaler.fit_transform(X_train)
 
-# Reshape input data for LSTM model
+## Reshape input data for LSTM model
 X_train = X_train.reshape(X_train.shape[0], X_train.shape[1], 1)
 
-# Split data into training and validation sets
+## Split data into training and validation sets
 X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=0.2, random_state=42)
 
-# Define the LSTM model
+## Define the LSTM model
 model = Sequential()
 model.add(LSTM(units=50, return_sequences=True, input_shape=(X_train.shape[1], 1)))
 model.add(LSTM(units=50))
 model.add(Dense(units=1))
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam', loss='mean_squared_error')
 
-# Train the model
+## Train the model
 model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_val, y_val))
 
-# Save the trained model
+## Save the trained model
 model.save('traffic_flow_optimization_model.h5')
 ```
 
@@ -547,23 +547,23 @@ By following this step-by-step deployment plan and utilizing the recommended too
 Below is a sample Dockerfile tailored for encapsulating the environment and dependencies of the Traffic Flow Optimization AI project, optimized for performance and scalability:
 
 ```Dockerfile
-# Use TensorFlow's Docker image as the base image
+## Use TensorFlow's Docker image as the base image
 FROM tensorflow/tensorflow:latest
 
-# Set the working directory in the container
+## Set the working directory in the container
 WORKDIR /app
 
-# Copy the project files into the container
+## Copy the project files into the container
 COPY . /app
 
-# Install additional dependencies
+## Install additional dependencies
 RUN pip install --upgrade pip
 RUN pip install pandas scikit-learn Flask
 
-# Expose the API port
+## Expose the API port
 EXPOSE 5000
 
-# Command to run the Flask API serving the model
+## Command to run the Flask API serving the model
 CMD ["python", "app.py"]
 ```
 

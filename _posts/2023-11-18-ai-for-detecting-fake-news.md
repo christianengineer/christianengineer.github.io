@@ -7,7 +7,7 @@ layout: article
 
 <<<<<<< HEAD
 
-# AI for Detecting Fake News
+## AI for Detecting Fake News
 
 ## Description
 
@@ -60,26 +60,26 @@ Sure! Here's a scalable file structure for the AI for Detecting Fake News projec
 
 ```
 |-- backend
-    |-- app.py           # Flask application entry point
-    |-- config.py        # Configuration file for the backend
-    |-- requirements.txt # Backend dependencies
+    |-- app.py           ## Flask application entry point
+    |-- config.py        ## Configuration file for the backend
+    |-- requirements.txt ## Backend dependencies
     |-- models
-        |-- fake_news_detection_model.py   # Implementation of the fake news detection model
-        |-- preprocessing.py               # Text preprocessing functions
+        |-- fake_news_detection_model.py   ## Implementation of the fake news detection model
+        |-- preprocessing.py               ## Text preprocessing functions
     |-- routes
-        |-- api.py      # Backend API routes for handling requests and responses
+        |-- api.py      ## Backend API routes for handling requests and responses
 |-- frontend
     |-- public
-        |-- index.html  # HTML template for the frontend
+        |-- index.html  ## HTML template for the frontend
     |-- src
-        |-- components  # React components
-        |-- store       # Redux store configuration
-        |-- api.js      # Frontend API functions for communicating with the backend
-        |-- index.js    # Entry point for the frontend application
+        |-- components  ## React components
+        |-- store       ## Redux store configuration
+        |-- api.js      ## Frontend API functions for communicating with the backend
+        |-- index.js    ## Entry point for the frontend application
 |-- database
-    |-- migrations  # Database migrations scripts
-|-- README.md       # Project documentation
-|-- requirements.txt  # Project dependencies (for both backend and frontend)
+    |-- migrations  ## Database migrations scripts
+|-- README.md       ## Project documentation
+|-- requirements.txt  ## Project dependencies (for both backend and frontend)
 ```
 
 This file structure follows a modular approach, separating the backend and frontend components. The backend directory contains the Flask application entry point (`app.py`), configuration file (`config.py`), and the `models` and `routes` directories. The `models` directory contains the implementation of the fake news detection model and text preprocessing functions. The `routes` directory contains the API routes for handling backend requests and responses.
@@ -103,33 +103,33 @@ from models.preprocessing import preprocess_text
 
 api_blueprint = Blueprint('api', __name__)
 
-model = FakeNewsDetectionModel()  # Instantiate the fake news detection model
+model = FakeNewsDetectionModel()  ## Instantiate the fake news detection model
 
 @api_blueprint.route('/detect', methods=['POST'])
 def detect_fake_news():
     data = request.get_json()
 
-    # Preprocess the input text
+    ## Preprocess the input text
     preprocessed_text = preprocess_text(data['text'])
 
-    # Use the fake news detection model to predict the authenticity of the text
+    ## Use the fake news detection model to predict the authenticity of the text
     prediction = model.predict(preprocessed_text)
 
-    # Return the prediction as a response
+    ## Return the prediction as a response
     return jsonify({'prediction': prediction})
 
 @api_blueprint.route('/train', methods=['POST'])
 def train_model():
     data = request.get_json()
 
-    # Preprocess the training data
+    ## Preprocess the training data
     preprocessed_data = [preprocess_text(text) for text in data['texts']]
     labels = data['labels']
 
-    # Train the fake news detection model
+    ## Train the fake news detection model
     model.train(preprocessed_data, labels)
 
-    # Return a success message
+    ## Return a success message
     return jsonify({'message': 'Model trained successfully.'})
 ```
 
@@ -153,21 +153,21 @@ from sklearn.linear_model import LogisticRegression
 
 class FakeNewsDetectionModel:
     def __init__(self):
-        self.vectorizer = TfidfVectorizer()  # Text vectorizer
-        self.classifier = LogisticRegression()  # Binary classifier
+        self.vectorizer = TfidfVectorizer()  ## Text vectorizer
+        self.classifier = LogisticRegression()  ## Binary classifier
 
     def train(self, data, labels):
-        # Vectorize the preprocessed data
+        ## Vectorize the preprocessed data
         X = self.vectorizer.fit_transform(data)
 
-        # Train the classifier using the vectorized data and labels
+        ## Train the classifier using the vectorized data and labels
         self.classifier.fit(X, labels)
 
     def predict(self, text):
-        # Vectorize the input text
+        ## Vectorize the input text
         text_vector = self.vectorizer.transform([text])
 
-        # Predict the authenticity of the input text
+        ## Predict the authenticity of the input text
         prediction = self.classifier.predict(text_vector)
 
         return prediction[0]
@@ -217,9 +217,9 @@ class TextPreprocessor(BaseEstimator, TransformerMixin):
     def transform(self, X):
         preprocessed_data = []
         for text in X:
-            tokens = word_tokenize(text.lower())  # Tokenize and convert to lowercase
+            tokens = word_tokenize(text.lower())  ## Tokenize and convert to lowercase
 
-            # Remove stopwords and punctuations, and lemmatize the remaining words
+            ## Remove stopwords and punctuations, and lemmatize the remaining words
             filtered_tokens = [self.lemmatizer.lemmatize(token) for token in tokens if
                                token.isalpha() and token not in self.stop_words]
 
@@ -271,9 +271,9 @@ Based on the AI for Detecting Fake News application, here is a list of potential
    - User Story: As a machine learning engineer, I want to fine-tune and optimize the AI model using advanced techniques and new datasets.
    - Accomplished in: Improving and optimizing the AI model can be done in files like `backend/models/fake_news_detection_model.py` or in separate Jupyter notebooks dedicated to model improvement.
 
-# It is important to note that the user stories provided above are just examples to illustrate the different types of users and their goals. Actual user stories may vary depending on the specific requirements of the application and the needs of the target users.
+## It is important to note that the user stories provided above are just examples to illustrate the different types of users and their goals. Actual user stories may vary depending on the specific requirements of the application and the needs of the target users.
 
-# Technical Specifications - AI for Detecting Fake News
+## Technical Specifications - AI for Detecting Fake News
 
 ## Description
 
@@ -391,31 +391,31 @@ class AICoreLogic:
         self.classifier = PassiveAggressiveClassifier(max_iter=50)
 
     def train_model(self):
-        # Load training data from CSV
+        ## Load training data from CSV
         df = pd.read_csv(self.train_data_path)
 
-        # Preprocess the data
+        ## Preprocess the data
         X = df['text']
         y = df['label']
 
-        # Vectorize the text data
+        ## Vectorize the text data
         X = self.vectorizer.fit_transform(X)
 
-        # Train the classifier
+        ## Train the classifier
         self.classifier.fit(X, y)
 
     def predict(self, input_text):
-        # Prepare the input for prediction
+        ## Prepare the input for prediction
         X = self.vectorizer.transform([input_text])
 
-        # Predict the label
+        ## Predict the label
         prediction = self.classifier.predict(X)
 
-        return prediction[0]  # Return the predicted label
+        return prediction[0]  ## Return the predicted label
 
 
 if __name__ == "__main__":
-    # Example usage of the AI core logic
+    ## Example usage of the AI core logic
     ai = AICoreLogic(train_data_path='/data/train_data.csv')
     ai.train_model()
 

@@ -5,7 +5,7 @@ permalink: posts/continuous-integrationcontinuous-deployment-cicd-for-ml-models-
 layout: article
 ---
 
-# AI Continuous Integration/Continuous Deployment (CI/CD) for ML Models
+## AI Continuous Integration/Continuous Deployment (CI/CD) for ML Models
 
 ## Objectives
 The objective of implementing a CI/CD pipeline specifically for machine learning (ML) models is to automate the ML model building, training, testing, and deployment processes. This allows for faster iteration and deployment of models, maintains consistency, improves collaboration, and ensures quality through automated testing and validation.
@@ -66,7 +66,7 @@ Consider using Docker to containerize ML models, enabling consistent deployment 
 
 By carefully architecting the infrastructure components and integrating them with the chosen CI/CD tools and libraries, a scalable and resilient CI/CD pipeline for ML models can be established, optimizing the development and deployment of AI applications.
 
-# Scalable File Structure for CI/CD for ML Models Repository
+## Scalable File Structure for CI/CD for ML Models Repository
 
 When setting up a repository for CI/CD pipeline specifically tailored for machine learning models, organizing the files and directories in a scalable manner is essential for maintainability and collaboration. Below is a suggested file structure for such a repository:
 
@@ -130,7 +130,7 @@ ML-Project/
 
 By organizing the repository in this manner, developers and data scientists can easily collaborate on ML model development, testing, and deployment, and the CI/CD pipeline can be seamlessly integrated with the project's version control system and chosen CI/CD tool.
 
-# Models Directory Structure for CI/CD for ML Models Repository
+## Models Directory Structure for CI/CD for ML Models Repository
 
 Within the `models/` directory, the structure and files are crucial for organizing machine learning models and their associated code, data, and dependencies to ensure efficient utilization within the CI/CD pipeline. Below is an expanded view of the `models/` directory and its associated files:
 
@@ -166,7 +166,7 @@ By organizing the `models/` directory in this manner, it becomes easier to manag
 
 This structure allows for scalability and flexibility as additional models can be added as subdirectories under `models/`, each with its own dedicated source code, data, and dependencies. This organization also fits well within the broader context of the ML project, providing a clear pathway for model development, testing, and deployment within the CI/CD pipeline.
 
-# Deployment Directory Structure for CI/CD for ML Models Repository
+## Deployment Directory Structure for CI/CD for ML Models Repository
 
 The `deployment/` directory is crucial for organizing deployment-related scripts and configurations for machine learning models within the CI/CD pipeline. Below is an expanded view of the `deployment/` directory and its associated files:
 
@@ -217,29 +217,29 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 
 def complex_machine_learning_algorithm(data_file_path):
-    # Load the dataset
+    ## Load the dataset
     data = pd.read_csv(data_file_path)
 
-    # Perform data preprocessing and feature engineering
-    # ... (preprocessing steps)
+    ## Perform data preprocessing and feature engineering
+    ## ... (preprocessing steps)
 
-    # Split the data into features and target variable
+    ## Split the data into features and target variable
     X = data.drop('target', axis=1)
     y = data['target']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize the machine learning model
+    ## Initialize the machine learning model
     model = RandomForestClassifier(n_estimators=100, random_state=42)
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train)
 
-    # Make predictions
+    ## Make predictions
     y_pred = model.predict(X_test)
 
-    # Evaluate the model
+    ## Evaluate the model
     accuracy = accuracy_score(y_test, y_pred)
 
     return accuracy
@@ -260,34 +260,34 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
 def complex_deep_learning_algorithm(data_file_path):
-    # Load the dataset
+    ## Load the dataset
     data = np.load(data_file_path)
     X = data['features']
     y = data['labels']
 
-    # Preprocess the data
+    ## Preprocess the data
     scaler = StandardScaler()
     X = scaler.fit_transform(X)
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Define the deep learning model using TensorFlow/Keras
+    ## Define the deep learning model using TensorFlow/Keras
     model = tf.keras.Sequential([
         tf.keras.layers.Dense(128, activation='relu', input_shape=(X_train.shape[1],)),
         tf.keras.layers.Dense(64, activation='relu'),
         tf.keras.layers.Dense(10, activation='softmax')
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam',
                   loss='sparse_categorical_crossentropy',
                   metrics=['accuracy'])
 
-    # Train the model
+    ## Train the model
     history = model.fit(X_train, y_train, epochs=10, validation_data=(X_test, y_test))
 
-    # Evaluate the model
+    ## Evaluate the model
     _, test_accuracy = model.evaluate(X_test, y_test)
     
     return test_accuracy

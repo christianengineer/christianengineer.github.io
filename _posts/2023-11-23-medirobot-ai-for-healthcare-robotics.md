@@ -79,7 +79,7 @@ The infrastructure for the MediRobot AI for Healthcare Robotics application is d
 
 By establishing this infrastructure, the MediRobot AI for Healthcare Robotics application can effectively support the AI algorithms, data processing, and machine learning workflows essential for its role in healthcare robotics.
 
-# Scalable File Structure for MediRobot AI for Healthcare Robotics Repository
+## Scalable File Structure for MediRobot AI for Healthcare Robotics Repository
 
 ```
 medirobot-ai-healthcare-robotics/
@@ -239,30 +239,30 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 
 def complex_ml_algorithm(data_file_path):
-    # Load mock data from the specified file path
+    ## Load mock data from the specified file path
     data = pd.read_csv(data_file_path)
 
-    # Preprocessing and feature engineering
-    # ... (preprocessing steps such as data cleaning, encoding, feature selection, etc.)
+    ## Preprocessing and feature engineering
+    ## ... (preprocessing steps such as data cleaning, encoding, feature selection, etc.)
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X = data.drop('target_column', axis=1)
     y = data['target_column']
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize and train a complex machine learning model (Random Forest as an example)
+    ## Initialize and train a complex machine learning model (Random Forest as an example)
     model = RandomForestClassifier(n_estimators=100, random_state=42)
     model.fit(X_train, y_train)
 
-    # Make predictions on the test set
+    ## Make predictions on the test set
     y_pred = model.predict(X_test)
 
-    # Evaluate the model
+    ## Evaluate the model
     accuracy = accuracy_score(y_test, y_pred)
 
     return model, accuracy
 
-# Example usage
+## Example usage
 data_file_path = 'path/to/mock/data.csv'
 trained_model, model_accuracy = complex_ml_algorithm(data_file_path)
 print(f'Trained model: {trained_model}')
@@ -281,42 +281,42 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
 def complex_deep_learning_algorithm(data_file_path):
-    # Load mock data from the specified file path
+    ## Load mock data from the specified file path
     data = pd.read_csv(data_file_path)
 
-    # Preprocessing and feature engineering
+    ## Preprocessing and feature engineering
     X = data.drop('target_column', axis=1).values
     y = data['target_column'].values
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Standardize the input features
+    ## Standardize the input features
     scaler = StandardScaler()
     X_train = scaler.fit_transform(X_train)
     X_test = scaler.transform(X_test)
 
-    # Define a complex deep learning model using TensorFlow/Keras
+    ## Define a complex deep learning model using TensorFlow/Keras
     model = tf.keras.Sequential([
         tf.keras.layers.Dense(64, activation='relu', input_shape=(X_train.shape[1],)),
         tf.keras.layers.Dense(64, activation='relu'),
         tf.keras.layers.Dense(1, activation='sigmoid')
     ])
     
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam',
                   loss='binary_crossentropy',
                   metrics=['accuracy'])
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y_test))
 
-    # Evaluate the model
+    ## Evaluate the model
     _, accuracy = model.evaluate(X_test, y_test)
 
     return model, accuracy
 
-# Example usage
+## Example usage
 data_file_path = 'path/to/mock/data.csv'
 trained_model, model_accuracy = complex_deep_learning_algorithm(data_file_path)
 print(f'Trained model: {trained_model}')

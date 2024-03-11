@@ -5,7 +5,7 @@ permalink: posts/public-health-monitoring-using-geopandas-python-analyzing-healt
 layout: article
 ---
 
-# AI Public Health Monitoring using Geopandas
+## AI Public Health Monitoring using Geopandas
 
 ## Objectives
 The primary objective of the AI Public Health Monitoring using Geopandas project is to analyze and visualize health trends geographically. This involves the processing and analysis of large-scale health data to understand the distribution of diseases, healthcare resource allocation, and the identification of potential health hazards within specific geographic regions. The project aims to utilize machine learning techniques to predict and monitor public health trends, providing valuable insights for public health officials and policymakers.
@@ -24,7 +24,7 @@ The primary objective of the AI Public Health Monitoring using Geopandas project
 
 By following these design strategies and leveraging the chosen libraries, the AI Public Health Monitoring using Geopandas project aims to deliver a scalable, data-intensive, AI application that provides valuable insights into public health trends at a geographic level.
 
-# MLOps Infrastructure for Public Health Monitoring using Geopandas
+## MLOps Infrastructure for Public Health Monitoring using Geopandas
 
 Implementing MLOps infrastructure for the Public Health Monitoring using Geopandas application involves establishing a streamlined and automated pipeline for developing, deploying, and maintaining machine learning models. The infrastructure ensures the seamless integration of machine learning components into the application, from model training to inference and monitoring.
 
@@ -63,7 +63,7 @@ Facilitating collaboration among team members by providing documentation, knowle
 
 By establishing a robust MLOps infrastructure that encompasses these components, the Public Health Monitoring using Geopandas application can effectively integrate machine learning into its geospatial health analysis, ensuring scalability, reliability, and efficiency in monitoring public health trends.
 
-# Public Health Monitoring using Geopandas Repository File Structure
+## Public Health Monitoring using Geopandas Repository File Structure
 
 - **data/**
   - *raw_data/*
@@ -149,15 +149,15 @@ The **deployment/** directory encompasses all the necessary infrastructure and c
 Certainly! Below is an example of a Python script for training a machine learning model for the Public Health Monitoring using Geopandas application using mock data:
 
 ```python
-# File Path: src/model_training.py
+## File Path: src/model_training.py
 
-# Importing necessary libraries
+## Importing necessary libraries
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 import joblib
 
-# Mock health and geospatial data
+## Mock health and geospatial data
 health_data = pd.DataFrame({
     'region': ['Region A', 'Region B', 'Region A', 'Region C'],
     'population_density': [1000, 1500, 800, 1200],
@@ -171,25 +171,25 @@ geospatial_data = pd.DataFrame({
     'longitude': [-74.0060, -118.2437, -87.6298]
 })
 
-# Merging health and geospatial data
+## Merging health and geospatial data
 merged_data = pd.merge(health_data, geospatial_data, on='region')
 
-# Splitting the data into features and target
+## Splitting the data into features and target
 X = merged_data[['population_density', 'average_income', 'latitude', 'longitude']]
 y = merged_data['disease_prevalence']
 
-# Splitting the data into training and testing sets
+## Splitting the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Training a logistic regression model
+## Training a logistic regression model
 model = LogisticRegression()
 model.fit(X_train, y_train)
 
-# Evaluating the model
+## Evaluating the model
 accuracy = model.score(X_test, y_test)
 print(f"Model accuracy: {accuracy}")
 
-# Saving the trained model
+## Saving the trained model
 model_file_path = 'models/trained_models/health_trend_prediction_model.pkl'
 joblib.dump(model, model_file_path)
 print(f"Trained model saved at {model_file_path}")
@@ -203,20 +203,20 @@ This script demonstrates the process of training a model using mock data and sav
 Certainly! Below is an example of a Python script for training a complex machine learning algorithm, such as a Random Forest, for the Public Health Monitoring using Geopandas application using mock data:
 
 ```python
-# File Path: src/model_training.py
+## File Path: src/model_training.py
 
-# Importing necessary libraries
+## Importing necessary libraries
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 import joblib
 
-# Mock health and geospatial data
+## Mock health and geospatial data
 health_data = pd.DataFrame({
     'region': ['Region A', 'Region B', 'Region A', 'Region C'],
     'population_density': [1000, 1500, 800, 1200],
     'average_income': [50000, 60000, 48000, 55000],
-    'disease_prevalence': [0, 1, 0, 1]  # Binary classification for demonstration
+    'disease_prevalence': [0, 1, 0, 1]  ## Binary classification for demonstration
 })
 
 geospatial_data = pd.DataFrame({
@@ -225,25 +225,25 @@ geospatial_data = pd.DataFrame({
     'longitude': [-74.0060, -118.2437, -87.6298]
 })
 
-# Merging health and geospatial data
+## Merging health and geospatial data
 merged_data = pd.merge(health_data, geospatial_data, on='region')
 
-# Splitting the data into features and target
+## Splitting the data into features and target
 X = merged_data[['population_density', 'average_income', 'latitude', 'longitude']]
 y = merged_data['disease_prevalence']
 
-# Splitting the data into training and testing sets
+## Splitting the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Training a Random Forest classifier
+## Training a Random Forest classifier
 model = RandomForestClassifier(n_estimators=100, max_depth=3, random_state=42)
 model.fit(X_train, y_train)
 
-# Evaluating the model
+## Evaluating the model
 accuracy = model.score(X_test, y_test)
 print(f"Model accuracy: {accuracy}")
 
-# Saving the trained model
+## Saving the trained model
 model_file_path = 'models/trained_models/health_trend_prediction_random_forest_model.pkl'
 joblib.dump(model, model_file_path)
 print(f"Trained model saved at {model_file_path}")

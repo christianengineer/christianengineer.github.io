@@ -5,7 +5,7 @@ permalink: posts/peru-climate-impact-modeling-for-agriculture-pytorch-tensorflow
 layout: article
 ---
 
-# **AI Peru Climate Impact Modeling for Agriculture**
+## **AI Peru Climate Impact Modeling for Agriculture**
 
 ## **Objectives:**
 1. **Modeling Climate Impact**: Develop AI models using PyTorch and TensorFlow to analyze climate data and forecast the impact of climate change on agriculture in Peru.
@@ -29,7 +29,7 @@ layout: article
 
 By leveraging PyTorch, TensorFlow, Spark, and DVC in the design and implementation of the AI Peru Climate Impact Modeling for Agriculture, we aim to develop scalable, data-intensive AI applications that provide valuable insights for adapting agricultural practices to the changing climate conditions in Peru.
 
-# **MLOps Infrastructure for Peru Climate Impact Modeling for Agriculture**
+## **MLOps Infrastructure for Peru Climate Impact Modeling for Agriculture**
 
 ## **Infrastructure Components:**
 1. **Data Pipeline**: Set up a robust data pipeline for data collection, preprocessing, and transformation of climate, agriculture, and water data. Use tools like Apache Airflow for orchestrating data workflows.
@@ -66,7 +66,7 @@ By leveraging PyTorch, TensorFlow, Spark, and DVC in the design and implementati
 
 By establishing a comprehensive MLOps infrastructure incorporating PyTorch, TensorFlow, Spark, and DVC, the Peru Climate Impact Modeling for Agriculture application can effectively model the impact of climate change on agriculture and provide actionable insights for adapting agricultural practices to changing environmental conditions.
 
-# **Scalable File Structure for Peru Climate Impact Modeling for Agriculture**
+## **Scalable File Structure for Peru Climate Impact Modeling for Agriculture**
 
 ```
 Peru_Climate_Impact_Modeling/
@@ -136,7 +136,7 @@ Peru_Climate_Impact_Modeling/
 
 This file structure organizes the Peru Climate Impact Modeling for Agriculture project into distinct directories for data, models, notebooks, source code, pipelines, and configurations, ensuring a scalable and maintainable layout for developing and deploying AI applications leveraging PyTorch, TensorFlow, Spark, and DVC.
 
-# **Models Directory for Peru Climate Impact Modeling for Agriculture**
+## **Models Directory for Peru Climate Impact Modeling for Agriculture**
 
 ```
 models/
@@ -200,7 +200,7 @@ models/
 
 The Models directory organization segregates the PyTorch and TensorFlow models into separate subdirectories along with necessary scripts for training, prediction, evaluation, as well as folders for storing checkpoints and logs, ensuring a structured approach to developing and managing AI models for analyzing the impact of climate change on agriculture and providing recommendations for crop selection, planting schedules, and water use optimization.
 
-# **Deployment Directory for Peru Climate Impact Modeling for Agriculture**
+## **Deployment Directory for Peru Climate Impact Modeling for Agriculture**
 
 ```
 deployment/
@@ -238,7 +238,7 @@ deployment/
 The Deployment directory organizes the deployment-related files and scripts for deploying the PyTorch and TensorFlow models for the Peru Climate Impact Modeling for Agriculture application. The Dockerfiles facilitate the creation of Docker images for the models, while the Kubernetes YAML files define the deployment configurations for running the models as Kubernetes pods. Additionally, the scripts provide utility for starting and stopping the deployed service, ensuring an organized approach for deploying and managing the AI models providing insights for adapting crop selection, planting schedules, and water use optimization based on climate impact analysis.
 
 ```python
-# File Path: models/PyTorch/crop_selection_model/train.py
+## File Path: models/PyTorch/crop_selection_model/train.py
 
 import torch
 import torch.nn as nn
@@ -246,17 +246,17 @@ import torch.optim as optim
 from torch.utils.data import DataLoader
 from torchvision import datasets, transforms
 
-# Define a simple PyTorch model for crop selection
+## Define a simple PyTorch model for crop selection
 class CropSelectionModel(nn.Module):
     def __init__(self):
         super(CropSelectionModel, self).__init__()
-        self.fc = nn.Linear(10, 5)  # Example: Input size 10, Output size 5
+        self.fc = nn.Linear(10, 5)  ## Example: Input size 10, Output size 5
 
     def forward(self, x):
         x = self.fc(x)
         return x
 
-# Mock data generator
+## Mock data generator
 class MockDataset(torch.utils.data.Dataset):
     def __init__(self, num_samples=1000, input_size=10):
         self.data = torch.randn(num_samples, input_size)
@@ -268,7 +268,7 @@ class MockDataset(torch.utils.data.Dataset):
     def __getitem__(self, idx):
         return self.data[idx], self.labels[idx]
 
-# Training function
+## Training function
 def train_model(model, train_loader, num_epochs=10):
     criterion = nn.CrossEntropyLoss()
     optimizer = optim.Adam(model.parameters(), lr=0.001)
@@ -294,7 +294,7 @@ if __name__ == "__main__":
 This Python script (`train.py`) resides in the `models/PyTorch/crop_selection_model/` directory of the Peru Climate Impact Modeling for Agriculture project. The script defines a simple PyTorch model for crop selection, utilizes mock data generated by the `MockDataset` class, and trains the model using the provided `train_model` function. It includes model training logic, data loading, model definition, and training loop for a specified number of epochs. This script provides a foundational example for training the crop selection model with mock data, serving as a template for later integration with real climate and agricultural datasets.
 
 ```python
-# File Path: models/PyTorch/planting_schedule_model/train_complex.py
+## File Path: models/PyTorch/planting_schedule_model/train_complex.py
 
 import torch
 import torch.nn as nn
@@ -302,7 +302,7 @@ import torch.optim as optim
 from torch.utils.data import DataLoader
 import numpy as np
 
-# Define a complex PyTorch model for planting schedule adaptation
+## Define a complex PyTorch model for planting schedule adaptation
 class PlantingScheduleModel(nn.Module):
     def __init__(self, input_dim, hidden_dim, output_dim):
         super(PlantingScheduleModel, self).__init__()
@@ -315,7 +315,7 @@ class PlantingScheduleModel(nn.Module):
         x = self.fc2(x)
         return x
 
-# Mock data generator for planting schedule
+## Mock data generator for planting schedule
 class MockPlantingDataset(torch.utils.data.Dataset):
     def __init__(self, num_samples=1000, input_size=10):
         self.data = torch.randn(num_samples, input_size)
@@ -327,7 +327,7 @@ class MockPlantingDataset(torch.utils.data.Dataset):
     def __getitem__(self, idx):
         return self.data[idx], self.labels[idx]
 
-# Training function for the complex model
+## Training function for the complex model
 def train_complex_model(model, train_loader, num_epochs=10):
     criterion = nn.MSELoss()
     optimizer = optim.Adam(model.parameters(), lr=0.001)

@@ -5,7 +5,7 @@ permalink: posts/real-time-energy-usage-monitoring-with-iot-sensors-and-tensorfl
 layout: article
 ---
 
-# Machine Learning Solution for Real-time Energy Usage Monitoring with IoT Sensors and TensorFlow
+## Machine Learning Solution for Real-time Energy Usage Monitoring with IoT Sensors and TensorFlow
 
 ## Objectives and Benefits for Facility Managers:
 - **Objectives**:
@@ -224,27 +224,27 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.impute import SimpleImputer
 from sklearn.model_selection import train_test_split
 
-# Load the raw data
+## Load the raw data
 data = pd.read_csv('energy_usage_data.csv')
 
-# Separate features and target variable
+## Separate features and target variable
 X = data.drop(columns=['energy_usage'])
 y = data['energy_usage']
 
-# Impute missing values using mean imputation
+## Impute missing values using mean imputation
 imputer = SimpleImputer(strategy='mean')
 X_imputed = imputer.fit_transform(X)
 X = pd.DataFrame(X_imputed, columns=X.columns)
 
-# Standardize features using StandardScaler
+## Standardize features using StandardScaler
 scaler = StandardScaler()
 X_scaled = scaler.fit_transform(X)
 X = pd.DataFrame(X_scaled, columns=X.columns)
 
-# Train-test split
+## Train-test split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Save preprocessed data
+## Save preprocessed data
 X_train.to_csv('X_train.csv', index=False)
 X_test.to_csv('X_test.csv', index=False)
 y_train.to_csv('y_train.csv', index=False)
@@ -335,33 +335,33 @@ import numpy as np
 from sklearn.preprocessing import StandardScaler
 from sklearn.datasets import make_regression
 
-# Generate fictitious energy usage data
+## Generate fictitious energy usage data
 np.random.seed(42)
 n_samples = 1000
 n_features = 7
 
-# Generate features with different distributions
+## Generate features with different distributions
 X, y = make_regression(n_samples=n_samples, n_features=n_features, noise=0.1, random_state=42)
 
-# Adding time-related features
+## Adding time-related features
 hour_of_day = np.random.randint(0, 24, n_samples)
 day_of_week = np.random.randint(0, 7, n_samples)
 season = np.random.choice(['Spring', 'Summer', 'Fall', 'Winter'], n_samples)
 
-# Combine features into a DataFrame
+## Combine features into a DataFrame
 data = pd.DataFrame(X, columns=[f'feature_{i}' for i in range(n_features)])
 data['hour_of_day'] = hour_of_day
 data['day_of_week'] = day_of_week
 data['season'] = season
 data['energy_usage'] = y
 
-# Scale features using StandardScaler
+## Scale features using StandardScaler
 scaler = StandardScaler()
 scaled_data = scaler.fit_transform(data.drop(columns=['energy_usage']))
 data_scaled = pd.DataFrame(scaled_data, columns=data.columns[:-1])
 data_scaled['energy_usage'] = y
 
-# Save the generated dataset
+## Save the generated dataset
 data_scaled.to_csv('simulated_energy_data.csv', index=False)
 ```
 
@@ -413,33 +413,33 @@ import tensorflow as tf
 from tensorflow import keras
 from sklearn.preprocessing import StandardScaler
 
-# Load preprocessed data
+## Load preprocessed data
 data = pd.read_csv('preprocessed_data.csv')
 
-# Separate features and target variable
+## Separate features and target variable
 X = data.drop(columns=['energy_usage'])
 y = data['energy_usage']
 
-# Standardize features using StandardScaler
+## Standardize features using StandardScaler
 scaler = StandardScaler()
 X_scaled = scaler.fit_transform(X)
 
-# Define LSTM model
+## Define LSTM model
 model = keras.Sequential([
     keras.layers.LSTM(units=64, input_shape=(X.shape[1], 1)),
     keras.layers.Dense(units=1)
 ])
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam', loss='mean_squared_error')
 
-# Prepare input data for LSTM
+## Prepare input data for LSTM
 X_lstm = X_scaled.reshape((X_scaled.shape[0], X_scaled.shape[1], 1))
 
-# Train the model
+## Train the model
 model.fit(X_lstm, y, epochs=50, batch_size=32)
 
-# Save the trained model
+## Save the trained model
 model.save('energy_prediction_model.h5')
 ```
 
@@ -518,27 +518,27 @@ This production-ready code file demonstrates the structured implementation of an
 By following this step-by-step deployment plan tailored to the unique demands of the real-time energy usage monitoring project, your team can confidently deploy the machine learning model into a live environment, ensuring scalability, reliability, and efficiency in predicting and optimizing energy consumption in commercial buildings.
 
 ```Dockerfile
-# Use a base image with Python and TensorFlow dependencies
+## Use a base image with Python and TensorFlow dependencies
 FROM python:3.8-slim
 
-# Set working directory
+## Set working directory
 WORKDIR /app
 
-# Copy requirements file and install dependencies
+## Copy requirements file and install dependencies
 COPY requirements.txt requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the preprocessed data and trained model
+## Copy the preprocessed data and trained model
 COPY preprocessed_data.csv preprocessed_data.csv
 COPY energy_prediction_model.h5 energy_prediction_model.h5
 
-# Copy the main script for running the model
+## Copy the main script for running the model
 COPY main.py main.py
 
-# Expose port for Flask API
+## Expose port for Flask API
 EXPOSE 5000
 
-# Command to run the Flask API
+## Command to run the Flask API
 CMD ["python", "main.py"]
 ```
 

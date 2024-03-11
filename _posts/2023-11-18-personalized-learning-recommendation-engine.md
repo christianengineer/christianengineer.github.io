@@ -5,7 +5,7 @@ permalink: posts/personalized-learning-recommendation-engine
 layout: article
 ---
 
-# Personalized Learning Recommendation Engine Technical Specifications
+## Personalized Learning Recommendation Engine Technical Specifications
 
 ## Description
 

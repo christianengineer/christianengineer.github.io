@@ -214,29 +214,29 @@ from keras.models import Sequential
 from keras.layers import LSTM, Dense
 
 def train_traffic_flow_prediction_model(data_file_path, model_save_path):
-    # Load mock traffic data from file
+    ## Load mock traffic data from file
     traffic_data = pd.read_csv(data_file_path)
 
-    # Preprocess the data (e.g., scaling, feature engineering)
-    # ...
+    ## Preprocess the data (e.g., scaling, feature engineering)
+    ## ...
 
-    # Define input features and target variable
+    ## Define input features and target variable
     X = traffic_data[['feature1', 'feature2', 'feature3']].values
     y = traffic_data['target'].values
 
-    # Define and configure the deep learning model
+    ## Define and configure the deep learning model
     model = Sequential()
     model.add(LSTM(100, activation='relu', input_shape=(X.shape[1], X.shape[2])))
     model.add(Dense(1))
     model.compile(optimizer='adam', loss='mse')
 
-    # Train the model
+    ## Train the model
     model.fit(X, y, epochs=10, batch_size=32)
 
-    # Save the trained model
+    ## Save the trained model
     model.save(model_save_path)
 
-# Example usage
+## Example usage
 data_file_path = 'data/processed_data/train/traffic_data.csv'
 model_save_path = 'models/trained_models/traffic_flow_model.h5'
 train_traffic_flow_prediction_model(data_file_path, model_save_path)
@@ -259,34 +259,34 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import LSTM, Dense
 
 def train_traffic_flow_prediction_model(data_file_path, model_save_path):
-    # Load mock traffic data from file
+    ## Load mock traffic data from file
     traffic_data = pd.read_csv(data_file_path)
 
-    # Preprocess the data (e.g., scaling, feature engineering)
-    # ...
+    ## Preprocess the data (e.g., scaling, feature engineering)
+    ## ...
 
-    # Define input features and target variable
+    ## Define input features and target variable
     X = traffic_data[['feature1', 'feature2', 'feature3']].values
     y = traffic_data['target'].values
 
-    # Reshape input features for LSTM input
+    ## Reshape input features for LSTM input
     X = X.reshape((X.shape[0], 1, X.shape[1]))
 
-    # Define and configure the deep learning model
+    ## Define and configure the deep learning model
     model = Sequential()
     model.add(LSTM(100, activation='relu', input_shape=(X.shape[1], X.shape[2])))
     model.add(Dense(1))
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam', loss='mse')
 
-    # Train the model
+    ## Train the model
     model.fit(X, y, epochs=10, batch_size=32)
 
-    # Save the trained model
+    ## Save the trained model
     model.save(model_save_path)
 
-# Example usage
+## Example usage
 data_file_path = 'data/processed_data/traffic_data.csv'
 model_save_path = 'models/trained_models/traffic_flow_model.h5'
 train_traffic_flow_prediction_model(data_file_path, model_save_path)

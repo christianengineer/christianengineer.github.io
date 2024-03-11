@@ -68,37 +68,37 @@ Implement security best practices such as encryption at rest and in transit, rol
 
 By designing the Sports Performance Analysis infrastructure using a cloud-based architecture and incorporating components for scalability, security, and monitoring, the application can effectively support the analysis of athletic strategies using machine learning techniques.
 
-# Sports Performance Analysis Repository Structure
+## Sports Performance Analysis Repository Structure
 
 ```
 sports_performance_analysis/
 │
 ├── data/
-│   ├── raw/                    # Raw data from various sources
-│   ├── processed/              # Processed data after cleaning and feature engineering
-│   └── models/                 # Trained machine learning models
+│   ├── raw/                    ## Raw data from various sources
+│   ├── processed/              ## Processed data after cleaning and feature engineering
+│   └── models/                 ## Trained machine learning models
 │
 ├── src/
-│   ├── data_processing/        # Scripts for data preprocessing and feature engineering
-│   ├── model_training/         # Scripts for training machine learning models
-│   ├── model_evaluation/       # Scripts for model evaluation and validation
-│   └── api/                    # Web API implementation for model deployment
+│   ├── data_processing/        ## Scripts for data preprocessing and feature engineering
+│   ├── model_training/         ## Scripts for training machine learning models
+│   ├── model_evaluation/       ## Scripts for model evaluation and validation
+│   └── api/                    ## Web API implementation for model deployment
 │
 ├── notebooks/
-│   ├── exploratory_analysis/   # Jupyter notebooks for exploratory data analysis
-│   └── model_evaluation/       # Jupyter notebooks for model performance evaluation
+│   ├── exploratory_analysis/   ## Jupyter notebooks for exploratory data analysis
+│   └── model_evaluation/       ## Jupyter notebooks for model performance evaluation
 │
 ├── app/
-│   ├── static/                 # Static files for the web user interface (e.g., CSS, JavaScript)
-│   └── templates/              # HTML templates for the web user interface
+│   ├── static/                 ## Static files for the web user interface (e.g., CSS, JavaScript)
+│   └── templates/              ## HTML templates for the web user interface
 │
 ├── config/
-│   ├── app_config.py          # Configuration settings for the web application
-│   └── model_config.py        # Configuration settings for model training and deployment
+│   ├── app_config.py          ## Configuration settings for the web application
+│   └── model_config.py        ## Configuration settings for model training and deployment
 │
-├── requirements.txt           # Python dependencies for the project
-├── README.md                  # Project documentation and instructions
-└── .gitignore                 # Git ignore file for excluding sensitive files from version control
+├── requirements.txt           ## Python dependencies for the project
+├── README.md                  ## Project documentation and instructions
+└── .gitignore                 ## Git ignore file for excluding sensitive files from version control
 ```
 
 In this repository structure:
@@ -117,32 +117,32 @@ This scalable file structure fosters organization, modularity, and maintainabili
 sports_performance_analysis/
 │
 ├── data/
-│   ├── raw/                    # Raw data from various sources
-│   ├── processed/              # Processed data after cleaning and feature engineering
-│   └── models/                 # Trained machine learning models
-│       └── saved_models/       # Trained models saved as serialized files
+│   ├── raw/                    ## Raw data from various sources
+│   ├── processed/              ## Processed data after cleaning and feature engineering
+│   └── models/                 ## Trained machine learning models
+│       └── saved_models/       ## Trained models saved as serialized files
 │
 ├── src/
-│   ├── data_processing/        # Scripts for data preprocessing and feature engineering
-│   ├── model_training/         # Scripts for training machine learning models
-│   ├── model_evaluation/       # Scripts for model evaluation and validation
-│   └── api/                    # Web API implementation for model deployment
+│   ├── data_processing/        ## Scripts for data preprocessing and feature engineering
+│   ├── model_training/         ## Scripts for training machine learning models
+│   ├── model_evaluation/       ## Scripts for model evaluation and validation
+│   └── api/                    ## Web API implementation for model deployment
 │
 ├── notebooks/
-│   ├── exploratory_analysis/   # Jupyter notebooks for exploratory data analysis
-│   └── model_evaluation/       # Jupyter notebooks for model performance evaluation
+│   ├── exploratory_analysis/   ## Jupyter notebooks for exploratory data analysis
+│   └── model_evaluation/       ## Jupyter notebooks for model performance evaluation
 │
 ├── app/
-│   ├── static/                 # Static files for the web user interface (e.g., CSS, JavaScript)
-│   └── templates/              # HTML templates for the web user interface
+│   ├── static/                 ## Static files for the web user interface (e.g., CSS, JavaScript)
+│   └── templates/              ## HTML templates for the web user interface
 │
 ├── config/
-│   ├── app_config.py          # Configuration settings for the web application
-│   └── model_config.py        # Configuration settings for model training and deployment
+│   ├── app_config.py          ## Configuration settings for the web application
+│   └── model_config.py        ## Configuration settings for model training and deployment
 │
-├── requirements.txt           # Python dependencies for the project
-├── README.md                  # Project documentation and instructions
-└── .gitignore                 # Git ignore file for excluding sensitive files from version control
+├── requirements.txt           ## Python dependencies for the project
+├── README.md                  ## Project documentation and instructions
+└── .gitignore                 ## Git ignore file for excluding sensitive files from version control
 ```
 
 ### models/ Directory
@@ -164,37 +164,37 @@ As part of the Sports Performance Analysis application, the deployment directory
 sports_performance_analysis/
 │
 ├── data/
-│   ├── raw/                    # Raw data from various sources
-│   ├── processed/              # Processed data after cleaning and feature engineering
-│   └── models/                 # Trained machine learning models
-│       └── saved_models/       # Trained models saved as serialized files
+│   ├── raw/                    ## Raw data from various sources
+│   ├── processed/              ## Processed data after cleaning and feature engineering
+│   └── models/                 ## Trained machine learning models
+│       └── saved_models/       ## Trained models saved as serialized files
 │
 ├── src/
-│   ├── data_processing/        # Scripts for data preprocessing and feature engineering
-│   ├── model_training/         # Scripts for training machine learning models
-│   ├── model_evaluation/       # Scripts for model evaluation and validation
-│   └── api/                    # Web API implementation for model deployment
+│   ├── data_processing/        ## Scripts for data preprocessing and feature engineering
+│   ├── model_training/         ## Scripts for training machine learning models
+│   ├── model_evaluation/       ## Scripts for model evaluation and validation
+│   └── api/                    ## Web API implementation for model deployment
 │
 ├── deployment/
-│   ├── app_deployment/         # Scripts and configurations for deploying the web application
-│   ├── model_deployment/       # Scripts and configurations for deploying the trained models
-│   └── infrastructure/         # Infrastructure as code (e.g., Terraform, CloudFormation templates)
+│   ├── app_deployment/         ## Scripts and configurations for deploying the web application
+│   ├── model_deployment/       ## Scripts and configurations for deploying the trained models
+│   └── infrastructure/         ## Infrastructure as code (e.g., Terraform, CloudFormation templates)
 │
 ├── notebooks/
-│   ├── exploratory_analysis/   # Jupyter notebooks for exploratory data analysis
-│   └── model_evaluation/       # Jupyter notebooks for model performance evaluation
+│   ├── exploratory_analysis/   ## Jupyter notebooks for exploratory data analysis
+│   └── model_evaluation/       ## Jupyter notebooks for model performance evaluation
 │
 ├── app/
-│   ├── static/                 # Static files for the web user interface (e.g., CSS, JavaScript)
-│   └── templates/              # HTML templates for the web user interface
+│   ├── static/                 ## Static files for the web user interface (e.g., CSS, JavaScript)
+│   └── templates/              ## HTML templates for the web user interface
 │
 ├── config/
-│   ├── app_config.py          # Configuration settings for the web application
-│   └── model_config.py        # Configuration settings for model training and deployment
+│   ├── app_config.py          ## Configuration settings for the web application
+│   └── model_config.py        ## Configuration settings for model training and deployment
 │
-├── requirements.txt           # Python dependencies for the project
-├── README.md                  # Project documentation and instructions
-└── .gitignore                 # Git ignore file for excluding sensitive files from version control
+├── requirements.txt           ## Python dependencies for the project
+├── README.md                  ## Project documentation and instructions
+└── .gitignore                 ## Git ignore file for excluding sensitive files from version control
 ```
 
 ### deployment/ Directory
@@ -219,31 +219,31 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 
 def train_performance_prediction_model(data_file_path):
-    # Load mock data from file
+    ## Load mock data from file
     data = pd.read_csv(data_file_path)
 
-    # Perform data preprocessing and feature engineering as needed
-    # ...
+    ## Perform data preprocessing and feature engineering as needed
+    ## ...
 
-    # Define features (X) and target variable (y)
+    ## Define features (X) and target variable (y)
     X = data[['feature1', 'feature2', 'feature3']]
     y = data['target_variable']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize and train the machine learning model
+    ## Initialize and train the machine learning model
     model = RandomForestRegressor(n_estimators=100, random_state=42)
     model.fit(X_train, y_train)
 
-    # Make predictions on the test set
+    ## Make predictions on the test set
     y_pred = model.predict(X_test)
 
-    # Evaluate the model
+    ## Evaluate the model
     mse = mean_squared_error(y_test, y_pred)
     print(f"Mean Squared Error: {mse}")
 
-    # Return the trained model for further use
+    ## Return the trained model for further use
     return model
 ```
 
@@ -267,31 +267,31 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 
 def train_performance_prediction_model(data_file_path):
-    # Load mock data from file
+    ## Load mock data from file
     data = pd.read_csv(data_file_path)
 
-    # Perform data preprocessing and feature engineering as needed
-    # ...
+    ## Perform data preprocessing and feature engineering as needed
+    ## ...
 
-    # Define features (X) and target variable (y)
+    ## Define features (X) and target variable (y)
     X = data[['feature1', 'feature2', 'feature3']]
     y = data['target_variable']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize and train the machine learning model
+    ## Initialize and train the machine learning model
     model = RandomForestRegressor(n_estimators=100, random_state=42)
     model.fit(X_train, y_train)
 
-    # Make predictions on the test set
+    ## Make predictions on the test set
     y_pred = model.predict(X_test)
 
-    # Evaluate the model
+    ## Evaluate the model
     mse = mean_squared_error(y_test, y_pred)
     print(f"Mean Squared Error: {mse}")
 
-    # Return the trained model for further use
+    ## Return the trained model for further use
     return model
 ```
 

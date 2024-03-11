@@ -56,41 +56,41 @@ By following these objectives, system design strategies, and utilizing the chose
 
 By designing the infrastructure with these considerations, the SEO Content Optimization with SpaCy application can achieve scalability, performance, security, and cost-effectiveness while leveraging AI and NLP capabilities to improve website visibility and SEO.
 
-# SEO Content Optimization with SpaCy (Python) Repository File Structure
+## SEO Content Optimization with SpaCy (Python) Repository File Structure
 
 ```
 |-- app
-|   |-- main.py        # Main application entry point
-|   |-- api            # API endpoints for web application
+|   |-- main.py        ## Main application entry point
+|   |-- api            ## API endpoints for web application
 |       |-- __init__.py
-|       |-- seo_controller.py    # SEO optimization API controller
-|       |-- content_controller.py  # Content analysis API controller
-|   |-- web            # Web application components
-|       |-- templates  # HTML templates
-|           |-- index.html    # Main page template
-|           |-- seo_results.html  # SEO optimization results template
+|       |-- seo_controller.py    ## SEO optimization API controller
+|       |-- content_controller.py  ## Content analysis API controller
+|   |-- web            ## Web application components
+|       |-- templates  ## HTML templates
+|           |-- index.html    ## Main page template
+|           |-- seo_results.html  ## SEO optimization results template
 |-- data
-|   |-- models         # Trained machine learning models
-|   |-- static         # Static files such as images, CSS, JavaScript
+|   |-- models         ## Trained machine learning models
+|   |-- static         ## Static files such as images, CSS, JavaScript
 |-- src
-|   |-- nlp            # Natural Language Processing (NLP) components
+|   |-- nlp            ## Natural Language Processing (NLP) components
 |       |-- __init__.py
-|       |-- nlp_utils.py    # Utility functions for NLP tasks
-|       |-- seo_analysis.py  # Module for SEO analysis using SpaCy
-|   |-- seo            # SEO optimization components
+|       |-- nlp_utils.py    ## Utility functions for NLP tasks
+|       |-- seo_analysis.py  ## Module for SEO analysis using SpaCy
+|   |-- seo            ## SEO optimization components
 |       |-- __init__.py
-|       |-- keyword_extraction.py   # Keyword extraction and analysis
-|       |-- readability_analysis.py  # Content readability analysis
-|-- tests              # Unit tests for the application
+|       |-- keyword_extraction.py   ## Keyword extraction and analysis
+|       |-- readability_analysis.py  ## Content readability analysis
+|-- tests              ## Unit tests for the application
 |   |-- test_seo_controller.py
 |   |-- test_nlp_analysis.py
 |-- config
-|   |-- app_config.py   # Application configuration settings
-|   |-- logging_config.py   # Logging configuration
-|-- requirements.txt    # Python dependencies for the application
-|-- Dockerfile          # Docker configuration for containerization
-|-- README.md           # Project documentation and instructions
-|-- LICENSE             # Project license information
+|   |-- app_config.py   ## Application configuration settings
+|   |-- logging_config.py   ## Logging configuration
+|-- requirements.txt    ## Python dependencies for the application
+|-- Dockerfile          ## Docker configuration for containerization
+|-- README.md           ## Project documentation and instructions
+|-- LICENSE             ## Project license information
 ```
 
 In this file structure:
@@ -111,11 +111,11 @@ The `models` directory in the SEO Content Optimization with SpaCy (Python) Impro
 ```
 |-- models               
     |-- nlp_models         
-        |-- spacy_model_lg  # Trained SpaCy language model (e.g., "en_core_web_lg")
-        |-- word2vec_model   # Trained Word2Vec model for word embeddings
+        |-- spacy_model_lg  ## Trained SpaCy language model (e.g., "en_core_web_lg")
+        |-- word2vec_model   ## Trained Word2Vec model for word embeddings
     |-- seo_models         
-        |-- keyword_extraction_model.pkl   # Trained model for keyword extraction
-        |-- readability_model.pkl          # Trained model for content readability analysis
+        |-- keyword_extraction_model.pkl   ## Trained model for keyword extraction
+        |-- readability_model.pkl          ## Trained model for content readability analysis
 ```
 
 In this directory:
@@ -137,24 +137,24 @@ The `deployment` directory in the SEO Content Optimization with SpaCy (Python) I
 ```
 |-- deployment
     |-- scripts
-        |-- deploy_aws.sh         # Script for deploying the application on AWS
-        |-- deploy_gcp.sh         # Script for deploying the application on GCP
-        |-- deploy_azure.sh       # Script for deploying the application on Azure
+        |-- deploy_aws.sh         ## Script for deploying the application on AWS
+        |-- deploy_gcp.sh         ## Script for deploying the application on GCP
+        |-- deploy_azure.sh       ## Script for deploying the application on Azure
     |-- configurations
         |-- aws
-            |-- ec2_config.json  # Configuration settings for deploying on AWS EC2
-            |-- s3_config.json   # Configuration settings for integrating with Amazon S3
-            |-- rds_config.json  # Configuration settings for Amazon RDS
+            |-- ec2_config.json  ## Configuration settings for deploying on AWS EC2
+            |-- s3_config.json   ## Configuration settings for integrating with Amazon S3
+            |-- rds_config.json  ## Configuration settings for Amazon RDS
         |-- gcp
-            |-- gce_config.json  # Configuration settings for deploying on GCP Compute Engine
-            |-- gcs_config.json  # Configuration settings for integrating with Google Cloud Storage
-            |-- cloud_sql_config.json  # Configuration settings for Google Cloud SQL
+            |-- gce_config.json  ## Configuration settings for deploying on GCP Compute Engine
+            |-- gcs_config.json  ## Configuration settings for integrating with Google Cloud Storage
+            |-- cloud_sql_config.json  ## Configuration settings for Google Cloud SQL
         |-- azure
-            |-- vm_config.json   # Configuration settings for deploying on Azure Virtual Machines
-            |-- blob_storage_config.json  # Configuration settings for integrating with Azure Blob Storage
-            |-- azure_db_config.json      # Configuration settings for Azure Database
+            |-- vm_config.json   ## Configuration settings for deploying on Azure Virtual Machines
+            |-- blob_storage_config.json  ## Configuration settings for integrating with Azure Blob Storage
+            |-- azure_db_config.json      ## Configuration settings for Azure Database
     |-- documentation
-        |-- deployment_guide.md    # Guide for deploying the application on various cloud platforms
+        |-- deployment_guide.md    ## Guide for deploying the application on various cloud platforms
 ```
 
 In this directory:
@@ -177,24 +177,24 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
 def train_and_evaluate_model(data_file_path):
-    # Load mock data from file
+    ## Load mock data from file
     data = pd.read_csv(data_file_path)
 
-    # Preprocessing mock data
+    ## Preprocessing mock data
     X = data.drop('target_variable', axis=1)
     y = data['target_variable']
 
-    # Split mock data into training and testing sets
+    ## Split mock data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize and train the machine learning model
+    ## Initialize and train the machine learning model
     model = RandomForestClassifier(n_estimators=100, random_state=42)
     model.fit(X_train, y_train)
 
-    # Make predictions
+    ## Make predictions
     y_pred = model.predict(X_test)
 
-    # Evaluate model performance
+    ## Evaluate model performance
     accuracy = accuracy_score(y_test, y_pred)
 
     return model, accuracy
@@ -220,24 +220,24 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 
 def train_and_evaluate_model(data_file_path):
-    # Load mock data from file
+    ## Load mock data from file
     data = pd.read_csv(data_file_path)
 
-    # Preprocessing mock data
+    ## Preprocessing mock data
     X = data.drop('target_variable', axis=1)
     y = data['target_variable']
 
-    # Split mock data into training and testing sets
+    ## Split mock data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize and train the machine learning model
+    ## Initialize and train the machine learning model
     model = RandomForestRegressor(n_estimators=100, random_state=42)
     model.fit(X_train, y_train)
 
-    # Make predictions
+    ## Make predictions
     y_pred = model.predict(X_test)
 
-    # Evaluate model performance
+    ## Evaluate model performance
     mse = mean_squared_error(y_test, y_pred)
 
     return model, mse

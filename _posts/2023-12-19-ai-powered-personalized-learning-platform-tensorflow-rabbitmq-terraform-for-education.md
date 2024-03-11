@@ -210,17 +210,17 @@ The `services` subdirectory contains Kubernetes service manifests, which define 
 By organizing the deployment configurations in this manner, it becomes easier to manage and version control the Kubernetes deployment and service definitions for the AI-powered Personalized Learning Platform, facilitating reproducible deployments and scalability management.
 
 ```python
-# File: train_model1.py
-# Path: machine-learning/tensorflow-models/model1/train.py
+## File: train_model1.py
+## Path: machine-learning/tensorflow-models/model1/train.py
 
 import tensorflow as tf
 import numpy as np
 
-# Load mock training data
+## Load mock training data
 X_train = np.random.rand(100, 10)
 y_train = np.random.randint(0, 2, size=(100,))
 
-# Build and compile the TensorFlow model
+## Build and compile the TensorFlow model
 model = tf.keras.Sequential([
     tf.keras.layers.Dense(64, activation='relu'),
     tf.keras.layers.Dense(64, activation='relu'),
@@ -231,44 +231,44 @@ model.compile(optimizer='adam',
               loss='binary_crossentropy',
               metrics=['accuracy'])
 
-# Train the model
+## Train the model
 model.fit(X_train, y_train, epochs=10, batch_size=32)
 
-# Save the trained model
+## Save the trained model
 model.save('/path/to/save/model1')
 ```
 
 The file `train_model1.py` is located at `machine-learning/tensorflow-models/model1/train.py` within the AI-powered Personalized Learning Platform repository. This file demonstrates the training process for a TensorFlow model (model1) using mock data. The model is built, compiled, trained on mock training data, and then saved to a specified path. This script serves as an example for training and saving a machine learning model within the platform.
 
 ```python
-# File: complex_model.py
-# Path: machine-learning/tensorflow-models/model2/model.py
+## File: complex_model.py
+## Path: machine-learning/tensorflow-models/model2/model.py
 
 import tensorflow as tf
 from tensorflow.keras.layers import Dense, LSTM
 from tensorflow.keras.models import Sequential
 import numpy as np
 
-# Load mock training data
-# Replace with actual mock data
-X_train = np.random.rand(100, 10, 5)  # Sample input shape (time steps, features)
+## Load mock training data
+## Replace with actual mock data
+X_train = np.random.rand(100, 10, 5)  ## Sample input shape (time steps, features)
 y_train = np.random.randint(0, 2, size=(100,))
 
-# Build a complex LSTM model
+## Build a complex LSTM model
 model = Sequential([
-    LSTM(64, input_shape=(10, 5)),  # LSTM layer with 64 units
-    Dense(1, activation='sigmoid')  # Output layer
+    LSTM(64, input_shape=(10, 5)),  ## LSTM layer with 64 units
+    Dense(1, activation='sigmoid')  ## Output layer
 ])
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam',
               loss='binary_crossentropy',
               metrics=['accuracy'])
 
-# Train the model
+## Train the model
 model.fit(X_train, y_train, epochs=10, batch_size=32)
 
-# Save the trained model
+## Save the trained model
 model.save('/path/to/save/model2')
 ```
 

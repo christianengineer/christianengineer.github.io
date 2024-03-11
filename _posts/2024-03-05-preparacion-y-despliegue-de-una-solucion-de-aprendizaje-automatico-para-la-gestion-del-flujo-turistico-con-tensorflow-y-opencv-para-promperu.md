@@ -5,7 +5,7 @@ permalink: posts/preparacion-y-despliegue-de-una-solucion-de-aprendizaje-automat
 layout: article
 ---
 
-# Preparación y Despliegue de una Solución de Aprendizaje Automático para la Gestión del Flujo Turístico con TensorFlow y OpenCV para PromPerú
+## Preparación y Despliegue de una Solución de Aprendizaje Automático para la Gestión del Flujo Turístico con TensorFlow y OpenCV para PromPerú
 
 ## Objetivos y Beneficios para la Audiencia:
 - **Objetivo**: Optimizar las campañas de marketing para atraer turistas durante las temporadas bajas.
@@ -200,35 +200,35 @@ Al implementar estratégicamente estas prácticas de preprocesamiento de datos e
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
 
-# Cargar los datos
+## Cargar los datos
 data = pd.read_csv('datos_flujo_turistico.csv')
 
-# Imprimir información básica de los datos
+## Imprimir información básica de los datos
 print(data.info())
 
-# Eliminar columnas no relevantes
+## Eliminar columnas no relevantes
 data = data.drop(['ID', 'Fecha', 'Ubicacion'], axis=1)
 
-# Imputar valores faltantes en los datos climáticos
+## Imputar valores faltantes en los datos climáticos
 data['Temperatura'] = data['Temperatura'].fillna(data['Temperatura'].mean())
-data['Precipitacion'] = data['Precipitacion'].fillna(0)  # Se asume que la ausencia de datos indica ausencia de precipitación
+data['Precipitacion'] = data['Precipitacion'].fillna(0)  ## Se asume que la ausencia de datos indica ausencia de precipitación
 
-# Normalizar las características numéricas
+## Normalizar las características numéricas
 scaler = StandardScaler()
 data[['Temperatura', 'Precipitacion']] = scaler.fit_transform(data[['Temperatura', 'Precipitacion']])
 
-# Codificar variables categóricas como variables dummy
+## Codificar variables categóricas como variables dummy
 data = pd.get_dummies(data, columns=['Periodo_Año', 'Eventos_Locales'])
 
-# Separar las características (X) y la variable objetivo (y)
+## Separar las características (X) y la variable objetivo (y)
 X = data.drop('Afluencia_Turistas', axis=1)
 y = data['Afluencia_Turistas']
 
-# Dividir el conjunto de datos en entrenamiento y prueba
+## Dividir el conjunto de datos en entrenamiento y prueba
 from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Imprimir la forma de los conjuntos de entrenamiento y prueba
+## Imprimir la forma de los conjuntos de entrenamiento y prueba
 print("Forma de X_train:", X_train.shape)
 print("Forma de X_test:", X_test.shape)
 print("Forma de y_train:", y_train.shape)
@@ -292,7 +292,7 @@ import pandas as pd
 import numpy as np
 from sklearn import preprocessing
 
-# Generar datos aleatorios
+## Generar datos aleatorios
 np.random.seed(42)
 n_samples = 1000
 
@@ -303,14 +303,14 @@ data['Dia_Semana'] = np.random.choice(['Lunes', 'Martes', 'Miércoles', 'Jueves'
 data['Eventos_Locales'] = np.random.choice(['Festival', 'Concierto', 'Exposición', 'Deportivo', 'Cultural', 'Feriado'], size=n_samples)
 data['Afluencia_Turistas'] = np.random.randint(100, 1000, size=n_samples)
 
-# Codificar variables categóricas
+## Codificar variables categóricas
 le_dia_semana = preprocessing.LabelEncoder()
 le_eventos_locales = preprocessing.LabelEncoder()
 
 data['Dia_Semana'] = le_dia_semana.fit_transform(data['Dia_Semana'])
 data['Eventos_Locales'] = le_eventos_locales.fit_transform(data['Eventos_Locales'])
 
-# Guardar los datos generados en un archivo CSV
+## Guardar los datos generados en un archivo CSV
 data.to_csv('datos_simulados_flujo_turistico.csv', index=False)
 ```
 
@@ -341,35 +341,35 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import accuracy_score
 
-# Cargar los datos preprocesados
+## Cargar los datos preprocesados
 data = pd.read_csv('datos_preprocesados.csv')
 
-# Separar las características (X) y la variable objetivo (y)
+## Separar las características (X) y la variable objetivo (y)
 X = data.drop('Afluencia_Turistas', axis=1)
 y = data['Afluencia_Turistas']
 
-# Dividir el conjunto de datos en entrenamiento y prueba
+## Dividir el conjunto de datos en entrenamiento y prueba
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Normalizar las características
+## Normalizar las características
 scaler = StandardScaler()
 X_train = scaler.fit_transform(X_train)
 X_test = scaler.transform(X_test)
 
-# Inicializar el modelo SVM
+## Inicializar el modelo SVM
 model = SVC()
 
-# Entrenar el modelo
+## Entrenar el modelo
 model.fit(X_train, y_train)
 
-# Predecir con el conjunto de prueba
+## Predecir con el conjunto de prueba
 y_pred = model.predict(X_test)
 
-# Calcular la precisión del modelo
+## Calcular la precisión del modelo
 accuracy = accuracy_score(y_test, y_pred)
 print(f'Precisión del modelo: {accuracy}')
 
-# Guardar el modelo entrenado
+## Guardar el modelo entrenado
 import joblib
 joblib.dump(model, 'modelo_entrenado.pkl')
 ```
@@ -432,25 +432,25 @@ Este plan de despliegue detallado proporciona una hoja de ruta clara y paso a pa
 A continuación, se presenta un ejemplo de Dockerfile optimizado para manejar los objetivos de rendimiento y escalabilidad de nuestro proyecto de gestión del flujo turístico:
 
 ```dockerfile
-# Utilizar una imagen base optimizada
+## Utilizar una imagen base optimizada
 FROM python:3.8-slim
 
-# Establecer directorio de trabajo en la imagen
+## Establecer directorio de trabajo en la imagen
 WORKDIR /app
 
-# Copiar archivos de la aplicación al contenedor
+## Copiar archivos de la aplicación al contenedor
 COPY requirements.txt app.py ./
 
-# Instalar dependencias
+## Instalar dependencias
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copiar el modelo entrenado al contenedor
+## Copiar el modelo entrenado al contenedor
 COPY modelo_entrenado.pkl /app/modelo_entrenado.pkl
 
-# Exponer el puerto necesario para la API
+## Exponer el puerto necesario para la API
 EXPOSE 5000
 
-# Comando de arranque para ejecutar la aplicación
+## Comando de arranque para ejecutar la aplicación
 CMD ["python", "app.py"]
 ```
 

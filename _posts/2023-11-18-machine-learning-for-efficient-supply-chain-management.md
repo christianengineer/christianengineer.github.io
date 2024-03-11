@@ -5,7 +5,7 @@ permalink: posts/machine-learning-for-efficient-supply-chain-management
 layout: article
 ---
 
-# Technical Specifications Document
+## Technical Specifications Document
 
 ## Machine Learning for Efficient Supply Chain Management
 

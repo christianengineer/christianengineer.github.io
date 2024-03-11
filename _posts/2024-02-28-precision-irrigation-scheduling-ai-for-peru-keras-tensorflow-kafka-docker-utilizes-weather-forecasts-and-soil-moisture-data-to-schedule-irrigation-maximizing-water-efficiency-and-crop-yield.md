@@ -228,20 +228,20 @@ import tensorflow as tf
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
 
-# Mock Data Generation
+## Mock Data Generation
 np.random.seed(42)
 num_samples = 1000
 num_features = 5
 
-weather_data = np.random.rand(num_samples, num_features) # Synthetic weather data
-soil_moisture = np.random.rand(num_samples, 1) # Synthetic soil moisture data
+weather_data = np.random.rand(num_samples, num_features) ## Synthetic weather data
+soil_moisture = np.random.rand(num_samples, 1) ## Synthetic soil moisture data
 
 X = weather_data
 y = soil_moisture
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Define and Train the Model
+## Define and Train the Model
 model = Sequential([
     Dense(64, activation='relu', input_shape=(num_features,)),
     Dense(32, activation='relu'),
@@ -252,7 +252,7 @@ model.compile(optimizer='adam', loss='mean_squared_error')
 
 model.fit(X_train, y_train, epochs=50, batch_size=32, validation_data=(X_test, y_test))
 
-# Save the Trained Model
+## Save the Trained Model
 model.save("models/trained_model_mock.h5")
 ```
 
@@ -277,7 +277,7 @@ import tensorflow as tf
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense
 
-# Mock Data Generation
+## Mock Data Generation
 np.random.seed(42)
 num_samples = 1000
 num_features = 5
@@ -285,17 +285,17 @@ image_height = 10
 image_width = 10
 num_channels = 3
 
-# Generate synthetic image data as weather forecasts
+## Generate synthetic image data as weather forecasts
 weather_images = np.random.rand(num_samples, image_height, image_width, num_channels)
 
-soil_moisture = np.random.rand(num_samples, 1)  # Synthetic soil moisture data
+soil_moisture = np.random.rand(num_samples, 1)  ## Synthetic soil moisture data
 
 X = weather_images
 y = soil_moisture
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Define and Train the CNN Model
+## Define and Train the CNN Model
 model = Sequential([
     Conv2D(32, (3, 3), activation='relu', input_shape=(image_height, image_width, num_channels)),
     MaxPooling2D((2, 2)),
@@ -310,7 +310,7 @@ model.compile(optimizer='adam', loss='mean_squared_error')
 
 model.fit(X_train, y_train, epochs=20, batch_size=32, validation_data=(X_test, y_test))
 
-# Save the Trained Model
+## Save the Trained Model
 model.save("models/trained_complex_model_mock.h5")
 ```
 

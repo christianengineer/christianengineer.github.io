@@ -49,36 +49,36 @@ Utilize experiment tracking platforms such as MLflow or TensorBoard to log hyper
 
 By setting up this infrastructure, the reinforcement learning project can leverage scalable and efficient resources for training, monitoring, and deploying the reinforcement learning algorithm for the specific task application.
 
-# Reinforcement Learning Project File Structure
+## Reinforcement Learning Project File Structure
 
 ```
 reinforcement_learning_project/
 │
 ├── data/
-│   ├── raw/                    # Raw data for the reinforcement learning task
-│   ├── processed/              # Processed data for training the reinforcement learning model
-│   ├── experiments/            # Data related to model training runs and evaluations
+│   ├── raw/                    ## Raw data for the reinforcement learning task
+│   ├── processed/              ## Processed data for training the reinforcement learning model
+│   ├── experiments/            ## Data related to model training runs and evaluations
 │
 ├── models/
-│   ├── q_learning.py           # Implementation of Q-learning algorithm
-│   ├── dqn.py                  # Implementation of Deep Q-Network (DQN) algorithm
-│   ├── policy_gradients.py     # Implementation of policy gradient algorithms
-│   ├── actor_critic.py         # Implementation of actor-critic algorithms
-│   ├── model_utils.py          # Utility functions for model architecture and training
+│   ├── q_learning.py           ## Implementation of Q-learning algorithm
+│   ├── dqn.py                  ## Implementation of Deep Q-Network (DQN) algorithm
+│   ├── policy_gradients.py     ## Implementation of policy gradient algorithms
+│   ├── actor_critic.py         ## Implementation of actor-critic algorithms
+│   ├── model_utils.py          ## Utility functions for model architecture and training
 │
 ├── environments/
-│   ├── custom_env.py           # Implementation of custom environment for the specific task
-│   ├── gym_env_wrapper.py      # Wrapper for integrating the environment with OpenAI Gym
+│   ├── custom_env.py           ## Implementation of custom environment for the specific task
+│   ├── gym_env_wrapper.py      ## Wrapper for integrating the environment with OpenAI Gym
 │
 ├── utils/
-│   ├── data_preprocessing.py   # Utilities for preprocessing raw data
-│   ├── visualization.py        # Utilities for visualizing training results and model performance
-│   ├── config.py               # Configuration parameters for the project
+│   ├── data_preprocessing.py   ## Utilities for preprocessing raw data
+│   ├── visualization.py        ## Utilities for visualizing training results and model performance
+│   ├── config.py               ## Configuration parameters for the project
 │
-├── train.py                    # Script for training the reinforcement learning models
-├── evaluate.py                 # Script for evaluating the trained models
-├── requirements.txt            # List of project dependencies
-├── README.md                   # Project documentation and instructions
+├── train.py                    ## Script for training the reinforcement learning models
+├── evaluate.py                 ## Script for evaluating the trained models
+├── requirements.txt            ## List of project dependencies
+├── README.md                   ## Project documentation and instructions
 ```
 
 In this scalable file structure, the project is organized into distinct directories for data, models, environments, and utilities. The `train.py` and `evaluate.py` scripts provide entry points for training the reinforcement learning models and evaluating their performance. The `requirements.txt` file specifies the project dependencies, and the `README.md` contains project documentation and instructions for setup and usage.
@@ -87,11 +87,11 @@ This structure allows for modularity and easy navigation within the project, ena
 
 ```plaintext
 models/
-├── q_learning.py           # Implementation of Q-learning algorithm
-├── dqn.py                  # Implementation of Deep Q-Network (DQN) algorithm
-├── policy_gradients.py     # Implementation of policy gradient algorithms
-├── actor_critic.py         # Implementation of actor-critic algorithms
-├── model_utils.py          # Utility functions for model architecture and training
+├── q_learning.py           ## Implementation of Q-learning algorithm
+├── dqn.py                  ## Implementation of Deep Q-Network (DQN) algorithm
+├── policy_gradients.py     ## Implementation of policy gradient algorithms
+├── actor_critic.py         ## Implementation of actor-critic algorithms
+├── model_utils.py          ## Utility functions for model architecture and training
 ```
 
 ### Models Directory
@@ -118,15 +118,15 @@ In a typical reinforcement learning project, the deployment phase involves takin
 ```plaintext
 deployment/
 ├── trained_models/
-│   ├── model1.pth           # Trained model parameters for Q-learning
-│   ├── model2.pth           # Trained model parameters for DQN
-│   ├── model3.pth           # Trained model parameters for policy gradient algorithm
-│   ├── model4.pth           # Trained model parameters for actor-critic algorithm
+│   ├── model1.pth           ## Trained model parameters for Q-learning
+│   ├── model2.pth           ## Trained model parameters for DQN
+│   ├── model3.pth           ## Trained model parameters for policy gradient algorithm
+│   ├── model4.pth           ## Trained model parameters for actor-critic algorithm
 │
-├── environment.py           # Integration code for running the trained model in the target environment
-├── serve.py                 # Script for serving the reinforcement learning agent for making real-time decisions
-├── requirements.txt         # List of deployment-specific dependencies
-├── README.md                # Documentation for deploying and using the trained reinforcement learning models
+├── environment.py           ## Integration code for running the trained model in the target environment
+├── serve.py                 ## Script for serving the reinforcement learning agent for making real-time decisions
+├── requirements.txt         ## List of deployment-specific dependencies
+├── README.md                ## Documentation for deploying and using the trained reinforcement learning models
 ```
 
 ### Deployment Directory
@@ -168,18 +168,18 @@ class DQN(nn.Module):
         return self.fc3(x)
 
 def train_dqn(data_path, input_dim, output_dim):
-    # Load mock data (replace with actual data loading)
+    ## Load mock data (replace with actual data loading)
     mock_data = torch.randn(100, input_dim)
     mock_targets = torch.randint(0, output_dim, (100,))
 
-    # Define DQN model
+    ## Define DQN model
     dqn_model = DQN(input_dim, output_dim)
 
-    # Define loss function and optimizer
+    ## Define loss function and optimizer
     criterion = nn.CrossEntropyLoss()
     optimizer = optim.Adam(dqn_model.parameters(), lr=0.001)
 
-    # Training loop (sample code, not for full training)
+    ## Training loop (sample code, not for full training)
     for epoch in range(10):
         optimizer.zero_grad()
         outputs = dqn_model(mock_data)
@@ -188,15 +188,15 @@ def train_dqn(data_path, input_dim, output_dim):
         optimizer.step()
         print(f'Epoch [{epoch+1}/10], Loss: {loss.item():.4f}')
 
-    # Save trained model (replace with actual model saving)
+    ## Save trained model (replace with actual model saving)
     model_path = 'path/to/save/model.pth'
     torch.save(dqn_model.state_dict(), model_path)
     print(f'Trained DQN model saved at: {model_path}')
 
-# Example usage
+## Example usage
 data_path = 'path/to/mock/data.csv'
-input_dim = 10  # Example input dimension
-output_dim = 4  # Example output dimension
+input_dim = 10  ## Example input dimension
+output_dim = 4  ## Example output dimension
 train_dqn(data_path, input_dim, output_dim)
 ```
 
@@ -217,30 +217,30 @@ def create_dqn_model(input_dim, output_dim):
     return model
 
 def train_dqn(data_path, input_dim, output_dim):
-    # Load mock data (replace with actual data loading)
+    ## Load mock data (replace with actual data loading)
     mock_data = tf.random.normal((100, input_dim))
     mock_targets = tf.random.uniform((100,), minval=0, maxval=output_dim, dtype=tf.int32)
 
-    # Define DQN model
+    ## Define DQN model
     dqn_model = create_dqn_model(input_dim, output_dim)
 
-    # Compile the model
+    ## Compile the model
     dqn_model.compile(optimizer='adam',
                       loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True),
                       metrics=['accuracy'])
 
-    # Train the model (sample code, not for full training)
+    ## Train the model (sample code, not for full training)
     dqn_model.fit(mock_data, mock_targets, epochs=10, batch_size=32)
 
-    # Save trained model (replace with actual model saving)
+    ## Save trained model (replace with actual model saving)
     model_path = 'path/to/save/model.h5'
     dqn_model.save(model_path)
     print(f'Trained DQN model saved at: {model_path}')
 
-# Example usage
+## Example usage
 data_path = 'path/to/mock/data.csv'
-input_dim = 10  # Example input dimension
-output_dim = 4  # Example output dimension
+input_dim = 10  ## Example input dimension
+output_dim = 4  ## Example output dimension
 train_dqn(data_path, input_dim, output_dim)
 ```
 

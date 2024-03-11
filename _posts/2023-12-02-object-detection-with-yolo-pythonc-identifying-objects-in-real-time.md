@@ -71,31 +71,31 @@ By carefully designing the infrastructure to accommodate the real-time nature of
 object_detection_yolo/
 │
 ├── data/
-│   ├── input/             # Input data sources (e.g., video files, streaming sources)
-│   └── output/            # Output data (e.g., processed videos, logs)
+│   ├── input/             ## Input data sources (e.g., video files, streaming sources)
+│   └── output/            ## Output data (e.g., processed videos, logs)
 │
 ├── models/
-│   ├── yolo/              # YOLO model definitions and weights
+│   ├── yolo/              ## YOLO model definitions and weights
 │   └── ...
 │
 ├── src/
-│   ├── utils/             # Common utility functions
-│   ├── preprocessing/     # Image and video preprocessing modules
-│   ├── model_execution/   # YOLO model loading and execution
-│   ├── postprocessing/    # Object detection post-processing logic
-│   ├── visualization/     # User interface and result visualization components
+│   ├── utils/             ## Common utility functions
+│   ├── preprocessing/     ## Image and video preprocessing modules
+│   ├── model_execution/   ## YOLO model loading and execution
+│   ├── postprocessing/    ## Object detection post-processing logic
+│   ├── visualization/     ## User interface and result visualization components
 │   └── ...
 │
 ├── config/
-│   ├── yolo_config.yaml   # Configuration file for YOLO model settings
+│   ├── yolo_config.yaml   ## Configuration file for YOLO model settings
 │   └── ...
 │
-├── requirements.txt       # Python dependencies for the project
-├── main.py                # Main entry point for the Python implementation
-├── main.cpp               # Main entry point for the C++ implementation
-├── Dockerfile             # Dockerfile for containerization
-├── README.md              # Project documentation and instructions
-└── .gitignore             # Git ignore file for version control
+├── requirements.txt       ## Python dependencies for the project
+├── main.py                ## Main entry point for the Python implementation
+├── main.cpp               ## Main entry point for the C++ implementation
+├── Dockerfile             ## Dockerfile for containerization
+├── README.md              ## Project documentation and instructions
+└── .gitignore             ## Git ignore file for version control
 ```
 
 In this suggested file structure for the Object Detection with YOLO repository, the project is organized into several key directories:
@@ -126,13 +126,13 @@ In the "models" directory for the Object Detection with YOLO repository, we can 
 models/
 │
 ├── yolo/
-│   ├── yolov3/              # Subdirectory for YOLOv3 model
-│   │   ├── config/          # Configuration files for the YOLOv3 model
-│   │   │   └── yolov3.cfg   # YOLOv3 model architecture configuration
-│   │   ├── weights/         # Pre-trained weights for the YOLOv3 model
+│   ├── yolov3/              ## Subdirectory for YOLOv3 model
+│   │   ├── config/          ## Configuration files for the YOLOv3 model
+│   │   │   └── yolov3.cfg   ## YOLOv3 model architecture configuration
+│   │   ├── weights/         ## Pre-trained weights for the YOLOv3 model
 │   │   │   └── yolov3.weights
-│   │   └── classes/         # Class definitions for the YOLOv3 model
-│   │       └── coco.names   # List of COCO dataset class names
+│   │   └── classes/         ## Class definitions for the YOLOv3 model
+│   │       └── coco.names   ## List of COCO dataset class names
 │   └── ...
 └── ...
 ```
@@ -163,16 +163,16 @@ For the Object Detection with YOLO (Python/C++) application, the "deployment" di
 deployment/
 │
 ├── docker/
-│   ├── Dockerfile           # Dockerfile for containerizing the application
+│   ├── Dockerfile           ## Dockerfile for containerizing the application
 │   └── ... 
 │
 ├── kubernetes/
-│   ├── deployment.yaml      # Deployment configuration for Kubernetes
-│   ├── service.yaml         # Service configuration for Kubernetes
+│   ├── deployment.yaml      ## Deployment configuration for Kubernetes
+│   ├── service.yaml         ## Service configuration for Kubernetes
 │   └── ...
 │
 ├── documentation/
-│   ├── deployment_guide.md  # Guide for deploying the application
+│   ├── deployment_guide.md  ## Guide for deploying the application
 │   └── ...
 │
 └── ...
@@ -204,7 +204,7 @@ import numpy as np
 import os
 
 def object_detection_yolo(image_path):
-    # Load the YOLO model and weights
+    ## Load the YOLO model and weights
     net = cv2.dnn.readNet("yolov3.weights", "yolov3.cfg")
     classes = []
     with open("coco.names", "r") as f:
@@ -212,17 +212,17 @@ def object_detection_yolo(image_path):
     layer_names = net.getLayerNames()
     output_layers = [layer_names[i[0] - 1] for i in net.getUnconnectedOutLayers()]
 
-    # Load the image
+    ## Load the image
     img = cv2.imread(image_path)
     img = cv2.resize(img, None, fx=0.4, fy=0.4)
     height, width, channels = img.shape
 
-    # Perform object detection
+    ## Perform object detection
     blob = cv2.dnn.blobFromImage(img, 0.00392, (416, 416), (0, 0, 0), True, crop=False)
     net.setInput(blob)
     outs = net.forward(output_layers)
 
-    # Process the detection results
+    ## Process the detection results
     class_ids = []
     confidences = []
     boxes = []
@@ -232,13 +232,13 @@ def object_detection_yolo(image_path):
             class_id = np.argmax(scores)
             confidence = scores[class_id]
             if confidence > 0.5:
-                # Object detected
+                ## Object detected
                 center_x = int(detection[0] * width)
                 center_y = int(detection[1] * height)
                 w = int(detection[2] * width)
                 h = int(detection[3] * height)
 
-                # Rectangle coordinates
+                ## Rectangle coordinates
                 x = int(center_x - w / 2)
                 y = int(center_y - h / 2)
 
@@ -246,10 +246,10 @@ def object_detection_yolo(image_path):
                 confidences.append(float(confidence))
                 class_ids.append(class_id)
 
-    # Apply non-maximum suppression to remove redundant boxes
+    ## Apply non-maximum suppression to remove redundant boxes
     indexes = cv2.dnn.NMSBoxes(boxes, confidences, 0.5, 0.4)
 
-    # Prepare the detected objects
+    ## Prepare the detected objects
     detected_objects = []
     font = cv2.FONT_HERSHEY_PLAIN
     colors = np.random.uniform(0, 255, size=(len(classes), 3))
@@ -267,7 +267,7 @@ def object_detection_yolo(image_path):
                 'bounding_box': (x, y, w, h)
             })
 
-    # Save the resulting image with bounding boxes and class labels
+    ## Save the resulting image with bounding boxes and class labels
     result_image_path = 'result_image.jpg'
     cv2.imwrite(result_image_path, img)
 
@@ -291,7 +291,7 @@ import cv2
 import numpy as np
 
 def real_time_object_detection_yolo(video_path):
-    # Load YOLO model and weights
+    ## Load YOLO model and weights
     net = cv2.dnn.readNet("yolov3.weights", "yolov3.cfg")
     classes = []
     with open("coco.names", "r") as f:
@@ -299,23 +299,23 @@ def real_time_object_detection_yolo(video_path):
     layer_names = net.getLayerNames()
     output_layers = [layer_names[i[0] - 1] for i in net.getUnconnectedOutLayers()]
 
-    # Open video stream
+    ## Open video stream
     cap = cv2.VideoCapture(video_path)
 
     while True:
-        # Capture frame-by-frame
+        ## Capture frame-by-frame
         ret, frame = cap.read()
         if not ret:
             break
 
         height, width, channels = frame.shape
 
-        # Perform object detection
+        ## Perform object detection
         blob = cv2.dnn.blobFromImage(frame, 0.00392, (416, 416), (0, 0, 0), True, crop=False)
         net.setInput(blob)
         outs = net.forward(output_layers)
 
-        # Process the detection results
+        ## Process the detection results
         class_ids = []
         confidences = []
         boxes = []
@@ -325,13 +325,13 @@ def real_time_object_detection_yolo(video_path):
                 class_id = np.argmax(scores)
                 confidence = scores[class_id]
                 if confidence > 0.5:
-                    # Object detected
+                    ## Object detected
                     center_x = int(detection[0] * width)
                     center_y = int(detection[1] * height)
                     w = int(detection[2] * width)
                     h = int(detection[3] * height)
 
-                    # Rectangle coordinates
+                    ## Rectangle coordinates
                     x = int(center_x - w / 2)
                     y = int(center_y - h / 2)
 
@@ -339,10 +339,10 @@ def real_time_object_detection_yolo(video_path):
                     confidences.append(float(confidence))
                     class_ids.append(class_id)
 
-        # Apply non-maximum suppression to remove redundant boxes
+        ## Apply non-maximum suppression to remove redundant boxes
         indexes = cv2.dnn.NMSBoxes(boxes, confidences, 0.5, 0.4)
 
-        # Visualize the detected objects
+        ## Visualize the detected objects
         font = cv2.FONT_HERSHEY_PLAIN
         colors = np.random.uniform(0, 255, size=(len(classes), 3))
         if len(indexes) > 0:
@@ -354,14 +354,14 @@ def real_time_object_detection_yolo(video_path):
                 cv2.rectangle(frame, (x, y), (x + w, y + h), color, 2)
                 cv2.putText(frame, f'{label} {confidence}', (x, y + 30), font, 3, color, 3)
 
-        # Display the frame with detected objects
+        ## Display the frame with detected objects
         cv2.imshow('Real-time Object Detection', frame)
 
-        # Exit when 'q' is pressed
+        ## Exit when 'q' is pressed
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
 
-    # Release video capture and close OpenCV windows
+    ## Release video capture and close OpenCV windows
     cap.release()
     cv2.destroyAllWindows()
 ```

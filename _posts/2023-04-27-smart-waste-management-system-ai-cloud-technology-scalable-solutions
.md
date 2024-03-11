@@ -5,7 +5,7 @@ permalink: posts/smart-waste-management-system-ai-cloud-technology-scalable-solu
 layout: article
 ---
 
-# Smart Waste Management System
+## Smart Waste Management System
 
 ## Description
 
@@ -55,7 +55,7 @@ This project will implement a full-stack development approach. Here are some tec
 
 By implementing the Smart Waste Management System, we hope to revolutionize waste management processes, introduce greater efficiency, and ultimately contribute to a more sustainable future.
 
-# Smart Waste Management System - Repository File Structure
+## Smart Waste Management System - Repository File Structure
 
 The Smart Waste Management System should have a organized and scalable file structure for easier maintenance and version control. Below is a proposed structure.
 
@@ -111,7 +111,7 @@ Smart-Waste-Management-System/
 
 - `README.md` will be used to present necessary information about the project including ‘how to run the application’, ‘file structure’, ‘contribution guidelines’ etc.
 
-# Smart Waste Management System - Backend Logic (Fictitious)
+## Smart Waste Management System - Backend Logic (Fictitious)
 
 Let's assume we are working on the main logic for managing the waste data received from the IoT devices. The file could be located in the `controllers` folder in the `backend` directory.
 

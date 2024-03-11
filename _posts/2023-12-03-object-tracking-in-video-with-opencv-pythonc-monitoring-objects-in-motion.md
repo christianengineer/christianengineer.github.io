@@ -5,7 +5,7 @@ permalink: posts/object-tracking-in-video-with-opencv-pythonc-monitoring-objects
 layout: article
 ---
 
-# AI Object Tracking in Video with OpenCV
+## AI Object Tracking in Video with OpenCV
 
 ## Objectives
 The objective of the "AI Object Tracking in Video with OpenCV" project is to develop a system that can monitor objects in motion within a video stream. This includes identifying and tracking specific objects as they move through the video.
@@ -226,39 +226,39 @@ Sure, for the "Object Tracking in Video with OpenCV" application, you can create
 import numpy as np
 
 def complex_ml_algorithm(video_frame_path):
-    # Load the video frame using OpenCV or any suitable library
+    ## Load the video frame using OpenCV or any suitable library
     video_frame = load_video_frame(video_frame_path)
 
-    # Preprocess the video frame for input to the ML algorithm
+    ## Preprocess the video frame for input to the ML algorithm
     preprocessed_frame = preprocess_video_frame(video_frame)
 
-    # Apply the complex machine learning algorithm (e.g., deep learning model)
-    # Here we use a simple mock example of generating random tracking coordinates
+    ## Apply the complex machine learning algorithm (e.g., deep learning model)
+    ## Here we use a simple mock example of generating random tracking coordinates
     tracked_objects = []
-    for _ in range(5):  # Simulate tracking 5 objects
+    for _ in range(5):  ## Simulate tracking 5 objects
         object_id = np.random.randint(1, 100)
-        x, y = np.random.randint(0, 1920), np.random.randint(0, 1080)  # Mock object coordinates
+        x, y = np.random.randint(0, 1920), np.random.randint(0, 1080)  ## Mock object coordinates
         tracked_objects.append({'id': object_id, 'x': x, 'y': y})
 
     return tracked_objects
 
 def load_video_frame(video_frame_path):
-    # Use OpenCV or any suitable library to load the video frame from the given file path
-    # Example:
-    # video_frame = cv2.imread(video_frame_path)
-    # Assuming cv2 is the OpenCV library
+    ## Use OpenCV or any suitable library to load the video frame from the given file path
+    ## Example:
+    ## video_frame = cv2.imread(video_frame_path)
+    ## Assuming cv2 is the OpenCV library
 
-    # For demonstration purposes, a mock implementation is used here
-    video_frame = None  # Replace with actual implementation
+    ## For demonstration purposes, a mock implementation is used here
+    video_frame = None  ## Replace with actual implementation
 
     return video_frame
 
 def preprocess_video_frame(video_frame):
-    # Preprocess the video frame as per the requirements of the ML algorithm
-    # Example: resizing, normalization, etc.
+    ## Preprocess the video frame as per the requirements of the ML algorithm
+    ## Example: resizing, normalization, etc.
 
-    # For demonstration purposes, a mock implementation is used here
-    preprocessed_frame = video_frame  # Replace with actual preprocessing steps
+    ## For demonstration purposes, a mock implementation is used here
+    preprocessed_frame = video_frame  ## Replace with actual preprocessing steps
 
     return preprocessed_frame
 ```
@@ -276,25 +276,25 @@ import cv2
 import numpy as np
 
 def complex_ml_algorithm(video_frame_path):
-    # Load the video frame using OpenCV
+    ## Load the video frame using OpenCV
     video_frame = cv2.imread(video_frame_path)
 
-    # Preprocess the video frame for input to the ML algorithm
+    ## Preprocess the video frame for input to the ML algorithm
     preprocessed_frame = preprocess_video_frame(video_frame)
 
-    # Apply the complex machine learning algorithm (e.g., deep learning model)
-    # Here we use a simple mock example of generating random tracking coordinates
+    ## Apply the complex machine learning algorithm (e.g., deep learning model)
+    ## Here we use a simple mock example of generating random tracking coordinates
     tracked_objects = []
-    for _ in range(5):  # Simulate tracking 5 objects
+    for _ in range(5):  ## Simulate tracking 5 objects
         object_id = np.random.randint(1, 100)
-        x, y = np.random.randint(0, video_frame.shape[1]), np.random.randint(0, video_frame.shape[0])  # Mock object coordinates
+        x, y = np.random.randint(0, video_frame.shape[1]), np.random.randint(0, video_frame.shape[0])  ## Mock object coordinates
         tracked_objects.append({'id': object_id, 'x': x, 'y': y})
 
     return tracked_objects
 
 def preprocess_video_frame(video_frame):
-    # Placeholder for actual preprocessing steps, such as resizing, normalization, etc.
-    # For demonstration, we'll just return the original frame for this mock example
+    ## Placeholder for actual preprocessing steps, such as resizing, normalization, etc.
+    ## For demonstration, we'll just return the original frame for this mock example
     return video_frame
 ```
 
@@ -305,7 +305,7 @@ The `video_frame_path` parameter is the file path of the video frame that the al
 Here's how you might use this function:
 
 ```python
-# Example usage
+## Example usage
 path_to_video_frame = "path_to_video_frame.jpg"
 tracked_objects = complex_ml_algorithm(path_to_video_frame)
 print(tracked_objects)

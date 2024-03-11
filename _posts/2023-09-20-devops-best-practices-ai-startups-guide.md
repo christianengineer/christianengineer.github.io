@@ -5,7 +5,7 @@ permalink: posts/devops-best-practices-ai-startups-guide
 layout: article
 ---
 
-# DevOps Best Practices in AI Startups
+## DevOps Best Practices in AI Startups
 
 The convergence of Development Operations (DevOps) and Artificial Intelligence (AI) has the potential to greatly improve a startup's ability to deliver high-quality software on schedule. By leveraging DevOps principles and incorporating AI, startups can innovate and operate more efficiently than ever before. This article will discuss the best practices of DevOps in AI startups.
 
@@ -32,7 +32,7 @@ AI, on the other hand, refers to the simulation of human intelligence processes 
 - CI allows developers to integrate their changes back to the main branch as often as possible. This reduces integration problems and allows a team to develop cohesive software more rapidly.
 
 ```bash
-# Example of a CI System
+## Example of a CI System
 git pull origin master
 make test
 ```
@@ -54,7 +54,7 @@ make test
 - In addition to these, AI applications need data tests and model tests. By regularly testing the quality of the data, one can catch any anomalies early. Regular evaluation of the model on validation data will ensure its performance.
 
 ```python
-# Example of a Unit Test
+## Example of a Unit Test
 def test_add():
     assert add(2, 3) == 5
 ```
@@ -70,7 +70,7 @@ def test_add():
 - Therefore, the entire environment can be set up at the push of a button, ensuring repeatability and reducing any manual error.
 
 ```bash
-# Example of IaC using Terraform
+## Example of IaC using Terraform
 resource "aws_instance" "example" {
   ami           = "ami-0c55b159cbfafe1f0"
   instance_type = "t2.micro"

@@ -5,7 +5,7 @@ permalink: posts/linguanet---natural-language-processing-suite
 layout: article
 ---
 
-# AI LinguaNet - Natural Language Processing Suite
+## AI LinguaNet - Natural Language Processing Suite
 
 ## Objectives
 
@@ -192,16 +192,16 @@ Sure, I can provide you with an example of a function for a complex machine lear
 import tensorflow as tf
 
 def perform_sentiment_analysis(text_data):
-    # Define the file path for the pre-trained sentiment analysis model
+    ## Define the file path for the pre-trained sentiment analysis model
     model_file_path = 'src/ai/nlp_models/text_classification/sentiment_analysis_model.h5'
 
-    # Load the pre-trained sentiment analysis model
+    ## Load the pre-trained sentiment analysis model
     sentiment_analysis_model = tf.keras.models.load_model(model_file_path)
 
-    # Tokenize and preprocess the input text data (mock data)
+    ## Tokenize and preprocess the input text data (mock data)
     preprocessed_data = preprocess_text_data(text_data)
 
-    # Perform sentiment analysis using the pre-trained model
+    ## Perform sentiment analysis using the pre-trained model
     predicted_sentiment = sentiment_analysis_model.predict(preprocessed_data)
 
     return predicted_sentiment
@@ -221,16 +221,16 @@ Certainly! Below is a Python function representing a hypothetical complex deep l
 import tensorflow as tf
 
 def perform_language_translation(input_text):
-    # Define the file path for the pre-trained language translation model
+    ## Define the file path for the pre-trained language translation model
     model_file_path = 'src/ai/nlp_models/language_translation/translation_model.h5'
 
-    # Load the pre-trained language translation model
+    ## Load the pre-trained language translation model
     translation_model = tf.keras.models.load_model(model_file_path)
 
-    # Tokenize and preprocess the input text data (mock data)
+    ## Tokenize and preprocess the input text data (mock data)
     preprocessed_input = preprocess_input_text(input_text)
 
-    # Perform translation using the pre-trained model
+    ## Perform translation using the pre-trained model
     translated_text = translation_model.predict(preprocessed_input)
 
     return translated_text

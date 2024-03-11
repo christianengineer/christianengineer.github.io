@@ -5,7 +5,7 @@ permalink: posts/kubernetes-for-ml-model-deployment---demonstrate-deploying-and-
 layout: article
 ---
 
-# AI Kubernetes for ML Model Deployment
+## AI Kubernetes for ML Model Deployment
 
 ## Objectives
 1. Deploy and manage ML models at scale using Kubernetes
@@ -27,7 +27,7 @@ layout: article
 
 By implementing the above strategies and leveraging the chosen libraries and tools, our AI Kubernetes for ML Model Deployment system will be able to efficiently deploy, manage, autoscale, and load balance ML models, providing scalability and high availability for AI applications.
 
-# Infrastructure for Kubernetes for ML Model Deployment
+## Infrastructure for Kubernetes for ML Model Deployment
 
 To deploy and manage ML models at scale using Kubernetes, the infrastructure needs to be designed to support autoscaling, load balancing, and efficient management of resources. Here are the key components of the infrastructure:
 
@@ -206,7 +206,7 @@ The `deployments` directory is essential for defining the Kubernetes deployments
 Below is an example of a complex machine learning algorithm function implemented in Python. This function uses mock data and is intended to represent a part of a machine learning model implementation that could be containerized and deployed in a Kubernetes environment for model serving.
 
 ```python
-# File path: models/ml_model_1/model_code.py
+## File path: models/ml_model_1/model_code.py
 
 import numpy as np
 import pandas as pd
@@ -215,24 +215,24 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
 def complex_ml_algorithm(data_path):
-    # Load mock data (for demonstration purposes)
+    ## Load mock data (for demonstration purposes)
     data = pd.read_csv(data_path)
 
-    # Preprocessing (mock preprocessing steps)
+    ## Preprocessing (mock preprocessing steps)
     X = data.drop('target', axis=1)
     y = data['target']
 
-    # Split data into training and testing sets
+    ## Split data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Define and train the machine learning model (mock algorithm for demonstration)
+    ## Define and train the machine learning model (mock algorithm for demonstration)
     model = RandomForestClassifier(n_estimators=100, random_state=42)
     model.fit(X_train, y_train)
 
-    # Make predictions
+    ## Make predictions
     y_pred = model.predict(X_test)
 
-    # Calculate accuracy
+    ## Calculate accuracy
     accuracy = accuracy_score(y_test, y_pred)
 
     return accuracy
@@ -247,7 +247,7 @@ This Python function should be placed in the directory structure under the `mode
 Below is an example of a complex deep learning algorithm function implemented in Python. This function uses mock data and is intended to represent a part of a deep learning model implementation that could be containerized and deployed in a Kubernetes environment for model serving.
 
 ```python
-# File path: models/ml_model_2/model_code.py
+## File path: models/ml_model_2/model_code.py
 
 import numpy as np
 import pandas as pd
@@ -256,30 +256,30 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
 def complex_deep_learning_algorithm(data_path):
-    # Load mock data (for demonstration purposes)
+    ## Load mock data (for demonstration purposes)
     data = pd.read_csv(data_path)
 
-    # Preprocessing (mock preprocessing steps)
+    ## Preprocessing (mock preprocessing steps)
     X = data.drop('target', axis=1)
     y = data['target']
 
-    # Split data into training and testing sets
+    ## Split data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Define the deep learning model architecture (mock architecture for demonstration)
+    ## Define the deep learning model architecture (mock architecture for demonstration)
     model = tf.keras.Sequential([
         tf.keras.layers.Dense(128, activation='relu', input_shape=(X_train.shape[1],)),
         tf.keras.layers.Dense(64, activation='relu'),
         tf.keras.layers.Dense(1, activation='sigmoid')
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y_test))
 
-    # Evaluate the model
+    ## Evaluate the model
     _, accuracy = model.evaluate(X_test, y_test)
 
     return accuracy

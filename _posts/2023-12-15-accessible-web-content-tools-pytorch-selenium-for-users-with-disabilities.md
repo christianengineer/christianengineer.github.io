@@ -69,44 +69,44 @@ Sure, below is a suggested scalable file structure for the "Accessible Web Conte
 ```plaintext
 accessible_web_content_tools/
 │
-├── data/  # Data directory
-│   ├── raw/  # Raw data collected from web scraping
-│   ├── processed/  # Preprocessed data for model training
-│   ├── trained_models/  # Saved trained PyTorch models
+├── data/  ## Data directory
+│   ├── raw/  ## Raw data collected from web scraping
+│   ├── processed/  ## Preprocessed data for model training
+│   ├── trained_models/  ## Saved trained PyTorch models
 │   └── ...
 │
-├── models/  # PyTorch model code
+├── models/  ## PyTorch model code
 │   ├── image_classification/
 │   ├── text_classification/
 │   └── ...
 │
-├── scripts/  # Selenium web scraping and preprocessing scripts
+├── scripts/  ## Selenium web scraping and preprocessing scripts
 │   ├── web_scraping/
 │   ├── data_preprocessing/
 │   └── ...
 │
-├── tests/  # Unit tests and integration tests
+├── tests/  ## Unit tests and integration tests
 │
-├── notebooks/  # Jupyter notebooks for exploratory data analysis and model prototyping
+├── notebooks/  ## Jupyter notebooks for exploratory data analysis and model prototyping
 │
-├── app/  # Application code
-│   ├── api/  # API endpoints for serving accessibility recommendations
-│   ├── web_interface/  # Web interface for interacting with the AI-driven accessibility tools
+├── app/  ## Application code
+│   ├── api/  ## API endpoints for serving accessibility recommendations
+│   ├── web_interface/  ## Web interface for interacting with the AI-driven accessibility tools
 │   └── ...
 │
-├── infrastructure/  # Infrastructure as Code (IaC) and deployment configurations
-│   ├── terraform/  # Terraform configurations for cloud infrastructure
-│   ├── docker/  # Dockerfile and container configurations
-│   ├── kubernetes/  # Kubernetes deployment and service configurations
+├── infrastructure/  ## Infrastructure as Code (IaC) and deployment configurations
+│   ├── terraform/  ## Terraform configurations for cloud infrastructure
+│   ├── docker/  ## Dockerfile and container configurations
+│   ├── kubernetes/  ## Kubernetes deployment and service configurations
 │   └── ...
 │
-├── docs/  # Documentation and guides
+├── docs/  ## Documentation and guides
 │   ├── README.md
 │   ├── user_guide.md
 │   └── ...
 │
-├── requirements.txt  # Python dependencies
-├── setup.py  # Project setup and installation script
+├── requirements.txt  ## Python dependencies
+├── setup.py  ## Project setup and installation script
 ├── LICENSE
 └── .gitignore
 ```
@@ -120,21 +120,21 @@ models/
 │
 ├── image_classification/
 │   ├── __init__.py
-│   ├── model.py  # PyTorch model code for image classification tasks
-│   ├── dataset.py  # Custom dataset class for image data
-│   └── utils.py  # Utility functions for image processing
+│   ├── model.py  ## PyTorch model code for image classification tasks
+│   ├── dataset.py  ## Custom dataset class for image data
+│   └── utils.py  ## Utility functions for image processing
 │
 ├── text_classification/
 │   ├── __init__.py
-│   ├── model.py  # PyTorch model code for text classification tasks
-│   ├── preprocessing.py  # Text data preprocessing functions
-│   └── evaluation.py  # Model evaluation and metrics calculation
+│   ├── model.py  ## PyTorch model code for text classification tasks
+│   ├── preprocessing.py  ## Text data preprocessing functions
+│   └── evaluation.py  ## Model evaluation and metrics calculation
 │
 └── object_detection/
     ├── __init__.py
-    ├── model.py  # PyTorch model code for object detection tasks
-    ├── dataset.py  # Custom dataset class for object detection data
-    └── postprocessing.py  # Post-processing functions for object detection results
+    ├── model.py  ## PyTorch model code for object detection tasks
+    ├── dataset.py  ## Custom dataset class for object detection data
+    └── postprocessing.py  ## Post-processing functions for object detection results
 ```
 
 ### `image_classification/` Directory
@@ -160,19 +160,19 @@ The `deployment` directory in the "Accessible Web Content Tools" repository cont
 deployment/
 │
 ├── terraform/
-│   ├── main.tf  # Main Terraform configuration file for cloud infrastructure
-│   ├── variables.tf  # Terraform variables and input declarations
-│   └── outputs.tf  # Terraform output definitions
+│   ├── main.tf  ## Main Terraform configuration file for cloud infrastructure
+│   ├── variables.tf  ## Terraform variables and input declarations
+│   └── outputs.tf  ## Terraform output definitions
 │
 ├── docker/
-│   ├── Dockerfile  # Dockerfile for building the containerized application
-│   ├── requirements.txt  # Python dependencies for the Docker image
+│   ├── Dockerfile  ## Dockerfile for building the containerized application
+│   ├── requirements.txt  ## Python dependencies for the Docker image
 │   └── ...
 │
 └── kubernetes/
-    ├── deployment.yaml  # Kubernetes deployment configuration for AI models and web scraping
-    ├── service.yaml  # Kubernetes service configuration for exposing the application
-    └── ingress.yaml  # Ingress configuration for routing external traffic to the application
+    ├── deployment.yaml  ## Kubernetes deployment configuration for AI models and web scraping
+    ├── service.yaml  ## Kubernetes service configuration for exposing the application
+    └── ingress.yaml  ## Ingress configuration for routing external traffic to the application
 ```
 
 ### `terraform/` Directory
@@ -194,38 +194,38 @@ By organizing the deployment configurations in the `deployment` directory, the r
 Certainly! Below is a sample file for training a PyTorch model in the "Accessible Web Content Tools" application using mock data. This file can be placed within the `models` directory as `train_model.py`.
 
 ```python
-# models/train_model.py
+## models/train_model.py
 
 import torch
 import torch.nn as nn
 import torch.optim as optim
 from torchvision import datasets, transforms
-from models.model import MyModel  # Import your PyTorch model implementation
+from models.model import MyModel  ## Import your PyTorch model implementation
 
-# Define mock data loaders (replace with actual data loaders)
+## Define mock data loaders (replace with actual data loaders)
 transform = transforms.Compose([
     transforms.ToTensor(),
     transforms.Normalize((0.5,), (0.5,))
 ])
 
 mock_train_loader = torch.utils.data.DataLoader(
-    datasets.FakeData(transform=transform),  # Replace with actual training data
+    datasets.FakeData(transform=transform),  ## Replace with actual training data
     batch_size=64, shuffle=True
 )
 
 mock_test_loader = torch.utils.data.DataLoader(
-    datasets.FakeData(transform=transform),  # Replace with actual test data
+    datasets.FakeData(transform=transform),  ## Replace with actual test data
     batch_size=1000, shuffle=True
 )
 
-# Define the PyTorch model and optimizer
+## Define the PyTorch model and optimizer
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-model = MyModel()  # Instantiate your PyTorch model
+model = MyModel()  ## Instantiate your PyTorch model
 model.to(device)
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.SGD(model.parameters(), lr=0.001, momentum=0.9)
 
-# Train the model using mock data
+## Train the model using mock data
 def train_model():
     model.train()
     for batch_idx, (data, target) in enumerate(mock_train_loader):
@@ -236,7 +236,7 @@ def train_model():
         loss.backward()
         optimizer.step()
 
-# Evaluate the model using mock test data
+## Evaluate the model using mock test data
 def evaluate_model():
     model.eval()
     test_loss = 0
@@ -253,11 +253,11 @@ def evaluate_model():
     print(f'Average loss: {test_loss}, Accuracy: {accuracy}%')
 
 if __name__ == "__main__":
-    for epoch in range(1, 11):  # Replace with actual training loop
+    for epoch in range(1, 11):  ## Replace with actual training loop
         train_model()
         print(f"Epoch {epoch} completed.")
         evaluate_model()
-    torch.save(model.state_dict(), "trained_models/mock_model.pth")  # Save the trained model
+    torch.save(model.state_dict(), "trained_models/mock_model.pth")  ## Save the trained model
 ```
 
 In this sample file (`models/train_model.py`), we import the necessary libraries, define mock data loaders, define a PyTorch model, train the model using mock data, and then evaluate the model's performance. The trained model is then saved to a file (`trained_models/mock_model.pth`).
@@ -267,45 +267,45 @@ This file structure and content assume that you have a PyTorch model implementat
 Certainly! Below is a sample file for a complex machine learning algorithm in the "Accessible Web Content Tools" application using PyTorch and mock data. This file can be placed within the `models` directory as `complex_algorithm.py`.
 
 ```python
-# models/complex_algorithm.py
+## models/complex_algorithm.py
 
 import torch
 import torch.nn as nn
 import torch.optim as optim
 from torch.utils.data import DataLoader
 from torchvision import datasets, transforms
-from models.model import ComplexModel  # Import the complex PyTorch model implementation
+from models.model import ComplexModel  ## Import the complex PyTorch model implementation
 
-# Mock data loaders (replace with real data loaders)
+## Mock data loaders (replace with real data loaders)
 transform = transforms.Compose([
     transforms.ToTensor(),
     transforms.Normalize((0.5,), (0.5,))
 ])
 
 mock_train_loader = DataLoader(
-    datasets.FakeData(transform=transform),  # Replace with actual training data
+    datasets.FakeData(transform=transform),  ## Replace with actual training data
     batch_size=64, shuffle=True
 )
 
 mock_test_loader = DataLoader(
-    datasets.FakeData(transform=transform),  # Replace with actual test data
+    datasets.FakeData(transform=transform),  ## Replace with actual test data
     batch_size=1000, shuffle=True
 )
 
-# Define the complex model and optimizer
+## Define the complex model and optimizer
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-model = ComplexModel()  # Instantiate the complex PyTorch model
+model = ComplexModel()  ## Instantiate the complex PyTorch model
 model.to(device)
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters(), lr=0.001)
 
-# Train and evaluate the complex model using mock data
+## Train and evaluate the complex model using mock data
 def train_and_evaluate_complex_model():
     model.train()
-    for epoch in range(10):  # Replace with actual training loop
+    for epoch in range(10):  ## Replace with actual training loop
         running_loss = 0.0
         for i, data in enumerate(mock_train_loader, 0):
-            inputs, labels = data[0].to(device), torch.randint(0, 2, (64,)).to(device)  # Replace with actual data
+            inputs, labels = data[0].to(device), torch.randint(0, 2, (64,)).to(device)  ## Replace with actual data
             optimizer.zero_grad()
             outputs = model(inputs)
             loss = criterion(outputs, labels)
@@ -320,7 +320,7 @@ def train_and_evaluate_complex_model():
     total = 0
     with torch.no_grad():
         for data in mock_test_loader:
-            inputs, labels = data[0].to(device), torch.randint(0, 2, (1000,)).to(device)  # Replace with actual data
+            inputs, labels = data[0].to(device), torch.randint(0, 2, (1000,)).to(device)  ## Replace with actual data
             outputs = model(inputs)
             _, predicted = torch.max(outputs, 1)
             total += labels.size(0)
@@ -330,7 +330,7 @@ def train_and_evaluate_complex_model():
 
 if __name__ == "__main__":
     train_and_evaluate_complex_model()
-    torch.save(model.state_dict(), "trained_models/complex_model.pth")  # Save the trained complex model
+    torch.save(model.state_dict(), "trained_models/complex_model.pth")  ## Save the trained complex model
 ```
 
 In this sample file (`models/complex_algorithm.py`), we define a complex PyTorch model, instantiate mock data loaders, train the model using the mock data, and then evaluate the model's performance. The trained complex model is then saved to a file (`trained_models/complex_model.pth`).

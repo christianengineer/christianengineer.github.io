@@ -197,19 +197,19 @@ Sure, here's an example of a Python function that represents a complex machine l
 import numpy as np
 
 def train_dqn_with_mock_data(data_file_path):
-    # Load mock data from file
+    ## Load mock data from file
     data = np.loadtxt(data_file_path, delimiter=',')
 
-    # Preprocess the data as needed for training
-    # ...
+    ## Preprocess the data as needed for training
+    ## ...
 
-    # Define the Deep Q Network and training process
-    # ...
+    ## Define the Deep Q Network and training process
+    ## ...
 
-    # Train the Deep Q Network with the mock data
-    # ...
+    ## Train the Deep Q Network with the mock data
+    ## ...
 
-    # Return the trained model
+    ## Return the trained model
     return trained_dqn_model
 ```
 
@@ -226,34 +226,34 @@ import numpy as np
 import tensorflow as tf
 
 def train_dqn_with_mock_data(data_file_path, learning_rate=0.001, batch_size=32, num_episodes=1000):
-    # Load mock data from file
+    ## Load mock data from file
     mock_data = np.loadtxt(data_file_path, delimiter=',')
 
-    # Preprocess the mock data if necessary
+    ## Preprocess the mock data if necessary
     preprocessed_data = preprocess_data(mock_data)
 
-    # Define the DQN model using TensorFlow
+    ## Define the DQN model using TensorFlow
     model = tf.keras.Sequential([
         tf.keras.layers.Dense(64, input_shape=(preprocessed_data.shape[1],), activation='relu'),
         tf.keras.layers.Dense(64, activation='relu'),
-        tf.keras.layers.Dense(num_actions)  # Output layer
+        tf.keras.layers.Dense(num_actions)  ## Output layer
     ])
 
     model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=learning_rate), loss='mean_squared_error')
 
-    # Train the DQN model using the mock data
+    ## Train the DQN model using the mock data
     for _ in range(num_episodes):
-        # Sample a batch from the preprocessed data
+        ## Sample a batch from the preprocessed data
         batch_indices = np.random.choice(len(preprocessed_data), size=batch_size, replace=False)
         state_batch = preprocessed_data[batch_indices, :]
 
-        # Generate target Q-values (for simulation purposes, we'll use random values)
+        ## Generate target Q-values (for simulation purposes, we'll use random values)
         target_q_values = np.random.rand(batch_size, num_actions)
 
-        # Train the model on the batch
+        ## Train the model on the batch
         model.train_on_batch(state_batch, target_q_values)
 
-    # Return the trained DQN model
+    ## Return the trained DQN model
     return model
 ```
 

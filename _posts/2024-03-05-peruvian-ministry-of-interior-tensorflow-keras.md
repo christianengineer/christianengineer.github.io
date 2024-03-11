@@ -5,7 +5,7 @@ permalink: posts/peruvian-ministry-of-interior-tensorflow-keras
 layout: article
 ---
 
-# Building a Predictive Policing Model for Peruvian Ministry of Interior using Machine Learning
+## Building a Predictive Policing Model for Peruvian Ministry of Interior using Machine Learning
 
 ## Objectives and Benefits for Crime Analysts:
 - **Objective**: Develop a machine learning model to predict future crime hotspots, optimizing patrol allocations.
@@ -235,27 +235,27 @@ from sklearn.preprocessing import StandardScaler, OneHotEncoder
 from sklearn.compose import ColumnTransformer
 from sklearn.impute import SimpleImputer
 
-# Load the crime data into a DataFrame
+## Load the crime data into a DataFrame
 crime_data = pd.read_csv('crime_data.csv')
 
-# Drop irrelevant columns or columns with sensitive information
+## Drop irrelevant columns or columns with sensitive information
 crime_data.drop(['incident_id', 'victim_names'], axis=1, inplace=True)
 
-# Handle missing values in numerical features by imputing with median
+## Handle missing values in numerical features by imputing with median
 imputer = SimpleImputer(strategy='median')
 crime_data['population_density'] = imputer.fit_transform(crime_data[['population_density']])
 
-# Encode categorical features like crime_category using one-hot encoding
+## Encode categorical features like crime_category using one-hot encoding
 ct = ColumnTransformer(transformers=[('encoder', OneHotEncoder(), ['crime_category'])], remainder='passthrough')
 crime_data_encoded = pd.DataFrame(ct.fit_transform(crime_data))
 
-# Scale numerical features like population_density using StandardScaler
+## Scale numerical features like population_density using StandardScaler
 scaler = StandardScaler()
 crime_data_encoded[1] = scaler.fit_transform(crime_data_encoded[[1]])
 
-# Normalize other numerical features as needed for model convergence
+## Normalize other numerical features as needed for model convergence
 
-# Save the preprocessed data to a new CSV file
+## Save the preprocessed data to a new CSV file
 crime_data_encoded.to_csv('preprocessed_crime_data.csv', index=False)
 ```
 
@@ -350,7 +350,7 @@ import numpy as np
 
 fake = Faker()
 
-# Generate fictitious crime data
+## Generate fictitious crime data
 crime_data = []
 for _ in range(10000):
     crime_type = random.choice(['Theft', 'Assault', 'Vandalism', 'Robbery'])
@@ -362,11 +362,11 @@ for _ in range(10000):
     
     crime_data.append([crime_type, location_lat, location_lon, date_time, population_density, weather_condition])
 
-# Create DataFrame from the generated data
+## Create DataFrame from the generated data
 columns = ['crime_type', 'location_lat', 'location_lon', 'date_time', 'population_density', 'weather_condition']
 crime_df = pd.DataFrame(crime_data, columns=columns)
 
-# Save the generated dataset to a CSV file
+## Save the generated dataset to a CSV file
 crime_df.to_csv('simulated_crime_data.csv', index=False)
 ```
 
@@ -418,28 +418,28 @@ from sklearn.model_selection import train_test_split
 from xgboost import XGBClassifier
 from sklearn.metrics import accuracy_score
 
-# Load preprocessed dataset
+## Load preprocessed dataset
 crime_data = pd.read_csv('preprocessed_crime_data.csv')
 
-# Prepare features and target variable
+## Prepare features and target variable
 X = crime_data.drop(columns=['crime_type'])
 y = crime_data['crime_type']
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize and train the XGBoost model
+## Initialize and train the XGBoost model
 model = XGBClassifier(objective='multi:softmax', num_class=len(y.unique()))
 model.fit(X_train, y_train)
 
-# Make predictions on the test set
+## Make predictions on the test set
 y_pred = model.predict(X_test)
 
-# Evaluate model performance
+## Evaluate model performance
 accuracy = accuracy_score(y_test, y_pred)
 print(f'Model Accuracy: {accuracy}')
 
-# Save the trained model for deployment
+## Save the trained model for deployment
 model.save_model('crime_prediction_model.model')
 ```
 
@@ -498,29 +498,29 @@ By following this deployment plan tailored to the unique demands of the predicti
 Here is a customized Dockerfile tailored for the predictive policing project to encapsulate the environment and dependencies for optimal performance and scalability:
 
 ```Dockerfile
-# Use a base Python image
+## Use a base Python image
 FROM python:3.8-slim
 
-# Set the working directory in the container
+## Set the working directory in the container
 WORKDIR /app
 
-# Copy requirements.txt to the container
+## Copy requirements.txt to the container
 COPY requirements.txt .
 
-# Install required Python packages
+## Install required Python packages
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the preprocessed dataset and trained model to the container
+## Copy the preprocessed dataset and trained model to the container
 COPY preprocessed_crime_data.csv .
 COPY crime_prediction_model.model .
 
-# Copy the model deployment script to the container
+## Copy the model deployment script to the container
 COPY model_deployment_script.py .
 
-# Expose the API port
+## Expose the API port
 EXPOSE 5000
 
-# Define the command to run the model deployment script
+## Define the command to run the model deployment script
 CMD ["python", "model_deployment_script.py"]
 ```
 

@@ -5,7 +5,7 @@ permalink: posts/space-exploration-data-analysis-with-astropy-python-studying-as
 layout: article
 ---
 
-# AI Space Exploration Data Analysis with AstroPy
+## AI Space Exploration Data Analysis with AstroPy
 
 ## Objectives
 The objective of this project is to study astronomical data repository using AstroPy in Python. The main goals are to analyze and visualize astronomical data, extract meaningful insights, and potentially apply machine learning techniques for knowledge discovery. 
@@ -26,7 +26,7 @@ The objective of this project is to study astronomical data repository using Ast
 
 By combining these libraries and following the outlined system design strategies, we can create a robust and scalable system for analyzing astronomical data using AstroPy in Python.
 
-# MLOps Infrastructure for Space Exploration Data Analysis with AstroPy
+## MLOps Infrastructure for Space Exploration Data Analysis with AstroPy
 
 When integrating machine learning (ML) into the space exploration data analysis application using AstroPy, it is essential to establish a robust MLOps infrastructure to streamline the development, deployment, and management of ML models. Here are the key components and strategies for implementing MLOps in this context:
 
@@ -242,7 +242,7 @@ The `infrastructure/` directory contains configuration files related to the infr
 By orchestrating the `deployment/` directory in this manner, the Space Exploration Data Analysis with AstroPy application is equipped with structured pipelines for managing data processing, model training, and inference, along with infrastructure configuration for containerization and orchestration in a distributed environment.
 
 ```python
-# File: model_training.py
+## File: model_training.py
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
@@ -250,36 +250,36 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, classification_report
 import joblib
 
-# File path for the mock astronomical data
+## File path for the mock astronomical data
 data_file_path = 'data/processed_data/mock_astronomical_data.csv'
 
-# Load the mock astronomical data
+## Load the mock astronomical data
 mock_data = pd.read_csv(data_file_path)
 
-# Assume that the mock data contains features (X) and target label (y)
+## Assume that the mock data contains features (X) and target label (y)
 X = mock_data.drop('target', axis=1)
 y = mock_data['target']
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize a RandomForestClassifier (or any other model of choice)
+## Initialize a RandomForestClassifier (or any other model of choice)
 model = RandomForestClassifier(n_estimators=100, random_state=42)
 
-# Train the model
+## Train the model
 model.fit(X_train, y_train)
 
-# Make predictions on the test set
+## Make predictions on the test set
 y_pred = model.predict(X_test)
 
-# Evaluate the model
+## Evaluate the model
 accuracy = accuracy_score(y_test, y_pred)
 print(f'Model accuracy: {accuracy:.2f}')
 
-# Generate classification report
+## Generate classification report
 print(classification_report(y_test, y_pred))
 
-# Serialize and save the trained model
+## Serialize and save the trained model
 model_file_path = 'models/trained_models/mock_astronomical_model.pkl'
 joblib.dump(model, model_file_path)
 print(f'Trained model saved to: {model_file_path}')
@@ -297,7 +297,7 @@ In this file, we perform the following:
 The path for the mock astronomical data file is assumed to be 'data/processed_data/mock_astronomical_data.csv', and the trained model will be saved to 'models/trained_models/mock_astronomical_model.pkl'.
 
 ```python
-# File: complex_model_training.py
+## File: complex_model_training.py
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
@@ -305,33 +305,33 @@ from sklearn.ensemble import GradientBoostingRegressor
 from sklearn.metrics import mean_squared_error
 import joblib
 
-# File path for the mock astronomical data
+## File path for the mock astronomical data
 data_file_path = 'data/processed_data/mock_astronomical_data.csv'
 
-# Load the mock astronomical data
+## Load the mock astronomical data
 mock_data = pd.read_csv(data_file_path)
 
-# Assume that the mock data contains features (X) and target variable (y)
+## Assume that the mock data contains features (X) and target variable (y)
 X = mock_data.drop('target_variable', axis=1)
 y = mock_data['target_variable']
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize a GradientBoostingRegressor (or any other complex model of choice)
+## Initialize a GradientBoostingRegressor (or any other complex model of choice)
 model = GradientBoostingRegressor(n_estimators=100, learning_rate=0.1, max_depth=3, random_state=42)
 
-# Train the model
+## Train the model
 model.fit(X_train, y_train)
 
-# Make predictions on the test set
+## Make predictions on the test set
 y_pred = model.predict(X_test)
 
-# Evaluate the model using mean squared error
+## Evaluate the model using mean squared error
 mse = mean_squared_error(y_test, y_pred)
 print(f'Mean Squared Error: {mse:.2f}')
 
-# Serialize and save the trained model
+## Serialize and save the trained model
 model_file_path = 'models/trained_models/complex_astronomical_model.pkl'
 joblib.dump(model, model_file_path)
 print(f'Trained complex model saved to: {model_file_path}')

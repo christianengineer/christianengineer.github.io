@@ -5,7 +5,7 @@ permalink: posts/insuretech---ai-in-insurance-analytics
 layout: article
 ---
 
-# AI InsureTech - AI in Insurance Analytics Repository
+## AI InsureTech - AI in Insurance Analytics Repository
 
 ## Objectives
 
@@ -74,7 +74,7 @@ Utilize a leading cloud platform such as AWS, Azure, or GCP for its scalability,
 
 By designing the infrastructure with these components and considerations, the InsureTech - AI in Insurance Analytics application can be robust, scalable, and well-equipped to handle the demands of data-intensive AI applications in the insurance industry.
 
-# InsureTech - AI in Insurance Analytics Repository File Structure
+## InsureTech - AI in Insurance Analytics Repository File Structure
 
 ```
 InsureTech-AI-in-Insurance-Analytics/
@@ -147,7 +147,7 @@ This file structure organizes the InsureTech - AI in Insurance Analytics reposit
 
 This organized file structure enables scalable development and maintenance, fostering collaboration and efficiency within the InsureTech - AI in Insurance Analytics repository.
 
-# InsureTech - AI in Insurance Analytics Repository: AI Directory
+## InsureTech - AI in Insurance Analytics Repository: AI Directory
 
 ```
 src/
@@ -193,7 +193,7 @@ In the AI directory of the InsureTech - AI in Insurance Analytics repository, th
 
 By adopting this directory structure, the AI functionality is organized into distinct modules, simplifying development, testing, and maintenance of AI components within the InsureTech - AI in Insurance Analytics application.
 
-# InsureTech - AI in Insurance Analytics Repository: Utils Directory
+## InsureTech - AI in Insurance Analytics Repository: Utils Directory
 
 ```plaintext
 src/
@@ -222,7 +222,7 @@ In the `utils` directory of the InsureTech - AI in Insurance Analytics repositor
 By structuring the `utils` directory in this manner, the InsureTech - AI in Insurance Analytics application promotes code organization, reusability, and maintainability, ensuring that common functionalities and operations are encapsulated in dedicated utility modules for efficient development and management.
 
 ```python
-# src/ai/modeling/complex_algorithm.py
+## src/ai/modeling/complex_algorithm.py
 
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
@@ -239,24 +239,24 @@ def complex_machine_learning_algorithm(data_path):
     Returns:
     - float: Accuracy of the trained model
     """
-    # Load mock data from the provided file path
+    ## Load mock data from the provided file path
     data = pd.read_csv(data_path)
 
-    # Extract features and target variable
+    ## Extract features and target variable
     X = data.drop('target', axis=1)
     y = data['target']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize and train the model (Random Forest Classifier as an example)
+    ## Initialize and train the model (Random Forest Classifier as an example)
     model = RandomForestClassifier(n_estimators=100, random_state=42)
     model.fit(X_train, y_train)
 
-    # Make predictions on the test set
+    ## Make predictions on the test set
     y_pred = model.predict(X_test)
 
-    # Calculate accuracy of the model
+    ## Calculate accuracy of the model
     accuracy = accuracy_score(y_test, y_pred)
 
     return accuracy
@@ -267,7 +267,7 @@ In this example, I have created a function `complex_machine_learning_algorithm` 
 The file path where the mock data is stored should be provided as an argument to the function. This function can serve as a placeholder for a more complex machine learning algorithm to be implemented as part of the InsureTech - AI in Insurance Analytics application.
 
 ```python
-# src/ai/modeling/deep_learning_algorithm.py
+## src/ai/modeling/deep_learning_algorithm.py
 
 import pandas as pd
 import numpy as np
@@ -285,35 +285,35 @@ def complex_deep_learning_algorithm(data_path):
     Returns:
     - float: Accuracy of the trained deep learning model
     """
-    # Load mock data from the provided file path
+    ## Load mock data from the provided file path
     data = pd.read_csv(data_path)
 
-    # Extract features and target variable
+    ## Extract features and target variable
     X = data.drop('target', axis=1)
     y = data['target']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Standardize the input features
+    ## Standardize the input features
     scaler = StandardScaler()
     X_train_scaled = scaler.fit_transform(X_train)
     X_test_scaled = scaler.transform(X_test)
 
-    # Define the deep learning model architecture using TensorFlow/Keras
+    ## Define the deep learning model architecture using TensorFlow/Keras
     model = tf.keras.Sequential([
         tf.keras.layers.Dense(128, activation='relu', input_shape=(X_train.shape[1],)),
         tf.keras.layers.Dense(64, activation='relu'),
         tf.keras.layers.Dense(1, activation='sigmoid')
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
-    # Train the model
+    ## Train the model
     model.fit(X_train_scaled, y_train, epochs=10, batch_size=32, validation_data=(X_test_scaled, y_test))
 
-    # Evaluate the model
+    ## Evaluate the model
     _, accuracy = model.evaluate(X_test_scaled, y_test)
 
     return accuracy

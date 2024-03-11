@@ -233,24 +233,24 @@ def complex_detection_algorithm(image_file_path):
     - list: A list of mock number plate detection results, where each result is a dictionary with bounding box coordinates.
     """
 
-    # Placeholder mock detection results
+    ## Placeholder mock detection results
     mock_results = [
         {"plate_number": "ABC123", "coordinates": (100, 100, 200, 200)},
         {"plate_number": "XYZ789", "coordinates": (300, 300, 400, 400)},
-        # Additional mock results...
+        ## Additional mock results...
     ]
 
-    # Load the input image using OpenCV
+    ## Load the input image using OpenCV
     image = cv2.imread(image_file_path)
 
-    # Perform any necessary preprocessing on the image
+    ## Perform any necessary preprocessing on the image
     processed_image = preprocess_image(image)
 
-    # Run the mock complex detection algorithm
-    # Replace this with the actual complex detection algorithm implementation
+    ## Run the mock complex detection algorithm
+    ## Replace this with the actual complex detection algorithm implementation
     detection_results = run_complex_detection_algorithm(processed_image)
 
-    # Convert the mock results to the appropriate format
+    ## Convert the mock results to the appropriate format
     transformed_results = []
 
     for result in mock_results:
@@ -272,18 +272,18 @@ def preprocess_image(image):
     """
     Placeholder function for image preprocessing.
     """
-    # Placeholder image preprocessing steps (e.g., resizing, normalization, etc.)
-    processed_image = image  # Placeholder; actual preprocessing steps to be implemented
+    ## Placeholder image preprocessing steps (e.g., resizing, normalization, etc.)
+    processed_image = image  ## Placeholder; actual preprocessing steps to be implemented
     return processed_image
 
 def run_complex_detection_algorithm(image):
     """
     Placeholder function for running the complex detection algorithm on the processed image.
     """
-    # Placeholder implementation of the complex detection algorithm
-    # Replace this with the actual implementation of the complex detection algorithm
-    # For example, using deep learning-based object detection model (e.g., YOLO, SSD, etc.)
-    detection_results = []  # Placeholder; actual detection algorithm to be implemented
+    ## Placeholder implementation of the complex detection algorithm
+    ## Replace this with the actual implementation of the complex detection algorithm
+    ## For example, using deep learning-based object detection model (e.g., YOLO, SSD, etc.)
+    detection_results = []  ## Placeholder; actual detection algorithm to be implemented
     return detection_results
 ```
 
@@ -307,21 +307,21 @@ def complex_character_recognition_algorithm(image_file_path):
     - str: A mock result representing the recognized characters from the number plate.
     """
 
-    # Placeholder mock character recognition result
-    mock_result = "ABC123"  # Mock recognized characters
+    ## Placeholder mock character recognition result
+    mock_result = "ABC123"  ## Mock recognized characters
 
-    # Load the input image using OpenCV
+    ## Load the input image using OpenCV
     image = cv2.imread(image_file_path)
 
-    # Perform any necessary preprocessing on the image
+    ## Perform any necessary preprocessing on the image
     processed_image = preprocess_image(image)
 
-    # Run the mock complex character recognition algorithm
-    # Replace this with the actual complex character recognition algorithm implementation
+    ## Run the mock complex character recognition algorithm
+    ## Replace this with the actual complex character recognition algorithm implementation
     recognized_characters = run_complex_character_recognition_algorithm(processed_image)
 
-    # Convert the mock character recognition result
-    transformed_result = mock_result  # Replace with the actual recognized characters
+    ## Convert the mock character recognition result
+    transformed_result = mock_result  ## Replace with the actual recognized characters
 
     return transformed_result
 
@@ -329,18 +329,18 @@ def preprocess_image(image):
     """
     Placeholder function for image preprocessing.
     """
-    # Placeholder image preprocessing steps (e.g., resizing, normalization, etc.)
-    processed_image = image  # Placeholder; actual preprocessing steps to be implemented
+    ## Placeholder image preprocessing steps (e.g., resizing, normalization, etc.)
+    processed_image = image  ## Placeholder; actual preprocessing steps to be implemented
     return processed_image
 
 def run_complex_character_recognition_algorithm(image):
     """
     Placeholder function for running the complex character recognition algorithm on the processed image.
     """
-    # Placeholder implementation of the complex character recognition algorithm
-    # Replace this with the actual implementation of the complex character recognition algorithm
-    # For example, using a deep learning model for optical character recognition (OCR)
-    recognized_characters = "ABC123"  # Placeholder; actual character recognition algorithm to be implemented
+    ## Placeholder implementation of the complex character recognition algorithm
+    ## Replace this with the actual implementation of the complex character recognition algorithm
+    ## For example, using a deep learning model for optical character recognition (OCR)
+    recognized_characters = "ABC123"  ## Placeholder; actual character recognition algorithm to be implemented
     return recognized_characters
 ```
 

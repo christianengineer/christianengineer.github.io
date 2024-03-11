@@ -217,45 +217,45 @@ To illustrate the usage of a complex machine learning algorithm within the conte
 ```python
 import numpy as np
 from PIL import Image
-from feature_store import FeatureStore  # Custom feature store module for accessing features
+from feature_store import FeatureStore  ## Custom feature store module for accessing features
 import os
 
-# Define the path to the feature store directory
+## Define the path to the feature store directory
 feature_store_path = '/path/to/feature_store'
 
-# Instantiate the FeatureStore
+## Instantiate the FeatureStore
 feature_store = FeatureStore(feature_store_path)
 
-# Define a function for the machine learning algorithm
+## Define a function for the machine learning algorithm
 def custom_image_recognition_model(image_feature_id):
-    # Get image features from the feature store
+    ## Get image features from the feature store
     image_features = feature_store.get_feature_vector(image_feature_id)
 
-    # Perform data preprocessing
+    ## Perform data preprocessing
     preprocessed_image = preprocess_image(image_features)
     
-    # Load the preprocessed image
+    ## Load the preprocessed image
     image_array = np.array(preprocessed_image)
     
-    # Perform model inference
+    ## Perform model inference
     predictions = run_custom_image_recognition_model(image_array)
 
     return predictions
 
-# Helper function for image preprocessing
+## Helper function for image preprocessing
 def preprocess_image(image_features):
-    # Mock image preprocessing logic
+    ## Mock image preprocessing logic
     image_path = image_features['image_path']
     image = Image.open(image_path)
-    resized_image = image.resize((224, 224))  # Assuming a specific input size for the model
+    resized_image = image.resize((224, 224))  ## Assuming a specific input size for the model
     return resized_image
 
-# Helper function for running the custom image recognition model
+## Helper function for running the custom image recognition model
 def run_custom_image_recognition_model(image_array):
-    # Mock model inference
-    # Assume this is a complex deep learning model for image recognition
-    # Placeholder code for illustration purposes
-    predictions = np.random.rand(1, 1000)  # Example output of 1000 classes
+    ## Mock model inference
+    ## Assume this is a complex deep learning model for image recognition
+    ## Placeholder code for illustration purposes
+    predictions = np.random.rand(1, 1000)  ## Example output of 1000 classes
     return predictions
 ```
 
@@ -269,52 +269,52 @@ This function serves as a simplified representation of a complex machine learnin
 ```python
 import numpy as np
 import pandas as pd
-from feature_store import FeatureStore  # Custom feature store module for accessing features
+from feature_store import FeatureStore  ## Custom feature store module for accessing features
 import os
 
-# Define the path to the feature store directory
+## Define the path to the feature store directory
 feature_store_path = '/path/to/feature_store'
 
-# Instantiate the FeatureStore
+## Instantiate the FeatureStore
 feature_store = FeatureStore(feature_store_path)
 
-# Define a function for the deep learning algorithm
+## Define a function for the deep learning algorithm
 def complex_deep_learning_model(feature_ids):
-    # Get features from the feature store
+    ## Get features from the feature store
     feature_vectors = [feature_store.get_feature_vector(fid) for fid in feature_ids]
 
-    # Perform data preprocessing and feature engineering
+    ## Perform data preprocessing and feature engineering
     preprocessed_data = preprocess_features(feature_vectors)
 
-    # Load preprocessed data into a DataFrame
+    ## Load preprocessed data into a DataFrame
     feature_df = pd.DataFrame(preprocessed_data)
 
-    # Train the deep learning model
+    ## Train the deep learning model
     trained_model = train_deep_learning_model(feature_df)
 
-    # Generate predictions using the trained model
+    ## Generate predictions using the trained model
     predictions = generate_predictions(trained_model, feature_df)
 
     return predictions
 
-# Helper function for data preprocessing
+## Helper function for data preprocessing
 def preprocess_features(feature_vectors):
-    # Mock data preprocessing and feature engineering logic
-    # Concatenating, normalizing, or transforming features
-    preprocessed_data = np.concatenate(feature_vectors, axis=1)  # Assuming feature vectors are NumPy arrays
+    ## Mock data preprocessing and feature engineering logic
+    ## Concatenating, normalizing, or transforming features
+    preprocessed_data = np.concatenate(feature_vectors, axis=1)  ## Assuming feature vectors are NumPy arrays
     return preprocessed_data
 
-# Placeholder functions for training and prediction (replace with actual deep learning model code)
+## Placeholder functions for training and prediction (replace with actual deep learning model code)
 def train_deep_learning_model(data):
-    # Placeholder for training the deep learning model
-    # In a real scenario, this would involve defining and training a deep learning architecture using the provided data
-    trained_model = "Trained deep learning model"  # Placeholder for trained model
+    ## Placeholder for training the deep learning model
+    ## In a real scenario, this would involve defining and training a deep learning architecture using the provided data
+    trained_model = "Trained deep learning model"  ## Placeholder for trained model
     return trained_model
 
 def generate_predictions(model, data):
-    # Placeholder for generating predictions using the trained model
-    # In reality, this would involve running the trained model on the provided data to generate predictions
-    predictions = np.random.rand(len(data))  # Placeholder for predictions
+    ## Placeholder for generating predictions using the trained model
+    ## In reality, this would involve running the trained model on the provided data to generate predictions
+    predictions = np.random.rand(len(data))  ## Placeholder for predictions
     return predictions
 ```
 

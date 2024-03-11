@@ -58,31 +58,31 @@ By integrating these MLOps practices into the Automated Drug Discovery Platform,
 ```
 automated_drug_discovery_platform/
 ├── data/
-│   ├── raw/      # Raw data files
-│   ├── processed/      # Processed data files
-│   └── interim/        # Intermediate data files
+│   ├── raw/      ## Raw data files
+│   ├── processed/      ## Processed data files
+│   └── interim/        ## Intermediate data files
 ├── models/
-│   ├── tensorflow/     # TensorFlow model files
-│   ├── luigi/          # Luigi workflow definitions
+│   ├── tensorflow/     ## TensorFlow model files
+│   ├── luigi/          ## Luigi workflow definitions
 ├── notebooks/
-│   ├── exploratory/    # Jupyter notebooks for initial data exploration
-│   ├── analysis/       # Jupyter notebooks for data analysis and visualization
+│   ├── exploratory/    ## Jupyter notebooks for initial data exploration
+│   ├── analysis/       ## Jupyter notebooks for data analysis and visualization
 ├── scripts/
-│   ├── data_processing/        # Scripts for data preprocessing
-│   ├── model_training/         # Scripts for model training
-│   └── deployment/             # Scripts for model deployment
+│   ├── data_processing/        ## Scripts for data preprocessing
+│   ├── model_training/         ## Scripts for model training
+│   └── deployment/             ## Scripts for model deployment
 ├── docker/
-│   ├── Dockerfile      # Dockerfile for building the platform image
+│   ├── Dockerfile      ## Dockerfile for building the platform image
 ├── config/
-│   ├── luigi.cfg       # Configuration file for Luigi workflow manager
+│   ├── luigi.cfg       ## Configuration file for Luigi workflow manager
 ├── tests/
-│   ├── unit/           # Unit tests for individual components
-│   ├── integration/    # Integration tests for end-to-end workflows
+│   ├── unit/           ## Unit tests for individual components
+│   ├── integration/    ## Integration tests for end-to-end workflows
 ├── docs/
-│   ├── specifications/ # Documentation for platform specifications and APIs
-│   └── tutorials/       # User guides and tutorials
-├── README.md           # Project overview and setup instructions
-└── requirements.txt    # Python dependencies
+│   ├── specifications/ ## Documentation for platform specifications and APIs
+│   └── tutorials/       ## User guides and tutorials
+├── README.md           ## Project overview and setup instructions
+└── requirements.txt    ## Python dependencies
 ```
 
 This structure provides a modular and organized layout for the Automated Drug Discovery Platform repository. It separates the data, models, notebooks, scripts, docker files, configuration, tests, and documentation, facilitating easy navigation and management of different components associated with TensorFlow, Luigi, and Docker for pharmaceuticals application.
@@ -91,19 +91,19 @@ This structure provides a modular and organized layout for the Automated Drug Di
 models/
 ├── tensorflow/
 │   ├── training/
-│   │   ├── train.py            # Script for training TensorFlow models
-│   │   └── hyperparameters.yaml   # Hyperparameters configuration file
+│   │   ├── train.py            ## Script for training TensorFlow models
+│   │   └── hyperparameters.yaml   ## Hyperparameters configuration file
 │   ├── evaluation/
-│   │   └── evaluate.py         # Script for evaluating TensorFlow models
+│   │   └── evaluate.py         ## Script for evaluating TensorFlow models
 │   └── deployment/
-│       └── deploy.py           # Script for deploying TensorFlow models
+│       └── deploy.py           ## Script for deploying TensorFlow models
 └── luigi/
     ├── tasks/
-    │   ├── data_processing.py    # Luigi task for data processing
-    │   ├── model_training.py     # Luigi task for model training
-    │   └── model_evaluation.py   # Luigi task for model evaluation
-    ├── workflow.py               # Main Luigi workflow definition
-    └── params.ini                # Parameter configuration file for Luigi tasks
+    │   ├── data_processing.py    ## Luigi task for data processing
+    │   ├── model_training.py     ## Luigi task for model training
+    │   └── model_evaluation.py   ## Luigi task for model evaluation
+    ├── workflow.py               ## Main Luigi workflow definition
+    └── params.ini                ## Parameter configuration file for Luigi tasks
 ```
 
 In the "models" directory of the Automated Drug Discovery Platform, the subdirectories "tensorflow" and "luigi" house the model-related files for TensorFlow and Luigi, respectively, as follows:
@@ -129,7 +129,7 @@ These files and directories organize the model-related components within the rep
 
 ```
 deployment/
-└── deploy.py  # Script for deploying TensorFlow models
+└── deploy.py  ## Script for deploying TensorFlow models
 ```
 
 In the "deployment" directory of the Automated Drug Discovery Platform, the "deploy.py" file handles the deployment of the TensorFlow models for the pharmaceuticals application. This script may include the following functionalities:
@@ -153,21 +153,21 @@ Certainly! Below is an example of a script for training a TensorFlow model withi
 **File Path**: `models/tensorflow/training/train.py`
 
 ```python
-# models/tensorflow/training/train.py
+## models/tensorflow/training/train.py
 
 import tensorflow as tf
 import numpy as np
 from sklearn.model_selection import train_test_split
 
-# Mock data generation
+## Mock data generation
 np.random.seed(0)
 X = np.random.rand(100, 2)
 y = np.random.randint(2, size=100)
 
-# Splitting the mock data into training and validation sets
+## Splitting the mock data into training and validation sets
 X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Define and compile a simple TensorFlow model
+## Define and compile a simple TensorFlow model
 model = tf.keras.models.Sequential([
     tf.keras.layers.Dense(10, activation='relu', input_shape=(2,)),
     tf.keras.layers.Dense(1, activation='sigmoid')
@@ -177,10 +177,10 @@ model.compile(optimizer='adam',
               loss='binary_crossentropy',
               metrics=['accuracy'])
 
-# Train the model using the mock data
+## Train the model using the mock data
 history = model.fit(X_train, y_train, epochs=20, validation_data=(X_val, y_val))
 
-# Save the trained model
+## Save the trained model
 model.save('trained_model.h5')
 ```
 
@@ -193,25 +193,25 @@ Certainly! Below is an example of a script for training a more complex machine l
 **File Path:** `models/tensorflow/training/train_complex_model.py`
 
 ```python
-# models/tensorflow/training/train_complex_model.py
+## models/tensorflow/training/train_complex_model.py
 
 import tensorflow as tf
 from sklearn.datasets import make_classification
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
-# Generate mock data
+## Generate mock data
 X, y = make_classification(n_samples=1000, n_features=20, random_state=42)
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Preprocess the data
+## Preprocess the data
 scaler = StandardScaler()
 X_train_normalized = scaler.fit_transform(X_train)
 X_test_normalized = scaler.transform(X_test)
 
-# Define a complex TensorFlow model
+## Define a complex TensorFlow model
 model = tf.keras.Sequential([
     tf.keras.layers.Dense(128, activation='relu', input_shape=(20,)),
     tf.keras.layers.Dropout(0.5),
@@ -220,15 +220,15 @@ model = tf.keras.Sequential([
     tf.keras.layers.Dense(1, activation='sigmoid')
 ])
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam',
               loss='binary_crossentropy',
               metrics=['accuracy'])
 
-# Train the model
+## Train the model
 history = model.fit(X_train_normalized, y_train, epochs=20, validation_data=(X_test_normalized, y_test))
 
-# Save the trained model
+## Save the trained model
 model.save('trained_complex_model.h5')
 ```
 

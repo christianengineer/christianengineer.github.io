@@ -5,7 +5,7 @@ permalink: posts/sustainable-operations-planner-for-peru-businesses-tensorflow-k
 layout: article
 ---
 
-# Sustainable Operations Planner for Peru Businesses
+## Sustainable Operations Planner for Peru Businesses
 
 ## Objectives and Benefits
 
@@ -260,35 +260,35 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.impute import SimpleImputer
 from imblearn.over_sampling import SMOTE
 
-# Load the sustainability data into a pandas DataFrame
+## Load the sustainability data into a pandas DataFrame
 sustainability_data = pd.read_csv('sustainability_data.csv')
 
-# Step 1: Handle Missing Values
-# Impute missing values with the median to maintain data integrity
+## Step 1: Handle Missing Values
+## Impute missing values with the median to maintain data integrity
 imputer = SimpleImputer(strategy='median')
 sustainability_data.fillna(sustainability_data.median(), inplace=True)
 
-# Step 2: Normalize Numerical Features
-# Standardize numerical features to bring them to a standard scale
+## Step 2: Normalize Numerical Features
+## Standardize numerical features to bring them to a standard scale
 scaler = StandardScaler()
 numerical_features = ['energy_usage_monthly', 'waste_production_rate', 'carbon_footprint']
 sustainability_data[numerical_features] = scaler.fit_transform(sustainability_data[numerical_features])
 
-# Step 3: Address Class Imbalance
-# Oversample the minority class using SMOTE to balance sustainability classes
+## Step 3: Address Class Imbalance
+## Oversample the minority class using SMOTE to balance sustainability classes
 smote = SMOTE()
 X_resampled, y_resampled = smote.fit_resample(sustainability_data.drop('class_label', axis=1), sustainability_data['class_label'])
 
-# Step 4: Feature Engineering (if applicable)
-# Include feature engineering steps like creating interaction terms or polynomial features
+## Step 4: Feature Engineering (if applicable)
+## Include feature engineering steps like creating interaction terms or polynomial features
 
-# Step 5: Split Data for Training and Testing
-# Split the preprocessed data into training and testing sets for model development
+## Step 5: Split Data for Training and Testing
+## Split the preprocessed data into training and testing sets for model development
 X_train, X_test, y_train, y_test = train_test_split(X_resampled, y_resampled, test_size=0.2, random_state=42)
 
-# Further model training and evaluation steps can be carried out using the preprocessed data
+## Further model training and evaluation steps can be carried out using the preprocessed data
 
-# Save the preprocessed data for future use
+## Save the preprocessed data for future use
 X_resampled.to_csv('preprocessed_data.csv', index=False)
 ```
 
@@ -373,10 +373,10 @@ To generate a large fictitious dataset mimicking real-world data relevant to the
 import pandas as pd
 import numpy as np
 
-# Define the number of samples for the dataset
+## Define the number of samples for the dataset
 num_samples = 10000
 
-# Generate features relevant to the Sustainable Operations Planner project
+## Generate features relevant to the Sustainable Operations Planner project
 data = {
     'energy_usage_monthly': np.random.randint(1000, 5000, num_samples),
     'energy_intensity': np.random.uniform(0.5, 5.0, num_samples),
@@ -385,17 +385,17 @@ data = {
     'waste_recycling_percentage': np.random.uniform(0.1, 0.5, num_samples),
     'supplier_sustainability_rating': np.random.randint(1, 5, num_samples),
     'carbon_footprint': np.random.randint(100, 1000, num_samples),
-    # Add more relevant features as needed
+    ## Add more relevant features as needed
 }
 
-# Create a pandas DataFrame from the generated data
+## Create a pandas DataFrame from the generated data
 df = pd.DataFrame(data)
 
-# Incorporate noise and variability to simulate real-world conditions
+## Incorporate noise and variability to simulate real-world conditions
 for col in df.columns:
     df[col] = df[col] + np.random.normal(0, 0.1*df[col].mean(), num_samples)
 
-# Save the generated dataset to a CSV file
+## Save the generated dataset to a CSV file
 df.to_csv('simulated_dataset.csv', index=False)
 ```
 
@@ -431,30 +431,30 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 
-# Load the preprocessed dataset
+## Load the preprocessed dataset
 df = pd.read_csv('preprocessed_data.csv')
 
-# Split the data into features (X) and target (y)
+## Split the data into features (X) and target (y)
 X = df.drop('target_column', axis=1)
 y = df['target_column']
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize the Random Forest Regression model with optimized hyperparameters
+## Initialize the Random Forest Regression model with optimized hyperparameters
 model = RandomForestRegressor(n_estimators=100, max_depth=10, random_state=42)
 
-# Fit the model on the training data
+## Fit the model on the training data
 model.fit(X_train, y_train)
 
-# Make predictions on the test set
+## Make predictions on the test set
 y_pred = model.predict(X_test)
 
-# Evaluate the model performance
+## Evaluate the model performance
 mse = mean_squared_error(y_test, y_pred)
 print(f'Mean Squared Error: {mse}')
 
-# Save the trained model for future use
+## Save the trained model for future use
 joblib.dump(model, 'trained_model.pkl')
 ```
 
@@ -536,33 +536,33 @@ By following this deployment plan and utilizing the recommended tools and platfo
 To create a production-ready Dockerfile tailored to the needs of the Sustainable Operations Planner project, optimized for performance and scalability, consider the following Dockerfile configuration:
 
 ```Dockerfile
-# Use a base image with Python installed
+## Use a base image with Python installed
 FROM python:3.8-slim
 
-# Set environment variables
+## Set environment variables
 ENV APP_HOME /app
 ENV FLASK_APP=app.py
 ENV FLASK_RUN_HOST=0.0.0.0
 
-# Set the working directory
+## Set the working directory
 WORKDIR $APP_HOME
 
-# Copy the requirements file and install dependencies
+## Copy the requirements file and install dependencies
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the preprocessed data and trained model
+## Copy the preprocessed data and trained model
 COPY preprocessed_data.csv .
 COPY trained_model.pkl .
 
-# Copy the Flask application code
+## Copy the Flask application code
 COPY app.py .
 COPY model_predictor.py .
 
-# Expose the port
+## Expose the port
 EXPOSE 5000
 
-# Command to run the Flask application
+## Command to run the Flask application
 CMD ["flask", "run"]
 ```
 

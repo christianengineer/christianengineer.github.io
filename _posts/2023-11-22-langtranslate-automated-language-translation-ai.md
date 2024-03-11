@@ -190,29 +190,29 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 
 def train_translation_model(data_path):
-    # Load mock multilingual text data
+    ## Load mock multilingual text data
     data = pd.read_csv(data_path)
 
-    # Split the data into source and target languages
+    ## Split the data into source and target languages
     X = data['source_text']
     y = data['target_language']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Feature engineering and transformation
-    # ...
+    ## Feature engineering and transformation
+    ## ...
 
-    # Initialize and train the translation model
+    ## Initialize and train the translation model
     model = RandomForestClassifier(n_estimators=100, random_state=42)
     model.fit(X_train, y_train)
 
-    # Validate the model
+    ## Validate the model
     y_pred = model.predict(X_test)
     accuracy = accuracy_score(y_test, y_pred)
     print(f"Model accuracy: {accuracy}")
 
-    # Save the trained model for serving
+    ## Save the trained model for serving
     model_file_path = 'translation_model.pkl'
     with open(model_file_path, 'wb') as model_file:
         pickle.dump(model, model_file)
@@ -239,20 +239,20 @@ import tensorflow as tf
 from sklearn.model_selection import train_test_split
 
 def train_translation_deep_learning_model(data_path, num_epochs=10):
-    # Load mock multilingual text data
+    ## Load mock multilingual text data
     data = pd.read_csv(data_path)
 
-    # Preprocess data and split into source and target languages
+    ## Preprocess data and split into source and target languages
     X = data['source_text']
     y = data['target_text']
 
-    # Tokenize and pad the text sequences
-    # ...
+    ## Tokenize and pad the text sequences
+    ## ...
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Define the deep learning model architecture
+    ## Define the deep learning model architecture
     model = tf.keras.Sequential([
         tf.keras.layers.Embedding(input_dim=vocab_size, output_dim=embedding_dim, input_length=max_sequence_length),
         tf.keras.layers.LSTM(128),
@@ -261,10 +261,10 @@ def train_translation_deep_learning_model(data_path, num_epochs=10):
 
     model.compile(loss='sparse_categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
 
-    # Train the deep learning translation model
+    ## Train the deep learning translation model
     model.fit(X_train, y_train, epochs=num_epochs, validation_data=(X_test, y_test))
 
-    # Save the trained deep learning model
+    ## Save the trained deep learning model
     model_file_path = 'translation_model.h5'
     model.save(model_file_path)
 

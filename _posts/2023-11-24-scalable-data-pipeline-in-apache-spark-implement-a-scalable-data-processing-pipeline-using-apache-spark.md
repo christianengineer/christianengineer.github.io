@@ -5,7 +5,7 @@ permalink: posts/scalable-data-pipeline-in-apache-spark-implement-a-scalable-dat
 layout: article
 ---
 
-# AI Scalable Data Pipeline in Apache Spark
+## AI Scalable Data Pipeline in Apache Spark
 
 ## Objectives
 The objectives of building a scalable data processing pipeline using Apache Spark are to efficiently handle large volumes of data, support parallel processing, and enable the integration of machine learning and deep learning algorithms for data analysis and prediction. The pipeline should be able to handle various data sources, perform data preprocessing, feature engineering, model training, and inference at scale.
@@ -25,7 +25,7 @@ The objectives of building a scalable data processing pipeline using Apache Spar
 
 By leveraging these libraries within the Apache Spark ecosystem, the data pipeline can efficiently handle large-scale data processing and seamlessly integrate machine learning and deep learning capabilities at scale.
 
-# Infrastructure for Scalable Data Pipeline in Apache Spark
+## Infrastructure for Scalable Data Pipeline in Apache Spark
 
 To implement a scalable data processing pipeline using Apache Spark, the infrastructure needs to be set up to support distributed computing, large-scale data storage, and efficient resource management. The infrastructure components can include the following:
 
@@ -188,37 +188,37 @@ from pyspark.ml.classification import LogisticRegression
 from pyspark.ml import Pipeline
 from pyspark.ml.evaluation import BinaryClassificationEvaluator
 
-# Initialize Spark session
+## Initialize Spark session
 spark = SparkSession.builder.appName("scikit-learn-integration").getOrCreate()
 
-# Load mock dataset (replace 'file_path' with your file path)
+## Load mock dataset (replace 'file_path' with your file path)
 file_path = "file:///path_to_your_mock_data_file.csv"
 data = spark.read.csv(file_path, header=True, inferSchema=True)
 
-# Define input features and target variable
+## Define input features and target variable
 feature_cols = ["feature1", "feature2", "feature3"]
 assembler = VectorAssembler(inputCols=feature_cols, outputCol="features")
 
-# Initialize logistic regression model
+## Initialize logistic regression model
 lr = LogisticRegression(featuresCol="features", labelCol="label")
 
-# Create ML pipeline
+## Create ML pipeline
 pipeline = Pipeline(stages=[assembler, lr])
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 train_data, test_data = data.randomSplit([0.7, 0.3])
 
-# Fit the pipeline to the training data
+## Fit the pipeline to the training data
 model = pipeline.fit(train_data)
 
-# Make predictions on test data
+## Make predictions on test data
 predictions = model.transform(test_data)
 
-# Evaluate the model
+## Evaluate the model
 evaluator = BinaryClassificationEvaluator(labelCol="label", rawPredictionCol="rawPrediction")
 accuracy = evaluator.evaluate(predictions)
 
-# Print the accuracy
+## Print the accuracy
 print("Accuracy:", accuracy)
 ```
 
@@ -244,41 +244,41 @@ from pyspark.ml.evaluation import MulticlassClassificationEvaluator
 from pyspark.ml import Pipeline
 from pyspark.sql.functions import col
 
-# Initialize Spark session
+## Initialize Spark session
 spark = SparkSession.builder.appName("tensorflow-integration").getOrCreate()
 
-# Load mock dataset (replace 'file_path' with your file path)
+## Load mock dataset (replace 'file_path' with your file path)
 file_path = "file:///path_to_your_mock_data_file.csv"
 data = spark.read.csv(file_path, header=True, inferSchema=True)
 
-# Selecting features and target variable
+## Selecting features and target variable
 feature_cols = ["feature1", "feature2", "feature3"]
 assembler = VectorAssembler(inputCols=feature_cols, outputCol="features")
 
-# Define the deep learning model using TensorFlow
-# Example: We'll use Spark's MultilayerPerceptronClassifier as a placeholder for the TensorFlow model
-layers = [len(feature_cols), 10, 5, 2]  # Define the layer structure
+## Define the deep learning model using TensorFlow
+## Example: We'll use Spark's MultilayerPerceptronClassifier as a placeholder for the TensorFlow model
+layers = [len(feature_cols), 10, 5, 2]  ## Define the layer structure
 dl_model = MultilayerPerceptronClassifier(layers=layers, seed=1234)
 
-# Create ML pipeline
+## Create ML pipeline
 pipeline = Pipeline(stages=[assembler, dl_model])
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 train_data, test_data = data.randomSplit([0.7, 0.3])
 
-# Fit the pipeline to the training data
+## Fit the pipeline to the training data
 model = pipeline.fit(train_data)
 
-# Make predictions on test data
+## Make predictions on test data
 predictions = model.transform(test_data)
 
-# Define an evaluator
+## Define an evaluator
 evaluator = MulticlassClassificationEvaluator(labelCol="label", predictionCol="prediction", metricName="accuracy")
 
-# Evaluate the model
+## Evaluate the model
 accuracy = evaluator.evaluate(predictions)
 
-# Print the accuracy
+## Print the accuracy
 print("Accuracy:", accuracy)
 ```
 

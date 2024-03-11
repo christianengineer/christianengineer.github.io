@@ -208,32 +208,32 @@ from sklearn.svm import SVC
 from sklearn.metrics import classification_report
 
 def train_and_evaluate_cyberbullying_model(data_path):
-    # Load the SpaCy English language model
+    ## Load the SpaCy English language model
     nlp = spacy.load("en_core_web_sm")
 
-    # Load mock data from a CSV file
+    ## Load mock data from a CSV file
     data = pd.read_csv(data_path)
 
-    # Preprocess the text data using SpaCy
+    ## Preprocess the text data using SpaCy
     def preprocess_text(text):
         doc = nlp(text)
         return " ".join([token.lemma_ for token in doc if not token.is_stop and not token.is_punct])
 
     data['preprocessed_text'] = data['text'].apply(preprocess_text)
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(data['preprocessed_text'], data['label'], test_size=0.2, random_state=42)
 
-    # Convert text data into TF-IDF features
+    ## Convert text data into TF-IDF features
     vectorizer = TfidfVectorizer(max_features=1000)
     X_train_tfidf = vectorizer.fit_transform(X_train)
     X_test_tfidf = vectorizer.transform(X_test)
 
-    # Train a Support Vector Machine (SVM) classifier
+    ## Train a Support Vector Machine (SVM) classifier
     svm_model = SVC(kernel='linear')
     svm_model.fit(X_train_tfidf, y_train)
 
-    # Evaluate the model
+    ## Evaluate the model
     y_pred = svm_model.predict(X_test_tfidf)
     report = classification_report(y_test, y_pred)
 
@@ -260,32 +260,32 @@ from sklearn.svm import SVC
 from sklearn.metrics import classification_report
 
 def train_and_evaluate_cyberbullying_model(data_path):
-    # Load the SpaCy English language model
+    ## Load the SpaCy English language model
     nlp = spacy.load("en_core_web_sm")
 
-    # Load mock data from a CSV file
+    ## Load mock data from a CSV file
     data = pd.read_csv(data_path)
 
-    # Preprocess the text data using SpaCy
+    ## Preprocess the text data using SpaCy
     def preprocess_text(text):
         doc = nlp(text)
         return " ".join([token.lemma_ for token in doc if not token.is_stop and not token.is_punct])
 
     data['preprocessed_text'] = data['text'].apply(preprocess_text)
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(data['preprocessed_text'], data['label'], test_size=0.2, random_state=42)
 
-    # Convert text data into TF-IDF features
+    ## Convert text data into TF-IDF features
     vectorizer = TfidfVectorizer(max_features=1000)
     X_train_tfidf = vectorizer.fit_transform(X_train)
     X_test_tfidf = vectorizer.transform(X_test)
 
-    # Train a Support Vector Machine (SVM) classifier
+    ## Train a Support Vector Machine (SVM) classifier
     svm_model = SVC(kernel='linear')
     svm_model.fit(X_train_tfidf, y_train)
 
-    # Evaluate the model
+    ## Evaluate the model
     y_pred = svm_model.predict(X_test_tfidf)
     evaluation_report = classification_report(y_test, y_pred)
 

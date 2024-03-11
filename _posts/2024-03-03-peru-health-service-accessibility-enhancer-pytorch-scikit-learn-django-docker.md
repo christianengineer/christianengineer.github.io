@@ -5,7 +5,7 @@ permalink: posts/peru-health-service-accessibility-enhancer-pytorch-scikit-learn
 layout: article
 ---
 
-# AI Peru Health Service Accessibility Enhancer
+## AI Peru Health Service Accessibility Enhancer
 
 ## Objectives
 The main objectives of the AI Peru Health Service Accessibility Enhancer include:
@@ -28,7 +28,7 @@ The system will leveraging the following libraries/frameworks:
 4. **Docker:** Utilize Docker for containerizing the application components, enabling scalability, easy deployment, and management of the system.
 
 
-# MLOps Infrastructure for AI Peru Health Service Accessibility Enhancer
+## MLOps Infrastructure for AI Peru Health Service Accessibility Enhancer
 
 ## Components of MLOps Infrastructure
 
@@ -66,7 +66,7 @@ The system will leveraging the following libraries/frameworks:
 
 By establishing a robust MLOps infrastructure, the AI Peru Health Service Accessibility Enhancer can efficiently match low-income families with accessible healthcare services and programs while ensuring scalability, reliability, and accuracy in the application.
 
-# Scalable File Structure for AI Peru Health Service Accessibility Enhancer
+## Scalable File Structure for AI Peru Health Service Accessibility Enhancer
 
 ```
 Peru_Health_Service_Accessibility_Enhancer/
@@ -109,7 +109,7 @@ Peru_Health_Service_Accessibility_Enhancer/
 
 This file structure provides a scalable organization for the AI Peru Health Service Accessibility Enhancer project, allowing for easy management of data, ML models, services, configurations, and deployment components.
 
-# Models Directory for AI Peru Health Service Accessibility Enhancer
+## Models Directory for AI Peru Health Service Accessibility Enhancer
 
 The **models** directory in the AI Peru Health Service Accessibility Enhancer project contains subdirectories for PyTorch and Scikit-Learn models, as well as scripts for data preprocessing and model evaluation.
 
@@ -153,7 +153,7 @@ ml_model/
 
 This structured organization within the **models** directory facilitates the development, training, evaluation, and deployment of PyTorch and Scikit-Learn models for matching low-income families with accessible healthcare services, ensuring scalability and maintainability of the AI application.
 
-# Deployment Directory for AI Peru Health Service Accessibility Enhancer
+## Deployment Directory for AI Peru Health Service Accessibility Enhancer
 
 The **deployment** directory in the AI Peru Health Service Accessibility Enhancer project manages the deployment configurations and files required for deploying the application using Docker.
 
@@ -180,17 +180,17 @@ The **deployment** directory streamlines the deployment process of the AI applic
 I'll provide an example of a Python script for training a PyTorch model using mock data for the Peru Health Service Accessibility Enhancer project. 
 
 ```python
-# File Path: ml_model/pytorch_model/train_mock_data.py
+## File Path: ml_model/pytorch_model/train_mock_data.py
 
 import torch
 import torch.nn as nn
 import torch.optim as optim
 
-# Mock data for training (example data)
+## Mock data for training (example data)
 X_train = torch.tensor([[0.2, 0.3], [0.4, 0.5], [0.6, 0.7]])
 y_train = torch.tensor([0, 1, 0])
 
-# Define the PyTorch model architecture
+## Define the PyTorch model architecture
 class Model(nn.Module):
     def __init__(self):
         super(Model, self).__init__()
@@ -200,10 +200,10 @@ class Model(nn.Module):
         return torch.sigmoid(self.fc(x))
 
 model = Model()
-criterion = nn.BCELoss()  # Binary Cross Entropy Loss
+criterion = nn.BCELoss()  ## Binary Cross Entropy Loss
 optimizer = optim.Adam(model.parameters(), lr=0.001)
 
-# Training the model
+## Training the model
 for epoch in range(100):
     optimizer.zero_grad()
     outputs = model(X_train.float())
@@ -214,7 +214,7 @@ for epoch in range(100):
     if epoch % 10 == 0:
         print(f'Epoch {epoch+1}, Loss: {loss.item()}')
 
-# Save the trained model
+## Save the trained model
 torch.save(model.state_dict(), 'ml_model/pytorch_model/trained_model.pth')
 ```
 
@@ -225,31 +225,31 @@ This script serves as an example and can be further customized and extended with
 I'll provide an example of a Python script for training a complex machine learning algorithm (Random Forest Classifier) using Scikit-Learn with mock data for the Peru Health Service Accessibility Enhancer project.
 
 ```python
-# File Path: ml_model/scikit-learn_model/train_complex_algorithm_mock_data.py
+## File Path: ml_model/scikit-learn_model/train_complex_algorithm_mock_data.py
 
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
-# Mock data for training (example data)
+## Mock data for training (example data)
 X = [[0.2, 0.3], [0.4, 0.5], [0.6, 0.7]]
 y = [0, 1, 0]
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Define and train the Random Forest Classifier
+## Define and train the Random Forest Classifier
 clf = RandomForestClassifier(n_estimators=100, random_state=42)
 clf.fit(X_train, y_train)
 
-# Make predictions on the test set
+## Make predictions on the test set
 y_pred = clf.predict(X_test)
 
-# Calculate and print the accuracy
+## Calculate and print the accuracy
 accuracy = accuracy_score(y_test, y_pred)
 print(f'Accuracy: {accuracy}')
 
-# Save the trained model (not needed for Random Forest)
+## Save the trained model (not needed for Random Forest)
 ```
 
 This Python script trains a Random Forest Classifier using Scikit-Learn with mock data, splits the data into training and testing sets, trains the model, makes predictions on the test set, calculates the accuracy, and prints the results.

@@ -5,7 +5,7 @@ permalink: posts/sme-credit-scoring-model-scikit-learn-tensorflow-airflow-promet
 layout: article
 ---
 
-# SME Credit Scoring Model Documentation
+## SME Credit Scoring Model Documentation
 
 ## Objectives and Benefits
 ### Objectives:
@@ -64,7 +64,7 @@ layout: article
 - [Apache Airflow](https://airflow.apache.org/)
 - [Prometheus](https://prometheus.io/)
 
-# SME Credit Scoring Model: Sourcing Data Strategy
+## SME Credit Scoring Model: Sourcing Data Strategy
 
 ## Data Collection Methods
 To efficiently collect alternative data sources for the SME Credit Scoring Model, we recommend the following methods and tools that integrate well within the existing technology stack:
@@ -102,7 +102,7 @@ To streamline the data collection process and ensure data readiness for analysis
 
 By implementing these data collection methods and tools within the existing technology stack, Mibanco can efficiently gather alternative data sources, guarantee data quality and availability, and prepare the data for analysis and model training for the SME Credit Scoring Model.
 
-# SME Credit Scoring Model: Feature Extraction and Engineering Analysis
+## SME Credit Scoring Model: Feature Extraction and Engineering Analysis
 
 ## Feature Extraction
 For the SME Credit Scoring Model, the following feature extraction strategies can be employed to enhance interpretability and model performance:
@@ -156,7 +156,7 @@ To maintain consistency and clarity in variable naming, consider the following r
 
 By implementing these feature extraction and engineering strategies along with clear and consistent variable naming conventions, the SME Credit Scoring Model can achieve improved interpretability of data and enhanced model performance.
 
-# SME Credit Scoring Model: Metadata Management Recommendations
+## SME Credit Scoring Model: Metadata Management Recommendations
 
 To ensure the success of the SME Credit Scoring Model project, specific metadata management strategies tailored to the unique demands and characteristics of the project are crucial. Here are some insights directly relevant to the project's needs:
 
@@ -186,7 +186,7 @@ To ensure the success of the SME Credit Scoring Model project, specific metadata
 
 By implementing comprehensive metadata management practices tailored to the unique demands of the SME Credit Scoring Model project, Mibanco can enhance transparency, reproducibility, and governance throughout the data preprocessing, modeling, and deployment stages, leading to a robust and trustworthy credit scoring solution for SMEs in Peru.
 
-# SME Credit Scoring Model: Data Preprocessing Strategies
+## SME Credit Scoring Model: Data Preprocessing Strategies
 
 ## Data Challenges and Preprocessing Solutions
 
@@ -230,37 +230,37 @@ from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
 from imblearn.over_sampling import SMOTE
 
-# Load the dataset
+## Load the dataset
 data = pd.read_csv('sme_credit_data.csv')
 
-# Separate features (X) and target variable (y)
+## Separate features (X) and target variable (y)
 X = data.drop(columns=['credit_default'])
 y = data['credit_default']
 
-# Step 1: Handling Missing Values
+## Step 1: Handling Missing Values
 imputer = SimpleImputer(strategy='median')
-X['missing_data'] = X.isnull().sum(axis=1)  # Create a new feature indicating missing data
+X['missing_data'] = X.isnull().sum(axis=1)  ## Create a new feature indicating missing data
 X = imputer.fit_transform(X)
 
-# Step 2: Handling Outliers
-# Apply Winsorization or Robust Scaling if needed
+## Step 2: Handling Outliers
+## Apply Winsorization or Robust Scaling if needed
 
-# Step 3: Balancing Imbalanced Data
+## Step 3: Balancing Imbalanced Data
 oversampler = SMOTE(random_state=42)
 X_resampled, y_resampled = oversampler.fit_resample(X, y)
 
-# Step 4: Feature Scaling
+## Step 4: Feature Scaling
 scaler = StandardScaler()
 X_resampled = scaler.fit_transform(X_resampled)
 
-# Step 5: Encoding Categorical Variables
+## Step 5: Encoding Categorical Variables
 onehot_encoder = OneHotEncoder(drop='first', sparse=False)
 X_encoded = onehot_encoder.fit_transform(X_resampled)
 
-# Step 6: Feature Engineering (if applicable)
-# Add polynomial features, interaction features, or temporal features here
+## Step 6: Feature Engineering (if applicable)
+## Add polynomial features, interaction features, or temporal features here
 
-# Save preprocessed data to a new CSV file
+## Save preprocessed data to a new CSV file
 preprocessed_data = pd.DataFrame(X_encoded, columns=onehot_encoder.get_feature_names_out())
 preprocessed_data['credit_default'] = y_resampled
 preprocessed_data.to_csv('preprocessed_sme_credit_data.csv', index=False)
@@ -275,7 +275,7 @@ In this code file:
 
 These preprocessing steps are tailored to address the specific challenges and needs of the SME Credit Scoring Model project, ensuring that the data is prepared effectively for model training and analysis.
 
-# SME Credit Scoring Model: Modeling Strategy Recommendation
+## SME Credit Scoring Model: Modeling Strategy Recommendation
 
 To address the unique challenges and data types presented by the SME Credit Scoring Model project, a Gradient Boosting Ensemble method, specifically XGBoost, is recommended. XGBoost is well-suited for handling diverse data types, capturing non-linear relationships, and providing high prediction accuracy, making it ideal for credit scoring applications.
 
@@ -310,7 +310,7 @@ The most crucial step within this recommended modeling strategy is **Feature Imp
 
 By prioritizing Feature Importance Analysis as a critical step in the modeling strategy, the SME Credit Scoring Model can ensure transparency, accuracy, and effectiveness in assessing creditworthiness for SMEs in Peru, ultimately advancing the project's objectives and benefits.
 
-# Tools and Technologies Recommendations for Data Modeling in SME Credit Scoring Project
+## Tools and Technologies Recommendations for Data Modeling in SME Credit Scoring Project
 
 To effectively implement the modeling strategy for the SME Credit Scoring Model, the following tools and technologies are recommended, tailored to handle diverse data types, ensure scalability, and integrate seamlessly with the existing workflow:
 
@@ -354,10 +354,10 @@ from faker import Faker
 import pandas as pd
 import numpy as np
 
-# Set up Faker for generating fake data
+## Set up Faker for generating fake data
 fake = Faker()
 
-# Define functions to create synthetic data for various features
+## Define functions to create synthetic data for various features
 def generate_business_sector():
     return fake.company_suffix()
 
@@ -367,7 +367,7 @@ def generate_transaction_amount():
 def generate_credit_score():
     return np.random.randint(300, 850)
 
-# Generate synthetic data for each feature
+## Generate synthetic data for each feature
 num_samples = 10000
 
 data = {
@@ -376,12 +376,12 @@ data = {
     'credit_score': [generate_credit_score() for _ in range(num_samples)]
 }
 
-# Create a DataFrame from the synthetic data
+## Create a DataFrame from the synthetic data
 df = pd.DataFrame(data)
 
-# Additional feature engineering or preprocessing steps can be included here
+## Additional feature engineering or preprocessing steps can be included here
 
-# Save the synthetic dataset to a CSV file
+## Save the synthetic dataset to a CSV file
 df.to_csv('synthetic_sme_credit_data.csv', index=False)
 ```
 
@@ -420,36 +420,36 @@ This example provides a visual representation of the mocked dataset structure, s
 Creating production-ready code for the deployment of the machine learning model in a production environment is crucial for the success of the SME Credit Scoring Model project. Below is a structured Python code snippet designed for immediate deployment, with detailed comments explaining key sections for clarity and maintainability, following best practices for code quality and structure commonly adopted in large tech environments:
 
 ```python
-# Import necessary libraries
+## Import necessary libraries
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from xgboost import XGBClassifier
 from sklearn.metrics import accuracy_score
 
-# Load preprocessed dataset
+## Load preprocessed dataset
 data = pd.read_csv('preprocessed_sme_credit_data.csv')
 
-# Split dataset into features (X) and target variable (y)
+## Split dataset into features (X) and target variable (y)
 X = data.drop(columns=['credit_default'])
 y = data['credit_default']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize XGBoost Classifier
+## Initialize XGBoost Classifier
 model = XGBClassifier()
 
-# Train the model
+## Train the model
 model.fit(X_train, y_train)
 
-# Make predictions on the test set
+## Make predictions on the test set
 y_pred = model.predict(X_test)
 
-# Calculate model accuracy
+## Calculate model accuracy
 accuracy = accuracy_score(y_test, y_pred)
 print(f'Model Accuracy: {accuracy}')
 
-# Save the trained model for deployment
+## Save the trained model for deployment
 model.save_model('sme_credit_model.model')
 ```
 
@@ -462,7 +462,7 @@ model.save_model('sme_credit_model.model')
 
 By following these conventions and best practices, the provided code snippet sets a solid foundation for developing a production-ready machine learning model for the SME Credit Scoring project, ensuring high quality, readability, and maintainability in a production environment.
 
-# Deployment Plan for SME Credit Scoring Model
+## Deployment Plan for SME Credit Scoring Model
 
 To effectively deploy the machine learning model for the SME Credit Scoring project, the following step-by-step deployment plan is tailored to the unique demands and characteristics of the project:
 
@@ -521,25 +521,25 @@ To effectively deploy the machine learning model for the SME Credit Scoring proj
 By following this step-by-step deployment plan and leveraging the recommended tools and platforms, Mibanco's team can effectively deploy the machine learning model for the SME Credit Scoring project, ensuring scalability, reliability, and regulatory compliance in a production environment.
 
 ```Dockerfile
-# Base image with Python and necessary dependencies
+## Base image with Python and necessary dependencies
 FROM python:3.8-slim
 
-# Set working directory in the container
+## Set working directory in the container
 WORKDIR /app
 
-# Copy requirements.txt to the container
+## Copy requirements.txt to the container
 COPY requirements.txt .
 
-# Install required Python packages
+## Install required Python packages
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy project files to the container
+## Copy project files to the container
 COPY . .
 
-# Set environment variables if needed
+## Set environment variables if needed
 ENV MODEL_NAME="sme_credit_model"
 
-# Command to run the model API
+## Command to run the model API
 CMD ["python", "app.py"]
 ```
 

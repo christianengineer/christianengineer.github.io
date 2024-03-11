@@ -5,7 +5,7 @@ permalink: posts/azure-ml-workspace-example-showcase-a-project-using-azure-ml-wo
 layout: article
 ---
 
-# AI Azure ML Workspace Example Showcase
+## AI Azure ML Workspace Example Showcase
 
 ## Objectives
 The objective of the project is to showcase the use of Azure Machine Learning workspace for building and deploying scalable, data-intensive AI applications using machine learning and deep learning techniques. The project aims to demonstrate the end-to-end process of creating, training, and deploying machine learning models in Azure environment.
@@ -231,30 +231,30 @@ from sklearn.metrics import accuracy_score
 import joblib
 
 def train_random_forest_classifier(data_file_path, model_save_path):
-    # Load mock data from a CSV file
+    ## Load mock data from a CSV file
     data = pd.read_csv(data_file_path)
 
-    # Assume the data contains features and target variable
+    ## Assume the data contains features and target variable
     X = data.drop('target', axis=1)
     y = data['target']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize the Random Forest Classifier
+    ## Initialize the Random Forest Classifier
     clf = RandomForestClassifier(n_estimators=100, random_state=42)
 
-    # Train the classifier
+    ## Train the classifier
     clf.fit(X_train, y_train)
 
-    # Make predictions on the test set
+    ## Make predictions on the test set
     y_pred = clf.predict(X_test)
 
-    # Evaluate the model
+    ## Evaluate the model
     accuracy = accuracy_score(y_test, y_pred)
     print(f"Model accuracy: {accuracy}")
 
-    # Save the trained model to a file
+    ## Save the trained model to a file
     joblib.dump(clf, model_save_path)
     print(f"Trained model saved at: {model_save_path}")
 
@@ -283,15 +283,15 @@ import numpy as np
 import joblib
 
 def train_convolutional_neural_network(data_file_path, model_save_path):
-    # Load mock image data from a file
-    # For example, using numpy to load array data
+    ## Load mock image data from a file
+    ## For example, using numpy to load array data
     data = np.load(data_file_path)
 
-    # Perform data preprocessing as needed
-    # Example: Normalization, reshaping, etc.
+    ## Perform data preprocessing as needed
+    ## Example: Normalization, reshaping, etc.
     preprocessed_data = preprocess_data(data)
 
-    # Build the convolutional neural network model using Keras
+    ## Build the convolutional neural network model using Keras
     model = tf.keras.Sequential([
         layers.Conv2D(32, (3,3), activation='relu', input_shape=(28, 28, 1)),
         layers.MaxPooling2D((2, 2)),
@@ -302,15 +302,15 @@ def train_convolutional_neural_network(data_file_path, model_save_path):
         layers.Dense(10, activation='softmax')
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam',
                   loss='sparse_categorical_crossentropy',
                   metrics=['accuracy'])
 
-    # Train the model
+    ## Train the model
     model.fit(preprocessed_data, epochs=5, validation_split=0.1)
 
-    # Save the trained model to a file using TensorFlow's save_model function
+    ## Save the trained model to a file using TensorFlow's save_model function
     tf.saved_model.save(model, model_save_path)
     print(f"Trained model saved at: {model_save_path}")
 

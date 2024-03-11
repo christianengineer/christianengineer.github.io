@@ -5,7 +5,7 @@ permalink: posts/child-education-game-development-unity-tensorflow-for-interacti
 layout: article
 ---
 
-# AI Child Education Game Development (Unity, TensorFlow)
+## AI Child Education Game Development (Unity, TensorFlow)
 
 ## Objectives
 The objectives of the AI Child Education Game Development project include:
@@ -35,7 +35,7 @@ To achieve the objectives, the following system design strategies are recommende
 
 By leveraging Unity and TensorFlow, the project aims to create a robust and immersive educational gaming experience for children, while also harnessing machine learning to personalize and optimize the learning process.
 
-# MLOps Infrastructure for Child Education Game Development
+## MLOps Infrastructure for Child Education Game Development
 
 ## Objectives
 The primary objectives of implementing MLOps infrastructure for the Child Education Game Development project include:
@@ -70,7 +70,7 @@ The MLOps infrastructure will rely on a combination of tools and technologies su
 
 By establishing an MLOps infrastructure encompassing model training pipelines, deployment workflows, and continuous monitoring, the project aims to facilitate the seamless integration of AI-driven educational content within the Unity game environment while enabling iterative improvements through continuous model updates and optimizations.
 
-# Scalable File Structure for Child Education Game Development Repository
+## Scalable File Structure for Child Education Game Development Repository
 
 The scalable file structure for the Child Education Game Development repository should be organized to support the seamless collaboration and development of Unity game components, machine learning models, and associated resources. The structure should accommodate the evolving nature of the game and machine learning components as well as enable efficient integration of TensorFlow models within the Unity environment.
 
@@ -282,27 +282,27 @@ This deployment structure supports the efficient deployment and integration of m
 Certainly! Please find below a Python script for training a simple TensorFlow model using mock data. We'll name the file "train_model.py" and locate it within the "model1" directory in the "machine-learning/models" section of the project repository.
 
 ```python
-# File Path: child-education-game/machine-learning/models/model1/train_model.py
+## File Path: child-education-game/machine-learning/models/model1/train_model.py
 
 import tensorflow as tf
 import numpy as np
 
-# Mock data
-X_train = np.random.rand(100, 3)  # Mock features
-y_train = np.random.randint(0, 2, (100, 1))  # Mock labels
+## Mock data
+X_train = np.random.rand(100, 3)  ## Mock features
+y_train = np.random.randint(0, 2, (100, 1))  ## Mock labels
 
-# Define the model architecture
+## Define the model architecture
 model = tf.keras.Sequential([
     tf.keras.layers.Dense(10, input_shape=(3,), activation='relu'),
     tf.keras.layers.Dense(1, activation='sigmoid')
 ])
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam',
               loss='binary_crossentropy',
               metrics=['accuracy'])
 
-# Train the model
+## Train the model
 model.fit(X_train, y_train, epochs=10)
 ```
 
@@ -317,14 +317,14 @@ This script serves as a basic example for training a TensorFlow model using mock
 Certainly! Below is an example of a complex machine learning algorithm using TensorFlow within a Python script. We'll name the file "complex_model.py" and locate it within the "model1" directory in the "machine-learning/models" section of the project repository.
 
 ```python
-# File Path: child-education-game/machine-learning/models/model1/complex_model.py
+## File Path: child-education-game/machine-learning/models/model1/complex_model.py
 
 import tensorflow as tf
 from tensorflow.keras.layers import Input, Dense, LSTM
 from tensorflow.keras.models import Model
 import numpy as np
 
-# Mock data
+## Mock data
 num_samples = 1000
 sequence_length = 10
 num_features = 5
@@ -332,17 +332,17 @@ num_features = 5
 X_train = np.random.rand(num_samples, sequence_length, num_features)
 y_train = np.random.randint(0, 2, (num_samples, 1))
 
-# Define the LSTM model
+## Define the LSTM model
 inputs = Input(shape=(sequence_length, num_features))
 x = LSTM(64)(inputs)
 outputs = Dense(1, activation='sigmoid')(x)
 
 model = Model(inputs=inputs, outputs=outputs)
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
-# Train the model
+## Train the model
 model.fit(X_train, y_train, epochs=10, batch_size=32)
 ```
 

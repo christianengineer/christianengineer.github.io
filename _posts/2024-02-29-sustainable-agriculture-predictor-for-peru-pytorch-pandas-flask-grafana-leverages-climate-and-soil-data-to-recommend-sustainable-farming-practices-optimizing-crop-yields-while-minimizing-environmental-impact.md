@@ -208,14 +208,14 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 
-# Load mock climate and soil data
+## Load mock climate and soil data
 climate_data = pd.read_csv('data/processed_data/mock_climate_data.csv')
 soil_data = pd.read_csv('data/processed_data/mock_soil_data.csv')
 
-# Combine climate and soil data
+## Combine climate and soil data
 combined_data = pd.merge(climate_data, soil_data, on='location_id')
 
-# Define PyTorch model architecture
+## Define PyTorch model architecture
 class AgricultureModel(nn.Module):
     def __init__(self, input_dim, hidden_dim, output_dim):
         super(AgricultureModel, self).__init__()
@@ -227,7 +227,7 @@ class AgricultureModel(nn.Module):
         x = self.fc2(x)
         return x
 
-# Model training function
+## Model training function
 def train_model(data, target):
     input_dim = data.shape[1]
     output_dim = target.shape[1]
@@ -246,14 +246,14 @@ def train_model(data, target):
 
     return model
 
-# Mock data for training
+## Mock data for training
 X_train = torch.tensor(combined_data.drop('yield', axis=1).values).float()
 y_train = torch.tensor(combined_data['yield'].values).view(-1, 1).float()
 
-# Train the model
+## Train the model
 trained_model = train_model(X_train, y_train)
 
-# Save the trained model
+## Save the trained model
 torch.save(trained_model.state_dict(), 'models/trained_models/mock_model.pth')
 ```
 
@@ -270,16 +270,16 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 
-# Load mock climate and soil data
+## Load mock climate and soil data
 climate_data = pd.read_csv('data/processed_data/mock_climate_data.csv')
 soil_data = pd.read_csv('data/processed_data/mock_soil_data.csv')
 
-# Feature engineering and data preprocessing
+## Feature engineering and data preprocessing
 combined_data = pd.merge(climate_data, soil_data, on='location_id')
 X = combined_data.drop('yield', axis=1).values
 y = combined_data['yield'].values
 
-# Define a complex PyTorch model architecture
+## Define a complex PyTorch model architecture
 class MultiTaskModel(nn.Module):
     def __init__(self, input_dim, hidden1_dim, hidden2_dim, task1_output_dim, task2_output_dim):
         super(MultiTaskModel, self).__init__()
@@ -295,13 +295,13 @@ class MultiTaskModel(nn.Module):
         output2 = self.task2(x)
         return output1, output2
 
-# Model training function for complex algorithm
+## Model training function for complex algorithm
 def train_complex_model(X, y):
     input_dim = X.shape[1]
     hidden1_dim = 64
     hidden2_dim = 32
-    task1_output_dim = 1  # Crop yield prediction
-    task2_output_dim = 1  # Environmental impact prediction
+    task1_output_dim = 1  ## Crop yield prediction
+    task2_output_dim = 1  ## Environmental impact prediction
 
     model = MultiTaskModel(input_dim, hidden1_dim, hidden2_dim, task1_output_dim, task2_output_dim)
 
@@ -312,22 +312,22 @@ def train_complex_model(X, y):
         optimizer.zero_grad()
         output1, output2 = model(torch.tensor(X).float())
         loss1 = criterion(output1, torch.tensor(y).view(-1, 1).float())
-        loss2 = custom_loss_function(output2)  # Custom loss for environmental impact prediction
+        loss2 = custom_loss_function(output2)  ## Custom loss for environmental impact prediction
         total_loss = loss1 + loss2
         total_loss.backward()
         optimizer.step()
 
     return model
 
-# Custom loss function for environmental impact prediction
+## Custom loss function for environmental impact prediction
 def custom_loss_function(output):
-    # Implement custom loss calculation based on environmental impact prediction
+    ## Implement custom loss calculation based on environmental impact prediction
     return torch.mean(output)
 
-# Mock data for training the complex model
+## Mock data for training the complex model
 trained_model = train_complex_model(X, y)
 
-# Save the trained model
+## Save the trained model
 torch.save(trained_model.state_dict(), 'models/trained_models/complex_model.pth')
 ```
 

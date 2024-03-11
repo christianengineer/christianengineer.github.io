@@ -203,18 +203,18 @@ import pandas as pd
 import tensorflow as tf
 from sklearn.model_selection import train_test_split
 
-# Load mock energy usage data
+## Load mock energy usage data
 data_path = 'data/processed_data/mock_energy_data.csv'
 energy_data = pd.read_csv(data_path)
 
-# Define features and target variable
+## Define features and target variable
 X = energy_data.drop(columns=['energy_usage'])
 y = energy_data['energy_usage']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Define and train a TensorFlow model
+## Define and train a TensorFlow model
 model = tf.keras.Sequential([
     tf.keras.layers.Dense(64, activation='relu'),
     tf.keras.layers.Dense(32, activation='relu'),
@@ -224,7 +224,7 @@ model = tf.keras.Sequential([
 model.compile(optimizer='adam', loss='mean_squared_error')
 model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y_test))
 
-# Save the trained model
+## Save the trained model
 model.save('deployment/model/saved_model')
 ```
 
@@ -243,29 +243,29 @@ from sklearn.ensemble import GradientBoostingRegressor
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 
-# Load mock energy usage data
+## Load mock energy usage data
 data_path = 'data/processed_data/mock_energy_data.csv'
 energy_data = pd.read_csv(data_path)
 
-# Define features and target variable
+## Define features and target variable
 X = energy_data.drop(columns=['energy_usage'])
 y = energy_data['energy_usage']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Train a Gradient Boosting Regressor model
+## Train a Gradient Boosting Regressor model
 gb_regressor = GradientBoostingRegressor(n_estimators=100, learning_rate=0.1, max_depth=3, random_state=42)
 gb_regressor.fit(X_train, y_train)
 
-# Evaluate the model
+## Evaluate the model
 y_pred = gb_regressor.predict(X_test)
 mse = mean_squared_error(y_test, y_pred)
 print(f'Mean Squared Error: {mse}')
 
-# Save the trained model (if required)
-# model_path = 'deployment/model/complex_model.pkl'
-# joblib.dump(gb_regressor, model_path)
+## Save the trained model (if required)
+## model_path = 'deployment/model/complex_model.pkl'
+## joblib.dump(gb_regressor, model_path)
 ```
 
 This script demonstrates training a more complex machine learning algorithm, a Gradient Boosting Regressor, on mock energy usage data. It splits the data, trains the model, evaluates its performance, and optionally saves the trained model. The mock data file should be stored at `data/processed_data/mock_energy_data.csv`.

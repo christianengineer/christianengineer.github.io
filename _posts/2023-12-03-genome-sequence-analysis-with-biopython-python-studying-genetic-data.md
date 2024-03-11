@@ -148,34 +148,34 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
 def train_genetic_algorithm_model(data_path):
-    # Load mock genetic data from a CSV file
+    ## Load mock genetic data from a CSV file
     genetic_data = pd.read_csv(data_path)
 
-    # Preprocessing and feature engineering steps
-    # ... (Preprocessing code for genetic data)
+    ## Preprocessing and feature engineering steps
+    ## ... (Preprocessing code for genetic data)
 
-    # Split data into features (X) and target (y)
+    ## Split data into features (X) and target (y)
     X = genetic_data.drop('phenotype', axis=1)
     y = genetic_data['phenotype']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize the Random Forest classifier
+    ## Initialize the Random Forest classifier
     model = RandomForestClassifier(n_estimators=100, random_state=42)
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train)
 
-    # Make predictions
+    ## Make predictions
     y_pred = model.predict(X_test)
 
-    # Evaluate the model
+    ## Evaluate the model
     accuracy = accuracy_score(y_test, y_pred)
 
     return model, accuracy
 
-# Example usage
+## Example usage
 mock_data_path = 'path/to/mock/genetic_data.csv'
 trained_model, model_accuracy = train_genetic_algorithm_model(mock_data_path)
 print("Trained Model:", trained_model)
@@ -190,34 +190,34 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
 def train_genetic_algorithm_model(data_path):
-    # Load mock genetic data from a CSV file
+    ## Load mock genetic data from a CSV file
     genetic_data = pd.read_csv(data_path)
 
-    # Preprocessing and feature engineering steps
-    # ...
+    ## Preprocessing and feature engineering steps
+    ## ...
 
-    # Assume the genetic features are stored in X and the target phenotype is stored in y
+    ## Assume the genetic features are stored in X and the target phenotype is stored in y
     X = genetic_data.drop(columns=['phenotype'], axis=1)
     y = genetic_data['phenotype']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize the Random Forest classifier
+    ## Initialize the Random Forest classifier
     model = RandomForestClassifier(n_estimators=100, random_state=42)
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train)
 
-    # Make predictions
+    ## Make predictions
     y_pred = model.predict(X_test)
 
-    # Evaluate the model
+    ## Evaluate the model
     accuracy = accuracy_score(y_test, y_pred)
 
     return model, accuracy
 
-# Example usage
+## Example usage
 mock_data_path = 'path/to/mock/genetic_data.csv'
 trained_model, model_accuracy = train_genetic_algorithm_model(mock_data_path)
 print("Trained Model:", trained_model)

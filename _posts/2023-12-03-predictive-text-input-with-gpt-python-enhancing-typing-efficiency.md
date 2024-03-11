@@ -5,7 +5,7 @@ permalink: posts/predictive-text-input-with-gpt-python-enhancing-typing-efficien
 layout: article
 ---
 
-# AI Predictive Text Input with GPT (Python) Repository
+## AI Predictive Text Input with GPT (Python) Repository
 
 ## Objectives
 The objectives of the AI Predictive Text Input with GPT (Python) repository are to enhance typing efficiency by providing users with intelligent, context-aware text predictions using GPT (Generative Pre-trained Transformer) models. The main goals include:
@@ -183,24 +183,24 @@ import torch
 from transformers import GPT2LMHeadModel, GPT2Tokenizer
 
 def generate_text_predictions(input_text):
-    # Path to the GPT model and tokenizer files (example path)
+    ## Path to the GPT model and tokenizer files (example path)
     model_path = "models/gpt2"
     
-    # Load GPT model and tokenizer
+    ## Load GPT model and tokenizer
     model = GPT2LMHeadModel.from_pretrained(model_path)
     tokenizer = GPT2Tokenizer.from_pretrained(model_path)
     
-    # Preprocess input text
+    ## Preprocess input text
     input_ids = tokenizer.encode(input_text, return_tensors="pt")
     
-    # Generate text predictions
-    max_length = 50  # Maximum length of the generated text
-    temperature = 0.7  # Controls the randomness of the generated text
-    top_k = 50  # Limits the number of highest probability vocabulary tokens to consider
-    top_p = 0.9  # Nucleus sampling parameter
-    num_return_sequences = 3  # Number of different sequences to generate
+    ## Generate text predictions
+    max_length = 50  ## Maximum length of the generated text
+    temperature = 0.7  ## Controls the randomness of the generated text
+    top_k = 50  ## Limits the number of highest probability vocabulary tokens to consider
+    top_p = 0.9  ## Nucleus sampling parameter
+    num_return_sequences = 3  ## Number of different sequences to generate
     
-    # Generate predictions using the GPT model
+    ## Generate predictions using the GPT model
     output_sequences = model.generate(
         input_ids,
         max_length=max_length,
@@ -210,7 +210,7 @@ def generate_text_predictions(input_text):
         num_return_sequences=num_return_sequences
     )
     
-    # Decode the generated sequences and return the predicted text
+    ## Decode the generated sequences and return the predicted text
     predicted_texts = [tokenizer.decode(sequence, skip_special_tokens=True) for sequence in output_sequences]
     
     return predicted_texts
@@ -231,24 +231,24 @@ import torch
 from transformers import GPT2LMHeadModel, GPT2Tokenizer
 
 def generate_text_predictions(input_text):
-    # Example file paths for the GPT-2 model and tokenizer
+    ## Example file paths for the GPT-2 model and tokenizer
     model_path = "models/gpt2"
     
-    # Load the pre-trained GPT-2 model and tokenizer
+    ## Load the pre-trained GPT-2 model and tokenizer
     model = GPT2LMHeadModel.from_pretrained(model_path)
     tokenizer = GPT2Tokenizer.from_pretrained(model_path)
     
-    # Tokenize the input text
+    ## Tokenize the input text
     input_ids = tokenizer.encode(input_text, return_tensors="pt")
     
-    # Generate text predictions using the GPT-2 model
+    ## Generate text predictions using the GPT-2 model
     max_length = 50
     temperature = 0.7
     top_k = 50
     top_p = 0.9
     num_return_sequences = 3
     
-    # Generate multiple sequences of text predictions
+    ## Generate multiple sequences of text predictions
     generated_sequences = model.generate(
         input_ids,
         max_length=max_length,
@@ -258,7 +258,7 @@ def generate_text_predictions(input_text):
         num_return_sequences=num_return_sequences
     )
     
-    # Decode the generated sequences into text predictions
+    ## Decode the generated sequences into text predictions
     generated_texts = []
     for sequence in generated_sequences:
         text = tokenizer.decode(sequence, skip_special_tokens=True)

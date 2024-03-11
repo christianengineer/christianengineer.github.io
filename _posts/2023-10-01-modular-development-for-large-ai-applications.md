@@ -5,7 +5,7 @@ permalink: posts/modular-development-for-large-ai-applications
 layout: article
 ---
 
-# From Concept to Launch: How My Modular Development Techniques Accelerate Large AI Applications
+## From Concept to Launch: How My Modular Development Techniques Accelerate Large AI Applications
 
 Modular design principles are essential for building scalable applications, particularly for large-scale systems where complexity can quickly become unmanageable. Here are some of the core principles of modular design for large scalable applications:
 

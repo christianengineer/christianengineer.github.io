@@ -136,10 +136,10 @@ import datetime
 
 fake = Faker()
 
-# Define the number of records for the fictitious dataset
+## Define the number of records for the fictitious dataset
 num_records = 1000
 
-# Generate fictitious dataset attributes
+## Generate fictitious dataset attributes
 data = {
     'raw_text': [fake.text() for _ in range(num_records)],
     'likes': [random.randint(1, 1000) for _ in range(num_records)],
@@ -152,23 +152,23 @@ data = {
 
 df = pd.DataFrame(data)
 
-# Feature engineering
+## Feature engineering
 df['text_length'] = df['raw_text'].apply(len)
 df['sentiment_score'] = [random.uniform(-1, 1) for _ in range(num_records)]
-df['hashtag_count'] = df['raw_text'].apply(lambda x: x.count('#'))
+df['hashtag_count'] = df['raw_text'].apply(lambda x: x.count('## ))
 
 df['post_hour'] = df['post_time'].dt.hour
 df['post_day'] = df['post_time'].dt.dayofweek
 df['post_month'] = df['post_time'].dt.month
 df['time_since_last_post'] = sorted([random.uniform(0, 24*60*60) for _ in range(num_records)])
 
-# Calculating engagement rate
+## Calculating engagement rate
 df['engagement_rate'] = (df['likes'] + df['comments'] + df['shares']) / df['views']
 
-# Save the fictitious dataset to a CSV file
+## Save the fictitious dataset to a CSV file
 df.to_csv('fictitious_social_media_data.csv', index=False)
 
-# Print the first few rows of the generated dataset
+## Print the first few rows of the generated dataset
 print(df.head())
 ```
 
@@ -371,14 +371,14 @@ from sklearn.preprocessing import OneHotEncoder
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 
-# Load the dataset
+## Load the dataset
 df = pd.read_csv('fictitious_social_media_data.csv')
 
-# Define numerical and categorical features for preprocessing
+## Define numerical and categorical features for preprocessing
 numerical_features = ['likes', 'comments', 'shares', 'views', 'text_length', 'sentiment_score', 'hashtag_count', 'time_since_last_post', 'engagement_rate']
 categorical_features = ['trending_keywords', 'post_hour', 'post_day', 'post_month']
 
-# Preprocessing pipeline
+## Preprocessing pipeline
 numerical_transformer = Pipeline(steps=[
     ('scaler', StandardScaler())])
 
@@ -390,16 +390,16 @@ preprocessor = ColumnTransformer(
         ('num', numerical_transformer, numerical_features),
         ('cat', categorical_transformer, categorical_features)])
 
-# Fit and transform the data using the preprocessing pipeline
+## Fit and transform the data using the preprocessing pipeline
 processed_data = preprocessor.fit_transform(df)
 
-# Convert processed data back to a DataFrame for modeling
+## Convert processed data back to a DataFrame for modeling
 processed_df = pd.DataFrame(processed_data, columns=[*numerical_features,
                                                       *preprocessor.named_transformers_['cat']\
                                                           .named_steps['encoder']\
                                                               .get_feature_names_out(categorical_features)])
 
-# Display the preprocessed data
+## Display the preprocessed data
 print(processed_df.head())
 ```
 
@@ -421,28 +421,28 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
 import joblib
 
-# Load preprocessed dataset
+## Load preprocessed dataset
 df = pd.read_csv('preprocessed_data.csv')
 
-# Split data into features (X) and target variable (y)
+## Split data into features (X) and target variable (y)
 X = df.drop('engagement_rate', axis=1)
 y = df['engagement_rate']
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Define and train the RandomForestRegressor model
+## Define and train the RandomForestRegressor model
 rf_model = RandomForestRegressor(random_state=42)
 rf_model.fit(X_train, y_train)
 
-# Evaluate the model
+## Evaluate the model
 train_score = rf_model.score(X_train, y_train)
 test_score = rf_model.score(X_test, y_test)
 
-# Save the model to a file
+## Save the model to a file
 joblib.dump(rf_model, 'engagement_rate_model.pkl')
 
-# Print model evaluation scores
+## Print model evaluation scores
 print(f'Training R^2 Score: {train_score:.2f}')
 print(f'Testing R^2 Score: {test_score:.2f}')
 ```
@@ -520,28 +520,28 @@ By following this deployment plan and utilizing the recommended tools and platfo
 Below is a sample Dockerfile tailored to encapsulate the environment and dependencies for the Peru Restaurant Social Media Content Optimizer project. This Dockerfile is optimized for performance and scalability to meet the project's specific needs:
 
 ```Dockerfile
-# Use a base Python image
+## Use a base Python image
 FROM python:3.8-slim
 
-# Set working directory in the container
+## Set working directory in the container
 WORKDIR /app
 
-# Copy requirements file
+## Copy requirements file
 COPY requirements.txt .
 
-# Install required Python packages
+## Install required Python packages
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy project files to the container
+## Copy project files to the container
 COPY . .
 
-# Set environment variables
+## Set environment variables
 ENV PYTHONUNBUFFERED=1
 
-# Expose port for Flask application
+## Expose port for Flask application
 EXPOSE 5000
 
-# Command to run the Flask application
+## Command to run the Flask application
 CMD ["python", "app.py"]
 ```
 

@@ -192,7 +192,7 @@ Sure, below is a Python function for a complex machine learning algorithm using 
 import tensorflow as tf
 import numpy as np
 
-# Define the file path for the pre-trained model
+## Define the file path for the pre-trained model
 model_file_path = 'models/trained_models/image_diagnosis_model/'
 
 def perform_image_classification(image_data):
@@ -206,18 +206,18 @@ def perform_image_classification(image_data):
     - predictions: A numpy array of predicted classes or probabilities for the input images.
     """
 
-    # Load the pre-trained model architecture and weights
+    ## Load the pre-trained model architecture and weights
     with open(model_file_path + 'model_architecture.json', 'r') as json_file:
         loaded_model_json = json_file.read()
         loaded_model = tf.keras.models.model_from_json(loaded_model_json)
     
-    # Load the pre-trained model weights
+    ## Load the pre-trained model weights
     loaded_model.load_weights(model_file_path + 'model_weights.h5')
 
-    # Preprocess the image data (replace with actual preprocessing steps)
+    ## Preprocess the image data (replace with actual preprocessing steps)
     preprocessed_image_data = preprocess_image_data(image_data)
 
-    # Perform classification on the preprocessed image data
+    ## Perform classification on the preprocessed image data
     predictions = loaded_model.predict(preprocessed_image_data)
 
     return predictions
@@ -237,7 +237,7 @@ Certainly! Below is a function for a complex machine learning algorithm that use
 import tensorflow as tf
 import numpy as np
 
-# Define the file path for the pre-trained model
+## Define the file path for the pre-trained model
 model_file_path = 'models/trained_models/clinical_notes_model/'
 
 def perform_medical_diagnosis(clinical_notes_data):
@@ -251,13 +251,13 @@ def perform_medical_diagnosis(clinical_notes_data):
     - diagnosis_predictions: A list of predicted diagnoses for the input clinical notes.
     """
 
-    # Load the pre-trained model architecture and weights
+    ## Load the pre-trained model architecture and weights
     model = tf.keras.models.load_model(model_file_path)
 
-    # Preprocess the clinical notes data (replace with actual preprocessing steps)
+    ## Preprocess the clinical notes data (replace with actual preprocessing steps)
     preprocessed_data = preprocess_clinical_notes(clinical_notes_data)
 
-    # Perform diagnosis prediction on the preprocessed data
+    ## Perform diagnosis prediction on the preprocessed data
     diagnosis_predictions = model.predict(preprocessed_data)
 
     return diagnosis_predictions

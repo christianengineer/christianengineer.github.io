@@ -5,7 +5,7 @@ permalink: posts/automated-video-surveillance-for-public-safety-opencv-kafka-kub
 layout: article
 ---
 
-# AI Automated Video Surveillance for Public Safety
+## AI Automated Video Surveillance for Public Safety
 
 ## Objectives
 The objectives of the AI Automated Video Surveillance for Public Safety project are to:
@@ -61,7 +61,7 @@ Flask will be used to develop RESTful APIs for integrating with law enforcement 
 
 By leveraging these libraries and frameworks, the AI Automated Video Surveillance for Public Safety system will be scalable, data-intensive, and AI-driven, enabling law enforcement to proactively address security concerns and respond to incidents effectively.
 
-# MLOps Infrastructure for Automated Video Surveillance for Public Safety
+## MLOps Infrastructure for Automated Video Surveillance for Public Safety
 
 ## Overview
 The MLOps infrastructure for the Automated Video Surveillance for Public Safety application will focus on effectively deploying and managing machine learning models, ensuring seamless integration with the existing system, and enabling scalable and automated processes for model training and inference.
@@ -239,17 +239,17 @@ The contents of the `deployment` directory are essential for orchestrating the d
 Certainly! Below is an example of a Python file for training an object detection model for the Automated Video Surveillance for Public Safety application using mock data. This file is named `train_object_detection_model.py` and it is located in the `models` directory of the project.
 
 ```python
-# File: models/object_detection/train_object_detection_model.py
+## File: models/object_detection/train_object_detection_model.py
 
 import os
 import numpy as np
 import tensorflow as tf
 
-# Mock data and labels (replace with actual data and labels)
+## Mock data and labels (replace with actual data and labels)
 mock_training_data = np.random.rand(100, 224, 224, 3)
 mock_training_labels = np.random.randint(0, 2, size=(100,))
 
-# Define and compile the object detection model (replace with actual model architecture)
+## Define and compile the object detection model (replace with actual model architecture)
 model = tf.keras.Sequential([
     tf.keras.layers.Conv2D(32, (3, 3), activation='relu', input_shape=(224, 224, 3)),
     tf.keras.layers.MaxPooling2D((2, 2)),
@@ -261,10 +261,10 @@ model.compile(optimizer='adam',
               loss='sparse_categorical_crossentropy',
               metrics=['accuracy'])
 
-# Train the model
+## Train the model
 model.fit(mock_training_data, mock_training_labels, epochs=10)
 
-# Save the trained model
+## Save the trained model
 os.makedirs('models/trained_models/object_detection', exist_ok=True)
 model.save('models/trained_models/object_detection/mock_object_detection_model')
 ```
@@ -276,30 +276,30 @@ The file is located at `models/object_detection/train_object_detection_model.py`
 Certainly! Below is an example of a Python file for a complex machine learning algorithm, focusing on anomaly detection for the Automated Video Surveillance for Public Safety application using mock data. This file is named `complex_anomaly_detection_algorithm.py` and it is located in the `models` directory of the project.
 
 ```python
-# File: models/complex_anomaly_detection_algorithm.py
+## File: models/complex_anomaly_detection_algorithm.py
 
 import os
 import numpy as np
 import pandas as pd
 from sklearn.ensemble import IsolationForest
 
-# Mock data for anomaly detection (replace with actual data)
-mock_training_data = np.random.randn(100, 20)  # Example of 100 samples with 20 features
+## Mock data for anomaly detection (replace with actual data)
+mock_training_data = np.random.randn(100, 20)  ## Example of 100 samples with 20 features
 
-# Instantiate and fit the anomaly detection model
-model = IsolationForest(contamination=0.1)  # Adjust parameters based on real data characteristics
+## Instantiate and fit the anomaly detection model
+model = IsolationForest(contamination=0.1)  ## Adjust parameters based on real data characteristics
 model.fit(mock_training_data)
 
-# Evaluate the model (not typically done with real-time anomaly detection)
-mock_test_data = np.random.randn(20, 20)  # Example of 20 samples with 20 features for testing
+## Evaluate the model (not typically done with real-time anomaly detection)
+mock_test_data = np.random.randn(20, 20)  ## Example of 20 samples with 20 features for testing
 anomaly_scores = model.score_samples(mock_test_data)
 
-# Perform post-processing and actions based on anomaly scores (e.g., raise alerts, trigger actions)
+## Perform post-processing and actions based on anomaly scores (e.g., raise alerts, trigger actions)
 detected_anomalies = np.where(anomaly_scores < model.threshold_)[0]
 if len(detected_anomalies) > 0:
     print(f"Detected {len(detected_anomalies)} anomalies: {detected_anomalies}")
 
-# Save the trained model
+## Save the trained model
 os.makedirs('models/trained_models/anomaly_detection', exist_ok=True)
 filename = 'models/trained_models/anomaly_detection/mock_anomaly_detection_model.pkl'
 model.save(filename)

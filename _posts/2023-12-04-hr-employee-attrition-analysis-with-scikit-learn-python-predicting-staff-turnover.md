@@ -5,7 +5,7 @@ permalink: posts/hr-employee-attrition-analysis-with-scikit-learn-python-predict
 layout: article
 ---
 
-# AI HR Employee Attrition Analysis with Scikit-Learn (Python)
+## AI HR Employee Attrition Analysis with Scikit-Learn (Python)
 
 ## Objectives
 The objectives of the AI HR Employee Attrition Analysis project are to:
@@ -32,7 +32,7 @@ For implementing the AI HR Employee Attrition Analysis project, the following Py
 
 By incorporating these libraries into the project, the development of scalable, data-intensive AI applications for employee attrition analysis using machine learning will be streamlined and effective.
 
-# Infrastructure for HR Employee Attrition Analysis with Scikit-Learn (Python)
+## Infrastructure for HR Employee Attrition Analysis with Scikit-Learn (Python)
 
 When designing the infrastructure for the HR Employee Attrition Analysis application, it is essential to consider scalability, reliability, and performance. The following components can be incorporated into the infrastructure:
 
@@ -198,16 +198,16 @@ import pandas as pd
 import joblib
 
 def predict_employee_attrition(data_file_path, model_file_path):
-    # Load the mock employee data
+    ## Load the mock employee data
     mock_data = pd.read_csv(data_file_path)
 
-    # Preprocess the mock data (assuming you have preprocessing functions)
-    processed_data = preprocess_employee_data(mock_data)  # Example preprocessing function
+    ## Preprocess the mock data (assuming you have preprocessing functions)
+    processed_data = preprocess_employee_data(mock_data)  ## Example preprocessing function
 
-    # Load the trained machine learning model
-    model = joblib.load(model_file_path)  # Assuming the model is saved using joblib
+    ## Load the trained machine learning model
+    model = joblib.load(model_file_path)  ## Assuming the model is saved using joblib
 
-    # Make predictions using the pre-trained model
+    ## Make predictions using the pre-trained model
     predictions = model.predict(processed_data)
 
     return predictions
@@ -234,16 +234,16 @@ import pandas as pd
 import joblib
 
 def predict_employee_attrition(data_file_path, model_file_path):
-    # Load the mock employee data
+    ## Load the mock employee data
     mock_data = pd.read_csv(data_file_path)
 
-    # Preprocess the mock data (assuming you have preprocessing functions)
-    processed_data = preprocess_employee_data(mock_data)  # Example preprocessing function
+    ## Preprocess the mock data (assuming you have preprocessing functions)
+    processed_data = preprocess_employee_data(mock_data)  ## Example preprocessing function
 
-    # Load the trained machine learning model
-    model = joblib.load(model_file_path)  # Assuming the model is saved using joblib
+    ## Load the trained machine learning model
+    model = joblib.load(model_file_path)  ## Assuming the model is saved using joblib
 
-    # Make predictions using the pre-trained model
+    ## Make predictions using the pre-trained model
     predictions = model.predict(processed_data)
 
     return predictions

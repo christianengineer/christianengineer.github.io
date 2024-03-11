@@ -133,30 +133,30 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 
 def train_price_optimization_model(data_file_path):
-    # Load mock data from the provided file path
+    ## Load mock data from the provided file path
     data = pd.read_csv(data_file_path)
 
-    # Preprocess the data (e.g., handle missing values, encode categorical variables)
+    ## Preprocess the data (e.g., handle missing values, encode categorical variables)
 
-    # Split the data into features and target variable
+    ## Split the data into features and target variable
     X = data.drop(columns=['price'])
     y = data['price']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize the Random Forest Regressor model
+    ## Initialize the Random Forest Regressor model
     model = RandomForestRegressor(n_estimators=100, max_depth=10, random_state=42)
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train)
 
-    # Evaluate the model
+    ## Evaluate the model
     y_pred = model.predict(X_test)
     mse = mean_squared_error(y_test, y_pred)
     print(f'Mean Squared Error: {mse}')
 
-    # Return the trained model for further usage
+    ## Return the trained model for further usage
     return model
 ```
 
@@ -181,30 +181,30 @@ def train_price_optimization_model(data_file_path):
     RandomForestRegressor: Trained price optimization model.
     """
     
-    # Load mock data from the provided file path
+    ## Load mock data from the provided file path
     data = pd.read_csv(data_file_path)
 
-    # Preprocess the data (e.g., handle missing values, encode categorical variables)
+    ## Preprocess the data (e.g., handle missing values, encode categorical variables)
 
-    # Split the data into features and target variable
+    ## Split the data into features and target variable
     X = data.drop(columns=['price'])
     y = data['price']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize the Random Forest Regressor model
+    ## Initialize the Random Forest Regressor model
     model = RandomForestRegressor(n_estimators=100, max_depth=10, random_state=42)
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train)
 
-    # Evaluate the model
+    ## Evaluate the model
     y_pred = model.predict(X_test)
     mse = mean_squared_error(y_test, y_pred)
     print(f'Mean Squared Error: {mse}')
 
-    # Return the trained model for further usage
+    ## Return the trained model for further usage
     return model
 ```
 

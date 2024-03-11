@@ -5,7 +5,7 @@ permalink: posts/hiring-a-senior-full-stack-engineer-assess-their-communication-
 layout: article
 ---
 
-# Hiring a Senior Full Stack Engineer: How to Assess Their Communication Skills
+## Hiring a Senior Full Stack Engineer: How to Assess Their Communication Skills
 
 As a hiring manager or technical recruiter, it’s crucial to evaluate a candidate's communication skills during the interview process, especially when hiring for senior full stack engineering positions. Effective communication is vital for collaborating with team members, understanding project requirements, and conveying technical concepts to non-technical stakeholders. In this article, we will explore how you can assess a candidate's communication skills by asking them about their projects.
 

@@ -5,7 +5,7 @@ permalink: posts/peru-crop-demand-forecasting-system-keras-tensorflow-spark-dvc-
 layout: article
 ---
 
-# AI Peru Crop Demand Forecasting System
+## AI Peru Crop Demand Forecasting System
 
 ## Objectives:
 - Predict future demand for various crops to aid farmers and suppliers in planning and distribution.
@@ -25,7 +25,7 @@ layout: article
 - **Spark:** For distributed processing to handle large datasets and scale the system as needed.
 - **DVC (Data Version Control):** For managing data, code, and model versions to ensure reproducibility and collaboration in the development process.
 
-# MLOps Infrastructure for AI Peru Crop Demand Forecasting System
+## MLOps Infrastructure for AI Peru Crop Demand Forecasting System
 
 ## Continuous Integration/Continuous Deployment (CI/CD) Pipeline:
 - **Source Code Management:** Utilize version control systems like Git to manage codebase.
@@ -59,7 +59,7 @@ layout: article
 
 By integrating these MLOps practices and infrastructure components, the Peru Crop Demand Forecasting System can efficiently predict future crop demand, aiding farmers and suppliers in planning and distribution to meet market needs effectively.
 
-# Scalable File Structure for AI Peru Crop Demand Forecasting System
+## Scalable File Structure for AI Peru Crop Demand Forecasting System
 
 ```
 ├── data/
@@ -209,7 +209,7 @@ deployment/
 By leveraging the files within the deployment directory, the Peru Crop Demand Forecasting System can be effectively deployed and scaled to meet market needs for efficient planning and distribution, benefiting farmers and suppliers in optimizing their agricultural operations.
 
 ```python
-# train_model.py
+## train_model.py
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -217,29 +217,29 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_squared_error
 import joblib
 
-# Load mock data for training
+## Load mock data for training
 data_path = 'data/mock_data.csv'
 data = pd.read_csv(data_path)
 
-# Define features and target variable
+## Define features and target variable
 X = data.drop('demand', axis=1)
 y = data['demand']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Train RandomForestRegressor model
+## Train RandomForestRegressor model
 model = RandomForestRegressor()
 model.fit(X_train, y_train)
 
-# Make predictions on the test set
+## Make predictions on the test set
 predictions = model.predict(X_test)
 
-# Evaluate the model
+## Evaluate the model
 mse = mean_squared_error(y_test, predictions)
 print(f'Mean Squared Error: {mse}')
 
-# Save the trained model
+## Save the trained model
 model_path = 'models/mock_model.pkl'
 joblib.dump(model, model_path)
 ```
@@ -249,7 +249,7 @@ joblib.dump(model, model_path)
 This script trains a RandomForestRegressor model on mock data for the Peru Crop Demand Forecasting System. It loads mock data from 'data/mock_data.csv', splits the data into training and testing sets, fits the model, evaluates its performance using mean squared error, and saves the trained model to 'models/mock_model.pkl'. This approach simulates the training process using mock data and prepares the trained model for deployment in the application.
 
 ```python
-# complex_model.py
+## complex_model.py
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -257,29 +257,29 @@ from sklearn.ensemble import GradientBoostingRegressor
 from sklearn.metrics import mean_absolute_error
 import joblib
 
-# Load mock data for training
+## Load mock data for training
 data_path = 'data/mock_data.csv'
 data = pd.read_csv(data_path)
 
-# Define features and target variable
+## Define features and target variable
 X = data.drop('demand', axis=1)
 y = data['demand']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Train GradientBoostingRegressor model
+## Train GradientBoostingRegressor model
 model = GradientBoostingRegressor()
 model.fit(X_train, y_train)
 
-# Make predictions on the test set
+## Make predictions on the test set
 predictions = model.predict(X_test)
 
-# Evaluate the model
+## Evaluate the model
 mae = mean_absolute_error(y_test, predictions)
 print(f'Mean Absolute Error: {mae}')
 
-# Save the trained model
+## Save the trained model
 model_path = 'models/complex_model.pkl'
 joblib.dump(model, model_path)
 ```

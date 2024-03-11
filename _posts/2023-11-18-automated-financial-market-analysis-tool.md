@@ -5,7 +5,7 @@ permalink: posts/automated-financial-market-analysis-tool
 layout: article
 ---
 
-# Automated Financial Market Analysis Tool
+## Automated Financial Market Analysis Tool
 
 ## Description
 

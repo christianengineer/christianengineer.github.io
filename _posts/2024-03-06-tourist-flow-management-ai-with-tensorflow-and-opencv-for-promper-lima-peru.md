@@ -5,7 +5,7 @@ permalink: posts/tourist-flow-management-ai-with-tensorflow-and-opencv-for-promp
 layout: article
 ---
 
-# Tourist Flow Management AI for PromPerú
+## Tourist Flow Management AI for PromPerú
 
 ## Objectives and Benefits
 ### Audience: Marketing Analyst at PromPerú
@@ -253,40 +253,40 @@ Sure! Here is a Python code file outlining the necessary preprocessing steps tai
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
 
-# Load the raw data
+## Load the raw data
 data = pd.read_csv('tourist_flow_data.csv')
 
-# Step 1: Drop unnecessary columns
+## Step 1: Drop unnecessary columns
 data.drop(['location', 'other_unnecessary_column'], axis=1, inplace=True)
-# Explanation: Removing irrelevant columns to focus on essential features for model training.
+## Explanation: Removing irrelevant columns to focus on essential features for model training.
 
-# Step 2: Handle missing values
+## Step 2: Handle missing values
 data.fillna(method='ffill', inplace=True)
-# Explanation: Forward fill missing values to maintain temporal order in tourist flow data.
+## Explanation: Forward fill missing values to maintain temporal order in tourist flow data.
 
-# Step 3: Feature scaling
+## Step 3: Feature scaling
 scaler = StandardScaler()
 data[['tourist_count', 'temperature', 'humidity']] = scaler.fit_transform(data[['tourist_count', 'temperature', 'humidity']])
-# Explanation: Scaling numeric features like tourist count, temperature, and humidity for model convergence and performance.
+## Explanation: Scaling numeric features like tourist count, temperature, and humidity for model convergence and performance.
 
-# Step 4: Create lagged features
+## Step 4: Create lagged features
 data['lagged_visitors_1day'] = data['tourist_count'].shift(1)
 data['lagged_visitors_7days'] = data['tourist_count'].shift(7)
-# Explanation: Introducing lagged features to capture temporal dependencies in tourist flow patterns.
+## Explanation: Introducing lagged features to capture temporal dependencies in tourist flow patterns.
 
-# Step 5: Encode cyclic features based on timestamp
+## Step 5: Encode cyclic features based on timestamp
 data['hour_sin'] = np.sin(2 * np.pi * data['hour'] / 24)
 data['hour_cos'] = np.cos(2 * np.pi * data['hour'] / 24)
-# Explanation: Encoding cyclic features like hour of the day to preserve temporal relationships.
+## Explanation: Encoding cyclic features like hour of the day to preserve temporal relationships.
 
-# Step 6: Extract temporal features
+## Step 6: Extract temporal features
 data['day_of_week'] = pd.to_datetime(data['timestamp']).dt.dayofweek
 data['month'] = pd.to_datetime(data['timestamp']).dt.month
-# Explanation: Extracting temporal features like day of the week and month for seasonality analysis.
+## Explanation: Extracting temporal features like day of the week and month for seasonality analysis.
 
-# Step 7: Save preprocessed data
+## Step 7: Save preprocessed data
 data.to_csv('preprocessed_tourist_flow_data.csv', index=False)
-# Explanation: Save the preprocessed data for model training and analysis.
+## Explanation: Save the preprocessed data for model training and analysis.
 
 ```
 
@@ -371,10 +371,10 @@ import numpy as np
 import pandas as pd
 from datetime import datetime, timedelta
 
-# Set random seed for reproducibility
+## Set random seed for reproducibility
 np.random.seed(42)
 
-# Generate fictitious timestamp data
+## Generate fictitious timestamp data
 start_date = datetime(2020, 1, 1)
 end_date = datetime(2021, 12, 31)
 num_days = (end_date - start_date).days
@@ -382,32 +382,32 @@ num_days = (end_date - start_date).days
 timestamps = [start_date + timedelta(days=i) for i in range(num_days)]
 locations = ['Location A', 'Location B', 'Location C']
 
-# Generate fictitious tourist flow data
+## Generate fictitious tourist flow data
 tourist_count = np.random.randint(50, 500, size=(num_days, len(locations)))
 
-# Generate fictitious weather data
+## Generate fictitious weather data
 temperature = np.random.randint(5, 35, size=(num_days, len(locations)))
 humidity = np.random.randint(30, 90, size=(num_days, len(locations)))
 
-# Create DataFrame for the fictitious dataset
+## Create DataFrame for the fictitious dataset
 data = pd.DataFrame({'timestamp': np.repeat(timestamps, len(locations)),
                      'location': np.tile(locations, num_days),
                      'tourist_count': tourist_count.flatten(),
                      'temperature': temperature.flatten(),
                      'humidity': humidity.flatten()})
 
-# Feature engineering
+## Feature engineering
 data['day_of_week'] = data['timestamp'].dt.dayofweek
 data['month'] = data['timestamp'].dt.month
 data['lagged_visitors_1day'] = data.groupby('location')['tourist_count'].shift(1)
 data['lagged_visitors_7days'] = data.groupby('location')['tourist_count'].shift(7)
 
-# Save the fictitious dataset
+## Save the fictitious dataset
 data.to_csv('fictitious_tourist_flow_data.csv', index=False)
 
-# Perform validation and exploratory analysis
-# Validation strategies: check for missing values, outliers, data distributions, and feature correlations
-# Use visualization tools like Matplotlib or Seaborn to visualize data distributions and relationships
+## Perform validation and exploratory analysis
+## Validation strategies: check for missing values, outliers, data distributions, and feature correlations
+## Use visualization tools like Matplotlib or Seaborn to visualize data distributions and relationships
 ```
 
 In this script:
@@ -462,39 +462,39 @@ from tensorflow.keras.layers import LSTM, Dense
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
-# Load preprocessed dataset
+## Load preprocessed dataset
 data = pd.read_csv('preprocessed_tourist_flow_data.csv')
 
-# Define features and target variable
+## Define features and target variable
 X = data[['temperature', 'humidity', 'day_of_week', 'month', 'lagged_visitors_1day', 'lagged_visitors_7days']]
 y = data['tourist_count']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Feature scaling
+## Feature scaling
 scaler = StandardScaler()
 X_train_scaled = scaler.fit_transform(X_train)
 X_test_scaled = scaler.transform(X_test)
 
-# Reshape input data for LSTM model
+## Reshape input data for LSTM model
 X_train_reshaped = X_train_scaled.reshape(X_train_scaled.shape[0], 1, X_train_scaled.shape[1])
 X_test_reshaped = X_test_scaled.reshape(X_test_scaled.shape[0], 1, X_test_scaled.shape[1])
 
-# Build LSTM model
+## Build LSTM model
 model = Sequential()
 model.add(LSTM(units=64, input_shape=(X_train_reshaped.shape[1], X_train_reshaped.shape[2])))
 model.add(Dense(units=1))
 model.compile(optimizer='adam', loss='mean_squared_error')
 
-# Train the model
+## Train the model
 model.fit(X_train_reshaped, y_train, epochs=50, batch_size=32, verbose=1)
 
-# Evaluate the model
+## Evaluate the model
 loss = model.evaluate(X_test_reshaped, y_test)
 print(f'Model Loss: {loss}')
 
-# Save the trained model for deployment
+## Save the trained model for deployment
 model.save('tourist_flow_lstm_model.h5')
 ```
 
@@ -571,29 +571,29 @@ By following this deployment plan tailored to the specific demands of the Touris
 Here is a Dockerfile tailored to encapsulate the environment and dependencies for deploying the Tourist Flow Management AI model, optimized for performance and scalability:
 
 ```Dockerfile
-# Use an official Python runtime as a base image
+## Use an official Python runtime as a base image
 FROM python:3.8-slim
 
-# Set the working directory in the container
+## Set the working directory in the container
 WORKDIR /app
 
-# Copy the requirements file into the container at /app
+## Copy the requirements file into the container at /app
 COPY requirements.txt /app/
 
-# Install any needed dependencies specified in requirements.txt
+## Install any needed dependencies specified in requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the preprocessed data and trained model into the container at /app
+## Copy the preprocessed data and trained model into the container at /app
 COPY preprocessed_tourist_flow_data.csv /app/
 COPY tourist_flow_lstm_model.h5 /app/
 
-# Copy the Python script for serving the model into the container at /app
+## Copy the Python script for serving the model into the container at /app
 COPY model_serving_script.py /app/
 
-# Expose the port the app runs on
+## Expose the port the app runs on
 EXPOSE 5000
 
-# Run app.py when the container launches
+## Run app.py when the container launches
 CMD ["python", "model_serving_script.py"]
 ```
 

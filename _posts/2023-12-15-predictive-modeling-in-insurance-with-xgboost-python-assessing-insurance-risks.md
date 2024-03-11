@@ -203,7 +203,7 @@ Here's an example of a Python script for training a model for the Predictive Mod
 **File Path**: `src/train_model.py`
 
 ```python
-# src/train_model.py
+## src/train_model.py
 
 import pandas as pd
 import xgboost as xgb
@@ -211,29 +211,29 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, classification_report
 import joblib
 
-# Load mock data
+## Load mock data
 mock_data_path = 'data/mock_insurance_data.csv'
 data = pd.read_csv(mock_data_path)
 
-# Perform data preprocessing and feature engineering
-# ... (code for data preprocessing and feature engineering)
+## Perform data preprocessing and feature engineering
+## ... (code for data preprocessing and feature engineering)
 
-# Split the data into training and testing sets
-X = data.drop('target_column', axis=1)  # Replace 'target_column' with the actual target column name
+## Split the data into training and testing sets
+X = data.drop('target_column', axis=1)  ## Replace 'target_column' with the actual target column name
 y = data['target_column']
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Train the XGBoost model
+## Train the XGBoost model
 model = xgb.XGBClassifier(objective='binary:logistic', max_depth=3, learning_rate=0.1, n_estimators=100)
 model.fit(X_train, y_train)
 
-# Make predictions and evaluate the model
+## Make predictions and evaluate the model
 y_pred = model.predict(X_test)
 accuracy = accuracy_score(y_test, y_pred)
 print('Accuracy:', accuracy)
 print(classification_report(y_test, y_pred))
 
-# Save the trained model
+## Save the trained model
 model_path = 'models/xgboost_model.pkl'
 joblib.dump(model, model_path)
 print('Trained model saved at', model_path)
@@ -247,7 +247,7 @@ Certainly! Below is an example of a Python script for training a complex machine
 
 **File Path**: `src/train_complex_model.py`
 ```python
-# src/train_complex_model.py
+## src/train_complex_model.py
 
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
@@ -255,29 +255,29 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report, accuracy_score
 import joblib
 
-# Load mock data
+## Load mock data
 mock_data_path = 'data/mock_insurance_data.csv'
 data = pd.read_csv(mock_data_path)
 
-# Perform data preprocessing and feature engineering
-# ... (code for data preprocessing and feature engineering)
+## Perform data preprocessing and feature engineering
+## ... (code for data preprocessing and feature engineering)
 
-# Split the data into training and testing sets
-X = data.drop('target_column', axis=1)  # Replace 'target_column' with the actual target column name
+## Split the data into training and testing sets
+X = data.drop('target_column', axis=1)  ## Replace 'target_column' with the actual target column name
 y = data['target_column']
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Train a Random Forest Classifier
+## Train a Random Forest Classifier
 model = RandomForestClassifier(n_estimators=100, max_depth=10, random_state=42)
 model.fit(X_train, y_train)
 
-# Make predictions and evaluate the model
+## Make predictions and evaluate the model
 y_pred = model.predict(X_test)
 accuracy = accuracy_score(y_test, y_pred)
 print('Accuracy:', accuracy)
 print(classification_report(y_test, y_pred))
 
-# Save the trained model
+## Save the trained model
 model_path = 'models/random_forest_model.pkl'
 joblib.dump(model, model_path)
 print('Trained model saved at', model_path)

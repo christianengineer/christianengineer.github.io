@@ -5,7 +5,7 @@ permalink: posts/ai-based-wildlife-monitoring-system
 layout: article
 ---
 
-# AI-Based Wildlife Monitoring System - Technical Specifications
+## AI-Based Wildlife Monitoring System - Technical Specifications
 
 ## Description:
 

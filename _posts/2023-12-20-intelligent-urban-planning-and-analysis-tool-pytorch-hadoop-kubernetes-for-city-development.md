@@ -42,7 +42,7 @@ Tools for experiment tracking and model management will be integrated to facilit
 
 By integrating these MLOps practices and technologies, the Intelligent Urban Planning and Analysis Tool will benefit from a streamlined, automated, and efficient process for developing, deploying, and maintaining machine learning models for urban planning and analysis.
 
-# Scalable File Structure for the Intelligent Urban Planning and Analysis Tool Repository
+## Scalable File Structure for the Intelligent Urban Planning and Analysis Tool Repository
 
 ## /intelligent-urban-planning/
 - **/data/**
@@ -136,7 +136,7 @@ The deployment directory contains Kubernetes deployment configurations and relat
 Certainly! Here is an example of a Python script for training a PyTorch model using mock data:
 
 ```python
-# File path: /model/training/model_training.py
+## File path: /model/training/model_training.py
 
 import torch
 import torch.nn as nn
@@ -144,15 +144,15 @@ import torch.optim as optim
 import numpy as np
 import pandas as pd
 
-# Load mock data for training
+## Load mock data for training
 data_path = '/data/processed_data/mock_training_data.csv'
 data = pd.read_csv(data_path)
 
-# Extract features and target variable
+## Extract features and target variable
 X = data.drop('target', axis=1).values
 y = data['target'].values
 
-# Define a simple neural network model using PyTorch
+## Define a simple neural network model using PyTorch
 class UrbanPlanningModel(nn.Module):
     def __init__(self, input_dim, hidden_dim, output_dim):
         super(UrbanPlanningModel, self).__init__()
@@ -164,21 +164,21 @@ class UrbanPlanningModel(nn.Module):
         x = self.fc2(x)
         return x
 
-# Instantiate the model
+## Instantiate the model
 input_dim = X.shape[1]
 hidden_dim = 64
 output_dim = 1
 model = UrbanPlanningModel(input_dim, hidden_dim, output_dim)
 
-# Define loss function and optimizer
+## Define loss function and optimizer
 criterion = nn.MSELoss()
 optimizer = optim.Adam(model.parameters(), lr=0.001)
 
-# Convert data to PyTorch tensors
+## Convert data to PyTorch tensors
 X = torch.tensor(X, dtype=torch.float32)
 y = torch.tensor(y, dtype=torch.float32)
 
-# Train the model
+## Train the model
 num_epochs = 100
 for epoch in range(num_epochs):
     optimizer.zero_grad()
@@ -189,7 +189,7 @@ for epoch in range(num_epochs):
     if (epoch+1) % 10 == 0:
         print(f'Epoch [{epoch+1}/{num_epochs}], Loss: {loss.item():.4f}')
 
-# Save the trained model
+## Save the trained model
 model_path = '/model/trained_models/urban_planning_model.pth'
 torch.save(model.state_dict(), model_path)
 print(f'Trained model is saved to {model_path}')
@@ -202,7 +202,7 @@ Please note that the data and model file paths are placeholders and should be re
 Certainly! Here is an example of a Python script for training a complex machine learning algorithm using PyTorch with mock data for the Intelligent Urban Planning and Analysis Tool:
 
 ```python
-# File path: /model/training/complex_model_training.py
+## File path: /model/training/complex_model_training.py
 
 import torch
 import torch.nn as nn
@@ -212,23 +212,23 @@ import pandas as pd
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 
-# Load mock data for training
+## Load mock data for training
 data_path = '/data/processed_data/mock_complex_training_data.csv'
 data = pd.read_csv(data_path)
 
-# Extract features and target variable
+## Extract features and target variable
 X = data.drop('target_variable', axis=1).values
 y = data['target_variable'].values
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Standardize the features
+## Standardize the features
 scaler = StandardScaler()
 X_train = scaler.fit_transform(X_train)
 X_test = scaler.transform(X_test)
 
-# Define a complex neural network model using PyTorch
+## Define a complex neural network model using PyTorch
 class ComplexUrbanPlanningModel(nn.Module):
     def __init__(self, input_dim, hidden_units, output_dim):
         super(ComplexUrbanPlanningModel, self).__init__()
@@ -244,21 +244,21 @@ class ComplexUrbanPlanningModel(nn.Module):
         x = self.fc3(x)
         return x
 
-# Instantiate the model
+## Instantiate the model
 input_dim = X_train.shape[1]
 hidden_units = 128
 output_dim = 1
 model = ComplexUrbanPlanningModel(input_dim, hidden_units, output_dim)
 
-# Define loss function and optimizer
+## Define loss function and optimizer
 criterion = nn.MSELoss()
 optimizer = optim.Adam(model.parameters(), lr=0.001)
 
-# Convert data to PyTorch tensors
+## Convert data to PyTorch tensors
 X_train = torch.tensor(X_train, dtype=torch.float32)
 y_train = torch.tensor(y_train, dtype=torch.float32)
 
-# Train the model
+## Train the model
 num_epochs = 100
 model.train()
 for epoch in range(num_epochs):
@@ -270,7 +270,7 @@ for epoch in range(num_epochs):
     if (epoch+1) % 10 == 0:
         print(f'Epoch [{epoch+1}/{num_epochs}], Loss: {loss.item():.4f}')
 
-# Save the trained model
+## Save the trained model
 model_path = '/model/trained_models/complex_urban_planning_model.pth'
 torch.save(model.state_dict(), model_path)
 print(f'Trained complex model is saved to {model_path}')

@@ -171,38 +171,38 @@ By structuring the models directory with detailed documentation and relevant fil
 By organizing the deployment directory with necessary files and scripts, the Dynamic Food Packaging Optimization project in Peru can achieve a streamlined deployment process, efficient monitoring with Prometheus and Grafana, and easy scalability through containerization. This structured approach ensures a reliable and effective deployment of the application for optimizing packaging processes and minimizing waste and costs.
 
 ```python
-# File: model_training.py
-# Description: Script for training a machine learning model for Dynamic Food Packaging Optimization using mock data
-# Dependencies: Scikit-Learn, Pandas
+## File: model_training.py
+## Description: Script for training a machine learning model for Dynamic Food Packaging Optimization using mock data
+## Dependencies: Scikit-Learn, Pandas
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
 import joblib
 
-# Load mock data for packaging process optimization
+## Load mock data for packaging process optimization
 data_path = 'data/processed/mock_data.csv'
 mock_data = pd.read_csv(data_path)
 
-# Split data into features and target variable
+## Split data into features and target variable
 X = mock_data.drop('optimal_packaging', axis=1)
 y = mock_data['optimal_packaging']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Train a Random Forest Regressor model
+## Train a Random Forest Regressor model
 model = RandomForestRegressor(n_estimators=100, random_state=42)
 model.fit(X_train, y_train)
 
-# Evaluate the model
+## Evaluate the model
 train_score = model.score(X_train, y_train)
 test_score = model.score(X_test, y_test)
 
 print(f'Training R^2 Score: {train_score}')
 print(f'Testing R^2 Score: {test_score}')
 
-# Save the trained model
+## Save the trained model
 model_path = 'models/packaging_model.pkl'
 joblib.dump(model, model_path)
 
@@ -214,9 +214,9 @@ print(f'Trained model saved at: {model_path}')
 This Python script trains a machine learning model for Dynamic Food Packaging Optimization using mock data. It loads the mock data, splits it into features and a target variable, trains a Random Forest Regressor model, evaluates the model's performance, and saves the trained model using joblib. The trained model is saved at the specified file path for later use in the application for optimizing packaging processes based on product type, destination, and shelf life to minimize waste and costs.
 
 ```python
-# File: complex_model_training.py
-# Description: Script for training a complex machine learning algorithm for Dynamic Food Packaging Optimization using mock data
-# Dependencies: Scikit-Learn, Pandas
+## File: complex_model_training.py
+## Description: Script for training a complex machine learning algorithm for Dynamic Food Packaging Optimization using mock data
+## Dependencies: Scikit-Learn, Pandas
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -224,22 +224,22 @@ from sklearn.ensemble import GradientBoostingRegressor
 from sklearn.metrics import mean_squared_error
 import joblib
 
-# Load mock data for packaging process optimization
+## Load mock data for packaging process optimization
 data_path = 'data/processed/mock_data.csv'
 mock_data = pd.read_csv(data_path)
 
-# Split data into features and target variable
+## Split data into features and target variable
 X = mock_data.drop('optimal_packaging', axis=1)
 y = mock_data['optimal_packaging']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Train a Gradient Boosting Regressor model
+## Train a Gradient Boosting Regressor model
 model = GradientBoostingRegressor(n_estimators=200, max_depth=4, learning_rate=0.1, loss='ls', random_state=42)
 model.fit(X_train, y_train)
 
-# Evaluate the model
+## Evaluate the model
 train_predictions = model.predict(X_train)
 test_predictions = model.predict(X_test)
 train_rmse = mean_squared_error(y_train, train_predictions, squared=False)
@@ -248,7 +248,7 @@ test_rmse = mean_squared_error(y_test, test_predictions, squared=False)
 print(f'Training Root Mean Squared Error: {train_rmse}')
 print(f'Testing Root Mean Squared Error: {test_rmse}')
 
-# Save the trained model
+## Save the trained model
 model_path = 'models/complex_packaging_model.pkl'
 joblib.dump(model, model_path)
 

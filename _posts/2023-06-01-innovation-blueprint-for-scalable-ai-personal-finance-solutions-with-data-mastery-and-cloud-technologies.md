@@ -5,7 +5,7 @@ permalink: posts/innovation-blueprint-for-scalable-ai-personal-finance-solutions
 layout: article
 ---
 
-# Blueprint for Innovation: Advancing Scalable AI-Driven Personal Finance Solutions
+## Blueprint for Innovation: Advancing Scalable AI-Driven Personal Finance Solutions
 
 This blueprint is aimed at both enlightening and enticing advanced software engineers to develop robust, AI-driven personal finance solutions by employing iterative design and mastery over data and cloud technologies.
 

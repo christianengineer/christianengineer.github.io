@@ -5,7 +5,7 @@ permalink: posts/peru-skills-and-employment-matching-platform-pytorch-pandas-fla
 layout: article
 ---
 
-# AI Peru Skills and Employment Matching Platform
+## AI Peru Skills and Employment Matching Platform
 
 ## Objectives
 - Connect learners with employment opportunities based on their newly acquired skills.
@@ -28,7 +28,7 @@ layout: article
 
 By leveraging these libraries and system design strategies, the AI Peru Skills and Employment Matching Platform can efficiently connect learners with job opportunities, thereby contributing to economic advancement through education and skills development.
 
-# MLOps Infrastructure for AI Peru Skills and Employment Matching Platform
+## MLOps Infrastructure for AI Peru Skills and Employment Matching Platform
 
 ## Components
 1. **Data Acquisition:** Gather data on learners' skills and job opportunities from various sources.
@@ -55,7 +55,7 @@ By leveraging these libraries and system design strategies, the AI Peru Skills a
 
 By implementing a robust MLOps infrastructure using PyTorch, Pandas, Flask, and Grafana, the AI Peru Skills and Employment Matching Platform can effectively connect learners with job opportunities, leading to economic advancement through education and skills development.
 
-# Scalable File Structure for AI Peru Skills and Employment Matching Platform
+## Scalable File Structure for AI Peru Skills and Employment Matching Platform
 
 ```
 AI_Peru_Platform/
@@ -125,7 +125,7 @@ AI_Peru_Platform/
 
 This structured file system provides a clear separation of concerns, making it easy to maintain, update, and scale the AI Peru Skills and Employment Matching Platform using PyTorch, Pandas, Flask, and Grafana.
 
-# Models Directory for AI Peru Skills and Employment Matching Platform
+## Models Directory for AI Peru Skills and Employment Matching Platform
 
 ```
 models/
@@ -167,7 +167,7 @@ models/
 
 By organizing model-related files in the "models" directory, the AI Peru Skills and Employment Matching Platform can efficiently develop, assess, and deploy machine learning models to connect learners with suitable employment opportunities, thereby fostering economic advancement through education.
 
-# Deployment Directory for AI Peru Skills and Employment Matching Platform
+## Deployment Directory for AI Peru Skills and Employment Matching Platform
 
 ```
 deployment/
@@ -222,8 +222,8 @@ deployment/
 By organizing deployment-related files in the "deployment" directory, the AI Peru Skills and Employment Matching Platform can be efficiently packaged, deployed, and scaled to connect learners with relevant job opportunities, thereby fostering economic advancement through education.
 
 ```python
-# File: models/model_training.py
-# Description: Script for training machine learning models using PyTorch with mock data for Peru Skills and Employment Matching Platform
+## File: models/model_training.py
+## Description: Script for training machine learning models using PyTorch with mock data for Peru Skills and Employment Matching Platform
 
 import pandas as pd
 import torch
@@ -231,13 +231,13 @@ import torch.nn as nn
 import torch.optim as optim
 from torch.utils.data import Dataset, DataLoader
 
-# Mock data for training (replace with actual data sources)
+## Mock data for training (replace with actual data sources)
 mock_data_path = 'data/processed_data/mock_training_data.csv'
 
-# Load mock training data
+## Load mock training data
 mock_data = pd.read_csv(mock_data_path)
 
-# Define PyTorch dataset and dataloader
+## Define PyTorch dataset and dataloader
 class CustomDataset(Dataset):
     def __init__(self, data):
         self.data = data
@@ -249,7 +249,7 @@ class CustomDataset(Dataset):
         sample = self.data.iloc[idx].values
         return sample
 
-# Define PyTorch model architecture
+## Define PyTorch model architecture
 class Model(nn.Module):
     def __init__(self, input_size, output_size):
         super(Model, self).__init__()
@@ -259,26 +259,26 @@ class Model(nn.Module):
         x = self.fc(x)
         return x
 
-# Hyperparameters
-input_size = len(mock_data.columns) - 1  # Number of input features
-output_size = 1  # Number of output classes
+## Hyperparameters
+input_size = len(mock_data.columns) - 1  ## Number of input features
+output_size = 1  ## Number of output classes
 learning_rate = 0.001
 epochs = 10
 
-# Initialize dataset and dataloader
+## Initialize dataset and dataloader
 dataset = CustomDataset(mock_data)
 dataloader = DataLoader(dataset, batch_size=32, shuffle=True)
 
-# Initialize model, loss function, and optimizer
+## Initialize model, loss function, and optimizer
 model = Model(input_size, output_size)
 criterion = nn.MSELoss()
 optimizer = optim.Adam(model.parameters(), lr=learning_rate)
 
-# Model training loop
+## Model training loop
 for epoch in range(epochs):
     for batch_idx, data in enumerate(dataloader):
-        inputs = data[:, :-1].float()  # Input features
-        targets = data[:, -1].view(-1, 1).float()  # Target labels
+        inputs = data[:, :-1].float()  ## Input features
+        targets = data[:, -1].view(-1, 1).float()  ## Target labels
         
         optimizer.zero_grad()
         outputs = model(inputs)
@@ -288,7 +288,7 @@ for epoch in range(epochs):
 
     print(f'Epoch [{epoch+1}/{epochs}], Loss: {loss.item()}')
 
-# Save the trained model
+## Save the trained model
 torch.save(model.state_dict(), 'models/model.pth')
 ```
 
@@ -297,8 +297,8 @@ In this script, we use mock training data stored in the file path `'data/process
 Ensure to replace the mock data path with your actual data sources before running the script for training the model.
 
 ```python
-# File: models/complex_model_training.py
-# Description: Script for training a complex machine learning algorithm using PyTorch with mock data for Peru Skills and Employment Matching Platform
+## File: models/complex_model_training.py
+## Description: Script for training a complex machine learning algorithm using PyTorch with mock data for Peru Skills and Employment Matching Platform
 
 import pandas as pd
 import numpy as np
@@ -308,24 +308,24 @@ import torch.optim as optim
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
-# Mock data for training (replace with actual data sources)
+## Mock data for training (replace with actual data sources)
 mock_data_path = 'data/processed_data/mock_complex_training_data.csv'
 
-# Load mock training data
+## Load mock training data
 mock_data = pd.read_csv(mock_data_path)
 
-# Feature engineering and preprocessing
+## Feature engineering and preprocessing
 X = mock_data.drop('target', axis=1)
 y = mock_data['target']
 
-# Standardize features
+## Standardize features
 scaler = StandardScaler()
 X_scaled = scaler.fit_transform(X)
 
-# Split data into train and test sets
+## Split data into train and test sets
 X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.2, random_state=42)
 
-# Define complex PyTorch model architecture
+## Define complex PyTorch model architecture
 class ComplexModel(nn.Module):
     def __init__(self, input_size, hidden_size, output_size):
         super(ComplexModel, self).__init__()
@@ -337,23 +337,23 @@ class ComplexModel(nn.Module):
         x = self.fc2(x)
         return x
 
-# Hyperparameters
+## Hyperparameters
 input_size = X_train.shape[1]
 hidden_size = 64
 output_size = 1
 learning_rate = 0.01
 epochs = 50
 
-# Initialize PyTorch model, loss function, and optimizer
+## Initialize PyTorch model, loss function, and optimizer
 model = ComplexModel(input_size, hidden_size, output_size)
 criterion = nn.MSELoss()
 optimizer = optim.Adam(model.parameters(), lr=learning_rate)
 
-# Convert data to PyTorch tensors
+## Convert data to PyTorch tensors
 X_train_tensor = torch.tensor(X_train, dtype=torch.float32)
 y_train_tensor = torch.tensor(y_train.values, dtype=torch.float32)
 
-# Model training loop
+## Model training loop
 for epoch in range(epochs):
     optimizer.zero_grad()
     outputs = model(X_train_tensor)
@@ -363,7 +363,7 @@ for epoch in range(epochs):
 
     print(f'Epoch [{epoch+1}/{epochs}], Loss: {loss.item()}')
 
-# Save the trained complex model
+## Save the trained complex model
 torch.save(model.state_dict(), 'models/complex_model.pth')
 ```
 

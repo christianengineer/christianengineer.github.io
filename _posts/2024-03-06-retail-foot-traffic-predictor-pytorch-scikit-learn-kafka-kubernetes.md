@@ -5,7 +5,7 @@ permalink: posts/retail-foot-traffic-predictor-pytorch-scikit-learn-kafka-kubern
 layout: article
 ---
 
-# Retail Foot Traffic Predictor for Plaza Vea
+## Retail Foot Traffic Predictor for Plaza Vea
 
 ## Objective:
 The main objective is to predict peak shopping times at Plaza Vea using historical data to optimize staff scheduling and inventory management, ultimately improving operational efficiency and customer service.
@@ -204,36 +204,36 @@ from sklearn.preprocessing import StandardScaler, OneHotEncoder
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 
-# Load the raw data
+## Load the raw data
 data = pd.read_csv('foot_traffic_data.csv')
 
-# Extract features and target variable
+## Extract features and target variable
 X = data.drop(['foot_traffic'], axis=1)
 y = data['foot_traffic']
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Define preprocessing steps for numerical and categorical features
+## Define preprocessing steps for numerical and categorical features
 numeric_features = ['temperature', 'prev_hourly_traffic']
 categorical_features = ['day_of_week', 'season']
 
-# Create preprocessing pipeline with scaling for numerical features and one-hot encoding for categorical features
+## Create preprocessing pipeline with scaling for numerical features and one-hot encoding for categorical features
 preprocessor = ColumnTransformer(
     transformers=[
         ('num', StandardScaler(), numeric_features),
         ('cat', OneHotEncoder(), categorical_features)
     ])
 
-# Preprocess the data
+## Preprocess the data
 X_train_processed = preprocessor.fit_transform(X_train)
 X_test_processed = preprocessor.transform(X_test)
 
-# Confirm the shape of the processed data
+## Confirm the shape of the processed data
 print('Shape of X_train_processed:', X_train_processed.shape)
 print('Shape of X_test_processed:', X_test_processed.shape)
 
-# Save the preprocessed data for model training
+## Save the preprocessed data for model training
 pd.DataFrame(X_train_processed).to_csv('X_train_processed.csv', index=False)
 pd.DataFrame(y_train).to_csv('y_train.csv', index=False)
 ```
@@ -308,20 +308,20 @@ import random
 from faker import Faker
 from datetime import datetime, timedelta
 
-# Initialize Faker to generate synthetic data
+## Initialize Faker to generate synthetic data
 fake = Faker()
 
-# Define the number of samples
+## Define the number of samples
 num_samples = 10000
 
-# Generate synthetic data for features
+## Generate synthetic data for features
 timestamps = [fake.date_time_between(start_date='-1y', end_date='now') for _ in range(num_samples)]
 temperature = [random.uniform(10, 35) for _ in range(num_samples)]
 prev_hourly_traffic = [random.randint(100, 1000) for _ in range(num_samples)]
 day_of_week = [timestamp.weekday() for timestamp in timestamps]
 season = [int((datetime.strptime(str(timestamp), '%Y-%m-%d %H:%M:%S').strftime('%m')) // 3) + 1 for timestamp in timestamps]
 
-# Create a DataFrame
+## Create a DataFrame
 data = pd.DataFrame({
     'timestamp': timestamps,
     'temperature': temperature,
@@ -330,20 +330,20 @@ data = pd.DataFrame({
     'season': season
 })
 
-# Save the synthetic dataset as a CSV file
+## Save the synthetic dataset as a CSV file
 data.to_csv('synthetic_foot_traffic_data.csv', index=False)
 
-# Validate the dataset
+## Validate the dataset
 print(data.head())
 
-# Generate noise for real-world variability
+## Generate noise for real-world variability
 noise = np.random.normal(0, 5, num_samples)
 data['foot_traffic'] = 1000 + 30*(data['prev_hourly_traffic']/500) + 5*data['temperature'] - 10*data['day_of_week'] + 15*data['season'] + noise
 
-# Save the synthetic dataset with foot traffic information
+## Save the synthetic dataset with foot traffic information
 data.to_csv('synthetic_foot_traffic_data_with_target.csv', index=False)
 
-# Validate the dataset with target variable
+## Validate the dataset with target variable
 print(data.head())
 ```
 
@@ -394,33 +394,33 @@ from sklearn.ensemble import GradientBoostingRegressor
 from sklearn.metrics import mean_squared_error
 import joblib
 
-# Load preprocessed dataset
+## Load preprocessed dataset
 data = pd.read_csv('preprocessed_dataset.csv')
 
-# Define features and target variable
+## Define features and target variable
 X = data.drop('foot_traffic', axis=1)
 y = data['foot_traffic']
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize and train the Gradient Boosting Regressor model
+## Initialize and train the Gradient Boosting Regressor model
 model = GradientBoostingRegressor()
 model.fit(X_train, y_train)
 
-# Make predictions on the test set
+## Make predictions on the test set
 y_pred = model.predict(X_test)
 
-# Calculate RMSE to evaluate model performance
+## Calculate RMSE to evaluate model performance
 rmse = mean_squared_error(y_test, y_pred, squared=False)
 print(f'Root Mean Squared Error: {rmse}')
 
-# Save the trained model for deployment
+## Save the trained model for deployment
 joblib.dump(model, 'foot_traffic_predictor_model.pkl')
 
-# Include in production deployment script:
-# loaded_model = joblib.load('foot_traffic_predictor_model.pkl')
-# predicted_values = loaded_model.predict(new_data)
+## Include in production deployment script:
+## loaded_model = joblib.load('foot_traffic_predictor_model.pkl')
+## predicted_values = loaded_model.predict(new_data)
 
 ```
 
@@ -481,24 +481,24 @@ This production-ready code file follows best practices in code quality, readabil
 By following this step-by-step deployment plan tailored to the unique demands of the Retail Foot Traffic Predictor project, Plaza Vea's team can confidently deploy the machine learning model into production. Each step, accompanied by recommended tools and platforms, offers a clear roadmap for successful model deployment, ensuring scalability, reliability, and seamless integration with the live environment.
 
 ```Dockerfile
-# Use a base image with necessary dependencies
+## Use a base image with necessary dependencies
 FROM python:3.8-slim
 
-# Set the working directory in the container
+## Set the working directory in the container
 WORKDIR /app
 
-# Copy the requirements file and install dependencies
+## Copy the requirements file and install dependencies
 COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 
-# Copy the model and preprocessing scripts
+## Copy the model and preprocessing scripts
 COPY model.py model.py
 COPY preprocessing.py preprocessing.py
 
-# Expose the port for FastAPI
+## Expose the port for FastAPI
 EXPOSE 8000
 
-# Command to run the FastAPI app
+## Command to run the FastAPI app
 CMD ["uvicorn", "model:app", "--host", "0.0.0.0", "--port", "8000"]
 ```
 

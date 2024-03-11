@@ -5,7 +5,7 @@ permalink: posts/competitive-intelligence-dashboard-gpt-3-scikit-learn-airflow-p
 layout: article
 ---
 
-# Competitive Intelligence Dashboard for Supermercados Peruanos
+## Competitive Intelligence Dashboard for Supermercados Peruanos
 
 ## Objectives and Benefits
 - **Objective**: To provide in-depth insights into competitor pricing, promotions, and customer preferences for data-driven strategic planning.
@@ -41,7 +41,7 @@ layout: article
 - [Dash](https://dash.plotly.com/)/[Flask](https://flask.palletsprojects.com/en/2.0.x/): Web application frameworks for building dashboards.
 - [Prometheus](https://prometheus.io/): Monitoring and alerting toolkit.
 
-# Sourcing Data Strategy Analysis for Competitive Intelligence Dashboard
+## Sourcing Data Strategy Analysis for Competitive Intelligence Dashboard
 
 ## Data Collection Tools and Methods
 
@@ -84,7 +84,7 @@ layout: article
 
 By leveraging these specific tools and methods, such as web scraping tools, APIs, and survey platforms, and integrating them within the existing technology stack using Airflow for automation, SQL/Pandas for data analysis, and Scikit-Learn for model training, Supermercados Peruanos can streamline the data collection process, ensuring that the data is readily accessible and in the correct format for analysis and model training for the Competitive Intelligence Dashboard project.
 
-# Feature Extraction and Engineering Analysis for Competitive Intelligence Dashboard
+## Feature Extraction and Engineering Analysis for Competitive Intelligence Dashboard
 
 ## Feature Extraction
 
@@ -136,7 +136,7 @@ By leveraging these specific tools and methods, such as web scraping tools, APIs
 
 By incorporating these feature extraction and engineering strategies, Supermercados Peruanos can enhance the interpretability of the data and improve the performance of the machine learning models in the Competitive Intelligence Dashboard project. Using clear and descriptive variable names like *avg_price_competitor1* and *customer_segment_demographics3* will aid in better understanding and analysis of the data, leading to more effective decision-making based on the insights derived from the project.
 
-# Metadata Management for Competitive Intelligence Dashboard
+## Metadata Management for Competitive Intelligence Dashboard
 
 ## Unique Demands and Characteristics
 
@@ -186,7 +186,7 @@ By incorporating these feature extraction and engineering strategies, Supermerca
 
 By including specific metadata elements tailored to the competitive intelligence domain, such as competitor information, pricing metadata, customer details, and purchase information, Supermercados Peruanos can effectively manage and track crucial data aspects essential for the success of the Competitive Intelligence Dashboard project. This targeted metadata management approach ensures data accuracy, reproducibility, and facilitates better insights and strategic decision-making based on the project's unique demands and characteristics.
 
-# Data Problems and Preprocessing Strategies for Competitive Intelligence Dashboard
+## Data Problems and Preprocessing Strategies for Competitive Intelligence Dashboard
 
 ## Specific Data Problems
 
@@ -248,27 +248,27 @@ from sklearn.preprocessing import MinMaxScaler
 from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import OneHotEncoder
 
-# Load the competitor data and customer data
+## Load the competitor data and customer data
 competitor_data = pd.read_csv("competitor_data.csv")
 customer_data = pd.read_csv("customer_data.csv")
 
-# Competitor data preprocessing
-# Impute missing values in pricing data
+## Competitor data preprocessing
+## Impute missing values in pricing data
 competitor_data['price_avg'].fillna(competitor_data['price_avg'].mean(), inplace=True)
-# Normalize price_avg using Min-Max scaling
+## Normalize price_avg using Min-Max scaling
 scaler = MinMaxScaler()
 competitor_data['price_avg_normalized'] = scaler.fit_transform(competitor_data[['price_avg']])
 
-# Customer data preprocessing
-# Impute missing values in customer demographic data
+## Customer data preprocessing
+## Impute missing values in customer demographic data
 imputer = SimpleImputer(strategy='most_frequent')
 customer_data['customer_age'].fillna(customer_data['customer_age'].mode()[0], inplace=True)
-# Encode categorical gender feature
+## Encode categorical gender feature
 encoder = OneHotEncoder()
 gender_encoded = encoder.fit_transform(customer_data[['customer_gender']])
 customer_data = pd.concat([customer_data, pd.DataFrame(gender_encoded.toarray(), columns=['gender_female', 'gender_male'])], axis=1)
 
-# Save preprocessed data
+## Save preprocessed data
 competitor_data.to_csv("preprocessed_competitor_data.csv", index=False)
 customer_data.to_csv("preprocessed_customer_data.csv", index=False)
 ```
@@ -280,7 +280,7 @@ In this code snippet:
 
 These preprocessing steps are crucial to ensure that the data is ready for effective model training, enhancing the interpretability and performance of machine learning models in the Competitive Intelligence Dashboard project specifically tailored for Supermercados Peruanos' needs.
 
-# Modeling Strategy for Competitive Intelligence Dashboard
+## Modeling Strategy for Competitive Intelligence Dashboard
 
 To address the unique challenges and data types presented by the Competitive Intelligence Dashboard project for Supermercados Peruanos, a hybrid modeling strategy incorporating both traditional machine learning algorithms and advanced natural language processing techniques is recommended. This strategy aims to leverage the structured competitor and customer data alongside unstructured textual data for comprehensive insights and analysis.
 
@@ -311,7 +311,7 @@ The most crucial step in the recommended modeling strategy is the seamless integ
 
 This integration is vital as it allows for a more holistic view of the competitive retail environment in Peru, enabling Market Analysts to make informed decisions based on a combination of quantitative data analysis and qualitative insights gleaned from textual data sources. By effectively synergizing structured and unstructured data sources, the project can achieve a deeper level of competitive intelligence that aligns with the overarching goal of providing in-depth insights for strategic planning in the competitive retail landscape of Peru.
 
-# Tools and Technologies for Data Modeling in Competitive Intelligence Dashboard
+## Tools and Technologies for Data Modeling in Competitive Intelligence Dashboard
 
 To effectively implement the modeling strategy for the Competitive Intelligence Dashboard project at Supermercados Peruanos, the following tools and technologies are recommended. These tools are chosen to handle the project's diverse data types, seamlessly integrate into the existing workflow, and contribute to addressing the Market Analyst's pain point of keeping up with rapid market changes and competitor strategies.
 
@@ -371,29 +371,29 @@ To generate a large fictitious dataset that reflects real-world data relevant to
 import numpy as np
 import pandas as pd
 
-# Generate fictitious competitor data
+## Generate fictitious competitor data
 n_rows = 10000
 
-# Competitor pricing attributes
+## Competitor pricing attributes
 price_avg = np.random.uniform(1, 100, n_rows)
 price_diff = np.random.normal(5, 2, n_rows)
 
-# Competitor promotion attributes
+## Competitor promotion attributes
 promotion_freq = np.random.randint(0, 10, n_rows)
 promotion_type = np.random.choice(['Discount', 'BOGO', 'Free Gift'], n_rows)
 
-# Competitor product attributes
+## Competitor product attributes
 product_category = np.random.choice(['Grocery', 'Electronics', 'Clothing'], n_rows)
 product_rating = np.random.uniform(1, 5, n_rows)
 
-# Customer data attributes
+## Customer data attributes
 customer_id = np.arange(1, n_rows + 1)
 customer_age = np.random.randint(18, 65, n_rows)
 customer_gender = np.random.choice(['Male', 'Female'], n_rows)
 purchase_freq = np.random.poisson(5, n_rows)
 purchase_amount = np.random.normal(50, 10, n_rows)
 
-# Create fictitious dataset
+## Create fictitious dataset
 data = pd.DataFrame({
     'price_avg': price_avg,
     'price_diff': price_diff,
@@ -408,16 +408,16 @@ data = pd.DataFrame({
     'purchase_amount': purchase_amount
 })
 
-# Perform data validation
-# Check for missing values
+## Perform data validation
+## Check for missing values
 missing_values = data.isnull().sum()
 print("Missing Values:\n", missing_values)
 
-# Add noise to simulated data
+## Add noise to simulated data
 data['price_avg'] += np.random.normal(0, 5, n_rows)
 data['purchase_amount'] += np.random.normal(0, 5, n_rows)
 
-# Save fictitious dataset to CSV
+## Save fictitious dataset to CSV
 data.to_csv("fictitious_competitor_customer_data.csv", index=False)
 ```
 
@@ -456,29 +456,29 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 
-# Load preprocessed dataset
+## Load preprocessed dataset
 data = pd.read_csv("preprocessed_data.csv")
 
-# Split data into features and target variable
+## Split data into features and target variable
 X = data.drop(['target_variable'], axis=1)
 y = data['target_variable']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize and train the model
+## Initialize and train the model
 model = RandomForestClassifier(random_state=42)
 model.fit(X_train, y_train)
 
-# Make predictions on the test set
+## Make predictions on the test set
 y_pred = model.predict(X_test)
 
-# Calculate model accuracy
+## Calculate model accuracy
 accuracy = accuracy_score(y_test, y_pred)
 print("Model Accuracy: {:.2f}".format(accuracy))
 
-# Save the trained model for deployment
-# joblib.dump(model, 'trained_model.pkl')
+## Save the trained model for deployment
+## joblib.dump(model, 'trained_model.pkl')
 ```
 
 ### Code Structure and Conventions:
@@ -505,7 +505,7 @@ print("Model Accuracy: {:.2f}".format(accuracy))
 
 By following these conventions and best practices, Supermercados Peruanos can ensure that their machine learning codebase is robust, scalable, and well-documented, facilitating smooth deployment and maintenance of the models in a production environment for the Competitive Intelligence Dashboard project.
 
-# Deployment Plan for Machine Learning Model in Production
+## Deployment Plan for Machine Learning Model in Production
 
 To effectively deploy the machine learning model for the Competitive Intelligence Dashboard project at Supermercados Peruanos, here is a step-by-step deployment plan tailored to the unique demands and characteristics of the project.
 
@@ -552,27 +552,27 @@ To effectively deploy the machine learning model for the Competitive Intelligenc
 
 By following this deployment plan and utilizing the recommended tools and platforms for each step, Supermercados Peruanos can efficiently deploy their machine learning model into a production environment for the Competitive Intelligence Dashboard project. This structured roadmap will empower the team with the guidance needed to execute the deployment independently and successfully transition the model into a live environment.
 
-# Production-Ready Dockerfile for Competitive Intelligence Dashboard
+## Production-Ready Dockerfile for Competitive Intelligence Dashboard
 
 ```Dockerfile
-# Use a base image with Python and necessary dependencies
+## Use a base image with Python and necessary dependencies
 FROM python:3.8-slim
 
-# Set environment variables
+## Set environment variables
 ENV APP_HOME /app
 WORKDIR $APP_HOME
 
-# Install required Python packages (update with project-specific dependencies)
+## Install required Python packages (update with project-specific dependencies)
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy over project files
+## Copy over project files
 COPY . .
 
-# Expose the necessary port for the API
+## Expose the necessary port for the API
 EXPOSE 5000
 
-# Command for running the API server
+## Command for running the API server
 CMD ["python", "app.py"]
 ```
 
@@ -590,7 +590,7 @@ CMD ["python", "app.py"]
 
 By utilizing this Dockerfile with configurations tailored to the performance and scalability needs of the Competitive Intelligence Dashboard project, Supermercados Peruanos can create a robust container setup optimized for handling the project's specific objectives in a production environment.
 
-# User Groups and User Stories for the Competitive Intelligence Dashboard
+## User Groups and User Stories for the Competitive Intelligence Dashboard
 
 ### 1. Market Analysts
 - **User Story**:  

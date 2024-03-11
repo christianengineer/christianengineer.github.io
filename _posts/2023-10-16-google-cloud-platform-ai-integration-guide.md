@@ -5,7 +5,7 @@ permalink: posts/google-cloud-platform-ai-integration-guide
 layout: article
 ---
 
-# Google Cloud Platform for AI integration
+## Google Cloud Platform for AI integration
 
 Google Cloud Platform (GCP) has emerged as one of the leading platforms for developing and managing artificial intelligence (AI) applications. GCP provides robust and versatile ecosystem for AI integration, offering complex machine learning solutions as well as simple and intuitive APIs. In this article, we'll look into various services provided by GCP for AI and how they can be leveraged to build and deploy smart applications.
 
@@ -41,16 +41,16 @@ user1, item2, 2018-01-02T00:00:00Z, VIEW, 1.0
 ```python
 from google.cloud import automl
 
-# Create client for AutoML
+## Create client for AutoML
 client = automl.AutoMlClient()
 
-# Create a dataset
+## Create a dataset
 dataset = client.create_dataset({
     "display_name": "Your dataset",
     "tables_dataset_metadata": {},
 })
 
-# Import data
+## Import data
 response = client.import_data(
     name=dataset_name,
     input_config={

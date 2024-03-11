@@ -5,7 +5,7 @@ permalink: posts/smart-ai-urban-planning-simulation
 layout: article
 ---
 
-# Smart AI Urban Planning Simulation Repository
+## Smart AI Urban Planning Simulation Repository
 
 ## Description
 

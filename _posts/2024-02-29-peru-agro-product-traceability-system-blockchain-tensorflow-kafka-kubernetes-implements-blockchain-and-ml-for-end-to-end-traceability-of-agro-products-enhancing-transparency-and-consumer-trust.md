@@ -60,33 +60,33 @@ By establishing a robust MLOps infrastructure encompassing data handling, model 
 ### Scalable File Structure for Peru Agro-Product Traceability System
 
 ```
-├── blockchain                  # Blockchain-related files and smart contracts
-│   ├── smart_contracts         # Smart contracts for traceability and transparency
-│   └── config                  # Configuration files for blockchain setup
+├── blockchain                  ## Blockchain-related files and smart contracts
+│   ├── smart_contracts         ## Smart contracts for traceability and transparency
+│   └── config                  ## Configuration files for blockchain setup
 
-├── machine_learning            # Machine Learning models and scripts
-│   ├── data                    # Data processing scripts and datasets
-│   ├── models                  # Trained TensorFlow models 
-│   └── notebooks               # Jupyter notebooks for experimentation
+├── machine_learning            ## Machine Learning models and scripts
+│   ├── data                    ## Data processing scripts and datasets
+│   ├── models                  ## Trained TensorFlow models 
+│   └── notebooks               ## Jupyter notebooks for experimentation
 
-├── real_time_processing         # Real-time data processing with Kafka
-│   ├── producers               # Kafka producers for data ingestion
-│   ├── consumers               # Kafka consumers for data processing
-│   └── streaming               # Data streaming and processing scripts
+├── real_time_processing         ## Real-time data processing with Kafka
+│   ├── producers               ## Kafka producers for data ingestion
+│   ├── consumers               ## Kafka consumers for data processing
+│   └── streaming               ## Data streaming and processing scripts
 
-├── kubernetes                   # Kubernetes deployment files
-│   ├── deployments             # YAML files for deploying services
-│   ├── services                # Service configurations for scalability
-│   └── monitoring              # Monitoring and logging configurations
+├── kubernetes                   ## Kubernetes deployment files
+│   ├── deployments             ## YAML files for deploying services
+│   ├── services                ## Service configurations for scalability
+│   └── monitoring              ## Monitoring and logging configurations
 
-├── infrastructure               # Infrastructure setup scripts
-│   ├── docker                  # Dockerfiles for containerization
-│   ├── scripts                 # Bash scripts for setup and deployment
-│   └── configuration           # Configuration files for system components
+├── infrastructure               ## Infrastructure setup scripts
+│   ├── docker                  ## Dockerfiles for containerization
+│   ├── scripts                 ## Bash scripts for setup and deployment
+│   └── configuration           ## Configuration files for system components
 
-├── docs                         # Documentation and system architecture diagrams
+├── docs                         ## Documentation and system architecture diagrams
 │
-└── README.md                    # Overview of the project, setup instructions, and guidelines
+└── README.md                    ## Overview of the project, setup instructions, and guidelines
 ```
 
 This file structure provides a modular and organized layout for the Peru Agro-Product Traceability System, incorporating components related to blockchain, machine learning, real-time data processing, Kubernetes deployment, and system infrastructure. Each directory is dedicated to specific functionalities, making it easier to manage, scale, and maintain the project.
@@ -96,15 +96,15 @@ This file structure provides a modular and organized layout for the Peru Agro-Pr
 ```
 ├── machine_learning      
 │   ├── models              
-│       ├── product_quality_prediction.h5     # Trained TensorFlow model for product quality prediction
-│       ├── anomaly_detection.pkl             # Serialized ML model for anomaly detection
-│       ├── supply_chain_optimization.pb       # TensorFlow model for supply chain optimization
+│       ├── product_quality_prediction.h5     ## Trained TensorFlow model for product quality prediction
+│       ├── anomaly_detection.pkl             ## Serialized ML model for anomaly detection
+│       ├── supply_chain_optimization.pb       ## TensorFlow model for supply chain optimization
 │   ├── data                
-│       ├── raw_data.csv                      # Raw data for training and testing models
-│       ├── processed_data.csv                # Cleaned and processed data for model input
+│       ├── raw_data.csv                      ## Raw data for training and testing models
+│       ├── processed_data.csv                ## Cleaned and processed data for model input
 │   └── notebooks           
-│       ├── data_exploration.ipynb            # Jupyter notebook for data exploration and preprocessing
-│       ├── model_training.ipynb              # Notebook for training TensorFlow models
+│       ├── data_exploration.ipynb            ## Jupyter notebook for data exploration and preprocessing
+│       ├── model_training.ipynb              ## Notebook for training TensorFlow models
 ```
 
 In the Models directory for the Peru Agro-Product Traceability System, we have organized various files related to machine learning models and data processing for enhancing transparency and consumer trust through blockchain and ML integration.
@@ -129,20 +129,20 @@ This structured Models directory provides a clear organization of files essentia
 ```
 ├── kubernetes
 │   ├── deployments
-│   │   ├── blockchain.yaml               # Kubernetes deployment for blockchain network
-│   │   ├── machine_learning.yaml          # Deployment file for TensorFlow model API
-│   │   ├── kafka.yaml                     # Deployment configuration for Apache Kafka
-│   │   └── web_app.yaml                   # Deployment file for web application frontend
+│   │   ├── blockchain.yaml               ## Kubernetes deployment for blockchain network
+│   │   ├── machine_learning.yaml          ## Deployment file for TensorFlow model API
+│   │   ├── kafka.yaml                     ## Deployment configuration for Apache Kafka
+│   │   └── web_app.yaml                   ## Deployment file for web application frontend
 
 │   ├── services
-│   │   ├── blockchain_svc.yaml           # Service configuration for blockchain network
-│   │   ├── machine_learning_svc.yaml      # Service definition for TensorFlow model API
-│   │   ├── kafka_svc.yaml                 # Service setup for Apache Kafka
-│   │   └── web_app_svc.yaml               # Service configuration for web application frontend
+│   │   ├── blockchain_svc.yaml           ## Service configuration for blockchain network
+│   │   ├── machine_learning_svc.yaml      ## Service definition for TensorFlow model API
+│   │   ├── kafka_svc.yaml                 ## Service setup for Apache Kafka
+│   │   └── web_app_svc.yaml               ## Service configuration for web application frontend
 
 │   ├── monitoring
-│   │   ├── prometheus_config.yaml         # Prometheus monitoring configuration
-│   │   └── grafana_config.yaml            # Grafana dashboard setup
+│   │   ├── prometheus_config.yaml         ## Prometheus monitoring configuration
+│   │   └── grafana_config.yaml            ## Grafana dashboard setup
 ```
 
 In the Deployment directory for the Peru Agro-Product Traceability System, we have organized various files related to Kubernetes deployments and services for integrating blockchain, TensorFlow, Kafka, and other system components efficiently.
@@ -173,11 +173,11 @@ Sure! Below is an example Python script for training a TensorFlow model using mo
 import tensorflow as tf
 import numpy as np
 
-# Mock data for training the model
-X_train = np.random.rand(100, 5)  # Input features
-y_train = np.random.randint(0, 2, 100)  # Target labels (binary classification)
+## Mock data for training the model
+X_train = np.random.rand(100, 5)  ## Input features
+y_train = np.random.randint(0, 2, 100)  ## Target labels (binary classification)
 
-# Define and compile the TensorFlow model
+## Define and compile the TensorFlow model
 model = tf.keras.Sequential([
     tf.keras.layers.Dense(10, activation='relu', input_shape=(5,)),
     tf.keras.layers.Dense(1, activation='sigmoid')
@@ -185,10 +185,10 @@ model = tf.keras.Sequential([
 
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
-# Train the model
+## Train the model
 model.fit(X_train, y_train, epochs=10, batch_size=32)
 
-# Save the trained model
+## Save the trained model
 model.save('models/trained_model.h5')
 ```
 
@@ -206,25 +206,25 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 import numpy as np
 
-# Mock data for training the model
-X = np.random.rand(100, 10)  # Input features
-y = np.random.randint(0, 2, 100)  # Target labels (binary classification)
+## Mock data for training the model
+X = np.random.rand(100, 10)  ## Input features
+y = np.random.randint(0, 2, 100)  ## Target labels (binary classification)
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize and train the Random Forest Classifier
+## Initialize and train the Random Forest Classifier
 clf = RandomForestClassifier(n_estimators=100, random_state=42)
 clf.fit(X_train, y_train)
 
-# Make predictions on the test set
+## Make predictions on the test set
 y_pred = clf.predict(X_test)
 
-# Evaluate model performance
+## Evaluate model performance
 accuracy = accuracy_score(y_test, y_pred)
 print(f'Model accuracy: {accuracy}')
 
-# Save the trained model
+## Save the trained model
 import joblib
 joblib.dump(clf, 'models/random_forest_model.pkl')
 ```

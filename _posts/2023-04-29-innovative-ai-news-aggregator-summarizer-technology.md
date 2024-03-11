@@ -121,9 +121,9 @@ Explanation:
 Sure, here is an example of how a file that handles summarization logic with the Hugging Face transformer library might look like in Python. Let's say this file is located at `app/summarizers/summarizer_model.py`.
 
 ```python
-# Location: app/summarizers/summarizer_model.py
+## Location: app/summarizers/summarizer_model.py
 
-# Import necessary libraries
+## Import necessary libraries
 from transformers import pipeline
 
 class Summarizer:

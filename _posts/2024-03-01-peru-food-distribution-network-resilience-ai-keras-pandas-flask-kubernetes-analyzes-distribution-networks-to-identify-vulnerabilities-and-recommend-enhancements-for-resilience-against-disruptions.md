@@ -225,32 +225,32 @@ By structuring the deployment directory with these key files and configurations,
 #### File Path: models/model_training/train_model_mock_data.py
 
 ```python
-# models/model_training/train_model_mock_data.py
+## models/model_training/train_model_mock_data.py
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 
-# Load mock data for training (replace with actual data loading code)
+## Load mock data for training (replace with actual data loading code)
 mock_data_path = "data/processed_data/mock_data.csv"
 data = pd.read_csv(mock_data_path)
 
-# Preprocess data, split into features and target
+## Preprocess data, split into features and target
 X = data.drop('target_column', axis=1)
 y = data['target_column']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize and train a RandomForestClassifier (replace with your model)
+## Initialize and train a RandomForestClassifier (replace with your model)
 model = RandomForestClassifier()
 model.fit(X_train, y_train)
 
-# Predict on the test set
+## Predict on the test set
 y_pred = model.predict(X_test)
 
-# Evaluate the model
+## Evaluate the model
 accuracy = accuracy_score(y_test, y_pred)
 print(f"Model accuracy: {accuracy}")
 ```
@@ -264,32 +264,32 @@ By running this script, you can simulate the model training process using mock d
 #### File Path: models/machine_learning/complex_algorithm_mock_data.py
 
 ```python
-# models/machine_learning/complex_algorithm_mock_data.py
+## models/machine_learning/complex_algorithm_mock_data.py
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.metrics import classification_report
 
-# Load mock data for training (replace with actual data loading code)
+## Load mock data for training (replace with actual data loading code)
 mock_data_path = "data/processed_data/mock_data.csv"
 data = pd.read_csv(mock_data_path)
 
-# Preprocess data, split into features and target
+## Preprocess data, split into features and target
 X = data.drop('target_column', axis=1)
 y = data['target_column']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize and train a GradientBoostingClassifier (replace with your model)
+## Initialize and train a GradientBoostingClassifier (replace with your model)
 model = GradientBoostingClassifier()
 model.fit(X_train, y_train)
 
-# Predict on the test set
+## Predict on the test set
 y_pred = model.predict(X_test)
 
-# Evaluate the model
+## Evaluate the model
 report = classification_report(y_test, y_pred)
 print("Classification Report:")
 print(report)

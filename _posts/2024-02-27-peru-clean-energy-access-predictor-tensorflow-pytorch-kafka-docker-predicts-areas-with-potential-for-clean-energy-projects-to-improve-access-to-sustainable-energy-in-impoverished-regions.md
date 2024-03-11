@@ -231,38 +231,38 @@ deployment/
 By organizing deployment-related files and scripts in the `deployment/` directory, it simplifies the process of packaging and deploying the Peru Clean Energy Access Predictor application using Docker containers, ensuring scalability and consistency across different environments.
 
 ```python
-# File: models/tensorflow/tf_model_1/train_mock_data.py
+## File: models/tensorflow/tf_model_1/train_mock_data.py
 
 import pandas as pd
 import numpy as np
 import tensorflow as tf
 
-# Load mock training data
+## Load mock training data
 data_path = "../../data/processed_data/train_data.csv"
 train_data = pd.read_csv(data_path)
 
-# Prepare input features and target variable
+## Prepare input features and target variable
 X_train = train_data.drop(columns=["target_variable"])
 y_train = train_data["target_variable"]
 
-# Define TensorFlow model architecture
+## Define TensorFlow model architecture
 model = tf.keras.Sequential([
     tf.keras.layers.Dense(128, activation='relu', input_shape=(X_train.shape[1],)),
     tf.keras.layers.Dense(64, activation='relu'),
     tf.keras.layers.Dense(1, activation='sigmoid')
 ])
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
-# Train the model
+## Train the model
 model.fit(X_train, y_train, epochs=10, batch_size=32, validation_split=0.2)
 ```
 
 This Python script (`train_mock_data.py`) is located at `models/tensorflow/tf_model_1/train_mock_data.py` and is responsible for training a TensorFlow model on mock data stored in `data/processed_data/train_data.csv`. The script loads the mock data, prepares the input features and target variable, defines the model architecture, compiles the model, and trains it for 10 epochs. This file serves as a template for training the Peru Clean Energy Access Predictor model using TensorFlow with mock data.
 
 ```python
-# File: models/pytorch/pt_model_1/train_complex_algorithm_mock_data.py
+## File: models/pytorch/pt_model_1/train_complex_algorithm_mock_data.py
 
 import pandas as pd
 import numpy as np
@@ -270,15 +270,15 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 
-# Load mock training data
+## Load mock training data
 data_path = "../../data/processed_data/train_data.csv"
 train_data = pd.read_csv(data_path)
 
-# Prepare input features and target variable
+## Prepare input features and target variable
 X_train = torch.tensor(train_data.drop(columns=["target_variable"]).values, dtype=torch.float32)
 y_train = torch.tensor(train_data["target_variable"].values, dtype=torch.float32)
 
-# Define PyTorch model architecture
+## Define PyTorch model architecture
 class ComplexModel(nn.Module):
     def __init__(self):
         super(ComplexModel, self).__init__()
@@ -294,11 +294,11 @@ class ComplexModel(nn.Module):
 
 model = ComplexModel()
 
-# Define loss function and optimizer
+## Define loss function and optimizer
 criterion = nn.BCELoss()
 optimizer = optim.Adam(model.parameters(), lr=0.001)
 
-# Train the model
+## Train the model
 for epoch in range(10):
     optimizer.zero_grad()
     outputs = model(X_train)

@@ -59,41 +59,41 @@ By establishing a robust infrastructure encompassing these components, the Custo
 customer_support_chatbot/
 │
 ├── actions/
-│   ├── actions.py               # Custom action server for handling business logic
+│   ├── actions.py               ## Custom action server for handling business logic
 │   ├── __init__.py
 │
 ├── data/
-│   ├── nlu.md                   # Training data for NLU model
-│   ├── stories.md               # Training data for dialogue management model
-│   ├── rules.md                 # Training data for rule-based model (optional)
-│   ├── domain.yml               # Domain configuration
+│   ├── nlu.md                   ## Training data for NLU model
+│   ├── stories.md               ## Training data for dialogue management model
+│   ├── rules.md                 ## Training data for rule-based model (optional)
+│   ├── domain.yml               ## Domain configuration
 │
 ├── models/
-│   ├── <model_files>.tar.gz     # Trained models and related files
+│   ├── <model_files>.tar.gz     ## Trained models and related files
 │
 ├── config/
-│   ├── config.yml               # Rasa configuration file
+│   ├── config.yml               ## Rasa configuration file
 │
 ├── credentials/
-│   ├── credentials.yml          # External service credentials (e.g., APIs, databases)
+│   ├── credentials.yml          ## External service credentials (e.g., APIs, databases)
 │
 ├── tests/
-│   ├── test_nlu.md              # Test data for evaluating NLU model
-│   ├── test_stories.md          # Test data for evaluating dialogue management model
+│   ├── test_nlu.md              ## Test data for evaluating NLU model
+│   ├── test_stories.md          ## Test data for evaluating dialogue management model
 │   ├── __init__.py
 │
 ├── docker/
-│   ├── Dockerfile               # Containerization configuration
+│   ├── Dockerfile               ## Containerization configuration
 │
 ├── scripts/
-│   ├── train_model.py           # Script for training and evaluating models
-│   ├── run_server.py            # Script for running the Rasa server
-│   ├── Dockerfile               # Containerization configuration
+│   ├── train_model.py           ## Script for training and evaluating models
+│   ├── run_server.py            ## Script for running the Rasa server
+│   ├── Dockerfile               ## Containerization configuration
 │
-├── README.md                    # Project documentation
-├── requirements.txt             # Python dependencies
-├── .gitignore                   # Git ignore file
-├── .dockerignore                # Docker ignore file
+├── README.md                    ## Project documentation
+├── requirements.txt             ## Python dependencies
+├── .gitignore                   ## Git ignore file
+├── .dockerignore                ## Docker ignore file
 ```
 
 In this scalable file structure for the Customer Support Chatbot using Rasa, the codebase is organized into logical components and follows best practices for modularity and maintainability. Each directory serves a specific purpose, leading to a coherent and manageable codebase. The structure also allows for scalable expansion and easy integration with version control systems and containerization.
@@ -101,7 +101,7 @@ In this scalable file structure for the Customer Support Chatbot using Rasa, the
 ```plaintext
 models/
 │
-├── <model_files>.tar.gz   # Trained models and related files
+├── <model_files>.tar.gz   ## Trained models and related files
 ```
 
 The `models` directory in the Customer Support Chatbot using Rasa repository stores the trained models and related files essential for the chatbot's functionality. Here's an expanded view of the files within the `models` directory:
@@ -117,19 +117,19 @@ It seems like in the initial file structure I provided, I missed including a spe
 deployment/
 │
 ├── scripts/
-│   ├── deploy.sh                 # Deployment script for deploying the Rasa application
-│   ├── start_server.sh           # Script for starting the Rasa server
-│   ├── stop_server.sh            # Script for stopping the Rasa server
-│   ├── restart_server.sh         # Script for restarting the Rasa server
+│   ├── deploy.sh                 ## Deployment script for deploying the Rasa application
+│   ├── start_server.sh           ## Script for starting the Rasa server
+│   ├── stop_server.sh            ## Script for stopping the Rasa server
+│   ├── restart_server.sh         ## Script for restarting the Rasa server
 │
 ├── config/
-│   ├── nginx.conf                # NGINX server configuration for reverse proxy (if applicable)
-│   ├── rasa_server_config.yml    # Configuration file for the Rasa server
+│   ├── nginx.conf                ## NGINX server configuration for reverse proxy (if applicable)
+│   ├── rasa_server_config.yml    ## Configuration file for the Rasa server
 │
 ├── docker/
-│   ├── docker-compose.yml        # Docker Compose configuration for orchestrating multi-container deployment
+│   ├── docker-compose.yml        ## Docker Compose configuration for orchestrating multi-container deployment
 │
-├── .env                         # Environment variables file for setting deployment configurations
+├── .env                         ## Environment variables file for setting deployment configurations
 ```
 
 In a real-world scenario, the `deployment` directory would contain scripts, configuration files, and potentially Docker-related files to facilitate the deployment and management of the Rasa chatbot in a production environment. These files help in setting up the necessary infrastructure, orchestrating the deployment, and managing the running instances of the chatbot application.
@@ -145,23 +145,23 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
 def train_and_evaluate_model(data_file_path):
-    # Load mock data
+    ## Load mock data
     data = pd.read_csv(data_file_path)
 
-    # Preprocess data (feature engineering, handling missing values, encoding categorical variables, etc.)
+    ## Preprocess data (feature engineering, handling missing values, encoding categorical variables, etc.)
 
-    # Split data into features and target variable
+    ## Split data into features and target variable
     X = data.drop('target_column', axis=1)
     y = data['target_column']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize and train the machine learning model
+    ## Initialize and train the machine learning model
     model = RandomForestClassifier(n_estimators=100, random_state=42)
     model.fit(X_train, y_train)
 
-    # Evaluate the model
+    ## Evaluate the model
     y_pred = model.predict(X_test)
     accuracy = accuracy_score(y_test, y_pred)
 
@@ -195,23 +195,23 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
 def train_and_evaluate_model(data_file_path, target_column):
-    # Load mock data
+    ## Load mock data
     data = pd.read_csv(data_file_path)
 
-    # Preprocess data (feature engineering, handling missing values, encoding categorical variables, etc.)
+    ## Preprocess data (feature engineering, handling missing values, encoding categorical variables, etc.)
 
-    # Split data into features and target variable
+    ## Split data into features and target variable
     X = data.drop(target_column, axis=1)
     y = data[target_column]
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize and train the machine learning model
+    ## Initialize and train the machine learning model
     model = RandomForestClassifier(n_estimators=100, random_state=42)
     model.fit(X_train, y_train)
 
-    # Evaluate the model
+    ## Evaluate the model
     y_pred = model.predict(X_test)
     accuracy = accuracy_score(y_test, y_pred)
 

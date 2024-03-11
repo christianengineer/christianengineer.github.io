@@ -190,7 +190,7 @@ As deployment typically involves more than just code files, the following direct
 By organizing deployment resources in a structured manner, the deployment pipeline for the Peru Remote Work Opportunity Connector can be streamlined, making it easier to manage, scale, and monitor the application in a production environment effectively.
 
 ```python
-# File Path: app/training/train_model.py
+## File Path: app/training/train_model.py
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -198,29 +198,29 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 import joblib
 
-# Load mock dataset
+## Load mock dataset
 data_path = '../data/mock_data.csv'
 data = pd.read_csv(data_path)
 
-# Feature engineering
+## Feature engineering
 X = data.drop('target', axis=1)
 y = data['target']
 
-# Split dataset into training and testing sets
+## Split dataset into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Train a Random Forest classifier
+## Train a Random Forest classifier
 rf_classifier = RandomForestClassifier()
 rf_classifier.fit(X_train, y_train)
 
-# Make predictions on the test set
+## Make predictions on the test set
 y_pred = rf_classifier.predict(X_test)
 
-# Evaluate model accuracy
+## Evaluate model accuracy
 accuracy = accuracy_score(y_test, y_pred)
 print(f'Model Accuracy: {accuracy}')
 
-# Save the trained model
+## Save the trained model
 model_path = '../models/random_forest_model.pkl'
 joblib.dump(rf_classifier, model_path)
 ```
@@ -232,7 +232,7 @@ In this Python script, we train a Random Forest classifier using mock data to de
 This file can be run to train and save the model for matching low-income individuals with remote work opportunities based on their skills and availability.
 
 ```python
-# File Path: app/models/complex_ml_algorithm.py
+## File Path: app/models/complex_ml_algorithm.py
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -240,29 +240,29 @@ from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.metrics import accuracy_score
 import joblib
 
-# Load mock dataset
+## Load mock dataset
 data_path = '../data/mock_data.csv'
 data = pd.read_csv(data_path)
 
-# Feature engineering
+## Feature engineering
 X = data.drop('target', axis=1)
 y = data['target']
 
-# Split dataset into training and testing sets
+## Split dataset into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Train a Gradient Boosting classifier
+## Train a Gradient Boosting classifier
 gb_classifier = GradientBoostingClassifier()
 gb_classifier.fit(X_train, y_train)
 
-# Make predictions on the test set
+## Make predictions on the test set
 y_pred = gb_classifier.predict(X_test)
 
-# Evaluate model accuracy
+## Evaluate model accuracy
 accuracy = accuracy_score(y_test, y_pred)
 print(f'Model Accuracy: {accuracy}')
 
-# Save the trained model
+## Save the trained model
 model_path = '../models/gradient_boosting_model.pkl'
 joblib.dump(gb_classifier, model_path)
 ```

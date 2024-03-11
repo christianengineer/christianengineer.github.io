@@ -5,20 +5,20 @@ permalink: posts/understanding-microservices-architecture-guide
 layout: article
 ---
 
-# Microservices Architecture: A Comprehensive Guide
+## Microservices Architecture: A Comprehensive Guide
 
 In the realm of software engineering, the need for simplifying the management of applications while promoting their scaling and agility has led to the rise of Microservices Architecture. This architectural style, often shortened to Microservices, is known for its ability to structure an application as a collection of small, loosely-coupled services.
 
 ## Table of Contents
 
-1. [What is Microservices Architecture?](#section1)
-2. [Key Features of Microservices](#section2)
-3. [Advantages of Microservices](#section3)
-4. [Disadvantages of Microservices](#section4)
-5. [Key Components of Microservices Architecture](#section5)
-6. [Principles of Microservices](#section6)
-7. [Where to Use Microservices?](#section7)
-8. [Conclusion](#section8)
+1. [What is Microservices Architecture?](## ection1)
+2. [Key Features of Microservices](## ection2)
+3. [Advantages of Microservices](## ection3)
+4. [Disadvantages of Microservices](## ection4)
+5. [Key Components of Microservices Architecture](## ection5)
+6. [Principles of Microservices](## ection6)
+7. [Where to Use Microservices?](## ection7)
+8. [Conclusion](## ection8)
 
 <a name="section1"></a>
 

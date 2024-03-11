@@ -5,7 +5,7 @@ permalink: posts/enhancing-industrial-productivity-with-ai-powered-predictive-ma
 layout: article
 ---
 
-# Predictive Maintenance Tool for Manufacturing Repository
+## Predictive Maintenance Tool for Manufacturing Repository
 
 ## Description
 
@@ -36,7 +36,7 @@ To achieve efficient data handling, accurate predictions, and scalable user traf
 With commitment to continued enhancement, this Predictive Maintenance Tool aims to be among the leading predictive maintenance solutions, offering advanced and accurate machinery monitoring and evaluation tools to manufacturers.
 
 ```markdown
-# Predictive Maintenance Tool for Manufacturing Repository
+## Predictive Maintenance Tool for Manufacturing Repository
 ```
 
 - **Predictive-Maintenance-Tool-for-Manufacturing**
@@ -87,14 +87,14 @@ With commitment to continued enhancement, this Predictive Maintenance Tool aims 
 ```
 
 ````markdown
-# Predictive Maintenance Tool for Manufacturing
+## Predictive Maintenance Tool for Manufacturing
 
 ## File Structure
 
 This is a demonstration of a fictitious Python file that would handle the logic for the Predictive Maintenance Tool. The filename is `predictiveModel.py` under the folder `src/analysis`.
 
 ```python
-# src/analysis/predictiveModel.py
+## src/analysis/predictiveModel.py
 
 import pandas as pd
 import numpy as np
@@ -111,21 +111,21 @@ class PredictiveModel:
 
     def preprocess(self):
         """Preprocessing steps like cleaning and transforming go here."""
-        # For instance, fill missing values
+        ## For instance, fill missing values
         self.df = self.df.fillna(method='ffill')
 
     def train(self):
         """Split the data and train the model."""
-        # Split the data
+        ## Split the data
         X = self.df.drop('target_variable', axis=1)
         y = self.df['target_variable']
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
 
-        # Train the model
+        ## Train the model
         self.model = RandomForestRegressor(n_estimators=100, random_state=42)
         self.model.fit(X_train, y_train)
 
-        # Make predictions and calculate accuracy
+        ## Make predictions and calculate accuracy
         y_pred = self.model.predict(X_test)
         accuracy = metrics.accuracy_score(y_test, y_pred)
         print(f'Model Accuracy: {accuracy}')

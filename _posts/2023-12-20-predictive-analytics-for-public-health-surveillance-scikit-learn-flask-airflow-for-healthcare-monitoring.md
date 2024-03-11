@@ -66,36 +66,36 @@ By integrating these MLOps practices and infrastructure components, the Predicti
 predictive_analytics_public_health_surveillance/
 │
 ├── data_processing/
-│   ├── data_ingestion/              # Scripts for collecting and ingesting health data
-│   ├── data_storage/                # Configuration for data lakes and catalogs
-│   └── feature_engineering/         # Code for feature extraction and transformation
+│   ├── data_ingestion/              ## Scripts for collecting and ingesting health data
+│   ├── data_storage/                ## Configuration for data lakes and catalogs
+│   └── feature_engineering/         ## Code for feature extraction and transformation
 │
 ├── model_training/
-│   ├── model_development/           # Jupyter notebooks or scripts for Scikit-Learn model development
-│   ├── hyperparameter_optimization/ # Configuration and scripts for hyperparameter optimization
-│   └── model_evaluation/            # Scripts for evaluating model performance and selection
+│   ├── model_development/           ## Jupyter notebooks or scripts for Scikit-Learn model development
+│   ├── hyperparameter_optimization/ ## Configuration and scripts for hyperparameter optimization
+│   └── model_evaluation/            ## Scripts for evaluating model performance and selection
 │
 ├── model_deployment/
-│   ├── containerization/            # Dockerfiles for containerizing Flask APIs and Scikit-Learn models
-│   ├── kubernetes_deploy/           # Kubernetes deployment configurations
-│   ├── continuous_integration/      # CI/CD pipeline scripts and configurations
-│   ├── logging_monitoring/          # Logging and monitoring setup
-│   └── security_compliance/         # Scripts and configurations for data security and compliance
+│   ├── containerization/            ## Dockerfiles for containerizing Flask APIs and Scikit-Learn models
+│   ├── kubernetes_deploy/           ## Kubernetes deployment configurations
+│   ├── continuous_integration/      ## CI/CD pipeline scripts and configurations
+│   ├── logging_monitoring/          ## Logging and monitoring setup
+│   └── security_compliance/         ## Scripts and configurations for data security and compliance
 │
 ├── api/
-│   ├── real_time_api/               # Flask APIs for real-time access to predictive models
-│   ├── batch_processing_api/        # APIs for batch processing data
-│   └── api_tests/                   # Unit tests and integration tests for APIs
+│   ├── real_time_api/               ## Flask APIs for real-time access to predictive models
+│   ├── batch_processing_api/        ## APIs for batch processing data
+│   └── api_tests/                   ## Unit tests and integration tests for APIs
 │
 ├── documentation/
-│   ├── data_dictionary/             # Description of health data fields and metadata
-│   ├── model_documentation/         # Documentation for the developed machine learning models
-│   ├── system_architecture/         # Architecture diagrams and explanations
-│   └── user_guide/                  # User guide for using the system and APIs
+│   ├── data_dictionary/             ## Description of health data fields and metadata
+│   ├── model_documentation/         ## Documentation for the developed machine learning models
+│   ├── system_architecture/         ## Architecture diagrams and explanations
+│   └── user_guide/                  ## User guide for using the system and APIs
 │
 └── airflow/
-    ├── dags/                        # Airflow DAG files for orchestrating batch processing workflows
-    └── airflow_config/              # Configuration files for Airflow setup and scheduling
+    ├── dags/                        ## Airflow DAG files for orchestrating batch processing workflows
+    └── airflow_config/              ## Configuration files for Airflow setup and scheduling
 ```
 
 This file structure organizes the repository into logical sections, facilitating the development, deployment, and documentation of the Predictive Analytics for Public Health Surveillance application. Each directory contains specific components related to data processing, model training, deployment, API development, documentation, and orchestration using Apache Airflow. This structure promotes modularity, scalability, and ease of navigation for collaborators working on the project.
@@ -104,17 +104,17 @@ This file structure organizes the repository into logical sections, facilitating
 model_training/
 │
 ├── model_development/
-│   ├── decision_tree_model.py       # Script for training a decision tree model using Scikit-Learn
-│   ├── random_forest_model.py       # Script for training a random forest model using Scikit-Learn
-│   ├── svm_model.py                 # Script for training a support vector machine model using Scikit-Learn
-│   └── neural_network_model.py      # Script for training a neural network model using Scikit-Learn or TensorFlow
+│   ├── decision_tree_model.py       ## Script for training a decision tree model using Scikit-Learn
+│   ├── random_forest_model.py       ## Script for training a random forest model using Scikit-Learn
+│   ├── svm_model.py                 ## Script for training a support vector machine model using Scikit-Learn
+│   └── neural_network_model.py      ## Script for training a neural network model using Scikit-Learn or TensorFlow
 │
 ├── hyperparameter_optimization/
-│   └── hyperopt_config.json         # Configuration file for Hyperopt hyperparameter optimization
+│   └── hyperopt_config.json         ## Configuration file for Hyperopt hyperparameter optimization
 │
 └── model_evaluation/
-    ├── evaluate_model.py            # Script for evaluating model performance using various metrics
-    └── select_best_model.py          # Script for selecting the best-performing model based on evaluation results
+    ├── evaluate_model.py            ## Script for evaluating model performance using various metrics
+    └── select_best_model.py          ## Script for selecting the best-performing model based on evaluation results
 ```
 
 The `model_training` directory contains subdirectories and files related to the development, optimization, and evaluation of machine learning models for the Predictive Analytics for Public Health Surveillance application.
@@ -134,26 +134,26 @@ These files collectively support the iterative development, optimization, and ev
 model_deployment/
 │
 ├── containerization/
-│   ├── Dockerfile_api               # Dockerfile for containerizing the Flask APIs
-│   ├── Dockerfile_models            # Dockerfile for containerizing the Scikit-Learn models
-│   └── requirements.txt             # Python dependencies for creating the Docker containers
+│   ├── Dockerfile_api               ## Dockerfile for containerizing the Flask APIs
+│   ├── Dockerfile_models            ## Dockerfile for containerizing the Scikit-Learn models
+│   └── requirements.txt             ## Python dependencies for creating the Docker containers
 │
 ├── kubernetes_deploy/
-│   ├── deployment.yaml              # Kubernetes deployment configuration for the Flask APIs and models
-│   └── service.yaml                 # Kubernetes service configuration for exposing the APIs
+│   ├── deployment.yaml              ## Kubernetes deployment configuration for the Flask APIs and models
+│   └── service.yaml                 ## Kubernetes service configuration for exposing the APIs
 │
 ├── continuous_integration/
-│   ├── ci_pipeline_config.yml       # Configuration file for continuous integration pipeline (e.g., Jenkins, GitLab CI)
-│   └── tests_run_script.sh           # Script for running API and model tests in the CI pipeline
+│   ├── ci_pipeline_config.yml       ## Configuration file for continuous integration pipeline (e.g., Jenkins, GitLab CI)
+│   └── tests_run_script.sh           ## Script for running API and model tests in the CI pipeline
 │
 ├── logging_monitoring/
-│   ├── prometheus_config.yaml       # Configuration file for Prometheus monitoring setup
-│   └── grafana_dashboard.json       # Configuration file for Grafana dashboard to monitor the deployed models
+│   ├── prometheus_config.yaml       ## Configuration file for Prometheus monitoring setup
+│   └── grafana_dashboard.json       ## Configuration file for Grafana dashboard to monitor the deployed models
 │
 └── security_compliance/
-    ├── data_encryption_config.json  # Configuration for data encryption at rest and in transit
-    ├── access_control_config.yaml   # Configuration for role-based access control (RBAC)
-    └── compliance_checklist.md       # Checklist for ensuring regulatory compliance (e.g., HIPAA, GDPR)
+    ├── data_encryption_config.json  ## Configuration for data encryption at rest and in transit
+    ├── access_control_config.yaml   ## Configuration for role-based access control (RBAC)
+    └── compliance_checklist.md       ## Checklist for ensuring regulatory compliance (e.g., HIPAA, GDPR)
 ```
 
 The `model_deployment` directory encapsulates the various aspects of deploying machine learning models and Flask APIs for the Predictive Analytics for Public Health Surveillance application, with a focus on containerization, orchestration, continuous integration, logging, monitoring, and security compliance.
@@ -180,36 +180,36 @@ Certainly! Below is a hypothetical Python script for training a machine learning
 **File Path**: predictive_analytics_public_health_surveillance/model_training/model_development/training_script.py
 
 ```python
-# training_script.py
+## training_script.py
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, classification_report
 
-# Load mock health data
+## Load mock health data
 data_path = 'path_to_mock_health_data.csv'
 health_data = pd.read_csv(data_path)
 
-# Preprocessing and feature selection
+## Preprocessing and feature selection
 X = health_data.drop('target_column', axis=1)
 y = health_data['target_column']
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize and train the random forest classifier
+## Initialize and train the random forest classifier
 clf = RandomForestClassifier(n_estimators=100, random_state=42)
 clf.fit(X_train, y_train)
 
-# Make predictions on the test set
+## Make predictions on the test set
 y_pred = clf.predict(X_test)
 
-# Evaluate the model
+## Evaluate the model
 accuracy = accuracy_score(y_test, y_pred)
 print(f"Model Accuracy: {accuracy:.2f}")
 
-# Generate classification report
+## Generate classification report
 report = classification_report(y_test, y_pred)
 print("Classification Report:")
 print(report)
@@ -225,7 +225,7 @@ Certainly! Below is a hypothetical Python script for training a complex machine 
 **File Path**: predictive_analytics_public_health_surveillance/model_training/model_development/deep_learning_training_script.py
 
 ```python
-# deep_learning_training_script.py
+## deep_learning_training_script.py
 
 import pandas as pd
 import numpy as np
@@ -234,23 +234,23 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from tensorflow.keras import layers, models
 
-# Load mock health data
+## Load mock health data
 data_path = 'path_to_mock_health_data.csv'
 health_data = pd.read_csv(data_path)
 
-# Preprocessing and feature selection
+## Preprocessing and feature selection
 X = health_data.drop('target_column', axis=1)
 y = health_data['target_column']
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Feature scaling
+## Feature scaling
 scaler = StandardScaler()
 X_train_scaled = scaler.fit_transform(X_train)
 X_test_scaled = scaler.transform(X_test)
 
-# Build a deep learning model
+## Build a deep learning model
 model = models.Sequential([
     layers.Dense(128, activation='relu', input_shape=(X_train.shape[1],)),
     layers.Dropout(0.5),
@@ -259,13 +259,13 @@ model = models.Sequential([
     layers.Dense(1, activation='sigmoid')
 ])
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
-# Train the model
+## Train the model
 history = model.fit(X_train_scaled, y_train, epochs=50, batch_size=32, validation_data=(X_test_scaled, y_test), verbose=2)
 
-# Evaluate the model
+## Evaluate the model
 _, accuracy = model.evaluate(X_test_scaled, y_test, verbose=0)
 print(f'Model Accuracy: {accuracy:.2f}')
 ```

@@ -84,28 +84,28 @@ By designing the infrastructure with cloud services, data storage, machine learn
 sports-betting-odds-prediction/
 │
 ├── data/
-│   ├── raw/                  # Raw data from various sources
-│   ├── processed/            # Cleaned and preprocessed data
-│   ├── trained_models/       # Saved trained Keras models
+│   ├── raw/                  ## Raw data from various sources
+│   ├── processed/            ## Cleaned and preprocessed data
+│   ├── trained_models/       ## Saved trained Keras models
 │
-├── notebooks/                # Jupyter notebooks for exploratory data analysis and prototyping
+├── notebooks/                ## Jupyter notebooks for exploratory data analysis and prototyping
 │
 ├── src/
-│   ├── data_collection/      # Scripts for collecting data from betting markets and sports databases
-│   ├── data_preprocessing/   # Code for cleaning, preprocessing, and feature engineering
-│   ├── model/                # Keras model building and training scripts
-│   ├── api/                  # API implementation for serving predictions
-│   ├── utils/                # Utility functions and helper scripts
+│   ├── data_collection/      ## Scripts for collecting data from betting markets and sports databases
+│   ├── data_preprocessing/   ## Code for cleaning, preprocessing, and feature engineering
+│   ├── model/                ## Keras model building and training scripts
+│   ├── api/                  ## API implementation for serving predictions
+│   ├── utils/                ## Utility functions and helper scripts
 │
 ├── tests/
-│   ├── unit/                 # Unit tests for individual functions and modules
-│   ├── integration/          # Integration tests for end-to-end testing of components
+│   ├── unit/                 ## Unit tests for individual functions and modules
+│   ├── integration/          ## Integration tests for end-to-end testing of components
 │
-├── config/                   # Configuration files for model hyperparameters, API settings, etc.
+├── config/                   ## Configuration files for model hyperparameters, API settings, etc.
 │
-├── requirements.txt          # Python dependencies for the project
-├── README.md                 # Project documentation and instructions
-├── LICENSE                   # License information
+├── requirements.txt          ## Python dependencies for the project
+├── README.md                 ## Project documentation and instructions
+├── LICENSE                   ## License information
 ```
 
 In this scalable file structure for the Sports Betting Odds Prediction using Keras, the organization follows a modular approach to facilitate ease of development, testing, and maintenance. The structure separates data, code, notebooks, tests, and configuration, ensuring a clear separation of concerns. This makes it convenient for team members to collaborate and scale the project.
@@ -123,11 +123,11 @@ sports-betting-odds-prediction/
 │
 ├── src/
 │   ├── model/
-│   │   ├── __init__.py                # Initialization file for the model package
-│   │   ├── model_builder.py           # Script for building the Keras model architecture
-│   │   ├── model_trainer.py           # Script for training the Keras model
-│   │   ├── model_evaluator.py         # Script for evaluating the trained model
-│   │   ├── model_serving.py           # Script for serving predictions through API
+│   │   ├── __init__.py                ## Initialization file for the model package
+│   │   ├── model_builder.py           ## Script for building the Keras model architecture
+│   │   ├── model_trainer.py           ## Script for training the Keras model
+│   │   ├── model_evaluator.py         ## Script for evaluating the trained model
+│   │   ├── model_serving.py           ## Script for serving predictions through API
 ```
 
 ### Model Directory Files
@@ -157,12 +157,12 @@ sports-betting-odds-prediction/
 │
 ├── src/
 │   ├── deployment/
-│   │   ├── __init__.py               # Initialization file for the deployment package
-│   │   ├── prediction_api.py         # Script for setting up the prediction API
-│   │   ├── dockerfile                # Dockerfile for building the API container
-│   │   ├── requirements.txt          # Python dependencies for the API
+│   │   ├── __init__.py               ## Initialization file for the deployment package
+│   │   ├── prediction_api.py         ## Script for setting up the prediction API
+│   │   ├── dockerfile                ## Dockerfile for building the API container
+│   │   ├── requirements.txt          ## Python dependencies for the API
 │   │   ├── config/
-│   │       ├── api_config.yml        # Configuration file for API settings
+│   │       ├── api_config.yml        ## Configuration file for API settings
 ```
 
 ### Deployment Directory Files
@@ -200,35 +200,35 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
 def train_and_evaluate_model(data_file):
-    # Load mock data
+    ## Load mock data
     data = pd.read_csv(data_file)
 
-    # Preprocessing data
+    ## Preprocessing data
     X = data.drop('outcome', axis=1)
     y = data['outcome']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Feature scaling
+    ## Feature scaling
     scaler = StandardScaler()
     X_train = scaler.fit_transform(X_train)
     X_test = scaler.transform(X_test)
 
-    # Define the Keras model
+    ## Define the Keras model
     model = Sequential()
     model.add(Dense(64, input_dim=X.shape[1], activation='relu'))
     model.add(Dropout(0.5))
     model.add(Dense(32, activation='relu'))
     model.add(Dense(1, activation='sigmoid'))
 
-    # Compile the model
+    ## Compile the model
     model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y_test))
 
-    # Evaluate the model
+    ## Evaluate the model
     loss, accuracy = model.evaluate(X_test, y_test)
     print(f'Accuracy: {accuracy}')
 
@@ -256,41 +256,41 @@ from keras.models import Sequential
 from keras.layers import Dense, Dropout
 
 def train_and_evaluate_model(data_file):
-    # Load data from the CSV file
+    ## Load data from the CSV file
     data = pd.read_csv(data_file)
 
-    # Define features and target variable
+    ## Define features and target variable
     X = data[['feature1', 'feature2', 'feature3']]
     y = data['outcome']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Standardize the features
+    ## Standardize the features
     scaler = StandardScaler()
     X_train = scaler.fit_transform(X_train)
     X_test = scaler.transform(X_test)
 
-    # Build the Keras model
+    ## Build the Keras model
     model = Sequential()
     model.add(Dense(64, input_dim=X_train.shape[1], activation='relu'))
     model.add(Dropout(0.5))
     model.add(Dense(32, activation='relu'))
     model.add(Dense(1, activation='sigmoid'))
 
-    # Compile the model
+    ## Compile the model
     model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y_test))
 
-    # Evaluate the model
+    ## Evaluate the model
     loss, accuracy = model.evaluate(X_test, y_test)
     print(f'Test accuracy: {accuracy}')
 
     return model
 
-# Example usage
+## Example usage
 trained_model = train_and_evaluate_model('path_to_mock_data.csv')
 ```
 

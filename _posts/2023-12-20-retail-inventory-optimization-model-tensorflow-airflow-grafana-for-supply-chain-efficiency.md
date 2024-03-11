@@ -186,25 +186,25 @@ deployment/
 These files and scripts in the `deployment` directory are essential for orchestrating the deployment and monitoring of the Retail Inventory Optimization Model, integrating with the AI application's core components, such as TensorFlow for model serving, Airflow for workflow management, and Grafana for visualization and monitoring.
 
 ```python
-# File Path: tensorflow/models/demand_forecasting_model/train.py
+## File Path: tensorflow/models/demand_forecasting_model/train.py
 
 import pandas as pd
 import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras import layers
 
-# Load mock demand data
+## Load mock demand data
 data_path = 'data/processed/mock_demand_data.csv'
 demand_data = pd.read_csv(data_path)
 
-# Preprocess the data as needed
-# ...
+## Preprocess the data as needed
+## ...
 
-# Define input features and target variable
+## Define input features and target variable
 X = demand_data.drop(columns=['demand'])
 y = demand_data['demand']
 
-# Define and compile the model
+## Define and compile the model
 model = keras.Sequential([
     layers.Dense(64, activation='relu', input_shape=[len(X.columns)]),
     layers.Dense(64, activation='relu'),
@@ -213,30 +213,30 @@ model = keras.Sequential([
 
 model.compile(optimizer='adam', loss='mean_squared_error')
 
-# Train the model
+## Train the model
 model.fit(X, y, epochs=10, batch_size=32)
 ```
 
 ```python
-# File Path: tensorflow/models/replenishment_optimization_model/train.py
+## File Path: tensorflow/models/replenishment_optimization_model/train.py
 
 import pandas as pd
 import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras import layers
 
-# Load mock inventory data
+## Load mock inventory data
 data_path = 'data/processed/mock_inventory_data.csv'
 inventory_data = pd.read_csv(data_path)
 
-# Preprocess the data as needed
-# ...
+## Preprocess the data as needed
+## ...
 
-# Define input features and target variable
+## Define input features and target variable
 X = inventory_data.drop(columns=['replenishment_quantity'])
 y = inventory_data['replenishment_quantity']
 
-# Define a more complex model architecture
+## Define a more complex model architecture
 model = keras.Sequential([
     layers.Dense(128, activation='relu', input_shape=[len(X.columns)]),
     layers.Dense(256, activation='relu'),
@@ -244,13 +244,13 @@ model = keras.Sequential([
     layers.Dense(1)
 ])
 
-# Define a custom loss function or metric if necessary
-# ...
+## Define a custom loss function or metric if necessary
+## ...
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam', loss='mean_squared_error')
 
-# Train the model
+## Train the model
 model.fit(X, y, epochs=20, batch_size=64)
 ```
 

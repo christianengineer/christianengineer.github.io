@@ -172,28 +172,28 @@ The deployment directory organizes the Kubernetes deployment and service configu
 Certainly! Below is an example of a Python training script for a voice recognition model using TensorFlow, integrated with mock data. The file is named `train.py` and is located in the `voice-recognition` directory within the `tensorflow-models` directory.
 
 ```python
-# File path: tensorflow-models/voice-recognition/train.py
+## File path: tensorflow-models/voice-recognition/train.py
 
 import tensorflow as tf
 import numpy as np
 
-# Load mock audio data (replace with actual data loading code)
+## Load mock audio data (replace with actual data loading code)
 def load_mock_data():
-    # Generate mock audio spectrograms and labels
-    mock_spectrograms = np.random.rand(100, 128, 128, 3)  # Example mock spectrograms
-    mock_labels = np.random.randint(0, 2, size=(100,))  # Example mock labels (binary classification)
+    ## Generate mock audio spectrograms and labels
+    mock_spectrograms = np.random.rand(100, 128, 128, 3)  ## Example mock spectrograms
+    mock_labels = np.random.randint(0, 2, size=(100,))  ## Example mock labels (binary classification)
 
     return mock_spectrograms, mock_labels
 
-# Define the voice recognition model architecture
+## Define the voice recognition model architecture
 def build_voice_recognition_model():
     model = tf.keras.models.Sequential([
-        # Define model layers
+        ## Define model layers
         tf.keras.layers.Conv2D(32, (3,3), activation='relu', input_shape=(128, 128, 3)),
         tf.keras.layers.MaxPooling2D(2, 2),
         tf.keras.layers.Flatten(),
         tf.keras.layers.Dense(128, activation='relu'),
-        tf.keras.layers.Dense(1, activation='sigmoid')  # Binary classification output
+        tf.keras.layers.Dense(1, activation='sigmoid')  ## Binary classification output
     ])
 
     model.compile(optimizer='adam',
@@ -202,10 +202,10 @@ def build_voice_recognition_model():
 
     return model
 
-# Load training data
+## Load training data
 spectrograms, labels = load_mock_data()
 
-# Build and train the voice recognition model
+## Build and train the voice recognition model
 voice_recognition_model = build_voice_recognition_model()
 voice_recognition_model.fit(spectrograms, labels, epochs=10, validation_split=0.2)
 ```
@@ -217,23 +217,23 @@ This file can be used as a starting point for training a voice recognition model
 Certainly! Below is an example of a Python training script for a complex machine learning algorithm used for sound classification, utilizing TensorFlow and mock data. The file is named `train.py` and is located in the `sound-classification` directory within the `tensorflow-models` directory.
 
 ```python
-# File path: tensorflow-models/sound-classification/train.py
+## File path: tensorflow-models/sound-classification/train.py
 
 import tensorflow as tf
 import numpy as np
 
-# Load mock audio data (replace with actual data loading code)
+## Load mock audio data (replace with actual data loading code)
 def load_mock_data():
-    # Generate mock audio spectrograms and multi-class labels
-    mock_spectrograms = np.random.rand(100, 128, 128, 3)  # Example mock spectrograms
-    mock_labels = np.random.randint(0, 10, size=(100,))  # Example multi-class mock labels
+    ## Generate mock audio spectrograms and multi-class labels
+    mock_spectrograms = np.random.rand(100, 128, 128, 3)  ## Example mock spectrograms
+    mock_labels = np.random.randint(0, 10, size=(100,))  ## Example multi-class mock labels
 
     return mock_spectrograms, mock_labels
 
-# Define the sound classification model architecture
+## Define the sound classification model architecture
 def build_sound_classification_model():
     model = tf.keras.models.Sequential([
-        # Convolutional and pooling layers
+        ## Convolutional and pooling layers
         tf.keras.layers.Conv2D(32, (3, 3), activation='relu', input_shape=(128, 128, 3)),
         tf.keras.layers.MaxPooling2D((2, 2)),
         tf.keras.layers.Conv2D(64, (3, 3), activation='relu'),
@@ -244,7 +244,7 @@ def build_sound_classification_model():
         tf.keras.layers.MaxPooling2D((2, 2)),
         tf.keras.layers.Flatten(),
         tf.keras.layers.Dense(512, activation='relu'),
-        tf.keras.layers.Dense(10, activation='softmax')  # Multi-class classification output
+        tf.keras.layers.Dense(10, activation='softmax')  ## Multi-class classification output
     ])
 
     model.compile(optimizer='adam',
@@ -253,12 +253,12 @@ def build_sound_classification_model():
 
     return model
 
-# Load training data
+## Load training data
 spectrograms, labels = load_mock_data()
 
-# Preprocess the data (e.g., normalization, augmentation)
+## Preprocess the data (e.g., normalization, augmentation)
 
-# Build and train the sound classification model
+## Build and train the sound classification model
 sound_classification_model = build_sound_classification_model()
 sound_classification_model.fit(spectrograms, labels, epochs=20, validation_split=0.2)
 ```

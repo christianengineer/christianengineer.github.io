@@ -5,7 +5,7 @@ permalink: posts/ai-driven-code-review-tool-design-future-scalable-cloud-machine
 layout: article
 ---
 
-# Title of the Project: Designing the Future - A Blueprint for an Innovative, Scalable, AI-Driven Code Review Tool
+## Title of the Project: Designing the Future - A Blueprint for an Innovative, Scalable, AI-Driven Code Review Tool
 
 ## I. Design Phase
 

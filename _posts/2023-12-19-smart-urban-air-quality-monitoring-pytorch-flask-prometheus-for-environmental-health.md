@@ -179,20 +179,20 @@ deployment/
 These files in the **deployment/** directory align with the application’s deployment aspect, encompassing the Flask web service for real-time air quality monitoring and the configuration file for Prometheus, a crucial component for monitoring the AI Smart Urban Air Quality Monitoring system's performance and health.
 
 ```python
-# src/model_training/pytorch/train_model.py
+## src/model_training/pytorch/train_model.py
 import torch
 import torch.nn as nn
 import torch.optim as optim
 import numpy as np
 import pandas as pd
 
-# Load mock data for training
+## Load mock data for training
 data = pd.read_csv('path_to_mock_data.csv')
 
-# Prepare the data for training
-# ... (data preprocessing and feature engineering steps)
+## Prepare the data for training
+## ... (data preprocessing and feature engineering steps)
 
-# Define the PyTorch model
+## Define the PyTorch model
 class AirQualityModel(nn.Module):
     def __init__(self, input_dim, hidden_dim, output_dim):
         super(AirQualityModel, self).__init__()
@@ -204,19 +204,19 @@ class AirQualityModel(nn.Module):
         x = self.output(x)
         return x
 
-# Define the model parameters
-input_dim = 5  # Example input dimensions
-hidden_dim = 10  # Example hidden layer dimensions
-output_dim = 1  # Example output dimensions
+## Define the model parameters
+input_dim = 5  ## Example input dimensions
+hidden_dim = 10  ## Example hidden layer dimensions
+output_dim = 1  ## Example output dimensions
 
-# Initialize the model
+## Initialize the model
 model = AirQualityModel(input_dim, hidden_dim, output_dim)
 
-# Define loss function and optimizer
+## Define loss function and optimizer
 criterion = nn.MSELoss()
 optimizer = optim.SGD(model.parameters(), lr=0.01)
 
-# Training the model
+## Training the model
 for epoch in range(100):
     inputs = torch.tensor(data[['feature1', 'feature2', 'feature3', 'feature4', 'feature5']].values, dtype=torch.float32)
     labels = torch.tensor(data['target'].values, dtype=torch.float32)
@@ -227,7 +227,7 @@ for epoch in range(100):
     loss.backward()
     optimizer.step()
 
-# Save the trained PyTorch model
+## Save the trained PyTorch model
 torch.save(model.state_dict(), 'models/pytorch/trained_model.pth')
 ```
 
@@ -244,20 +244,20 @@ The script performs the following tasks:
 The file demonstrates the process of training a PyTorch model for air quality prediction and serves as a foundational piece for the Smart Urban Air Quality Monitoring application's machine learning components.
 
 ```python
-# src/model_training/pytorch/complex_model.py
+## src/model_training/pytorch/complex_model.py
 import torch
 import torch.nn as nn
 import torch.optim as optim
 import numpy as np
 import pandas as pd
 
-# Load mock data for training
+## Load mock data for training
 data = pd.read_csv('path_to_mock_data.csv')
 
-# Perform data preprocessing and feature engineering
-# ... (data preprocessing and feature engineering steps)
+## Perform data preprocessing and feature engineering
+## ... (data preprocessing and feature engineering steps)
 
-# Define a complex PyTorch model
+## Define a complex PyTorch model
 class ComplexAirQualityModel(nn.Module):
     def __init__(self, input_dim, hidden_dim, output_dim):
         super(ComplexAirQualityModel, self).__init__()
@@ -276,19 +276,19 @@ class ComplexAirQualityModel(nn.Module):
         x = self.output(x)
         return x
 
-# Define the model parameters
-input_dim = 10  # Example input dimensions
-hidden_dim = 64  # Example hidden layer dimensions
-output_dim = 1  # Example output dimensions
+## Define the model parameters
+input_dim = 10  ## Example input dimensions
+hidden_dim = 64  ## Example hidden layer dimensions
+output_dim = 1  ## Example output dimensions
 
-# Initialize the complex model
+## Initialize the complex model
 model = ComplexAirQualityModel(input_dim, hidden_dim, output_dim)
 
-# Define loss function and optimizer
+## Define loss function and optimizer
 criterion = nn.MSELoss()
 optimizer = optim.Adam(model.parameters(), lr=0.001)
 
-# Training the complex model
+## Training the complex model
 for epoch in range(100):
     inputs = torch.tensor(data[['feature1', 'feature2', 'feature3', 'feature4', 'feature5', 'feature6', 'feature7', 'feature8', 'feature9', 'feature10']].values, dtype=torch.float32)
     labels = torch.tensor(data['target'].values, dtype=torch.float32)
@@ -299,7 +299,7 @@ for epoch in range(100):
     loss.backward()
     optimizer.step()
 
-# Save the trained complex PyTorch model
+## Save the trained complex PyTorch model
 torch.save(model.state_dict(), 'models/pytorch/complex_model.pth')
 ```
 

@@ -75,32 +75,32 @@ educational-podcast-compressor/
 ├── app/
 │   ├── api/ 
 │   │   ├── controllers/
-│   │   │   ├── compression_controller.py    # Flask controllers for compression requests
-│   │   │   ├── health_controller.py         # Flask controller for health check endpoint
+│   │   │   ├── compression_controller.py    ## Flask controllers for compression requests
+│   │   │   ├── health_controller.py         ## Flask controller for health check endpoint
 │   │   ├── models/
-│   │   │   ├── compression_model.py         # Machine learning model for compression optimization
+│   │   │   ├── compression_model.py         ## Machine learning model for compression optimization
 │   ├── services/
-│   │   ├── compression_service.py            # Service for processing compression tasks
-│   │   ├── rabbitmq_service.py               # Service for interacting with RabbitMQ
-│   │   ├── opus_codec_service.py             # Service for utilizing Opus Codec
+│   │   ├── compression_service.py            ## Service for processing compression tasks
+│   │   ├── rabbitmq_service.py               ## Service for interacting with RabbitMQ
+│   │   ├── opus_codec_service.py             ## Service for utilizing Opus Codec
 │
 ├── config/
-│   ├── app_config.py                         # Application configuration settings
-│   ├── model_config.py                       # Configuration settings for machine learning model
-│   ├── rabbitmq_config.py                    # RabbitMQ configuration settings
+│   ├── app_config.py                         ## Application configuration settings
+│   ├── model_config.py                       ## Configuration settings for machine learning model
+│   ├── rabbitmq_config.py                    ## RabbitMQ configuration settings
 │
 ├── data/
-│   ├── training_data/                        # Labeled podcast data for model training
+│   ├── training_data/                        ## Labeled podcast data for model training
 │
 ├── kubernetes/
-│   ├── deployment.yaml                       # Kubernetes deployment configuration
-│   ├── service.yaml                          # Kubernetes service configuration
+│   ├── deployment.yaml                       ## Kubernetes deployment configuration
+│   ├── service.yaml                          ## Kubernetes service configuration
 │
-├── Dockerfile                                # Docker configuration for containerization
+├── Dockerfile                                ## Docker configuration for containerization
 │
-├── requirements.txt                          # Python dependencies for the application
+├── requirements.txt                          ## Python dependencies for the application
 │
-├── README.md                                 # Project documentation
+├── README.md                                 ## Project documentation
 ```
 
 ### Directory Structure Overview:
@@ -128,10 +128,10 @@ This structured file layout ensures modularity, organization, and scalability fo
 ```
 models/
 │
-├── compression_model.py     # Machine learning model for compression optimization
-├── audio_processor.py        # Module for audio data preprocessing
-├── feature_extraction.py     # Module for extracting audio features
-├── data_loader.py            # Module for loading and preprocessing training data
+├── compression_model.py     ## Machine learning model for compression optimization
+├── audio_processor.py        ## Module for audio data preprocessing
+├── feature_extraction.py     ## Module for extracting audio features
+├── data_loader.py            ## Module for loading and preprocessing training data
 ```
 
 ### Models Directory Overview:
@@ -167,10 +167,10 @@ By organizing the models directory with these files, the Educational Podcast Com
 ```
 deployment/
 │
-├── Dockerfile                # Docker configuration for containerization
+├── Dockerfile                ## Docker configuration for containerization
 ├── kubernetes/
-│   ├── deployment.yaml       # Kubernetes deployment configuration
-│   ├── service.yaml          # Kubernetes service configuration
+│   ├── deployment.yaml       ## Kubernetes deployment configuration
+│   ├── service.yaml          ## Kubernetes service configuration
 ```
 
 ### Deployment Directory Overview:
@@ -194,29 +194,29 @@ deployment/
 By organizing the deployment directory with these files, the Educational Podcast Compressor establishes a structured approach to containerization and Kubernetes deployment. These configurations enable efficient deployment, scaling, and management of the application, ensuring smooth operation and optimal performance of the podcast compression system.
 
 ```python
-# File: train_model.py
-# Description: Script for training the machine learning model of the Educational Podcast Compressor using mock data.
+## File: train_model.py
+## Description: Script for training the machine learning model of the Educational Podcast Compressor using mock data.
 
 import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
 import joblib
 
-# Load mock training data (replace with actual data loading logic)
+## Load mock training data (replace with actual data loading logic)
 X, y = np.random.rand(100, 10), np.random.rand(100, 1)
 
-# Split the data into training and validation sets
+## Split the data into training and validation sets
 X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Define and train the machine learning model
+## Define and train the machine learning model
 model = RandomForestRegressor()
 model.fit(X_train, y_train)
 
-# Evaluate the model on the validation set
+## Evaluate the model on the validation set
 score = model.score(X_val, y_val)
 print(f"Model evaluation score: {score}")
 
-# Save the trained model to a file
+## Save the trained model to a file
 model_filepath = 'models/compression_model.pkl'
 joblib.dump(model, model_filepath)
 print(f"Trained model saved at: {model_filepath}")
@@ -229,29 +229,29 @@ print(f"Trained model saved at: {model_filepath}")
 This script demonstrates the training process of the machine learning model for the Educational Podcast Compressor using mock data. It loads random mock training data, splits it into training and validation sets, trains a RandomForestRegressor model, evaluates its performance, and saves the trained model to a file. Use this script as a starting point for training the compression optimization model with actual podcast data in a real-world scenario.
 
 ```python
-# File: complex_model.py
-# Description: Script implementing a complex machine learning algorithm for the Educational Podcast Compressor using mock data.
+## File: complex_model.py
+## Description: Script implementing a complex machine learning algorithm for the Educational Podcast Compressor using mock data.
 
 import numpy as np
 from sklearn.ensemble import GradientBoostingRegressor
 from sklearn.model_selection import train_test_split
 import joblib
 
-# Load mock training data (replace with actual data loading logic)
+## Load mock training data (replace with actual data loading logic)
 X, y = np.random.rand(100, 10), np.random.rand(100, 1)
 
-# Split the data into training and validation sets
+## Split the data into training and validation sets
 X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Define and train a complex machine learning algorithm
+## Define and train a complex machine learning algorithm
 model = GradientBoostingRegressor(n_estimators=100, learning_rate=0.1, max_depth=3)
 model.fit(X_train, y_train)
 
-# Evaluate the model on the validation set
+## Evaluate the model on the validation set
 score = model.score(X_val, y_val)
 print(f"Model evaluation score: {score}")
 
-# Save the trained complex model to a file
+## Save the trained complex model to a file
 model_filepath = 'models/complex_model.pkl'
 joblib.dump(model, model_filepath)
 print(f"Trained complex model saved at: {model_filepath}")

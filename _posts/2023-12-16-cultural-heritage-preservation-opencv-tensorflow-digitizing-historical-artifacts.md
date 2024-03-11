@@ -69,28 +69,28 @@ By implementing this MLOps infrastructure, the Cultural Heritage Preservation ap
 Cultural_Heritage_Preservation/
 │
 ├── data/
-│   ├── raw/                   # Raw historical artifacts data
-│   ├── processed/             # Processed data for model training
-│   └── models/                # Trained models and model artifacts
+│   ├── raw/                   ## Raw historical artifacts data
+│   ├── processed/             ## Processed data for model training
+│   └── models/                ## Trained models and model artifacts
 │
-├── notebooks/                 # Jupyter notebooks for data exploration, model development
+├── notebooks/                 ## Jupyter notebooks for data exploration, model development
 │
 ├── src/
-│   ├── data_processing/       # Scripts for data preprocessing and feature extraction
-│   ├── model_training/        # Scripts for training machine learning models (using TensorFlow)
-│   ├── model_evaluation/      # Scripts for evaluating model performance
-│   ├── model_deployment/      # Scripts for packaging and deploying models
-│   └── api/                   # API endpoint scripts for accessing the artifacts
+│   ├── data_processing/       ## Scripts for data preprocessing and feature extraction
+│   ├── model_training/        ## Scripts for training machine learning models (using TensorFlow)
+│   ├── model_evaluation/      ## Scripts for evaluating model performance
+│   ├── model_deployment/      ## Scripts for packaging and deploying models
+│   └── api/                   ## API endpoint scripts for accessing the artifacts
 │
 ├── config/
-│   ├── infrastructure/        # Infrastructure as Code (IaC) scripts for cloud resources
-│   └── deployment/            # Configuration files for model deployment
+│   ├── infrastructure/        ## Infrastructure as Code (IaC) scripts for cloud resources
+│   └── deployment/            ## Configuration files for model deployment
 │
-├── tests/                     # Unit tests and integration tests
+├── tests/                     ## Unit tests and integration tests
 │
-├── docs/                      # Documentation and project resources
+├── docs/                      ## Documentation and project resources
 │
-└── README.md                  # Project overview and usage guide
+└── README.md                  ## Project overview and usage guide
 ```
 
 In this scalable file structure for the Cultural Heritage Preservation repository, the organization is designed to support the development, training, deployment, and maintenance of AI models utilizing OpenCV and TensorFlow for digitizing historical artifacts.
@@ -112,19 +112,19 @@ The `models` directory in the Cultural Heritage Preservation repository houses t
 models/
 │
 ├── artifact_classification/
-│   ├── model.pb              # Serialized model file for artifact classification
-│   ├── model_checkpoint       # Checkpoint files for the trained model
-│   └── metadata.json         # Metadata for the trained artifact classification model
+│   ├── model.pb              ## Serialized model file for artifact classification
+│   ├── model_checkpoint       ## Checkpoint files for the trained model
+│   └── metadata.json         ## Metadata for the trained artifact classification model
 │
 ├── text_extraction/
-│   ├── model.h5              # Saved model file for text extraction
-│   ├── tokenizer.pickle      # Serialized tokenizer for text pre-processing
-│   └── metadata.json         # Metadata for the trained text extraction model
+│   ├── model.h5              ## Saved model file for text extraction
+│   ├── tokenizer.pickle      ## Serialized tokenizer for text pre-processing
+│   └── metadata.json         ## Metadata for the trained text extraction model
 │
 └── object_detection/
-    ├── frozen_inference_graph.pb  # Frozen graph for object detection
-    ├── label_map.pbtxt        # File mapping class indices to class names
-    └── metadata.json          # Metadata for the trained object detection model
+    ├── frozen_inference_graph.pb  ## Frozen graph for object detection
+    ├── label_map.pbtxt        ## File mapping class indices to class names
+    └── metadata.json          ## Metadata for the trained object detection model
 ```
 
 1. **artifact_classification/**: Subdirectory containing the artifacts related to the model for artifact classification.
@@ -152,19 +152,19 @@ The `deployment` directory within the Cultural Heritage Preservation repository 
 deployment/
 │
 ├── artifact_classification/
-│   ├── deployment_config.yaml       # Configuration file for deploying artifact classification model
-│   ├── requirements.txt              # Python dependencies for artifact classification deployment
-│   └── run_artifact_classification_server.py  # Script to run artifact classification model server
+│   ├── deployment_config.yaml       ## Configuration file for deploying artifact classification model
+│   ├── requirements.txt              ## Python dependencies for artifact classification deployment
+│   └── run_artifact_classification_server.py  ## Script to run artifact classification model server
 │
 ├── text_extraction/
-│   ├── deployment_config.yaml       # Configuration file for deploying text extraction model
-│   ├── requirements.txt              # Python dependencies for text extraction deployment
-│   └── run_text_extraction_server.py  # Script to run text extraction model server
+│   ├── deployment_config.yaml       ## Configuration file for deploying text extraction model
+│   ├── requirements.txt              ## Python dependencies for text extraction deployment
+│   └── run_text_extraction_server.py  ## Script to run text extraction model server
 │
 └── object_detection/
-    ├── deployment_config.yaml       # Configuration file for deploying object detection model
-    ├── requirements.txt              # Python dependencies for object detection deployment
-    └── run_object_detection_server.py  # Script to run object detection model server
+    ├── deployment_config.yaml       ## Configuration file for deploying object detection model
+    ├── requirements.txt              ## Python dependencies for object detection deployment
+    └── run_object_detection_server.py  ## Script to run object detection model server
 ```
 
 1. **artifact_classification/**: Subdirectory containing deployment-related files for the artifact classification model.
@@ -193,11 +193,11 @@ Certainly! Below is an example of a Python script for training a model for artif
 import tensorflow as tf
 import numpy as np
 
-# Mock data for artifact classification training
-X_train = np.random.rand(100, 32, 32, 3)  # Example: Random images with shape 32x32x3
-y_train = np.random.randint(0, 5, size=100)  # Example: Random labels for artifact classes (0-4)
+## Mock data for artifact classification training
+X_train = np.random.rand(100, 32, 32, 3)  ## Example: Random images with shape 32x32x3
+y_train = np.random.randint(0, 5, size=100)  ## Example: Random labels for artifact classes (0-4)
 
-# Define and compile the model
+## Define and compile the model
 model = tf.keras.Sequential([
     tf.keras.layers.Conv2D(32, (3, 3), activation='relu', input_shape=(32, 32, 3)),
     tf.keras.layers.MaxPooling2D((2, 2)),
@@ -210,10 +210,10 @@ model.compile(optimizer='adam',
               loss='sparse_categorical_crossentropy',
               metrics=['accuracy'])
 
-# Train the model
+## Train the model
 model.fit(X_train, y_train, epochs=10)
 
-# Save the trained model
+## Save the trained model
 model.save('artifact_classification_model.h5')
 ```
 
@@ -231,11 +231,11 @@ import tensorflow as tf
 import numpy as np
 from tensorflow.keras import layers
 
-# Mock data for image classification training
-X_train = np.random.rand(100, 128, 128, 3)  # Example: Random images with shape 128x128x3
-y_train = np.random.randint(0, 5, size=100)  # Example: Random labels for artifact classes (0-4)
+## Mock data for image classification training
+X_train = np.random.rand(100, 128, 128, 3)  ## Example: Random images with shape 128x128x3
+y_train = np.random.randint(0, 5, size=100)  ## Example: Random labels for artifact classes (0-4)
 
-# Define and compile the complex CNN model
+## Define and compile the complex CNN model
 model = tf.keras.Sequential([
     layers.Conv2D(32, (3, 3), activation='relu', input_shape=(128, 128, 3)),
     layers.MaxPooling2D((2, 2)),
@@ -252,10 +252,10 @@ model.compile(optimizer='adam',
               loss='sparse_categorical_crossentropy',
               metrics=['accuracy'])
 
-# Train the complex CNN model
+## Train the complex CNN model
 model.fit(X_train, y_train, epochs=20)
 
-# Save the trained model
+## Save the trained model
 model.save('complex_artifact_classification_model.h5')
 ```
 

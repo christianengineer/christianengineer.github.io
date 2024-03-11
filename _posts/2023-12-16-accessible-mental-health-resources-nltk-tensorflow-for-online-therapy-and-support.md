@@ -265,32 +265,32 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.preprocessing.text import Tokenizer
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 
-# Mock data (replace with actual data)
+## Mock data (replace with actual data)
 texts = ["I feel so stressed out today", "Feeling great after the therapy session", "Anxious about the upcoming events", "The support group was really helpful"]
 
-# Mock labels (replace with actual labels)
-labels = [1, 0, 1, 0]  # 1 for positive sentiment, 0 for negative sentiment
+## Mock labels (replace with actual labels)
+labels = [1, 0, 1, 0]  ## 1 for positive sentiment, 0 for negative sentiment
 
-# Preprocessing the text data
+## Preprocessing the text data
 tokenizer = Tokenizer(num_words=1000, oov_token='<OOV>')
 tokenizer.fit_on_texts(texts)
 sequences = tokenizer.texts_to_sequences(texts)
 padded_sequences = pad_sequences(sequences, maxlen=100, padding='post')
 
-# Define the sentiment analysis model
+## Define the sentiment analysis model
 model = Sequential([
     Embedding(input_dim=1000, output_dim=16, input_length=100),
     LSTM(64),
     Dense(1, activation='sigmoid')
 ])
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
-# Train the model
+## Train the model
 model.fit(padded_sequences, labels, epochs=10, validation_split=0.2)
 
-# Save the trained model
+## Save the trained model
 model.save('models/trained/sentiment_analysis/model_v1')
 ```
 
@@ -307,19 +307,19 @@ from tensorflow.keras.layers import Input, Embedding, LSTM, Dense, Bidirectional
 from tensorflow.keras.models import Model
 import numpy as np
 
-# Mock data and labels (replace with actual data and labels)
+## Mock data and labels (replace with actual data and labels)
 num_users = 1000
 max_conversations_per_user = 50
 max_words_per_conversation = 100
 num_classes = 5
 
-# Generate mock conversation data
+## Generate mock conversation data
 conversation_data = np.random.randint(1000, size=(num_users, max_conversations_per_user, max_words_per_conversation))
 
-# Generate mock labels
+## Generate mock labels
 labels = np.random.randint(num_classes, size=(num_users,))
 
-# Define the hierarchical RNN model
+## Define the hierarchical RNN model
 input_layer = Input(shape=(max_conversations_per_user, max_words_per_conversation))
 word_embedding = TimeDistributed(Embedding(input_dim=10000, output_dim=100, input_length=max_words_per_conversation))(input_layer)
 conversation_encoder = TimeDistributed(LSTM(64))(word_embedding)
@@ -328,13 +328,13 @@ output_layer = Dense(num_classes, activation='softmax')(user_encoder)
 
 model = Model(inputs=input_layer, outputs=output_layer)
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
 
-# Train the model with mock data
+## Train the model with mock data
 model.fit(conversation_data, labels, epochs=10, validation_split=0.2)
 
-# Save the trained model
+## Save the trained model
 model.save('models/trained/hierarchical_rnn_model')
 ```
 

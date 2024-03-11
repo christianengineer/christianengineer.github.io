@@ -5,7 +5,7 @@ permalink: posts/agribot---ai-for-agriculture
 layout: article
 ---
 
-# AI AgriBot - AI for Agriculture Repository
+## AI AgriBot - AI for Agriculture Repository
 
 ## Objectives
 
@@ -72,7 +72,7 @@ Implement a comprehensive monitoring and logging system for tracking the perform
 
 By adopting this infrastructure design, we aim to build a robust, scalable, and efficient AI application for agriculture that can handle the computational demands of real-time data processing, deep learning inference, and high-throughput computing tasks.
 
-# AgriBot - AI for Agriculture Repository File Structure
+## AgriBot - AI for Agriculture Repository File Structure
 
 ```plaintext
 .
@@ -263,36 +263,36 @@ def train_crop_yield_prediction_model(data_file_path):
     RandomForestRegressor: Trained crop yield prediction model.
     """
 
-    # Load the agricultural data from the CSV file
+    ## Load the agricultural data from the CSV file
     data = pd.read_csv(data_file_path)
 
-    # Preprocess the data (feature engineering, data cleaning, etc.)
-    # For example, perform feature scaling, handle missing values, encode categorical variables, etc.
+    ## Preprocess the data (feature engineering, data cleaning, etc.)
+    ## For example, perform feature scaling, handle missing values, encode categorical variables, etc.
 
-    # Split the data into features (X) and target variable (y)
-    X = data.drop('yield', axis=1)  # Assuming 'yield' is the target variable
+    ## Split the data into features (X) and target variable (y)
+    X = data.drop('yield', axis=1)  ## Assuming 'yield' is the target variable
     y = data['yield']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize the Random Forest Regressor model
+    ## Initialize the Random Forest Regressor model
     model = RandomForestRegressor(n_estimators=100, random_state=42)
 
-    # Train the model on the training data
+    ## Train the model on the training data
     model.fit(X_train, y_train)
 
-    # Predict the crop yield using the trained model
+    ## Predict the crop yield using the trained model
     y_pred = model.predict(X_test)
 
-    # Evaluate the model
+    ## Evaluate the model
     mse = mean_squared_error(y_test, y_pred)
     print(f'Mean Squared Error: {mse}')
 
-    # Return the trained model
+    ## Return the trained model
     return model
 
-# Example usage
+## Example usage
 data_file_path = 'path_to_agricultural_data.csv'
 trained_model = train_crop_yield_prediction_model(data_file_path)
 ```
@@ -325,19 +325,19 @@ def train_crop_health_deep_learning_model(data_file_path):
     Sequential: Trained deep learning model for crop health assessment.
     """
 
-    # Load the agricultural data from the CSV file
+    ## Load the agricultural data from the CSV file
     data = pd.read_csv(data_file_path)
 
-    # Preprocess the data (e.g., scaling, handling missing values, encoding categorical variables)
+    ## Preprocess the data (e.g., scaling, handling missing values, encoding categorical variables)
 
-    # Split the data into features (X) and target variable (y)
-    X = data.drop('health_score', axis=1)  # Assuming 'health_score' is the target variable
+    ## Split the data into features (X) and target variable (y)
+    X = data.drop('health_score', axis=1)  ## Assuming 'health_score' is the target variable
     y = data['health_score']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize a deep learning model
+    ## Initialize a deep learning model
     model = Sequential([
         Dense(64, activation='relu', input_shape=(X.shape[1],)),
         Dropout(0.2),
@@ -346,16 +346,16 @@ def train_crop_health_deep_learning_model(data_file_path):
         Dense(1)
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer=Adam(learning_rate=0.001), loss=MeanSquaredError())
 
-    # Train the model on the training data
+    ## Train the model on the training data
     model.fit(X_train, y_train, epochs=50, batch_size=32, validation_data=(X_test, y_test))
 
-    # Return the trained deep learning model
+    ## Return the trained deep learning model
     return model
 
-# Example usage
+## Example usage
 data_file_path = 'path_to_agricultural_data.csv'
 trained_model = train_crop_health_deep_learning_model(data_file_path)
 ```

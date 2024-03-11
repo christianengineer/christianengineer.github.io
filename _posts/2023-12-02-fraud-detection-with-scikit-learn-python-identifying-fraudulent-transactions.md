@@ -185,28 +185,28 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report, accuracy_score
 
 def train_fraud_detection_model(data_file_path):
-    # Load the mock data from the specified file path
+    ## Load the mock data from the specified file path
     data = pd.read_csv(data_file_path)
     
-    # Assume that the data has already been preprocessed and engineered
+    ## Assume that the data has already been preprocessed and engineered
     
-    # Split the data into features and target variable (e.g., 'X' and 'y')
-    X = data.drop('target_variable', axis=1)  # Assuming 'target_variable' is the label for fraudulent transactions
+    ## Split the data into features and target variable (e.g., 'X' and 'y')
+    X = data.drop('target_variable', axis=1)  ## Assuming 'target_variable' is the label for fraudulent transactions
     y = data['target_variable']
     
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
     
-    # Initialize the Random Forest classifier (or any other complex ML algorithm)
+    ## Initialize the Random Forest classifier (or any other complex ML algorithm)
     model = RandomForestClassifier(n_estimators=100, random_state=42)
     
-    # Train the model on the training data
+    ## Train the model on the training data
     model.fit(X_train, y_train)
     
-    # Make predictions on the test data
+    ## Make predictions on the test data
     y_pred = model.predict(X_test)
     
-    # Evaluate the model performance
+    ## Evaluate the model performance
     accuracy = accuracy_score(y_test, y_pred)
     report = classification_report(y_test, y_pred)
     
@@ -231,28 +231,28 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report, accuracy_score
 
 def train_fraud_detection_model(data_file_path):
-    # Load the mock data from the specified file path
+    ## Load the mock data from the specified file path
     data = pd.read_csv(data_file_path)
     
-    # Assume that the data has already been preprocessed and engineered
+    ## Assume that the data has already been preprocessed and engineered
     
-    # Split the data into features and target variable (e.g., 'X' and 'y')
-    X = data.drop('target_variable', axis=1)  # Assuming 'target_variable' is the label for fraudulent transactions
+    ## Split the data into features and target variable (e.g., 'X' and 'y')
+    X = data.drop('target_variable', axis=1)  ## Assuming 'target_variable' is the label for fraudulent transactions
     y = data['target_variable']
     
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
     
-    # Initialize the Random Forest classifier (or any other complex ML algorithm)
+    ## Initialize the Random Forest classifier (or any other complex ML algorithm)
     model = RandomForestClassifier(n_estimators=100, random_state=42)
     
-    # Train the model on the training data
+    ## Train the model on the training data
     model.fit(X_train, y_train)
     
-    # Make predictions on the test data
+    ## Make predictions on the test data
     y_pred = model.predict(X_test)
     
-    # Evaluate the model performance
+    ## Evaluate the model performance
     accuracy = accuracy_score(y_test, y_pred)
     report = classification_report(y_test, y_pred)
     

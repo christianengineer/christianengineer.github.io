@@ -81,7 +81,7 @@ Building a robust MLOps infrastructure for the Cultural Awareness Educational Ap
 
 By incorporating these MLOps components into the infrastructure for the Cultural Awareness Educational Apps, the development, deployment, and management of machine learning features will be streamlined, ensuring scalability, reliability, and security while promoting diversity and inclusion through AI-driven educational experiences.
 
-# Scalable File Structure for Cultural Awareness Educational Apps Repository
+## Scalable File Structure for Cultural Awareness Educational Apps Repository
 
 Creating a scalable file structure is essential for organizing the code, assets, and resources effectively. The file structure should facilitate collaboration, maintainability, and scalability. Below is a suggested scalable file structure for the Cultural Awareness Educational Apps repository:
 
@@ -166,18 +166,18 @@ Cultural-Awareness-Educational-Apps/
 │
 ├── models/
 │   ├── user_preferences/
-│   │   ├── user_preferences_model.pth   # Serialized user preferences model
+│   │   ├── user_preferences_model.pth   ## Serialized user preferences model
 │   │   ├── user_preferences_training_data/
-│   │   │   ├── user_preferences_data.csv  # Training data for user preferences model
+│   │   │   ├── user_preferences_data.csv  ## Training data for user preferences model
 │   │   │   ├── ...
-│   │   └── user_preferences_model_documentation.md   # Model documentation
+│   │   └── user_preferences_model_documentation.md   ## Model documentation
 │   │
 │   └── content_personalization/
-│       ├── content_recommender_model.pb   # Serialized content recommender model
+│       ├── content_recommender_model.pb   ## Serialized content recommender model
 │       ├── content_recommender_training_data/
-│       │   ├── content_data.csv  # Training data for content recommender model
+│       │   ├── content_data.csv  ## Training data for content recommender model
 │       │   ├── ...
-│       └── content_recommender_model_documentation.md   # Model documentation
+│       └── content_recommender_model_documentation.md   ## Model documentation
 │
 └── ...
 ```
@@ -208,20 +208,20 @@ Cultural-Awareness-Educational-Apps/
 ├── deployment/
 │   ├── unity/
 │   │   ├── app_package/
-│   │   │   ├── app_build.exe  # Executable build of the Unity application
-│   │   │   ├── assets/  # Unity assets used in the application
+│   │   │   ├── app_build.exe  ## Executable build of the Unity application
+│   │   │   ├── assets/  ## Unity assets used in the application
 │   │   │   └── ...
 │   │   ├── deployment_config/
-│   │   │   ├── unity_cloud_config.yaml   # Configuration file for Unity Cloud deployment
+│   │   │   ├── unity_cloud_config.yaml   ## Configuration file for Unity Cloud deployment
 │   │   │   ├── ...
-│   │   └── release_notes.md   # Documentation of deployment release notes and version history
+│   │   └── release_notes.md   ## Documentation of deployment release notes and version history
 │   │
 │   └── tensorflow/
 │       ├── serving_config/
-│       │   ├── model_config.pbtxt   # Configuration file for TensorFlow Serving
+│       │   ├── model_config.pbtxt   ## Configuration file for TensorFlow Serving
 │       │   ├── ...
 │       └── deployment_scripts/
-│           ├── deploy_tf_serving.sh   # Script for deploying TensorFlow models with TensorFlow Serving
+│           ├── deploy_tf_serving.sh   ## Script for deploying TensorFlow models with TensorFlow Serving
 │           └── ...
 │
 └── ...
@@ -245,39 +245,39 @@ By maintaining the deployment configurations and files within the `deployment` d
 Certainly! Below is an example of a Python script file for training a mock user preferences model for the Cultural Awareness Educational Apps using TensorFlow. The script generates and trains a simple neural network model using mock data to showcase the training process.
 
 ```python
-# File Path: Cultural-Awareness-Educational-Apps/models/user_preferences/train_model.py
+## File Path: Cultural-Awareness-Educational-Apps/models/user_preferences/train_model.py
 
 import numpy as np
 import tensorflow as tf
 from tensorflow import keras
 from sklearn.model_selection import train_test_split
 
-# Generate mock user preferences data for training
+## Generate mock user preferences data for training
 num_samples = 1000
 num_features = 5
 
-X = np.random.rand(num_samples, num_features)  # Mock features
-y = np.random.randint(2, size=num_samples)     # Mock binary labels (e.g., 0 or 1)
+X = np.random.rand(num_samples, num_features)  ## Mock features
+y = np.random.randint(2, size=num_samples)     ## Mock binary labels (e.g., 0 or 1)
 
-# Split the data into training and validation sets
+## Split the data into training and validation sets
 X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Define a simple neural network model
+## Define a simple neural network model
 model = keras.Sequential([
     keras.layers.Dense(10, input_shape=(num_features,), activation='relu'),
     keras.layers.Dense(1, activation='sigmoid')
 ])
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
-# Train the model
+## Train the model
 history = model.fit(X_train, y_train, epochs=20, batch_size=32, validation_data=(X_val, y_val))
 
-# Serialize and save the trained model
+## Serialize and save the trained model
 model.save('user_preferences_model.h5')
 
-# Save the training history for analysis and visualization
+## Save the training history for analysis and visualization
 np.save('training_history.npy', history.history)
 ```
 
@@ -294,24 +294,24 @@ This script serves as a mock demonstration of training a user preferences model 
 Certainly! Below is an example of a Python script file for implementing a complex machine learning algorithm, such as a deep learning model using TensorFlow, for the Cultural Awareness Educational Apps. The script generates and trains a convolutional neural network (CNN) using mock image data to showcase the implementation of a sophisticated machine learning algorithm.
 
 ```python
-# File Path: Cultural-Awareness-Educational-Apps/models/content_personalization/train_cnn_model.py
+## File Path: Cultural-Awareness-Educational-Apps/models/content_personalization/train_cnn_model.py
 
 import numpy as np
 import tensorflow as tf
 from tensorflow.keras import layers, models
 from sklearn.model_selection import train_test_split
 
-# Generate mock image data for content personalization
+## Generate mock image data for content personalization
 num_samples = 1000
-img_height, img_width, num_channels = 64, 64, 3  # Mock image dimensions and channels
+img_height, img_width, num_channels = 64, 64, 3  ## Mock image dimensions and channels
 
-X = np.random.rand(num_samples, img_height, img_width, num_channels)  # Mock image data
-y = np.random.randint(2, size=num_samples)  # Mock binary labels (e.g., 0 or 1)
+X = np.random.rand(num_samples, img_height, img_width, num_channels)  ## Mock image data
+y = np.random.randint(2, size=num_samples)  ## Mock binary labels (e.g., 0 or 1)
 
-# Split the data into training and validation sets
+## Split the data into training and validation sets
 X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Create a convolutional neural network (CNN) model
+## Create a convolutional neural network (CNN) model
 model = models.Sequential([
     layers.Conv2D(32, (3, 3), activation='relu', input_shape=(img_height, img_width, num_channels)),
     layers.MaxPooling2D((2, 2)),
@@ -324,16 +324,16 @@ model = models.Sequential([
     layers.Dense(1, activation='sigmoid')
 ])
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
-# Train the model
+## Train the model
 history = model.fit(X_train, y_train, epochs=20, batch_size=32, validation_data=(X_val, y_val))
 
-# Serialize and save the trained model
+## Serialize and save the trained model
 model.save('content_personalization_cnn_model.h5')
 
-# Save the training history for analysis and visualization
+## Save the training history for analysis and visualization
 np.save('training_history_cnn.npy', history.history)
 ```
 

@@ -5,7 +5,7 @@ permalink: posts/ecoai-ai-in-sustainability-analytics
 layout: article
 ---
 
-# AI EcoAI in Sustainability Analytics Repository
+## AI EcoAI in Sustainability Analytics Repository
 
 ## Objectives
 The AI EcoAI in Sustainability Analytics repository aims to address challenges in sustainability by leveraging AI and analytics techniques. The specific objectives of the project include:
@@ -188,31 +188,31 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
 def train_random_forest_model(data_file_path):
-    # Load mock data from CSV file
+    ## Load mock data from CSV file
     mock_data = pd.read_csv(data_file_path)
 
-    # Preprocessing steps (e.g., handling missing values, feature engineering, etc.)
-    # ...
+    ## Preprocessing steps (e.g., handling missing values, feature engineering, etc.)
+    ## ...
 
-    # Split data into features and target variable
+    ## Split data into features and target variable
     X = mock_data.drop('target_column', axis=1)
     y = mock_data['target_column']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize and train the random forest classifier
+    ## Initialize and train the random forest classifier
     random_forest_model = RandomForestClassifier(n_estimators=100, random_state=42)
     random_forest_model.fit(X_train, y_train)
 
-    # Make predictions on the test set
+    ## Make predictions on the test set
     y_pred = random_forest_model.predict(X_test)
 
-    # Evaluate the model
+    ## Evaluate the model
     accuracy = accuracy_score(y_test, y_pred)
     print(f"Model accuracy: {accuracy}")
 
-    # Return the trained model for future use
+    ## Return the trained model for future use
     return random_forest_model
 ```
 
@@ -232,25 +232,25 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
 def train_deep_learning_model(data_file_path):
-    # Load mock data from CSV file
+    ## Load mock data from CSV file
     mock_data = pd.read_csv(data_file_path)
 
-    # Preprocessing steps (e.g., handling missing values, feature scaling, etc.)
-    # ...
+    ## Preprocessing steps (e.g., handling missing values, feature scaling, etc.)
+    ## ...
 
-    # Split data into features and target variable
+    ## Split data into features and target variable
     X = mock_data.drop('target_column', axis=1)
     y = mock_data['target_column']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Scale the features
+    ## Scale the features
     scaler = StandardScaler()
     X_train_scaled = scaler.fit_transform(X_train)
     X_test_scaled = scaler.transform(X_test)
 
-    # Define and train the deep learning model
+    ## Define and train the deep learning model
     model = tf.keras.Sequential([
         tf.keras.layers.Dense(64, activation='relu', input_shape=(X_train.shape[1],)),
         tf.keras.layers.Dense(64, activation='relu'),
@@ -260,11 +260,11 @@ def train_deep_learning_model(data_file_path):
     model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
     model.fit(X_train_scaled, y_train, epochs=20, batch_size=32, validation_data=(X_test_scaled, y_test))
 
-    # Evaluate the model
+    ## Evaluate the model
     _, accuracy = model.evaluate(X_test_scaled, y_test)
     print(f"Model accuracy: {accuracy}")
 
-    # Return the trained deep learning model for future use
+    ## Return the trained deep learning model for future use
     return model
 ```
 

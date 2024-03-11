@@ -5,7 +5,7 @@ permalink: posts/nutritional-value-optimization-ai-for-peru-tensorflow-scikit-le
 layout: article
 ---
 
-# AI Nutritional Value Optimization System
+## AI Nutritional Value Optimization System
 
 ## Objectives:
 - Enhance the nutritional value of food products by analyzing ingredients and processing methods
@@ -28,7 +28,7 @@ layout: article
 
 By incorporating these libraries and following the outlined system design strategies, the AI Nutritional Value Optimization System can effectively analyze food products, recommend improvements, and contribute to achieving public health goals related to nutrition.
 
-# MLOps Infrastructure for Nutritional Value Optimization AI System
+## MLOps Infrastructure for Nutritional Value Optimization AI System
 
 ## Objectives:
 - Implement a robust MLOps infrastructure to streamline the development, deployment, and monitoring of the Nutritional Value Optimization AI system
@@ -63,7 +63,7 @@ By incorporating these libraries and following the outlined system design strate
 
 By establishing a comprehensive MLOps infrastructure that leverages the capabilities of TensorFlow, Scikit-Learn, Kafka, and Grafana, the Nutritional Value Optimization AI system can operate efficiently, provide valuable insights, and contribute to achieving public health goals in Peru.
 
-# Scalable File Structure for Nutritional Value Optimization AI System
+## Scalable File Structure for Nutritional Value Optimization AI System
 
 ```
 Nutritional_Value_Optimization_AI/
@@ -130,7 +130,7 @@ In this file structure:
 
 This structured approach ensures organization, scalability, and ease of maintenance for the Nutritional Value Optimization AI system leveraging TensorFlow, Scikit-Learn, Kafka, and Grafana.
 
-# Models Directory for Nutritional Value Optimization AI System
+## Models Directory for Nutritional Value Optimization AI System
 
 ```
 models/
@@ -167,7 +167,7 @@ In the `models/` directory:
 
 By organizing the models into separate directories based on the framework and specific tasks they perform, it facilitates the management, understanding, and maintenance of the AI models involved in enhancing the nutritional value of food products for the public health goals in Peru.
 
-# Deployment Directory for Nutritional Value Optimization AI System
+## Deployment Directory for Nutritional Value Optimization AI System
 
 ```
 deployment/
@@ -192,7 +192,7 @@ In the `deployment/` directory:
 
 By including these files in the `deployment/` directory, the Nutritional Value Optimization AI system can be easily deployed, managed, and scaled using containerization technologies like Docker and Kubernetes, ensuring efficient and reliable operation in addressing public health goals related to food nutrition in Peru.
 
-# Model Training Script for Nutritional Value Optimization AI System
+## Model Training Script for Nutritional Value Optimization AI System
 
 File Path: `models/tensorflow_models/nutritional_value_prediction/train.py`
 
@@ -203,36 +203,36 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 import tensorflow as tf
 
-# Load mock data (replace with actual data source)
+## Load mock data (replace with actual data source)
 data_path = "data/processed_data/mock_data.csv"
 data = pd.read_csv(data_path)
 
-# Separate features and target variable
+## Separate features and target variable
 X = data.drop(columns=['nutritional_value'])
 y = data['nutritional_value']
 
-# Train-test split
+## Train-test split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Data preprocessing (replace with actual preprocessing steps)
+## Data preprocessing (replace with actual preprocessing steps)
 scaler = StandardScaler()
 X_train_scaled = scaler.fit_transform(X_train)
 X_test_scaled = scaler.transform(X_test)
 
-# Define neural network model using TensorFlow
+## Define neural network model using TensorFlow
 model = tf.keras.models.Sequential([
     tf.keras.layers.Dense(128, activation='relu', input_shape=(X_train.shape[1],)),
     tf.keras.layers.Dense(64, activation='relu'),
     tf.keras.layers.Dense(1)
 ])
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam', loss='mean_squared_error')
 
-# Train the model
+## Train the model
 model.fit(X_train_scaled, y_train, epochs=50, batch_size=32, validation_data=(X_test_scaled, y_test))
 
-# Save the trained model
+## Save the trained model
 model.save('models/tensorflow_models/nutritional_value_prediction/trained_model')
 ```
 
@@ -240,7 +240,7 @@ This script demonstrates the training of a TensorFlow model for predicting the n
 
 Note: Remember to replace the mock data with real data and adjust the preprocessing steps as necessary when using the script with actual data.
 
-# Complex Machine Learning Algorithm Script for Nutritional Value Optimization AI System
+## Complex Machine Learning Algorithm Script for Nutritional Value Optimization AI System
 
 File Path: `models/scikit_learn_models/ingredient_analysis/complex_algorithm.py`
 
@@ -250,38 +250,38 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 
-# Load mock data (replace with actual data source)
+## Load mock data (replace with actual data source)
 data_path = "data/processed_data/mock_data.csv"
 data = pd.read_csv(data_path)
 
-# Separate features and target variable
+## Separate features and target variable
 X = data.drop(columns=['nutritional_value'])
 y = data['nutritional_value']
 
-# Train-test split
+## Train-test split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize and train a Random Forest Regressor model
+## Initialize and train a Random Forest Regressor model
 model = RandomForestRegressor(n_estimators=100, max_depth=10, random_state=42)
 model.fit(X_train, y_train)
 
-# Make predictions on the test set
+## Make predictions on the test set
 y_pred = model.predict(X_test)
 
-# Evaluate the model
+## Evaluate the model
 mse = mean_squared_error(y_test, y_pred)
 print("Mean Squared Error:", mse)
 
-# Save the trained model (if required)
-# model_name = 'random_forest_model.sav'
-# joblib.dump(model, model_name)
+## Save the trained model (if required)
+## model_name = 'random_forest_model.sav'
+## joblib.dump(model, model_name)
 ```
 
 This script demonstrates the use of a complex machine learning algorithm (Random Forest Regressor) for analyzing ingredients and predicting the nutritional value of food products using mock data. It loads the data, trains the model, makes predictions, evaluates the model's performance, and potentially saves the trained model for later use.
 
 Note: Adjust the algorithm, hyperparameters, and evaluation metrics as needed when using the script with actual data in the Nutritional Value Optimization AI system.
 
-# Types of Users for Nutritional Value Optimization AI System:
+## Types of Users for Nutritional Value Optimization AI System:
 
 1. **Nutrition Researchers**
    - *User Story*: As a nutrition researcher, I want to analyze the nutritional value of various food products to understand their impact on public health goals and make informed recommendations for improving nutrition.

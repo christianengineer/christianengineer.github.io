@@ -193,7 +193,7 @@ high-frequency-trading-algorithm/
 By organizing the deployment configurations within the `kubernetes/` directory, the high-frequency trading algorithm application benefits from a centralized location for managing the deployment settings. This structure allows for clear separation of deployment concerns, ease of configuration management, and scalability when deploying and managing the application within a Kubernetes environment.
 
 ```python
-# File Path: high-frequency-trading-algorithm/app/ai_algorithm/train_model.py
+## File Path: high-frequency-trading-algorithm/app/ai_algorithm/train_model.py
 
 import torch
 import torch.nn as nn
@@ -203,30 +203,30 @@ import pandas as pd
 from models.lstm import LSTMModel
 from utils import preprocess_data, split_train_test_data
 
-# Load Mock Data
+## Load Mock Data
 mock_data_path = "data/mock_stock_data.csv"
 mock_data = pd.read_csv(mock_data_path)
 
-# Preprocess Data
+## Preprocess Data
 processed_data = preprocess_data(mock_data)
 
-# Split Data into Training and Testing Sets
+## Split Data into Training and Testing Sets
 train_data, test_data = split_train_test_data(processed_data, train_ratio=0.8)
 
-# Define LSTM Model
-input_size = processed_data.shape[1]  # Number of input features
+## Define LSTM Model
+input_size = processed_data.shape[1]  ## Number of input features
 hidden_size = 64
 output_size = 1
 num_layers = 2
-sequence_length = 10  # Sequence length for time-series data
+sequence_length = 10  ## Sequence length for time-series data
 
 lstm_model = LSTMModel(input_size, hidden_size, output_size, num_layers)
 
-# Define Loss and Optimizer
+## Define Loss and Optimizer
 criterion = nn.MSELoss()
 optimizer = optim.Adam(lstm_model.parameters(), lr=0.001)
 
-# Train the LSTM Model
+## Train the LSTM Model
 num_epochs = 100
 for epoch in range(num_epochs):
     for inputs, targets in train_data:
@@ -237,7 +237,7 @@ for epoch in range(num_epochs):
         optimizer.step()
     print(f'Epoch [{epoch+1}/{num_epochs}], Loss: {loss.item()}')
 
-# Save trained model
+## Save trained model
 model_save_path = "ai_algorithm/trained_models/lstm_model.pth"
 torch.save(lstm_model.state_dict(), model_save_path)
 print(f"Trained LSTM model saved at {model_save_path}")
@@ -248,34 +248,34 @@ In the file `train_model.py`, we start by loading mock stock data from the file 
 This file demonstrates the training process for an LSTM model using PyTorch and mock stock data, as part of the High-frequency Trading Algorithm application.
 
 ```python
-# File Path: high-frequency-trading-algorithm/app/ai_algorithm/complex_ml_algorithm.py
+## File Path: high-frequency-trading-algorithm/app/ai_algorithm/complex_ml_algorithm.py
 
 import pandas as pd
 
-# Load Mock Data
+## Load Mock Data
 mock_data_path = "data/mock_stock_data.csv"
 mock_data = pd.read_csv(mock_data_path)
 
-# Implement Complex Machine Learning Algorithm
+## Implement Complex Machine Learning Algorithm
 def complex_ml_algorithm(data):
-    # Your complex machine learning algorithm implementation using PyTorch or other libraries
-    # This may involve advanced feature engineering, model ensembling, or deep learning techniques tailored for high-frequency trading analysis.
-    # Sample code for illustration:
+    ## Your complex machine learning algorithm implementation using PyTorch or other libraries
+    ## This may involve advanced feature engineering, model ensembling, or deep learning techniques tailored for high-frequency trading analysis.
+    ## Sample code for illustration:
     
-    # Preprocessing
-    # ... Your preprocessing code
+    ## Preprocessing
+    ## ... Your preprocessing code
     
-    # Feature Engineering
-    # ... Your feature engineering code
+    ## Feature Engineering
+    ## ... Your feature engineering code
     
-    # Model Training and Inference
-    # ... Your model training and inference code
+    ## Model Training and Inference
+    ## ... Your model training and inference code
     
-    # Return Trading Decisions
-    trading_decisions = []  # Placeholder for trading decisions based on the complex ML algorithm
+    ## Return Trading Decisions
+    trading_decisions = []  ## Placeholder for trading decisions based on the complex ML algorithm
     return trading_decisions
 
-# Example Usage
+## Example Usage
 if __name__ == "__main__":
     trading_decisions = complex_ml_algorithm(mock_data)
     print(trading_decisions)

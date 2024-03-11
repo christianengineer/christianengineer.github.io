@@ -5,7 +5,7 @@ permalink: posts/performance-optimization-techniques-in-AI-systems
 layout: article
 ---
 
-# Performance Optimization in AI Systems
+## Performance Optimization in AI Systems
 
 Performance optimization is a growing sub-domain in Artificial Intelligence (AI) that focuses on improving the efficiency and speed of AI systems. In the modern world of data science, machine learning, deep learning, and other AI-related fields, running resource-intensive algorithms efficiently is critical for any application. This article explains the concept of performance optimization in AI systems and provides a deep dive into different techniques to achieve it.
 

@@ -256,7 +256,7 @@ deployment/
 By structuring the `deployment/` directory with components for API deployment, batch processing, Airflow DAG configurations, and monitoring setup, the application can be effectively deployed, managed, and monitored to analyze technology access disparities and guide initiatives to bridge the digital divide in underserved communities.
 
 ```python
-# File Path: models/train_model.py
+## File Path: models/train_model.py
 
 import numpy as np
 import pandas as pd
@@ -265,32 +265,32 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 import joblib
 
-# Load mock data (replace with actual data loading process)
+## Load mock data (replace with actual data loading process)
 data = pd.DataFrame({
     'Feature1': np.random.rand(100),
     'Feature2': np.random.randint(0, 2, size=100),
     'Target': np.random.randint(0, 2, size=100)
 })
 
-# Split data into features and target
+## Split data into features and target
 X = data[['Feature1', 'Feature2']]
 y = data['Target']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Define and train the model (Random Forest Classifier as an example)
+## Define and train the model (Random Forest Classifier as an example)
 model = RandomForestClassifier()
 model.fit(X_train, y_train)
 
-# Make predictions on the test set
+## Make predictions on the test set
 predictions = model.predict(X_test)
 
-# Calculate accuracy
+## Calculate accuracy
 accuracy = accuracy_score(y_test, predictions)
 print(f'Model Accuracy: {accuracy}')
 
-# Save the trained model
+## Save the trained model
 joblib.dump(model, 'models/scikit-learn/mock_model.pkl')
 ```
 
@@ -299,14 +299,14 @@ This Python script `train_model.py` trains a mock Scikit-Learn model using rando
 You can replace the mock data loading process in the script with your actual data loading implementation to train the model on real data for analyzing technology access disparities and guiding initiatives to bridge the digital divide in underserved communities.
 
 ```python
-# File Path: models/train_complex_model.py
+## File Path: models/train_complex_model.py
 
 import torch
 import torch.nn as nn
 import torch.optim as optim
 import numpy as np
 
-# Define a complex neural network model using PyTorch
+## Define a complex neural network model using PyTorch
 class ComplexModel(nn.Module):
     def __init__(self):
         super(ComplexModel, self).__init__()
@@ -321,18 +321,18 @@ class ComplexModel(nn.Module):
         x = self.fc3(x)
         return x
 
-# Load mock data (replace with actual data loading process)
+## Load mock data (replace with actual data loading process)
 X = torch.tensor(np.random.rand(100, 2).astype(np.float32))
 y = torch.tensor(np.random.randint(0, 2, size=100).astype(np.float32)).view(-1, 1)
 
-# Initialize the complex model
+## Initialize the complex model
 model = ComplexModel()
 
-# Define loss function and optimizer
+## Define loss function and optimizer
 criterion = nn.BCEWithLogitsLoss()
 optimizer = optim.Adam(model.parameters(), lr=0.001)
 
-# Train the model
+## Train the model
 num_epochs = 50
 for epoch in range(num_epochs):
     optimizer.zero_grad()
@@ -344,7 +344,7 @@ for epoch in range(num_epochs):
     if (epoch+1) % 10 == 0:
         print(f'Epoch [{epoch+1}/{num_epochs}], Loss: {loss.item()}')
 
-# Save the trained model
+## Save the trained model
 torch.save(model.state_dict(), 'models/pytorch/mock_complex_model.pth')
 ```
 

@@ -5,7 +5,7 @@ permalink: posts/ai-enhanced-customer-relationship-management-gpt-3-kafka-docker
 layout: article
 ---
 
-# AI-enhanced Customer Relationship Management System
+## AI-enhanced Customer Relationship Management System
 
 ## Objectives
 The main objectives of the AI-enhanced Customer Relationship Management (CRM) system are:
@@ -75,40 +75,40 @@ By integrating these MLOps practices into the infrastructure for the AI-enhanced
 AI-enhanced-CRM/
 ├── app/
 │   ├── src/
-│   │   ├── main.py                 # Main application entry point
+│   │   ├── main.py                 ## Main application entry point
 │   │   ├── api/
-│   │   │   ├── controllers/        # API controllers for handling requests
-│   │   │   ├── models/             # Data models for API endpoints
-│   │   │   ├── routes/             # API endpoint definitions
+│   │   │   ├── controllers/        ## API controllers for handling requests
+│   │   │   ├── models/             ## Data models for API endpoints
+│   │   │   ├── routes/             ## API endpoint definitions
 │   ├── services/
-│   │   ├── chatbot/                # Chatbot service implementation
-│   │   ├── data_processing/        # Data processing modules
-│   │   ├── customer_analytics/     # Customer behavior analysis modules
-│   │   ├── recommendation_engine/   # Recommendation system modules
+│   │   ├── chatbot/                ## Chatbot service implementation
+│   │   ├── data_processing/        ## Data processing modules
+│   │   ├── customer_analytics/     ## Customer behavior analysis modules
+│   │   ├── recommendation_engine/   ## Recommendation system modules
 ├── ml/
-│   ├── models/                     # Trained ML models
-│   ├── training/                   # Scripts for model training and evaluation
-│   ├── preprocessing/              # Data preprocessing scripts
+│   ├── models/                     ## Trained ML models
+│   ├── training/                   ## Scripts for model training and evaluation
+│   ├── preprocessing/              ## Data preprocessing scripts
 ├── infra/
-│   ├── docker/                     # Dockerfiles for containerization
-│   ├── kubernetes/                 # Kubernetes deployment configurations
-│   ├── terraform/                  # Infrastructure as Code scripts for cloud deployment
+│   ├── docker/                     ## Dockerfiles for containerization
+│   ├── kubernetes/                 ## Kubernetes deployment configurations
+│   ├── terraform/                  ## Infrastructure as Code scripts for cloud deployment
 ├── data/
-│   ├── raw/                        # Raw data files
-│   ├── processed/                  # Processed data for AI models
+│   ├── raw/                        ## Raw data files
+│   ├── processed/                  ## Processed data for AI models
 ├── notebooks/
-│   ├── exploratory_analysis.ipynb  # Jupyter notebook for data exploration
-│   ├── model_evaluation.ipynb      # Notebook for model performance evaluation
+│   ├── exploratory_analysis.ipynb  ## Jupyter notebook for data exploration
+│   ├── model_evaluation.ipynb      ## Notebook for model performance evaluation
 ├── tests/
-│   ├── unit/                       # Unit tests for application components
-│   ├── integration/                # Integration tests for API endpoints and services
-│   ├── ml_model/                   # Tests for ML model functionality and accuracy
+│   ├── unit/                       ## Unit tests for application components
+│   ├── integration/                ## Integration tests for API endpoints and services
+│   ├── ml_model/                   ## Tests for ML model functionality and accuracy
 ├── docs/
-│   ├── api_documentation.md        # API documentation
-│   ├── model_architecture.md       # Documentation for AI model architecture
-├── .gitignore                      # Git ignore file for excluding certain files from version control
-├── README.md                       # Repository overview and setup instructions
-├── requirements.txt                # Dependencies list for Python environment setup
+│   ├── api_documentation.md        ## API documentation
+│   ├── model_architecture.md       ## Documentation for AI model architecture
+├── .gitignore                      ## Git ignore file for excluding certain files from version control
+├── README.md                       ## Repository overview and setup instructions
+├── requirements.txt                ## Dependencies list for Python environment setup
 ```
 
 In this structure:
@@ -156,7 +156,7 @@ Certainly! Below is an example of a Python script for training a machine learnin
 File path: `models/training/train_model.py`
 
 ```python
-# train_model.py
+## train_model.py
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -164,7 +164,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.svm import SVC
 from sklearn.metrics import accuracy_score, classification_report
 
-# Load mock data (replace with actual data loading code)
+## Load mock data (replace with actual data loading code)
 def load_mock_data():
     data = {
         'feature1': [1.1, 2.2, 3.3, 4.4, 5.5],
@@ -173,28 +173,28 @@ def load_mock_data():
     }
     return pd.DataFrame(data)
 
-# Preprocess the data
+## Preprocess the data
 def preprocess_data(data):
     X = data[['feature1', 'feature2']]
     y = data['label']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Standardize the features
+    ## Standardize the features
     scaler = StandardScaler()
     X_train = scaler.fit_transform(X_train)
     X_test = scaler.transform(X_test)
 
     return X_train, X_test, y_train, y_test
 
-# Train a machine learning model
+## Train a machine learning model
 def train_model(X_train, y_train):
     model = SVC(kernel='linear', random_state=42)
     model.fit(X_train, y_train)
     return model
 
-# Evaluate the trained model
+## Evaluate the trained model
 def evaluate_model(model, X_test, y_test):
     y_pred = model.predict(X_test)
     accuracy = accuracy_score(y_test, y_pred)
@@ -204,16 +204,16 @@ def evaluate_model(model, X_test, y_test):
     print(f"Accuracy: {accuracy:.2f}")
 
 def main():
-    # Load mock data
+    ## Load mock data
     data = load_mock_data()
 
-    # Preprocess the data
+    ## Preprocess the data
     X_train, X_test, y_train, y_test = preprocess_data(data)
 
-    # Train the model
+    ## Train the model
     model = train_model(X_train, y_train)
 
-    # Evaluate the model
+    ## Evaluate the model
     evaluate_model(model, X_test, y_test)
 
 if __name__ == "__main__":
@@ -231,7 +231,7 @@ Certainly! Below is an example of a Python script that demonstrates the training
 File path: `models/training/train_complex_model.py`
 
 ```python
-# train_complex_model.py
+## train_complex_model.py
 
 import tensorflow as tf
 from tensorflow.keras.models import Sequential
@@ -242,32 +242,32 @@ from sklearn.metrics import accuracy_score, classification_report
 import numpy as np
 
 
-# Load mock data (replace with actual data loading code)
+## Load mock data (replace with actual data loading code)
 def load_mock_data():
-    # Mock data generation
-    X = np.random.rand(100, 10)  # Example features
-    y = np.random.randint(2, size=100)  # Example target
+    ## Mock data generation
+    X = np.random.rand(100, 10)  ## Example features
+    y = np.random.randint(2, size=100)  ## Example target
 
     return X, y
 
 
-# Preprocess the data
+## Preprocess the data
 def preprocess_data(X, y):
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    scaler = StandardScaler()  # Standardizing features
+    scaler = StandardScaler()  ## Standardizing features
     X_train = scaler.fit_transform(X_train)
     X_test = scaler.transform(X_test)
 
     return X_train, X_test, y_train, y_test
 
 
-# Define a complex neural network model
+## Define a complex neural network model
 def build_model(input_dim):
     model = Sequential([
         Dense(64, input_dim=input_dim, activation='relu'),
         Dense(64, activation='relu'),
-        Dense(1, activation='sigmoid')  # Binary classification output
+        Dense(1, activation='sigmoid')  ## Binary classification output
     ])
     model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
     return model
@@ -278,7 +278,7 @@ def train_and_evaluate_model(X_train, X_test, y_train, y_test):
     model = build_model(input_dim)
     model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y_test))
 
-    y_pred = (model.predict(X_test) > 0.5).astype("int32")  # Predicting on test data
+    y_pred = (model.predict(X_test) > 0.5).astype("int32")  ## Predicting on test data
     accuracy = accuracy_score(y_test, y_pred)
     report = classification_report(y_test, y_pred)
     print("Model Evaluation Report:")

@@ -186,31 +186,31 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 
 def train_load_forecasting_model(data_file_path):
-    # Load mock smart grid data from the specified file path
+    ## Load mock smart grid data from the specified file path
     smart_grid_data = pd.read_csv(data_file_path)
 
-    # Perform feature engineering and prepare the dataset for modeling
-    # Assume the features are named feature1, feature2, ..., featureN and the target variable is 'load'
+    ## Perform feature engineering and prepare the dataset for modeling
+    ## Assume the features are named feature1, feature2, ..., featureN and the target variable is 'load'
     X = smart_grid_data.drop('load', axis=1)
     y = smart_grid_data['load']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize and train a Random Forest regressor model
+    ## Initialize and train a Random Forest regressor model
     model = RandomForestRegressor(n_estimators=100, random_state=42)
     model.fit(X_train, y_train)
 
-    # Evaluate the model on the testing set
+    ## Evaluate the model on the testing set
     y_pred = model.predict(X_test)
     mse = mean_squared_error(y_test, y_pred)
 
-    # Save the trained model to the specified file path
+    ## Save the trained model to the specified file path
     model_file_path = 'models/trained_models/load_forecasting_model.pkl'
     with open(model_file_path, 'wb') as file:
         pickle.dump(model, file)
 
-    # Return the file path of the trained model and the mean squared error
+    ## Return the file path of the trained model and the mean squared error
     return model_file_path, mse
 ```
 
@@ -233,44 +233,44 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
 
 def train_deep_learning_model(data_file_path):
-    # Load mock smart grid data from the specified file path
+    ## Load mock smart grid data from the specified file path
     smart_grid_data = pd.read_csv(data_file_path)
 
-    # Perform feature engineering and prepare the dataset for modeling
-    # Assume the features are named feature1, feature2, ..., featureN and the target variable is 'load'
+    ## Perform feature engineering and prepare the dataset for modeling
+    ## Assume the features are named feature1, feature2, ..., featureN and the target variable is 'load'
     X = smart_grid_data.drop('load', axis=1)
     y = smart_grid_data['load']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Standardize the input features
+    ## Standardize the input features
     scaler = StandardScaler()
     X_train_scaled = scaler.fit_transform(X_train)
     X_test_scaled = scaler.transform(X_test)
 
-    # Build a deep learning model
+    ## Build a deep learning model
     model = Sequential([
         Dense(64, activation='relu', input_shape=(X_train.shape[1],)),
         Dense(64, activation='relu'),
         Dense(1)
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam', loss='mean_squared_error')
 
-    # Train the model
+    ## Train the model
     model.fit(X_train_scaled, y_train, epochs=50, batch_size=32, validation_data=(X_test_scaled, y_test))
 
-    # Evaluate the model on the testing set
+    ## Evaluate the model on the testing set
     y_pred = model.predict(X_test_scaled)
     mse = mean_squared_error(y_test, y_pred)
 
-    # Save the trained model to the specified file path
+    ## Save the trained model to the specified file path
     model_file_path = 'models/trained_models/load_forecasting_model.h5'
     model.save(model_file_path)
 
-    # Return the file path of the trained model and the mean squared error
+    ## Return the file path of the trained model and the mean squared error
     return model_file_path, mse
 ```
 

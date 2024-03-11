@@ -203,15 +203,15 @@ Sure, here's an example of a function for a complex machine learning algorithm i
 import numpy as np
 
 def train_deep_learning_model(train_data_path, model_save_path):
-    # Mock data generation for demonstration purposes
-    train_data = np.random.rand(100, 64, 64, 3)  # Mock training data in the shape of (batch_size, height, width, channels)
-    train_labels = np.random.randint(0, 2, size=(100, 1))  # Mock training labels
+    ## Mock data generation for demonstration purposes
+    train_data = np.random.rand(100, 64, 64, 3)  ## Mock training data in the shape of (batch_size, height, width, channels)
+    train_labels = np.random.randint(0, 2, size=(100, 1))  ## Mock training labels
     
-    # Assuming the usage of TensorFlow for model training
+    ## Assuming the usage of TensorFlow for model training
     import tensorflow as tf
     from tensorflow.keras import layers, models
     
-    # Define a simple deep learning model for demonstration
+    ## Define a simple deep learning model for demonstration
     model = models.Sequential([
         layers.Conv2D(32, (3, 3), activation='relu', input_shape=(64, 64, 3)),
         layers.MaxPooling2D((2, 2)),
@@ -223,15 +223,15 @@ def train_deep_learning_model(train_data_path, model_save_path):
         layers.Dense(10, activation='softmax')
     ])
     
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam',
                   loss='sparse_categorical_crossentropy',
                   metrics=['accuracy'])
     
-    # Train the model with mock data
+    ## Train the model with mock data
     model.fit(train_data, train_labels, epochs=10, batch_size=32)
     
-    # Save the trained model to the specified model save path
+    ## Save the trained model to the specified model save path
     model.save(model_save_path)
     
     return model
@@ -246,19 +246,19 @@ Certainly! Below is an example of a function for a complex deep learning algorit
 ```python
 import numpy as np
 import tensorflow as tf
-from cryptography.fernet import Fernet  # Importing the encryption library
+from cryptography.fernet import Fernet  ## Importing the encryption library
 
-# Mock data generation for demonstration purposes
+## Mock data generation for demonstration purposes
 def generate_mock_data(data_path):
-    mock_data = np.random.rand(100, 64, 64, 3)  # Mock data in the shape of (batch_size, height, width, channels)
-    np.save(data_path, mock_data)  # Saving the mock data to the specified data path
+    mock_data = np.random.rand(100, 64, 64, 3)  ## Mock data in the shape of (batch_size, height, width, channels)
+    np.save(data_path, mock_data)  ## Saving the mock data to the specified data path
 
 def train_deep_learning_model(train_data_path, model_save_path):
-    # Load and preprocess the training data (this step may involve data encryption/decryption in a real scenario)
+    ## Load and preprocess the training data (this step may involve data encryption/decryption in a real scenario)
     train_data = np.load(train_data_path)
-    train_labels = np.random.randint(0, 2, size=(100, 1))  # Mock training labels
+    train_labels = np.random.randint(0, 2, size=(100, 1))  ## Mock training labels
 
-    # Define a complex deep learning model using TensorFlow
+    ## Define a complex deep learning model using TensorFlow
     model = tf.keras.Sequential([
         tf.keras.layers.Conv2D(32, (3, 3), activation='relu', input_shape=(64, 64, 3)),
         tf.keras.layers.MaxPooling2D((2, 2)),
@@ -270,51 +270,51 @@ def train_deep_learning_model(train_data_path, model_save_path):
         tf.keras.layers.Dense(10, activation='softmax')
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
 
-    # Train the model with the mock data
+    ## Train the model with the mock data
     model.fit(train_data, train_labels, epochs=10, batch_size=32)
 
-    # Save the trained model to the specified model save path
+    ## Save the trained model to the specified model save path
     model.save(model_save_path)
 
     return model
 
 def encrypt_model_weights(model_path, key_path, encrypted_model_path):
-    # Load the model
+    ## Load the model
     model = tf.keras.models.load_model(model_path)
 
-    # Extract the model weights
+    ## Extract the model weights
     model_weights = model.get_weights()
 
-    # Serialize the model weights
+    ## Serialize the model weights
     serialized_weights = tf.io.serialize_tensor(model_weights)
 
-    # Encrypt the serialized model weights using a symmetric encryption key
-    key = Fernet.generate_key()  # Generate a random encryption key
+    ## Encrypt the serialized model weights using a symmetric encryption key
+    key = Fernet.generate_key()  ## Generate a random encryption key
     with open(key_path, 'wb') as key_file:
-        key_file.write(key)  # Save the encryption key to the specified key path
+        key_file.write(key)  ## Save the encryption key to the specified key path
     f = Fernet(key)
     encrypted_weights = f.encrypt(serialized_weights.numpy())
 
-    # Save the encrypted weights to the specified path
+    ## Save the encrypted weights to the specified path
     with open(encrypted_model_path, 'wb') as encrypted_file:
         encrypted_file.write(encrypted_weights)
 
-# Example usage of the functions
+## Example usage of the functions
 data_path = 'mock_data.npy'
 model_path = 'trained_model.h5'
 key_path = 'encryption_key.key'
 encrypted_model_path = 'encrypted_model.dat'
 
-# Generate and save the mock data
+## Generate and save the mock data
 generate_mock_data(data_path)
 
-# Train the deep learning model
+## Train the deep learning model
 trained_model = train_deep_learning_model(data_path, model_path)
 
-# Encrypt the model weights
+## Encrypt the model weights
 encrypt_model_weights(model_path, key_path, encrypted_model_path)
 ```
 

@@ -5,7 +5,7 @@ permalink: posts/audio-signal-processing-using-librosa-python-analyzing-sound-da
 layout: article
 ---
 
-# AI Audio Signal Processing using Librosa
+## AI Audio Signal Processing using Librosa
 
 ## Objectives
 
@@ -87,7 +87,7 @@ To support the Audio Signal Processing using Librosa (Python) application, we ne
 
 By implementing this infrastructure, we can effectively support the Audio Signal Processing application, enabling it to handle large-scale audio data processing, both in batch and real-time scenarios. The infrastructure will be cost-effective, scalable, and resilient, providing a solid foundation for building and deploying data-intensive AI applications.
 
-# Scalable File Structure for Audio Signal Processing Application
+## Scalable File Structure for Audio Signal Processing Application
 
 To maintain a well-organized and scalable file structure for the Audio Signal Processing using Librosa (Python) application, the following directory layout can be utilized. This structure facilitates modularity, easy collaboration, version control, and efficient management of code, data, and resources.
 
@@ -284,40 +284,40 @@ def complex_machine_learning_algorithm(audio_file_paths, labels):
     float: Accuracy score of the trained model.
     """
 
-    # Placeholder for feature extraction and model training
+    ## Placeholder for feature extraction and model training
     features = []
     for audio_file_path in audio_file_paths:
-        # Load audio data using Librosa
+        ## Load audio data using Librosa
         y, sr = librosa.load(audio_file_path)
 
-        # Extract features using Librosa (placeholder for actual feature extraction code)
-        audio_features = np.mean(librosa.feature.mfcc(y=y, sr=sr, n_mfcc=40).T, axis=0)  # Example: using MFCC as features
+        ## Extract features using Librosa (placeholder for actual feature extraction code)
+        audio_features = np.mean(librosa.feature.mfcc(y=y, sr=sr, n_mfcc=40).T, axis=0)  ## Example: using MFCC as features
         features.append(audio_features)
 
-    # Convert features and labels to numpy arrays
+    ## Convert features and labels to numpy arrays
     X = np.array(features)
     y = np.array(labels)
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize and train a machine learning model (Random Forest classifier as an example)
+    ## Initialize and train a machine learning model (Random Forest classifier as an example)
     model = RandomForestClassifier(n_estimators=100, random_state=42)
     model.fit(X_train, y_train)
 
-    # Perform prediction using the trained model
+    ## Perform prediction using the trained model
     y_pred = model.predict(X_test)
 
-    # Evaluate the model performance
+    ## Evaluate the model performance
     accuracy = accuracy_score(y_test, y_pred)
 
     return accuracy
 
-# Mock data for audio file paths and corresponding labels
+## Mock data for audio file paths and corresponding labels
 mock_audio_file_paths = ['/path/to/audio/file1.wav', '/path/to/audio/file2.wav', '/path/to/audio/file3.wav']
 mock_labels = ['label1', 'label2', 'label1']
 
-# Apply the complex machine learning algorithm with mock data
+## Apply the complex machine learning algorithm with mock data
 accuracy_score = complex_machine_learning_algorithm(mock_audio_file_paths, mock_labels)
 print("Accuracy Score: {:.2f}".format(accuracy_score))
 ```
@@ -350,46 +350,46 @@ def complex_machine_learning_algorithm(audio_file_paths, labels):
     float: Accuracy score of the trained model.
     """
 
-    # Placeholder for feature extraction and model training
+    ## Placeholder for feature extraction and model training
     features = []
     for audio_file_path in audio_file_paths:
-        # Load audio data using Librosa
-        y, sr = librosa.load(audio_file_path, sr=22050)  # Example: loading audio with a sample rate of 22050 Hz
+        ## Load audio data using Librosa
+        y, sr = librosa.load(audio_file_path, sr=22050)  ## Example: loading audio with a sample rate of 22050 Hz
 
-        # Extract features using Librosa (placeholder for actual feature extraction code)
-        mfccs = librosa.feature.mfcc(y=y, sr=sr, n_mfcc=20)  # Example: using MFCC as features
+        ## Extract features using Librosa (placeholder for actual feature extraction code)
+        mfccs = librosa.feature.mfcc(y=y, sr=sr, n_mfcc=20)  ## Example: using MFCC as features
         spectral_centroid = librosa.feature.spectral_centroid(y=y, sr=sr)[0]
         spectral_rolloff = librosa.feature.spectral_rolloff(y=y, sr=sr)[0]
         
-        # Aggregate multiple features into a single feature vector (example: concatenating MFCCs and statistics of spectral features)
+        ## Aggregate multiple features into a single feature vector (example: concatenating MFCCs and statistics of spectral features)
         combined_features = np.concatenate([np.mean(mfccs, axis=1), np.std(mfccs, axis=1), np.mean(spectral_centroid), np.std(spectral_rolloff)])
         features.append(combined_features)
 
-    # Convert features and labels to numpy arrays
+    ## Convert features and labels to numpy arrays
     X = np.array(features)
     y = np.array(labels)
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize and train a machine learning model (Random Forest classifier as an example)
+    ## Initialize and train a machine learning model (Random Forest classifier as an example)
     model = RandomForestClassifier(n_estimators=100, random_state=42)
     model.fit(X_train, y_train)
 
-    # Perform prediction using the trained model
+    ## Perform prediction using the trained model
     y_pred = model.predict(X_test)
 
-    # Evaluate the model performance
+    ## Evaluate the model performance
     accuracy = accuracy_score(y_test, y_pred)
 
     return accuracy
 
 
-# Mock data for audio file paths and corresponding labels
+## Mock data for audio file paths and corresponding labels
 mock_audio_file_paths = ['/path/to/audio/file1.wav', '/path/to/audio/file2.wav', '/path/to/audio/file3.wav']
 mock_labels = ['class1', 'class2', 'class1']
 
-# Apply the complex machine learning algorithm with mock data
+## Apply the complex machine learning algorithm with mock data
 accuracy_score = complex_machine_learning_algorithm(mock_audio_file_paths, mock_labels)
 print("Accuracy Score: {:.2f}".format(accuracy_score))
 ```

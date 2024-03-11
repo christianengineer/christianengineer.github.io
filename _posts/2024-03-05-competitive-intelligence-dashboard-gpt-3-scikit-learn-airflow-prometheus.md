@@ -5,7 +5,7 @@ permalink: posts/competitive-intelligence-dashboard-gpt-3-scikit-learn-airflow-p
 layout: article
 ---
 
-# Competitive Intelligence Dashboard for Supermercados Peruanos
+## Competitive Intelligence Dashboard for Supermercados Peruanos
 ## Machine Learning Engineer Documentation
 
 ### Objectives:
@@ -248,14 +248,14 @@ from sklearn.impute import SimpleImputer
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 
-# Load the raw data into a DataFrame
+## Load the raw data into a DataFrame
 data = pd.read_csv('competitive_data.csv')
 
-# Separate features (X) and target variable (y)
+## Separate features (X) and target variable (y)
 X = data.drop('target_variable', axis=1)
 y = data['target_variable']
 
-# Define preprocessing steps for numerical and categorical features
+## Define preprocessing steps for numerical and categorical features
 numeric_features = X.select_dtypes(include=['float64', 'int64']).columns
 numeric_transformer = Pipeline(steps=[
     ('imputer', SimpleImputer(strategy='mean')),
@@ -268,16 +268,16 @@ categorical_transformer = Pipeline(steps=[
     ('onehot', OneHotEncoder())
 ])
 
-# Combine preprocessing steps for numerical and categorical features
+## Combine preprocessing steps for numerical and categorical features
 preprocessor = ColumnTransformer(transformers=[
     ('num', numeric_transformer, numeric_features),
     ('cat', categorical_transformer, categorical_features)
 ])
 
-# Apply preprocessing to the features data
+## Apply preprocessing to the features data
 X_preprocessed = preprocessor.fit_transform(X)
 
-# Print the preprocessed feature data
+## Print the preprocessed feature data
 print(X_preprocessed)
 ```
 
@@ -362,10 +362,10 @@ import pandas as pd
 import numpy as np
 from faker import Faker
 
-# Initialize Faker for generating fake data
+## Initialize Faker for generating fake data
 fake = Faker()
 
-# Create a fictitious dataset with features relevant to the project
+## Create a fictitious dataset with features relevant to the project
 def generate_fictitious_data(num_samples):
     data = {'competitor_name': [fake.company() for _ in range(num_samples)],
             'base_price': np.random.uniform(1, 100, num_samples),
@@ -381,14 +381,14 @@ def generate_fictitious_data(num_samples):
     
     return pd.DataFrame(data)
 
-# Generate a fictitious dataset with 1000 samples
+## Generate a fictitious dataset with 1000 samples
 num_samples = 1000
 fictitious_data = generate_fictitious_data(num_samples)
 
-# Save the fictitious dataset to a CSV file
+## Save the fictitious dataset to a CSV file
 fictitious_data.to_csv('fictitious_data.csv', index=False)
 
-# Validate the dataset by displaying the first few rows
+## Validate the dataset by displaying the first few rows
 print(fictitious_data.head())
 ```
 
@@ -448,24 +448,24 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report
 
-# Load the preprocessed dataset
+## Load the preprocessed dataset
 data = pd.read_csv('preprocessed_data.csv')
 
-# Separate features (X) and target variable (y)
+## Separate features (X) and target variable (y)
 X = data.drop('target_variable', axis=1)
 y = data['target_variable']
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize and train the Random Forest Classifier model
+## Initialize and train the Random Forest Classifier model
 rf_model = RandomForestClassifier()
 rf_model.fit(X_train, y_train)
 
-# Make predictions on the test set
+## Make predictions on the test set
 y_pred = rf_model.predict(X_test)
 
-# Evaluate the model's performance
+## Evaluate the model's performance
 print("Classification Report:")
 print(classification_report(y_test, y_pred))
 ```
@@ -538,24 +538,24 @@ By developing this production-ready code file for the machine learning model, Su
 By following this deployment plan tailored to the unique demands of the Competitive Intelligence Dashboard project, Supermercados Peruanos can successfully deploy the machine learning model into production, ensuring reliability, scalability, and continuous monitoring for data-driven strategic planning in Peru’s competitive retail environment.
 
 ```Dockerfile
-# Use a Python base image
+## Use a Python base image
 FROM python:3.8-slim
 
-# Set working directory in the container
+## Set working directory in the container
 WORKDIR /app
 
-# Copy requirements.txt and install dependencies
+## Copy requirements.txt and install dependencies
 COPY requirements.txt /app/
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the model files and preprocessed data
+## Copy the model files and preprocessed data
 COPY model.py /app/
 COPY preprocessed_data.csv /app/
 
-# Expose the required port
+## Expose the required port
 EXPOSE 5000
 
-# Command to run the application
+## Command to run the application
 CMD ["python", "model.py"]
 ```
 

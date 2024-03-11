@@ -5,7 +5,7 @@ permalink: posts/aws-services-for-ai-startups-guide
 layout: article
 ---
 
-# AWS Services for Artificial Intelligence Startups
+## AWS Services for Artificial Intelligence Startups
 
 As a startup in the artificial intelligence (AI) domain, one of your primary goals would be to reduce your data management and computation costs without compromising on quality. Adopting the right cloud storage and tools is crucial for this purpose. Amazon Web Services (AWS), the most comprehensive and broadly adopted cloud platform, provides a myriad of services ideal for AI startups.
 

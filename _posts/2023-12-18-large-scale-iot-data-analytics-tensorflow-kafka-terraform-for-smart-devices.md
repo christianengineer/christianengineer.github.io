@@ -5,7 +5,7 @@ permalink: posts/large-scale-iot-data-analytics-tensorflow-kafka-terraform-for-s
 layout: article
 ---
 
-# AI Large Scale IoT Data Analytics Repository
+## AI Large Scale IoT Data Analytics Repository
 
 ## Objectives
 The main objectives of the AI Large Scale IoT Data Analytics repository are:
@@ -30,7 +30,7 @@ The chosen libraries and frameworks for the AI Large Scale IoT Data Analytics re
 
 By leveraging these libraries and frameworks, the repository aims to provide a robust and scalable solution for AI-powered IoT data analytics, enabling organizations to derive valuable insights from their large-scale IoT deployments.
 
-# MLOps Infrastructure for Large Scale IoT Data Analytics
+## MLOps Infrastructure for Large Scale IoT Data Analytics
 
 ## Overview
 The MLOps infrastructure for the Large Scale IoT Data Analytics application combines best practices in machine learning operations with scalable infrastructure management to ensure the seamless deployment and management of machine learning models within the IoT data analytics system.
@@ -196,18 +196,18 @@ This structure allows for the organization of deployment-related configurations 
 Certainly! Below is an example of a Python script for training a TensorFlow model using mock data for the Large Scale IoT Data Analytics application. Let's call the file `train_model.py`, and it can be located within the `machine_learning/model_training/` directory of the repository:
 
 ```python
-# machine_learning/model_training/train_model.py
+## machine_learning/model_training/train_model.py
 
 import tensorflow as tf
 import numpy as np
 
-# Generate mock IoT data for training
+## Generate mock IoT data for training
 num_samples = 1000
 num_features = 10
 X_train = np.random.rand(num_samples, num_features)
-y_train = np.random.randint(0, 2, size=num_samples)  # Binary classification labels
+y_train = np.random.randint(0, 2, size=num_samples)  ## Binary classification labels
 
-# Define a simple TensorFlow model for training
+## Define a simple TensorFlow model for training
 model = tf.keras.Sequential([
     tf.keras.layers.Dense(64, activation='relu', input_shape=(num_features,)),
     tf.keras.layers.Dense(64, activation='relu'),
@@ -218,10 +218,10 @@ model.compile(optimizer='adam',
               loss='binary_crossentropy',
               metrics=['accuracy'])
 
-# Train the model
+## Train the model
 model.fit(X_train, y_train, epochs=10, batch_size=32)
 
-# Save the trained model
+## Save the trained model
 model.save('trained_models/mock_iot_model')
 ```
 
@@ -233,19 +233,19 @@ The file `train_model.py` would be located at the following path within the repo
 Certainly! Below is an example of a more complex machine learning algorithm using TensorFlow to train a neural network with mock IoT data for the Large Scale IoT Data Analytics application. Let's call the file `complex_model_training.py`, and it can be located within the `machine_learning/model_training/` directory of the repository:
 
 ```python
-# Large-Scale-IoT-Data-Analytics/machine_learning/model_training/complex_model_training.py
+## Large-Scale-IoT-Data-Analytics/machine_learning/model_training/complex_model_training.py
 
 import tensorflow as tf
 import numpy as np
 from tensorflow.keras import layers, models
 
-# Generating mock IoT data for training
+## Generating mock IoT data for training
 num_samples = 1000
 num_features = 20
 X_train = np.random.rand(num_samples, num_features)
-y_train = np.random.randint(0, 2, size=num_samples)  # Binary classification labels
+y_train = np.random.randint(0, 2, size=num_samples)  ## Binary classification labels
 
-# Define a complex neural network model using TensorFlow/Keras
+## Define a complex neural network model using TensorFlow/Keras
 model = models.Sequential([
     layers.Dense(128, activation='relu', input_shape=(num_features,)),
     layers.Dropout(0.3),
@@ -254,15 +254,15 @@ model = models.Sequential([
     layers.Dense(1, activation='sigmoid')
 ])
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam',
               loss='binary_crossentropy',
               metrics=['accuracy'])
 
-# Train the model
+## Train the model
 model.fit(X_train, y_train, epochs=20, batch_size=64)
 
-# Save the trained model
+## Save the trained model
 model.save('trained_models/complex_iot_model')
 ```
 

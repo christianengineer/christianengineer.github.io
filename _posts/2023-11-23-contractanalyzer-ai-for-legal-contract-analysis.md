@@ -5,7 +5,7 @@ permalink: posts/contractanalyzer-ai-for-legal-contract-analysis
 layout: article
 ---
 
-# AI ContractAnalyzer AI for Legal Contract Analysis Repository
+## AI ContractAnalyzer AI for Legal Contract Analysis Repository
 
 ## Objectives
 The objectives of the AI ContractAnalyzer repository are to create a scalable and efficient system for analyzing legal contracts using AI and machine learning techniques. The repository aims to provide a solution for extracting key information, identifying clauses, and providing insights into the contents of legal contracts. The specific objectives include:
@@ -214,24 +214,24 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
 def train_and_evaluate_model(data_file_path):
-    # Load mock data from a CSV file
+    ## Load mock data from a CSV file
     data = pd.read_csv(data_file_path)
 
-    # Preprocessing and feature engineering
+    ## Preprocessing and feature engineering
     X = data.drop('target_variable', axis=1)
     y = data['target_variable']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Instantiate and train a Random Forest classifier
+    ## Instantiate and train a Random Forest classifier
     model = RandomForestClassifier(n_estimators=100, max_depth=3, random_state=42)
     model.fit(X_train, y_train)
 
-    # Make predictions on the test set
+    ## Make predictions on the test set
     y_pred = model.predict(X_test)
 
-    # Evaluate model performance
+    ## Evaluate model performance
     accuracy = accuracy_score(y_test, y_pred)
 
     return model, accuracy
@@ -249,35 +249,35 @@ from sklearn.preprocessing import StandardScaler
 from tensorflow.keras import layers, models
 
 def train_and_evaluate_deep_learning_model(data_file_path):
-    # Load mock data from a CSV file
+    ## Load mock data from a CSV file
     data = pd.read_csv(data_file_path)
 
-    # Preprocessing and feature engineering
+    ## Preprocessing and feature engineering
     X = data.drop('target_variable', axis=1)
     y = data['target_variable']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Standardize the input features
+    ## Standardize the input features
     scaler = StandardScaler()
     X_train = scaler.fit_transform(X_train)
     X_test = scaler.transform(X_test)
 
-    # Build a deep learning model
+    ## Build a deep learning model
     model = models.Sequential([
         layers.Dense(128, activation='relu', input_shape=(X_train.shape[1],)),
         layers.Dense(64, activation='relu'),
         layers.Dense(1, activation='sigmoid')
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train, epochs=20, batch_size=32, validation_data=(X_test, y_test))
 
-    # Evaluate model performance
+    ## Evaluate model performance
     _, accuracy = model.evaluate(X_test, y_test)
 
     return model, accuracy

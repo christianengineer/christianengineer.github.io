@@ -5,7 +5,7 @@ permalink: posts/energy-consumption-analysis-pandas-tensorflow-for-reducing-carb
 layout: article
 ---
 
-# AI Energy Consumption Analysis Repository
+## AI Energy Consumption Analysis Repository
 
 ## Objectives
 The objective of the AI Energy Consumption Analysis repository is to develop a scalable, data-intensive application for analyzing energy consumption data to reduce carbon footprint. This will involve leveraging machine learning techniques to identify patterns, make predictions, and optimize energy usage. The primary goals include:
@@ -33,7 +33,7 @@ To achieve the objectives and system design strategies, the following libraries 
 
 By integrating these libraries and frameworks, the AI Energy Consumption Analysis repository will enable the development of a powerful, scalable, and data-intensive application for reducing carbon footprint through advanced AI and machine learning techniques.
 
-# MLOps Infrastructure for Energy Consumption Analysis
+## MLOps Infrastructure for Energy Consumption Analysis
 
 ## Overview
 The MLOps infrastructure for the Energy Consumption Analysis application is essential for ensuring the seamless integration of machine learning models into the operational processes, enabling continuous monitoring, automated management, and efficient deployment of AI-driven insights for reducing carbon footprint. The key components and strategies for the MLOps infrastructure include:
@@ -76,27 +76,27 @@ By integrating these tools and technologies, the MLOps infrastructure for the En
 energy-consumption-analysis/
 │
 ├── data/
-│   ├── raw/                  # Raw data files
-│   ├── processed/            # Processed data files
-│   └── external/             # External datasets or APIs
+│   ├── raw/                  ## Raw data files
+│   ├── processed/            ## Processed data files
+│   └── external/             ## External datasets or APIs
 │
-├── notebooks/                # Jupyter notebooks for data exploration, analysis, and model development
+├── notebooks/                ## Jupyter notebooks for data exploration, analysis, and model development
 │
 ├── src/
-│   ├── data_processing/      # Scripts for data preprocessing and feature engineering
-│   ├── modeling/             # Scripts for building and training machine learning models
-│   ├── evaluation/           # Scripts for model evaluation and performance metrics
-│   └── serving/              # Scripts for model serving and real-time predictions
+│   ├── data_processing/      ## Scripts for data preprocessing and feature engineering
+│   ├── modeling/             ## Scripts for building and training machine learning models
+│   ├── evaluation/           ## Scripts for model evaluation and performance metrics
+│   └── serving/              ## Scripts for model serving and real-time predictions
 │
-├── config/                   # Configuration files for application settings and environment variables
+├── config/                   ## Configuration files for application settings and environment variables
 │
-├── tests/                    # Unit tests and integration tests for the application components
+├── tests/                    ## Unit tests and integration tests for the application components
 │
-├── infrastructure/           # Infrastructure as Code scripts for defining and provisioning the MLOps infrastructure
+├── infrastructure/           ## Infrastructure as Code scripts for defining and provisioning the MLOps infrastructure
 │
-├── docs/                     # Documentation files, including README, user guides, and API documentation
+├── docs/                     ## Documentation files, including README, user guides, and API documentation
 │
-└── .gitignore                # Git ignore file
+└── .gitignore                ## Git ignore file
 ```
 
 In this scalable file structure, the key components of the Energy Consumption Analysis repository are organized in a modular and easy-to-access manner. The structure encompasses the following directories:
@@ -127,17 +127,17 @@ The `models/` directory within the Energy Consumption Analysis repository houses
 models/
 │
 ├── training/
-│   ├── data_splitting.py         # Script for splitting the dataset into training and validation sets
-│   ├── feature_engineering.py    # Script for feature engineering and data preprocessing
-│   ├── model_training.py         # Script for training machine learning models using TensorFlow
-│   └── hyperparameter_tuning.py   # Script for hyperparameter tuning and optimization
+│   ├── data_splitting.py         ## Script for splitting the dataset into training and validation sets
+│   ├── feature_engineering.py    ## Script for feature engineering and data preprocessing
+│   ├── model_training.py         ## Script for training machine learning models using TensorFlow
+│   └── hyperparameter_tuning.py   ## Script for hyperparameter tuning and optimization
 │
 ├── evaluation/
-│   ├── model_evaluation.py       # Script for evaluating the performance of trained models
-│   └── visualize_results.py      # Script for visualizing model evaluation results
+│   ├── model_evaluation.py       ## Script for evaluating the performance of trained models
+│   └── visualize_results.py      ## Script for visualizing model evaluation results
 │
 └── serving/
-    └── serve_model.py            # Script for serving the trained model for real-time predictions
+    └── serve_model.py            ## Script for serving the trained model for real-time predictions
 ```
 
 ### Description of Files and Directories
@@ -172,16 +172,16 @@ The `deployment/` directory within the Energy Consumption Analysis repository en
 deployment/
 │
 ├── docker/
-│   ├── Dockerfile              # File for defining the Docker image for the application and model serving
-│   └── requirements.txt        # File specifying the Python dependencies for the deployment environment
+│   ├── Dockerfile              ## File for defining the Docker image for the application and model serving
+│   └── requirements.txt        ## File specifying the Python dependencies for the deployment environment
 │
 ├── kubernetes/
-│   ├── deployment.yaml         # Kubernetes manifest file for deploying the application and serving infrastructure
-│   ├── service.yaml            # Kubernetes manifest file for defining the service endpoints
-│   └── configmap.yaml          # Kubernetes ConfigMap for managing environment-specific configurations
+│   ├── deployment.yaml         ## Kubernetes manifest file for deploying the application and serving infrastructure
+│   ├── service.yaml            ## Kubernetes manifest file for defining the service endpoints
+│   └── configmap.yaml          ## Kubernetes ConfigMap for managing environment-specific configurations
 │
 └── scripts/
-    └── deploy_application.sh    # Shell script for automating the deployment of the application and model serving infrastructure
+    └── deploy_application.sh    ## Shell script for automating the deployment of the application and model serving infrastructure
 ```
 
 ### Description of Files and Directories
@@ -220,23 +220,23 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Dropout
 from tensorflow.keras.optimizers import Adam
 
-# Load mock energy consumption data using Pandas
+## Load mock energy consumption data using Pandas
 data_path = 'data/processed/mock_energy_data.csv'
 energy_data = pd.read_csv(data_path)
 
-# Preprocessing the data
+## Preprocessing the data
 X = energy_data.drop('target_variable', axis=1).values
 y = energy_data['target_variable'].values
 
-# Splitting the data into training and validation sets
+## Splitting the data into training and validation sets
 X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Feature scaling using StandardScaler
+## Feature scaling using StandardScaler
 scaler = StandardScaler()
 X_train = scaler.fit_transform(X_train)
 X_val = scaler.transform(X_val)
 
-# Defining the TensorFlow model
+## Defining the TensorFlow model
 model = Sequential([
     Dense(64, activation='relu', input_shape=(X_train.shape[1],)),
     Dropout(0.5),
@@ -245,21 +245,21 @@ model = Sequential([
     Dense(1)
 ])
 
-# Compiling the model
+## Compiling the model
 model.compile(optimizer=Adam(learning_rate=0.001),
               loss='mean_squared_error',
               metrics=['mae'])
 
-# Training the model
+## Training the model
 history = model.fit(X_train, y_train, validation_data=(X_val, y_val), epochs=50, batch_size=32)
 
-# Saving the trained model
+## Saving the trained model
 model.save('energy_consumption_model.h5')
 
-# Printing the model summary
+## Printing the model summary
 print(model.summary())
 
-# Evaluating the model
+## Evaluating the model
 loss, mae = model.evaluate(X_val, y_val)
 print(f'Validation MAE: {mae}')
 ```
@@ -285,51 +285,51 @@ from tensorflow.keras.layers import Dense, LSTM, Dropout
 from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.callbacks import EarlyStopping
 
-# Load mock energy consumption data using Pandas
+## Load mock energy consumption data using Pandas
 data_path = 'data/processed/mock_energy_data.csv'
 energy_data = pd.read_csv(data_path)
 
-# Preprocessing the data
+## Preprocessing the data
 X = energy_data.drop('target_variable', axis=1).values
 y = energy_data['target_variable'].values
 
-# Splitting the data into training and validation sets
+## Splitting the data into training and validation sets
 X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Feature scaling using StandardScaler
+## Feature scaling using StandardScaler
 scaler = StandardScaler()
 X_train = scaler.fit_transform(X_train)
 X_val = scaler.transform(X_val)
 
-# Reshaping input data for LSTM model
+## Reshaping input data for LSTM model
 X_train_lstm = X_train.reshape((X_train.shape[0], 1, X_train.shape[1]))
 X_val_lstm = X_val.reshape((X_val.shape[0], 1, X_val.shape[1]))
 
-# Defining the LSTM model architecture
+## Defining the LSTM model architecture
 model = Sequential([
     LSTM(50, input_shape=(X_train_lstm.shape[1], X_train_lstm.shape[2])),
     Dropout(0.2),
     Dense(1)
 ])
 
-# Compiling the model
+## Compiling the model
 model.compile(optimizer=Adam(learning_rate=0.001),
               loss='mean_squared_error',
               metrics=['mae'])
 
-# Adding early stopping to prevent overfitting
+## Adding early stopping to prevent overfitting
 early_stopping = EarlyStopping(monitor='val_loss', patience=5, mode='min', restore_best_weights=True)
 
-# Training the model
+## Training the model
 history = model.fit(X_train_lstm, y_train, validation_data=(X_val_lstm, y_val), epochs=50, batch_size=32, callbacks=[early_stopping])
 
-# Saving the trained model
+## Saving the trained model
 model.save('complex_energy_consumption_model.h5')
 
-# Printing the model summary
+## Printing the model summary
 print(model.summary())
 
-# Evaluating the model
+## Evaluating the model
 loss, mae = model.evaluate(X_val_lstm, y_val)
 print(f'Validation MAE: {mae}')
 ```

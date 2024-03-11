@@ -5,7 +5,7 @@ permalink: posts/ai-driven-retail-customer-experience-enhancer
 layout: article
 ---
 
-# AI-Driven Retail Customer Experience Enhancer
+## AI-Driven Retail Customer Experience Enhancer
 
 ## Description
 

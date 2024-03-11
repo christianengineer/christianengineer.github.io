@@ -59,39 +59,39 @@ By implementing a robust MLOps infrastructure, the Large-scale Network Traffic A
 large-scale-network-traffic-analysis
 │
 ├── analysis
-│   ├── spark_processing         # Spark processing code
+│   ├── spark_processing         ## Spark processing code
 │   │   ├── streaming_analysis.py
 │   │   └── batch_analysis.py
-│   ├── ml_modeling              # Machine learning model development
+│   ├── ml_modeling              ## Machine learning model development
 │   │   ├── train_model.py
 │   │   └── evaluate_model.py
-│   └── data_preprocessing       # Data preprocessing scripts
+│   └── data_preprocessing       ## Data preprocessing scripts
 │       ├── data_cleaning.py
 │       └── feature_engineering.py
 │
 ├── deployment
-│   ├── dockerfiles             # Dockerfile for building containers
+│   ├── dockerfiles             ## Dockerfile for building containers
 │   │   ├── spark.Dockerfile
 │   │   └── ml_model.Dockerfile
-│   ├── kubernetes               # Kubernetes deployment configurations
+│   ├── kubernetes               ## Kubernetes deployment configurations
 │   │   ├── spark_deployment.yaml
 │   │   └── ml_model_deployment.yaml
-│   └── CI_CD                    # Continuous integration and deployment scripts
+│   └── CI_CD                    ## Continuous integration and deployment scripts
 │       ├── build_docker_image.sh
 │       └── deploy_to_kubernetes.sh
 │
 ├── data
-│   ├── raw_data                 # Raw network traffic data
-│   └── processed_data           # Processed and transformed data
+│   ├── raw_data                 ## Raw network traffic data
+│   └── processed_data           ## Processed and transformed data
 │
 └── infrastructure
-    ├── monitoring               # Monitoring and logging configurations
+    ├── monitoring               ## Monitoring and logging configurations
     │   ├── prometheus_config.yaml
     │   └── grafana_dashboards.json
-    ├── mlflow                   # MLflow model tracking configurations
+    ├── mlflow                   ## MLflow model tracking configurations
     │   ├── mlflow_server_config.yaml
     │   └── tracking.py
-    └── tests                    # Automated tests for ML models and processing
+    └── tests                    ## Automated tests for ML models and processing
         ├── model_tests.py
         └── spark_processing_tests.py
 ```
@@ -103,17 +103,17 @@ The `models` directory within the Large-scale Network Traffic Analysis applicati
 ```
 models
 │
-├── trained_models                # Directory to store trained model artifacts
-│   ├── model_version1.pkl        # Serialized version of the trained Scikit-Learn model
-│   └── model_version1_metadata.json  # Metadata and performance metrics for the trained model
+├── trained_models                ## Directory to store trained model artifacts
+│   ├── model_version1.pkl        ## Serialized version of the trained Scikit-Learn model
+│   └── model_version1_metadata.json  ## Metadata and performance metrics for the trained model
 │
-├── model_training.py             # Script for training the machine learning model
+├── model_training.py             ## Script for training the machine learning model
 │
-├── model_evaluation.py           # Script for evaluating the performance of the trained model
+├── model_evaluation.py           ## Script for evaluating the performance of the trained model
 │
 └── model_serving
-    ├── serve_model.py            # Script for serving the trained model using a REST API
-    └── Dockerfile                # Dockerfile for containerizing the model serving application
+    ├── serve_model.py            ## Script for serving the trained model using a REST API
+    └── Dockerfile                ## Dockerfile for containerizing the model serving application
 ```
 
 ### trained_models
@@ -135,17 +135,17 @@ The `deployment` directory within the Large-scale Network Traffic Analysis appli
 ```
 deployment
 │
-├── dockerfiles                   # Directory for Docker build configuration files
-│   ├── spark.Dockerfile          # Dockerfile for building the Spark application container
-│   └── ml_model.Dockerfile       # Dockerfile for building the machine learning model serving container
+├── dockerfiles                   ## Directory for Docker build configuration files
+│   ├── spark.Dockerfile          ## Dockerfile for building the Spark application container
+│   └── ml_model.Dockerfile       ## Dockerfile for building the machine learning model serving container
 │
-├── kubernetes                    # Kubernetes deployment configurations
-│   ├── spark_deployment.yaml     # YAML file defining the Spark processing job deployment
-│   └── ml_model_deployment.yaml  # YAML file defining the deployment of the model serving application
+├── kubernetes                    ## Kubernetes deployment configurations
+│   ├── spark_deployment.yaml     ## YAML file defining the Spark processing job deployment
+│   └── ml_model_deployment.yaml  ## YAML file defining the deployment of the model serving application
 │
-└── CI_CD                         # Continuous integration and deployment scripts
-    ├── build_docker_image.sh     # Script for building Docker images
-    └── deploy_to_kubernetes.sh    # Script for deploying the application to Kubernetes
+└── CI_CD                         ## Continuous integration and deployment scripts
+    ├── build_docker_image.sh     ## Script for building Docker images
+    └── deploy_to_kubernetes.sh    ## Script for deploying the application to Kubernetes
 ```
 
 ### dockerfiles
@@ -164,35 +164,35 @@ Certainly! Below is an example of a Python script for training a machine learnin
 The file can be named `train_model.py` and can be placed within the `analysis/ml_modeling/` directory of the repository.
 
 ```python
-# train_model.py
+## train_model.py
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 import joblib
 
-# Load mock data (replace with actual data loading logic)
+## Load mock data (replace with actual data loading logic)
 data = pd.read_csv('path_to_mock_data/mock_traffic_data.csv')
 
-# Preprocessing - feature selection, data cleaning, etc.
-# ...
+## Preprocessing - feature selection, data cleaning, etc.
+## ...
 
-# Split data into features and target variable
+## Split data into features and target variable
 X = data.drop('target_variable', axis=1)
 y = data['target_variable']
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Instantiate the model
+## Instantiate the model
 model = RandomForestClassifier(n_estimators=100, random_state=42)
 
-# Train the model
+## Train the model
 model.fit(X_train, y_train)
 
-# Evaluate the model (if needed)
-# ...
+## Evaluate the model (if needed)
+## ...
 
-# Save the trained model to a file
+## Save the trained model to a file
 joblib.dump(model, 'path_to_trained_models/trained_model.pkl')
 ```
 
@@ -209,45 +209,45 @@ For complex machine learning algorithms, such as deep learning models, Spark-bas
 The file can be named `train_complex_model.py` and can be placed within the `analysis/ml_modeling/` directory of the repository.
 
 ```python
-# train_complex_model.py
+## train_complex_model.py
 import pandas as pd
 from pyspark.sql import SparkSession
 from pyspark.ml.feature import VectorAssembler
 from pyspark.ml.classification import RandomForestClassifier
 from pyspark.ml.evaluation import MulticlassClassificationEvaluator
 
-# Create a Spark session
+## Create a Spark session
 spark = SparkSession.builder.appName("NetworkTrafficAnalysis").getOrCreate()
 
-# Load mock data (replace with actual data loading logic)
+## Load mock data (replace with actual data loading logic)
 data = spark.read.csv("path_to_mock_data/mock_traffic_data.csv", header=True, inferSchema=True)
 
-# Perform feature engineering and preprocessing using Spark's DataFrame API
-feature_columns = data.columns[:-1]  # Select all columns as features except the target variable
+## Perform feature engineering and preprocessing using Spark's DataFrame API
+feature_columns = data.columns[:-1]  ## Select all columns as features except the target variable
 assembler = VectorAssembler(inputCols=feature_columns, outputCol="features")
 data_assembled = assembler.transform(data)
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 (training_data, test_data) = data_assembled.randomSplit([0.8, 0.2])
 
-# Instantiate the Random Forest classifier
+## Instantiate the Random Forest classifier
 rf = RandomForestClassifier(labelCol="target_variable", featuresCol="features", numTrees=10)
 
-# Train the model
+## Train the model
 model = rf.fit(training_data)
 
-# Make predictions on test data
+## Make predictions on test data
 predictions = model.transform(test_data)
 
-# Evaluate the model
+## Evaluate the model
 evaluator = MulticlassClassificationEvaluator(labelCol="target_variable", predictionCol="prediction", metricName="accuracy")
 accuracy = evaluator.evaluate(predictions)
 print("Test Accuracy = %g" % accuracy)
 
-# Save the trained model
-model.save("path_to_trained_models/complex_model")  # Save the model as a Spark ML pipeline
+## Save the trained model
+model.save("path_to_trained_models/complex_model")  ## Save the model as a Spark ML pipeline
 
-# Stop the Spark session
+## Stop the Spark session
 spark.stop()
 ```
 

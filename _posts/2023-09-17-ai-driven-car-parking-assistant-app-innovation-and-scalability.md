@@ -5,7 +5,7 @@ permalink: posts/ai-driven-car-parking-assistant-app-innovation-and-scalability
 layout: article
 ---
 
-# AI-Driven Car Parking Assistant App Repository
+## AI-Driven Car Parking Assistant App Repository
 
 This repository is dedicated for the development of a state-of-the-art AI-Driven Car Parking Assistant app, envisioned to be a top-tier product in optimizing the handling, control, and management of car parking spaces in various settings - be it shopping malls, public spaces, or office premises.
 
@@ -53,7 +53,7 @@ The AI-Driven Car Parking Assistant App is a smart solution designed to address 
 
 Through the synergistic use of these libraries and technologies, we strive to develop a cutting-edge AI-Driven Car Parking Assistant App that simplifies parking management and provides the optimal user experience.
 
-# AI-Driven Car Parking Assistant App Repository - File Structure
+## AI-Driven Car Parking Assistant App Repository - File Structure
 
 This is a proposed organization of files and directories for efficient development, collaboration, and management of the AI-Driven Car Parking Assistant App project.
 
@@ -114,7 +114,7 @@ AI-Driven-Car-Parking-Assistant-App/
 
 Every component of the project is encapsulated and each has its own separate concerns which makes it scalable, manageable, easy to debug, and ensures a clean workflow.
 
-# AI-Driven Car Parking Assistant App Repository - AI Logic File
+## AI-Driven Car Parking Assistant App Repository - AI Logic File
 
 The AI Logic for the AI-Driven Car Parking Assistant App can be found in the `ai/scripts/ai_logic.py` file within the project.
 
@@ -131,7 +131,7 @@ AI-Driven-Car-Parking-Assistant-App/
 Below is a brief overview of the `ai_logic.py`:
 
 ```python
-# Import necessary libraries
+## Import necessary libraries
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
@@ -139,25 +139,25 @@ from sklearn.metrics import mean_absolute_error
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
 
-# AI Logic for handling AI-Driven Car Parking Assistant App
+## AI Logic for handling AI-Driven Car Parking Assistant App
 
-# Load dataset
+## Load dataset
 def load_data(file_path):
     data = pd.read_csv(file_path)
     return data
 
-# Preprocess Data
+## Preprocess Data
 def preprocess_data(data):
-    # Define preprocessing steps
-    # Return preprocessed data
+    ## Define preprocessing steps
+    ## Return preprocessed data
     return data
 
-# Split Data into Training and Testing Sets
+## Split Data into Training and Testing Sets
 def split_data(data):
     X_train, X_test, y_train, y_test = train_test_split(data.iloc[:, :-1], data.iloc[:, -1], test_size=0.2)
     return X_train, X_test, y_train, y_test
 
-# Define Model
+## Define Model
 def define_model():
     model = Sequential()
     model.add(Dense(10, input_dim=8))
@@ -166,17 +166,17 @@ def define_model():
 
     return model
 
-# Train Model
+## Train Model
 def train_model(model, X_train, y_train):
     model.fit(X_train, y_train, epochs=100, batch_size=10)
 
-# Evaluate Model
+## Evaluate Model
 def evaluate_model(model, X_test, y_test):
     prediction = model.predict(X_test)
 
     return mean_absolute_error(y_test, prediction)
 
-# Main Execution Flow of Car Parking Assistant's AI Logic
+## Main Execution Flow of Car Parking Assistant's AI Logic
 def main():
     data = load_data('dataset.csv')
     data = preprocess_data(data)

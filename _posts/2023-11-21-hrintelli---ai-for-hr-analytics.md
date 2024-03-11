@@ -320,29 +320,29 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 
 def train_employee_turnover_prediction_model(data_file_path):
-    # Load mock HR data from the provided file path
+    ## Load mock HR data from the provided file path
     hr_data = pd.read_csv(data_file_path)
 
-    # Preprocessing and feature engineering (simplified for demonstration)
-    # ...
+    ## Preprocessing and feature engineering (simplified for demonstration)
+    ## ...
     X = hr_data[['satisfaction_level', 'average_montly_hours', 'time_spend_company']]
     y = hr_data['left']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize and train the random forest classifier
+    ## Initialize and train the random forest classifier
     clf = RandomForestClassifier(n_estimators=100, random_state=42)
     clf.fit(X_train, y_train)
 
-    # Make predictions on the test set
+    ## Make predictions on the test set
     y_pred = clf.predict(X_test)
 
-    # Evaluate model performance
+    ## Evaluate model performance
     accuracy = accuracy_score(y_test, y_pred)
     print("Model Accuracy:", accuracy)
 
-    # Serialize the trained model for later use
+    ## Serialize the trained model for later use
     model_file_path = 'models/employee_turnover_model.pkl'
     joblib.dump(clf, model_file_path)
 
@@ -369,10 +369,10 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 from sklearn.metrics import accuracy_score
 
 def train_employee_sentiment_analysis_model(data_file_path):
-    # Load mock HR sentiment data from the provided file path
+    ## Load mock HR sentiment data from the provided file path
     hr_sentiment_data = pd.read_csv(data_file_path)
 
-    # Preprocessing and tokenization of text data (simplified for demonstration)
+    ## Preprocessing and tokenization of text data (simplified for demonstration)
     tokenizer = Tokenizer(num_words=1000, oov_token='<OOV>')
     tokenizer.fit_on_texts(hr_sentiment_data['employee_comments'])
     sequences = tokenizer.texts_to_sequences(hr_sentiment_data['employee_comments'])
@@ -381,10 +381,10 @@ def train_employee_sentiment_analysis_model(data_file_path):
     X = padded_sequences
     y = hr_sentiment_data['sentiment_label']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Build the deep learning model
+    ## Build the deep learning model
     model = Sequential()
     model.add(Embedding(input_dim=1000, output_dim=100, input_length=100))
     model.add(LSTM(64, return_sequences=True))
@@ -393,15 +393,15 @@ def train_employee_sentiment_analysis_model(data_file_path):
 
     model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y_test))
 
-    # Evaluate model performance
+    ## Evaluate model performance
     y_pred = (model.predict(X_test) > 0.5).astype(int)
     accuracy = accuracy_score(y_test, y_pred)
     print("Model Accuracy:", accuracy)
 
-    # Serialize the trained model for later use
+    ## Serialize the trained model for later use
     model_file_path = 'models/employee_sentiment_analysis_model.h5'
     model.save(model_file_path)
 

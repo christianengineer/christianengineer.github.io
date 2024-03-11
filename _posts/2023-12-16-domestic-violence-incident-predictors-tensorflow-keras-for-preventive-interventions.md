@@ -5,7 +5,7 @@ permalink: posts/domestic-violence-incident-predictors-tensorflow-keras-for-prev
 layout: article
 ---
 
-# AI Domestic Violence Incident Predictors
+## AI Domestic Violence Incident Predictors
 
 ## Objectives
 The primary objective of the AI Domestic Violence Incident Predictors project is to develop a machine learning model that can predict the likelihood of domestic violence incidents. The model aims to leverage historical data to identify patterns and indicators that may precede such incidents. By accurately predicting the likelihood of domestic violence, the goal is to enable preventive interventions and support to potential victims.
@@ -29,7 +29,7 @@ The following libraries and frameworks will be utilized in the project:
 
 By leveraging these libraries and following the system design strategies, the project aims to develop a robust AI system for predicting domestic violence incidents and enabling preventive interventions.
 
-# MLOps Infrastructure for Domestic Violence Incident Predictors
+## MLOps Infrastructure for Domestic Violence Incident Predictors
 
 ## Introduction
 MLOps, short for Machine Learning Operations, encompasses the practices and tools for operationalizing machine learning models to ensure their scalability, reliability, and maintainability in production environments. The MLOps infrastructure for the Domestic Violence Incident Predictors application involves the integration of various components to streamline the deployment, monitoring, and management of machine learning models based on TensorFlow and Keras for preventive interventions.
@@ -60,7 +60,7 @@ MLOps, short for Machine Learning Operations, encompasses the practices and tool
 
 By integrating these components and strategies, the MLOps infrastructure for the Domestic Violence Incident Predictors application aims to ensure the reliability, scalability, and maintainability of the machine learning models, ultimately enabling effective preventive interventions based on predictive insights.
 
-# Scalable File Structure for Domestic Violence Incident Predictors Repository
+## Scalable File Structure for Domestic Violence Incident Predictors Repository
 
 The following scalable file structure is suggested for organizing the codebase of the Domestic Violence Incident Predictors application based on TensorFlow and Keras:
 
@@ -164,15 +164,15 @@ from tensorflow.keras.optimizers import Adam
 from sklearn.model_selection import train_test_split
 import pandas as pd
 
-# Load preprocessed data
+## Load preprocessed data
 df = pd.read_csv('data/processed/preprocessed_data.csv')
 X = df.drop(columns=['target_column'])
 y = df['target_column']
 
-# Split the data into training and validation sets
+## Split the data into training and validation sets
 X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Define the model architecture
+## Define the model architecture
 model = Sequential([
     Dense(64, activation='relu', input_shape=(X_train.shape[1],)),
     Dropout(0.2),
@@ -181,13 +181,13 @@ model = Sequential([
     Dense(1, activation='sigmoid')
 ])
 
-# Compile the model
+## Compile the model
 model.compile(optimizer=Adam(), loss='binary_crossentropy', metrics=['accuracy'])
 
-# Train the model
+## Train the model
 history = model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_val, y_val))
 
-# Save the trained model
+## Save the trained model
 model.save('models/saved_models/domestic_violence_model.h5')
 ```
 
@@ -217,30 +217,30 @@ import numpy as np
 
 app = Flask(__name__)
 
-# Load the trained model
+## Load the trained model
 model = load_model('models/saved_models/domestic_violence_model.h5')
 
-# API endpoint for model prediction
+## API endpoint for model prediction
 @app.route('/predict', methods=['POST'])
 def predict():
     data = request.get_json()
-    # Data preprocessing (e.g., convert to appropriate input format, normalize features)
+    ## Data preprocessing (e.g., convert to appropriate input format, normalize features)
     input_data = preprocess_input(data)
-    # Model prediction
+    ## Model prediction
     prediction = model.predict(input_data)
-    # Post-processing (e.g., converting predictions to human-readable format)
+    ## Post-processing (e.g., converting predictions to human-readable format)
     processed_prediction = postprocess_prediction(prediction)
     return jsonify({'prediction': processed_prediction})
 
 def preprocess_input(data):
-    # Perform data preprocessing specific to the model's input requirements
-    # E.g., feature normalization, conversion to model input format
+    ## Perform data preprocessing specific to the model's input requirements
+    ## E.g., feature normalization, conversion to model input format
     preprocessed_data = np.array([data['feature1'], data['feature2']])
     return preprocessed_data
 
 def postprocess_prediction(prediction):
-    # Perform post-processing to convert model output to human-readable format
-    # E.g., thresholding, label mapping
+    ## Perform post-processing to convert model output to human-readable format
+    ## E.g., thresholding, label mapping
     processed_prediction = "High Risk" if prediction > 0.5 else "Low Risk"
     return processed_prediction
 
@@ -262,11 +262,11 @@ from tensorflow.keras.layers import Dense, Dropout
 from tensorflow.keras.optimizers import Adam
 import numpy as np
 
-# Mock data (example)
-X_train = np.random.rand(100, 10)  # 100 samples, 10 features
-y_train = np.random.randint(0, 2, 100)  # Binary classification labels (0 or 1)
+## Mock data (example)
+X_train = np.random.rand(100, 10)  ## 100 samples, 10 features
+y_train = np.random.randint(0, 2, 100)  ## Binary classification labels (0 or 1)
 
-# Define the model architecture
+## Define the model architecture
 model = Sequential([
     Dense(64, activation='relu', input_shape=(X_train.shape[1],)),
     Dropout(0.2),
@@ -275,13 +275,13 @@ model = Sequential([
     Dense(1, activation='sigmoid')
 ])
 
-# Compile the model
+## Compile the model
 model.compile(optimizer=Adam(), loss='binary_crossentropy', metrics=['accuracy'])
 
-# Train the model with mock data
+## Train the model with mock data
 history = model.fit(X_train, y_train, epochs=10, batch_size=32, validation_split=0.2)
 
-# Save the trained model
+## Save the trained model
 model.save('models/saved_models/mock_domestic_violence_model.h5')
 ```
 
@@ -299,12 +299,12 @@ from tensorflow.keras.layers import Dense, Dropout, LSTM
 from tensorflow.keras.optimizers import Adam
 import numpy as np
 
-# Mock data (example)
-# Mock time series data (100 samples, 10 timesteps, 5 features)
+## Mock data (example)
+## Mock time series data (100 samples, 10 timesteps, 5 features)
 X_train = np.random.rand(100, 10, 5)
-y_train = np.random.randint(0, 2, 100)  # Binary classification labels (0 or 1)
+y_train = np.random.randint(0, 2, 100)  ## Binary classification labels (0 or 1)
 
-# Define the complex LSTM-based model architecture
+## Define the complex LSTM-based model architecture
 model = Sequential([
     LSTM(64, input_shape=(X_train.shape[1], X_train.shape[2])),
     Dropout(0.2),
@@ -313,13 +313,13 @@ model = Sequential([
     Dense(1, activation='sigmoid')
 ])
 
-# Compile the model
+## Compile the model
 model.compile(optimizer=Adam(), loss='binary_crossentropy', metrics=['accuracy'])
 
-# Train the complex model with mock time series data
+## Train the complex model with mock time series data
 history = model.fit(X_train, y_train, epochs=10, batch_size=32, validation_split=0.2)
 
-# Save the trained complex model
+## Save the trained complex model
 model.save('models/saved_models/complex_mock_domestic_violence_model.h5')
 ```
 

@@ -97,43 +97,43 @@ The file structure for the EduAI platform repository should be organized in a mo
 EduAI/
 ├── backend/
 │   ├── app/
-│   │   ├── controllers/                  # Controllers for handling HTTP requests
-│   │   ├── models/                       # Data models and database schemas
-│   │   ├── routes/                       # API route definitions
-│   │   ├── services/                     # Business logic services
-│   │   └── app.js                        # Main backend application entry point
-│   ├── config/                           # Configuration files for environment-specific settings
-│   ├── middleware/                       # Custom middleware for request processing
-│   ├── tests/                            # Test cases and test utilities
-│   └── package.json                      # Backend dependencies and scripts
+│   │   ├── controllers/                  ## Controllers for handling HTTP requests
+│   │   ├── models/                       ## Data models and database schemas
+│   │   ├── routes/                       ## API route definitions
+│   │   ├── services/                     ## Business logic services
+│   │   └── app.js                        ## Main backend application entry point
+│   ├── config/                           ## Configuration files for environment-specific settings
+│   ├── middleware/                       ## Custom middleware for request processing
+│   ├── tests/                            ## Test cases and test utilities
+│   └── package.json                      ## Backend dependencies and scripts
 ├── frontend/
-│   ├── public/                           # Static assets and index.html
+│   ├── public/                           ## Static assets and index.html
 │   ├── src/
-│   │   ├── assets/                       # Images, fonts, and other static assets
-│   │   ├── components/                   # Reusable React/Vue components
-│   │   ├── containers/                   # Higher-level container components
-│   │   ├── services/                     # Frontend services for API communication
-│   │   ├── styles/                       # SCSS or CSS stylesheets
-│   │   └── App.js/App.vue                # Root component for the frontend application
-│   └── package.json                      # Frontend dependencies and scripts
+│   │   ├── assets/                       ## Images, fonts, and other static assets
+│   │   ├── components/                   ## Reusable React/Vue components
+│   │   ├── containers/                   ## Higher-level container components
+│   │   ├── services/                     ## Frontend services for API communication
+│   │   ├── styles/                       ## SCSS or CSS stylesheets
+│   │   └── App.js/App.vue                ## Root component for the frontend application
+│   └── package.json                      ## Frontend dependencies and scripts
 ├── machine_learning/
-│   ├── models/                           # Trained machine learning models and model definitions
-│   ├── preprocessing/                    # Data preprocessing scripts
-│   ├── training/                         # Scripts for training machine learning models
-│   └── inference/                        # Model serving and inference scripts
+│   ├── models/                           ## Trained machine learning models and model definitions
+│   ├── preprocessing/                    ## Data preprocessing scripts
+│   ├── training/                         ## Scripts for training machine learning models
+│   └── inference/                        ## Model serving and inference scripts
 ├── infrastructure/
-│   ├── deployment/                       # Infrastructure as Code (IaC) templates for cloud deployment
-│   ├── networking/                       # Configuration files and scripts for networking setup
-│   ├── monitoring/                       # Monitoring and logging configuration
-│   └── security/                         # Security configurations and scripts
+│   ├── deployment/                       ## Infrastructure as Code (IaC) templates for cloud deployment
+│   ├── networking/                       ## Configuration files and scripts for networking setup
+│   ├── monitoring/                       ## Monitoring and logging configuration
+│   └── security/                         ## Security configurations and scripts
 ├── data/
-│   ├── raw/                              # Raw educational data and datasets
-│   ├── processed/                        # Processed and cleaned data for training and analysis
-│   └── metadata/                          # Metadata and annotations for the educational content
-├── documentation/                        # Project documentation, API references, and development guidelines
-├── scripts/                              # Utility scripts for development, testing, and CI/CD workflows
-├── README.md                             # Project overview, setup instructions, and usage guidelines
-└── .gitignore                            # Git ignore file for excluding unnecessary files from version control
+│   ├── raw/                              ## Raw educational data and datasets
+│   ├── processed/                        ## Processed and cleaned data for training and analysis
+│   └── metadata/                          ## Metadata and annotations for the educational content
+├── documentation/                        ## Project documentation, API references, and development guidelines
+├── scripts/                              ## Utility scripts for development, testing, and CI/CD workflows
+├── README.md                             ## Project overview, setup instructions, and usage guidelines
+└── .gitignore                            ## Git ignore file for excluding unnecessary files from version control
 ```
 
 This file structure organizes the repository into distinct modules such as backend, frontend, machine learning, infrastructure, data, documentation, and scripts. Each module contains relevant subdirectories and files to effectively manage the development, deployment, and maintenance of the EduAI platform.
@@ -148,24 +148,24 @@ Within the EduAI repository, the `AI` directory is dedicated to hosting the mach
 EduAI/
 └── AI/
     ├── models/
-    │   ├── nlp/                           # Subdirectory for natural language processing (NLP) models
-    │   ├── computer_vision/               # Subdirectory for computer vision models
-    │   ├── recommendation/                # Subdirectory for recommendation system models
-    │   └── sentiment_analysis/            # Subdirectory for sentiment analysis models
+    │   ├── nlp/                           ## Subdirectory for natural language processing (NLP) models
+    │   ├── computer_vision/               ## Subdirectory for computer vision models
+    │   ├── recommendation/                ## Subdirectory for recommendation system models
+    │   └── sentiment_analysis/            ## Subdirectory for sentiment analysis models
     ├── preprocessing/
-    │   ├── data_preprocessing.ipynb       # Jupyter notebook for data preprocessing and feature engineering
-    │   ├── text_processing.py             # Python script for text data preprocessing
-    │   ├── image_processing.py            # Python script for image data preprocesing
-    │   └── data_augmentation/             # Subdirectory for data augmentation scripts
+    │   ├── data_preprocessing.ipynb       ## Jupyter notebook for data preprocessing and feature engineering
+    │   ├── text_processing.py             ## Python script for text data preprocessing
+    │   ├── image_processing.py            ## Python script for image data preprocesing
+    │   └── data_augmentation/             ## Subdirectory for data augmentation scripts
     ├── training/
-    │   ├── train_nlp_model.py             # Script for training NLP models
-    │   ├── train_cv_model.py              # Script for training computer vision models
-    │   ├── train_recommender.py           # Script for training recommendation system models
-    │   └── train_sa_model.py              # Script for training sentiment analysis models
+    │   ├── train_nlp_model.py             ## Script for training NLP models
+    │   ├── train_cv_model.py              ## Script for training computer vision models
+    │   ├── train_recommender.py           ## Script for training recommendation system models
+    │   └── train_sa_model.py              ## Script for training sentiment analysis models
     ├── inference/
-    │   ├── serve_model.py                 # Script for serving trained models for real-time inference
-    │   └── batch_inference.py             # Script for batch inference on datasets using trained models
-    └── README.md                          # Overview and instructions for the AI directory
+    │   ├── serve_model.py                 ## Script for serving trained models for real-time inference
+    │   └── batch_inference.py             ## Script for batch inference on datasets using trained models
+    └── README.md                          ## Overview and instructions for the AI directory
 ```
 
 #### Overview of Files and Subdirectories:
@@ -190,28 +190,28 @@ The `utils` directory within the EduAI repository houses utility scripts, helper
 EduAI/
 └── utils/
     ├── data_processing/
-    │   ├── data_loader.py               # Utility functions for loading and preprocessing data
-    │   ├── data_augmentation.py         # Functions for data augmentation and transformation
-    │   └── feature_extraction.py        # Feature extraction utilities for data analysis and modeling
+    │   ├── data_loader.py               ## Utility functions for loading and preprocessing data
+    │   ├── data_augmentation.py         ## Functions for data augmentation and transformation
+    │   └── feature_extraction.py        ## Feature extraction utilities for data analysis and modeling
     ├── model_evaluation/
-    │   ├── metrics.py                   # Custom evaluation metrics for model performance assessment
-    │   ├── visualization.py             # Functions for generating model evaluation visualizations
-    │   └── calibration.py               # Calibration utilities for probability calibration
+    │   ├── metrics.py                   ## Custom evaluation metrics for model performance assessment
+    │   ├── visualization.py             ## Functions for generating model evaluation visualizations
+    │   └── calibration.py               ## Calibration utilities for probability calibration
     ├── text_processing/
-    │   ├── text_cleaning.py             # Functions for text cleaning and preprocessing
-    │   ├── text_vectorization.py        # Utilities for text vectorization and word embedding
-    │   └── language_model_utils.py      # Helper functions for language modeling tasks
+    │   ├── text_cleaning.py             ## Functions for text cleaning and preprocessing
+    │   ├── text_vectorization.py        ## Utilities for text vectorization and word embedding
+    │   └── language_model_utils.py      ## Helper functions for language modeling tasks
     ├── image_processing/
-    │   ├── image_loading.py             # Image loading and preprocessing functions
-    │   ├── image_augmentation.py        # Image augmentation techniques and utilities
-    │   └── feature_extraction.py        # Feature extraction and representation for images
+    │   ├── image_loading.py             ## Image loading and preprocessing functions
+    │   ├── image_augmentation.py        ## Image augmentation techniques and utilities
+    │   └── feature_extraction.py        ## Feature extraction and representation for images
     ├── logging/
-    │   ├── logger.py                    # Custom logger setup for consistent logging across the platform
-    │   └── error_handling.py            # Error handling utilities and exception classes
+    │   ├── logger.py                    ## Custom logger setup for consistent logging across the platform
+    │   └── error_handling.py            ## Error handling utilities and exception classes
     ├── testing/
-    │   ├── unit_testing.py              # Utilities for writing and running unit tests
-    │   └── integration_testing.py       # Helper functions for setting up integration tests
-    └── README.md                        # Overview and instructions for the utils directory
+    │   ├── unit_testing.py              ## Utilities for writing and running unit tests
+    │   └── integration_testing.py       ## Helper functions for setting up integration tests
+    └── README.md                        ## Overview and instructions for the utils directory
 ```
 
 #### Overview of Files and Subdirectories:
@@ -239,24 +239,24 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
 def complex_machine_learning_algorithm(data_path):
-    # Load mock data (replace with actual data loading code)
+    ## Load mock data (replace with actual data loading code)
     data = np.genfromtxt(data_path, delimiter=',', skip_header=1)
-    X = data[:, :-1]  # Features
-    y = data[:, -1]   # Target variable
+    X = data[:, :-1]  ## Features
+    y = data[:, -1]   ## Target variable
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize the complex machine learning model (Random Forest as an example)
+    ## Initialize the complex machine learning model (Random Forest as an example)
     model = RandomForestClassifier(n_estimators=100, random_state=42)
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train)
 
-    # Make predictions
+    ## Make predictions
     y_pred = model.predict(X_test)
 
-    # Evaluate the model
+    ## Evaluate the model
     accuracy = accuracy_score(y_test, y_pred)
 
     return model, accuracy
@@ -287,34 +287,34 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
 def complex_deep_learning_algorithm(data_path):
-    # Load mock data (replace with actual data loading code)
+    ## Load mock data (replace with actual data loading code)
     data = np.genfromtxt(data_path, delimiter=',', skip_header=1)
-    X = data[:, :-1]  # Features
-    y = data[:, -1]   # Target variable
+    X = data[:, :-1]  ## Features
+    y = data[:, -1]   ## Target variable
 
-    # Data preprocessing
+    ## Data preprocessing
     scaler = StandardScaler()
     X_scaled = scaler.fit_transform(X)
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.2, random_state=42)
 
-    # Define the deep learning model
+    ## Define the deep learning model
     model = tf.keras.models.Sequential([
         tf.keras.layers.Dense(64, activation='relu', input_shape=(X_train.shape[1],)),
         tf.keras.layers.Dense(64, activation='relu'),
         tf.keras.layers.Dense(1, activation='sigmoid')
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam',
                   loss='binary_crossentropy',
                   metrics=['accuracy'])
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y_test))
 
-    # Evaluate the model
+    ## Evaluate the model
     _, accuracy = model.evaluate(X_test, y_test)
 
     return model, accuracy

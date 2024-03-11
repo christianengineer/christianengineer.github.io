@@ -5,7 +5,7 @@ permalink: posts/waste-reduction-ai-for-peru-food-enterprises-pytorch-scikit-lea
 layout: article
 ---
 
-# AI Waste Reduction System for Peru Food Enterprises
+## AI Waste Reduction System for Peru Food Enterprises
 
 ## Objectives
 - Identify patterns in the supply chain that lead to waste
@@ -31,7 +31,7 @@ layout: article
 
 By integrating these design strategies and leveraging the chosen libraries, the AI Waste Reduction System can effectively identify waste patterns in the supply chain of Peru Food Enterprises and recommend interventions to reduce waste and improve sustainability.
 
-# MLOps Infrastructure for Waste Reduction AI
+## MLOps Infrastructure for Waste Reduction AI
 
 ## Continuous Integration/Continuous Deployment (CI/CD)
 - **Pipeline Automation**: Develop CI/CD pipelines to automate the training, evaluation, and deployment of ML models.
@@ -59,68 +59,68 @@ By integrating these design strategies and leveraging the chosen libraries, the 
 
 By incorporating these MLOps practices, the Waste Reduction AI for Peru Food Enterprises can efficiently identify waste patterns in the supply chain, recommend interventions to reduce waste, and improve sustainability. The combination of PyTorch, Scikit-Learn, Spark, and DVC will be supported by a robust MLOps infrastructure for seamless development, deployment, and monitoring of the AI application.
 
-# Scalable File Structure for Waste Reduction AI
+## Scalable File Structure for Waste Reduction AI
 
 ```
 waste_reduction_ai_peru_food_enterprises/
 │
 ├── data/
-│   ├── raw/                       # Raw data from various sources
-│   ├── processed/                  # Preprocessed data for model training
-│   └── interim/                    # Intermediate data files
+│   ├── raw/                       ## Raw data from various sources
+│   ├── processed/                  ## Preprocessed data for model training
+│   └── interim/                    ## Intermediate data files
 │
 ├── models/
-│   ├── pytorch/                   # PyTorch model scripts
-│   ├── scikit-learn/              # Scikit-Learn model scripts
-│   └── spark/                     # Spark model scripts
+│   ├── pytorch/                   ## PyTorch model scripts
+│   ├── scikit-learn/              ## Scikit-Learn model scripts
+│   └── spark/                     ## Spark model scripts
 │
 ├── notebooks/
-│   ├── exploratory_analysis.ipynb # Jupyter notebook for data exploration
-│   └── model_evaluation.ipynb      # Jupyter notebook for model evaluation
+│   ├── exploratory_analysis.ipynb ## Jupyter notebook for data exploration
+│   └── model_evaluation.ipynb      ## Jupyter notebook for model evaluation
 │
 ├── src/
-│   ├── data_processing/            # Scripts for data preprocessing
-│   ├── feature_engineering/        # Scripts for feature engineering
-│   ├── model_training/             # Scripts for training ML models
-│   └── interventions/              # Scripts for recommending interventions
+│   ├── data_processing/            ## Scripts for data preprocessing
+│   ├── feature_engineering/        ## Scripts for feature engineering
+│   ├── model_training/             ## Scripts for training ML models
+│   └── interventions/              ## Scripts for recommending interventions
 │
 ├── pipelines/
-│   ├── etl_pipeline.py             # ETL pipeline for data processing
-│   └── ml_pipeline.py              # ML pipeline for model training
+│   ├── etl_pipeline.py             ## ETL pipeline for data processing
+│   └── ml_pipeline.py              ## ML pipeline for model training
 │
 ├── config/
-│   ├── settings.py                 # Configuration settings for the AI application
-│   └── spark_config.json           # Configuration file for Apache Spark
+│   ├── settings.py                 ## Configuration settings for the AI application
+│   └── spark_config.json           ## Configuration file for Apache Spark
 │
 ├── tests/
-│   ├── test_data_processing.py     # Unit tests for data processing scripts
-│   ├── test_model_training.py      # Unit tests for model training scripts
-│   └── test_interventions.py       # Unit tests for intervention recommendation scripts
+│   ├── test_data_processing.py     ## Unit tests for data processing scripts
+│   ├── test_model_training.py      ## Unit tests for model training scripts
+│   └── test_interventions.py       ## Unit tests for intervention recommendation scripts
 │
-├── Dockerfile                     # Dockerfile for containerizing the application
-├── requirements.txt               # Dependencies for the AI application
-└── README.md                      # Description of the repository and project
+├── Dockerfile                     ## Dockerfile for containerizing the application
+├── requirements.txt               ## Dependencies for the AI application
+└── README.md                      ## Description of the repository and project
 ```
 
 This file structure provides a scalable organization for the Waste Reduction AI project for Peru Food Enterprises. It separates data, models, notebooks, source code, pipelines, configuration files, tests, and Dockerfile for containerization, ensuring a clear and maintainable layout for the AI application.
 
-# Models Directory for Waste Reduction AI
+## Models Directory for Waste Reduction AI
 
 ```
 models/
 │
 ├── pytorch/
-│   ├── pytorch_model.py           # PyTorch model implementation for waste pattern recognition
-│   ├── pytorch_utils.py           # Utility functions for PyTorch model training and evaluation
-│   └── saved_models/              # Directory to save trained PyTorch models
+│   ├── pytorch_model.py           ## PyTorch model implementation for waste pattern recognition
+│   ├── pytorch_utils.py           ## Utility functions for PyTorch model training and evaluation
+│   └── saved_models/              ## Directory to save trained PyTorch models
 │
 ├── scikit-learn/
-│   ├── scikit_learn_model.py      # Scikit-Learn model implementation for waste pattern recognition
-│   └── scikit_learn_utils.py      # Utility functions for Scikit-Learn model training and evaluation
+│   ├── scikit_learn_model.py      ## Scikit-Learn model implementation for waste pattern recognition
+│   └── scikit_learn_utils.py      ## Utility functions for Scikit-Learn model training and evaluation
 │
 └── spark/
-    ├── spark_model.py            # Spark MLlib model implementation for waste pattern recognition
-    └── spark_utils.py            # Utility functions for Spark model training and evaluation
+    ├── spark_model.py            ## Spark MLlib model implementation for waste pattern recognition
+    └── spark_utils.py            ## Utility functions for Spark model training and evaluation
 ```
 
 ## Description:
@@ -136,18 +136,18 @@ models/
 
 By organizing the models directory in this manner, the Waste Reduction AI project can effectively manage and implement PyTorch, Scikit-Learn, and Spark models for identifying waste patterns in the supply chain data, enabling interventions to reduce waste and improve sustainability.
 
-# Deployment Directory for Waste Reduction AI
+## Deployment Directory for Waste Reduction AI
 
 ```
 deployment/
 │
 ├── app/
-│   ├── main.py                    # Main application script for interacting with the AI models
-│   ├── templates/                 # HTML templates for the web application
+│   ├── main.py                    ## Main application script for interacting with the AI models
+│   ├── templates/                 ## HTML templates for the web application
 │
-├── Dockerfile                     # Dockerfile for containerizing the deployment app
-├── requirements.txt               # Dependencies for the deployment app
-└── README.md                      # Description of the deployment setup
+├── Dockerfile                     ## Dockerfile for containerizing the deployment app
+├── requirements.txt               ## Dependencies for the deployment app
+└── README.md                      ## Description of the deployment setup
 ```
 
 ## Description:
@@ -163,7 +163,7 @@ deployment/
 
 By organizing the deployment directory in this structure, the Waste Reduction AI for Peru Food Enterprises can be efficiently deployed and accessed through a user-friendly interface, enabling stakeholders to leverage the AI models to reduce waste and enhance sustainability in the supply chain.
 
-# Training Model File for Waste Reduction AI
+## Training Model File for Waste Reduction AI
 
 ## File Path: `src/model_training/train_model.py`
 
@@ -174,34 +174,34 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 import joblib
 
-# Load mock data (replace with actual data loading code)
+## Load mock data (replace with actual data loading code)
 data = pd.read_csv('data/mock_data.csv')
 
-# Data preprocessing and feature engineering (replace with actual code)
+## Data preprocessing and feature engineering (replace with actual code)
 X = data.drop(columns=['target'])
 y = data['target']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize and train the Scikit-Learn model (Random Forest classifier)
+## Initialize and train the Scikit-Learn model (Random Forest classifier)
 model = RandomForestClassifier(n_estimators=100, random_state=42)
 model.fit(X_train, y_train)
 
-# Make predictions on the test set
+## Make predictions on the test set
 predictions = model.predict(X_test)
 
-# Evaluate the model
+## Evaluate the model
 accuracy = accuracy_score(y_test, predictions)
 print(f'Model accuracy: {accuracy}')
 
-# Save the trained model (replace with actual model saving code)
+## Save the trained model (replace with actual model saving code)
 joblib.dump(model, 'models/scikit-learn/trained_model.pkl')
 ```
 
 This Python script `train_model.py` demonstrates the process of training a Scikit-Learn model (specifically a Random Forest classifier) using mock data for the Waste Reduction AI for Peru Food Enterprises. The script loads mock data, preprocesses it, trains the model, evaluates its performance, and saves the trained model for future use. Please replace the mock data loading and saving code with actual data handling and model saving functions when working with real data.
 
-# Complex Machine Learning Algorithm File for Waste Reduction AI
+## Complex Machine Learning Algorithm File for Waste Reduction AI
 
 ## File Path: `src/models/pytorch/complex_model.py`
 
@@ -211,7 +211,7 @@ import torch.nn as nn
 import torch.optim as optim
 import numpy as np
 
-# Define a complex PyTorch neural network model for waste pattern recognition
+## Define a complex PyTorch neural network model for waste pattern recognition
 class ComplexModel(nn.Module):
     def __init__(self, input_size):
         super(ComplexModel, self).__init__()
@@ -228,18 +228,18 @@ class ComplexModel(nn.Module):
         x = self.softmax(x)
         return x
 
-# Generate mock data for training (replace with actual data loading code)
+## Generate mock data for training (replace with actual data loading code)
 X_train = torch.from_numpy(np.random.rand(100, 10).astype(np.float32))
 y_train = torch.randint(0, 2, (100,))
 
-# Initialize the complex PyTorch model
+## Initialize the complex PyTorch model
 model = ComplexModel(input_size=X_train.shape[1])
 
-# Define loss function and optimizer
+## Define loss function and optimizer
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters(), lr=0.001)
 
-# Training loop
+## Training loop
 num_epochs = 10
 for epoch in range(num_epochs):
     optimizer.zero_grad()
@@ -248,13 +248,13 @@ for epoch in range(num_epochs):
     loss.backward()
     optimizer.step()
 
-# Save the trained model (replace with actual model saving code)
+## Save the trained model (replace with actual model saving code)
 torch.save(model.state_dict(), 'models/pytorch/complex_model.pth')
 ```
 
 This Python script `complex_model.py` showcases the implementation of a complex PyTorch neural network model for waste pattern recognition in the Waste Reduction AI for Peru Food Enterprises. The script defines a deep neural network architecture, generates mock training data, trains the model using the defined loss function and optimizer, and saves the trained model for future inference. Replace the mock data generation with actual data loading and model saving code when working with real data.
 
-# Users of Waste Reduction AI for Peru Food Enterprises
+## Users of Waste Reduction AI for Peru Food Enterprises
 
 ## 1. Supply Chain Manager
 **User Story:** As a Supply Chain Manager at Peru Food Enterprises, I need to identify patterns leading to waste in the supply chain to make informed decisions on interventions for waste reduction and sustainability improvement.

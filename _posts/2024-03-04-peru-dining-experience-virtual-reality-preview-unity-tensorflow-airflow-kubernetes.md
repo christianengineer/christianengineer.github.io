@@ -5,7 +5,7 @@ permalink: posts/peru-dining-experience-virtual-reality-preview-unity-tensorflow
 layout: article
 ---
 
-# Machine Learning Peru Dining Experience Virtual Reality Preview
+## Machine Learning Peru Dining Experience Virtual Reality Preview
 
 ## Objectives and Benefits:
 - **Objectives**:
@@ -154,33 +154,33 @@ import numpy as np
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfTransformer
 
-# Standardize image resolution and quality for menu item images
+## Standardize image resolution and quality for menu item images
 def standardize_image(image_path, target_resolution):
     img = cv2.imread(image_path)
     resized_img = cv2.resize(img, target_resolution)
     return resized_img
 
-# Preprocess menu item descriptions
+## Preprocess menu item descriptions
 def preprocess_text(descriptions):
-    # Tokenize and count words in descriptions
+    ## Tokenize and count words in descriptions
     count_vectorizer = CountVectorizer()
     bow_matrix = count_vectorizer.fit_transform(descriptions)
     
-    # Apply TF-IDF transformation
+    ## Apply TF-IDF transformation
     tfidf_transformer = TfidfTransformer()
     tfidf_matrix = tfidf_transformer.fit_transform(bow_matrix)
     
     return tfidf_matrix
 
-# Example data
+## Example data
 menu_item_images = ['menu_item_image1.jpg', 'menu_item_image2.jpg']
 menu_item_descriptions = ['Delicious pasta with creamy sauce', 'Fresh salad with vinaigrette dressing']
 
-# Cleansing data
+## Cleansing data
 cleaned_images = [standardize_image(image, (224, 224)) for image in menu_item_images]
 cleaned_descriptions = preprocess_text(menu_item_descriptions)
 
-# Verify cleaned data
+## Verify cleaned data
 for img in cleaned_images:
     cv2.imshow('Standardized Image', img)
     cv2.waitKey(0)
@@ -312,33 +312,33 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.svm import SVC
 from sklearn.metrics import accuracy_score
 
-# Load the cleansed dataset
+## Load the cleansed dataset
 dataset = pd.read_csv('cleansed_dataset.csv')
 
-# Split dataset into features (X) and target (y)
+## Split dataset into features (X) and target (y)
 X = dataset.drop('interaction_rating', axis=1)
 y = dataset['interaction_rating']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Data preprocessing - Scale features
+## Data preprocessing - Scale features
 scaler = StandardScaler()
 X_train = scaler.fit_transform(X_train)
 X_test = scaler.transform(X_test)
 
-# Model training - Support Vector Machine (SVM)
+## Model training - Support Vector Machine (SVM)
 clf = SVC()
 clf.fit(X_train, y_train)
 
-# Model evaluation
+## Model evaluation
 y_pred = clf.predict(X_test)
 accuracy = accuracy_score(y_test, y_pred)
 
-# Print model accuracy
+## Print model accuracy
 print(f'Model Accuracy: {accuracy}')
 
-# Save the trained model for deployment
+## Save the trained model for deployment
 import joblib
 joblib.dump(clf, 'svm_model.pkl')
 ```
@@ -422,28 +422,28 @@ By following this deployment plan and utilizing the recommended tools at each st
 Here is a sample Dockerfile tailored to encapsulate your project's environment and dependencies, optimized for performance needs and scalability:
 
 ```dockerfile
-# Use a base Python image
+## Use a base Python image
 FROM python:3.8-slim
 
-# Set working directory
+## Set working directory
 WORKDIR /app
 
-# Copy requirements file
+## Copy requirements file
 COPY requirements.txt .
 
-# Install required libraries
+## Install required libraries
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy project files
+## Copy project files
 COPY . .
 
-# Set environment variables
+## Set environment variables
 ENV PYTHONUNBUFFERED=1
 
-# Expose the required port
+## Expose the required port
 EXPOSE 5000
 
-# Command to run the API
+## Command to run the API
 CMD ["python", "app.py"]
 ```
 

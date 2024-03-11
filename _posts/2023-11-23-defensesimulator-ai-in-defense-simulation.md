@@ -68,35 +68,35 @@ defense_simulator/
 │
 ├── data/
 │   ├── input/
-│   │   ├── raw_data/           # Raw input data for simulations
-│   │   └── processed_data/     # Processed data for training and simulations
+│   │   ├── raw_data/           ## Raw input data for simulations
+│   │   └── processed_data/     ## Processed data for training and simulations
 │
 ├── models/
-│   ├── ai_models/              # Trained AI models for defense strategies
-│   └── ml_models/              # Traditional machine learning models
+│   ├── ai_models/              ## Trained AI models for defense strategies
+│   └── ml_models/              ## Traditional machine learning models
 │
 ├── src/
-│   ├── algorithms/             # Implementation of AI algorithms and defense strategies
-│   ├── simulations/            # Main simulation logic and scenarios
-│   ├── data_processing/        # Scripts for data preprocessing and feature engineering
-│   └── visualization/          # Visualization tools for simulation results
+│   ├── algorithms/             ## Implementation of AI algorithms and defense strategies
+│   ├── simulations/            ## Main simulation logic and scenarios
+│   ├── data_processing/        ## Scripts for data preprocessing and feature engineering
+│   └── visualization/          ## Visualization tools for simulation results
 │
 ├── tests/
-│   ├── unit_tests/             # Unit tests for individual components
-│   └── integration_tests/      # Integration tests for system modules
+│   ├── unit_tests/             ## Unit tests for individual components
+│   └── integration_tests/      ## Integration tests for system modules
 │
 ├── docs/
-│   └── user_guide.md           # User guide for using the defense simulator
+│   └── user_guide.md           ## User guide for using the defense simulator
 │
 ├── config/
-│   ├── environment/            # Configuration files for different environments (e.g., development, production)
-│   └── logging/                # Logging configuration for the application
+│   ├── environment/            ## Configuration files for different environments (e.g., development, production)
+│   └── logging/                ## Logging configuration for the application
 │
 ├── scripts/
-│   ├── deployment/             # Scripts for deployment and infrastructure setup
-│   └── data_pipeline/          # Automation scripts for data pipeline processing
+│   ├── deployment/             ## Scripts for deployment and infrastructure setup
+│   └── data_pipeline/          ## Automation scripts for data pipeline processing
 │
-└── README.md                   # Project overview, setup instructions, and usage guide
+└── README.md                   ## Project overview, setup instructions, and usage guide
 ```
 
 In this structure:
@@ -120,21 +120,21 @@ models/
 │
 ├── ai_models/
 │   ├── reinforcement_learning/
-│   │   ├── policy_model.h5          # Trained policy model for reinforcement learning
-│   │   └── value_model.h5           # Trained value model for reinforcement learning
+│   │   ├── policy_model.h5          ## Trained policy model for reinforcement learning
+│   │   └── value_model.h5           ## Trained value model for reinforcement learning
 │   ├── neural_networks/
-│   │   ├── trained_cnn_model.h5     # Trained CNN model for image analysis
-│   │   └── lstm_model.h5            # Trained LSTM model for sequential data
+│   │   ├── trained_cnn_model.h5     ## Trained CNN model for image analysis
+│   │   └── lstm_model.h5            ## Trained LSTM model for sequential data
 │
 └── ml_models/
     ├── decision_trees/
-    │   ├── decision_tree.pkl        # Trained decision tree classifier
-    │   └── feature_importance.txt    # Feature importances from decision tree model
+    │   ├── decision_tree.pkl        ## Trained decision tree classifier
+    │   └── feature_importance.txt    ## Feature importances from decision tree model
     ├── svm/
-    │   ├── svm_model.pkl             # Trained Support Vector Machine model
+    │   ├── svm_model.pkl             ## Trained Support Vector Machine model
     └── ensemble/
-        ├── random_forest.pkl         # Trained random forest ensemble model
-        └── gradient_boosting.pkl      # Trained gradient boosting ensemble model
+        ├── random_forest.pkl         ## Trained random forest ensemble model
+        └── gradient_boosting.pkl      ## Trained gradient boosting ensemble model
 ```
 
 In this structure:
@@ -152,16 +152,16 @@ deployment/
 │
 ├── infrastructure_as_code/
 │   ├── terraform/
-│   │   ├── main.tf             # Main Terraform file for infrastructure provisioning
-│   │   └── variables.tf         # Variables file for defining input parameters
+│   │   ├── main.tf             ## Main Terraform file for infrastructure provisioning
+│   │   └── variables.tf         ## Variables file for defining input parameters
 │
 ├── docker/
-│   ├── Dockerfile              # Instructions for building the Docker image
-│   └── docker-compose.yml      # Docker Compose file for multi-container application setup
+│   ├── Dockerfile              ## Instructions for building the Docker image
+│   └── docker-compose.yml      ## Docker Compose file for multi-container application setup
 │
 └── kubernetes/
-    ├── deployment.yaml         # Kubernetes deployment configuration
-    └── service.yaml            # Kubernetes service configuration
+    ├── deployment.yaml         ## Kubernetes deployment configuration
+    └── service.yaml            ## Kubernetes service configuration
 ```
 
 In this structure:
@@ -180,26 +180,26 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 
 def train_and_evaluate_model(data_file_path):
-    # Load mock data from the specified file path
+    ## Load mock data from the specified file path
     data = pd.read_csv(data_file_path)
 
-    # Split the data into features and target variable
+    ## Split the data into features and target variable
     X = data.drop('target', axis=1)
     y = data['target']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize the Random Forest classifier
+    ## Initialize the Random Forest classifier
     model = RandomForestClassifier(n_estimators=100, random_state=42)
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train)
 
-    # Make predictions on the test set
+    ## Make predictions on the test set
     y_pred = model.predict(X_test)
 
-    # Evaluate the model
+    ## Evaluate the model
     accuracy = accuracy_score(y_test, y_pred)
     print(f"Model Accuracy: {accuracy}")
 
@@ -225,17 +225,17 @@ from tensorflow.keras.layers import Dense, Dropout
 from tensorflow.keras.callbacks import EarlyStopping
 
 def train_and_evaluate_deep_learning_model(data_file_path):
-    # Load mock data from the specified file path
+    ## Load mock data from the specified file path
     data = pd.read_csv(data_file_path)
 
-    # Split the data into features and target variable
+    ## Split the data into features and target variable
     X = data.drop('target', axis=1)
     y = data['target']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize the Sequential model
+    ## Initialize the Sequential model
     model = Sequential()
     model.add(Dense(64, input_shape=(X_train.shape[1],), activation='relu'))
     model.add(Dropout(0.2))
@@ -243,16 +243,16 @@ def train_and_evaluate_deep_learning_model(data_file_path):
     model.add(Dropout(0.2))
     model.add(Dense(1, activation='sigmoid'))
 
-    # Compile the model
+    ## Compile the model
     model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
 
-    # Define early stopping to prevent overfitting
+    ## Define early stopping to prevent overfitting
     early_stopping = EarlyStopping(monitor='val_loss', patience=3, restore_best_weights=True)
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train, validation_data=(X_test, y_test), epochs=50, batch_size=32, callbacks=[early_stopping])
 
-    # Evaluate the model
+    ## Evaluate the model
     _, accuracy = model.evaluate(X_test, y_test)
     print(f"Model Accuracy: {accuracy}")
 

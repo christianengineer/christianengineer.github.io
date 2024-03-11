@@ -5,7 +5,7 @@ permalink: posts/predictive-ai-analytics-for-public-health
 layout: article
 ---
 
-# Predictive AI Analytics for Public Health Technical Specifications
+## Predictive AI Analytics for Public Health Technical Specifications
 
 ## Description
 

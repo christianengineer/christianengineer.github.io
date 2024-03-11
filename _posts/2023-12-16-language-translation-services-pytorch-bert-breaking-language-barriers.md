@@ -5,7 +5,7 @@ permalink: posts/language-translation-services-pytorch-bert-breaking-language-ba
 layout: article
 ---
 
-# AI Language Translation Services (PyTorch, BERT) Repository Overview
+## AI Language Translation Services (PyTorch, BERT) Repository Overview
 
 ## Objectives
 The main objectives of the "AI Language Translation Services (PyTorch, BERT) Breaking language barriers" repository are:
@@ -31,7 +31,7 @@ The following libraries and frameworks will be utilized in the repository:
 
 By incorporating these design strategies and leveraging the chosen libraries and frameworks, the "AI Language Translation Services (PyTorch, BERT) Breaking language barriers" repository aims to deliver a robust, scalable, and high-performance language translation solution.
 
-# MLOps Infrastructure for Language Translation Services (PyTorch, BERT)
+## MLOps Infrastructure for Language Translation Services (PyTorch, BERT)
 
 ## Overview
 The MLOps infrastructure for the "Language Translation Services (PyTorch, BERT) Breaking language barriers" application aims to establish a robust and efficient operational framework for managing the machine learning lifecycle, from model development to deployment and maintenance. This infrastructure enables seamless integration of AI and ML capabilities into the language translation service, ensuring scalability, reliability, and continuous improvement of the AI models.
@@ -165,11 +165,11 @@ import torch.nn as nn
 from transformers import BertModel, BertTokenizer
 from torch.utils.data import Dataset, DataLoader
 
-# Sample data (mock data for training, replace with actual training data)
+## Sample data (mock data for training, replace with actual training data)
 input_texts = ["Hello, how are you?", "What is your name?", "I love programming."]
 target_texts = ["Bonjour, comment ça va?", "Comment tu t'appelles?", "J'adore la programmation."]
 
-# Mock dataset class
+## Mock dataset class
 class TranslationDataset(Dataset):
     def __init__(self, input_texts, target_texts, tokenizer, max_seq_length=128):
         self.input_texts = input_texts
@@ -194,16 +194,16 @@ class TranslationDataset(Dataset):
             'target_attention_mask': target_encoding['attention_mask'].squeeze()
         }
 
-# Mock BERT model and tokenizer
+## Mock BERT model and tokenizer
 model_name = 'bert-base-multilingual-cased'
 tokenizer = BertTokenizer.from_pretrained(model_name)
 bert_model = BertModel.from_pretrained(model_name)
 
-# Mock training data loader
+## Mock training data loader
 dataset = TranslationDataset(input_texts, target_texts, tokenizer)
 dataloader = DataLoader(dataset, batch_size=2, shuffle=True)
 
-# Mock model training loop
+## Mock model training loop
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 bert_model.to(device)
 criterion = nn.CrossEntropyLoss()
@@ -224,7 +224,7 @@ for epoch in range(EPOCHS):
 
     print(f'Epoch [{epoch+1}/{EPOCHS}], Loss: {loss.item()}')
 
-# Save the trained model
+## Save the trained model
 model_save_path = 'path_to_save_trained_model.pth'
 torch.save(bert_model.state_dict(), model_save_path)
 ```
@@ -244,11 +244,11 @@ import torch.optim as optim
 import torch.nn.functional as F
 import numpy as np
 
-# Sample data (mock data for training, replace with actual training data)
+## Sample data (mock data for training, replace with actual training data)
 input_texts = ["Hello, how are you?", "What is your name?", "I love programming."]
 target_texts = ["Bonjour, comment ça va?", "Comment tu t'appelles?", "J'adore la programmation."]
 
-# Mock Encoder-Decoder model
+## Mock Encoder-Decoder model
 class Encoder(nn.Module):
     def __init__(self, input_size, hidden_size, embedding):
         super(Encoder, self).__init__()
@@ -284,7 +284,7 @@ class Decoder(nn.Module):
     def init_hidden(self):
         return torch.zeros(1, 1, self.hidden_size)
 
-# Mock training loop
+## Mock training loop
 def train(input_tensor, target_tensor, encoder, decoder, encoder_optimizer, decoder_optimizer, criterion, max_length=10):
     encoder_hidden = encoder.init_hidden()
 
@@ -307,7 +307,7 @@ def train(input_tensor, target_tensor, encoder, decoder, encoder_optimizer, deco
         decoder_output, decoder_hidden = decoder(
             decoder_input, decoder_hidden)
         topv, topi = decoder_output.topk(1)
-        decoder_input = topi.squeeze().detach()  # detach from history as input
+        decoder_input = topi.squeeze().detach()  ## detach from history as input
         loss += criterion(decoder_output, target_tensor[di].view(-1))
         if decoder_input.item() == EOS_token:
             break
@@ -319,11 +319,11 @@ def train(input_tensor, target_tensor, encoder, decoder, encoder_optimizer, deco
 
     return loss.item() / target_length
 
-# Mock data processing
+## Mock data processing
 def prepare_data():
-    pass  # Implement data preprocessing steps
+    pass  ## Implement data preprocessing steps
 
-# Mock model training
+## Mock model training
 def run_training_loop(input_texts, target_texts):
     input_tensor, target_tensor, input_lang, output_lang = prepare_data(input_texts, target_texts)
     hidden_size = 256
@@ -336,7 +336,7 @@ def run_training_loop(input_texts, target_texts):
     for iter in range(1000):
         training_loss = train(input_tensor, target_tensor, encoder, decoder, encoder_optimizer, decoder_optimizer, criterion)
 
-    # Save the trained model
+    ## Save the trained model
     model_save_path = 'path_to_save_trained_model.pth'
     torch.save({
         'encoder_state_dict': encoder.state_dict(),

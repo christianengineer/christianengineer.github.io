@@ -176,44 +176,44 @@ By strategically employing data cleansing practices tailored to the unique deman
 import pandas as pd
 import numpy as np
 
-# Load the raw data
+## Load the raw data
 customer_feedback_data = pd.read_csv('customer_feedback_data.csv')
 staff_performance_data = pd.read_csv('staff_performance_data.csv')
 training_program_data = pd.read_csv('training_program_data.csv')
 
-# Data Cleansing for Customer Feedback Data
-# Handling Missing Data
-customer_feedback_data.fillna(customer_feedback_data.mean(), inplace=True)  # Fill missing values with mean
+## Data Cleansing for Customer Feedback Data
+## Handling Missing Data
+customer_feedback_data.fillna(customer_feedback_data.mean(), inplace=True)  ## Fill missing values with mean
 
-# Outlier Detection
+## Outlier Detection
 Q1 = customer_feedback_data['Customer_Satisfaction_Score'].quantile(0.25)
 Q3 = customer_feedback_data['Customer_Satisfaction_Score'].quantile(0.75)
 IQR = Q3 - Q1
 customer_feedback_data = customer_feedback_data[(customer_feedback_data['Customer_Satisfaction_Score'] >= Q1 - 1.5 * IQR) & 
                                                 (customer_feedback_data['Customer_Satisfaction_Score'] <= Q3 + 1.5 * IQR)]
 
-# Standardize Text Data
-customer_feedback_data['Specific_Complaints'] = customer_feedback_data['Specific_Complaints'].str.lower()  # Convert to lowercase
+## Standardize Text Data
+customer_feedback_data['Specific_Complaints'] = customer_feedback_data['Specific_Complaints'].str.lower()  ## Convert to lowercase
 
-# Data Cleansing for Staff Performance Data
-# Data Validation Checks
-staff_performance_data.dropna(subset=['Wait_Time_per_Table', 'Order_Accuracy_Rate'], inplace=True)  # Drop rows with missing values
+## Data Cleansing for Staff Performance Data
+## Data Validation Checks
+staff_performance_data.dropna(subset=['Wait_Time_per_Table', 'Order_Accuracy_Rate'], inplace=True)  ## Drop rows with missing values
 
-# Scheduled Data Checks
-staff_performance_data['Date'] = pd.to_datetime(staff_performance_data['Date'])  # Convert Date column to datetime format
+## Scheduled Data Checks
+staff_performance_data['Date'] = pd.to_datetime(staff_performance_data['Date'])  ## Convert Date column to datetime format
 
-# Data Cleansing for Training Program Data
-# Completeness Check
-training_program_data.dropna(subset=['Training_Participation_Rate', 'Post_Training_Performance_Improvement'], inplace=True)  # Drop rows with missing values
+## Data Cleansing for Training Program Data
+## Completeness Check
+training_program_data.dropna(subset=['Training_Participation_Rate', 'Post_Training_Performance_Improvement'], inplace=True)  ## Drop rows with missing values
 
-# Objective Evaluation Metrics
+## Objective Evaluation Metrics
 training_program_data['Post_Training_Performance_Improvement'] = np.where(training_program_data['Post_Training_Performance_Improvement'] >= 0, 
-                                                                         training_program_data['Post_Training_Performance_Improvement'], 0)  # Ensure non-negative values
+                                                                         training_program_data['Post_Training_Performance_Improvement'], 0)  ## Ensure non-negative values
 
-# Benchmarking
-training_program_data['Service_Quality_Benchmark'] = training_program_data['Service_Quality_Benchmark'].astype(int)  # Convert to integer
+## Benchmarking
+training_program_data['Service_Quality_Benchmark'] = training_program_data['Service_Quality_Benchmark'].astype(int)  ## Convert to integer
 
-# Save the cleansed data
+## Save the cleansed data
 customer_feedback_data.to_csv('cleaned_customer_feedback_data.csv', index=False)
 staff_performance_data.to_csv('cleaned_staff_performance_data.csv', index=False)
 training_program_data.to_csv('cleaned_training_program_data.csv', index=False)
@@ -342,35 +342,35 @@ In this sample dataset snippet for our project, we have structured the data with
 This sample dataset snippet provides a visual representation of the structured and formatted data relevant to our project's objectives. It serves as a guide for understanding the composition of the mocked data and how it aligns with the variables and types essential for model ingestion and analysis in the context of fine dining staff skill enhancement.
 
 ```python
-# Import necessary libraries
+## Import necessary libraries
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report
 
-# Load the preprocessed dataset
+## Load the preprocessed dataset
 data = pd.read_csv('cleaned_dataset.csv')
 
-# Define features and target variable
+## Define features and target variable
 X = data.drop('Fine_Dining_Accreditation', axis=1)
 y = data['Fine_Dining_Accreditation']
 
-# Split the dataset into training and testing sets
+## Split the dataset into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize the RandomForestClassifier
+## Initialize the RandomForestClassifier
 clf = RandomForestClassifier()
 
-# Fit the model on the training data
+## Fit the model on the training data
 clf.fit(X_train, y_train)
 
-# Make predictions on the test data
+## Make predictions on the test data
 y_pred = clf.predict(X_test)
 
-# Evaluate the model
+## Evaluate the model
 print(classification_report(y_test, y_pred))
 
-# Save the trained model for future use
+## Save the trained model for future use
 import joblib
 joblib.dump(clf, 'fine_dining_model.pkl')
 ```
@@ -423,26 +423,26 @@ By following this structured and well-documented code example, you can ensure th
 By following this deployment plan and utilizing the recommended tools and platforms, you can efficiently deploy your machine learning model into a production environment. This structured approach will help streamline the deployment process and ensure a successful integration of the model for real-world use.
 
 ```Dockerfile
-# Use the official Python image
+## Use the official Python image
 FROM python:3.9-slim
 
-# Set the working directory in the container
+## Set the working directory in the container
 WORKDIR /app
 
-# Copy the requirements file into the container
+## Copy the requirements file into the container
 COPY requirements.txt .
 
-# Install required Python packages
+## Install required Python packages
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the model and necessary files into the container
+## Copy the model and necessary files into the container
 COPY model.pkl .
 COPY app.py .
 
-# Expose the port to access the API
+## Expose the port to access the API
 EXPOSE 5000
 
-# Define the command to run the Flask API
+## Define the command to run the Flask API
 CMD ["python", "app.py"]
 ```
 

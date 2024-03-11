@@ -5,7 +5,7 @@ permalink: posts/groundbreaking-ai-driven-job-matching-engine-optimization-strat
 layout: article
 ---
 
-# AI-Driven Job Matching Engine Repository
+## AI-Driven Job Matching Engine Repository
 
 ## Description
 
@@ -43,7 +43,7 @@ For handling user traffic and ensuring scalability, the following technologies w
 This repository aims to provide a comprehensive package for the AI-Driven Job Matching Engine. It's designed to facilitate collaboration and ensure high-quality code production, necessary for the successful execution and maintenance of the project. Using the above-mentioned libraries and technologies, the product will assure efficient data handling and scalable user traffic, thereby ensuring optimal user experience.
 
 ```markdown
-# AI-Driven Job Matching Engine Repository File Structure
+## AI-Driven Job Matching Engine Repository File Structure
 
 This document outlines a scalable file structure for the AI-Driven Job Matching Engine.
 
@@ -93,7 +93,7 @@ It's important to note that this structure can vary depending on the specific pr
 ```
 
 ```markdown
-# AI-Driven Job Matching Engine Logic File
+## AI-Driven Job Matching Engine Logic File
 
 The primary logic for the AI-Driven Job Matching Engine will be contained in a Python file named `job_matching_engine.py`. Here is a hypothetical look at the file and its location in the repository.
 
@@ -112,7 +112,7 @@ The primary logic for the AI-Driven Job Matching Engine will be contained in a P
 Below is a fictitious content example for `job_matching_engine.py`:
 
 ```python
-# Import Necessary Libraries
+## Import Necessary Libraries
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer

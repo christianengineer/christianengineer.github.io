@@ -163,17 +163,17 @@ from sklearn.model_selection import train_test_split
 from tensorflow.keras import layers, models
 
 def train_astronomical_image_classifier(data_file_path):
-    # Load mock data from the provided file path
+    ## Load mock data from the provided file path
     mock_data = pd.read_csv(data_file_path)
 
-    # Assume the mock data contains features and labels
+    ## Assume the mock data contains features and labels
     features = mock_data.drop('label', axis=1)
     labels = mock_data['label']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(features, labels, test_size=0.2, random_state=42)
 
-    # Build a simple Convolutional Neural Network (CNN) model for image classification
+    ## Build a simple Convolutional Neural Network (CNN) model for image classification
     model = models.Sequential([
         layers.Conv2D(32, (3, 3), activation='relu', input_shape=(28, 28, 1)),
         layers.MaxPooling2D((2, 2)),
@@ -185,15 +185,15 @@ def train_astronomical_image_classifier(data_file_path):
         layers.Dense(10, activation='softmax')
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam',
                   loss='sparse_categorical_crossentropy',
                   metrics=['accuracy'])
 
-    # Train the model using the mock data
+    ## Train the model using the mock data
     model.fit(np.array(X_train), np.array(y_train), epochs=10, validation_data=(np.array(X_test), np.array(y_test)))
 
-    # Return the trained model for further processing or deployment
+    ## Return the trained model for further processing or deployment
     return model
 ```
 
@@ -218,17 +218,17 @@ from sklearn.model_selection import train_test_split
 from tensorflow.keras import layers, models
 
 def train_deep_learning_algorithm(data_file_path):
-    # Load mock data from the provided file path
+    ## Load mock data from the provided file path
     mock_data = pd.read_csv(data_file_path)
 
-    # Assume the mock data contains features and labels
+    ## Assume the mock data contains features and labels
     features = mock_data.drop('target_variable', axis=1)
     labels = mock_data['target_variable']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(features, labels, test_size=0.2, random_state=42)
 
-    # Build a complex deep learning model for astronomical data analysis
+    ## Build a complex deep learning model for astronomical data analysis
     model = models.Sequential([
         layers.Dense(128, activation='relu', input_shape=(X_train.shape[1],)),
         layers.Dropout(0.5),
@@ -237,15 +237,15 @@ def train_deep_learning_algorithm(data_file_path):
         layers.Dense(1, activation='sigmoid')
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam',
                   loss='binary_crossentropy',
                   metrics=['accuracy'])
 
-    # Train the model using the mock data
+    ## Train the model using the mock data
     model.fit(np.array(X_train), np.array(y_train), epochs=10, validation_data=(np.array(X_test), np.array(y_test)))
 
-    # Return the trained model for further processing or deployment
+    ## Return the trained model for further processing or deployment
     return model
 ```
 

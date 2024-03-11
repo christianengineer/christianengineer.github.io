@@ -5,7 +5,7 @@ permalink: posts/food-safety-incident-predictor-for-peru-keras-bert-kafka-docker
 layout: article
 ---
 
-# AI Food Safety Incident Predictor for Peru
+## AI Food Safety Incident Predictor for Peru
 
 ## Objectives:
 - Analyze historical data on food safety incidents to predict potential future outbreaks
@@ -43,7 +43,7 @@ layout: article
 
 By following these system design strategies and utilizing the chosen libraries, we can create an AI Food Safety Incident Predictor for Peru that leverages AI technologies to enhance food safety measures and enable preemptive actions.
 
-# MLOps Infrastructure for the Food Safety Incident Predictor for Peru
+## MLOps Infrastructure for the Food Safety Incident Predictor for Peru
 
 ## Components:
 1. **Data Pipeline**:
@@ -88,34 +88,34 @@ By setting up a robust MLOps infrastructure incorporating these components, the 
 food_safety_predictor_peru/
 │
 ├── data/
-│   ├── raw_data/           # Directory for storing raw data on food safety incidents
-│   ├── processed_data/     # Directory for storing preprocessed data for model training
+│   ├── raw_data/           ## Directory for storing raw data on food safety incidents
+│   ├── processed_data/     ## Directory for storing preprocessed data for model training
 │
 ├── models/
-│   ├── keras_model/        # Directory for Keras deep learning models
-│   ├── bert_model/         # Directory for BERT models for NLP tasks
+│   ├── keras_model/        ## Directory for Keras deep learning models
+│   ├── bert_model/         ## Directory for BERT models for NLP tasks
 │
 ├── infrastructure/
-│   ├── dockerfile          # Dockerfile for containerizing the application
-│   ├── docker-compose.yml  # Docker Compose file for managing multi-container Docker applications
-│   ├── kafka_config/       # Configuration files for Kafka setup
+│   ├── dockerfile          ## Dockerfile for containerizing the application
+│   ├── docker-compose.yml  ## Docker Compose file for managing multi-container Docker applications
+│   ├── kafka_config/       ## Configuration files for Kafka setup
 │
 ├── src/
-│   ├── data_processing.py  # Script for data preprocessing tasks
-│   ├── model_training.py   # Script for training deep learning models using Keras and BERT
-│   ├── kafka_consumer.py   # Script for consuming data from Kafka streams
-│   ├── api_deploy.py       # Script for deploying trained models as REST APIs
+│   ├── data_processing.py  ## Script for data preprocessing tasks
+│   ├── model_training.py   ## Script for training deep learning models using Keras and BERT
+│   ├── kafka_consumer.py   ## Script for consuming data from Kafka streams
+│   ├── api_deploy.py       ## Script for deploying trained models as REST APIs
 │
 ├── notebooks/
-│   ├── exploratory_analysis.ipynb   # Jupyter notebook for exploratory data analysis
-│   ├── model_evaluation.ipynb       # Jupyter notebook for model evaluation and testing
+│   ├── exploratory_analysis.ipynb   ## Jupyter notebook for exploratory data analysis
+│   ├── model_evaluation.ipynb       ## Jupyter notebook for model evaluation and testing
 │
 ├── config/
-│   ├── config.yml          # Configuration file for storing parameters and settings
-│   ├── kafka_config.yml    # Configuration file for Kafka setup
+│   ├── config.yml          ## Configuration file for storing parameters and settings
+│   ├── kafka_config.yml    ## Configuration file for Kafka setup
 │
-├── requirements.txt        # File listing all the required Python dependencies
-├── README.md               # Project documentation and instructions
+├── requirements.txt        ## File listing all the required Python dependencies
+├── README.md               ## Project documentation and instructions
 ``` 
 
 In this scalable file structure for the Food Safety Incident Predictor for Peru, the repository is organized into several directories for data, models, infrastructure, source code, notebooks, configuration files, and documentation. This structure ensures modularity, easy navigation, and efficient management of resources for the project.
@@ -124,14 +124,14 @@ In this scalable file structure for the Food Safety Incident Predictor for Peru,
 models/
 │
 ├── keras_model/
-│   ├── keras_food_safety_model.h5    # Trained Keras deep learning model for predicting food safety incidents
-│   └── keras_model_evaluation.ipynb  # Jupyter notebook for evaluating and testing the Keras model
+│   ├── keras_food_safety_model.h5    ## Trained Keras deep learning model for predicting food safety incidents
+│   └── keras_model_evaluation.ipynb  ## Jupyter notebook for evaluating and testing the Keras model
 │
 ├── bert_model/
-│   ├── bert_food_safety_model/       # Directory for storing BERT model checkpoint files
-│   ├── bert_config.json              # BERT model configuration file
-│   ├── bert_vocab.txt                # BERT vocabulary file
-│   └── bert_model_evaluation.ipynb    # Jupyter notebook for evaluating and testing the BERT model
+│   ├── bert_food_safety_model/       ## Directory for storing BERT model checkpoint files
+│   ├── bert_config.json              ## BERT model configuration file
+│   ├── bert_vocab.txt                ## BERT vocabulary file
+│   └── bert_model_evaluation.ipynb    ## Jupyter notebook for evaluating and testing the BERT model
 │
 ```
 
@@ -179,7 +179,7 @@ In the `deployment` directory of the Food Safety Incident Predictor for Peru pro
 These deployment files and scripts in the `deployment` directory provide the infrastructure and automation needed to effectively deploy, run, and maintain the Food Safety Incident Predictor application, ensuring scalability and efficiency in analyzing historical data on food safety incidents and predicting potential future outbreaks.
 
 ```python
-# train_model.py
+## train_model.py
 
 import numpy as np
 import pandas as pd
@@ -187,41 +187,41 @@ from keras.models import Sequential
 from keras.layers import Dense
 from transformers import BertTokenizer, TFBertModel
 
-# Load mock data for training
+## Load mock data for training
 data_path = "data/processed_data/mock_food_safety_data.csv"
 mock_data = pd.read_csv(data_path)
 
-# Preprocess mock data (e.g., feature engineering, normalization)
-# ...
-# ...
+## Preprocess mock data (e.g., feature engineering, normalization)
+## ...
+## ...
 
-# Define features and target variable
+## Define features and target variable
 X = mock_data.drop(columns=['target_column'])
 y = mock_data['target_column']
 
-# Build a simple Keras model
+## Build a simple Keras model
 model = Sequential()
 model.add(Dense(64, input_dim=X.shape[1], activation='relu'))
 model.add(Dense(1, activation='sigmoid'))
 
 model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
 
-# Train the model
+## Train the model
 model.fit(X, y, epochs=10, batch_size=32)
 
-# Save the trained model
+## Save the trained model
 model.save("models/keras_model/mock_food_safety_model.h5")
 
-# Fine-tune BERT model using mock data
+## Fine-tune BERT model using mock data
 tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
 bert_model = TFBertModel.from_pretrained('bert-base-uncased')
 
-# Fine-tuning code for BERT model with mock data
-# ...
-# ...
+## Fine-tuning code for BERT model with mock data
+## ...
+## ...
 
-# Save the fine-tuned BERT model
-# bert_model.save_pretrained("models/bert_model/fine_tuned_mock_food_safety_model/")
+## Save the fine-tuned BERT model
+## bert_model.save_pretrained("models/bert_model/fine_tuned_mock_food_safety_model/")
 
 ```
 
@@ -232,7 +232,7 @@ In the `train_model.py` script above, we train a model for the Food Safety Incid
 This script serves as a template for training a model using mock data and can be further extended and customized based on the actual data and modeling requirements of the application.
 
 ```python
-# complex_ml_algorithm.py
+## complex_ml_algorithm.py
 
 import numpy as np
 import pandas as pd
@@ -242,19 +242,19 @@ from transformers import BertTokenizer, TFBertModel
 from kafka import KafkaProducer
 import json
 
-# Load mock data for training
+## Load mock data for training
 data_path = "data/processed_data/mock_food_safety_data.csv"
 mock_data = pd.read_csv(data_path)
 
-# Preprocess mock data (e.g., feature engineering, normalization)
-# ...
-# ...
+## Preprocess mock data (e.g., feature engineering, normalization)
+## ...
+## ...
 
-# Define features and target variable
+## Define features and target variable
 X = mock_data.drop(columns=['target_column'])
 y = mock_data['target_column']
 
-# Build a complex Keras model
+## Build a complex Keras model
 model = Sequential()
 model.add(Dense(128, input_dim=X.shape[1], activation='relu'))
 model.add(Dense(64, activation='relu'))
@@ -262,30 +262,30 @@ model.add(Dense(1, activation='sigmoid'))
 
 model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
 
-# Train the complex model
+## Train the complex model
 model.fit(X, y, epochs=20, batch_size=64)
 
-# Save the trained complex model
+## Save the trained complex model
 model.save("models/keras_model/complex_food_safety_model.h5")
 
-# Instantiate a Kafka producer
+## Instantiate a Kafka producer
 producer = KafkaProducer(bootstrap_servers='localhost:9092')
 
-# Produce mock data to Kafka topic for real-time processing
+## Produce mock data to Kafka topic for real-time processing
 for index, row in mock_data.iterrows():
     record = json.dumps(row.to_dict())
     producer.send('food_safety_topic', value=record.encode('utf-8'))
 
-# Fine-tune a BERT model using mock data
+## Fine-tune a BERT model using mock data
 tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
 bert_model = TFBertModel.from_pretrained('bert-base-uncased')
 
-# Fine-tuning code for BERT model with mock data
-# ...
-# ...
+## Fine-tuning code for BERT model with mock data
+## ...
+## ...
 
-# Save the fine-tuned BERT model
-# bert_model.save_pretrained("models/bert_model/fine_tuned_complex_food_safety_model/")
+## Save the fine-tuned BERT model
+## bert_model.save_pretrained("models/bert_model/fine_tuned_complex_food_safety_model/")
 
 ```
 

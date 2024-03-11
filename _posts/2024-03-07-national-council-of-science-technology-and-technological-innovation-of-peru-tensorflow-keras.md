@@ -5,7 +5,7 @@ permalink: posts/national-council-of-science-technology-and-technological-innova
 layout: article
 ---
 
-# Machine Learning Solution for Research Funding Coordinators
+## Machine Learning Solution for Research Funding Coordinators
 
 ## Objective:
 The objective is to deploy a machine learning solution that assesses research proposals accurately, predicts their potential impact, and optimizes fund distribution for the National Council of Science, Technology, and Technological Innovation of Peru.
@@ -56,7 +56,7 @@ The chosen algorithm for this task is a **Gradient Boosting Machine (GBM)**, par
 
 By following these strategies and utilizing the recommended tools and libraries, the National Council of Science, Technology, and Technological Innovation of Peru can build a scalable, production-ready machine learning solution to optimize research grant distribution effectively.
 
-# Data Sourcing Strategy for Machine Learning Solution
+## Data Sourcing Strategy for Machine Learning Solution
 
 ## Data Collection Tools and Methods:
 
@@ -93,7 +93,7 @@ By following these strategies and utilizing the recommended tools and libraries,
 
 By integrating these tools within the existing technology stack of the National Council of Science, Technology, and Technological Innovation of Peru, the data collection process can be streamlined, ensuring that the data is readily accessible, well-organized, and in the correct format for analysis and model training. Automated data collection, secure data storage, efficient preprocessing, and seamless model training are key components to successfully building and deploying the machine learning solution for optimizing research grant distribution.
 
-# Feature Extraction and Engineering for Machine Learning Solution
+## Feature Extraction and Engineering for Machine Learning Solution
 
 ## Feature Extraction:
 
@@ -159,7 +159,7 @@ By integrating these tools within the existing technology stack of the National 
 
 By carefully extracting and engineering features with meaningful variable names, the interpretability of the data can be enhanced, leading to improved model performance for predicting the impact of research proposals accurately. Proper feature extraction and engineering are crucial steps in building a successful machine learning model for optimizing research grant distribution at the National Council of Science, Technology, and Technological Innovation of Peru.
 
-# Metadata Management for Machine Learning Solution
+## Metadata Management for Machine Learning Solution
 
 ## Project's Unique Demands and Characteristics:
 
@@ -198,7 +198,7 @@ By carefully extracting and engineering features with meaningful variable names,
 
 By incorporating these metadata management practices tailored to the specific demands and characteristics of the project, the National Council of Science, Technology, and Technological Innovation of Peru can effectively organize, track, and utilize metadata to optimize the research grant distribution process using the machine learning solution.
 
-# Data Challenges and Preprocessing Strategies for Machine Learning Solution
+## Data Challenges and Preprocessing Strategies for Machine Learning Solution
 
 ## Specific Problems with Project Data:
 
@@ -246,21 +246,21 @@ from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 
-# Load the dataset
+## Load the dataset
 data = pd.read_csv("research_proposals.csv")
 
-# Step 1: Handle Missing Values
-# Replace missing values in numerical features with mean and categorical features with mode
+## Step 1: Handle Missing Values
+## Replace missing values in numerical features with mean and categorical features with mode
 imputer = SimpleImputer(strategy='mean')
 data['budget'] = imputer.fit_transform(data[['budget']])
 data['duration'].fillna(data['duration'].mode()[0], inplace=True)
 
-# Step 2: Normalize Numerical Features
+## Step 2: Normalize Numerical Features
 scaler = StandardScaler()
 data['budget'] = scaler.fit_transform(data[['budget']])
 data['duration'] = scaler.fit_transform(data[['duration']])
 
-# Step 3: Text Preprocessing for Abstract Information
+## Step 3: Text Preprocessing for Abstract Information
 stop_words = set(stopwords.words('english'))
 lemmatizer = WordNetLemmatizer()
 
@@ -271,16 +271,16 @@ def preprocess_text(text):
 
 data['abstract_processed'] = data['abstract'].apply(preprocess_text)
 
-# Step 4: TF-IDF Vectorization for Text Features
+## Step 4: TF-IDF Vectorization for Text Features
 tfidf_vectorizer = TfidfVectorizer(max_features=5000)
 text_features = tfidf_vectorizer.fit_transform(data['abstract_processed']).toarray()
 text_df = pd.DataFrame(text_features, columns=tfidf_vectorizer.get_feature_names_out())
 data = pd.concat([data, text_df], axis=1)
 
-# Step 5: Drop Unnecessary Columns
+## Step 5: Drop Unnecessary Columns
 data.drop(['abstract', 'abstract_processed'], axis=1, inplace=True)
 
-# Save preprocessed data
+## Save preprocessed data
 data.to_csv("preprocessed_data.csv", index=False)
 ```
 
@@ -298,7 +298,7 @@ This code file outlines the necessary preprocessing steps tailored to the unique
 
 By following these preprocessing steps, the data will be effectively prepared for model training and analysis, aligning with the specific requirements of the project for predicting research proposal impact accurately and optimizing fund distribution for the National Council of Science, Technology, and Technological Innovation of Peru.
 
-# Modeling Strategy for Machine Learning Solution
+## Modeling Strategy for Machine Learning Solution
 
 ## Recommended Modeling Strategy:
 
@@ -363,7 +363,7 @@ from sklearn import preprocessing
 
 fake = Faker()
 
-# Generate fictitious research proposal data
+## Generate fictitious research proposal data
 def generate_data(num_samples):
     data = {
         'project_title': [fake.catch_phrase() for _ in range(num_samples)],
@@ -377,23 +377,23 @@ def generate_data(num_samples):
     df = pd.DataFrame(data)
     return df
 
-# Create a large fictitious dataset
+## Create a large fictitious dataset
 num_samples = 10000
 data = generate_data(num_samples)
 
-# Feature Engineering - Encode categorical variables
+## Feature Engineering - Encode categorical variables
 label_encoder = preprocessing.LabelEncoder()
 data['researcher_category'] = label_encoder.fit_transform(data['researcher_name'])
 
-# Simulate real-world variability
+## Simulate real-world variability
 data['budget'] *= np.random.uniform(0.8, 1.2, num_samples)
 data['duration'] += np.random.randint(-3, 3, num_samples)
 
-# Add noise to numerical features
+## Add noise to numerical features
 data['budget'] += np.random.normal(0, 10000, num_samples)
 data['duration'] += np.random.normal(0, 2, num_samples)
 
-# Validate and export the dataset
+## Validate and export the dataset
 data.to_csv("simulated_dataset.csv", index=False)
 ```
 
@@ -429,24 +429,24 @@ from sklearn.model_selection import train_test_split
 from xgboost import XGBRegressor
 from sklearn.metrics import mean_squared_error
 
-# Load preprocessed dataset
+## Load preprocessed dataset
 data = pd.read_csv("preprocessed_data.csv")
 
-# Split data into features (X) and target variable (y)
+## Split data into features (X) and target variable (y)
 X = data.drop('impact_prediction', axis=1)
 y = data['impact_prediction']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize and train the XGBoost model
+## Initialize and train the XGBoost model
 model = XGBRegressor()
 model.fit(X_train, y_train)
 
-# Make predictions on the test set
+## Make predictions on the test set
 predictions = model.predict(X_test)
 
-# Evaluate the model
+## Evaluate the model
 mse = mean_squared_error(y_test, predictions)
 print(f'Mean Squared Error: {mse}')
 ```
@@ -464,7 +464,7 @@ In this production-ready code snippet:
 
 By following these coding standards and practices commonly adopted in large tech environments, the production-ready code will maintain high quality, readability, and scalability for deploying the machine learning model effectively in a production environment.
 
-# Machine Learning Model Deployment Plan
+## Machine Learning Model Deployment Plan
 
 ## Step-by-Step Deployment Outline:
 
@@ -516,23 +516,23 @@ By following these coding standards and practices commonly adopted in large tech
 By following this step-by-step deployment plan utilizing the recommended tools and platforms, the machine learning model can be effectively deployed into a production environment, ensuring scalability, reliability, and real-time predictions to optimize research grant distribution for the National Council of Science, Technology, and Technological Innovation of Peru.
 
 ```Dockerfile
-# Use a base image with Python and required dependencies
+## Use a base image with Python and required dependencies
 FROM python:3.8-slim
 
-# Set the working directory in the container
+## Set the working directory in the container
 WORKDIR /app
 
-# Copy the project files to the working directory
+## Copy the project files to the working directory
 COPY requirements.txt /app
 COPY your_model_file.pkl /app
 
-# Install necessary dependencies
+## Install necessary dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Expose the port the app runs on
+## Expose the port the app runs on
 EXPOSE 5000
 
-# Command to run the application
+## Command to run the application
 CMD ["python", "app.py"]
 ```
 

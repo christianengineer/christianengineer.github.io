@@ -5,7 +5,7 @@ permalink: posts/automated-sentiment-analysis-for-brand-monitoring-tensorflow-ap
 layout: article
 ---
 
-# AI Automated Sentiment Analysis for Brand Monitoring
+## AI Automated Sentiment Analysis for Brand Monitoring
 
 ## Objectives
 The objectives of the AI Automated Sentiment Analysis for Brand Monitoring project are to:
@@ -168,18 +168,18 @@ from tensorflow import keras
 from tensorflow.keras.preprocessing.text import Tokenizer
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 
-# Mock data (replace with actual dataset)
+## Mock data (replace with actual dataset)
 texts = ["I love the products from this brand!", "This brand is amazing", "Not a fan of their customer service"]
-labels = [1, 1, 0]  # 1 for positive sentiment, 0 for negative sentiment
+labels = [1, 1, 0]  ## 1 for positive sentiment, 0 for negative sentiment
 
-# Tokenize the text data
+## Tokenize the text data
 tokenizer = Tokenizer(num_words=1000, oov_token='<OOV>')
 tokenizer.fit_on_texts(texts)
 word_index = tokenizer.word_index
 sequences = tokenizer.texts_to_sequences(texts)
 padded_sequences = pad_sequences(sequences, maxlen=10)
 
-# Define and compile the model
+## Define and compile the model
 model = keras.Sequential([
     keras.layers.Embedding(1000, 16, input_length=10),
     keras.layers.GlobalAveragePooling1D(),
@@ -188,10 +188,10 @@ model = keras.Sequential([
 
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
-# Train the model with mock data
+## Train the model with mock data
 model.fit(padded_sequences, labels, epochs=10)
 
-# Save the trained model
+## Save the trained model
 model.save('sentiment_analysis_model.h5')
 ```
 
@@ -208,18 +208,18 @@ from tensorflow import keras
 from tensorflow.keras import layers
 from sklearn.model_selection import train_test_split
 
-# Mock data (replace with actual dataset)
+## Mock data (replace with actual dataset)
 num_samples = 1000
 max_sequence_length = 100
 
-# Generate mock data
+## Generate mock data
 X = np.random.randint(1000, size=(num_samples, max_sequence_length))
-y = np.random.randint(2, size=num_samples)  # Binary labels (0 or 1)
+y = np.random.randint(2, size=num_samples)  ## Binary labels (0 or 1)
 
-# Split the data into training and validation sets
+## Split the data into training and validation sets
 X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Define and compile the complex machine learning model
+## Define and compile the complex machine learning model
 model = keras.Sequential([
     layers.Embedding(input_dim=1000, output_dim=100, input_length=max_sequence_length),
     layers.Conv1D(128, 5, activation='relu'),
@@ -231,10 +231,10 @@ model = keras.Sequential([
 
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
-# Train the model with mock data
+## Train the model with mock data
 model.fit(X_train, y_train, validation_data=(X_val, y_val), epochs=10, batch_size=32)
 
-# Save the trained model
+## Save the trained model
 model.save('complex_sentiment_analysis_model.h5')
 ```
 

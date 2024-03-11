@@ -244,13 +244,13 @@ The `deployment/` directory centralizes all deployment-related scripts and confi
 Here's a sample Python script for training a machine learning model in the Small Business Growth Toolkit for Peru Entrepreneurs using Scikit-Learn with mock data. This script demonstrates how to train a simple classifier for business stage classification.
 
 ```python
-# train_model.py
+## train_model.py
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 import joblib
 
-# Load mock data (replace with actual data loading code)
+## Load mock data (replace with actual data loading code)
 data = {
     'revenue': [10000, 5000, 20000, 3000],
     'customer_base': [100, 50, 300, 30],
@@ -260,22 +260,22 @@ data = {
 
 df = pd.DataFrame(data)
 
-# Preprocess data (if needed) and split into X and y
+## Preprocess data (if needed) and split into X and y
 X = df[['revenue', 'customer_base', 'growth_rate']]
 y = df['business_stage']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize and train a Random Forest classifier
+## Initialize and train a Random Forest classifier
 clf = RandomForestClassifier(random_state=42)
 clf.fit(X_train, y_train)
 
-# Evaluate the model
+## Evaluate the model
 accuracy = clf.score(X_test, y_test)
 print(f'Model Accuracy: {accuracy}')
 
-# Save the trained model
+## Save the trained model
 joblib.dump(clf, 'models/scikit-learn/business_stage_classifier.pkl')
 ```
 
@@ -288,15 +288,15 @@ This script uses mock data to train a Random Forest classifier for predicting th
 Below is an example of a file that implements a complex machine learning algorithm using TensorFlow for the Small Business Growth Toolkit for Peru Entrepreneurs. This script trains a neural network model to predict growth opportunities for small businesses based on mock data.
 
 ```python
-# train_neural_network.py
+## train_neural_network.py
 import tensorflow as tf
 import numpy as np
 
-# Generate mock data
-X = np.random.randn(100, 3)  # Features: 100 samples, 3 features
-y = np.random.randint(2, size=100)  # Binary target variable for classification
+## Generate mock data
+X = np.random.randn(100, 3)  ## Features: 100 samples, 3 features
+y = np.random.randint(2, size=100)  ## Binary target variable for classification
 
-# Define neural network architecture
+## Define neural network architecture
 model = tf.keras.Sequential([
     tf.keras.layers.Dense(64, activation='relu', input_shape=(3,)),
     tf.keras.layers.Dense(32, activation='relu'),
@@ -305,10 +305,10 @@ model = tf.keras.Sequential([
 
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
-# Train the model
+## Train the model
 model.fit(X, y, epochs=50, batch_size=32)
 
-# Save the trained model
+## Save the trained model
 model.save('models/tensorflow/growth_opportunity_predictor')
 ```
 

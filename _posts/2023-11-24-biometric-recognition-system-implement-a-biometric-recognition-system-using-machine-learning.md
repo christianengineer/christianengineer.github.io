@@ -52,33 +52,33 @@ By architecting the biometric recognition system on a scalable cloud-based infra
 biometric_recognition_system/
 │
 ├── data/
-│   ├── raw/                   # Raw biometric data
-│   ├── processed/             # Processed biometric data
-│   ├── models/                # Trained machine learning models
+│   ├── raw/                   ## Raw biometric data
+│   ├── processed/             ## Processed biometric data
+│   ├── models/                ## Trained machine learning models
 │   
 ├── src/
-│   ├── data_preprocessing/    # Scripts for data cleaning and preprocessing
-│   ├── feature_extraction/    # Code for extracting biometric features
-│   ├── model_training/        # Scripts for training machine learning and deep learning models
-│   ├── model_evaluation/      # Code for evaluating model performance
-│   ├── api/                   # APIs for integrating the biometric recognition functionality
+│   ├── data_preprocessing/    ## Scripts for data cleaning and preprocessing
+│   ├── feature_extraction/    ## Code for extracting biometric features
+│   ├── model_training/        ## Scripts for training machine learning and deep learning models
+│   ├── model_evaluation/      ## Code for evaluating model performance
+│   ├── api/                   ## APIs for integrating the biometric recognition functionality
 │   
 ├── infrastructure/
-│   ├── cloud_deployment/      # Infrastructure as code (IaC) scripts for cloud deployment
-│   ├── server_config/         # Configuration files for server setup
+│   ├── cloud_deployment/      ## Infrastructure as code (IaC) scripts for cloud deployment
+│   ├── server_config/         ## Configuration files for server setup
 │   
 ├── documentation/
-│   ├── data_documentation.md  # Documentation for the dataset and data preprocessing steps
-│   ├── model_documentation.md # Documentation for trained models and their performance
-│   ├── api_documentation.md   # Documentation for the biometric recognition API
+│   ├── data_documentation.md  ## Documentation for the dataset and data preprocessing steps
+│   ├── model_documentation.md ## Documentation for trained models and their performance
+│   ├── api_documentation.md   ## Documentation for the biometric recognition API
 │   
 ├── config/
-│   ├── config.py              # Configuration settings for the system
-│   ├── logging_config.py      # Logging configuration
+│   ├── config.py              ## Configuration settings for the system
+│   ├── logging_config.py      ## Logging configuration
 │   
-├── requirements.txt           # Python dependencies for the project
-├── README.md                  # Overview of the biometric recognition system
-├── LICENSE                    # License information
+├── requirements.txt           ## Python dependencies for the project
+├── README.md                  ## Overview of the biometric recognition system
+├── LICENSE                    ## License information
 ```
 
 ### File Structure Explanation
@@ -99,12 +99,12 @@ This file structure provides a scalable and organized layout for the Biometric R
 models/
 │
 ├── deep_learning/
-│   ├── facial_recognition_model.h5            # Trained deep learning model for facial recognition
-│   ├── voice_recognition_model.h5             # Trained deep learning model for voice recognition
+│   ├── facial_recognition_model.h5            ## Trained deep learning model for facial recognition
+│   ├── voice_recognition_model.h5             ## Trained deep learning model for voice recognition
 │
 ├── machine_learning/
-│   ├── fingerprint_recognition_model.pkl      # Trained machine learning model for fingerprint recognition
-│   ├── iris_recognition_model.pkl             # Trained machine learning model for iris recognition
+│   ├── fingerprint_recognition_model.pkl      ## Trained machine learning model for fingerprint recognition
+│   ├── iris_recognition_model.pkl             ## Trained machine learning model for iris recognition
 ```
 
 ### Explanation
@@ -121,16 +121,16 @@ deployment/
 │
 ├── cloud_deployment/
 │   ├── infrastructure_as_code/
-│   │   ├── biometric_recognition_system.yaml     # CloudFormation template for deploying the biometric recognition system on AWS
-│   │   ├── biometric_recognition_system.tf       # Terraform configuration for deploying the biometric recognition system on Azure
+│   │   ├── biometric_recognition_system.yaml     ## CloudFormation template for deploying the biometric recognition system on AWS
+│   │   ├── biometric_recognition_system.tf       ## Terraform configuration for deploying the biometric recognition system on Azure
 │   │
 │   ├── containerization/
-│   │   ├── Dockerfile                            # Dockerfile for containerizing the biometric recognition system
-│   │   ├── docker-compose.yaml                   # Docker Compose file for multi-container deployment
+│   │   ├── Dockerfile                            ## Dockerfile for containerizing the biometric recognition system
+│   │   ├── docker-compose.yaml                   ## Docker Compose file for multi-container deployment
 │
 ├── server_config/
-│   ├── nginx.conf                               # Configuration file for Nginx server
-│   ├── gunicorn_config.py                        # Gunicorn configuration file for serving the biometric recognition API
+│   ├── nginx.conf                               ## Configuration file for Nginx server
+│   ├── gunicorn_config.py                        ## Gunicorn configuration file for serving the biometric recognition API
 ```
 
 ### Explanation
@@ -150,24 +150,24 @@ from sklearn.svm import SVC
 from sklearn.metrics import accuracy_score
 
 def biometric_recognition_algorithm(data_file_path):
-    # Load mock biometric data from file
+    ## Load mock biometric data from file
     biometric_data = pd.read_csv(data_file_path)
 
-    # Assume the biometric data has features and a target label
+    ## Assume the biometric data has features and a target label
     X = biometric_data.drop('target_label', axis=1)
     y = biometric_data['target_label']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize and train a Support Vector Machine (SVM) classifier
+    ## Initialize and train a Support Vector Machine (SVM) classifier
     svm_classifier = SVC(kernel='linear')
     svm_classifier.fit(X_train, y_train)
 
-    # Make predictions on the test data
+    ## Make predictions on the test data
     predictions = svm_classifier.predict(X_test)
 
-    # Calculate accuracy
+    ## Calculate accuracy
     accuracy = accuracy_score(y_test, predictions)
 
     return accuracy
@@ -184,30 +184,30 @@ from tensorflow.keras.layers import Dense
 from tensorflow.keras.optimizers import Adam
 
 def biometric_deep_learning_algorithm(data_file_path):
-    # Load mock biometric data from file
+    ## Load mock biometric data from file
     biometric_data = pd.read_csv(data_file_path)
 
-    # Assume the biometric data has features and a target label
+    ## Assume the biometric data has features and a target label
     X = biometric_data.drop('target_label', axis=1)
     y = biometric_data['target_label']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize a deep learning model
+    ## Initialize a deep learning model
     model = Sequential([
         Dense(64, input_shape=(X_train.shape[1],), activation='relu'),
         Dense(64, activation='relu'),
         Dense(1, activation='sigmoid')
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer=Adam(learning_rate=0.001), loss='binary_crossentropy', metrics=['accuracy'])
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y_test), verbose=1)
 
-    # Evaluate the model
+    ## Evaluate the model
     _, accuracy = model.evaluate(X_test, y_test)
 
     return accuracy

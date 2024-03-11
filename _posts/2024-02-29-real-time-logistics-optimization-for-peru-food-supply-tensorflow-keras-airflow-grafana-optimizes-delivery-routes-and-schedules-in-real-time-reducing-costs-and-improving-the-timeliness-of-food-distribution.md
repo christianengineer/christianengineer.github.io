@@ -158,7 +158,7 @@ By organizing the models directory in this manner, we ensure a clear separation 
 - The deployment directory facilitates the seamless deployment and scaling of the Real-time Logistics Optimization for Peru Food Supply application, ensuring efficient utilization of resources and reliable real-time optimization of delivery routes and schedules.
 
 ```python
-# File Path: src/model_training/train_mock_model.py
+## File Path: src/model_training/train_mock_model.py
 
 import numpy as np
 import pandas as pd
@@ -166,27 +166,27 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
 from sklearn.model_selection import train_test_split
 
-# Load mock data for route optimization training
+## Load mock data for route optimization training
 data = pd.read_csv('data/mock_route_optimization_data.csv')
 X = data.drop('optimized_route', axis=1)
 y = data['optimized_route']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Define neural network model architecture
+## Define neural network model architecture
 model = Sequential()
 model.add(Dense(units=64, activation='relu', input_dim=X.shape[1]))
 model.add(Dense(units=32, activation='relu'))
 model.add(Dense(units=1, activation='linear'))
 
-# Compile the model
+## Compile the model
 model.compile(loss='mse', optimizer='adam')
 
-# Train the model
+## Train the model
 model.fit(X_train, y_train, epochs=50, batch_size=32, validation_data=(X_test, y_test))
 
-# Save the trained model
+## Save the trained model
 model.save('models/route_optimization/mock_trained_model')
 ```
 
@@ -195,7 +195,7 @@ This Python script `train_mock_model.py` trains a mock neural network model for 
 The script follows the steps of loading data, splitting it into training and testing sets, defining the model architecture, compiling the model, training the model, and saving the trained model. It provides a foundational structure for training machine learning models for Real-time Logistics Optimization for Peru Food Supply using mock data.
 
 ```python
-# File Path: src/model_training/train_complex_model.py
+## File Path: src/model_training/train_complex_model.py
 
 import numpy as np
 import pandas as pd
@@ -203,26 +203,26 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_squared_error
 import joblib
 
-# Load mock data for demand forecasting training
+## Load mock data for demand forecasting training
 data = pd.read_csv('data/mock_demand_forecasting_data.csv')
 X = data.drop('demand', axis=1)
 y = data['demand']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize and train a Random Forest Regressor model
+## Initialize and train a Random Forest Regressor model
 model = RandomForestRegressor(n_estimators=100, max_depth=10, random_state=42)
 model.fit(X_train, y_train)
 
-# Make predictions on the test set
+## Make predictions on the test set
 y_pred = model.predict(X_test)
 
-# Calculate Mean Squared Error
+## Calculate Mean Squared Error
 mse = mean_squared_error(y_test, y_pred)
 print(f'Mean Squared Error: {mse}')
 
-# Save the trained model
+## Save the trained model
 joblib.dump(model, 'models/demand_forecasting/mock_trained_model.pkl')
 ```
 

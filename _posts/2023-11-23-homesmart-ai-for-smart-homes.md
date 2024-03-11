@@ -283,21 +283,21 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report
 
 def train_anomaly_detection_model(data_file_path):
-    # Load mock sensor data from the provided file path
+    ## Load mock sensor data from the provided file path
     sensor_data = pd.read_csv(data_file_path)
 
-    # Assume the sensor data contains features and a label (1 for normal, 0 for anomaly)
+    ## Assume the sensor data contains features and a label (1 for normal, 0 for anomaly)
     X = sensor_data.drop('label', axis=1)
     y = sensor_data['label']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize and train a random forest classifier
+    ## Initialize and train a random forest classifier
     clf = RandomForestClassifier(n_estimators=100, random_state=42)
     clf.fit(X_train, y_train)
 
-    # Evaluate the model
+    ## Evaluate the model
     y_pred = clf.predict(X_test)
     report = classification_report(y_test, y_pred)
 
@@ -323,24 +323,24 @@ from tensorflow.keras.layers import LSTM, Dense
 from sklearn.model_selection import train_test_split
 
 def train_activity_recognition_model(data_file_path):
-    # Load mock sensor data from the provided file path
+    ## Load mock sensor data from the provided file path
     sensor_data = pd.read_csv(data_file_path)
 
-    # Assume the sensor data features are preprocessed and organized in a suitable format for LSTM input
+    ## Assume the sensor data features are preprocessed and organized in a suitable format for LSTM input
     X = np.array(sensor_data.drop('activity', axis=1))
-    y = np.array(pd.get_dummies(sensor_data['activity']))  # Convert activity labels to one-hot encoded format
+    y = np.array(pd.get_dummies(sensor_data['activity']))  ## Convert activity labels to one-hot encoded format
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Define and compile the deep learning model
+    ## Define and compile the deep learning model
     model = Sequential()
     model.add(LSTM(64, input_shape=(X.shape[1], X.shape[2])))
     model.add(Dense(32, activation='relu'))
     model.add(Dense(y.shape[1], activation='softmax'))
     model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train, epochs=10, batch_size=64, validation_data=(X_test, y_test))
 
     return model

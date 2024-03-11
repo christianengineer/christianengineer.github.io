@@ -5,16 +5,16 @@ permalink: posts/understanding-distributed-systems-concurrency-principles
 layout: article
 ---
 
-# Distributed Systems and Concurrency
+## Distributed Systems and Concurrency
 
 In today's digitally connected world, managing and efficiently leveraging big data and complex computing processes needs systems that can handle the workload scale, delivering improved performance, reliability, and ease of use. This article delves into the concept of distributed systems and how concurrency comes into play for such systems.
 
 ## Table of Contents:
 
-1. [Definition of a Distributed System](#Definition-of-a-Distributed-System)
-2. [Components of a Distributed System](#Components-of-a-Distributed-System)
-3. [Advantages & Disadvantages of Distributed Systems](#Advantages-&-Disadvantages-of-Distributed-Systems)
-4. [Concurrency in Distributed Systems](#Concurrency-in-Distributed-Systems)
+1. [Definition of a Distributed System](## efinition-of-a-Distributed-System)
+2. [Components of a Distributed System](## omponents-of-a-Distributed-System)
+3. [Advantages & Disadvantages of Distributed Systems](## dvantages-&-Disadvantages-of-Distributed-Systems)
+4. [Concurrency in Distributed Systems](## oncurrency-in-Distributed-Systems)
 
 ### Definition of a Distributed System
 

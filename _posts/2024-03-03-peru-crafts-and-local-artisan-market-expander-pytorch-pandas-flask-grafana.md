@@ -237,7 +237,7 @@ In the **models/** directory, these Python files contain the PyTorch models for 
 In the **deployment/** directory, these files and subdirectories provide infrastructure setup and deployment configurations for the Peru Crafts and Local Artisan Market Expander application. Dockerization enables containerized deployment, while Kubernetes files facilitate scalable orchestration and resource management. The deployment scripts and Helm charts offer automation and customizable deployment options for efficient deployment and management of the AI-driven application.
 
 ```python
-# scripts/train_model.py
+## scripts/train_model.py
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -245,17 +245,17 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 
-# Load mock data for training
+## Load mock data for training
 data = pd.read_csv('data/mock_training_data.csv')
 
-# Preprocess data (mock preprocessing steps)
+## Preprocess data (mock preprocessing steps)
 X = data.drop('target', axis=1)
 y = data['target']
 
-# Split data into training and validation sets
+## Split data into training and validation sets
 X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Define a simple PyTorch neural network model
+## Define a simple PyTorch neural network model
 class SimpleModel(nn.Module):
     def __init__(self, input_dim):
         super(SimpleModel, self).__init__()
@@ -267,12 +267,12 @@ class SimpleModel(nn.Module):
         x = self.fc2(x)
         return x
 
-# Initialize the model and optimizer
+## Initialize the model and optimizer
 model = SimpleModel(input_dim=X_train.shape[1])
 criterion = nn.MSELoss()
 optimizer = optim.Adam(model.parameters(), lr=0.001)
 
-# Training loop
+## Training loop
 for epoch in range(100):
     optimizer.zero_grad()
     outputs = model(torch.tensor(X_train.values, dtype=torch.float32))
@@ -281,7 +281,7 @@ for epoch in range(100):
     optimizer.step()
     print(f'Epoch {epoch+1}, Loss: {loss.item()}')
 
-# Save the trained model
+## Save the trained model
 torch.save(model.state_dict(), 'models/trained_model.pth')
 ```
 
@@ -290,7 +290,7 @@ This file `train_model.py` contains a training script for a simple PyTorch model
 By running this script, the model can be trained to make recommendations for matching local artisans with suitable online marketplaces and tourist shops, contributing to the goal of increasing the visibility and sales of their crafts and fostering sustainable income streams.
 
 ```python
-# scripts/train_complex_model.py
+## scripts/train_complex_model.py
 
 import pandas as pd
 import numpy as np
@@ -300,18 +300,18 @@ import torch.optim as optim
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
-# Load mock data for training complex model
+## Load mock data for training complex model
 data = pd.read_csv('data/mock_complex_data.csv')
 
-# Preprocess data
+## Preprocess data
 scaler = StandardScaler()
 X = scaler.fit_transform(data.drop('target', axis=1).values)
 y = data['target'].values
 
-# Split data into training and validation sets
+## Split data into training and validation sets
 X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Define a complex PyTorch model
+## Define a complex PyTorch model
 class ComplexModel(nn.Module):
     def __init__(self, input_dim):
         super(ComplexModel, self).__init__()
@@ -328,12 +328,12 @@ class ComplexModel(nn.Module):
         x = self.fc3(x)
         return x
 
-# Initialize the model and optimizer
+## Initialize the model and optimizer
 model = ComplexModel(input_dim=X_train.shape[1])
 criterion = nn.MSELoss()
 optimizer = optim.Adam(model.parameters(), lr=0.001)
 
-# Training loop
+## Training loop
 for epoch in range(200):
     optimizer.zero_grad()
     outputs = model(torch.tensor(X_train, dtype=torch.float32))
@@ -342,7 +342,7 @@ for epoch in range(200):
     optimizer.step()
     print(f'Epoch {epoch+1}, Loss: {loss.item()}')
 
-# Save the trained complex model
+## Save the trained complex model
 torch.save(model.state_dict(), 'models/trained_complex_model.pth')
 ```
 

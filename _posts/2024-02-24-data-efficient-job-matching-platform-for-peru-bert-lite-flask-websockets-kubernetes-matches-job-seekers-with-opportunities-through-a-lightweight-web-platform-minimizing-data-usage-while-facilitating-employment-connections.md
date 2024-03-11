@@ -5,7 +5,7 @@ permalink: posts/data-efficient-job-matching-platform-for-peru-bert-lite-flask-w
 layout: article
 ---
 
-# AI Data-Efficient Job Matching Platform for Peru
+## AI Data-Efficient Job Matching Platform for Peru
 
 ## Objectives:
 - Match job seekers with opportunities through a lightweight web platform
@@ -44,7 +44,7 @@ layout: article
 
 By leveraging these technologies and design strategies, the AI Data-Efficient Job Matching Platform for Peru can efficiently match job seekers with opportunities while minimizing data usage and providing a seamless user experience.
 
-# MLOps Infrastructure for the Data-Efficient Job Matching Platform
+## MLOps Infrastructure for the Data-Efficient Job Matching Platform
 
 ## Components:
 1. **Data Collection and Preprocessing**
@@ -88,7 +88,7 @@ By leveraging these technologies and design strategies, the AI Data-Efficient Jo
 
 By establishing a robust MLOps infrastructure and workflow for the Data-Efficient Job Matching Platform, we can ensure the seamless integration of machine learning components with the web application while maintaining data efficiency and scalability.
 
-# Scalable File Structure for Data-Efficient Job Matching Platform
+## Scalable File Structure for Data-Efficient Job Matching Platform
 
 ```
 data_efficient_job_matching_platform/
@@ -258,31 +258,31 @@ deployment/
 - These files ensure efficient container orchestration, scalability, and resource management for the application, aligning with the platform's objective of minimizing data usage and facilitating smooth employment connections.
 
 ```python
-# train_model.py
+## train_model.py
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from transformers import BertTokenizer, BertForSequenceClassification, AdamW
 from torch.utils.data import DataLoader
 from dataset import JobMatchingDataset
 
-# Load mock data (replace with actual data)
+## Load mock data (replace with actual data)
 data = pd.read_csv('mock_data/job_profiles.csv')
 
-# Tokenize text data using BERT tokenizer
+## Tokenize text data using BERT tokenizer
 tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
 encoded_data = tokenizer(data['job_description'].tolist(), padding=True, truncation=True, return_tensors='pt')
 
-# Create dataset and dataloader
+## Create dataset and dataloader
 dataset = JobMatchingDataset(encoded_data, data['label'])
 train_loader, val_loader = DataLoader(dataset, batch_size=16, shuffle=True), DataLoader(dataset, batch_size=16)
 
-# Initialize BERT model for sequence classification
+## Initialize BERT model for sequence classification
 model = BertForSequenceClassification.from_pretrained('bert-base-uncased', num_labels=2)
 
-# Define optimizer and learning rate
+## Define optimizer and learning rate
 optimizer = AdamW(model.parameters(), lr=5e-5)
 
-# Training loop
+## Training loop
 for epoch in range(3):
     for batch in train_loader:
         input_ids = batch['input_ids']
@@ -294,7 +294,7 @@ for epoch in range(3):
         loss.backward()
         optimizer.step()
 
-# Save the trained model
+## Save the trained model
 model.save_pretrained('models/job_matching_model')
 ```
 
@@ -303,25 +303,25 @@ model.save_pretrained('models/job_matching_model')
 This script demonstrates training a BERT-based model for job matching using mock data. It preprocesses text data, tokenizes it using BERT tokenizer, creates a dataset, trains the model for sequence classification, and saves the trained model for inference in the project's `models/` directory. Adjust the script according to the actual dataset and training requirements for the Data-Efficient Job Matching Platform.
 
 ```python
-# complex_ml_algorithm.py
+## complex_ml_algorithm.py
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.pipeline import Pipeline
 from joblib import dump
 
-# Load mock data (replace with actual data)
+## Load mock data (replace with actual data)
 data = pd.read_csv('mock_data/user_profiles.csv')
 
-# Preprocess text data
+## Preprocess text data
 tfidf_vectorizer = TfidfVectorizer(max_features=5000)
 X = tfidf_vectorizer.fit_transform(data['user_bio'])
 
-# Train a Random Forest classifier
+## Train a Random Forest classifier
 rf_clf = RandomForestClassifier(n_estimators=100, random_state=42)
 rf_clf.fit(X, data['job_match'])
 
-# Save the trained classifier
+## Save the trained classifier
 dump(rf_clf, 'models/user_profile_classifier.joblib')
 ```
 

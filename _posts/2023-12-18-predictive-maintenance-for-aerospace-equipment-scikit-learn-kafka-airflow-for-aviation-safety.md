@@ -5,7 +5,7 @@ permalink: posts/predictive-maintenance-for-aerospace-equipment-scikit-learn-kaf
 layout: article
 ---
 
-# AI Predictive Maintenance for Aerospace Equipment
+## AI Predictive Maintenance for Aerospace Equipment
 
 ## Objectives
 The objective of the AI Predictive Maintenance for Aerospace Equipment is to leverage machine learning to predict potential equipment failures in aerospace industry. By using historical data from the equipment, we aim to develop models that can predict failures before they occur, enabling proactive maintenance and enhancing aviation safety.
@@ -36,7 +36,7 @@ To implement the AI Predictive Maintenance system, we have chosen the following 
 
 By leveraging the chosen libraries and technologies, we aim to build a scalable, data-intensive AI application that can effectively predict equipment failures in the aerospace industry, ultimately contributing to improved aviation safety.
 
-# MLOps Infrastructure for Predictive Maintenance for Aerospace Equipment
+## MLOps Infrastructure for Predictive Maintenance for Aerospace Equipment
 
 ## Continuous Integration and Continuous Deployment (CI/CD)
 For the Predictive Maintenance for Aerospace Equipment application, we will implement a robust MLOps infrastructure to streamline model development, deployment, and monitoring. The MLOps infrastructure will incorporate Continuous Integration and Continuous Deployment (CI/CD) practices to ensure seamless integration of machine learning models into the production environment. 
@@ -71,52 +71,52 @@ To ensure a well-organized and scalable file structure for the Predictive Mainte
 predictive_maintenance_aerospace_equipment/
 │
 ├── data/
-│   ├── raw/  # Raw data from aerospace equipment
-│   ├── processed/  # Processed and cleaned data
+│   ├── raw/  ## Raw data from aerospace equipment
+│   ├── processed/  ## Processed and cleaned data
 │
 ├── models/
-│   ├── trained_models/  # Stored trained machine learning models
-│   ├── model_evaluation/  # Model performance evaluation and metrics
-│   ├── model_monitoring/  # Model monitoring scripts and configurations
-│   ├── deployment_artifacts/  # Files necessary for deploying models
+│   ├── trained_models/  ## Stored trained machine learning models
+│   ├── model_evaluation/  ## Model performance evaluation and metrics
+│   ├── model_monitoring/  ## Model monitoring scripts and configurations
+│   ├── deployment_artifacts/  ## Files necessary for deploying models
 │
 ├── notebooks/
-│   ├── exploratory_analysis.ipynb  # Jupyter notebook for data exploration
-│   ├── feature_engineering.ipynb  # Notebook for feature engineering
-│   ├── model_training_evaluation.ipynb  # Notebook for model training and evaluation
+│   ├── exploratory_analysis.ipynb  ## Jupyter notebook for data exploration
+│   ├── feature_engineering.ipynb  ## Notebook for feature engineering
+│   ├── model_training_evaluation.ipynb  ## Notebook for model training and evaluation
 │
 ├── src/
-│   ├── data_processing.py  # Python script for data preprocessing
-│   ├── model_training.py  # Script for training machine learning models
-│   ├── model_evaluation.py  # Script for model evaluation
-│   ├── model_deployment.py  # Code for deploying the trained model
+│   ├── data_processing.py  ## Python script for data preprocessing
+│   ├── model_training.py  ## Script for training machine learning models
+│   ├── model_evaluation.py  ## Script for model evaluation
+│   ├── model_deployment.py  ## Code for deploying the trained model
 │
 ├── airflow/
-│   ├── dags/  # Airflow DAGs for orchestration
-│   ├── plugins/  # Airflow custom plugins
-│   ├── configurations/  # Airflow configuration files
+│   ├── dags/  ## Airflow DAGs for orchestration
+│   ├── plugins/  ## Airflow custom plugins
+│   ├── configurations/  ## Airflow configuration files
 │
 ├── kafka/
-│   ├── producer/  # Kafka producer scripts
-│   ├── consumer/  # Kafka consumer scripts
-│   ├── configurations/  # Kafka configuration files
+│   ├── producer/  ## Kafka producer scripts
+│   ├── consumer/  ## Kafka consumer scripts
+│   ├── configurations/  ## Kafka configuration files
 │
 ├── docker/
-│   ├── Dockerfile  # Dockerfile for containerizing the application
-│   ├── docker-compose.yml  # Docker Compose for defining multi-container applications
+│   ├── Dockerfile  ## Dockerfile for containerizing the application
+│   ├── docker-compose.yml  ## Docker Compose for defining multi-container applications
 │
 ├── docs/
-│   ├── requirements.txt  # Python dependencies
-│   ├── README.md  # Project overview, setup instructions, and documentation
-│   ├── changelog.md  # Changelog for tracking project updates
+│   ├── requirements.txt  ## Python dependencies
+│   ├── README.md  ## Project overview, setup instructions, and documentation
+│   ├── changelog.md  ## Changelog for tracking project updates
 │
 ├── tests/
-│   ├── unit_tests/  # Unit tests for individual components
-│   ├── integration_tests/  # Integration tests for end-to-end testing
+│   ├── unit_tests/  ## Unit tests for individual components
+│   ├── integration_tests/  ## Integration tests for end-to-end testing
 │
 ├── scripts/
-│   ├── data_ingestion.sh  # Script for data ingestion
-│   ├── model_evaluation_workflow.sh  # Script for executing the model evaluation workflow
+│   ├── data_ingestion.sh  ## Script for data ingestion
+│   ├── model_evaluation_workflow.sh  ## Script for executing the model evaluation workflow
 ```
 
 This file structure organizes different components of the Predictive Maintenance for Aerospace Equipment repository into distinct directories, ensuring modularity, readability, and scalability. Each directory focuses on specific aspects of the project, such as data processing, model training, orchestration, deployment, and documentation. This structure facilitates collaboration among team members and eases the maintenance and expansion of the project.
@@ -127,21 +127,21 @@ The "models" directory in the Predictive Maintenance for Aerospace Equipment rep
 models/
 │
 ├── trained_models/
-│   ├── model_version_1.pkl  # Serialized file of the trained Scikit-Learn model
-│   ├── model_version_2.pkl  # Serialized file of an updated trained model
+│   ├── model_version_1.pkl  ## Serialized file of the trained Scikit-Learn model
+│   ├── model_version_2.pkl  ## Serialized file of an updated trained model
 │
 ├── model_evaluation/
-│   ├── evaluation_metrics.txt  # Text file containing evaluation metrics of the models
-│   ├── model_performance_plots/  # Directory containing visualizations of model performance
+│   ├── evaluation_metrics.txt  ## Text file containing evaluation metrics of the models
+│   ├── model_performance_plots/  ## Directory containing visualizations of model performance
 │
 ├── model_monitoring/
-│   ├── monitoring_configurations/  # Directory for model monitoring configurations
-│   ├── monitoring_scripts/  # Directory for scripts used in real-time model monitoring
+│   ├── monitoring_configurations/  ## Directory for model monitoring configurations
+│   ├── monitoring_scripts/  ## Directory for scripts used in real-time model monitoring
 │
 ├── deployment_artifacts/
-│   ├── model_deployment_script.py  # Python script for serving the trained model
-│   ├── requirements.txt  # Python dependencies required for serving the model
-│   ├── Dockerfile  # Dockerfile for containerizing the model serving application
+│   ├── model_deployment_script.py  ## Python script for serving the trained model
+│   ├── requirements.txt  ## Python dependencies required for serving the model
+│   ├── Dockerfile  ## Dockerfile for containerizing the model serving application
 ```
 
 In this expanded file structure, the "models" directory is organized into subdirectories that cater to different aspects of the machine learning models:
@@ -162,26 +162,26 @@ Here's an expanded view of the "deployment" directory and its files for the Pred
 deployment/
 │
 ├── docker/
-│   ├── Dockerfile  # The Dockerfile for containerizing the application
-│   ├── docker-compose.yml  # Docker Compose file for defining multi-container applications
+│   ├── Dockerfile  ## The Dockerfile for containerizing the application
+│   ├── docker-compose.yml  ## Docker Compose file for defining multi-container applications
 │
 ├── kubernetes/
-│   ├── deployment.yaml  # Kubernetes deployment configuration
-│   ├── service.yaml  # Kubernetes service configuration
-│   ├── ingress.yaml  # Kubernetes Ingress configuration
+│   ├── deployment.yaml  ## Kubernetes deployment configuration
+│   ├── service.yaml  ## Kubernetes service configuration
+│   ├── ingress.yaml  ## Kubernetes Ingress configuration
 │
 ├── airflow/
-│   ├── dags/  # Airflow DAGs for orchestrating model retraining and deployment
-│   ├── plugins/  # Airflow custom plugins for specific deployment tasks
-│   ├── configurations/  # Airflow configuration files for deployment workflows
+│   ├── dags/  ## Airflow DAGs for orchestrating model retraining and deployment
+│   ├── plugins/  ## Airflow custom plugins for specific deployment tasks
+│   ├── configurations/  ## Airflow configuration files for deployment workflows
 │
 ├── scripts/
-│   ├── start_services.sh  # Script for starting essential services (e.g., Kafka, Airflow)
-│   ├── deploy_model.sh  # Script for deploying the trained model
+│   ├── start_services.sh  ## Script for starting essential services (e.g., Kafka, Airflow)
+│   ├── deploy_model.sh  ## Script for deploying the trained model
 │
 ├── monitoring/
-│   ├── monitoring_configurations/  # Configuration files for model performance monitoring
-│   ├── monitoring_setup_scripts/  # Scripts for setting up monitoring and alerting systems
+│   ├── monitoring_configurations/  ## Configuration files for model performance monitoring
+│   ├── monitoring_setup_scripts/  ## Scripts for setting up monitoring and alerting systems
 ```
 
 This expanded "deployment" directory is structured to accommodate various aspects of deploying the Predictive Maintenance for Aerospace Equipment application. Here's a breakdown of the subdirectories and their contents:
@@ -203,44 +203,44 @@ Below is an example Python script for training a machine learning model using mo
 File Path: `src/train_model.py`
 
 ```python
-# src/train_model.py
+## src/train_model.py
 
-# Import necessary libraries
+## Import necessary libraries
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 import joblib
 
-# Load mock data (replace with actual data source in production)
+## Load mock data (replace with actual data source in production)
 data_path = 'data/processed/mock_training_data.csv'
 df = pd.read_csv(data_path)
 
-# Preprocessing the data (assumed to have been done in a separate script)
-# ...
-# Feature engineering, handling missing values, encoding categorical variables, etc.
+## Preprocessing the data (assumed to have been done in a separate script)
+## ...
+## Feature engineering, handling missing values, encoding categorical variables, etc.
 
-# Split data into features and target variable
+## Split data into features and target variable
 X = df.drop('target_variable', axis=1)
 y = df['target_variable']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Instantiate the model (replace with the relevant model for the predictive maintenance task)
+## Instantiate the model (replace with the relevant model for the predictive maintenance task)
 model = RandomForestClassifier(n_estimators=100, random_state=42)
 
-# Train the model
+## Train the model
 model.fit(X_train, y_train)
 
-# Make predictions
+## Make predictions
 y_pred = model.predict(X_test)
 
-# Evaluate the model
+## Evaluate the model
 accuracy = accuracy_score(y_test, y_pred)
 print(f'Model accuracy: {accuracy}')
 
-# Save the trained model to a file
+## Save the trained model to a file
 model_output_path = 'models/trained_models/predictive_maintenance_model.pkl'
 joblib.dump(model, model_output_path)
 print(f'Trained model saved at {model_output_path}')
@@ -255,49 +255,49 @@ Certainly! Below is an example Python script for training a complex machine lear
 File Path: `src/train_complex_model.py`
 
 ```python
-# src/train_complex_model.py
+## src/train_complex_model.py
 
-# Import necessary libraries
+## Import necessary libraries
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.metrics import accuracy_score, classification_report
 import joblib
 
-# Load mock data (replace with actual data source in production)
+## Load mock data (replace with actual data source in production)
 data_path = 'data/processed/mock_training_data.csv'
 df = pd.read_csv(data_path)
 
-# Preprocessing the data (assumed to have been done in a separate script)
-# ...
-# Feature engineering, handling missing values, encoding categorical variables, etc.
+## Preprocessing the data (assumed to have been done in a separate script)
+## ...
+## Feature engineering, handling missing values, encoding categorical variables, etc.
 
-# Split data into features and target variable
+## Split data into features and target variable
 X = df.drop('target_variable', axis=1)
 y = df['target_variable']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Instantiate the complex model (e.g., Gradient Boosting Classifier)
+## Instantiate the complex model (e.g., Gradient Boosting Classifier)
 model = GradientBoostingClassifier(n_estimators=100, learning_rate=1.0, max_depth=3, random_state=42)
 
-# Train the model
+## Train the model
 model.fit(X_train, y_train)
 
-# Make predictions
+## Make predictions
 y_pred = model.predict(X_test)
 
-# Evaluate the model
+## Evaluate the model
 accuracy = accuracy_score(y_test, y_pred)
 print(f'Model accuracy: {accuracy}')
 
-# Generate a detailed classification report
+## Generate a detailed classification report
 class_report = classification_report(y_test, y_pred)
 print('Classification Report:')
 print(class_report)
 
-# Save the trained complex model to a file
+## Save the trained complex model to a file
 model_output_path = 'models/trained_models/complex_predictive_maintenance_model.pkl'
 joblib.dump(model, model_output_path)
 print(f'Trained complex model saved at {model_output_path}')

@@ -5,7 +5,7 @@ permalink: posts/agricultural-crop-yield-prediction-using-tensorflow-python-enha
 layout: article
 ---
 
-# AI Agricultural Crop Yield Prediction using TensorFlow (Python)
+## AI Agricultural Crop Yield Prediction using TensorFlow (Python)
 
 ## Objectives
 The objectives of the AI Agricultural Crop Yield Prediction project using TensorFlow are to:
@@ -35,7 +35,7 @@ For the implementation of this project, the following libraries will be used:
 
 By leveraging these libraries, we can efficiently develop, train, and deploy machine learning models for predicting crop yields while ensuring scalability, performance, and maintainability of the AI applications in the agricultural domain.
 
-# Infrastructure for Agricultural Crop Yield Prediction using TensorFlow (Python)
+## Infrastructure for Agricultural Crop Yield Prediction using TensorFlow (Python)
 
 To support the Agricultural Crop Yield Prediction using TensorFlow application, a scalable and reliable infrastructure is essential. The infrastructure should accommodate data storage, model training, deployment, and real-time inference. Here, I'll outline the key components of the infrastructure design for this application.
 
@@ -74,7 +74,7 @@ To support the Agricultural Crop Yield Prediction using TensorFlow application, 
 
 By building the Agricultural Crop Yield Prediction application on a cloud-based infrastructure with these considerations, we can ensure scalability, reliability, cost-efficiency, and security while empowering farmers with valuable insights to enhance farm productivity.
 
-# Scalable File Structure for Agricultural Crop Yield Prediction using TensorFlow (Python) Repository
+## Scalable File Structure for Agricultural Crop Yield Prediction using TensorFlow (Python) Repository
 
 To ensure that the Agricultural Crop Yield Prediction using TensorFlow repository is well-organized, maintainable, and scalable, a well-defined and structured file organization is essential. Below is a recommended file structure for this project:
 
@@ -221,32 +221,32 @@ from tensorflow.keras.layers import Dense
 from tensorflow.keras.optimizers import Adam
 
 def build_crop_yield_prediction_model(data_path):
-    # Load mock data
+    ## Load mock data
     data = pd.read_csv(data_path)
     
-    # Preprocess the data
+    ## Preprocess the data
     features = data.drop('yield', axis=1)
     target = data['yield']
     
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(features, target, test_size=0.2, random_state=42)
     
-    # Standardize the data
+    ## Standardize the data
     scaler = StandardScaler()
     X_train = scaler.fit_transform(X_train)
     X_test = scaler.transform(X_test)
     
-    # Build the neural network model
+    ## Build the neural network model
     model = Sequential([
         Dense(64, activation='relu', input_shape=(X_train.shape[1],)),
         Dense(64, activation='relu'),
         Dense(1)
     ])
     
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer=Adam(learning_rate=0.001), loss='mean_squared_error')
     
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train, epochs=50, batch_size=32, validation_data=(X_test, y_test))
     
     return model
@@ -267,32 +267,32 @@ from tensorflow.keras.layers import Dense
 from tensorflow.keras.optimizers import Adam
 
 def build_crop_yield_prediction_model(data_path):
-    # Load mock data
+    ## Load mock data
     data = pd.read_csv(data_path)
     
-    # Preprocess the data
+    ## Preprocess the data
     features = data.drop('yield', axis=1)
     target = data['yield']
     
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(features, target, test_size=0.2, random_state=42)
     
-    # Standardize the data
+    ## Standardize the data
     scaler = StandardScaler()
     X_train = scaler.fit_transform(X_train)
     X_test = scaler.transform(X_test)
     
-    # Build the neural network model
+    ## Build the neural network model
     model = Sequential([
         Dense(64, activation='relu', input_shape=(X_train.shape[1],)),
         Dense(64, activation='relu'),
         Dense(1)
     ])
     
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer=Adam(learning_rate=0.001), loss='mean_squared_error')
     
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train, epochs=50, batch_size=32, validation_data=(X_test, y_test))
     
     return model

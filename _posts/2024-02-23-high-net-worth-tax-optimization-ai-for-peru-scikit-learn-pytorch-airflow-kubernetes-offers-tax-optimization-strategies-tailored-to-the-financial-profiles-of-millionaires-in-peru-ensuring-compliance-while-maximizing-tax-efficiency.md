@@ -204,7 +204,7 @@ By organizing the deployment directory with essential files such as the Dockerfi
 ### Python Script for Training a High-Net-Worth Tax Optimization Model
 
 ```python
-# File Path: high-net-worth-tax-optimization/models/model_training.py
+## File Path: high-net-worth-tax-optimization/models/model_training.py
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -213,26 +213,26 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 
-# Load mock data
+## Load mock data
 data_path = "../data/processed_data/cleaned_data.csv"
 data = pd.read_csv(data_path)
 
-# Prepare data for training
+## Prepare data for training
 X = data.drop('tax_optimization_strategy', axis=1)
 y = data['tax_optimization_strategy']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Train a Scikit-Learn model
+## Train a Scikit-Learn model
 scikit_model = RandomForestRegressor(n_estimators=100)
 scikit_model.fit(X_train, y_train)
 
-# Save the Scikit-Learn model
+## Save the Scikit-Learn model
 scikit_model_path = "../models/scikit_learn_model.pkl"
 joblib.dump(scikit_model, scikit_model_path)
 
-# Train a PyTorch model
+## Train a PyTorch model
 class NeuralNetwork(nn.Module):
     def __init__(self):
         super(NeuralNetwork, self).__init__()
@@ -260,7 +260,7 @@ for epoch in range(100):
     loss.backward()
     optimizer.step()
 
-# Save the PyTorch model
+## Save the PyTorch model
 torch_model_path = "../models/pytorch_model.pth"
 torch.save(pytorch_model.state_dict(), torch_model_path)
 ```
@@ -270,7 +270,7 @@ This Python script trains both a Scikit-Learn RandomForestRegressor model and a 
 ### Python Script for Complex Machine Learning Algorithm in High-Net-Worth Tax Optimization AI
 
 ```python
-# File Path: high-net-worth-tax-optimization/models/complex_model_training.py
+## File Path: high-net-worth-tax-optimization/models/complex_model_training.py
 
 import pandas as pd
 from sklearn.ensemble import GradientBoostingRegressor
@@ -279,26 +279,26 @@ import torch.nn as nn
 import torch.optim as optim
 from sklearn.model_selection import train_test_split
 
-# Load mock data
+## Load mock data
 data_path = "../data/processed_data/cleaned_data.csv"
 data = pd.read_csv(data_path)
 
-# Prepare data for training
+## Prepare data for training
 X = data.drop('tax_optimization_strategy', axis=1)
 y = data['tax_optimization_strategy']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Train a complex Scikit-Learn model (Gradient Boosting Regressor)
+## Train a complex Scikit-Learn model (Gradient Boosting Regressor)
 gb_model = GradientBoostingRegressor(n_estimators=100, max_depth=3, learning_rate=0.1)
 gb_model.fit(X_train, y_train)
 
-# Save the complex Scikit-Learn model
+## Save the complex Scikit-Learn model
 gb_model_path = "../models/complex_scikit_learn_model.pkl"
 joblib.dump(gb_model, gb_model_path)
 
-# Train a complex PyTorch model
+## Train a complex PyTorch model
 class ComplexNeuralNetwork(nn.Module):
     def __init__(self):
         super(ComplexNeuralNetwork, self).__init__()
@@ -328,7 +328,7 @@ for epoch in range(100):
     loss.backward()
     optimizer.step()
 
-# Save the complex PyTorch model
+## Save the complex PyTorch model
 complex_pytorch_model_path = "../models/complex_pytorch_model.pth"
 torch.save(complex_pytorch_model.state_dict(), complex_pytorch_model_path)
 ```

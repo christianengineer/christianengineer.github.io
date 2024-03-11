@@ -5,7 +5,7 @@ permalink: posts/air-quality-forecasting-using-tensorflow-python-predicting-envi
 layout: article
 ---
 
-# AI Air Quality Forecasting using TensorFlow
+## AI Air Quality Forecasting using TensorFlow
 
 ## Objectives
 The objectives of the AI Air Quality Forecasting using TensorFlow (Python) Predicting environmental conditions repository are as follows:
@@ -32,7 +32,7 @@ The repository can leverage the following libraries and frameworks to achieve th
 
 By focusing on these design strategies and utilizing relevant libraries and frameworks, the repository aims to deliver a robust and scalable AI application for air quality forecasting using machine learning with TensorFlow in Python.
 
-# Infrastructure for Air Quality Forecasting using TensorFlow
+## Infrastructure for Air Quality Forecasting using TensorFlow
 
 Building an infrastructure to support the Air Quality Forecasting application involves considerations for data processing, model training and serving, scalability, and real-time inference capabilities.
 
@@ -60,7 +60,7 @@ To support real-time inference, the infrastructure can include:
 
 By designing and implementing a robust infrastructure encompassing these components, the Air Quality Forecasting application can effectively support the processing, training, serving, and real-time inference of machine learning models for accurate and scalable air quality predictions.
 
-# Scalable File Structure for Air Quality Forecasting Repository
+## Scalable File Structure for Air Quality Forecasting Repository
 
 A scalable file structure for the Air Quality Forecasting repository can help organize the project components, facilitate collaboration, and ensure maintainability. Here's a suggested scalable file structure for the repository:
 
@@ -68,36 +68,36 @@ A scalable file structure for the Air Quality Forecasting repository can help or
 air_quality_forecasting/
 │
 ├─ data/
-│  ├─ raw_data/                  # Raw environmental data
-│  ├─ processed_data/            # Processed and cleaned data
+│  ├─ raw_data/                  ## Raw environmental data
+│  ├─ processed_data/            ## Processed and cleaned data
 │
 ├─ models/
-│  ├─ training/                  # Scripts or notebooks for model training
-│  ├─ evaluation/                # Model evaluation results
-│  ├─ serving/                   # Trained model artifacts and serving code
+│  ├─ training/                  ## Scripts or notebooks for model training
+│  ├─ evaluation/                ## Model evaluation results
+│  ├─ serving/                   ## Trained model artifacts and serving code
 │
 ├─ src/
-│  ├─ data_preprocessing/        # Code for data preprocessing pipeline
-│  ├─ feature_engineering/       # Feature extraction and engineering scripts
-│  ├─ model_training/            # Scripts or notebooks for model training
-│  ├─ model_evaluation/          # Evaluation scripts and notebooks
-│  ├─ api/                       # API code for model serving
+│  ├─ data_preprocessing/        ## Code for data preprocessing pipeline
+│  ├─ feature_engineering/       ## Feature extraction and engineering scripts
+│  ├─ model_training/            ## Scripts or notebooks for model training
+│  ├─ model_evaluation/          ## Evaluation scripts and notebooks
+│  ├─ api/                       ## API code for model serving
 │
 ├─ infrastructure/
-│  ├─ deployment/                # Deployment configurations (e.g., Kubernetes manifests)
-│  ├─ cloud_resources/           # Infrastructure as code scripts for cloud resources setup
+│  ├─ deployment/                ## Deployment configurations (e.g., Kubernetes manifests)
+│  ├─ cloud_resources/           ## Infrastructure as code scripts for cloud resources setup
 │
 ├─ docs/
-│  ├─ requirements.md            # Project requirements and dependencies
-│  ├─ design.md                  # System design documentation
-│  ├─ usage_guide.md             # Usage guide for contributors and users
+│  ├─ requirements.md            ## Project requirements and dependencies
+│  ├─ design.md                  ## System design documentation
+│  ├─ usage_guide.md             ## Usage guide for contributors and users
 │
 ├─ tests/
-│  ├─ unit/                      # Unit tests for code components
-│  ├─ integration/               # Integration tests for system components
+│  ├─ unit/                      ## Unit tests for code components
+│  ├─ integration/               ## Integration tests for system components
 │
-├─ LICENSE                        # License information for the project
-├─ README.md                      # Project overview, setup instructions, and usage guide
+├─ LICENSE                        ## License information for the project
+├─ README.md                      ## Project overview, setup instructions, and usage guide
 ```
 
 In this file structure:
@@ -119,19 +119,19 @@ Within the `models/` directory of the Air Quality Forecasting repository, we can
 models/
 │
 ├─ training/
-│  ├─ data_loading.py          # Script for loading and preprocessing training data
-│  ├─ model_training.py        # Script for training the machine learning models
-│  ├─ hyperparameter_tuning.py # Script for hyperparameter tuning experiments
-│  ├─ cross_validation.py      # Script for performing cross-validation
+│  ├─ data_loading.py          ## Script for loading and preprocessing training data
+│  ├─ model_training.py        ## Script for training the machine learning models
+│  ├─ hyperparameter_tuning.py ## Script for hyperparameter tuning experiments
+│  ├─ cross_validation.py      ## Script for performing cross-validation
 │
 ├─ evaluation/
-│  ├─ performance_metrics.py   # Script for calculating model performance metrics
-│  ├─ visualization.py         # Script for visualizing model evaluation results
+│  ├─ performance_metrics.py   ## Script for calculating model performance metrics
+│  ├─ visualization.py         ## Script for visualizing model evaluation results
 │
 ├─ serving/
-│  ├─ model_artifacts/         # Directory containing trained model artifacts
-│  ├─ serving_code.py          # Script for serving the trained model
-│  ├─ api_integration_test.py   # Script for testing the model serving API
+│  ├─ model_artifacts/         ## Directory containing trained model artifacts
+│  ├─ serving_code.py          ## Script for serving the trained model
+│  ├─ api_integration_test.py   ## Script for testing the model serving API
 ```
 
 ### Training/
@@ -159,21 +159,21 @@ In the `deployment/` directory of the Air Quality Forecasting repository, we can
 deployment/
 │
 ├─ kubernetes/
-│  ├─ air_quality_service.yaml         # Kubernetes manifest for deploying the model serving service
-│  ├─ preprocessing_pipeline.yaml     # Kubernetes manifest for setting up a data preprocessing pipeline
+│  ├─ air_quality_service.yaml         ## Kubernetes manifest for deploying the model serving service
+│  ├─ preprocessing_pipeline.yaml     ## Kubernetes manifest for setting up a data preprocessing pipeline
 │
 ├─ cloud_resources/
-│  ├─ infrastructure_as_code_script.py  # Script for provisioning cloud resources (e.g., AWS CloudFormation, Terraform)
+│  ├─ infrastructure_as_code_script.py  ## Script for provisioning cloud resources (e.g., AWS CloudFormation, Terraform)
 │  ├─ network_configuration/
-│     ├─ vpc_config.yaml               # Configuration file for setting up Virtual Private Cloud (VPC)
-│     ├─ subnet_config.yaml            # Configuration file for setting up subnets
+│     ├─ vpc_config.yaml               ## Configuration file for setting up Virtual Private Cloud (VPC)
+│     ├─ subnet_config.yaml            ## Configuration file for setting up subnets
 │
 ├─ docker/
-│  ├─ Dockerfile                        # Dockerfile for building the model serving container
+│  ├─ Dockerfile                        ## Dockerfile for building the model serving container
 │
 ├─ scripts/
-│  ├─ deployment_utils.sh               # Shell script with utility functions for deployment tasks
-│  ├─ update_model_version.sh           # Shell script for updating the deployed model version
+│  ├─ deployment_utils.sh               ## Shell script with utility functions for deployment tasks
+│  ├─ update_model_version.sh           ## Shell script for updating the deployed model version
 ```
 
 ### Kubernetes/
@@ -210,42 +210,42 @@ def complex_lstm_model(input_shape):
     model (tf.keras.Model): The constructed LSTM model.
     """
 
-    # Define the input layer
+    ## Define the input layer
     inputs = Input(shape=input_shape, name='input_layer')
 
-    # Add LSTM layers with dropout for regularization
+    ## Add LSTM layers with dropout for regularization
     x = LSTM(64, return_sequences=True)(inputs)
     x = LSTM(64)(x)
 
-    # Add a fully connected layer for prediction
+    ## Add a fully connected layer for prediction
     outputs = Dense(1, activation='linear', name='output_layer')(x)
 
-    # Create the model
+    ## Create the model
     model = Model(inputs=inputs, outputs=outputs, name='air_quality_lstm_model')
 
     return model
 
-# Create mock data for model training
+## Create mock data for model training
 num_samples = 1000
 timesteps = 24
 num_features = 5
 mock_input_data = np.random.rand(num_samples, timesteps, num_features)
-mock_output_data = np.random.rand(num_samples, 1)  # Mock output data
+mock_output_data = np.random.rand(num_samples, 1)  ## Mock output data
 
-# Define the file path for saving the model
+## Define the file path for saving the model
 file_path = 'path/to/save/model/model_name.h5'
 
-# Build the LSTM model
+## Build the LSTM model
 lstm_input_shape = (timesteps, num_features)
 lstm_model = complex_lstm_model(input_shape=lstm_input_shape)
 
-# Compile the model
+## Compile the model
 lstm_model.compile(optimizer='adam', loss='mean_squared_error')
 
-# Train the model with mock data
+## Train the model with mock data
 lstm_model.fit(mock_input_data, mock_output_data, epochs=10, batch_size=32)
 
-# Save the trained model
+## Save the trained model
 lstm_model.save(file_path)
 ```
 In the above Python code, a function `complex_lstm_model` is defined to create a complex LSTM model for air quality forecasting using TensorFlow. The function takes the input shape as a parameter and returns the constructed LSTM model. 
@@ -272,23 +272,23 @@ def train_and_save_air_quality_model(input_data, output_data, file_path):
     Trained model saved at the specified file path.
     """
 
-    # Define the input shape
+    ## Define the input shape
     input_shape = input_data.shape[1:]
 
-    # Define the complex LSTM model
+    ## Define the complex LSTM model
     inputs = Input(shape=input_shape, name='input_layer')
     x = LSTM(64, return_sequences=True)(inputs)
     x = LSTM(64)(x)
     outputs = Dense(1, activation='linear', name='output_layer')(x)
     model = Model(inputs=inputs, outputs=outputs, name='air_quality_lstm_model')
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam', loss='mean_squared_error')
 
-    # Train the model
+    ## Train the model
     model.fit(input_data, output_data, epochs=10, batch_size=32)
 
-    # Save the trained model
+    ## Save the trained model
     model.save(file_path)
 ```
 
@@ -297,17 +297,17 @@ In this code, the `train_and_save_air_quality_model` function takes input data, 
 To use this function, you can call it with the mock data and a file path for saving the trained model:
 
 ```python
-# Create mock input and output data
+## Create mock input and output data
 num_samples = 1000
 timesteps = 24
 num_features = 5
 input_data = np.random.rand(num_samples, timesteps, num_features)
-output_data = np.random.rand(num_samples, 1)  # Mock output data
+output_data = np.random.rand(num_samples, 1)  ## Mock output data
 
-# Define the file path for saving the model
+## Define the file path for saving the model
 file_path = 'path/to/save/model/model_name.h5'
 
-# Train the model and save it
+## Train the model and save it
 train_and_save_air_quality_model(input_data, output_data, file_path)
 ```
 

@@ -78,65 +78,65 @@ By establishing a comprehensive MLOps infrastructure encompassing these componen
 customized_marketing_campaign_analysis/
 │
 ├── data/
-│   ├── raw/                     # Raw data from marketing campaigns
-│   ├── processed/               # Processed and transformed data
-│   └── external/                # External datasets or sources
+│   ├── raw/                     ## Raw data from marketing campaigns
+│   ├── processed/               ## Processed and transformed data
+│   └── external/                ## External datasets or sources
 │
 ├── models/
-│   ├── keras/                   # Keras deep learning models
-│   └── spark/                   # Spark machine learning models or pipelines
+│   ├── keras/                   ## Keras deep learning models
+│   └── spark/                   ## Spark machine learning models or pipelines
 │
 ├── src/
-│   ├── data_processing/         # Data ingestion, cleaning, and feature engineering scripts
-│   ├── model_training/          # Scripts for training Keras and Spark models
-│   ├── inference/               # Code for model inference and predictions
-│   ├── monitoring/              # Prometheus monitoring and alerting configurations
-│   └── utils/                   # Utility functions and shared components
+│   ├── data_processing/         ## Data ingestion, cleaning, and feature engineering scripts
+│   ├── model_training/          ## Scripts for training Keras and Spark models
+│   ├── inference/               ## Code for model inference and predictions
+│   ├── monitoring/              ## Prometheus monitoring and alerting configurations
+│   └── utils/                   ## Utility functions and shared components
 │
 ├── tests/
-│   ├── unit/                    # Unit tests for individual components
-│   └── integration/             # Integration tests for end-to-end workflows
+│   ├── unit/                    ## Unit tests for individual components
+│   └── integration/             ## Integration tests for end-to-end workflows
 │
 ├── infrastructure/
-│   ├── docker/                  # Docker configurations for containerization
-│   ├── kubernetes/              # Kubernetes deployment and orchestration configurations
-│   └── CI_CD/                   # Continuous integration and deployment pipelines
+│   ├── docker/                  ## Docker configurations for containerization
+│   ├── kubernetes/              ## Kubernetes deployment and orchestration configurations
+│   └── CI_CD/                   ## Continuous integration and deployment pipelines
 │
-├── docs/                        # Documentation, user guides, and system architecture
+├── docs/                        ## Documentation, user guides, and system architecture
 │
-└── config/                       # Configuration files for application settings and parameters
+└── config/                       ## Configuration files for application settings and parameters
 ```
 
 ```
 models/
 ├── keras/
-│   ├── customer_behavior_analysis.h5         # Serialized Keras model for customer behavior analysis
-│   ├── campaign_performance_prediction.h5   # Serialized Keras model for predicting campaign performance
-│   └── advertising_strategy_optimization.h5 # Serialized Keras model for optimizing advertising strategies
+│   ├── customer_behavior_analysis.h5         ## Serialized Keras model for customer behavior analysis
+│   ├── campaign_performance_prediction.h5   ## Serialized Keras model for predicting campaign performance
+│   └── advertising_strategy_optimization.h5 ## Serialized Keras model for optimizing advertising strategies
 │
 └── spark/
-    ├── data_preprocessing_pipeline.py       # Spark data preprocessing pipeline script
-    ├── campaign_performance_model.pkl       # Serialized Spark machine learning model for campaign performance
-    └── advertising_roi_optimization_model.pkl # Serialized Spark machine learning model for advertising ROI optimization
+    ├── data_preprocessing_pipeline.py       ## Spark data preprocessing pipeline script
+    ├── campaign_performance_model.pkl       ## Serialized Spark machine learning model for campaign performance
+    └── advertising_roi_optimization_model.pkl ## Serialized Spark machine learning model for advertising ROI optimization
 ```
 
 ```plaintext
 deployment/
 ├── docker/
-│   ├── Dockerfile                 # Configuration for building the application Docker image
-│   └── requirements.txt           # Python dependencies for the application
+│   ├── Dockerfile                 ## Configuration for building the application Docker image
+│   └── requirements.txt           ## Python dependencies for the application
 │
 ├── kubernetes/
-│   ├── deployment.yaml            # Kubernetes deployment configuration for the application
-│   └── service.yaml               # Kubernetes service configuration for the application
+│   ├── deployment.yaml            ## Kubernetes deployment configuration for the application
+│   └── service.yaml               ## Kubernetes service configuration for the application
 │
 └── CI_CD/
-    ├── jenkinsfile                # Jenkins pipeline for CI/CD integration
-    └── gitlab_ci.yml              # GitLab CI/CD configuration for automated testing and deployment
+    ├── jenkinsfile                ## Jenkins pipeline for CI/CD integration
+    └── gitlab_ci.yml              ## GitLab CI/CD configuration for automated testing and deployment
 ```
 
 ```python
-# File Path: src/model_training/train_model.py
+## File Path: src/model_training/train_model.py
 
 import pandas as pd
 import numpy as np
@@ -144,69 +144,69 @@ from keras.models import Sequential
 from keras.layers import Dense
 from sklearn.model_selection import train_test_split
 
-# Load mock data
+## Load mock data
 data = pd.read_csv('data/processed/mock_campaign_data.csv')
 
-# Preprocess data (e.g., feature engineering, normalization)
+## Preprocess data (e.g., feature engineering, normalization)
 
-# Split data into features and target variables
+## Split data into features and target variables
 X = data.drop(columns=['target_column'])
 y = data['target_column']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Define Keras model
+## Define Keras model
 model = Sequential()
 model.add(Dense(64, input_dim=X.shape[1], activation='relu'))
 model.add(Dense(32, activation='relu'))
 model.add(Dense(1, activation='linear'))
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam', loss='mean_squared_error')
 
-# Train the model
+## Train the model
 model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y_test))
 
-# Save the trained model
+## Save the trained model
 model.save('models/keras/customized_campaign_model.h5')
 ```
 
 ```python
-# File Path: src/model_training/train_complex_model.py
+## File Path: src/model_training/train_complex_model.py
 
 from pyspark.sql import SparkSession
 from pyspark.ml.feature import VectorAssembler
 from pyspark.ml.regression import RandomForestRegressor
 from pyspark.ml.evaluation import RegressionEvaluator
 
-# Create a Spark session
+## Create a Spark session
 spark = SparkSession.builder.appName("CustomizedMarketingCampaignAnalysis").getOrCreate()
 
-# Load mock data
+## Load mock data
 data = spark.read.csv('data/processed/mock_campaign_data.csv', header=True, inferSchema=True)
 
-# Prepare data for training
+## Prepare data for training
 assembler = VectorAssembler(inputCols=data.columns[:-1], outputCol='features')
 data = assembler.transform(data)
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 (train_data, test_data) = data.randomSplit([0.8, 0.2])
 
-# Define and train a complex machine learning model
+## Define and train a complex machine learning model
 rf = RandomForestRegressor(featuresCol="features", labelCol="target_column")
 model = rf.fit(train_data)
 
-# Make predictions
+## Make predictions
 predictions = model.transform(test_data)
 
-# Evaluate the model
+## Evaluate the model
 evaluator = RegressionEvaluator(labelCol="target_column", predictionCol="prediction", metricName="rmse")
 rmse = evaluator.evaluate(predictions)
 
 print("Root Mean Squared Error (RMSE) on test data = %g" % rmse)
 
-# Save the trained model
+## Save the trained model
 model.save("models/spark/customized_campaign_model")
 ```
 

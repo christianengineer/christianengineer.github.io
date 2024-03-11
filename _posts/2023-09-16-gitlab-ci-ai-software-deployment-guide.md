@@ -5,7 +5,7 @@ permalink: posts/gitlab-ci-ai-software-deployment-guide
 layout: article
 ---
 
-# GitLab CI for AI Software Deployment
+## GitLab CI for AI Software Deployment
 
 As the AI field continues to grow and evolve, implementation needs have required engineers to adapt to changing standards. Software deployment now often happens concurrently with the development process, through the practice of Continuous Integration (CI) and the use of Artificial Intelligence (AI). GitLab, a widely-used open source repository manager, provides one of the best tools for CI. GitLab's CI tool offers advanced features geared specifically towards the efficient testing &amp; deployment of AI software.
 
@@ -39,17 +39,17 @@ Firstly, you need to create a configuration file named `.gitlab-ci.yml` at the r
 An example of a simple pipeline might look like this:
 
 ```yaml
-image: tensorflow/tensorflow:latest # Use the latest TensorFlow docker image
+image: tensorflow/tensorflow:latest ## Use the latest TensorFlow docker image
 
 stages:
-  - build # Define build stage
-  - test # Define test stage
+  - build ## Define build stage
+  - test ## Define test stage
 
-build_job: # Define the job for the build stage
+build_job: ## Define the job for the build stage
   stage: build
   script: echo "Building the application (e.g., compiling, downloading dependencies)"
 
-test_job: # Define the job for the test stage
+test_job: ## Define the job for the test stage
   stage: test
   script: echo "Testing the application (e.g., running unit or integration tests)"
 ```

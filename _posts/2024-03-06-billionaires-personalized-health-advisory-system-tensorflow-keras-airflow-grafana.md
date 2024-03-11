@@ -5,7 +5,7 @@ permalink: posts/billionaires-personalized-health-advisory-system-tensorflow-ker
 layout: article
 ---
 
-# Billionaire's Personalized Health Advisory System
+## Billionaire's Personalized Health Advisory System
 
 ## Objectives and Benefits for VIP Client Coordinators at Clínica Internacional:
 - **Objective:** Create a scalable and production-ready personalized health advisory system for elite clients, enhancing client satisfaction and health outcomes.
@@ -217,34 +217,34 @@ import pandas as pd
 from sklearn.preprocessing import StandardScaler
 from sklearn.impute import SimpleImputer
 
-# Load and preprocess data
+## Load and preprocess data
 def preprocess_data(data):
-    # 1. Handle missing values
+    ## 1. Handle missing values
     imputer = SimpleImputer(strategy='mean')
     data[['heart_rate', 'blood_pressure', 'cholesterol_levels']] = imputer.fit_transform(data[['heart_rate', 'blood_pressure', 'cholesterol_levels']])
     
-    # 2. Outlier removal - Assuming outlier detection has been performed previously
-    # Remove outliers based on a predefined threshold
+    ## 2. Outlier removal - Assuming outlier detection has been performed previously
+    ## Remove outliers based on a predefined threshold
 
-    # 3. Normalize numerical features
+    ## 3. Normalize numerical features
     scaler = StandardScaler()
     data[['steps_count', 'active_minutes', 'sedentary_time']] = scaler.fit_transform(data[['steps_count', 'active_minutes', 'sedentary_time']])
     
-    # 4. Feature engineering - Creating composite features
+    ## 4. Feature engineering - Creating composite features
     data['daily_activity_score'] = data['steps_count'] + (0.5 * data['active_minutes']) - (0.25 * data['sedentary_time'])
     
-    # 5. Feature selection - Drop unnecessary columns
+    ## 5. Feature selection - Drop unnecessary columns
     data.drop(['sedentary_time'], axis=1, inplace=True)
     
     return data
 
-# Load data
+## Load data
 data = pd.read_csv('health_data.csv')
 
-# Preprocess data
+## Preprocess data
 preprocessed_data = preprocess_data(data)
 
-# Save preprocessed data
+## Save preprocessed data
 preprocessed_data.to_csv('preprocessed_health_data.csv', index=False)
 ```
 
@@ -342,10 +342,10 @@ import pandas as pd
 import numpy as np
 from faker import Faker
 
-# Initialize Faker for generating fake data
+## Initialize Faker for generating fake data
 fake = Faker()
 
-# Function to generate fictitious health data
+## Function to generate fictitious health data
 def generate_health_data(num_samples):
     data = {
         'client_id': [fake.uuid4() for _ in range(num_samples)],
@@ -362,10 +362,10 @@ def generate_health_data(num_samples):
     
     return pd.DataFrame(data)
 
-# Generate fictitious health data with 100 samples
+## Generate fictitious health data with 100 samples
 fake_health_data = generate_health_data(100)
 
-# Save generated data to CSV file
+## Save generated data to CSV file
 fake_health_data.to_csv('fake_health_data.csv', index=False)
 ```
 
@@ -420,15 +420,15 @@ from tensorflow.keras.models import Model
 from tensorflow.keras.layers import Input, Embedding, Dot, Flatten
 from sklearn.model_selection import train_test_split
 
-# Load preprocessed dataset
+## Load preprocessed dataset
 data = pd.read_csv('preprocessed_health_data.csv')
 
-# Split data into training and validation sets
+## Split data into training and validation sets
 train, validation = train_test_split(data, test_size=0.2)
 
-# Define model architecture
+## Define model architecture
 num_clients = len(data['client_id'].unique())
-num_features = data.shape[1] - 1  # Exclude client_id
+num_features = data.shape[1] - 1  ## Exclude client_id
 embedding_size = 10
 
 client_input = Input(shape=(1,), name='client_input')
@@ -443,12 +443,12 @@ output = Flatten()(dot_product)
 model = Model(inputs=[client_input, feature_input], outputs=output)
 model.compile(optimizer='adam', loss='mean_squared_error')
 
-# Train the model
+## Train the model
 model.fit([train['client_id'], train.drop('client_id', axis=1)], train['health_plan_score'], 
           validation_data=([validation['client_id'], validation.drop('client_id', axis=1)], validation['health_plan_score']), 
           epochs=10, batch_size=32)
 
-# Save the trained model for deployment
+## Save the trained model for deployment
 model.save('health_advisory_model.h5')
 ```
 
@@ -530,23 +530,23 @@ By following these code quality and structure conventions in the production-read
 By following this step-by-step deployment plan and utilizing the recommended tools for each stage, the deployment of the machine learning model for the Personalized Health Advisory System can be carried out effectively, ensuring a seamless integration into the live production environment.
 
 ```Dockerfile
-# Use a base TensorFlow image
+## Use a base TensorFlow image
 FROM tensorflow/tensorflow:latest
 
-# Set the working directory
+## Set the working directory
 WORKDIR /app
 
-# Copy the necessary files into the container
+## Copy the necessary files into the container
 COPY requirements.txt /app/
 COPY health_advisory_model.h5 /app/
 
-# Install required Python packages
+## Install required Python packages
 RUN pip install --upgrade pip && pip install -r requirements.txt
 
-# Copy the entry script into the container
+## Copy the entry script into the container
 COPY entry_script.sh /app/
 
-# Set the entrypoint script
+## Set the entrypoint script
 ENTRYPOINT ["/bin/bash", "entry_script.sh"]
 ```
 

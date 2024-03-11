@@ -5,7 +5,7 @@ permalink: posts/predictive-maintenance-in-manufacturing-keras-mqtt-grafana-for-
 layout: article
 ---
 
-# AI Predictive Maintenance in Manufacturing - Repository Overview
+## AI Predictive Maintenance in Manufacturing - Repository Overview
 
 ## Objectives
 The primary objectives of the AI Predictive Maintenance in Manufacturing repository are to:
@@ -30,7 +30,7 @@ The chosen libraries and technologies for implementing the system are as follows
 
 By leveraging these technologies and design strategies, the repository aims to provide a robust and scalable solution for predictive maintenance in manufacturing that improves equipment reliability and operational efficiency.
 
-# MLOps Infrastructure for Predictive Maintenance in Manufacturing
+## MLOps Infrastructure for Predictive Maintenance in Manufacturing
 
 To ensure the successful deployment and management of machine learning models for predictive maintenance in manufacturing, an MLOps infrastructure needs to be established. The infrastructure will encompass key components and processes to facilitate model development, deployment, monitoring, and maintenance. 
 
@@ -75,7 +75,7 @@ To ensure the successful deployment and management of machine learning models fo
 
 By integrating these components and processes, the MLOps infrastructure will facilitate the development, deployment, and monitoring of predictive maintenance models, ensuring the reliability and effectiveness of the industrial IoT application for manufacturing equipment.
 
-# Predictive Maintenance in Manufacturing Repository File Structure
+## Predictive Maintenance in Manufacturing Repository File Structure
 
 The scalable file structure for the Predictive Maintenance in Manufacturing repository can be organized to support modular development, maintainability, and ease of navigation. Below is the proposed file structure:
 
@@ -135,7 +135,7 @@ predictive_maintenance_mfg/
 
 By organizing the repository with this scalable structure, it becomes easier for developers and stakeholders to navigate, maintain, and extend the solution for Predictive Maintenance in Manufacturing. This structure encourages modular development, promotes code reuse, and supports the integration of new features and improvements as the project evolves.
 
-# Predictive Maintenance in Manufacturing - Models Directory
+## Predictive Maintenance in Manufacturing - Models Directory
 
 The `models/` directory within the Predictive Maintenance in Manufacturing repository holds the trained machine learning models and related artifacts. This directory plays a crucial role in managing, versioning, and deploying the models for predictive maintenance in the industrial IoT application.
 
@@ -160,7 +160,7 @@ The `models/` directory serves the following purposes:
 
 By maintaining a structured `models/` directory, the repository ensures efficient management and deployment of trained predictive maintenance models for the industrial IoT application, allowing for scalability and ease of development and maintenance.
 
-# Predictive Maintenance in Manufacturing - Deployment Directory
+## Predictive Maintenance in Manufacturing - Deployment Directory
 
 The `deployment/` directory within the Predictive Maintenance in Manufacturing repository encompasses files and scripts required for deploying and serving the trained machine learning models for real-time inference and integration with the industrial IoT application.
 
@@ -185,41 +185,41 @@ The `deployment/` directory and its contained files serve the following purposes
 By incorporating the `deployment/` directory and its associated files, the repository maintains a structured approach to deploying and serving the trained machine learning models, ensuring their effective utilization within the industrial IoT environment for predictive maintenance in manufacturing.
 
 ```python
-# File: src/model_training/train_model.py
+## File: src/model_training/train_model.py
 import pandas as pd
 import numpy as np
 from tensorflow import keras
 from sklearn.model_selection import train_test_split
-from src.data_preprocessing.data_cleaning import clean_data  # Assuming data cleaning function is implemented in data_cleaning.py
+from src.data_preprocessing.data_cleaning import clean_data  ## Assuming data cleaning function is implemented in data_cleaning.py
 
-# Load mock sensor data (mock data path)
+## Load mock sensor data (mock data path)
 mock_data_path = 'data/raw_data/mock_sensor_data.csv'
 sensor_data = pd.read_csv(mock_data_path)
 
-# Clean and preprocess the data
-cleaned_data = clean_data(sensor_data)  # Assuming clean_data function handles preprocessing
+## Clean and preprocess the data
+cleaned_data = clean_data(sensor_data)  ## Assuming clean_data function handles preprocessing
 
-# Split data into features and target
-X = cleaned_data.drop('target_variable', axis=1)  # Replace 'target_variable' with the actual target variable name
+## Split data into features and target
+X = cleaned_data.drop('target_variable', axis=1)  ## Replace 'target_variable' with the actual target variable name
 y = cleaned_data['target_variable']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Define a Keras sequential model
+## Define a Keras sequential model
 model = keras.Sequential([
     keras.layers.Dense(64, activation='relu', input_shape=[len(X_train.keys())]),
     keras.layers.Dense(64, activation='relu'),
     keras.layers.Dense(1)
 ])
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam', loss='mse', metrics=['mae', 'mse'])
 
-# Train the model
+## Train the model
 model.fit(X_train, y_train, epochs=10, validation_data=(X_test, y_test))
 
-# Save the trained model
+## Save the trained model
 model.save('models/keras_models/trained_model.h5')
 ```
 In this example, the `train_model.py` script loads mock sensor data, preprocesses the data, trains a Keras model, and saves the trained model in the designated directory. It assumes the availability of a data cleaning function and the necessary preprocessing steps. The mock data is assumed to be stored in a CSV file named `mock_sensor_data.csv` within the `data/raw_data/` directory. The trained model is saved as `trained_model.h5` in the `models/keras_models/` directory.
@@ -227,7 +227,7 @@ In this example, the `train_model.py` script loads mock sensor data, preprocesse
 This script is a simplified representation of the model training process using mock data and serves as a starting point for training the predictive maintenance model within the industrial IoT application. Adjustments and expansions based on real data and detailed preprocessing and model tuning can be incorporated as per the requirements.
 
 ```python
-# File: src/model_training/train_complex_model.py
+## File: src/model_training/train_complex_model.py
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
@@ -235,34 +235,34 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, classification_report
 import joblib
 
-# Load mock sensor data (mock data path)
+## Load mock sensor data (mock data path)
 mock_data_path = 'data/raw_data/mock_sensor_data.csv'
 sensor_data = pd.read_csv(mock_data_path)
 
-# Perform data preprocessing and feature engineering
-# ... (Assuming preprocessing and feature engineering steps are implemented)
+## Perform data preprocessing and feature engineering
+## ... (Assuming preprocessing and feature engineering steps are implemented)
 
-# Split data into features and target
-X = sensor_data.drop('target_variable', axis=1)  # Replace 'target_variable' with the actual target variable name
+## Split data into features and target
+X = sensor_data.drop('target_variable', axis=1)  ## Replace 'target_variable' with the actual target variable name
 y = sensor_data['target_variable']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize and train a complex machine learning model
+## Initialize and train a complex machine learning model
 model = RandomForestClassifier(n_estimators=100, max_depth=10, random_state=42)
 model.fit(X_train, y_train)
 
-# Make predictions and evaluate the model
+## Make predictions and evaluate the model
 y_pred = model.predict(X_test)
 accuracy = accuracy_score(y_test, y_pred)
 print(f'Accuracy: {accuracy:.2f}')
 
-# Generate classification report for detailed performance evaluation
+## Generate classification report for detailed performance evaluation
 report = classification_report(y_test, y_pred)
 print(report)
 
-# Save the trained model
+## Save the trained model
 joblib.dump(model, 'models/random_forest_model.pkl')
 ```
 In this example, the `train_complex_model.py` script loads mock sensor data, performs data preprocessing and feature engineering, trains a complex Random Forest classifier, evaluates the model's performance, and saves the trained model in the designated directory. The mock data is assumed to be stored in a CSV file named `mock_sensor_data.csv` within the `data/raw_data/` directory. The trained model is saved as `random_forest_model.pkl` in the `models/` directory.

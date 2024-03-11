@@ -5,7 +5,7 @@ permalink: posts/ai-driven-retail-store-layout-optimization-keras-apache-beam-ku
 layout: article
 ---
 
-# AI-driven Retail Store Layout Optimization
+## AI-driven Retail Store Layout Optimization
 
 ## Objectives
 The objective of the AI-driven Retail Store Layout Optimization is to use machine learning and data-driven insights to optimize the layout of retail stores. By leveraging AI, the system aims to enhance the shopping experience, improve product visibility, and ultimately increase sales. Additionally, the system should consider factors such as customer behavior, product placement, and inventory management to create an optimal store layout.
@@ -34,7 +34,7 @@ The following libraries and technologies will be utilized in the development of 
 
 By leveraging Keras for machine learning, Apache Beam for real-time data processing, and Kubernetes for scalable deployment, the AI-driven Retail Store Layout Optimization system aims to provide data-driven insights and actionable recommendations for optimizing the layout of retail stores, ultimately enhancing the overall shopping experience and driving increased sales.
 
-# MLOps Infrastructure for AI-driven Retail Store Layout Optimization
+## MLOps Infrastructure for AI-driven Retail Store Layout Optimization
 
 ## Introduction
 Implementing a robust MLOps infrastructure for the AI-driven Retail Store Layout Optimization application is crucial for ensuring seamless deployment, monitoring, and management of machine learning models and data processing pipelines. The infrastructure should aim to automate the end-to-end ML lifecycle, encompassing model training, testing, deployment, and monitoring, while leveraging technologies such as Keras, Apache Beam, and Kubernetes. 
@@ -178,7 +178,7 @@ import numpy as np
 from keras.models import Sequential
 from keras.layers import Dense
 
-# Load mock data for training
+## Load mock data for training
 data = {
     'customer_id': [1, 2, 3, 4, 5],
     'age': [25, 30, 28, 35, 40],
@@ -189,60 +189,60 @@ data = {
 }
 mock_customer_data = pd.DataFrame(data)
 
-# Feature engineering and preprocessing
-# ... (Perform necessary feature engineering and preprocessing of the mock data)
+## Feature engineering and preprocessing
+## ... (Perform necessary feature engineering and preprocessing of the mock data)
 
-# Define input features and target variable
+## Define input features and target variable
 X = mock_customer_data[['age', 'time_spent_in_store_minutes', 'amount_spent_dollars']]
 y = mock_customer_data['layout_preference']
 
-# Define and compile the neural network model using Keras
+## Define and compile the neural network model using Keras
 model = Sequential()
 model.add(Dense(64, input_dim=3, activation='relu'))
 model.add(Dense(32, activation='relu'))
 model.add(Dense(1, activation='sigmoid'))
 model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
 
-# Train the model
+## Train the model
 model.fit(X, y, epochs=10, batch_size=1)
 
-# Serialize and save the trained model
+## Serialize and save the trained model
 model.save('trained_models/store_layout_optimization_model_mock.h5')
 ```
 
 In this example, the script `training_pipeline.py` utilizes mock customer data to train a basic neural network model using Keras. The trained model is then serialized and saved as `store_layout_optimization_model_mock.h5` within the `trained_models` directory. This file path effectively organizes the training code and the resultant trained model within the project's directory structure, facilitating easy access and management.
 
 ```python
-# File Path: models/store_layout_optimization_model.py
+## File Path: models/store_layout_optimization_model.py
 
 import pandas as pd
 import numpy as np
 from sklearn.ensemble import RandomForestRegressor
 import joblib
 
-# Load mock data for training
+## Load mock data for training
 data = {
     'customer_id': [1, 2, 3, 4, 5],
     'age': [25, 30, 28, 35, 40],
     'product_category': ['Electronics', 'Clothing', 'Grocery', 'Electronics', 'Beauty'],
     'time_spent_in_store_minutes': [40, 55, 30, 45, 60],
     'amount_spent_dollars': [100, 150, 75, 120, 200],
-    'layout_preference': [1, 0, 1, 0, 1]  # Binary encoding for layout preference (1 for Layout A, 0 for Layout B)
+    'layout_preference': [1, 0, 1, 0, 1]  ## Binary encoding for layout preference (1 for Layout A, 0 for Layout B)
 }
 mock_customer_data = pd.DataFrame(data)
 
-# Feature engineering and preprocessing
-# ... (Perform complex feature engineering and preprocessing of the mock data, including encoding and scaling)
+## Feature engineering and preprocessing
+## ... (Perform complex feature engineering and preprocessing of the mock data, including encoding and scaling)
 
-# Define input features and target variable
+## Define input features and target variable
 X = mock_customer_data[['age', 'time_spent_in_store_minutes', 'amount_spent_dollars']]
 y = mock_customer_data['layout_preference']
 
-# Initialize and train a complex machine learning model (Random Forest Regressor)
+## Initialize and train a complex machine learning model (Random Forest Regressor)
 model = RandomForestRegressor(n_estimators=100, random_state=42)
 model.fit(X, y)
 
-# Serialize and save the trained model
+## Serialize and save the trained model
 joblib.dump(model, 'trained_models/store_layout_optimization_model_complex.pkl')
 ```
 

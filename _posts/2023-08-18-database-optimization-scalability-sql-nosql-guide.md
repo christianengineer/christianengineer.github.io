@@ -5,7 +5,7 @@ permalink: posts/database-optimization-scalability-sql-nosql-guide
 layout: article
 ---
 
-# Database Optimization and Scalability (SQL and NoSQL)
+## Database Optimization and Scalability (SQL and NoSQL)
 
 In today's data-centric society, databases play a central role in information management across many industries. Modern organizations depend significantly on databases for the scalability and optimization of their operations. But as databases grow, managing them effectively becomes challenging. Thus, the concepts of database optimization and scalability become of paramount importance.
 

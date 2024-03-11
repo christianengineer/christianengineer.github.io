@@ -120,11 +120,11 @@ This file structure is organized to accommodate the different components of the 
 ```
 |- models/
     |- keras/
-        |- lstm_stock_prediction.h5  # Trained Keras LSTM model for stock price prediction
-        |- sentiment_analysis_model.h5  # Trained Keras model for sentiment analysis
+        |- lstm_stock_prediction.h5  ## Trained Keras LSTM model for stock price prediction
+        |- sentiment_analysis_model.h5  ## Trained Keras model for sentiment analysis
     |- spark/
-        |- regression_model.pkl  # Trained Spark MLlib regression model for risk assessment
-        |- clustering_model.pkl  # Trained Spark MLlib clustering model for market segmentation
+        |- regression_model.pkl  ## Trained Spark MLlib regression model for risk assessment
+        |- clustering_model.pkl  ## Trained Spark MLlib clustering model for market segmentation
 ```
 
 #### Details of `models` directory:
@@ -195,38 +195,38 @@ from tensorflow.keras.layers import LSTM, Dense
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import MinMaxScaler
 
-# Load mock financial data
+## Load mock financial data
 data = pd.read_csv('data/raw/financial_data.csv')
 
-# Data preprocessing
-# ... (Data preprocessing steps such as feature engineering, normalization, etc.)
+## Data preprocessing
+## ... (Data preprocessing steps such as feature engineering, normalization, etc.)
 
-# Split data into features and target
+## Split data into features and target
 X = data[['feature1', 'feature2', 'feature3']].values
 y = data['target'].values
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Scale the input features
+## Scale the input features
 scaler = MinMaxScaler()
 X_train = scaler.fit_transform(X_train)
 X_test = scaler.transform(X_test)
 
-# Define the LSTM model
+## Define the LSTM model
 model = Sequential()
 model.add(LSTM(50, return_sequences=True, input_shape=(X_train.shape[1], X_train.shape[2])))
 model.add(LSTM(50, return_sequences=False))
 model.add(Dense(25))
 model.add(Dense(1))
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam', loss='mean_squared_error')
 
-# Train the model
+## Train the model
 model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y_test))
 
-# Save the trained model
+## Save the trained model
 model.save('models/keras/lstm_stock_prediction.h5')
 ```
 
@@ -246,42 +246,42 @@ from pyspark.ml.evaluation import RegressionEvaluator
 from pyspark.ml import Pipeline
 import pandas as pd
 
-# Create a Spark session
+## Create a Spark session
 spark = SparkSession.builder.appName("AssetManagementFinance").getOrCreate()
 
-# Load mock financial data
+## Load mock financial data
 data = spark.read.csv("data/raw/financial_data.csv", header=True, inferSchema=True)
 
-# Data preprocessing
-# ... (Data preprocessing steps such as feature engineering, handling missing values, etc.)
+## Data preprocessing
+## ... (Data preprocessing steps such as feature engineering, handling missing values, etc.)
 
-# Define features and target variable
+## Define features and target variable
 feature_cols = ['feature1', 'feature2', 'feature3']
 assembler = VectorAssembler(inputCols=feature_cols, outputCol="features")
 data = assembler.transform(data)
 data = data.select("features", "target")
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 train_data, test_data = data.randomSplit([0.8, 0.2])
 
-# Define the GBTRegressor model
+## Define the GBTRegressor model
 gbt = GBTRegressor(featuresCol='features', labelCol='target', maxIter=10)
 
-# Create a pipeline
+## Create a pipeline
 pipeline = Pipeline(stages=[gbt])
 
-# Train the model
+## Train the model
 model = pipeline.fit(train_data)
 
-# Make predictions
+## Make predictions
 predictions = model.transform(test_data)
 
-# Evaluate the model
+## Evaluate the model
 evaluator = RegressionEvaluator(labelCol="target", predictionCol="prediction", metricName="rmse")
 rmse = evaluator.evaluate(predictions)
 print("Root Mean Squared Error (RMSE) on test data = %g" % rmse)
 
-# Save the trained model
+## Save the trained model
 model.save("models/spark/complex_regression_model")
 ```
 

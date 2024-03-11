@@ -62,39 +62,39 @@ By integrating these MLOps practices into the infrastructure for the Automated R
 automated-resume-screening/
 │
 ├── data/
-│   ├── raw/               # Raw resume data
-│   ├── processed/         # Processed resume data
-│   └── models/            # Trained machine learning models
+│   ├── raw/               ## Raw resume data
+│   ├── processed/         ## Processed resume data
+│   └── models/            ## Trained machine learning models
 │
 ├── src/
-│   ├── ingestion/         # Scripts for data ingestion
-│   ├── preprocessing/     # Scripts for preprocessing resume data
-│   ├── feature_extraction/  # Scripts for extracting features from resumes
-│   ├── model_training/    # Scripts for training machine learning models
-│   └── api/               # API implementation for interacting with the screening system
+│   ├── ingestion/         ## Scripts for data ingestion
+│   ├── preprocessing/     ## Scripts for preprocessing resume data
+│   ├── feature_extraction/  ## Scripts for extracting features from resumes
+│   ├── model_training/    ## Scripts for training machine learning models
+│   └── api/               ## API implementation for interacting with the screening system
 │
-├── tests/                 # Unit tests and integration tests
+├── tests/                 ## Unit tests and integration tests
 │
 ├── infrastructure/
-│   ├── docker/            # Dockerfiles for containerization
-│   ├── kubernetes/        # Kubernetes configuration files for deployment
-│   ├── terraform/         # Infrastructure as code for cloud deployment
-│   └── ci_cd/             # Configuration for continuous integration and continuous deployment
+│   ├── docker/            ## Dockerfiles for containerization
+│   ├── kubernetes/        ## Kubernetes configuration files for deployment
+│   ├── terraform/         ## Infrastructure as code for cloud deployment
+│   └── ci_cd/             ## Configuration for continuous integration and continuous deployment
 │
-├── docs/                  # Documentation
+├── docs/                  ## Documentation
 │
-├── requirements.txt       # Python dependencies
+├── requirements.txt       ## Python dependencies
 │
-├── README.md              # Project overview and instructions
+├── README.md              ## Project overview and instructions
 │
-└── .gitignore             # Git ignore file
+└── .gitignore             ## Git ignore file
 ```
 
 ```
 ├── data/
 │   ├── models/
-│   │   ├── model1.pkl          # Serialized file for machine learning model 1
-│   │   ├── model2.pkl          # Serialized file for machine learning model 2
+│   │   ├── model1.pkl          ## Serialized file for machine learning model 1
+│   │   ├── model2.pkl          ## Serialized file for machine learning model 2
 │   │   └── ...
 ```
 
@@ -109,16 +109,16 @@ Additionally, it's crucial to establish robust processes for updating and managi
 ```
 ├── deployment/
 │   ├── docker/
-│   │   ├── Dockerfile               # Instructions for building the Docker image
-│   │   └── requirements.txt         # Dependencies specific to the Docker image
+│   │   ├── Dockerfile               ## Instructions for building the Docker image
+│   │   └── requirements.txt         ## Dependencies specific to the Docker image
 │   │
 │   ├── kubernetes/
-│   │   ├── screening-service.yaml   # Kubernetes manifest for deploying the screening service
+│   │   ├── screening-service.yaml   ## Kubernetes manifest for deploying the screening service
 │   │   └── ...
 │   │
 │   └── terraform/
-│       ├── main.tf                  # Configuration for cloud infrastructure components
-│       └── variables.tf             # Input variables for the Terraform configuration
+│       ├── main.tf                  ## Configuration for cloud infrastructure components
+│       └── variables.tf             ## Input variables for the Terraform configuration
 ```
 
 In the "deployment" directory, we manage the configuration files and scripts for deploying the Automated Resume Screening with NLP application.
@@ -140,27 +140,27 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 import joblib
 
-# Load mock resume data (replace with actual data loading code)
+## Load mock resume data (replace with actual data loading code)
 mock_resume_data = pd.read_csv('path_to_mock_resume_data.csv')
 
-# Preprocess and feature extraction (replace with actual preprocessing and feature extraction code)
+## Preprocess and feature extraction (replace with actual preprocessing and feature extraction code)
 text_data = mock_resume_data['text']
 vectorizer = TfidfVectorizer()
 X = vectorizer.fit_transform(text_data)
 y = mock_resume_data['label']
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Train a machine learning model
+## Train a machine learning model
 model = LogisticRegression()
 model.fit(X_train, y_train)
 
-# Evaluate the model
+## Evaluate the model
 accuracy = model.score(X_test, y_test)
 print(f'Model accuracy: {accuracy}')
 
-# Serialize the trained model to a file
+## Serialize the trained model to a file
 joblib.dump(model, 'path_to_save_trained_model.pkl')
 ```
 
@@ -180,28 +180,28 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 import joblib
 
-# Load mock resume data (replace with actual data loading code)
+## Load mock resume data (replace with actual data loading code)
 mock_resume_data = pd.read_csv('path_to_mock_resume_data.csv')
 
-# Preprocess and feature extraction (replace with actual preprocessing and feature extraction code)
+## Preprocess and feature extraction (replace with actual preprocessing and feature extraction code)
 text_data = mock_resume_data['text']
 vectorizer = TfidfVectorizer()
 X = vectorizer.fit_transform(text_data)
 y = mock_resume_data['label']
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Train a Random Forest Classifier
+## Train a Random Forest Classifier
 model = RandomForestClassifier(n_estimators=100, max_depth=10, random_state=42)
 model.fit(X_train, y_train)
 
-# Evaluate the model
+## Evaluate the model
 y_pred = model.predict(X_test)
 accuracy = accuracy_score(y_test, y_pred)
 print(f'Model accuracy: {accuracy}')
 
-# Serialize the trained model to a file
+## Serialize the trained model to a file
 joblib.dump(model, 'path_to_save_complex_trained_model.pkl')
 ```
 

@@ -5,16 +5,16 @@ permalink: posts/automated-data-cleaning-and-preprocessing-build-an-automated-da
 layout: article
 ---
 
-# Objectives
+## Objectives
 The objective of the automated data cleaning and preprocessing pipeline repository is to create a robust and scalable system that can handle large volumes of data and perform various data cleaning and preprocessing tasks such as handling missing values, outlier detection, normalization, feature engineering, and more. The repository should provide a set of tools and utilities that enable users to easily integrate and automate these processes into their machine learning pipelines.
 
-# System Design Strategies
+## System Design Strategies
 - **Modular Design:** The pipeline should be modular, allowing users to plug in different data cleaning and preprocessing modules based on their specific requirements.
 - **Scalability:** The system should be designed to handle large volumes of data efficiently, leveraging distributed computing if necessary.
 - **Flexibility:** The pipeline should be flexible, allowing users to customize the various data cleaning and preprocessing steps based on their specific use case.
 - **Automation:** The repository should facilitate automation, enabling users to schedule and execute the data cleaning and preprocessing tasks as part of their overall machine learning workflow.
 
-# Chosen Libraries
+## Chosen Libraries
 - **Pandas:** For data manipulation and preprocessing tasks such as handling missing values, data transformation, and feature engineering.
 - **NumPy:** For numerical computing and array manipulation, which can be useful for outlier detection and normalization.
 - **Scikit-learn:** For a wide range of machine learning utilities including data preprocessing, feature scaling, and outlier detection algorithms.
@@ -22,7 +22,7 @@ The objective of the automated data cleaning and preprocessing pipeline reposito
 
 By leveraging these libraries, the pipeline can provide a comprehensive set of tools for data cleaning and preprocessing while ensuring compatibility with a wide range of machine learning and deep learning workflows.
 
-# Infrastructure for Automated Data Cleaning and Preprocessing Pipeline Application
+## Infrastructure for Automated Data Cleaning and Preprocessing Pipeline Application
 
 To build an automated data cleaning and preprocessing pipeline application, we need to consider the infrastructure required to support the scalability, flexibility, and automation of the pipeline.
 
@@ -50,7 +50,7 @@ To build an automated data cleaning and preprocessing pipeline application, we n
 
 By incorporating these infrastructure components, we can ensure that the automated data cleaning and preprocessing pipeline application is scalable, robust, and capable of handling the complexities of large-scale data processing while adhering to best practices in security and compliance.
 
-# Scalable File Structure for Automated Data Cleaning and Preprocessing Pipeline Repository
+## Scalable File Structure for Automated Data Cleaning and Preprocessing Pipeline Repository
 
 To ensure the maintainability and scalability of the automated data cleaning and preprocessing pipeline repository, we can structure the project in a modular and organized manner. Here is a suggested file structure:
 
@@ -232,38 +232,38 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 
 def complex_ml_algorithm(data_path):
-    # Load mock data
+    ## Load mock data
     data = pd.read_csv(data_path)
 
-    # Data cleaning and preprocessing steps
-    # ... (e.g., handling missing values, feature engineering, etc.)
+    ## Data cleaning and preprocessing steps
+    ## ... (e.g., handling missing values, feature engineering, etc.)
 
-    # Split data into features and target variable
+    ## Split data into features and target variable
     X = data.drop('target', axis=1)
     y = data['target']
 
-    # Split data into training and testing sets
+    ## Split data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize and train a complex machine learning algorithm (e.g., RandomForestClassifier)
+    ## Initialize and train a complex machine learning algorithm (e.g., RandomForestClassifier)
     model = RandomForestClassifier(n_estimators=100, random_state=42)
     model.fit(X_train, y_train)
 
-    # Make predictions
+    ## Make predictions
     y_pred = model.predict(X_test)
 
-    # Evaluate the model
+    ## Evaluate the model
     accuracy = accuracy_score(y_test, y_pred)
     
     return model, accuracy
 
-# File path for the mock data
+## File path for the mock data
 file_path = 'data/processed/mock_data.csv'
 
-# Execute the complex ML algorithm function
+## Execute the complex ML algorithm function
 trained_model, accuracy = complex_ml_algorithm(file_path)
 
-# Print the accuracy and model details
+## Print the accuracy and model details
 print(f"Accuracy of the trained model: {accuracy}")
 print(trained_model)
 ```
@@ -284,53 +284,53 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import accuracy_score
 
 def complex_deep_learning_algorithm(data_path):
-    # Load mock data
+    ## Load mock data
     data = pd.read_csv(data_path)
 
-    # Data cleaning and preprocessing steps
-    # ... (e.g., handling missing values, feature engineering, etc.)
+    ## Data cleaning and preprocessing steps
+    ## ... (e.g., handling missing values, feature engineering, etc.)
 
-    # Split data into features and target variable
+    ## Split data into features and target variable
     X = data.drop('target', axis=1)
     y = data['target']
 
-    # Split data into training and testing sets
+    ## Split data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Standardize the features
+    ## Standardize the features
     scaler = StandardScaler()
     X_train = scaler.fit_transform(X_train)
     X_test = scaler.transform(X_test)
 
-    # Initialize a deep learning model
+    ## Initialize a deep learning model
     model = tf.keras.Sequential([
         tf.keras.layers.Dense(64, activation='relu', input_shape=(X_train.shape[1],)),
         tf.keras.layers.Dense(64, activation='relu'),
         tf.keras.layers.Dense(1, activation='sigmoid')
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam',
                   loss='binary_crossentropy',
                   metrics=['accuracy'])
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y_test))
 
-    # Evaluate the model
+    ## Evaluate the model
     y_pred_prob = model.predict(X_test)
-    y_pred = (y_pred_prob > 0.5).astype(int)  # convert probabilities to binary predictions
+    y_pred = (y_pred_prob > 0.5).astype(int)  ## convert probabilities to binary predictions
     accuracy = accuracy_score(y_test, y_pred)
     
     return model, accuracy
 
-# File path for the mock data
+## File path for the mock data
 file_path = 'data/processed/mock_data.csv'
 
-# Execute the complex deep learning algorithm function
+## Execute the complex deep learning algorithm function
 trained_model, accuracy = complex_deep_learning_algorithm(file_path)
 
-# Print the accuracy and model details
+## Print the accuracy and model details
 print(f"Accuracy of the trained deep learning model: {accuracy}")
 print(trained_model.summary())
 ```

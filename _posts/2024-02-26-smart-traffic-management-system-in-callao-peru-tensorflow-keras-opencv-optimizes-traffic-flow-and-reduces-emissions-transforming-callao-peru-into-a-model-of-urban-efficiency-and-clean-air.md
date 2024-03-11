@@ -85,39 +85,39 @@ Creating a well-organized and scalable file structure is essential for the Smart
 smart_traffic_management_system/
 │
 ├── data/
-│   ├── raw_data/                  # Raw data from traffic cameras and sensors
-│   ├── processed_data/            # Processed and cleaned data for model training
+│   ├── raw_data/                  ## Raw data from traffic cameras and sensors
+│   ├── processed_data/            ## Processed and cleaned data for model training
 │
 ├── models/
-│   ├── traffic_prediction/        # TensorFlow/Keras models for traffic prediction
-│   ├── signal_optimization/       # Models for optimizing traffic signal timings
-│   ├── emissions_reduction/       # Models for reducing emissions
+│   ├── traffic_prediction/        ## TensorFlow/Keras models for traffic prediction
+│   ├── signal_optimization/       ## Models for optimizing traffic signal timings
+│   ├── emissions_reduction/       ## Models for reducing emissions
 │
 ├── notebooks/
-│   ├── data_exploration.ipynb     # Jupyter notebook for data exploration
-│   ├── model_training.ipynb        # Notebook for training machine learning models
+│   ├── data_exploration.ipynb     ## Jupyter notebook for data exploration
+│   ├── model_training.ipynb        ## Notebook for training machine learning models
 │
 ├── src/
-│   ├── data_processing/           # Scripts for data preprocessing
-│   ├── model_training/            # Scripts for training and evaluating models
-│   ├── signal_optimization/       # Implementation of traffic signal optimization algorithms
-│   ├── emissions_reduction/       # Code for emissions reduction strategies
-│   ├── utils/                     # Utility functions and helper scripts
+│   ├── data_processing/           ## Scripts for data preprocessing
+│   ├── model_training/            ## Scripts for training and evaluating models
+│   ├── signal_optimization/       ## Implementation of traffic signal optimization algorithms
+│   ├── emissions_reduction/       ## Code for emissions reduction strategies
+│   ├── utils/                     ## Utility functions and helper scripts
 │
 ├── config/
-│   ├── config.yaml                # Configuration parameters for the system
+│   ├── config.yaml                ## Configuration parameters for the system
 │
 ├── tests/
-│   ├── test_data_processing.py    # Unit tests for data processing functions
-│   ├── test_model_training.py     # Unit tests for model training scripts
+│   ├── test_data_processing.py    ## Unit tests for data processing functions
+│   ├── test_model_training.py     ## Unit tests for model training scripts
 │
 ├── docker/
-│   ├── Dockerfile                 # Configuration for Docker image
+│   ├── Dockerfile                 ## Configuration for Docker image
 │
 ├── kubernetes/
-│   ├── deployment.yaml            # Kubernetes deployment configuration
+│   ├── deployment.yaml            ## Kubernetes deployment configuration
 │
-├── README.md                      # Project documentation and setup instructions
+├── README.md                      ## Project documentation and setup instructions
 ```
 
 ### Explanation of the File Structure:
@@ -152,19 +152,19 @@ In the context of the Smart Traffic Management System in Callao, Peru, the `mode
 models/
 │
 ├── traffic_prediction/
-│   ├── traffic_flow_model.h5       # Pre-trained deep learning model for traffic flow prediction
-│   ├── traffic_flow_model.py       # Code for loading and using the traffic flow prediction model
-│   ├── evaluation_metrics.py       # Utility functions for evaluating traffic prediction model performance
+│   ├── traffic_flow_model.h5       ## Pre-trained deep learning model for traffic flow prediction
+│   ├── traffic_flow_model.py       ## Code for loading and using the traffic flow prediction model
+│   ├── evaluation_metrics.py       ## Utility functions for evaluating traffic prediction model performance
 │
 ├── signal_optimization/
-│   ├── signal_timing_model.h5      # Pre-trained model for optimizing traffic signal timings
-│   ├── signal_timing_model.py      # Implementation of the signal timing optimization algorithm
-│   ├── optimization_results.csv    # Historical results of signal timing optimizations
+│   ├── signal_timing_model.h5      ## Pre-trained model for optimizing traffic signal timings
+│   ├── signal_timing_model.py      ## Implementation of the signal timing optimization algorithm
+│   ├── optimization_results.csv    ## Historical results of signal timing optimizations
 │
 ├── emissions_reduction/
-│   ├── emissions_model.h5          # Trained model for predicting emissions from traffic data
-│   ├── emissions_model.py          # Script for calculating and reducing emissions based on the model
-│   ├── emissions_data.csv          # Dataset containing emissions data for training
+│   ├── emissions_model.h5          ## Trained model for predicting emissions from traffic data
+│   ├── emissions_model.py          ## Script for calculating and reducing emissions based on the model
+│   ├── emissions_data.csv          ## Dataset containing emissions data for training
 ```
 
 ### Explanation of Files in Models Directory:
@@ -205,18 +205,18 @@ deployment/
 ├── Dockerfile
 ├── requirements.txt
 ├── app/
-│   ├── app.py              # Main application script for traffic management system
-│   ├── config.py           # Configuration parameters for the application
+│   ├── app.py              ## Main application script for traffic management system
+│   ├── config.py           ## Configuration parameters for the application
 │   ├── routes/
-│       ├── traffic_routes.py        # API routes for traffic-related operations
-│       ├── emissions_routes.py      # API routes for emissions-related operations
+│       ├── traffic_routes.py        ## API routes for traffic-related operations
+│       ├── emissions_routes.py      ## API routes for emissions-related operations
 │   ├── models/
-│       ├── traffic_flow_model.h5    # Trained traffic flow prediction model
-│       ├── signal_timing_model.h5   # Trained signal timing optimization model
-│       ├── emissions_model.h5       # Trained emissions prediction model
+│       ├── traffic_flow_model.h5    ## Trained traffic flow prediction model
+│       ├── signal_timing_model.h5   ## Trained signal timing optimization model
+│       ├── emissions_model.h5       ## Trained emissions prediction model
 │   ├── utils/
-│       ├── data_processing.py       # Utility functions for data processing
-│       ├── model_utils.py            # Helper functions for model operations
+│       ├── data_processing.py       ## Utility functions for data processing
+│       ├── model_utils.py            ## Helper functions for model operations
 ```
 
 ### Explanation of Files in Deployment Directory:
@@ -250,22 +250,22 @@ deployment/
 By setting up a structured `deployment/` directory with relevant files for the Smart Traffic Management System in Callao, Peru, the deployment process can be streamlined, and the application can be effectively deployed to optimize traffic flow, reduce emissions, and contribute to the vision of urban efficiency and clean air in Callao.
 
 ```python
-# File: model_training_traffic_flow.py
-# Description: Script for training a traffic flow prediction model for the Smart Traffic Management System in Callao, Peru using mock data
-# Frameworks: TensorFlow, Keras
+## File: model_training_traffic_flow.py
+## Description: Script for training a traffic flow prediction model for the Smart Traffic Management System in Callao, Peru using mock data
+## Frameworks: TensorFlow, Keras
 
 import numpy as np
 import tensorflow as tf
 from tensorflow import keras
 
-# Mock data generation
-# Assuming 1000 data points with 5 features for traffic flow prediction
+## Mock data generation
+## Assuming 1000 data points with 5 features for traffic flow prediction
 num_samples = 1000
 num_features = 5
-X_train = np.random.rand(num_samples, num_features)  # Mock input features
-y_train = np.random.randint(0, 2, num_samples)       # Mock binary target labels (e.g., traffic flow status)
+X_train = np.random.rand(num_samples, num_features)  ## Mock input features
+y_train = np.random.randint(0, 2, num_samples)       ## Mock binary target labels (e.g., traffic flow status)
 
-# Define and compile the model
+## Define and compile the model
 model = keras.Sequential([
     keras.layers.Dense(32, activation='relu', input_shape=(num_features,)),
     keras.layers.Dense(1, activation='sigmoid')
@@ -273,10 +273,10 @@ model = keras.Sequential([
 
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
-# Train the model
+## Train the model
 model.fit(X_train, y_train, epochs=10, batch_size=32)
 
-# Save the trained model
+## Save the trained model
 model.save('models/traffic_prediction/traffic_flow_model.h5')
 ```
 
@@ -286,23 +286,23 @@ model.save('models/traffic_prediction/traffic_flow_model.h5')
 This Python script demonstrates the training of a traffic flow prediction model for the Smart Traffic Management System in Callao, Peru using mock data. It utilizes TensorFlow and Keras to define, compile, train, and save the model. The trained model is saved as `traffic_flow_model.h5` in the directory `models/traffic_prediction/` within the project structure.
 
 ```python
-# File: complex_model_algorithm.py
-# Description: Script implementing a complex machine learning algorithm for the Smart Traffic Management System in Callao, Peru using mock data
-# Frameworks: TensorFlow, Keras, OpenCV
+## File: complex_model_algorithm.py
+## Description: Script implementing a complex machine learning algorithm for the Smart Traffic Management System in Callao, Peru using mock data
+## Frameworks: TensorFlow, Keras, OpenCV
 
 import numpy as np
 import tensorflow as tf
 from tensorflow import keras
 import cv2
 
-# Mock data generation
-# Assuming 1000 data points with 10 features for the complex algorithm
+## Mock data generation
+## Assuming 1000 data points with 10 features for the complex algorithm
 num_samples = 1000
 num_features = 10
-X_train = np.random.rand(num_samples, num_features)  # Mock input features
-y_train = np.random.randint(0, 2, num_samples)       # Mock binary target labels
+X_train = np.random.rand(num_samples, num_features)  ## Mock input features
+y_train = np.random.randint(0, 2, num_samples)       ## Mock binary target labels
 
-# Define and compile a complex neural network model
+## Define and compile a complex neural network model
 model = keras.Sequential([
     keras.layers.Dense(64, activation='relu', input_shape=(num_features,)),
     keras.layers.Dropout(0.2),
@@ -312,13 +312,13 @@ model = keras.Sequential([
 
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
-# Train the model
+## Train the model
 model.fit(X_train, y_train, epochs=20, batch_size=64)
 
-# Save the trained model
+## Save the trained model
 model.save('models/complex_algorithm/complex_model.h5')
 
-# Process mock image data using OpenCV
+## Process mock image data using OpenCV
 image_data = np.random.randint(0, 255, (100, 100, 3), dtype=np.uint8)
 gray_image = cv2.cvtColor(image_data, cv2.COLOR_BGR2GRAY)
 ```

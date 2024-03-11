@@ -5,7 +5,7 @@ permalink: posts/ai-based-credit-scoring-system-scikit-learn-flask-prometheus-fo
 layout: article
 ---
 
-# AI-Based Credit Scoring System Repository
+## AI-Based Credit Scoring System Repository
 
 ## Objectives
 The objective of this repository is to build an AI-based Credit Scoring System that leverages Machine Learning to assess the creditworthiness of individuals or businesses. The system aims to provide accurate and scalable credit scoring by analyzing a variety of data points and generating predictive models to assist financial institutions in making informed lending decisions.
@@ -25,7 +25,7 @@ The system can be built using the following libraries and frameworks:
 
 By leveraging these libraries and frameworks, the AI-based Credit Scoring System can be developed with a strong foundation in machine learning, web services, and system monitoring, ensuring its effectiveness, scalability, and maintainability.
 
-# MLOps Infrastructure for AI-Based Credit Scoring System
+## MLOps Infrastructure for AI-Based Credit Scoring System
 
 To build a robust MLOps infrastructure for the AI-based Credit Scoring System, we will incorporate modern practices and tools that enable seamless integration, deployment, monitoring, and management of machine learning models. The infrastructure will focus on automating the end-to-end ML lifecycle, ensuring reproducibility, and maintaining model quality and consistency.
 
@@ -159,7 +159,7 @@ In the `deployment/` directory, the following files and subdirectories are inclu
 These files and subdirectories enable the seamless deployment and management of the AI-based Credit Scoring System using Docker containers and Kubernetes, providing scalability, reliability, and efficient orchestration of the system's components.
 
 ```python
-# ml_model/model_training/train_model.py
+## ml_model/model_training/train_model.py
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -167,37 +167,37 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, classification_report
 import joblib
 
-# Load mock data
+## Load mock data
 data = pd.read_csv('path_to_mock_data/mock_credit_data.csv')
 
-# Preprocessing and feature engineering (not shown in this example)
-# ...
+## Preprocessing and feature engineering (not shown in this example)
+## ...
 
-# Split the data into features and target variable
+## Split the data into features and target variable
 X = data.drop('target_variable', axis=1)
 y = data['target_variable']
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize the Random Forest classifier
+## Initialize the Random Forest classifier
 model = RandomForestClassifier(n_estimators=100, random_state=42)
 
-# Train the model
+## Train the model
 model.fit(X_train, y_train)
 
-# Make predictions on the test set
+## Make predictions on the test set
 y_pred = model.predict(X_test)
 
-# Evaluate the model
+## Evaluate the model
 accuracy = accuracy_score(y_test, y_pred)
 print(f'Accuracy: {accuracy:.2f}')
 
-# Generate classification report
+## Generate classification report
 report = classification_report(y_test, y_pred)
 print(report)
 
-# Serialize the trained model
+## Serialize the trained model
 joblib.dump(model, 'path_to_save_model/trained_credit_scoring_model.pkl')
 ```
 
@@ -206,7 +206,7 @@ In this example, the `train_model.py` file demonstrates the training of a Random
 The file path for the mock data and the location to save the trained model should be appropriately specified in the script. Additionally, preprocessing and feature engineering steps would typically be included in the actual implementation to prepare the data for model training.
 
 ```python
-# ml_model/model_training/train_model.py
+## ml_model/model_training/train_model.py
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -214,33 +214,33 @@ from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.metrics import classification_report
 import joblib
 
-# Load mock data
+## Load mock data
 data = pd.read_csv('path_to_mock_data/mock_credit_data.csv')
 
-# Preprocessing and feature engineering (not shown in this example)
-# ...
+## Preprocessing and feature engineering (not shown in this example)
+## ...
 
-# Split the data into features and target variable
+## Split the data into features and target variable
 X = data.drop('target_variable', axis=1)
 y = data['target_variable']
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize the Gradient Boosting classifier
+## Initialize the Gradient Boosting classifier
 model = GradientBoostingClassifier(n_estimators=100, learning_rate=0.1, max_depth=3, random_state=42)
 
-# Train the model
+## Train the model
 model.fit(X_train, y_train)
 
-# Make predictions on the test set
+## Make predictions on the test set
 y_pred = model.predict(X_test)
 
-# Evaluate the model
+## Evaluate the model
 report = classification_report(y_test, y_pred)
 print(report)
 
-# Serialize the trained model
+## Serialize the trained model
 joblib.dump(model, 'path_to_save_model/trained_credit_scoring_model.pkl')
 ```
 

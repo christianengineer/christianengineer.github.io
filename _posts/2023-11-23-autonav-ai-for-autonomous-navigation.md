@@ -185,47 +185,47 @@ The `models` directory within the AutoNav AI for Autonomous Navigation applicati
 models/
 |-- perception/
 |   |-- object_detection/
-|   |   |-- trained_model.pb  # Trained object detection model (e.g., TensorFlow model)
-|   |   |-- label_map.pbtxt   # Label mapping for detected objects
+|   |   |-- trained_model.pb  ## Trained object detection model (e.g., TensorFlow model)
+|   |   |-- label_map.pbtxt   ## Label mapping for detected objects
 |   |   |-- ...
 |   |
 |   |-- segmentation/
-|   |   |-- trained_model.pth  # Trained segmentation model (e.g., PyTorch model)
-|   |   |-- segmentation_utils.py  # Utility functions for segmentation
+|   |   |-- trained_model.pth  ## Trained segmentation model (e.g., PyTorch model)
+|   |   |-- segmentation_utils.py  ## Utility functions for segmentation
 |   |   |-- ...
 |   |
 |   |-- depth_estimation/
-|   |   |-- trained_model.h5   # Trained depth estimation model (e.g., Keras model)
-|   |   |-- depth_evaluation.py  # Script for evaluating depth estimation performance
+|   |   |-- trained_model.h5   ## Trained depth estimation model (e.g., Keras model)
+|   |   |-- depth_evaluation.py  ## Script for evaluating depth estimation performance
 |   |   |-- ...
 |   |
-|   |-- perception_utils.py   # Utility functions for pre-processing sensor data
-|   |-- perception_config.yaml  # Configuration file for perception models
+|   |-- perception_utils.py   ## Utility functions for pre-processing sensor data
+|   |-- perception_config.yaml  ## Configuration file for perception models
 |   |-- ...
 |
 |-- planning/
 |   |-- path_planning/
-|   |   |-- path_planning_model.pkl  # Serialized path planning model (e.g., scikit-learn model)
-|   |   |-- path_optimizer.py  # Optimizer for generated paths
+|   |   |-- path_planning_model.pkl  ## Serialized path planning model (e.g., scikit-learn model)
+|   |   |-- path_optimizer.py  ## Optimizer for generated paths
 |   |   |-- ...
 |   |
 |   |-- decision_making/
-|   |   |-- decision_model.onnx  # Decision-making model in ONNX format
-|   |   |-- decision_evaluation.py  # Script for evaluating decision-making model
+|   |   |-- decision_model.onnx  ## Decision-making model in ONNX format
+|   |   |-- decision_evaluation.py  ## Script for evaluating decision-making model
 |   |   |-- ...
 |   |
-|   |-- planning_utils.py  # Utility functions for planning and decision-making
-|   |-- planning_config.yaml  # Configuration file for planning models
+|   |-- planning_utils.py  ## Utility functions for planning and decision-making
+|   |-- planning_config.yaml  ## Configuration file for planning models
 |   |-- ...
 |
 |-- control/
 |   |-- motion_control/
-|   |   |-- pid_controller.py  # Implementation of PID controller for motion control
+|   |   |-- pid_controller.py  ## Implementation of PID controller for motion control
 |   |   |-- trajectory_prediction/
 |   |   |-- ...
 |   |
-|   |-- control_utils.py  # Utility functions for control systems
-|   |-- control_config.yaml  # Configuration file for control systems
+|   |-- control_utils.py  ## Utility functions for control systems
+|   |-- control_config.yaml  ## Configuration file for control systems
 |   |-- ...
 |
 |-- reinforcement_learning/
@@ -234,12 +234,12 @@ models/
 |   |-- ...
 |
 |-- evaluation/
-|   |-- model_evaluation_utils.py  # Utility functions for model evaluation
-|   |-- evaluation_config.yaml  # Configuration file for evaluation metrics and criteria
+|   |-- model_evaluation_utils.py  ## Utility functions for model evaluation
+|   |-- evaluation_config.yaml  ## Configuration file for evaluation metrics and criteria
 |   |-- ...
 |
-|-- README.md  # Description of the models directory and guidance for usage
-|-- requirements.txt  # Specific dependencies for the models and their evaluation
+|-- README.md  ## Description of the models directory and guidance for usage
+|-- requirements.txt  ## Specific dependencies for the models and their evaluation
 |-- ...
 ```
 
@@ -266,53 +266,53 @@ The `deployment` directory in the AutoNav AI for Autonomous Navigation applicati
 ```plaintext
 deployment/
 |-- docker/
-|   |-- Dockerfile  # Configuration file for building the Docker image
-|   |-- docker-compose.yml  # Docker Compose file for defining a multi-container Docker application
+|   |-- Dockerfile  ## Configuration file for building the Docker image
+|   |-- docker-compose.yml  ## Docker Compose file for defining a multi-container Docker application
 |   |-- ...
 |
 |-- kubernetes/
-|   |-- deployment.yaml  # Kubernetes deployment configuration file
-|   |-- service.yaml  # Kubernetes service configuration file
-|   |-- ingress.yaml  # Kubernetes Ingress configuration file
+|   |-- deployment.yaml  ## Kubernetes deployment configuration file
+|   |-- service.yaml  ## Kubernetes service configuration file
+|   |-- ingress.yaml  ## Kubernetes Ingress configuration file
 |   |-- ...
 |
 |-- serverless/
-|   |-- serverless.yml  # Configuration file for deploying to serverless platforms
+|   |-- serverless.yml  ## Configuration file for deploying to serverless platforms
 |   |-- ...
 |
 |-- scripts/
-|   |-- deploy.sh  # Shell script for automated deployment
-|   |-- monitor.sh  # Script for monitoring the deployed application
+|   |-- deploy.sh  ## Shell script for automated deployment
+|   |-- monitor.sh  ## Script for monitoring the deployed application
 |   |-- ...
 |
 |-- cloud_infra/
-|   |-- terraform/  # Terraform configuration files for provisioning cloud infrastructure
-|   |   |-- main.tf  # Main Terraform configuration file
-|   |   |-- variables.tf  # Variables for configuring the infrastructure
+|   |-- terraform/  ## Terraform configuration files for provisioning cloud infrastructure
+|   |   |-- main.tf  ## Main Terraform configuration file
+|   |   |-- variables.tf  ## Variables for configuring the infrastructure
 |   |   |-- ...
 |   |
-|   |-- arm_templates/  # Azure Resource Manager templates for infrastructure deployment
-|   |   |-- deployment.json  # ARM template for deployment
-|   |   |-- parameters.json  # Parameters for the ARM template
+|   |-- arm_templates/  ## Azure Resource Manager templates for infrastructure deployment
+|   |   |-- deployment.json  ## ARM template for deployment
+|   |   |-- parameters.json  ## Parameters for the ARM template
 |   |   |-- ...
 |   |
-|   |-- cloudformation/  # AWS CloudFormation templates for infrastructure deployment
-|   |   |-- template.yml  # CloudFormation template for deployment
+|   |-- cloudformation/  ## AWS CloudFormation templates for infrastructure deployment
+|   |   |-- template.yml  ## CloudFormation template for deployment
 |   |   |-- ...
 |   |
 |   |-- ...
 |
 |-- configuration/
-|   |-- deployment_config.yaml  # Configuration file for deployment environment variables
-|   |-- environment_variables.env  # Environment variable settings for deployment
+|   |-- deployment_config.yaml  ## Configuration file for deployment environment variables
+|   |-- environment_variables.env  ## Environment variable settings for deployment
 |   |-- ...
 |
 |-- documentation/
-|   |-- deployment_guide.md  # Step-by-step deployment guide
-|   |-- network_diagrams/  # Diagrams illustrating the network architecture
+|   |-- deployment_guide.md  ## Step-by-step deployment guide
+|   |-- network_diagrams/  ## Diagrams illustrating the network architecture
 |   |-- ...
 |
-|-- README.md  # Overview of the deployment directory and guidance for deployment
+|-- README.md  ## Overview of the deployment directory and guidance for deployment
 |-- ...
 ```
 
@@ -343,16 +343,16 @@ import numpy as np
 import tensorflow as tf
 
 def complex_object_detection_model(data_file_path):
-    # Load mock data from file
+    ## Load mock data from file
     with np.load(data_file_path) as data:
-        images = data['images']  # Mock input images
-        annotations = data['annotations']  # Mock annotations for images
+        images = data['images']  ## Mock input images
+        annotations = data['annotations']  ## Mock annotations for images
 
-    # Preprocess mock data (This step may vary based on the actual model requirements)
+    ## Preprocess mock data (This step may vary based on the actual model requirements)
     preprocessed_images = preprocess_images(images)
     preprocessed_annotations = preprocess_annotations(annotations)
 
-    # Define and train a complex deep learning model (This is a simplified example)
+    ## Define and train a complex deep learning model (This is a simplified example)
     model = tf.keras.Sequential([
         tf.keras.layers.Conv2D(32, (3,3), activation='relu', input_shape=(224, 224, 3)),
         tf.keras.layers.MaxPooling2D(2, 2),
@@ -389,16 +389,16 @@ import numpy as np
 import tensorflow as tf
 
 def complex_deep_learning_algorithm(data_file_path):
-    # Load mock data from file
+    ## Load mock data from file
     with np.load(data_file_path) as data:
-        features = data['features']  # Mock input features
-        labels = data['labels']      # Mock labels for the input features
+        features = data['features']  ## Mock input features
+        labels = data['labels']      ## Mock labels for the input features
 
-    # Preprocess mock data
+    ## Preprocess mock data
     preprocessed_features = preprocess_features(features)
     preprocessed_labels = preprocess_labels(labels)
 
-    # Define a complex deep learning model architecture
+    ## Define a complex deep learning model architecture
     model = tf.keras.Sequential([
         tf.keras.layers.Dense(256, activation='relu', input_shape=(input_dim,)),
         tf.keras.layers.Dropout(0.3),
@@ -407,15 +407,15 @@ def complex_deep_learning_algorithm(data_file_path):
         tf.keras.layers.Dense(num_classes, activation='softmax')
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam',
                   loss='sparse_categorical_crossentropy',
                   metrics=['accuracy'])
 
-    # Train the model with the preprocessed mock data
+    ## Train the model with the preprocessed mock data
     model.fit(preprocessed_features, preprocessed_labels, epochs=10, batch_size=32)
 
-    # Evaluate the model
+    ## Evaluate the model
     evaluation_results = model.evaluate(preprocessed_features, preprocessed_labels)
 
     return model, evaluation_results

@@ -67,44 +67,44 @@ By implementing a robust MLOps infrastructure encompassing model training pipeli
 ivr_educational_system_peru/
 │
 ├── app/
-│   ├── ml/                       # Machine Learning module
-│   │   ├── models/               # PyTorch models for personalized content
-│   │   ├── data_processing.py    # Data preprocessing scripts
-│   │   ├── model_training.py     # Scripts for training ML models
-│   │   └── model_inference.py    # Model inference functions
+│   ├── ml/                       ## Machine Learning module
+│   │   ├── models/               ## PyTorch models for personalized content
+│   │   ├── data_processing.py    ## Data preprocessing scripts
+│   │   ├── model_training.py     ## Scripts for training ML models
+│   │   └── model_inference.py    ## Model inference functions
 │   │
-│   ├── ivr/                      # IVR module
-│   │   ├── twilio_integration.py # Twilio API integration for IVR
-│   │   ├── ivr_logic.py          # IVR business logic
-│   │   └── ivr_routes.py         # Flask routes for IVR interactions
+│   ├── ivr/                      ## IVR module
+│   │   ├── twilio_integration.py ## Twilio API integration for IVR
+│   │   ├── ivr_logic.py          ## IVR business logic
+│   │   └── ivr_routes.py         ## Flask routes for IVR interactions
 │   │
-│   ├── monitoring/               # Monitoring and Logging module
-│   │   ├── metrics.py            # Functions for collecting system metrics
-│   │   └── logging_config.py     # Logging configuration settings
+│   ├── monitoring/               ## Monitoring and Logging module
+│   │   ├── metrics.py            ## Functions for collecting system metrics
+│   │   └── logging_config.py     ## Logging configuration settings
 │   │
-│   └── app.py                    # Main Flask application
+│   └── app.py                    ## Main Flask application
 │
-├── config/                        # Configuration files
-│   ├── config.py                  # General application configurations
-│   ├── twilio_config.py           # Twilio API configuration settings
-│   └── grafana_config.py          # Grafana configuration settings
+├── config/                        ## Configuration files
+│   ├── config.py                  ## General application configurations
+│   ├── twilio_config.py           ## Twilio API configuration settings
+│   └── grafana_config.py          ## Grafana configuration settings
 │
-├── data/                          # Data directory
-│   ├── raw_data/                  # Raw input data
-│   └── processed_data/            # Processed data for ML models
+├── data/                          ## Data directory
+│   ├── raw_data/                  ## Raw input data
+│   └── processed_data/            ## Processed data for ML models
 │
-├── scripts/                       # Utility scripts
-│   ├── data_preparation.py        # Scripts for preparing data
-│   └── deployment_scripts/        # Deployment automation scripts
+├── scripts/                       ## Utility scripts
+│   ├── data_preparation.py        ## Scripts for preparing data
+│   └── deployment_scripts/        ## Deployment automation scripts
 │
-├── tests/                         # Unit tests directory
-│   ├── test_ml_models.py          # Test cases for ML models
-│   ├── test_ivr_logic.py          # Test cases for IVR logic
-│   └── test_endpoints.py          # Test cases for Flask endpoints
+├── tests/                         ## Unit tests directory
+│   ├── test_ml_models.py          ## Test cases for ML models
+│   ├── test_ivr_logic.py          ## Test cases for IVR logic
+│   └── test_endpoints.py          ## Test cases for Flask endpoints
 │
-├── README.md                      # Project description and setup instructions
-├── requirements.txt               # List of project dependencies
-└── LICENSE                        # Project license information
+├── README.md                      ## Project description and setup instructions
+├── requirements.txt               ## List of project dependencies
+└── LICENSE                        ## Project license information
 ```
 
 This structured file layout provides a scalable and organized setup for the Interactive Voice Response Educational System for Peru. It separates components like machine learning, IVR integration, monitoring, configuration, data handling, scripts, tests, and documentation, promoting modularity, maintainability, and ease of collaboration between team members working on different parts of the system.
@@ -115,14 +115,14 @@ This structured file layout provides a scalable and organized setup for the Inte
 models/
 │
 ├── models/
-│   ├── user_profile_model.pt        # PyTorch model for user profiling based on IVR interactions
-│   ├── content_personalization_model.pt # PyTorch model for personalizing educational content
-│   └── tutoring_recommendation_model.pt # PyTorch model for recommending tutoring services
+│   ├── user_profile_model.pt        ## PyTorch model for user profiling based on IVR interactions
+│   ├── content_personalization_model.pt ## PyTorch model for personalizing educational content
+│   └── tutoring_recommendation_model.pt ## PyTorch model for recommending tutoring services
 │
-├── data_processing.py              # Data preprocessing utilities for model input
-├── model_training.py               # Module for training machine learning models
-├── model_evaluation.py             # Scripts for evaluating model performance
-└── model_inference.py              # Functions for model inference during IVR interactions
+├── data_processing.py              ## Data preprocessing utilities for model input
+├── model_training.py               ## Module for training machine learning models
+├── model_evaluation.py             ## Scripts for evaluating model performance
+└── model_inference.py              ## Functions for model inference during IVR interactions
 ```
 
 ### Explanation of Files:
@@ -156,10 +156,10 @@ This structured `models/` directory houses the trained PyTorch models for user p
 ```
 deployment_scripts/
 │
-├── deploy_ml_models.py              # Script for deploying trained ML models
-├── deploy_ivr_system.py             # Script for deploying IVR system components
-├── deploy_flask_app.py              # Script for deploying the Flask application
-└── monitor_system_performance.py    # Script for monitoring system performance using Grafana
+├── deploy_ml_models.py              ## Script for deploying trained ML models
+├── deploy_ivr_system.py             ## Script for deploying IVR system components
+├── deploy_flask_app.py              ## Script for deploying the Flask application
+└── monitor_system_performance.py    ## Script for monitoring system performance using Grafana
 ```
 
 ### Explanation of Files:
@@ -183,33 +183,33 @@ deployment_scripts/
 These deployment scripts in the `deployment_scripts/` directory facilitate the setup, deployment, and monitoring of the Interactive Voice Response Educational System for Peru. They automate the deployment process of machine learning models, IVR system components, Flask application, and system performance monitoring using Grafana, thereby streamlining the deployment and maintenance tasks for the system.
 
 ```python
-# File: model_training.py
-# Path: app/ml/model_training.py
+## File: model_training.py
+## Path: app/ml/model_training.py
 
 import torch
 import torch.nn as nn
 import torch.optim as optim
 from torch.utils.data import DataLoader
-from dataset import IVRDataset  # Assuming a custom dataset class for IVR data
-from model import IVRModel  # Assuming a custom PyTorch model for IVR tasks
+from dataset import IVRDataset  ## Assuming a custom dataset class for IVR data
+from model import IVRModel  ## Assuming a custom PyTorch model for IVR tasks
 
-# Define hyperparameters
+## Define hyperparameters
 num_epochs = 10
 batch_size = 32
 learning_rate = 0.001
 
-# Load mock data (replace with actual data loading logic)
+## Load mock data (replace with actual data loading logic)
 train_dataset = IVRDataset(mock_data_file='data/mock_ivr_data.csv')
 train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
 
-# Initialize model
-model = IVRModel()  # Assuming a custom PyTorch model class for IVR tasks
+## Initialize model
+model = IVRModel()  ## Assuming a custom PyTorch model class for IVR tasks
 
-# Define loss function and optimizer
+## Define loss function and optimizer
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters(), lr=learning_rate)
 
-# Training loop
+## Training loop
 for epoch in range(num_epochs):
     model.train()
     for inputs, labels in train_loader:
@@ -221,39 +221,39 @@ for epoch in range(num_epochs):
     
     print(f'Epoch [{epoch+1}/{num_epochs}], Loss: {loss.item()}')
 
-# Save trained model
+## Save trained model
 torch.save(model.state_dict(), 'models/ivr_model.pt')
 ```
 
 In this script `model_training.py` located at `app/ml/model_training.py`, the PyTorch model for the Interactive Voice Response Educational System for Peru is trained using mock data. The script loads the mock data, initializes the model, defines the loss function and optimizer, and then trains the model over a specified number of epochs. Finally, the trained model is saved to the `models/ivr_model.pt` file.
 
 ```python
-# File: complex_ml_algorithm.py
-# Path: app/ml/complex_ml_algorithm.py
+## File: complex_ml_algorithm.py
+## Path: app/ml/complex_ml_algorithm.py
 
 import torch
 import torch.nn as nn
 import torch.optim as optim
-from dataset import IVRDataset  # Assuming a custom dataset class for IVR data
-from model import ComplexIVRModel  # Assuming a custom PyTorch model for complex IVR tasks
+from dataset import IVRDataset  ## Assuming a custom dataset class for IVR data
+from model import ComplexIVRModel  ## Assuming a custom PyTorch model for complex IVR tasks
 
-# Define hyperparameters
+## Define hyperparameters
 num_epochs = 20
 batch_size = 64
 learning_rate = 0.001
 
-# Load mock data (replace with actual data loading logic)
+## Load mock data (replace with actual data loading logic)
 train_dataset = IVRDataset(mock_data_file='data/mock_ivr_data_complex.csv')
 train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
 
-# Initialize complex model
-complex_model = ComplexIVRModel()  # Assuming a custom PyTorch model class for complex IVR tasks
+## Initialize complex model
+complex_model = ComplexIVRModel()  ## Assuming a custom PyTorch model class for complex IVR tasks
 
-# Define loss function and optimizer
+## Define loss function and optimizer
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(complex_model.parameters(), lr=learning_rate)
 
-# Training loop for complex model
+## Training loop for complex model
 for epoch in range(num_epochs):
     complex_model.train()
     for inputs, labels in train_loader:
@@ -265,7 +265,7 @@ for epoch in range(num_epochs):
     
     print(f'Epoch [{epoch+1}/{num_epochs}], Loss: {loss.item()}')
 
-# Save trained complex model
+## Save trained complex model
 torch.save(complex_model.state_dict(), 'models/complex_ivr_model.pt')
 ```
 

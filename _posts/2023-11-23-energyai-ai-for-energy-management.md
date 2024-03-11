@@ -5,7 +5,7 @@ permalink: posts/energyai-ai-for-energy-management
 layout: article
 ---
 
-# AI for Energy Management Repository
+## AI for Energy Management Repository
 
 ## Objectives
 The AI for Energy Management repository aims to provide a scalable, data-intensive AI system for optimizing energy consumption, predicting energy usage, and improving energy efficiency in industrial and commercial settings. The key objectives of this project are to:
@@ -42,7 +42,7 @@ The AI for Energy Management repository aims to provide a scalable, data-intensi
 
 By following these system design strategies and leveraging the chosen libraries, the AI for Energy Management repository aims to provide a robust, scalable, and data-intensive AI system for optimizing energy usage and improving energy efficiency in industrial and commercial settings.
 
-# Infrastructure for EnergyAI AI for Energy Management Application
+## Infrastructure for EnergyAI AI for Energy Management Application
 
 The infrastructure for the EnergyAI AI for Energy Management application is designed to support the scalable, data-intensive, and AI-driven requirements of energy management and optimization. The infrastructure encompasses the following components and design considerations:
 
@@ -226,19 +226,19 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_squared_error
 
 def train_energy_consumption_prediction_model(data_file_path):
-    # Load mock data from the CSV file
+    ## Load mock data from the CSV file
     energy_data = pd.read_csv(data_file_path)
 
-    # Preprocess the data
+    ## Preprocess the data
     X = energy_data.drop('energy_consumption', axis=1)
     y = energy_data['energy_consumption']
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize and train the machine learning model
+    ## Initialize and train the machine learning model
     model = RandomForestRegressor(n_estimators=100, random_state=42)
     model.fit(X_train, y_train)
 
-    # Evaluate the model
+    ## Evaluate the model
     y_pred = model.predict(X_test)
     mse = mean_squared_error(y_test, y_pred)
 
@@ -259,33 +259,33 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
 def train_deep_learning_energy_consumption_prediction_model(data_file_path):
-    # Load mock data from the CSV file
+    ## Load mock data from the CSV file
     energy_data = pd.read_csv(data_file_path)
 
-    # Preprocess the data
+    ## Preprocess the data
     X = energy_data.drop('energy_consumption', axis=1).values
     y = energy_data['energy_consumption'].values
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Scale the data
+    ## Scale the data
     scaler = StandardScaler()
     X_train_scaled = scaler.fit_transform(X_train)
     X_test_scaled = scaler.transform(X_test)
 
-    # Build the deep learning model
+    ## Build the deep learning model
     model = tf.keras.models.Sequential([
         tf.keras.layers.Dense(64, activation='relu', input_shape=(X_train.shape[1],)),
         tf.keras.layers.Dense(32, activation='relu'),
-        tf.keras.layers.Dense(1)  # Output layer
+        tf.keras.layers.Dense(1)  ## Output layer
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam', loss='mean_squared_error')
 
-    # Train the model
+    ## Train the model
     model.fit(X_train_scaled, y_train, epochs=50, batch_size=32, validation_data=(X_test_scaled, y_test))
 
-    # Evaluate the model
+    ## Evaluate the model
     mse = model.evaluate(X_test_scaled, y_test)
 
     return model, mse

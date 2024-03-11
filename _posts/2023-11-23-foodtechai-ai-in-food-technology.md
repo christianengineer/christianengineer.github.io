@@ -196,27 +196,27 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import accuracy_score, classification_report
 
 def food_quality_assessment_model(file_path):
-    # Load mock data from CSV file
+    ## Load mock data from CSV file
     data = pd.read_csv(file_path)
 
-    # Preprocessing mock data (example preprocessing steps)
+    ## Preprocessing mock data (example preprocessing steps)
     X = data.drop('quality_label', axis=1)
     y = data['quality_label']
     
     scaler = StandardScaler()
     X_scaled = scaler.fit_transform(X)
     
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.2, random_state=42)
     
-    # Instantiate and train the machine learning model
+    ## Instantiate and train the machine learning model
     model = RandomForestClassifier(n_estimators=100, random_state=42)
     model.fit(X_train, y_train)
     
-    # Make predictions
+    ## Make predictions
     predictions = model.predict(X_test)
     
-    # Evaluate the model
+    ## Evaluate the model
     accuracy = accuracy_score(y_test, predictions)
     report = classification_report(y_test, predictions)
     
@@ -241,13 +241,13 @@ from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 
 def food_image_classification_model(file_path):
-    # Create an ImageDataGenerator to preprocess and augment the mock image data
+    ## Create an ImageDataGenerator to preprocess and augment the mock image data
     datagen = ImageDataGenerator(rescale=1./255, shear_range=0.2, zoom_range=0.2, horizontal_flip=True)
     
-    # Load and preprocess mock image data from the specified directory
+    ## Load and preprocess mock image data from the specified directory
     mock_generator = datagen.flow_from_directory(file_path, target_size=(150, 150), batch_size=32, class_mode='categorical')
 
-    # Define a convolutional neural network (CNN) model for image classification
+    ## Define a convolutional neural network (CNN) model for image classification
     model = Sequential([
         Conv2D(32, (3, 3), activation='relu', input_shape=(150, 150, 3)),
         MaxPooling2D((2, 2)),
@@ -259,13 +259,13 @@ def food_image_classification_model(file_path):
         MaxPooling2D((2, 2)),
         Flatten(),
         Dense(512, activation='relu'),
-        Dense(3, activation='softmax')  # Assuming 3 classes for food image classification
+        Dense(3, activation='softmax')  ## Assuming 3 classes for food image classification
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
     
-    # Train the model on the mock image data
+    ## Train the model on the mock image data
     model.fit(mock_generator, steps_per_epoch=100, epochs=10)
 
     return model

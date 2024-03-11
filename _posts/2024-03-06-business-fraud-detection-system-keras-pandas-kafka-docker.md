@@ -5,7 +5,7 @@ permalink: posts/business-fraud-detection-system-keras-pandas-kafka-docker
 layout: article
 ---
 
-# Machine Learning Engineer's Guide for Business Fraud Detection System
+## Machine Learning Engineer's Guide for Business Fraud Detection System
 
 ## Audience: Fraud Analysts at Banco de Crédito del Perú
 ### Pain Point: High incidence of sophisticated financial frauds affecting bank operations
@@ -230,36 +230,36 @@ import pandas as pd
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 
-# Load the dataset
+## Load the dataset
 data = pd.read_csv('fraud_data.csv')
 
-# Step 1: Handle Missing Values
-# Filling missing values with median to ensure robustness in model training
+## Step 1: Handle Missing Values
+## Filling missing values with median to ensure robustness in model training
 data = data.fillna(data.median())
 
-# Step 2: Feature Scaling
-# Standardize numerical features to bring them to a common scale
+## Step 2: Feature Scaling
+## Standardize numerical features to bring them to a common scale
 scaler = StandardScaler()
 data[['transaction_amount', 'account_balance']] = scaler.fit_transform(data[['transaction_amount', 'account_balance']])
 
-# Step 3: Feature Engineering
-# Include relevant engineered features for fraud detection
+## Step 3: Feature Engineering
+## Include relevant engineered features for fraud detection
 data['interaction_feature'] = data['transaction_amount'] * data['account_balance']
 
-# Step 4: Encoding Categorical Variables
-# Perform one-hot encoding for categorical variables if needed
+## Step 4: Encoding Categorical Variables
+## Perform one-hot encoding for categorical variables if needed
 data = pd.get_dummies(data, columns=['transaction_type'])
 
-# Step 5: Splitting Data into Training and Testing Sets
+## Step 5: Splitting Data into Training and Testing Sets
 X = data.drop('fraud_label', axis=1)
 y = data['fraud_label']
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Step 6: Data Balancing (if necessary)
-# Implement data balancing techniques if dealing with imbalanced data
-# For example, using oversampling or undersampling methods
+## Step 6: Data Balancing (if necessary)
+## Implement data balancing techniques if dealing with imbalanced data
+## For example, using oversampling or undersampling methods
 
-# Step 7: Save Preprocessed Data
+## Step 7: Save Preprocessed Data
 X_train.to_csv('X_train.csv', index=False)
 X_test.to_csv('X_test.csv', index=False)
 y_train.to_csv('y_train.csv', index=False)
@@ -334,10 +334,10 @@ from faker import Faker
 import pandas as pd
 import numpy as np
 
-# Initialize Faker for generating fake data
+## Initialize Faker for generating fake data
 fake = Faker()
 
-# Generate fictitious data for transactions and accounts
+## Generate fictitious data for transactions and accounts
 data = []
 for _ in range(10000):
     transaction_amount = round(np.random.uniform(1, 10000), 2)
@@ -355,14 +355,14 @@ for _ in range(10000):
         'customer_location': fake.country()
     })
 
-# Create a DataFrame from the generated data
+## Create a DataFrame from the generated data
 df = pd.DataFrame(data)
 
-# Add noise and anomalies to simulate real-world variability
+## Add noise and anomalies to simulate real-world variability
 anomalies_indices = np.random.choice(df.index, 100, replace=False)
-df.loc[anomalies_indices, 'transaction_amount'] *= 10  # Introduce anomalies in transaction amounts
+df.loc[anomalies_indices, 'transaction_amount'] *= 10  ## Introduce anomalies in transaction amounts
 
-# Save the generated dataset to a CSV file
+## Save the generated dataset to a CSV file
 df.to_csv('fake_fraud_data.csv', index=False)
 ```
 
@@ -406,38 +406,38 @@ import pandas as pd
 from sklearn.ensemble import IsolationForest
 from sklearn.metrics import classification_report
 
-# Load preprocessed data
+## Load preprocessed data
 X_train = pd.read_csv('X_train.csv')
 y_train = pd.read_csv('y_train.csv')
 
-# Initialize and train the Isolation Forest model
-model = IsolationForest(contamination=0.01)  # Assuming 1% of data are anomalies
+## Initialize and train the Isolation Forest model
+model = IsolationForest(contamination=0.01)  ## Assuming 1% of data are anomalies
 model.fit(X_train)
 
-# Model predictions for training data
+## Model predictions for training data
 y_pred_train = model.predict(X_train)
 
-# Evaluate the model
+## Evaluate the model
 train_classification_report = classification_report(y_train, y_pred_train, target_names=['Normal', 'Fraud'])
 
-# Save the trained model
+## Save the trained model
 import joblib
 joblib.dump(model, 'fraud_detection_model.pkl')
 
-# Deployment-ready function for real-time prediction
+## Deployment-ready function for real-time prediction
 def predict_fraud(transaction_data):
-    # Implement preprocessing steps specific to incoming transaction data
-    # Eg. data transformation, feature extraction
+    ## Implement preprocessing steps specific to incoming transaction data
+    ## Eg. data transformation, feature extraction
     
-    # Load the trained model
+    ## Load the trained model
     model = joblib.load('fraud_detection_model.pkl')
     
-    # Model prediction on new transaction data
+    ## Model prediction on new transaction data
     prediction = model.predict(transaction_data)
     
     return prediction
 
-# Sample usage of the prediction function
+## Sample usage of the prediction function
 new_transaction = pd.DataFrame({'transaction_amount': [426.50], 'account_balance_before': [35462.19]})
 prediction = predict_fraud(new_transaction)
 print(prediction)
@@ -503,24 +503,24 @@ By following this step-by-step deployment plan and leveraging the recommended to
 Below is a production-ready Dockerfile tailored to encapsulate the environment and dependencies for the machine learning model in the Business Fraud Detection System at Banco de Crédito del Perú. The Dockerfile is optimized for handling the project's performance needs and scalability requirements:
 
 ```dockerfile
-# Use a Python base image
+## Use a Python base image
 FROM python:3.8-slim
 
-# Set the working directory in the container
+## Set the working directory in the container
 WORKDIR /app
 
-# Copy the requirements file and install dependencies
+## Copy the requirements file and install dependencies
 COPY requirements.txt requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the model file and necessary scripts
+## Copy the model file and necessary scripts
 COPY fraud_detection_model.pkl ./
 COPY predict.py ./
 
-# Expose the port for communication with the model (if applicable)
+## Expose the port for communication with the model (if applicable)
 EXPOSE 5000
 
-# Define the command to run the model prediction service
+## Define the command to run the model prediction service
 CMD ["python", "predict.py"]
 ```
 

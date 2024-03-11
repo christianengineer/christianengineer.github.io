@@ -251,31 +251,31 @@ from sklearn.preprocessing import OneHotEncoder, StandardScaler
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.model_selection import train_test_split
 
-# Load and preprocess tax regulation documents and business data
+## Load and preprocess tax regulation documents and business data
 tax_regulations = pd.read_csv('tax_regulations.csv')
 business_data = pd.read_csv('business_data.csv')
 
-# Merge tax regulation data with business data
+## Merge tax regulation data with business data
 merged_data = pd.merge(tax_regulations, business_data, on='business_id', how='inner')
 
-# Text normalization and TF-IDF encoding for tax regulation documents
+## Text normalization and TF-IDF encoding for tax regulation documents
 tfidf_vectorizer = TfidfVectorizer(max_features=1000, stop_words='english')
 tax_regulations_tfidf = tfidf_vectorizer.fit_transform(merged_data['tax_regulation_text'])
 
-# One-hot encoding for categorical features like business sectors
+## One-hot encoding for categorical features like business sectors
 encoder = OneHotEncoder()
 business_sector_onehot = encoder.fit_transform(merged_data['business_sector'].values.reshape(-1, 1))
 
-# Normalize numerical features like financial data and tax rates
+## Normalize numerical features like financial data and tax rates
 scaler = StandardScaler()
 numerical_features_scaled = scaler.fit_transform(merged_data[['revenue', 'tax_rate']])
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X = pd.concat([pd.DataFrame(tax_regulations_tfidf.toarray()), pd.DataFrame(business_sector_onehot.toarray()), pd.DataFrame(numerical_features_scaled)], axis=1)
 y = merged_data['compliance_status']
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Save preprocessed data for model training
+## Save preprocessed data for model training
 X_train.to_csv('X_train.csv', index=False)
 X_test.to_csv('X_test.csv', index=False)
 y_train.to_csv('y_train.csv', index=False)
@@ -375,10 +375,10 @@ import pandas as pd
 from faker import Faker
 from sklearn.datasets import make_classification
 
-# Initialize Faker for generating fake business data
+## Initialize Faker for generating fake business data
 fake = Faker()
 
-# Generate fake business data
+## Generate fake business data
 num_samples = 10000
 business_data = pd.DataFrame(columns=['business_id', 'business_name', 'business_sector', 'revenue', 'tax_rate', 'compliance_status'])
 
@@ -392,10 +392,10 @@ for _ in range(num_samples):
         'compliance_status': fake.random_element(elements=('Compliant', 'Non-Compliant'))
     }, ignore_index=True)
 
-# Generate synthetic tax regulation text data
+## Generate synthetic tax regulation text data
 tax_regulation_text = ['Tax regulation document ' + str(i) for i in range(num_samples)]
 
-# Create a synthetic dataset by combining business and tax regulation data
+## Create a synthetic dataset by combining business and tax regulation data
 synthetic_data = pd.DataFrame({
     'business_id': business_data['business_id'],
     'business_name': business_data['business_name'],
@@ -406,10 +406,10 @@ synthetic_data = pd.DataFrame({
     'tax_regulation_text': tax_regulation_text
 })
 
-# Save the synthetic dataset to a CSV file for model testing
+## Save the synthetic dataset to a CSV file for model testing
 synthetic_data.to_csv('synthetic_dataset.csv', index=False)
 
-# Validate the synthetic dataset using scikit-learn's make_classification
+## Validate the synthetic dataset using scikit-learn's make_classification
 X, y = make_classification(n_samples=num_samples, n_features=100, n_informative=10, n_classes=2)
 print("Synthetic dataset validated using make_classification:", X.shape, y.shape)
 ```
@@ -458,24 +458,24 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 
-# Load preprocessed data
+## Load preprocessed data
 data = pd.read_csv('preprocessed_data.csv')
 
-# Feature selection
-X = data.drop(columns=['compliance_status'])  # Features
-y = data['compliance_status']  # Target variable
+## Feature selection
+X = data.drop(columns=['compliance_status'])  ## Features
+y = data['compliance_status']  ## Target variable
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize and train a Random Forest Classifier
+## Initialize and train a Random Forest Classifier
 rf_classifier = RandomForestClassifier(n_estimators=100, random_state=42)
 rf_classifier.fit(X_train, y_train)
 
-# Make predictions on the test set
+## Make predictions on the test set
 y_pred = rf_classifier.predict(X_test)
 
-# Calculate accuracy
+## Calculate accuracy
 accuracy = accuracy_score(y_test, y_pred)
 print(f'Model Accuracy: {accuracy}')
 ```
@@ -552,31 +552,31 @@ By following this tailored deployment plan, your team can confidently navigate t
 Here is a sample Dockerfile tailored to encapsulate the environment and dependencies for the Custom Tax Compliance Advisor project, optimized for performance and scalability:
 
 ```Dockerfile
-# Use a base Python image
+## Use a base Python image
 FROM python:3.8-slim
 
-# Set the working directory in the container
+## Set the working directory in the container
 WORKDIR /app
 
-# Copy the requirements file and install dependencies
+## Copy the requirements file and install dependencies
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the model and data files into the container
+## Copy the model and data files into the container
 COPY model.pkl .
 COPY preprocessed_data.csv .
 
-# Expose the required port
+## Expose the required port
 EXPOSE 5000
 
-# Define environment variables
+## Define environment variables
 ENV FLASK_APP=app.py
 ENV FLASK_RUN_HOST=0.0.0.0
 
-# Copy the Flask app into the container
+## Copy the Flask app into the container
 COPY app.py .
 
-# Command to run the application
+## Command to run the application
 CMD ["flask", "run"]
 ```
 

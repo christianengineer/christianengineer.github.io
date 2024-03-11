@@ -5,7 +5,7 @@ permalink: posts/agricultural-yield-prediction-system-using-pytorch-and-scikit-l
 layout: article
 ---
 
-# Agricultural Yield Prediction System using PyTorch and Scikit-Learn
+## Agricultural Yield Prediction System using PyTorch and Scikit-Learn
 
 ## Objectives and Benefits
 - **Objective**: To accurately predict crop yields under varying weather conditions using satellite imagery and weather data.
@@ -220,31 +220,31 @@ import pandas as pd
 from sklearn.preprocessing import StandardScaler
 from sklearn.impute import SimpleImputer
 
-# Load the dataset (satellite imagery and weather data)
+## Load the dataset (satellite imagery and weather data)
 data = pd.read_csv('agricultural_data.csv')
 
-# Separate features (X) and target variable (y)
+## Separate features (X) and target variable (y)
 X = data.drop('yield', axis=1)
 y = data['yield']
 
-# Step 1: Handling Missing Values
+## Step 1: Handling Missing Values
 imputer = SimpleImputer(strategy='mean')
 X_imputed = pd.DataFrame(imputer.fit_transform(X), columns=X.columns)
 
-# Step 2: Standardize Numerical Features
+## Step 2: Standardize Numerical Features
 scaler = StandardScaler()
 X_scaled = pd.DataFrame(scaler.fit_transform(X_imputed), columns=X.columns)
 
-# Step 3: Feature Engineering (if additional features were extracted)
-# Include feature engineering steps here based on the specific project needs
+## Step 3: Feature Engineering (if additional features were extracted)
+## Include feature engineering steps here based on the specific project needs
 
-# Step 4: Data Split (train-test split or cross-validation)
-# Implement train-test split for model evaluation
+## Step 4: Data Split (train-test split or cross-validation)
+## Implement train-test split for model evaluation
 
-# Step 5: Additional Preprocessing Steps as needed
-# You can add more preprocessing steps here based on data characteristics and modeling requirements
+## Step 5: Additional Preprocessing Steps as needed
+## You can add more preprocessing steps here based on data characteristics and modeling requirements
 
-# Final processed data ready for model training
+## Final processed data ready for model training
 final_data = pd.concat([X_scaled, y], axis=1)
 final_data.to_csv('preprocessed_data.csv', index=False)
 ```
@@ -346,29 +346,29 @@ import random
 
 fake = Faker()
 
-# Generate synthetic dataset
+## Generate synthetic dataset
 n_samples = 10000
 n_features = 10
 
-# Generate tabular data for weather attributes
+## Generate tabular data for weather attributes
 weather_data = pd.DataFrame(np.random.rand(n_samples, n_features), columns=[f'feat_{i}' for i in range(n_features)])
 
-# Generate synthetic satellite imagery data
+## Generate synthetic satellite imagery data
 ndvi_values = [random.uniform(0.2, 0.8) for _ in range(n_samples)]
 evi_values = [random.uniform(0.3, 0.7) for _ in range(n_samples)]
 
-# Create dataset with target variable (yield)
+## Create dataset with target variable (yield)
 data = pd.DataFrame({
     'NDVI': ndvi_values,
     'EVI': evi_values,
     'yield': make_regression(n_samples=n_samples, n_features=1, noise=0.1)[0].reshape(-1)
 })
 
-# Add metadata
+## Add metadata
 data['location'] = [fake.city() for _ in range(n_samples)]
 data['date'] = pd.date_range(start='1/1/2021', periods=n_samples, freq='D')
 
-# Save dataset to CSV
+## Save dataset to CSV
 data.to_csv('synthetic_agri_yield_dataset.csv', index=False)
 ```
 
@@ -422,30 +422,30 @@ from sklearn.model_selection import train_test_split
 from sklearn.svm import SVR
 from sklearn.metrics import mean_squared_error
 
-# Load preprocessed dataset
+## Load preprocessed dataset
 data = pd.read_csv('preprocessed_data.csv')
 
-# Split data into features (X) and target variable (y)
+## Split data into features (X) and target variable (y)
 X = data.drop('yield', axis=1)
 y = data['yield']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize Support Vector Machine Regressor
+## Initialize Support Vector Machine Regressor
 svm_regressor = SVR(kernel='rbf')
 
-# Train the model
+## Train the model
 svm_regressor.fit(X_train, y_train)
 
-# Make predictions on the test set
+## Make predictions on the test set
 y_pred = svm_regressor.predict(X_test)
 
-# Calculate Mean Squared Error to evaluate the model
+## Calculate Mean Squared Error to evaluate the model
 mse = mean_squared_error(y_test, y_pred)
 print(f'Mean Squared Error: {mse}')
 
-# Save the trained model for deployment
+## Save the trained model for deployment
 import joblib
 joblib.dump(svm_regressor, 'svm_model.pkl')
 ```
@@ -514,26 +514,26 @@ By following this step-by-step deployment plan tailored to the specific demands 
 To create a production-ready Dockerfile tailored to the needs of the Agricultural Yield Prediction System project, optimized for performance and scalability, follow the configuration below:
 
 ```docker
-# Use a base image with necessary dependencies (e.g., Python, PyTorch)
+## Use a base image with necessary dependencies (e.g., Python, PyTorch)
 FROM python:3.9-slim
 
-# Set the working directory in the container
+## Set the working directory in the container
 WORKDIR /app
 
-# Copy the project files into the container
+## Copy the project files into the container
 COPY . /app
 
-# Install required packages
+## Install required packages
 RUN pip install --no-cache-dir numpy pandas scikit-learn torch torchvision flask joblib
 
-# Expose the Flask port
+## Expose the Flask port
 EXPOSE 5000
 
-# Define environment variables
+## Define environment variables
 ENV FLASK_APP=app.py
 ENV FLASK_RUN_HOST=0.0.0.0
 
-# Command to run the Flask application
+## Command to run the Flask application
 CMD ["flask", "run"]
 ```
 

@@ -5,7 +5,7 @@ permalink: posts/language-modeling-using-bert-python-understanding-language-cont
 layout: article
 ---
 
-# AI Language Modeling using BERT
+## AI Language Modeling using BERT
 
 ## Objectives
 The objective of the AI Language Modeling using BERT repository is to provide a comprehensive understanding of leveraging BERT (Bidirectional Encoder Representations from Transformers) for natural language processing tasks. This includes demonstrating how BERT can be used for tasks such as text classification, named entity recognition, question answering, and more.
@@ -23,7 +23,7 @@ By leveraging these libraries, the repository aims to provide a practical and ha
 
 This repository will serve as a valuable resource for developers and data scientists aiming to build scalable, data-intensive AI applications that leverage the power of BERT and machine learning.
 
-# Infrastructure for Language Modeling using BERT
+## Infrastructure for Language Modeling using BERT
 
 ## Cloud-based Infrastructure
 For the Language Modeling using BERT application, a cloud-based infrastructure can provide the scalability and resources required for training and deploying AI models. The following components can be part of the infrastructure:
@@ -53,40 +53,40 @@ Sure, below is an example of a scalable file structure for the Language Modeling
 language_modeling_bert/
 │
 ├── data/
-│   ├── raw/          # Raw data files
-│   ├── processed/    # Processed data files
+│   ├── raw/          ## Raw data files
+│   ├── processed/    ## Processed data files
 │
 ├── models/
-│   ├── pre_trained/  # Pre-trained BERT models
-│   ├── fine_tuned/   # Fine-tuned BERT models
+│   ├── pre_trained/  ## Pre-trained BERT models
+│   ├── fine_tuned/   ## Fine-tuned BERT models
 │
 ├── notebooks/
-│   ├── exploration.ipynb   # Jupyter notebook for data exploration
-│   ├── preprocessing.ipynb  # Jupyter notebook for data preprocessing
-│   ├── model_training.ipynb # Jupyter notebook for BERT model training
-│   ├── evaluation.ipynb     # Jupyter notebook for model evaluation
+│   ├── exploration.ipynb   ## Jupyter notebook for data exploration
+│   ├── preprocessing.ipynb  ## Jupyter notebook for data preprocessing
+│   ├── model_training.ipynb ## Jupyter notebook for BERT model training
+│   ├── evaluation.ipynb     ## Jupyter notebook for model evaluation
 │
 ├── src/
-│   ├── data/           # Data processing scripts
+│   ├── data/           ## Data processing scripts
 │   │   ├── preprocessing.py
 │   │   ├── data_loader.py
 │   │
-│   ├── models/         # BERT model definition and training scripts
+│   ├── models/         ## BERT model definition and training scripts
 │   │   ├── bert_model.py
 │   │   ├── train.py
 │   │   ├── evaluation.py
 │   │
-│   ├── utils/          # Utility functions and helper scripts
+│   ├── utils/          ## Utility functions and helper scripts
 │   │   ├── config.py
 │   │   ├── metrics.py
 │   │
-│   ├── main.py         # Main script to orchestrate the workflow
+│   ├── main.py         ## Main script to orchestrate the workflow
 │
 ├── config/
-│   ├── config.yaml     # Configuration file for hyperparameters and settings
+│   ├── config.yaml     ## Configuration file for hyperparameters and settings
 │
-├── requirements.txt     # Python package dependencies
-├── README.md            # Project description and usage instructions
+├── requirements.txt     ## Python package dependencies
+├── README.md            ## Project description and usage instructions
 ```
 
 In this file structure:
@@ -105,26 +105,26 @@ Certainly! Below is an expanded view of the `models/` directory and its files fo
 models/
 │
 ├── pre_trained/
-│   ├── bert_base_uncased/    # Directory containing pre-trained BERT base uncased model
-│   │   ├── config.json       # Configuration file for the pre-trained BERT model
-│   │   ├── pytorch_model.bin # Pre-trained weights of the BERT model in PyTorch format
-│   │   ├── vocab.txt         # Vocabulary file for tokenization
+│   ├── bert_base_uncased/    ## Directory containing pre-trained BERT base uncased model
+│   │   ├── config.json       ## Configuration file for the pre-trained BERT model
+│   │   ├── pytorch_model.bin ## Pre-trained weights of the BERT model in PyTorch format
+│   │   ├── vocab.txt         ## Vocabulary file for tokenization
 │   │
-│   ├── bert_large_cased/     # Directory containing pre-trained BERT large cased model
-│   │   ├── config.json       # Configuration file for the pre-trained BERT model
-│   │   ├── tf_model.h5       # Pre-trained weights of the BERT model in TensorFlow/Keras format
-│   │   ├── vocab.txt         # Vocabulary file for tokenization
+│   ├── bert_large_cased/     ## Directory containing pre-trained BERT large cased model
+│   │   ├── config.json       ## Configuration file for the pre-trained BERT model
+│   │   ├── tf_model.h5       ## Pre-trained weights of the BERT model in TensorFlow/Keras format
+│   │   ├── vocab.txt         ## Vocabulary file for tokenization
 │
 ├── fine_tuned/
 │   ├── sentiment_analysis/
-│   │   ├── config.json       # Configuration file for the fine-tuned sentiment analysis BERT model
-│   │   ├── pytorch_model.bin # Fine-tuned weights of the sentiment analysis BERT model in PyTorch format
-│   │   ├── vocab.txt         # Vocabulary file for tokenization
+│   │   ├── config.json       ## Configuration file for the fine-tuned sentiment analysis BERT model
+│   │   ├── pytorch_model.bin ## Fine-tuned weights of the sentiment analysis BERT model in PyTorch format
+│   │   ├── vocab.txt         ## Vocabulary file for tokenization
 │   │
 │   ├── named_entity_recognition/
-│   │   ├── config.json       # Configuration file for the fine-tuned named entity recognition BERT model
-│   │   ├── tf_model.h5       # Fine-tuned weights of the named entity recognition BERT model in TensorFlow/Keras format
-│   │   ├── vocab.txt         # Vocabulary file for tokenization
+│   │   ├── config.json       ## Configuration file for the fine-tuned named entity recognition BERT model
+│   │   ├── tf_model.h5       ## Fine-tuned weights of the named entity recognition BERT model in TensorFlow/Keras format
+│   │   ├── vocab.txt         ## Vocabulary file for tokenization
 ```
 
 **Explanation:**
@@ -147,21 +147,21 @@ As the Language Modeling using BERT (Python) Understanding language context appl
 deployment/
 │
 ├── app/
-│   ├── main.py          # Main Flask application for serving BERT models
-│   ├── requirements.txt # Python package dependencies for the Flask application
-│   ├── templates/       # Directory for HTML templates (if using web interfaces)
-│   │   ├── index.html   # Example HTML template for model input/output visualization
+│   ├── main.py          ## Main Flask application for serving BERT models
+│   ├── requirements.txt ## Python package dependencies for the Flask application
+│   ├── templates/       ## Directory for HTML templates (if using web interfaces)
+│   │   ├── index.html   ## Example HTML template for model input/output visualization
 │
 ├── models/
 │   ├── sentiment_analysis/
-│   │   ├── config.json       # Configuration file for the sentiment analysis BERT model
-│   │   ├── pytorch_model.bin # Serialized BERT model for sentiment analysis (fine-tuned)
-│   │   ├── vocab.txt         # Vocabulary file for tokenization
+│   │   ├── config.json       ## Configuration file for the sentiment analysis BERT model
+│   │   ├── pytorch_model.bin ## Serialized BERT model for sentiment analysis (fine-tuned)
+│   │   ├── vocab.txt         ## Vocabulary file for tokenization
 │   │
 │   ├── named_entity_recognition/
-│   │   ├── config.json       # Configuration file for the named entity recognition BERT model
-│   │   ├── pytorch_model.bin # Serialized BERT model for named entity recognition (fine-tuned)
-│   │   ├── vocab.txt         # Vocabulary file for tokenization
+│   │   ├── config.json       ## Configuration file for the named entity recognition BERT model
+│   │   ├── pytorch_model.bin ## Serialized BERT model for named entity recognition (fine-tuned)
+│   │   ├── vocab.txt         ## Vocabulary file for tokenization
 ```
 
 **Explanation:**
@@ -187,27 +187,27 @@ from transformers import BertTokenizer, BertForMaskedLM
 import pandas as pd
 
 def language_model_inference(file_path):
-    # Load pre-trained BERT model and tokenizer
+    ## Load pre-trained BERT model and tokenizer
     model_name = 'bert-base-uncased'
     tokenizer = BertTokenizer.from_pretrained(model_name)
     model = BertForMaskedLM.from_pretrained(model_name)
 
-    # Preprocess mock data
+    ## Preprocess mock data
     data = pd.read_csv(file_path)
     sentences = data['sentence'].tolist()
 
-    # Perform language modeling inference
+    ## Perform language modeling inference
     for sentence in sentences:
-        # Tokenize input sentence
+        ## Tokenize input sentence
         inputs = tokenizer(sentence, return_tensors='pt')
 
-        # Model inference
+        ## Model inference
         outputs = model(**inputs)
 
-        # Post-process inference results
+        ## Post-process inference results
         predictions = tokenizer.convert_ids_to_tokens(torch.argmax(outputs.logits, dim=2))
 
-        # Output predictions
+        ## Output predictions
         print("Input Sentence:", sentence)
         print("Predicted Tokens:", predictions)
         print("\n")
@@ -232,33 +232,33 @@ import torch
 import pandas as pd
 
 def language_model_inference(file_path):
-    # Load pre-trained BERT model and tokenizer
+    ## Load pre-trained BERT model and tokenizer
     model_name = 'bert-base-uncased'
     tokenizer = BertTokenizer.from_pretrained(model_name)
     model = BertForMaskedLM.from_pretrained(model_name)
 
-    # Load mock data
+    ## Load mock data
     mock_data = pd.read_csv(file_path)
 
-    # Initialize a list to store the results
+    ## Initialize a list to store the results
     results = []
 
-    # Iterate over the mock data
+    ## Iterate over the mock data
     for index, row in mock_data.iterrows():
         sentence = row['sentence']
 
-        # Tokenize the input sentence
+        ## Tokenize the input sentence
         tokenized_input = tokenizer.encode(sentence, return_tensors="pt")
 
-        # Perform language modeling inference
+        ## Perform language modeling inference
         with torch.no_grad():
             outputs = model(tokenized_input)
 
-        # Get the predicted token
+        ## Get the predicted token
         predicted_index = torch.argmax(outputs.logits[0], dim=1)
         predicted_token = tokenizer.decode([predicted_index])
 
-        # Store the result
+        ## Store the result
         results.append({'input_sentence': sentence, 'predicted_token': predicted_token})
 
     return results

@@ -5,7 +5,7 @@ permalink: posts/predictive-maintenance-using-lstm-python-forecasting-equipment-
 layout: article
 ---
 
-# AI Predictive Maintenance using LSTM (Python)
+## AI Predictive Maintenance using LSTM (Python)
 
 ## Objectives
 The objective of the AI Predictive Maintenance using LSTM (Python) is to build a machine learning model that leverages Long Short-Term Memory (LSTM) networks to forecast equipment failures in industrial settings. By analyzing historical sensor data, the model aims to predict when maintenance is required before a failure occurs, thereby reducing downtime and optimizing maintenance schedules. 
@@ -26,7 +26,7 @@ The objective of the AI Predictive Maintenance using LSTM (Python) is to build a
 
 By integrating these libraries into the Python codebase, the AI Predictive Maintenance using LSTM system can effectively process sensor data, build a robust LSTM model, and provide actionable insights for optimizing equipment maintenance.
 
-# Infrastructure for Predictive Maintenance using LSTM (Python)
+## Infrastructure for Predictive Maintenance using LSTM (Python)
 
 To deploy the Predictive Maintenance using LSTM (Python) forecasting equipment failures application, a scalable and resilient infrastructure is required to support the machine learning model, handle data processing, and serve predictions to end-users. 
 
@@ -48,7 +48,7 @@ To deploy the Predictive Maintenance using LSTM (Python) forecasting equipment f
 
 By building and deploying the Predictive Maintenance using LSTM (Python) forecasting equipment failures application on a robust infrastructure, it becomes possible to make accurate predictions for equipment failures, reduce downtime, and optimize maintenance schedules in industrial environments.
 
-# Scalable File Structure for Predictive Maintenance using LSTM (Python) Repository
+## Scalable File Structure for Predictive Maintenance using LSTM (Python) Repository
 
 The following is a scalable file structure for organizing the code, data, and resources related to the Predictive Maintenance using LSTM (Python) forecasting equipment failures application:
 
@@ -125,7 +125,7 @@ predictive_maintenance_ltsm/
 
 This file structure separates different components of the application, promotes modularity, and allows for scalability and ease of organization for the Predictive Maintenance using LSTM (Python) forecasting equipment failures application.
 
-# models/ Directory for Predictive Maintenance using LSTM (Python) Forecasting Equipment Failures Application
+## models/ Directory for Predictive Maintenance using LSTM (Python) Forecasting Equipment Failures Application
 
 The `models/` directory in the Predictive Maintenance using LSTM (Python) forecasting equipment failures application contains the code, artifacts, and files related to the LSTM model development, training, evaluation, and deployment.
 
@@ -168,19 +168,19 @@ from tensorflow.keras.layers import LSTM, Dense
 from sklearn.model_selection import train_test_split
 
 def train_lstm_model(data_file_path):
-    # Load mock data
+    ## Load mock data
     data = pd.read_csv(data_file_path)
 
-    # Data preprocessing
-    # Assuming the data has columns: 'timestamp', 'sensor1', 'sensor2', 'sensor3', 'target'
+    ## Data preprocessing
+    ## Assuming the data has columns: 'timestamp', 'sensor1', 'sensor2', 'sensor3', 'target'
     features = data[['sensor1', 'sensor2', 'sensor3']]
     target = data['target']
 
-    # Normalize the features
+    ## Normalize the features
     scaler = MinMaxScaler()
     features_scaled = scaler.fit_transform(features)
 
-    # Create sequences and reshape for LSTM
+    ## Create sequences and reshape for LSTM
     seq_length = 10
     X, y = [], []
     for i in range(len(features_scaled) - seq_length):
@@ -190,16 +190,16 @@ def train_lstm_model(data_file_path):
     X, y = np.array(X), np.array(y)
     X = X.reshape((X.shape[0], X.shape[1], features.shape[1]))
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, shuffle=False)
 
-    # Define the LSTM model
+    ## Define the LSTM model
     model = Sequential()
     model.add(LSTM(50, input_shape=(X.shape[1], X.shape[2])))
     model.add(Dense(1))
     model.compile(loss='mean_squared_error', optimizer='adam')
 
-    # Train the LSTM model
+    ## Train the LSTM model
     model.fit(X_train, y_train, epochs=50, batch_size=32, validation_data=(X_test, y_test), shuffle=False)
 
     return model
@@ -218,30 +218,30 @@ from tensorflow.keras.layers import LSTM, Dense
 from sklearn.model_selection import train_test_split
 
 def train_lstm_model(data_file_path):
-    # Load mock data
+    ## Load mock data
     data = pd.read_csv(data_file_path)
 
-    # Data preprocessing
+    ## Data preprocessing
     X = data[['sensor1', 'sensor2', 'sensor3']].values
     y = data['target'].values
 
-    # Normalize the features
+    ## Normalize the features
     scaler = MinMaxScaler()
     X = scaler.fit_transform(X)
 
-    # Reshape input to be 3D [samples, timesteps, features]
+    ## Reshape input to be 3D [samples, timesteps, features]
     X = X.reshape((X.shape[0], 1, X.shape[1]))
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, shuffle=False)
 
-    # Define the LSTM model
+    ## Define the LSTM model
     model = Sequential()
     model.add(LSTM(50, input_shape=(X.shape[1], X.shape[2])))
     model.add(Dense(1))
     model.compile(optimizer='adam', loss='mse')
 
-    # Train the LSTM model
+    ## Train the LSTM model
     model.fit(X_train, y_train, epochs=50, batch_size=32, validation_data=(X_test, y_test), shuffle=False)
 
     return model

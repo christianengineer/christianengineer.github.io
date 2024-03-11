@@ -64,33 +64,33 @@ Sure, here's a proposed file structure for the Real-time Inference with Kafka an
 real-time-inference-with-kafka-tensorflow/
 │
 ├── kafka/
-│   ├── producer/                 # Code for data ingestion services
-│   ├── consumer/                 # Code for consuming and processing data from Kafka
-│   ├── connectors/               # Configuration files for Kafka Connect
-│   └── config/                   # Kafka configuration files
+│   ├── producer/                 ## Code for data ingestion services
+│   ├── consumer/                 ## Code for consuming and processing data from Kafka
+│   ├── connectors/               ## Configuration files for Kafka Connect
+│   └── config/                   ## Kafka configuration files
 │
 ├── data-preprocessing/
-│   ├── streaming-preprocessor/   # Code for preprocessing real-time streaming data
-│   ├── batch-preprocessor/       # Code for batch preprocessing if required
-│   └── config/                   # Configuration files for data preprocessing components
+│   ├── streaming-preprocessor/   ## Code for preprocessing real-time streaming data
+│   ├── batch-preprocessor/       ## Code for batch preprocessing if required
+│   └── config/                   ## Configuration files for data preprocessing components
 │
 ├── tensorflow/
-│   ├── models/                   # Trained TensorFlow models
-│   ├── serving/                  # Configuration and scripts for TensorFlow model serving
-│   └── config/                   # TensorFlow serving configuration files
+│   ├── models/                   ## Trained TensorFlow models
+│   ├── serving/                  ## Configuration and scripts for TensorFlow model serving
+│   └── config/                   ## TensorFlow serving configuration files
 │
 ├── monitoring-logging/
-│   ├── prometheus-config/        # Configuration files for Prometheus monitoring
-│   ├── grafana-config/           # Configuration files for Grafana dashboard
-│   ├── logging/                  # Configuration for logging, e.g., ELK stack
-│   └── alerts/                   # Configuration for alerting and notifications
+│   ├── prometheus-config/        ## Configuration files for Prometheus monitoring
+│   ├── grafana-config/           ## Configuration files for Grafana dashboard
+│   ├── logging/                  ## Configuration for logging, e.g., ELK stack
+│   └── alerts/                   ## Configuration for alerting and notifications
 │
 ├── infrastructure/
-│   ├── deployment/               # Scripts for deploying Kafka, data preprocessing, TensorFlow serving 
-│   ├── orchestration/            # Kubernetes configurations or other orchestration setup
-│   └── config/                   # Configuration files for infrastructure components
+│   ├── deployment/               ## Scripts for deploying Kafka, data preprocessing, TensorFlow serving 
+│   ├── orchestration/            ## Kubernetes configurations or other orchestration setup
+│   └── config/                   ## Configuration files for infrastructure components
 │
-└── README.md                     # Project documentation and setup instructions
+└── README.md                     ## Project documentation and setup instructions
 ```
 
 In this structure:
@@ -109,24 +109,24 @@ Certainly! In the `models` directory for the Real-time Inference with Kafka and 
 models/
 │
 ├── trained_models/
-│   ├── model_1/                     # Directory for the first trained model
-│   │   ├── saved_model.pb           # Serialized TensorFlow model in Protocol Buffer format
-│   │   └── variables/               # Directory containing model variables and checkpoints
+│   ├── model_1/                     ## Directory for the first trained model
+│   │   ├── saved_model.pb           ## Serialized TensorFlow model in Protocol Buffer format
+│   │   └── variables/               ## Directory containing model variables and checkpoints
 │   │   
-│   ├── model_2/                     # Directory for the second trained model
+│   ├── model_2/                     ## Directory for the second trained model
 │   │   ├── saved_model.pb
 │   │   └── variables/
 │   │   
 │   └── ...
 │
 ├── model_metadata/
-│   ├── model_1_metadata.json        # Metadata file for model_1, including version, input/output data schema, etc.
-│   ├── model_2_metadata.json        # Metadata file for model_2
+│   ├── model_1_metadata.json        ## Metadata file for model_1, including version, input/output data schema, etc.
+│   ├── model_2_metadata.json        ## Metadata file for model_2
 │   └── ...
 │
 └── serving_config/
-    ├── model_1_serving_config.yaml  # Configuration file specific to model_1 for serving with TensorFlow Serving
-    ├── model_2_serving_config.yaml  # Configuration file specific to model_2
+    ├── model_1_serving_config.yaml  ## Configuration file specific to model_1 for serving with TensorFlow Serving
+    ├── model_2_serving_config.yaml  ## Configuration file specific to model_2
     └── ...
 ```
 
@@ -143,22 +143,22 @@ In the `deployment` directory for the Real-time Inference with Kafka and TensorF
 deployment/
 │
 ├── kafka/
-│   ├── kafka-deployment.yaml         # Kubernetes deployment file for Kafka brokers and related services
-│   ├── kafka-service.yaml            # Kubernetes service definition for accessing Kafka
-│   └── kafka-config/                 # Configuration files specific to Kafka deployment
+│   ├── kafka-deployment.yaml         ## Kubernetes deployment file for Kafka brokers and related services
+│   ├── kafka-service.yaml            ## Kubernetes service definition for accessing Kafka
+│   └── kafka-config/                 ## Configuration files specific to Kafka deployment
 │
 ├── data-preprocessing/
-│   ├── streaming-preprocessor-deployment.yaml  # Kubernetes deployment file for real-time data preprocessing components
-│   ├── batch-preprocessor-deployment.yaml      # Kubernetes deployment file for batch data preprocessing components
-│   └── preprocessing-config/          # Configuration files specific to data preprocessing deployments
+│   ├── streaming-preprocessor-deployment.yaml  ## Kubernetes deployment file for real-time data preprocessing components
+│   ├── batch-preprocessor-deployment.yaml      ## Kubernetes deployment file for batch data preprocessing components
+│   └── preprocessing-config/          ## Configuration files specific to data preprocessing deployments
 │
 ├── tensorflow-serving/
-│   ├── serving-deployment.yaml       # Kubernetes deployment file for TensorFlow Serving instances
-│   └── serving-config/               # Configuration files specific to TensorFlow Serving deployment
+│   ├── serving-deployment.yaml       ## Kubernetes deployment file for TensorFlow Serving instances
+│   └── serving-config/               ## Configuration files specific to TensorFlow Serving deployment
 │
 └── orchestration/
-    ├── deployment-scripts/           # Manual deployment scripts for non-Kubernetes environments
-    └── orchestration-config/         # Configuration files for deployment orchestration tools
+    ├── deployment-scripts/           ## Manual deployment scripts for non-Kubernetes environments
+    └── orchestration-config/         ## Configuration files for deployment orchestration tools
 ```
 
 In this structure:
@@ -175,31 +175,31 @@ Certainly! Below is an example of a function for a complex machine learning algo
 import tensorflow as tf
 import numpy as np
 
-# Define a function for a complex machine learning algorithm
+## Define a function for a complex machine learning algorithm
 def perform_realtime_inference(file_path):
-    # Read mock data from the file
+    ## Read mock data from the file
     with open(file_path, 'r') as file:
         mock_data = file.read()
 
-    # Preprocess the data as required by the model
+    ## Preprocess the data as required by the model
     preprocessed_data = preprocess_data(mock_data)
 
-    # Load the trained TensorFlow model
+    ## Load the trained TensorFlow model
     loaded_model = tf.keras.models.load_model('path_to_saved_model')
 
-    # Perform model inference
+    ## Perform model inference
     inference_result = loaded_model.predict(preprocessed_data)
 
     return inference_result
 
-# Define a data preprocessing function for the mock data
+## Define a data preprocessing function for the mock data
 def preprocess_data(data):
-    # Mock preprocessing step (e.g., tokenization, normalization, feature engineering)
-    preprocessed_data = np.random.rand(10, 5)  # Placeholder for preprocessed data
+    ## Mock preprocessing step (e.g., tokenization, normalization, feature engineering)
+    preprocessed_data = np.random.rand(10, 5)  ## Placeholder for preprocessed data
 
     return preprocessed_data
 
-# Example usage of the function with a file path
+## Example usage of the function with a file path
 file_path = 'path_to_mock_data_file/mock_data.txt'
 inference_result = perform_realtime_inference(file_path)
 print("Inference Result:", inference_result)
@@ -218,31 +218,31 @@ Certainly! Below is an example of a function for a complex deep learning algorit
 import tensorflow as tf
 import numpy as np
 
-# Define a function for a complex deep learning algorithm
+## Define a function for a complex deep learning algorithm
 def perform_realtime_inference_deep_learning(file_path):
-    # Read mock data from the file
+    ## Read mock data from the file
     with open(file_path, 'r') as file:
         mock_data = file.read()
 
-    # Preprocess the data as required by the model
+    ## Preprocess the data as required by the model
     preprocessed_data = preprocess_data(mock_data)
 
-    # Load the trained TensorFlow deep learning model
+    ## Load the trained TensorFlow deep learning model
     loaded_model = tf.keras.models.load_model('path_to_saved_deep_learning_model')
 
-    # Perform model inference
+    ## Perform model inference
     inference_result = loaded_model.predict(preprocessed_data)
 
     return inference_result
 
-# Define a data preprocessing function for the mock data
+## Define a data preprocessing function for the mock data
 def preprocess_data(data):
-    # Mock preprocessing step for deep learning models (e.g., tokenization, padding, normalization)
-    preprocessed_data = np.random.rand(10, 100, 100, 3)  # Placeholder for preprocessed data suitable for deep learning models
+    ## Mock preprocessing step for deep learning models (e.g., tokenization, padding, normalization)
+    preprocessed_data = np.random.rand(10, 100, 100, 3)  ## Placeholder for preprocessed data suitable for deep learning models
 
     return preprocessed_data
 
-# Example usage of the function with a file path
+## Example usage of the function with a file path
 file_path = 'path_to_mock_data_file/mock_data.txt'
 inference_result = perform_realtime_inference_deep_learning(file_path)
 print("Inference Result:", inference_result)

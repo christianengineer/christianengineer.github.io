@@ -68,26 +68,26 @@ To ensure a scalable and organized file structure for the Precision Agriculture 
 ```
 .
 ├── data
-│   ├── raw               # Raw satellite imagery data
-│   ├── processed         # Preprocessed data for model training and inference
-│   └── archived          # Archived or backup data
+│   ├── raw               ## Raw satellite imagery data
+│   ├── processed         ## Preprocessed data for model training and inference
+│   └── archived          ## Archived or backup data
 ├── models
-│   ├── training_scripts  # Scripts for model training using Keras
-│   ├── evaluation        # Model evaluation scripts and metrics
-│   └── deployment        # Configuration files for model deployment in Kubernetes
+│   ├── training_scripts  ## Scripts for model training using Keras
+│   ├── evaluation        ## Model evaluation scripts and metrics
+│   └── deployment        ## Configuration files for model deployment in Kubernetes
 ├── infrastructure
-│   ├── kubernetes        # Kubernetes deployment manifests
-│   ├── terraform         # Infrastructure as Code configuration for provisioning and managing resources
+│   ├── kubernetes        ## Kubernetes deployment manifests
+│   ├── terraform         ## Infrastructure as Code configuration for provisioning and managing resources
 ├── src
-│   ├── data_processing   # Code for data preprocessing and feature engineering
-│   ├── models            # Custom model architectures and utilities for Keras
-│   ├── pipelines         # Data processing and model training pipelines using tools like Apache Spark
-│   └── api               # REST API for serving model predictions
+│   ├── data_processing   ## Code for data preprocessing and feature engineering
+│   ├── models            ## Custom model architectures and utilities for Keras
+│   ├── pipelines         ## Data processing and model training pipelines using tools like Apache Spark
+│   └── api               ## REST API for serving model predictions
 ├── tests
-│   ├── unit              # Unit tests for individual components
-│   └── integration       # Integration tests for end-to-end workflows
-├── docs                  # Documentation, including model specifications, architecture diagrams, and user guides
-└── .gitignore            # Gitignore file for specifying files and directories to be ignored by version control
+│   ├── unit              ## Unit tests for individual components
+│   └── integration       ## Integration tests for end-to-end workflows
+├── docs                  ## Documentation, including model specifications, architecture diagrams, and user guides
+└── .gitignore            ## Gitignore file for specifying files and directories to be ignored by version control
 ```
 
 This file structure provides a clear separation of concerns and organization of different components of the Precision Agriculture using Satellite Imagery application. It encompasses directories for data management, model development, infrastructure configuration, source code, testing, and documentation. This layout allows for scalability, ease of collaboration, and efficient management of the project's artifacts. As the project evolves, new subdirectories for additional features, modules, or components can be easily incorporated without disrupting the overall file structure.
@@ -98,17 +98,17 @@ Within the 'models' directory of the Precision Agriculture using Satellite Image
 
 ```
 models
-├── training_scripts       # Scripts for model training using Keras
-│   ├── train_crop_classifier.py    # Script for training a crop classification model
-│   ├── train_yield_prediction.py   # Script for training a yield prediction model
-│   └── train_anomaly_detection.py   # Script for training an anomaly detection model
-├── evaluation             # Model evaluation scripts and metrics
-│   ├── evaluate_model_performance.py   # Script for evaluating the performance of trained models
-│   └── metrics                # Directory for storing evaluation metrics such as accuracy, precision, recall, etc.
-└── deployment             # Configuration files for model deployment in Kubernetes
-    ├── crop_classifier_deployment.yaml    # Kubernetes deployment configuration for the crop classification model
-    ├── yield_prediction_deployment.yaml   # Kubernetes deployment configuration for the yield prediction model
-    └── anomaly_detection_deployment.yaml   # Kubernetes deployment configuration for the anomaly detection model
+├── training_scripts       ## Scripts for model training using Keras
+│   ├── train_crop_classifier.py    ## Script for training a crop classification model
+│   ├── train_yield_prediction.py   ## Script for training a yield prediction model
+│   └── train_anomaly_detection.py   ## Script for training an anomaly detection model
+├── evaluation             ## Model evaluation scripts and metrics
+│   ├── evaluate_model_performance.py   ## Script for evaluating the performance of trained models
+│   └── metrics                ## Directory for storing evaluation metrics such as accuracy, precision, recall, etc.
+└── deployment             ## Configuration files for model deployment in Kubernetes
+    ├── crop_classifier_deployment.yaml    ## Kubernetes deployment configuration for the crop classification model
+    ├── yield_prediction_deployment.yaml   ## Kubernetes deployment configuration for the yield prediction model
+    └── anomaly_detection_deployment.yaml   ## Kubernetes deployment configuration for the anomaly detection model
 ```
 
 #### training_scripts
@@ -128,9 +128,9 @@ Within the 'deployment' directory of the Precision Agriculture using Satellite I
 
 ```
 deployment
-├── crop_classifier_deployment.yaml    # Kubernetes deployment configuration for the crop classification model
-├── yield_prediction_deployment.yaml   # Kubernetes deployment configuration for the yield prediction model
-└── anomaly_detection_deployment.yaml   # Kubernetes deployment configuration for the anomaly detection model
+├── crop_classifier_deployment.yaml    ## Kubernetes deployment configuration for the crop classification model
+├── yield_prediction_deployment.yaml   ## Kubernetes deployment configuration for the yield prediction model
+└── anomaly_detection_deployment.yaml   ## Kubernetes deployment configuration for the anomaly detection model
 ```
 
 #### crop_classifier_deployment.yaml
@@ -147,26 +147,26 @@ These YAML files encapsulate the necessary specifications to deploy each trained
 Certainly! Below is an example of a Python script for training a crop classification model using Keras with mock data. This script assumes a simplified scenario for demonstration purposes, and the actual implementation would involve real satellite imagery data preprocessing and feature engineering.
 
 ```python
-# File: models/training_scripts/train_crop_classifier.py
+## File: models/training_scripts/train_crop_classifier.py
 
 import numpy as np
 from keras.models import Sequential
 from keras.layers import Conv2D, MaxPooling2D, Flatten, Dense
 
-# Generate mock data (replace with real data loading and preprocessing)
+## Generate mock data (replace with real data loading and preprocessing)
 def generate_mock_data():
-    # Mock satellite imagery data and labels
+    ## Mock satellite imagery data and labels
     num_samples = 1000
     img_height = 64
     img_width = 64
     num_channels = 3
 
-    X = np.random.rand(num_samples, img_height, img_width, num_channels)  # Mock satellite imagery data
-    y = np.random.randint(0, 5, num_samples)  # Mock crop class labels (e.g., 5 crop classes)
+    X = np.random.rand(num_samples, img_height, img_width, num_channels)  ## Mock satellite imagery data
+    y = np.random.randint(0, 5, num_samples)  ## Mock crop class labels (e.g., 5 crop classes)
 
     return X, y
 
-# Define the crop classification model architecture
+## Define the crop classification model architecture
 def create_crop_classifier_model(input_shape, num_classes):
     model = Sequential()
     model.add(Conv2D(32, (3, 3), activation='relu', input_shape=input_shape))
@@ -181,21 +181,21 @@ def create_crop_classifier_model(input_shape, num_classes):
 
     return model
 
-# Main function for training the crop classification model
+## Main function for training the crop classification model
 def train_crop_classifier():
-    # Generate mock data
+    ## Generate mock data
     X, y = generate_mock_data()
 
-    input_shape = X.shape[1:]  # Input shape for the model
-    num_classes = len(np.unique(y))  # Number of unique crop classes
+    input_shape = X.shape[1:]  ## Input shape for the model
+    num_classes = len(np.unique(y))  ## Number of unique crop classes
 
-    # Create and compile the crop classifier model
+    ## Create and compile the crop classifier model
     crop_classifier_model = create_crop_classifier_model(input_shape, num_classes)
 
-    # Train the model
+    ## Train the model
     crop_classifier_model.fit(X, y, epochs=10, batch_size=32, validation_split=0.2)
 
-    # Save the trained model weights and architecture
+    ## Save the trained model weights and architecture
     crop_classifier_model.save('crop_classifier_model.h5')
 
 if __name__ == "__main__":
@@ -211,26 +211,26 @@ This script can be executed using Python to train the crop classification model 
 Certainly! Below is an example of a Python script for training a complex machine learning algorithm, such as a Convolutional Neural Network (CNN) for crop classification, using Keras with mock data. Please note that this script assumes a simplified scenario for demonstration purposes, and the actual implementation would involve real satellite imagery data preprocessing and feature engineering.
 
 ```python
-# File: models/training_scripts/train_complex_algorithm.py
+## File: models/training_scripts/train_complex_algorithm.py
 
 import numpy as np
 from keras.models import Sequential
 from keras.layers import Conv2D, MaxPooling2D, Flatten, Dense
 
-# Generate mock data (replace with real data loading and preprocessing)
+## Generate mock data (replace with real data loading and preprocessing)
 def generate_mock_data():
-    # Mock satellite imagery data and labels
+    ## Mock satellite imagery data and labels
     num_samples = 1000
     img_height = 64
     img_width = 64
     num_channels = 3
 
-    X = np.random.rand(num_samples, img_height, img_width, num_channels)  # Mock satellite imagery data
-    y = np.random.randint(0, 5, num_samples)  # Mock crop class labels (e.g., 5 crop classes)
+    X = np.random.rand(num_samples, img_height, img_width, num_channels)  ## Mock satellite imagery data
+    y = np.random.randint(0, 5, num_samples)  ## Mock crop class labels (e.g., 5 crop classes)
 
     return X, y
 
-# Define the complex algorithm (CNN) architecture for crop classification
+## Define the complex algorithm (CNN) architecture for crop classification
 def create_complex_algorithm(input_shape, num_classes):
     model = Sequential()
     model.add(Conv2D(32, (3, 3), activation='relu', input_shape=input_shape))
@@ -247,21 +247,21 @@ def create_complex_algorithm(input_shape, num_classes):
 
     return model
 
-# Main function for training the complex algorithm (CNN) for crop classification
+## Main function for training the complex algorithm (CNN) for crop classification
 def train_complex_algorithm():
-    # Generate mock data
+    ## Generate mock data
     X, y = generate_mock_data()
 
-    input_shape = X.shape[1:]  # Input shape for the model
-    num_classes = len(np.unique(y))  # Number of unique crop classes
+    input_shape = X.shape[1:]  ## Input shape for the model
+    num_classes = len(np.unique(y))  ## Number of unique crop classes
 
-    # Create and compile the complex algorithm model (CNN)
+    ## Create and compile the complex algorithm model (CNN)
     complex_algorithm_model = create_complex_algorithm(input_shape, num_classes)
 
-    # Train the model
+    ## Train the model
     complex_algorithm_model.fit(X, y, epochs=15, batch_size=32, validation_split=0.2)
 
-    # Save the trained model weights and architecture
+    ## Save the trained model weights and architecture
     complex_algorithm_model.save('complex_algorithm_model.h5')
 
 if __name__ == "__main__":

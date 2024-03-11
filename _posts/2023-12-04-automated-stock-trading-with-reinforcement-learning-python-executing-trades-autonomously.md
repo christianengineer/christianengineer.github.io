@@ -5,7 +5,7 @@ permalink: posts/automated-stock-trading-with-reinforcement-learning-python-exec
 layout: article
 ---
 
-# AI Automated Stock Trading with Reinforcement Learning
+## AI Automated Stock Trading with Reinforcement Learning
 
 ## Objectives
 The main objective of this repository is to build a system that can autonomously execute trades in the stock market using reinforcement learning techniques. The system aims to learn optimal trading strategies through interactions with the market and maximize returns while minimizing risks. The specific objectives include:
@@ -230,24 +230,24 @@ def complex_machine_learning_algorithm(file_path):
     np.array: Array of predicted trading actions or signals based on the machine learning algorithm.
     """
 
-    # Load mock stock market data
+    ## Load mock stock market data
     data = pd.read_csv(file_path)
 
-    # Perform data preprocessing and feature engineering
-    # ...
-    # ...
+    ## Perform data preprocessing and feature engineering
+    ## ...
+    ## ...
 
-    # Define input features and target variable
+    ## Define input features and target variable
     X = data[['feature1', 'feature2', 'feature3']]
     y = data['target_variable']
 
-    # Initialize and train the complex machine learning model
-    # Replace the following code with your actual complex machine learning algorithm
+    ## Initialize and train the complex machine learning model
+    ## Replace the following code with your actual complex machine learning algorithm
     from sklearn.ensemble import RandomForestClassifier
     model = RandomForestClassifier(n_estimators=100, random_state=42)
     model.fit(X, y)
 
-    # Generate predictions for trading actions or signals
+    ## Generate predictions for trading actions or signals
     trading_predictions = model.predict(X)
 
     return trading_predictions
@@ -270,29 +270,29 @@ def complex_machine_learning_algorithm(file_path):
     list: List of predicted trading actions or signals based on the machine learning algorithm.
     """
 
-    # Load mock stock market data
+    ## Load mock stock market data
     data = pd.read_csv(file_path)
 
-    # Perform data preprocessing and feature engineering
-    # ...
+    ## Perform data preprocessing and feature engineering
+    ## ...
 
-    # Define input features and target variable
+    ## Define input features and target variable
     X = data[['feature1', 'feature2', 'feature3']]
     y = data['target_variable']
 
-    # Split data into training and testing sets
+    ## Split data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Standardize features by removing the mean and scaling to unit variance
+    ## Standardize features by removing the mean and scaling to unit variance
     scaler = StandardScaler()
     X_train = scaler.fit_transform(X_train)
     X_test = scaler.transform(X_test)
 
-    # Initialize and train the complex machine learning model
+    ## Initialize and train the complex machine learning model
     model = RandomForestClassifier(n_estimators=100, random_state=42)
     model.fit(X_train, y_train)
 
-    # Generate predictions for trading actions or signals
+    ## Generate predictions for trading actions or signals
     trading_predictions = model.predict(X_test)
 
     return trading_predictions.tolist()

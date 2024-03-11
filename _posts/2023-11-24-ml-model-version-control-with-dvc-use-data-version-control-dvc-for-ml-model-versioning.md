@@ -78,7 +78,7 @@ The infrastructure for ML model version control using DVC involves setting up a 
 
 By establishing a well-architected infrastructure for ML model version control with DVC, the AI application development can effectively manage and version data-intensive, AI applications that leverage the use of Machine Learning and Deep Learning.
 
-# Scalable File Structure for ML Model Version Control with DVC
+## Scalable File Structure for ML Model Version Control with DVC
 
 To organize a scalable file structure for ML model version control using DVC, it's essential to establish a well-defined directory layout for data, code, models, and DVC-specific files. The following hierarchical structure is designed to efficiently version control data and models while ensuring scalability and ease of management.
 
@@ -262,34 +262,34 @@ from sklearn.metrics import accuracy_score
 import dvc.api
 
 def train_and_evaluate_model(data_filepath):
-    # Load mock data from DVC-tracked data file
+    ## Load mock data from DVC-tracked data file
     with dvc.api.open(data_filepath, repo="https://github.com/your-username/your-dvc-repo") as f:
         df = pd.read_csv(f)
 
-    # Preprocessing: Assuming the mock data has been preprocessed
+    ## Preprocessing: Assuming the mock data has been preprocessed
     X = df.drop('target_column', axis=1)
     y = df['target_column']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize and train the model
+    ## Initialize and train the model
     model = RandomForestClassifier(n_estimators=100, random_state=42)
     model.fit(X_train, y_train)
 
-    # Make predictions on the test set
+    ## Make predictions on the test set
     y_pred = model.predict(X_test)
 
-    # Evaluate the model
+    ## Evaluate the model
     accuracy = accuracy_score(y_test, y_pred)
     print(f"Model accuracy: {accuracy}")
 
-    # Assuming the model evaluation results are logged or stored for further analysis
+    ## Assuming the model evaluation results are logged or stored for further analysis
 
-    # Return the trained model for deployment or further use
+    ## Return the trained model for deployment or further use
     return model
 
-# Example usage
+## Example usage
 data_filepath = "data/mock_data.csv"
 trained_model = train_and_evaluate_model(data_filepath)
 ```
@@ -304,18 +304,18 @@ from sklearn.model_selection import train_test_split
 import dvc.api
 
 def train_and_evaluate_deep_learning_model(data_filepath):
-    # Load mock data from DVC-tracked data file
+    ## Load mock data from DVC-tracked data file
     with dvc.api.open(data_filepath, repo="https://github.com/your-username/your-dvc-repo") as f:
         df = pd.read_csv(f)
 
-    # Preprocessing: Assuming the mock data has been preprocessed
+    ## Preprocessing: Assuming the mock data has been preprocessed
     X = df.drop('target_column', axis=1)
     y = df['target_column']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Build the deep learning model
+    ## Build the deep learning model
     model = tf.keras.Sequential([
         tf.keras.layers.Dense(128, activation='relu', input_shape=(X.shape[1],)),
         tf.keras.layers.Dense(64, activation='relu'),
@@ -325,19 +325,19 @@ def train_and_evaluate_deep_learning_model(data_filepath):
                   loss='binary_crossentropy',
                   metrics=['accuracy'])
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y_test))
 
-    # Evaluate the model
+    ## Evaluate the model
     _, accuracy = model.evaluate(X_test, y_test)
     print(f"Model accuracy: {accuracy}")
 
-    # Assuming the model evaluation results are logged or stored for further analysis
+    ## Assuming the model evaluation results are logged or stored for further analysis
 
-    # Return the trained model for deployment or further use
+    ## Return the trained model for deployment or further use
     return model
 
-# Example usage
+## Example usage
 data_filepath = "data/mock_data.csv"
 trained_dl_model = train_and_evaluate_deep_learning_model(data_filepath)
 ```

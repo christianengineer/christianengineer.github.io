@@ -5,7 +5,7 @@ permalink: posts/automated-disease-vector-tracking-tensorflow-opencv-for-public-
 layout: article
 ---
 
-# AI Automated Disease Vector Tracking Project
+## AI Automated Disease Vector Tracking Project
 
 ## Objectives
 The objectives of the AI Automated Disease Vector Tracking project are to:
@@ -30,7 +30,7 @@ The chosen libraries for this project are:
 
 By leveraging these libraries and design strategies, the AI Automated Disease Vector Tracking system aims to provide a robust, scalable, and efficient solution for public health authorities to combat vector-borne diseases.
 
-# MLOps Infrastructure for Automated Disease Vector Tracking
+## MLOps Infrastructure for Automated Disease Vector Tracking
 
 To build an effective MLOps infrastructure for the Automated Disease Vector Tracking system, we will integrate the following components and best practices:
 
@@ -61,50 +61,50 @@ By integrating these components and best practices, the MLOps infrastructure for
 AI_Disease_Vector_Tracking/
 │
 ├── data/
-│   ├── raw/                    # Raw data from sources
-│   ├── processed/              # Processed and labeled data
-│   ├── augmented/              # Augmented data for model training
+│   ├── raw/                    ## Raw data from sources
+│   ├── processed/              ## Processed and labeled data
+│   ├── augmented/              ## Augmented data for model training
 │   
 ├── models/
-│   ├── object_detection/       # Trained object detection models
-│   ├── classification/         # Trained classification models
-│   ├── model_artifacts/        # Serialized model artifacts
+│   ├── object_detection/       ## Trained object detection models
+│   ├── classification/         ## Trained classification models
+│   ├── model_artifacts/        ## Serialized model artifacts
 │   
 ├── notebooks/
-│   ├── data_exploration.ipynb  # Jupyter notebook for data exploration
-│   ├── model_training.ipynb     # Jupyter notebook for model training
-│   ├── model_evaluation.ipynb   # Jupyter notebook for model evaluation
+│   ├── data_exploration.ipynb  ## Jupyter notebook for data exploration
+│   ├── model_training.ipynb     ## Jupyter notebook for model training
+│   ├── model_evaluation.ipynb   ## Jupyter notebook for model evaluation
 │   
 ├── src/
-│   ├── data_processing/        # Scripts for data preprocessing
-│   ├── model_training/         # Scripts for training machine learning models
-│   ├── model_evaluation/       # Scripts for model evaluation and validation
-│   ├── deployment/             # Scripts for model deployment
-│   ├── utils/                  # Utility scripts and functions
+│   ├── data_processing/        ## Scripts for data preprocessing
+│   ├── model_training/         ## Scripts for training machine learning models
+│   ├── model_evaluation/       ## Scripts for model evaluation and validation
+│   ├── deployment/             ## Scripts for model deployment
+│   ├── utils/                  ## Utility scripts and functions
 │   
 ├── infrastructure/
-│   ├── dockerfiles/            # Dockerfiles for model serving and deployment
-│   ├── kubernetes/              # Kubernetes deployment configurations
-│   ├── terraform/               # Infrastructure as code for cloud setup
-│   ├── deployment_config/       # Configuration files for deployment pipelines
+│   ├── dockerfiles/            ## Dockerfiles for model serving and deployment
+│   ├── kubernetes/              ## Kubernetes deployment configurations
+│   ├── terraform/               ## Infrastructure as code for cloud setup
+│   ├── deployment_config/       ## Configuration files for deployment pipelines
 │   
 ├── documentation/
-│   ├── data_dictionary.md      # Documentation for data attributes and labels
-│   ├── model_architecture.md    # Documentation for model architecture
-│   ├── deployment_guide.md      # Deployment instructions and configurations
+│   ├── data_dictionary.md      ## Documentation for data attributes and labels
+│   ├── model_architecture.md    ## Documentation for model architecture
+│   ├── deployment_guide.md      ## Deployment instructions and configurations
 │   
 ├── tests/
-│   ├── unit_tests/              # Unit tests for various modules
-│   ├── integration_tests/       # Integration tests for end-to-end functionality
+│   ├── unit_tests/              ## Unit tests for various modules
+│   ├── integration_tests/       ## Integration tests for end-to-end functionality
 │   
 ├── config/
-│   ├── environment_config.yml   # Configuration for environment variables
-│   ├── model_config.yml         # Configuration for model hyperparameters
-│   ├── deployment_config.yml    # Configuration for deployment settings
+│   ├── environment_config.yml   ## Configuration for environment variables
+│   ├── model_config.yml         ## Configuration for model hyperparameters
+│   ├── deployment_config.yml    ## Configuration for deployment settings
 │   
-├── README.md                    # Project overview, setup instructions, and guidelines
-├── requirements.txt             # Python dependencies
-├── LICENSE                      # License information
+├── README.md                    ## Project overview, setup instructions, and guidelines
+├── requirements.txt             ## Python dependencies
+├── LICENSE                      ## License information
 ```
 
 The `models/` directory in the Automated Disease Vector Tracking repository contains the trained machine learning models and their associated artifacts for object detection and classification. Below is an expanded view of the `models/` directory structure and its files:
@@ -113,23 +113,23 @@ The `models/` directory in the Automated Disease Vector Tracking repository cont
 models/
 │
 ├── object_detection/
-│   ├── ssd_mobilenet_v2/             # Trained object detection model
-│   │   ├── saved_model/              # Serialized model in TensorFlow SavedModel format
-│   │   ├── inference_graph/          # Frozen inference graph for deployment
-│   │   ├── evaluation_results/       # Evaluation metrics and validation results
-│   │   ├── training_logs/            # Logs and checkpoints from model training
+│   ├── ssd_mobilenet_v2/             ## Trained object detection model
+│   │   ├── saved_model/              ## Serialized model in TensorFlow SavedModel format
+│   │   ├── inference_graph/          ## Frozen inference graph for deployment
+│   │   ├── evaluation_results/       ## Evaluation metrics and validation results
+│   │   ├── training_logs/            ## Logs and checkpoints from model training
 │   
 ├── classification/
-│   ├── resnet50/                     # Trained classification model
-│   │   ├── saved_model/              # Serialized model in TensorFlow SavedModel format
-│   │   ├── model_weights/            # Model weights and configuration
-│   │   ├── evaluation_results/       # Evaluation metrics and validation results
-│   │   ├── training_logs/            # Logs and checkpoints from model training
+│   ├── resnet50/                     ## Trained classification model
+│   │   ├── saved_model/              ## Serialized model in TensorFlow SavedModel format
+│   │   ├── model_weights/            ## Model weights and configuration
+│   │   ├── evaluation_results/       ## Evaluation metrics and validation results
+│   │   ├── training_logs/            ## Logs and checkpoints from model training
 │   
 ├── model_artifacts/
-│   ├── model_metadata.json           # Metadata for trained models
-│   ├── performance_metrics.json      # Model performance metrics
-│   ├── model_version_history.md      # History of model versions and changes
+│   ├── model_metadata.json           ## Metadata for trained models
+│   ├── performance_metrics.json      ## Model performance metrics
+│   ├── model_version_history.md      ## History of model versions and changes
 │ 
 ```
 
@@ -145,24 +145,24 @@ The `deployment/` directory in the Automated Disease Vector Tracking repository 
 deployment/
 │
 ├── deployment_scripts/
-│   ├── deploy_object_detection_model.sh       # Script for deploying the object detection model
-│   ├── deploy_classification_model.sh         # Script for deploying the classification model
-│   ├── update_model_version.sh                # Script for updating the deployed model version
+│   ├── deploy_object_detection_model.sh       ## Script for deploying the object detection model
+│   ├── deploy_classification_model.sh         ## Script for deploying the classification model
+│   ├── update_model_version.sh                ## Script for updating the deployed model version
 │
 ├── model_serving/
-│   ├── dockerfile_object_detection           # Dockerfile for creating the object detection model serving container
-│   ├── dockerfile_classification             # Dockerfile for creating the classification model serving container
-│   ├── model_serving_config.yml              # Configuration file for model serving settings
+│   ├── dockerfile_object_detection           ## Dockerfile for creating the object detection model serving container
+│   ├── dockerfile_classification             ## Dockerfile for creating the classification model serving container
+│   ├── model_serving_config.yml              ## Configuration file for model serving settings
 │
 ├── cloud_deployment/
-│   ├── kubernetes_config/                    # Kubernetes deployment configurations
-│   ├── terraform_scripts/                    # Infrastructure as code scripts for cloud deployment
-│   ├── cloud_setup_guide.md                  # Guide for setting up the cloud infrastructure
+│   ├── kubernetes_config/                    ## Kubernetes deployment configurations
+│   ├── terraform_scripts/                    ## Infrastructure as code scripts for cloud deployment
+│   ├── cloud_setup_guide.md                  ## Guide for setting up the cloud infrastructure
 │
 ├── endpoint_documentation/
-│   ├── object_detection_api_docs.md          # Documentation for the object detection model API
-│   ├── classification_api_docs.md            # Documentation for the classification model API
-│   ├── endpoint_testing_guide.md             # Guide for testing the deployed endpoints
+│   ├── object_detection_api_docs.md          ## Documentation for the object detection model API
+│   ├── classification_api_docs.md            ## Documentation for the classification model API
+│   ├── endpoint_testing_guide.md             ## Guide for testing the deployed endpoints
 ```
 
 The `deployment_scripts/` directory contains shell scripts for deploying the object detection and classification models. These scripts automate the deployment process, ensuring consistency and reliability across different environments.
@@ -186,64 +186,64 @@ import cv2
 import os
 from sklearn.model_selection import train_test_split
 
-# Mock data paths
+## Mock data paths
 data_dir = 'data/processed'
 label_file = 'data/processed/labels.csv'
 
-# Load mock data
+## Load mock data
 def load_data(data_dir, label_file):
-    # Code to load mock data from the data directory and labels from the label file
-    # Mock implementation
+    ## Code to load mock data from the data directory and labels from the label file
+    ## Mock implementation
     images = []
     labels = []
     for image_file in os.listdir(data_dir):
         img = cv2.imread(os.path.join(data_dir, image_file))
-        # Preprocess and augment the images as necessary
+        ## Preprocess and augment the images as necessary
         images.append(img)
-        # Extract labels from the label file or image metadata
+        ## Extract labels from the label file or image metadata
         labels.append(label_file[image_file])
     return np.array(images), np.array(labels)
 
-# Preprocessing and augmentation
+## Preprocessing and augmentation
 def preprocess_data(images, labels):
-    # Code for preprocessing and augmentation of the data
-    # Mock implementation
-    preprocessed_images = images  # Placeholder for actual preprocessing steps
+    ## Code for preprocessing and augmentation of the data
+    ## Mock implementation
+    preprocessed_images = images  ## Placeholder for actual preprocessing steps
     return preprocessed_images, labels
 
-# Define model architecture
+## Define model architecture
 def create_model(input_shape, num_classes):
     model = tf.keras.models.Sequential([
-        # Define the layers for the model architecture
-        # Mock implementation
+        ## Define the layers for the model architecture
+        ## Mock implementation
         tf.keras.layers.Conv2D(32, (3, 3), activation='relu', input_shape=input_shape),
         tf.keras.layers.MaxPooling2D((2, 2)),
         tf.keras.layers.Flatten(),
         tf.keras.layers.Dense(64, activation='relu'),
         tf.keras.layers.Dense(num_classes, activation='softmax')
     ])
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
     return model
 
-# Load mock data
+## Load mock data
 images, labels = load_data(data_dir, label_file)
 
-# Preprocess data
+## Preprocess data
 preprocessed_images, labels = preprocess_data(images, labels)
 
-# Split the data into training and validation sets
+## Split the data into training and validation sets
 train_images, val_images, train_labels, val_labels = train_test_split(preprocessed_images, labels, test_size=0.2, random_state=42)
 
-# Define model parameters
+## Define model parameters
 input_shape = train_images.shape[1:]
 num_classes = len(np.unique(train_labels))
 
-# Create and train the model
+## Create and train the model
 model = create_model(input_shape, num_classes)
 model.fit(train_images, train_labels, epochs=10, validation_data=(val_images, val_labels))
 
-# Save the trained model
+## Save the trained model
 model.save('models/classification/disease_vector_model')
 ```
 
@@ -262,34 +262,34 @@ import cv2
 import os
 from sklearn.model_selection import train_test_split
 
-# Mock data paths
+## Mock data paths
 data_dir = 'data/processed'
 label_file = 'data/processed/labels.csv'
 
-# Load mock data
+## Load mock data
 def load_data(data_dir, label_file):
-    # Code to load mock data from the data directory and labels from the label file
-    # Mock implementation
+    ## Code to load mock data from the data directory and labels from the label file
+    ## Mock implementation
     images = []
     labels = []
     for image_file in os.listdir(data_dir):
         img = cv2.imread(os.path.join(data_dir, image_file))
-        # Preprocess and augment the images as necessary
+        ## Preprocess and augment the images as necessary
         images.append(img)
-        # Extract labels from the label file or image metadata
+        ## Extract labels from the label file or image metadata
         labels.append(label_file[image_file])
     return np.array(images), np.array(labels)
 
-# Preprocessing and augmentation
+## Preprocessing and augmentation
 def preprocess_data(images, labels):
-    # Code for preprocessing and augmentation of the data
-    # Mock implementation
-    preprocessed_images = images  # Placeholder for actual preprocessing steps
+    ## Code for preprocessing and augmentation of the data
+    ## Mock implementation
+    preprocessed_images = images  ## Placeholder for actual preprocessing steps
     return preprocessed_images, labels
 
-# Complex machine learning algorithm
+## Complex machine learning algorithm
 def complex_model_algorithm(train_images, train_labels, val_images, val_labels):
-    # Create a complex machine learning model using TensorFlow
+    ## Create a complex machine learning model using TensorFlow
     model = Sequential([
         Conv2D(32, (3, 3), activation='relu', input_shape=(64, 64, 3)),
         MaxPooling2D(pool_size=(2, 2)),
@@ -304,23 +304,23 @@ def complex_model_algorithm(train_images, train_labels, val_images, val_labels):
 
     model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
-    # Train the model
+    ## Train the model
     model.fit(train_images, train_labels, epochs=10, validation_data=(val_images, val_labels))
 
     return model
 
-# Load mock data
+## Load mock data
 images, labels = load_data(data_dir, label_file)
 
-# Preprocess data
+## Preprocess data
 train_images, val_images, train_labels, val_labels = train_test_split(images, labels, test_size=0.2, random_state=42)
 preprocessed_train_images, train_labels = preprocess_data(train_images, train_labels)
 preprocessed_val_images, val_labels = preprocess_data(val_images, val_labels)
 
-# Train a complex machine learning model
+## Train a complex machine learning model
 trained_model = complex_model_algorithm(preprocessed_train_images, train_labels, preprocessed_val_images, val_labels)
 
-# Save the trained model
+## Save the trained model
 model_path = 'models/object_detection/disease_vector_model'
 tf.saved_model.save(trained_model, model_path)
 ```

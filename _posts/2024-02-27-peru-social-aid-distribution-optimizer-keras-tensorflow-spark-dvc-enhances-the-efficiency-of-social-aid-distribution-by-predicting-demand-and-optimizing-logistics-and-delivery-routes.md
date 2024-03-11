@@ -5,7 +5,7 @@ permalink: posts/peru-social-aid-distribution-optimizer-keras-tensorflow-spark-d
 layout: article
 ---
 
-# AI Peru Social Aid Distribution Optimizer
+## AI Peru Social Aid Distribution Optimizer
 
 ## Objectives:
 - Predict demand for social aid to ensure resources are allocated effectively.
@@ -39,7 +39,7 @@ layout: article
 
 By leveraging these libraries and system design strategies, the AI Peru Social Aid Distribution Optimizer can efficiently predict demand, optimize logistics, and improve the overall efficiency of social aid distribution.
 
-# MLOps Infrastructure for Peru Social Aid Distribution Optimizer
+## MLOps Infrastructure for Peru Social Aid Distribution Optimizer
 
 ## Key Components:
 1. **Data Pipeline**:
@@ -89,7 +89,7 @@ By leveraging these libraries and system design strategies, the AI Peru Social A
 
 By setting up a robust MLOps infrastructure integrating Keras, TensorFlow, Spark, DVC, and optimization algorithms, the Peru Social Aid Distribution Optimizer can efficiently predict demand, optimize logistics, and enhance the overall efficiency of social aid distribution while ensuring scalability and maintainability of the system.
 
-# Scalable File Structure for Peru Social Aid Distribution Optimizer
+## Scalable File Structure for Peru Social Aid Distribution Optimizer
 
 ## Project Structure:
 ```
@@ -145,7 +145,7 @@ Peru_Social_Aid_Distribution_Optimizer/
 
 By organizing the project into distinct directories based on functionality, it becomes easier to manage, maintain, and scale the Peru Social Aid Distribution Optimizer repository. Each component has its designated place, making it straightforward for team members to locate and work on specific parts of the project. This structure fosters collaboration and ensures a standardized approach to developing and deploying the AI application.
 
-# Models Directory for Peru Social Aid Distribution Optimizer
+## Models Directory for Peru Social Aid Distribution Optimizer
 
 ## Project Structure:
 ```
@@ -168,7 +168,7 @@ models/
 
 The `models/` directory contains the trained AI models that are crucial for predicting demand and optimizing logistics and delivery routes in the Peru Social Aid Distribution Optimizer application. These models are pivotal for driving the decision-making process and optimizing the distribution of social aid efficiently. The structure allows for easy access to the models, simplifying deployment and integration with the rest of the system components.
 
-# Deployment Directory for Peru Social Aid Distribution Optimizer
+## Deployment Directory for Peru Social Aid Distribution Optimizer
 
 ## Project Structure:
 ```
@@ -197,7 +197,7 @@ The `deployment/` directory contains scripts and configuration files necessary f
 I'll provide a Python script for training a demand prediction model using mock data for the Peru Social Aid Distribution Optimizer project. We will simulate the training process using Keras and TensorFlow. Let's consider the file path as `scripts/train_demand_prediction_model.py`.
 
 ```python
-# train_demand_prediction_model.py
+## train_demand_prediction_model.py
 
 import numpy as np
 import pandas as pd
@@ -206,30 +206,30 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
 from tensorflow.keras.callbacks import ModelCheckpoint
 
-# Generate mock data for training
+## Generate mock data for training
 np.random.seed(42)
 num_samples = 1000
-features = np.random.rand(num_samples, 3)  # Mock features (3 input features)
-target = 2 * features[:, 0] + 3 * features[:, 1] - 1.5 * features[:, 2] + np.random.normal(0, 1, num_samples)  # Mock target variable
+features = np.random.rand(num_samples, 3)  ## Mock features (3 input features)
+target = 2 * features[:, 0] + 3 * features[:, 1] - 1.5 * features[:, 2] + np.random.normal(0, 1, num_samples)  ## Mock target variable
 
-# Split data into training and validation sets
+## Split data into training and validation sets
 X_train, X_val, y_train, y_val = train_test_split(features, target, test_size=0.2, random_state=42)
 
-# Define a simple feedforward neural network model
+## Define a simple feedforward neural network model
 model = Sequential()
 model.add(Dense(64, activation='relu', input_shape=(3,)))
-model.add(Dense(1))  # Output layer
+model.add(Dense(1))  ## Output layer
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam', loss='mean_squared_error')
 
-# Use ModelCheckpoint callback to save the best model during training
+## Use ModelCheckpoint callback to save the best model during training
 checkpoint_callback = ModelCheckpoint('models/keras_models/demand_prediction_model.h5', monitor='val_loss', save_best_only=True)
 
-# Train the model
+## Train the model
 model.fit(X_train, y_train, validation_data=(X_val, y_val), epochs=50, batch_size=32, callbacks=[checkpoint_callback])
 
-# Save the final model
+## Save the final model
 model.save('models/keras_models/demand_prediction_model_final.h5')
 
 print("Training completed. Model saved.")
@@ -251,7 +251,7 @@ This script simulates the training process for the demand prediction model and s
 I'll provide a Python script for implementing a complex machine learning algorithm for route optimization using Spark with mock data for the Peru Social Aid Distribution Optimizer project. Let's consider the file path as `optimization/route_optimization_algorithm.py`.
 
 ```python
-# route_optimization_algorithm.py
+## route_optimization_algorithm.py
 
 from pyspark.sql import SparkSession
 from pyspark.ml.feature import VectorAssembler
@@ -259,48 +259,48 @@ from pyspark.ml.regression import RandomForestRegressor
 from pyspark.ml import Pipeline
 from pyspark.ml.evaluation import RegressionEvaluator
 
-# Create Spark session
+## Create Spark session
 spark = SparkSession.builder \
     .appName("RouteOptimization") \
     .getOrCreate()
 
-# Generate mock data for route optimization
+## Generate mock data for route optimization
 num_samples = 1000
 features = spark.sparkContext.parallelize([(1.2, 2.3, 3.4), (4.5, 5.6, 6.7)] * (num_samples//2))
 data = features.map(lambda x: (x, x[0] + x[1] + x[2] + 0.1))
 
-# Create DataFrame from the mock data
+## Create DataFrame from the mock data
 df = data.toDF(["features", "label"])
 
-# Vectorize features
+## Vectorize features
 assembler = VectorAssembler(inputCols=["features"], outputCol="features_vec")
 df_vectorized = assembler.transform(df)
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 train_data, test_data = df_vectorized.randomSplit([0.8, 0.2], seed=42)
 
-# Build the Random Forest regression model
+## Build the Random Forest regression model
 rf = RandomForestRegressor(featuresCol="features_vec", labelCol="label")
 
-# Create a Pipeline
+## Create a Pipeline
 pipeline = Pipeline(stages=[rf])
 
-# Train the model
+## Train the model
 model = pipeline.fit(train_data)
 
-# Make predictions
+## Make predictions
 predictions = model.transform(test_data)
 
-# Evaluate the model
+## Evaluate the model
 evaluator = RegressionEvaluator(labelCol="label", predictionCol="prediction", metricName="rmse")
 rmse = evaluator.evaluate(predictions)
 
 print(f"Root Mean Squared Error (RMSE) on test data: {rmse}")
 
-# Save the Trained Model
+## Save the Trained Model
 model.stages[0].save("models/spark_models/route_optimization_model")
 
-# Stop the Spark session
+## Stop the Spark session
 spark.stop()
 ```
 

@@ -5,7 +5,7 @@ permalink: posts/private-security-threat-intelligence-pytorch-opencv-kafka-docke
 layout: article
 ---
 
-# Private Security Threat Intelligence Solution (PyTorch, OpenCV, Kafka, Docker) for Prosegur
+## Private Security Threat Intelligence Solution (PyTorch, OpenCV, Kafka, Docker) for Prosegur
 
 ## Objective:
 Develop and deploy a scalable, production-ready machine learning solution to preemptively identify and mitigate security threats, enhancing client safety across Peru for Prosegur's Security Operations Coordinator.
@@ -153,31 +153,31 @@ import pandas as pd
 from sklearn.preprocessing import StandardScaler
 from sklearn.utils import resample
 
-# Load surveillance data with metadata
+## Load surveillance data with metadata
 data = pd.read_csv('surveillance_data.csv')
 
-# Data Preprocessing Steps:
-# Step 1: Handling Missing Values
-data.fillna(method='ffill', inplace=True)  # Forward fill missing values
+## Data Preprocessing Steps:
+## Step 1: Handling Missing Values
+data.fillna(method='ffill', inplace=True)  ## Forward fill missing values
 
-# Step 2: Handling Imbalanced Classes
+## Step 2: Handling Imbalanced Classes
 class_counts = data['threat_level'].value_counts()
 minority_class = class_counts.idxmin()
 oversampled_data = resample(data[data['threat_level'] == minority_class], 
                             replace=True, n_samples=class_counts.max(), random_state=42)
 data = pd.concat([data, oversampled_data])
 
-# Step 3: Feature Scaling
+## Step 3: Feature Scaling
 scaler = StandardScaler()
 data[['feature1', 'feature2', 'feature3']] = scaler.fit_transform(data[['feature1', 'feature2', 'feature3']])
 
-# Step 4: Data Anonymization
-data.drop(['customer_id', 'location'], axis=1, inplace=True)  # Drop sensitive information
+## Step 4: Data Anonymization
+data.drop(['customer_id', 'location'], axis=1, inplace=True)  ## Drop sensitive information
 
-# Step 5: Data Drift Detection
-# Implement data drift detection algorithm to monitor and adapt to changing data distributions
+## Step 5: Data Drift Detection
+## Implement data drift detection algorithm to monitor and adapt to changing data distributions
 
-# Step 6: Save Preprocessed Data
+## Step 6: Save Preprocessed Data
 data.to_csv('preprocessed_surveillance_data.csv', index=False)
 ```
 
@@ -250,10 +250,10 @@ import pandas as pd
 from sklearn.preprocessing import StandardScaler
 from faker import Faker
 
-# Initialize Faker for generating synthetic data
+## Initialize Faker for generating synthetic data
 fake = Faker()
 
-# Generate fictitious surveillance dataset
+## Generate fictitious surveillance dataset
 num_samples = 1000
 features = ['color_histogram_feature1', 'edge_intensity_max', 'optical_flow_direction_x', 'texture_variance_region1']
 metadata = ['timestamp', 'location', 'event_type']
@@ -269,20 +269,20 @@ data = {'customer_id': [fake.random_int(min=1000, max=9999) for _ in range(num_s
 
 dataset = pd.DataFrame(data)
 
-# Feature Engineering - Scale numerical features
+## Feature Engineering - Scale numerical features
 scaler = StandardScaler()
 dataset[['color_histogram_feature1', 'edge_intensity_max', 'texture_variance_region1']] = \
     scaler.fit_transform(dataset[['color_histogram_feature1', 'edge_intensity_max', 'texture_variance_region1']])
 
-# Save fictitious dataset to CSV
+## Save fictitious dataset to CSV
 dataset.to_csv('fictitious_surveillance_dataset.csv', index=False)
 
-# Validation Strategy - Split dataset into training and validation sets
+## Validation Strategy - Split dataset into training and validation sets
 train_split = int(0.8 * len(dataset))
 train_data = dataset[:train_split]
 val_data = dataset[train_split:]
 
-# Validate dataset by checking key statistics and features
+## Validate dataset by checking key statistics and features
 print("Training Data Info:")
 print(train_data.info())
 print("\nTraining Data Description:")
@@ -341,28 +341,28 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 
-# Load preprocessed dataset
+## Load preprocessed dataset
 data = pd.read_csv('preprocessed_surveillance_data.csv')
 
-# Split data into features and target variable
+## Split data into features and target variable
 X = data[['color_histogram_feature1', 'edge_intensity_max', 'optical_flow_direction_x', 'texture_variance_region1']]
 y = data['threat_level']
 
-# Split data into training and validation sets
+## Split data into training and validation sets
 X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Feature Scaling
+## Feature Scaling
 scaler = StandardScaler()
 X_train = scaler.fit_transform(X_train)
 X_val = scaler.transform(X_val)
 
-# Convert data to PyTorch tensors
+## Convert data to PyTorch tensors
 X_train = torch.tensor(X_train, dtype=torch.float32)
 y_train = torch.tensor(y_train.values, dtype=torch.long)
 X_val = torch.tensor(X_val, dtype=torch.float32)
 y_val = torch.tensor(y_val.values, dtype=torch.long)
 
-# Define RNN model using PyTorch
+## Define RNN model using PyTorch
 class RNNModel(nn.Module):
     def __init__(self, input_size, hidden_size, num_classes):
         super(RNNModel, self).__init__()
@@ -374,12 +374,12 @@ class RNNModel(nn.Module):
         out = self.fc(out[:, -1, :])
         return out
 
-# Initialize model, loss function, and optimizer
+## Initialize model, loss function, and optimizer
 model = RNNModel(input_size=X_train.shape[1], hidden_size=64, num_classes=len(data['threat_level'].unique()))
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters(), lr=0.001)
 
-# Training loop
+## Training loop
 num_epochs = 10
 for epoch in range(num_epochs):
     optimizer.zero_grad()
@@ -389,7 +389,7 @@ for epoch in range(num_epochs):
     optimizer.step()
     print(f'Epoch {epoch+1}, Loss: {loss.item()}')
 
-# Model evaluation on validation set
+## Model evaluation on validation set
 with torch.no_grad():
     val_outputs = model(X_val)
     val_loss = criterion(val_outputs, y_val)
@@ -457,26 +457,26 @@ This code exemplifies a structured approach to developing a reliable and scalabl
 By following this deployment plan, leveraging the recommended tools, and referring to the provided official documentation links, the Security Threat Intelligence project can ensure a smooth and efficient deployment of the machine learning model into a live production environment, tailored to the project's specific demands and characteristics.
 
 ```Dockerfile
-# Use a base PyTorch image
+## Use a base PyTorch image
 FROM pytorch/pytorch:latest
 
-# Set working directory
+## Set working directory
 WORKDIR /app
 
-# Copy project files to the container
+## Copy project files to the container
 COPY . /app
 
-# Install additional dependencies
+## Install additional dependencies
 RUN pip install -r requirements.txt
 
-# Set environment variables
+## Set environment variables
 ENV CUDA_VISIBLE_DEVICES=0
 ENV OMP_NUM_THREADS=1
 
-# Expose port for Flask API
+## Expose port for Flask API
 EXPOSE 5000
 
-# Command to run the Flask API
+## Command to run the Flask API
 CMD [ "python", "app.py" ]
 ```
 

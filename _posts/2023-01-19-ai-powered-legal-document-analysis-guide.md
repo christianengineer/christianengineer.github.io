@@ -5,7 +5,7 @@ permalink: posts/ai-powered-legal-document-analysis-guide
 layout: article
 ---
 
-# AI-Powered Legal Document Analysis
+## AI-Powered Legal Document Analysis
 
 ## Description
 
@@ -45,7 +45,7 @@ The following libraries and services will be implemented in the project to guara
 
 These tools and libraries will be selected to expediently handle large amounts of data, support concurrent user sessions, offer high performing AI computations, and provide superior functionality.
 
-# AI-Powered Legal Document Analysis
+## AI-Powered Legal Document Analysis
 
 Below is a brief scalable file structure for this project repository.
 
@@ -111,14 +111,14 @@ Below is a brief scalable file structure for this project repository.
 
 - `.gitignore`: to specify the files and directories that Git should ignore when creating commits.
 
-# AI-Powered Legal Document Analysis - AI Logic File
+## AI-Powered Legal Document Analysis - AI Logic File
 
 This fictitious Python file, `AI_Analysis.py`, will handle the logic for AI-Powered Legal Document Analysis. The location of this file would be under the `NLP` directory, i.e., `src/backend/NLP/AI_Analysis.py`. See below for an example of what the structure and content of this file could look like.
 
 ```python
-# File Location: src/backend/NLP/AI_Analysis.py
+## File Location: src/backend/NLP/AI_Analysis.py
 
-# Importing necessary libraries
+## Importing necessary libraries
 from nltk import word_tokenize
 import spacy
 from spacy import displacy
@@ -146,7 +146,7 @@ class AI_Analysis:
         elements = [{'text': ent.text, 'label': ent.label_} for ent in doc.ents]
         return elements
 
-# Test the class methods with a sample document
+## Test the class methods with a sample document
 if __name__ == "__main__":
     doc = "This is a sample document."
     analysis = AI_Analysis(doc)

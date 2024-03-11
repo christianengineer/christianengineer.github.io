@@ -225,27 +225,27 @@ from data.data_preprocessing import preprocess_data
 from utils.data_loader import load_mock_training_data
 from utils.model_evaluation import evaluate_model
 
-# File Paths
+## File Paths
 TRAINING_DATA_PATH = 'data/processed/mock_training_data.csv'
 SAVED_MODEL_PATH = 'models/tensorflow/model_artifacts/mock_model'
 
-# Load mock training data
+## Load mock training data
 X, y = load_mock_training_data(TRAINING_DATA_PATH)
 
-# Preprocess the data
+## Preprocess the data
 X_processed = preprocess_data(X)
 
-# Create and compile the TensorFlow model
+## Create and compile the TensorFlow model
 model = create_model()
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
-# Train the model
+## Train the model
 model.fit(X_processed, y, epochs=10, batch_size=32, validation_split=0.2)
 
-# Save the trained model
+## Save the trained model
 model.save(SAVED_MODEL_PATH)
 
-# Evaluate the model
+## Evaluate the model
 evaluate_model(model, X_processed, y)
 ```
 
@@ -278,27 +278,27 @@ from data.data_preprocessing import preprocess_complex_data
 from utils.data_loader import load_mock_complex_training_data
 from utils.model_evaluation import evaluate_model
 
-# File Paths
+## File Paths
 TRAINING_DATA_PATH = 'data/processed/mock_complex_training_data.csv'
 SAVED_MODEL_PATH = 'models/tensorflow/model_artifacts/complex_model'
 
-# Load mock complex training data
+## Load mock complex training data
 X, y = load_mock_complex_training_data(TRAINING_DATA_PATH)
 
-# Preprocess the complex data
+## Preprocess the complex data
 X_processed = preprocess_complex_data(X)
 
-# Create and compile the complex TensorFlow model
+## Create and compile the complex TensorFlow model
 model = create_complex_model()
 model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
 
-# Train the model with more complex configurations
+## Train the model with more complex configurations
 model.fit(X_processed, y, epochs=50, batch_size=64, validation_split=0.2, callbacks=[early_stopping, tensorboard])
 
-# Save the trained complex model
+## Save the trained complex model
 model.save(SAVED_MODEL_PATH)
 
-# Evaluate the performance of the complex model
+## Evaluate the performance of the complex model
 evaluate_model(model, X_processed, y)
 ```
 

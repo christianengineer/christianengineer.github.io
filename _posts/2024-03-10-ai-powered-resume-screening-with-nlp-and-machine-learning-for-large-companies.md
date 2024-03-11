@@ -5,7 +5,7 @@ permalink: posts/ai-powered-resume-screening-with-nlp-and-machine-learning-for-l
 layout: article
 ---
 
-# AI-Powered Resume Screening with NLP and Machine Learning
+## AI-Powered Resume Screening with NLP and Machine Learning
 
 ## Objectives for Talent Acquisition Specialists:
 - Automate initial screening process to handle high volume of job applications.
@@ -204,41 +204,41 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 
-# Load the raw data containing resumes and labels
+## Load the raw data containing resumes and labels
 data = pd.read_csv("resumes_data.csv")
 
-# Text Cleaning and Standardization
+## Text Cleaning and Standardization
 def clean_text(text):
-    # Implement text cleaning steps like removing special characters and stopwords
-    # Uncomment below code or replace with your custom text cleaning function
-    # cleaned_text = your_text_cleaning_function(text)
+    ## Implement text cleaning steps like removing special characters and stopwords
+    ## Uncomment below code or replace with your custom text cleaning function
+    ## cleaned_text = your_text_cleaning_function(text)
     return cleaned_text
 
-# Apply text cleaning to the "text_data" column in the dataset
+## Apply text cleaning to the "text_data" column in the dataset
 data['cleaned_resume'] = data['text_data'].apply(clean_text)
 
-# Feature Engineering - Extract numerical features and encode categorical features
-# Ensure consistent encoding for industry and location features
+## Feature Engineering - Extract numerical features and encode categorical features
+## Ensure consistent encoding for industry and location features
 
-# Feature Scaling and Normalization
+## Feature Scaling and Normalization
 scaler = StandardScaler()
 data[['num_feature_1', 'num_feature_2']] = scaler.fit_transform(data[['num_feature_1', 'num_feature_2']])
 
-# Train-Test Split for Model Training
+## Train-Test Split for Model Training
 X = data[['cleaned_resume', 'num_feature_1', 'num_feature_2']]
 y = data['label']
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Vectorization of Text Data
-tfidf_vectorizer = TfidfVectorizer(max_features=5000)  # Limit features to top 5000
+## Vectorization of Text Data
+tfidf_vectorizer = TfidfVectorizer(max_features=5000)  ## Limit features to top 5000
 X_train_text = tfidf_vectorizer.fit_transform(X_train['cleaned_resume'])
 X_test_text = tfidf_vectorizer.transform(X_test['cleaned_resume'])
 
-# Merge Text and Numerical Features
+## Merge Text and Numerical Features
 X_train_final = pd.concat([pd.DataFrame(X_train_text.toarray()), X_train.drop('cleaned_resume', axis=1)], axis=1)
 X_test_final = pd.concat([pd.DataFrame(X_test_text.toarray()), X_test.drop('cleaned_resume', axis=1)], axis=1)
 
-# Display final preprocessed features ready for model training
+## Display final preprocessed features ready for model training
 print(X_train_final.head())
 print(X_test_final.head())
 ```
@@ -327,10 +327,10 @@ from faker import Faker
 import pandas as pd
 import random
 
-# Instantiate Faker generator
+## Instantiate Faker generator
 faker = Faker()
 
-# Generate fictitious resume data
+## Generate fictitious resume data
 def generate_resume_data(num_samples):
     data = []
     for _ in range(num_samples):
@@ -349,23 +349,23 @@ def generate_resume_data(num_samples):
         })
     return data
 
-# Generate fictitious dataset
+## Generate fictitious dataset
 num_samples = 1000
 resume_data = generate_resume_data(num_samples)
 
-# Create a DataFrame from the generated data
+## Create a DataFrame from the generated data
 df = pd.DataFrame(resume_data)
 
-# Save the fictitious dataset to a CSV file
+## Save the fictitious dataset to a CSV file
 df.to_csv('fictitious_resume_data.csv', index=False)
 
-# Validate the dataset
-# Add data validation checks or metrics relevant to the project's data characteristics
+## Validate the dataset
+## Add data validation checks or metrics relevant to the project's data characteristics
 
-# Integrate the fictitious dataset with model training and validation
-# Utilize the generated dataset for model training, hyperparameter tuning, and model evaluation
+## Integrate the fictitious dataset with model training and validation
+## Utilize the generated dataset for model training, hyperparameter tuning, and model evaluation
 
-# Display the first few rows of the generated dataset
+## Display the first few rows of the generated dataset
 print(df.head())
 ```
 
@@ -412,45 +412,45 @@ from sklearn.model_selection import train_test_split
 from xgboost import XGBClassifier
 from sklearn.metrics import accuracy_score
 
-# Load preprocessed dataset
+## Load preprocessed dataset
 data = pd.read_csv("preprocessed_resume_data.csv")
 
-# Split dataset into features and target variable
+## Split dataset into features and target variable
 X = data.drop('Label', axis=1)
 y = data['Label']
 
-# Split data into train and test sets
+## Split data into train and test sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize XGBoost classifier
+## Initialize XGBoost classifier
 model = XGBClassifier()
 
-# Train the model
+## Train the model
 model.fit(X_train, y_train)
 
-# Make predictions
+## Make predictions
 y_pred = model.predict(X_test)
 
-# Calculate model accuracy
+## Calculate model accuracy
 accuracy = accuracy_score(y_test, y_pred)
 print(f"Model Accuracy: {accuracy}")
 
-# Save the trained model for deployment
+## Save the trained model for deployment
 model.save_model('resume_screening_model.model')
 
-# Model deployment code
+## Model deployment code
 def predict_candidate_qualification(candidate_data):
-    # Load the trained model
+    ## Load the trained model
     model = XGBClassifier()
     model.load_model('resume_screening_model.model')
 
-    # Perform prediction on candidate data
+    ## Perform prediction on candidate data
     prediction = model.predict(candidate_data)
 
     return prediction
 
-# Sample call to the prediction function
-sample_candidate_data = X.iloc[0].values.reshape(1, -1)  # Sample candidate data
+## Sample call to the prediction function
+sample_candidate_data = X.iloc[0].values.reshape(1, -1)  ## Sample candidate data
 prediction = predict_candidate_qualification(sample_candidate_data)
 print(f"Predicted Qualification: {prediction}")
 ```
@@ -524,33 +524,33 @@ By following this step-by-step deployment plan and leveraging the recommended to
 Here is an example of a Dockerfile tailored for deploying the AI-Powered Resume Screening model, optimized for the project's performance needs and scalability requirements:
 
 ```Dockerfile
-# Use a base image with Python and required dependencies
+## Use a base image with Python and required dependencies
 FROM python:3.8-slim
 
-# Set the working directory inside the container
+## Set the working directory inside the container
 WORKDIR /app
 
-# Copy the preprocessed dataset and model file
+## Copy the preprocessed dataset and model file
 COPY preprocessed_resume_data.csv /app/
 COPY resume_screening_model.model /app/
 
-# Install required Python packages
+## Install required Python packages
 RUN pip install numpy pandas scikit-learn xgboost flask gunicorn mlflow
 
-# Expose the port on which the Flask application will run
+## Expose the port on which the Flask application will run
 EXPOSE 5000
 
-# Define environment variables
+## Define environment variables
 ENV FLASK_APP=app.py
 ENV FLASK_RUN_HOST=0.0.0.0
 
-# Copy the Flask application code into the container
+## Copy the Flask application code into the container
 COPY app.py /app/
 
-# Command to start the Flask application using gunicorn
+## Command to start the Flask application using gunicorn
 CMD ["gunicorn", "-w", "4", "-b", "0.0.0.0:5000", "app:app"]
 
-# Add any additional instructions that may be necessary for your specific project requirements
+## Add any additional instructions that may be necessary for your specific project requirements
 ```
 
 In this Dockerfile:

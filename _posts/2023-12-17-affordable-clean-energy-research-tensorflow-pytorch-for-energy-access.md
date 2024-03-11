@@ -235,23 +235,23 @@ import tensorflow as tf
 from src.data.data_loader import load_mock_energy_data
 from models.tensorflow.model_definition import create_tensorflow_model
 
-# Load mock energy data (Replace with actual data loading logic)
+## Load mock energy data (Replace with actual data loading logic)
 train_data, train_labels = load_mock_energy_data()
 
-# Create a TensorFlow model
+## Create a TensorFlow model
 model = create_tensorflow_model()
 
-# Define optimizer and loss function
+## Define optimizer and loss function
 optimizer = tf.keras.optimizers.Adam()
 loss_fn = tf.keras.losses.MeanSquaredError()
 
-# Compile the model
+## Compile the model
 model.compile(optimizer=optimizer, loss=loss_fn, metrics=['mean_squared_error'])
 
-# Train the model
+## Train the model
 model.fit(train_data, train_labels, epochs=10, batch_size=32, validation_split=0.2)
 
-# Save the trained model
+## Save the trained model
 model.save('trained_models/tensorflow_model')
 ```
 
@@ -264,17 +264,17 @@ import torch.optim as optim
 from src.data.data_loader import load_mock_energy_data
 from models.pytorch.model_definition import create_pytorch_model
 
-# Load mock energy data (Replace with actual data loading logic)
+## Load mock energy data (Replace with actual data loading logic)
 train_data, train_labels = load_mock_energy_data()
 
-# Create a PyTorch model
+## Create a PyTorch model
 model = create_pytorch_model()
 
-# Define optimizer and loss function
+## Define optimizer and loss function
 optimizer = optim.Adam(model.parameters())
 criterion = nn.MSELoss()
 
-# Train the model
+## Train the model
 for epoch in range(10):
     outputs = model(train_data)
     loss = criterion(outputs, train_labels)
@@ -283,7 +283,7 @@ for epoch in range(10):
     loss.backward()
     optimizer.step()
 
-# Save the trained model
+## Save the trained model
 torch.save(model.state_dict(), 'trained_models/pytorch_model.pth')
 ```
 
@@ -304,27 +304,27 @@ Certainly! Below is an example of a file defining a complex machine learning alg
 import tensorflow as tf
 from src.data.data_loader import load_mock_energy_data
 
-# Define a complex TensorFlow machine learning algorithm
+## Define a complex TensorFlow machine learning algorithm
 def complex_tensorflow_algorithm():
-    # Load mock energy data (Replace with actual data loading logic)
+    ## Load mock energy data (Replace with actual data loading logic)
     train_data, train_labels = load_mock_energy_data()
 
-    # Define a complex TensorFlow model architecture
+    ## Define a complex TensorFlow model architecture
     model = tf.keras.Sequential([
         tf.keras.layers.Dense(64, activation='relu'),
         tf.keras.layers.Dense(64, activation='relu'),
         tf.keras.layers.Dense(1)
     ])
 
-    # Define custom loss function, optimizer, and metrics
+    ## Define custom loss function, optimizer, and metrics
     loss_fn = tf.keras.losses.MeanSquaredError()
     optimizer = tf.keras.optimizers.Adam()
     model.compile(optimizer=optimizer, loss=loss_fn, metrics=['mean_squared_error'])
 
-    # Train the model
+    ## Train the model
     model.fit(train_data, train_labels, epochs=10, batch_size=32, validation_split=0.2)
 
-    # Save the trained model
+    ## Save the trained model
     model.save('trained_models/complex_tensorflow_model')
 ```
 
@@ -336,12 +336,12 @@ import torch.nn as nn
 import torch.optim as optim
 from src.data.data_loader import load_mock_energy_data
 
-# Define a complex PyTorch machine learning algorithm
+## Define a complex PyTorch machine learning algorithm
 def complex_pytorch_algorithm():
-    # Load mock energy data (Replace with actual data loading logic)
+    ## Load mock energy data (Replace with actual data loading logic)
     train_data, train_labels = load_mock_energy_data()
 
-    # Define a custom complex PyTorch model
+    ## Define a custom complex PyTorch model
     class ComplexModel(nn.Module):
         def __init__(self):
             super(ComplexModel, self).__init__()
@@ -357,11 +357,11 @@ def complex_pytorch_algorithm():
 
     model = ComplexModel()
 
-    # Define custom loss function and optimizer
+    ## Define custom loss function and optimizer
     criterion = nn.MSELoss()
     optimizer = optim.Adam(model.parameters())
 
-    # Train the model
+    ## Train the model
     for epoch in range(10):
         outputs = model(train_data)
         loss = criterion(outputs, train_labels)
@@ -369,7 +369,7 @@ def complex_pytorch_algorithm():
         loss.backward()
         optimizer.step()
 
-    # Save the trained model
+    ## Save the trained model
     torch.save(model.state_dict(), 'trained_models/complex_pytorch_model.pth')
 ```
 

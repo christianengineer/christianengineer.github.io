@@ -5,7 +5,7 @@ permalink: posts/automated-data-quality-checks-and-balancing-develop-automated-p
 layout: article
 ---
 
-# AI Automated Data Quality Checks and Balancing
+## AI Automated Data Quality Checks and Balancing
 
 ## Objectives
 The objectives of implementing automated data quality checks and balancing in machine learning projects are to ensure that the input data is of high quality, free from inconsistencies and errors, and to address the issue of imbalanced datasets that could lead to biased model performance.
@@ -66,7 +66,7 @@ To implement automated processes for checking data quality and handling imbalanc
 
 By building the infrastructure with these components and considerations, the team can ensure that the automated data quality checks and balancing processes are seamlessly integrated into the machine learning projects application, and can be scaled to handle large volumes of data with high reliability and efficiency.
 
-# Scalable File Structure for Automated Data Quality Checks and Balancing
+## Scalable File Structure for Automated Data Quality Checks and Balancing
 
 To maintain a scalable and organized file structure for the Automated Data Quality Checks and Balancing processes in the machine learning projects repository, the following directory layout can be utilized:
 
@@ -216,28 +216,28 @@ import xgboost as xgb
 import great_expectations as ge
 
 def automated_data_processing_and_modeling(data_file_path):
-    # Load the data
+    ## Load the data
     data = pd.read_csv(data_file_path)
     
-    # Perform data quality checks using Great Expectations
+    ## Perform data quality checks using Great Expectations
     expectation_suite = ge.dataset.PandasDataset(data).expect_table()
     data_quality_report = expectation_suite.validate(result_format="html")
-    # Save the data quality report to the specified file path
+    ## Save the data quality report to the specified file path
     data_quality_report_file_path = "data/processed_data/data_quality_reports/data_quality_report.html"
     with open(data_quality_report_file_path, "w") as file:
         file.write(data_quality_report)
 
-    # Handling imbalanced dataset using SMOTE
+    ## Handling imbalanced dataset using SMOTE
     X = data.drop('target_column', axis=1)
     y = data['target_column']
     smote = SMOTE(sampling_strategy='auto')
     X_resampled, y_resampled = smote.fit_resample(X, y)
     
-    # Training an XGBoost model on the balanced dataset
+    ## Training an XGBoost model on the balanced dataset
     clf = xgb.XGBClassifier()
     clf.fit(X_resampled, y_resampled)
     
-    # Return the trained model
+    ## Return the trained model
     return clf
 ```
 
@@ -259,19 +259,19 @@ from tensorflow import keras
 from sklearn.model_selection import train_test_split
 
 def automated_deep_learning_modeling(data_file_path):
-    # Load the data
+    ## Load the data
     data = pd.read_csv(data_file_path)
     
-    # Handling imbalanced dataset using SMOTE
+    ## Handling imbalanced dataset using SMOTE
     X = data.drop('target_column', axis=1)
     y = data['target_column']
     smote = SMOTE(sampling_strategy='auto')
     X_resampled, y_resampled = smote.fit_resample(X, y)
     
-    # Split the resampled data into training and validation sets
+    ## Split the resampled data into training and validation sets
     X_train, X_val, y_train, y_val = train_test_split(X_resampled, y_resampled, test_size=0.2, random_state=42)
     
-    # Build the deep learning model
+    ## Build the deep learning model
     model = keras.Sequential([
         keras.layers.Conv2D(32, (3, 3), activation='relu', input_shape=(X_train.shape[1], 1)),
         keras.layers.MaxPooling2D((2, 2)),
@@ -280,15 +280,15 @@ def automated_deep_learning_modeling(data_file_path):
         keras.layers.Dense(1, activation='sigmoid')
     ])
     
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam',
                   loss='binary_crossentropy',
                   metrics=['accuracy'])
     
-    # Train the deep learning model
+    ## Train the deep learning model
     model.fit(X_train, y_train, epochs=10, validation_data=(X_val, y_val))
     
-    # Return the trained deep learning model
+    ## Return the trained deep learning model
     return model
 ```
 

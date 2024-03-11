@@ -5,7 +5,7 @@ permalink: posts/genetic-algorithm-for-optimization-with-deap-python-solving-com
 layout: article
 ---
 
-# AI Genetic Algorithm for Optimization with DEAP (Python)
+## AI Genetic Algorithm for Optimization with DEAP (Python)
 
 ## Objectives
 The objective of implementing the Genetic Algorithm for Optimization with DEAP is to solve complex optimization problems efficiently using a combination of evolutionary computation techniques and Python programming. By leveraging the DEAP library, the goal is to create a scalable and flexible framework for solving a wide range of optimization problems, including those that are data-intensive and require machine learning models for optimization.
@@ -75,29 +75,29 @@ By establishing this infrastructure, the Genetic Algorithm for Optimization with
 
 ```plaintext
 genetic_algorithm_optimization/
-    ├── data/                   # Directory for input data and optimization problem datasets
-    │   ├── dataset1.csv        # Example input dataset
+    ├── data/                   ## Directory for input data and optimization problem datasets
+    │   ├── dataset1.csv        ## Example input dataset
     │   └── ...
-    ├── src/                    # Source code directory
-    │   ├── algorithms/         # Contains genetic algorithm implementation
+    ├── src/                    ## Source code directory
+    │   ├── algorithms/         ## Contains genetic algorithm implementation
     │   │   ├── genetic_algorithm.py  
     │   │   └── ...
-    │   ├── models/             # Optional: Machine learning model integration
+    │   ├── models/             ## Optional: Machine learning model integration
     │   │   ├── neural_network.py  
     │   │   └── ...
-    │   ├── utils/              # Utility functions and helper modules
+    │   ├── utils/              ## Utility functions and helper modules
     │   │   ├── optimization_utils.py
     │   │   └── ...
-    │   ├── main.py             # Main script for running the optimization
+    │   ├── main.py             ## Main script for running the optimization
     │   └── ...
-    ├── tests/                  # Directory for unit tests and test datasets
+    ├── tests/                  ## Directory for unit tests and test datasets
     │   ├── test_genetic_algorithm.py
     │   └── ...
-    ├── docs/                   # Documentation folder
-    │   ├── user_manual.md      # User manual for the genetic algorithm
+    ├── docs/                   ## Documentation folder
+    │   ├── user_manual.md      ## User manual for the genetic algorithm
     │   └── ...
-    ├── requirements.txt        # Python dependencies and libraries
-    └── README.md               # Main repository documentation
+    ├── requirements.txt        ## Python dependencies and libraries
+    └── README.md               ## Main repository documentation
 ```
 
 In this file structure:
@@ -113,9 +113,9 @@ This file structure provides a scalable organization for the Genetic Algorithm f
 
 ```plaintext
 models/
-    ├── neural_network.py      # File for defining the neural network model
-    ├── evolutionary_strategy.py  # File for integrating evolutionary strategies with optimization
-    ├── hyperparameter_optimization.py  # File for tuning hyperparameters using genetic algorithm
+    ├── neural_network.py      ## File for defining the neural network model
+    ├── evolutionary_strategy.py  ## File for integrating evolutionary strategies with optimization
+    ├── hyperparameter_optimization.py  ## File for tuning hyperparameters using genetic algorithm
     └── ...
 ```
 
@@ -131,9 +131,9 @@ These files in the `models/` directory facilitate the integration of machine lea
 
 ```plaintext
 deployment/
-    ├── Dockerfile          # File for defining the Docker image and environment setup
-    ├── docker-compose.yml  # Configuration file for multi-container Docker applications
-    └── deploy.sh           # Shell script for deploying the application
+    ├── Dockerfile          ## File for defining the Docker image and environment setup
+    ├── docker-compose.yml  ## Configuration file for multi-container Docker applications
+    └── deploy.sh           ## Shell script for deploying the application
 ```
 
 In the `deployment/` directory:
@@ -152,22 +152,22 @@ from sklearn.ensemble import GradientBoostingRegressor
 from sklearn.model_selection import cross_val_score
 
 def evaluate_ml_model(parameters, filepath='data/dataset.csv'):
-    # Load mock data from the specified filepath
+    ## Load mock data from the specified filepath
     data = np.loadtxt(filepath, delimiter=',')
 
-    # Extract features and target variable from the dataset
+    ## Extract features and target variable from the dataset
     X = data[:, :-1]
     y = data[:, -1]
 
-    # Create an instance of the machine learning algorithm with the provided parameters
+    ## Create an instance of the machine learning algorithm with the provided parameters
     model = GradientBoostingRegressor(n_estimators=parameters['n_estimators'],
                                       max_depth=parameters['max_depth'],
                                       learning_rate=parameters['learning_rate'])
 
-    # Evaluate the model using cross-validation
+    ## Evaluate the model using cross-validation
     scores = cross_val_score(model, X, y, cv=5, scoring='neg_mean_squared_error')
 
-    # Return the mean squared error as the fitness value for optimization
+    ## Return the mean squared error as the fitness value for optimization
     return -np.mean(scores)
 ```
 
@@ -190,23 +190,23 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import cross_val_score
 
 def evaluate_ml_model(parameters, filepath='data/dataset.csv'):
-    # Load mock data from the specified filepath
+    ## Load mock data from the specified filepath
     data = np.loadtxt(filepath, delimiter=',')
 
-    # Extract features and target variable from the dataset
+    ## Extract features and target variable from the dataset
     X = data[:, :-1]
     y = data[:, -1]
 
-    # Create an instance of the machine learning algorithm with the provided parameters
+    ## Create an instance of the machine learning algorithm with the provided parameters
     model = RandomForestRegressor(n_estimators=parameters['n_estimators'],
                                   max_depth=parameters['max_depth'],
                                   min_samples_split=parameters['min_samples_split'], 
                                   min_samples_leaf=parameters['min_samples_leaf'])
 
-    # Evaluate the model using cross-validation
+    ## Evaluate the model using cross-validation
     scores = cross_val_score(model, X, y, cv=5, scoring='neg_mean_squared_error')
 
-    # Return the mean squared error as the fitness value for optimization
+    ## Return the mean squared error as the fitness value for optimization
     return -np.mean(scores)
 ```
 

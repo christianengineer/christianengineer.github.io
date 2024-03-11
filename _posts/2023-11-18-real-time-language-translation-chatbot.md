@@ -5,7 +5,7 @@ permalink: posts/technical-specifications-real-time-language-translation-chatbot
 layout: article
 ---
 
-# Technical Specifications Document - Real-Time Language Translation Chatbot
+## Technical Specifications Document - Real-Time Language Translation Chatbot
 
 ## Description
 

@@ -184,27 +184,27 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 
 def train_privacy_preserving_model(data_file_path):
-    # Load mock data from file
+    ## Load mock data from file
     data = pd.read_csv(data_file_path)
     
-    # Preprocessing
+    ## Preprocessing
     X = data.drop('target', axis=1)
     y = data['target']
     
-    # Split data into training and testing sets
+    ## Split data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
     
-    # Initialize and train a privacy-preserving machine learning model
+    ## Initialize and train a privacy-preserving machine learning model
     model = RandomForestClassifier(n_estimators=100, random_state=42)
     model.fit(X_train, y_train)
     
-    # Evaluate the model
+    ## Evaluate the model
     y_pred = model.predict(X_test)
     accuracy = accuracy_score(y_test, y_pred)
     
     return model, accuracy
 
-# Example usage
+## Example usage
 mock_data_file_path = 'mock_data.csv'
 trained_model, accuracy = train_privacy_preserving_model(mock_data_file_path)
 print(f"Trained model accuracy: {accuracy}")
@@ -223,41 +223,41 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import accuracy_score
 
 def train_privacy_preserving_deep_learning_model(data_file_path):
-    # Load mock data from file
+    ## Load mock data from file
     data = pd.read_csv(data_file_path)
     
-    # Preprocessing
+    ## Preprocessing
     X = data.drop('target', axis=1)
     y = data['target']
     
-    # Split data into training and testing sets
+    ## Split data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
     
-    # Feature scaling
+    ## Feature scaling
     scaler = StandardScaler()
     X_train = scaler.fit_transform(X_train)
     X_test = scaler.transform(X_test)
     
-    # Build the deep learning model
+    ## Build the deep learning model
     model = tf.keras.Sequential([
         tf.keras.layers.Dense(128, activation='relu', input_shape=(X_train.shape[1],)),
         tf.keras.layers.Dense(64, activation='relu'),
         tf.keras.layers.Dense(1, activation='sigmoid')
     ])
     
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
     
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y_test))
     
-    # Evaluate the model
+    ## Evaluate the model
     y_pred = (model.predict(X_test) > 0.5).astype("int32")
     accuracy = accuracy_score(y_test, y_pred)
 
     return model, accuracy
 
-# Example usage
+## Example usage
 mock_data_file_path = 'mock_data.csv'
 trained_model, accuracy = train_privacy_preserving_deep_learning_model(mock_data_file_path)
 print(f"Trained deep learning model accuracy: {accuracy}")

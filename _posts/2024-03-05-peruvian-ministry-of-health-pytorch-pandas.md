@@ -246,47 +246,47 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
-# Load the raw health data
+## Load the raw health data
 data = pd.read_csv('health_data.csv')
 
-# Display the initial data structure
+## Display the initial data structure
 print("Initial Data Structure:")
 print(data.head())
 
-# Drop irrelevant columns if needed
+## Drop irrelevant columns if needed
 data = data.drop(['irrelevant_column1', 'irrelevant_column2'], axis=1)
 
-# Ensure consistent date format and sort data by date
+## Ensure consistent date format and sort data by date
 data['date'] = pd.to_datetime(data['date'])
 data = data.sort_values(by='date')
 
-# Impute missing values (replace NaN values with median of the column)
+## Impute missing values (replace NaN values with median of the column)
 data = data.fillna(data.median())
 
-# Feature scaling for numerical columns
+## Feature scaling for numerical columns
 scaler = StandardScaler()
 numerical_cols = ['numerical_feature1', 'numerical_feature2']
 data[numerical_cols] = scaler.fit_transform(data[numerical_cols])
 
-# One-hot encode categorical variables
+## One-hot encode categorical variables
 categorical_cols = ['categorical_feature1', 'categorical_feature2']
 data = pd.get_dummies(data, columns=categorical_cols)
 
-# Feature engineering (add relevant features or transformations)
+## Feature engineering (add relevant features or transformations)
 data['new_feature'] = data['feature_a'] * data['feature_b']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X = data.drop('target_column', axis=1)
 y = data['target_column']
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Save preprocessed data
+## Save preprocessed data
 X_train.to_csv('X_train.csv', index=False)
 X_test.to_csv('X_test.csv', index=False)
 y_train.to_csv('y_train.csv', index=False)
 y_test.to_csv('y_test.csv', index=False)
 
-# Display the preprocessed data structure
+## Display the preprocessed data structure
 print("\nPreprocessed Data Structure:")
 print(X_train.head())
 ```
@@ -393,10 +393,10 @@ import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
 
-# Create a fictitious dataset with relevant features
-np.random.seed(42)  # For reproducibility
+## Create a fictitious dataset with relevant features
+np.random.seed(42)  ## For reproducibility
 
-# Define features for disease outbreak prediction
+## Define features for disease outbreak prediction
 num_samples = 10000
 dates = pd.date_range(start='1/1/2020', periods=num_samples, freq='D')
 temperature = np.random.normal(25, 5, num_samples)
@@ -404,7 +404,7 @@ humidity = np.random.normal(60, 10, num_samples)
 population_density = np.random.randint(100, 1000, num_samples)
 outbreak_cases = np.random.binomial(50, 0.05, num_samples)
 
-# Create a DataFrame for the dataset
+## Create a DataFrame for the dataset
 data = pd.DataFrame({
     'date': dates,
     'temperature': temperature,
@@ -413,23 +413,23 @@ data = pd.DataFrame({
     'outbreak_cases': outbreak_cases
 })
 
-# Feature engineering: Create new features based on interactions or transformations
+## Feature engineering: Create new features based on interactions or transformations
 data['temp_humidity_interaction'] = data['temperature'] * data['humidity']
 data['log_population_density'] = np.log(data['population_density'] + 1)
 
-# Metadata management: Add metadata for future reference
+## Metadata management: Add metadata for future reference
 data['source'] = 'Synthetic Data Generator'
 data['target_variable'] = 'outbreak_cases'
 
-# Save the synthetic dataset to a CSV file
+## Save the synthetic dataset to a CSV file
 data.to_csv('synthetic_dataset.csv', index=False)
 
-# Split the dataset into training and validation sets
+## Split the dataset into training and validation sets
 X = data.drop('outbreak_cases', axis=1)
 y = data['outbreak_cases']
 X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Validate the synthetic dataset
+## Validate the synthetic dataset
 print("Synthetic Dataset Summary:")
 print(data.describe())
 print("\nTraining Dataset Shape:", X_train.shape)
@@ -484,31 +484,31 @@ import pandas as pd
 import numpy as np
 from tensorflow.keras.models import load_model
 
-# Load the preprocessed dataset for inference
+## Load the preprocessed dataset for inference
 data = pd.read_csv('preprocessed_data.csv')
 
-# Preprocess the data for model input
+## Preprocess the data for model input
 X = data.drop(['target_column'], axis=1).values
-# Reshape data for LSTM model input (samples, timesteps, features)
+## Reshape data for LSTM model input (samples, timesteps, features)
 X = X.reshape(X.shape[0], 1, X.shape[1])
 
-# Load the trained LSTM model
+## Load the trained LSTM model
 model = load_model('trained_lstm_model.h5')
 
-# Make predictions using the model
+## Make predictions using the model
 predictions = model.predict(X)
 
-# Prepare predictions for deployment or further analysis
+## Prepare predictions for deployment or further analysis
 predicted_outbreak_cases = np.argmax(predictions, axis=1)
 
-# Save the predictions to a CSV file
+## Save the predictions to a CSV file
 predictions_df = pd.DataFrame({
     'Date': data['Date'],
     'Predicted_Outbreak_Cases': predicted_outbreak_cases
 })
 predictions_df.to_csv('predicted_outbreak_cases.csv', index=False)
 
-# Production Environment Log: Model successfully deployed
+## Production Environment Log: Model successfully deployed
 print("Model deployment to production environment successful!")
 ```
 
@@ -587,29 +587,29 @@ By following this deployment plan and utilizing the recommended tools and platfo
 Below is a Dockerfile tailored to encapsulate the environment and dependencies required for deploying the machine learning model for disease outbreak prediction in a production setting. This Dockerfile includes configurations optimized for performance and scalability specific to the project's requirements:
 
 ```Dockerfile
-# Use a base image with Python and required libraries
+## Use a base image with Python and required libraries
 FROM python:3.9-slim
 
-# Set the working directory in the container
+## Set the working directory in the container
 WORKDIR /app
 
-# Copy the model file and dependencies to the working directory
+## Copy the model file and dependencies to the working directory
 COPY requirements.txt /app
 COPY trained_lstm_model.h5 /app/trained_lstm_model.h5
 
-# Install necessary dependencies
+## Install necessary dependencies
 RUN pip install --upgrade pip && pip install -r requirements.txt
 
-# Copy the model deployment script into the container
+## Copy the model deployment script into the container
 COPY model_deployment.py /app
 
-# Expose the API port
+## Expose the API port
 EXPOSE 5000
 
-# Set environment variables
+## Set environment variables
 ENV FLASK_APP=model_deployment.py
 
-# Command to execute when the Docker container starts
+## Command to execute when the Docker container starts
 CMD ["flask", "run", "--host=0.0.0.0"]
 ```
 

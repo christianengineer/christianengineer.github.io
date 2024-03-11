@@ -77,36 +77,36 @@ A scalable file structure for the FaceNet - Facial Recognition AI repository sho
 facenet-facial-recognition-ai/
 │
 ├── models/
-│   ├── facenet.py          # Implementation of the FaceNet model
+│   ├── facenet.py          ## Implementation of the FaceNet model
 │   └── ...
 │
 ├── data/
-│   ├── preprocessing/      # Scripts for data preprocessing
+│   ├── preprocessing/      ## Scripts for data preprocessing
 │   └── ...
 │
 ├── app/
-│   ├── web/               # Web-based APIs and frontend (if applicable)
-│   │   ├── api/           # API endpoints for face recognition
+│   ├── web/               ## Web-based APIs and frontend (if applicable)
+│   │   ├── api/           ## API endpoints for face recognition
 │   │   └── ...
 │   └── ...
 │
 ├── infrastructure/
-│   ├── cloud/             # Infrastructure as code (IaC) scripts for cloud deployment
+│   ├── cloud/             ## Infrastructure as code (IaC) scripts for cloud deployment
 │   └── ...
 │
 ├── utils/
-│   ├── image_processing.py  # Utility functions for image processing
+│   ├── image_processing.py  ## Utility functions for image processing
 │   └── ...
 │
 ├── tests/
-│   ├── unit/              # Unit tests for individual components
-│   ├── integration/       # Integration tests
+│   ├── unit/              ## Unit tests for individual components
+│   ├── integration/       ## Integration tests
 │   └── ...
 │
-├── requirements.txt       # Dependencies and libraries
-├── Dockerfile             # Configuration for containerization
-├── README.md              # Project documentation
-└── ...                    # Other configuration files and resources
+├── requirements.txt       ## Dependencies and libraries
+├── Dockerfile             ## Configuration for containerization
+├── README.md              ## Project documentation
+└── ...                    ## Other configuration files and resources
 ```
 
 ### Explanation of File Structure
@@ -139,23 +139,23 @@ Within the FaceNet - Facial Recognition AI application, the `AI` directory is de
 AI/
 │
 ├── models/
-│   ├── facenet.py             # Implementation of the FaceNet model
-│   ├── additional_models.py   # Any additional facial recognition models
+│   ├── facenet.py             ## Implementation of the FaceNet model
+│   ├── additional_models.py   ## Any additional facial recognition models
 │   └── ...
 │
 ├── training/
-│   ├── data_preparation/      # Scripts for preparing training data
-│   ├── data_augmentation/     # Tools for augmenting training data
-│   ├── model_training.py      # Script for training the facial recognition model
+│   ├── data_preparation/      ## Scripts for preparing training data
+│   ├── data_augmentation/     ## Tools for augmenting training data
+│   ├── model_training.py      ## Script for training the facial recognition model
 │   └── ...
 │
 ├── inference/
-│   ├── face_detection.py      # Script for detecting faces in images or video frames
-│   ├── face_recognition.py    # Inference logic for recognizing and verifying faces
+│   ├── face_detection.py      ## Script for detecting faces in images or video frames
+│   ├── face_recognition.py    ## Inference logic for recognizing and verifying faces
 │   └── ...
 │
 ├── evaluation/
-│   ├── model_evaluation.py    # Scripts for evaluating the performance of the trained models
+│   ├── model_evaluation.py    ## Scripts for evaluating the performance of the trained models
 │   └── ...
 │
 └── ...
@@ -180,15 +180,15 @@ The `utils` directory in the FaceNet - Facial Recognition AI application contain
 ```
 utils/
 │
-├── image_processing.py     # Utility functions for image preprocessing and manipulation
+├── image_processing.py     ## Utility functions for image preprocessing and manipulation
 │
 ├── data_utils/
-│   ├── data_loader.py      # Utility for loading and processing training and validation data
-│   ├── data_augmentation.py  # Functions for data augmentation techniques
+│   ├── data_loader.py      ## Utility for loading and processing training and validation data
+│   ├── data_augmentation.py  ## Functions for data augmentation techniques
 │   └── ...
 │
 ├── logging/
-│   ├── logger.py           # Custom logger implementation for the application
+│   ├── logger.py           ## Custom logger implementation for the application
 │   └── ...
 │
 └── ...
@@ -227,23 +227,23 @@ def train_facenet_model(mock_data_dir, epochs=10, batch_size=32, learning_rate=0
     - trained_model: Trained FaceNet model
     """
 
-    # Load mock training data
+    ## Load mock training data
     X_train, Y_train = load_mock_training_data(mock_data_dir)
 
-    # Preprocess the data (e.g., normalization, resizing)
+    ## Preprocess the data (e.g., normalization, resizing)
     X_train_preprocessed = preprocess_data(X_train)
 
-    # Initialize FaceNet model
+    ## Initialize FaceNet model
     facenet_model = FaceNetModel()
 
-    # Compile the model
+    ## Compile the model
     optimizer = tf.keras.optimizers.Adam(learning_rate=learning_rate)
     facenet_model.compile(optimizer=optimizer, loss='mean_squared_error')
 
-    # Train the model
+    ## Train the model
     facenet_model.fit(X_train_preprocessed, Y_train, epochs=epochs, batch_size=batch_size)
 
-    # Save the trained model
+    ## Save the trained model
     model_save_path = 'trained_models/facenet_trained_model.h5'
     if not os.path.exists('trained_models'):
         os.makedirs('trained_models')
@@ -281,21 +281,21 @@ def train_facenet_model(mock_data_dir, epochs=10, batch_size=32, learning_rate=0
     - trained_model: Trained FaceNet model
     """
 
-    # Load mock training data
+    ## Load mock training data
     X_train, Y_train = load_mock_training_data(mock_data_dir)
 
-    # Preprocess the data
+    ## Preprocess the data
     X_train_preprocessed = preprocess_images(X_train)
 
-    # Initialize and compile the FaceNet model
+    ## Initialize and compile the FaceNet model
     facenet_model = FaceNetModel()
     optimizer = tf.keras.optimizers.Adam(learning_rate=learning_rate)
     facenet_model.compile(optimizer=optimizer, loss='mean_squared_error')
 
-    # Train the model
+    ## Train the model
     facenet_model.fit(X_train_preprocessed, Y_train, epochs=epochs, batch_size=batch_size)
 
-    # Save the trained model
+    ## Save the trained model
     model_save_path = 'trained_models/facenet_trained_model.h5'
     if not os.path.exists('trained_models'):
         os.makedirs('trained_models')

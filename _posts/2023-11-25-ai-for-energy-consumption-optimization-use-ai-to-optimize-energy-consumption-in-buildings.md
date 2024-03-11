@@ -5,7 +5,7 @@ permalink: posts/ai-for-energy-consumption-optimization-use-ai-to-optimize-energ
 layout: article
 ---
 
-# AI for Energy Consumption Optimization
+## AI for Energy Consumption Optimization
 
 ## Objectives
 The main objective of the "AI for Energy Consumption Optimization" project is to develop a system that utilizes AI techniques to optimize energy consumption in buildings. This involves creating a model that can analyze historical energy usage data, identify patterns, and make predictions about future energy consumption. The system aims to provide insights and recommendations for efficient energy usage, ultimately reducing costs and environmental impact.
@@ -40,7 +40,7 @@ The main objective of the "AI for Energy Consumption Optimization" project is to
 
 By leveraging these design strategies and libraries, the "AI for Energy Consumption Optimization" project aims to create a scalable, data-intensive AI application that can effectively optimize energy usage in buildings.
 
-# Infrastructure for AI for Energy Consumption Optimization
+## Infrastructure for AI for Energy Consumption Optimization
 
 To support the "AI for Energy Consumption Optimization" application, a robust infrastructure is essential to handle the data-intensive and AI-driven nature of the system. The infrastructure needs to facilitate data collection, preprocessing, model training, deployment, and integration with the user interface. Here's an overview of the infrastructure components:
 
@@ -234,26 +234,26 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 
 def train_energy_consumption_model(data_path):
-    # Load the mock data from the specified file path
+    ## Load the mock data from the specified file path
     data = pd.read_csv(data_path)
 
-    # Assume the data contains features and target variable (energy consumption)
+    ## Assume the data contains features and target variable (energy consumption)
     X = data.drop('energy_consumption', axis=1)
     y = data['energy_consumption']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize and train a complex machine learning algorithm (e.g., Random Forest)
+    ## Initialize and train a complex machine learning algorithm (e.g., Random Forest)
     model = RandomForestRegressor(n_estimators=100, random_state=42)
     model.fit(X_train, y_train)
 
-    # Evaluate the model on the test set
+    ## Evaluate the model on the test set
     y_pred = model.predict(X_test)
     mse = mean_squared_error(y_test, y_pred)
     print(f"Mean Squared Error on Test Set: {mse}")
 
-    # Return the trained model for later use
+    ## Return the trained model for later use
     return model
 ```
 
@@ -277,40 +277,40 @@ from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics import mean_squared_error
 
 def train_energy_consumption_lstm_model(data_path):
-    # Load the mock data from the specified file path
+    ## Load the mock data from the specified file path
     data = pd.read_csv(data_path)
 
-    # Assume the data contains a single feature and the target variable (energy consumption)
-    feature_data = data['feature'].values.reshape(-1, 1)  # Convert feature data to 2D array
+    ## Assume the data contains a single feature and the target variable (energy consumption)
+    feature_data = data['feature'].values.reshape(-1, 1)  ## Convert feature data to 2D array
     target_data = data['energy_consumption'].values.reshape(-1, 1)
 
-    # Normalize the data using Min-Max scaling
+    ## Normalize the data using Min-Max scaling
     scaler = MinMaxScaler(feature_range=(0, 1))
     scaled_feature_data = scaler.fit_transform(feature_data)
     scaled_target_data = scaler.fit_transform(target_data)
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(scaled_feature_data, scaled_target_data, test_size=0.2, random_state=42)
 
-    # Reshape the input data for LSTM model (samples, time steps, features)
+    ## Reshape the input data for LSTM model (samples, time steps, features)
     X_train = X_train.reshape((X_train.shape[0], 1, X_train.shape[1]))
     X_test = X_test.reshape((X_test.shape[0], 1, X_test.shape[1]))
 
-    # Build the LSTM model
+    ## Build the LSTM model
     model = Sequential()
     model.add(LSTM(50, input_shape=(X_train.shape[1], X_train.shape[2])))
     model.add(Dense(1))
     model.compile(loss='mean_squared_error', optimizer='adam')
 
-    # Train the LSTM model
+    ## Train the LSTM model
     model.fit(X_train, y_train, epochs=100, batch_size=32, verbose=1)
 
-    # Evaluate the model on the test set
+    ## Evaluate the model on the test set
     y_pred = model.predict(X_test)
     mse = mean_squared_error(y_test, y_pred)
     print(f"Mean Squared Error on Test Set: {mse}")
 
-    # Return the trained LSTM model for later use
+    ## Return the trained LSTM model for later use
     return model
 ```
 

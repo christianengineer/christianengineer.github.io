@@ -213,7 +213,7 @@ Additionally, the Dockerfiles facilitate the reproducibility and portability of 
 Certainly! Below is an example of a file for training a machine learning model for the AI-driven Human Resource Management System using mock data. This file demonstrates the training process for a hypothetical candidate screening model using TensorFlow.
 
 ```python
-# training/model_training.py
+## training/model_training.py
 
 import tensorflow as tf
 import pandas as pd
@@ -222,33 +222,33 @@ from sklearn.preprocessing import StandardScaler
 from tensorflow.keras import Sequential
 from tensorflow.keras.layers import Dense
 
-# Load mock HR data for candidate screening
+## Load mock HR data for candidate screening
 data = pd.read_csv('mock_candidate_data.csv')
 
-# Preprocess the data
-X = data.drop('target_label', axis=1)  # Assuming 'target_label' is the label column
+## Preprocess the data
+X = data.drop('target_label', axis=1)  ## Assuming 'target_label' is the label column
 y = data['target_label']
 
 scaler = StandardScaler()
 X_scaled = scaler.fit_transform(X)
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.2, random_state=42)
 
-# Build the candidate screening model
+## Build the candidate screening model
 model = Sequential([
     Dense(64, activation='relu', input_shape=(X_train.shape[1],)),
     Dense(32, activation='relu'),
     Dense(1, activation='sigmoid')
 ])
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
-# Train the model
+## Train the model
 model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y_test))
 
-# Save the trained model
+## Save the trained model
 model.save('candidate_screening_model.h5')
 ```
 
@@ -261,37 +261,37 @@ This file provides a simplified representation of the model training process for
 Sure! Below is an example of a Python file for a complex machine learning algorithm (XGBoost) for the AI-driven Human Resource Management System using mock data. In this example, we'll use XGBoost as the machine learning algorithm for employee performance prediction.
 
 ```python
-# ml_models/employee_performance_prediction/model_training_xgboost.py
+## ml_models/employee_performance_prediction/model_training_xgboost.py
 
 import pandas as pd
 import xgboost as xgb
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
-# Load mock HR data for employee performance prediction
+## Load mock HR data for employee performance prediction
 data = pd.read_csv('mock_employee_performance_data.csv')
 
-# Preprocess the data
-X = data.drop('performance_category', axis=1)  # Assuming 'performance_category' is the target column
+## Preprocess the data
+X = data.drop('performance_category', axis=1)  ## Assuming 'performance_category' is the target column
 y = data['performance_category']
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Define the XGBoost model
+## Define the XGBoost model
 model = xgb.XGBClassifier(objective='multi:softmax', num_class=num_classes)
 
-# Train the XGBoost model
+## Train the XGBoost model
 model.fit(X_train, y_train)
 
-# Make predictions
+## Make predictions
 y_pred = model.predict(X_test)
 
-# Evaluate the model
+## Evaluate the model
 accuracy = accuracy_score(y_test, y_pred)
 print('Accuracy:', accuracy)
 
-# Save the trained model
+## Save the trained model
 model.save_model('employee_performance_xgboost.model')
 ```
 

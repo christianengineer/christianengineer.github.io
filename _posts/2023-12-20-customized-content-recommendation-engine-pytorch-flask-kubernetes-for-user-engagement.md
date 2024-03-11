@@ -81,45 +81,45 @@ customized-content-recommendation/
 │
 ├── app/
 │   ├── recommendation_engine/
-│   │   ├── model/                 # PyTorch model files and scripts
-│   │   │   ├── train.py           # Model training script
-│   │   │   ├── inference.py       # Model inference script
-│   │   │   └── requirements.txt   # Python dependencies for model training
+│   │   ├── model/                 ## PyTorch model files and scripts
+│   │   │   ├── train.py           ## Model training script
+│   │   │   ├── inference.py       ## Model inference script
+│   │   │   └── requirements.txt   ## Python dependencies for model training
 │   │   │
 │   │   ├── api/
-│   │   │   ├── app.py             # Flask API endpoints for user interactions and model serving
-│   │   │   └── requirements.txt   # Python dependencies for Flask app
+│   │   │   ├── app.py             ## Flask API endpoints for user interactions and model serving
+│   │   │   └── requirements.txt   ## Python dependencies for Flask app
 │   │   │
-│   │   └── data/                  # Data processing and storage
-│   │       ├── preprocessing.py   # Data preprocessing scripts
+│   │   └── data/                  ## Data processing and storage
+│   │       ├── preprocessing.py   ## Data preprocessing scripts
 │   │       └── ...
 │   │
 │   ├── user_management/
-│   │   ├── authentication.py      # User authentication and access control
+│   │   ├── authentication.py      ## User authentication and access control
 │   │   └── ...
 │   │
 │   └── deployment/
-│       ├── Dockerfile             # Dockerfile for building the application containers
+│       ├── Dockerfile             ## Dockerfile for building the application containers
 │       ├── kubernetes/
-│       │   ├── deployment.yaml    # Kubernetes deployment configuration
-│       │   └── service.yaml       # Kubernetes service configuration
+│       │   ├── deployment.yaml    ## Kubernetes deployment configuration
+│       │   └── service.yaml       ## Kubernetes service configuration
 │       │
 │       └── ...
 │
 ├── infra/
 │   ├── monitoring/
-│   │   ├── prometheus.yaml        # Prometheus configuration for monitoring
-│   │   └── grafana.yaml           # Grafana configuration for visualization
+│   │   ├── prometheus.yaml        ## Prometheus configuration for monitoring
+│   │   └── grafana.yaml           ## Grafana configuration for visualization
 │   │
 │   ├── mlops/
-│   │   ├── airflow/               # Apache Airflow DAGs for model training pipelines
-│   │   ├── model_registry/        # Model versioning and registry
+│   │   ├── airflow/               ## Apache Airflow DAGs for model training pipelines
+│   │   ├── model_registry/        ## Model versioning and registry
 │   │   └── ...
 │   │
 │   └── ...
 │
 ├── docs/
-│   └── ...                        # Documentation and README files
+│   └── ...                        ## Documentation and README files
 │
 └── ...
 ```
@@ -175,20 +175,20 @@ Within the `app/` directory of the Customized Content Recommendation Engine, the
 By organizing the deployment-related files within the `deployment/` directory, the repository separates the infrastructure configuration from application code, making it easier to manage and maintain deployment configurations for the Customized Content Recommendation Engine. These files and configurations are essential for deploying the application within a Kubernetes cluster, ensuring scalability, reliability, and efficient resource management.
 
 ```python
-# recommendation_engine/models/train.py
+## recommendation_engine/models/train.py
 import torch
 import torch.nn as nn
 import torch.optim as optim
 import pandas as pd
 
-# Load mock data for training
+## Load mock data for training
 data_path = 'path_to_mock_training_data.csv'
 data = pd.read_csv(data_path)
 
-# Preprocess data and define features and target
-# ...
+## Preprocess data and define features and target
+## ...
 
-# Define the recommendation model using PyTorch
+## Define the recommendation model using PyTorch
 class RecommendationModel(nn.Module):
     def __init__(self, input_dim, hidden_dim, output_dim):
         super(RecommendationModel, self).__init__()
@@ -202,10 +202,10 @@ class RecommendationModel(nn.Module):
         x = self.fc2(x)
         return x
 
-# Set hyperparameters and initialize the model
-input_dim = 10  # Replace with actual input dimension
-hidden_dim = 64  # Replace with desired hidden dimension
-output_dim = 1  # Replace with actual output dimension
+## Set hyperparameters and initialize the model
+input_dim = 10  ## Replace with actual input dimension
+hidden_dim = 64  ## Replace with desired hidden dimension
+output_dim = 1  ## Replace with actual output dimension
 learning_rate = 0.001
 epochs = 100
 
@@ -213,7 +213,7 @@ model = RecommendationModel(input_dim, hidden_dim, output_dim)
 criterion = nn.MSELoss()
 optimizer = optim.Adam(model.parameters(), lr=learning_rate)
 
-# Training loop
+## Training loop
 for epoch in range(epochs):
     inputs = torch.tensor(data['input_features'].values, dtype=torch.float32)
     targets = torch.tensor(data['target'].values, dtype=torch.float32)
@@ -227,7 +227,7 @@ for epoch in range(epochs):
     if (epoch+1) % 10 == 0:
         print(f'Epoch [{epoch+1}/{epochs}], Loss: {loss.item():.4f}')
 
-# Save the trained model
+## Save the trained model
 model_path = 'path_to_save_trained_model.pth'
 torch.save(model.state_dict(), model_path)
 print("Model trained and saved successfully")
@@ -237,20 +237,20 @@ In this example, `train.py` defines the script for training a PyTorch recommenda
 Replace `'path_to_mock_training_data.csv'` and `'path_to_save_trained_model.pth'` with actual file paths for the mock training data and the path to save the trained model, respectively. This file should be placed within the `recommendation_engine/models/` directory of the Customized Content Recommendation Engine repository.
 
 ```python
-# recommendation_engine/models/train_complex.py
+## recommendation_engine/models/train_complex.py
 import torch
 import torch.nn as nn
 import torch.optim as optim
 import pandas as pd
 
-# Load mock data for training
+## Load mock data for training
 data_path = 'path_to_mock_training_data.csv'
 data = pd.read_csv(data_path)
 
-# Preprocess data and define features and target
-# ...
+## Preprocess data and define features and target
+## ...
 
-# Define a more complex recommendation model using PyTorch
+## Define a more complex recommendation model using PyTorch
 class ComplexRecommendationModel(nn.Module):
     def __init__(self, input_dim, embedding_dim, hidden_dim, output_dim):
         super(ComplexRecommendationModel, self).__init__()
@@ -261,17 +261,17 @@ class ComplexRecommendationModel(nn.Module):
         
     def forward(self, x):
         x = self.embedding(x)
-        x = x.mean(dim=1)  # Aggregate embeddings
+        x = x.mean(dim=1)  ## Aggregate embeddings
         x = self.fc1(x)
         x = self.relu(x)
         x = self.fc2(x)
         return x
 
-# Set hyperparameters and initialize the model
-input_dim = 100  # Replace with actual input dimension
-embedding_dim = 64  # Replace with desired embedding dimension
-hidden_dim = 128  # Replace with desired hidden dimension
-output_dim = 1  # Replace with actual output dimension
+## Set hyperparameters and initialize the model
+input_dim = 100  ## Replace with actual input dimension
+embedding_dim = 64  ## Replace with desired embedding dimension
+hidden_dim = 128  ## Replace with desired hidden dimension
+output_dim = 1  ## Replace with actual output dimension
 learning_rate = 0.001
 epochs = 100
 
@@ -279,9 +279,9 @@ model = ComplexRecommendationModel(input_dim, embedding_dim, hidden_dim, output_
 criterion = nn.MSELoss()
 optimizer = optim.Adam(model.parameters(), lr=learning_rate)
 
-# Training loop
+## Training loop
 for epoch in range(epochs):
-    inputs = torch.tensor(data['input_features'].values, dtype=torch.long)  # Assuming categorical features for embeddings
+    inputs = torch.tensor(data['input_features'].values, dtype=torch.long)  ## Assuming categorical features for embeddings
     targets = torch.tensor(data['target'].values, dtype=torch.float32)
 
     optimizer.zero_grad()
@@ -293,7 +293,7 @@ for epoch in range(epochs):
     if (epoch+1) % 10 == 0:
         print(f'Epoch [{epoch+1}/{epochs}], Loss: {loss.item():.4f}')
 
-# Save the trained model
+## Save the trained model
 model_path = 'path_to_save_complex_trained_model.pth'
 torch.save(model.state_dict(), model_path)
 print("Complex model trained and saved successfully")

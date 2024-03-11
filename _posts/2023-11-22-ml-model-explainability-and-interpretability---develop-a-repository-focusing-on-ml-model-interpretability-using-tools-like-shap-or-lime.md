@@ -5,7 +5,7 @@ permalink: posts/ml-model-explainability-and-interpretability---develop-a-reposi
 layout: article
 ---
 
-# AI ML Model Explainability and Interpretability Repository
+## AI ML Model Explainability and Interpretability Repository
 
 ## Objectives
 The objective of this repository is to provide a comprehensive resource for understanding and implementing ML model interpretability techniques using tools such as SHAP (SHapley Additive exPlanations) or LIME (Local Interpretable Model-agnostic Explanations). The repository will cover the following objectives:
@@ -31,7 +31,7 @@ Additionally, the code examples and implementation guides will leverage popular 
 
 By focusing on these objectives, system design strategies, and chosen libraries, the repository aims to serve as a comprehensive guide for individuals looking to incorporate model interpretability into their AI/ML applications.
 
-# Infrastructure for ML Model Explainability and Interpretability Repository
+## Infrastructure for ML Model Explainability and Interpretability Repository
 
 To develop a repository focusing on ML model interpretability using tools like SHAP or LIME, we need to consider a robust infrastructure that supports the storage, management, and demonstration of interpretability techniques. The infrastructure components should include:
 
@@ -149,21 +149,21 @@ The `deployment` directory and its files provide a starting point for deploying 
 Certainly! Below is a Python function for a complex machine learning algorithm that uses mock data. For the purpose of this example, I'll create a simple function representing a machine learning model that takes in mock features and returns mock predictions.
 
 ```python
-# File path: models/model_wrapper.py
+## File path: models/model_wrapper.py
 
 import numpy as np
 from sklearn.ensemble import RandomForestRegressor
 
 def complex_ml_algorithm(features):
-    # Mock data for demonstration
+    ## Mock data for demonstration
     X_train = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
     y_train = np.array([10, 20, 30])
     
-    # Create a complex ML model - Random Forest Regressor for demo
+    ## Create a complex ML model - Random Forest Regressor for demo
     model = RandomForestRegressor(n_estimators=100, random_state=42)
     model.fit(X_train, y_train)
     
-    # Perform predictions using the complex ML model
+    ## Perform predictions using the complex ML model
     predictions = model.predict(features)
     
     return predictions
@@ -180,7 +180,7 @@ The file path for this function is `models/model_wrapper.py`, within the `models
 Certainly! Below is an example of a function for a complex deep learning algorithm using mock data. This function represents a simple neural network model that takes in mock features and returns mock predictions.
 
 ```python
-# File path: models/model_wrapper.py
+## File path: models/model_wrapper.py
 
 import numpy as np
 import tensorflow as tf
@@ -188,11 +188,11 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
 
 def complex_deep_learning_algorithm(features):
-    # Mock data for demonstration
+    ## Mock data for demonstration
     X_train = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
     y_train = np.array([10, 20, 30])
     
-    # Create a simple deep learning model for demonstration
+    ## Create a simple deep learning model for demonstration
     model = Sequential([
         Dense(64, activation='relu', input_shape=(3,)),
         Dense(64, activation='relu'),
@@ -202,7 +202,7 @@ def complex_deep_learning_algorithm(features):
     model.compile(optimizer='adam', loss='mean_squared_error')
     model.fit(X_train, y_train, epochs=10, batch_size=1)
     
-    # Perform predictions using the complex deep learning model
+    ## Perform predictions using the complex deep learning model
     predictions = model.predict(features)
     
     return predictions

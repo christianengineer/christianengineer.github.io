@@ -5,7 +5,7 @@ permalink: posts/comparing-front-end-frameworks-react-angular-vuejs-guide
 layout: article
 ---
 
-# Front-End Frameworks: React, Angular, and Vue.js
+## Front-End Frameworks: React, Angular, and Vue.js
 
 The continual evolution of technology has paved the way for modern front-end frameworks that aim to simplify web development for programmers. These frameworks provide developers with a starting block and structure for their projects. Some of the most popular among these are React, Angular, and Vue.js. This article will discuss these three competencies from a professional engineering perspective, diving into the particularities of each and how they contribute to the web development world.
 
@@ -69,7 +69,7 @@ Vue.js is gradually gaining popularity among developers due to its smooth learni
 
 ```js
 var app = new Vue({
-  el: "#app",
+  el: "## pp",
   data: {
     message: "Hello, world!",
   },

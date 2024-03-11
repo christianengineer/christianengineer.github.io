@@ -5,7 +5,7 @@ permalink: posts/watchover-ai-for-video-surveillance
 layout: article
 ---
 
-# AI WatchOver AI for Video Surveillance
+## AI WatchOver AI for Video Surveillance
 
 ## Objectives
 The main objectives of the AI WatchOver AI for Video Surveillance repository are to develop a scalable, data-intensive AI system for video surveillance that leverages the power of machine learning and deep learning to detect and analyze events in video streams. The system aims to provide real-time monitoring, anomaly detection, and behavior analysis to enhance security and safety in various environments such as public spaces, commercial facilities, and residential areas.
@@ -68,7 +68,7 @@ Utilize monitoring and management tools such as AWS CloudWatch, Azure Monitor, o
 
 By implementing a scalable, resilient, and secure infrastructure, the AI WatchOver AI for Video Surveillance application can effectively handle the data-intensive processing requirements of video surveillance, while ensuring real-time monitoring and analysis for enhanced security and safety.
 
-# WatchOver AI for Video Surveillance Repository File Structure
+## WatchOver AI for Video Surveillance Repository File Structure
 
 To maintain a well-organized and scalable file structure for the WatchOver AI for Video Surveillance repository, we can organize the code, data, and documentation into separate directories and subdirectories. This structure will help in managing the development, testing, and deployment of the AI application.
 
@@ -138,7 +138,7 @@ The repository can be structured as follows:
 
 By implementing this scalable file structure, the WatchOver AI for Video Surveillance repository will be well-organized, enabling efficient development, testing, and deployment of the AI application.
 
-# Models Directory for WatchOver AI for Video Surveillance Application
+## Models Directory for WatchOver AI for Video Surveillance Application
 
 The `models/` directory within the WatchOver AI for Video Surveillance repository contains pre-trained machine learning and deep learning models used for various tasks such as object detection, action recognition, and anomaly detection in video surveillance. This directory is organized to facilitate model management, version control, and easy integration into the application codebase.
 
@@ -184,7 +184,7 @@ Each subdirectory contains the following files and metadata associated with the 
 
 By adopting this structured approach for the `models/` directory and its associated model files, the WatchOver AI for Video Surveillance application can effectively manage and utilize pre-trained models for video analysis, object detection, action recognition, and anomalous behavior detection.
 
-# Deployment Directory for WatchOver AI for Video Surveillance Application
+## Deployment Directory for WatchOver AI for Video Surveillance Application
 
 The `deploy/` directory within the WatchOver AI for Video Surveillance repository contains configuration files and manifests for deploying the application on different platforms or cloud environments. This directory is structured to facilitate automated deployment, infrastructure provisioning, and scaling of the AI application components.
 
@@ -240,12 +240,12 @@ import cv2
 import numpy as np
 
 def perform_object_detection(video_file_path, yolo_model_path):
-    # Load YOLO model and configuration
+    ## Load YOLO model and configuration
     net = cv2.dnn.readNet(yolo_model_path, "yolov3.cfg")
     layers_names = net.getLayerNames()
     output_layers = [layers_names[i[0] - 1] for i in net.getUnconnectedOutLayers()]
 
-    # Load mock video data
+    ## Load mock video data
     cap = cv2.VideoCapture(video_file_path)
 
     while cap.isOpened():
@@ -255,12 +255,12 @@ def perform_object_detection(video_file_path, yolo_model_path):
 
         height, width, channels = frame.shape
 
-        # Perform object detection
+        ## Perform object detection
         blob = cv2.dnn.blobFromImage(frame, 0.00392, (416, 416), (0, 0, 0), True, crop=False)
         net.setInput(blob)
         outs = net.forward(output_layers)
 
-        # Post-processing of detected objects
+        ## Post-processing of detected objects
         class_ids = []
         confidences = []
         boxes = []
@@ -270,13 +270,13 @@ def perform_object_detection(video_file_path, yolo_model_path):
                 class_id = np.argmax(scores)
                 confidence = scores[class_id]
                 if confidence > 0.5:
-                    # Object detected
+                    ## Object detected
                     center_x = int(detection[0] * width)
                     center_y = int(detection[1] * height)
                     w = int(detection[2] * width)
                     h = int(detection[3] * height)
 
-                    # Rectangle coordinates
+                    ## Rectangle coordinates
                     x = int(center_x - w / 2)
                     y = int(center_y - h / 2)
 
@@ -284,7 +284,7 @@ def perform_object_detection(video_file_path, yolo_model_path):
                     confidences.append(float(confidence))
                     class_ids.append(class_id)
 
-        # Apply Non-maximum suppression to eliminate redundant overlapping boxes
+        ## Apply Non-maximum suppression to eliminate redundant overlapping boxes
         indexes = cv2.dnn.NMSBoxes(boxes, confidences, 0.5, 0.4)
 
         for i in range(len(boxes)):
@@ -292,11 +292,11 @@ def perform_object_detection(video_file_path, yolo_model_path):
                 x, y, w, h = boxes[i]
                 label = str(class_ids[i])
                 confidence = confidences[i]
-                # Draw bounding box and label on the frame
+                ## Draw bounding box and label on the frame
                 cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
                 cv2.putText(frame, label, (x, y - 5), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
 
-        # Display the frame with detected objects
+        ## Display the frame with detected objects
         cv2.imshow('Object Detection', frame)
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
@@ -318,47 +318,47 @@ from PIL import Image
 import numpy as np
 
 def perform_action_recognition(video_file_path, cnn_model_path):
-    # Load the pre-trained CNN model
+    ## Load the pre-trained CNN model
     cnn_model = torch.load(cnn_model_path)
-    cnn_model.eval()  # Set the model to evaluation mode
+    cnn_model.eval()  ## Set the model to evaluation mode
 
-    # Define the transformations to be applied to each frame of the video
+    ## Define the transformations to be applied to each frame of the video
     transform = transforms.Compose([
         transforms.Resize((224, 224)),
         transforms.ToTensor(),
         transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
     ])
 
-    # Load and process mock video data
+    ## Load and process mock video data
     video_frames = load_video_frames(video_file_path)
     video_tensor = torch.stack([transform(frame) for frame in video_frames])
 
-    # Perform action recognition on the video tensor
+    ## Perform action recognition on the video tensor
     with torch.no_grad():
         outputs = cnn_model(video_tensor)
 
-    # Post-processing of the classification outputs
+    ## Post-processing of the classification outputs
     probabilities = torch.nn.functional.softmax(outputs, dim=1)
     predicted_classes = torch.argmax(probabilities, dim=1)
 
-    # Return the predicted classes as a list of action labels
+    ## Return the predicted classes as a list of action labels
     action_labels = [get_action_label(class_id.item()) for class_id in predicted_classes]
     return action_labels
 
 def load_video_frames(video_file_path):
-    # Mock function to load and process video frames as a list of numpy arrays
-    # This function is for demonstration purposes and should be replaced with actual video data loading and processing logic
-    video_frames = []  # Placeholder for processed video frames
-    # ... Logic to load and process video frames from the specified file path
+    ## Mock function to load and process video frames as a list of numpy arrays
+    ## This function is for demonstration purposes and should be replaced with actual video data loading and processing logic
+    video_frames = []  ## Placeholder for processed video frames
+    ## ... Logic to load and process video frames from the specified file path
     return video_frames
 
 def get_action_label(class_id):
-    # Mock function to retrieve action labels based on class IDs
-    # Replace with actual action labels corresponding to the model's classes
+    ## Mock function to retrieve action labels based on class IDs
+    ## Replace with actual action labels corresponding to the model's classes
     action_labels = ["walking", "running", "standing", "sitting", "sneezing", "typing", "reading", "eating"]
     return action_labels[class_id]
 
-# Example usage
+## Example usage
 video_file_path = "path/to/mock/video.mp4"
 cnn_model_path = "path/to/pretrained/cnn_model.pth"
 predicted_actions = perform_action_recognition(video_file_path, cnn_model_path)

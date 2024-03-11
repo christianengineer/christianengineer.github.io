@@ -65,54 +65,54 @@ AI_Enhanced_Legal_Document_Analysis/
 │
 ├── app/
 │   ├── models/
-│   │   ├── bert/                   # BERT model files and configurations
+│   │   ├── bert/                   ## BERT model files and configurations
 │   │   │   ├── trained_models/
 │   │   │   └── bert_config.json
 │   │   │   └── vocab.txt
 │   │
 │   ├── src/
-│   │   ├── api/                    # Flask API code
+│   │   ├── api/                    ## Flask API code
 │   │   │   └── app.py
 │   │   │   └── ...
-│   │   ├── data_processing/        # Data preprocessing scripts
+│   │   ├── data_processing/        ## Data preprocessing scripts
 │   │   │   └── preprocess.py
 │   │   │   └── ...
-│   │   ├── model_training/         # Scripts for fine-tuning BERT and training models
+│   │   ├── model_training/         ## Scripts for fine-tuning BERT and training models
 │   │   │   └── train_bert.py
 │   │   │   └── ...
-│   │   └── utils/                  # Utility functions
+│   │   └── utils/                  ## Utility functions
 │   │       └── helper_functions.py
 │   │       └── ...
 │   │
 ├── deployment/
 │   ├── kubernetes/
-│   │   ├── deployment.yaml         # Kubernetes deployment configuration
-│   │   ├── service.yaml            # Kubernetes service configuration
+│   │   ├── deployment.yaml         ## Kubernetes deployment configuration
+│   │   ├── service.yaml            ## Kubernetes service configuration
 │   │   └── ...
 │   │
 ├── data/
-│   ├── raw_data/                   # Directory for raw legal documents
+│   ├── raw_data/                   ## Directory for raw legal documents
 │   │   └── ...
-│   ├── processed_data/             # Directory for processed data
+│   ├── processed_data/             ## Directory for processed data
 │   │   └── ...
 │   │
 ├── tests/
-│   ├── unit_tests/                 # Unit tests for code components
-│   ├── integration_tests/          # Integration tests for the entire application
-│   ├── performance_tests/          # Performance tests for model inference
+│   ├── unit_tests/                 ## Unit tests for code components
+│   ├── integration_tests/          ## Integration tests for the entire application
+│   ├── performance_tests/          ## Performance tests for model inference
 │   └── ...
 │
 ├── config/
-│   ├── app_config.yaml             # Application configurations
-│   ├── model_config.yaml           # Configurations for model hyperparameters
+│   ├── app_config.yaml             ## Application configurations
+│   ├── model_config.yaml           ## Configurations for model hyperparameters
 │   └── ...
 │
 ├── docs/
-│   ├── design_documents/           # System design documents
-│   ├── api_documentation/         # Documentation for the API endpoints
+│   ├── design_documents/           ## System design documents
+│   ├── api_documentation/         ## Documentation for the API endpoints
 │   └── ...
 │
-└── README.md                       # Project documentation and usage instructions
+└── README.md                       ## Project documentation and usage instructions
 ```
 
 This scalable file structure organizes the AI-Enhanced Legal Document Analysis repository into meaningful directories, separating code, data, configuration, tests, and documentation. It allows for modularity, maintainability, and scalability as the project grows and evolves.
@@ -123,13 +123,13 @@ The `models` directory within the AI-Enhanced Legal Document Analysis repository
 models/
 │
 ├── bert/
-│   ├── trained_models/              # Directory for storing trained BERT model weights
-│   │   ├── model_checkpoint.bin     # Trained weights of the BERT model
-│   │   ├── optimizer_checkpoint.bin # Optimizer state for the model
+│   ├── trained_models/              ## Directory for storing trained BERT model weights
+│   │   ├── model_checkpoint.bin     ## Trained weights of the BERT model
+│   │   ├── optimizer_checkpoint.bin ## Optimizer state for the model
 │   │   └── ...
 │   │
-│   ├── bert_config.json             # Configuration file for BERT model architecture
-│   ├── vocab.txt                    # Vocabulary file for tokenizing text for BERT
+│   ├── bert_config.json             ## Configuration file for BERT model architecture
+│   ├── vocab.txt                    ## Vocabulary file for tokenizing text for BERT
 │   └── ...
 ```
 
@@ -149,9 +149,9 @@ The `deployment` directory within the AI-Enhanced Legal Document Analysis reposi
 deployment/
 │
 ├── kubernetes/
-│   ├── deployment.yaml        # Kubernetes deployment configuration
-│   ├── service.yaml           # Kubernetes service configuration
-│   ├── ingress.yaml           # Kubernetes Ingress configuration for exposing the API
+│   ├── deployment.yaml        ## Kubernetes deployment configuration
+│   ├── service.yaml           ## Kubernetes service configuration
+│   ├── ingress.yaml           ## Kubernetes Ingress configuration for exposing the API
 │   └── ...
 ```
 
@@ -175,23 +175,23 @@ from transformers import BertTokenizer, BertForSequenceClassification, AdamW
 from torch.utils.data import DataLoader, Dataset
 import pandas as pd
 
-# Mock data (replace with actual training data)
+## Mock data (replace with actual training data)
 data = {
     'text': ['Sample legal document text 1', 'Sample legal document text 2'],
-    'label': [1, 0]  # Replace with actual labels for the mock data
+    'label': [1, 0]  ## Replace with actual labels for the mock data
 }
 
 df = pd.DataFrame(data)
 
-# BERT model and tokenizer
+## BERT model and tokenizer
 model_name = 'bert-base-uncased'
 tokenizer = BertTokenizer.from_pretrained(model_name)
-model = BertForSequenceClassification.from_pretrained(model_name, num_labels=2)  # Adjust num_labels based on actual classes
+model = BertForSequenceClassification.from_pretrained(model_name, num_labels=2)  ## Adjust num_labels based on actual classes
 
-# Tokenize input text
+## Tokenize input text
 tokenized_input = tokenizer(df['text'].tolist(), padding=True, truncation=True, return_tensors='pt')
 
-# Create custom dataset
+## Create custom dataset
 class LegalDocumentDataset(Dataset):
     def __init__(self, tokenized_input, labels):
         self.tokenized_input = tokenized_input
@@ -205,10 +205,10 @@ class LegalDocumentDataset(Dataset):
 
 dataset = LegalDocumentDataset(tokenized_input, df['label'].tolist())
 
-# Data loader
+## Data loader
 dataloader = DataLoader(dataset, batch_size=1, shuffle=True)
 
-# Training loop (Dummy example - replace with actual training process)
+## Training loop (Dummy example - replace with actual training process)
 optimizer = AdamW(model.parameters(), lr=1e-5)
 for inputs, labels in dataloader:
     optimizer.zero_grad()
@@ -217,7 +217,7 @@ for inputs, labels in dataloader:
     loss.backward()
     optimizer.step()
 
-# Save trained model
+## Save trained model
 output_dir = './models/trained_models'
 model.save_pretrained(output_dir)
 tokenizer.save_pretrained(output_dir)
@@ -237,31 +237,31 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 import joblib
 
-# Mock data (replace with actual data)
+## Mock data (replace with actual data)
 data = {
     'text': ['Sample legal document text 1', 'Sample legal document text 2'],
-    'label': ['contract', 'judicial opinion'],  # Replace with actual labels for the mock data
+    'label': ['contract', 'judicial opinion'],  ## Replace with actual labels for the mock data
 }
 
 df = pd.DataFrame(data)
 
-# Feature engineering
+## Feature engineering
 vectorizer = TfidfVectorizer(max_features=1000)
 X = vectorizer.fit_transform(df['text'])
 
-# Train-test split
+## Train-test split
 X_train, X_test, y_train, y_test = train_test_split(X, df['label'], test_size=0.2, random_state=42)
 
-# Complex model training (Random Forest as an example)
+## Complex model training (Random Forest as an example)
 model = RandomForestClassifier(n_estimators=100, random_state=42)
 model.fit(X_train, y_train)
 
-# Model evaluation
+## Model evaluation
 y_pred = model.predict(X_test)
 accuracy = accuracy_score(y_test, y_pred)
 print(f"Accuracy: {accuracy}")
 
-# Save trained model
+## Save trained model
 output_path = './models/trained_models/complex_model.pkl'
 joblib.dump(model, output_path)
 ```

@@ -65,38 +65,38 @@ automated-essay-scoring/
 │
 ├── app/
 │   ├── api/
-│   │   ├── endpoints/           # API endpoint definitions
-│   │   ├── serializers/         # Data serialization/deserialization logic
-│   │   ├── validators/          # Request/response validation logic
+│   │   ├── endpoints/           ## API endpoint definitions
+│   │   ├── serializers/         ## Data serialization/deserialization logic
+│   │   ├── validators/          ## Request/response validation logic
 │   │   └── __init__.py
 │   │
 │   ├── core/
-│   │   ├── models/              # Trained machine learning models
-│   │   ├── nlp/                 # NLP preprocessing and analysis modules
-│   │   ├── services/            # Core business logic and services
+│   │   ├── models/              ## Trained machine learning models
+│   │   ├── nlp/                 ## NLP preprocessing and analysis modules
+│   │   ├── services/            ## Core business logic and services
 │   │   └── __init__.py
 │   │
 │   ├── data/
-│   │   ├── essays/              # Sample essays for testing
+│   │   ├── essays/              ## Sample essays for testing
 │   │   └── __init__.py
 │   │
-│   ├── utils/                   # Utility functions and helper modules
+│   ├── utils/                   ## Utility functions and helper modules
 │   └── __init__.py
 │
 ├── config/
-│   ├── settings/                # Configuration settings for the application
+│   ├── settings/                ## Configuration settings for the application
 │   └── __init__.py
 │
-├── docs/                        # Documentation for the project
+├── docs/                        ## Documentation for the project
 │
-├── tests/                       # Unit tests and integration tests
+├── tests/                       ## Unit tests and integration tests
 │
 ├── .gitignore
-├── Dockerfile                   # Docker configuration for containerization
-├── requirements.txt             # Python dependencies
-├── app.py                       # Entry point for the application
-├── README.md                    # Project README file
-└── LICENSE                      # License information
+├── Dockerfile                   ## Docker configuration for containerization
+├── requirements.txt             ## Python dependencies
+├── app.py                       ## Entry point for the application
+├── README.md                    ## Project README file
+└── LICENSE                      ## License information
 ```
 
 In this file structure:
@@ -120,15 +120,15 @@ Certainly! Here's an expanded view of the `models` directory and its associated 
 models/
 │
 ├── machine_learning/
-│   ├── regression_model.pkl       # Serialized trained regression model for essay scoring
-│   ├── classification_model.pkl   # Serialized trained classification model for essay scoring
+│   ├── regression_model.pkl       ## Serialized trained regression model for essay scoring
+│   ├── classification_model.pkl   ## Serialized trained classification model for essay scoring
 │   └── __init__.py
 │
 ├── nlp/
-│   ├── preprocessing.py           # Preprocessing module for cleaning and tokenizing essays
-│   ├── feature_extraction.py      # Feature extraction module for obtaining relevant essay features
-│   ├── sentiment_analysis.py      # Sentiment analysis module for evaluating the emotional tone of essays
-│   ├── part_of_speech_tagging.py  # Part-of-speech tagging module for analyzing essay syntax
+│   ├── preprocessing.py           ## Preprocessing module for cleaning and tokenizing essays
+│   ├── feature_extraction.py      ## Feature extraction module for obtaining relevant essay features
+│   ├── sentiment_analysis.py      ## Sentiment analysis module for evaluating the emotional tone of essays
+│   ├── part_of_speech_tagging.py  ## Part-of-speech tagging module for analyzing essay syntax
 │   └── __init__.py
 │
 └── __init__.py
@@ -150,13 +150,13 @@ In the context of the Automated Essay Scoring with NLTK (Python) application, th
 deployment/
 │
 ├── docker/
-│   ├── Dockerfile           # Configuration for building the Docker image
-│   ├── .dockerignore        # Specifies files and directories to be ignored by Docker build
-│   └── docker-compose.yml   # Docker Compose configuration for multi-container application setup
+│   ├── Dockerfile           ## Configuration for building the Docker image
+│   ├── .dockerignore        ## Specifies files and directories to be ignored by Docker build
+│   └── docker-compose.yml   ## Docker Compose configuration for multi-container application setup
 │
 └── kubernetes/
-    ├── deployment.yaml      # Kubernetes deployment configuration for scaling and orchestrating containers
-    └── service.yaml         # Kubernetes service configuration for exposing the application to external traffic
+    ├── deployment.yaml      ## Kubernetes deployment configuration for scaling and orchestrating containers
+    └── service.yaml         ## Kubernetes service configuration for exposing the application to external traffic
 ```
 
 In this structure:
@@ -175,22 +175,22 @@ from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 def train_complex_ml_algorithm(data_file_path):
-    # Load mock data from a CSV file
+    ## Load mock data from a CSV file
     data = pd.read_csv(data_file_path)
 
-    # Perform text preprocessing and feature extraction
+    ## Perform text preprocessing and feature extraction
     vectorizer = TfidfVectorizer()
     X = vectorizer.fit_transform(data['essay'])
     y = data['score']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize and train a complex machine learning algorithm (Random Forest Regressor, for example)
+    ## Initialize and train a complex machine learning algorithm (Random Forest Regressor, for example)
     model = RandomForestRegressor(n_estimators=100, random_state=42)
     model.fit(X_train, y_train)
 
-    # Evaluate the model
+    ## Evaluate the model
     train_score = model.score(X_train, y_train)
     test_score = model.score(X_test, y_test)
 
@@ -217,22 +217,22 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import train_test_split
 
 def train_automated_essay_scoring_model(data_file_path):
-    # Load the mock data from the provided file path
+    ## Load the mock data from the provided file path
     data = pd.read_csv(data_file_path)
 
-    # Preprocessing and feature extraction
+    ## Preprocessing and feature extraction
     vectorizer = TfidfVectorizer(max_features=1000, stop_words='english')
     X = vectorizer.fit_transform(data['essay'])
     y = data['score']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize and train a RandomForestRegressor model
+    ## Initialize and train a RandomForestRegressor model
     model = RandomForestRegressor(n_estimators=100, random_state=42)
     model.fit(X_train, y_train)
 
-    # Evaluate the model
+    ## Evaluate the model
     train_score = model.score(X_train, y_train)
     test_score = model.score(X_test, y_test)
 

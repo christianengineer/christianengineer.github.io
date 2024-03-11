@@ -5,7 +5,7 @@ permalink: posts/peru-retail-foot-traffic-predictor-pytorch-scikit-learn-kafka-k
 layout: article
 ---
 
-# **Peru Retail Foot Traffic Predictor Solution**
+## **Peru Retail Foot Traffic Predictor Solution**
 
 ## **Objective and Benefits for Retail Businesses:**
 
@@ -220,34 +220,34 @@ import pandas as pd
 from sklearn.preprocessing import StandardScaler
 from sklearn.impute import SimpleImputer
 
-# Load the dataset containing foot traffic data
+## Load the dataset containing foot traffic data
 data = pd.read_csv('foot_traffic_data.csv')
 
-# Feature selection: We select relevant features for model training
+## Feature selection: We select relevant features for model training
 selected_features = ['timestamp', 'foot_traffic_count', 'temperature', 'precipitation']
 
-# Extract selected features and drop any irrelevant columns
+## Extract selected features and drop any irrelevant columns
 data = data[selected_features]
 
-# Impute missing values: Ensure completeness in the dataset
+## Impute missing values: Ensure completeness in the dataset
 imputer = SimpleImputer(strategy='mean')
 data[['temperature', 'precipitation']] = imputer.fit_transform(data[['temperature', 'precipitation']])
 
-# Normalize numerical features: Scale features to a common range
+## Normalize numerical features: Scale features to a common range
 scaler = StandardScaler()
 data[['temperature', 'precipitation']] = scaler.fit_transform(data[['temperature', 'precipitation']])
 
-# Feature engineering: Create new features (e.g., time-based features)
+## Feature engineering: Create new features (e.g., time-based features)
 data['hour_of_day'] = pd.to_datetime(data['timestamp']).dt.hour
 data['day_of_week'] = pd.to_datetime(data['timestamp']).dt.dayofweek
 
-# One-hot encoding categorical features (day of the week)
+## One-hot encoding categorical features (day of the week)
 data = pd.get_dummies(data, columns=['day_of_week'])
 
-# Drop the original timestamp column after feature extraction
+## Drop the original timestamp column after feature extraction
 data.drop('timestamp', axis=1, inplace=True)
 
-# Save the preprocessed data to a new CSV file
+## Save the preprocessed data to a new CSV file
 data.to_csv('preprocessed_foot_traffic_data.csv', index=False)
 ```
 
@@ -340,10 +340,10 @@ from faker import Faker
 import random
 import numpy as np
 
-# Initialize Faker generator
+## Initialize Faker generator
 fake = Faker()
 
-# Generate synthetic data for the fictitious dataset
+## Generate synthetic data for the fictitious dataset
 def generate_synthetic_data(num_samples):
     data = []
     for _ in range(num_samples):
@@ -352,7 +352,7 @@ def generate_synthetic_data(num_samples):
         temperature = round(np.random.normal(loc=25, scale=5), 2)
         precipitation = round(np.random.uniform(0, 10), 2)
         
-        # Simulate holiday and special event effects
+        ## Simulate holiday and special event effects
         is_holiday = 1 if random.random() < 0.1 else 0
         special_event_type = random.choice(['Promotion', 'Sale', 'Event', None])
         
@@ -361,10 +361,10 @@ def generate_synthetic_data(num_samples):
     df = pd.DataFrame(data, columns=['timestamp', 'foot_traffic_count', 'temperature', 'precipitation', 'is_holiday', 'special_event_type'])
     return df
 
-# Generate a synthetic dataset with 1000 samples
+## Generate a synthetic dataset with 1000 samples
 synthetic_data = generate_synthetic_data(1000)
 
-# Save the synthetic dataset to a CSV file
+## Save the synthetic dataset to a CSV file
 synthetic_data.to_csv('synthetic_foot_traffic_data.csv', index=False)
 ```
 
@@ -418,28 +418,28 @@ import torch.optim as optim
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
-# Load the preprocessed dataset
+## Load the preprocessed dataset
 data = pd.read_csv('preprocessed_foot_traffic_data.csv')
 
-# Split data into features and target
+## Split data into features and target
 X = data.drop(['foot_traffic_count'], axis=1)
 y = data['foot_traffic_count']
 
-# Perform train-test split
+## Perform train-test split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Standardize numerical features
+## Standardize numerical features
 scaler = StandardScaler()
 X_train[['temperature', 'precipitation']] = scaler.fit_transform(X_train[['temperature', 'precipitation']])
 X_test[['temperature', 'precipitation']] = scaler.transform(X_test[['temperature', 'precipitation']])
 
-# Convert data to PyTorch tensors
+## Convert data to PyTorch tensors
 X_train_tensor = torch.tensor(X_train.values, dtype=torch.float)
 y_train_tensor = torch.tensor(y_train.values, dtype=torch.float).view(-1, 1)
 X_test_tensor = torch.tensor(X_test.values, dtype=torch.float)
 y_test_tensor = torch.tensor(y_test.values, dtype=torch.float).view(-1, 1)
 
-# Define a simple RNN model using PyTorch
+## Define a simple RNN model using PyTorch
 class RNNModel(nn.Module):
     def __init__(self, input_size, hidden_size, output_size):
         super(RNNModel, self).__init__()
@@ -451,17 +451,17 @@ class RNNModel(nn.Module):
         out = self.fc(out[:, -1, :])
         return out
 
-# Initialize the RNN model
+## Initialize the RNN model
 input_size = X_train.shape[1]
 output_size = 1
 hidden_size = 64
 model = RNNModel(input_size, hidden_size, output_size)
 
-# Define loss function and optimizer
+## Define loss function and optimizer
 criterion = nn.MSELoss()
 optimizer = optim.Adam(model.parameters(), lr=0.001)
 
-# Training the RNN model
+## Training the RNN model
 num_epochs = 100
 for epoch in range(num_epochs):
     optimizer.zero_grad()
@@ -470,7 +470,7 @@ for epoch in range(num_epochs):
     loss.backward()
     optimizer.step()
 
-# Save the trained model for deployment
+## Save the trained model for deployment
 torch.save(model.state_dict(), 'rnn_foot_traffic_predictor.pth')
 ```
 
@@ -534,22 +534,22 @@ By following this deployment plan tailored to the unique demands of the Peru Ret
 Here is a production-ready Dockerfile tailored to encapsulate the environment and dependencies for the Peru Retail Foot Traffic Predictor project, focusing on optimized performance and scalability:
 
 ```Dockerfile
-# Use a base image with PyTorch and CUDA support for GPU acceleration
+## Use a base image with PyTorch and CUDA support for GPU acceleration
 FROM pytorch/pytorch:1.9.0-cuda10.2-cudnn7-runtime
 
-# Set the working directory in the container
+## Set the working directory in the container
 WORKDIR /app
 
-# Copy the project files into the container
+## Copy the project files into the container
 COPY . /app
 
-# Install necessary dependencies
+## Install necessary dependencies
 RUN pip install --no-cache-dir pandas scikit-learn torch torchvision torchtext
 
-# Expose the port for Flask API
+## Expose the port for Flask API
 EXPOSE 5000
 
-# Define the entry point for running the Flask API
+## Define the entry point for running the Flask API
 CMD ["python", "app.py"]
 ```
 

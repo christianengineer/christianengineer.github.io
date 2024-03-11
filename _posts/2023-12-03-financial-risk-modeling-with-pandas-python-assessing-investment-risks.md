@@ -63,32 +63,32 @@ When structuring the repository for the "Financial Risk Modeling with Pandas (Py
 financial-risk-modeling/
 │
 ├── data/
-│   ├── raw_data/              # Store raw financial data from different sources
-│   ├── processed_data/        # Preprocessed and cleaned data for model training
-│   └── external_data/         # Additional external datasets for feature engineering
+│   ├── raw_data/              ## Store raw financial data from different sources
+│   ├── processed_data/        ## Preprocessed and cleaned data for model training
+│   └── external_data/         ## Additional external datasets for feature engineering
 │
 ├── notebooks/
-│   ├── exploratory_analysis/  # Jupyter notebooks for data exploration and visualization
-│   ├── preprocessing/         # Notebooks for data preprocessing and feature engineering
-│   └── model_training/        # Notebooks for machine learning model training and evaluation
+│   ├── exploratory_analysis/  ## Jupyter notebooks for data exploration and visualization
+│   ├── preprocessing/         ## Notebooks for data preprocessing and feature engineering
+│   └── model_training/        ## Notebooks for machine learning model training and evaluation
 │
 ├── src/
-│   ├── data_ingestion/        # Scripts for data collection and ingestion from various sources
-│   ├── data_preprocessing/    # Modules for data cleaning, feature extraction, and transformation
-│   ├── model_training/        # Code for training machine learning models
-│   └── model_evaluation/      # Utilities for model evaluation and performance metrics
+│   ├── data_ingestion/        ## Scripts for data collection and ingestion from various sources
+│   ├── data_preprocessing/    ## Modules for data cleaning, feature extraction, and transformation
+│   ├── model_training/        ## Code for training machine learning models
+│   └── model_evaluation/      ## Utilities for model evaluation and performance metrics
 │
-├── model/                     # Saved trained models or model artifacts
+├── model/                     ## Saved trained models or model artifacts
 │
-├── config/                    # Configuration files for setting up system parameters, API keys, etc.
+├── config/                    ## Configuration files for setting up system parameters, API keys, etc.
 │
-├── reports/                   # Report files such as model evaluation results, performance metrics, and visualizations
+├── reports/                   ## Report files such as model evaluation results, performance metrics, and visualizations
 │
-├── requirements.txt           # Python packages and dependencies required for the project
+├── requirements.txt           ## Python packages and dependencies required for the project
 │
-├── README.md                  # Project overview, setup instructions, and usage guidelines
+├── README.md                  ## Project overview, setup instructions, and usage guidelines
 │
-└── LICENSE                    # Licensing information for the repository
+└── LICENSE                    ## Licensing information for the repository
 ```
 
 In this structure:
@@ -109,24 +109,24 @@ To further expand on the `models` directory within the "Financial Risk Modeling 
 ```plaintext
 models/
 │
-├── trained_models/               # Directory for storing trained machine learning models or model artifacts
-│   ├── model1.pkl                # Serialized file for a trained scikit-learn model
-│   ├── model2.pth                # Serialized file for a PyTorch model
+├── trained_models/               ## Directory for storing trained machine learning models or model artifacts
+│   ├── model1.pkl                ## Serialized file for a trained scikit-learn model
+│   ├── model2.pth                ## Serialized file for a PyTorch model
 │   └── ...
 │
-├── model_evaluation/             # Directory for storing model evaluation results and metrics
-│   ├── evaluation_metrics.json  # JSON file containing evaluation metrics (e.g., accuracy, precision, recall)
-│   ├── confusion_matrix.png      # Visualization of the confusion matrix for model performance
+├── model_evaluation/             ## Directory for storing model evaluation results and metrics
+│   ├── evaluation_metrics.json  ## JSON file containing evaluation metrics (e.g., accuracy, precision, recall)
+│   ├── confusion_matrix.png      ## Visualization of the confusion matrix for model performance
 │   └── ...
 │
-├── model_documentation/          # Directory for model documentation and related files
-│   ├── model_summary.md         # Markdown file providing a summary of the trained models and their performance
-│   ├── feature_importance.png   # Visualization of feature importance for a trained model
+├── model_documentation/          ## Directory for model documentation and related files
+│   ├── model_summary.md         ## Markdown file providing a summary of the trained models and their performance
+│   ├── feature_importance.png   ## Visualization of feature importance for a trained model
 │   └── ...
 │
-└── deployment_artifacts/         # Directory for model deployment artifacts
-    ├── dockerfile               # Dockerfile for containerizing the model inference service
-    ├── kubernetes_config.yaml    # Configuration file for deploying models on Kubernetes
+└── deployment_artifacts/         ## Directory for model deployment artifacts
+    ├── dockerfile               ## Dockerfile for containerizing the model inference service
+    ├── kubernetes_config.yaml    ## Configuration file for deploying models on Kubernetes
     └── ...
 ```
 
@@ -144,22 +144,22 @@ The `deployment` directory plays a crucial role in managing the deployment artif
 deployment/
 │
 ├── docker/
-│   ├── Dockerfile              # Configuration file for building the Docker image of the application
-│   ├── docker-compose.yml      # Compose file for multi-container Docker applications (if applicable)
+│   ├── Dockerfile              ## Configuration file for building the Docker image of the application
+│   ├── docker-compose.yml      ## Compose file for multi-container Docker applications (if applicable)
 │   └── ...
 │
 ├── kubernetes/
-│   ├── deployment.yaml         # YAML configuration for deploying the application on Kubernetes
-│   ├── service.yaml            # YAML configuration for creating Kubernetes service
+│   ├── deployment.yaml         ## YAML configuration for deploying the application on Kubernetes
+│   ├── service.yaml            ## YAML configuration for creating Kubernetes service
 │   └── ...
 │
 ├── cloud_deploy/
-│   ├── cloudformation_template.json  # CloudFormation template for AWS deployment
-│   ├── terraform_config.tf            # Terraform configuration for infrastructure provisioning
+│   ├── cloudformation_template.json  ## CloudFormation template for AWS deployment
+│   ├── terraform_config.tf            ## Terraform configuration for infrastructure provisioning
 │   └── ...
 │
 └── scripts/
-    ├── deploy.sh               # Bash script for deploying the application
+    ├── deploy.sh               ## Bash script for deploying the application
     └── ...
 ```
 
@@ -180,27 +180,27 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 
 def financial_risk_modeling(file_path):
-    # Load mock financial data from the provided CSV file
+    ## Load mock financial data from the provided CSV file
     data = pd.read_csv(file_path)
 
-    # Assume the data contains features and a target variable 'risk_level'
-    # Split the data into features (X) and target variable (y)
+    ## Assume the data contains features and a target variable 'risk_level'
+    ## Split the data into features (X) and target variable (y)
     X = data.drop('risk_level', axis=1)
     y = data['risk_level']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
 
-    # Initialize a RandomForestClassifier (complex ML algorithm for illustration)
+    ## Initialize a RandomForestClassifier (complex ML algorithm for illustration)
     model = RandomForestClassifier(n_estimators=100, random_state=42)
 
-    # Train the model on the training data
+    ## Train the model on the training data
     model.fit(X_train, y_train)
 
-    # Make predictions on the testing data
+    ## Make predictions on the testing data
     y_pred = model.predict(X_test)
 
-    # Evaluate the model's performance using accuracy as a metric
+    ## Evaluate the model's performance using accuracy as a metric
     accuracy = accuracy_score(y_test, y_pred)
 
     return model, accuracy
@@ -230,27 +230,27 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 
 def train_and_evaluate_model(file_path):
-    # Load mock financial data from the provided CSV file
+    ## Load mock financial data from the provided CSV file
     data = pd.read_csv(file_path)
 
-    # Assume the data contains features and a target variable 'risk_level'
-    # Split the data into features (X) and target variable (y)
+    ## Assume the data contains features and a target variable 'risk_level'
+    ## Split the data into features (X) and target variable (y)
     X = data.drop('risk_level', axis=1)
     y = data['risk_level']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
 
-    # Initialize a RandomForestClassifier (complex ML algorithm for illustration)
+    ## Initialize a RandomForestClassifier (complex ML algorithm for illustration)
     model = RandomForestClassifier(n_estimators=100, random_state=42)
 
-    # Train the model on the training data
+    ## Train the model on the training data
     model.fit(X_train, y_train)
 
-    # Make predictions on the testing data
+    ## Make predictions on the testing data
     y_pred = model.predict(X_test)
 
-    # Evaluate the model's performance using accuracy as a metric
+    ## Evaluate the model's performance using accuracy as a metric
     accuracy = accuracy_score(y_test, y_pred)
 
     return model, accuracy

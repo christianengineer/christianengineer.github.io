@@ -5,7 +5,7 @@ permalink: posts/intelligent-public-transport-planner-for-callao-peru-tensorflow
 layout: article
 ---
 
-# AI Intelligent Public Transport Planner for Callao, Peru
+## AI Intelligent Public Transport Planner for Callao, Peru
 
 ## Objectives:
 1. **Seamless Connectivity:** Provide passengers in Callao, Peru with a comprehensive public transport system that enables seamless connectivity between different modes of transport.
@@ -24,7 +24,7 @@ layout: article
 2. **Keras:** Keras, known for its user-friendly API, will be used in conjunction with TensorFlow for efficient model building and training.
 3. **NetworkX:** NetworkX will be used to represent the public transport network as a graph, enabling efficient algorithms for route planning and optimization.
 
-# MLOps Infrastructure for the Intelligent Public Transport Planner
+## MLOps Infrastructure for the Intelligent Public Transport Planner
 
 ## Objectives:
 1. **Automated Model Training:** Implement a pipeline for automated training of machine learning models using TensorFlow and Keras.
@@ -44,7 +44,7 @@ layout: article
 ## Overview:
 The MLOps infrastructure for the Intelligent Public Transport Planner application will ensure efficient model training, deployment, monitoring, and scalability. By leveraging TensorFlow, Keras, and NetworkX, along with robust MLOps practices, the public transport system in Callao, Peru will revolutionize travel experiences, offering seamless connectivity and eco-friendly travel options to its passengers.
 
-# Scalable File Structure for the Intelligent Public Transport Planner Repository
+## Scalable File Structure for the Intelligent Public Transport Planner Repository
 
 ```
 intelligent_public_transport_planner/
@@ -113,7 +113,7 @@ In this file structure:
 
 This structured layout facilitates scalability, code organization, and collaboration for the development of the Intelligent Public Transport Planner application using TensorFlow, Keras, and NetworkX.
 
-# `models/` Directory for the Intelligent Public Transport Planner
+## `models/` Directory for the Intelligent Public Transport Planner
 
 ```
 models/
@@ -155,7 +155,7 @@ models/
 
 In the `models/` directory, the trained models are saved, and scripts for neural network architecture, graph representation, and model evaluation are provided. These files play a crucial role in optimizing public transport routes, ensuring seamless connectivity, and promoting eco-friendly travel in the Callao, Peru application powered by AI technologies like TensorFlow, Keras, and NetworkX.
 
-# `deployment/` Directory for the Intelligent Public Transport Planner
+## `deployment/` Directory for the Intelligent Public Transport Planner
 
 ```
 deployment/
@@ -184,7 +184,7 @@ In the `deployment/` directory, the deployment scripts `deploy_model.py` and `de
 I will provide an example file for training a model using mock data for the Intelligent Public Transport Planner application in Callao, Peru. Let's create a file named `train_model.py` under the `src/` directory in the project repository:
 
 ```python
-# File: src/train_model.py
+## File: src/train_model.py
 import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -192,7 +192,7 @@ from keras.models import Sequential
 from keras.layers import Dense
 from keras.optimizers import Adam
 
-# Load mock data
+## Load mock data
 data = {
     'feature1': np.random.random(1000),
     'feature2': np.random.random(1000),
@@ -200,14 +200,14 @@ data = {
 }
 df = pd.DataFrame(data)
 
-# Split data into features and target
+## Split data into features and target
 X = df[['feature1', 'feature2']]
 y = df['target']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Define and train a simple neural network model
+## Define and train a simple neural network model
 model = Sequential()
 model.add(Dense(128, input_shape=(2,), activation='relu'))
 model.add(Dense(1, activation='sigmoid'))
@@ -215,7 +215,7 @@ model.add(Dense(1, activation='sigmoid'))
 model.compile(optimizer=Adam(), loss='binary_crossentropy', metrics=['accuracy'])
 model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y_test))
 
-# Save the trained model
+## Save the trained model
 model.save('models/saved_models/mock_model.h5')
 ```
 
@@ -230,7 +230,7 @@ This file serves as an example of training a model using mock data for the Intel
 To demonstrate a more complex machine learning algorithm for the Intelligent Public Transport Planner application in Callao, Peru, I will create a file named `complex_ml_algorithm.py` under the `src/` directory in the project repository. This example will showcase a Neural Network with multiple layers for a challenging scenario:
 
 ```python
-# File: src/complex_ml_algorithm.py
+## File: src/complex_ml_algorithm.py
 import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -238,7 +238,7 @@ from keras.models import Sequential
 from keras.layers import Dense, Dropout
 from keras.optimizers import Adam
 
-# Load mock data
+## Load mock data
 data = {
     'feature1': np.random.random(1000),
     'feature2': np.random.random(1000),
@@ -247,14 +247,14 @@ data = {
 }
 df = pd.DataFrame(data)
 
-# Split data into features and target
+## Split data into features and target
 X = df[['feature1', 'feature2', 'feature3']]
 y = df['target']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Define and train a complex neural network model
+## Define and train a complex neural network model
 model = Sequential()
 model.add(Dense(128, input_shape=(3,), activation='relu'))
 model.add(Dropout(0.2))
@@ -265,7 +265,7 @@ model.add(Dense(1, activation='sigmoid'))
 model.compile(optimizer=Adam(), loss='binary_crossentropy', metrics=['accuracy'])
 model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y_test))
 
-# Save the trained model
+## Save the trained model
 model.save('models/saved_models/complex_model.h5')
 ```
 
@@ -277,7 +277,7 @@ In this file:
 
 This file showcases a more intricate machine learning algorithm using mock data for the Intelligent Public Transport Planner application, illustrating the usage of TensorFlow, Keras, and a complex neural network architecture.
 
-# List of User Types for the Intelligent Public Transport Planner:
+## List of User Types for the Intelligent Public Transport Planner:
 
 1. **Commuter User**
     - User Story: As a commuter living in Callao, Peru, I want to quickly plan my daily route using the Intelligent Public Transport Planner to minimize travel time and reduce congestion.

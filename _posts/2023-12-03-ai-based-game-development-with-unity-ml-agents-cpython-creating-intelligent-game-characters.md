@@ -1,12 +1,12 @@
 ---
-title: AI-based Game Development with Unity ML-Agents (C#/Python) Creating intelligent game characters
+title: AI-based Game Development with Unity ML-Agents (C## Python) Creating intelligent game characters
 date: 2023-12-03
 permalink: posts/ai-based-game-development-with-unity-ml-agents-cpython-creating-intelligent-game-characters
 layout: article
 ---
 
 ## Objectives
-The objectives of the AI-based Game Development with Unity ML-Agents repository are to create intelligent game characters using machine learning and reinforcement learning techniques. The repository aims to leverage Unity ML-Agents, which is a toolkit for building intelligent game agents, and provide examples and tutorials for creating AI-powered game characters using C# and Python.
+The objectives of the AI-based Game Development with Unity ML-Agents repository are to create intelligent game characters using machine learning and reinforcement learning techniques. The repository aims to leverage Unity ML-Agents, which is a toolkit for building intelligent game agents, and provide examples and tutorials for creating AI-powered game characters using C## and Python.
 
 ## System Design Strategies
 The system design for this repository should focus on creating a flexible and modular architecture that allows for easy integration of AI and machine learning algorithms with Unity game development. This can be achieved through the following strategies:
@@ -26,7 +26,7 @@ The chosen libraries and frameworks for this repository are as follows:
 
 2. **TensorFlow or PyTorch**: Using TensorFlow or PyTorch for implementing and training machine learning models for game character intelligence with Unity ML-Agents.
 
-3. **C# and Python Integration**: Leveraging the interoperability of C# and Python to combine the strength of Unity game development with the rich ecosystem of machine learning libraries available in Python.
+3. **C## and Python Integration**: Leveraging the interoperability of C## and Python to combine the strength of Unity game development with the rich ecosystem of machine learning libraries available in Python.
 
 By focusing on these objectives, system design strategies, and chosen libraries, the repository can provide comprehensive guidance and resources for creating AI-powered game characters in Unity, showcasing the potential of AI in game development.
 
@@ -210,23 +210,23 @@ import tensorflow as tf
 import numpy as np
 
 def train_reinforcement_learning_model(data_path):
-    # Load mock training data (as an example)
+    ## Load mock training data (as an example)
     training_data = np.load(data_path)
     
-    # Define the TensorFlow model
+    ## Define the TensorFlow model
     model = tf.keras.Sequential([
         tf.keras.layers.Dense(128, activation='relu', input_shape=(training_data.shape[1],)),
         tf.keras.layers.Dense(64, activation='relu'),
         tf.keras.layers.Dense(num_actions, activation='softmax')
     ])
     
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam', loss='categorical_crossentropy')
     
-    # Train the model with the mock data
+    ## Train the model with the mock data
     model.fit(training_data, epochs=10, batch_size=32)
     
-    # Save the trained model
+    ## Save the trained model
     model.save('trained_models/reinforcement_learning_model')
 ```
 
@@ -246,23 +246,23 @@ import tensorflow as tf
 import numpy as np
 
 def train_reinforcement_learning_model(data_path):
-    # Load mock training data
+    ## Load mock training data
     training_data = np.load(data_path)
     
-    # Define the neural network model using TensorFlow's Keras API
+    ## Define the neural network model using TensorFlow's Keras API
     model = tf.keras.Sequential([
         tf.keras.layers.Dense(64, activation='relu', input_shape=(input_shape,)),
         tf.keras.layers.Dense(64, activation='relu'),
         tf.keras.layers.Dense(num_actions, activation='softmax')
     ])
     
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam', loss='categorical_crossentropy')
     
-    # Train the model with the mock data
+    ## Train the model with the mock data
     model.fit(training_data, epochs=10, batch_size=32)
     
-    # Save the trained model
+    ## Save the trained model
     model.save('trained_models/reinforcement_learning_model')
 ```
 

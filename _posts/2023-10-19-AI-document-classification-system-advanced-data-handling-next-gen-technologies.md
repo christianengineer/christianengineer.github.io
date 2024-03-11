@@ -111,7 +111,7 @@ The file that will handle the logic for Intelligent Document Classification Syst
 
 ````python
 ```markdown
-# Import necessary libraries
+## Import necessary libraries
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.pipeline import Pipeline
 from sklearn.linear_model import SGDClassifier
@@ -123,20 +123,20 @@ class DocumentClassifier:
         self.model = None
 
     def preprocess_data(self):
-        # Extract features and labels
+        ## Extract features and labels
         features = self.df['text']
         labels = self.df['class']
 
-        # Train test split
+        ## Train test split
         features_train, features_test, labels_train, labels_test = train_test_split(features, labels, test_size = 0.2)
 
         return features_train, features_test, labels_train, labels_test
 
     def train_classifier(self):
-        # Training
+        ## Training
         features_train, features_test, labels_train, labels_test = self.preprocess_data()
 
-        # Text processing and classifier pipeline
+        ## Text processing and classifier pipeline
         self.model = Pipeline([
             ('vect', TfidfVectorizer()),
             ('clf', SGDClassifier()),
@@ -145,7 +145,7 @@ class DocumentClassifier:
         self.model.fit(features_train, labels_train)
 
     def classify_document(self, document):
-        # Classification
+        ## Classification
         if self.model is not None:
             predicted_class = self.model.predict([document])
             return predicted_class

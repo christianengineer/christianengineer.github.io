@@ -174,34 +174,34 @@ The deployment directory consolidates the essential resources and automation scr
 Certainly! Below is a simple Python script for training a Keras-based model for the real-time medical emergency response system, using mock data for demonstration purposes. 
 
 ```python
-# File Name: model_training.py
-# File Path: /model_training_pipeline/model_training.py
+## File Name: model_training.py
+## File Path: /model_training_pipeline/model_training.py
 
 import numpy as np
 import pandas as pd
 from keras.models import Sequential
 from keras.layers import Dense
 
-# Load mock data (replace with actual data loading logic)
+## Load mock data (replace with actual data loading logic)
 data = pd.read_csv('path_to_mock_data/emergency_cases_mock_data.csv')
 
-# Preprocessing and feature extraction (replace with actual preprocessing logic)
+## Preprocessing and feature extraction (replace with actual preprocessing logic)
 X = data.drop(columns=['emergency_type'])
 y = data['emergency_type']
 
-# Define the Keras model
+## Define the Keras model
 model = Sequential()
 model.add(Dense(12, input_dim=8, activation='relu'))
 model.add(Dense(8, activation='relu'))
 model.add(Dense(1, activation='sigmoid'))
 
-# Compile the model
+## Compile the model
 model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
 
-# Train the model
+## Train the model
 model.fit(X, y, epochs=150, batch_size=10)
 
-# Save the trained model
+## Save the trained model
 model.save('path_to_trained_models/emergency_classification_model.h5')
 ```
 
@@ -216,20 +216,20 @@ Note that the actual implementation would involve real medical emergency data an
 Certainly! Below is an example of a more complex machine learning algorithm using a Convolutional Neural Network (CNN) implemented with Keras for the real-time medical emergency response system. This script uses mock data for demonstration purposes.
 
 ```python
-# File Name: emergency_classification_cnn.py
-# File Path: /src/ai_models/emergency_classification_cnn.py
+## File Name: emergency_classification_cnn.py
+## File Path: /src/ai_models/emergency_classification_cnn.py
 
 import numpy as np
 import pandas as pd
 from keras.models import Sequential
 from keras.layers import Conv2D, MaxPooling2D, Flatten, Dense
 
-# Load and preprocess mock image data (replace with actual data loading and preprocessing logic)
-# Assuming the data is stored in a directory containing images of medical cases
-# Mock data loading and preprocessing to be replaced with actual data pipeline
+## Load and preprocess mock image data (replace with actual data loading and preprocessing logic)
+## Assuming the data is stored in a directory containing images of medical cases
+## Mock data loading and preprocessing to be replaced with actual data pipeline
 X, y = load_and_preprocess_image_data('path_to_mock_image_data/')
 
-# Define the CNN model architecture
+## Define the CNN model architecture
 model = Sequential()
 model.add(Conv2D(32, (3, 3), input_shape=(64, 64, 3), activation='relu'))
 model.add(MaxPooling2D(pool_size=(2, 2)))
@@ -239,13 +239,13 @@ model.add(Flatten())
 model.add(Dense(units=128, activation='relu'))
 model.add(Dense(units=1, activation='sigmoid'))
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
-# Train the model
+## Train the model
 model.fit(X, y, epochs=10, batch_size=32)
 
-# Save the trained CNN model
+## Save the trained CNN model
 model.save('path_to_trained_models/emergency_classification_cnn_model.h5')
 ```
 

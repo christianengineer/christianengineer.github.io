@@ -124,14 +124,14 @@ import torch.nn as nn
 class MyModel(nn.Module):
     def __init__(self, input_dim, output_dim):
         super(MyModel, self).__init__()
-        # Define the layers and components of the neural network
+        ## Define the layers and components of the neural network
 
     def forward(self, x):
-        # Define the forward pass of the model
+        ## Define the forward pass of the model
         return x
 
-# Additional training, validation, and testing logic
-# ...
+## Additional training, validation, and testing logic
+## ...
 
 ```
 
@@ -144,14 +144,14 @@ Example content of `layers.py`:
 import torch
 import torch.nn as nn
 
-# Custom layers or modules
+## Custom layers or modules
 class CustomBlock(nn.Module):
     def __init__(self, input_dim, output_dim):
         super(CustomBlock, self).__init__()
-        # Define the layer components and operations
+        ## Define the layer components and operations
 
     def forward(self, x):
-        # Define the forward pass of the custom block
+        ## Define the forward pass of the custom block
         return x
 ```
 
@@ -165,14 +165,14 @@ import torch
 import torchvision
 from torch.utils.data import DataLoader
 
-# Data-related utility functions
+## Data-related utility functions
 def load_dataset():
-    # Load and preprocess the dataset
+    ## Load and preprocess the dataset
     return dataset
 
-# Custom loss function
+## Custom loss function
 def custom_loss(output, target):
-    # Define the custom loss calculation
+    ## Define the custom loss calculation
     return loss
 ```
 
@@ -202,9 +202,9 @@ from preprocessing import preprocess_input
 
 app = Flask(__name__)
 
-# Load the trained model
+## Load the trained model
 model = MyModel()
-# Load the trained weights 
+## Load the trained weights 
 model.load_state_dict(torch.load('path_to_trained_weights.pth'))
 model.eval()
 
@@ -213,7 +213,7 @@ def predict():
     data = request.json
     input_data = preprocess_input(data)
     output = model(input_data)
-    # Process the output and return the predictions
+    ## Process the output and return the predictions
     return jsonify({'prediction': output.tolist()})
 
 if __name__ == '__main__':
@@ -242,7 +242,7 @@ import torchvision.transforms as transforms
 from PIL import Image
 
 def complex_machine_learning_algorithm(data_path, model_path):
-    # Load and preprocess the mock data
+    ## Load and preprocess the mock data
     transform = transforms.Compose([
         transforms.Resize(256),
         transforms.CenterCrop(224),
@@ -250,27 +250,27 @@ def complex_machine_learning_algorithm(data_path, model_path):
         transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
     ])
 
-    # Assume mock data is represented by an image
+    ## Assume mock data is represented by an image
     input_image = Image.open(data_path)
     input_tensor = transform(input_image)
-    input_batch = input_tensor.unsqueeze(0)  # Add a batch dimension
+    input_batch = input_tensor.unsqueeze(0)  ## Add a batch dimension
 
-    # Load the pre-trained model
+    ## Load the pre-trained model
     model = torch.load(model_path)
     model.eval()
 
-    # Check if GPU is available and move the model and input data to GPU
+    ## Check if GPU is available and move the model and input data to GPU
     if torch.cuda.is_available():
         device = torch.device("cuda")
         model.to(device)
         input_batch = input_batch.to(device)
 
-    # Perform inference
+    ## Perform inference
     with torch.no_grad():
         output = model(input_batch)
 
-    # Process the output as needed
-    # ...
+    ## Process the output as needed
+    ## ...
 
     return output
 ```
@@ -291,7 +291,7 @@ import torchvision.transforms as transforms
 from PIL import Image
 
 def complex_deep_learning_algorithm(data_path, model_path):
-    # Load and preprocess the mock data
+    ## Load and preprocess the mock data
     transform = transforms.Compose([
         transforms.Resize(256),
         transforms.CenterCrop(224),
@@ -299,27 +299,27 @@ def complex_deep_learning_algorithm(data_path, model_path):
         transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
     ])
 
-    # Assume mock data is represented by an image
+    ## Assume mock data is represented by an image
     input_image = Image.open(data_path)
     input_tensor = transform(input_image)
-    input_batch = input_tensor.unsqueeze(0)  # Add a batch dimension
+    input_batch = input_tensor.unsqueeze(0)  ## Add a batch dimension
 
-    # Load the pre-trained model
+    ## Load the pre-trained model
     model = torch.jit.load(model_path)
     model.eval()
 
-    # Check if GPU is available and move the model and input data to GPU
+    ## Check if GPU is available and move the model and input data to GPU
     if torch.cuda.is_available():
         device = torch.device("cuda")
         model = model.to(device)
         input_batch = input_batch.to(device)
 
-    # Perform inference
+    ## Perform inference
     with torch.no_grad():
         output = model(input_batch)
 
-    # Process the output as needed
-    # ...
+    ## Process the output as needed
+    ## ...
 
     return output
 ```

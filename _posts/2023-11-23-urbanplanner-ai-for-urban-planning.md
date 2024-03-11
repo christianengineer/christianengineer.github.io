@@ -5,7 +5,7 @@ permalink: posts/urbanplanner-ai-for-urban-planning
 layout: article
 ---
 
-# AI UrbanPlanner Repository
+## AI UrbanPlanner Repository
 
 ## Objectives
 The AI UrbanPlanner project aims to create an AI application for urban planning that leverages machine learning and deep learning to analyze urban data and make informed decisions. The main objectives of this repository are:
@@ -241,28 +241,28 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 
 def train_urban_trend_prediction_model(data_file_path):
-    # Load mock urban data
+    ## Load mock urban data
     urban_data = pd.read_csv(data_file_path)
 
-    # Preprocess data (mock preprocessing steps)
+    ## Preprocess data (mock preprocessing steps)
     X = urban_data.drop('target_variable', axis=1)
     y = urban_data['target_variable']
 
-    # Split data into training and testing sets
+    ## Split data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize and train the model
+    ## Initialize and train the model
     model = RandomForestRegressor(n_estimators=100, random_state=42)
     model.fit(X_train, y_train)
 
-    # Make predictions
+    ## Make predictions
     y_pred = model.predict(X_test)
 
-    # Evaluate the model
+    ## Evaluate the model
     mse = mean_squared_error(y_test, y_pred)
     print(f"Mean Squared Error: {mse}")
 
-    # Return the trained model for deployment
+    ## Return the trained model for deployment
     return model
 ```
 
@@ -284,38 +284,38 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
 def train_urban_trend_prediction_deep_learning_model(data_file_path):
-    # Load mock urban data
+    ## Load mock urban data
     urban_data = pd.read_csv(data_file_path)
 
-    # Preprocess data (mock preprocessing steps)
+    ## Preprocess data (mock preprocessing steps)
     X = urban_data.drop('target_variable', axis=1)
     y = urban_data['target_variable']
     
-    # Scale the input features
+    ## Scale the input features
     scaler = StandardScaler()
     X_scaled = scaler.fit_transform(X)
 
-    # Split data into training and testing sets
+    ## Split data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.2, random_state=42)
 
-    # Build the deep learning model
+    ## Build the deep learning model
     model = Sequential([
         Dense(64, activation='relu', input_shape=(X.shape[1],)),
         Dense(64, activation='relu'),
         Dense(1)
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam', loss='mean_squared_error')
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train, epochs=50, batch_size=32, validation_data=(X_test, y_test))
 
-    # Evaluate the model
+    ## Evaluate the model
     _, mse = model.evaluate(X_test, y_test)
     print(f"Mean Squared Error: {mse}")
 
-    # Return the trained deep learning model for deployment
+    ## Return the trained deep learning model for deployment
     return model
 ```
 

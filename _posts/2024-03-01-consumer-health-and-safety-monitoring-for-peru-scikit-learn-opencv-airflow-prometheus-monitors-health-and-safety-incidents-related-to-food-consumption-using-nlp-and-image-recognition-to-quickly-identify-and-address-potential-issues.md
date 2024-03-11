@@ -70,35 +70,35 @@ By implementing a robust MLOps infrastructure with the specified components, we 
 consumer_health_safety_monitoring_peru/
 │
 ├── data/
-│   ├── raw_data/  # Raw data collected from various sources
-│   ├── processed_data/  # Cleaned and preprocessed data for analysis
-│   ├── model_data/  # Data used for model training and inference
+│   ├── raw_data/  ## Raw data collected from various sources
+│   ├── processed_data/  ## Cleaned and preprocessed data for analysis
+│   ├── model_data/  ## Data used for model training and inference
 │
 ├── models/
-│   ├── nlp_model/  # NLP model for text analysis
-│   ├── image_model/  # Image recognition model
-│   ├── model_registry/  # Stored ML models for deployment
+│   ├── nlp_model/  ## NLP model for text analysis
+│   ├── image_model/  ## Image recognition model
+│   ├── model_registry/  ## Stored ML models for deployment
 │
 ├── src/
-│   ├── data_collection/  # Scripts for collecting data from sources
-│   ├── data_preprocessing/  # Code for cleaning and preprocessing data
-│   ├── model_training/  # Python scripts for training ML models
-│   ├── model_inference/  # Code for model deployment and inference
-│   ├── monitoring/  # Monitoring scripts for system performance and alerts
+│   ├── data_collection/  ## Scripts for collecting data from sources
+│   ├── data_preprocessing/  ## Code for cleaning and preprocessing data
+│   ├── model_training/  ## Python scripts for training ML models
+│   ├── model_inference/  ## Code for model deployment and inference
+│   ├── monitoring/  ## Monitoring scripts for system performance and alerts
 │
 ├── config/
-│   ├── airflow/  # Airflow DAG configurations for data processing workflows
-│   ├── prometheus/  # Configuration files for Prometheus monitoring
+│   ├── airflow/  ## Airflow DAG configurations for data processing workflows
+│   ├── prometheus/  ## Configuration files for Prometheus monitoring
 │
 ├── infrastructure/
-│   ├── docker/  # Dockerfiles for containerizing application components
-│   ├── kubernetes/  # Kubernetes configurations for deployment and scaling
+│   ├── docker/  ## Dockerfiles for containerizing application components
+│   ├── kubernetes/  ## Kubernetes configurations for deployment and scaling
 │
 ├── notebooks/
-│   ├── exploratory_analysis.ipynb  # Jupyter notebook for initial data exploration
-│   ├── model_evaluation.ipynb  # Notebook for evaluating model performance
+│   ├── exploratory_analysis.ipynb  ## Jupyter notebook for initial data exploration
+│   ├── model_evaluation.ipynb  ## Notebook for evaluating model performance
 │
-├── README.md  # Project overview, setup instructions, and usage guide
+├── README.md  ## Project overview, setup instructions, and usage guide
 ```
 
 This file structure provides a scalable organization for the Consumer Health and Safety Monitoring application for Peru. It separates components such as data processing, model training, deployment, monitoring, and infrastructure configurations into distinct directories for clarity and maintainability. The division of files by functionality enables efficient development, deployment, and monitoring of the system using NLP and image recognition techniques to address potential health and safety incidents related to food consumption.
@@ -109,22 +109,22 @@ This file structure provides a scalable organization for the Consumer Health and
 models/
 │
 ├── nlp_model/
-│   ├── train_nlp_model.py  # Script to train NLP model for text analysis using Scikit-Learn
-│   ├── nlp_model.pkl  # Pickled NLP model for deployment
-│   ├── requirements.txt  # Python dependencies for the NLP model training
-│   ├── README.md  # Documentation for the NLP model
+│   ├── train_nlp_model.py  ## Script to train NLP model for text analysis using Scikit-Learn
+│   ├── nlp_model.pkl  ## Pickled NLP model for deployment
+│   ├── requirements.txt  ## Python dependencies for the NLP model training
+│   ├── README.md  ## Documentation for the NLP model
 │
 ├── image_model/
-│   ├── train_image_model.py  # Script to train image recognition model using OpenCV
-│   ├── image_model.h5  # Trained image recognition model in h5 format
-│   ├── requirements.txt  # Python dependencies for the image model training
-│   ├── README.md  # Documentation for the image model
+│   ├── train_image_model.py  ## Script to train image recognition model using OpenCV
+│   ├── image_model.h5  ## Trained image recognition model in h5 format
+│   ├── requirements.txt  ## Python dependencies for the image model training
+│   ├── README.md  ## Documentation for the image model
 │
 ├── model_registry/
-│   ├── deploy_model.py  # Script to deploy ML models
-│   ├── model_metadata.json  # Metadata file containing information about deployed models
-│   ├── requirements.txt  # Python dependencies for model deployment
-│   ├── README.md  # Documentation for model deployment
+│   ├── deploy_model.py  ## Script to deploy ML models
+│   ├── model_metadata.json  ## Metadata file containing information about deployed models
+│   ├── requirements.txt  ## Python dependencies for model deployment
+│   ├── README.md  ## Documentation for model deployment
 ```
 
 ### NLP Model:
@@ -153,25 +153,25 @@ By organizing the Models directory in this manner, the Consumer Health and Safet
 deployment/
 │
 ├── docker/
-│   ├── Dockerfile_nlp_model  # Dockerfile for containerizing the NLP model deployment
-│   ├── Dockerfile_image_model  # Dockerfile for containerizing the image model deployment
+│   ├── Dockerfile_nlp_model  ## Dockerfile for containerizing the NLP model deployment
+│   ├── Dockerfile_image_model  ## Dockerfile for containerizing the image model deployment
 │
 ├── kubernetes/
-│   ├── deployment_nlp_model.yaml  # Kubernetes deployment configuration for the NLP model
-│   ├── deployment_image_model.yaml  # Kubernetes deployment configuration for the image model
-│   ├── service_nlp_model.yaml  # Kubernetes service configuration for exposing the NLP model
-│   ├── service_image_model.yaml  # Kubernetes service configuration for exposing the image model
+│   ├── deployment_nlp_model.yaml  ## Kubernetes deployment configuration for the NLP model
+│   ├── deployment_image_model.yaml  ## Kubernetes deployment configuration for the image model
+│   ├── service_nlp_model.yaml  ## Kubernetes service configuration for exposing the NLP model
+│   ├── service_image_model.yaml  ## Kubernetes service configuration for exposing the image model
 │
 ├── scripts/
-│   ├── deploy_nlp_model.sh  # Shell script for deploying the NLP model
-│   ├── deploy_image_model.sh  # Shell script for deploying the image model
-│   ├── update_model.py  # Python script for updating deployed models
+│   ├── deploy_nlp_model.sh  ## Shell script for deploying the NLP model
+│   ├── deploy_image_model.sh  ## Shell script for deploying the image model
+│   ├── update_model.py  ## Python script for updating deployed models
 │
 ├── monitor/
-│   ├── Prometheus_config.yaml  # Prometheus configuration for monitoring deployed models
-│   ├── Grafana_dashboard.json  # Grafana dashboard for visualizing model performance metrics
+│   ├── Prometheus_config.yaml  ## Prometheus configuration for monitoring deployed models
+│   ├── Grafana_dashboard.json  ## Grafana dashboard for visualizing model performance metrics
 │
-├── README.md  # Deployment instructions and overview of deployment configurations
+├── README.md  ## Deployment instructions and overview of deployment configurations
 ```
 
 ### Docker:
@@ -210,29 +210,29 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 import joblib
 
-# Load mock data
+## Load mock data
 mock_data = pd.read_csv('data/mock_data.csv')
 
-# Preprocess text data
+## Preprocess text data
 vectorizer = TfidfVectorizer()
 X = vectorizer.fit_transform(mock_data['text'])
 y = mock_data['label']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Train the NLP model
+## Train the NLP model
 model = LogisticRegression()
 model.fit(X_train, y_train)
 
-# Make predictions
+## Make predictions
 y_pred = model.predict(X_test)
 
-# Evaluate model performance
+## Evaluate model performance
 accuracy = accuracy_score(y_test, y_pred)
 print(f'Model Accuracy: {accuracy}')
 
-# Save the trained model
+## Save the trained model
 joblib.dump(model, 'models/nlp_model/nlp_model_mock_data.pkl')
 ```
 
@@ -258,25 +258,25 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 import joblib
 
-# Load mock data
+## Load mock data
 mock_data = pd.read_csv('data/mock_data_image.csv')
 
-# Preprocess image data
+## Preprocess image data
 X = mock_data.drop(columns=['label'])
 y = mock_data['label']
 
-# Train a RandomForestClassifier model
+## Train a RandomForestClassifier model
 model = RandomForestClassifier(n_estimators=100, max_depth=10, random_state=42)
 model.fit(X, y)
 
-# Make predictions (not required for training with mock data)
-# y_pred = model.predict(X)
+## Make predictions (not required for training with mock data)
+## y_pred = model.predict(X)
 
-# Evaluate model performance (not required for training with mock data)
-# accuracy = accuracy_score(y, y_pred)
-# print(f'Model Accuracy: {accuracy}')
+## Evaluate model performance (not required for training with mock data)
+## accuracy = accuracy_score(y, y_pred)
+## print(f'Model Accuracy: {accuracy}')
 
-# Save the trained model
+## Save the trained model
 joblib.dump(model, 'models/complex_algorithm/complex_model_mock_data.pkl')
 ```
 

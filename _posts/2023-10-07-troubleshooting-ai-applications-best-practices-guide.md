@@ -5,7 +5,7 @@ permalink: posts/troubleshooting-ai-applications-best-practices-guide
 layout: article
 ---
 
-# Troubleshooting AI Applications
+## Troubleshooting AI Applications
 
 Artificial Intelligence (AI) has changed the way businesses operate by enabling them to predict trends, personalize customer experiences, and accelerate innovation. However, as with any technology, using AI can bring its own share of challenges. This article provides a comprehensive guide on how to troubleshoot some of the common issues that can arise when working with AI applications.
 
@@ -49,7 +49,7 @@ The following is an example of a Python code snippet using Scikit-learn to handl
 
 ```python
 from sklearn import svm
-# Set the value of max_iter to a small number
+## Set the value of max_iter to a small number
 clf = svm.SVC(max_iter=100)
 clf.fit(X, y)
 ```
@@ -65,7 +65,7 @@ In Python, here is a code snippet example to increase the number of learning ite
 
 ```python
 from sklearn import svm
-# Set the value of max_iter to a large number
+## Set the value of max_iter to a large number
 clf = svm.SVC(max_iter=10000)
 clf.fit(X, y)
 ```

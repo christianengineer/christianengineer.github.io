@@ -5,7 +5,7 @@ permalink: posts/peru-e-commerce-personalization-engine-bert-keras-spark-dvc
 layout: article
 ---
 
-# Peru E-commerce Personalization Engine Documentation
+## Peru E-commerce Personalization Engine Documentation
 
 ## Introduction
 The Peru E-commerce Personalization Engine leverages BERT (Bidirectional Encoder Representations from Transformers) implemented using Keras, Apache Spark for scalable data processing, and Data Version Control (DVC) for efficient ML pipeline management. This solution delivers personalized shopping experiences to e-commerce customers in Peru, boosting engagement and conversion rates.
@@ -196,30 +196,30 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
-# Load the raw dataset containing user interactions and product information
+## Load the raw dataset containing user interactions and product information
 raw_data = pd.read_csv('ecommerce_data.csv')
 
-# Feature Engineering: Calculate user engagement score based on interactions
+## Feature Engineering: Calculate user engagement score based on interactions
 raw_data['engagement_score'] = raw_data['num_product_views'] + raw_data['num_search_queries'] + raw_data['num_clicks']
 
-# Data Cleaning: Handle missing values by filling with mean value
+## Data Cleaning: Handle missing values by filling with mean value
 raw_data.fillna(raw_data.mean(), inplace=True)
 
-# Encoding Categorical Variables: Perform one-hot encoding for product categories
+## Encoding Categorical Variables: Perform one-hot encoding for product categories
 encoded_data = pd.get_dummies(raw_data, columns=['product_category'])
 
-# Feature Scaling: Standardize numerical features for consistent model training
+## Feature Scaling: Standardize numerical features for consistent model training
 scaler = StandardScaler()
 scaled_data = encoded_data.copy()
 scaled_data[['num_product_views', 'num_search_queries', 'num_clicks', 'engagement_score']] = scaler.fit_transform(encoded_data[['num_product_views', 'num_search_queries', 'num_clicks', 'engagement_score']])
 
-# Train-Test Split: Split the data into training and testing sets
-X = scaled_data.drop('target_variable', axis=1)  # Features
-y = scaled_data['target_variable']  # Target variable
+## Train-Test Split: Split the data into training and testing sets
+X = scaled_data.drop('target_variable', axis=1)  ## Features
+y = scaled_data['target_variable']  ## Target variable
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Data Preprocessing Summary
+## Data Preprocessing Summary
 print("Data Preprocessing Summary:")
 print("Scaled Data Shape:", scaled_data.shape)
 print("Training Data Shape:", X_train.shape, y_train.shape)
@@ -290,13 +290,13 @@ import numpy as np
 from faker import Faker
 import random
 
-# Initialize Faker for generating fake data
+## Initialize Faker for generating fake data
 fake = Faker()
 
-# Define the number of samples in the dataset
+## Define the number of samples in the dataset
 num_samples = 10000
 
-# Generate fictitious e-commerce data
+## Generate fictitious e-commerce data
 data = {
     'user_id': [fake.uuid4() for _ in range(num_samples)],
     'num_product_views': [random.randint(1, 20) for _ in range(num_samples)],
@@ -304,19 +304,19 @@ data = {
     'num_clicks': [random.randint(0, 5) for _ in range(num_samples)],
     'product_category': [fake.random_element(elements=('Electronics', 'Clothing', 'Books')) for _ in range(num_samples)],
     'product_price': [random.uniform(10.0, 1000.0) for _ in range(num_samples)],
-    # Add more features as needed for modeling
+    ## Add more features as needed for modeling
 }
 
-# Create a DataFrame from the generated data
+## Create a DataFrame from the generated data
 df = pd.DataFrame(data)
 
-# Add target_variable for modeling purposes
+## Add target_variable for modeling purposes
 df['target_variable'] = np.where(df['num_clicks'] > 2, 1, 0)
 
-# Save the generated dataset to a CSV file
+## Save the generated dataset to a CSV file
 df.to_csv('fake_ecommerce_data.csv', index=False)
 
-# Validate the dataset
+## Validate the dataset
 print("Generated Dataset Information:")
 print(df.info())
 ```
@@ -364,28 +364,28 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 
-# Load preprocessed dataset
+## Load preprocessed dataset
 data = pd.read_csv('preprocessed_data.csv')
 
-# Split data into features and target
+## Split data into features and target
 X = data.drop('target_variable', axis=1)
 y = data['target_variable']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize and train a Random Forest Classifier
+## Initialize and train a Random Forest Classifier
 rf_classifier = RandomForestClassifier(n_estimators=100, random_state=42)
 rf_classifier.fit(X_train, y_train)
 
-# Make predictions on the test set
+## Make predictions on the test set
 y_pred = rf_classifier.predict(X_test)
 
-# Calculate model accuracy
+## Calculate model accuracy
 accuracy = accuracy_score(y_test, y_pred)
 print(f"Model Accuracy: {accuracy}")
 
-# Save the trained model for deployment
+## Save the trained model for deployment
 import joblib
 joblib.dump(rf_classifier, 'trained_model.pkl')
 ```
@@ -414,7 +414,7 @@ joblib.dump(rf_classifier, 'trained_model.pkl')
 
 Adhering to these best practices in code structure and quality will help ensure that the production-ready machine learning model for your Peru E-commerce Personalization Engine meets the high standards of quality, readability, and maintainability required for deployment in a real-world setting.
 
-# Machine Learning Model Deployment Plan
+## Machine Learning Model Deployment Plan
 
 ## Step-by-Step Deployment Guide
 
@@ -464,29 +464,29 @@ Adhering to these best practices in code structure and quality will help ensure 
 By following this step-by-step deployment plan tailored to the unique demands of the Peru E-commerce Personalization Engine, your team can effectively deploy the machine learning model into a production environment with confidence and efficiency. Each tool and platform recommended plays a vital role in ensuring a seamless deployment process, from serialization to live environment integration, enabling the project to deliver personalized shopping experiences to e-commerce customers effectively.
 
 ```Dockerfile
-# Use an official Python runtime as a parent image
+## Use an official Python runtime as a parent image
 FROM python:3.8-slim
 
-# Set the working directory in the container
+## Set the working directory in the container
 WORKDIR /app
 
-# Copy the requirements file into the container at /app
+## Copy the requirements file into the container at /app
 COPY requirements.txt /app/
 
-# Install any needed dependencies specified in requirements.txt
+## Install any needed dependencies specified in requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the current directory contents into the container at /app
+## Copy the current directory contents into the container at /app
 COPY . /app
 
-# Expose the port the app runs on
+## Expose the port the app runs on
 EXPOSE 5000
 
-# Define environment variables
+## Define environment variables
 ENV FLASK_APP=app.py
 ENV FLASK_RUN_HOST=0.0.0.0
 
-# Command to run on container start
+## Command to run on container start
 CMD ["flask", "run"]
 ```
 

@@ -5,7 +5,7 @@ permalink: posts/kubernetes-based-ml-model-orchestration-demonstrate-deploying-m
 layout: article
 ---
 
-# AI Kubernetes-based ML Model Orchestration
+## AI Kubernetes-based ML Model Orchestration
 
 ## Objectives
 
@@ -183,7 +183,7 @@ models/
    import pandas as pd
    from sklearn.model_selection import train_test_split
    from sklearn.ensemble import RandomForestClassifier
-   # ... model training and serving logic
+   ## ... model training and serving logic
    ```
 
 3. **requirements.txt**: This file lists the Python dependencies required for the model to run. It includes libraries, versions, and any other necessary packages. These dependencies will be installed when building the Docker image for the corresponding model.
@@ -263,7 +263,7 @@ Assuming the ML model `complex_model` is located in the `models` directory, the 
 ### Example Function for Complex Machine Learning Algorithm:
 
 ```python
-# File: models/complex_model/algorithm.py
+## File: models/complex_model/algorithm.py
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -271,30 +271,30 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 
 def train_and_evaluate_model(data_file_path):
-    # Load mock data
+    ## Load mock data
     data = pd.read_csv(data_file_path)
 
-    # Data preprocessing
+    ## Data preprocessing
     X = data.drop('target', axis=1)
     y = data['target']
 
-    # Split data into training and testing sets
+    ## Split data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize the random forest classifier
+    ## Initialize the random forest classifier
     clf = RandomForestClassifier(n_estimators=100, random_state=42)
 
-    # Train the model
+    ## Train the model
     clf.fit(X_train, y_train)
 
-    # Make predictions
+    ## Make predictions
     y_pred = clf.predict(X_test)
 
-    # Evaluate the model
+    ## Evaluate the model
     accuracy = accuracy_score(y_test, y_pred)
     print(f"Model accuracy: {accuracy}")
 
-    # Return the trained model for serving
+    ## Return the trained model for serving
     return clf
 ```
 
@@ -309,7 +309,7 @@ File Path: Assuming the ML model `deep_learning_model` is located in the `models
 ### Example Function for Complex Deep Learning Algorithm using TensorFlow:
 
 ```python
-# File: models/deep_learning_model/deep_learning_algorithm.py
+## File: models/deep_learning_model/deep_learning_algorithm.py
 
 import tensorflow as tf
 from tensorflow.keras.models import Sequential
@@ -319,17 +319,17 @@ from sklearn.metrics import accuracy_score
 import pandas as pd
 
 def train_and_evaluate_model(data_file_path):
-    # Load mock data
+    ## Load mock data
     data = pd.read_csv(data_file_path)
 
-    # Data preprocessing
+    ## Data preprocessing
     X = data.drop('target', axis=1)
     y = data['target']
 
-    # Split data into training and testing sets
+    ## Split data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize the deep learning model
+    ## Initialize the deep learning model
     model = Sequential([
         Dense(128, input_shape=(X_train.shape[1],), activation='relu'),
         Dropout(0.3),
@@ -338,17 +338,17 @@ def train_and_evaluate_model(data_file_path):
         Dense(1, activation='sigmoid')
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y_test))
 
-    # Evaluate the model
+    ## Evaluate the model
     _, accuracy = model.evaluate(X_test, y_test)
     print(f"Model accuracy: {accuracy}")
 
-    # Save the trained model
+    ## Save the trained model
     model.save("trained_deep_learning_model.h5")
 
     return "trained_deep_learning_model.h5"

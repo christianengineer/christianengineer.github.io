@@ -191,7 +191,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from torch.utils.data import DataLoader, TensorDataset
 
-# Define the autoencoder model
+## Define the autoencoder model
 class AnomalyDetectionModel(nn.Module):
     def __init__(self, input_dim, encoding_dim):
         super(AnomalyDetectionModel, self).__init__()
@@ -216,38 +216,38 @@ class AnomalyDetectionModel(nn.Module):
         x = self.decoder(x)
         return x
 
-# Function to train the model with mock data from a CSV file
+## Function to train the model with mock data from a CSV file
 def train_anomaly_detection_model(data_file_path):
-    # Load mock data from CSV
+    ## Load mock data from CSV
     data = pd.read_csv(data_file_path)
 
-    # Preprocessing (e.g., scaling, feature selection)
+    ## Preprocessing (e.g., scaling, feature selection)
 
-    # Split data into train and test sets
+    ## Split data into train and test sets
     X_train, X_test = train_test_split(data, test_size=0.2, random_state=42)
 
-    # Normalize the data
+    ## Normalize the data
     scaler = StandardScaler()
     X_train = scaler.fit_transform(X_train)
     X_test = scaler.transform(X_test)
 
-    # Convert data to PyTorch tensors
+    ## Convert data to PyTorch tensors
     X_train_tensor = torch.tensor(X_train, dtype=torch.float)
     X_test_tensor = torch.tensor(X_test, dtype=torch.float)
 
-    # Create DataLoader
+    ## Create DataLoader
     train_loader = DataLoader(TensorDataset(X_train_tensor), batch_size=64, shuffle=True)
 
-    # Define the model
+    ## Define the model
     input_dim = X_train.shape[1]
     encoding_dim = 10
     model = AnomalyDetectionModel(input_dim, encoding_dim)
 
-    # Define loss function and optimizer
+    ## Define loss function and optimizer
     criterion = nn.MSELoss()
     optimizer = torch.optim.Adam(model.parameters(), lr=0.01)
 
-    # Training loop
+    ## Training loop
     num_epochs = 10
     for epoch in range(num_epochs):
         for batch_idx, (inputs, ) in enumerate(train_loader):
@@ -258,7 +258,7 @@ def train_anomaly_detection_model(data_file_path):
             optimizer.step()
         print(f'Epoch [{epoch+1}/{num_epochs}], Loss: {loss.item()}')
 
-    # Save trained model
+    ## Save trained model
     torch.save(model.state_dict(), 'anomaly_detection_model.pth')
 ```
 
@@ -278,7 +278,7 @@ import numpy as np
 from sklearn.model_selection import train_test_split
 from torch.utils.data import Dataset, DataLoader
 
-# Define the LSTM-based anomaly detection model
+## Define the LSTM-based anomaly detection model
 class LSTMAnomalyDetectionModel(nn.Module):
     def __init__(self, input_dim, hidden_dim, num_layers, output_dim):
         super(LSTMAnomalyDetectionModel, self).__init__()
@@ -294,47 +294,47 @@ class LSTMAnomalyDetectionModel(nn.Module):
         out = self.fc(out[:, -1, :])
         return out
 
-# Function to train the model with mock data from a CSV file
+## Function to train the model with mock data from a CSV file
 def train_anomaly_detection_model(data_file_path):
-    # Load mock data from CSV
+    ## Load mock data from CSV
     data = pd.read_csv(data_file_path)
 
-    # Preprocessing and feature extraction
-    # Assuming the data contains sequential network traffic features
+    ## Preprocessing and feature extraction
+    ## Assuming the data contains sequential network traffic features
 
-    # Split data into input sequences and targets
-    sequence_length = 10  # Define the length of the input sequence
+    ## Split data into input sequences and targets
+    sequence_length = 10  ## Define the length of the input sequence
     X, y = [], []
     for i in range(len(data) - sequence_length - 1):
         X.append(data[i:(i + sequence_length)].values)
         y.append(data[i + sequence_length].values)
     X, y = np.array(X), np.array(y)
 
-    # Split data into train and test sets
+    ## Split data into train and test sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Convert data to PyTorch tensors
+    ## Convert data to PyTorch tensors
     X_train_tensor = torch.from_numpy(X_train).type(torch.Tensor)
     X_test_tensor = torch.from_numpy(X_test).type(torch.Tensor)
     y_train_tensor = torch.from_numpy(y_train).type(torch.Tensor)
     y_test_tensor = torch.from_numpy(y_test).type(torch.Tensor)
 
-    # Create DataLoader
+    ## Create DataLoader
     train_dataset = Dataset(X_train_tensor, y_train_tensor)
     train_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)
 
-    # Define the model
-    input_dim = X_train.shape[2]  # Assuming the data has multiple features for each time step
+    ## Define the model
+    input_dim = X_train.shape[2]  ## Assuming the data has multiple features for each time step
     hidden_dim = 64
     num_layers = 2
-    output_dim = y_train.shape[1]  # Dimension of the output (e.g., features to predict)
+    output_dim = y_train.shape[1]  ## Dimension of the output (e.g., features to predict)
     model = LSTMAnomalyDetectionModel(input_dim, hidden_dim, num_layers, output_dim)
 
-    # Define loss function and optimizer
+    ## Define loss function and optimizer
     criterion = nn.MSELoss()
     optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
 
-    # Training loop
+    ## Training loop
     num_epochs = 10
     for epoch in range(num_epochs):
         for inputs, targets in train_loader:
@@ -345,7 +345,7 @@ def train_anomaly_detection_model(data_file_path):
             optimizer.step()
         print(f'Epoch [{epoch+1}/{num_epochs}], Loss: {loss.item()}')
 
-    # Save trained model
+    ## Save trained model
     torch.save(model.state_dict(), 'lstm_anomaly_detection_model.pth')
 ```
 

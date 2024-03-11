@@ -5,7 +5,7 @@ permalink: posts/advanced-javascript-techniques-for-ai-integration
 layout: article
 ---
 
-# Advanced JavaScript Techniques for AI Integration
+## Advanced JavaScript Techniques for AI Integration
 
 ## Introduction
 
@@ -13,11 +13,11 @@ As Artificial Intelligence (AI) continues to transform various industries, devel
 
 ## Table of Contents
 
-1. [Web APIs for AI Integration](#web-apis-for-ai-integration)
-2. [Client-side Machine Learning](#client-side-machine-learning)
-3. [Asynchronous Operations and Web Workers](#asynchronous-operations-and-web-workers)
-4. [Optimizing Performance with Algorithms](#optimizing-performance-with-algorithms)
-5. [Conclusion](#conclusion)
+1. [Web APIs for AI Integration](## eb-apis-for-ai-integration)
+2. [Client-side Machine Learning](## lient-side-machine-learning)
+3. [Asynchronous Operations and Web Workers](## synchronous-operations-and-web-workers)
+4. [Optimizing Performance with Algorithms](## ptimizing-performance-with-algorithms)
+5. [Conclusion](## onclusion)
 
 ## Web APIs for AI Integration <a id="web-apis-for-ai-integration"></a>
 

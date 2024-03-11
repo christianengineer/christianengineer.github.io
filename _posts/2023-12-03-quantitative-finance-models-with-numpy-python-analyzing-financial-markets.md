@@ -49,7 +49,7 @@ The infrastructure for the "Quantitative Finance Models with NumPy (Python) Anal
 
 By integrating and orchestrating these components, the infrastructure will support the development of a scalable, data-intensive AI application for analyzing financial markets using NumPy and Python.
 
-# Quantitative Finance Models with NumPy (Python) Analyzing Financial Markets Repository
+## Quantitative Finance Models with NumPy (Python) Analyzing Financial Markets Repository
 
 The file structure for the "Quantitative Finance Models with NumPy (Python) Analyzing Financial Markets" repository should be organized and modular to facilitate the development and maintenance of the AI application. Below is a scalable file structure for the repository:
 
@@ -205,21 +205,21 @@ def train_random_forest_model(data_file_path):
     Returns:
     trained_model (RandomForestRegressor): Trained Random Forest regression model.
     """
-    # Load mock financial market data from the specified file
+    ## Load mock financial market data from the specified file
     financial_data = pd.read_csv(data_file_path)
     
-    # Prepare the data for model training
+    ## Prepare the data for model training
     X = financial_data.drop('target_variable', axis=1)
     y = financial_data['target_variable']
     
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
     
-    # Initialize and train the Random Forest regression model
+    ## Initialize and train the Random Forest regression model
     model = RandomForestRegressor(n_estimators=100, random_state=42)
     model.fit(X_train, y_train)
     
-    # Evaluate the model
+    ## Evaluate the model
     y_pred = model.predict(X_test)
     mse = mean_squared_error(y_test, y_pred)
     print(f'Mean Squared Error: {mse}')
@@ -259,23 +259,23 @@ def train_random_forest_model(data_file_path):
     Returns:
     trained_model (RandomForestRegressor): Trained Random Forest regression model.
     """
-    # Load the mock financial market data from the specified file path
+    ## Load the mock financial market data from the specified file path
     financial_data = pd.read_csv(data_file_path)
 
-    # Preprocess the data if needed (e.g., handling missing values, encoding categorical variables)
+    ## Preprocess the data if needed (e.g., handling missing values, encoding categorical variables)
 
-    # Define the features and target variable
+    ## Define the features and target variable
     X = financial_data.drop('target_variable', axis=1)
     y = financial_data['target_variable']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize and train the Random Forest regression model
+    ## Initialize and train the Random Forest regression model
     model = RandomForestRegressor(n_estimators=100, random_state=42)
     model.fit(X_train, y_train)
 
-    # Evaluate the model
+    ## Evaluate the model
     y_pred = model.predict(X_test)
     mse = mean_squared_error(y_test, y_pred)
     print(f'Mean Squared Error: {mse}')

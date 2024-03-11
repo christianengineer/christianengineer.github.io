@@ -5,7 +5,7 @@ permalink: posts/challenges-in-machine-learning-model-deployment
 layout: article
 ---
 
-# Machine Learning Model Deployment Challenges
+## Machine Learning Model Deployment Challenges
 
 The value of a machine learning (ML) model is realized when it is successfully deployed into production where it can make real-time predictions. However, deploying machine learning models isn't always straightforward. Data scientists and engineers face many unique challenges during the model deployment phase. This article explores some of the common challenges and some potential solutions.
 
@@ -32,15 +32,15 @@ Let’s take a closer look at the challenges often faced during the deployment o
 - This challenge can be solved using code versioning tools like Git. But what about versioning the data? Data versioning is an integral part of model development, considering that machine learning models are data dependent. In the absence of proper versioning, tracking and reproducing experiments becomes arduous.
 
 ```python
-# Example of using git for code versioning
+## Example of using git for code versioning
 
-# Add all changed files to the "staged" area
+## Add all changed files to the "staged" area
 git add .
 
-# Commit your changes with a message
+## Commit your changes with a message
 git commit -m 'Update model deployment code'
 
-# Push your changes to the remote repository
+## Push your changes to the remote repository
 git push origin master
 ```
 

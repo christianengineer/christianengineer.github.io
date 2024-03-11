@@ -5,7 +5,7 @@ permalink: posts/customerinsight---advanced-customer-portal
 layout: article
 ---
 
-# AI CustomerInsight - Advanced Customer Portal Repository
+## AI CustomerInsight - Advanced Customer Portal Repository
 
 ## Objectives
 
@@ -79,7 +79,7 @@ To build the portal, we will use a well-vetted stack of libraries and frameworks
 
 By using this mix of technologies, we ensure that the AI CustomerInsight - Advanced Customer Portal is capable of delivering dynamic, high-performance, and secure experiences for businesses seeking to gain a competitive edge through customer insights.
 
-# Infrastructure for the CustomerInsight - Advanced Customer Portal Application
+## Infrastructure for the CustomerInsight - Advanced Customer Portal Application
 
 To support the CustomerInsight - Advanced Customer Portal Application, the infrastructure needs to accommodate high-performance requirements, large-scale data processing, and complex machine learning tasks, while ensuring security, reliability, and ease of maintenance. We will use cloud services, combined with best practices in infrastructure management, to achieve these goals.
 
@@ -166,50 +166,50 @@ When designing a file structure for the CustomerInsight - Advanced Customer Port
 ```plaintext
 /CustomerInsight-Portal
 │
-├── /build              # Compiled files and build scripts
-├── /config             # Configuration files for different environments
-├── /deploy             # Deployment scripts and configuration (Docker, Kubernetes, Terraform)
+├── /build              ## Compiled files and build scripts
+├── /config             ## Configuration files for different environments
+├── /deploy             ## Deployment scripts and configuration (Docker, Kubernetes, Terraform)
 │
-├── /services           # Microservices directory
-│   ├── /customer-api            # Customer-related operations service
-│   │   ├── /src                 # Source files specific to the customer API
-│   │   ├── /tests               # Test scripts for the customer API
-│   │   └── Dockerfile           # Dockerfile for building the customer API service
+├── /services           ## Microservices directory
+│   ├── /customer-api            ## Customer-related operations service
+│   │   ├── /src                 ## Source files specific to the customer API
+│   │   ├── /tests               ## Test scripts for the customer API
+│   │   └── Dockerfile           ## Dockerfile for building the customer API service
 │   │
-│   ├── /insight-engine          # Data processing and ML model running service
-│   │   ├── /src                 # Source files for the insight engine
-│   │   ├── /models              # Machine learning models directory
-│   │   ├── /tests               # Test scripts for the insight engine
-│   │   └── Dockerfile           # Dockerfile for the insight engine service
+│   ├── /insight-engine          ## Data processing and ML model running service
+│   │   ├── /src                 ## Source files for the insight engine
+│   │   ├── /models              ## Machine learning models directory
+│   │   ├── /tests               ## Test scripts for the insight engine
+│   │   └── Dockerfile           ## Dockerfile for the insight engine service
 │   │
-│   └── /other-service           # Other microservices following similar structure
+│   └── /other-service           ## Other microservices following similar structure
 │
-├── /lib                # Shared libraries used across services
+├── /lib                ## Shared libraries used across services
 │
-├── /frontend            # Frontend React/Vue application
-│   ├── /public          # Static files
-│   ├── /src             # Frontend source files
-│   │   ├── /assets      # Frontend assets like styles, images and fonts
-│   │   ├── /components  # Reusable components
-│   │   ├── /views       # Pages
-│   │   ├── /services    # Services to interact with backend APIs
-│   │   ├── App.js       # Main React/Vue application file
-│   │   └── main.js      # Entry point for JavaScript
-│   ├── .env.example     # Example environment file
-│   ├── package.json     # Project manifest
-│   └── Dockerfile       # Dockerfile for building frontend
+├── /frontend            ## Frontend React/Vue application
+│   ├── /public          ## Static files
+│   ├── /src             ## Frontend source files
+│   │   ├── /assets      ## Frontend assets like styles, images and fonts
+│   │   ├── /components  ## Reusable components
+│   │   ├── /views       ## Pages
+│   │   ├── /services    ## Services to interact with backend APIs
+│   │   ├── App.js       ## Main React/Vue application file
+│   │   └── main.js      ## Entry point for JavaScript
+│   ├── .env.example     ## Example environment file
+│   ├── package.json     ## Project manifest
+│   └── Dockerfile       ## Dockerfile for building frontend
 │
-├── /docs               # Documentation files
+├── /docs               ## Documentation files
 │
-├── /scripts            # Utility scripts (data migration, backup, etc.)
+├── /scripts            ## Utility scripts (data migration, backup, etc.)
 │
-├── /tests              # High-level tests (end-to-end, integration)
+├── /tests              ## High-level tests (end-to-end, integration)
 │
-│── .gitignore          # Specifies intentionally untracked files to ignore
-│── docker-compose.yml  # Defines services, networks, and volumes for Docker
-│── README.md           # Project overview document
-│── LICENSE             # License information
-└── .env                # Global environment variables (not to be committed)
+│── .gitignore          ## Specifies intentionally untracked files to ignore
+│── docker-compose.yml  ## Defines services, networks, and volumes for Docker
+│── README.md           ## Project overview document
+│── LICENSE             ## License information
+└── .env                ## Global environment variables (not to be committed)
 ```
 
 ### Notes:
@@ -236,46 +236,46 @@ Below is an expanded overview of the `AI` directory for the CustomerInsight - Ad
 ```plaintext
 /CustomerInsight-Portal
 │
-├── /AI       # AI Directory
-│   ├── /data_preparation     # Scripts and modules for data cleaning and preprocessing
-│   │   ├── preprocess.py     # Preprocessing script/module
-│   │   └── clean_data.py     # Data cleaning script/module
+├── /AI       ## AI Directory
+│   ├── /data_preparation     ## Scripts and modules for data cleaning and preprocessing
+│   │   ├── preprocess.py     ## Preprocessing script/module
+│   │   └── clean_data.py     ## Data cleaning script/module
 │   │
-│   ├── /feature_engineering  # Code for generating and selecting features
-│   │   ├── extract_features.py    # Feature extraction script
-│   │   └── select_features.py    # Features selection script
+│   ├── /feature_engineering  ## Code for generating and selecting features
+│   │   ├── extract_features.py    ## Feature extraction script
+│   │   └── select_features.py    ## Features selection script
 │   │
-│   ├── /models               # Machine Learning model scripts and serialized model files
-│   │   ├── train_model.py    # Script to train machine learning model(s)
-│   │   ├── evaluate_model.py # Model evaluation and validation script
-│   │   ├── model_utils.py    # Utility functions for model training and evaluation
-│   │   └── /saved_models     # Serialized models, ready for use by the application
-│   │       ├── churn_model.pkl   # Example saved model for churn prediction
-│   │       └── segmentation_model.pkl  # Example saved model for customer segmentation
+│   ├── /models               ## Machine Learning model scripts and serialized model files
+│   │   ├── train_model.py    ## Script to train machine learning model(s)
+│   │   ├── evaluate_model.py ## Model evaluation and validation script
+│   │   ├── model_utils.py    ## Utility functions for model training and evaluation
+│   │   └── /saved_models     ## Serialized models, ready for use by the application
+│   │       ├── churn_model.pkl   ## Example saved model for churn prediction
+│   │       └── segmentation_model.pkl  ## Example saved model for customer segmentation
 │   │
-│   ├── /pipelines            # ML pipelines for automating workflows
-│   │   ├── data_pipeline.py  # Automated pipeline for data processing and feature engineering
-│   │   └── training_pipeline.py # Automated pipeline for model training
+│   ├── /pipelines            ## ML pipelines for automating workflows
+│   │   ├── data_pipeline.py  ## Automated pipeline for data processing and feature engineering
+│   │   └── training_pipeline.py ## Automated pipeline for model training
 │   │
-│   ├── /notebooks            # Jupyter notebooks used for exploratory data analysis and prototyping
-│   │   ├── EDA.ipynb         # Exploratory Data Analysis notebook
-│   │   └── models_prototyping.ipynb # Prototype modeling notebook
+│   ├── /notebooks            ## Jupyter notebooks used for exploratory data analysis and prototyping
+│   │   ├── EDA.ipynb         ## Exploratory Data Analysis notebook
+│   │   └── models_prototyping.ipynb ## Prototype modeling notebook
 │   │
-│   ├── /api                  # API service to expose AI models as HTTP endpoints
-│   │   ├── app.py            # Flask/FastAPI application to create the API
-│   │   └── endpoints.py      # API endpoints dedicated to different ML models
+│   ├── /api                  ## API service to expose AI models as HTTP endpoints
+│   │   ├── app.py            ## Flask/FastAPI application to create the API
+│   │   └── endpoints.py      ## API endpoints dedicated to different ML models
 │   │
-│   ├── /tests                # Test cases for the AI components
-│   │   ├── test_preprocess.py     # Tests for data preprocessing
-│   │   ├── test_feature_engineering.py # Tests for feature engineering scripts
-│   │   └── test_models.py         # Tests for ML model training and prediction
+│   ├── /tests                ## Test cases for the AI components
+│   │   ├── test_preprocess.py     ## Tests for data preprocessing
+│   │   ├── test_feature_engineering.py ## Tests for feature engineering scripts
+│   │   └── test_models.py         ## Tests for ML model training and prediction
 │   │
-│   ├── /config               # Configuration files, including ML model params
-│   │   └── model_config.json # JSON file with machine learning configuration parameters
+│   ├── /config               ## Configuration files, including ML model params
+│   │   └── model_config.json ## JSON file with machine learning configuration parameters
 │   │
-│   └── requirements.txt      # Python dependencies required for the AI section
+│   └── requirements.txt      ## Python dependencies required for the AI section
 │
-├── ... # Rest of the repository structure
+├── ... ## Rest of the repository structure
 ```
 
 ### Notes:
@@ -307,45 +307,45 @@ Below is a description of a potential structure for the `utils` directory:
 ```plaintext
 /CustomerInsight-Portal
 │
-├── /lib or /utils    # Utilities directory
-│   ├── /data_utils           # Helpers for data handling across services
-│   │   ├── data_processing.py # General data processing functions
-│   │   └── data_validation.py # Functions for validating data integrity
+├── /lib or /utils    ## Utilities directory
+│   ├── /data_utils           ## Helpers for data handling across services
+│   │   ├── data_processing.py ## General data processing functions
+│   │   └── data_validation.py ## Functions for validating data integrity
 │   │
-│   ├── /api_utils            # Utilities for API services
-│   │   ├── response_handling.py # Standardized response formats
-│   │   ├── request_validation.py # Validation of incoming API requests
-│   │   └── error_handling.py    # Consistent error responses
+│   ├── /api_utils            ## Utilities for API services
+│   │   ├── response_handling.py ## Standardized response formats
+│   │   ├── request_validation.py ## Validation of incoming API requests
+│   │   └── error_handling.py    ## Consistent error responses
 │   │
-│   ├── /logging              # Logging utilities for standardized logging
-│   │   ├── logger.py            # Setup application logger
-│   │   └── log_formatter.py     # Custom log formatter for consistent logs
+│   ├── /logging              ## Logging utilities for standardized logging
+│   │   ├── logger.py            ## Setup application logger
+│   │   └── log_formatter.py     ## Custom log formatter for consistent logs
 │   │
-│   ├── /security             # Security-related utilities
-│   │   ├── encryption.py         # Encryption functions
-│   │   ├── decryption.py         # Decryption functions
-│   │   └── auth.py               # Authentication helpers
+│   ├── /security             ## Security-related utilities
+│   │   ├── encryption.py         ## Encryption functions
+│   │   ├── decryption.py         ## Decryption functions
+│   │   └── auth.py               ## Authentication helpers
 │   │
-│   ├── /config_loader        # Handling of configuration file loading
-│   │   └── config_loader.py      # Function(s) to load and parse config files
+│   ├── /config_loader        ## Handling of configuration file loading
+│   │   └── config_loader.py      ## Function(s) to load and parse config files
 │   │
-│   ├── /ml_utils             # Utilities for machine learning tasks
-│   │   ├── model_management.py   # Functions for managing ML models (loading, saving, updating)
-│   │   └── model_evaluation.py   # Common model evaluation metrics and utilities
+│   ├── /ml_utils             ## Utilities for machine learning tasks
+│   │   ├── model_management.py   ## Functions for managing ML models (loading, saving, updating)
+│   │   └── model_evaluation.py   ## Common model evaluation metrics and utilities
 │   │
-│   ├── /performance          # Performance tracking utilities
-│   │   ├── memory_profiler.py    # Tools for monitoring memory usage
-│   │   └── time_tracker.py       # Decorators/functions for timing code sections
+│   ├── /performance          ## Performance tracking utilities
+│   │   ├── memory_profiler.py    ## Tools for monitoring memory usage
+│   │   └── time_tracker.py       ## Decorators/functions for timing code sections
 │   │
-│   ├── /notification         # Notification system integrations
-│   │   ├── email_client.py       # Functions for sending emails
-│   │   └── sms_client.py         # Functions for sending SMS messages
+│   ├── /notification         ## Notification system integrations
+│   │   ├── email_client.py       ## Functions for sending emails
+│   │   └── sms_client.py         ## Functions for sending SMS messages
 │   │
-│   └── /test_helpers         # Common test helper functions and mock data
-│       ├── fixtures.py           # Shared test fixtures
-│       └── mocks.py              # Mock functions and objects
+│   └── /test_helpers         ## Common test helper functions and mock data
+│       ├── fixtures.py           ## Shared test fixtures
+│       └── mocks.py              ## Mock functions and objects
 │
-├── ... # Rest of the repository structure
+├── ... ## Rest of the repository structure
 ```
 
 ### Notes:
@@ -377,7 +377,7 @@ Here is an example of a module loader (or service registry) file:
 File path: `/CustomerInsight-Portal/utils/module_loader.py`
 
 ```python
-# module_loader.py
+## module_loader.py
 
 """
 ModuleLoader is responsible for loading and providing instances of the modular
@@ -389,9 +389,9 @@ from services.customer_api.service import CustomerService
 from services.insight_engine.service import InsightEngineService
 from services.other_service.service import OtherService
 
-# Import additional services or utilities as necessary
-# from services.x import XService
-# from lib.y import YUtility
+## Import additional services or utilities as necessary
+## from services.x import XService
+## from lib.y import YUtility
 
 class ModuleLoader(containers.DeclarativeContainer):
     """
@@ -401,7 +401,7 @@ class ModuleLoader(containers.DeclarativeContainer):
 
     config = providers.Configuration()
 
-    # Service Providers
+    ## Service Providers
     customer_service = providers.Singleton(
         CustomerService,
         config=config.customer_api
@@ -417,21 +417,21 @@ class ModuleLoader(containers.DeclarativeContainer):
         config=config.other_service
     )
 
-    # Utility Providers (Add utilities that are injected into services)
-    # y_utility = providers.Singleton(YUtility, config=config.y_utility)
+    ## Utility Providers (Add utilities that are injected into services)
+    ## y_utility = providers.Singleton(YUtility, config=config.y_utility)
 
-    # Add additional service and utility providers below
+    ## Add additional service and utility providers below
 
 
-# Example usage
+## Example usage
 if __name__ == "__main__":
-    # Loading configurations
+    ## Loading configurations
     module_loader = ModuleLoader()
     module_loader.config.from_yaml('config/config.yml')
 
-    # Accessing an instance of a service
+    ## Accessing an instance of a service
     customer_service_instance = module_loader.customer_service()
-    # The service can now be used in the application
+    ## The service can now be used in the application
 
 ```
 
@@ -452,7 +452,7 @@ Here is an example of such a core logic handler:
 File path: `/CustomerInsight-Portal/services/core/core_logic.py`
 
 ```python
-# core_logic.py
+## core_logic.py
 
 """
 CoreLogicHandler is responsible for orchestrating the business logic and data
@@ -470,45 +470,45 @@ class CoreLogicHandler:
         self.insight_engine_service = insight_engine_service
 
     def process_customer_data(self, data):
-        # Preprocess the data
+        ## Preprocess the data
         preprocessed_data = preprocess_data(data)
 
-        # Validate processed data
+        ## Validate processed data
         if not validate_data(preprocessed_data):
             raise ValueError("Processed customer data validation failed.")
 
-        # Send preprocessed data to the Customer Service for further operations
+        ## Send preprocessed data to the Customer Service for further operations
         customer_information = self.customer_service.process_data(preprocessed_data)
         return customer_information
 
     def generate_insights(self, customer_id):
-        # Retrieve customer data
+        ## Retrieve customer data
         customer_data = self.customer_service.get_customer_data(customer_id)
 
-        # Generate insights using the Insight Engine Service
+        ## Generate insights using the Insight Engine Service
         insights = self.insight_engine_service.analyze_data(customer_data)
         return insights
 
-    # Additional core logic functions can be added below to handle various application use cases
+    ## Additional core logic functions can be added below to handle various application use cases
 
 
-# Example use of the CoreLogicHandler
+## Example use of the CoreLogicHandler
 if __name__ == "__main__":
     customer_service = CustomerService()
     insight_engine_service = InsightEngineService()
 
     core_handler = CoreLogicHandler(customer_service, insight_engine_service)
 
-    # Example data - this would normally come from an API request or another part of the application
+    ## Example data - this would normally come from an API request or another part of the application
     sample_data = {"customer_id": "123", "purchase_history": [], "interaction_data": {}}
 
-    # Process customer data through the application's core logic
+    ## Process customer data through the application's core logic
     customer_info = core_handler.process_customer_data(sample_data)
 
-    # Generate customer insights
+    ## Generate customer insights
     customer_insights = core_handler.generate_insights(customer_info['customer_id'])
 
-    # Other business logic can be performed using the core_handler instance
+    ## Other business logic can be performed using the core_handler instance
 ```
 
 In this example, `core_logic.py` defines the `CoreLogicHandler` class, which acts as the heart of the application logic. It orchestrates the operations by calling upon pre-defined services like `CustomerService` for customer-related tasks and `InsightEngineService` for insight generation operations. The `CoreLogicHandler` also utilizes utility functions such as `preprocess_data` and `validate_data` from the `utils.data_utils` module to ensure data integrity before further processing.
@@ -520,14 +520,14 @@ To integrate this with the module loader structure from the previous example, on
 ```python
 from utils.module_loader import module_loader
 
-# Load configurations and services using the module loader
+## Load configurations and services using the module loader
 module_loader.config.from_yaml('config/config.yml')
 
-# Get instances of services from the module loader
+## Get instances of services from the module loader
 customer_service_instance = module_loader.customer_service()
 insight_engine_service_instance = module_loader.insight_engine_service()
 
-# Instantiate the CoreLogicHandler with the service instances
+## Instantiate the CoreLogicHandler with the service instances
 core_handler = CoreLogicHandler(
     customer_service=customer_service_instance,
     insight_engine_service=insight_engine_service_instance
@@ -601,7 +601,7 @@ Below is a list of potential user types for the CustomerInsight - Advanced Custo
 
 Each user story here correlates with a specific concern and by having designated files/modules to handle these concerns, the application adheres to principles such as separation of concerns and single responsibility. This makes the entire system more maintainable, scalable, and user-friendly for each type of user.
 
-# CustomerInsight - Advanced Customer Portal
+## CustomerInsight - Advanced Customer Portal
 
 ## Description
 
@@ -665,7 +665,7 @@ To build CustomerInsight, we will use a wide spectrum of well-established librar
 
 This list is just a starting point. As we continue to refine CustomerInsight, we may incorporate additional libraries and technologies based on the evolving needs of the platform and the developer community's advancements.
 
-# Senior Full Stack Software Engineer - AI Applications
+## Senior Full Stack Software Engineer - AI Applications
 
 ## Role Overview
 
@@ -715,66 +715,66 @@ We are excited to welcome a new tech-savvy, creative thinker to our team who sha
 ```
 CustomerInsight/
 |
-|-- .github/             # Contains GitHub workflows and issue templates
+|-- .github/             ## Contains GitHub workflows and issue templates
 |   |-- workflows/
 |   |-- ISSUE_TEMPLATE/
 |
-|-- client/              # Frontend part of the application
-|   |-- public/          # Static files
+|-- client/              ## Frontend part of the application
+|   |-- public/          ## Static files
 |   |   |-- index.html
 |   |   |-- favicon.ico
 |   |
-|   |-- src/             # React application source files
-|   |   |-- components/  # Reusable components
-|   |   |-- pages/       # Application pages
-|   |   |-- hooks/       # Custom React hooks
-|   |   |-- app.js       # Main application
-|   |   |-- index.js     # Entry point for React
-|   |   |-- App.css      # App-wide styles
+|   |-- src/             ## React application source files
+|   |   |-- components/  ## Reusable components
+|   |   |-- pages/       ## Application pages
+|   |   |-- hooks/       ## Custom React hooks
+|   |   |-- app.js       ## Main application
+|   |   |-- index.js     ## Entry point for React
+|   |   |-- App.css      ## App-wide styles
 |   |
 |   |-- package.json
-|   |-- .env             # Environment variables for the frontend
+|   |-- .env             ## Environment variables for the frontend
 |
-|-- server/              # Backend part of the application
+|-- server/              ## Backend part of the application
 |   |-- src/
-|   |   |-- api/         # REST API routes and controllers
-|   |   |-- config/      # Server configuration files
-|   |   |-- services/    # Business logic
-|   |   |-- models/      # Database models
-|   |   |-- utils/       # Utility functions
-|   |   |-- middleware/  # Custom middleware
-|   |   |-- app.js       # Server setup (Express)
+|   |   |-- api/         ## REST API routes and controllers
+|   |   |-- config/      ## Server configuration files
+|   |   |-- services/    ## Business logic
+|   |   |-- models/      ## Database models
+|   |   |-- utils/       ## Utility functions
+|   |   |-- middleware/  ## Custom middleware
+|   |   |-- app.js       ## Server setup (Express)
 |   |
 |   |-- package.json
-|   |-- .env             # Environment variables for the backend
+|   |-- .env             ## Environment variables for the backend
 |
-|-- ai/                  # AI and ML related operations
-|   |-- models/          # Custom machine learning models
-|   |-- data/            # Scripts to handle and process data
-|   |-- utils/           # AI-specific utility functions
+|-- ai/                  ## AI and ML related operations
+|   |-- models/          ## Custom machine learning models
+|   |-- data/            ## Scripts to handle and process data
+|   |-- utils/           ## AI-specific utility functions
 |
-|-- database/            # Database specific files, potentially including migrations and seeds
+|-- database/            ## Database specific files, potentially including migrations and seeds
 |   |-- migrations/
 |   |-- seeds/
 |
-|-- scripts/             # Utility scripts for deployment, setup, etc.
+|-- scripts/             ## Utility scripts for deployment, setup, etc.
 |
-|-- test/                # Contains all the test cases for front-end and back-end
+|-- test/                ## Contains all the test cases for front-end and back-end
 |   |-- client/
 |   |-- server/
 |
-|-- docs/                # Documentation for the project
+|-- docs/                ## Documentation for the project
 |   |-- API.md
 |   |-- OVERVIEW.md
 |
-|-- node_modules/        # Node modules (not committed to the repository; generated during setup)
+|-- node_modules/        ## Node modules (not committed to the repository; generated during setup)
 |
-|-- Dockerfile           # Dockerfile for containerizing the application
-|-- docker-compose.yml   # To setup the multi-container environment
-|-- .env.example         # Example env file with default values
+|-- Dockerfile           ## Dockerfile for containerizing the application
+|-- docker-compose.yml   ## To setup the multi-container environment
+|-- .env.example         ## Example env file with default values
 |-- .gitignore
-|-- README.md            # Project README with setup and contribution instructions
-|-- package.json         # Monorepo package.json (if using Lerna or similar)
+|-- README.md            ## Project README with setup and contribution instructions
+|-- package.json         ## Monorepo package.json (if using Lerna or similar)
 ```
 
 Explanation:
@@ -815,10 +815,10 @@ Additional files such as Docker configurations, environment variable examples, .
 Overall, the described file structure provides a clear separation of concerns and an organized approach to handling various parts of the application, aiding developers in maintaining and extending the application as needed.
 
 ```
-# File Path
+## File Path
 /core/CustomerInsightEngine.js
 
-# File Content
+## File Content
 
 /**
  * CustomerInsightEngine.js

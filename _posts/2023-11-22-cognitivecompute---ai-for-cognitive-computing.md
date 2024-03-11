@@ -5,7 +5,7 @@ permalink: posts/cognitivecompute---ai-for-cognitive-computing
 layout: article
 ---
 
-# AI CognitiveCompute - AI for Cognitive Computing Repository
+## AI CognitiveCompute - AI for Cognitive Computing Repository
 
 ## Objectives
 
@@ -273,10 +273,10 @@ def train_image_classification_model(data_path, labels):
     - trained_model (tf.keras.Model): Trained image classification model.
     """
 
-    # Load mock image data
-    mock_images = np.random.rand(100, 32, 32, 3)  # Assuming 100 RGB images of size 32x32
+    ## Load mock image data
+    mock_images = np.random.rand(100, 32, 32, 3)  ## Assuming 100 RGB images of size 32x32
 
-    # Define a simple convolutional neural network (CNN) model architecture
+    ## Define a simple convolutional neural network (CNN) model architecture
     model = models.Sequential()
     model.add(layers.Conv2D(32, (3, 3), activation='relu', input_shape=(32, 32, 3)))
     model.add(layers.MaxPooling2D((2, 2)))
@@ -285,17 +285,17 @@ def train_image_classification_model(data_path, labels):
     model.add(layers.Conv2D(64, (3, 3), activation='relu'))
     model.add(layers.Flatten())
     model.add(layers.Dense(64, activation='relu'))
-    model.add(layers.Dense(10, activation='softmax'))  # Assuming 10 classes for image classification
+    model.add(layers.Dense(10, activation='softmax'))  ## Assuming 10 classes for image classification
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam',
                   loss='sparse_categorical_crossentropy',
                   metrics=['accuracy'])
 
-    # Train the model using the mock data and labels
+    ## Train the model using the mock data and labels
     model.fit(mock_images, labels, epochs=10, batch_size=32)
 
-    # Return the trained image classification model
+    ## Return the trained image classification model
     return model
 ```
 
@@ -322,25 +322,25 @@ def train_nlp_model(data_path, labels):
     - trained_model (tf.keras.Model): Trained NLP model.
     """
 
-    # Load and preprocess mock text data
+    ## Load and preprocess mock text data
     mock_text_data = ["This is a mock sentence.", "Another example of a mock sentence."]
-    # preprocess the text data as required, e.g., tokenization, padding, and vectorization
+    ## preprocess the text data as required, e.g., tokenization, padding, and vectorization
 
-    # Define a sequential model for NLP
+    ## Define a sequential model for NLP
     model = models.Sequential()
-    model.add(layers.Embedding(input_dim=1000, output_dim=64, input_length=10))  # Example embedding layer
-    model.add(layers.LSTM(128))  # Example LSTM layer
-    model.add(layers.Dense(1, activation='sigmoid'))  # Example output layer
+    model.add(layers.Embedding(input_dim=1000, output_dim=64, input_length=10))  ## Example embedding layer
+    model.add(layers.LSTM(128))  ## Example LSTM layer
+    model.add(layers.Dense(1, activation='sigmoid'))  ## Example output layer
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam',
-                  loss='binary_crossentropy',  # Example loss function
+                  loss='binary_crossentropy',  ## Example loss function
                   metrics=['accuracy'])
 
-    # Train the model using the mock text data and labels
+    ## Train the model using the mock text data and labels
     model.fit(mock_text_data, labels, epochs=10, batch_size=32)
 
-    # Return the trained NLP model
+    ## Return the trained NLP model
     return model
 ```
 

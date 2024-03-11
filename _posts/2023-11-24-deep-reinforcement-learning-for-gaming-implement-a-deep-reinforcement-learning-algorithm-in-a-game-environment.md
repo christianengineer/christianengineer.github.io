@@ -78,26 +78,26 @@ To ensure a cohesive and scalable file structure for the deep reinforcement lear
 deep_reinforcement_learning_gaming/
 │
 ├── data/
-│   ├── raw/                          # Raw data collected from game environment
-│   ├── processed/                    # Processed and formatted training data
-│   └── models/                       # Trained deep learning models
+│   ├── raw/                          ## Raw data collected from game environment
+│   ├── processed/                    ## Processed and formatted training data
+│   └── models/                       ## Trained deep learning models
 │
 ├── src/
-│   ├── agents/                       # Reinforcement learning agent implementations
-│   ├── environments/                 # Wrappers for integrating game environments (e.g., OpenAI Gym)
-│   ├── models/                       # Deep learning model implementations
-│   ├── training/                     # Training scripts and configurations
-│   └── utils/                        # Utility functions and helper modules
+│   ├── agents/                       ## Reinforcement learning agent implementations
+│   ├── environments/                 ## Wrappers for integrating game environments (e.g., OpenAI Gym)
+│   ├── models/                       ## Deep learning model implementations
+│   ├── training/                     ## Training scripts and configurations
+│   └── utils/                        ## Utility functions and helper modules
 │
-├── configs/                          # Configuration files for hyperparameters, training settings, etc.
+├── configs/                          ## Configuration files for hyperparameters, training settings, etc.
 │
-├── notebooks/                        # Jupyter notebooks for experimentation, training visualization, and model evaluation
+├── notebooks/                        ## Jupyter notebooks for experimentation, training visualization, and model evaluation
 │
-├── tests/                            # Test suites for ensuring functionality and performance of the implemented components
+├── tests/                            ## Test suites for ensuring functionality and performance of the implemented components
 │
-├── docs/                             # Documentation, including system design, API references, and user guides
+├── docs/                             ## Documentation, including system design, API references, and user guides
 │
-└── README.md                         # Project overview, setup instructions, and usage guidelines
+└── README.md                         ## Project overview, setup instructions, and usage guidelines
 ```
 
 ### File Structure Description
@@ -163,8 +163,8 @@ deployment/
 ├── agents/
 │   ├── trained_agent1/
 │   │   ├── model_weights/
-│   │   │   ├── model_checkpoint.pt   # Trained model weights
-│   │   ├── metadata.json             # Metadata and configuration for the trained agent
+│   │   │   ├── model_checkpoint.pt   ## Trained model weights
+│   │   ├── metadata.json             ## Metadata and configuration for the trained agent
 │   ├── trained_agent2/
 │   │   ├── model_weights/
 │   │   │   ├── model_checkpoint.pt
@@ -172,13 +172,13 @@ deployment/
 │   └── ...
 ├── environments/
 │   ├── game_environment1/
-│   │   ├── game_assets/              # Assets and resources required for the game environment
-│   │   ├── agent_integration.py      # Script to integrate the trained agent with the game environment
+│   │   ├── game_assets/              ## Assets and resources required for the game environment
+│   │   ├── agent_integration.py      ## Script to integrate the trained agent with the game environment
 │   ├── game_environment2/
 │   │   ├── game_assets/
 │   │   ├── agent_integration.py
 │   └── ...
-└── README.md                        # Instructions and documentation for deploying trained agents
+└── README.md                        ## Instructions and documentation for deploying trained agents
 ```
 
 ### Files and Subdirectories in the Deployment Directory
@@ -201,42 +201,42 @@ Certainly! Below is a mock implementation of a complex machine learning algorith
 import numpy as np
 
 def train_deep_q_learning_agent(data_path):
-    # Load mock training data from the specified file path
+    ## Load mock training data from the specified file path
     training_data = np.load(data_path)
 
-    # Placeholder for the DRL agent and model initialization
-    drl_agent = ...  # Instantiate the DRL agent (e.g., DQN agent from a library like Stable Baselines3)
-    model = ...  # Initialize the deep Q-learning model
+    ## Placeholder for the DRL agent and model initialization
+    drl_agent = ...  ## Instantiate the DRL agent (e.g., DQN agent from a library like Stable Baselines3)
+    model = ...  ## Initialize the deep Q-learning model
 
-    # Hyperparameters for training
+    ## Hyperparameters for training
     learning_rate = 0.001
     discount_factor = 0.99
     batch_size = 32
     num_episodes = 1000
 
-    # Training loop
+    ## Training loop
     for episode in range(num_episodes):
-        state = ...  # Initialize the game state
+        state = ...  ## Initialize the game state
         episode_reward = 0
         
-        while not done:  # Game episode loop
-            action = drl_agent.choose_action(state)  # Choose action using the DRL agent
-            next_state, reward, done, _ = env.step(action)  # Simulated environment interaction
+        while not done:  ## Game episode loop
+            action = drl_agent.choose_action(state)  ## Choose action using the DRL agent
+            next_state, reward, done, _ = env.step(action)  ## Simulated environment interaction
             episode_reward += reward
 
-            # Store the experience tuple (state, action, reward, next_state, done) in the agent's memory
+            ## Store the experience tuple (state, action, reward, next_state, done) in the agent's memory
             drl_agent.store_experience(state, action, reward, next_state, done)
 
-            # Sample a minibatch of experiences and perform the deep Q-learning update
+            ## Sample a minibatch of experiences and perform the deep Q-learning update
             experiences = drl_agent.sample_experience_batch(batch_size)
             loss = drl_agent.update_q_network(experiences, learning_rate, discount_factor)
 
-            state = next_state  # Update the state for the next time step
+            state = next_state  ## Update the state for the next time step
 
-        # Log the episode reward and performance metrics
+        ## Log the episode reward and performance metrics
         print(f"Episode {episode}: Total Reward = {episode_reward}")
 
-    # Save the trained model weights for future deployment
+    ## Save the trained model weights for future deployment
     model.save_weights('trained_model_weights.h5')
 ```
 
@@ -252,41 +252,41 @@ Certainly! Below is a mock implementation of a function for a complex deep learn
 import numpy as np
 
 def train_deep_q_learning_algorithm(data_path):
-    # Load mock training data from the specified file path
+    ## Load mock training data from the specified file path
     training_data = np.load(data_path)
 
-    # Placeholder for deep Q-learning algorithm and model initialization
-    deep_q_learning_algorithm = ...  # Instantiate the deep Q-learning algorithm
-    model = ...  # Initialize the deep Q-learning model architecture
+    ## Placeholder for deep Q-learning algorithm and model initialization
+    deep_q_learning_algorithm = ...  ## Instantiate the deep Q-learning algorithm
+    model = ...  ## Initialize the deep Q-learning model architecture
 
-    # Hyperparameters for training
+    ## Hyperparameters for training
     learning_rate = 0.001
     discount_factor = 0.99
     batch_size = 32
     num_epochs = 1000
 
-    # Training loop
+    ## Training loop
     for epoch in range(num_epochs):
-        state, total_reward, done = ..., 0, False  # Initialize game state, total reward, and termination flag
+        state, total_reward, done = ..., 0, False  ## Initialize game state, total reward, and termination flag
         
-        while not done:  # Game episode loop
-            action = deep_q_learning_algorithm.choose_action(state)  # Choose action using the deep Q-learning algorithm
-            next_state, reward, done, _ = environment.step(action)  # Simulated environment interaction
+        while not done:  ## Game episode loop
+            action = deep_q_learning_algorithm.choose_action(state)  ## Choose action using the deep Q-learning algorithm
+            next_state, reward, done, _ = environment.step(action)  ## Simulated environment interaction
             total_reward += reward
 
-            # Store the experience tuple (state, action, reward, next_state, done) in the algorithm's memory
+            ## Store the experience tuple (state, action, reward, next_state, done) in the algorithm's memory
             deep_q_learning_algorithm.store_experience(state, action, reward, next_state, done)
 
-            # Sample a minibatch of experiences and perform the deep Q-learning update
+            ## Sample a minibatch of experiences and perform the deep Q-learning update
             experiences = deep_q_learning_algorithm.sample_experience_batch(batch_size)
             loss = deep_q_learning_algorithm.update_q_network(experiences, learning_rate, discount_factor)
 
-            state = next_state  # Update the state for the next time step
+            state = next_state  ## Update the state for the next time step
 
-        # Log the episode reward and performance metrics
+        ## Log the episode reward and performance metrics
         print(f"Epoch {epoch}: Total Reward = {total_reward}")
 
-    # Save the trained model weights for future deployment
+    ## Save the trained model weights for future deployment
     model.save_weights('trained_model_weights.h5')
 ```
 

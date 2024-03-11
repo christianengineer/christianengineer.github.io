@@ -5,7 +5,7 @@ permalink: posts/real-time-fleet-management-for-logistics-scikit-learn-rabbitmq-
 layout: article
 ---
 
-# AI Real-time Fleet Management for Logistics 
+## AI Real-time Fleet Management for Logistics 
 
 ## Objectives
 The primary objective of the AI real-time fleet management system is to optimize the transportation logistics process by leveraging machine learning for predictive maintenance, route optimization, and real-time decision making. The system aims to enhance operational efficiency, reduce costs, and improve overall fleet performance.
@@ -29,7 +29,7 @@ Docker is utilized for containerization to encapsulate microservices and their d
 
 By incorporating these libraries and frameworks into the design, the AI real-time fleet management system would be well-equipped to handle the challenges of processing large volumes of real-time data, implementing machine learning models, and maintaining a scalable, resilient architecture.
 
-# MLOps Infrastructure for Real-time Fleet Management
+## MLOps Infrastructure for Real-time Fleet Management
 
 To establish a robust MLOps infrastructure for the real-time fleet management system, a comprehensive approach encompassing continuous integration, model monitoring, deployment automation, and feedback loop mechanisms is crucial. The MLOps infrastructure will integrate seamlessly with the existing tech stack (Scikit-Learn, RabbitMQ, Docker) to ensure efficient deployment and monitoring of machine learning models and data-intensive AI applications.
 
@@ -200,33 +200,33 @@ The `deployment` directory encapsulates the infrastructure as code (IaC) and dep
 By organizing the deployment-related files in a structured manner, the `deployment` directory supports the effective management of the real-time fleet management application's deployment and maintenance, ensuring a scalable, data-intensive, AI-driven solution for transportation logistics.
 
 ```python
-# File Path: realtime-fleet-management/src/model_training/train_model.py
+## File Path: realtime-fleet-management/src/model_training/train_model.py
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 import joblib
 
-# Load mock data
+## Load mock data
 mock_data_path = 'data/processed/mock_fleet_data.csv'
 mock_data = pd.read_csv(mock_data_path)
 
-# Define features and target
+## Define features and target
 X = mock_data.drop('target_variable', axis=1)
 y = mock_data['target_variable']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize and train the model
+## Initialize and train the model
 model = RandomForestClassifier(n_estimators=100, random_state=42)
 model.fit(X_train, y_train)
 
-# Evaluate the model
+## Evaluate the model
 accuracy = model.score(X_test, y_test)
 print(f"Model Accuracy: {accuracy}")
 
-# Save the trained model
+## Save the trained model
 model_output_path = 'models/model1/model1_trained.pkl'
 joblib.dump(model, model_output_path)
 print(f"Trained model saved at {model_output_path}")
@@ -239,7 +239,7 @@ The `train_model.py` file is located at `realtime-fleet-management/src/model_tra
 This file serves as a starting point for training machine learning models within the Real-time Fleet Management for Logistics application, demonstrating the integration of Scikit-Learn for model training and joblib for model serialization.
 
 ```python
-# File Path: realtime-fleet-management/src/model_training/train_complex_model.py
+## File Path: realtime-fleet-management/src/model_training/train_complex_model.py
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -248,31 +248,31 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.pipeline import make_pipeline
 import joblib
 
-# Load mock data
+## Load mock data
 mock_data_path = 'data/processed/mock_fleet_data.csv'
 mock_data = pd.read_csv(mock_data_path)
 
-# Define features and target
+## Define features and target
 X = mock_data.drop('target_variable', axis=1)
 y = mock_data['target_variable']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Construct a complex model pipeline
+## Construct a complex model pipeline
 model = make_pipeline(
     StandardScaler(),
     GradientBoostingRegressor(n_estimators=100, learning_rate=0.1, max_depth=3, random_state=42)
 )
 
-# Train the model pipeline
+## Train the model pipeline
 model.fit(X_train, y_train)
 
-# Evaluate the model
+## Evaluate the model
 r2_score = model.score(X_test, y_test)
 print(f"R2 Score: {r2_score}")
 
-# Save the trained model
+## Save the trained model
 model_output_path = 'models/complex_model/complex_model_trained.pkl'
 joblib.dump(model, model_output_path)
 print(f"Trained complex model saved at {model_output_path}")

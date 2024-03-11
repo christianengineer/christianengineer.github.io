@@ -162,10 +162,10 @@ import tensorflow as tf
 from tensorflow.keras.applications import InceptionV3
 from tensorflow.keras import layers, Model
 
-# Mock training data
+## Mock training data
 mock_training_data_path = '/data/training_data/mock_video_dataset'
 
-# Load and preprocess the mock training data
+## Load and preprocess the mock training data
 train_ds = tf.keras.preprocessing.image_dataset_from_directory(
     mock_training_data_path,
     validation_split=0.2,
@@ -182,31 +182,31 @@ val_ds = tf.keras.preprocessing.image_dataset_from_directory(
     image_size=(299, 299),
     batch_size=32)
 
-# Load the InceptionV3 model without its top layer for transfer learning
+## Load the InceptionV3 model without its top layer for transfer learning
 base_model = InceptionV3(weights='imagenet', include_top=False)
 
-# Add custom classification layers on top of the InceptionV3 base model
+## Add custom classification layers on top of the InceptionV3 base model
 x = base_model.output
 x = layers.GlobalAveragePooling2D()(x)
 x = layers.Dense(1024, activation='relu')(x)
 predictions = layers.Dense(num_classes, activation='softmax')(x)
 
-# Create the final model for training
+## Create the final model for training
 model = Model(inputs=base_model.input, outputs=predictions)
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam',
               loss='sparse_categorical_crossentropy',
               metrics=['accuracy'])
 
-# Train the model
+## Train the model
 model.fit(
     train_ds,
     validation_data=val_ds,
     epochs=10
 )
 
-# Save the trained model
+## Save the trained model
 model.save('/models/tensorflow_models/inception_v3/inception_v3_trained_model')
 ```
 
@@ -223,35 +223,35 @@ Certainly! Below is an example of a file for a complex machine learning algorith
 import tensorflow as tf
 from tensorflow.keras import layers, Model
 
-# Mock training data
+## Mock training data
 mock_training_data_path = '/data/training_data/mock_video_dataset'
 
-# Load and preprocess the mock training data
-# (Assuming the data is preprocessed and stored as numpy arrays or in a compatible format)
+## Load and preprocess the mock training data
+## (Assuming the data is preprocessed and stored as numpy arrays or in a compatible format)
 train_data, train_labels = load_and_preprocess_data(mock_training_data_path)
 
-# Define the architecture of the custom neural network model
-input_layer = layers.Input(shape=(...))  # Input shape based on the preprocessed video data
+## Define the architecture of the custom neural network model
+input_layer = layers.Input(shape=(...))  ## Input shape based on the preprocessed video data
 x = layers.Conv2D(64, (3, 3), activation='relu')(input_layer)
 x = layers.MaxPooling2D(pool_size=(2, 2))(x)
 x = layers.Conv2D(128, (3, 3), activation='relu')(x)
 x = layers.MaxPooling2D(pool_size=(2, 2))(x)
 x = layers.Flatten()(x)
 x = layers.Dense(256, activation='relu')(x)
-output_layer = layers.Dense(num_classes, activation='softmax')(x)  # Output layer based on the number of classes
+output_layer = layers.Dense(num_classes, activation='softmax')(x)  ## Output layer based on the number of classes
 
-# Create the custom neural network model
+## Create the custom neural network model
 model = Model(inputs=input_layer, outputs=output_layer)
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam',
               loss='sparse_categorical_crossentropy',
               metrics=['accuracy'])
 
-# Train the model
+## Train the model
 model.fit(train_data, train_labels, epochs=10, batch_size=32, validation_split=0.2)
 
-# Save the trained custom neural network model
+## Save the trained custom neural network model
 model.save('/models/tensorflow_models/custom_nn_model/trained_model')
 ```
 

@@ -250,22 +250,22 @@ Below is a basic Python script for training a mock BERT model for the AI-Powered
 `models/bert/train_bert_model.py`
 
 ```python
-# train_bert_model.py
+## train_bert_model.py
 
 import torch
 import torch.nn as nn
 from transformers import BertModel, BertTokenizer
 import numpy as np
 
-# Mock training data (replace with actual data loading and preprocessing)
+## Mock training data (replace with actual data loading and preprocessing)
 input_texts = ["Sample input text 1", "Another sample input text", "Mock input for training"]
-labels = [0, 1, 0]  # Replace with actual labels or targets
+labels = [0, 1, 0]  ## Replace with actual labels or targets
 
-# Initializing BERT tokenizer and model
+## Initializing BERT tokenizer and model
 tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
 model = BertModel.from_pretrained('bert-base-uncased')
 
-# Tokenizing input texts
+## Tokenizing input texts
 input_ids = []
 attention_masks = []
 
@@ -285,7 +285,7 @@ input_ids = torch.cat(input_ids, dim=0)
 attention_masks = torch.cat(attention_masks, dim=0)
 labels = torch.tensor(labels)
 
-# Define BERT model architecture for fine-tuning
+## Define BERT model architecture for fine-tuning
 class BertClassifier(nn.Module):
     def __init__(self, bert_model):
         super(BertClassifier, self).__init__()
@@ -300,13 +300,13 @@ class BertClassifier(nn.Module):
         output = self.fc(dropout_output)
         return output
 
-# Create an instance of the BERT classifier model
+## Create an instance of the BERT classifier model
 model = BertClassifier(model)
 criterion = nn.BCEWithLogitsLoss()
 optimizer = torch.optim.Adam(model.parameters(), lr=2e-5)
 
-# Start model training with mock data
-epochs = 3  # Number of training epochs
+## Start model training with mock data
+epochs = 3  ## Number of training epochs
 for epoch in range(epochs):
     model.train()
     outputs = model(input_ids, attention_masks)
@@ -315,7 +315,7 @@ for epoch in range(epochs):
     optimizer.step()
     optimizer.zero_grad()
 
-# Save the trained model
+## Save the trained model
 output_model_path = 'models/bert/fine-tuned-models/mock_model'
 torch.save(model.state_dict(), output_model_path)
 ```
@@ -334,11 +334,11 @@ import tensorflow as tf
 from tensorflow.keras import layers, models
 import numpy as np
 
-# Mock data generation (replace with actual data loading and preprocessing)
-input_data = np.random.rand(100, 10)  # Replace with actual input features
-target_data = np.random.randint(2, size=(100, 1))  # Replace with actual target labels
+## Mock data generation (replace with actual data loading and preprocessing)
+input_data = np.random.rand(100, 10)  ## Replace with actual input features
+target_data = np.random.randint(2, size=(100, 1))  ## Replace with actual target labels
 
-# Define a complex neural network model
+## Define a complex neural network model
 model = models.Sequential([
     layers.Dense(64, activation='relu', input_shape=(10,)),
     layers.Dropout(0.5),
@@ -346,15 +346,15 @@ model = models.Sequential([
     layers.Dense(1, activation='sigmoid')
 ])
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam',
               loss='binary_crossentropy',
               metrics=['accuracy'])
 
-# Train the model
+## Train the model
 model.fit(input_data, target_data, epochs=10, batch_size=32)
 
-# Save the trained model
+## Save the trained model
 output_model_path = 'models/complex_ml_model.h5'
 model.save(output_model_path)
 ```

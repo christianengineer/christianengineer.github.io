@@ -5,7 +5,7 @@ permalink: posts/water-access-and-quality-monitoring-system-for-peru-scikit-lear
 layout: article
 ---
 
-# AI Water Access and Quality Monitoring System for Peru
+## AI Water Access and Quality Monitoring System for Peru
 
 ## Objectives:
 1. **Monitor Water Access Points**: Collect and analyze data on water access points to ensure availability and quality.
@@ -27,7 +27,7 @@ layout: article
 
 By combining the power of Scikit-Learn and TensorFlow for predictive modeling, Kafka for real-time data processing, and Docker for efficient deployment, the AI Water Access and Quality Monitoring System can revolutionize water management in Peru by enabling proactive measures to ensure clean water access for all residents.
 
-# MLOps Infrastructure for AI Water Access and Quality Monitoring System
+## MLOps Infrastructure for AI Water Access and Quality Monitoring System
 
 ## Workflow Steps:
 1. **Data Ingestion**: Data from water access points is collected using sensors and IoT devices and streamed to Kafka for real-time processing.
@@ -48,64 +48,64 @@ By combining the power of Scikit-Learn and TensorFlow for predictive modeling, K
 
 By establishing a robust MLOps infrastructure that integrates Scikit-Learn, TensorFlow, Kafka, and Docker, the Water Access and Quality Monitoring System can efficiently monitor water access points, predict areas at risk of water quality issues, and guide infrastructure development in Peru, ultimately leading to improved water accessibility and quality management.
 
-# Water Access and Quality Monitoring System File Structure
+## Water Access and Quality Monitoring System File Structure
 
 ```
 water_access_quality_monitoring_system/
 │
 ├── data/
-│   ├── raw_data/                  # Raw data collected from water access points
-│   ├── processed_data/            # Processed data for model training and evaluation
+│   ├── raw_data/                  ## Raw data collected from water access points
+│   ├── processed_data/            ## Processed data for model training and evaluation
 │
 ├── models/
-│   ├── scikit-learn/              # Scikit-Learn machine learning models
-│   │   ├── regression_model.pkl   # Trained regression model for prediction
-│   │   ├── classification_model.pkl  # Trained classification model for risk assessment
+│   ├── scikit-learn/              ## Scikit-Learn machine learning models
+│   │   ├── regression_model.pkl   ## Trained regression model for prediction
+│   │   ├── classification_model.pkl  ## Trained classification model for risk assessment
 │   │
-│   ├── tensorflow/                # TensorFlow deep learning models
-│   │   ├── neural_network_model.h5   # Trained neural network model for complex patterns
+│   ├── tensorflow/                ## TensorFlow deep learning models
+│   │   ├── neural_network_model.h5   ## Trained neural network model for complex patterns
 │
 ├── notebooks/
-│   ├── data_exploration.ipynb     # Jupyter notebook for exploring and visualizing data
-│   ├── model_training_evaluation.ipynb   # Jupyter notebook for model training and evaluation
+│   ├── data_exploration.ipynb     ## Jupyter notebook for exploring and visualizing data
+│   ├── model_training_evaluation.ipynb   ## Jupyter notebook for model training and evaluation
 │
 ├── scripts/
-│   ├── data_processing.py         # Script for data preprocessing and feature engineering
-│   ├── model_training.py          # Script for training machine learning models
-│   ├── model_inference.py         # Script for making real-time predictions
+│   ├── data_processing.py         ## Script for data preprocessing and feature engineering
+│   ├── model_training.py          ## Script for training machine learning models
+│   ├── model_inference.py         ## Script for making real-time predictions
 │
 ├── streams/
-│   ├── kafka_producer.py          # Kafka producer for streaming data
-│   ├── kafka_consumer.py          # Kafka consumer for processing streamed data
+│   ├── kafka_producer.py          ## Kafka producer for streaming data
+│   ├── kafka_consumer.py          ## Kafka consumer for processing streamed data
 │
 ├── docker/
-│   ├── Dockerfile                 # Dockerfile for building model deployment containers
-│   ├── requirements.txt           # List of dependencies for Docker image
+│   ├── Dockerfile                 ## Dockerfile for building model deployment containers
+│   ├── requirements.txt           ## List of dependencies for Docker image
 │
 ├── config/
-│   ├── kafka_config.json          # Configuration file for Kafka setup
-│   ├── model_config.json          # Configuration file for model hyperparameters
+│   ├── kafka_config.json          ## Configuration file for Kafka setup
+│   ├── model_config.json          ## Configuration file for model hyperparameters
 │
-├── README.md                      # Project overview, setup instructions, and usage guide
-├── requirements.txt               # List of Python dependencies for the project
+├── README.md                      ## Project overview, setup instructions, and usage guide
+├── requirements.txt               ## List of Python dependencies for the project
 ```
 
 This file structure organizes the Water Access and Quality Monitoring System components, including data, models, notebooks, scripts, Kafka streams, Docker configurations, and project configurations. It ensures scalability and maintainability of the system by separating different functionalities into distinct directories and files.
 
-# Water Access and Quality Monitoring System - Models Directory
+## Water Access and Quality Monitoring System - Models Directory
 
 ```
 models/
 │
 ├── scikit-learn/
 │   │
-│   ├── regression_model.pkl     # Trained Scikit-Learn regression model for predicting water quality
-│   ├── classification_model.pkl  # Trained Scikit-Learn classification model for risk assessment
-│   └── feature_encoder.pkl       # Trained Scikit-Learn feature encoder for data preprocessing
+│   ├── regression_model.pkl     ## Trained Scikit-Learn regression model for predicting water quality
+│   ├── classification_model.pkl  ## Trained Scikit-Learn classification model for risk assessment
+│   └── feature_encoder.pkl       ## Trained Scikit-Learn feature encoder for data preprocessing
 │
 └── tensorflow/
     │
-    └── neural_network_model.h5   # Trained TensorFlow neural network model for complex pattern recognition
+    └── neural_network_model.h5   ## Trained TensorFlow neural network model for complex pattern recognition
 ```
 
 ## Files in the `models` directory:
@@ -120,16 +120,16 @@ models/
 
 These model files represent the predictive capabilities of the Water Access and Quality Monitoring System, utilizing both Scikit-Learn and TensorFlow to generate insights into water quality and identify areas that may require intervention for improved water accessibility and quality management in Peru.
 
-# Water Access and Quality Monitoring System - Deployment Directory
+## Water Access and Quality Monitoring System - Deployment Directory
 
 ```
 deployment/
 │
-├── Dockerfile                   # Dockerfile for building model deployment containers
-├── requirements.txt             # List of dependencies for Docker image
+├── Dockerfile                   ## Dockerfile for building model deployment containers
+├── requirements.txt             ## List of dependencies for Docker image
 └── config/
-    ├── kafka_config.json        # Configuration file for Kafka setup
-    └── model_config.json        # Configuration file for model hyperparameters
+    ├── kafka_config.json        ## Configuration file for Kafka setup
+    └── model_config.json        ## Configuration file for model hyperparameters
 ```
 
 ## Files in the `deployment` directory:
@@ -149,7 +149,7 @@ deployment/
 The `deployment` directory houses essential files for deploying the Water Access and Quality Monitoring System, including the Docker configuration files, model hyperparameters, and Kafka setup details. These files are crucial for setting up the scalable and efficient deployment infrastructure for the application.
 
 ```python
-# File Path: water_access_quality_monitoring_system/scripts/train_model.py
+## File Path: water_access_quality_monitoring_system/scripts/train_model.py
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -157,28 +157,28 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 import joblib
 
-# Load mock data (Replace with actual data loading code)
+## Load mock data (Replace with actual data loading code)
 data = pd.read_csv('path_to_mock_data/water_quality_data.csv')
 
-# Split data into features and target
+## Split data into features and target
 X = data.drop('target_variable', axis=1)
 y = data['target_variable']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize and train the model
+## Initialize and train the model
 model = RandomForestClassifier()
 model.fit(X_train, y_train)
 
-# Make predictions on the test set
+## Make predictions on the test set
 y_pred = model.predict(X_test)
 
-# Evaluate the model
+## Evaluate the model
 accuracy = accuracy_score(y_test, y_pred)
 print(f"Model accuracy: {accuracy}")
 
-# Save the trained model
+## Save the trained model
 model_filename = 'path_to_save_model/water_quality_model.pkl'
 joblib.dump(model, model_filename)
 print(f"Model saved at {model_filename}")
@@ -191,7 +191,7 @@ Ensure to replace the placeholders `path_to_mock_data/water_quality_data.csv` an
 Please note that this script is a simplified version and should be adapted to incorporate the actual data processing and model training requirements of the Water Access and Quality Monitoring System.
 
 ```python
-# File Path: water_access_quality_monitoring_system/scripts/train_complex_model.py
+## File Path: water_access_quality_monitoring_system/scripts/train_complex_model.py
 
 import pandas as pd
 import tensorflow as tf
@@ -202,39 +202,39 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import accuracy_score
 import joblib
 
-# Load mock data (Replace with actual data loading code)
+## Load mock data (Replace with actual data loading code)
 data = pd.read_csv('path_to_mock_data/water_quality_data.csv')
 
-# Split data into features and target
+## Split data into features and target
 X = data.drop('target_variable', axis=1)
 y = data['target_variable']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Create a Sequential model
+## Create a Sequential model
 model = Sequential([
     Dense(64, activation='relu', input_shape=(X_train.shape[1],)),
     Dense(32, activation='relu'),
     Dense(1, activation='sigmoid')
 ])
 
-# Compile the model
+## Compile the model
 model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
 
-# Normalize features using StandardScaler
+## Normalize features using StandardScaler
 scaler = StandardScaler()
 X_train_scaled = scaler.fit_transform(X_train)
 X_test_scaled = scaler.transform(X_test)
 
-# Train the model
+## Train the model
 model.fit(X_train_scaled, y_train, epochs=50, batch_size=32, validation_data=(X_test_scaled, y_test), verbose=1)
 
-# Evaluate the model
+## Evaluate the model
 _, accuracy = model.evaluate(X_test_scaled, y_test)
 print(f"Model accuracy: {accuracy}")
 
-# Save the trained model
+## Save the trained model
 model_filename = 'path_to_save_model/neural_network_model.h5'
 model.save(model_filename)
 print(f"Model saved at {model_filename}")
@@ -246,7 +246,7 @@ Ensure to update the placeholders `path_to_mock_data/water_quality_data.csv` and
 
 Keep in mind that this script is a simplified example and should be adapted to meet the specific data processing and model training needs of the Water Access and Quality Monitoring System.
 
-# Types of Users for the Water Access and Quality Monitoring System:
+## Types of Users for the Water Access and Quality Monitoring System:
 
 1. **Government Officials**:
    - User Story: As a government official, I need to access real-time data on water access points and areas at risk of water quality issues to make informed decisions on infrastructure development and resource allocation.

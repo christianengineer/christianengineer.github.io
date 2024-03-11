@@ -56,57 +56,57 @@ By setting up such a robust infrastructure, we ensure that the Voice Biometrics 
 voice-biometrics-deepspeech/
 │
 ├── data/
-│   ├── raw/                         # Raw voice data for training
-│   ├── processed/                   # Processed voice data ready for model training
-│   ├── models/                      # Trained DeepSpeech models
+│   ├── raw/                         ## Raw voice data for training
+│   ├── processed/                   ## Processed voice data ready for model training
+│   ├── models/                      ## Trained DeepSpeech models
 │   
 ├── src/
-│   ├── data_processing/             # Scripts for preprocessing voice data
-│   ├── model_training/              # Scripts for training DeepSpeech models
-│   ├── identity_verification/       # Implementation of the identity verification logic
-│   ├── api/                         # Implementation of the RESTful API for accessing the system
-│   ├── utils/                       # Utility functions and helper scripts
-│   ├── app.py                       # Main application entry point
+│   ├── data_processing/             ## Scripts for preprocessing voice data
+│   ├── model_training/              ## Scripts for training DeepSpeech models
+│   ├── identity_verification/       ## Implementation of the identity verification logic
+│   ├── api/                         ## Implementation of the RESTful API for accessing the system
+│   ├── utils/                       ## Utility functions and helper scripts
+│   ├── app.py                       ## Main application entry point
 │   
 ├── config/
-│   ├── config.yaml                  # Configuration file for model training and system parameters
-│   ├── logging.yaml                 # Configuration for logging and monitoring
+│   ├── config.yaml                  ## Configuration file for model training and system parameters
+│   ├── logging.yaml                 ## Configuration for logging and monitoring
 │   
 ├── tests/
-│   ├── unit/                        # Unit tests for different modules
-│   ├── integration/                 # Integration tests for the entire system
+│   ├── unit/                        ## Unit tests for different modules
+│   ├── integration/                 ## Integration tests for the entire system
 │   
 ├── docs/
-│   ├── api_specification.md         # API specification documentation
-│   ├── data_processing_guide.md     # Guide for processing voice data
-│   ├── model_training_guide.md      # Guide for training DeepSpeech models
-│   ├── system_architecture.md       # Documentation for system architecture
+│   ├── api_specification.md         ## API specification documentation
+│   ├── data_processing_guide.md     ## Guide for processing voice data
+│   ├── model_training_guide.md      ## Guide for training DeepSpeech models
+│   ├── system_architecture.md       ## Documentation for system architecture
 │
-├── requirements.txt                 # Python dependencies for the project
-├── Dockerfile                       # Dockerfile for containerizing the application
-├── README.md                        # Project overview and setup instructions
-├── LICENSE                          # License information for the project
+├── requirements.txt                 ## Python dependencies for the project
+├── Dockerfile                       ## Dockerfile for containerizing the application
+├── README.md                        ## Project overview and setup instructions
+├── LICENSE                          ## License information for the project
 ```
 
 In this scalable file structure, the `voice-biometrics-deepspeech` repository is organized into distinct directories for data, source code, configuration, tests, and documentation. This structure promotes modularity, ease of maintenance, and clear separation of concerns. Additionally, it includes essential files such as `requirements.txt`, `Dockerfile`, `README.md`, and `LICENSE` to facilitate reproducibility, containerization, project overview, and license information.
 
 ```plaintext
 models/
-├── pre_trained/                    # Pre-trained DeepSpeech model files
-│   ├── model.pb                    # Serialized pre-trained model
-│   ├── scorer.pbmm                 # Pre-built language model
+├── pre_trained/                    ## Pre-trained DeepSpeech model files
+│   ├── model.pb                    ## Serialized pre-trained model
+│   ├── scorer.pbmm                 ## Pre-built language model
 │
-├── custom_trained/                 # Custom-trained DeepSpeech model files
-│   ├── checkpoints/                # Saved model training checkpoints
-│   ├── best_model.pb               # Serialized custom-trained model (best performing)
-│   ├── frozen_graph.pb             # Frozen model graph for inference
-│   ├── alphabet.txt                # Alphabet file for mapping characters to integers
-│   ├── lm.binary                   # Language model for improving transcription accuracy
-│   ├── trie                        # Trie file for language model usage
+├── custom_trained/                 ## Custom-trained DeepSpeech model files
+│   ├── checkpoints/                ## Saved model training checkpoints
+│   ├── best_model.pb               ## Serialized custom-trained model (best performing)
+│   ├── frozen_graph.pb             ## Frozen model graph for inference
+│   ├── alphabet.txt                ## Alphabet file for mapping characters to integers
+│   ├── lm.binary                   ## Language model for improving transcription accuracy
+│   ├── trie                        ## Trie file for language model usage
 │
-├── evaluation/                     # Evaluation metrics and model performance
-│   ├── evaluation_results.csv      # Results of model evaluation on test data
-│   ├── evaluation_metrics.txt      # Metrics such as accuracy, precision, recall, etc.
+├── evaluation/                     ## Evaluation metrics and model performance
+│   ├── evaluation_results.csv      ## Results of model evaluation on test data
+│   ├── evaluation_metrics.txt      ## Metrics such as accuracy, precision, recall, etc.
 ```
 
 In this directory, the `models` directory maintains separate subdirectories for pre-trained and custom-trained DeepSpeech models, as well as a directory for evaluation metrics.
@@ -122,22 +122,22 @@ By organizing the `models` directory in this manner, the project maintains clear
 ```plaintext
 deployment/
 ├── docker/
-│   ├── Dockerfile              # Dockerfile for creating a containerized deployment
-│   ├── build.sh                # Script for building the Docker image
-│   ├── run.sh                  # Script for running the Docker container
+│   ├── Dockerfile              ## Dockerfile for creating a containerized deployment
+│   ├── build.sh                ## Script for building the Docker image
+│   ├── run.sh                  ## Script for running the Docker container
 │
 ├── kubernetes/
-│   ├── deployment.yaml         # Kubernetes deployment configuration
-│   ├── service.yaml            # Kubernetes service configuration
-│   ├── ingress.yaml            # Kubernetes ingress configuration (if applicable)
+│   ├── deployment.yaml         ## Kubernetes deployment configuration
+│   ├── service.yaml            ## Kubernetes service configuration
+│   ├── ingress.yaml            ## Kubernetes ingress configuration (if applicable)
 │
 ├── ansible/
-│   ├── playbook.yml            # Ansible playbook for deploying the application to servers
-│   ├── inventory.ini           # Inventory file specifying the target servers
+│   ├── playbook.yml            ## Ansible playbook for deploying the application to servers
+│   ├── inventory.ini           ## Inventory file specifying the target servers
 │
 ├── terraform/
-│   ├── main.tf                 # Terraform configuration for infrastructure deployment
-│   ├── variables.tf            # Input variables for the Terraform configuration
+│   ├── main.tf                 ## Terraform configuration for infrastructure deployment
+│   ├── variables.tf            ## Input variables for the Terraform configuration
 ```
 
 The `deployment` directory contains subdirectories and files relevant to different deployment strategies for the Voice Biometrics using DeepSpeech application.
@@ -157,37 +157,37 @@ import deepspeech
 import numpy as np
 
 def voice_biometrics_verification(audio_file_path):
-    # Mock implementation of the voice biometrics verification algorithm using DeepSpeech
+    ## Mock implementation of the voice biometrics verification algorithm using DeepSpeech
 
-    # Load the DeepSpeech model
+    ## Load the DeepSpeech model
     deepspeech_model = deepspeech.Model('path_to_pretrained_model.pb')
 
-    # Load the audio data from the provided file path
+    ## Load the audio data from the provided file path
     audio_data = load_audio(audio_file_path)
 
-    # Preprocess the audio data (e.g., resampling, normalization)
+    ## Preprocess the audio data (e.g., resampling, normalization)
 
-    # Convert the audio data to features (e.g., MFCCs)
+    ## Convert the audio data to features (e.g., MFCCs)
     features = extract_features(audio_data)
 
-    # Perform voice biometrics verification
+    ## Perform voice biometrics verification
     verification_result = perform_verification(deepspeech_model, features)
 
     return verification_result
 
 def load_audio(file_path):
-    # Mock implementation to load audio data from file
-    audio_data = np.random.rand(44100)  # Mock audio data with 44100 samples
+    ## Mock implementation to load audio data from file
+    audio_data = np.random.rand(44100)  ## Mock audio data with 44100 samples
     return audio_data
 
 def extract_features(audio_data):
-    # Mock implementation to extract features from audio data
-    features = np.random.rand(10, 20)  # Mock features (e.g., 10 MFCCs with 20 coefficients each)
+    ## Mock implementation to extract features from audio data
+    features = np.random.rand(10, 20)  ## Mock features (e.g., 10 MFCCs with 20 coefficients each)
     return features
 
 def perform_verification(model, features):
-    # Mock implementation to perform voice biometrics verification using the provided model and features
-    verification_result = np.random.choice([True, False])  # Mock verification result
+    ## Mock implementation to perform voice biometrics verification using the provided model and features
+    verification_result = np.random.choice([True, False])  ## Mock verification result
     return verification_result
 ```
 
@@ -198,44 +198,44 @@ import deepspeech
 import numpy as np
 
 def voice_biometrics_verification(audio_file_path):
-    # Load the DeepSpeech model
+    ## Load the DeepSpeech model
     deepspeech_model = deepspeech.Model('path_to_pretrained_model.pb')
 
-    # Load the audio data from the provided file path
+    ## Load the audio data from the provided file path
     audio_data = load_audio(audio_file_path)
 
-    # Preprocess the audio data
+    ## Preprocess the audio data
     preprocessed_data = preprocess_audio(audio_data)
 
-    # Extract features from preprocessed data
+    ## Extract features from preprocessed data
     features = extract_features(preprocessed_data)
 
-    # Perform voice biometrics verification
+    ## Perform voice biometrics verification
     verification_result = perform_verification(deepspeech_model, features)
 
     return verification_result
 
 def load_audio(file_path):
-    # Placeholder function to load audio data from file
-    # In a real implementation, this function would read the audio file and return the audio data
-    audio_data = np.random.random(44100)  # Mock audio data with 44100 samples
+    ## Placeholder function to load audio data from file
+    ## In a real implementation, this function would read the audio file and return the audio data
+    audio_data = np.random.random(44100)  ## Mock audio data with 44100 samples
     return audio_data
 
 def preprocess_audio(audio_data):
-    # Placeholder function for audio preprocessing (e.g., resampling, normalization, noise reduction)
-    preprocessed_data = audio_data  # Placeholder for actual preprocessing steps
+    ## Placeholder function for audio preprocessing (e.g., resampling, normalization, noise reduction)
+    preprocessed_data = audio_data  ## Placeholder for actual preprocessing steps
     return preprocessed_data
 
 def extract_features(preprocessed_data):
-    # Placeholder function to extract features from preprocessed audio data
-    # In a real implementation, this function would extract relevant features such as MFCCs
-    features = np.random.rand(10, 20)  # Mock features (e.g., 10 MFCCs with 20 coefficients each)
+    ## Placeholder function to extract features from preprocessed audio data
+    ## In a real implementation, this function would extract relevant features such as MFCCs
+    features = np.random.rand(10, 20)  ## Mock features (e.g., 10 MFCCs with 20 coefficients each)
     return features
 
 def perform_verification(model, features):
-    # Placeholder function for performing voice biometrics verification using a machine learning model
-    # In a real implementation, this function would use the model to verify the identity based on the extracted features
-    verification_result = np.random.choice([True, False])  # Placeholder for actual verification logic
+    ## Placeholder function for performing voice biometrics verification using a machine learning model
+    ## In a real implementation, this function would use the model to verify the identity based on the extracted features
+    verification_result = np.random.choice([True, False])  ## Placeholder for actual verification logic
     return verification_result
 ```
 

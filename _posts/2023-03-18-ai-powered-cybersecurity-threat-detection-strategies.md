@@ -5,7 +5,7 @@ permalink: posts/ai-powered-cybersecurity-threat-detection-strategies
 layout: article
 ---
 
-# AI-Based Cybersecurity Threat Detection Repository
+## AI-Based Cybersecurity Threat Detection Repository
 
 ## Description
 
@@ -34,7 +34,7 @@ This system will use logs and traffic patterns to identify anomalies, assess ris
 
 Here's a proposed structure for the repository that supports scaling.
 
-# AI-Based Cybersecurity Threat Detection Repository Structure
+## AI-Based Cybersecurity Threat Detection Repository Structure
 
 ```
 AI-Based Cybersecurity Threat Detection/
@@ -93,7 +93,7 @@ AI-Based Cybersecurity Threat Detection/
 
 This structure aims to ensure easy navigation and improved readability as the repository grows larger and more complex.
 
-# AI-Based Cybersecurity Threat Detection Repository Structure
+## AI-Based Cybersecurity Threat Detection Repository Structure
 
 Consider the following structure:
 
@@ -114,31 +114,31 @@ In this structure, `detection_logic.py` is a fictitious file that handles the lo
 Here's an abstract example (in Python) of how the detection logic might look:
 
 ```python
-# detection_logic.py
-# Note: This is a simplified pseudocode logic for educational purposes.
+## detection_logic.py
+## Note: This is a simplified pseudocode logic for educational purposes.
 
-# Import necessary libraries
+## Import necessary libraries
 import pandas as pd
 from sklearn.ensemble import IsolationForest
 import numpy as np
 
-# Load trained model
+## Load trained model
 model = np.load('models/current/model.npy')
 
-# Function to preprocess incoming data
+## Function to preprocess incoming data
 def preprocess(data_path):
     data = pd.read_csv(data_path)
-    # Preprocessing steps here
-    # ...
+    ## Preprocessing steps here
+    ## ...
     return processed_data
 
-# Function to detect anomalies in preprocessed data
+## Function to detect anomalies in preprocessed data
 def detect(processed_data):
     predictions = model.predict(processed_data)
     anomalies = processed_data[predictions == -1]
     return anomalies
 
-# Main function
+## Main function
 def main():
     data_path = "data/raw/incoming_data.csv"
     processed_data = preprocess(data_path)

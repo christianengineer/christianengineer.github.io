@@ -5,7 +5,7 @@ permalink: posts/peruvian-ministry-of-production-numpy-pandas
 layout: article
 ---
 
-# Solution Overview
+## Solution Overview
 
 ### Objectives and Benefits
 - **Objective:** Develop a machine learning tool to advise small businesses on market trends and growth opportunities.
@@ -58,7 +58,7 @@ layout: article
 
 By following this approach, you can create a scalable, production-ready machine learning solution to address the pain points faced by small business advisors at the Peruvian Ministry of Production.
 
-# Sourcing Data Strategy and Recommendation
+## Sourcing Data Strategy and Recommendation
 
 ## Data Collection Strategy
 - **Data Sources:** Market data, industry reports, historical small business performance data.
@@ -99,7 +99,7 @@ By following this approach, you can create a scalable, production-ready machine 
 
 By leveraging the recommended tools and methods for data collection and integration within the existing technology stack, small business advisors at the Peruvian Ministry of Production can streamline the data sourcing process, ensuring readily accessible and correctly formatted data for analysis and model training.
 
-# Feature Extraction and Engineering Analysis
+## Feature Extraction and Engineering Analysis
 
 ## Feature Extraction
 - **Objective:** Extract relevant features from the data sources to support small business growth advice.
@@ -147,7 +147,7 @@ By leveraging the recommended tools and methods for data collection and integrat
 
 By incorporating these feature extraction and engineering techniques, along with recommended variable names, small business advisors can enhance the interpretability of data and boost the performance of the machine learning model for effective small business growth advice.
 
-# Metadata Management Recommendation
+## Metadata Management Recommendation
 
 ## Unique Demands and Characteristics of the Project
 
@@ -206,7 +206,7 @@ By incorporating these feature extraction and engineering techniques, along with
 
 By implementing these project-specific metadata management practices, small business advisors at the Peruvian Ministry of Production can enhance transparency, reproducibility, and decision-making processes for effective small business growth advice based on the machine learning model insights.
 
-# Data Preprocessing for Robust Machine Learning Models
+## Data Preprocessing for Robust Machine Learning Models
 
 ## Specific Problems that Might Arise with Project Data
 
@@ -271,14 +271,14 @@ from sklearn.impute import SimpleImputer
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 
-# Load the data into a Pandas DataFrame
+## Load the data into a Pandas DataFrame
 data = pd.read_csv("small_business_data.csv")
 
-# Define features and target variable
+## Define features and target variable
 features = ['sales_growth_rate', 'profit_margin', 'industry_type', 'customer_satisfaction_level']
 target = 'growth_opportunity'
 
-# Preprocessing Pipeline
+## Preprocessing Pipeline
 numeric_features = ['sales_growth_rate', 'profit_margin']
 numeric_transformer = Pipeline(steps=[
     ('imputer', SimpleImputer(strategy='median')),
@@ -297,20 +297,20 @@ preprocessor = ColumnTransformer(
         ('cat', categorical_transformer, categorical_features)
     ])
 
-# Apply the preprocessing pipeline to the features
+## Apply the preprocessing pipeline to the features
 X_processed = preprocessor.fit_transform(data[features])
 
-# Extract the target variable
+## Extract the target variable
 y = data[target]
 
-# Display the preprocessed data
+## Display the preprocessed data
 print(pd.DataFrame(X_processed, columns=numeric_features + \
     list(preprocessor.named_transformers_['cat']['onehot'].get_feature_names(categorical_features))))
 
-# Further steps:
-# Split the data into training and testing sets
-# Train machine learning model on the preprocessed data
-# Evaluate model performance
+## Further steps:
+## Split the data into training and testing sets
+## Train machine learning model on the preprocessed data
+## Evaluate model performance
 ```
 
 ### Comments on Preprocessing Steps:
@@ -331,7 +331,7 @@ print(pd.DataFrame(X_processed, columns=numeric_features + \
 
 This code file provides a tailored preprocessing strategy for the small business data, preparing it effectively for model training and ensuring the success of the machine learning project focused on providing growth opportunities for small businesses.
 
-# Modeling Strategy Recommendation
+## Modeling Strategy Recommendation
 
 ## Recommended Modeling Approach
 - **Algorithm:** Random Forest
@@ -355,7 +355,7 @@ This code file provides a tailored preprocessing strategy for the small business
 from sklearn.model_selection import GridSearchCV
 from sklearn.ensemble import RandomForestClassifier
 
-# Define the parameter grid to search
+## Define the parameter grid to search
 param_grid = {
     'n_estimators': [50, 100, 150],
     'max_depth': [None, 10, 20],
@@ -363,20 +363,20 @@ param_grid = {
     'min_samples_leaf': [1, 2, 4]
 }
 
-# Initialize the Random Forest classifier
+## Initialize the Random Forest classifier
 rf = RandomForestClassifier(random_state=42)
 
-# Perform Grid Search for hyperparameter tuning
+## Perform Grid Search for hyperparameter tuning
 grid_search = GridSearchCV(estimator=rf, param_grid=param_grid, cv=5)
 grid_search.fit(X_processed, y)
 
-# Get the best hyperparameters
+## Get the best hyperparameters
 best_params = grid_search.best_params_
 print("Best Hyperparameters:", best_params)
 
-# Further steps:
-# Train the Random Forest model with the best hyperparameters
-# Evaluate model performance on test data
+## Further steps:
+## Train the Random Forest model with the best hyperparameters
+## Evaluate model performance on test data
 ```
 
 ## Project Alignment
@@ -385,7 +385,7 @@ print("Best Hyperparameters:", best_params)
 
 A strategic hyperparameter tuning process tailored to the Random Forest model is the crucial step that can elevate the project's success by optimizing model performance, ensuring robustness, and enhancing interpretability in providing growth opportunities for small businesses based on accurate and actionable insights.
 
-# Data Modeling Tools Recommendations
+## Data Modeling Tools Recommendations
 
 To enhance the efficiency, accuracy, and scalability of our data modeling process for providing growth advice to small businesses, we recommend the following tools tailored to our project's data and objectives:
 
@@ -427,46 +427,46 @@ To generate a large fictitious dataset mimicking real-world data relevant to our
 import numpy as np
 import pandas as pd
 
-# Set random seed for reproducibility
+## Set random seed for reproducibility
 np.random.seed(42)
 
-# Define the size of the dataset
+## Define the size of the dataset
 num_samples = 10000
 
-# Generate fictitious data for features
+## Generate fictitious data for features
 sales_growth_rate = np.random.uniform(0, 1, num_samples) * 100
 profit_margin = np.random.uniform(0.2, 0.8, num_samples)
 industry_types = np.random.choice(['Retail', 'Technology', 'Healthcare', 'Manufacturing'], num_samples)
 customer_satisfaction_levels = np.random.choice(['Low', 'Medium', 'High'], num_samples)
 
-# Introduce noise for real-world variability
+## Introduce noise for real-world variability
 sales_growth_rate += np.random.normal(0, 5, num_samples)
 profit_margin += np.random.normal(0, 0.03, num_samples)
 
-# Create a DataFrame with the generated data
+## Create a DataFrame with the generated data
 data = pd.DataFrame({
     'sales_growth_rate': sales_growth_rate,
     'profit_margin': profit_margin,
     'industry_type': industry_types,
     'customer_satisfaction_level': customer_satisfaction_levels,
-    'growth_opportunity': np.random.randint(0, 2, num_samples)  # Binary target variable
+    'growth_opportunity': np.random.randint(0, 2, num_samples)  ## Binary target variable
 })
 
-# Validate the dataset - example only
-# Check for missing values
+## Validate the dataset - example only
+## Check for missing values
 print("Missing values in dataset:")
 print(data.isnull().sum())
 
-# Check basic statistics
+## Check basic statistics
 print("\nBasic statistics of dataset:")
 print(data.describe())
 
-# Further steps:
-# Split the data into training and testing sets
-# Perform model training and testing
-# Evaluate model performance
+## Further steps:
+## Split the data into training and testing sets
+## Perform model training and testing
+## Evaluate model performance
 
-# Save the dataset to a CSV file
+## Save the dataset to a CSV file
 data.to_csv('fictitious_dataset.csv', index=False)
 ```
 
@@ -514,35 +514,35 @@ This sample visualizes a snippet of the mocked dataset, providing a clear repres
 Creating production-ready code for deploying the machine learning model in a real-world environment requires adherence to coding standards, documentation, and best practices. Below is a structured code snippet exemplifying a high-quality Python script for deployment, tailored to our model's data:
 
 ```python
-# Import necessary libraries
+## Import necessary libraries
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 import joblib
 
-# Load the preprocessed dataset
+## Load the preprocessed dataset
 data = pd.read_csv("preprocessed_data.csv")
 
-# Define features and target variable
+## Define features and target variable
 X = data.drop('growth_opportunity', axis=1)
 y = data['growth_opportunity']
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize and train the Random Forest model
+## Initialize and train the Random Forest model
 rf_model = RandomForestClassifier(random_state=42)
 rf_model.fit(X_train, y_train)
 
-# Make predictions on the test set
+## Make predictions on the test set
 y_pred = rf_model.predict(X_test)
 
-# Calculate and print the model accuracy
+## Calculate and print the model accuracy
 accuracy = accuracy_score(y_test, y_pred)
 print(f"Model Accuracy: {accuracy}")
 
-# Save the trained model for future use in deployment
+## Save the trained model for future use in deployment
 joblib.dump(rf_model, 'trained_model.pkl')
 ```
 
@@ -564,7 +564,7 @@ joblib.dump(rf_model, 'trained_model.pkl')
 
 By following these conventions and best practices, the provided code snippet ensures high standards of quality, readability, and maintainability, aligning with the standards observed in large tech environments for deploying machine learning models in production.
 
-# Machine Learning Model Deployment Plan
+## Machine Learning Model Deployment Plan
 
 To successfully deploy our machine learning model into a production environment tailored to the unique demands of our project, we need to follow a structured deployment plan. Below is a step-by-step guide with references to necessary tools for each deployment stage:
 
@@ -629,27 +629,27 @@ By following this deployment plan and utilizing the recommended tools and platfo
 Here is a sample Dockerfile tailored to encapsulate the environment and dependencies for deploying our machine learning model, optimized for performance and scalability:
 
 ```dockerfile
-# Use a base image with Python and required dependencies
+## Use a base image with Python and required dependencies
 FROM python:3.8
 
-# Set working directory in the container
+## Set working directory in the container
 WORKDIR /app
 
-# Copy the requirements file and install dependencies
+## Copy the requirements file and install dependencies
 COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 
-# Copy the preprocessed data and trained model
+## Copy the preprocessed data and trained model
 COPY preprocessed_data.csv /app
 COPY trained_model.pkl /app
 
-# Copy the Python script for model deployment
+## Copy the Python script for model deployment
 COPY model_deployment_script.py /app
 
-# Expose the necessary port for the Flask API
+## Expose the necessary port for the Flask API
 EXPOSE 5000
 
-# Set the command to run the Flask API for model predictions
+## Set the command to run the Flask API for model predictions
 CMD ["python", "model_deployment_script.py"]
 ```
 
@@ -663,7 +663,7 @@ CMD ["python", "model_deployment_script.py"]
 
 This Dockerfile encapsulates the project's environment and dependencies, optimized for performance and scalability, to ensure seamless deployment of the machine learning model in a production environment.
 
-# User Groups and User Stories
+## User Groups and User Stories
 
 ## User Groups Benefiting from the Application:
 

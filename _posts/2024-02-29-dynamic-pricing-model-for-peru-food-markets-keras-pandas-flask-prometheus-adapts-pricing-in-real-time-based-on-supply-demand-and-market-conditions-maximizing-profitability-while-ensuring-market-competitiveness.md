@@ -5,7 +5,7 @@ permalink: posts/dynamic-pricing-model-for-peru-food-markets-keras-pandas-flask-
 layout: article
 ---
 
-# AI Dynamic Pricing Model for Peru Food Markets
+## AI Dynamic Pricing Model for Peru Food Markets
 
 ## Objectives:
 1. **Real-time Price Adaptation**: The model should be able to adjust prices dynamically based on real-time insights into supply, demand, and market conditions.
@@ -24,7 +24,7 @@ layout: article
 3. **Flask**: Flask is a lightweight and efficient web framework that can be used to build the dynamic pricing engine with endpoints for real-time price adjustments.
 4. **Prometheus**: Prometheus is a monitoring and alerting toolkit that can be integrated into the system to track relevant metrics and ensure the performance and profitability of the dynamic pricing model.
 
-# MLOps Infrastructure for Dynamic Pricing Model
+## MLOps Infrastructure for Dynamic Pricing Model
 
 ## Key Components:
 1. **Data Pipeline**: Automate data collection, preprocessing, and feature engineering using Pandas to ensure a continuous flow of data for model training and inference.
@@ -52,38 +52,38 @@ layout: article
 
 By setting up a robust MLOps infrastructure with the chosen tools (Keras, Pandas, Flask, Prometheus), the Dynamic Pricing Model for the Peru Food Markets can effectively adapt pricing in real-time to maximize profitability while ensuring market competitiveness and customer satisfaction.
 
-# Scalable File Structure for Dynamic Pricing Model
+## Scalable File Structure for Dynamic Pricing Model
 
 ```
 dynamic-pricing-model-peru-food-markets/
 │
 ├── data/
-│   ├── raw/                   # Raw data files from various sources
-│   ├── processed/             # Processed data after cleaning and feature engineering
-│   └── dataloader.py          # Data loading and preprocessing script
+│   ├── raw/                   ## Raw data files from various sources
+│   ├── processed/             ## Processed data after cleaning and feature engineering
+│   └── dataloader.py          ## Data loading and preprocessing script
 │
 ├── models/
-│   ├── keras_model.py         # Keras machine learning model implementation
-│   ├── model_training.py      # Script for training and updating the model
-│   └── model_evaluation.py    # Model evaluation script
+│   ├── keras_model.py         ## Keras machine learning model implementation
+│   ├── model_training.py      ## Script for training and updating the model
+│   └── model_evaluation.py    ## Model evaluation script
 │
 ├── deployment/
-│   ├── flask_app/             # Flask application for real-time price adaptation
-│   │   ├── app.py             # Flask app main script
-│   │   ├── routes.py          # API routes for price adjustments
-│   │   └── pricing_engine.py  # Pricing engine for model integration
-│   └── Dockerfile             # Dockerfile for containerizing the Flask app
+│   ├── flask_app/             ## Flask application for real-time price adaptation
+│   │   ├── app.py             ## Flask app main script
+│   │   ├── routes.py          ## API routes for price adjustments
+│   │   └── pricing_engine.py  ## Pricing engine for model integration
+│   └── Dockerfile             ## Dockerfile for containerizing the Flask app
 |
 ├── monitoring/
-│   ├── prometheus_config.yml  # Prometheus configuration file for monitoring
-│   └── logging.py             # Logging configuration and setup
+│   ├── prometheus_config.yml  ## Prometheus configuration file for monitoring
+│   └── logging.py             ## Logging configuration and setup
 |
 ├── feedback/
-│   ├── feedback_collector.py  # Script for collecting and processing user feedback
-│   └── feedback_analysis.py   # Analysis of feedback data for model improvement
+│   ├── feedback_collector.py  ## Script for collecting and processing user feedback
+│   └── feedback_analysis.py   ## Analysis of feedback data for model improvement
 |
-├── README.md                  # Project overview, setup, and guidelines
-└── requirements.txt           # Python dependencies for the project
+├── README.md                  ## Project overview, setup, and guidelines
+└── requirements.txt           ## Python dependencies for the project
 ```
 
 In this file structure:
@@ -97,14 +97,14 @@ In this file structure:
 
 This structure provides a clear separation of components, making it easier to manage and scale the Dynamic Pricing Model for Peru Food Markets application leveraging Keras, Pandas, Flask, and Prometheus for dynamic pricing based on supply, demand, and market conditions.
 
-# Models Directory for Dynamic Pricing Model
+## Models Directory for Dynamic Pricing Model
 
 ```
 models/
 │
-├── keras_model.py         # Keras machine learning model implementation
-├── model_training.py      # Script for training and updating the model
-└── model_evaluation.py    # Model evaluation script
+├── keras_model.py         ## Keras machine learning model implementation
+├── model_training.py      ## Script for training and updating the model
+└── model_evaluation.py    ## Model evaluation script
 ```
 
 ## Files Description:
@@ -125,17 +125,17 @@ models/
 
 These files in the models directory play a crucial role in developing and maintaining the machine learning model at the core of the Dynamic Pricing Model for Peru Food Markets application. They enable training, evaluation, and updating of the Keras model to adapt pricing in real-time, ensuring profitability and market competitiveness based on supply, demand, and market conditions.
 
-# Deployment Directory for Dynamic Pricing Model
+## Deployment Directory for Dynamic Pricing Model
 
 ```
 deployment/
 │
-├── flask_app/             # Flask application for real-time price adaptation
-│   ├── app.py             # Main Flask application script
-│   ├── routes.py          # API routes for price adjustments
-│   └── pricing_engine.py  # Pricing engine for model integration
+├── flask_app/             ## Flask application for real-time price adaptation
+│   ├── app.py             ## Main Flask application script
+│   ├── routes.py          ## API routes for price adjustments
+│   └── pricing_engine.py  ## Pricing engine for model integration
 │
-└── Dockerfile             # Dockerfile for containerizing the Flask app
+└── Dockerfile             ## Dockerfile for containerizing the Flask app
 ```
 
 ## Files Description:
@@ -151,7 +151,7 @@ deployment/
 
 The **deployment** directory handles the deployment aspects of the Dynamic Pricing Model for Peru Food Markets application. The Flask application serves as the real-time price adaptation engine, utilizing the pricing engine for model integration. The Dockerfile facilitates the containerization of the Flask app, enabling easy deployment and scaling of the dynamic pricing system based on supply, demand, and market conditions to maximize profitability and ensure market competitiveness.
 
-# Model Training Script for Dynamic Pricing Model
+## Model Training Script for Dynamic Pricing Model
 
 ## File: model_training.py
 ### File Path: models/model_training.py
@@ -163,34 +163,34 @@ from keras.layers import Dense
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
-# Load mock data (replace with actual data loading mechanism)
+## Load mock data (replace with actual data loading mechanism)
 data_path = 'data/processed/mock_data.csv'
 df = pd.read_csv(data_path)
 
-# Split data into features (X) and target (y)
+## Split data into features (X) and target (y)
 X = df.drop('price', axis=1)
 y = df['price']
 
-# Preprocess data
+## Preprocess data
 scaler = StandardScaler()
 X_scaled = scaler.fit_transform(X)
 
-# Split data into training and validation sets
+## Split data into training and validation sets
 X_train, X_val, y_train, y_val = train_test_split(X_scaled, y, test_size=0.2, random_state=42)
 
-# Define Keras model architecture
+## Define Keras model architecture
 model = Sequential()
 model.add(Dense(64, input_shape=(X_train.shape[1],), activation='relu'))
 model.add(Dense(64, activation='relu'))
 model.add(Dense(1, activation='linear'))
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam', loss='mean_squared_error')
 
-# Train the model
+## Train the model
 model.fit(X_train, y_train, epochs=50, batch_size=32, validation_data=(X_val, y_val))
 
-# Save the trained model weights
+## Save the trained model weights
 model.save('models/trained_model.h5')
 
 print("Model training completed and model saved.")
@@ -200,7 +200,7 @@ This `model_training.py` script sets up a simple workflow for training the Keras
 
 The file path for this script is `models/model_training.py`, located in the `models/` directory of the project.
 
-# Complex Machine Learning Algorithm for Dynamic Pricing Model
+## Complex Machine Learning Algorithm for Dynamic Pricing Model
 
 ## File: complex_model_algorithm.py
 ### File Path: models/complex_model_algorithm.py
@@ -213,21 +213,21 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics import mean_squared_error
 
-# Load mock data (replace with actual data loading mechanism)
+## Load mock data (replace with actual data loading mechanism)
 data_path = 'data/processed/mock_data.csv'
 df = pd.read_csv(data_path)
 
-# Preprocess data
+## Preprocess data
 scaler = MinMaxScaler()
 scaled_data = scaler.fit_transform(df)
 
 X = scaled_data[:, :-1]
 y = scaled_data[:, -1]
 
-# Split data into training and validation sets
+## Split data into training and validation sets
 X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Define a complex neural network architecture
+## Define a complex neural network architecture
 model = Sequential()
 model.add(Dense(128, input_shape=(X_train.shape[1],), activation='relu'))
 model.add(Dropout(0.2))
@@ -235,19 +235,19 @@ model.add(Dense(64, activation='relu'))
 model.add(Dense(32, activation='relu'))
 model.add(Dense(1, activation='linear'))
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam', loss='mean_squared_error')
 
-# Train the model
+## Train the model
 model.fit(X_train, y_train, epochs=100, batch_size=64, validation_data=(X_val, y_val))
 
-# Evaluate the model
+## Evaluate the model
 train_loss = model.evaluate(X_train, y_train)
 val_loss = model.evaluate(X_val, y_val)
 
 print(f'Training Loss: {train_loss}, Validation Loss: {val_loss}')
 
-# Save the trained model weights
+## Save the trained model weights
 model.save('models/complex_model.h5')
 
 print("Complex model training completed and model saved.")
@@ -257,7 +257,7 @@ In this `complex_model_algorithm.py` script, a more complex neural network archi
 
 The file path for this script is `models/complex_model_algorithm.py`, located in the `models/` directory of the project.
 
-# Type of Users for the Dynamic Pricing Model
+## Type of Users for the Dynamic Pricing Model
 
 1. **Market Analyst:**
    - **User Story**: As a Market Analyst, I want to access real-time pricing data and analytics generated by the Dynamic Pricing Model to analyze market trends, competitor pricing strategies, and make informed recommendations to optimize pricing for different products.

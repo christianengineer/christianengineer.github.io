@@ -5,7 +5,7 @@ permalink: posts/ai-powered-fitness-coach-using-tensorflow-python-personalizing-
 layout: article
 ---
 
-# AI-Powered Fitness Coach using TensorFlow
+## AI-Powered Fitness Coach using TensorFlow
 
 ## Objectives
 The objective of the AI-Powered Fitness Coach is to provide personalized workout recommendations based on user preferences, past performance, and real-time feedback. The system aims to leverage machine learning and deep learning techniques to analyze user data and provide tailored workout plans to maximize user engagement and fitness progress.
@@ -147,7 +147,7 @@ class User:
         self.age = age
         self.gender = gender
         self.fitness_goals = fitness_goals
-        # Additional attributes and methods
+        ## Additional attributes and methods
 ```
 
 ### `workout_model.py`
@@ -161,7 +161,7 @@ class Workout:
         self.exercises = exercises
         self.duration = duration
         self.intensity = intensity
-        # Additional attributes and methods
+        ## Additional attributes and methods
 ```
 
 ### `recommendation_model.py`
@@ -174,7 +174,7 @@ class Recommendation:
         self.user_id = user_id
         self.recommended_workouts = recommended_workouts
         self.confidence_scores = confidence_scores
-        # Additional attributes and methods
+        ## Additional attributes and methods
 ```
 
 By organizing the models in separate files within the `models` directory, the application can maintain a clear separation of concerns and facilitate modularity, making it easier to extend, maintain, and test the data models.
@@ -228,26 +228,26 @@ Certainly! Below is a Python function that represents a simple mock machine lear
 import tensorflow as tf
 
 def generate_workout_recommendation(mock_user_data_path, mock_workout_data_path):
-    # Load mock user data
+    ## Load mock user data
     mock_user_data = tf.data.experimental.make_csv_dataset(mock_user_data_path, batch_size=1, label_name="target")
 
-    # Load mock workout data
+    ## Load mock workout data
     mock_workout_data = tf.data.experimental.make_csv_dataset(mock_workout_data_path, batch_size=1, label_name="target")
 
-    # Define a simple neural network model using TensorFlow
+    ## Define a simple neural network model using TensorFlow
     model = tf.keras.Sequential([
         tf.keras.layers.Dense(64, activation='relu', input_shape=(mock_user_data.shape[1],)),
         tf.keras.layers.Dense(64, activation='relu'),
         tf.keras.layers.Dense(1)
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam', loss='mean_squared_error')
 
-    # Fit the model with mock data
+    ## Fit the model with mock data
     model.fit(mock_user_data, mock_workout_data, epochs=10)
 
-    # Generate a mock workout recommendation
+    ## Generate a mock workout recommendation
     mock_recommendation = model.predict(mock_user_data)
 
     return mock_recommendation
@@ -269,33 +269,33 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 
 def train_workout_recommendation_model(user_data_path, workout_data_path):
-    # Load mock user data and workout data
+    ## Load mock user data and workout data
     user_data = pd.read_csv(user_data_path)
     workout_data = pd.read_csv(workout_data_path)
 
-    # Perform data preprocessing and feature engineering
-    # ... (e.g., data normalization, encoding categorical variables, feature selection)
+    ## Perform data preprocessing and feature engineering
+    ## ... (e.g., data normalization, encoding categorical variables, feature selection)
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(user_data, workout_data, test_size=0.2, random_state=42)
 
-    # Define a complex neural network model using TensorFlow
+    ## Define a complex neural network model using TensorFlow
     model = tf.keras.Sequential([
         tf.keras.layers.Dense(128, activation='relu', input_shape=(X_train.shape[1],)),
         tf.keras.layers.Dropout(0.2),
         tf.keras.layers.Dense(64, activation='relu'),
         tf.keras.layers.Dropout(0.2),
         tf.keras.layers.Dense(32, activation='relu'),
-        tf.keras.layers.Dense(workout_data.shape[1])  # Output layer for workout recommendations
+        tf.keras.layers.Dense(workout_data.shape[1])  ## Output layer for workout recommendations
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam', loss='mean_squared_error')
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train, epochs=50, batch_size=32, validation_data=(X_test, y_test))
 
-    # Evaluate the model
+    ## Evaluate the model
     model.evaluate(X_test, y_test)
 
     return model

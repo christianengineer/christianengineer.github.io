@@ -5,7 +5,7 @@ permalink: posts/github-actions-ai-engineering-guide
 layout: article
 ---
 
-# GitHub Actions for AI Engineering
+## GitHub Actions for AI Engineering
 
 For any AI project, one of the most essential tasks is creating and managing workflows. These workflows generally involve tests, builds, and deployments of models that require multiple steps and may also include different tools and environments. This is where GitHub Actions can come into play and streamline your workflow. GitHub Actions is a CI/CD (Continuous Integration & Continuous Deployment) service provided by GitHub to automate workflows in software development. In this article, we'll discuss how GitHub Actions can be used effectively in the field of AI Engineering.
 
@@ -63,8 +63,8 @@ In the above example, a GitHub Action is defined to set up Python environment, i
 name: Nightly model re-training
 on:
   schedule:
-    # * is a special character in YAML so you have to quote this string
-    # This will run the job at 2:30 AM UTC
+    ## * is a special character in YAML so you have to quote this string
+    ## This will run the job at 2:30 AM UTC
     - cron: "30 2 * * *"
 jobs:
   build:

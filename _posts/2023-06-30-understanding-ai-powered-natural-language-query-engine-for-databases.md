@@ -81,52 +81,52 @@ Brief Explanation of the file structure:
 - **README.md:** Provides information about the project and instructions on how to use it.
 
 ````markdown
-# Natural-Language-Query-Engine/app/nlqe_logic.py
+## Natural-Language-Query-Engine/app/nlqe_logic.py
 
 ```python
-# Importing Required Libraries
+## Importing Required Libraries
 import spacy
 from sqlalchemy import create_engine
 
-# Load the Spacy Model
+## Load the Spacy Model
 nlp = spacy.load('en_core_web_sm')
 
-# Connect to the database
+## Connect to the database
 engine = create_engine('sqlite:///app.db')
 
-# Function to Parse Natural Language Query
+## Function to Parse Natural Language Query
 def parse_query(query):
     nlp_query = nlp(query)
 
-    # Use the NLP model to understand the query
-    # This is an example, and would need to be much more complex in a real application
+    ## Use the NLP model to understand the query
+    ## This is an example, and would need to be much more complex in a real application
     for token in nlp_query:
         if token.pos_ == 'NOUN':
             table_name = token.text
         if token.dep_=='amod':
             condition = token.text
 
-    # Construct SQL query
+    ## Construct SQL query
     sql_query = f"SELECT * FROM {table_name} WHERE {condition}"
 
     return sql_query
 
 
-# Function to Execute SQL Query and Fetch Result
+## Function to Execute SQL Query and Fetch Result
 def execute_query(sql_query):
     result = engine.execute(sql_query)
 
-    # Convert result to a list of dictionaries
+    ## Convert result to a list of dictionaries
     result_list = [dict(row) for row in result]
 
     return result_list
 
-# Function to Process Natural Language Query and Fetch Result
+## Function to Process Natural Language Query and Fetch Result
 def process_query(query):
-    # Parse the query
+    ## Parse the query
     sql_query = parse_query(query)
 
-    # Execute the query and fetch result
+    ## Execute the query and fetch result
     result = execute_query(sql_query)
 
     return result

@@ -5,7 +5,7 @@ permalink: posts/audio-fingerprinting-with-dejavu-python-recognizing-songs-from-
 layout: article
 ---
 
-# AI Audio Fingerprinting with Dejavu (Python)
+## AI Audio Fingerprinting with Dejavu (Python)
 
 ## Objectives
 The objectives of implementing AI audio fingerprinting with Dejavu are to recognize songs from audio snippets by creating unique fingerprints of audio files and then matching them to a database of known audio tracks. This can be used for applications such as music recognition, content identification, and copyright enforcement.
@@ -230,32 +230,32 @@ import dejavu
 import numpy as np
 
 def audio_fingerprinting_algorithm(audio_file_path, fingerprint_database):
-    # Mock data for audio fingerprinting algorithm
-    audio_data = load_audio(audio_file_path)  # Function to load audio data from file
-    audio_features = extract_audio_features(audio_data)  # Function to extract features from audio
+    ## Mock data for audio fingerprinting algorithm
+    audio_data = load_audio(audio_file_path)  ## Function to load audio data from file
+    audio_features = extract_audio_features(audio_data)  ## Function to extract features from audio
     
-    # Simulated matching with fingerprint database
+    ## Simulated matching with fingerprint database
     matched_tracks = []
     for fingerprint in fingerprint_database:
-        similarity_score = calculate_similarity(audio_features, fingerprint.features)  # Function to calculate similarity using features
-        if similarity_score > 0.8:  # Example threshold for considering a match
+        similarity_score = calculate_similarity(audio_features, fingerprint.features)  ## Function to calculate similarity using features
+        if similarity_score > 0.8:  ## Example threshold for considering a match
             matched_tracks.append(fingerprint.track)
     
     return matched_tracks
 
 def load_audio(file_path):
-    # Function to load audio data from file
-    # Example implementation using dejavu library
+    ## Function to load audio data from file
+    ## Example implementation using dejavu library
     return dejavu.load_audio(file_path)
 
 def extract_audio_features(audio_data):
-    # Function to extract features from audio
-    # Example implementation using dejavu library
+    ## Function to extract features from audio
+    ## Example implementation using dejavu library
     return dejavu.extract_audio_features(audio_data)
 
 def calculate_similarity(features1, features2):
-    # Function to calculate similarity between audio features
-    # Example implementation using numpy to calculate cosine similarity
+    ## Function to calculate similarity between audio features
+    ## Example implementation using numpy to calculate cosine similarity
     similarity_score = np.dot(features1, features2) / (np.linalg.norm(features1) * np.linalg.norm(features2))
     return similarity_score
 ```
@@ -267,38 +267,38 @@ import dejavu
 import numpy as np
 
 def audio_fingerprinting_algorithm(audio_file_path, fingerprint_database):
-    # Load audio data
+    ## Load audio data
     audio_data = load_audio(audio_file_path)
 
-    # Extract audio features
+    ## Extract audio features
     audio_features = extract_audio_features(audio_data)
 
-    # Match with fingerprint database
+    ## Match with fingerprint database
     matched_tracks = match_with_fingerprint_database(audio_features, fingerprint_database)
 
     return matched_tracks
 
 def load_audio(file_path):
-    # Mock function to load audio data from file using dejavu library
+    ## Mock function to load audio data from file using dejavu library
     audio_data = dejavu.load_audio(file_path)
     return audio_data
 
 def extract_audio_features(audio_data):
-    # Mock function to extract audio features using dejavu library
+    ## Mock function to extract audio features using dejavu library
     audio_features = dejavu.extract_features(audio_data)
     return audio_features
 
 def match_with_fingerprint_database(audio_features, fingerprint_database):
-    # Mock function to match audio features with fingerprint database
+    ## Mock function to match audio features with fingerprint database
     matched_tracks = []
     for fingerprint in fingerprint_database:
         similarity_score = calculate_similarity(audio_features, fingerprint.features)
-        if similarity_score > 0.8:  # Adjust the threshold as per requirement
+        if similarity_score > 0.8:  ## Adjust the threshold as per requirement
             matched_tracks.append(fingerprint.track)
     return matched_tracks
 
 def calculate_similarity(features1, features2):
-    # Mock function to calculate similarity between audio features (e.g., using cosine similarity)
+    ## Mock function to calculate similarity between audio features (e.g., using cosine similarity)
     similarity_score = np.dot(features1, features2) / (np.linalg.norm(features1) * np.linalg.norm(features2))
     return similarity_score
 ```

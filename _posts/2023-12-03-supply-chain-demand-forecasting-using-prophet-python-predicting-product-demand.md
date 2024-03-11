@@ -223,27 +223,27 @@ import pandas as pd
 from fbprophet import Prophet
 
 def train_demand_forecasting_model(data_file_path, model_save_path):
-    # Load mock historical demand data from a CSV file
+    ## Load mock historical demand data from a CSV file
     historical_demand_data = pd.read_csv(data_file_path)
 
-    # Prepare the data in the required format by Prophet
+    ## Prepare the data in the required format by Prophet
     demand_data = historical_demand_data.rename(columns={'ds': 'ds', 'y': 'y'})
 
-    # Initialize and fit the Prophet model
+    ## Initialize and fit the Prophet model
     model = Prophet()
     model.fit(demand_data)
 
-    # Save the trained model to a file
+    ## Save the trained model to a file
     with open(model_save_path, 'wb') as f:
         pickle.dump(model, f)
     
     print("Demand forecasting model trained and saved successfully.")
 
-# Mock file paths
+## Mock file paths
 data_file_path = "path_to_mock_demand_data.csv"
 model_save_path = "path_to_save_trained_model.pkl"
 
-# Call the function with the mock file paths
+## Call the function with the mock file paths
 train_demand_forecasting_model(data_file_path, model_save_path)
 ```
 
@@ -262,27 +262,27 @@ from fbprophet import Prophet
 import pickle
 
 def train_and_save_demand_forecasting_model(data_file_path: str, model_save_path: str):
-    # Load mock historical demand data from a CSV file
+    ## Load mock historical demand data from a CSV file
     mock_demand_data = pd.DataFrame({
         'ds': pd.date_range(start='2022-01-01', periods=365, freq='D'),
-        'y': [i + 10 for i in range(365)]  # Mock demand values
+        'y': [i + 10 for i in range(365)]  ## Mock demand values
     })
 
-    # Initialize and fit the Prophet model
+    ## Initialize and fit the Prophet model
     model = Prophet()
     model.fit(mock_demand_data)
 
-    # Save the trained model to a file
+    ## Save the trained model to a file
     with open(model_save_path, 'wb') as file:
         pickle.dump(model, file)
 
     print("Demand forecasting model trained and saved successfully.")
 
-# Mock file paths
+## Mock file paths
 mock_data_file_path = "mock_demand_data.csv"
 mock_model_save_path = "trained_demand_forecasting_model.pkl"
 
-# Call the function with the mock file paths
+## Call the function with the mock file paths
 train_and_save_demand_forecasting_model(mock_data_file_path, mock_model_save_path)
 ```
 

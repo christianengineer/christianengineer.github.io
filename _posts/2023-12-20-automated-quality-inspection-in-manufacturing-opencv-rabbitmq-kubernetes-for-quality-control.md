@@ -5,7 +5,7 @@ permalink: posts/automated-quality-inspection-in-manufacturing-opencv-rabbitmq-k
 layout: article
 ---
 
-# AI Automated Quality Inspection in Manufacturing
+## AI Automated Quality Inspection in Manufacturing
 
 ## Objectives
 The primary objective of the AI Automated Quality Inspection system in manufacturing is to utilize machine learning and computer vision techniques to inspect products in real-time, ensuring high quality and consistency. The specific goals include:
@@ -32,7 +32,7 @@ The chosen libraries and frameworks for building the AI Automated Quality Inspec
 
 By combining these libraries and frameworks, the system can achieve a scalable, data-intensive AI application for quality control in manufacturing.
 
-# MLOps Infrastructure for Automated Quality Inspection in Manufacturing
+## MLOps Infrastructure for Automated Quality Inspection in Manufacturing
 
 ## Introduction
 MLOps involves the collaboration between data scientists, machine learning engineers, and operations professionals to operationalize and streamline the machine learning lifecycle. In the context of the Automated Quality Inspection in Manufacturing, the MLOps infrastructure aims to facilitate the seamless deployment, monitoring, and management of machine learning models for quality control applications.
@@ -63,7 +63,7 @@ OpenCV can be integrated into the MLOps infrastructure for the Automated Quality
 
 By incorporating the aforementioned components into the MLOps infrastructure, the Automated Quality Inspection system can effectively leverage the capabilities of OpenCV, RabbitMQ, and Kubernetes to build a scalable, data-intensive AI application for quality control in manufacturing.
 
-# Scalable File Structure for Automated Quality Inspection in Manufacturing Repository
+## Scalable File Structure for Automated Quality Inspection in Manufacturing Repository
 
 To ensure scalability and maintainability in the development and deployment of the Automated Quality Inspection system, a well-organized file structure is essential. The following is a suggested scalable file structure for the repository:
 
@@ -236,14 +236,14 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense
 from tensorflow.keras.optimizers import Adam
 
-# Define the path to the mock dataset
+## Define the path to the mock dataset
 dataset_path = '/path/to/mock_dataset/'
 
-# Define parameters for image dimensions and classes
+## Define parameters for image dimensions and classes
 img_width, img_height = 128, 128
 num_classes = 2
 
-# Load mock dataset
+## Load mock dataset
 def load_dataset(path):
     images = []
     labels = []
@@ -254,16 +254,16 @@ def load_dataset(path):
             image = cv2.imread(image_path)
             image = cv2.resize(image, (img_width, img_height))
             images.append(image)
-            labels.append(int(label))  # Assuming class folders are labeled as 0 and 1
+            labels.append(int(label))  ## Assuming class folders are labeled as 0 and 1
     return np.array(images), np.array(labels)
 
-# Load mock data
+## Load mock data
 X, y = load_dataset(dataset_path)
 
-# Preprocess data (e.g., normalization, train/test split)
-# ...
+## Preprocess data (e.g., normalization, train/test split)
+## ...
 
-# Define and compile the model architecture
+## Define and compile the model architecture
 model = Sequential([
     Conv2D(32, (3, 3), activation='relu', input_shape=(img_width, img_height, 3)),
     MaxPooling2D((2, 2)),
@@ -276,10 +276,10 @@ model = Sequential([
 
 model.compile(optimizer=Adam(learning_rate=0.001), loss='sparse_categorical_crossentropy', metrics=['accuracy'])
 
-# Train the model using the mock data
+## Train the model using the mock data
 model.fit(X, y, epochs=10, batch_size=32, validation_split=0.2)
 
-# Save the trained model
+## Save the trained model
 model.save('/path/to/save/trained_model.h5')
 ```
 
@@ -300,10 +300,10 @@ from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense, Dropou
 from tensorflow.keras.optimizers import Adam
 from sklearn.model_selection import train_test_split
 
-# Define the path to the mock dataset
+## Define the path to the mock dataset
 dataset_path = '/path/to/mock_dataset/'
 
-# Load and preprocess mock dataset
+## Load and preprocess mock dataset
 def load_dataset(path):
     images = []
     labels = []
@@ -312,18 +312,18 @@ def load_dataset(path):
         for image_file in os.listdir(label_path):
             image_path = os.path.join(label_path, image_file)
             image = cv2.imread(image_path)
-            image = cv2.resize(image, (128, 128))  # Resize images to a standardized size
+            image = cv2.resize(image, (128, 128))  ## Resize images to a standardized size
             images.append(image)
-            labels.append(int(label))  # Assuming class folders are labeled as 0 and 1
+            labels.append(int(label))  ## Assuming class folders are labeled as 0 and 1
     return np.array(images), np.array(labels)
 
 X, y = load_dataset(dataset_path)
 
-# Preprocess data (e.g., normalization, train/test split)
-X = X / 255.0  # Normalize pixel values to the range [0, 1]
+## Preprocess data (e.g., normalization, train/test split)
+X = X / 255.0  ## Normalize pixel values to the range [0, 1]
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Define and compile a complex CNN model
+## Define and compile a complex CNN model
 model = Sequential([
     Conv2D(32, (3, 3), activation='relu', input_shape=(128, 128, 3)),
     MaxPooling2D((2, 2)),
@@ -334,19 +334,19 @@ model = Sequential([
     Flatten(),
     Dense(512, activation='relu'),
     Dropout(0.5),
-    Dense(1, activation='sigmoid')  # Binary classification (defective/non-defective)
+    Dense(1, activation='sigmoid')  ## Binary classification (defective/non-defective)
 ])
 
 model.compile(optimizer=Adam(learning_rate=0.0001), loss='binary_crossentropy', metrics=['accuracy'])
 
-# Train the complex model using the mock data
+## Train the complex model using the mock data
 model.fit(X_train, y_train, epochs=15, batch_size=32, validation_data=(X_test, y_test))
 
-# Evaluate the model
+## Evaluate the model
 loss, accuracy = model.evaluate(X_test, y_test)
 print(f'Model evaluation - Loss: {loss}, Accuracy: {accuracy}')
 
-# Save the trained model
+## Save the trained model
 model.save('/path/to/save/trained_complex_model.h5')
 ```
 

@@ -242,33 +242,33 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, classification_report
 
-# Load mock child welfare and educational data
+## Load mock child welfare and educational data
 child_welfare_data = pd.read_csv('data/processed_data/mock_child_welfare_data.csv')
 educational_data = pd.read_csv('data/processed_data/mock_educational_data.csv')
 
-# Merge data on common key
+## Merge data on common key
 merged_data = pd.merge(child_welfare_data, educational_data, on='child_id')
 
-# Select features and target variable
+## Select features and target variable
 X = merged_data.drop(['child_id', 'at_risk'], axis=1)
 y = merged_data['at_risk']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Train Random Forest model
+## Train Random Forest model
 rf_model = RandomForestClassifier(random_state=42)
 rf_model.fit(X_train, y_train)
 
-# Make predictions
+## Make predictions
 y_pred = rf_model.predict(X_test)
 
-# Evaluate model
+## Evaluate model
 accuracy = accuracy_score(y_test, y_pred)
 print(f'Accuracy: {accuracy}\n')
 print('Classification Report:\n', classification_report(y_test, y_pred))
 
-# Save the trained model
+## Save the trained model
 import joblib
 joblib.dump(rf_model, 'models/saved_models/random_forest_model.pkl')
 ```
@@ -289,33 +289,33 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.metrics import accuracy_score, classification_report
 
-# Load mock child welfare and educational data
+## Load mock child welfare and educational data
 child_welfare_data = pd.read_csv('data/processed_data/mock_child_welfare_data.csv')
 educational_data = pd.read_csv('data/processed_data/mock_educational_data.csv')
 
-# Merge data on common key
+## Merge data on common key
 merged_data = pd.merge(child_welfare_data, educational_data, on='child_id')
 
-# Select features and target variable
+## Select features and target variable
 X = merged_data.drop(['child_id', 'at_risk'], axis=1)
 y = merged_data['at_risk']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Train Gradient Boosting model
+## Train Gradient Boosting model
 gb_model = GradientBoostingClassifier(random_state=42)
 gb_model.fit(X_train, y_train)
 
-# Make predictions
+## Make predictions
 y_pred = gb_model.predict(X_test)
 
-# Evaluate model
+## Evaluate model
 accuracy = accuracy_score(y_test, y_pred)
 print(f'Accuracy: {accuracy}\n')
 print('Classification Report:\n', classification_report(y_test, y_pred))
 
-# Save the trained model
+## Save the trained model
 import joblib
 joblib.dump(gb_model, 'models/saved_models/gradient_boosting_model.pkl')
 ```

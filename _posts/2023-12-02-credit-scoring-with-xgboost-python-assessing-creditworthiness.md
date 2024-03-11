@@ -158,23 +158,23 @@ def credit_scoring_prediction(data: pd.DataFrame) -> pd.DataFrame:
     Returns:
     - predictions: Predicted credit scores for the input data.
     """
-    # Load the trained XGBoost model from file
+    ## Load the trained XGBoost model from file
     model_file_path = 'models/xgboost_model.pkl'
     if not os.path.isfile(model_file_path):
         raise FileNotFoundError("XGBoost model file not found. Please ensure the model file exists at the specified path.")
 
-    # Assuming 'data' contains the necessary input features for the XGBoost model
-    # Preprocess the input data if required before making predictions
+    ## Assuming 'data' contains the necessary input features for the XGBoost model
+    ## Preprocess the input data if required before making predictions
 
-    # Load the trained model
+    ## Load the trained model
     trained_model = xgb.Booster()
     trained_model.load_model(model_file_path)
 
-    # Make predictions on the input data
+    ## Make predictions on the input data
     dmatrix = xgb.DMatrix(data)
     predictions = trained_model.predict(dmatrix)
 
-    # Assuming the predictions are returned as a DataFrame with the same indices as the input data
+    ## Assuming the predictions are returned as a DataFrame with the same indices as the input data
     return pd.DataFrame(predictions, index=data.index, columns=['credit_score'])
 ```
 
@@ -204,24 +204,24 @@ def credit_scoring_prediction(input_data: pd.DataFrame, model_file_path: str) ->
     Returns:
     - predictions: Predicted credit scores for the input data in a Pandas DataFrame format.
     """
-    # Check if the model file exists
+    ## Check if the model file exists
     if not os.path.exists(model_file_path):
         raise FileNotFoundError("The provided model file path does not exist.")
     
-    # Load the trained XGBoost model
+    ## Load the trained XGBoost model
     model = xgb.Booster()
     model.load_model(model_file_path)
 
-    # Perform any necessary preprocessing on the input_data
-    processed_data = preprocess_input_data(input_data)  # Assuming a preprocessing function is defined
+    ## Perform any necessary preprocessing on the input_data
+    processed_data = preprocess_input_data(input_data)  ## Assuming a preprocessing function is defined
 
-    # Convert input data to DMatrix format
+    ## Convert input data to DMatrix format
     input_dmatrix = xgb.DMatrix(processed_data)
 
-    # Make predictions using the loaded model
+    ## Make predictions using the loaded model
     predictions = model.predict(input_dmatrix)
 
-    # Create a DataFrame of predictions
+    ## Create a DataFrame of predictions
     result = pd.DataFrame(predictions, columns=["credit_score"], index=input_data.index)
 
     return result

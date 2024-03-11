@@ -5,7 +5,7 @@ permalink: posts/food-distribution-route-optimizer-in-peru-tensorflow-pytorch-ka
 layout: article
 ---
 
-# AI Food Distribution Route Optimizer in Peru
+## AI Food Distribution Route Optimizer in Peru
 
 ## Objectives:
 - Optimize delivery routes for food distribution in Peru using AI technologies
@@ -39,7 +39,7 @@ layout: article
 
 By combining the strengths of TensorFlow, PyTorch, Kafka, and Docker, the AI Food Distribution Route Optimizer can efficiently leverage real-time data to optimize delivery routes, enabling food distribution companies in Peru to reduce delivery times and fuel consumption.
 
-# MLOps Infrastructure for the Food Distribution Route Optimizer
+## MLOps Infrastructure for the Food Distribution Route Optimizer
 
 ## Components and Workflow:
 1. **Data Collection**:
@@ -78,7 +78,7 @@ By combining the strengths of TensorFlow, PyTorch, Kafka, and Docker, the AI Foo
 
 By establishing a robust MLOps infrastructure incorporating TensorFlow, PyTorch, Kafka, and Docker, the Food Distribution Route Optimizer can effectively leverage real-time data for optimizing delivery routes, ultimately reducing delivery times and fuel consumption for food distribution companies in Peru.
 
-# Food Distribution Route Optimizer File Structure
+## Food Distribution Route Optimizer File Structure
 
 ```
 food_distribution_optimizer/
@@ -141,7 +141,7 @@ food_distribution_optimizer/
 
 This scalable file structure organizes the components of the Food Distribution Route Optimizer application built using TensorFlow, PyTorch, Kafka, and Docker. It ensures clarity and maintainability of the codebase, facilitating efficient development and deployment of the AI-driven route optimization solution.
 
-# Models Directory for the Food Distribution Route Optimizer
+## Models Directory for the Food Distribution Route Optimizer
 
 ```
 models/
@@ -174,7 +174,7 @@ models/
 
 By maintaining separate directories for TensorFlow and PyTorch models in the **models/** directory, the Food Distribution Route Optimizer application ensures a clear organization of the trained models and their respective files. These models play a crucial role in optimizing delivery routes by leveraging real-time traffic and weather data, ultimately reducing delivery times and fuel consumption for food distribution companies in Peru.
 
-# Deployment Directory for the Food Distribution Route Optimizer
+## Deployment Directory for the Food Distribution Route Optimizer
 
 ```
 src/
@@ -222,25 +222,25 @@ I'll provide a Python script for training a TensorFlow model using mock data for
 import tensorflow as tf
 import numpy as np
 
-# Mock data for training
-traffic_data = np.random.rand(100, 3)  # Mock traffic data with 3 features
-weather_data = np.random.rand(100, 2)  # Mock weather data with 2 features
-labels = np.random.randint(0, 2, size=100)  # Mock labels for route optimization
+## Mock data for training
+traffic_data = np.random.rand(100, 3)  ## Mock traffic data with 3 features
+weather_data = np.random.rand(100, 2)  ## Mock weather data with 2 features
+labels = np.random.randint(0, 2, size=100)  ## Mock labels for route optimization
 
-# Define the TensorFlow model architecture
+## Define the TensorFlow model architecture
 model = tf.keras.Sequential([
     tf.keras.layers.Dense(64, activation='relu', input_shape=(5,)),
     tf.keras.layers.Dense(64, activation='relu'),
     tf.keras.layers.Dense(1, activation='sigmoid')
 ])
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
-# Train the model
+## Train the model
 model.fit(x=[traffic_data, weather_data], y=labels, epochs=10, batch_size=32)
 
-# Save the trained model
+## Save the trained model
 model.save('models/tensorflow_models/trained_model')
 ```
 
@@ -263,12 +263,12 @@ import torch.nn as nn
 import torch.optim as optim
 import numpy as np
 
-# Mock data for training
-traffic_data = torch.tensor(np.random.rand(100, 3), dtype=torch.float)  # Mock traffic data with 3 features
-weather_data = torch.tensor(np.random.rand(100, 2), dtype=torch.float)  # Mock weather data with 2 features
-labels = torch.randint(0, 2, (100,), dtype=torch.float)  # Mock labels for route optimization
+## Mock data for training
+traffic_data = torch.tensor(np.random.rand(100, 3), dtype=torch.float)  ## Mock traffic data with 3 features
+weather_data = torch.tensor(np.random.rand(100, 2), dtype=torch.float)  ## Mock weather data with 2 features
+labels = torch.randint(0, 2, (100,), dtype=torch.float)  ## Mock labels for route optimization
 
-# Define a complex neural network model using PyTorch
+## Define a complex neural network model using PyTorch
 class ComplexModel(nn.Module):
     def __init__(self):
         super(ComplexModel, self).__init__()
@@ -284,11 +284,11 @@ class ComplexModel(nn.Module):
 
 model = ComplexModel()
 
-# Define loss function and optimizer
+## Define loss function and optimizer
 criterion = nn.BCELoss()
 optimizer = optim.Adam(model.parameters(), lr=0.001)
 
-# Train the model
+## Train the model
 for epoch in range(10):
     optimizer.zero_grad()
     outputs = model(torch.cat((traffic_data, weather_data), dim=1))
@@ -296,7 +296,7 @@ for epoch in range(10):
     loss.backward()
     optimizer.step()
 
-# Save the trained model
+## Save the trained model
 torch.save(model.state_dict(), 'models/pytorch_models/trained_model.pth')
 ```
 

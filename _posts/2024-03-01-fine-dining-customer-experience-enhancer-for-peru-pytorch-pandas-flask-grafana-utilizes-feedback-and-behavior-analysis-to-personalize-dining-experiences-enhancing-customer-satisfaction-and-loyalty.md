@@ -175,7 +175,7 @@ deployment/
 By organizing the deployment directory with these files, it simplifies the process of deploying the Fine Dining Customer Experience Enhancer application using containerization tools like Docker and container orchestration platforms like Kubernetes. It provides a structured approach to managing deployment configurations, ensuring scalability, reliability, and efficient deployment of the AI application.
 
 ```python
-# File Path: models/training_model.py
+## File Path: models/training_model.py
 
 import pandas as pd
 import torch
@@ -184,18 +184,18 @@ import torch.optim as optim
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
-# Load mock data for training
+## Load mock data for training
 data_path = 'data/training_data/mock_data.csv'
 data = pd.read_csv(data_path)
 
-# Define features and target variable
+## Define features and target variable
 X = data.drop(columns=['target_column'])
 y = data['target_column']
 
-# Split data into training and validation sets
+## Split data into training and validation sets
 X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Define PyTorch model architecture
+## Define PyTorch model architecture
 class CustomModel(nn.Module):
     def __init__(self, input_dim, hidden_dim, output_dim):
         super(CustomModel, self).__init__()
@@ -207,19 +207,19 @@ class CustomModel(nn.Module):
         x = self.fc2(x)
         return x
 
-# Model parameters
+## Model parameters
 input_dim = X_train.shape[1]
 hidden_dim = 64
 output_dim = 1
 
-# Instantiate the model
+## Instantiate the model
 model = CustomModel(input_dim, hidden_dim, output_dim)
 
-# Define loss function and optimizer
+## Define loss function and optimizer
 criterion = nn.BCEWithLogitsLoss()
 optimizer = optim.Adam(model.parameters(), lr=0.001)
 
-# Training loop
+## Training loop
 num_epochs = 100
 for epoch in range(num_epochs):
     optimizer.zero_grad()
@@ -232,7 +232,7 @@ for epoch in range(num_epochs):
     if epoch % 10 == 0:
         print(f'Epoch {epoch+1}/{num_epochs}, Loss: {loss.item()}')
 
-# Evaluation on validation set
+## Evaluation on validation set
 with torch.no_grad():
     val_outputs = model(X_val)
     val_preds = torch.round(torch.sigmoid(val_outputs)).squeeze()
@@ -243,7 +243,7 @@ with torch.no_grad():
 In this training script for the Fine Dining Customer Experience Enhancer model, we load mock data from 'data/training_data/mock_data.csv', preprocess the data, define a simple PyTorch neural network model, train the model, and evaluate its performance on a validation set. This script showcases the training process using PyTorch for a basic binary classification task with mock data.
 
 ```python
-# File Path: models/complex_ml_algorithm.py
+## File Path: models/complex_ml_algorithm.py
 
 import pandas as pd
 import numpy as np
@@ -254,21 +254,21 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import accuracy_score
 
-# Load mock data for training
+## Load mock data for training
 data_path = 'data/training_data/mock_data_complex.csv'
 data = pd.read_csv(data_path)
 
-# Preprocessing
+## Preprocessing
 X = data.drop(columns=['target_column'])
 y = data['target_column']
 
 scaler = StandardScaler()
 X_scaled = scaler.fit_transform(X)
 
-# Split data into training and validation sets
+## Split data into training and validation sets
 X_train, X_val, y_train, y_val = train_test_split(X_scaled, y, test_size=0.2, random_state=42)
 
-# Define complex PyTorch model architecture
+## Define complex PyTorch model architecture
 class ComplexModel(nn.Module):
     def __init__(self, input_dim, hidden_dim1, hidden_dim2, output_dim):
         super(ComplexModel, self).__init__()
@@ -285,20 +285,20 @@ class ComplexModel(nn.Module):
         x = self.fc3(x)
         return x
 
-# Model parameters
+## Model parameters
 input_dim = X_train.shape[1]
 hidden_dim1 = 128
 hidden_dim2 = 64
 output_dim = 1
 
-# Instantiate the complex model
+## Instantiate the complex model
 model = ComplexModel(input_dim, hidden_dim1, hidden_dim2, output_dim)
 
-# Define loss function and optimizer
+## Define loss function and optimizer
 criterion = nn.BCEWithLogitsLoss()
 optimizer = optim.Adam(model.parameters(), lr=0.001)
 
-# Training loop
+## Training loop
 num_epochs = 200
 for epoch in range(num_epochs):
     optimizer.zero_grad()
@@ -311,7 +311,7 @@ for epoch in range(num_epochs):
     if epoch % 20 == 0:
         print(f'Epoch {epoch+1}/{num_epochs}, Loss: {loss.item()}')
 
-# Evaluation on validation set
+## Evaluation on validation set
 with torch.no_grad():
     val_outputs = model(torch.tensor(X_val, dtype=torch.float32))
     val_preds = torch.round(torch.sigmoid(val_outputs)).squeeze()

@@ -5,7 +5,7 @@ permalink: posts/automated-image-tagging-for-digital-asset-management-tensorflow
 layout: article
 ---
 
-# AI Automated Image Tagging for Digital Asset Management
+## AI Automated Image Tagging for Digital Asset Management
 
 ## Objectives
 The objective of this project is to build a scalable and efficient system for automated image tagging for digital asset management using AI. The system should be able to process large volumes of images, extract meaningful tags from them using machine learning, and efficiently manage the tagged images in a content management repository.
@@ -26,7 +26,7 @@ The objective of this project is to build a scalable and efficient system for au
 
 By leveraging these libraries and frameworks, the system design will be well-equipped to handle the challenges of automated image tagging for digital asset management, ensuring scalability, efficiency, and responsiveness.
 
-# MLOps Infrastructure for Automated Image Tagging
+## MLOps Infrastructure for Automated Image Tagging
 
 ## Continuous Integration and Continuous Deployment (CI/CD)
 - **GitHub Actions**: Implement GitHub Actions for continuous integration and continuous deployment, enabling automated testing, building, and deployment of the application code and machine learning models.
@@ -60,23 +60,23 @@ Here's a scalable file structure for the Automated Image Tagging for Digital Ass
 ```plaintext
 automated_image_tagging/
   ├── app/
-  │   ├── main.py                   # Main application logic for image tagging and management
-  │   ├── models/                   # Trained machine learning models
-  │   ├── services/                 # Services for interacting with RabbitMQ, Kubernetes, etc.
-  │   └── utils/                    # Utility functions for image processing, API handling, etc.
+  │   ├── main.py                   ## Main application logic for image tagging and management
+  │   ├── models/                   ## Trained machine learning models
+  │   ├── services/                 ## Services for interacting with RabbitMQ, Kubernetes, etc.
+  │   └── utils/                    ## Utility functions for image processing, API handling, etc.
   ├── infrastructure/
-  │   ├── kubernetes/               # Kubernetes configuration files
-  │   ├── docker/                   # Dockerfiles for containerization
-  │   └── terraform/                # Infrastructure as Code (IaC) using Terraform for cloud resources
+  │   ├── kubernetes/               ## Kubernetes configuration files
+  │   ├── docker/                   ## Dockerfiles for containerization
+  │   └── terraform/                ## Infrastructure as Code (IaC) using Terraform for cloud resources
   ├── data/
-  │   ├── raw/                      # Raw image data
-  │   ├── processed/                # Processed images and associated metadata
+  │   ├── raw/                      ## Raw image data
+  │   ├── processed/                ## Processed images and associated metadata
   ├── ml_ops/
-  │   ├── mlflow/                   # MLflow model tracking and registry
-  │   ├── airflow/                  # Apache Airflow DAGs for data pipeline orchestration
+  │   ├── mlflow/                   ## MLflow model tracking and registry
+  │   ├── airflow/                  ## Apache Airflow DAGs for data pipeline orchestration
   └── documentation/
-      ├── README.md                 # Project overview, setup instructions, and usage
-      └── docs/                     # Additional documentation and specifications
+      ├── README.md                 ## Project overview, setup instructions, and usage
+      └── docs/                     ## Additional documentation and specifications
 ```
 
 This file structure separates concerns and organizes the application components for the Automated Image Tagging for Digital Asset Management system. It includes directories for the application code, infrastructure configuration, data storage, MLOps components, and documentation, enabling a scalable and maintainable codebase.
@@ -86,16 +86,16 @@ The `models` directory for the Automated Image Tagging for Digital Asset Managem
 ```plaintext
 models/
   ├── training/
-  │   ├── data_preprocessing.py      # Script for data preprocessing and augmentation
-  │   ├── model_training.py          # Script for training the image tagging machine learning model
-  │   └── evaluation.ipynb           # Jupyter notebook for model evaluation and analysis
+  │   ├── data_preprocessing.py      ## Script for data preprocessing and augmentation
+  │   ├── model_training.py          ## Script for training the image tagging machine learning model
+  │   └── evaluation.ipynb           ## Jupyter notebook for model evaluation and analysis
   ├── deployment/
-  │   ├── Dockerfile                 # Dockerfile for building the model serving container
-  │   ├── requirements.txt           # Python dependencies for the model serving container
-  │   └── run_model_server.py        # Script for running the model serving API using TensorFlow Serving
+  │   ├── Dockerfile                 ## Dockerfile for building the model serving container
+  │   ├── requirements.txt           ## Python dependencies for the model serving container
+  │   └── run_model_server.py        ## Script for running the model serving API using TensorFlow Serving
   └── metadata/
-      ├── model_config.yaml          # Configuration file for model hyperparameters, architecture, etc.
-      └── performance_metrics.json   # Recorded performance metrics of the trained models
+      ├── model_config.yaml          ## Configuration file for model hyperparameters, architecture, etc.
+      └── performance_metrics.json   ## Recorded performance metrics of the trained models
 ```
 
 ### Training Directory
@@ -123,9 +123,9 @@ The `deployment` directory for the Automated Image Tagging for Digital Asset Man
 
 ```plaintext
 deployment/
-  ├── Dockerfile                 # Dockerfile for building the model serving container
-  ├── requirements.txt           # Python dependencies for the model serving container
-  └── run_model_server.py        # Script for running the model serving API using TensorFlow Serving
+  ├── Dockerfile                 ## Dockerfile for building the model serving container
+  ├── requirements.txt           ## Python dependencies for the model serving container
+  └── run_model_server.py        ## Script for running the model serving API using TensorFlow Serving
 ```
 
 ### Dockerfile
@@ -161,15 +161,15 @@ import tensorflow as tf
 from tensorflow_serving.apis import predict_pb2
 from tensorflow_serving.apis import prediction_service_pb2_grpc
 
-model_path = '/app/models/my_model/1'  # Path to the saved model
+model_path = '/app/models/my_model/1'  ## Path to the saved model
 
 channel = grpc.insecure_channel('localhost:8500')
 stub = prediction_service_pb2_grpc.PredictionServiceStub(channel)
 
-# Load the model
+## Load the model
 model = tf.saved_model.load(model_path)
 
-# Define function for making predictions
+## Define function for making predictions
 def make_prediction(image):
     request = predict_pb2.PredictRequest()
     request.model_spec.name = 'my_model'
@@ -180,7 +180,7 @@ def make_prediction(image):
 
     return response
 
-# Define API endpoint for making predictions
+## Define API endpoint for making predictions
 @app.route('/predict', methods=['POST'])
 def predict():
     data = request.get_json()
@@ -188,7 +188,7 @@ def predict():
     
     prediction = make_prediction(image)
     
-    # Process prediction and return response
+    ## Process prediction and return response
     
 ```
 
@@ -197,19 +197,19 @@ By organizing the `deployment` directory in this manner, the application can eff
 Here's an example of a Python script for training a model for the Automated Image Tagging for Digital Asset Management using TensorFlow with mock data. In this example, I'll create a file called `model_training.py` within the `models/training/` directory for the project:
 
 ```python
-# File Path: automated_image_tagging/models/training/model_training.py
+## File Path: automated_image_tagging/models/training/model_training.py
 
 import tensorflow as tf
 from tensorflow.keras import layers
 import numpy as np
 
-# Mock image data
-# Assume we have mock image data stored as NumPy arrays
-# Replace this with your actual image data and labels
-image_data = np.random.random((100, 128, 128, 3))  # Mock image data with 100 samples of 128x128 RGB images
-labels = np.random.randint(0, 2, size=(100,))  # Mock binary labels for image tagging
+## Mock image data
+## Assume we have mock image data stored as NumPy arrays
+## Replace this with your actual image data and labels
+image_data = np.random.random((100, 128, 128, 3))  ## Mock image data with 100 samples of 128x128 RGB images
+labels = np.random.randint(0, 2, size=(100,))  ## Mock binary labels for image tagging
 
-# Define the model architecture
+## Define the model architecture
 model = tf.keras.Sequential([
     layers.Conv2D(32, (3, 3), activation='relu', input_shape=(128, 128, 3)),
     layers.MaxPooling2D((2, 2)),
@@ -221,15 +221,15 @@ model = tf.keras.Sequential([
     layers.Dense(1, activation='sigmoid')
 ])
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam',
               loss='binary_crossentropy',
               metrics=['accuracy'])
 
-# Train the model
+## Train the model
 model.fit(image_data, labels, epochs=10, batch_size=32)
 
-# Save the trained model
+## Save the trained model
 model.save('trained_model')
 ```
 
@@ -240,38 +240,38 @@ You can further customize this script to use your actual image data and labels f
 Certainly! Here's an example of a Python script implementing a complex machine learning algorithm (such as a pre-trained deep learning model) for the Automated Image Tagging for Digital Asset Management using TensorFlow with mock data. This script will be named `complex_model_training.py` and will reside within the `models/training/` directory of the project:
 
 ```python
-# File Path: automated_image_tagging/models/training/complex_model_training.py
+## File Path: automated_image_tagging/models/training/complex_model_training.py
 
 import tensorflow as tf
 from tensorflow.keras.applications import ResNet50
 from tensorflow.keras import layers
 import numpy as np
 
-# Mock image data
-# Assume we have mock image data stored as NumPy arrays
-# Replace this with your actual image data and labels
-image_data = np.random.random((100, 224, 224, 3))  # Mock image data with 100 samples of 224x224 RGB images
-labels = np.random.randint(0, 2, size=(100,))  # Mock binary labels for image tagging
+## Mock image data
+## Assume we have mock image data stored as NumPy arrays
+## Replace this with your actual image data and labels
+image_data = np.random.random((100, 224, 224, 3))  ## Mock image data with 100 samples of 224x224 RGB images
+labels = np.random.randint(0, 2, size=(100,))  ## Mock binary labels for image tagging
 
-# Use a pre-trained ResNet50 model with Fine-tuning
+## Use a pre-trained ResNet50 model with Fine-tuning
 base_model = ResNet50(weights='imagenet', include_top=False, input_shape=(224, 224, 3))
 
-# Add custom classification layers
+## Add custom classification layers
 x = layers.GlobalAveragePooling2D()(base_model.output)
 x = layers.Dense(256, activation='relu')(x)
 output = layers.Dense(1, activation='sigmoid')(x)
 
 model = tf.keras.Model(inputs=base_model.input, outputs=output)
 
-# Compile the model
+## Compile the model
 model.compile(optimizer=tf.keras.optimizers.Adam(lr=0.0001),
               loss='binary_crossentropy',
               metrics=['accuracy'])
 
-# Fine-tune the model with mock data
+## Fine-tune the model with mock data
 model.fit(image_data, labels, epochs=10, batch_size=32)
 
-# Save the trained model
+## Save the trained model
 model.save('trained_complex_model')
 ```
 

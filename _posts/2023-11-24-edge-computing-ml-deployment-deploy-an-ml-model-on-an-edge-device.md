@@ -56,37 +56,37 @@ edge_ml_deployment/
 ├── models/
 │   ├── model1/
 │   │   ├── model_files/
-│   │   │   ├── model.pb      # Serialized model file
-│   │   │   └── model_config.yaml  # Model configuration
-│   │   ├── preprocessing_script.py  # Data preprocessing script
-│   │   ├── postprocessing_script.py  # Inference output post-processing script
-│   │   └── metadata.json   # Model metadata (e.g., input/output shape, version, etc.)
+│   │   │   ├── model.pb      ## Serialized model file
+│   │   │   └── model_config.yaml  ## Model configuration
+│   │   ├── preprocessing_script.py  ## Data preprocessing script
+│   │   ├── postprocessing_script.py  ## Inference output post-processing script
+│   │   └── metadata.json   ## Model metadata (e.g., input/output shape, version, etc.)
 │   └── model2/
 │       ├── ...
 ├── edge_application/
-│   ├── main.py   # Main inference application
+│   ├── main.py   ## Main inference application
 │   ├── data_processing/
-│   │   └── data_processing_functions.py  # Data processing utilities
+│   │   └── data_processing_functions.py  ## Data processing utilities
 │   └── utils/
-│       └── device_info.py   # Device information utilities
+│       └── device_info.py   ## Device information utilities
 ├── infrastructure/
 │   ├── deployment_scripts/
-│   │   ├── deploy_model.sh   # Script for deploying the model
-│   │   ├── update_model.sh   # Script for updating the deployed model
-│   │   └── rollback_model.sh  # Script for rolling back the model update
+│   │   ├── deploy_model.sh   ## Script for deploying the model
+│   │   ├── update_model.sh   ## Script for updating the deployed model
+│   │   └── rollback_model.sh  ## Script for rolling back the model update
 │   └── config/
-│       ├── edge_config.yaml  # Configuration for edge devices
+│       ├── edge_config.yaml  ## Configuration for edge devices
 │       └── security/
-│           └── certificates/  # SSL/TLS certificates for secure communication
+│           └── certificates/  ## SSL/TLS certificates for secure communication
 ├── documentation/
-│   ├── model_documentation.md  # Documentation for model details and usage
-│   ├── deployment_guide.md  # Deployment guide for the edge application
-│   └── changelog.md   # Changelog for model updates
+│   ├── model_documentation.md  ## Documentation for model details and usage
+│   ├── deployment_guide.md  ## Deployment guide for the edge application
+│   └── changelog.md   ## Changelog for model updates
 └── tests/
     ├── unit_tests/
-    │   └── model_tests.py   # Unit tests for model functionalities
+    │   └── model_tests.py   ## Unit tests for model functionalities
     └── integration_tests/
-        └── integration_test_suite.py   # Integration tests for the edge application
+        └── integration_test_suite.py   ## Integration tests for the edge application
 ```
 
 In this file structure:
@@ -107,14 +107,14 @@ Within the `models/` directory of the edge computing ML deployment repository, a
 models/
 ├── model1/
 │   ├── model_files/
-│   │   ├── model.pb            # Serialized model file
-│   │   ├── model_weights.h5    # Model weights file
-│   │   └── model_config.yaml   # Model configuration
+│   │   ├── model.pb            ## Serialized model file
+│   │   ├── model_weights.h5    ## Model weights file
+│   │   └── model_config.yaml   ## Model configuration
 │   ├── preprocessing/
-│   │   └── preprocessing_script.py  # Data preprocessing script specific to this model
+│   │   └── preprocessing_script.py  ## Data preprocessing script specific to this model
 │   ├── postprocessing/
-│   │   └── postprocessing_script.py  # Inference output post-processing script specific to this model
-│   └── metadata.json           # Model metadata (e.g., input/output shape, version, etc.)
+│   │   └── postprocessing_script.py  ## Inference output post-processing script specific to this model
+│   └── metadata.json           ## Model metadata (e.g., input/output shape, version, etc.)
 ├── model2/
 │   ├── ...
 ```
@@ -134,9 +134,9 @@ The `deployment_scripts/` directory within the `infrastructure/` directory plays
 ```plaintext
 infrastructure/
 └── deployment_scripts/
-    ├── deploy_model.sh                # Script for initial deployment of the model
-    ├── update_model.sh                # Script for updating the deployed model
-    └── rollback_model.sh              # Script for rolling back the model update
+    ├── deploy_model.sh                ## Script for initial deployment of the model
+    ├── update_model.sh                ## Script for updating the deployed model
+    └── rollback_model.sh              ## Script for rolling back the model update
 ```
 
 In this structure:
@@ -158,22 +158,22 @@ import tensorflow as tf
 from PIL import Image
 
 def perform_image_classification(image_path, model_path):
-    # Load the image using PIL (Python Imaging Library)
+    ## Load the image using PIL (Python Imaging Library)
     img = Image.open(image_path)
     
-    # Preprocess the image (e.g., resize, normalization)
-    img = img.resize((224, 224))  # Example resizing to match the model input size
-    img = np.array(img) / 255.0  # Example normalization
+    ## Preprocess the image (e.g., resize, normalization)
+    img = img.resize((224, 224))  ## Example resizing to match the model input size
+    img = np.array(img) / 255.0  ## Example normalization
     
-    # Load the trained TensorFlow model
+    ## Load the trained TensorFlow model
     model = tf.keras.models.load_model(model_path)
     
-    # Perform inference
+    ## Perform inference
     predictions = model.predict(np.expand_dims(img, axis=0))
     
-    # Post-process the predictions
-    # Example: Mapping predictions to human-readable labels
-    class_names = ['cat', 'dog']  # Example class names
+    ## Post-process the predictions
+    ## Example: Mapping predictions to human-readable labels
+    class_names = ['cat', 'dog']  ## Example class names
     class_index = np.argmax(predictions)
     predicted_class = class_names[class_index]
     
@@ -198,22 +198,22 @@ import tensorflow as tf
 from PIL import Image
 
 def perform_image_segmentation(image_path, model_path):
-    # Load the image using PIL (Python Imaging Library)
+    ## Load the image using PIL (Python Imaging Library)
     img = Image.open(image_path)
     
-    # Preprocess the image (e.g., resize, normalization)
-    img = img.resize((256, 256))  # Assuming input size required by the model
-    img = np.array(img) / 255.0    # Normalization
+    ## Preprocess the image (e.g., resize, normalization)
+    img = img.resize((256, 256))  ## Assuming input size required by the model
+    img = np.array(img) / 255.0    ## Normalization
     
-    # Load the trained TensorFlow model (assuming it's a U-Net based model)
+    ## Load the trained TensorFlow model (assuming it's a U-Net based model)
     model = tf.keras.models.load_model(model_path)
     
-    # Perform inference for image segmentation
+    ## Perform inference for image segmentation
     input_data = np.expand_dims(img, axis=0)
     segmentation_map = model.predict(input_data)
     
-    # Post-process the segmentation map if necessary
-    # Example: converting the segmentation map into a human-interpretable format
+    ## Post-process the segmentation map if necessary
+    ## Example: converting the segmentation map into a human-interpretable format
     
     return segmentation_map
 ```

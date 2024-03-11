@@ -5,7 +5,7 @@ permalink: posts/automated-financial-market-analysis-tensorflow-spark-prometheus
 layout: article
 ---
 
-# AI Automated Financial Market Analysis Repository
+## AI Automated Financial Market Analysis Repository
 
 ## Objectives
 The objective of the AI Automated Financial Market Analysis repository is to develop a scalable and data-intensive system that leverages Machine Learning for analyzing financial market data and generating investment strategies. The system aims to utilize TensorFlow for building and training deep learning models, Apache Spark for distributed data processing, and Prometheus for monitoring and alerting.
@@ -32,7 +32,7 @@ The following libraries and frameworks have been chosen to implement the system:
 
 By leveraging these libraries and frameworks, the AI Automated Financial Market Analysis system can efficiently process large volumes of financial data, build and train complex machine learning models, and monitor the system's performance in real-time.
 
-# MLOps Infrastructure for Automated Financial Market Analysis
+## MLOps Infrastructure for Automated Financial Market Analysis
 
 ## Overview
 MLOps refers to the practices and tools used to streamline and automate the process of deploying, monitoring, and managing machine learning models in production. For the Automated Financial Market Analysis application, the MLOps infrastructure plays a crucial role in ensuring that the machine learning models are developed, deployed, and maintained effectively and efficiently.
@@ -66,7 +66,7 @@ MLOps refers to the practices and tools used to streamline and automate the proc
 
 By incorporating these components and integrating them with the chosen technologies (TensorFlow, Spark, and Prometheus), the MLOps infrastructure will support the Automated Financial Market Analysis application in efficiently managing the entire machine learning lifecycle, from data ingestion to model deployment and monitoring.
 
-# Scalable File Structure for Automated Financial Market Analysis Repository
+## Scalable File Structure for Automated Financial Market Analysis Repository
 
 ```
 automated-financial-analysis/
@@ -135,7 +135,7 @@ In this proposed file structure:
 
 This file structure supports a scalable and modular design, facilitating collaboration, version control, and maintenance in the development of the Automated Financial Market Analysis application leveraging TensorFlow, Spark, and Prometheus.
 
-# Models Directory for Automated Financial Market Analysis
+## Models Directory for Automated Financial Market Analysis
 
 The `models/` directory within the Automated Financial Market Analysis repository contains subdirectories for organizing the trained machine learning models, configuration files, and deployment scripts. The directory structure is designed to facilitate efficient management and deployment of models trained using TensorFlow and Spark for the Automated Financial Market Analysis application, which leverages Prometheus for monitoring. Below is an expanded view of the contents within the `models/` directory:
 
@@ -183,7 +183,7 @@ models/
 
 By organizing the trained models and their artifacts in this structured manner, the repository ensures clear separation and easy access to the model files and associated evaluation metrics. This promotes reproducibility, collaboration, and streamlined deployment of the machine learning models for the Automated Financial Market Analysis application.
 
-# Deployment Directory for Automated Financial Market Analysis
+## Deployment Directory for Automated Financial Market Analysis
 
 The `deployment/` directory within the Automated Financial Market Analysis repository contains subdirectories and scripts for deploying and monitoring the trained machine learning models using TensorFlow and Spark, as well as configuring monitoring with Prometheus. Below is an expanded view of the contents within the `deployment/` directory:
 
@@ -219,37 +219,37 @@ By organizing the deployment scripts and configuration files in this structured 
 Certainly! Below is a Python script for training a simple TensorFlow model using mock data for the Automated Financial Market Analysis application. This script generates synthetic data and trains a basic neural network model. The file is located in the `src/model_training/tensorflow/train_model.py` path.
 
 ```python
-# src/model_training/tensorflow/train_model.py
+## src/model_training/tensorflow/train_model.py
 
 import numpy as np
 import tensorflow as tf
 from sklearn.model_selection import train_test_split
 
-# Mock data generation
+## Mock data generation
 num_samples = 1000
 num_features = 10
 X = np.random.rand(num_samples, num_features)
-y = np.random.randint(2, size=num_samples)  # Binary classification label
+y = np.random.randint(2, size=num_samples)  ## Binary classification label
 
-# Data preprocessing
+## Data preprocessing
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Model architecture
+## Model architecture
 model = tf.keras.models.Sequential([
     tf.keras.layers.Dense(64, activation='relu', input_shape=(num_features,)),
     tf.keras.layers.Dense(64, activation='relu'),
     tf.keras.layers.Dense(1, activation='sigmoid')
 ])
 
-# Model compilation
+## Model compilation
 model.compile(optimizer='adam',
               loss='binary_crossentropy',
               metrics=['accuracy'])
 
-# Model training
+## Model training
 model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y_test))
 
-# Save the trained model
+## Save the trained model
 model.save('models/tensorflow/mock_model/')
 ```
 
@@ -260,43 +260,43 @@ This training script leverages TensorFlow for building and training the machine 
 Certainly! Below is a Python script for training a complex machine learning algorithm (Gradient Boosting) using Spark with mock data for the Automated Financial Market Analysis application. The file is located in the `src/model_training/spark/train_complex_model.py` path.
 
 ```python
-# src/model_training/spark/train_complex_model.py
+## src/model_training/spark/train_complex_model.py
 
 from pyspark.sql import SparkSession
 from pyspark.ml.feature import VectorAssembler
 from pyspark.ml.classification import GBTClassifier
 from pyspark.ml.evaluation import BinaryClassificationEvaluator
 
-# Create a Spark session
+## Create a Spark session
 spark = SparkSession.builder.appName("AutomatedFinancialAnalysis").getOrCreate()
 
-# Mock data generation
+## Mock data generation
 num_samples = 1000
 num_features = 10
 data = [(i, "features_" + str(i % num_features), float(i % 2)) for i in range(num_samples)]
 df = spark.createDataFrame(data, ["id", "features", "label"])
 
-# Feature engineering
+## Feature engineering
 assembler = VectorAssembler(inputCols=["features"], outputCol="feature_vector")
 df = assembler.transform(df)
 
-# Split the data into training and test sets
+## Split the data into training and test sets
 (trainingData, testData) = df.randomSplit([0.7, 0.3])
 
-# Model training
+## Model training
 gbt = GBTClassifier(labelCol="label", featuresCol="feature_vector", maxIter=10)
 model = gbt.fit(trainingData)
 
-# Model evaluation
+## Model evaluation
 predictions = model.transform(testData)
 evaluator = BinaryClassificationEvaluator(labelCol="label")
 auc = evaluator.evaluate(predictions)
 print("Test Area Under ROC: " + str(auc))
 
-# Save the trained model
+## Save the trained model
 model.save("models/spark/mock_model_complex")
 
-# Stop the Spark session
+## Stop the Spark session
 spark.stop()
 ```
 

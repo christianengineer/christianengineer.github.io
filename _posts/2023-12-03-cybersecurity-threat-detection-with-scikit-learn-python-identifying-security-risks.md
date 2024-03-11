@@ -5,7 +5,7 @@ permalink: posts/cybersecurity-threat-detection-with-scikit-learn-python-identif
 layout: article
 ---
 
-# AI Cybersecurity Threat Detection with Scikit-Learn
+## AI Cybersecurity Threat Detection with Scikit-Learn
 
 ## Objectives
 The objective of the AI Cybersecurity Threat Detection project using Scikit-Learn is to build a system that can effectively identify security risks and potential threats within a network or system using machine learning algorithms. The system aims to utilize historical cybersecurity data to train and deploy models that can accurately detect anomalies and potential threats in real-time.
@@ -41,7 +41,7 @@ The objective of the AI Cybersecurity Threat Detection project using Scikit-Lear
 
 By combining the aforementioned design strategies with the chosen libraries, we aim to build a scalable, data-intensive AI cybersecurity threat detection system that leverages the power of machine learning to enhance security within the network or system.
 
-# Infrastructure for Cybersecurity Threat Detection with Scikit-Learn
+## Infrastructure for Cybersecurity Threat Detection with Scikit-Learn
 
 To effectively support the Cybersecurity Threat Detection application, a robust infrastructure that encompasses data processing, model training, deployment, and monitoring capabilities is essential.
 
@@ -195,27 +195,27 @@ from sklearn.ensemble import RandomForestClassifier
 import joblib
 
 def train_random_forest_model(data_path, model_save_path):
-    # Load data from the specified path
+    ## Load data from the specified path
     data = pd.read_csv(data_path)
 
-    # Assume the data has been preprocessed and contains features and target labels
+    ## Assume the data has been preprocessed and contains features and target labels
     X = data.drop('target', axis=1)
     y = data['target']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize a Random Forest Classifier
+    ## Initialize a Random Forest Classifier
     clf = RandomForestClassifier(n_estimators=100, random_state=42)
 
-    # Train the model
+    ## Train the model
     clf.fit(X_train, y_train)
 
-    # Evaluate the model
+    ## Evaluate the model
     accuracy = clf.score(X_test, y_test)
     print(f'Model accuracy: {accuracy}')
 
-    # Save the trained model to the specified file path
+    ## Save the trained model to the specified file path
     joblib.dump(clf, model_save_path)
     print(f'Trained model saved to: {model_save_path}')
 ```
@@ -242,27 +242,27 @@ from sklearn.ensemble import GradientBoostingClassifier
 import joblib
 
 def train_gradient_boosting_model(data_path, model_save_path):
-    # Load data from the specified path
+    ## Load data from the specified path
     data = pd.read_csv(data_path)
 
-    # Assume the data has been preprocessed and contains features and target labels
+    ## Assume the data has been preprocessed and contains features and target labels
     X = data.drop(columns=['target'], axis=1)
     y = data['target']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize a Gradient Boosting Classifier
+    ## Initialize a Gradient Boosting Classifier
     clf = GradientBoostingClassifier(n_estimators=100, learning_rate=0.1, max_depth=3, random_state=42)
 
-    # Train the model
+    ## Train the model
     clf.fit(X_train, y_train)
 
-    # Evaluate the model
+    ## Evaluate the model
     accuracy = clf.score(X_test, y_test)
     print(f'Model accuracy: {accuracy}')
 
-    # Save the trained model to the specified file path
+    ## Save the trained model to the specified file path
     joblib.dump(clf, model_save_path)
     print(f'Trained model saved to: {model_save_path}')
 ```

@@ -5,7 +5,7 @@ permalink: posts/ai-driven-podcast-summarization-tool
 layout: article
 ---
 
-# AI-Driven Podcast Summarization Tool - Technical Specifications
+## AI-Driven Podcast Summarization Tool - Technical Specifications
 
 ## Description
 

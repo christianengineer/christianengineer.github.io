@@ -237,30 +237,30 @@ from sklearn.model_selection import train_test_split
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
 
-# Mock data generation for demonstration
-X = np.random.rand(100, 5)  # Features
-y = np.random.randint(2, size=100)  # Binary target
+## Mock data generation for demonstration
+X = np.random.rand(100, 5)  ## Features
+y = np.random.randint(2, size=100)  ## Binary target
 
-# Split mock data into training and testing sets
+## Split mock data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Define a simple neural network model
+## Define a simple neural network model
 model = Sequential([
     Dense(10, activation='relu', input_shape=(5,)),
     Dense(1, activation='sigmoid')
 ])
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
-# Train the model
+## Train the model
 model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y_test))
 
-# Evaluate the model
+## Evaluate the model
 loss, accuracy = model.evaluate(X_test, y_test)
 print(f'Evaluation - Loss: {loss}, Accuracy: {accuracy}')
 
-# Save the trained model
+## Save the trained model
 model.save('trained_models/model_version1/education_access_model')
 ```
 
@@ -288,14 +288,14 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Dropout, BatchNormalization
 from tensorflow.keras.optimizers import Adam
 
-# Mock data generation for demonstration
-X = np.random.rand(100, 10)  # Features
-y = np.random.randint(3, size=100)  # Multiclass target
+## Mock data generation for demonstration
+X = np.random.rand(100, 10)  ## Features
+y = np.random.randint(3, size=100)  ## Multiclass target
 
-# Split mock data into training and testing sets
+## Split mock data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Define a more complex neural network model
+## Define a more complex neural network model
 model = Sequential([
     Dense(64, activation='relu', input_shape=(10,)),
     BatchNormalization(),
@@ -306,18 +306,18 @@ model = Sequential([
     Dense(3, activation='softmax')
 ])
 
-# Compile the model with custom optimizer
+## Compile the model with custom optimizer
 optimizer = Adam(learning_rate=0.001)
 model.compile(optimizer=optimizer, loss='sparse_categorical_crossentropy', metrics=['accuracy'])
 
-# Train the model with more epochs
+## Train the model with more epochs
 model.fit(X_train, y_train, epochs=20, batch_size=64, validation_data=(X_test, y_test))
 
-# Evaluate the model
+## Evaluate the model
 loss, accuracy = model.evaluate(X_test, y_test)
 print(f'Evaluation - Loss: {loss}, Accuracy: {accuracy}')
 
-# Save the trained model
+## Save the trained model
 model.save('trained_models/model_version2/complex_education_access_model')
 ```
 

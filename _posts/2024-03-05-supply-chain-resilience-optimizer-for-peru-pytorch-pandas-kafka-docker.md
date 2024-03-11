@@ -211,22 +211,22 @@ import pandas as pd
 from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import StandardScaler
 
-# Load the raw data
+## Load the raw data
 raw_data_path = 'path/to/raw/data.csv'
 data = pd.read_csv(raw_data_path)
 
-# Handle missing data
+## Handle missing data
 imputer = SimpleImputer(strategy='mean')
 data_filled = pd.DataFrame(imputer.fit_transform(data), columns=data.columns)
 
-# Perform standard scaling
+## Perform standard scaling
 scaler = StandardScaler()
 data_scaled = pd.DataFrame(scaler.fit_transform(data_filled), columns=data.columns)
 
-# Feature engineering (example: creating lagged features)
+## Feature engineering (example: creating lagged features)
 data_scaled['lagged_sales_data_3_days'] = data_scaled['historical_sales'].shift(3)
 
-# Save the preprocessed data
+## Save the preprocessed data
 preprocessed_data_path = 'path/to/preprocessed/data.csv'
 data_scaled.to_csv(preprocessed_data_path, index=False)
 
@@ -313,10 +313,10 @@ import pandas as pd
 from faker import Faker
 from sklearn.datasets import make_regression
 
-# Set random seed for reproducibility
+## Set random seed for reproducibility
 np.random.seed(42)
 
-# Generate fake data using Faker library
+## Generate fake data using Faker library
 fake = Faker()
 num_samples = 10000
 
@@ -332,11 +332,11 @@ data = {
 
 df = pd.DataFrame(data)
 
-# Introduce variability using Scikit-learn make_regression
+## Introduce variability using Scikit-learn make_regression
 X, _ = make_regression(n_samples=num_samples, n_features=3, n_informative=3, noise=10, random_state=42)
 df[['additional_feature1', 'additional_feature2', 'additional_feature3']] = X
 
-# Save the synthetic dataset to a CSV file
+## Save the synthetic dataset to a CSV file
 df.to_csv('synthetic_dataset.csv', index=False)
 
 print("Synthetic dataset generated successfully.")
@@ -381,34 +381,34 @@ This sample dataset provides a visual representation of the mocked data's struct
 Below is a production-ready Python script for training and deploying a machine learning model using the preprocessed dataset for the Supply Chain Resilience Optimizer project. The code adheres to best practices for documentation, clarity, and maintainability commonly observed in large tech environments:
 
 ```python
-# Import necessary libraries
+## Import necessary libraries
 import pandas as pd
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 
-# Load preprocessed dataset
+## Load preprocessed dataset
 df = pd.read_csv('preprocessed_dataset.csv')
 
-# Define features and target variable
+## Define features and target variable
 X = df.drop('target_variable', axis=1)
 y = df['target_variable']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize and train Random Forest model
+## Initialize and train Random Forest model
 rf_model = RandomForestRegressor(n_estimators=100, random_state=42)
 rf_model.fit(X_train, y_train)
 
-# Make predictions on the test set
+## Make predictions on the test set
 y_pred = rf_model.predict(X_test)
 
-# Calculate Mean Squared Error on test set
+## Calculate Mean Squared Error on test set
 mse = mean_squared_error(y_test, y_pred)
 print(f"Mean Squared Error on Test Set: {mse}")
 
-# Save the trained model for deployment
+## Save the trained model for deployment
 import joblib
 joblib.dump(rf_model, 'random_forest_model.pkl')
 
@@ -488,26 +488,26 @@ By following this step-by-step deployment plan tailored to the unique demands of
 Below is a sample Dockerfile tailored for encapsulating the environment and dependencies of the Supply Chain Resilience Optimizer project, optimized for performance and scalability:
 
 ```Dockerfile
-# Use a base image with Python and required dependencies
+## Use a base image with Python and required dependencies
 FROM python:3.9-slim
 
-# Set work directory in the container
+## Set work directory in the container
 WORKDIR /app
 
-# Copy required files into the container
+## Copy required files into the container
 COPY requirements.txt /app/requirements.txt
 COPY trained_model.pkl /app/trained_model.pkl
 
-# Install required Python libraries
+## Install required Python libraries
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the main Python script into the container
+## Copy the main Python script into the container
 COPY main.py /app/main.py
 
-# Expose the port for the API endpoint
+## Expose the port for the API endpoint
 EXPOSE 8000
 
-# Define the command to run the Python script
+## Define the command to run the Python script
 CMD ["python", "main.py"]
 ```
 

@@ -36,7 +36,7 @@ The AI FraudGuard project will leverage a variety of libraries and frameworks to
 
 By employing these libraries, frameworks, and design strategies, the AI FraudGuard project aims to deliver a scalable, robust, and accurate fraud detection system capable of addressing the evolving challenges of financial fraud.
 
-# Infrastructure for AI FraudGuard - AI Fraud Detection System
+## Infrastructure for AI FraudGuard - AI Fraud Detection System
 
 The infrastructure for the AI FraudGuard system is critical to support the scalability, reliability, and performance required for real-time fraud detection. Below are the key components and considerations for the infrastructure design:
 
@@ -92,42 +92,42 @@ The file structure for the AI FraudGuard repository is designed to organize the 
 fraudguard/
 │
 ├── app/
-│   ├── api/                      # API microservice for communication
-│   ├── data_processing/          # Microservice for data processing
-│   ├── model_serving/            # Microservice for model serving
-│   ├── visualization/            # Microservice for result visualization
+│   ├── api/                      ## API microservice for communication
+│   ├── data_processing/          ## Microservice for data processing
+│   ├── model_serving/            ## Microservice for model serving
+│   ├── visualization/            ## Microservice for result visualization
 │
 ├── config/
-│   ├── deployment/               # Configuration files for deployment (e.g., Kubernetes manifests)
-│   ├── environment/              # Environment-specific configuration files
+│   ├── deployment/               ## Configuration files for deployment (e.g., Kubernetes manifests)
+│   ├── environment/              ## Environment-specific configuration files
 │
 ├── docs/
-│   ├── architecture/             # System architecture diagrams and documentation
-│   ├── api/                      # API documentation
-│   ├── user_guide/               # User guide and documentation
+│   ├── architecture/             ## System architecture diagrams and documentation
+│   ├── api/                      ## API documentation
+│   ├── user_guide/               ## User guide and documentation
 │
-├── models/                       # Trained machine learning models
+├── models/                       ## Trained machine learning models
 │
 ├── scripts/
-│   ├── deployment/               # Deployment scripts
-│   ├── maintenance/              # Maintenance scripts
-│   ├── setup/                    # Setup scripts for local development
+│   ├── deployment/               ## Deployment scripts
+│   ├── maintenance/              ## Maintenance scripts
+│   ├── setup/                    ## Setup scripts for local development
 │
 ├── src/
-│   ├── data_processing/          # Source code for data processing microservice
-│   ├── model_training/           # Source code for machine learning model training
-│   ├── model_serving/            # Source code for model serving microservice
-│   ├── visualization/            # Source code for result visualization microservice
+│   ├── data_processing/          ## Source code for data processing microservice
+│   ├── model_training/           ## Source code for machine learning model training
+│   ├── model_serving/            ## Source code for model serving microservice
+│   ├── visualization/            ## Source code for result visualization microservice
 │
-├── tests/                        # Unit tests and integration tests
+├── tests/                        ## Unit tests and integration tests
 │
-├── .gitignore                    # Git ignore file
-├── Dockerfile                    # Dockerfile for containerization
-├── README.md                     # Project README with overview, setup instructions, and usage guide
-├── requirements.txt              # Python dependencies for the project
-├── LICENSE                       # Project license information
-├── .dockerignore                 # Docker ignore file
-├── .env                          # Environment variables configuration
+├── .gitignore                    ## Git ignore file
+├── Dockerfile                    ## Dockerfile for containerization
+├── README.md                     ## Project README with overview, setup instructions, and usage guide
+├── requirements.txt              ## Python dependencies for the project
+├── LICENSE                       ## Project license information
+├── .dockerignore                 ## Docker ignore file
+├── .env                          ## Environment variables configuration
 ```
 
 In this file structure:
@@ -148,13 +148,13 @@ The `src/` directory in the FraudGuard - AI Fraud Detection System houses the co
 ```plaintext
 src/
 ├── AI/
-│   ├── models/                 # Trained model binaries and artifacts
-│   ├── data_preprocessing/     # Code for data preprocessing and feature engineering
-│   ├── model_training/         # Code for training machine learning and deep learning models
-│   ├── model_evaluation/       # Code for evaluating model performance and metrics
-│   ├── model_serving/          # Code for serving trained models and making real-time predictions
-│   ├── utils/                  # Utility functions for data processing, model management, etc.
-│   ├── requirements.txt        # Python dependencies specific to AI component
+│   ├── models/                 ## Trained model binaries and artifacts
+│   ├── data_preprocessing/     ## Code for data preprocessing and feature engineering
+│   ├── model_training/         ## Code for training machine learning and deep learning models
+│   ├── model_evaluation/       ## Code for evaluating model performance and metrics
+│   ├── model_serving/          ## Code for serving trained models and making real-time predictions
+│   ├── utils/                  ## Utility functions for data processing, model management, etc.
+│   ├── requirements.txt        ## Python dependencies specific to AI component
 ```
 
 - **models/**: This directory contains trained model binaries and artifacts resulting from the model training process. These trained models can be serialized and stored for deployment within the system.
@@ -180,10 +180,10 @@ src/
 ├── AI/
 │   ├── ...
 │   ├── utils/
-│       ├── data_processing.py      # Utility functions for data preprocessing
-│       ├── model_management.py     # Functions for managing trained models
-│       ├── visualization.py        # Helper functions for result visualization
-│       ├── serialization.py        # Functions for model serialization and deserialization
+│       ├── data_processing.py      ## Utility functions for data preprocessing
+│       ├── model_management.py     ## Functions for managing trained models
+│       ├── visualization.py        ## Helper functions for result visualization
+│       ├── serialization.py        ## Functions for model serialization and deserialization
 ```
 
 - **data_processing.py**: This file contains utility functions for data preprocessing, feature engineering, and data transformation tasks. Common functions include handling missing values, normalizing data, performing feature scaling, and encoding categorical variables. These functions are essential for preparing the input data for model training and prediction.
@@ -199,37 +199,37 @@ By housing these utility functions and helper scripts within the `utils/` direct
 Below is an example of a function implementing a complex machine learning algorithm for the FraudGuard - AI Fraud Detection System application. In this example, we'll create a function for training a Gradient Boosting Classifier using mock data. The function will take mock input data, perform feature engineering, train the model, and serialize the trained model to a file.
 
 ```python
-# Import necessary libraries
+## Import necessary libraries
 import pandas as pd
 from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.model_selection import train_test_split
 import joblib
 
 def train_gradient_boosting_model(data_file_path, model_output_path):
-    # Load mock data from a CSV file
+    ## Load mock data from a CSV file
     data = pd.read_csv(data_file_path)
 
-    # Data preprocessing and feature engineering (e.g., handling missing values, encoding categorical variables)
-    # Example:
-    # X = data.drop('target_column', axis=1)
-    # y = data['target_column']
-    # X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+    ## Data preprocessing and feature engineering (e.g., handling missing values, encoding categorical variables)
+    ## Example:
+    ## X = data.drop('target_column', axis=1)
+    ## y = data['target_column']
+    ## X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Instantiate a Gradient Boosting Classifier model
+    ## Instantiate a Gradient Boosting Classifier model
     model = GradientBoostingClassifier(n_estimators=100, learning_rate=1.0, max_depth=1, random_state=42)
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train)
 
-    # Evaluate the model
-    # Example:
-    # accuracy = model.score(X_test, y_test)
-    # print(f"Model accuracy: {accuracy}")
+    ## Evaluate the model
+    ## Example:
+    ## accuracy = model.score(X_test, y_test)
+    ## print(f"Model accuracy: {accuracy}")
 
-    # Serialize the trained model to a file
+    ## Serialize the trained model to a file
     joblib.dump(model, model_output_path)
 
-    # Return the path to the serialized model
+    ## Return the path to the serialized model
     return model_output_path
 ```
 
@@ -246,7 +246,7 @@ Please note that the data preprocessing and model evaluation sections are partia
 Certainly! Below is an example of a function implementing a complex deep learning algorithm for the FraudGuard - AI Fraud Detection System application. In this example, we'll create a function for training a deep learning model using a neural network with TensorFlow and Keras. The function will take mock input data, perform preprocessing, train the deep learning model, and save the trained model to a file.
 
 ```python
-# Import necessary libraries
+## Import necessary libraries
 import numpy as np
 import pandas as pd
 import tensorflow as tf
@@ -254,37 +254,37 @@ from tensorflow import keras
 from sklearn.model_selection import train_test_split
 
 def train_deep_learning_model(data_file_path, model_output_path):
-    # Load mock data from a CSV file
+    ## Load mock data from a CSV file
     data = pd.read_csv(data_file_path)
 
-    # Data preprocessing and feature engineering (e.g., handling missing values, encoding categorical variables)
-    # Example:
-    # X = data.drop('target_column', axis=1)
-    # y = data['target_column']
-    # X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+    ## Data preprocessing and feature engineering (e.g., handling missing values, encoding categorical variables)
+    ## Example:
+    ## X = data.drop('target_column', axis=1)
+    ## y = data['target_column']
+    ## X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Define a deep learning neural network model using Keras
+    ## Define a deep learning neural network model using Keras
     model = keras.Sequential([
         keras.layers.Dense(128, input_shape=(X_train.shape[1],), activation='relu'),
         keras.layers.Dense(64, activation='relu'),
         keras.layers.Dense(1, activation='sigmoid')
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y_test))
 
-    # Evaluate the model
-    # Example:
-    # loss, accuracy = model.evaluate(X_test, y_test)
-    # print(f"Model loss: {loss}, Model accuracy: {accuracy}")
+    ## Evaluate the model
+    ## Example:
+    ## loss, accuracy = model.evaluate(X_test, y_test)
+    ## print(f"Model loss: {loss}, Model accuracy: {accuracy}")
 
-    # Save the trained model to a file
+    ## Save the trained model to a file
     model.save(model_output_path)
 
-    # Return the path to the saved model file
+    ## Return the path to the saved model file
     return model_output_path
 ```
 

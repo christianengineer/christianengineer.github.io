@@ -5,7 +5,7 @@ permalink: posts/personalized-ai-art-generator
 layout: article
 ---
 
-# Personalized AI Art Generator Repository Technical Specifications
+## Personalized AI Art Generator Repository Technical Specifications
 
 ## Description
 

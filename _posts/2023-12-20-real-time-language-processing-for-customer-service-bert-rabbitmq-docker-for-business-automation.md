@@ -157,25 +157,25 @@ from transformers import BertTokenizer, BertForSequenceClassification
 import pandas as pd
 from sklearn.model_selection import train_test_split
 
-# Load mock data
+## Load mock data
 data = {
     'text': ['I am satisfied with your service', 'This product is great', 'I am very disappointed', 'The delivery was terrible'],
     'sentiment': ['positive', 'positive', 'negative', 'negative']
 }
 df = pd.DataFrame(data)
 
-# Split data into training and validation sets
+## Split data into training and validation sets
 train_texts, val_texts, train_labels, val_labels = train_test_split(df['text'], df['sentiment'], test_size=0.2)
 
-# Load pre-trained BERT model and tokenizer
+## Load pre-trained BERT model and tokenizer
 tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
 model = BertForSequenceClassification.from_pretrained('bert-base-uncased', num_labels=2)
 
-# Tokenize and preprocess the text data
+## Tokenize and preprocess the text data
 train_encodings = tokenizer(list(train_texts), truncation=True, padding=True)
 val_encodings = tokenizer(list(val_texts), truncation=True, padding=True)
 
-# Create PyTorch datasets
+## Create PyTorch datasets
 class RtlpDataset(torch.utils.data.Dataset):
     def __init__(self, encodings, labels):
         self.encodings = encodings
@@ -192,18 +192,18 @@ class RtlpDataset(torch.utils.data.Dataset):
 train_dataset = RtlpDataset(train_encodings, train_labels)
 val_dataset = RtlpDataset(val_encodings, val_labels)
 
-# Set training parameters
+## Set training parameters
 training_args = TrainingArguments(
-    output_dir='./results',  # output directory
-    num_train_epochs=3,  # total number of training epochs
-    per_device_train_batch_size=8,  # batch size per device during training
-    per_device_eval_batch_size=8,  # batch size for evaluation
-    warmup_steps=500,  # number of warmup steps for learning rate scheduler
-    weight_decay=0.01,  # strength of weight decay
-    logging_dir='./logs',  # directory for storing logs
+    output_dir='./results',  ## output directory
+    num_train_epochs=3,  ## total number of training epochs
+    per_device_train_batch_size=8,  ## batch size per device during training
+    per_device_eval_batch_size=8,  ## batch size for evaluation
+    warmup_steps=500,  ## number of warmup steps for learning rate scheduler
+    weight_decay=0.01,  ## strength of weight decay
+    logging_dir='./logs',  ## directory for storing logs
 )
 
-# Initialize Trainer for training
+## Initialize Trainer for training
 trainer = Trainer(
     model=model,
     args=training_args,
@@ -211,7 +211,7 @@ trainer = Trainer(
     eval_dataset=val_dataset,
 )
 
-# Start model training
+## Start model training
 trainer.train()
 ```
 
@@ -228,33 +228,33 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, classification_report
 
-# Load mock data
+## Load mock data
 data = {
     'text': ['I am satisfied with your service', 'This product is great', 'I am very disappointed', 'The delivery was terrible'],
     'sentiment': ['positive', 'positive', 'negative', 'negative']
 }
 df = pd.DataFrame(data)
 
-# Text vectorization using TF-IDF
+## Text vectorization using TF-IDF
 vectorizer = TfidfVectorizer(max_features=1000)
 X = vectorizer.fit_transform(df['text'])
 y = df['sentiment']
 
-# Split data into training and validation sets
+## Split data into training and validation sets
 X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Train a Random Forest Classifier
+## Train a Random Forest Classifier
 clf = RandomForestClassifier(n_estimators=100, random_state=42)
 clf.fit(X_train, y_train)
 
-# Make predictions
+## Make predictions
 y_pred = clf.predict(X_val)
 
-# Evaluate the model
+## Evaluate the model
 accuracy = accuracy_score(y_val, y_pred)
 print(f'Accuracy: {accuracy:.2f}')
 
-# Generate classification report
+## Generate classification report
 report = classification_report(y_val, y_pred)
 print(report)
 ```

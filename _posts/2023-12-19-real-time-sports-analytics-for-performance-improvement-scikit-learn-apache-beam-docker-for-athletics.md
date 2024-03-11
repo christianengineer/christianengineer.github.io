@@ -5,10 +5,10 @@ permalink: posts/real-time-sports-analytics-for-performance-improvement-scikit-l
 layout: article
 ---
 
-# Objectives
+## Objectives
 The objective of the AI real-time sports analytics for performance improvement system is to provide athletes and coaches with real-time insights and actionable recommendations to enhance their performance. This includes analyzing data from various sources such as player statistics, biometric sensors, and video feeds to generate valuable insights for improved decision-making and training strategies.
 
-# System Design Strategies
+## System Design Strategies
 The system will be designed to handle real-time data streaming, processing large volumes of data, and providing timely insights to end-users. Here are some key design strategies:
 
 ## Real-time Data Ingestion:
@@ -23,7 +23,7 @@ Use Docker for containerization to ensure portability and scalability of the app
 ## Microservices Architecture:
 Implement the system using a microservices architecture to allow for modular and independently scalable components. This will enable flexibility and scalability as well as easier maintenance and upgrades.
 
-# Chosen Libraries
+## Chosen Libraries
 The following libraries will be utilized for the development of the AI real-time sports analytics system:
 
 ## Scikit-Learn:
@@ -37,7 +37,7 @@ Docker will be utilized for containerizing the application, ensuring consistent 
 
 By employing these strategies and libraries, the AI real-time sports analytics for performance improvement system will be capable of handling large volumes of data, providing real-time insights, and facilitating data-driven decision-making for athletes and coaches.
 
-# MLOps Infrastructure for Real-time Sports Analytics
+## MLOps Infrastructure for Real-time Sports Analytics
 
 To support the real-time sports analytics application, a robust MLOps (Machine Learning Operations) infrastructure is essential. This infrastructure encompasses the tools and processes required for deploying, managing, and monitoring machine learning models in production. Here's an overview of the MLOps infrastructure components for the real-time sports analytics application:
 
@@ -194,34 +194,34 @@ from sklearn.linear_model import LinearRegression
 import joblib
 import json
 
-# Load mock data (replace with actual data loading logic)
+## Load mock data (replace with actual data loading logic)
 mock_player_data = pd.read_csv('data/raw_data/mock_player_data.csv')
 
-# Perform data preprocessing and feature engineering
+## Perform data preprocessing and feature engineering
 X = mock_player_data.drop(['player_id', 'performance_metric'], axis=1)
 y = mock_player_data['performance_metric']
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Standardize the features
+## Standardize the features
 scaler = StandardScaler()
 X_train_scaled = scaler.fit_transform(X_train)
 X_test_scaled = scaler.transform(X_test)
 
-# Train a linear regression model
+## Train a linear regression model
 model = LinearRegression()
 model.fit(X_train_scaled, y_train)
 
-# Evaluate the model
+## Evaluate the model
 train_score = model.score(X_train_scaled, y_train)
 test_score = model.score(X_test_scaled, y_test)
 
-# Save the trained model and scaler
+## Save the trained model and scaler
 joblib.dump(model, 'models/trained_models/player_performance/model.pkl')
 joblib.dump(scaler, 'models/trained_models/player_performance/scaler.pkl')
 
-# Save model metadata
+## Save model metadata
 model_info = {
     'model_type': 'LinearRegression',
     'features': list(X.columns),
@@ -252,34 +252,34 @@ from sklearn.preprocessing import StandardScaler
 import joblib
 import json
 
-# Load mock data (replace with actual data loading logic)
+## Load mock data (replace with actual data loading logic)
 mock_game_data = pd.read_csv('data/raw_data/mock_game_data.csv')
 
-# Perform data preprocessing and feature engineering
+## Perform data preprocessing and feature engineering
 X = mock_game_data.drop(['game_id', 'opponent', 'outcome'], axis=1)
 y = mock_game_data['outcome']
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Standardize the features
+## Standardize the features
 scaler = StandardScaler()
 X_train_scaled = scaler.fit_transform(X_train)
 X_test_scaled = scaler.transform(X_test)
 
-# Train a Gradient Boosting model
+## Train a Gradient Boosting model
 model = GradientBoostingClassifier(n_estimators=100, learning_rate=0.1, max_depth=3, random_state=42)
 model.fit(X_train_scaled, y_train)
 
-# Evaluate the model
+## Evaluate the model
 train_score = model.score(X_train_scaled, y_train)
 test_score = model.score(X_test_scaled, y_test)
 
-# Save the trained model and scaler
+## Save the trained model and scaler
 joblib.dump(model, 'models/trained_models/game_strategy/model.pkl')
 joblib.dump(scaler, 'models/trained_models/game_strategy/scaler.pkl')
 
-# Save model metadata
+## Save model metadata
 model_info = {
     'model_type': 'GradientBoostingClassifier',
     'features': list(X.columns),

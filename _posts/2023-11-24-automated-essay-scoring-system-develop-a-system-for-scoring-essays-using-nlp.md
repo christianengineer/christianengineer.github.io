@@ -5,7 +5,7 @@ permalink: posts/automated-essay-scoring-system-develop-a-system-for-scoring-ess
 layout: article
 ---
 
-# AI Automated Essay Scoring System
+## AI Automated Essay Scoring System
 
 ## Objectives
 The primary objectives of the AI Automated Essay Scoring System are:
@@ -30,7 +30,7 @@ To implement the AI Automated Essay Scoring System, the following libraries can 
 
 By combining these libraries with a well-designed architecture and effective NLP techniques, the AI Automated Essay Scoring System can efficiently and accurately assess essays at scale, providing valuable feedback to writers and educators.
 
-# Infrastructure for the Automated Essay Scoring System
+## Infrastructure for the Automated Essay Scoring System
 
 Designing a scalable and efficient infrastructure is crucial for the success of the Automated Essay Scoring System. Below are the key components and considerations for the system's infrastructure:
 
@@ -84,55 +84,55 @@ Sure, here's a scalable file structure for the Automated Essay Scoring System:
 automated_essay_scoring_system/
 │
 ├── data/
-│   ├── essays/                  # Directory for storing essays
+│   ├── essays/                  ## Directory for storing essays
 │   │   ├── essay1.txt
 │   │   ├── essay2.txt
 │   │   ├── ...
 │   │
-│   ├── models/                  # Directory for storing trained scoring models
+│   ├── models/                  ## Directory for storing trained scoring models
 │   │   ├── model1.pkl
 │   │   ├── model2.pkl
 │   │   ├── ...
 │   │
-│   └── annotations/             # Directory for storing annotated essay scores
+│   └── annotations/             ## Directory for storing annotated essay scores
 │       ├── annotated_scores.csv
 │       └── ...
 │
 ├── src/
 │   ├── app/
-│   │   ├── main.py              # Application entry point and API endpoints
+│   │   ├── main.py              ## Application entry point and API endpoints
 │   │   └── ...
 │   │
 │   ├── nlp/
-│   │   ├── preprocessing.py     # NLP text preprocessing functions
-│   │   ├── feature_extraction.py# Feature extraction methods for essays
+│   │   ├── preprocessing.py     ## NLP text preprocessing functions
+│   │   ├── feature_extraction.py## Feature extraction methods for essays
 │   │   └── ...
 │   │
 │   ├── models/
-│   │   ├── model_training.py     # Script for training scoring models
-│   │   ├── model_evaluation.py   # Script for evaluating model performance
+│   │   ├── model_training.py     ## Script for training scoring models
+│   │   ├── model_evaluation.py   ## Script for evaluating model performance
 │   │   └── ...
 │   │
 │   └── utils/
-│       ├── database.py          # Database interaction methods
+│       ├── database.py          ## Database interaction methods
 │       └── ...
 │
-├── tests/                        # Directory for unit tests
+├── tests/                        ## Directory for unit tests
 │   ├── test_preprocessing.py
 │   ├── test_model_training.py
 │   └── ...
 │
 ├── config/
-│   ├── settings.py               # Configuration settings for the system
+│   ├── settings.py               ## Configuration settings for the system
 │   └── ...
 │
-├── Dockerfile                    # Dockerfile for containerizing the application
+├── Dockerfile                    ## Dockerfile for containerizing the application
 │
-├── requirements.txt              # Python dependencies for the system
+├── requirements.txt              ## Python dependencies for the system
 │
-├── README.md                     # Documentation for the Automated Essay Scoring System
+├── README.md                     ## Documentation for the Automated Essay Scoring System
 │
-├── .gitignore                    # Git ignore file
+├── .gitignore                    ## Git ignore file
 │
 └── ...
 ```
@@ -160,10 +160,10 @@ Sure, I can expand on the `models/` directory and its files for the Automated Es
 ```
 models/
 │
-├── model_training.py     # Script for training scoring models
-├── model_evaluation.py   # Script for evaluating model performance
-├── model_inference.py    # Script for scoring new essays using trained models
-└── model_utils.py        # Utility functions for model handling and evaluation
+├── model_training.py     ## Script for training scoring models
+├── model_evaluation.py   ## Script for evaluating model performance
+├── model_inference.py    ## Script for scoring new essays using trained models
+└── model_utils.py        ## Utility functions for model handling and evaluation
 ```
 
 In this `models/` directory:
@@ -183,19 +183,19 @@ In the context of the Automated Essay Scoring System, when we talk about the dep
 ```
 deployment/
 │
-├── Dockerfile                 # Definition for containerizing the application
-├── docker-compose.yml         # Docker Compose configuration for multi-container deployment
-├── kubernetes/                # Kubernetes deployment files for orchestrating the application
+├── Dockerfile                 ## Definition for containerizing the application
+├── docker-compose.yml         ## Docker Compose configuration for multi-container deployment
+├── kubernetes/                ## Kubernetes deployment files for orchestrating the application
 │   ├── essay-scoring-deployment.yml
 │   ├── essay-scoring-service.yml
 │   └── ...
 ├── scripts/
-│   ├── start_application.sh    # Script for starting the application
-│   ├── stop_application.sh     # Script for stopping the application
+│   ├── start_application.sh    ## Script for starting the application
+│   ├── stop_application.sh     ## Script for stopping the application
 │   └── ...
 └── configurations/
-    ├── production.yaml        # Production configuration settings
-    ├── development.yaml       # Development configuration settings
+    ├── production.yaml        ## Production configuration settings
+    ├── development.yaml       ## Development configuration settings
     └── ...
 ```
 
@@ -223,26 +223,26 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.pipeline import make_pipeline
 
 def train_essay_scoring_model(data_file_path):
-    # Load mock data (assuming the data is in CSV format with columns 'essay_text' and 'score')
+    ## Load mock data (assuming the data is in CSV format with columns 'essay_text' and 'score')
     data = pd.read_csv(data_file_path)
 
-    # Split the data into features (essay_text) and target (score)
+    ## Split the data into features (essay_text) and target (score)
     X = data['essay_text']
     y = data['score']
 
-    # Create a TF-IDF vectorizer for text representation
+    ## Create a TF-IDF vectorizer for text representation
     vectorizer = TfidfVectorizer(max_features=1000)
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Build a pipeline with TF-IDF vectorizer and Gradient Boosting Regressor
+    ## Build a pipeline with TF-IDF vectorizer and Gradient Boosting Regressor
     model = make_pipeline(vectorizer, GradientBoostingRegressor())
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train)
 
-    # Evaluate the model
+    ## Evaluate the model
     training_score = model.score(X_train, y_train)
     testing_score = model.score(X_test, y_test)
 
@@ -269,34 +269,34 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 from sklearn.model_selection import train_test_split
 
 def train_lstm_essay_scoring_model(data_file_path):
-    # Load mock data (assuming the data is in CSV format with columns 'essay_text' and 'score')
+    ## Load mock data (assuming the data is in CSV format with columns 'essay_text' and 'score')
     data = pd.read_csv(data_file_path)
 
-    # Tokenize the essay text
+    ## Tokenize the essay text
     tokenizer = Tokenizer(num_words=1000)
     tokenizer.fit_on_texts(data['essay_text'])
     sequences = tokenizer.texts_to_sequences(data['essay_text'])
     X = pad_sequences(sequences)
 
-    # Define target variable
+    ## Define target variable
     y = data['score']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Build the LSTM model
+    ## Build the LSTM model
     model = Sequential()
     model.add(Embedding(1000, 64, input_length=X.shape[1]))
     model.add(LSTM(100, dropout=0.2, recurrent_dropout=0.2))
     model.add(Dense(1, activation='linear'))
 
-    # Compile the model
+    ## Compile the model
     model.compile(loss='mean_squared_error', optimizer='adam', metrics=['mae'])
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train, epochs=10, batch_size=64, validation_data=(X_test, y_test))
 
-    # Evaluate the model
+    ## Evaluate the model
     training_loss, training_mae = model.evaluate(X_train, y_train, verbose=0)
     testing_loss, testing_mae = model.evaluate(X_test, y_test, verbose=0)
 

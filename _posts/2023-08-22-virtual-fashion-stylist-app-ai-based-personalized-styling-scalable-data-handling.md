@@ -5,7 +5,7 @@ permalink: posts/virtual-fashion-stylist-app-ai-based-personalized-styling-scala
 layout: article
 ---
 
-# Virtual Fashion Stylist App
+## Virtual Fashion Stylist App
 
 ## Description
 
@@ -48,29 +48,29 @@ Certainly. Below is a scalable and maintainable file structure to the Virtual Fa
 
 ```markdown
 .
-├── client # Frontend code base
-│ ├── public # Public assets and index file
+├── client ## Frontend code base
+│ ├── public ## Public assets and index file
 │ ├── src  
-│ │ ├── components # React components
-│ │ ├── views # Screens / Views / Routes
-│ │ ├── redux # Redux state management
-│ │ ├── services # API services
-│ │ ├── styles # Stylesheets, variables, themes
+│ │ ├── components ## React components
+│ │ ├── views ## Screens / Views / Routes
+│ │ ├── redux ## Redux state management
+│ │ ├── services ## API services
+│ │ ├── styles ## Stylesheets, variables, themes
 │ │ └── app.js  
 │ └── package.json  
-├── server # Backend code base
-│ ├── config # Configuration files
-│ ├── models # Database models
-│ ├── routes # API endpoints and routes
-│ ├── services # Service handlers (business logic)
-│ ├── tests # Testing scripts
-│ └── server.js # Entry file
-├── scripts # Script files
-├── .env # Environment variables
-├── .gitignore # Ignore files (node_modules, .env etc)
-├── readme.md # Project description, setup guide etc.
-├── package.json # Dependency list
-└── Dockerfile # For Dockerization
+├── server ## Backend code base
+│ ├── config ## Configuration files
+│ ├── models ## Database models
+│ ├── routes ## API endpoints and routes
+│ ├── services ## Service handlers (business logic)
+│ ├── tests ## Testing scripts
+│ └── server.js ## Entry file
+├── scripts ## Script files
+├── .env ## Environment variables
+├── .gitignore ## Ignore files (node_modules, .env etc)
+├── readme.md ## Project description, setup guide etc.
+├── package.json ## Dependency list
+└── Dockerfile ## For Dockerization
 ```
 
 It is recommended to keep server and client codebases separate (through the two directories `client` and `server`) for better separation of concerns. This also provides the flexibility to scale up the frontend and backend independently based on the load. Remember that it's good to tailor the structure based on your application needs and team preferences.

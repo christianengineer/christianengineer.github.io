@@ -201,22 +201,22 @@ import pandas as pd
 from transformers import BertTokenizer, BertForSequenceClassification
 import torch
 
-# Load mock data for training
+## Load mock data for training
 data = pd.read_csv('data/mock_training_data.csv')
 
-# Tokenization
+## Tokenization
 tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
 encoded_data = tokenizer(data['text'], padding=True, truncation=True, return_tensors='pt')
 
-# Model Initialization
+## Model Initialization
 model = BertForSequenceClassification.from_pretrained('bert-base-uncased', num_labels=2)
 
-# Training setup
+## Training setup
 optimizer = torch.optim.AdamW(model.parameters())
 loss_function = torch.nn.CrossEntropyLoss()
 
-# Model training
-for epoch in range(3):  # 3 epochs for demonstration
+## Model training
+for epoch in range(3):  ## 3 epochs for demonstration
     outputs = model(**encoded_data, labels=torch.tensor(data['labels']).unsqueeze(0))
     loss = outputs.loss
     optimizer.zero_grad()
@@ -225,7 +225,7 @@ for epoch in range(3):  # 3 epochs for demonstration
 
     print(f'Epoch {epoch + 1}: Loss - {loss.item()}')
 
-# Save trained model
+## Save trained model
 model.save_pretrained('models/BERT/trained_model')
 ```
 
@@ -254,24 +254,24 @@ import pandas as pd
 from transformers import GPT2LMHeadModel, GPT2Tokenizer
 import torch
 
-# Load mock data for complex algorithm
+## Load mock data for complex algorithm
 data = pd.read_csv('data/mock_complex_data.csv')
 
-# Tokenization
+## Tokenization
 tokenizer = GPT2Tokenizer.from_pretrained('gpt2')
 encoded_data = tokenizer(data['text'], padding=True, truncation=True, return_tensors='pt')
 
-# Model Initialization
+## Model Initialization
 model = GPT2LMHeadModel.from_pretrained('gpt2')
 
-# Model training
+## Model training
 inputs = encoded_data['input_ids']
 outputs = model(inputs, labels=inputs)
 loss = outputs.loss
 
 print(f'Complex algorithm training completed with loss: {loss.item()}')
 
-# Save trained model
+## Save trained model
 model.save_pretrained('models/GPT-3/trained_model')
 ```
 

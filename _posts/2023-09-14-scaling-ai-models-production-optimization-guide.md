@@ -5,7 +5,7 @@ permalink: posts/scaling-ai-models-production-optimization-guide
 layout: article
 ---
 
-# Scaling AI Models in Production
+## Scaling AI Models in Production
 
 In the last few years, as Artificial Intelligence (AI) and Machine Learning (ML) have come to the forefront of technology, a new challenge has begun to emerge - how to scale these AI models in a production environment. With computer capabilities advancing and data volumes growing at an exponential rate, the potential for AI models to make invaluable predictions or decisions in real-time has only increased.
 
@@ -32,11 +32,11 @@ As a general rule, the computational requirements when training and deploying mo
 
 ```python
 def train_model(model, data_loader):
-    # Training code
+    ## Training code
     ...
 
 def serve_model(model, request):
-    # Serving code
+    ## Serving code
     ...
 ```
 
@@ -70,7 +70,7 @@ Investing in hardware accelerators like GPUs or TPUs can speed up computation an
 
 ```python
 with tf.device('/GPU:0'):
-    # run your TensorFlow operations
+    ## run your TensorFlow operations
     ...
 ```
 
@@ -79,7 +79,7 @@ with tf.device('/GPU:0'):
 Model monitoring tools can be used to track, measure, and analyze model performance and implement alerting systems for system failures. Tools such as TensorFlow Model Analysis, Seldon Core, and Fiddler can help to monitor deployments effectively.
 
 ```python
-# TensorFlow Model Analysis
+## TensorFlow Model Analysis
 metrics = tfma.result_metrics(results)
 ```
 

@@ -123,34 +123,34 @@ model_monitoring_logging/
 │
 ├── monitoring/
 │   ├── prometheus/
-│   │   ├── prometheus.yml                # Configuration file for Prometheus server
-│   │   ├── alert.rules                   # Rules for alerting based on model metrics
+│   │   ├── prometheus.yml                ## Configuration file for Prometheus server
+│   │   ├── alert.rules                   ## Rules for alerting based on model metrics
 │   │   ├── ...
 │   │
 │   ├── grafana/
 │   │   ├── provisioning/
-│   │   │   ├── datasources/              # Configurations for data sources
-│   │   │   ├── dashboards/               # JSON files of pre-configured dashboards
+│   │   │   ├── datasources/              ## Configurations for data sources
+│   │   │   ├── dashboards/               ## JSON files of pre-configured dashboards
 │   │   │   └── ...
 │   │   ├── ...
 │   │
 │   └── alertmanager/
-│       ├── config.yml                    # Configuration file for Alertmanager
+│       ├── config.yml                    ## Configuration file for Alertmanager
 │       ├── ...
 │
 └── logging/
-    ├── elasticsearch/                    # Configuration files for Elasticsearch cluster
+    ├── elasticsearch/                    ## Configuration files for Elasticsearch cluster
     │   ├── elasticsearch.yml
     │   ├── jvm.options
     │   ├── ...
     │
-    ├── logstash/                         # Configurations for Logstash servers
+    ├── logstash/                         ## Configurations for Logstash servers
     │   ├── logstash.yml
     │   ├── pipelines.yml
     │   ├── ...
     │  
     └── kibana/
-        ├── kibana.yml                    # Configuration file for Kibana
+        ├── kibana.yml                    ## Configuration file for Kibana
         ├── ...
 ```
 
@@ -175,45 +175,45 @@ model_monitoring_logging/
 │
 ├── monitoring/
 │   ├── prometheus/
-│   │   ├── prometheus.yml                # Configuration file for Prometheus server
-│   │   ├── alert.rules                   # Rules for alerting based on model metrics
+│   │   ├── prometheus.yml                ## Configuration file for Prometheus server
+│   │   ├── alert.rules                   ## Rules for alerting based on model metrics
 │   │   ├── ...
 │   │
 │   ├── grafana/
 │   │   ├── provisioning/
-│   │   │   ├── datasources/              # Configurations for data sources
-│   │   │   ├── dashboards/               # JSON files of pre-configured dashboards
+│   │   │   ├── datasources/              ## Configurations for data sources
+│   │   │   ├── dashboards/               ## JSON files of pre-configured dashboards
 │   │   │   └── ...
 │   │   ├── ...
 │   │
 │   └── alertmanager/
-│       ├── config.yml                    # Configuration file for Alertmanager
+│       ├── config.yml                    ## Configuration file for Alertmanager
 │       ├── ...
 │
 └── logging/
-    ├── elasticsearch/                    # Configuration files for Elasticsearch cluster
+    ├── elasticsearch/                    ## Configuration files for Elasticsearch cluster
     │   ├── elasticsearch.yml
     │   ├── jvm.options
     │   ├── ...
     │
-    ├── logstash/                         # Configurations for Logstash servers
+    ├── logstash/                         ## Configurations for Logstash servers
     │   ├── logstash.yml
     │   ├── pipelines.yml
     │   ├── ...
     │  
     └── kibana/
-        ├── kibana.yml                    # Configuration file for Kibana
+        ├── kibana.yml                    ## Configuration file for Kibana
         ├── ...
 │
 └── models/
     ├── model1/
-    │   ├── monitoring_config.yaml        # Configuration specific to monitoring model1
-    │   ├── logging_config.yaml           # Configuration for logging model1
+    │   ├── monitoring_config.yaml        ## Configuration specific to monitoring model1
+    │   ├── logging_config.yaml           ## Configuration for logging model1
     │   ├── ...
     │
     ├── model2/
-    │   ├── monitoring_config.yaml        # Configuration specific to monitoring model2
-    │   ├── logging_config.yaml           # Configuration for logging model2
+    │   ├── monitoring_config.yaml        ## Configuration specific to monitoring model2
+    │   ├── logging_config.yaml           ## Configuration for logging model2
     │   ├── ...
     │
     └── ...
@@ -246,73 +246,73 @@ model_monitoring_logging/
 │
 ├── monitoring/
 │   ├── prometheus/
-│   │   ├── prometheus.yml                # Configuration file for Prometheus server
-│   │   ├── alert.rules                   # Rules for alerting based on model metrics
+│   │   ├── prometheus.yml                ## Configuration file for Prometheus server
+│   │   ├── alert.rules                   ## Rules for alerting based on model metrics
 │   │   ├── ...
 │   │
 │   ├── grafana/
 │   │   ├── provisioning/
-│   │   │   ├── datasources/              # Configurations for data sources
-│   │   │   ├── dashboards/               # JSON files of pre-configured dashboards
+│   │   │   ├── datasources/              ## Configurations for data sources
+│   │   │   ├── dashboards/               ## JSON files of pre-configured dashboards
 │   │   │   └── ...
 │   │   ├── ...
 │   │
 │   └── alertmanager/
-│       ├── config.yml                    # Configuration file for Alertmanager
+│       ├── config.yml                    ## Configuration file for Alertmanager
 │       ├── ...
 │
 └── logging/
-    ├── elasticsearch/                    # Configuration files for Elasticsearch cluster
+    ├── elasticsearch/                    ## Configuration files for Elasticsearch cluster
     │   ├── elasticsearch.yml
     │   ├── jvm.options
     │   ├── ...
     │
-    ├── logstash/                         # Configurations for Logstash servers
+    ├── logstash/                         ## Configurations for Logstash servers
     │   ├── logstash.yml
     │   ├── pipelines.yml
     │   ├── ...
     │  
     └── kibana/
-        ├── kibana.yml                    # Configuration file for Kibana
+        ├── kibana.yml                    ## Configuration file for Kibana
         ├── ...
 │
 └── models/
 │   ├── model1/
-│   │   ├── monitoring_config.yaml        # Configuration specific to monitoring model1
-│   │   ├── logging_config.yaml           # Configuration for logging model1
+│   │   ├── monitoring_config.yaml        ## Configuration specific to monitoring model1
+│   │   ├── logging_config.yaml           ## Configuration for logging model1
 │   │   ├── ...
 │   │
 │   ├── model2/
-│   │   ├── monitoring_config.yaml        # Configuration specific to monitoring model2
-│   │   ├── logging_config.yaml           # Configuration for logging model2
+│   │   ├── monitoring_config.yaml        ## Configuration specific to monitoring model2
+│   │   ├── logging_config.yaml           ## Configuration for logging model2
 │   │   ├── ...
 │   │
 │   └── ...
 │
 └── deployment/
     ├── prometheus/
-    │   ├── prometheus.yml                # Configuration specific to Prometheus server deployment
-    │   ├── dockerfile                   # Dockerfile for building Prometheus container
+    │   ├── prometheus.yml                ## Configuration specific to Prometheus server deployment
+    │   ├── dockerfile                   ## Dockerfile for building Prometheus container
     │   ├── ...
     │
     ├── grafana/
-    │   ├── config.ini                    # Configuration specific to Grafana deployment
-    │   ├── dockerfile                   # Dockerfile for building Grafana container
+    │   ├── config.ini                    ## Configuration specific to Grafana deployment
+    │   ├── dockerfile                   ## Dockerfile for building Grafana container
     │   ├── ...
     │
     ├── elasticsearch/
-    │   ├── elasticsearch.yml             # Configuration specific to Elasticsearch deployment
-    │   ├── dockerfile                   # Dockerfile for building Elasticsearch container
+    │   ├── elasticsearch.yml             ## Configuration specific to Elasticsearch deployment
+    │   ├── dockerfile                   ## Dockerfile for building Elasticsearch container
     │   ├── ...
     │
     ├── logstash/
-    │   ├── logstash.yml                  # Configuration specific to Logstash deployment
-    │   ├── dockerfile                   # Dockerfile for building Logstash container
+    │   ├── logstash.yml                  ## Configuration specific to Logstash deployment
+    │   ├── dockerfile                   ## Dockerfile for building Logstash container
     │   ├── ...
     │
     └── kibana/
-        ├── kibana.yml                    # Configuration specific to Kibana deployment
-        ├── dockerfile                   # Dockerfile for building Kibana container
+        ├── kibana.yml                    ## Configuration specific to Kibana deployment
+        ├── dockerfile                   ## Dockerfile for building Kibana container
         ├── ...
 ```
 
@@ -361,30 +361,30 @@ from sklearn.metrics import accuracy_score
 import joblib
 
 def train_and_evaluate_model(data_file_path):
-    # Load the mock data from the specified file path
+    ## Load the mock data from the specified file path
     data = pd.read_csv(data_file_path)
 
-    # Separate features and target variable
+    ## Separate features and target variable
     X = data.drop('target', axis=1)
     y = data['target']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize the Random Forest classifier
+    ## Initialize the Random Forest classifier
     clf = RandomForestClassifier(n_estimators=100, random_state=42)
 
-    # Train the classifier
+    ## Train the classifier
     clf.fit(X_train, y_train)
 
-    # Make predictions on the test set
+    ## Make predictions on the test set
     y_pred = clf.predict(X_test)
 
-    # Evaluate the model performance
+    ## Evaluate the model performance
     accuracy = accuracy_score(y_test, y_pred)
     print(f'Model accuracy: {accuracy}')
 
-    # Save the trained model to a file
+    ## Save the trained model to a file
     model_output_path = 'trained_models/random_forest_model.pkl'
     joblib.dump(clf, model_output_path)
     print(f'Trained model saved to: {model_output_path}')
@@ -417,34 +417,34 @@ from tensorflow.keras.optimizers import Adam
 import joblib
 
 def train_and_evaluate_deep_learning_model(data_file_path):
-    # Load the mock data from the specified file path
+    ## Load the mock data from the specified file path
     data = pd.read_csv(data_file_path)
 
-    # Separate features and target variable
+    ## Separate features and target variable
     X = data.drop('target', axis=1)
     y = data['target']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Build the deep learning model
+    ## Build the deep learning model
     model = Sequential([
         Dense(64, input_shape=(X.shape[1],), activation='relu'),
         Dense(32, activation='relu'),
         Dense(1, activation='sigmoid')
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer=Adam(learning_rate=0.001), loss='binary_crossentropy', metrics=['accuracy'])
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train, epochs=50, batch_size=64, validation_data=(X_test, y_test))
 
-    # Evaluate the model performance
+    ## Evaluate the model performance
     _, accuracy = model.evaluate(X_test, y_test)
     print(f'Model accuracy: {accuracy}')
 
-    # Save the trained model to a file
+    ## Save the trained model to a file
     model_output_path = 'trained_models/deep_learning_model.h5'
     model.save(model_output_path)
     print(f'Trained model saved to: {model_output_path}')

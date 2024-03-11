@@ -64,42 +64,42 @@ By integrating these components into the MLOps infrastructure, the AI-powered Pr
 ```plaintext
 AI-powered-Predictive-Policing/
 ├── data/
-│   ├── raw/                             # Raw data from various sources
-│   ├── processed/                       # Processed data for model training and evaluation
-│   └── external/                        # External datasets used for enrichment
+│   ├── raw/                             ## Raw data from various sources
+│   ├── processed/                       ## Processed data for model training and evaluation
+│   └── external/                        ## External datasets used for enrichment
 │
 ├── models/
-│   ├── train/                           # Scripts and configuration for model training
-│   ├── evaluate/                        # Evaluation scripts and metrics
-│   └── production/                      # Deployed and production-ready models
+│   ├── train/                           ## Scripts and configuration for model training
+│   ├── evaluate/                        ## Evaluation scripts and metrics
+│   └── production/                      ## Deployed and production-ready models
 │
 ├── src/
-│   ├── data_processing/                 # Code for data cleaning, transformation, and feature engineering
-│   ├── model_development/               # PyTorch scripts for machine learning model development
-│   ├── spark_processing/                # Spark scripts for distributed data processing
-│   └── monitoring/                      # Grafana dashboard configurations and monitoring scripts
+│   ├── data_processing/                 ## Code for data cleaning, transformation, and feature engineering
+│   ├── model_development/               ## PyTorch scripts for machine learning model development
+│   ├── spark_processing/                ## Spark scripts for distributed data processing
+│   └── monitoring/                      ## Grafana dashboard configurations and monitoring scripts
 │
 ├── pipelines/
-│   ├── data_ingestion/                  # Pipelines for data extraction and ingestion
-│   ├── model_training/                  # CI/CD pipelines for model training and evaluation
-│   └── model_deployment/                # Automation scripts for model deployment and serving
+│   ├── data_ingestion/                  ## Pipelines for data extraction and ingestion
+│   ├── model_training/                  ## CI/CD pipelines for model training and evaluation
+│   └── model_deployment/                ## Automation scripts for model deployment and serving
 │
 ├── infrastructure/
-│   ├── dockerfiles/                    # Docker configurations for containerization
-│   ├── kubernetes/                     # Configuration files for Kubernetes deployment
-│   └── ansible/                        # Infrastructure automation scripts with Ansible
+│   ├── dockerfiles/                    ## Docker configurations for containerization
+│   ├── kubernetes/                     ## Configuration files for Kubernetes deployment
+│   └── ansible/                        ## Infrastructure automation scripts with Ansible
 │
 ├── docs/
-│   ├── data_documentation.md            # Data dictionary and data schema documentation
-│   ├── model_architecture.md            # Description of model architectures and hyperparameters
-│   └── deployment_guide.md              # Guide for deploying and scaling the application
+│   ├── data_documentation.md            ## Data dictionary and data schema documentation
+│   ├── model_architecture.md            ## Description of model architectures and hyperparameters
+│   └── deployment_guide.md              ## Guide for deploying and scaling the application
 │
 ├── tests/
-│   ├── unit_tests/                      # Unit tests for individual components
-│   └── integration_tests/               # Integration tests for end-to-end validation
+│   ├── unit_tests/                      ## Unit tests for individual components
+│   └── integration_tests/               ## Integration tests for end-to-end validation
 │
-├── LICENSE                              # License information for the repository
-└── README.md                            # Overview and instructions for the repository
+├── LICENSE                              ## License information for the repository
+└── README.md                            ## Overview and instructions for the repository
 ```
 
 ### Description:
@@ -129,17 +129,17 @@ The "models" directory in the AI-powered Predictive Policing repository holds al
 ```plaintext
 models/
 ├── train/
-│   ├── model_training.py                # Script for training the predictive models
-│   ├── hyperparameter_tuning.py         # Script for hyperparameter tuning
-│   └── cross_validation.py              # Script for cross-validation of models
+│   ├── model_training.py                ## Script for training the predictive models
+│   ├── hyperparameter_tuning.py         ## Script for hyperparameter tuning
+│   └── cross_validation.py              ## Script for cross-validation of models
 ├── evaluate/
-│   ├── model_evaluation.py              # Script for evaluating model performance
-│   ├── performance_metrics.py           # Scripts for calculating performance metrics
-│   └── visualization.py                 # Script for visualizing model evaluation results
+│   ├── model_evaluation.py              ## Script for evaluating model performance
+│   ├── performance_metrics.py           ## Scripts for calculating performance metrics
+│   └── visualization.py                 ## Script for visualizing model evaluation results
 └── production/
-    ├── deployed_model.pth               # Serialized production-ready model for deployment
-    ├── deployment_config.yaml           # Configuration file for model deployment
-    └── inference_service.py             # Code for model inference service
+    ├── deployed_model.pth               ## Serialized production-ready model for deployment
+    ├── deployment_config.yaml           ## Configuration file for model deployment
+    └── inference_service.py             ## Code for model inference service
 ```
 
 ### Description:
@@ -166,15 +166,15 @@ The "deployment" directory in the AI-powered Predictive Policing repository mana
 ```plaintext
 deployment/
 ├── dockerfiles/
-│   ├── model_inference.Dockerfile       # Dockerfile for creating container for model inference service
-│   └── spark_processing.Dockerfile      # Dockerfile for creating container for Spark processing
+│   ├── model_inference.Dockerfile       ## Dockerfile for creating container for model inference service
+│   └── spark_processing.Dockerfile      ## Dockerfile for creating container for Spark processing
 ├── kubernetes/
-│   ├── deployment.yaml                  # Kubernetes deployment configuration for model inference service
-│   ├── service.yaml                     # Kubernetes service configuration for exposing model inference service
-│   └── spark_job.yaml                   # Kubernetes configuration for running Spark job for data processing
+│   ├── deployment.yaml                  ## Kubernetes deployment configuration for model inference service
+│   ├── service.yaml                     ## Kubernetes service configuration for exposing model inference service
+│   └── spark_job.yaml                   ## Kubernetes configuration for running Spark job for data processing
 └── ansible/
-    ├── deploy_model.yaml                # Ansible playbook for deploying production-ready models
-    └── scale_infrastructure.yaml         # Ansible playbook for scaling the infrastructure for increased load
+    ├── deploy_model.yaml                ## Ansible playbook for deploying production-ready models
+    └── scale_infrastructure.yaml         ## Ansible playbook for scaling the infrastructure for increased load
 ```
 
 ### Description:
@@ -195,8 +195,8 @@ deployment/
 The structured "deployment" directory and its contents facilitate a smooth and automated deployment process for the AI-powered Predictive Policing application. It streamlines the packaging of components into deployable artifacts, orchestrates the deployment of services using Kubernetes, and enables infrastructure automation through Ansible playbooks. This organized structure enhances the maintainability, scalability, and consistency of the deployment workflow.
 
 ```python
-# File: model_training.py
-# Description: Script for training the predictive models using PyTorch and Spark with mock data
+## File: model_training.py
+## Description: Script for training the predictive models using PyTorch and Spark with mock data
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -205,24 +205,24 @@ from pyspark.sql import SparkSession
 from pyspark.ml.feature import VectorAssembler
 from pyspark.ml.regression import LinearRegression
 
-# File path for mock data
+## File path for mock data
 mock_data_path = "data/processed/mock_crime_data.csv"
 
-# Set up a Spark session
+## Set up a Spark session
 spark = SparkSession.builder.appName("PredictivePolicing").getOrCreate()
 
-# Load mock crime data as a Spark DataFrame
+## Load mock crime data as a Spark DataFrame
 crime_data = spark.read.csv(mock_data_path, header=True, inferSchema=True)
 
-# Feature engineering using VectorAssembler
-feature_columns = crime_data.columns[:-1]  # Selecting all columns as features except the target variable
+## Feature engineering using VectorAssembler
+feature_columns = crime_data.columns[:-1]  ## Selecting all columns as features except the target variable
 assembler = VectorAssembler(inputCols=feature_columns, outputCol="features")
 assembled_data = assembler.transform(crime_data)
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 train_data, test_data = assembled_data.randomSplit([0.7, 0.3])
 
-# Define a simple neural network model using PyTorch
+## Define a simple neural network model using PyTorch
 input_size = len(feature_columns)
 output_size = 1
 model = nn.Sequential(
@@ -233,11 +233,11 @@ model = nn.Sequential(
     nn.Linear(32, output_size)
 )
 
-# Loss function and optimizer
+## Loss function and optimizer
 criterion = nn.MSELoss()
 optimizer = optim.Adam(model.parameters(), lr=0.001)
 
-# Train the model using mock data
+## Train the model using mock data
 for epoch in range(100):
     for batch in train_data.toLocalIterator():
         features = torch.Tensor(batch["features"])
@@ -248,10 +248,10 @@ for epoch in range(100):
         loss.backward()
         optimizer.step()
 
-# Save the trained model
+## Save the trained model
 torch.save(model.state_dict(), "models/trained_model.pth")
 
-# Close the Spark session
+## Close the Spark session
 spark.stop()
 ```
 
@@ -260,8 +260,8 @@ In the above `model_training.py` script, we employ PyTorch for defining a simple
 Please ensure that the mock crime data is saved in the specified file path "data/processed/mock_crime_data.csv" before running the script.
 
 ```python
-# File: complex_model_training.py
-# Description: Script for training a complex machine learning algorithm using PyTorch and Spark with mock data
+## File: complex_model_training.py
+## Description: Script for training a complex machine learning algorithm using PyTorch and Spark with mock data
 import torch
 import torch.nn as nn
 from pyspark.sql import SparkSession
@@ -269,42 +269,42 @@ from pyspark.ml.feature import VectorAssembler
 from pyspark.ml.classification import RandomForestClassifier
 from pyspark.ml.evaluation import MulticlassClassificationEvaluator
 
-# File paths for mock data
+## File paths for mock data
 mock_data_path = "data/processed/mock_crime_data.csv"
 mock_test_data_path = "data/processed/mock_test_data.csv"
 
-# Set up a Spark session
+## Set up a Spark session
 spark = SparkSession.builder.appName("PredictivePolicing").getOrCreate()
 
-# Load mock crime data as a Spark DataFrame
+## Load mock crime data as a Spark DataFrame
 crime_data = spark.read.csv(mock_data_path, header=True, inferSchema=True)
 
-# Feature engineering using VectorAssembler
-feature_columns = crime_data.columns[:-1]  # Selecting all columns as features except the target variable
+## Feature engineering using VectorAssembler
+feature_columns = crime_data.columns[:-1]  ## Selecting all columns as features except the target variable
 assembler = VectorAssembler(inputCols=feature_columns, outputCol="features")
 assembled_data = assembler.transform(crime_data)
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 train_data, test_data = assembled_data.randomSplit([0.8, 0.2])
 
-# Define a complex machine learning algorithm using PySpark's RandomForestClassifier
+## Define a complex machine learning algorithm using PySpark's RandomForestClassifier
 classifier = RandomForestClassifier(labelCol="label", featuresCol="features", numTrees=100, maxDepth=8)
 
-# Train the model using mock data
+## Train the model using mock data
 model = classifier.fit(train_data)
 
-# Make predictions on the test data
+## Make predictions on the test data
 predictions = model.transform(test_data)
 
-# Evaluate the model's performance
+## Evaluate the model's performance
 evaluator = MulticlassClassificationEvaluator(labelCol="label", predictionCol="prediction", metricName="accuracy")
 accuracy = evaluator.evaluate(predictions)
 print("Test set accuracy = " + str(accuracy))
 
-# Save the trained model
+## Save the trained model
 model.save("models/trained_random_forest_model")
 
-# Close the Spark session
+## Close the Spark session
 spark.stop()
 ```
 

@@ -283,18 +283,18 @@ from tensorflow import keras
 from scipy.io import wavfile
 
 def complex_machine_learning_algorithm(audio_file_path):
-    # Load the audio file
+    ## Load the audio file
     sample_rate, audio_data = wavfile.read(audio_file_path)
     
-    # Preprocess the audio data (e.g., normalization, silence removal, feature extraction)
-    # Placeholder for preprocessing steps
-    preprocessed_audio = audio_data  # Placeholder for preprocessed audio data
+    ## Preprocess the audio data (e.g., normalization, silence removal, feature extraction)
+    ## Placeholder for preprocessing steps
+    preprocessed_audio = audio_data  ## Placeholder for preprocessed audio data
     
-    # Load the deep learning model
-    model = keras.models.load_model('path_to_trained_model')  # Replace 'path_to_trained_model' with the actual path
+    ## Load the deep learning model
+    model = keras.models.load_model('path_to_trained_model')  ## Replace 'path_to_trained_model' with the actual path
     
-    # Perform inference using the loaded model
-    # Assuming the model accepts preprocessed audio data as input
+    ## Perform inference using the loaded model
+    ## Assuming the model accepts preprocessed audio data as input
     predicted_transcription = model.predict(np.expand_dims(preprocessed_audio, axis=0))
     
     return predicted_transcription
@@ -318,21 +318,21 @@ import numpy as np
 import tensorflow as tf
 
 def complex_deep_learning_algorithm(audio_file_path):
-    # Load and process the audio data
-    audio_data, sample_rate = librosa.load(audio_file_path, sr=16000)  # Load the audio file using librosa
+    ## Load and process the audio data
+    audio_data, sample_rate = librosa.load(audio_file_path, sr=16000)  ## Load the audio file using librosa
     
-    # Extract features from the audio data (e.g., Mel spectrograms, MFCCs)
-    # Example: Mel spectrogram feature extraction
+    ## Extract features from the audio data (e.g., Mel spectrograms, MFCCs)
+    ## Example: Mel spectrogram feature extraction
     mel_spectrogram = librosa.feature.melspectrogram(y=audio_data, sr=sample_rate, n_mels=128)
     log_mel_spectrogram = librosa.power_to_db(mel_spectrogram, ref=np.max)
     
-    # Prepare the input tensor for the deep learning model
-    input_data = np.expand_dims(log_mel_spectrogram, axis=-1)  # Add a channel dimension for the model input
+    ## Prepare the input tensor for the deep learning model
+    input_data = np.expand_dims(log_mel_spectrogram, axis=-1)  ## Add a channel dimension for the model input
     
-    # Load the deep learning model
-    model = tf.keras.models.load_model('path_to_trained_model')  # Replace 'path_to_trained_model' with the actual path
+    ## Load the deep learning model
+    model = tf.keras.models.load_model('path_to_trained_model')  ## Replace 'path_to_trained_model' with the actual path
     
-    # Perform inference using the loaded model
+    ## Perform inference using the loaded model
     predicted_transcription = model.predict(np.expand_dims(input_data, axis=0))
     
     return predicted_transcription

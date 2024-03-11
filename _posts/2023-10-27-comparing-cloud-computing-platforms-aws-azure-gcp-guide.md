@@ -5,7 +5,7 @@ permalink: posts/comparing-cloud-computing-platforms-aws-azure-gcp-guide
 layout: article
 ---
 
-# Cloud Computing Platforms: AWS, Azure, GCP
+## Cloud Computing Platforms: AWS, Azure, GCP
 
 Cloud Computing Platforms have revolutionized the world of IT, bringing a multitude of benefits for large enterprises, SMEs, and even individual developers. They have transformed the way we develop, deploy, and scale software, hardware, and networking infrastructure. Top-tier vendors in this field are Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform (GCP). This article will take a thorough look into these platforms, their services, strengths, and differences.
 
@@ -20,7 +20,7 @@ AWS, launched in 2006, is the pioneer and leader in the cloud services industry,
 3. **Relational Database Service (RDS):** Facilitates easier setup, operational tasks, and scaling of relational databases.
 
 ```python
-# python example to launch an EC2 instance in AWS
+## python example to launch an EC2 instance in AWS
 import boto3
 ec2 = boto3.resource('ec2')
 
@@ -41,7 +41,7 @@ Microsoft Azure, launched in 2010, is the closest competitor to AWS. Azure gives
 3. **Blob Storage:** For storing large amounts of unstructured object data, such as text or binary.
 
 ```csharp
-// C# example to create a blob in Azure
+// C## example to create a blob in Azure
 BlobServiceClient blobServiceClient = new BlobServiceClient(connectionString);
 BlobContainerClient containerClient = blobServiceClient.GetBlobContainerClient("yourcontainername");
 BlobClient blobClient = containerClient.GetBlobClient("yourblobname");

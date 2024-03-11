@@ -5,7 +5,7 @@ permalink: posts/project-management-strategies-in-ai-startups
 layout: article
 ---
 
-# Project Management in AI Startups: A Comprehensive Guide
+## Project Management in AI Startups: A Comprehensive Guide
 
 Managing projects in an AI startup requires a unique set of skills and expertise. This is due to the nature of AI tech and its nascent stage of development. AI projects usually involve complex systems and a high level of uncertainty, making project management crucial to the success of these endeavors. Read on for a comprehensive guide on how to effectively manage AI projects from the perspective of a startup.
 
@@ -34,7 +34,7 @@ An effective project management strategy necessitates a keen understanding of th
 AI development is best suited to the Agile methodology due to its iterative and flexible nature.
 
 ```python
-# Typical AI project planning with Agile
+## Typical AI project planning with Agile
 sprint_planning = {
     'sprint1' : ['data_preparation_1', 'model_building_1'],
     'sprint2' : ['model_building_2', 'model_evaluation_1'],

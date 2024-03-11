@@ -5,7 +5,7 @@ permalink: posts/climate-change-analysis-and-prediction-model
 layout: article
 ---
 
-# Climate Change Analysis and Prediction Model Repository
+## Climate Change Analysis and Prediction Model Repository
 
 ## Description
 
@@ -39,7 +39,7 @@ To accomplish the objectives efficiently and handle high user traffic, the follo
 
 By leveraging these libraries and technologies, the Climate Change Analysis and Prediction Model repository ensures efficient data management, high scalability, and optimal user experience.
 
-# Proposed Scalable File Structure
+## Proposed Scalable File Structure
 
 To ensure a scalable and organized file structure for the Climate Change Analysis and Prediction Model repository, the following directory structure is recommended:
 
@@ -120,7 +120,7 @@ This file structure separates the backend and frontend components, allowing for 
 
 This proposed file structure promotes modularity, separation of concerns, and scalability. It allows for easy navigation, maintenance, and future expansion of the Climate Change Analysis and Prediction Model repository.
 
-# Climate Analysis Service
+## Climate Analysis Service
 
 In the `backend/src/main/java/com/climatechange/analysis/services` directory, create a new file called `ClimateAnalysisService.java`. This file will handle one of the repository's core logic, which is the analysis of climate data. Here is an outline of the file's structure and functionality:
 

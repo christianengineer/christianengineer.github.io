@@ -5,7 +5,7 @@ permalink: posts/ai-in-agriculture-for-crop-prediction-use-ai-for-predicting-cro
 layout: article
 ---
 
-# AI in Agriculture for Crop Prediction
+## AI in Agriculture for Crop Prediction
 
 ## Objectives
 The objective of the AI in Agriculture for Crop Prediction project is to develop a machine learning model that can predict crop yields based on various input parameters such as weather data, soil quality, and historical crop yield data. This will enable farmers to make informed decisions about crop planning, resource allocation, and harvest predictions, ultimately leading to improved agricultural productivity and efficiency.
@@ -53,35 +53,35 @@ By leveraging cloud services, implementing data processing pipelines, and settin
 AI-in-Agriculture-Crop-Prediction/
 │
 ├── data/
-│   ├── raw/                          # Raw data from various sources
-│   ├── processed/                    # Processed and cleaned data ready for model training
-│   └── models/                       # Trained machine learning models
+│   ├── raw/                          ## Raw data from various sources
+│   ├── processed/                    ## Processed and cleaned data ready for model training
+│   └── models/                       ## Trained machine learning models
 │
 ├── notebooks/
-│   ├── data_exploration.ipynb        # Jupyter notebook for data exploration and analysis
-│   ├── data_preprocessing.ipynb       # Notebook for data preprocessing and feature engineering
-│   └── model_training_evaluation.ipynb  # Notebook for model training, evaluation, and hyperparameter tuning
+│   ├── data_exploration.ipynb        ## Jupyter notebook for data exploration and analysis
+│   ├── data_preprocessing.ipynb       ## Notebook for data preprocessing and feature engineering
+│   └── model_training_evaluation.ipynb  ## Notebook for model training, evaluation, and hyperparameter tuning
 │
 ├── src/
-│   ├── data_ingestion.py             # Scripts for automated data ingestion from external sources
-│   ├── data_preprocessing.py         # Module for cleaning, preprocessing, and transforming the data
-│   ├── model_training.py             # Scripts for training machine learning and deep learning models
-│   ├── model_evaluation.py           # Scripts for evaluating and testing trained models
-│   └── api/                          # API for serving the predictive model
+│   ├── data_ingestion.py             ## Scripts for automated data ingestion from external sources
+│   ├── data_preprocessing.py         ## Module for cleaning, preprocessing, and transforming the data
+│   ├── model_training.py             ## Scripts for training machine learning and deep learning models
+│   ├── model_evaluation.py           ## Scripts for evaluating and testing trained models
+│   └── api/                          ## API for serving the predictive model
 │
 ├── infrastructure/
-│   ├── cloud_deployment/             # Infrastructure as code for cloud resources deployment
-│   ├── data_processing_pipeline/     # Configuration and scripts for data processing pipeline
-│   ├── machine_learning_infrastructure/  # Configuration for scalable machine learning infrastructure
-│   └── monitoring_devops/            # Scripts for logging, monitoring, and CI/CD pipelines
+│   ├── cloud_deployment/             ## Infrastructure as code for cloud resources deployment
+│   ├── data_processing_pipeline/     ## Configuration and scripts for data processing pipeline
+│   ├── machine_learning_infrastructure/  ## Configuration for scalable machine learning infrastructure
+│   └── monitoring_devops/            ## Scripts for logging, monitoring, and CI/CD pipelines
 │
 ├── docs/
-│   ├── requirements.md               # Requirements and dependencies for running the application
-│   ├── architecture_diagrams/        # Diagrams depicting system architecture and design
-│   └── user_guide.md                 # User guide for utilizing the crop prediction application
+│   ├── requirements.md               ## Requirements and dependencies for running the application
+│   ├── architecture_diagrams/        ## Diagrams depicting system architecture and design
+│   └── user_guide.md                 ## User guide for utilizing the crop prediction application
 │
-├── README.md                         # Overview of the AI in Agriculture for Crop Prediction project
-└── LICENSE                           # License information for the repository
+├── README.md                         ## Overview of the AI in Agriculture for Crop Prediction project
+└── LICENSE                           ## License information for the repository
 ```
 
 In this scalable file structure for the AI in Agriculture for Crop Prediction repository, the project is organized into distinct directories to manage different aspects of the application. The structure includes directories for data management, notebooks for analysis and model development, source code for data processing and modeling, infrastructure configuration, documentation, and a README file for an overview of the project. This file structure promotes modularity and organization, making it easier for collaborators to contribute to the project and maintain code consistency.
@@ -90,13 +90,13 @@ In the `models` directory of the AI in Agriculture for Crop Prediction applicati
 
 ```
 models/
-├── crop_yield_prediction_model_1/         # Directory for the first version of the crop yield prediction model
-│   ├── model_weights.h5                   # Trained weights of the machine learning model
-│   ├── model_architecture.json             # JSON file containing the architecture of the model
-│   ├── model_hyperparameters.yaml          # Hyperparameters used for training the model
-│   └── model_metrics.txt                   # Evaluation metrics and performance of the model
+├── crop_yield_prediction_model_1/         ## Directory for the first version of the crop yield prediction model
+│   ├── model_weights.h5                   ## Trained weights of the machine learning model
+│   ├── model_architecture.json             ## JSON file containing the architecture of the model
+│   ├── model_hyperparameters.yaml          ## Hyperparameters used for training the model
+│   └── model_metrics.txt                   ## Evaluation metrics and performance of the model
 │
-└── crop_yield_prediction_model_2/         # Directory for a subsequent version of the crop yield prediction model
+└── crop_yield_prediction_model_2/         ## Directory for a subsequent version of the crop yield prediction model
     ├── model_weights.h5
     ├── model_architecture.json
     ├── model_hyperparameters.yaml
@@ -117,13 +117,13 @@ In the `deployment` directory of the AI in Agriculture for Crop Prediction appli
 ```
 deployment/
 ├── model_deployment/
-│   ├── dockerfile                   # Configuration for building the model deployment container
-│   ├── requirements.txt             # Python dependencies required for serving the predictive model
-│   └── app.py                       # RESTful API for serving the predictive model
+│   ├── dockerfile                   ## Configuration for building the model deployment container
+│   ├── requirements.txt             ## Python dependencies required for serving the predictive model
+│   └── app.py                       ## RESTful API for serving the predictive model
 │
 └── cloud_infrastructure/
-    ├── terraform/                   # Terraform configuration for cloud infrastructure deployment
-    └── kubernetes/                  # Kubernetes configuration for container orchestration
+    ├── terraform/                   ## Terraform configuration for cloud infrastructure deployment
+    └── kubernetes/                  ## Kubernetes configuration for container orchestration
 ```
 
 Details for the files and directories within the `deployment` directory are as follows:
@@ -146,28 +146,28 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 
 def train_crop_yield_prediction_model(data_file_path):
-    # Load mock agricultural data from file
+    ## Load mock agricultural data from file
     agricultural_data = pd.read_csv(data_file_path)
 
-    # Preprocessing: Separate features and target variable
+    ## Preprocessing: Separate features and target variable
     X = agricultural_data.drop(columns=['yield'])
     y = agricultural_data['yield']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize and train the machine learning model
+    ## Initialize and train the machine learning model
     model = RandomForestRegressor(n_estimators=100, random_state=42)
     model.fit(X_train, y_train)
 
-    # Predict crop yields on the test set
+    ## Predict crop yields on the test set
     y_pred = model.predict(X_test)
 
-    # Evaluate the model
+    ## Evaluate the model
     mse = mean_squared_error(y_test, y_pred)
     print(f"Mean Squared Error: {mse}")
 
-    # Return the trained model for future predictions
+    ## Return the trained model for future predictions
     return model
 ```
 
@@ -193,22 +193,22 @@ from tensorflow.keras.optimizers import Adam
 from sklearn.metrics import mean_squared_error
 
 def train_deep_learning_crop_yield_prediction_model(data_file_path):
-    # Load mock agricultural data from file
+    ## Load mock agricultural data from file
     agricultural_data = pd.read_csv(data_file_path)
 
-    # Preprocessing: Separate features and target variable
+    ## Preprocessing: Separate features and target variable
     X = agricultural_data.drop(columns=['yield'])
     y = agricultural_data['yield']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Standardize the data
+    ## Standardize the data
     scaler = StandardScaler()
     X_train_scaled = scaler.fit_transform(X_train)
     X_test_scaled = scaler.transform(X_test)
 
-    # Build the deep learning model
+    ## Build the deep learning model
     model = Sequential([
         Dense(64, activation='relu', input_shape=(X_train.shape[1],)),
         Dropout(0.2),
@@ -217,19 +217,19 @@ def train_deep_learning_crop_yield_prediction_model(data_file_path):
         Dense(1)
     ])
 
-    # Compile the model
+    ## Compile the model
     optimizer = Adam(learning_rate=0.001)
     model.compile(optimizer=optimizer, loss='mean_squared_error')
 
-    # Train the model
+    ## Train the model
     model.fit(X_train_scaled, y_train, epochs=50, batch_size=32, validation_split=0.2, verbose=2)
 
-    # Evaluate the model
+    ## Evaluate the model
     y_pred = model.predict(X_test_scaled)
     mse = mean_squared_error(y_test, y_pred)
     print(f"Mean Squared Error: {mse}")
 
-    # Return the trained model for future predictions
+    ## Return the trained model for future predictions
     return model
 ```
 

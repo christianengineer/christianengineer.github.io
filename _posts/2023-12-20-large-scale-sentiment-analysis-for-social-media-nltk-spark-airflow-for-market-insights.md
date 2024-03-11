@@ -5,7 +5,7 @@ permalink: posts/large-scale-sentiment-analysis-for-social-media-nltk-spark-airf
 layout: article
 ---
 
-# AI Large Scale Sentiment Analysis for Social Media
+## AI Large Scale Sentiment Analysis for Social Media
 
 ## Objectives:
 - Gather and analyze large volumes of social media data to extract sentiment insights for market analysis
@@ -29,7 +29,7 @@ layout: article
 
 By employing these objectives, system design strategies, and selected libraries and technologies, we can build a scalable, data-intensive AI application for large-scale sentiment analysis of social media data, providing valuable market insights and trends for further analysis and decision-making.
 
-# MLOps Infrastructure for Large Scale Sentiment Analysis for Social Media
+## MLOps Infrastructure for Large Scale Sentiment Analysis for Social Media
 
 ## Continuous Integration/Continuous Deployment (CI/CD) Pipeline:
 - **Data Ingestion:** Implement CI/CD pipeline for continuous ingestion of social media data into the system. This could involve automated data collection, validation, and integration into the data processing pipeline.
@@ -179,7 +179,7 @@ This subdirectory houses the configurations for anomaly detection, including rul
 By organizing these deployment artifacts within the deployment directory, the infrastructure supports the deployment, orchestration, and monitoring of the large-scale sentiment analysis system for social media data processing.
 
 ```python
-# model_training/train_sentiment_model.py
+## model_training/train_sentiment_model.py
 
 import nltk
 from nltk.tokenize import word_tokenize
@@ -188,7 +188,7 @@ from nltk.sentiment import SentimentIntensityAnalyzer
 import pandas as pd
 from pyspark.sql import SparkSession
 
-# Load mock data
+## Load mock data
 data = {
     'text': ["I love the new product! It's fantastic!",
              "The customer service was terrible. I won't be shopping here again.",
@@ -197,7 +197,7 @@ data = {
 }
 df = pd.DataFrame(data)
 
-# NLTK preprocessing
+## NLTK preprocessing
 nltk.download('punkt')
 nltk.download('vader_lexicon')
 stop_words = set(stopwords.words('english'))
@@ -207,44 +207,44 @@ df['tokens'] = df['text'].apply(word_tokenize)
 df['tokens'] = df['tokens'].apply(lambda x: [word for word in x if word.isalnum() and word not in stop_words])
 df['sentiment_score'] = df['text'].apply(lambda x: sid.polarity_scores(x)['compound'])
 
-# Initialize Spark session
+## Initialize Spark session
 spark = SparkSession.builder.appName("SentimentModelTraining").getOrCreate()
 
-# Create Spark dataframe from the preprocessed data
+## Create Spark dataframe from the preprocessed data
 spark_df = spark.createDataFrame(df)
 
-# Train the sentiment analysis model using Spark ML, e.g., Logistic Regression, Naive Bayes, etc.
-# (Add code for model training using Spark ML)
+## Train the sentiment analysis model using Spark ML, e.g., Logistic Regression, Naive Bayes, etc.
+## (Add code for model training using Spark ML)
 
-# Serialize and store the trained model for deployment and evaluation
-# (Add code for model serialization)
+## Serialize and store the trained model for deployment and evaluation
+## (Add code for model serialization)
 
-# Example model training using Spark's Logistic Regression
+## Example model training using Spark's Logistic Regression
 from pyspark.ml.feature import VectorAssembler
 from pyspark.ml.classification import LogisticRegression
 
-# Assemble features
+## Assemble features
 assembler = VectorAssembler(inputCols=['sentiment_score'], outputCol='features')
 output = assembler.transform(spark_df)
 
-# Initialize and fit the model
+## Initialize and fit the model
 lr = LogisticRegression(labelCol='label', featuresCol='features', maxIter=10, regParam=0.3, elasticNetParam=0.8)
 model = lr.fit(output)
 
-# Serialize the model (in a production setting, this would typically involve saving the model to a distributed file system or model registry)
+## Serialize the model (in a production setting, this would typically involve saving the model to a distributed file system or model registry)
 
-# Show model summary
+## Show model summary
 print("Model training complete. Model summary:")
 print(model.summary)
 
-# Close the Spark session
+## Close the Spark session
 spark.stop()
 ```
 
 In this file, the sentiment analysis model is trained using mock data. The NLTK library is utilized for text preprocessing, and the trained model is serialized using Spark's machine learning library. The file path for this script would be `model_training/train_sentiment_model.py`.
 
 ```python
-# model_training/train_sentiment_model_complex.py
+## model_training/train_sentiment_model_complex.py
 
 import nltk
 from nltk.tokenize import word_tokenize
@@ -257,7 +257,7 @@ from pyspark.ml.classification import RandomForestClassifier
 from pyspark.ml import Pipeline
 from pyspark.ml.evaluation import BinaryClassificationEvaluator
 
-# Load mock data
+## Load mock data
 data = {
     'text': ["I love the new product! It's fantastic!",
              "The customer service was terrible. I won't be shopping here again.",
@@ -266,7 +266,7 @@ data = {
 }
 df = pd.DataFrame(data)
 
-# NLTK preprocessing
+## NLTK preprocessing
 nltk.download('punkt')
 nltk.download('vader_lexicon')
 stop_words = set(stopwords.words('english'))
@@ -276,41 +276,41 @@ df['tokens'] = df['text'].apply(word_tokenize)
 df['tokens'] = df['tokens'].apply(lambda x: [word for word in x if word.isalnum() and word not in stop_words])
 df['sentiment_score'] = df['text'].apply(lambda x: sid.polarity_scores(x)['compound'])
 
-# Initialize Spark session
+## Initialize Spark session
 spark = SparkSession.builder.appName("SentimentModelTrainingComplex").getOrCreate()
 
-# Create Spark dataframe from the preprocessed data
+## Create Spark dataframe from the preprocessed data
 spark_df = spark.createDataFrame(df)
 
-# Initialize components for the complex sentiment analysis model
+## Initialize components for the complex sentiment analysis model
 tokenizer = Tokenizer(inputCol="text", outputCol="words")
 hashing_tf = HashingTF(inputCol=tokenizer.getOutputCol(), outputCol="raw_features")
 idf = IDF(inputCol=hashing_tf.getOutputCol(), outputCol="features")
 rf = RandomForestClassifier(labelCol="label", featuresCol="features")
 
-# Define the ML pipeline
+## Define the ML pipeline
 pipeline = Pipeline(stages=[tokenizer, hashing_tf, idf, rf])
 
-# Split the data into train and test sets
+## Split the data into train and test sets
 train_data, test_data = spark_df.randomSplit([0.8, 0.2])
 
-# Train the complex sentiment analysis model using the pipeline
+## Train the complex sentiment analysis model using the pipeline
 model = pipeline.fit(train_data)
 
-# Make predictions on the test data
+## Make predictions on the test data
 predictions = model.transform(test_data)
 
-# Evaluate the model
+## Evaluate the model
 evaluator = BinaryClassificationEvaluator(labelCol="label")
 auc = evaluator.evaluate(predictions)
 
-# Serialize and store the trained model for deployment and evaluation
-# (Add code for model serialization)
+## Serialize and store the trained model for deployment and evaluation
+## (Add code for model serialization)
 
-# Show model evaluation results
+## Show model evaluation results
 print("Model training and evaluation complete. AUC:", auc)
 
-# Close the Spark session
+## Close the Spark session
 spark.stop()
 ```
 

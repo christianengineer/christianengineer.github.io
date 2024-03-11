@@ -214,18 +214,18 @@ Certainly! Below is an example of a function for a complex machine learning algo
 import numpy as np
 
 def train_seq2seq_model(source_data_path, target_data_path, model_params):
-    # Load synthetic training data
+    ## Load synthetic training data
     source_data = np.array(['I am at home', 'He is a good person', 'She likes to play'])
     target_data = np.array(['Je suis à la maison', 'Il est une bonne personne', 'Elle aime jouer'])
 
-    # Preprocess the training data
-    # This would involve tokenization, padding, and other preprocessing steps
+    ## Preprocess the training data
+    ## This would involve tokenization, padding, and other preprocessing steps
 
-    # Initialize and train the Seq2Seq model
+    ## Initialize and train the Seq2Seq model
     seq2seq_model = Seq2SeqModel(model_params)
     seq2seq_model.train(source_data, target_data)
 
-    # Save the trained model to the specified file path
+    ## Save the trained model to the specified file path
     model_file_path = 'models/trained_seq2seq_model.pth'
     seq2seq_model.save_model(model_file_path)
 
@@ -247,18 +247,18 @@ import numpy as np
 from seq2seq_model import Seq2SeqModel
 
 def train_seq2seq_model(source_data_path, target_data_path, model_params):
-    # Load synthetic training data (to be replaced with actual data loading logic)
+    ## Load synthetic training data (to be replaced with actual data loading logic)
     source_data = np.array(['I am at home', 'He is a good person', 'She likes to play'])
     target_data = np.array(['Je suis à la maison', 'Il est une bonne personne', 'Elle aime jouer'])
 
-    # Preprocess the training data (tokenization, padding, etc.)
-    # ...
+    ## Preprocess the training data (tokenization, padding, etc.)
+    ## ...
 
-    # Initialize and train the Seq2Seq model
+    ## Initialize and train the Seq2Seq model
     seq2seq_model = Seq2SeqModel(model_params)
     seq2seq_model.train(source_data, target_data)
 
-    # Save the trained model to the specified file path
+    ## Save the trained model to the specified file path
     model_file_path = 'models/trained_seq2seq_model.pth'
     seq2seq_model.save_model(model_file_path)
 

@@ -5,7 +5,7 @@ permalink: posts/billionaire-asset-diversification-ai-tensorflow-scikit-learn-ai
 layout: article
 ---
 
-# Billionaire Asset Diversification AI Documentation
+## Billionaire Asset Diversification AI Documentation
 
 ## Objective
 The objective of the Billionaire Asset Diversification AI solution is to provide Wealth Managers at Inversiones La Cruz with a scalable, production-ready tool to manage high-net-worth clients' portfolios during economic fluctuations. By utilizing AI to predict market trends and create customized asset diversification strategies, the solution aims to safeguard investments in Peru's complex economic landscape.
@@ -221,33 +221,33 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.impute import SimpleImputer
 from sklearn.model_selection import train_test_split
 
-# Load the raw financial market data
+## Load the raw financial market data
 data = pd.read_csv('financial_data.csv')
 
-# Display the first few rows of the dataset
+## Display the first few rows of the dataset
 print(data.head())
 
-# Drop any irrelevant columns
+## Drop any irrelevant columns
 data.drop(['Column1', 'Column2'], axis=1, inplace=True)
 
-# Handle missing values by imputing with mean values
+## Handle missing values by imputing with mean values
 imputer = SimpleImputer(strategy='mean')
 data[['Price', 'Volume']] = imputer.fit_transform(data[['Price', 'Volume']])
 
-# Normalize numerical features using StandardScaler
+## Normalize numerical features using StandardScaler
 scaler = StandardScaler()
 data[['Price', 'Volume']] = scaler.fit_transform(data[['Price', 'Volume']])
 
-# Engineer additional features such as moving averages or technical indicators
+## Engineer additional features such as moving averages or technical indicators
 
-# Split the data into features (X) and target (y) variables
+## Split the data into features (X) and target (y) variables
 X = data.drop('Target_Variable', axis=1)
 y = data['Target_Variable']
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Display the shape of the training and testing sets
+## Display the shape of the training and testing sets
 print('Training set shape:', X_train.shape, y_train.shape)
 print('Testing set shape:', X_test.shape, y_test.shape)
 ```
@@ -344,7 +344,7 @@ import pandas as pd
 import numpy as np
 from sklearn import preprocessing
 
-# Generate fictitious financial market data
+## Generate fictitious financial market data
 np.random.seed(42)
 num_samples = 1000
 
@@ -355,7 +355,7 @@ moving_avg_5days = pd.Series(prices).rolling(window=5).mean()
 rsi = np.random.uniform(30, 70, num_samples)
 market_sentiment = np.random.uniform(0, 1, num_samples)
 
-# Create a DataFrame with the generated data
+## Create a DataFrame with the generated data
 data = pd.DataFrame({
     'Date': dates,
     'Price': prices,
@@ -365,11 +365,11 @@ data = pd.DataFrame({
     'Market_Sentiment': market_sentiment
 })
 
-# Scale numeric features
+## Scale numeric features
 scaler = preprocessing.StandardScaler()
 data[['Price', 'Volume', 'Moving_Avg_5Days', 'RSI', 'Market_Sentiment']] = scaler.fit_transform(data[['Price', 'Volume', 'Moving_Avg_5Days', 'RSI', 'Market_Sentiment']])
 
-# Save the generated dataset to a CSV file
+## Save the generated dataset to a CSV file
 data.to_csv('fictional_financial_data.csv', index=False)
 
 print("Fictitious financial market data generated and saved successfully!")
@@ -422,39 +422,39 @@ from sklearn.preprocessing import StandardScaler
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import LSTM, Dense
 
-# Load preprocessed dataset
+## Load preprocessed dataset
 data = pd.read_csv('preprocessed_data.csv')
 
-# Split data into features (X) and target variable (y)
+## Split data into features (X) and target variable (y)
 X = data.drop('Target_Variable', axis=1)
 y = data['Target_Variable']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Scale features using StandardScaler
+## Scale features using StandardScaler
 scaler = StandardScaler()
 X_train = scaler.fit_transform(X_train)
 X_test = scaler.transform(X_test)
 
-# Reshape data for LSTM input (samples, time steps, features)
+## Reshape data for LSTM input (samples, time steps, features)
 X_train = X_train.reshape(X_train.shape[0], 1, X_train.shape[1])
 X_test = X_test.reshape(X_test.shape[0], 1, X_test.shape[1])
 
-# Build LSTM model
+## Build LSTM model
 model = Sequential()
 model.add(LSTM(50, input_shape=(X_train.shape[1], X_train.shape[2])))
 model.add(Dense(1))
 model.compile(optimizer='adam', loss='mse')
 
-# Train the model
+## Train the model
 model.fit(X_train, y_train, epochs=50, batch_size=32, validation_data=(X_test, y_test))
 
-# Evaluate model performance
+## Evaluate model performance
 loss = model.evaluate(X_test, y_test)
 print(f'Model Loss: {loss}')
 
-# Save the trained model for deployment
+## Save the trained model for deployment
 model.save('billionaire_asset_diversification_model.h5')
 ```
 
@@ -519,25 +519,25 @@ By following these conventions and standards for code quality and structure comm
 By following this step-by-step deployment plan tailored to the unique requirements of the Billionaire Asset Diversification AI project and utilizing the recommended tools and platforms, your team can confidently and effectively deploy the machine learning model into a production environment, ensuring reliability, scalability, and performance in real-world operations.
 
 ```Dockerfile
-# Use official Tensorflow image as base image
+## Use official Tensorflow image as base image
 FROM tensorflow/tensorflow:latest
 
-# Set the working directory in the container
+## Set the working directory in the container
 WORKDIR /app
 
-# Copy requirements.txt and install additional dependencies
+## Copy requirements.txt and install additional dependencies
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the preprocessed data and model files to the container
+## Copy the preprocessed data and model files to the container
 COPY preprocessed_data.csv .
 COPY billionaire_asset_diversification_model.h5 .
 
-# Expose the necessary port for the API (if applicable)
-# EXPOSE 5000
+## Expose the necessary port for the API (if applicable)
+## EXPOSE 5000
 
-# Command to run the prediction API
-# CMD ["python", "prediction_api.py"]
+## Command to run the prediction API
+## CMD ["python", "prediction_api.py"]
 ```
 
 ### Dockerfile Explanation:

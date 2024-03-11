@@ -215,36 +215,36 @@ from sklearn.metrics import accuracy_score
 import joblib
 
 def train_and_save_model(data_path, model_save_path):
-    # Load mock data from CSV file
+    ## Load mock data from CSV file
     data = pd.read_csv(data_path)
     
-    # Prepare the data
+    ## Prepare the data
     X = data.drop('label', axis=1)
     y = data['label']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Preprocess the data
+    ## Preprocess the data
     scaler = StandardScaler()
     X_train = scaler.fit_transform(X_train)
     X_test = scaler.transform(X_test)
 
-    # Initialize and train the Support Vector Machine (SVM) model
+    ## Initialize and train the Support Vector Machine (SVM) model
     model = SVC(kernel='rbf', C=10, gamma=0.1, random_state=42)
     model.fit(X_train, y_train)
 
-    # Make predictions
+    ## Make predictions
     y_pred = model.predict(X_test)
 
-    # Calculate and print the accuracy
+    ## Calculate and print the accuracy
     accuracy = accuracy_score(y_test, y_pred)
     print(f"Model Accuracy: {accuracy}")
 
-    # Save the trained model to a file
+    ## Save the trained model to a file
     joblib.dump(model, model_save_path)
 
-# Example usage
+## Example usage
 data_path = 'data/mnist/mnist_train.csv'
 model_save_path = 'models/trained_models/svm_model.pkl'
 train_and_save_model(data_path, model_save_path)
@@ -266,31 +266,31 @@ from sklearn.metrics import accuracy_score
 import joblib
 
 def train_and_save_model(data_path, model_save_path):
-    # Load mock data from CSV file
+    ## Load mock data from CSV file
     data = pd.read_csv(data_path)
     
-    # Prepare the data
+    ## Prepare the data
     X = data.drop('label', axis=1)
     y = data['label']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize and train the Random Forest classifier
+    ## Initialize and train the Random Forest classifier
     model = RandomForestClassifier(n_estimators=100, random_state=42)
     model.fit(X_train, y_train)
 
-    # Make predictions
+    ## Make predictions
     y_pred = model.predict(X_test)
 
-    # Calculate and print the accuracy
+    ## Calculate and print the accuracy
     accuracy = accuracy_score(y_test, y_pred)
     print(f"Model Accuracy: {accuracy}")
 
-    # Save the trained model to a file
+    ## Save the trained model to a file
     joblib.dump(model, model_save_path)
 
-# Example usage
+## Example usage
 data_path = 'data/mnist/mnist_train.csv'
 model_save_path = 'models/trained_models/random_forest_model.pkl'
 train_and_save_model(data_path, model_save_path)

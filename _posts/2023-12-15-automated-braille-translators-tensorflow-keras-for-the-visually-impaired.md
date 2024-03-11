@@ -47,82 +47,82 @@ By integrating these MLOps practices and tools into the infrastructure for the A
 ```plaintext
 Automated-Braille-Translators
 │
-├── data/                  # Directory for storing dataset and data processing scripts
-│   ├── raw/               # Raw data
-│   ├── processed/         # Processed data
-│   └── preprocessing/     # Scripts for data preprocessing
+├── data/                  ## Directory for storing dataset and data processing scripts
+│   ├── raw/               ## Raw data
+│   ├── processed/         ## Processed data
+│   └── preprocessing/     ## Scripts for data preprocessing
 │
-├── models/                # Trained model artifacts and model deployment code
-│   ├── trained_models/    # Saved trained model files
-│   └── deployment/        # Code for deploying the model
+├── models/                ## Trained model artifacts and model deployment code
+│   ├── trained_models/    ## Saved trained model files
+│   └── deployment/        ## Code for deploying the model
 │
-├── notebooks/             # Jupyter notebooks for exploratory data analysis, model development, and evaluation
+├── notebooks/             ## Jupyter notebooks for exploratory data analysis, model development, and evaluation
 │
-├── src/                   # Source code for the application
-│   ├── app/               # Application code for interfacing with the model and UI
-│   ├── api/               # REST API endpoints for model serving
-│   ├── model/             # Model training and evaluation code
-│   └── utils/             # Utility functions and helper scripts
+├── src/                   ## Source code for the application
+│   ├── app/               ## Application code for interfacing with the model and UI
+│   ├── api/               ## REST API endpoints for model serving
+│   ├── model/             ## Model training and evaluation code
+│   └── utils/             ## Utility functions and helper scripts
 │
-├── tests/                 # Unit tests and integration tests for the application code
+├── tests/                 ## Unit tests and integration tests for the application code
 │
-├── docs/                  # Documentation and system design related files
+├── docs/                  ## Documentation and system design related files
 │
-├── config/                # Configuration files for model hyperparameters, logging, etc.
+├── config/                ## Configuration files for model hyperparameters, logging, etc.
 │
-├── requirements.txt       # Python dependencies for the project
+├── requirements.txt       ## Python dependencies for the project
 │
-├── .gitignore             # Git ignore file
+├── .gitignore             ## Git ignore file
 │
-└── README.md              # Project documentation and instructions for setting up and running the application
+└── README.md              ## Project documentation and instructions for setting up and running the application
 ```
 
 ```plaintext
 models/
-├── trained_models/             # Directory for storing trained model artifacts
-│   ├── braille_translator_model.h5         # Trained model file in Keras format
-│   └── braille_translator_model.pb         # Serialized model file for deployment
+├── trained_models/             ## Directory for storing trained model artifacts
+│   ├── braille_translator_model.h5         ## Trained model file in Keras format
+│   └── braille_translator_model.pb         ## Serialized model file for deployment
 │
-└── deployment/                  # Model deployment code and configuration
-    ├── dockerfile               # Dockerfile for creating a container for the model serving
-    ├── requirements.txt         # Python dependencies for the model serving
-    └── serve_model.py           # Script for serving the trained model via REST API endpoints
+└── deployment/                  ## Model deployment code and configuration
+    ├── dockerfile               ## Dockerfile for creating a container for the model serving
+    ├── requirements.txt         ## Python dependencies for the model serving
+    └── serve_model.py           ## Script for serving the trained model via REST API endpoints
 ```
 
 ```plaintext
 deployment/
-├── dockerfile               # Dockerfile for creating a container for the model serving
-├── requirements.txt         # Python dependencies for the model serving
-└── serve_model.py           # Script for serving the trained model via REST API endpoints
+├── dockerfile               ## Dockerfile for creating a container for the model serving
+├── requirements.txt         ## Python dependencies for the model serving
+└── serve_model.py           ## Script for serving the trained model via REST API endpoints
 ```
 
 Certainly! Below is an example of a Python script for training a model using mock data for the Automated Braille Translators application. This script uses Keras with TensorFlow backend for building and training the neural network model. Let's assume the file is named `train_model.py` and it's located in the `src/model/` directory of the project.
 
 ```python
-# File: src/model/train_model.py
+## File: src/model/train_model.py
 
 import numpy as np
 from tensorflow import keras
 from tensorflow.keras import layers
 
-# Mock data (replace with actual data loading logic)
-X_train = np.random.random((100, 10))  # Sample input data
-y_train = np.random.randint(2, size=(100, 1))  # Sample output data (binary classification)
+## Mock data (replace with actual data loading logic)
+X_train = np.random.random((100, 10))  ## Sample input data
+y_train = np.random.randint(2, size=(100, 1))  ## Sample output data (binary classification)
 
-# Define the neural network model architecture
+## Define the neural network model architecture
 model = keras.Sequential([
     layers.Dense(64, activation='relu', input_shape=(10,)),
     layers.Dense(64, activation='relu'),
     layers.Dense(1, activation='sigmoid')
 ])
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
-# Train the model
+## Train the model
 model.fit(X_train, y_train, epochs=10, batch_size=32)
 
-# Save the trained model
+## Save the trained model
 model.save('models/trained_models/braille_translator_model.h5')
 ```
 
@@ -131,30 +131,30 @@ In this script, we generate mock data and define a simple neural network model u
 Certainly! Below is an example of a Python script for training a complex neural network model using mock data for the Automated Braille Translators application. This script demonstrates a more complex neural network architecture using Keras with the TensorFlow backend. Let's assume the file is named `complex_model_training.py` and it's located in the `src/model/` directory of the project.
 
 ```python
-# File: src/model/complex_model_training.py
+## File: src/model/complex_model_training.py
 
 import numpy as np
 from tensorflow import keras
 from tensorflow.keras import layers
 from tensorflow.keras.layers import LSTM, Embedding, Dense
 
-# Mock data (replace with actual data loading logic)
-# Assuming X_train and y_train are preprocessed training data and labels.
+## Mock data (replace with actual data loading logic)
+## Assuming X_train and y_train are preprocessed training data and labels.
 
-# Define a complex neural network model architecture
+## Define a complex neural network model architecture
 model = keras.Sequential()
 model.add(Embedding(input_dim=1000, output_dim=64))
 model.add(LSTM(128))
 model.add(Dense(64, activation='relu'))
 model.add(Dense(1, activation='sigmoid'))
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
-# Train the model
+## Train the model
 model.fit(X_train, y_train, epochs=10, batch_size=32)
 
-# Save the trained model
+## Save the trained model
 model.save('models/trained_models/braille_translator_complex_model.h5')
 ```
 

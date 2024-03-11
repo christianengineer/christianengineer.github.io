@@ -51,26 +51,26 @@ solar_energy_prediction/
 │
 ├── data/
 │   ├── raw_data/
-│   │   ├── solar_generation.csv          # Raw historical solar power generation data
-│   │   ├── environmental_data.csv       # Raw environmental variables data
+│   │   ├── solar_generation.csv          ## Raw historical solar power generation data
+│   │   ├── environmental_data.csv       ## Raw environmental variables data
 │   │
 │   ├── processed_data/
-│       ├── solar_features.csv           # Processed and feature-engineered data for model training
+│       ├── solar_features.csv           ## Processed and feature-engineered data for model training
 │
 ├── models/
-│   ├── trained_model.h5                 # Trained machine learning model for solar energy prediction
+│   ├── trained_model.h5                 ## Trained machine learning model for solar energy prediction
 │
 ├── notebooks/
-│   ├── data_analysis.ipynb              # Jupyter notebook for data exploration and analysis
-│   ├── model_training.ipynb             # Jupyter notebook for model training and evaluation
+│   ├── data_analysis.ipynb              ## Jupyter notebook for data exploration and analysis
+│   ├── model_training.ipynb             ## Jupyter notebook for model training and evaluation
 │
 ├── src/
-│   ├── data_preprocessing.py            # Python script for data preprocessing and feature engineering
-│   ├── model_training.py                # Python script for training the Keras model
-│   ├── prediction_service.py            # Python script for deploying the trained model as a prediction service
+│   ├── data_preprocessing.py            ## Python script for data preprocessing and feature engineering
+│   ├── model_training.py                ## Python script for training the Keras model
+│   ├── prediction_service.py            ## Python script for deploying the trained model as a prediction service
 │
-├── requirements.txt                     # List of Python dependencies for the application
-├── README.md                            # Documentation and instructions for the repository
+├── requirements.txt                     ## List of Python dependencies for the application
+├── README.md                            ## Documentation and instructions for the repository
 ```
 
 In this scalable file structure, the `solar_energy_prediction` repository is organized into distinct directories for data, models, notebooks, source code, and configuration files. This structure supports modularity, ease of collaboration, and maintainability.
@@ -94,10 +94,10 @@ This scalable file structure fosters a well-organized and maintainable codebase 
 ```plaintext
 models/
 │
-├── trained_model.h5          # Trained machine learning model for solar energy prediction
-├── model_evaluation.ipynb     # Jupyter notebook for model evaluation and performance analysis
-├── model_metrics.json         # JSON file storing metrics and performance of the trained model
-├── model_config.json          # JSON file containing configuration and hyperparameters of the trained model
+├── trained_model.h5          ## Trained machine learning model for solar energy prediction
+├── model_evaluation.ipynb     ## Jupyter notebook for model evaluation and performance analysis
+├── model_metrics.json         ## JSON file storing metrics and performance of the trained model
+├── model_config.json          ## JSON file containing configuration and hyperparameters of the trained model
 ```
 
 ### Explanation:
@@ -117,12 +117,12 @@ By maintaining these specific files within the `models/` directory, the Solar En
 ```plaintext
 deployment/
 │
-├── dockerfile                 # Configuration file for building a Docker image for the prediction service
-├── requirements.txt            # Packages and dependencies required for the prediction service deployment
+├── dockerfile                 ## Configuration file for building a Docker image for the prediction service
+├── requirements.txt            ## Packages and dependencies required for the prediction service deployment
 ├── app/
-│   ├── prediction_service.py   # Python script for deploying the trained model as a prediction service
+│   ├── prediction_service.py   ## Python script for deploying the trained model as a prediction service
 │   ├── config/
-│       ├── service_config.json # JSON file containing configuration settings for the prediction service
+│       ├── service_config.json ## JSON file containing configuration settings for the prediction service
 ```
 
 ### Explanation:
@@ -152,36 +152,36 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import MinMaxScaler
 
 def train_solar_energy_prediction_model(data_file_path):
-    # Load mock data
+    ## Load mock data
     data = pd.read_csv(data_file_path)
 
-    # Perform data preprocessing
-    # Assuming the data contains features and the target variable ('solar_power_generation')
+    ## Perform data preprocessing
+    ## Assuming the data contains features and the target variable ('solar_power_generation')
     X = data.drop('solar_power_generation', axis=1)
     y = data['solar_power_generation']
 
-    # Scale the data
+    ## Scale the data
     scaler = MinMaxScaler()
     X_scaled = scaler.fit_transform(X)
     y_scaled = scaler.fit_transform(np.array(y).reshape(-1, 1))
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X_scaled, y_scaled, test_size=0.2, random_state=42)
 
-    # Build the LSTM model
+    ## Build the LSTM model
     model = Sequential()
     model.add(LSTM(units=50, return_sequences=True, input_shape=(X_train.shape[1], 1)))
     model.add(LSTM(units=50, return_sequences=False))
     model.add(Dense(units=1))
     model.compile(optimizer='adam', loss='mean_squared_error')
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y_test), shuffle=False)
 
-    # Evaluate the model
+    ## Evaluate the model
     loss = model.evaluate(X_test, y_test)
 
-    # Save the trained model
+    ## Save the trained model
     model.save('trained_solar_energy_prediction_model.h5')
 
     return model, scaler, loss
@@ -208,40 +208,40 @@ from keras.layers import Dense, Dropout
 from keras.optimizers import Adam
 
 def train_solar_energy_prediction_model(data_file_path):
-    # Load mock data
+    ## Load mock data
     data = pd.read_csv(data_file_path)
 
-    # Assume the data contains features X1, X2, X3,..., Xn and the target variable 'solar_power_generation'
+    ## Assume the data contains features X1, X2, X3,..., Xn and the target variable 'solar_power_generation'
 
-    # Split the data into features and target variable
+    ## Split the data into features and target variable
     X = data.drop('solar_power_generation', axis=1)
     y = data['solar_power_generation']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Standardize the features
+    ## Standardize the features
     scaler = StandardScaler()
     X_train_scaled = scaler.fit_transform(X_train)
     X_test_scaled = scaler.transform(X_test)
 
-    # Define the neural network model
+    ## Define the neural network model
     model = Sequential()
     model.add(Dense(128, activation='relu', input_shape=(X_train.shape[1],)))
     model.add(Dropout(0.2))
     model.add(Dense(64, activation='relu'))
-    model.add(Dense(1))  # Output layer
+    model.add(Dense(1))  ## Output layer
 
-    # Compile the model
+    ## Compile the model
     model.compile(loss='mean_squared_error', optimizer=Adam(learning_rate=0.001))
 
-    # Train the model
+    ## Train the model
     model.fit(X_train_scaled, y_train, epochs=50, batch_size=32, validation_split=0.1, verbose=1)
 
-    # Evaluate the model
+    ## Evaluate the model
     loss = model.evaluate(X_test_scaled, y_test)
 
-    # Save the trained model
+    ## Save the trained model
     model.save('trained_solar_energy_prediction_model.h5')
 
     return model, scaler, loss

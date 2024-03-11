@@ -199,32 +199,32 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 
 def earthquake_prediction_model(file_path):
-    # Load the mock seismic data from the given file path
+    ## Load the mock seismic data from the given file path
     data = pd.read_csv(file_path)
 
-    # Preprocessing: Assuming the dataset contains features and labels
+    ## Preprocessing: Assuming the dataset contains features and labels
     X = data.drop('target', axis=1)
     y = data['target']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize the Random Forest classifier
+    ## Initialize the Random Forest classifier
     model = RandomForestClassifier(n_estimators=100, random_state=42)
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train)
 
-    # Make predictions
+    ## Make predictions
     y_pred = model.predict(X_test)
 
-    # Evaluate the model performance
+    ## Evaluate the model performance
     accuracy = accuracy_score(y_test, y_pred)
     print(f'Model accuracy: {accuracy}')
 
     return model
 
-# Example usage
+## Example usage
 file_path = 'path/to/mock_data.csv'
 trained_model = earthquake_prediction_model(file_path)
 ```
@@ -245,38 +245,38 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 
 def train_earthquake_prediction_model(file_path):
-    # Load the mock seismic data from the given file path
+    ## Load the mock seismic data from the given file path
     data = pd.read_csv(file_path)
 
-    # Perform feature engineering and preprocessing if needed
-    # ...
+    ## Perform feature engineering and preprocessing if needed
+    ## ...
 
-    # Split the data into features and target variable
+    ## Split the data into features and target variable
     X = data.drop(columns=['target_column'])
     y = data['target_column']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize a Random Forest classifier (or any other complex algorithm)
+    ## Initialize a Random Forest classifier (or any other complex algorithm)
     model = RandomForestClassifier(n_estimators=100, random_state=42)
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train)
 
-    # Make predictions on the test set
+    ## Make predictions on the test set
     y_pred = model.predict(X_test)
 
-    # Evaluate model performance
+    ## Evaluate model performance
     accuracy = accuracy_score(y_test, y_pred)
     print(f'Model accuracy: {accuracy}')
 
-    # Optionally, you can save the trained model for later use
-    # model.save('trained_earthquake_model.pkl')
+    ## Optionally, you can save the trained model for later use
+    ## model.save('trained_earthquake_model.pkl')
 
     return model
 
-# Example usage
+## Example usage
 file_path = 'path_to_mock_data.csv'
 trained_model = train_earthquake_prediction_model(file_path)
 ```

@@ -72,53 +72,53 @@ serviceai_customer_service/
 ├── app/
 │   ├── api/
 │   │   ├── v1/
-│   │   │   ├── controllers/            # API route handlers
-│   │   │   ├── schemas/                # Request/response schemas
-│   │   │   ├── routes.py               # API endpoint definitions
+│   │   │   ├── controllers/            ## API route handlers
+│   │   │   ├── schemas/                ## Request/response schemas
+│   │   │   ├── routes.py               ## API endpoint definitions
 │   │   │   └── __init__.py
 │   │   └── __init__.py
 │
 ├── models/
 │   ├── nlp/
-│   │   ├── spacy_model/               # Trained SpaCy NLP model
-│   │   └── nltk_model/                # Trained NLTK NLP model
+│   │   ├── spacy_model/               ## Trained SpaCy NLP model
+│   │   └── nltk_model/                ## Trained NLTK NLP model
 │   ├── machine_learning/
-│   │   ├── sklearn_models/            # Trained scikit-learn models
-│   │   └── tensorflow_models/         # Trained TensorFlow/Keras models
+│   │   ├── sklearn_models/            ## Trained scikit-learn models
+│   │   └── tensorflow_models/         ## Trained TensorFlow/Keras models
 │   └── __init__.py
 │
 ├── data_pipeline/
 │   ├── etl/
-│   │   ├── preprocessing/             # Data preprocessing scripts
-│   │   ├── feature_engineering/       # Feature engineering scripts
+│   │   ├── preprocessing/             ## Data preprocessing scripts
+│   │   ├── feature_engineering/       ## Feature engineering scripts
 │   │   └── __init__.py
 │   ├── training/
-│   │   ├── model_training/            # Scripts for training machine learning models
+│   │   ├── model_training/            ## Scripts for training machine learning models
 │   └── __init__.py
 │
 ├── infrastructure/
 │   ├── deployment/
-│   ├── config/                        # Configuration files for deployment
-│   │   ├── dev.yml                    # Development environment configuration
-│   │   ├── prod.yml                   # Production environment configuration
+│   ├── config/                        ## Configuration files for deployment
+│   │   ├── dev.yml                    ## Development environment configuration
+│   │   ├── prod.yml                   ## Production environment configuration
 │   │   └── __init__.py
-│   ├── docker/                        # Docker configurations
-│   └── kubernetes/                    # Kubernetes deployment configurations
+│   ├── docker/                        ## Docker configurations
+│   └── kubernetes/                    ## Kubernetes deployment configurations
 │
 ├── utils/
-│   ├── helpers/                       # Utility functions
+│   ├── helpers/                       ## Utility functions
 │   └── __init__.py
 │
 ├── tests/
-│   ├── unit_tests/                    # Unit tests for various components
-│   ├── integration_tests/             # Integration tests for API endpoints
+│   ├── unit_tests/                    ## Unit tests for various components
+│   ├── integration_tests/             ## Integration tests for API endpoints
 │   └── __init__.py
 │
-├── README.md                          # Project documentation
-├── requirements.txt                   # Python dependencies
-├── Dockerfile                         # Docker configuration for app deployment
-├── manage.py                          # Script for managing the application
-└── .gitignore                         # Git ignore file
+├── README.md                          ## Project documentation
+├── requirements.txt                   ## Python dependencies
+├── Dockerfile                         ## Docker configuration for app deployment
+├── manage.py                          ## Script for managing the application
+└── .gitignore                         ## Git ignore file
 ```
 
 This scalable file structure for the ServiceAI AI for Customer Service repository is organized to contain various components such as API, models, data pipeline, infrastructure, utilities, tests, and essential project configuration files. This structure allows for modularization, easy maintenance, and efficient collaboration among team members.
@@ -127,24 +127,24 @@ This scalable file structure for the ServiceAI AI for Customer Service repositor
 models/
 │
 ├── nlp/
-│   ├── spacy_model/               # Trained SpaCy NLP model
-│   │   ├── spacy_custom_model/    # Custom trained SpaCy NLP model
-│   │   └── spacy_config.yml       # Configuration file for SpaCy model
+│   ├── spacy_model/               ## Trained SpaCy NLP model
+│   │   ├── spacy_custom_model/    ## Custom trained SpaCy NLP model
+│   │   └── spacy_config.yml       ## Configuration file for SpaCy model
 │   │
-│   └── nltk_model/               # Trained NLTK NLP model
-│       ├── nltk_custom_model/    # Custom trained NLTK NLP model
-│       └── nltk_config.json       # Configuration file for NLTK model
+│   └── nltk_model/               ## Trained NLTK NLP model
+│       ├── nltk_custom_model/    ## Custom trained NLTK NLP model
+│       └── nltk_config.json       ## Configuration file for NLTK model
 │
 └── machine_learning/
-    ├── sklearn_models/            # Trained scikit-learn models
-    │   ├── sentiment_analysis.pkl # Pickle file for sentiment analysis model
-    │   └── recommendation_model.joblib  # Joblib file for recommendation system model
+    ├── sklearn_models/            ## Trained scikit-learn models
+    │   ├── sentiment_analysis.pkl ## Pickle file for sentiment analysis model
+    │   └── recommendation_model.joblib  ## Joblib file for recommendation system model
     │
-    └── tensorflow_models/         # Trained TensorFlow/Keras models
-        ├── chatbot_model.h5       # HDF5 file for chatbot model
-        └── image_classification/   # Directory for image classification model files
-            ├── model.json         # JSON model architecture
-            └── weights.h5         # HDF5 model weights
+    └── tensorflow_models/         ## Trained TensorFlow/Keras models
+        ├── chatbot_model.h5       ## HDF5 file for chatbot model
+        └── image_classification/   ## Directory for image classification model files
+            ├── model.json         ## JSON model architecture
+            └── weights.h5         ## HDF5 model weights
 ```
 
 The `models/` directory for the ServiceAI AI for Customer Service application contains subdirectories for NLP and machine learning models, each with their trained models and associated configuration files. 
@@ -180,20 +180,20 @@ infrastructure/
 │
 └── deployment/
     ├── config/
-    │   ├── dev.yml                    # Development environment configuration
-    │   ├── prod.yml                   # Production environment configuration
-    │   └── test.yml                   # Test environment configuration
+    │   ├── dev.yml                    ## Development environment configuration
+    │   ├── prod.yml                   ## Production environment configuration
+    │   └── test.yml                   ## Test environment configuration
     │
     ├── docker/
-    │   ├── Dockerfile                 # Docker configuration for app deployment
-    │   └── docker-compose.yml         # Docker Compose configuration for local development
+    │   ├── Dockerfile                 ## Docker configuration for app deployment
+    │   └── docker-compose.yml         ## Docker Compose configuration for local development
     │
     └── kubernetes/
-        ├── deployment.yaml            # Kubernetes deployment configuration file
-        ├── service.yaml               # Kubernetes service configuration file
-        └── secrets/                   # Directory for storing Kubernetes secrets
-            ├── db-credentials.yaml    # Example file for database credentials
-            ├── api-keys.yaml          # Example file for API keys
+        ├── deployment.yaml            ## Kubernetes deployment configuration file
+        ├── service.yaml               ## Kubernetes service configuration file
+        └── secrets/                   ## Directory for storing Kubernetes secrets
+            ├── db-credentials.yaml    ## Example file for database credentials
+            ├── api-keys.yaml          ## Example file for API keys
 ```
 
 The `deployment/` directory for the ServiceAI AI for Customer Service application contains subdirectories and files related to the deployment and configuration of the application in different environments.
@@ -226,32 +226,32 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, classification_report
 
 def train_and_evaluate_model(data_file_path):
-    # Load mock data
+    ## Load mock data
     data = pd.read_csv(data_file_path)
 
-    # Preprocessing and feature extraction
+    ## Preprocessing and feature extraction
     X = data.drop('target', axis=1)
     y = data['target']
 
-    # Split data into training and testing sets
+    ## Split data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize model
+    ## Initialize model
     model = RandomForestClassifier(n_estimators=100, random_state=42)
 
-    # Train model
+    ## Train model
     model.fit(X_train, y_train)
 
-    # Make predictions
+    ## Make predictions
     y_pred = model.predict(X_test)
 
-    # Evaluate model
+    ## Evaluate model
     accuracy = accuracy_score(y_test, y_pred)
     report = classification_report(y_test, y_pred)
 
     return model, accuracy, report
 
-# Example usage
+## Example usage
 data_file_path = "data/mock_customer_data.csv"
 trained_model, model_accuracy, evaluation_report = train_and_evaluate_model(data_file_path)
 print("Model accuracy:", model_accuracy)
@@ -272,41 +272,41 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import accuracy_score, classification_report
 
 def train_and_evaluate_deep_learning_model(data_file_path):
-    # Load mock data
+    ## Load mock data
     data = pd.read_csv(data_file_path)
 
-    # Preprocessing and feature extraction
+    ## Preprocessing and feature extraction
     X = data.drop('target', axis=1)
     y = data['target']
 
-    # Normalize feature data
+    ## Normalize feature data
     scaler = StandardScaler()
     X_normalized = scaler.fit_transform(X)
 
-    # Split data into training and testing sets
+    ## Split data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X_normalized, y, test_size=0.2, random_state=42)
 
-    # Initialize deep learning model
+    ## Initialize deep learning model
     model = Sequential([
         Dense(64, activation='relu', input_shape=(X_train.shape[1],)),
         Dense(64, activation='relu'),
         Dense(1, activation='sigmoid')
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y_test))
 
-    # Evaluate the model
+    ## Evaluate the model
     y_pred = (model.predict(X_test) > 0.5).astype("int32")
     accuracy = accuracy_score(y_test, y_pred)
     report = classification_report(y_test, y_pred)
 
     return model, accuracy, report
 
-# Example usage
+## Example usage
 data_file_path = "data/mock_customer_data.csv"
 trained_dl_model, dl_model_accuracy, dl_evaluation_report = train_and_evaluate_deep_learning_model(data_file_path)
 print("Deep Learning Model accuracy:", dl_model_accuracy)

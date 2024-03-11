@@ -174,24 +174,24 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 
 def train_real_estate_price_prediction_model(data_file_path):
-    # Load mock real estate data from CSV file
+    ## Load mock real estate data from CSV file
     data = pd.read_csv(data_file_path)
 
-    # Assume the data contains features (X) and target variable (y)
+    ## Assume the data contains features (X) and target variable (y)
     X = data.drop('price', axis=1)
     y = data['price']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize and train a RandomForestRegressor model
+    ## Initialize and train a RandomForestRegressor model
     model = RandomForestRegressor(n_estimators=100, random_state=42)
     model.fit(X_train, y_train)
 
-    # Make predictions on the test set
+    ## Make predictions on the test set
     y_pred = model.predict(X_test)
 
-    # Evaluate the model
+    ## Evaluate the model
     mse = mean_squared_error(y_test, y_pred)
 
     return model, mse
@@ -214,24 +214,24 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 
 def train_real_estate_price_prediction_model(data_file_path):
-    # Load mock real estate data from CSV file
+    ## Load mock real estate data from CSV file
     data = pd.read_csv(data_file_path)
 
-    # Assume the data contains features (X) and target variable (y)
+    ## Assume the data contains features (X) and target variable (y)
     X = data.drop('price', axis=1)
     y = data['price']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize and train a RandomForestRegressor model
+    ## Initialize and train a RandomForestRegressor model
     model = RandomForestRegressor(n_estimators=100, random_state=42)
     model.fit(X_train, y_train)
 
-    # Make predictions on the test set
+    ## Make predictions on the test set
     y_pred = model.predict(X_test)
 
-    # Evaluate the model
+    ## Evaluate the model
     mse = mean_squared_error(y_test, y_pred)
 
     return model, mse

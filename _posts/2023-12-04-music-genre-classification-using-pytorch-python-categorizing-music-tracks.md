@@ -5,7 +5,7 @@ permalink: posts/music-genre-classification-using-pytorch-python-categorizing-mu
 layout: article
 ---
 
-# AI Music Genre Classification using PyTorch
+## AI Music Genre Classification using PyTorch
 
 ## Objectives
 The objective of the AI Music Genre Classification system is to categorize music tracks into different genres using machine learning techniques. This involves training a model to recognize patterns in the audio features of music tracks and classify them into specific genres such as rock, pop, jazz, hip-hop, etc. The system aims to provide accurate and reliable genre classification for a wide range of music tracks.
@@ -72,26 +72,26 @@ By deploying the AI music genre classification system on a scalable cloud infras
 music_genre_classification/
 │
 ├── data/
-│   ├── raw_data/  # Raw music track data and genre labels
-│   ├── processed_data/  # Processed audio features and dataset splits
+│   ├── raw_data/  ## Raw music track data and genre labels
+│   ├── processed_data/  ## Processed audio features and dataset splits
 │
 ├── models/
-│   ├── saved_models/  # Trained PyTorch models and model checkpoints
+│   ├── saved_models/  ## Trained PyTorch models and model checkpoints
 │
 ├── src/
-│   ├── data_preprocessing/  # Code for audio data preprocessing and feature extraction
-│   ├── model_training/  # Scripts for training the music genre classification model
-│   ├── inference/  # Code for performing inference and making predictions
-│   ├── evaluation/  # Scripts for evaluating the model performance
-│   ├── api/  # API implementation for deploying the model as a service
+│   ├── data_preprocessing/  ## Code for audio data preprocessing and feature extraction
+│   ├── model_training/  ## Scripts for training the music genre classification model
+│   ├── inference/  ## Code for performing inference and making predictions
+│   ├── evaluation/  ## Scripts for evaluating the model performance
+│   ├── api/  ## API implementation for deploying the model as a service
 │
-├── notebooks/  # Jupyter notebooks for exploratory data analysis, model development, and experimentation
+├── notebooks/  ## Jupyter notebooks for exploratory data analysis, model development, and experimentation
 │
-├── config/  # Configuration files for hyperparameters, training settings, and API setup
+├── config/  ## Configuration files for hyperparameters, training settings, and API setup
 │
-├── requirements.txt  # File listing dependencies for the project
+├── requirements.txt  ## File listing dependencies for the project
 │
-├── README.md  # Project overview, setup instructions, and usage guidelines
+├── README.md  ## Project overview, setup instructions, and usage guidelines
 ```
 
 In this file structure:
@@ -108,9 +108,9 @@ music_genre_classification/
 │
 ├── models/
 │   ├── saved_models/
-│       ├── model.pth  # Trained PyTorch model weights saved as a .pth file
-│       ├── model_config.json  # Configuration file containing model architecture and hyperparameters
-│       ├── performance_metrics.json  # Evaluation metrics (e.g., accuracy, loss) for the trained model
+│       ├── model.pth  ## Trained PyTorch model weights saved as a .pth file
+│       ├── model_config.json  ## Configuration file containing model architecture and hyperparameters
+│       ├── performance_metrics.json  ## Evaluation metrics (e.g., accuracy, loss) for the trained model
 ```
 
 In the `models/` directory:
@@ -126,9 +126,9 @@ music_genre_classification/
 │
 ├── deployment/
 │   ├── inference/
-│   │   ├── dockerfile  # Configuration file for building a Docker image to deploy the model
-│   │   ├── requirements.txt  # Dependencies required for the model deployment
-│   │   ├── app.py  # Main application file for serving model predictions via an API
+│   │   ├── dockerfile  ## Configuration file for building a Docker image to deploy the model
+│   │   ├── requirements.txt  ## Dependencies required for the model deployment
+│   │   ├── app.py  ## Main application file for serving model predictions via an API
 ```
 
 In the `deployment/` directory:
@@ -163,14 +163,14 @@ def complex_music_genre_classification_model(input_size, output_size):
     )
     return model
 
-# Mock data
+## Mock data
 input_size = 128
 output_size = 10
 batch_size = 32
-num_channels = 3  # Assuming RGB images
-mock_input = torch.randn(batch_size, num_channels, input_size, input_size)  # Mock input data
+num_channels = 3  ## Assuming RGB images
+mock_input = torch.randn(batch_size, num_channels, input_size, input_size)  ## Mock input data
 model = complex_music_genre_classification_model(input_size, output_size)
-mock_output = model(mock_input)  # Mock output from the model
+mock_output = model(mock_input)  ## Mock output from the model
 print(mock_output)
 ```
 
@@ -219,13 +219,13 @@ class MusicGenreClassificationModel(nn.Module):
         x = self.fc2(x)
         return x
 
-# Mock data and model usage
+## Mock data and model usage
 input_size = 128
 output_size = 10
 batch_size = 32
-mock_input = torch.randn(batch_size, 3, input_size, input_size)  # Mock input data
+mock_input = torch.randn(batch_size, 3, input_size, input_size)  ## Mock input data
 model = MusicGenreClassificationModel(input_size, output_size)
-mock_output = model(mock_input)  # Mock output from the model
+mock_output = model(mock_input)  ## Mock output from the model
 print(mock_output)
 ```
 

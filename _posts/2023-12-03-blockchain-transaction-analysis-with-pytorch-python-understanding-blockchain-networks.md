@@ -5,7 +5,7 @@ permalink: posts/blockchain-transaction-analysis-with-pytorch-python-understandi
 layout: article
 ---
 
-# AI Blockchain Transaction Analysis with PyTorch (Python)
+## AI Blockchain Transaction Analysis with PyTorch (Python)
 
 ## Objectives
 - The objective of the project is to utilize PyTorch, a popular open-source machine learning library, for analyzing blockchain transactions. 
@@ -27,7 +27,7 @@ layout: article
 
 By efficiently integrating PyTorch into the blockchain transaction analysis pipeline, we aim to derive valuable insights and contribute to the advancement of AI-driven analysis in blockchain technology.
 
-# Infrastructure for Blockchain Transaction Analysis with PyTorch (Python)
+## Infrastructure for Blockchain Transaction Analysis with PyTorch (Python)
 
 ## Components
 The infrastructure for the Blockchain Transaction Analysis with PyTorch (Python) application consists of several key components to support the analysis of blockchain transaction data using machine learning. The following components form the infrastructure:
@@ -64,7 +64,7 @@ When designing the infrastructure, considerations should be made for scalability
 
 By carefully orchestrating these components and deployment options, the infrastructure will support the development of a scalable, data-intensive, AI-driven application for analyzing blockchain transaction data using PyTorch and other relevant libraries.
 
-# Scalable File Structure for Blockchain Transaction Analysis with PyTorch (Python)
+## Scalable File Structure for Blockchain Transaction Analysis with PyTorch (Python)
 
 ```
 blockchain_transaction_analysis/
@@ -245,23 +245,23 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
-# Define the complex machine learning algorithm
+## Define the complex machine learning algorithm
 def train_transaction_analysis_model(data_file_path):
-    # Load mock blockchain transaction data from CSV
+    ## Load mock blockchain transaction data from CSV
     df = pd.read_csv(data_file_path)
 
-    # Assume the data has features and target variable 'label'
+    ## Assume the data has features and target variable 'label'
     X = df.drop('label', axis=1)
     y = df['label']
 
-    # Data preprocessing
+    ## Data preprocessing
     scaler = StandardScaler()
     X_scaled = scaler.fit_transform(X)
     
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.2, random_state=42)
 
-    # Define a neural network model using PyTorch
+    ## Define a neural network model using PyTorch
     model = nn.Sequential(
         nn.Linear(X.shape[1], 64),
         nn.ReLU(),
@@ -271,11 +271,11 @@ def train_transaction_analysis_model(data_file_path):
         nn.Sigmoid()
     )
 
-    # Define loss function and optimizer
+    ## Define loss function and optimizer
     criterion = nn.BCELoss()
     optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
 
-    # Train the model
+    ## Train the model
     for epoch in range(100):
         inputs = torch.tensor(X_train, dtype=torch.float)
         labels = torch.tensor(y_train.values, dtype=torch.float).view(-1, 1)
@@ -286,13 +286,13 @@ def train_transaction_analysis_model(data_file_path):
         loss.backward()
         optimizer.step()
 
-    # Evaluate the model on test data (not shown in the function)
-    # ...
+    ## Evaluate the model on test data (not shown in the function)
+    ## ...
 
-    # Return the trained model
+    ## Return the trained model
     return model
 
-# Example usage
+## Example usage
 model = train_transaction_analysis_model('path/to/mock_blockchain_data.csv')
 ```
 
@@ -313,25 +313,25 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
 def train_complex_model(data_file_path):
-    # Load mock blockchain transaction data from CSV
+    ## Load mock blockchain transaction data from CSV
     data = pd.read_csv(data_file_path)
 
-    # Assume the data has features X and target variable y
+    ## Assume the data has features X and target variable y
     X = data.drop(columns=['target'], axis=1)
     y = data['target']
 
-    # Data preprocessing
+    ## Data preprocessing
     scaler = StandardScaler()
     X_scaled = scaler.fit_transform(X)
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.2, random_state=42)
 
-    # Convert data to PyTorch tensors
+    ## Convert data to PyTorch tensors
     X_train_t = torch.tensor(X_train, dtype=torch.float32)
     y_train_t = torch.tensor(y_train.values, dtype=torch.float32).unsqueeze(1)
 
-    # Define a neural network model using PyTorch
+    ## Define a neural network model using PyTorch
     class ComplexModel(nn.Module):
         def __init__(self, input_dim):
             super(ComplexModel, self).__init__()
@@ -350,26 +350,26 @@ def train_complex_model(data_file_path):
     input_dim = X.shape[1]
     model = ComplexModel(input_dim)
 
-    # Define loss function and optimizer
+    ## Define loss function and optimizer
     criterion = nn.BCELoss()
     optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
 
-    # Train the model
+    ## Train the model
     num_epochs = 100
     for epoch in range(num_epochs):
-        # Forward pass
+        ## Forward pass
         outputs = model(X_train_t)
         loss = criterion(outputs, y_train_t)
 
-        # Backward pass and optimization
+        ## Backward pass and optimization
         optimizer.zero_grad()
         loss.backward()
         optimizer.step()
 
-    # Return the trained model
+    ## Return the trained model
     return model
 
-# Example usage
+## Example usage
 model = train_complex_model('mock_blockchain_data.csv')
 ```
 

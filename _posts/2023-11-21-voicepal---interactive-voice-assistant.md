@@ -5,7 +5,7 @@ permalink: posts/voicepal---interactive-voice-assistant
 layout: article
 ---
 
-# AI VoicePal - Interactive Voice Assistant Repository
+## AI VoicePal - Interactive Voice Assistant Repository
 
 ## Objectives
 
@@ -217,7 +217,7 @@ These utility modules and scripts in the "utils" directory serve to encapsulate 
 Certainly! Below is an example of a function for a complex machine learning algorithm of the VoicePal - Interactive Voice Assistant application that uses mock data. This function represents a simplified speech recognition model for the voice assistant. The mock data for this example is a set of audio features and corresponding transcriptions.
 
 ```python
-# File path: voicepal-interactive-voice-assistant/ai/models/speechRecognitionModel.py
+## File path: voicepal-interactive-voice-assistant/ai/models/speechRecognitionModel.py
 
 import numpy as np
 from sklearn.svm import SVC
@@ -226,24 +226,24 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import accuracy_score
 
 def train_speech_recognition_model(audio_features_path, transcriptions_path):
-    # Load mock audio features and transcriptions data
-    audio_features = np.load(audio_features_path)  # Replace with actual path to mock audio features data
-    transcriptions = np.load(transcriptions_path)  # Replace with actual path to mock transcriptions data
+    ## Load mock audio features and transcriptions data
+    audio_features = np.load(audio_features_path)  ## Replace with actual path to mock audio features data
+    transcriptions = np.load(transcriptions_path)  ## Replace with actual path to mock transcriptions data
 
-    # Feature scaling
+    ## Feature scaling
     scaler = StandardScaler()
     scaled_audio_features = scaler.fit_transform(audio_features)
 
-    # Split data into training and testing sets
+    ## Split data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(scaled_audio_features, transcriptions, test_size=0.2, random_state=42)
 
-    # Initialize the SVM classifier
+    ## Initialize the SVM classifier
     svm_classifier = SVC(kernel='rbf', C=1, gamma='auto')
 
-    # Train the speech recognition model
+    ## Train the speech recognition model
     svm_classifier.fit(X_train, y_train)
 
-    # Evaluate model accuracy
+    ## Evaluate model accuracy
     y_pred = svm_classifier.predict(X_test)
     accuracy = accuracy_score(y_test, y_pred)
 
@@ -260,7 +260,7 @@ This function serves as a representation of a complex machine learning algorithm
 Certainly! Below is an example of a function for a complex deep learning algorithm of the VoicePal - Interactive Voice Assistant application that uses mock data. This function represents a simplified natural language processing (NLP) model for intent recognition. The mock data for this example consists of user utterances and corresponding intents.
 
 ```python
-# File path: voicepal-interactive-voice-assistant/ai/models/nlpModel.py
+## File path: voicepal-interactive-voice-assistant/ai/models/nlpModel.py
 
 import tensorflow as tf
 from tensorflow.keras.layers import Embedding, LSTM, Dense
@@ -270,23 +270,23 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 from sklearn.model_selection import train_test_split
 
 def train_nlp_intent_recognition_model(utterances_path, intents_path):
-    # Load mock user utterances and intents data
+    ## Load mock user utterances and intents data
     with open(utterances_path, 'r') as file:
-        utterances = file.readlines()  # Replace with actual path to mock user utterances data
+        utterances = file.readlines()  ## Replace with actual path to mock user utterances data
 
     with open(intents_path, 'r') as file:
-        intents = file.readlines()  # Replace with actual path to mock intents data
+        intents = file.readlines()  ## Replace with actual path to mock intents data
 
-    # Preprocess data
+    ## Preprocess data
     tokenizer = Tokenizer()
     tokenizer.fit_on_texts(utterances)
     sequences = tokenizer.texts_to_sequences(utterances)
     padded_sequences = pad_sequences(sequences, maxlen=100, padding='post')
 
-    # Split data into training and testing sets
+    ## Split data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(padded_sequences, intents, test_size=0.2, random_state=42)
 
-    # Initialize the NLP model
+    ## Initialize the NLP model
     model = Sequential([
         Embedding(input_dim=1000, output_dim=64, input_length=100),
         LSTM(64, dropout=0.1, recurrent_dropout=0.1),
@@ -294,10 +294,10 @@ def train_nlp_intent_recognition_model(utterances_path, intents_path):
         Dense(10, activation='softmax')
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(loss='sparse_categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
 
-    # Train the NLP intent recognition model
+    ## Train the NLP intent recognition model
     model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y_test))
 
     return model

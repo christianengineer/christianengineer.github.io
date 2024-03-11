@@ -168,20 +168,20 @@ By organizing the deployment directory in this manner, the repository establishe
 Certainly! Below is an example of a Python script for training a machine learning model using mock data for the Real-time Manufacturing Process Optimization application. The script is named `train_model.py` and is located in the `models/` directory of the repository.
 
 ```python
-# models/train_model.py
+## models/train_model.py
 
 import tensorflow as tf
 import numpy as np
 
-# Mock data generation (replace with actual data loading)
+## Mock data generation (replace with actual data loading)
 def generate_mock_data():
     num_samples = 1000
     num_features = 10
     X = np.random.rand(num_samples, num_features)
-    y = np.random.randint(2, size=num_samples)  # Binary classification labels
+    y = np.random.randint(2, size=num_samples)  ## Binary classification labels
     return X, y
 
-# Define and compile the TensorFlow model
+## Define and compile the TensorFlow model
 def create_model(input_shape):
     model = tf.keras.models.Sequential([
         tf.keras.layers.Dense(64, activation='relu', input_shape=(input_shape,)),
@@ -193,16 +193,16 @@ def create_model(input_shape):
     return model
 
 def main():
-    # Generate mock data
+    ## Generate mock data
     X, y = generate_mock_data()
 
-    # Create the model
+    ## Create the model
     model = create_model(input_shape=X.shape[1])
 
-    # Train the model
+    ## Train the model
     model.fit(X, y, epochs=10, batch_size=32, validation_split=0.2)
 
-    # Save the trained model
+    ## Save the trained model
     model.save('trained_models/mock_model')
 
 if __name__ == "__main__":
@@ -219,20 +219,20 @@ This script serves as a placeholder for the actual model training process and ca
 The file path for this script in the repository is `realtime-manufacturing-process-optimization/models/train_model.py`.
 
 ```python
-# models/train_model_complex.py
+## models/train_model_complex.py
 
 import tensorflow as tf
 import numpy as np
 
-# Mock data generation (replace with actual data loading)
+## Mock data generation (replace with actual data loading)
 def generate_mock_data():
     num_samples = 1000
     num_features = 20
     X = np.random.rand(num_samples, num_features)
-    y = np.random.randint(3, size=num_samples)  # Multiclass classification labels
+    y = np.random.randint(3, size=num_samples)  ## Multiclass classification labels
     return X, y
 
-# Define and compile a more complex TensorFlow model
+## Define and compile a more complex TensorFlow model
 def create_complex_model(input_shape, num_classes):
     model = tf.keras.models.Sequential([
         tf.keras.layers.Dense(128, activation='relu', input_shape=(input_shape,)),
@@ -247,17 +247,17 @@ def create_complex_model(input_shape, num_classes):
     return model
 
 def main():
-    # Generate mock data
+    ## Generate mock data
     X, y = generate_mock_data()
 
-    # Create the more complex model
+    ## Create the more complex model
     num_classes = len(np.unique(y))
     model = create_complex_model(input_shape=X.shape[1], num_classes=num_classes)
 
-    # Train the model
+    ## Train the model
     model.fit(X, y, epochs=20, batch_size=64, validation_split=0.2)
 
-    # Save the trained model
+    ## Save the trained model
     model.save('trained_models/complex_mock_model')
 
 if __name__ == "__main__":

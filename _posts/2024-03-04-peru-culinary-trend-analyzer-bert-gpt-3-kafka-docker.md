@@ -107,43 +107,43 @@ Below is a scalable folder and file structure recommendation for organizing the 
 Peru_Culinary_Trend_Analyzer/
 │
 ├── data/
-│   ├── raw_data/          # Raw data sources
-│   ├── processed_data/    # Processed data for modeling
-│   └── output/            # Model outputs, predictions
+│   ├── raw_data/          ## Raw data sources
+│   ├── processed_data/    ## Processed data for modeling
+│   └── output/            ## Model outputs, predictions
 │
 ├── models/
-│   ├── model_training/    # Scripts for training models
-│   ├── model_evaluation/  # Evaluation scripts and metrics
-│   └── model_deployment/  # Model deployment scripts
+│   ├── model_training/    ## Scripts for training models
+│   ├── model_evaluation/  ## Evaluation scripts and metrics
+│   └── model_deployment/  ## Model deployment scripts
 │
 ├── notebooks/
-│   ├── data_exploration.ipynb  # Jupyter notebook for data exploration
-│   ├── model_training.ipynb     # Jupyter notebook for model training
-│   └── model_evaluation.ipynb   # Jupyter notebook for model evaluation
+│   ├── data_exploration.ipynb  ## Jupyter notebook for data exploration
+│   ├── model_training.ipynb     ## Jupyter notebook for model training
+│   └── model_evaluation.ipynb   ## Jupyter notebook for model evaluation
 │
 ├── src/
-│   ├── data_processing/   # Data preprocessing scripts
-│   ├── feature_engineering/   # Feature engineering scripts
-│   ├── model/             # Machine learning model scripts
-│   ├── api/               # API integration scripts
-│   └── utils/             # Utility functions and helper scripts
+│   ├── data_processing/   ## Data preprocessing scripts
+│   ├── feature_engineering/   ## Feature engineering scripts
+│   ├── model/             ## Machine learning model scripts
+│   ├── api/               ## API integration scripts
+│   └── utils/             ## Utility functions and helper scripts
 │
 ├── config/
-│   ├── config.yaml        # Configuration parameters
-│   └── logging_config.yaml  # Logging configuration
+│   ├── config.yaml        ## Configuration parameters
+│   └── logging_config.yaml  ## Logging configuration
 │
 ├── tests/
-│   ├── unit_tests/        # Unit tests for individual functions
-│   └── integration_tests/  # Integration tests for end-to-end workflows
+│   ├── unit_tests/        ## Unit tests for individual functions
+│   └── integration_tests/  ## Integration tests for end-to-end workflows
 │
 ├── docs/
-│   ├── data_dictionary.md  # Data dictionary
-│   ├── model_architecture.md  # Model architecture documentation
-│   └── api_documentation.md   # API documentation
+│   ├── data_dictionary.md  ## Data dictionary
+│   ├── model_architecture.md  ## Model architecture documentation
+│   └── api_documentation.md   ## API documentation
 │
-├── requirements.txt       # Python package requirements
-├── README.md              # Project README file
-├── LICENSE.md             # License information
+├── requirements.txt       ## Python package requirements
+├── README.md              ## Project README file
+├── LICENSE.md             ## License information
 ```
 
 In this folder structure:
@@ -168,13 +168,13 @@ The `sourcing` directory within the Peru Culinary Trend Analyzer project is dedi
 sourcing/
 │
 ├── data_sources/
-│   ├── social_media_api.py       # Script for accessing social media APIs
-│   ├── web_scraping.py           # Script for web scraping data from food blogs
-│   ├── consumer_database.py      # Script for accessing consumer databases
+│   ├── social_media_api.py       ## Script for accessing social media APIs
+│   ├── web_scraping.py           ## Script for web scraping data from food blogs
+│   ├── consumer_database.py      ## Script for accessing consumer databases
 │
-├── data_collection_pipeline.py   # Pipeline script for orchestrating data collection process
-├── data_preparation.py           # Script for preparing raw data for further processing
-├── data_integration.py           # Script for integrating and merging data from different sources
+├── data_collection_pipeline.py   ## Pipeline script for orchestrating data collection process
+├── data_preparation.py           ## Script for preparing raw data for further processing
+├── data_integration.py           ## Script for integrating and merging data from different sources
 ```
 
 In this structure:
@@ -199,9 +199,9 @@ The `cleansing` directory within the Peru Culinary Trend Analyzer project is foc
 ```
 cleansing/
 │
-├── text_preprocessing.py        # Script for text data preprocessing
-├── data_cleaning.py             # Script for general data cleaning tasks
-├── outlier_detection.py         # Script for detecting and handling outliers
+├── text_preprocessing.py        ## Script for text data preprocessing
+├── data_cleaning.py             ## Script for general data cleaning tasks
+├── outlier_detection.py         ## Script for detecting and handling outliers
 ```
 
 In this structure:
@@ -221,16 +221,16 @@ The `modeling` directory within the Peru Culinary Trend Analyzer project is dedi
 ```
 modeling/
 │
-├── model_training.py          # Script for training machine learning models
-├── model_evaluation.py        # Script for evaluating model performance
-├── model_selection.py         # Script for hyperparameter tuning and model selection
-├── model_deployment.py        # Script for deploying trained models
+├── model_training.py          ## Script for training machine learning models
+├── model_evaluation.py        ## Script for evaluating model performance
+├── model_selection.py         ## Script for hyperparameter tuning and model selection
+├── model_deployment.py        ## Script for deploying trained models
 │
 ├── models/
-│   ├── bert_model.py          # Script for BERT model implementation
-│   ├── gpt3_model.py          # Script for GPT-3 model implementation
-│   ├── ensemble_model.py      # Script for ensemble model creation
-│   └── custom_model.py        # Script for custom machine learning model
+│   ├── bert_model.py          ## Script for BERT model implementation
+│   ├── gpt3_model.py          ## Script for GPT-3 model implementation
+│   ├── ensemble_model.py      ## Script for ensemble model creation
+│   └── custom_model.py        ## Script for custom machine learning model
 ```
 
 In this structure:
@@ -258,14 +258,14 @@ The `deployment` directory within the Peru Culinary Trend Analyzer project is de
 ```
 deployment/
 │
-├── dockerfile                   # Dockerfile for containerizing the application
-├── requirements.txt             # Python package requirements for deployment
+├── dockerfile                   ## Dockerfile for containerizing the application
+├── requirements.txt             ## Python package requirements for deployment
 ├── app/
-│   ├── main.py                   # Main script for running the application
-│   ├── api_integration.py        # Script for integrating the model into an API
-│   ├── kafka_producer.py         # Script for producing real-time data to Kafka
-│   ├── kafka_consumer.py         # Script for consuming data from Kafka
-│   └── data_visualization.py      # Script for visualizing trend analysis results
+│   ├── main.py                   ## Main script for running the application
+│   ├── api_integration.py        ## Script for integrating the model into an API
+│   ├── kafka_producer.py         ## Script for producing real-time data to Kafka
+│   ├── kafka_consumer.py         ## Script for consuming data from Kafka
+│   └── data_visualization.py      ## Script for visualizing trend analysis results
 ```
 
 In this structure:
@@ -358,29 +358,29 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
 import joblib
 
-# Load the mocked data from the CSV file
+## Load the mocked data from the CSV file
 file_path = 'path/to/mocked_data.csv'
 data = pd.read_csv(file_path)
 
-# Preprocessing: Splitting into features(X) and target(y) variables
-X = data.drop(['rating', 'customer_id'], axis=1)  # Features
-y = data['rating']  # Target variable
+## Preprocessing: Splitting into features(X) and target(y) variables
+X = data.drop(['rating', 'customer_id'], axis=1)  ## Features
+y = data['rating']  ## Target variable
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Train a RandomForestRegressor model
+## Train a RandomForestRegressor model
 model = RandomForestRegressor(n_estimators=100, random_state=42)
 model.fit(X_train, y_train)
 
-# Evaluate the model
+## Evaluate the model
 train_score = model.score(X_train, y_train)
 test_score = model.score(X_test, y_test)
 
 print(f'Training R^2 Score: {train_score:.2f}')
 print(f'Testing R^2 Score: {test_score:.2f}')
 
-# Save the trained model to a file
+## Save the trained model to a file
 model_file_path = 'path/to/trained_model.pkl'
 joblib.dump(model, model_file_path)
 ```

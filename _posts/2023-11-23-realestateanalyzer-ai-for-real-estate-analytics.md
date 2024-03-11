@@ -5,7 +5,7 @@ permalink: posts/realestateanalyzer-ai-for-real-estate-analytics
 layout: article
 ---
 
-# AI RealEstateAnalyzer Repository
+## AI RealEstateAnalyzer Repository
 
 ## Objectives
 The main objectives of the AI RealEstateAnalyzer repository are to build a scalable, data-intensive AI application that leverages machine learning and deep learning techniques to analyze and provide insights on real estate properties. Some of the specific objectives include:
@@ -34,7 +34,7 @@ The AI RealEstateAnalyzer repository will leverage a variety of libraries and te
 
 By utilizing these libraries and technologies, we can build a robust, scalable AI application that meets the objectives of the AI RealEstateAnalyzer repository.
 
-# Infrastructure for RealEstateAnalyzer AI Application
+## Infrastructure for RealEstateAnalyzer AI Application
 
 Building an infrastructure for the RealEstateAnalyzer AI application involves designing a scalable and reliable system that can handle the intensive data processing and machine learning tasks required for real estate analytics. The infrastructure components include:
 
@@ -185,7 +185,7 @@ By establishing this structure, the RealEstateAnalyzer AI application can be sea
 Certainly! Below is an example of a function for a complex machine learning algorithm using mock data for the RealEstateAnalyzer AI application. In this example, we'll create a function for a Gradient Boosting Regressor model using scikit-learn for predicting real estate property prices. We'll also include a mock file path for the model training data.
 
 ```python
-# app/models/machine_learning/regression.py
+## app/models/machine_learning/regression.py
 
 import pandas as pd
 from sklearn.ensemble import GradientBoostingRegressor
@@ -193,34 +193,34 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 
 def train_gradient_boosting_model(data_file_path):
-    # Load the mock training data from the specified file path
+    ## Load the mock training data from the specified file path
     data = pd.read_csv(data_file_path)
 
-    # Assume that the dataset contains features and target variable 'price'
+    ## Assume that the dataset contains features and target variable 'price'
     X = data.drop('price', axis=1)
     y = data['price']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize the Gradient Boosting Regressor model
+    ## Initialize the Gradient Boosting Regressor model
     model = GradientBoostingRegressor(n_estimators=100, learning_rate=0.1, max_depth=3, loss='ls')
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train)
 
-    # Evaluate the model on the test set
+    ## Evaluate the model on the test set
     predictions = model.predict(X_test)
     mse = mean_squared_error(y_test, predictions)
     print(f"Mean Squared Error: {mse}")
 
-    # Return the trained model
+    ## Return the trained model
     return model
 
-# Mock file path for the training data
+## Mock file path for the training data
 file_path = 'data/processed_data/training_data.csv'
 
-# Train the Gradient Boosting Regressor model using the mock data
+## Train the Gradient Boosting Regressor model using the mock data
 trained_model = train_gradient_boosting_model(file_path)
 ```
 
@@ -231,7 +231,7 @@ This script assumes that the mock training data is stored in a CSV file located 
 Sure, here's an example of a function for a complex deep learning algorithm using mock data for the RealEstateAnalyzer AI application. In this example, we'll create a function for a Convolutional Neural Network (CNN) model using TensorFlow and Keras for image recognition of real estate property features. We'll include a mock file path for the image data.
 
 ```python
-# app/models/deep_learning/image_recognition.py
+## app/models/deep_learning/image_recognition.py
 
 import numpy as np
 import tensorflow as tf
@@ -239,11 +239,11 @@ from tensorflow import keras
 from tensorflow.keras import layers
 
 def train_image_recognition_model(image_data_path):
-    # Load and preprocess the mock image data from the specified file path
-    # Here, we assume image_data_path contains the paths to the image files and their corresponding labels
-    # Placeholder for loading and preprocessing image data using libraries such as TensorFlow or OpenCV
+    ## Load and preprocess the mock image data from the specified file path
+    ## Here, we assume image_data_path contains the paths to the image files and their corresponding labels
+    ## Placeholder for loading and preprocessing image data using libraries such as TensorFlow or OpenCV
 
-    # Define a simple Convolutional Neural Network (CNN) model for image recognition
+    ## Define a simple Convolutional Neural Network (CNN) model for image recognition
     model = keras.Sequential([
         layers.Conv2D(32, (3, 3), activation='relu', input_shape=(64, 64, 3)),
         layers.MaxPooling2D((2, 2)),
@@ -256,26 +256,26 @@ def train_image_recognition_model(image_data_path):
         layers.Dense(10, activation='softmax')
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam',
                   loss='sparse_categorical_crossentropy',
                   metrics=['accuracy'])
 
-    # Assume X contains the preprocessed images and y contains the corresponding labels
-    # This is a placeholder for the actual data loading and preprocessing
-    X = np.random.rand(100, 64, 64, 3)  # Mock image data
-    y = np.random.randint(10, size=(100,))  # Mock labels
+    ## Assume X contains the preprocessed images and y contains the corresponding labels
+    ## This is a placeholder for the actual data loading and preprocessing
+    X = np.random.rand(100, 64, 64, 3)  ## Mock image data
+    y = np.random.randint(10, size=(100,))  ## Mock labels
 
-    # Train the model
+    ## Train the model
     model.fit(X, y, epochs=10, batch_size=32, validation_split=0.2)
 
-    # Return the trained model
+    ## Return the trained model
     return model
 
-# Mock file path for the image data
+## Mock file path for the image data
 image_data_path = 'data/raw_images/property_images/'
 
-# Train the CNN image recognition model using the mock image data
+## Train the CNN image recognition model using the mock image data
 trained_image_recognition_model = train_image_recognition_model(image_data_path)
 ```
 

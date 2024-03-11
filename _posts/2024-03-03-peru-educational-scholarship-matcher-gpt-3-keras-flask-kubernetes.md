@@ -5,7 +5,7 @@ permalink: posts/peru-educational-scholarship-matcher-gpt-3-keras-flask-kubernet
 layout: article
 ---
 
-# AI Peru Educational Scholarship Matcher
+## AI Peru Educational Scholarship Matcher
 
 ## Objectives
 The main objective of the **AI Peru Educational Scholarship Matcher** is to connect low-income students with suitable scholarship opportunities to support their educational pursuits and reduce financial barriers. The system aims to streamline the scholarship application process by leveraging AI technologies to match students with scholarships that align with their qualifications and interests.
@@ -26,7 +26,7 @@ The main objective of the **AI Peru Educational Scholarship Matcher** is to conn
 
 By implementing these design strategies and utilizing the chosen libraries, the **AI Peru Educational Scholarship Matcher** can effectively match low-income students with scholarship opportunities, thereby empowering them to pursue higher education without financial constraints.
 
-# MLOps Infrastructure for the Peru Educational Scholarship Matcher
+## MLOps Infrastructure for the Peru Educational Scholarship Matcher
 
 ## Data Pipeline
 1. **Data Collection**: Gather scholarship opportunities and student profiles through web scraping, API integration, and user input.
@@ -73,7 +73,7 @@ By implementing these design strategies and utilizing the chosen libraries, the 
 
 By implementing a robust MLOps infrastructure for the **Peru Educational Scholarship Matcher**, the team can efficiently develop, train, deploy, monitor, and scale the application while ensuring data security, model performance, and compliance with best practices in machine learning operations.
 
-# Scalable File Structure for Peru Educational Scholarship Matcher Repository
+## Scalable File Structure for Peru Educational Scholarship Matcher Repository
 
 ```
 ├── app/
@@ -170,14 +170,14 @@ The `kubernetes/` directory in the **Peru Educational Scholarship Matcher** repo
 By organizing the deployment files in the `kubernetes/` directory, the **Peru Educational Scholarship Matcher** application follows best practices for containerized deployments and orchestrating resources in Kubernetes. These files streamline the deployment process, ensure consistency across environments, and provide scalability and reliability for hosting the application in a Kubernetes cluster.
 
 ```python
-# File Path: data/mock_training_data.py
+## File Path: data/mock_training_data.py
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 
-# Load mock training data
+## Load mock training data
 data = {
     'Feature1': [value1, value2, value3, ...],
     'Feature2': [value4, value5, value6, ...],
@@ -185,18 +185,18 @@ data = {
 }
 df = pd.DataFrame(data)
 
-# Split data into features and target
+## Split data into features and target
 X = df[['Feature1', 'Feature2']]
 y = df['Target']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Train a machine learning model (Random Forest as an example)
+## Train a machine learning model (Random Forest as an example)
 model = RandomForestClassifier()
 model.fit(X_train, y_train)
 
-# Evaluate the model
+## Evaluate the model
 predictions = model.predict(X_test)
 accuracy = accuracy_score(y_test, predictions)
 print(f"Model Accuracy: {accuracy}")
@@ -207,30 +207,30 @@ This Python script `mock_training_data.py` can be used to train a machine learni
 The script loads mock training data, splits it into features and target variables, trains a Random Forest classifier on the data, and evaluates the model's accuracy. This serves as a foundational step in developing and training machine learning models for the scholarship matching application with mock data.
 
 ```python
-# File Path: models/complex_algorithm.py
+## File Path: models/complex_algorithm.py
 
 import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.metrics import accuracy_score
 
-# Load and preprocess mock data
+## Load and preprocess mock data
 X, y = load_mock_data()
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Define and train a complex machine learning algorithm (Gradient Boosting)
+## Define and train a complex machine learning algorithm (Gradient Boosting)
 model = GradientBoostingClassifier(n_estimators=100, learning_rate=0.1, max_depth=3)
 model.fit(X_train, y_train)
 
-# Evaluate the model
+## Evaluate the model
 predictions = model.predict(X_test)
 accuracy = accuracy_score(y_test, predictions)
 print(f"Model Accuracy: {accuracy}")
 
 def load_mock_data():
-    # Load and preprocess mock data (replace with actual data loading and preprocessing steps)
+    ## Load and preprocess mock data (replace with actual data loading and preprocessing steps)
     data = {
         'Feature1': [value1, value2, value3, ...],
         'Feature2': [value4, value5, value6, ...],

@@ -288,33 +288,33 @@ nltk.download('wordnet')
 nltk.download('punkt')
 
 def train_sentiment_analysis_model(data_file_path):
-    # Load mock data from CSV file
+    ## Load mock data from CSV file
     data = pd.read_csv(data_file_path)
 
-    # Data preprocessing
+    ## Data preprocessing
     stop_words = set(stopwords.words('english'))
     lemmatizer = WordNetLemmatizer()
     data['clean_text'] = data['text'].apply(lambda x: ' '.join([lemmatizer.lemmatize(word) for word in x.split() if word.lower() not in stop_words]))
 
-    # Split data into training and testing sets
+    ## Split data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(data['clean_text'], data['label'], test_size=0.2, random_state=42)
 
-    # Feature extraction
-    vectorizer = TfidfVectorizer(max_features=1000)  # Using TF-IDF for feature extraction
+    ## Feature extraction
+    vectorizer = TfidfVectorizer(max_features=1000)  ## Using TF-IDF for feature extraction
     X_train_vectorized = vectorizer.fit_transform(X_train)
     X_test_vectorized = vectorizer.transform(X_test)
 
-    # Model training
+    ## Model training
     classifier = RandomForestClassifier(n_estimators=100, random_state=42)
     classifier.fit(X_train_vectorized, y_train)
 
-    # Model evaluation
+    ## Model evaluation
     train_accuracy = classifier.score(X_train_vectorized, y_train)
     test_accuracy = classifier.score(X_test_vectorized, y_test)
 
     return classifier, vectorizer, train_accuracy, test_accuracy
 
-# Example usage
+## Example usage
 data_file_path = 'path_to_mock_data.csv'
 model, vectorizer, train_acc, test_acc = train_sentiment_analysis_model(data_file_path)
 print("Training accuracy:", train_acc)
@@ -347,20 +347,20 @@ nltk.download('wordnet')
 nltk.download('punkt')
 
 def train_lstm_sentiment_analysis_model(data_file_path):
-    # Load mock data from CSV file
+    ## Load mock data from CSV file
     data = pd.read_csv(data_file_path)
 
-    # Data preprocessing
+    ## Data preprocessing
     stop_words = set(stopwords.words('english'))
     lemmatizer = WordNetLemmatizer()
     data['clean_text'] = data['text'].apply(lambda x: ' '.join([lemmatizer.lemmatize(word) for word in x.split() if word.lower() not in stop_words]))
 
-    # Split data into training and testing sets
+    ## Split data into training and testing sets
     X = data['clean_text']
     y = data['label']
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Tokenize and pad sequences
+    ## Tokenize and pad sequences
     tokenizer = Tokenizer(num_words=10000)
     tokenizer.fit_on_texts(X_train)
     X_train_sequence = tokenizer.texts_to_sequences(X_train)
@@ -369,7 +369,7 @@ def train_lstm_sentiment_analysis_model(data_file_path):
     X_train_padded = pad_sequences(X_train_sequence, maxlen=max_sequence_length, padding='post')
     X_test_padded = pad_sequences(X_test_sequence, maxlen=max_sequence_length, padding='post')
 
-    # Build and train LSTM model
+    ## Build and train LSTM model
     model = Sequential()
     model.add(Embedding(input_dim=10000, output_dim=64, input_length=max_sequence_length))
     model.add(LSTM(units=64))
@@ -379,7 +379,7 @@ def train_lstm_sentiment_analysis_model(data_file_path):
 
     return model
 
-# Example usage
+## Example usage
 data_file_path = 'path_to_mock_data.csv'
 trained_lstm_model = train_lstm_sentiment_analysis_model(data_file_path)
 ```

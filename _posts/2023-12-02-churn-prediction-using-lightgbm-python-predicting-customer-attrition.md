@@ -5,7 +5,7 @@ permalink: posts/churn-prediction-using-lightgbm-python-predicting-customer-attr
 layout: article
 ---
 
-# AI Churn Prediction using LightGBM
+## AI Churn Prediction using LightGBM
 
 ## Objectives
 The objective of the AI churn prediction system is to develop a machine learning model that can accurately predict customer attrition or churn. By utilizing historical customer data, the system aims to identify patterns and factors associated with customers who are likely to churn. This will enable businesses to proactively take measures to retain at-risk customers and minimize revenue loss.
@@ -28,7 +28,7 @@ The objective of the AI churn prediction system is to develop a machine learning
 
 By following these design strategies and leveraging the chosen libraries, the system can effectively predict customer churn using LightGBM while maintaining scalability, data integrity, and real-time predictability.
 
-# Infrastructure for Churn Prediction using LightGBM
+## Infrastructure for Churn Prediction using LightGBM
 
 To build a scalable infrastructure for the Churn Prediction using LightGBM application, we can leverage modern cloud-based technologies and principles of microservices architecture.
 
@@ -147,37 +147,37 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
 def train_lightgbm_churn_prediction_model(data_path, model_save_path):
-    # Load mock data
+    ## Load mock data
     mock_data = pd.read_csv(data_path)
 
-    # Preprocess the data (example: handle missing values, feature encoding, etc.)
-    # ...
+    ## Preprocess the data (example: handle missing values, feature encoding, etc.)
+    ## ...
 
-    # Split the data into features and target variable
+    ## Split the data into features and target variable
     X = mock_data.drop('churn_label', axis=1)
     y = mock_data['churn_label']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Define the LightGBM model
+    ## Define the LightGBM model
     lgb_model = lgb.LGBMClassifier(num_leaves=31, learning_rate=0.05, n_estimators=100)
 
-    # Train the model
+    ## Train the model
     lgb_model.fit(X_train, y_train)
 
-    # Make predictions on the test set
+    ## Make predictions on the test set
     y_pred = lgb_model.predict(X_test)
 
-    # Evaluate the model
+    ## Evaluate the model
     accuracy = accuracy_score(y_test, y_pred)
 
-    # Save the trained model to a file path
+    ## Save the trained model to a file path
     lgb_model.booster_.save_model(model_save_path)
 
     return accuracy, model_save_path
 
-# Example usage
+## Example usage
 data_path = 'data/processed_data/train.csv'
 model_save_path = 'models/trained_model/lightgbm_model.pkl'
 accuracy, saved_model_path = train_lightgbm_churn_prediction_model(data_path, model_save_path)
@@ -197,37 +197,37 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
 def train_lightgbm_churn_prediction_model(data_path, model_save_path):
-    # Load mock data
+    ## Load mock data
     mock_data = pd.read_csv(data_path)
 
-    # Preprocess the data (example: handle missing values, feature encoding, etc.)
-    # ...
+    ## Preprocess the data (example: handle missing values, feature encoding, etc.)
+    ## ...
 
-    # Split the data into features and target variable
+    ## Split the data into features and target variable
     X = mock_data.drop('churn_label', axis=1)
     y = mock_data['churn_label']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Define the LightGBM model
+    ## Define the LightGBM model
     lgb_model = lgb.LGBMClassifier(num_leaves=31, learning_rate=0.05, n_estimators=100)
 
-    # Train the model
+    ## Train the model
     lgb_model.fit(X_train, y_train)
 
-    # Make predictions on the test set
+    ## Make predictions on the test set
     y_pred = lgb_model.predict(X_test)
 
-    # Evaluate the model
+    ## Evaluate the model
     accuracy = accuracy_score(y_test, y_pred)
 
-    # Save the trained model to a file path
+    ## Save the trained model to a file path
     lgb_model.booster_.save_model(model_save_path)
 
     return accuracy, model_save_path
 
-# Example usage
+## Example usage
 data_path = 'data/processed_data/train.csv'
 model_save_path = 'models/trained_model/lightgbm_model.txt'
 accuracy, saved_model_path = train_lightgbm_churn_prediction_model(data_path, model_save_path)

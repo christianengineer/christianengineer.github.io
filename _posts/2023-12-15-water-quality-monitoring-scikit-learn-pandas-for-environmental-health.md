@@ -5,7 +5,7 @@ permalink: posts/water-quality-monitoring-scikit-learn-pandas-for-environmental-
 layout: article
 ---
 
-# AI Water Quality Monitoring System
+## AI Water Quality Monitoring System
 
 ## Objectives
 The objective of the AI Water Quality Monitoring system is to create a scalable, data-intensive platform that leverages machine learning to assess and predict water quality. By utilizing historical water quality data and real-time sensor inputs, the system aims to identify patterns, detect anomalies, and provide actionable insights for environmental health management.
@@ -34,7 +34,7 @@ The objective of the AI Water Quality Monitoring system is to create a scalable,
 
 By incorporating these design strategies and chosen libraries, the AI Water Quality Monitoring system can effectively manage and analyze water quality data to support environmental health initiatives.
 
-# MLOps Infrastructure for Water Quality Monitoring Application
+## MLOps Infrastructure for Water Quality Monitoring Application
 
 ## Continuous Integration and Continuous Deployment (CI/CD)
 
@@ -85,51 +85,51 @@ By incorporating these MLOps practices into the water quality monitoring applica
 water_quality_monitoring/
 │
 ├── data/
-│   ├── raw/                    # Raw data sources
-│   ├── processed/              # Processed and cleaned data
-│   ├── feature_engineering/    # Engineered features and preprocessed data
+│   ├── raw/                    ## Raw data sources
+│   ├── processed/              ## Processed and cleaned data
+│   ├── feature_engineering/    ## Engineered features and preprocessed data
 │   
 ├── models/
-│   ├── training/               # Trained machine learning models
-│   ├── inference/              # Deployable models for inference
-│   ├── model_evaluation/       # Model performance evaluation results
+│   ├── training/               ## Trained machine learning models
+│   ├── inference/              ## Deployable models for inference
+│   ├── model_evaluation/       ## Model performance evaluation results
 │   
 ├── src/
-│   ├── data_collection/        # Scripts for data collection and integration
-│   ├── data_preprocessing/     # Data cleaning and preprocessing pipelines
-│   ├── feature_engineering/    # Feature engineering scripts
-│   ├── model_training/         # Model training and evaluation scripts
-│   ├── model_deployment/       # Deployment configurations for machine learning models
-│   ├── app_integration/        # Integration scripts for application components
-│   ├── utils/                  # Utility scripts and reusable modules
+│   ├── data_collection/        ## Scripts for data collection and integration
+│   ├── data_preprocessing/     ## Data cleaning and preprocessing pipelines
+│   ├── feature_engineering/    ## Feature engineering scripts
+│   ├── model_training/         ## Model training and evaluation scripts
+│   ├── model_deployment/       ## Deployment configurations for machine learning models
+│   ├── app_integration/        ## Integration scripts for application components
+│   ├── utils/                  ## Utility scripts and reusable modules
 │   
-├── tests/                      # Automated tests for the application components
+├── tests/                      ## Automated tests for the application components
 │
-├── docs/                       # Documentation and user guides
+├── docs/                       ## Documentation and user guides
 │
-├── config/                     # Configuration files for environment settings
+├── config/                     ## Configuration files for environment settings
 │
-├── .gitignore                  # Gitignore file to specify files and directories to be ignored by Git
-├── requirements.txt            # List of Python packages and dependencies
-├── README.md                   # Overview of the repository and instructions for setup
-├── LICENSE                     # License information for the project
+├── .gitignore                  ## Gitignore file to specify files and directories to be ignored by Git
+├── requirements.txt            ## List of Python packages and dependencies
+├── README.md                   ## Overview of the repository and instructions for setup
+├── LICENSE                     ## License information for the project
 ```
 
 ```plaintext
 models/
 │
-├── training/                   # Trained machine learning models
-│   ├── regression_model.pkl    # Serialized file for the trained regression model
-│   ├── anomaly_detection_model.h5  # Serialized file for the trained anomaly detection model
-│   ├── classification_model.joblib  # Serialized file for the trained classification model
+├── training/                   ## Trained machine learning models
+│   ├── regression_model.pkl    ## Serialized file for the trained regression model
+│   ├── anomaly_detection_model.h5  ## Serialized file for the trained anomaly detection model
+│   ├── classification_model.joblib  ## Serialized file for the trained classification model
 │
-├── inference/                  # Deployable models for inference
-│   ├── regression_model_v1.pkl  # Versioned serialized file for the regression model
-│   ├── random_forest_model_v2.joblib  # Versioned serialized file for the RandomForest classification model
+├── inference/                  ## Deployable models for inference
+│   ├── regression_model_v1.pkl  ## Versioned serialized file for the regression model
+│   ├── random_forest_model_v2.joblib  ## Versioned serialized file for the RandomForest classification model
 │
-├── model_evaluation/           # Model performance evaluation results
-│   ├── regression_metrics.txt   # Performance metrics for the regression model
-│   ├── classification_metrics.txt  # Performance metrics for the classification model
+├── model_evaluation/           ## Model performance evaluation results
+│   ├── regression_metrics.txt   ## Performance metrics for the regression model
+│   ├── classification_metrics.txt  ## Performance metrics for the classification model
 │
 ```
 
@@ -147,17 +147,17 @@ By organizing the models directory in this manner, it becomes easier to manage, 
 deployment/
 │
 ├── docker/
-│   ├── Dockerfile          # Configuration file for building a Docker image for the application
-│   ├── requirements.txt    # Python package dependencies for the application
+│   ├── Dockerfile          ## Configuration file for building a Docker image for the application
+│   ├── requirements.txt    ## Python package dependencies for the application
 │
 ├── kubernetes/
-│   ├── deployment.yaml     # Deployment configuration for Kubernetes
-│   ├── service.yaml        # Service configuration for Kubernetes
-│   ├── ingress.yaml        # Ingress configuration for Kubernetes
+│   ├── deployment.yaml     ## Deployment configuration for Kubernetes
+│   ├── service.yaml        ## Service configuration for Kubernetes
+│   ├── ingress.yaml        ## Ingress configuration for Kubernetes
 │
 ├── scripts/
-    ├── start_application.sh    # Script for starting the water quality monitoring application
-    ├── stop_application.sh     # Script for stopping the application
+    ├── start_application.sh    ## Script for starting the water quality monitoring application
+    ├── stop_application.sh     ## Script for stopping the application
 ```
 
 The `deployment` directory contains subdirectories and files related to the deployment of the Water Quality Monitoring application, including configurations for containerization, Kubernetes deployment, and startup scripts. The directory structure and files are organized as follows:
@@ -175,37 +175,37 @@ Certainly! Below is an example of a Python script for training a regression mode
 File Path: `src/model_training/train_regression_model.py`
 
 ```python
-# train_regression_model.py
+## train_regression_model.py
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 import joblib
 
-# Load mock water quality data from a CSV file
+## Load mock water quality data from a CSV file
 data_path = 'data/processed/mock_water_quality_data.csv'
 water_quality_data = pd.read_csv(data_path)
 
-# Perform feature selection and split the data into features (X) and target variable (y)
+## Perform feature selection and split the data into features (X) and target variable (y)
 X = water_quality_data[['feature1', 'feature2', 'feature3']]
 y = water_quality_data['target']
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize and train a linear regression model
+## Initialize and train a linear regression model
 regression_model = LinearRegression()
 regression_model.fit(X_train, y_train)
 
-# Evaluate the model
+## Evaluate the model
 train_score = regression_model.score(X_train, y_train)
 test_score = regression_model.score(X_test, y_test)
 
-# Save the trained model to a file
+## Save the trained model to a file
 model_output_path = 'models/training/regression_model.pkl'
 joblib.dump(regression_model, model_output_path)
 
-# Print the model evaluation metrics
+## Print the model evaluation metrics
 print(f"Training R-squared score: {train_score}")
 print(f"Testing R-squared score: {test_score}")
 print(f"Trained regression model saved to: {model_output_path}")
@@ -220,7 +220,7 @@ Certainly! Below is an example of a Python script for training a Random Forest c
 File Path: `src/model_training/train_random_forest_classifier.py`
 
 ```python
-# train_random_forest_classifier.py
+## train_random_forest_classifier.py
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -228,32 +228,32 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report
 import joblib
 
-# Load mock water quality data from a CSV file
+## Load mock water quality data from a CSV file
 data_path = 'data/processed/mock_water_quality_data.csv'
 water_quality_data = pd.read_csv(data_path)
 
-# Perform feature selection and split the data into features (X) and target variable (y)
+## Perform feature selection and split the data into features (X) and target variable (y)
 X = water_quality_data[['feature1', 'feature2', 'feature3']]
-y = water_quality_data['label']  # Assuming 'label' is the target class for classification
+y = water_quality_data['label']  ## Assuming 'label' is the target class for classification
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize and train a Random Forest classifier
+## Initialize and train a Random Forest classifier
 classifier = RandomForestClassifier(n_estimators=100, random_state=42)
 classifier.fit(X_train, y_train)
 
-# Make predictions on the test set
+## Make predictions on the test set
 y_pred = classifier.predict(X_test)
 
-# Evaluate the model
+## Evaluate the model
 classification_summary = classification_report(y_test, y_pred)
 
-# Save the trained model to a file
+## Save the trained model to a file
 model_output_path = 'models/training/random_forest_classifier.joblib'
 joblib.dump(classifier, model_output_path)
 
-# Print the classification report and the model path
+## Print the classification report and the model path
 print("Classification Report:")
 print(classification_summary)
 print(f"Trained Random Forest Classifier saved to: {model_output_path}")
@@ -263,7 +263,7 @@ In this script, the mock water quality data is loaded from a CSV file, and a Ran
 
 This script demonstrates the training of a more complex machine learning algorithm, specifically a Random Forest classifier, using mock data for the Water Quality Monitoring application. Actual data and domain-specific features would be used in a real-world scenario.
 
-# Types of Users for Water Quality Monitoring Application
+## Types of Users for Water Quality Monitoring Application
 
 1. **Environmental Researcher**
    - *User Story*: As an environmental researcher, I want to analyze the historical water quality data to identify long-term trends and patterns in pollutants, which helps in understanding the impact of human activities on water bodies.

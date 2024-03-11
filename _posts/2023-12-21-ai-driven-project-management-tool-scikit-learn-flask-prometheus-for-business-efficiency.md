@@ -224,7 +224,7 @@ Additionally, integrating deployment-related scripts, such as deployment automat
 Sure, I can provide a sample file for training a machine learning model using mock data for the AI-driven Project Management Tool. Below is a Python script for training a simple regression model using Scikit-Learn with mock project data. We'll name the file `train_model.py`, and it will be located in the `models/` directory of the project:
 
 ```python
-# models/train_model.py
+## models/train_model.py
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -232,26 +232,26 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
 import joblib
 
-# Load mock project data (Replace with actual data loading code)
+## Load mock project data (Replace with actual data loading code)
 project_data = pd.read_csv('path_to_mock_project_data.csv')
 
-# Preprocessing (Replace with actual preprocessing steps)
+## Preprocessing (Replace with actual preprocessing steps)
 X = project_data.drop(['project_id', 'target_variable'], axis=1)
 y = project_data['target_variable']
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Train a simple linear regression model
+## Train a simple linear regression model
 model = LinearRegression()
 model.fit(X_train, y_train)
 
-# Evaluate the model
+## Evaluate the model
 y_pred = model.predict(X_test)
 mse = mean_squared_error(y_test, y_pred)
 print(f'Mean Squared Error: {mse}')
 
-# Save the trained model to a file
+## Save the trained model to a file
 joblib.dump(model, 'path_to_saved_model.pkl')
 
 ```
@@ -270,7 +270,7 @@ This file provides a basic template for training a model using mock data for the
 Certainly! Below is a Python script for training a complex machine learning algorithm, specifically a Random Forest Regressor, using mock project data for the AI-driven Project Management Tool. The file will be named `train_complex_model.py` and should be located in the `models/` directory of the project:
 
 ```python
-# models/train_complex_model.py
+## models/train_complex_model.py
 
 import pandas as pd
 from sklearn.ensemble import RandomForestRegressor
@@ -278,26 +278,26 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 import joblib
 
-# Load mock project data (Replace with actual data loading code)
+## Load mock project data (Replace with actual data loading code)
 project_data = pd.read_csv('path_to_mock_project_data.csv')
 
-# Preprocessing (Replace with actual preprocessing steps)
+## Preprocessing (Replace with actual preprocessing steps)
 X = project_data.drop(['project_id', 'target_variable'], axis=1)
 y = project_data['target_variable']
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Train a Random Forest Regressor
+## Train a Random Forest Regressor
 model = RandomForestRegressor(n_estimators=100, max_depth=10, random_state=42)
 model.fit(X_train, y_train)
 
-# Evaluate the model
+## Evaluate the model
 y_pred = model.predict(X_test)
 mse = mean_squared_error(y_test, y_pred)
 print(f'Mean Squared Error: {mse}')
 
-# Save the trained model to a file
+## Save the trained model to a file
 joblib.dump(model, 'path_to_saved_complex_model.pkl')
 ```
 

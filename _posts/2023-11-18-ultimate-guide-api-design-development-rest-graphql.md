@@ -5,7 +5,7 @@ permalink: posts/ultimate-guide-api-design-development-rest-graphql
 layout: article
 ---
 
-# API Design and Development (REST, GraphQL)
+## API Design and Development (REST, GraphQL)
 
 API stands for Application Programming Interface. It's a set of rules and protocols that determines how components of a software should interact. In the context of web development, APIs offer a way to exchange data and functionality between separate software systems.
 

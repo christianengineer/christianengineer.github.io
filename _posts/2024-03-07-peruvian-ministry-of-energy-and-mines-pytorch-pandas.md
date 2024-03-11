@@ -5,7 +5,7 @@ permalink: posts/peruvian-ministry-of-energy-and-mines-pytorch-pandas
 layout: article
 ---
 
-# Project Overview
+## Project Overview
 In this project, we aim to develop a scalable machine learning solution to forecast energy demand for the Peruvian Ministry of Energy and Mines. By predicting future energy consumption patterns, we can assist Energy Analysts in efficiently planning energy production and distribution.
 
 ## Target Audience
@@ -40,7 +40,7 @@ For this project, we will use a Long Short-Term Memory (LSTM) neural network alg
 - **AWS** (https://aws.amazon.com/) or **Google Cloud Platform** (https://cloud.google.com/): Cloud platforms for deploying the machine learning model.
 - **Scikit-learn** (https://scikit-learn.org/): Optional library for data preprocessing and evaluation of the model.
 
-# Data Sourcing Strategy
+## Data Sourcing Strategy
 
 ## Data Collection Tools and Methods
 To efficiently collect relevant historical energy consumption data for our forecasting project, we can leverage a combination of tools and methods tailored to the problem domain. Here are some recommendations:
@@ -74,7 +74,7 @@ To streamline the data collection process and ensure the data is readily accessi
 
 By incorporating these tools and methods into our existing technology stack, we can streamline the data collection process, ensuring that the historical energy consumption data is efficiently retrieved, processed, and ready for analysis and model training for our forecasting project.
 
-# Feature Extraction and Engineering Analysis
+## Feature Extraction and Engineering Analysis
 
 ## Feature Extraction
 For the energy demand forecasting project, effective feature extraction is crucial to capture relevant patterns in the data and improve the performance of the machine learning model. Here are some key features to consider for extraction:
@@ -137,7 +137,7 @@ When naming the engineered features, it is essential to use descriptive and cons
 
 By incorporating these feature extraction and engineering strategies, along with the recommended variable names, we can enhance the interpretability of the data, improve the performance of the machine learning model, and ultimately achieve more accurate energy demand forecasts for the Ministry of Energy and Mines.
 
-# Metadata Management Recommendations
+## Metadata Management Recommendations
 
 In the context of our energy demand forecasting project for the Peruvian Ministry of Energy and Mines, effective metadata management is essential for ensuring the success and scalability of the project. Here are some insights directly relevant to the unique demands and characteristics of our project:
 
@@ -167,7 +167,7 @@ In the context of our energy demand forecasting project for the Peruvian Ministr
 
 By implementing robust metadata management practices tailored to the specific demands and characteristics of our energy demand forecasting project, we can enhance transparency, reproducibility, and efficiency throughout the project lifecycle, leading to more accurate forecasts and informed decision-making for the Peruvian Ministry of Energy and Mines.
 
-# Data Preprocessing for Robust Machine Learning Models
+## Data Preprocessing for Robust Machine Learning Models
 
 In the context of our energy demand forecasting project for the Peruvian Ministry of Energy and Mines, several specific data-related challenges may arise that could impact the performance and reliability of our machine learning models. To address these challenges effectively, strategic data preprocessing practices can be employed to mitigate issues and ensure the data remains robust and conducive to high-performing models. Here are insights directly relevant to the unique demands and characteristics of our project:
 
@@ -201,28 +201,28 @@ Below is a Python code file that outlines the necessary preprocessing steps tail
 import pandas as pd
 from sklearn.preprocessing import MinMaxScaler
 
-# Load the energy consumption data
+## Load the energy consumption data
 energy_data = pd.read_csv('energy_consumption_data.csv')
 
-# Convert the date/time column to datetime format
+## Convert the date/time column to datetime format
 energy_data['timestamp'] = pd.to_datetime(energy_data['timestamp'])
 
-# Sort the data by timestamp to ensure chronological order
+## Sort the data by timestamp to ensure chronological order
 energy_data = energy_data.sort_values('timestamp')
 
-# Impute missing values in energy consumption column with forward fill
+## Impute missing values in energy consumption column with forward fill
 energy_data['energy_consumption'].fillna(method='ffill', inplace=True)
 
-# Feature Engineering: Extract date and time features
+## Feature Engineering: Extract date and time features
 energy_data['day_of_week'] = energy_data['timestamp'].dt.dayofweek
 energy_data['month'] = energy_data['timestamp'].dt.month
 energy_data['hour'] = energy_data['timestamp'].dt.hour
 
-# Feature Scaling: Normalize energy consumption data
+## Feature Scaling: Normalize energy consumption data
 scaler = MinMaxScaler()
 energy_data['energy_consumption_scaled'] = scaler.fit_transform(energy_data[['energy_consumption']])
 
-# Save the preprocessed data to a new CSV file for model training
+## Save the preprocessed data to a new CSV file for model training
 energy_data.to_csv('preprocessed_energy_data.csv', index=False)
 ```
 
@@ -238,7 +238,7 @@ energy_data.to_csv('preprocessed_energy_data.csv', index=False)
 
 By following these preprocessing steps outlined in the code file, we can prepare our data effectively for model training and analysis, ensuring that it is structured, cleaned, and scaled appropriately to build accurate and reliable machine learning models for energy demand forecasting in alignment with the specific needs of the Ministry of Energy and Mines.
 
-# Recommended Modeling Strategy for Energy Demand Forecasting
+## Recommended Modeling Strategy for Energy Demand Forecasting
 
 For our energy demand forecasting project for the Peruvian Ministry of Energy and Mines, a Long Short-Term Memory (LSTM) neural network model implemented in PyTorch stands out as a particularly well-suited modeling strategy. LSTMs excel at capturing long-term dependencies in sequential data, making them ideal for predicting energy consumption patterns that exhibit temporal dynamics and trends.
 
@@ -261,7 +261,7 @@ The most crucial step within this recommended modeling strategy is feature selec
 
 By emphasizing feature selection and temporal aggregation within the modeling strategy, we can ensure that our LSTM model effectively captures the intricate dynamics of energy consumption data, leading to accurate forecasts that empower Energy Analysts to make informed decisions for energy production and distribution planning at the Peruvian Ministry of Energy and Mines.
 
-# Data Modeling Tools and Technologies Recommendations
+## Data Modeling Tools and Technologies Recommendations
 
 To effectively implement our modeling strategy for energy demand forecasting at the Peruvian Ministry of Energy and Mines, the following tools and technologies are recommended. Each tool is aligned with our project's data types and modeling needs, tailored to address the pain points of Energy Analysts by providing accurate energy demand predictions.
 
@@ -304,22 +304,22 @@ import pandas as pd
 import numpy as np
 from datetime import datetime, timedelta
 
-# Set random seed for reproducibility
+## Set random seed for reproducibility
 np.random.seed(42)
 
-# Define the number of data points in the dataset
+## Define the number of data points in the dataset
 num_data_points = 1000
 
-# Generate synthetic timestamp data
+## Generate synthetic timestamp data
 start_date = datetime(2021, 1, 1)
 timestamps = [start_date + timedelta(hours=i) for i in range(num_data_points)]
 
-# Generate synthetic energy consumption data
+## Generate synthetic energy consumption data
 mean_energy_consumption = 1000
 energy_consumption_variation = 200
 energy_consumption = np.random.normal(mean_energy_consumption, energy_consumption_variation, num_data_points)
 
-# Generate synthetic weather data (temperature and humidity)
+## Generate synthetic weather data (temperature and humidity)
 mean_temperature = 25
 temperature_variation = 5
 temperature = np.random.normal(mean_temperature, temperature_variation, num_data_points)
@@ -328,10 +328,10 @@ mean_humidity = 60
 humidity_variation = 10
 humidity = np.random.normal(mean_humidity, humidity_variation, num_data_points)
 
-# Generate synthetic holiday data
+## Generate synthetic holiday data
 holidays = np.random.choice([0, 1], num_data_points, p=[0.9, 0.1])
 
-# Create a Pandas DataFrame with the synthetic data
+## Create a Pandas DataFrame with the synthetic data
 data = pd.DataFrame({
     'timestamp': timestamps,
     'energy_consumption': energy_consumption,
@@ -340,7 +340,7 @@ data = pd.DataFrame({
     'is_holiday': holidays
 })
 
-# Save the synthetic dataset to a CSV file
+## Save the synthetic dataset to a CSV file
 data.to_csv('synthetic_energy_data.csv', index=False)
 ```
 
@@ -388,10 +388,10 @@ import torch
 import torch.nn as nn
 import numpy as np
 
-# Load the preprocessed dataset
+## Load the preprocessed dataset
 data = pd.read_csv('preprocessed_energy_data.csv')
 
-# Define the LSTM model architecture
+## Define the LSTM model architecture
 class LSTMModel(nn.Module):
     def __init__(self, input_size, hidden_size, num_layers, output_size):
         super(LSTMModel, self).__init__()
@@ -403,29 +403,29 @@ class LSTMModel(nn.Module):
         output = self.fc(lstm_out[:, -1, :])
         return output
 
-# Initialize model hyperparameters
-input_size = 4  # Number of features (timestamp, energy, temperature, humidity)
+## Initialize model hyperparameters
+input_size = 4  ## Number of features (timestamp, energy, temperature, humidity)
 hidden_size = 64
 num_layers = 2
-output_size = 1  # Predict energy consumption
+output_size = 1  ## Predict energy consumption
 
-# Instantiate the LSTM model
+## Instantiate the LSTM model
 model = LSTMModel(input_size, hidden_size, num_layers, output_size)
 
-# Load model weights
+## Load model weights
 model.load_state_dict(torch.load('lstm_model_weights.pth'))
 
-# Prepare input data for prediction
+## Prepare input data for prediction
 input_data = torch.FloatTensor(data[['timestamp', 'energy_consumption_scaled', 'temperature', 'humidity']].values)
-input_data = input_data.unsqueeze(0)  # Add batch dimension
+input_data = input_data.unsqueeze(0)  ## Add batch dimension
 
-# Make prediction
+## Make prediction
 model.eval()
 with torch.no_grad():
     prediction = model(input_data)
 
-# Convert predicted value back to original scale
-prediction = prediction.item()  # Assuming single prediction
+## Convert predicted value back to original scale
+prediction = prediction.item()  ## Assuming single prediction
 min_energy, max_energy = data['energy_consumption'].min(), data['energy_consumption'].max()
 predicted_energy = prediction * (max_energy - min_energy) + min_energy
 
@@ -441,7 +441,7 @@ print('Predicted Energy Consumption:', predicted_energy)
 
 By following these conventions and best practices, the provided code serves as a benchmark for developing a production-ready machine learning model for energy demand forecasting, ensuring high-quality, readable, and maintainable code suitable for deployment in a scalable production environment.
 
-# Machine Learning Model Deployment Plan
+## Machine Learning Model Deployment Plan
 
 To effectively deploy the machine learning model for energy demand forecasting into a production environment for the Peruvian Ministry of Energy and Mines, the following step-by-step deployment plan is outlined. Each step is tailored to the unique demands and characteristics of our project, providing references to necessary tools and platforms for seamless deployment.
 
@@ -507,24 +507,24 @@ By following this step-by-step deployment plan tailored to the unique demands of
 Below is a sample Dockerfile tailored to encapsulate the environment and dependencies for deploying the machine learning model for energy demand forecasting in a production environment. This Dockerfile is optimized for handling the performance needs of our project and includes configurations specific to our use case:
 
 ```Dockerfile
-# Use a base image with Python and PyTorch pre-installed
+## Use a base image with Python and PyTorch pre-installed
 FROM pytorch/pytorch:latest
 
-# Set the working directory inside the container
+## Set the working directory inside the container
 WORKDIR /app
 
-# Copy the model files and necessary dependencies
+## Copy the model files and necessary dependencies
 COPY requirements.txt .
 COPY lstm_model.py .
 COPY preprocessed_energy_data.csv .
 
-# Install required Python packages
+## Install required Python packages
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Expose API port
+## Expose API port
 EXPOSE 5000
 
-# Command to start the Python Flask API for model inference
+## Command to start the Python Flask API for model inference
 CMD ["python", "lstm_model.py"]
 ```
 
@@ -539,7 +539,7 @@ CMD ["python", "lstm_model.py"]
 
 By following this Dockerfile configuration optimized for our energy demand forecasting project, we can encapsulate our machine learning model and environment effectively, ensuring optimal performance, scalability, and deployment readiness for production use.
 
-# User Groups and User Stories
+## User Groups and User Stories
 
 ## User Groups:
 1. **Energy Analysts**:

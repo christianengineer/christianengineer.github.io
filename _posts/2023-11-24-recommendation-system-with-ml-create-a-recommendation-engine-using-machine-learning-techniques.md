@@ -54,33 +54,33 @@ By implementing this infrastructure, we can create a scalable, data-intensive AI
 ```
 /ml_recommendation_system
 |__ data/
-   |__ raw/  # Raw data files
-   |__ processed/  # Processed data files
-   |__ external/  # External data sources
+   |__ raw/  ## Raw data files
+   |__ processed/  ## Processed data files
+   |__ external/  ## External data sources
 
 |__ notebooks/
-   |__ data_exploration.ipynb  # Jupyter notebook for data exploration and visualization
-   |__ feature_engineering.ipynb  # Jupyter notebook for feature engineering
-   |__ model_training_evaluation.ipynb  # Jupyter notebook for model training and evaluation
+   |__ data_exploration.ipynb  ## Jupyter notebook for data exploration and visualization
+   |__ feature_engineering.ipynb  ## Jupyter notebook for feature engineering
+   |__ model_training_evaluation.ipynb  ## Jupyter notebook for model training and evaluation
 
 |__ src/
-   |__ data_ingestion/  # Scripts for data ingestion from various sources
-   |__ data_processing/  # Scripts for data preprocessing and feature engineering
-   |__ model_training/  # Scripts for training machine learning models
-   |__ model_evaluation/  # Scripts for model evaluation and performance metrics
-   |__ api_service/  # Files for building and deploying the real-time recommendation API service
+   |__ data_ingestion/  ## Scripts for data ingestion from various sources
+   |__ data_processing/  ## Scripts for data preprocessing and feature engineering
+   |__ model_training/  ## Scripts for training machine learning models
+   |__ model_evaluation/  ## Scripts for model evaluation and performance metrics
+   |__ api_service/  ## Files for building and deploying the real-time recommendation API service
 
 |__ models/
-   |__ trained_models/  # Saved trained ML models
-   |__ model_evaluation_results/  # Model evaluation metrics and results
+   |__ trained_models/  ## Saved trained ML models
+   |__ model_evaluation_results/  ## Model evaluation metrics and results
 
 |__ config/
-   |__ environment_config.yaml  # Environment-specific configurations for data sources, model hyperparameters, etc.
-   |__ logging_config.yaml  # Configuration for centralized logging
+   |__ environment_config.yaml  ## Environment-specific configurations for data sources, model hyperparameters, etc.
+   |__ logging_config.yaml  ## Configuration for centralized logging
 
-|__ Dockerfile  # Dockerfile for containerizing the real-time recommendation API service
-|__ requirements.txt  # Python dependencies for the project
-|__ README.md  # Project documentation and setup instructions
+|__ Dockerfile  ## Dockerfile for containerizing the real-time recommendation API service
+|__ requirements.txt  ## Python dependencies for the project
+|__ README.md  ## Project documentation and setup instructions
 ```
 
 This file structure is designed to organize the ML recommendation system repository in a scalable and maintainable manner. It separates data processing, model development, and deployment components into distinct directories, making it easier to manage, maintain, and collaborate on the project.
@@ -88,12 +88,12 @@ This file structure is designed to organize the ML recommendation system reposit
 ```plaintext
 |__ models/
    |__ trained_models/
-      |__ model1.pkl  # Serialized trained model file
-      |__ model2.pkl  # Serialized trained model file
+      |__ model1.pkl  ## Serialized trained model file
+      |__ model2.pkl  ## Serialized trained model file
       |__ ...
    |__ model_evaluation_results/
-      |__ model1_metrics.json  # Evaluation metrics for model1
-      |__ model2_metrics.json  # Evaluation metrics for model2
+      |__ model1_metrics.json  ## Evaluation metrics for model1
+      |__ model2_metrics.json  ## Evaluation metrics for model2
       |__ ...
 ```
 
@@ -108,15 +108,15 @@ Having a dedicated "models" directory with subdirectories for trained models and
 ```plaintext
 |__ deployment/
    |__ api_service/
-      |__ app.py  # Main application file for the recommendation API service
-      |__ requirements.txt  # Python dependencies for the API service
-      |__ Dockerfile  # Dockerfile for containerizing the API service
+      |__ app.py  ## Main application file for the recommendation API service
+      |__ requirements.txt  ## Python dependencies for the API service
+      |__ Dockerfile  ## Dockerfile for containerizing the API service
       |__ config/
-         |__ production_config.yaml  # Configuration file for production environment
-         |__ staging_config.yaml  # Configuration file for staging environment
+         |__ production_config.yaml  ## Configuration file for production environment
+         |__ staging_config.yaml  ## Configuration file for staging environment
       |__ tests/
-         |__ test_recommendation_service.py  # Unit tests for the recommendation service
-      |__ README.md  # Documentation for deploying and using the recommendation API service
+         |__ test_recommendation_service.py  ## Unit tests for the recommendation service
+      |__ README.md  ## Documentation for deploying and using the recommendation API service
 ```
 
 In the "deployment" directory, we have a subdirectory called "api_service", which contains files related to deploying the real-time recommendation API service.
@@ -142,24 +142,24 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 
 def train_recommendation_model(data_file_path):
-    # Load mock data from the specified file
+    ## Load mock data from the specified file
     data = pd.read_csv(data_file_path)
 
-    # Split the data into features and target variable
+    ## Split the data into features and target variable
     X = data.drop('rating', axis=1)
     y = data['rating']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize and train the machine learning model
+    ## Initialize and train the machine learning model
     model = RandomForestRegressor(n_estimators=100, random_state=42)
     model.fit(X_train, y_train)
 
-    # Make predictions on the test set
+    ## Make predictions on the test set
     y_pred = model.predict(X_test)
 
-    # Evaluate the model using mean squared error
+    ## Evaluate the model using mean squared error
     mse = mean_squared_error(y_test, y_pred)
     
     return model, mse
@@ -176,33 +176,33 @@ from tensorflow.keras.layers import Dense
 from sklearn.metrics import mean_squared_error
 
 def train_deep_learning_recommendation_model(data_file_path):
-    # Load mock data from the specified file
+    ## Load mock data from the specified file
     data = pd.read_csv(data_file_path)
 
-    # Split the data into features and target variable
+    ## Split the data into features and target variable
     X = data.drop('rating', axis=1)
     y = data['rating']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize a deep learning model
+    ## Initialize a deep learning model
     model = Sequential([
         Dense(64, activation='relu', input_shape=(X_train.shape[1],)),
         Dense(32, activation='relu'),
-        Dense(1)  # Output layer
+        Dense(1)  ## Output layer
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam', loss='mean_squared_error')
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y_test))
 
-    # Make predictions on the test set
+    ## Make predictions on the test set
     y_pred = model.predict(X_test)
 
-    # Evaluate the model using mean squared error
+    ## Evaluate the model using mean squared error
     mse = mean_squared_error(y_test, y_pred)
 
     return model, mse

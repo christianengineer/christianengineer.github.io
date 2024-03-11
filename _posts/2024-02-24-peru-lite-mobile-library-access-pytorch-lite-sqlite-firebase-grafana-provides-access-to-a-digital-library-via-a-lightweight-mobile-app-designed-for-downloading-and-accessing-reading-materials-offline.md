@@ -5,7 +5,7 @@ permalink: posts/peru-lite-mobile-library-access-pytorch-lite-sqlite-firebase-gr
 layout: article
 ---
 
-# Scalable File Structure for the Peru Lite Mobile Library Access
+## Scalable File Structure for the Peru Lite Mobile Library Access
 
 ## Overview
 This file structure is designed to provide a scalable and organized layout for the Peru Lite Mobile Library Access project. The project aims to provide access to a digital library via a lightweight mobile app that allows users to download and access reading materials offline. The technologies involved in this project include PyTorch Lite for machine learning capabilities, SQLite for local data storage, Firebase for cloud services, and Grafana for data visualization.
@@ -149,65 +149,65 @@ import firebase_admin
 from firebase_admin import credentials, firestore
 import pandas as pd
 
-# Load PyTorch Lite model
+## Load PyTorch Lite model
 model = torch.jit.load("model_lite.pth")
 
-# Connect to SQLite database
+## Connect to SQLite database
 conn = sqlite3.connect('offline_repository.db')
 cursor = conn.cursor()
 
-# Initialize Firebase
+## Initialize Firebase
 cred = credentials.Certificate("firebase_credentials.json")
 firebase_admin.initialize_app(cred)
 db = firestore.client()
 
-# Mock data retrieval functions
+## Mock data retrieval functions
 def get_books_from_sqlite():
-    # Mock SQLite query to fetch book data
+    ## Mock SQLite query to fetch book data
     cursor.execute("SELECT * FROM books")
     books = cursor.fetchall()
     return books
 
 def get_user_preferences_from_firebase():
-    # Mock Firebase query to fetch user preferences
+    ## Mock Firebase query to fetch user preferences
     user_prefs = db.collection('users').document('user123').get().to_dict()
     return user_prefs
 
-# Mock training process using data
+## Mock training process using data
 books_data = get_books_from_sqlite()
 user_prefs = get_user_preferences_from_firebase()
 
-# Preprocess data, train model, etc.
+## Preprocess data, train model, etc.
 ...
 ```
 
 In this file, we demonstrate the process of training a model using PyTorch Lite with mock data for the Peru Lite Mobile Library Access application. The model is loaded, mock data is obtained from SQLite and Firebase, and a training process is initialized.
 
 ```markdown
-# File: complex_ml_algorithm.py
+## File: complex_ml_algorithm.py
 ## Location: /models/complex_ml_algorithm.py
 
-# Import necessary libraries
+## Import necessary libraries
 import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 
-# Mock data for training
+## Mock data for training
 X = np.random.rand(100, 10)
 y = np.random.randint(0, 2, 100)
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Define and train a complex machine learning algorithm (Random Forest in this case)
+## Define and train a complex machine learning algorithm (Random Forest in this case)
 clf = RandomForestClassifier()
 clf.fit(X_train, y_train)
 
-# Make predictions on the test set
+## Make predictions on the test set
 predictions = clf.predict(X_test)
 
-# Calculate the accuracy of the model
+## Calculate the accuracy of the model
 accuracy = accuracy_score(y_test, predictions)
 print(f"Accuracy of the complex machine learning algorithm: {accuracy}")
 ```

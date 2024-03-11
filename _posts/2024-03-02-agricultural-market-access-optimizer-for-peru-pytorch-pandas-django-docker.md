@@ -212,7 +212,7 @@ By organizing the machine learning components into a structured directory with s
 By structuring the deployment directory with separate subdirectories for Kubernetes and AWS deployments, along with relevant configuration files and scripts, the Agricultural Market Access Optimizer application can be easily deployed and managed on cloud platforms. The deployment process is automated and streamlined, ensuring scalability and reliability of the application in connecting smallholder farmers with markets and buyers effectively.
 
 ```python
-# File Path: machine_learning/model_training.py
+## File Path: machine_learning/model_training.py
 
 import pandas as pd
 import torch
@@ -221,22 +221,22 @@ import torch.optim as optim
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
-# Load mock data
+## Load mock data
 data = pd.read_csv('data/mock_data.csv')
 
-# Preprocess data
+## Preprocess data
 X = data.drop('target_column', axis=1)
 y = data['target_column']
 
-# Split data into training and validation sets
+## Split data into training and validation sets
 X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Standardize features
+## Standardize features
 scaler = StandardScaler()
 X_train = scaler.fit_transform(X_train)
 X_val = scaler.transform(X_val)
 
-# Define PyTorch model
+## Define PyTorch model
 class MockModel(nn.Module):
     def __init__(self):
         super(MockModel, self).__init__()
@@ -250,14 +250,14 @@ class MockModel(nn.Module):
         x = self.fc3(x)
         return x
 
-# Initialize model
+## Initialize model
 model = MockModel()
 
-# Define loss function and optimizer
+## Define loss function and optimizer
 criterion = nn.MSELoss()
 optimizer = optim.Adam(model.parameters(), lr=0.001)
 
-# Train model
+## Train model
 epochs = 100
 for epoch in range(epochs):
     optimizer.zero_grad()
@@ -269,14 +269,14 @@ for epoch in range(epochs):
     if epoch % 10 == 0:
         print(f'Epoch {epoch+1}/{epochs}, Loss: {loss.item()}')
 
-# Save trained model
+## Save trained model
 torch.save(model.state_dict(), 'models/mock_model.pth')
 ```
 
 This Python script `model_training.py` in the `machine_learning` directory trains a mock PyTorch model for the Agricultural Market Access Optimizer using mock data. The script loads mock data, preprocesses it, defines a simple feedforward neural network model, trains the model, and saves the trained model state dictionary to a file (`models/mock_model.pth`). The script also includes standardization of features, model training loop, and model evaluation via Mean Squared Error loss.
 
 ```python
-# File Path: machine_learning/complex_model_algorithm.py
+## File Path: machine_learning/complex_model_algorithm.py
 
 import pandas as pd
 import torch
@@ -286,22 +286,22 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import accuracy_score
 
-# Load mock data
+## Load mock data
 data = pd.read_csv('data/mock_data_complex.csv')
 
-# Preprocess data
+## Preprocess data
 X = data.drop('target_column', axis=1)
 y = data['target_column']
 
-# Split data into training and validation sets
+## Split data into training and validation sets
 X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Standardize features
+## Standardize features
 scaler = StandardScaler()
 X_train = scaler.fit_transform(X_train)
 X_val = scaler.transform(X_val)
 
-# Define complex PyTorch model architecture
+## Define complex PyTorch model architecture
 class ComplexModel(nn.Module):
     def __init__(self):
         super(ComplexModel, self).__init__()
@@ -317,14 +317,14 @@ class ComplexModel(nn.Module):
         x = self.fc4(x)
         return x
 
-# Initialize complex model
+## Initialize complex model
 model = ComplexModel()
 
-# Define loss function and optimizer
+## Define loss function and optimizer
 criterion = nn.MSELoss()
 optimizer = optim.Adam(model.parameters(), lr=0.001)
 
-# Train complex model
+## Train complex model
 epochs = 200
 for epoch in range(epochs):
     optimizer.zero_grad()
@@ -336,7 +336,7 @@ for epoch in range(epochs):
     if epoch % 10 == 0:
         print(f'Epoch {epoch+1}/{epochs}, Loss: {loss.item()}')
 
-# Evaluate model on validation set
+## Evaluate model on validation set
 with torch.no_grad():
     val_outputs = model(torch.tensor(X_val, dtype=torch.float))
     val_loss = criterion(val_outputs.squeeze(), torch.tensor(y_val.values, dtype=torch.float))
@@ -345,7 +345,7 @@ with torch.no_grad():
 
     print(f'Validation Loss: {val_loss.item()}, Accuracy: {accuracy}')
 
-# Save trained complex model
+## Save trained complex model
 torch.save(model.state_dict(), 'models/complex_model.pth')
 ```
 

@@ -5,7 +5,7 @@ permalink: posts/public-health-data-visualization-d3js-pandas-for-health-awarene
 layout: article
 ---
 
-# AI Public Health Data Visualization Repository
+## AI Public Health Data Visualization Repository
 
 ## Objectives
 The objective of the AI Public Health Data Visualization repository is to create a comprehensive data visualization platform that leverages D3.js and Pandas to raise health awareness through the effective representation of public health data. This will involve the utilization of machine learning algorithms for data analysis and visualization to provide actionable insights and promote informed decision-making in public health.
@@ -22,7 +22,7 @@ The objective of the AI Public Health Data Visualization repository is to create
 
 By incorporating these libraries and design strategies, the AI Public Health Data Visualization repository will be well-equipped to not only visualize health data but also to provide actionable insights and contribute to public health awareness and decision-making.
 
-# MLOps Infrastructure for Public Health Data Visualization Application
+## MLOps Infrastructure for Public Health Data Visualization Application
 
 ## Introduction
 Implementing MLOps infrastructure for the Public Health Data Visualization application is essential to ensure the seamless integration of machine learning components, data visualization, and continuous deployment. The infrastructure aims to streamline the deployment, monitoring, and maintenance of machine learning models that drive the data insights and visualizations in the application.
@@ -195,34 +195,34 @@ By maintaining this organized structure in the deployment directory, the Public 
 Certainly! Below is an example of a Python script for training a simple machine learning model using mock data for the Public Health Data Visualization (D3.js, Pandas) for health awareness application. The file is named `train_model.py`, and the mock data is stored in a file named `mock_health_data.csv` within the `data` directory.
 
 ```python
-# File: train_model.py
+## File: train_model.py
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 import joblib
 
-# Load mock health data
+## Load mock health data
 data_path = 'data/mock_health_data.csv'
 health_data = pd.read_csv(data_path)
 
-# Perform data preprocessing and feature engineering
-# ...
+## Perform data preprocessing and feature engineering
+## ...
 
-# Split the data into features and target variable
+## Split the data into features and target variable
 X = health_data[['feature1', 'feature2', 'feature3']]
 y = health_data['target_variable']
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize and train the machine learning model
+## Initialize and train the machine learning model
 model = LinearRegression()
 model.fit(X_train, y_train)
 
-# Evaluate the model
-# ...
+## Evaluate the model
+## ...
 
-# Save the trained model to a file
+## Save the trained model to a file
 model_path = 'models/regression_model.pkl'
 joblib.dump(model, model_path)
 
@@ -242,39 +242,39 @@ This `train_model.py` script serves as an example for training a machine learnin
 Certainly! Below is an example of a Python script implementing a complex machine learning algorithm (Random Forest) using mock data for the Public Health Data Visualization (D3.js, Pandas) for health awareness application. The file is named `train_complex_model.py` and the mock data is stored in a file named `mock_health_data.csv` within the `data` directory.
 
 ```python
-# File: train_complex_model.py
+## File: train_complex_model.py
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 import joblib
 
-# Load mock health data
+## Load mock health data
 data_path = 'data/mock_health_data.csv'
 health_data = pd.read_csv(data_path)
 
-# Perform data preprocessing and feature engineering
-# ...
+## Perform data preprocessing and feature engineering
+## ...
 
-# Split the data into features and target variable
+## Split the data into features and target variable
 X = health_data[['feature1', 'feature2', 'feature3']]
 y = health_data['target_variable']
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize and train the random forest classifier model
+## Initialize and train the random forest classifier model
 model = RandomForestClassifier(n_estimators=100, random_state=42)
 model.fit(X_train, y_train)
 
-# Make predictions on the testing set
+## Make predictions on the testing set
 y_pred = model.predict(X_test)
 
-# Evaluate the model
+## Evaluate the model
 accuracy = accuracy_score(y_test, y_pred)
 print(f'Model accuracy: {accuracy}')
 
-# Save the trained model to a file
+## Save the trained model to a file
 model_path = 'models/classification_model.pkl'
 joblib.dump(model, model_path)
 

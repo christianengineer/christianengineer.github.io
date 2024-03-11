@@ -5,7 +5,7 @@ permalink: posts/luxury-brand-affinity-analysis-pytorch-pandas-kafka-docker
 layout: article
 ---
 
-# Luxury Brand Affinity Analysis for Saga Falabella
+## Luxury Brand Affinity Analysis for Saga Falabella
 
 ## Objective and Benefits
 The primary objective of the Luxury Brand Affinity Analysis solution is to help Saga Falabella align their inventory with premium customers' preferences. By leveraging AI-driven analysis of luxury consumer trends, the solution aims to optimize product selection and inventory to meet the high expectations of Peru's affluent shoppers. The solution will help the Luxury Goods Manager at Saga Falabella in making data-driven decisions to enhance customer experience and drive sales.
@@ -223,34 +223,34 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.impute import SimpleImputer
 from sklearn.model_selection import train_test_split
 
-# Load the dataset
+## Load the dataset
 data = pd.read_csv('luxury_brand_affinity_data.csv')
 
-# Separate features and target variable
+## Separate features and target variable
 X = data.drop(['LuxuryBrandPreference'], axis=1)
 y = data['LuxuryBrandPreference']
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Impute missing values in numerical features with median
+## Impute missing values in numerical features with median
 imputer = SimpleImputer(strategy='median')
 X_train[numerical_cols] = imputer.fit_transform(X_train[numerical_cols])
 X_test[numerical_cols] = imputer.transform(X_test[numerical_cols])
 
-# Standardize numerical features
+## Standardize numerical features
 scaler = StandardScaler()
 X_train[numerical_cols] = scaler.fit_transform(X_train[numerical_cols])
 X_test[numerical_cols] = scaler.transform(X_test[numerical_cols])
 
-# Perform one-hot encoding on categorical variables
+## Perform one-hot encoding on categorical variables
 X_train = pd.get_dummies(X_train, columns=categorical_cols)
 X_test = pd.get_dummies(X_test, columns=categorical_cols)
 
-# Feature selection (if needed)
-# Select relevant features based on importance scores from feature selection techniques
+## Feature selection (if needed)
+## Select relevant features based on importance scores from feature selection techniques
 
-# Data is now preprocessed and ready for model training
+## Data is now preprocessed and ready for model training
 ```
 
 ### Comments Explaining Preprocessing Steps:
@@ -347,13 +347,13 @@ import pandas as pd
 import numpy as np
 from faker import Faker
 
-# Initialize Faker to generate fake data
+## Initialize Faker to generate fake data
 fake = Faker()
 
-# Define the number of samples for the dataset
+## Define the number of samples for the dataset
 num_samples = 10000
 
-# Generate fictitious dataset
+## Generate fictitious dataset
 data = {
     'CustomerID': [fake.uuid4() for _ in range(num_samples)],
     'Age': np.random.randint(18, 70, size=num_samples),
@@ -371,10 +371,10 @@ data = {
     'LuxuryBrandPreference': [fake.boolean(chance_of_getting_true=30) for _ in range(num_samples)]
 }
 
-# Create DataFrame
+## Create DataFrame
 df = pd.DataFrame(data)
 
-# Save fictitious dataset to CSV
+## Save fictitious dataset to CSV
 df.to_csv('luxury_brand_affinity_fictitious_data.csv', index=False)
 ```
 
@@ -411,26 +411,26 @@ from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.metrics import accuracy_score
 from sklearn.model_selection import train_test_split
 
-# Load preprocessed dataset
+## Load preprocessed dataset
 data = pd.read_csv('preprocessed_luxury_brand_affinity_data.csv')
 
-# Define features and target variable
+## Define features and target variable
 X = data.drop(['LuxuryBrandPreference'], axis=1)
 y = data['LuxuryBrandPreference']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Model training
+## Model training
 model = GradientBoostingClassifier()
 model.fit(X_train, y_train)
 
-# Model evaluation
+## Model evaluation
 predictions = model.predict(X_test)
 accuracy = accuracy_score(y_test, predictions)
 print(f"Model Accuracy: {accuracy}")
 
-# Save the trained model for deployment
+## Save the trained model for deployment
 model.save_model('luxury_brand_affinity_model.pkl')
 ```
 
@@ -509,25 +509,25 @@ By following these conventions and best practices in code quality and structure,
 By following this step-by-step deployment plan tailored to the unique demands of the Luxury Brand Affinity Analysis project, implementing the necessary tools and platforms for each deployment phase, Saga Falabella can successfully deploy the machine learning model into production, ensuring scalability, reliability, and efficient real-time prediction serving for optimized inventory selection and enhanced customer experience.
 
 ```dockerfile
-# Use an official Python runtime as a parent image
+## Use an official Python runtime as a parent image
 FROM python:3.8-slim
 
-# Set the working directory in the container
+## Set the working directory in the container
 WORKDIR /app
 
-# Copy the current directory contents into the container at /app
+## Copy the current directory contents into the container at /app
 COPY . /app
 
-# Install any needed dependencies specified in requirements.txt
+## Install any needed dependencies specified in requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Expose the port the app runs on
+## Expose the port the app runs on
 EXPOSE 5000
 
-# Define environment variables
+## Define environment variables
 ENV PYTHONUNBUFFERED=1
 
-# Run app.py when the container launches
+## Run app.py when the container launches
 CMD ["python", "app.py"]
 ```
 

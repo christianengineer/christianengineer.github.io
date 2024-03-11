@@ -212,34 +212,34 @@ import pandas as pd
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
 from sklearn.impute import SimpleImputer
 
-# Load the customs data into a Pandas DataFrame
+## Load the customs data into a Pandas DataFrame
 data = pd.read_csv('customs_data.csv')
 
-# Handling Missing Data
+## Handling Missing Data
 imputer = SimpleImputer(strategy='mean')
 data['declared_value'] = imputer.fit_transform(data[['declared_value']])
 
-# Feature Engineering
+## Feature Engineering
 data['price_discrepancy'] = data['estimated_market_price'] - data['declared_value']
 
-# Encoding Categorical Features
+## Encoding Categorical Features
 encoder = OneHotEncoder(drop='first', sparse=False)
 encoded_features = pd.DataFrame(encoder.fit_transform(data[['product_category', 'country_of_origin']]))
 encoded_features.columns = encoder.get_feature_names(['product_category', 'country_of_origin'])
 data = pd.concat([data, encoded_features], axis=1)
 data.drop(['product_category', 'country_of_origin'], axis=1, inplace=True)
 
-# Standardizing Numerical Features
+## Standardizing Numerical Features
 scaler = StandardScaler()
 data[['shipment_weight', 'price_discrepancy']] = scaler.fit_transform(data[['shipment_weight', 'price_discrepancy']])
 
-# Handling Outliers (Assuming outliers have been identified)
-data = data[(data['shipment_weight'] < 3) & (data['price_discrepancy'] < 5)]  # Example threshold values
+## Handling Outliers (Assuming outliers have been identified)
+data = data[(data['shipment_weight'] < 3) & (data['price_discrepancy'] < 5)]  ## Example threshold values
 
-# Dropping Unnecessary Features
+## Dropping Unnecessary Features
 data.drop(['shipment_id', 'import_date', 'declared_currency'], axis=1, inplace=True)
 
-# Save the preprocessed data
+## Save the preprocessed data
 data.to_csv('preprocessed_customs_data.csv', index=False)
 ```
 
@@ -309,11 +309,11 @@ To generate a large fictitious dataset that mimics real-world data relevant to o
 import pandas as pd
 import numpy as np
 
-# Create a fictitious dataset with relevant features
+## Create a fictitious dataset with relevant features
 np.random.seed(42)
 n_samples = 10000
 
-# Generate random data for the features
+## Generate random data for the features
 data = pd.DataFrame({
     'declared_value': np.random.uniform(100, 10000, n_samples),
     'quantity_items': np.random.randint(1, 100, n_samples),
@@ -325,11 +325,11 @@ data = pd.DataFrame({
     'declared_currency': np.random.choice(['USD', 'EUR'], n_samples)
 })
 
-# Feature Engineering: Adding noise and variability to simulate real-world conditions
+## Feature Engineering: Adding noise and variability to simulate real-world conditions
 data['estimated_market_price'] = data['declared_value'] + np.random.normal(0, 1000, n_samples)
 data['price_discrepancy'] = data['estimated_market_price'] - data['declared_value']
 
-# Save the synthetic dataset to a CSV file
+## Save the synthetic dataset to a CSV file
 data.to_csv('synthetic_customs_data.csv', index=False)
 ```
 
@@ -380,30 +380,30 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, classification_report
 import joblib
 
-# Load the preprocessed dataset
+## Load the preprocessed dataset
 data = pd.read_csv('preprocessed_customs_data.csv')
 
-# Define features and target variable
+## Define features and target variable
 X = data.drop('underreported', axis=1)
 y = data['underreported']
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize and train the Random Forest model
+## Initialize and train the Random Forest model
 rf_model = RandomForestClassifier(random_state=42)
 rf_model.fit(X_train, y_train)
 
-# Make predictions on the test set
+## Make predictions on the test set
 y_pred = rf_model.predict(X_test)
 
-# Evaluate the model
+## Evaluate the model
 accuracy = accuracy_score(y_test, y_pred)
 print(f'Accuracy: {accuracy}\n')
 print('Classification Report:')
 print(classification_report(y_test, y_pred))
 
-# Serialize the trained model for deployment
+## Serialize the trained model for deployment
 joblib.dump(rf_model, 'customs_model.pkl')
 ```
 
@@ -482,28 +482,28 @@ By following this deployment plan tailored to the unique demands of the National
 Here is a sample Dockerfile tailored to encapsulate the environment and dependencies for deploying the machine learning model for identifying underreported goods in customs declarations at the National Superintendence of Customs and Tax Administration of Peru. This Dockerfile is designed to optimize performance and scalability for our specific project needs:
 
 ```docker
-# Use a base Python image
+## Use a base Python image
 FROM python:3.8-slim
 
-# Set the working directory in the container
+## Set the working directory in the container
 WORKDIR /app
 
-# Copy the requirements file into the container
+## Copy the requirements file into the container
 COPY requirements.txt .
 
-# Install necessary dependencies
+## Install necessary dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the model serialization file into the container
+## Copy the model serialization file into the container
 COPY customs_model.pkl /app
 
-# Copy the Python script for API deployment into the container
+## Copy the Python script for API deployment into the container
 COPY app.py /app
 
-# Expose the API port
+## Expose the API port
 EXPOSE 5000
 
-# Command to run the API when the container is started
+## Command to run the API when the container is started
 CMD ["python", "app.py"]
 ```
 

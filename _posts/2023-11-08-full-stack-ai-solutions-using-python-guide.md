@@ -5,7 +5,7 @@ permalink: posts/full-stack-ai-solutions-using-python-guide
 layout: article
 ---
 
-# Python for Full Stack AI Solutions
+## Python for Full Stack AI Solutions
 
 For building full-stack Artificial Intelligence (AI) solutions, Python is rapidly becoming the go-to programming language due to its simplicity, versatility, and wide array of robust libraries and frameworks.
 

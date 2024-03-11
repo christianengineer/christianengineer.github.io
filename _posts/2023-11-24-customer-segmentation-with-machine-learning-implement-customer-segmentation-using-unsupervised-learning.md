@@ -5,7 +5,7 @@ permalink: posts/customer-segmentation-with-machine-learning-implement-customer-
 layout: article
 ---
 
-# AI Customer Segmentation with Machine Learning
+## AI Customer Segmentation with Machine Learning
 
 ## Objectives
 The objectives of implementing customer segmentation using unsupervised learning include:
@@ -34,7 +34,7 @@ The use of these libraries can expedite the implementation of the system, levera
 
 By incorporating these design strategies and utilizing the specified libraries, the system can effectively achieve customer segmentation using unsupervised learning, enabling businesses to derive actionable insights for targeted customer engagement and resource optimization.
 
-# Infrastructure for Customer Segmentation with Machine Learning
+## Infrastructure for Customer Segmentation with Machine Learning
 
 ## Introduction
 The infrastructure for the customer segmentation with machine learning application encompasses the necessary components and technologies to support the data-intensive and AI-driven nature of the system. This infrastructure should be designed to handle the computation and storage requirements of data processing, model training, and real-time inference for customer segmentation.
@@ -78,35 +78,35 @@ A scalable file structure for the customer segmentation with machine learning re
 customer_segmentation_ml/
 │
 ├── data/
-│   ├── raw/                       # Raw data from different sources
-│   ├── processed/                 # Cleaned and preprocessed data
-│   ├── feature_store/             # Engineered features
+│   ├── raw/                       ## Raw data from different sources
+│   ├── processed/                 ## Cleaned and preprocessed data
+│   ├── feature_store/             ## Engineered features
 │
 ├── models/
-│   ├── trained_models/            # Stored trained customer segmentation models
-│   ├── model_evaluation/          # Scripts and notebooks for model evaluation
+│   ├── trained_models/            ## Stored trained customer segmentation models
+│   ├── model_evaluation/          ## Scripts and notebooks for model evaluation
 │
 ├── notebooks/
-│   ├── data_analysis/             # Jupyter notebooks for exploratory data analysis
-│   ├── model_experiments/         # Notebooks for running and tracking machine learning experiments
+│   ├── data_analysis/             ## Jupyter notebooks for exploratory data analysis
+│   ├── model_experiments/         ## Notebooks for running and tracking machine learning experiments
 │
 ├── src/
-│   ├── data_preprocessing/        # Scripts for data cleaning, transformation, and feature engineering
-│   ├── model_training/            # Code for training customer segmentation models
-│   ├── inference_service/         # Implementation of real-time customer segmentation inference service
-│   ├── utils/                     # Utility functions and helper scripts
+│   ├── data_preprocessing/        ## Scripts for data cleaning, transformation, and feature engineering
+│   ├── model_training/            ## Code for training customer segmentation models
+│   ├── inference_service/         ## Implementation of real-time customer segmentation inference service
+│   ├── utils/                     ## Utility functions and helper scripts
 │
 ├── config/
-│   ├── environment.yml            # Configuration file for the project environment setup
-│   ├── model_config.yml           # Configuration for hyperparameters and model settings
+│   ├── environment.yml            ## Configuration file for the project environment setup
+│   ├── model_config.yml           ## Configuration for hyperparameters and model settings
 │
 ├── docs/
-│   ├── data_dictionary.md         # Description of the dataset and its features
-│   ├── model_evaluation_metrics.md # Documentation of model evaluation metrics and results
+│   ├── data_dictionary.md         ## Description of the dataset and its features
+│   ├── model_evaluation_metrics.md ## Documentation of model evaluation metrics and results
 │
-├── README.md                      # Project overview, setup instructions, and usage guide
-├── requirements.txt               # Python dependencies for the project
-├── LICENSE                        # Project license information
+├── README.md                      ## Project overview, setup instructions, and usage guide
+├── requirements.txt               ## Python dependencies for the project
+├── LICENSE                        ## Project license information
 ```
 
 This file structure provides a scalable organization for the customer segmentation with machine learning repository. It separates data, models, code, configuration, documentation, and environment setup, enhancing clarity and facilitating collaboration among team members. Additionally, it supports version control and reproducibility of experiments, making it easier to iterate on and extend the customer segmentation system.
@@ -119,14 +119,14 @@ In the context of the AI customer segmentation application using unsupervised le
 models/
 │
 ├── trained_models/
-│   ├── clustering_model.pkl        # Serialized trained customer segmentation model
-│   ├── clustering_model_metrics.txt # Evaluation metrics for the clustering model
-│   ├── clustering_model_visualization.png  # Visualization of the clustered customer segments
+│   ├── clustering_model.pkl        ## Serialized trained customer segmentation model
+│   ├── clustering_model_metrics.txt ## Evaluation metrics for the clustering model
+│   ├── clustering_model_visualization.png  ## Visualization of the clustered customer segments
 │
 ├── model_evaluation/
-│   ├── evaluation_metrics.py       # Python script for computing evaluation metrics
-│   ├── visualize_clusters.py       # Script for visualizing the segmented customer clusters
-│   ├── model_evaluation_notebook.ipynb  # Jupyter notebook for detailed model evaluation
+│   ├── evaluation_metrics.py       ## Python script for computing evaluation metrics
+│   ├── visualize_clusters.py       ## Script for visualizing the segmented customer clusters
+│   ├── model_evaluation_notebook.ipynb  ## Jupyter notebook for detailed model evaluation
 │
 ```
 
@@ -150,13 +150,13 @@ In the context of deploying the customer segmentation with machine learning appl
 deployment/
 │
 ├── inference_service/
-│   ├── app.py                      # Main application file for the inference service
-│   ├── requirements.txt            # Python dependencies for the inference service
-│   ├── Dockerfile                  # Dockerfile for containerizing the inference service
+│   ├── app.py                      ## Main application file for the inference service
+│   ├── requirements.txt            ## Python dependencies for the inference service
+│   ├── Dockerfile                  ## Dockerfile for containerizing the inference service
 │
 ├── api_documentation/
-│   ├── swagger.yaml                # Swagger/OpenAPI specification for the inference service API
-│   ├── documentation.md            # Documentation for the usage of the inference service API
+│   ├── swagger.yaml                ## Swagger/OpenAPI specification for the inference service API
+│   ├── documentation.md            ## Documentation for the usage of the inference service API
 ```
 
 ### `inference_service/` Subdirectory
@@ -187,21 +187,21 @@ def customer_segmentation_ml(file_path, num_clusters=3):
     pd.DataFrame: DataFrame with the original customer data and an additional column for the assigned cluster.
     """
 
-    # Load mock customer data from the CSV file
+    ## Load mock customer data from the CSV file
     customer_data = pd.read_csv(file_path)
 
-    # Perform any necessary data preprocessing and feature engineering
+    ## Perform any necessary data preprocessing and feature engineering
 
-    # Select relevant features for clustering
-    features = ['feature1', 'feature2', 'feature3']  # Replace with actual feature names
+    ## Select relevant features for clustering
+    features = ['feature1', 'feature2', 'feature3']  ## Replace with actual feature names
 
-    # Data normalization or other preprocessing steps if necessary
+    ## Data normalization or other preprocessing steps if necessary
 
-    # Apply K-means clustering algorithm
+    ## Apply K-means clustering algorithm
     kmeans = KMeans(n_clusters=num_clusters, random_state=42)
     customer_data['cluster'] = kmeans.fit_predict(customer_data[features])
 
-    # Visualize the clustered data
+    ## Visualize the clustered data
     fig, ax = plt.subplots()
     ax.scatter(customer_data['feature1'], customer_data['feature2'], c=customer_data['cluster'], cmap='viridis')
     ax.set_xlabel('Feature 1')
@@ -239,21 +239,21 @@ def customer_segmentation_deep_learning(file_path):
     pd.DataFrame: DataFrame with the original customer data and reconstructed features from the autoencoder.
     """
 
-    # Load mock customer data from the CSV file
+    ## Load mock customer data from the CSV file
     customer_data = pd.read_csv(file_path)
 
-    # Perform any necessary data preprocessing and feature engineering
+    ## Perform any necessary data preprocessing and feature engineering
 
-    # Select relevant features for the deep learning model
-    features = ['feature1', 'feature2', 'feature3']  # Replace with actual feature names
+    ## Select relevant features for the deep learning model
+    features = ['feature1', 'feature2', 'feature3']  ## Replace with actual feature names
 
-    # Data normalization
+    ## Data normalization
     scaler = StandardScaler()
     customer_data[features] = scaler.fit_transform(customer_data[features])
 
-    # Build the deep learning autoencoder model
+    ## Build the deep learning autoencoder model
     input_dim = len(features)
-    encoding_dim = 2  # Adjust based on the desired dimensionality of the latent space
+    encoding_dim = 2  ## Adjust based on the desired dimensionality of the latent space
 
     input_layer = tf.keras.Input(shape=(input_dim,))
     encoder = tf.keras.layers.Dense(encoding_dim, activation='relu')(input_layer)
@@ -262,13 +262,13 @@ def customer_segmentation_deep_learning(file_path):
     autoencoder = tf.keras.Model(inputs=input_layer, outputs=decoder)
     autoencoder.compile(optimizer='adam', loss='mean_squared_error')
 
-    # Train the autoencoder model
+    ## Train the autoencoder model
     autoencoder.fit(customer_data[features], customer_data[features], epochs=50, batch_size=32, shuffle=True, verbose=0)
 
-    # Use the trained autoencoder to reconstruct the input features
+    ## Use the trained autoencoder to reconstruct the input features
     reconstructed_features = autoencoder.predict(customer_data[features])
 
-    # Create a DataFrame with the original customer data and the reconstructed features from the autoencoder
+    ## Create a DataFrame with the original customer data and the reconstructed features from the autoencoder
     reconstructed_df = pd.DataFrame(reconstructed_features, columns=features)
 
     return pd.concat([customer_data, reconstructed_df], axis=1)

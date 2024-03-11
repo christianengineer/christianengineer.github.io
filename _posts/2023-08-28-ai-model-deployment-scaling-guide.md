@@ -5,7 +5,7 @@ permalink: posts/ai-model-deployment-scaling-guide
 layout: article
 ---
 
-# AI Model Deployment and Scaling
+## AI Model Deployment and Scaling
 
 In the lifecycle of machine learning (ML) model development, one of the critical stages is model deployment. The deployment of AI models involves integrating a model into an existing system to make real-time predictions.
 

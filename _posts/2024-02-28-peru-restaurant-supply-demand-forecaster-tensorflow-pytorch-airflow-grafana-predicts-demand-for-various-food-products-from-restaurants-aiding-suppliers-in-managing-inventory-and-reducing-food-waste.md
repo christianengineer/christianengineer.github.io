@@ -5,7 +5,7 @@ permalink: posts/peru-restaurant-supply-demand-forecaster-tensorflow-pytorch-air
 layout: article
 ---
 
-# AI Peru Restaurant Supply Demand Forecaster
+## AI Peru Restaurant Supply Demand Forecaster
 
 ## Objectives:
 - Predict demand for various food products from restaurants to aid suppliers in managing inventory efficiently.
@@ -28,7 +28,7 @@ layout: article
 
 By following these design strategies and utilizing the chosen libraries effectively, the AI Peru Restaurant Supply Demand Forecaster can provide valuable support to suppliers in managing their inventory efficiently, reducing food waste, and improving overall operational efficiency in the restaurant supply chain.
 
-# MLOps Infrastructure for Peru Restaurant Supply Demand Forecaster
+## MLOps Infrastructure for Peru Restaurant Supply Demand Forecaster
 
 ## Components of MLOps Infrastructure:
 1. **Data Lake**:
@@ -68,7 +68,7 @@ By following these design strategies and utilizing the chosen libraries effectiv
 
 By setting up a robust MLOps infrastructure for the Peru Restaurant Supply Demand Forecaster, the AI application can effectively predict demand for various food products, assist suppliers in managing inventory efficiently, and reduce food waste in the restaurant supply chain.
 
-# Scalable File Structure for Peru Restaurant Supply Demand Forecaster
+## Scalable File Structure for Peru Restaurant Supply Demand Forecaster
 
 ```
 restaurant_supply_demand_forecaster/
@@ -187,8 +187,8 @@ Having separate directories for TensorFlow and PyTorch models in the `models/` d
 By organizing deployment components in the `deployment/` directory, the Peru Restaurant Supply Demand Forecaster application can benefit from streamlined workflow management, automated scheduling, and real-time monitoring capabilities to enhance forecasting accuracy and operational efficiency.
 
 ```python
-# File: models/tensorflow/lstm_model/train.py
-# Mock Data Path: data/processed_data/mock_training_data.csv
+## File: models/tensorflow/lstm_model/train.py
+## Mock Data Path: data/processed_data/mock_training_data.csv
 
 import pandas as pd
 import numpy as np
@@ -196,32 +196,32 @@ import tensorflow as tf
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import LSTM, Dense
 
-# Load mock training data
+## Load mock training data
 data_path = 'data/processed_data/mock_training_data.csv'
 mock_data = pd.read_csv(data_path)
 
-# Preprocess mock data (sample code for illustration purposes)
+## Preprocess mock data (sample code for illustration purposes)
 X_train = mock_data.drop(['demand'], axis=1).values
 y_train = mock_data['demand'].values
 
-# Define LSTM model architecture
+## Define LSTM model architecture
 model = Sequential()
 model.add(LSTM(64, input_shape=(X_train.shape[1], 1)))
 model.add(Dense(1))
 model.compile(optimizer='adam', loss='mean_squared_error')
 
-# Train the LSTM model
+## Train the LSTM model
 model.fit(X_train, y_train, epochs=10, batch_size=32)
 
-# Save the trained model
+## Save the trained model
 model.save('models/tensorflow/lstm_model/trained_model')
 ```
 
 In this file, a mock LSTM model is trained on mock training data (`mock_training_data.csv`) stored at `data/processed_data/`. The script loads the data, preprocesses it, defines the LSTM model architecture, trains the model, and saves the trained model in the specified directory. This file can serve as a template for training the LSTM model of the Peru Restaurant Supply Demand Forecaster application using TensorFlow with mock data.
 
 ```python
-# File: models/pytorch/custom_model/train.py
-# Mock Data Path: data/processed_data/mock_training_data.csv
+## File: models/pytorch/custom_model/train.py
+## Mock Data Path: data/processed_data/mock_training_data.csv
 
 import pandas as pd
 import numpy as np
@@ -229,19 +229,19 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 
-# Load mock training data
+## Load mock training data
 data_path = 'data/processed_data/mock_training_data.csv'
 mock_data = pd.read_csv(data_path)
 
-# Preprocess mock data (sample code for illustration purposes)
+## Preprocess mock data (sample code for illustration purposes)
 X_train = mock_data.drop(['demand'], axis=1).values
 y_train = mock_data['demand'].values
 
-# Convert data to PyTorch tensors
+## Convert data to PyTorch tensors
 X_train_tensor = torch.tensor(X_train, dtype=torch.float32)
 y_train_tensor = torch.tensor(y_train, dtype=torch.float32)
 
-# Define custom neural network model
+## Define custom neural network model
 class CustomModel(nn.Module):
     def __init__(self, input_size, hidden_size, output_size):
         super(CustomModel, self).__init__()
@@ -255,17 +255,17 @@ class CustomModel(nn.Module):
         x = self.fc2(x)
         return x
 
-# Instantiate custom model
+## Instantiate custom model
 input_size = X_train.shape[1]
 hidden_size = 64
 output_size = 1
 model = CustomModel(input_size, hidden_size, output_size)
 
-# Define loss function and optimizer
+## Define loss function and optimizer
 criterion = nn.MSELoss()
 optimizer = optim.Adam(model.parameters(), lr=0.001)
 
-# Train the custom PyTorch model
+## Train the custom PyTorch model
 for epoch in range(10):
     optimizer.zero_grad()
     output = model(X_train_tensor)
@@ -273,7 +273,7 @@ for epoch in range(10):
     loss.backward()
     optimizer.step()
 
-# Save the trained model
+## Save the trained model
 torch.save(model.state_dict(), 'models/pytorch/custom_model/trained_model.pth')
 ```
 

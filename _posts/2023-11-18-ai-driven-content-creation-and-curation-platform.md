@@ -5,7 +5,7 @@ permalink: posts/ai-driven-content-creation-and-curation-platform
 layout: article
 ---
 
-# Technical Specifications - AI-Driven Content Creation and Curation Platform
+## Technical Specifications - AI-Driven Content Creation and Curation Platform
 
 ## Description
 

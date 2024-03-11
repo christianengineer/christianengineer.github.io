@@ -5,7 +5,7 @@ permalink: posts/agile-methodologies-for-ai-projects-guide
 layout: article
 ---
 
-# Agile Methodologies for AI Projects
+## Agile Methodologies for AI Projects
 
 In the contemporary world of Artificial Intelligence (AI) and Machine Learning (ML), it's crucial to leverage methodologies that promise efficiency, flexibility, and close collaboration. Many businesses nowadays are turning to Agile Methodologies to manage their AI projects. Agile's iterative nature, emphasis on collaboration, and flexibility make it a suitable approach for the complexity and evolving nature of AI projects.
 
@@ -41,18 +41,18 @@ Here's a summary of Agile practices that can be effectively employed in AI Proje
 Agile thrives on collaboration and frequent communication. AI projects bring together different roles like data scientists, data engineers, ML engineer, product owners, among others. These teams need to collaborate on understanding requirements, model selection, data preprocessing, feature selection, and model evaluation. Regular stand-ups, retrospectives and planning meetings foster an environment of close collaboration.
 
 ```python
-# Sample Python code for an AI project
+## Sample Python code for an AI project
 import pandas as pd
 from sklearn import preprocessing
 
-# Load the dataset
+## Load the dataset
 data = pd.read_csv('dataset.csv')
 
-# Preprocessing
+## Preprocessing
 le = preprocessing.LabelEncoder()
 data = data.apply(le.fit_transform)
 
-# Data Inspection
+## Data Inspection
 print(data.head())
 ```
 
@@ -61,7 +61,7 @@ print(data.head())
 Continuous integration and delivery (CI/CD) is crucial for AI projects. It fosters quick feedback loops, maintains the quality of the system, and ensures that the production system stays close to the development.
 
 ```bash
-# Sample CI/CD pipeline command
+## Sample CI/CD pipeline command
 pipeline {
     agent any
     stages {
@@ -92,7 +92,7 @@ pipeline {
 Test-Driven Development (TDD) is a software development practice that requires its users to write tests before writing the code itself. TDD can be incredibly beneficial to measure the performance of AI algorithms.
 
 ```python
-# Sample Python code using TDD for an AI project
+## Sample Python code using TDD for an AI project
 def test_add():
     assert add(1,2) == 3
 ```

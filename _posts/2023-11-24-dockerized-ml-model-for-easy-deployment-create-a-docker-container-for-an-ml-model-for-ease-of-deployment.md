@@ -87,13 +87,13 @@ When organizing the files for a Dockerized ML model deployment repository, a str
 ```plaintext
 dockerized_ml_model/
 ├── model/
-│   ├── trained_model.pkl  # Serialized trained model
-│   ├── requirements.txt   # Python dependencies for the ML model
-│   ├── ml_model.py        # Script for serving the ML model
+│   ├── trained_model.pkl  ## Serialized trained model
+│   ├── requirements.txt   ## Python dependencies for the ML model
+│   ├── ml_model.py        ## Script for serving the ML model
 ├── app/
-│   ├── main.py            # Flask or FastAPI application for serving the model via API
-├── Dockerfile             # Configuration for building the Docker image
-├── README.md              # Documentation for the repository
+│   ├── main.py            ## Flask or FastAPI application for serving the model via API
+├── Dockerfile             ## Configuration for building the Docker image
+├── README.md              ## Documentation for the repository
 ```
 
 ### Structure Breakdown
@@ -124,15 +124,15 @@ The `models/` directory for the Dockerized ML Model repository contains the file
 
 ```plaintext
 model/
-├── trained_model.pkl       # Serialized trained model
-├── requirements.txt        # Python dependencies for the ML model
-├── ml_model.py             # Script for serving the ML model
-├── preprocessing.py        # Script for data preprocessing if necessary
+├── trained_model.pkl       ## Serialized trained model
+├── requirements.txt        ## Python dependencies for the ML model
+├── ml_model.py             ## Script for serving the ML model
+├── preprocessing.py        ## Script for data preprocessing if necessary
 ├── utils/
-│   ├── data_utils.py       # Module for data processing utilities
-│   ├── model_utils.py      # Module for model loading and inference functions
+│   ├── data_utils.py       ## Module for data processing utilities
+│   ├── model_utils.py      ## Module for model loading and inference functions
 ├── tests/
-│   ├── test_model.py       # Unit tests for the ML model and its serving functions
+│   ├── test_model.py       ## Unit tests for the ML model and its serving functions
 ```
 
 ### Breakdown of Model Directory Files
@@ -161,17 +161,17 @@ Certainly! Below is an expanded breakdown of the `app/` directory, which contain
 
 ```plaintext
 app/
-├── main.py                 # Script for defining the RESTful API endpoints and model serving logic
-├── requirements.txt        # Python dependencies for the deployment application (e.g., Flask, FastAPI)
-├── Dockerfile              # Configuration for building the deployment Docker image
-├── static/                 # (Optional) Directory for serving static files like images or CSS
+├── main.py                 ## Script for defining the RESTful API endpoints and model serving logic
+├── requirements.txt        ## Python dependencies for the deployment application (e.g., Flask, FastAPI)
+├── Dockerfile              ## Configuration for building the deployment Docker image
+├── static/                 ## (Optional) Directory for serving static files like images or CSS
 │   ├── images/
 │   │   ├── logo.png
-├── templates/              # (Optional) Directory for serving HTML templates
+├── templates/              ## (Optional) Directory for serving HTML templates
 │   ├── index.html
-├── tests/                  # (Optional) Directory for unit and integration tests
+├── tests/                  ## (Optional) Directory for unit and integration tests
 │   ├── test_main.py
-├── config/                 # (Optional) Configuration files for deployment settings
+├── config/                 ## (Optional) Configuration files for deployment settings
 │   ├── app_config.yaml
 ```
 
@@ -209,29 +209,29 @@ First, let's define the directory structure for the Dockerized ML Model reposito
 ```plaintext
 dockerized_ml_model/
 ├── model/
-│   ├── trained_model.pkl    # Serialized trained model (mock file)
-│   ├── requirements.txt     # Python dependencies for the ML model
-│   ├── ml_model.py          # Script for serving the ML model (mock file)
+│   ├── trained_model.pkl    ## Serialized trained model (mock file)
+│   ├── requirements.txt     ## Python dependencies for the ML model
+│   ├── ml_model.py          ## Script for serving the ML model (mock file)
 ├── app/
-│   ├── main.py              # Script for defining the RESTful API endpoints and model serving logic
-├── Dockerfile               # Configuration for building the Docker image
-├── README.md                # Documentation for the repository
+│   ├── main.py              ## Script for defining the RESTful API endpoints and model serving logic
+├── Dockerfile               ## Configuration for building the Docker image
+├── README.md                ## Documentation for the repository
 ```
 
 Below is an example of the `ml_model.py` file with the `mock_ml_algorithm` function:
 
 ```python
-# ml_model.py
+## ml_model.py
 
 import joblib
 import numpy as np
 
-# Mock function representing a complex machine learning algorithm
+## Mock function representing a complex machine learning algorithm
 def mock_ml_algorithm(input_features):
-    # Unpickle the trained model (mock model)
-    model = joblib.load('trained_model.pkl')  # Assuming the serialized model is stored in trained_model.pkl
+    ## Unpickle the trained model (mock model)
+    model = joblib.load('trained_model.pkl')  ## Assuming the serialized model is stored in trained_model.pkl
 
-    # Perform prediction using the mock model
+    ## Perform prediction using the mock model
     predicted_classes = model.predict(input_features)
 
     return predicted_classes
@@ -250,32 +250,32 @@ First, let's define the directory structure for the Dockerized ML Model reposito
 ```plaintext
 dockerized_ml_model/
 ├── model/
-│   ├── trained_model.h5      # Serialized trained deep learning model (mock file)
-│   ├── requirements.txt      # Python dependencies for the ML model
-│   ├── ml_model.py           # Script for serving the ML model (mock file)
+│   ├── trained_model.h5      ## Serialized trained deep learning model (mock file)
+│   ├── requirements.txt      ## Python dependencies for the ML model
+│   ├── ml_model.py           ## Script for serving the ML model (mock file)
 ├── app/
-│   ├── main.py               # Script for defining the RESTful API endpoints and model serving logic
-├── Dockerfile                # Configuration for building the Docker image
-├── README.md                 # Documentation for the repository
+│   ├── main.py               ## Script for defining the RESTful API endpoints and model serving logic
+├── Dockerfile                ## Configuration for building the Docker image
+├── README.md                 ## Documentation for the repository
 ```
 
 Now, let's define the `ml_model.py` file with the `mock_deep_learning_algorithm` function:
 
 ```python
-# ml_model.py
+## ml_model.py
 
 import tensorflow as tf
 import numpy as np
 
-# Mock function representing a complex deep learning algorithm
+## Mock function representing a complex deep learning algorithm
 def mock_deep_learning_algorithm(input_data):
-    # Load the serialized deep learning model (mock model)
-    model = tf.keras.models.load_model('trained_model.h5')  # Assuming the serialized model is stored in trained_model.h5
+    ## Load the serialized deep learning model (mock model)
+    model = tf.keras.models.load_model('trained_model.h5')  ## Assuming the serialized model is stored in trained_model.h5
 
-    # Preprocess the input data if necessary
-    preprocessed_data = preprocess_input(input_data)  # Assuming a mock preprocessing function
+    ## Preprocess the input data if necessary
+    preprocessed_data = preprocess_input(input_data)  ## Assuming a mock preprocessing function
 
-    # Perform prediction using the mock deep learning model
+    ## Perform prediction using the mock deep learning model
     predictions = model.predict(preprocessed_data)
 
     return predictions

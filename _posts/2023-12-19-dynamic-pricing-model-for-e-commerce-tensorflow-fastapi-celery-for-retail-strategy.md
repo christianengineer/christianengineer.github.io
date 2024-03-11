@@ -5,7 +5,7 @@ permalink: posts/dynamic-pricing-model-for-e-commerce-tensorflow-fastapi-celery-
 layout: article
 ---
 
-# AI Dynamic Pricing Model for E-commerce
+## AI Dynamic Pricing Model for E-commerce
 
 ## Objectives
 The main objective of the AI Dynamic Pricing Model for E-commerce is to build a scalable, data-intensive application that leverages machine learning to optimize pricing strategies in real time. The specific objectives include:
@@ -30,7 +30,7 @@ The system design for the AI Dynamic Pricing Model for E-commerce should conside
 
 By incorporating these strategies and utilizing the chosen libraries, we aim to build a scalable, data-intensive AI application that can drive effective pricing strategies for e-commerce, leading to improved competitiveness and customer satisfaction.
 
-# MLOps Infrastructure for Dynamic Pricing Model in E-commerce
+## MLOps Infrastructure for Dynamic Pricing Model in E-commerce
 
 ## Objectives
 The MLOps infrastructure for the Dynamic Pricing Model in e-commerce aims to establish a robust and scalable framework for managing the machine learning lifecycle, including model development, deployment, monitoring, and continuous improvement. The specific objectives include:
@@ -71,8 +71,8 @@ dynamic_pricing_model/
 ├── models/
 │   ├── trained_models/
 │   │   ├── version_1/
-│   │   │   ├── model.pb  # TensorFlow model
-│   │   │   ├── model_metadata.json  # Metadata for the model
+│   │   │   ├── model.pb  ## TensorFlow model
+│   │   │   ├── model_metadata.json  ## Metadata for the model
 │   │   │   └── ... (other model-related files)
 │   │   └── ... (other model versions)
 │   └── ... (other model-related directories)
@@ -84,14 +84,14 @@ dynamic_pricing_model/
 │
 ├── src/
 │   ├── api/
-│   │   ├── main.py  # FastAPI application
+│   │   ├── main.py  ## FastAPI application
 │   │   └── ... (other API-related files)
 │   ├── data_processing/
 │   │   ├── data_ingestion.py
 │   │   ├── data_preprocessing.py
 │   │   └── ... (other data processing scripts)
 │   ├── model/
-│   │   ├── pricing_model.py  # TensorFlow model implementation
+│   │   ├── pricing_model.py  ## TensorFlow model implementation
 │   │   ├── model_training.py
 │   │   └── ... (other model-related files)
 │   ├── tasks/
@@ -111,8 +111,8 @@ dynamic_pricing_model/
 │   └── ... (other test-related directories)
 │
 ├── config/
-│   ├── app_config.yaml  # Application configuration settings
-│   ├── model_config.yaml  # Model hyperparameters and configurations
+│   ├── app_config.yaml  ## Application configuration settings
+│   ├── model_config.yaml  ## Model hyperparameters and configurations
 │   └── ... (other configuration files)
 │
 ├── Dockerfile
@@ -140,27 +140,27 @@ models/
 │
 ├── trained_models/
 │   ├── version_1/
-│   │   ├── model.pb  # TensorFlow SavedModel format
-│   │   ├── model_metadata.json  # Metadata for the model
-│   │   ├── preprocessing_pipeline.pkl  # Serialized data preprocessing pipeline
-│   │   ├── features.txt  # List of input features used by the model
+│   │   ├── model.pb  ## TensorFlow SavedModel format
+│   │   ├── model_metadata.json  ## Metadata for the model
+│   │   ├── preprocessing_pipeline.pkl  ## Serialized data preprocessing pipeline
+│   │   ├── features.txt  ## List of input features used by the model
 │   │   └── evaluation/
-│   │       ├── evaluation_metrics.json  # Evaluation metrics for the model
-│   │       └── evaluation_plots/  # Directory containing evaluation plots
+│   │       ├── evaluation_metrics.json  ## Evaluation metrics for the model
+│   │       └── evaluation_plots/  ## Directory containing evaluation plots
 │   └── version_2/
 │       ├── ... (files for the second version of the trained model)
 │
 └── model_training/
-    ├── model_training_script.py  # Script for training the model
-    ├── hyperparameter_tuning_config.yaml  # Configuration for hyperparameter tuning
+    ├── model_training_script.py  ## Script for training the model
+    ├── hyperparameter_tuning_config.yaml  ## Configuration for hyperparameter tuning
     ├── feature_engineering/
-    │   ├── feature_selection.py  # Script for feature selection
-    │   ├── feature_transformation.py  # Script for feature transformation
+    │   ├── feature_selection.py  ## Script for feature selection
+    │   ├── feature_transformation.py  ## Script for feature transformation
     │   └── ... (other feature engineering scripts)
     └── data/
-        ├── data_preparation_script.py  # Script for preparing training data
-        ├── train_data.csv  # Training dataset
-        └── validation_data.csv  # Validation dataset
+        ├── data_preparation_script.py  ## Script for preparing training data
+        ├── train_data.csv  ## Training dataset
+        └── validation_data.csv  ## Validation dataset
 ```
 
 The *models/* directory for the Dynamic Pricing Model for E-commerce houses two main subdirectories:
@@ -192,20 +192,20 @@ deployment/
 ├── Dockerfile
 ├── docker-compose.yml
 ├── app/
-│   ├── main.py  # FastAPI application for serving model predictions
+│   ├── main.py  ## FastAPI application for serving model predictions
 │   ├── api/
-│   │   ├── schemas.py  # Pydantic schemas for API input/output validation
-│   │   └── routes.py  # API routes for model inference
+│   │   ├── schemas.py  ## Pydantic schemas for API input/output validation
+│   │   └── routes.py  ## API routes for model inference
 │   └── ... (other application files)
 │
 ├── celery/
-│   ├── celery_config.py  # Celery configuration settings
-│   ├── tasks.py  # Celery tasks for asynchronous processing
+│   ├── celery_config.py  ## Celery configuration settings
+│   ├── tasks.py  ## Celery tasks for asynchronous processing
 │   └── ... (other Celery-related files)
 │
 └── kubernetes/
-    ├── deployment.yaml  # Kubernetes deployment manifest for scaling the application
-    ├── service.yaml  # Kubernetes service manifest for exposing the application
+    ├── deployment.yaml  ## Kubernetes deployment manifest for scaling the application
+    ├── service.yaml  ## Kubernetes service manifest for exposing the application
     └── ... (other Kubernetes deployment files)
 ```
 
@@ -234,27 +234,27 @@ This structure provides a clear delineation of the deployment components, includ
 Certainly! Below is an example of a Python script for training a model for the Dynamic Pricing Model for E-commerce using mock data. The script is responsible for loading the mock data, preparing the data, training a TensorFlow model, and saving the trained model artifacts.
 
 ```python
-# File: model_training_script.py
+## File: model_training_script.py
 import pandas as pd
 import numpy as np
 import tensorflow as tf
 from sklearn.model_selection import train_test_split
 
-# Load mock data
+## Load mock data
 data_path = 'data/mock_pricing_data.csv'
 mock_data = pd.read_csv(data_path)
 
-# Preprocess and prepare the data
-# ... (data preprocessing and feature engineering steps)
+## Preprocess and prepare the data
+## ... (data preprocessing and feature engineering steps)
 
-# Split into features and target
+## Split into features and target
 X = mock_data.drop('price', axis=1).values
 y = mock_data['price'].values
 
-# Split the data into training and validation sets
+## Split the data into training and validation sets
 X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Define and train a simple TensorFlow model
+## Define and train a simple TensorFlow model
 model = tf.keras.Sequential([
     tf.keras.layers.Dense(64, activation='relu', input_shape=(X_train.shape[1],)),
     tf.keras.layers.Dense(32, activation='relu'),
@@ -264,11 +264,11 @@ model = tf.keras.Sequential([
 model.compile(optimizer='adam', loss='mean_squared_error')
 model.fit(X_train, y_train, validation_data=(X_val, y_val), epochs=10, batch_size=32)
 
-# Evaluate the model
-# ... (evaluation metrics and plots)
+## Evaluate the model
+## ... (evaluation metrics and plots)
 
-# Save the trained model and artifacts
-model.save('models/trained_models/version_1')  # Save the model in SavedModel format
+## Save the trained model and artifacts
+model.save('models/trained_models/version_1')  ## Save the model in SavedModel format
 model_metadata = {'version': 1, 'features': list(mock_data.drop('price', axis=1).columns)}
 with open('models/trained_models/version_1/model_metadata.json', 'w') as metadata_file:
     json.dump(model_metadata, metadata_file)
@@ -281,7 +281,7 @@ This script demonstrates the process of model training using mock data, where yo
 Certainly! The following is an example of a Python script implementing a complex machine learning algorithm for the Dynamic Pricing Model for E-commerce using mock data. This script demonstrates the training of a more sophisticated model, specifically a Gradient Boosting Regressor from the XGBoost library.
 
 ```python
-# File: model_training_script.py
+## File: model_training_script.py
 import pandas as pd
 import numpy as np
 import xgboost as xgb
@@ -289,31 +289,31 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 import json
 
-# Load mock data
+## Load mock data
 data_path = 'data/mock_pricing_data.csv'
 mock_data = pd.read_csv(data_path)
 
-# Preprocess and prepare the data
-# ... (data preprocessing and feature engineering steps)
+## Preprocess and prepare the data
+## ... (data preprocessing and feature engineering steps)
 
-# Split into features and target
+## Split into features and target
 X = mock_data.drop('price', axis=1).values
 y = mock_data['price'].values
 
-# Split the data into training and validation sets
+## Split the data into training and validation sets
 X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Define and train a complex XGBoost model
+## Define and train a complex XGBoost model
 model = xgb.XGBRegressor(objective='reg:squarederror', n_estimators=100, learning_rate=0.1, max_depth=5)
 model.fit(X_train, y_train, eval_set=[(X_val, y_val)], early_stopping_rounds=10, verbose=False)
 
-# Evaluate the model
+## Evaluate the model
 y_pred = model.predict(X_val)
 mse = mean_squared_error(y_val, y_pred)
 print(f"Mean Squared Error: {mse}")
 
-# Save the trained model and artifacts
-model.save_model('models/trained_models/version_1/model.xgb')  # Save the XGBoost model
+## Save the trained model and artifacts
+model.save_model('models/trained_models/version_1/model.xgb')  ## Save the XGBoost model
 model_metadata = {'version': 1, 'features': list(mock_data.drop('price', axis=1).columns)}
 with open('models/trained_models/version_1/model_metadata.json', 'w') as metadata_file:
     json.dump(model_metadata, metadata_file)

@@ -5,7 +5,7 @@ permalink: posts/geneai-ai-in-genomic-studies
 layout: article
 ---
 
-# AI GeneAI AI in Genomic Studies Repository
+## AI GeneAI AI in Genomic Studies Repository
 
 ## Objectives
 The AI GeneAI AI in Genomic Studies repository aims to provide a platform for researchers and practitioners in the field of genomic studies to leverage the power of artificial intelligence (AI) for analyzing and interpreting genomic data. The key objectives of this repository include:
@@ -63,7 +63,7 @@ Security and compliance measures are integral parts of the infrastructure, encom
 
 By integrating these components and design considerations, the infrastructure for the GeneAI AI in Genomic Studies application provides a robust and scalable foundation for building data-intensive AI applications that leverage machine learning and deep learning for genomic analysis and research.
 
-# GeneAI AI in Genomic Studies Repository File Structure
+## GeneAI AI in Genomic Studies Repository File Structure
 
 ```
 GeneAI/
@@ -249,24 +249,24 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, classification_report
 
 def train_genomic_classification_model(data_file_path):
-    # Load mock genomic data from a file
+    ## Load mock genomic data from a file
     genomic_data = pd.read_csv(data_file_path)
 
-    # Preprocessing: Separate features and target variable
+    ## Preprocessing: Separate features and target variable
     X = genomic_data.drop('target_label', axis=1)
     y = genomic_data['target_label']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize and train the RandomForestClassifier
+    ## Initialize and train the RandomForestClassifier
     model = RandomForestClassifier(n_estimators=100, random_state=42)
     model.fit(X_train, y_train)
 
-    # Make predictions on the test set
+    ## Make predictions on the test set
     y_pred = model.predict(X_test)
 
-    # Evaluate the model
+    ## Evaluate the model
     accuracy = accuracy_score(y_test, y_pred)
     report = classification_report(y_test, y_pred)
 
@@ -293,18 +293,18 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
 def train_deep_learning_genomic_model(data_file_path):
-    # Load mock genomic data from a file
+    ## Load mock genomic data from a file
     genomic_data = pd.read_csv(data_file_path)
 
-    # Preprocessing: Separate features and target variable, and scale the features
+    ## Preprocessing: Separate features and target variable, and scale the features
     X = genomic_data.drop('target_label', axis=1).values
     y = genomic_data['target_label'].values
     X = StandardScaler().fit_transform(X)
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Build a deep learning model using TensorFlow's Keras API
+    ## Build a deep learning model using TensorFlow's Keras API
     model = tf.keras.Sequential([
         tf.keras.layers.Dense(128, input_shape=(X_train.shape[1],), activation='relu'),
         tf.keras.layers.Dropout(0.2),
@@ -312,12 +312,12 @@ def train_deep_learning_genomic_model(data_file_path):
         tf.keras.layers.Dense(1, activation='sigmoid')
     ])
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam',
                   loss='binary_crossentropy',
                   metrics=['accuracy'])
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y_test))
 
     return model

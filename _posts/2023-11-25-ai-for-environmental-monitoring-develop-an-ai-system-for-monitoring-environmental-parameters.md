@@ -296,26 +296,26 @@ from sklearn.metrics import accuracy_score, classification_report
 import joblib
 
 def train_air_quality_model(data_file_path):
-    # Load mock data from CSV file
+    ## Load mock data from CSV file
     data = pd.read_csv(data_file_path)
 
-    # Assume the CSV contains features and target columns
+    ## Assume the CSV contains features and target columns
     features = data.drop('air_quality_label', axis=1)
     target = data['air_quality_label']
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(features, target, test_size=0.2, random_state=42)
 
-    # Initialize and train the Random Forest Classifier model
+    ## Initialize and train the Random Forest Classifier model
     model = RandomForestClassifier(n_estimators=100, random_state=42)
     model.fit(X_train, y_train)
 
-    # Evaluate the model
+    ## Evaluate the model
     y_pred = model.predict(X_test)
     accuracy = accuracy_score(y_test, y_pred)
     report = classification_report(y_test, y_pred)
 
-    # Save the trained model to a file
+    ## Save the trained model to a file
     model_file_path = 'models/saved_models/environmental_parameters/air_quality/random_forest_20220120/model.pkl'
     joblib.dump(model, model_file_path)
 
@@ -344,13 +344,13 @@ from tensorflow.keras.optimizers import Adam
 import joblib
 
 def train_temperature_lstm_model(data_file_path):
-    # Load mock data from CSV file
+    ## Load mock data from CSV file
     data = pd.read_csv(data_file_path)
 
-    # Assume the CSV contains time series temperature data
+    ## Assume the CSV contains time series temperature data
     temperature_sequence = data['temperature'].values
 
-    # Prepare the data for LSTM input
+    ## Prepare the data for LSTM input
     sequence_length = 10
     X, y = [], []
     for i in range(len(temperature_sequence) - sequence_length):
@@ -358,23 +358,23 @@ def train_temperature_lstm_model(data_file_path):
         y.append(temperature_sequence[i+sequence_length])
     X, y = np.array(X), np.array(y)
 
-    # Reshape the data for LSTM input
+    ## Reshape the data for LSTM input
     X = X.reshape((X.shape[0], X.shape[1], 1))
 
-    # Split the data into training and testing sets
+    ## Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Initialize and train the LSTM model
+    ## Initialize and train the LSTM model
     model = Sequential()
     model.add(LSTM(50, activation='relu', input_shape=(sequence_length, 1)))
     model.add(Dense(1))
     model.compile(optimizer=Adam(learning_rate=0.001), loss='mse')
     model.fit(X_train, y_train, epochs=50, batch_size=32, validation_data=(X_test, y_test))
 
-    # Evaluate the model
+    ## Evaluate the model
     loss = model.evaluate(X_test, y_test)
 
-    # Save the trained model to a file
+    ## Save the trained model to a file
     model_file_path = 'models/saved_models/environmental_parameters/temperature/lstm_20220125/model.h5'
     model.save(model_file_path)
 

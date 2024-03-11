@@ -5,7 +5,7 @@ permalink: posts/realtimewatch---real-time-monitoring-ai
 layout: article
 ---
 
-# AI RealTimeWatch - Real-Time Monitoring AI Repository
+## AI RealTimeWatch - Real-Time Monitoring AI Repository
 
 ## Objectives
 
@@ -91,7 +91,7 @@ The infrastructure for the RealTimeWatch application needs to be robust, scalabl
 
 By deploying the RealTimeWatch application on a cloud-based infrastructure with the mentioned components, we can ensure scalability, resilience, and real-time capabilities for monitoring, processing, and analyzing data streams using AI and machine learning.
 
-# Scalable File Structure for RealTimeWatch Repository
+## Scalable File Structure for RealTimeWatch Repository
 
 ```
 RealTimeWatch/
@@ -248,21 +248,21 @@ import pandas as pd
 from sklearn.ensemble import IsolationForest
 
 def run_anomaly_detection(file_path):
-    # Load mock data from the specified file
+    ## Load mock data from the specified file
     data = pd.read_csv(file_path)
 
-    # Feature engineering and data preprocessing (if needed)
-    # ...
+    ## Feature engineering and data preprocessing (if needed)
+    ## ...
 
-    # Model training
-    model = IsolationForest(contamination=0.05)  # Contamination parameter can be adjusted
+    ## Model training
+    model = IsolationForest(contamination=0.05)  ## Contamination parameter can be adjusted
     model.fit(data)
 
-    # Predict anomalies
+    ## Predict anomalies
     anomalies = model.predict(data)
 
-    # Post-processing and visualization (if needed)
-    # ...
+    ## Post-processing and visualization (if needed)
+    ## ...
 
     return anomalies
 ```
@@ -286,28 +286,28 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import LSTM, Dense
 
 def run_deep_learning_anomaly_detection(file_path):
-    # Load mock data from the specified file
+    ## Load mock data from the specified file
     data = pd.read_csv(file_path)
 
-    # Data preprocessing and feature engineering (if needed)
-    # ...
+    ## Data preprocessing and feature engineering (if needed)
+    ## ...
 
-    # Define model architecture
+    ## Define model architecture
     model = Sequential()
     model.add(LSTM(64, input_shape=(None, num_features), return_sequences=True))
     model.add(Dense(1, activation='sigmoid'))
 
-    # Compile the model
+    ## Compile the model
     model.compile(optimizer='adam', loss='binary_crossentropy')
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_val, y_val))
 
-    # Predict anomalies
+    ## Predict anomalies
     anomalies_probabilities = model.predict(X_test)
 
-    # Post-processing and visualization (if needed)
-    # ...
+    ## Post-processing and visualization (if needed)
+    ## ...
 
     return anomalies_probabilities
 ```

@@ -62,73 +62,73 @@ By incorporating these MLOps practices into the AI-enhanced agricultural advice 
 AI-Enhanced-Agricultural-Advice/
 │
 ├── app/
-│   ├── api/                            # API module for serving ML predictions and recommendations
+│   ├── api/                            ## API module for serving ML predictions and recommendations
 │   │   ├── __init__.py
 │   │   ├── routes.py
 │   │   └── controllers.py
 │   │
-│   ├── data_processing/                # Module for data cleaning, preprocessing, and feature engineering
+│   ├── data_processing/                ## Module for data cleaning, preprocessing, and feature engineering
 │   │   ├── __init__.py
 │   │   ├── data_cleaning.py
 │   │   └── feature_engineering.py
 │   │
-│   ├── model_training/                 # Module for training and evaluating ML models
+│   ├── model_training/                 ## Module for training and evaluating ML models
 │   │   ├── __init__.py
 │   │   ├── model.py
 │   │   └── evaluation.py
 │   │
-│   └── utils/                          # Utility functions and helper modules
+│   └── utils/                          ## Utility functions and helper modules
 │       ├── __init__.py
 │       ├── data_loading.py
 │       └── visualization.py
 │
 ├── deployment/
-│   ├── Dockerfile                      # Docker configuration for containerizing the application
-│   ├── kubernetes/                     # Kubernetes deployment configurations
+│   ├── Dockerfile                      ## Docker configuration for containerizing the application
+│   ├── kubernetes/                     ## Kubernetes deployment configurations
 │   │   ├── deployment.yaml
 │   │   ├── service.yaml
 │   │   └── ingress.yaml
-│   └── Jenkinsfile                     # Pipeline configuration for automated CI/CD
+│   └── Jenkinsfile                     ## Pipeline configuration for automated CI/CD
 │
 ├── models/
-│   ├── trained_models/                 # Directory for storing trained ML models and associated metadata
+│   ├── trained_models/                 ## Directory for storing trained ML models and associated metadata
 │   │   ├── model_version1/
 │   │   │   ├── model.h5
 │   │   │   └── metadata.json
 │   │   └── model_version2/
 │   │       ├── model.h5
 │   │       └── metadata.json
-│   └── preprocessing_pipeline.pkl      # Serialized preprocessing pipeline for data transformation
+│   └── preprocessing_pipeline.pkl      ## Serialized preprocessing pipeline for data transformation
 │
 ├── notebooks/
-│   ├── exploratory_analysis.ipynb      # Jupyter notebook for exploring and analyzing agricultural data
-│   ├── model_evaluation.ipynb           # Jupyter notebook for evaluating model performance
-│   └── data_preprocessing.ipynb         # Jupyter notebook for data preprocessing and feature engineering
+│   ├── exploratory_analysis.ipynb      ## Jupyter notebook for exploring and analyzing agricultural data
+│   ├── model_evaluation.ipynb           ## Jupyter notebook for evaluating model performance
+│   └── data_preprocessing.ipynb         ## Jupyter notebook for data preprocessing and feature engineering
 │
 ├── data/
-│   ├── raw_data/                       # Raw agricultural data from IoT sensors and satellite imagery
+│   ├── raw_data/                       ## Raw agricultural data from IoT sensors and satellite imagery
 │   │   ├── sensor_data.csv
 │   │   └── satellite_images/
 │   │
-│   └── processed_data/                 # Cleaned and transformed data for model training and validation
+│   └── processed_data/                 ## Cleaned and transformed data for model training and validation
 │       ├── training_data.csv
 │       └── validation_data.csv
 │
 ├── config/
-│   ├── app_config.yaml                 # Application configuration settings
-│   └── logging_config.yaml             # Configuration for logging and monitoring
+│   ├── app_config.yaml                 ## Application configuration settings
+│   └── logging_config.yaml             ## Configuration for logging and monitoring
 │
 ├── tests/
-│   ├── unit_tests/                     # Unit tests for different modules and functionalities
-│   └── integration_tests/              # Integration tests for API endpoints and data processing workflows
+│   ├── unit_tests/                     ## Unit tests for different modules and functionalities
+│   └── integration_tests/              ## Integration tests for API endpoints and data processing workflows
 │
 ├── docs/
-│   ├── api_documentation.md            # Documentation of the API endpoints and usage
-│   └── deployment_guide.md             # Guide for deploying the application and infrastructure
+│   ├── api_documentation.md            ## Documentation of the API endpoints and usage
+│   └── deployment_guide.md             ## Guide for deploying the application and infrastructure
 │
-├── README.md                          # Project overview, setup instructions, and usage guide
-├── LICENSE                            # License information for the repository
-└── requirements.txt                   # Python dependencies for the application
+├── README.md                          ## Project overview, setup instructions, and usage guide
+├── LICENSE                            ## License information for the repository
+└── requirements.txt                   ## Python dependencies for the application
 ```
 
 The `models` directory for the AI-Enhanced Agricultural Advice application stores trained machine learning models and associated metadata, as well as the serialized preprocessing pipeline for data transformation. Here's an expansion on the contents of the `models` directory:
@@ -168,33 +168,33 @@ Certainly! Below is an example of a Python script for training a machine learnin
 You can save this script as a file named `train_model.py` in the `app` directory within the project structure.
 
 ```python
-# train_model.py
+## train_model.py
 
 import numpy as np
 import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras import layers
 
-# Mock agricultural data (features and labels)
-# Replace this with actual agricultural data
-features = np.random.rand(100, 5)  # Example: 100 samples with 5 features each
-labels = np.random.randint(2, size=100)  # Example: Binary classification labels
+## Mock agricultural data (features and labels)
+## Replace this with actual agricultural data
+features = np.random.rand(100, 5)  ## Example: 100 samples with 5 features each
+labels = np.random.randint(2, size=100)  ## Example: Binary classification labels
 
-# Define a simple neural network model
+## Define a simple neural network model
 model = keras.Sequential([
     layers.Dense(10, activation='relu', input_shape=(5,)),
     layers.Dense(1, activation='sigmoid')
 ])
 
-# Compile the model with appropriate loss and optimizer
+## Compile the model with appropriate loss and optimizer
 model.compile(optimizer='adam',
               loss='binary_crossentropy',
               metrics=['accuracy'])
 
-# Train the model using the mock data
+## Train the model using the mock data
 model.fit(features, labels, epochs=10, batch_size=32)
 
-# Save the trained model
+## Save the trained model
 model.save('trained_model.h5')
 ```
 
@@ -209,20 +209,20 @@ Certainly! Below is an example of a Python script for training a more complex ma
 You can save this script as a file named `train_cnn_model.py` in the `app` directory within the project structure.
 
 ```python
-# train_cnn_model.py
+## train_cnn_model.py
 
 import numpy as np
 import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras import layers
 
-# Mock agricultural image data and labels
-# Replace this with actual agricultural image data
-# Mock data can be generated using libraries such as scikit-image or by loading sample images
-images = np.random.rand(100, 128, 128, 3)  # Example: 100 RGB images with size 128x128
-labels = np.random.randint(5, size=100)    # Example: 5 different classes for image classification
+## Mock agricultural image data and labels
+## Replace this with actual agricultural image data
+## Mock data can be generated using libraries such as scikit-image or by loading sample images
+images = np.random.rand(100, 128, 128, 3)  ## Example: 100 RGB images with size 128x128
+labels = np.random.randint(5, size=100)    ## Example: 5 different classes for image classification
 
-# Define a convolutional neural network model
+## Define a convolutional neural network model
 model = keras.Sequential([
     layers.Conv2D(32, (3, 3), activation='relu', input_shape=(128, 128, 3)),
     layers.MaxPooling2D((2, 2)),
@@ -232,18 +232,18 @@ model = keras.Sequential([
     layers.MaxPooling2D((2, 2)),
     layers.Flatten(),
     layers.Dense(256, activation='relu'),
-    layers.Dense(5, activation='softmax')  # Replace 5 with the actual number of classes
+    layers.Dense(5, activation='softmax')  ## Replace 5 with the actual number of classes
 ])
 
-# Compile the model with appropriate loss and optimizer
+## Compile the model with appropriate loss and optimizer
 model.compile(optimizer='adam',
               loss='sparse_categorical_crossentropy',
               metrics=['accuracy'])
 
-# Train the model using the mock image data
+## Train the model using the mock image data
 model.fit(images, labels, epochs=10, batch_size=32)
 
-# Save the trained CNN model
+## Save the trained CNN model
 model.save('trained_cnn_model.h5')
 ```
 

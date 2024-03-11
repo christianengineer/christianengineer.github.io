@@ -5,7 +5,7 @@ permalink: posts/sme-credit-scoring-model-for-peru-scikit-learn-tensorflow-airfl
 layout: article
 ---
 
-# SME Credit Scoring Model for Peru
+## SME Credit Scoring Model for Peru
 
 ## Objectives and Benefits
 ### Objectives:
@@ -46,7 +46,7 @@ layout: article
 
 Feel free to reach out for more details on each step!
 
-# Sourcing Data Strategy Analysis
+## Sourcing Data Strategy Analysis
 
 ## Data Collection Tools and Strategies:
 1. **Financial Institutions Data**:
@@ -85,7 +85,7 @@ Feel free to reach out for more details on each step!
 
 By adopting these tools and strategies, we can streamline the data collection process, ensure data quality, and make the data readily accessible in the correct format for analysis and model training within our existing technology stack. The seamless integration of these tools will enhance the efficiency and effectiveness of the SME Credit Scoring Model project.
 
-# Feature Extraction and Engineering Analysis
+## Feature Extraction and Engineering Analysis
 
 ## Feature Extraction Strategies:
 1. **Cash Flow Analysis**:
@@ -145,7 +145,7 @@ By adopting these tools and strategies, we can streamline the data collection pr
 
 By implementing these feature extraction and engineering strategies with well-thought-out variable names, we can not only enhance the interpretability of the data but also improve the performance of the machine learning model for the SME Credit Scoring project. Consistent and descriptive variable names will aid in better understanding the features and their impact on the credit scoring outcomes.
 
-# Metadata Management for SME Credit Scoring Model
+## Metadata Management for SME Credit Scoring Model
 
 ## Project-Specific Metadata Requirements:
 1. **Feature Description**:
@@ -192,7 +192,7 @@ By implementing these feature extraction and engineering strategies with well-th
 
 By leveraging project-specific metadata management requirements and tailored tools and techniques, the SME Credit Scoring Model can ensure transparency, reproducibility, and compliance in data handling and model performance monitoring, catering to the unique demands and characteristics of the project.
 
-# Data Challenges and Preprocessing Strategies for SME Credit Scoring Model
+## Data Challenges and Preprocessing Strategies for SME Credit Scoring Model
 
 ## Specific Data Challenges:
 1. **Imbalanced Data**:
@@ -238,31 +238,31 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.impute import SimpleImputer
 from imblearn.over_sampling import SMOTE
 
-# Load the raw data
+## Load the raw data
 data = pd.read_csv('sme_credit_data.csv')
 
-# Separate features and target variable
+## Separate features and target variable
 X = data.drop('credit_worthy', axis=1)
 y = data['credit_worthy']
 
-# Impute missing values
+## Impute missing values
 imputer = SimpleImputer(strategy='mean')
 X_imputed = imputer.fit_transform(X)
 X = pd.DataFrame(X_imputed, columns=X.columns)
 
-# Scale numerical features
+## Scale numerical features
 scaler = StandardScaler()
 X_scaled = scaler.fit_transform(X)
 X = pd.DataFrame(X_scaled, columns=X.columns)
 
-# Handle categorical variables (if any) - Example with one-hot encoding
-# X = pd.get_dummies(X)
+## Handle categorical variables (if any) - Example with one-hot encoding
+## X = pd.get_dummies(X)
 
-# Address class imbalance using SMOTE
+## Address class imbalance using SMOTE
 smote = SMOTE(random_state=42)
 X_resampled, y_resampled = smote.fit_resample(X, y)
 
-# Save the preprocessed data
+## Save the preprocessed data
 preprocessed_data = pd.concat([X_resampled, y_resampled], axis=1)
 preprocessed_data.to_csv('preprocessed_data.csv', index=False)
 ```
@@ -277,7 +277,7 @@ In this code:
 
 These preprocessing steps are crucial for preparing the dataset for effective model training and analysis, ensuring that the data is robust, standardized, and ready for building a high-performing credit scoring model tailored to the unique demands of SMEs in Peru.
 
-# Modeling Strategy for SME Credit Scoring Model
+## Modeling Strategy for SME Credit Scoring Model
 
 ## Recommended Modeling Strategy:
 - **Algorithm**: **Gradient Boosting Decision Trees (XGBoost)**
@@ -306,7 +306,7 @@ These preprocessing steps are crucial for preparing the dataset for effective mo
 
 By focusing on hyperparameter tuning with cross-validation as the most crucial step within the modeling strategy, we prioritize optimizing the model's performance and generalization capacity, specifically tailored to the unique challenges and data types present in our project. This step ensures that the model can effectively leverage the SME operational data to provide accurate credit scoring assessments, contributing to the success and impact of the SME Credit Scoring Model in facilitating access to credit for small and medium-sized enterprises in Peru.
 
-# Tools and Technologies for Data Modeling in SME Credit Scoring Project
+## Tools and Technologies for Data Modeling in SME Credit Scoring Project
 
 ## 1. Tool: **XGBoost**
    - **Description**: XGBoost is a powerful gradient boosting algorithm suitable for structured data and classification tasks, aligning well with the project's objective of credit scoring for SMEs in Peru.
@@ -346,10 +346,10 @@ import pandas as pd
 from faker import Faker
 from sklearn.preprocessing import StandardScaler
 
-# Initialize Faker for generating synthetic data
+## Initialize Faker for generating synthetic data
 fake = Faker()
 
-# Create a fictitious dataset with relevant features
+## Create a fictitious dataset with relevant features
 num_samples = 10000
 
 data = {
@@ -357,25 +357,25 @@ data = {
     'monthly_expenses': [fake.random_int(min=500, max=30000) for _ in range(num_samples)],
     'return_on_assets': [fake.random.uniform(0, 1) for _ in range(num_samples)],
     'return_on_equity': [fake.random.uniform(0, 1) for _ in range(num_samples)],
-    # Add more relevant features based on the project's requirements
+    ## Add more relevant features based on the project's requirements
 
     'credit_worthy': [fake.random_element(elements=[0, 1]) for _ in range(num_samples)]
 }
 
 df = pd.DataFrame(data)
 
-# Feature Engineering Steps
-# Add feature engineering code here as needed
+## Feature Engineering Steps
+## Add feature engineering code here as needed
 
-# Metadata Management
-# Add metadata annotations if required
+## Metadata Management
+## Add metadata annotations if required
 
-# Scale numerical features
+## Scale numerical features
 scaler = StandardScaler()
 scaled_features = scaler.fit_transform(df.drop('credit_worthy', axis=1))
 df_scaled = pd.DataFrame(scaled_features, columns=df.columns[:-1])
 
-# Save the synthetic dataset for model training
+## Save the synthetic dataset for model training
 df_scaled.to_csv('synthetic_sme_credit_data.csv', index=False)
 ```
 
@@ -422,32 +422,32 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.metrics import roc_auc_score
 
-# Load preprocessed data
+## Load preprocessed data
 data = pd.read_csv('preprocessed_data.csv')
 
-# Split data into features and target variable
+## Split data into features and target variable
 X = data.drop('credit_worthy', axis=1)
 y = data['credit_worthy']
 
-# Split data into training and testing sets
+## Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize Gradient Boosting Classifier
+## Initialize Gradient Boosting Classifier
 model = GradientBoostingClassifier()
 
-# Train the model
+## Train the model
 model.fit(X_train, y_train)
 
-# Make predictions on the test set
+## Make predictions on the test set
 y_pred = model.predict(X_test)
 
-# Calculate AUC-ROC score
+## Calculate AUC-ROC score
 auc_roc_score = roc_auc_score(y_test, model.predict_proba(X_test)[:, 1])
 
-# Print the AUC-ROC score
+## Print the AUC-ROC score
 print(f'AUC-ROC Score: {auc_roc_score}')
 
-# Save the trained model for deployment
+## Save the trained model for deployment
 joblib.dump(model, 'credit_scoring_model.joblib')
 ```
 
@@ -473,7 +473,7 @@ joblib.dump(model, 'credit_scoring_model.joblib')
 
 Adhering to these coding practices and standards will help maintain a robust and scalable codebase for deploying the machine learning model in a production environment efficiently.
 
-# Deployment Plan for SME Credit Scoring Model
+## Deployment Plan for SME Credit Scoring Model
 
 ## Step-by-Step Deployment Process:
 
@@ -538,27 +538,27 @@ By following this step-by-step deployment plan tailored to the unique demands of
 Here is a sample Dockerfile tailored for encapsulating the environment and dependencies of the SME Credit Scoring Model project, optimized for performance and scalability:
 
 ```dockerfile
-# Use a minimal Python image as the base image
+## Use a minimal Python image as the base image
 FROM python:3.8-slim
 
-# Set the working directory in the container
+## Set the working directory in the container
 WORKDIR /app
 
-# Copy the requirements.txt file and install dependencies
+## Copy the requirements.txt file and install dependencies
 COPY requirements.txt requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the preprocessed dataset and trained model
+## Copy the preprocessed dataset and trained model
 COPY preprocessed_data.csv preprocessed_data.csv
 COPY credit_scoring_model.joblib credit_scoring_model.joblib
 
-# Copy the Python script for model inference
+## Copy the Python script for model inference
 COPY app.py app.py
 
-# Expose the container port
+## Expose the container port
 EXPOSE 5000
 
-# Command to run the FastAPI server for model inference
+## Command to run the FastAPI server for model inference
 CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "5000"]
 ```
 

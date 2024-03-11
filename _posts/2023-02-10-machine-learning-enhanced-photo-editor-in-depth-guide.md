@@ -5,7 +5,7 @@ permalink: posts/machine-learning-enhanced-photo-editor-in-depth-guide
 layout: article
 ---
 
-# Machine Learning Enhanced Photo Editor
+## Machine Learning Enhanced Photo Editor
 
 ## Description
 
@@ -45,7 +45,7 @@ The application will be built using a combination of powerful libraries and tool
 
 7. **Docker**: Will enable the application to run seamlessly in any environment.
 
-# Machine Learning Enhanced Photo Editor Repository File Structure
+## Machine Learning Enhanced Photo Editor Repository File Structure
 
 ```
 ML-Enhanced-Photo-Editor/
@@ -109,7 +109,7 @@ ML-Enhanced-Photo-Editor/
 - **docker-compose.yml** -> Allows defining and running multi-container Docker applications.
 - **README.md** -> Contains basic information about the project, its setup, and usage.
 
-# File: ml_controller.py
+## File: ml_controller.py
 
 ## Folder Location:
 
@@ -123,18 +123,18 @@ from tensorflow import keras
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 
-# Add path for custom models or utilities if any
-# import custom_models
-# import utils
+## Add path for custom models or utilities if any
+## import custom_models
+## import utils
 
 class MLController:
 
     def __init__(self):
-        # Initialize your ML models here
+        ## Initialize your ML models here
         self.model = None
-        # self.model = custom_models.CustomModel()
+        ## self.model = custom_models.CustomModel()
 
-    # Modifying an image using a pre-trained ML model
+    ## Modifying an image using a pre-trained ML model
     def apply_feature(self, image, feature):
         """
         This method applies the ML-driven feature on the given image
@@ -142,16 +142,16 @@ class MLController:
         :param feature: features to be applied - style_transfer, object_remove, etc.
         :return: modified image
         """
-        # Implement feature application logic here using self.model
+        ## Implement feature application logic here using self.model
         modified_img = image
         return modified_img
 
-    # Add more functions as needed for handling ML operations
-    # def train_model(self, train_data):
-    #   ...
+    ## Add more functions as needed for handling ML operations
+    ## def train_model(self, train_data):
+    ##   ...
 
-    # def evaluate_model(self, test_data):
-    #   ...
+    ## def evaluate_model(self, test_data):
+    ##   ...
 
 ```
 

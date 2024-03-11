@@ -201,16 +201,16 @@ I'll provide a Python script file for training a voice recognition model using T
 ### File: train_voice_recognition_model.py
 
 ```python
-# train_voice_recognition_model.py
+## train_voice_recognition_model.py
 
 import tensorflow as tf
 import numpy as np
 
-# Define mock training data
-X_train = np.random.rand(100, 10)  # Mock features
-y_train = np.random.randint(0, 2, size=100)  # Mock labels
+## Define mock training data
+X_train = np.random.rand(100, 10)  ## Mock features
+y_train = np.random.randint(0, 2, size=100)  ## Mock labels
 
-# Define and train TensorFlow Lite voice recognition model
+## Define and train TensorFlow Lite voice recognition model
 model = tf.keras.Sequential([
     tf.keras.layers.Dense(64, activation='relu', input_shape=(10,)),
     tf.keras.layers.Dense(1, activation='sigmoid')
@@ -219,11 +219,11 @@ model = tf.keras.Sequential([
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 model.fit(X_train, y_train, epochs=10)
 
-# Save the trained model in TensorFlow Lite format
+## Save the trained model in TensorFlow Lite format
 converter = tf.lite.TFLiteConverter.from_keras_model(model)
 tflite_model = converter.convert()
 
-# Save the model to a file
+## Save the model to a file
 with open('models/tensorflow_lite_models/voice_recognition_model.tflite', 'wb') as f:
     f.write(tflite_model)
 
@@ -248,7 +248,7 @@ I will provide a Python script file for implementing a complex machine learning 
 ### File: complex_ml_algorithm.py
 
 ```python
-# complex_ml_algorithm.py
+## complex_ml_algorithm.py
 
 import tensorflow as tf
 from sklearn.datasets import make_classification
@@ -256,26 +256,26 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 
-# Generate mock data for voice recognition
+## Generate mock data for voice recognition
 X, y = make_classification(n_samples=1000, n_features=20, n_classes=2, random_state=42)
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Train a RandomForestClassifier
+## Train a RandomForestClassifier
 clf = RandomForestClassifier(n_estimators=100, random_state=42)
 clf.fit(X_train, y_train)
 
-# Evaluate the model
+## Evaluate the model
 y_pred = clf.predict(X_test)
 accuracy = accuracy_score(y_test, y_pred)
 print(f"Accuracy of the complex ML algorithm: {accuracy}")
 
-# Convert the model to TensorFlow Lite format
+## Convert the model to TensorFlow Lite format
 converter = tf.lite.TFLiteConverter.from_sklearn(clf)
 tflite_model = converter.convert()
 
-# Save the model to a file
+## Save the model to a file
 with open('models/tensorflow_lite_models/complex_ml_algorithm_model.tflite', 'wb') as f:
     f.write(tflite_model)
 

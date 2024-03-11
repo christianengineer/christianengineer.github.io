@@ -5,7 +5,7 @@ permalink: posts/citizen-engagement-platforms-gpt-tensorflow-enhancing-public-pa
 layout: article
 ---
 
-# AI Citizen Engagement Platforms: Enhancing Public Participation Repository
+## AI Citizen Engagement Platforms: Enhancing Public Participation Repository
 
 ## Objectives
 The objectives of the AI Citizen Engagement Platforms project are to:
@@ -33,7 +33,7 @@ For the development of the AI Citizen Engagement Platforms, the following librar
 
 By incorporating these strategies and utilizing these libraries and frameworks, the AI Citizen Engagement Platforms can be developed to be highly scalable, data-intensive, and capable of leveraging machine learning to enhance public participation and decision-making processes.
 
-# MLOps Infrastructure for Citizen Engagement Platforms
+## MLOps Infrastructure for Citizen Engagement Platforms
 
 To build a robust MLOps infrastructure for the Citizen Engagement Platforms leveraging GPT and TensorFlow, the following components and strategies should be considered:
 
@@ -206,43 +206,43 @@ Certainly! Below is an example of a Python script for training a TensorFlow sent
 File Path: `training_sentiment_analysis_model.py`
 
 ```python
-# training_sentiment_analysis_model.py
+## training_sentiment_analysis_model.py
 
 import numpy as np
 import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras import layers
 
-# Mock data generation
-# Mock features (input data)
+## Mock data generation
+## Mock features (input data)
 mock_text_data = np.array(["I love this product", "This is terrible", "Neutral comment"])
-# Mock labels (sentiment classes)
-mock_labels = np.array([1, 0, 2])  # 1: Positive, 0: Negative, 2: Neutral
+## Mock labels (sentiment classes)
+mock_labels = np.array([1, 0, 2])  ## 1: Positive, 0: Negative, 2: Neutral
 
-# Text preprocessing
+## Text preprocessing
 tokenizer = keras.preprocessing.text.Tokenizer()
 tokenizer.fit_on_texts(mock_text_data)
 tokenized_text = tokenizer.texts_to_sequences(mock_text_data)
 max_sequence_length = max([len(seq) for seq in tokenized_text])
 padded_text_data = keras.preprocessing.sequence.pad_sequences(tokenized_text, maxlen=max_sequence_length)
 
-# Define the TensorFlow sentiment analysis model
+## Define the TensorFlow sentiment analysis model
 model = keras.Sequential([
     layers.Embedding(input_dim=len(tokenizer.word_index) + 1, output_dim=16, input_length=max_sequence_length),
     layers.GlobalAveragePooling1D(),
     layers.Dense(16, activation='relu'),
-    layers.Dense(3, activation='softmax')  # 3 output classes: Positive, Negative, Neutral
+    layers.Dense(3, activation='softmax')  ## 3 output classes: Positive, Negative, Neutral
 ])
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam',
               loss='sparse_categorical_crossentropy',
               metrics=['accuracy'])
 
-# Model training
+## Model training
 model.fit(padded_text_data, mock_labels, epochs=10)
 
-# Save the trained model
+## Save the trained model
 model.save('trained_models/sentiment_analysis_model')
 ```
 
@@ -255,43 +255,43 @@ Certainly! Below is an example of a Python script for training a complex machine
 File Path: `training_entity_recognition_model.py`
 
 ```python
-# training_entity_recognition_model.py
+## training_entity_recognition_model.py
 
 import numpy as np
 import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras import layers
 
-# Mock data generation
-# Mock features (input data)
+## Mock data generation
+## Mock features (input data)
 mock_text_data = np.array(["Apple is expected to launch a new product next month"])
-# Mock labels (entity tags)
+## Mock labels (entity tags)
 mock_entity_labels = np.array([[1, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2]])
 
-# Tokenization and text preprocessing
+## Tokenization and text preprocessing
 tokenizer = keras.preprocessing.text.Tokenizer()
 tokenizer.fit_on_texts(mock_text_data)
 tokenized_text = tokenizer.texts_to_sequences(mock_text_data)
 max_sequence_length = max([len(seq) for seq in tokenized_text])
 padded_text_data = keras.preprocessing.sequence.pad_sequences(tokenized_text, maxlen=max_sequence_length)
 
-# Define the TensorFlow entity recognition model
+## Define the TensorFlow entity recognition model
 input_layer = layers.Input(shape=(max_sequence_length,))
 embedding_layer = layers.Embedding(input_dim=len(tokenizer.word_index) + 1, output_dim=32, input_length=max_sequence_length)(input_layer)
 bi_lstm = layers.Bidirectional(layers.LSTM(64, return_sequences=True))(embedding_layer)
-output_layer = layers.TimeDistributed(layers.Dense(3, activation='softmax'))(bi_lstm)  # 3 entity classes: B (beginning), I (inside), O (outside)
+output_layer = layers.TimeDistributed(layers.Dense(3, activation='softmax'))(bi_lstm)  ## 3 entity classes: B (beginning), I (inside), O (outside)
 
-# Build the model
+## Build the model
 model = keras.Model(inputs=input_layer, outputs=output_layer)
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam',
               loss='sparse_categorical_crossentropy')
 
-# Model training
+## Model training
 model.fit(padded_text_data, mock_entity_labels, epochs=10)
 
-# Save the trained entity recognition model
+## Save the trained entity recognition model
 model.save('trained_models/entity_recognition_model')
 ```
 

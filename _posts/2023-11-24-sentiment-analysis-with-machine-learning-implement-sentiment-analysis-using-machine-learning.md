@@ -229,30 +229,30 @@ from sklearn.svm import SVC
 from sklearn.metrics import classification_report, accuracy_score
 
 def train_sentiment_analysis_model(data_path):
-    # Load mock data (IMDb movie review dataset)
+    ## Load mock data (IMDb movie review dataset)
     data = pd.read_csv(data_path)
 
-    # Preprocessing and feature extraction
+    ## Preprocessing and feature extraction
     vectorizer = TfidfVectorizer(max_features=10000)
     X = vectorizer.fit_transform(data['review'])
     y = data['sentiment']
 
-    # Split data into training and testing sets
+    ## Split data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Instantiate and train Support Vector Machine (SVM) model
+    ## Instantiate and train Support Vector Machine (SVM) model
     svm_model = SVC(kernel='linear')
     svm_model.fit(X_train, y_train)
 
-    # Evaluate the model
+    ## Evaluate the model
     y_pred = svm_model.predict(X_test)
 
-    # Print classification report and accuracy
+    ## Print classification report and accuracy
     print("Classification Report:")
     print(classification_report(y_test, y_pred))
     print("Accuracy:", accuracy_score(y_test, y_pred))
 
-    # Return the trained model
+    ## Return the trained model
     return svm_model
 ```
 
@@ -281,10 +281,10 @@ from tensorflow.keras.layers import Embedding, LSTM, Dense
 from tensorflow.keras.callbacks import EarlyStopping
 
 def train_deep_learning_sentiment_analysis_model(data_path):
-    # Load mock data (IMDb movie review dataset)
+    ## Load mock data (IMDb movie review dataset)
     data = pd.read_csv(data_path)
 
-    # Preprocessing
+    ## Preprocessing
     tokenizer = Tokenizer(num_words=10000)
     tokenizer.fit_on_texts(data['review'])
     X = tokenizer.texts_to_sequences(data['review'])
@@ -292,29 +292,29 @@ def train_deep_learning_sentiment_analysis_model(data_path):
 
     y = data['sentiment']
 
-    # Split data into training and testing sets
+    ## Split data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Build the LSTM model
+    ## Build the LSTM model
     model = Sequential()
     model.add(Embedding(10000, 128, input_length=100))
     model.add(LSTM(128, dropout=0.2, recurrent_dropout=0.2))
     model.add(Dense(1, activation='sigmoid'))
 
-    # Compile the model
+    ## Compile the model
     model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
 
-    # Define early stopping
+    ## Define early stopping
     early_stopping = EarlyStopping(monitor='val_loss', patience=3)
 
-    # Train the model
+    ## Train the model
     model.fit(X_train, y_train, batch_size=64, epochs=10, validation_data=(X_test, y_test), callbacks=[early_stopping])
 
-    # Evaluate the model
+    ## Evaluate the model
     loss, accuracy = model.evaluate(X_test, y_test)
     print("Test Accuracy:", accuracy)
 
-    # Return the trained model
+    ## Return the trained model
     return model
 ```
 

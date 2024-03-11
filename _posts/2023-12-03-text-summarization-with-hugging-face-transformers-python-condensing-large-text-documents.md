@@ -60,32 +60,32 @@ A well-organized and scalable file structure is essential for managing the code,
 ```
 text_summarization_hf_transformers/
 ├── data/
-│   ├── raw_text/                  # Directory for storing raw text documents or repositories
-│   ├── processed_text/            # Processed and pre-processed text data
-│   └── summarization_model/       # Folder for storing trained summarization model
+│   ├── raw_text/                  ## Directory for storing raw text documents or repositories
+│   ├── processed_text/            ## Processed and pre-processed text data
+│   └── summarization_model/       ## Folder for storing trained summarization model
 ├── models/
-│   ├── preprocessing/             # Scripts/modules for text preprocessing
-│   ├── transformers/              # Scripts/modules for interacting with Hugging Face Transformers library
-│   └── serving/                   # Code for serving the text summarization model
+│   ├── preprocessing/             ## Scripts/modules for text preprocessing
+│   ├── transformers/              ## Scripts/modules for interacting with Hugging Face Transformers library
+│   └── serving/                   ## Code for serving the text summarization model
 ├── api/
-│   ├── app.py                     # API endpoints for text summarization
-│   └── requirements.txt           # Python dependencies for the API
+│   ├── app.py                     ## API endpoints for text summarization
+│   └── requirements.txt           ## Python dependencies for the API
 ├── utils/
-│   ├── config.py                  # Configuration settings and hyperparameters
-│   └── logging.py                 # Logging setup and utilities
+│   ├── config.py                  ## Configuration settings and hyperparameters
+│   └── logging.py                 ## Logging setup and utilities
 ├── tests/
-│   ├── unit_tests/                # Unit tests for various components
-│   └── integration_tests/         # Integration tests for the end-to-end flow
+│   ├── unit_tests/                ## Unit tests for various components
+│   └── integration_tests/         ## Integration tests for the end-to-end flow
 ├── scripts/
-│   ├── data_preprocessing.py      # Scripts for preprocessing raw text data
-│   └── model_training.py          # Script for fine-tuning and training the summarization model
+│   ├── data_preprocessing.py      ## Scripts for preprocessing raw text data
+│   └── model_training.py          ## Script for fine-tuning and training the summarization model
 ├── docker/
-│   ├── Dockerfile                 # Dockerfile for containerizing the application
-│   └── docker-compose.yml         # Docker-compose file for defining the application's services
-├── README.md                      # Project overview, setup instructions, and usage guidelines
-├── requirements.txt               # Python dependencies for the entire application
-├── .gitignore                     # Specification of files to be ignored by version control
-└── LICENSE                        # License information for the project
+│   ├── Dockerfile                 ## Dockerfile for containerizing the application
+│   └── docker-compose.yml         ## Docker-compose file for defining the application's services
+├── README.md                      ## Project overview, setup instructions, and usage guidelines
+├── requirements.txt               ## Python dependencies for the entire application
+├── .gitignore                     ## Specification of files to be ignored by version control
+└── LICENSE                        ## License information for the project
 ```
 
 This file structure separates the different components of the text summarization application into organized directories, making it easier to manage and scale. The division of code, data, models, API, utilities, tests, and scripts allows for clear separation of concerns and ensures that each aspect of the application can be independently maintained and extended.
@@ -99,14 +99,14 @@ The `models` directory is a crucial component of the text summarization applicat
 ```
 models/
 ├── preprocessing/
-│   ├── text_preprocessing.py      # Module for text cleaning, tokenization, and other preprocessing tasks
-│   └── data_processing.py         # Script for processing raw text data into a suitable format for summarization
+│   ├── text_preprocessing.py      ## Module for text cleaning, tokenization, and other preprocessing tasks
+│   └── data_processing.py         ## Script for processing raw text data into a suitable format for summarization
 ├── transformers/
-│   ├── summarization_utils.py     # Utilities for interacting with Hugging Face Transformers library for summarization
-│   └── model_loading.py           # Script for loading and utilizing the pre-trained summarization model
+│   ├── summarization_utils.py     ## Utilities for interacting with Hugging Face Transformers library for summarization
+│   └── model_loading.py           ## Script for loading and utilizing the pre-trained summarization model
 └── serving/
-    ├── api_integration.py         # Module for integrating the summarization model into an API endpoint
-    └── model_server.py            # Module for serving the summarization model and handling inference requests
+    ├── api_integration.py         ## Module for integrating the summarization model into an API endpoint
+    └── model_server.py            ## Module for serving the summarization model and handling inference requests
 ```
 
 ### Breakdown of Files in the `models` Directory:
@@ -132,14 +132,14 @@ The `deployment` directory is a crucial component of the text summarization appl
 ```
 deployment/
 ├── docker/
-│   ├── Dockerfile                 # Configuration file for building the Docker image for the text summarization application
-│   └── docker-compose.yml         # Docker Compose file for defining the application's services and their interactions
+│   ├── Dockerfile                 ## Configuration file for building the Docker image for the text summarization application
+│   └── docker-compose.yml         ## Docker Compose file for defining the application's services and their interactions
 ├── kubernetes/
-│   ├── deployment.yaml            # Kubernetes deployment configuration for deploying the application as a containerized workload
-│   └── service.yaml               # Kubernetes service configuration for exposing the deployed application
+│   ├── deployment.yaml            ## Kubernetes deployment configuration for deploying the application as a containerized workload
+│   └── service.yaml               ## Kubernetes service configuration for exposing the deployed application
 └── terraform/
-    ├── main.tf                    # Terraform script for provisioning the necessary cloud infrastructure for the application
-    └── variables.tf               # Declaration of input variables for the Terraform script
+    ├── main.tf                    ## Terraform script for provisioning the necessary cloud infrastructure for the application
+    └── variables.tf               ## Declaration of input variables for the Terraform script
 ```
 
 ### Breakdown of Files in the `deployment` Directory:
@@ -164,27 +164,27 @@ from transformers import T5Tokenizer, T5ForConditionalGeneration
 import torch
 
 def summarize_text(input_text, model_path, tokenizer_path):
-    # Load pre-trained T5 model and tokenizer
+    ## Load pre-trained T5 model and tokenizer
     tokenizer = T5Tokenizer.from_pretrained(tokenizer_path)
     model = T5ForConditionalGeneration.from_pretrained(model_path)
 
-    # Tokenize the input text
+    ## Tokenize the input text
     input_ids = tokenizer.encode("summarize: " + input_text, return_tensors="pt", max_length=512, truncation=True)
 
-    # Generate the summary
+    ## Generate the summary
     summary_ids = model.generate(input_ids, num_beams=4, max_length=150, min_length=30, early_stopping=True)
     summary = tokenizer.decode(summary_ids[0], skip_special_tokens=True)
 
     return summary
 
-# Mock data
+## Mock data
 input_text = "Mock input text for summarization. This could be a large document with multiple paragraphs."
 
-# Replace these paths with actual paths to the pre-trained model and tokenizer on your local system
+## Replace these paths with actual paths to the pre-trained model and tokenizer on your local system
 model_path = "path_to_pretrained_model"
 tokenizer_path = "path_to_tokenizer"
 
-# Call the function with mock data
+## Call the function with mock data
 summary = summarize_text(input_text, model_path, tokenizer_path)
 print(summary)
 ```
@@ -199,27 +199,27 @@ When you call the `summarize_text` function with the mock input data, it will ge
 from transformers import T5Tokenizer, T5ForConditionalGeneration
 
 def summarize_text(input_text, model_path, tokenizer_path):
-    # Load pre-trained T5 model and tokenizer
+    ## Load pre-trained T5 model and tokenizer
     tokenizer = T5Tokenizer.from_pretrained(tokenizer_path)
     model = T5ForConditionalGeneration.from_pretrained(model_path)
 
-    # Tokenize the input text
+    ## Tokenize the input text
     inputs = tokenizer.encode("summarize: " + input_text, return_tensors="pt", max_length=1024, truncation=True)
 
-    # Generate the summary
+    ## Generate the summary
     summary_ids = model.generate(inputs, num_beams=4, max_length=150, min_length=30, early_stopping=True)
     summary = tokenizer.decode(summary_ids[0], skip_special_tokens=True)
 
     return summary
 
-# Mock data
+## Mock data
 input_text = "Mock input text for summarization. This could be a large document with multiple paragraphs."
 
-# Replace these paths with actual paths to the pre-trained model and tokenizer on your local system
+## Replace these paths with actual paths to the pre-trained model and tokenizer on your local system
 model_path = "path_to_pretrained_model"
 tokenizer_path = "path_to_tokenizer"
 
-# Call the function with mock data
+## Call the function with mock data
 summary = summarize_text(input_text, model_path, tokenizer_path)
 print(summary)
 ```

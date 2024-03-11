@@ -5,7 +5,7 @@ permalink: posts/rural-connectivity-solutions-tensorflow-keras-bridging-the-digi
 layout: article
 ---
 
-# AI Rural Connectivity Solutions Repository
+## AI Rural Connectivity Solutions Repository
 
 ## Objectives
 The AI Rural Connectivity Solutions Repository aims to bridge the digital divide by leveraging AI-driven technologies to provide sustainable and scalable connectivity solutions for rural communities. The primary objectives of this repository are to develop and deploy data-intensive AI applications that utilize machine learning to optimize rural network connectivity and resource allocation, with a focus on leveraging TensorFlow and Keras to achieve these goals.
@@ -32,7 +32,7 @@ Keras is selected for its user-friendly, high-level interface to TensorFlow, ena
 
 By employing these strategies and leveraging the chosen libraries, the AI Rural Connectivity Solutions Repository aims to address the digital divide in rural areas by harnessing the power of AI and machine learning to enable sustainable and effective connectivity solutions.
 
-# MLOps Infrastructure for Rural Connectivity Solutions
+## MLOps Infrastructure for Rural Connectivity Solutions
 
 To effectively operationalize the Rural Connectivity Solutions application, a robust MLOps infrastructure needs to be established. MLOps, an abbreviation for "machine learning operations," focuses on the collaboration and communication between data scientists and operations professionals to help manage and deploy machine learning models effectively. The MLOps infrastructure for the Rural Connectivity Solutions, leveraging TensorFlow and Keras, involves several key components and best practices:
 
@@ -182,33 +182,33 @@ By maintaining the `/deployment` directory in this structured manner, the reposi
 Certainly! Below is an example of a Python script for training a machine learning model for the Rural Connectivity Solutions application using mock data. This script utilizes TensorFlow and Keras for building and training the model.
 
 ```python
-# File: train_model.py
-# Description: Python script for training a machine learning model using mock data for the Rural Connectivity Solutions application.
+## File: train_model.py
+## Description: Python script for training a machine learning model using mock data for the Rural Connectivity Solutions application.
 
 import numpy as np
 import tensorflow as tf
 from tensorflow import keras
 
-# Path to the mock data file
+## Path to the mock data file
 mock_data_file = 'data/mock_data.csv'
 
-# Load mock data
-# Assuming the mock data contains features in columns 1 to N-1 and the target variable in the last column
+## Load mock data
+## Assuming the mock data contains features in columns 1 to N-1 and the target variable in the last column
 mock_data = np.genfromtxt(mock_data_file, delimiter=',', skip_header=1)
-X = mock_data[:, :-1]  # Features
-y = mock_data[:, -1]   # Target variable
+X = mock_data[:, :-1]  ## Features
+y = mock_data[:, -1]   ## Target variable
 
-# Define the machine learning model using Keras
+## Define the machine learning model using Keras
 model = keras.Sequential([
     keras.layers.Dense(64, activation='relu', input_shape=(X.shape[1],)),
     keras.layers.Dense(32, activation='relu'),
     keras.layers.Dense(1, activation='sigmoid')
 ])
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
-# Train the model
+## Train the model
 model.fit(X, y, epochs=10, batch_size=32, validation_split=0.2)
 ```
 
@@ -219,24 +219,24 @@ File Path: `/src/model/train_model.py`
 Please replace `'data/mock_data.csv'` with the actual file path for the mock data file in your project. This Python script can be further modularized, and the model training process can be customized based on the specific requirements of the Rural Connectivity Solutions application.
 
 ```python
-# File: complex_model_training.py
-# Description: Python script for training a complex machine learning algorithm using mock data for the Rural Connectivity Solutions application.
+## File: complex_model_training.py
+## Description: Python script for training a complex machine learning algorithm using mock data for the Rural Connectivity Solutions application.
 
 import numpy as np
 import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras import layers
 
-# Path to the mock data file
+## Path to the mock data file
 mock_data_file = 'data/mock_data.csv'
 
-# Load mock data
-# Assuming the mock data contains features in columns 1 to N-1 and the target variable in the last column
+## Load mock data
+## Assuming the mock data contains features in columns 1 to N-1 and the target variable in the last column
 mock_data = np.genfromtxt(mock_data_file, delimiter=',', skip_header=1)
-X = mock_data[:, :-1]  # Features
-y = mock_data[:, -1]   # Target variable
+X = mock_data[:, :-1]  ## Features
+y = mock_data[:, -1]   ## Target variable
 
-# Define the complex machine learning model using Keras
+## Define the complex machine learning model using Keras
 model = keras.Sequential([
     layers.Dense(256, activation='relu', input_shape=(X.shape[1],)),
     layers.BatchNormalization(),
@@ -247,10 +247,10 @@ model = keras.Sequential([
     layers.Dense(1, activation='sigmoid')
 ])
 
-# Compile the model
+## Compile the model
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
-# Train the model with mock data
+## Train the model with mock data
 model.fit(X, y, epochs=20, batch_size=64, validation_split=0.2)
 ```
 
