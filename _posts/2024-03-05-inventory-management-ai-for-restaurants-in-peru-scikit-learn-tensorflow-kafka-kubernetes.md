@@ -159,9 +159,9 @@ By implementing a comprehensive feature extraction and engineering process with 
 
 ### Project-Specific Insights:
 
-- \*\*Consider incorporating lead time and reorder point adjustments to account for supplier delays and stock availability constraints specific to the restaurant industry in Peru.
-- \*\*Aggregate weather data at relevant time intervals (e.g., daily averages) to capture fluctuations in weather conditions effectively impacting demand.
-- \*\*Employ feature selection algorithms such as recursive feature elimination or feature importance ranking to identify the most relevant variables for inventory prediction in restaurant settings.
+- Consider incorporating lead time and reorder point adjustments to account for supplier delays and stock availability constraints specific to the restaurant industry in Peru.
+- Aggregate weather data at relevant time intervals (e.g., daily averages) to capture fluctuations in weather conditions effectively impacting demand.
+- Employ feature selection algorithms such as recursive feature elimination or feature importance ranking to identify the most relevant variables for inventory prediction in restaurant settings.
 
 By proactively addressing these specific data challenges through strategic preprocessing practices tailored to the unique demands of the project, the data can be processed effectively to ensure robustness, reliability, and suitability for high-performing machine learning models for inventory management in restaurants in Peru.
 
@@ -237,9 +237,9 @@ This production-ready code snippet showcases the preprocessing steps for the inv
 
 ### Project-Specific Insights:
 
-- \*\*Include metadata related to supplier lead times, reorder points, and restocking schedules to capture supply chain dynamics and inventory replenishment strategies.
-- \*\*Incorporate metadata on external factors influencing demand, such as weather conditions, market trends, and seasonal patterns, to enhance the predictive accuracy of the model.
-- \*\*Document the impact of feature extraction and engineering decisions on the model's interpretability and the ability to optimize inventory levels efficiently in the restaurant context.
+- Include metadata related to supplier lead times, reorder points, and restocking schedules to capture supply chain dynamics and inventory replenishment strategies.
+- Incorporate metadata on external factors influencing demand, such as weather conditions, market trends, and seasonal patterns, to enhance the predictive accuracy of the model.
+- Document the impact of feature extraction and engineering decisions on the model's interpretability and the ability to optimize inventory levels efficiently in the restaurant context.
 
 By implementing robust metadata management practices tailored to the unique demands of the project, stakeholders can gain valuable insights into the data processing steps, feature engineering rationale, and model decision-making process, facilitating informed decision-making for effective inventory management in restaurants in Peru.
 

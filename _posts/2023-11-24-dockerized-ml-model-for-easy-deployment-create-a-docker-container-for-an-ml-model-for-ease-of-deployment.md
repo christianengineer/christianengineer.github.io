@@ -176,11 +176,11 @@ model/
 
    - If the model requires specific data preprocessing steps, this script contains the functions for processing input data before it is fed into the model for inference.
 
-5. \*\*`utils/` Directory
+5. **`utils/`** Directory
 
    - Contains utility modules for data processing and model handling, promoting modular and reusable code for data manipulation and model operations.
 
-6. \*\*`tests/` Directory
+6. **`tests/`** Directory
    - Includes unit test scripts to verify the functionality of the model-serving and data preprocessing scripts, ensuring the reliability of the ML model within the Docker container.
 
 By organizing the `model/` directory in this manner, the Dockerized ML Model repository maintains a clear separation of concerns, facilitating easy maintenance, testing, and deployment of the ML model within the Docker container. Additionally, the inclusion of modular utilities and testing infrastructure promotes code reuse and robustness in serving the ML model.
@@ -217,19 +217,19 @@ app/
 
    - Configuration for building the Docker image specific to the deployment application. This file includes instructions for setting up the deployment environment, installing dependencies, and exposing necessary ports.
 
-4. \*\*`static/` Directory (Optional)
+4. **`static/`** Directory (Optional)
 
    - Contains static files, such as images or CSS, to be served alongside the API endpoints.
 
-5. \*\*`templates/` Directory (Optional)
+5. **`templates/`** Directory (Optional)
 
    - Includes HTML templates for rendering dynamic web content if the deployment application serves web pages in addition to API responses.
 
-6. \*\*`tests/` Directory (Optional)
+6. **`tests/`** Directory (Optional)
 
    - Holds unit and integration test scripts for verifying the functionality of the deployment application, ensuring its reliability and robustness.
 
-7. \*\*`config/` Directory (Optional)
+7. **`config/`** Directory (Optional)
    - Contains configuration files for deployment settings, allowing for easy management of environment-specific configurations and settings.
 
 By structuring the `app/` directory in this manner, the Dockerized ML Model repository maintains a clear organization of deployment-related files, enabling the seamless integration of the ML model serving logic with the necessary deployment framework. Additionally, including optional directories for static files, templates, tests, and configuration enhances the flexibility and maintainability of the deployment application within the Docker container.

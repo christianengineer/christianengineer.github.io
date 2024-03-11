@@ -165,7 +165,7 @@ This well-organized file structure promotes modularity, reusability, and maintai
 
 The **models/** directory is a critical part of the repository, housing scripts and notebooks essential for defining, training, evaluating, and deploying machine learning models for stock price prediction. Here's a detailed breakdown of the files and subdirectories within the **models/** directory:
 
-### **models/** Directory Structure
+### models/ Directory Structure
 
 ```
 models/
@@ -176,7 +176,7 @@ models/
 └── ...
 ```
 
-### **Files in the models/ Directory:**
+### Files in the models/ Directory:
 
 1. **keras_model.py**: This file contains the core implementation of the Keras neural network model used for stock price prediction. It defines the architecture of the deep learning model, including layers, activation functions, and any custom components. Additionally, it provides functions for model training and inference.
 
@@ -202,7 +202,7 @@ By maintaining a well-structured **models/** directory, the repository fosters g
 
 The **deployment/** directory is crucial for housing files and scripts related to deploying machine learning models, setting up inference services, and incorporating the predictive capabilities into production or real-time systems. Below is a detailed breakdown of the files and subdirectories within the **deployment/** directory:
 
-### **deployment/** Directory Structure
+### deployment/ Directory Structure
 
 ```
 deployment/
@@ -222,7 +222,7 @@ deployment/
 └── ...
 ```
 
-### **Subdirectories and Files in the deployment/ Directory:**
+### Subdirectories and Files in the deployment/ Directory:
 
 1. **docker/**: This subdirectory contains the Dockerfile used to build a container image for the deployment of the stock price prediction application. It may also include other Docker-related files and configurations required for containerization.
 

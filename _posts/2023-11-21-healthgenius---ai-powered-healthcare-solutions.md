@@ -199,7 +199,7 @@ The `utils/` directory in the HealthGenius repository contains the following fil
 
 - **text_utils.py**: Contains utility functions for processing and analyzing text data within the healthcare domain. It may include functions for natural language processing (NLP) tasks such as tokenization, stemming, and sentiment analysis of clinical notes or patient records.
 
-- \***\*init**.py\*\*: This file indicates that the `utils/` directory should be treated as a package in Python. It can be empty or may contain initialization code for the package.
+- **init.py**: This file indicates that the `utils/` directory should be treated as a package in Python. It can be empty or may contain initialization code for the package.
 
 The `utils/` directory provides a centralized location for housing reusable utility functions and modules that are commonly used across different parts of the AI-powered healthcare application. These utilities aid in standardizing data processing, image handling, and text analytics tasks, promoting code reusability, maintainability, and consistency across the project.
 

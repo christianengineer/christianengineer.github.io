@@ -604,7 +604,7 @@ By following these conventions and standards commonly adopted in large tech envi
 
 ### Deployment Summary:
 
-- \*\*Winnow down pre-deployment stages by ensuring model readiness and compatibility checks before moving forward.
+- Winnow down pre-deployment stages by ensuring model readiness and compatibility checks before moving forward.
 - Containerize the model with Docker and version the model with DVC for easy management.
 - Deploy on a scalable cloud platform like AWS Elastic Beanstalk and monitor performance with the ELK Stack.
 - Utilize Flask or FastAPI for API development and AWS Lambda for model deployment.

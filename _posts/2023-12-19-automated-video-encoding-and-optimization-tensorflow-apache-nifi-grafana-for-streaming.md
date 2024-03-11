@@ -5,7 +5,7 @@ permalink: posts/automated-video-encoding-and-optimization-tensorflow-apache-nif
 layout: article
 ---
 
-### **AI Automated Video Encoding and Optimization**
+### AI Automated Video Encoding and Optimization
 
 #### Objectives:
 

@@ -230,7 +230,7 @@ To use this code, replace `'raw_data.csv'` with the path to the raw dataset file
 - **Algorithm Selection:** Choose appropriate algorithms based on the nature of the problem (e.g., regression, classification) and data characteristics.
 - **Hyperparameter Tuning:** Optimize model hyperparameters through techniques like grid search, random search, or Bayesian optimization.
 
-### **Most Important Modeling Step:**
+### Most Important Modeling Step:
 
 - **Model Evaluation and Interpretation:** The most critical modeling step for this project is the evaluation of the model's performance and the interpretation of results. It involves analyzing metrics, such as accuracy, precision, recall, and F1 score, to assess how well the model captures consumer behavior insights or market trends. Additionally, interpreting the model's decisions and insights is crucial for informing strategic decision-making in fine dining establishments.
 

@@ -173,7 +173,7 @@ models/
 
 ### Files within the `models` Directory
 
-#### **init**.py
+#### init.py
 
 The `__init__.py` files within each subdirectory indicate that the directories are Python packages, enabling the contained Python files to be imported as modules within the application.
 

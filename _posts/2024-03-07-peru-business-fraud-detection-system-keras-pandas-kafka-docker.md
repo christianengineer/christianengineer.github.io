@@ -232,7 +232,7 @@ These preprocessing steps are crucial in preparing the data for model training, 
 
 ## Modeling Strategy Overview
 
-For the Peru Business Fraud Detection System, a **Deep Learning approach using an **Anomaly Detection** technique with **Autoencoders\*\* is particularly suited to handle the unique challenges presented by the project's objectives and data types. Autoencoders are neural network models designed to reconstruct input data, making them effective for capturing complex patterns and anomalies in financial transaction data.
+For the Peru Business Fraud Detection System, a Deep Learning approach using an **Anomaly Detection** technique with **Autoencoders** is particularly suited to handle the unique challenges presented by the project's objectives and data types. Autoencoders are neural network models designed to reconstruct input data, making them effective for capturing complex patterns and anomalies in financial transaction data.
 
 ## Key Step: Anomaly Detection using Autoencoders
 

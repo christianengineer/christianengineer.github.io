@@ -274,26 +274,26 @@ For the Supply Chain Resilience Optimizer project in Peru, a modeling strategy t
 
 ### Modeling Strategy: Random Forest Ensemble with Gradient Boosting
 
-#### **Step 1: Ensemble Modeling Approach**
+#### Step 1: Ensemble Modeling Approach
 
 - **Random Forest**:
   - Utilize Random Forest due to its ability to handle complex relationships in structured data, robustness to outliers, and feature importance analysis.
 - **Gradient Boosting**:
   - Employ Gradient Boosting for boosting the predictive power of the model ensemble by iteratively correcting errors of the base models.
 
-#### **Step 2: Hyperparameter Tuning**
+#### Step 2: Hyperparameter Tuning
 
 - Fine-tune the hyperparameters of both Random Forest and Gradient Boosting models to optimize model performance. Grid search or Bayesian optimization can be employed.
 
-#### **Step 3: Cross-Validation**
+#### Step 3: Cross-Validation
 
 - Implement robust cross-validation techniques such as Stratified K-Fold or Time Series Splitting to ensure model generalization and performance evaluation using different data subsets.
 
-#### **Step 4: Feature Importance Analysis**
+#### Step 4: Feature Importance Analysis
 
 - Analyze feature importance from both Random Forest and Gradient Boosting models to identify key drivers influencing supply chain resilience and decision-making.
 
-#### **Step 5: Model Evaluation and Interpretation**
+#### Step 5: Model Evaluation and Interpretation
 
 - Evaluate model performance using relevant metrics such as accuracy, precision, recall, or F1-score. Interpret the model results to extract actionable insights for supply chain resilience optimization.
 

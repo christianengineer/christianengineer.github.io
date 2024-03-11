@@ -62,14 +62,14 @@ This open-source project is designed to evolve with the community's input and th
 
 MindLearn, an emerging leader in providing cutting-edge machine learning (ML) services, is actively seeking a **Senior Full Stack Software Engineer** with a flair for developing sophisticated AI-powered applications. We are focused on attracting professionals who thrive in fast-paced environments and have a proven track record of contributing to open-source projects, especially in areas that involve scaling AI systems. Your expertise will be pivotal in advancing our Comprehensive Machine Learning Service application, ensuring it delivers on our promise of scalability, reliability, and performance.
 
-### **Responsibilities:**
+### Responsibilities:
 
 - Build, optimize, and maintain a full-stack ML service platform, ensuring seamless scalability across a spectrum of AI functionalities.
 - Foster continuous improvement by integrating cutting-edge technologies and architectural patterns into our service.
 - Cultivate a codebase that encourages community participation, setting the standard for open-source AI services.
 - Develop intuitive UIs for non-technical users, empowering them to leverage ML insights effectively.
 
-### **Qualifications:**
+### Qualifications:
 
 - Proficiency in **TensorFlow/Keras**, **PyTorch**, **scikit-learn**, or similar ML libraries/frameworks.
 - Solid experience with **FastAPI**, **Celery** task queuing, and working knowledge of **Redis/RabbitMQ**.
@@ -78,17 +78,17 @@ MindLearn, an emerging leader in providing cutting-edge machine learning (ML) se
 - Understanding of the DevOps lifecycle, with experience in **CI/CD** tools such as **GitHub Actions** or **GitLab CI**, and monitoring solutions like **Prometheus/Grafana**.
 - A commitment to implementing user-friendly solutions that adhere to best practices in usability and accessibility.
 
-### **Preferred Experience:**
+### Preferred Experience:
 
 - Evidence of significant contribution to open-source projects, specifically large-scale AI applications.
 - Strong portfolio demonstrating thorough understanding of high-load systems and strategies for effective scaling.
 - Ability to design and optimize APIs for high-traffic applications and real-time functionality.
 
-### **Why MindLearn?**
+### Why MindLearn?
 
 Joining MindLearn means you'll contribute to a rapidly growing open-source project where your work impacts the core of real business solutions. Gain exposure to a multitude of AI domains such as predictive analytics, NLP, and computer vision. Thrive in a collaborative ecosystem that values innovation and supports continuous learning.
 
-### **How to Apply:**
+### How to Apply:
 
 **If you are ready to shape the future of AI services**, send us your resume along with links to your GitHub/GitLab profiles showcasing your open-source contributions. Let's build a smarter world together!
 

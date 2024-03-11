@@ -173,7 +173,7 @@ This expanded directory structure for the "ai/" directory focuses on the AI-spec
 
 - **data/**: This directory encompasses data-related functionalities, such as data preprocessing scripts and the corresponding data directories for raw and processed data. The "data_preprocessing/" subdirectory includes the script for data preprocessing tasks.
 
-- \***\*init**.py\*\*: This file indicates that the "ai/" directory should be treated as a package, allowing the Python modules within it to be imported and utilized across different parts of the application.
+- **init.py**: This file indicates that the "ai/" directory should be treated as a package, allowing the Python modules within it to be imported and utilized across different parts of the application.
 
 This directory structure specifically caters to the AI-related components, promoting organization, modularity, and maintainability within the QualityCheck - AI for Quality Control application.
 
