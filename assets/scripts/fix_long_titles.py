@@ -36,6 +36,7 @@ def generate_seo_title_and_description(title):
     title = remove_special_characters(title)
     # Define the prompt to generate SEO-optimized title
     title_prompt = f"Generate a more technical title from, {title}. Use this format: [shocking project problem], [AI tool or library] for [project soluction]. Response should be a max of 65 characters"
+    # title_prompt = f"Analyze {title}, then generate a new title that succinctly describes using AI to solve a specific problem. Response should be a max of 65 characters"
     conversation_title = [
         {"role": "user", "content": title_prompt},
     ]
