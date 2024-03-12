@@ -28,7 +28,7 @@ jobs:
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }} # Set the environment variable
         run: |
-          python scripts/post.py
+          python assets/scripts/post.py
 
       - name: Commit
         run: |
