@@ -1,7 +1,8 @@
 ---
-title: AI Tutor for STEM Subjects with GPT and PyTorch for Rural Schools in Peru - Project Objective: Offer accessible STEM education resources to rural areas, solution is to deploy ChatGPT-powered AI tutors that provide explanations, solve problems, and interact in real-time, bridging educational gaps.
+title: AI Tutor for STEM Subjects with GPT and PyTorch for Rural Schools in Peru - Project Objective Offer accessible STEM education resources to rural areas, solution is to deploy ChatGPT-powered AI tutors that provide explanations, solve problems, and interact in real-time, bridging educational gaps.
 date: 2024-03-12
 permalink: posts/ai-tutor-for-stem-subjects-with-gpt-and-pytorch-for-rural-schools-in-peru
+image: assets/images/posts/ai-tutor-for-stem-subjects-with-gpt-and-pytorch-for-rural-schools-in-peru.webp
 layout: article
 ---
 
