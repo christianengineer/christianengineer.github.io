@@ -1,7 +1,7 @@
 ---
 title: SmartCity - AI Solutions for Smart Cities
 date: 2023-11-21
-permalink: posts/smartcity---ai-solutions-for-smart-cities
+permalink: posts/smartcity-ai-solutions-for-smart-cities
 layout: article
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: FinanceSmart - AI-Driven Finance Analytics
 date: 2023-11-21
-permalink: posts/financesmart---ai-driven-finance-analytics
+permalink: posts/financesmart-ai-driven-finance-analytics
 layout: article
 ---
 

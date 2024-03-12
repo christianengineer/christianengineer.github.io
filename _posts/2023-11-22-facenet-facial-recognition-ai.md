@@ -1,7 +1,7 @@
 ---
 title: FaceNet - Facial Recognition AI
 date: 2023-11-22
-permalink: posts/facenet---facial-recognition-ai
+permalink: posts/facenet-facial-recognition-ai
 layout: article
 ---
 

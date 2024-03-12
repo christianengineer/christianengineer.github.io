@@ -1,7 +1,7 @@
 ---
 title: Data Version Control with DVC - Use Data Version Control (DVC) for managing and versioning datasets and machine learning models, showcasing best practices.
 date: 2023-11-22
-permalink: posts/data-version-control-with-dvc---use-data-version-control-dvc-for-managing-and-versioning-datasets-and-machine-learning-models-showcasing-best-practices
+permalink: posts/data-version-control-with-dvc-use-data-version-control-dvc-for-managing-and-versioning-datasets-and-machine-learning-models-showcasing-best-practices
 layout: article
 ---
 

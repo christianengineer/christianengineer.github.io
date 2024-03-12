@@ -1,7 +1,7 @@
 ---
 title: CognitiveCompute - AI for Cognitive Computing
 date: 2023-11-22
-permalink: posts/cognitivecompute---ai-for-cognitive-computing
+permalink: posts/cognitivecompute-ai-for-cognitive-computing
 layout: article
 ---
 

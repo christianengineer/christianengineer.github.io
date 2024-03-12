@@ -1,7 +1,7 @@
 ---
 title: ChainOptimize - Supply Chain Optimization AI
 date: 2023-11-21
-permalink: posts/chainoptimize---supply-chain-optimization-ai
+permalink: posts/chainoptimize-supply-chain-optimization-ai
 layout: article
 ---
 

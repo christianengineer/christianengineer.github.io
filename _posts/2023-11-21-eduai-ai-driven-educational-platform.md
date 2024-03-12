@@ -1,7 +1,7 @@
 ---
 title: EduAI - AI-Driven Educational Platform
 date: 2023-11-21
-permalink: posts/eduai---ai-driven-educational-platform
+permalink: posts/eduai-ai-driven-educational-platform
 layout: article
 ---
 

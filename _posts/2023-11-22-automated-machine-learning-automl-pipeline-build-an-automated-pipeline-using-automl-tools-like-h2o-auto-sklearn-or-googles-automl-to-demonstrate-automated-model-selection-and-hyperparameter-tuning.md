@@ -1,7 +1,7 @@
 ---
 title: Automated Machine Learning (AutoML) Pipeline - Build an automated pipeline using AutoML tools like H2O, Auto-sklearn, or Google’s AutoML to demonstrate automated model selection and hyperparameter tuning.
 date: 2023-11-22
-permalink: posts/automated-machine-learning-automl-pipeline---build-an-automated-pipeline-using-automl-tools-like-h2o-auto-sklearn-or-googles-automl-to-demonstrate-automated-model-selection-and-hyperparameter-tuning
+permalink: posts/automated-machine-learning-automl-pipeline-build-an-automated-pipeline-using-automl-tools-like-h2o-auto-sklearn-or-googles-automl-to-demonstrate-automated-model-selection-and-hyperparameter-tuning
 layout: article
 ---
 

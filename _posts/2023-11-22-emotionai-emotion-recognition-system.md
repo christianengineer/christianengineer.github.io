@@ -1,7 +1,7 @@
 ---
 title: EmotionAI - Emotion Recognition System
 date: 2023-11-22
-permalink: posts/emotionai---emotion-recognition-system
+permalink: posts/emotionai-emotion-recognition-system
 layout: article
 ---
 

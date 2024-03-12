@@ -1,7 +1,7 @@
 ---
 title: CyberShield - AI-Based Cybersecurity System
 date: 2023-11-21
-permalink: posts/cybershield---ai-based-cybersecurity-system
+permalink: posts/cybershield-ai-based-cybersecurity-system
 layout: article
 ---
 

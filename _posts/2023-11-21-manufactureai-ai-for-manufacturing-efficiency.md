@@ -1,7 +1,7 @@
 ---
 title: ManufactureAI - AI for Manufacturing Efficiency
 date: 2023-11-21
-permalink: posts/manufactureai---ai-for-manufacturing-efficiency
+permalink: posts/manufactureai-ai-for-manufacturing-efficiency
 layout: article
 ---
 

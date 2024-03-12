@@ -1,7 +1,7 @@
 ---
 title: ChatAI - Intelligent Chatbot Service
 date: 2023-11-21
-permalink: posts/chatai---intelligent-chatbot-service
+permalink: posts/chatai-intelligent-chatbot-service
 layout: article
 ---
 

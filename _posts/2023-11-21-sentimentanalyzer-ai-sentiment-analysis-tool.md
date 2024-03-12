@@ -1,7 +1,7 @@
 ---
 title: SentimentAnalyzer - AI Sentiment Analysis Tool
 date: 2023-11-21
-permalink: posts/sentimentanalyzer---ai-sentiment-analysis-tool
+permalink: posts/sentimentanalyzer-ai-sentiment-analysis-tool
 layout: article
 ---
 

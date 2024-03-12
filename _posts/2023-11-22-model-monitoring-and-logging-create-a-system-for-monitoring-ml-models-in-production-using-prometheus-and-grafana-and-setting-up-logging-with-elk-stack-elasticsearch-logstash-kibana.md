@@ -1,7 +1,7 @@
 ---
 title: Model Monitoring and Logging - Create a system for monitoring ML models in production using Prometheus and Grafana, and setting up logging with ELK stack (Elasticsearch, Logstash, Kibana).
 date: 2023-11-22
-permalink: posts/model-monitoring-and-logging---create-a-system-for-monitoring-ml-models-in-production-using-prometheus-and-grafana-and-setting-up-logging-with-elk-stack-elasticsearch-logstash-kibana
+permalink: posts/model-monitoring-and-logging-create-a-system-for-monitoring-ml-models-in-production-using-prometheus-and-grafana-and-setting-up-logging-with-elk-stack-elasticsearch-logstash-kibana
 layout: article
 ---
 

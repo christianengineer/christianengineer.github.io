@@ -1,7 +1,7 @@
 ---
 title: Sentiment Analysis with NLTK (Python) - Analyzing customer feedback
 date: 2023-12-02
-permalink: posts/sentiment-analysis-with-nltk-python---analyzing-customer-feedback
+permalink: posts/sentiment-analysis-with-nltk-python-analyzing-customer-feedback
 layout: article
 ---
 

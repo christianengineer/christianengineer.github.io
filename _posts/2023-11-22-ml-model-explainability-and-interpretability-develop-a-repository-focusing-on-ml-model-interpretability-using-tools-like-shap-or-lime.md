@@ -1,7 +1,7 @@
 ---
 title: ML Model Explainability and Interpretability - Develop a repository focusing on ML model interpretability using tools like SHAP or LIME.
 date: 2023-11-22
-permalink: posts/ml-model-explainability-and-interpretability---develop-a-repository-focusing-on-ml-model-interpretability-using-tools-like-shap-or-lime
+permalink: posts/ml-model-explainability-and-interpretability-develop-a-repository-focusing-on-ml-model-interpretability-using-tools-like-shap-or-lime
 layout: article
 ---
 

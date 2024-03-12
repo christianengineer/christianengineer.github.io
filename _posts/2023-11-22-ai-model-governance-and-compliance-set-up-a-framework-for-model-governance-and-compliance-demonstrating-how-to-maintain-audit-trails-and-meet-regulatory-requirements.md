@@ -1,7 +1,7 @@
 ---
 title: AI Model Governance and Compliance - Set up a framework for model governance and compliance, demonstrating how to maintain audit trails, and meet regulatory requirements.
 date: 2023-11-22
-permalink: posts/ai-model-governance-and-compliance---set-up-a-framework-for-model-governance-and-compliance-demonstrating-how-to-maintain-audit-trails-and-meet-regulatory-requirements
+permalink: posts/ai-model-governance-and-compliance-set-up-a-framework-for-model-governance-and-compliance-demonstrating-how-to-maintain-audit-trails-and-meet-regulatory-requirements
 layout: article
 ---
 

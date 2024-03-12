@@ -1,7 +1,7 @@
 ---
 title: Feature Store Implementation - Implement a feature store for machine learning, which could include how to store, retrieve, and manage features for ML models.
 date: 2023-11-22
-permalink: posts/feature-store-implementation---implement-a-feature-store-for-machine-learning-which-could-include-how-to-store-retrieve-and-manage-features-for-ml-models
+permalink: posts/feature-store-implementation-implement-a-feature-store-for-machine-learning-which-could-include-how-to-store-retrieve-and-manage-features-for-ml-models
 layout: article
 ---
 

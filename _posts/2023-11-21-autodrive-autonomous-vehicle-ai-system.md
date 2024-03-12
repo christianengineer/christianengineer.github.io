@@ -1,7 +1,7 @@
 ---
 title: AutoDrive - Autonomous Vehicle AI System
 date: 2023-11-21
-permalink: posts/autodrive---autonomous-vehicle-ai-system
+permalink: posts/autodrive-autonomous-vehicle-ai-system
 layout: article
 ---
 

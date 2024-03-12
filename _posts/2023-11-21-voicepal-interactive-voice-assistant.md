@@ -1,7 +1,7 @@
 ---
 title: VoicePal - Interactive Voice Assistant
 date: 2023-11-21
-permalink: posts/voicepal---interactive-voice-assistant
+permalink: posts/voicepal-interactive-voice-assistant
 layout: article
 ---
 

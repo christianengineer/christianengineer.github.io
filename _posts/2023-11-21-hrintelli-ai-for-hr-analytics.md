@@ -1,7 +1,7 @@
 ---
 title: HRIntelli - AI for HR Analytics
 date: 2023-11-21
-permalink: posts/hrintelli---ai-for-hr-analytics
+permalink: posts/hrintelli-ai-for-hr-analytics
 layout: article
 ---
 

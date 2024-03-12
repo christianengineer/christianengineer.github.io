@@ -1,7 +1,7 @@
 ---
 title: RecoEngine - Smart Recommendation System
 date: 2023-11-21
-permalink: posts/recoengine---smart-recommendation-system
+permalink: posts/recoengine-smart-recommendation-system
 layout: article
 ---
 

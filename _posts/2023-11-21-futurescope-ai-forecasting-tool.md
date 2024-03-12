@@ -1,7 +1,7 @@
 ---
 title: FutureScope - AI Forecasting Tool
 date: 2023-11-21
-permalink: posts/futurescope---ai-forecasting-tool
+permalink: posts/futurescope-ai-forecasting-tool
 layout: article
 ---
 

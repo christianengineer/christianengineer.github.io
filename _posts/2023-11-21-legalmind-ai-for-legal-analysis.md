@@ -1,7 +1,7 @@
 ---
 title: LegalMind - AI for Legal Analysis
 date: 2023-11-21
-permalink: posts/legalmind---ai-for-legal-analysis
+permalink: posts/legalmind-ai-for-legal-analysis
 layout: article
 ---
 
