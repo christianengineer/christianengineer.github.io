@@ -3,6 +3,7 @@ title: Employee Productivity Analysis for AI Companies
 date: 2024-03-11
 permalink: posts/employee-productivity-analysis-for-ai-companies
 layout: article
+image: assets/images/posts/employee-productivity-analysis-for-ai-companies.webp
 ---
 
 ## Project Focus
