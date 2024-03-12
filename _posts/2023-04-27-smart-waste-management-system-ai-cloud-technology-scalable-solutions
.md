@@ -1,8 +1,9 @@
 ---
-title: "Revolutionizing Waste Management: From Concept to Deployment - A Strategic Plan For Developing and Scaling an AI-Integrated Smart Waste Management System Harnessing Cloud Technologies"
 date: 2023-04-27
-permalink: posts/smart-waste-management-system-ai-cloud-technology-scalable-solutions
+description: We will be using TensorFlow for machine learning, OpenCV for image processing, and IBM Watson for cognitive computing to improve waste management efficiency.
 layout: article
+permalink: posts/smart-waste-management-system-ai-cloud-technology-scalable-solutions
+title: Inefficient Waste Management, AI for Smart System.
 ---
 
 ## Smart Waste Management System

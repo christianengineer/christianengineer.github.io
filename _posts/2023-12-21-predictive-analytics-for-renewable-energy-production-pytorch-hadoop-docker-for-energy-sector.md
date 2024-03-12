@@ -1,8 +1,9 @@
 ---
-title: Predictive Analytics for Renewable Energy Production (PyTorch, Hadoop, Docker) For energy sector
 date: 2023-12-21
-permalink: posts/predictive-analytics-for-renewable-energy-production-pytorch-hadoop-docker-for-energy-sector
+description: We'll be using PyTorch for training AI models due to its flexibility and efficiency in handling complex deep learning tasks in the energy sector.
 layout: article
+permalink: posts/predictive-analytics-for-renewable-energy-production-pytorch-hadoop-docker-for-energy-sector
+title: Unreliable Energy Forecasts Improved with PyTorch for Energy Sector
 ---
 
 ## AI Predictive Analytics for Renewable Energy Production Repository

@@ -1,8 +1,9 @@
 ---
-title: IntelliCore - Central AI Operating Platform
 date: 2023-11-21
-permalink: posts/intellicore-central-ai-operating-platform
+description: We will be using TensorFlow for neural network development, Pandas for data manipulation, and Scikit-learn for machine learning algorithms. They are robust tools for efficient data processing and analysis.
 layout: article
+permalink: posts/intellicore-central-ai-operating-platform
+title: Inefficient Data Processing, Utilizing TensorFlow for Improved Efficiency
 ---
 
 ## IntelliCore: Central AI Operating Platform

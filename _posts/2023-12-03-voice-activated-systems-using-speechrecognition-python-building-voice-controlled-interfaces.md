@@ -1,8 +1,9 @@
 ---
-title: Voice-Activated Systems using SpeechRecognition (Python) Building voice-controlled interfaces
 date: 2023-12-03
-permalink: posts/voice-activated-systems-using-speechrecognition-python-building-voice-controlled-interfaces
+description: For this project, we will be using libraries such as SpeechRecognition for audio input, PyAudio for microphone access, and PyTTSX3 for text-to-speech capabilities.
 layout: article
+permalink: posts/voice-activated-systems-using-speechrecognition-python-building-voice-controlled-interfaces
+title: Voice Recognition for Building Voice-Controlled Interfaces using Python.
 ---
 
 ## AI Voice-Activated Systems using SpeechRecognition (Python)

@@ -1,8 +1,9 @@
 ---
-title: "Mastering Real-Time Data Processing: Advanced Techniques and Strategies for Senior Software Engineers"
 date: 2023-08-24
-permalink: posts/advanced-real-time-data-processing-techniques-for-senior-software-engineers
+description: We will be using Apache Flink for stream processing optimization, along with libraries like TensorFlow for machine learning and Spark for data processing.
 layout: article
+permalink: posts/advanced-real-time-data-processing-techniques-for-senior-software-engineers
+title: Inefficient Data Processing, Apache Flink for Optimization
 ---
 
 ## Mastering Real-Time Data Processing: Advanced Techniques and Strategies for Senior Software Engineers

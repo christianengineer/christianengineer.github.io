@@ -1,8 +1,9 @@
 ---
-title: Accessible Education Tools (GPT, BERT) Tailoring learning for special needs students
 date: 2023-12-15
-permalink: posts/accessible-education-tools-gpt-bert-tailoring-learning-for-special-needs-students
+description: For this project, we will be using AI tools such as TensorFlow for building and training the model, GPT for natural language processing, and BERT for text classification tasks. These tools are powerful for creating tailored educational content for special needs students.
 layout: article
+permalink: posts/accessible-education-tools-gpt-bert-tailoring-learning-for-special-needs-students
+title: Lack of tailored edtech, GPT BERT for special needs students.
 ---
 
 ## Objectives

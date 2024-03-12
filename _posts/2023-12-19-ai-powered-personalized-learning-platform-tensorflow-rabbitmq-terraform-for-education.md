@@ -1,8 +1,9 @@
 ---
-title: AI-powered Personalized Learning Platform (TensorFlow, RabbitMQ, Terraform) For education
 date: 2023-12-19
-permalink: posts/ai-powered-personalized-learning-platform-tensorflow-rabbitmq-terraform-for-education
+description: We will be using TensorFlow for deep learning models, Keras for easy prototyping, Scikit-learn for machine learning algorithms, and NLTK for natural language processing. These tools offer a wide range of functionalities needed for our project.
 layout: article
+permalink: posts/ai-powered-personalized-learning-platform-tensorflow-rabbitmq-terraform-for-education
+title: Inefficient Learning Management, TensorFlow for Education
 ---
 
 ## Objectives of the AI-powered Personalized Learning Platform

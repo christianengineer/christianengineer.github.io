@@ -1,8 +1,9 @@
 ---
-title: AutoDrive - Autonomous Vehicle AI System
 date: 2023-11-21
-permalink: posts/autodrive-autonomous-vehicle-ai-system
+description: We will be using tools such as TensorFlow for deep learning models, scikit-learn for classical ML algorithms, and OpenCV for computer vision tasks to solve challenges in Autonomous Vehicle AI. These libraries are powerful, well-documented, and widely used in the field.
 layout: article
+permalink: posts/autodrive-autonomous-vehicle-ai-system
+title: Challenges in Autonomous Vehicle AI Solved Using Machine Learning
 ---
 
 ## AI AutoDrive - Autonomous Vehicle AI System

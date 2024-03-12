@@ -1,8 +1,9 @@
 ---
-title: Wildlife Conservation Analytics (Scikit-Learn, TensorFlow) For biodiversity preservation
 date: 2023-12-16
-permalink: posts/wildlife-conservation-analytics-scikit-learn-tensorflow-for-biodiversity-preservation
+description: For this project, we will be using Scikit-Learn and TensorFlow for AI modeling and analysis. These tools are widely used for their robustness and flexibility in processing large and complex datasets.
 layout: article
+permalink: posts/wildlife-conservation-analytics-scikit-learn-tensorflow-for-biodiversity-preservation
+title: Lack of biodiversity data, ScikitLearn TensorFlow for preservation
 ---
 
 ## AI Wildlife Conservation Analytics Repository

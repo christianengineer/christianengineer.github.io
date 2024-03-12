@@ -1,8 +1,9 @@
 ---
-title: Agricultural Crop Yield Prediction using TensorFlow (Python) Enhancing farm productivity
 date: 2023-12-03
-permalink: posts/agricultural-crop-yield-prediction-using-tensorflow-python-enhancing-farm-productivity
+description: We will be using TensorFlow for its machine learning capabilities, NumPy for numerical computations, Pandas for data manipulation, and Matplotlib for visualizations.
 layout: article
+permalink: posts/agricultural-crop-yield-prediction-using-tensorflow-python-enhancing-farm-productivity
+title: Inadequate crop yield forecast, TensorFlow for enhanced farm productivity
 ---
 
 ## AI Agricultural Crop Yield Prediction using TensorFlow (Python)

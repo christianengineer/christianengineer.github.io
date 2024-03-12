@@ -1,8 +1,9 @@
 ---
-title: ServiceAI AI for Customer Service
 date: 2023-11-23
-permalink: posts/serviceai-ai-for-customer-service
+description: We will be using natural language processing (NLP) libraries like NLTK and SpaCy to process and understand customer inquiries. Additionally, we will utilize machine learning algorithms for classification and sentiment analysis.
 layout: article
+permalink: posts/serviceai-ai-for-customer-service
+title: Inefficient customer inquiries, ServiceAI for enhanced support.
 ---
 
 ### AI ServiceAI for Customer Service

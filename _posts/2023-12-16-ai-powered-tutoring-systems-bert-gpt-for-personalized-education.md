@@ -1,8 +1,9 @@
 ---
-title: AI-Powered Tutoring Systems (BERT, GPT) For personalized education
 date: 2023-12-16
-permalink: posts/ai-powered-tutoring-systems-bert-gpt-for-personalized-education
+description: We will be using TensorFlow and Hugging Face's Transformers library for our project. TensorFlow is a powerful deep learning tool, while Transformers streamlines working with state-of-the-art language models like BERT and GPT.
 layout: article
+permalink: posts/ai-powered-tutoring-systems-bert-gpt-for-personalized-education
+title: Personalized education dilemmas solved with BERT GPT.
 ---
 
 ## Objectives of AI-Powered Tutoring Systems

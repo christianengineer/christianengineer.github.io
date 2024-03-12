@@ -1,8 +1,9 @@
 ---
-title: AI for Predictive Maintenance Build a predictive maintenance system using AI
 date: 2023-11-24
-permalink: posts/ai-for-predictive-maintenance-build-a-predictive-maintenance-system-using-ai
+description: We will use Python for programming and libraries such as TensorFlow for machine learning models, Pandas for data manipulation, and Scikit-learn for predictive analytics.
 layout: article
+permalink: posts/ai-for-predictive-maintenance-build-a-predictive-maintenance-system-using-ai
+title: Unforeseen downtime, AI system for predictive maintenance
 ---
 
 ## AI for Predictive Maintenance Repository

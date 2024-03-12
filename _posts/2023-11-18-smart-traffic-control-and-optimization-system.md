@@ -1,8 +1,9 @@
 ---
-title: Smart Traffic Control and Optimization System
 date: 2023-11-18
-permalink: posts/smart-traffic-control-and-optimization-system
+description: We will be using tools like TensorFlow and Scikit-learn for machine learning algorithms, OpenCV for image processing, and Pandas for data manipulation.
 layout: article
+permalink: posts/smart-traffic-control-and-optimization-system
+title: Inefficient Traffic Flow, AI for Optimization.
 ---
 
 ## Smart Traffic Control and Optimization System

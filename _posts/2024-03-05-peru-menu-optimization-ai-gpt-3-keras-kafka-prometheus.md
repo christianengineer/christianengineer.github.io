@@ -1,8 +1,9 @@
 ---
-title: Peru Menu Optimization AI (GPT-3, Keras, Kafka, Prometheus) Employs NLP to analyze menu item performance and customer preferences, suggesting menu optimizations to attract more patrons
 date: 2024-03-05
-permalink: posts/peru-menu-optimization-ai-gpt-3-keras-kafka-prometheus
+description: We will be using natural language processing tools like OpenAI's GPT-3, Python's NLTK library, and spaCy for semantic analysis and menu optimization.
 layout: article
+permalink: posts/peru-menu-optimization-ai-gpt-3-keras-kafka-prometheus
+title: Inadequate menu analysis, GPT3 for menu optimization
 ---
 
 ## Machine Learning Peru Menu Optimization AI

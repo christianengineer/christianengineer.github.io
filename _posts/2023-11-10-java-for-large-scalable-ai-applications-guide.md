@@ -1,8 +1,9 @@
 ---
-title: Java for Large Scalable AI Applications
 date: 2023-11-10
-permalink: posts/java-for-large-scalable-ai-applications-guide
+description: We will be using TensorFlow for building, training, and deploying AI models in Java applications. TensorFlow provides efficient computation and scalability for improved performance.
 layout: article
+permalink: posts/java-for-large-scalable-ai-applications-guide
+title: Scaling Java AI Applications with TensorFlow for Improved Performance
 ---
 
 ## Java for Large Scalable AI Applications

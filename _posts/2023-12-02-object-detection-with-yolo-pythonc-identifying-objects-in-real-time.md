@@ -1,8 +1,9 @@
 ---
-title: Object Detection with YOLO (Python/C++) Identifying objects in real-time
 date: 2023-12-02
-permalink: posts/object-detection-with-yolo-pythonc-identifying-objects-in-real-time
+description: We will be using the YOLO (You Only Look Once) algorithm for real-time object detection and OpenCV library for processing images and videos. These tools provide fast and accurate object identification for real-world applications.
 layout: article
+permalink: posts/object-detection-with-yolo-pythonc-identifying-objects-in-real-time
+title: 'Real-time Object Detection with YOLO Python: Enhancing Object Identification.'
 ---
 
 ## Objectives

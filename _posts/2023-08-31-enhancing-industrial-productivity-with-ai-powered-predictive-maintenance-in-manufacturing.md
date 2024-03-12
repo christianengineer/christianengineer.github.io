@@ -1,8 +1,9 @@
 ---
-title: "Revolutionizing AI-Based Predictive Maintenance: A Holistic Development Plan for Fabricating and Scaling a High-Performance Data-Driven Tool in Manufacturing"
 date: 2023-08-31
-permalink: posts/enhancing-industrial-productivity-with-ai-powered-predictive-maintenance-in-manufacturing
+description: We will be using TensorFlow for building neural networks, Scikit-learn for machine learning algorithms, and Pandas for data manipulation in Python for this project.
 layout: article
+permalink: posts/enhancing-industrial-productivity-with-ai-powered-predictive-maintenance-in-manufacturing
+title: Development Plan, Predictive Maintenance AI Tool for Manufacturing
 ---
 
 ## Predictive Maintenance Tool for Manufacturing Repository

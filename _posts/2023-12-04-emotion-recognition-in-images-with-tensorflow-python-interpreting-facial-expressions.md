@@ -1,8 +1,9 @@
 ---
-title: Emotion Recognition in Images with TensorFlow (Python) Interpreting facial expressions
 date: 2023-12-04
-permalink: posts/emotion-recognition-in-images-with-tensorflow-python-interpreting-facial-expressions
+description: We will be using TensorFlow for building and training our deep learning models, OpenCV for image processing, and Pandas for data manipulation in Python.
 layout: article
+permalink: posts/emotion-recognition-in-images-with-tensorflow-python-interpreting-facial-expressions
+title: Facial Expression Analysis Using TensorFlow for Emotion Recognition
 ---
 
 ## AI Emotion Recognition in Images with TensorFlow (Python)

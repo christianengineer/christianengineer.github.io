@@ -1,8 +1,9 @@
 ---
-title: Automated Video Surveillance for Public Safety (OpenCV, Kafka, Kubernetes) For law enforcement
 date: 2023-12-19
-permalink: posts/automated-video-surveillance-for-public-safety-opencv-kafka-kubernetes-for-law-enforcement
+description: We will be using OpenCV for computer vision tasks such as object detection and tracking, as well as machine learning algorithms for facial recognition.
 layout: article
+permalink: posts/automated-video-surveillance-for-public-safety-opencv-kafka-kubernetes-for-law-enforcement
+title: Inefficient surveillance management, OpenCV for optimized public safety.
 ---
 
 ## AI Automated Video Surveillance for Public Safety

@@ -1,8 +1,9 @@
 ---
-title: "Project Pinnacle: A Comprehensive Blueprint for Scalable, Cloud-Integrated Natural Language Processing for High-Traffic Social Media Analysis"
 date: 2023-06-25
-permalink: posts/advanced-natural-language-processing-for-social-media-analysis
+description: We will be using Python programming language along with libraries such as NLTK, SpaCy, TensorFlow, and Keras for NLP tasks, as well as AWS for cloud integration due to their scalability and efficiency.
 layout: article
+permalink: posts/advanced-natural-language-processing-for-social-media-analysis
+title: 'Scalable Social Media Analysis: NLP Solution for High Traffic Using Cloud Integration.'
 ---
 
 ## Natural Language Processing for Social Media Analysis Repository

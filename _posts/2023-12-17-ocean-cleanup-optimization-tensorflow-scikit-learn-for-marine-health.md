@@ -1,8 +1,9 @@
 ---
-title: Ocean Cleanup Optimization (TensorFlow, Scikit-Learn) For marine health
 date: 2023-12-17
-permalink: posts/ocean-cleanup-optimization-tensorflow-scikit-learn-for-marine-health
+description: We will be using TensorFlow, an open-source machine learning framework, for effectively training models to identify marine pollution and enhance ocean cleanup efforts.
 layout: article
+permalink: posts/ocean-cleanup-optimization-tensorflow-scikit-learn-for-marine-health
+title: Inefficient Ocean Cleanup, TensorFlow for Marine Health
 ---
 
 ## AI Ocean Cleanup Optimization System

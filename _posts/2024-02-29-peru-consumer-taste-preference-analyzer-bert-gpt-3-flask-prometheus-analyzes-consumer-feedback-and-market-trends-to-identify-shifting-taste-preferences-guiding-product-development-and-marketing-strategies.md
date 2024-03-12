@@ -1,8 +1,9 @@
 ---
-title: Peru Consumer Taste Preference Analyzer (BERT, GPT-3, Flask, Prometheus) Analyzes consumer feedback and market trends to identify shifting taste preferences, guiding product development and marketing strategies
 date: 2024-02-29
-permalink: posts/peru-consumer-taste-preference-analyzer-bert-gpt-3-flask-prometheus-analyzes-consumer-feedback-and-market-trends-to-identify-shifting-taste-preferences-guiding-product-development-and-marketing-strategies
+description: For this project, we will be using BERT (Bidirectional Encoder Representations from Transformers) and GPT-3 AI models for analyzing taste trends due to their advanced natural language processing capabilities and ability to understand context in text data.
 layout: article
+permalink: posts/peru-consumer-taste-preference-analyzer-bert-gpt-3-flask-prometheus-analyzes-consumer-feedback-and-market-trends-to-identify-shifting-taste-preferences-guiding-product-development-and-marketing-strategies
+title: Market segmentation, BERT GPT3 AI for taste trends.
 ---
 
 ## AI Peru Consumer Taste Preference Analyzer

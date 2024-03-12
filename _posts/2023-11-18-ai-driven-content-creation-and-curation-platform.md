@@ -1,8 +1,9 @@
 ---
-title: AI-Driven Content Creation and Curation Platform
 date: 2023-11-18
-permalink: posts/ai-driven-content-creation-and-curation-platform
+description: Some of the AI tools and libraries we'll be using include TensorFlow for deep learning, NLTK for natural language processing, and OpenCV for computer vision tasks. These tools are popular in the AI community for their robustness and ease of use in developing various AI solutions.
 layout: article
+permalink: posts/ai-driven-content-creation-and-curation-platform
+title: Content Creation Challenges, AI Solutions
 ---
 
 ## Technical Specifications - AI-Driven Content Creation and Curation Platform

@@ -1,8 +1,9 @@
 ---
-title: "Masterplan for Advanced Scalability: Innovating Secure Facial Recognition through Comprehensive Design, Robust AI Integration and Dynamic Cloud Technologies"
 date: 2023-01-12
-permalink: posts/masterplan-advanced-scalability-secure-facial-recognition-robust-ai-integration-dynamic-cloud-technologies
+description: We will be using popular AI tools and libraries such as TensorFlow, OpenCV, and Dlib for facial recognition due to their powerful processing capabilities and robust functionality.
 layout: article
+permalink: posts/masterplan-advanced-scalability-secure-facial-recognition-robust-ai-integration-dynamic-cloud-technologies
+title: Scalability challenges, AI for facial recognition.
 ---
 
 ## Masterplan for Advanced Scalability: Innovating Secure Facial Recognition through Comprehensive Design, Robust AI Integration and Dynamic Cloud Technologies

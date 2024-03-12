@@ -1,8 +1,9 @@
 ---
-title: EcoMonitor - Environmental Monitoring AI
 date: 2023-11-21
-permalink: posts/ecomonitor-environmental-monitoring-ai
+description: We'll be using TensorFlow for deep learning, scikit-learn for machine learning, and pandas for data manipulation in order to process and analyze environmental data efficiently.
 layout: article
+permalink: posts/ecomonitor-environmental-monitoring-ai
+title: Environmental data analysis using AI for EcoMonitor
 ---
 
 ## AI EcoMonitor - Environmental Monitoring AI Repository

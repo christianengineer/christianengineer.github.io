@@ -1,8 +1,9 @@
 ---
-title: Drug Discovery using DeepChem (Python) Accelerating pharmaceutical development
 date: 2023-12-03
-permalink: posts/drug-discovery-using-deepchem-python-accelerating-pharmaceutical-development
+description: We will be using DeepChem and TensorFlow for deep learning, RDKit for molecular informatics, and scikit-learn for machine learning algorithms to accelerate drug discovery processes.
 layout: article
+permalink: posts/drug-discovery-using-deepchem-python-accelerating-pharmaceutical-development
+title: Challenges in Drug Discovery, DeepChem Python for Acceleration
 ---
 
 ### AI Drug Discovery using DeepChem

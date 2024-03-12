@@ -1,8 +1,9 @@
 ---
-title: SimulAI Advanced Simulation Platform
 date: 2023-11-22
-permalink: posts/simulai-advanced-simulation-platform
+description: For this project, we will be using tools like TensorFlow for neural network programming, scikit-learn for machine learning algorithms, and PyTorch for deep learning tasks. These tools are popular in the AI community and provide efficient solutions for simulation optimization.
 layout: article
+permalink: posts/simulai-advanced-simulation-platform
+title: Simulation Optimization using SimulAI for Advanced AI Solutions
 ---
 
 ## AI SimulAI Advanced Simulation Platform Repository

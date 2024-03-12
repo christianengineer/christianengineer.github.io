@@ -1,8 +1,9 @@
 ---
-title: Automated Data Cleaning and Preprocessing Build an automated data cleaning and preprocessing pipeline
 date: 2023-11-24
-permalink: posts/automated-data-cleaning-and-preprocessing-build-an-automated-data-cleaning-and-preprocessing-pipeline
+description: We will be using tools such as TensorFlow and Keras for machine learning models, OpenCV for image processing, and Pandas for data manipulation in our AI pipeline.
 layout: article
+permalink: posts/automated-data-cleaning-and-preprocessing-build-an-automated-data-cleaning-and-preprocessing-pipeline
+title: Data quality enhancement with automated pipeline using AI.
 ---
 
 ## Objectives

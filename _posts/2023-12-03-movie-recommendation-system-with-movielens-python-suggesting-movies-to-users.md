@@ -1,8 +1,9 @@
 ---
-title: Movie Recommendation System with MovieLens (Python) Suggesting movies to users
 date: 2023-12-03
-permalink: posts/movie-recommendation-system-with-movielens-python-suggesting-movies-to-users
+description: We will be using Python with libraries such as scikit-learn for machine learning algorithms, pandas for data manipulation, and NLTK for natural language processing.
 layout: article
+permalink: posts/movie-recommendation-system-with-movielens-python-suggesting-movies-to-users
+title: Inaccurate movie suggestions, ML for improved recommendations
 ---
 
 ## AI Movie Recommendation System with MovieLens

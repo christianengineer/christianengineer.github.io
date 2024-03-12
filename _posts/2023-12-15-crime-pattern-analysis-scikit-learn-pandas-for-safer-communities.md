@@ -1,8 +1,9 @@
 ---
-title: Crime Pattern Analysis (Scikit-Learn, Pandas) For safer communities
 date: 2023-12-15
-permalink: posts/crime-pattern-analysis-scikit-learn-pandas-for-safer-communities
+description: We will be using Scikit-learn for machine learning models, Pandas for data manipulation, and Matplotlib for visualizations to analyze crime patterns effectively.
 layout: article
+permalink: posts/crime-pattern-analysis-scikit-learn-pandas-for-safer-communities
+title: Crime pattern detection, ScikitLearn Pandas for community safety.
 ---
 
 ## AI Crime Pattern Analysis Repository

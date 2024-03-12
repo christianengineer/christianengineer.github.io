@@ -1,8 +1,9 @@
 ---
-title: Hybrid Cloud and Multi-cloud ML Deployments Demonstrate deploying ML models in a hybrid or multi-cloud environment, showcasing strategies for cloud interoperability and data transfer
 date: 2023-11-22
-permalink: posts/hybrid-cloud-and-multi-cloud-ml-deployments-demonstrate-deploying-ml-models-in-a-hybrid-or-multi-cloud-environment-showcasing-strategies-for-cloud-interoperability-and-data-transfer
+description: We will be using TensorFlow and Scikit-learn for model training, deployment automation with Kubernetes for scalability, and H2o.ai for advanced ML algorithms.
 layout: article
+permalink: posts/hybrid-cloud-and-multi-cloud-ml-deployments-demonstrate-deploying-ml-models-in-a-hybrid-or-multi-cloud-environment-showcasing-strategies-for-cloud-interoperability-and-data-transfer
+title: Challenges in integrating ML models on Hybrid & Multicloud, using AI for solution.
 ---
 
 ## AI Hybrid Cloud and Multi-cloud ML Deployments

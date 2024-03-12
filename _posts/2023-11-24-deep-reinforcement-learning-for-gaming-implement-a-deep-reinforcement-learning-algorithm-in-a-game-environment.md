@@ -1,8 +1,9 @@
 ---
-title: Deep Reinforcement Learning for Gaming Implement a deep reinforcement learning algorithm in a game environment
 date: 2023-11-24
-permalink: posts/deep-reinforcement-learning-for-gaming-implement-a-deep-reinforcement-learning-algorithm-in-a-game-environment
+description: We will be using Unity ML-Agents for creating intelligent agents, OpenAI Gym for environment integration, and TensorFlow for deep learning capabilities.
 layout: article
+permalink: posts/deep-reinforcement-learning-for-gaming-implement-a-deep-reinforcement-learning-algorithm-in-a-game-environment
+title: Inadequate gaming progress, DRL for advancing game environments
 ---
 
 ### Objectives

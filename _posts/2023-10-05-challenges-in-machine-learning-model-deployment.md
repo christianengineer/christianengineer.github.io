@@ -1,8 +1,9 @@
 ---
-title: Machine Learning Model Deployment Challenges
 date: 2023-10-05
-permalink: posts/challenges-in-machine-learning-model-deployment
+description: We will be using TensorFlow for deploying machine learning models as it provides a robust framework for building, training, and deploying AI models efficiently.
 layout: article
+permalink: posts/challenges-in-machine-learning-model-deployment
+title: 'Difficulties in Deploying Machine Learning Models: Overcoming with TensorFlow.'
 ---
 
 ## Machine Learning Model Deployment Challenges

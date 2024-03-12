@@ -1,8 +1,9 @@
 ---
-title: Predictive Analytics for Retail Inventory Management
 date: 2023-11-20
-permalink: posts/predictive-analytics-for-retail-inventory-management
+description: We will be using Python with libraries such as scikit-learn, TensorFlow, and pandas for machine learning algorithms and data manipulation to optimize inventory forecasts accurately.
 layout: article
+permalink: posts/predictive-analytics-for-retail-inventory-management
+title: Inaccurate Forecasting, Machine Learning for Retail Inventory Optimization
 ---
 
 ## Predictive Analytics for Retail Inventory Management

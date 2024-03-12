@@ -1,8 +1,9 @@
 ---
-title: Sustainable Agriculture Predictor for Peru (PyTorch, Pandas, Flask, Grafana) Leverages climate and soil data to recommend sustainable farming practices, optimizing crop yields while minimizing environmental impact
 date: 2024-02-29
-permalink: posts/sustainable-agriculture-predictor-for-peru-pytorch-pandas-flask-grafana-leverages-climate-and-soil-data-to-recommend-sustainable-farming-practices-optimizing-crop-yields-while-minimizing-environmental-impact
+description: We will primarily be using PyTorch for its powerful deep learning capabilities in developing models for optimizing sustainable farming practices and minimizing environmental impacts.
 layout: article
+permalink: posts/sustainable-agriculture-predictor-for-peru-pytorch-pandas-flask-grafana-leverages-climate-and-soil-data-to-recommend-sustainable-farming-practices-optimizing-crop-yields-while-minimizing-environmental-impact
+title: Environmental impact minimization, PyTorch for sustainable farming.
 ---
 
 ## AI Sustainable Agriculture Predictor for Peru

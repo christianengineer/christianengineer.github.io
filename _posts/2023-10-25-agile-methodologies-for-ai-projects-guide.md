@@ -1,8 +1,9 @@
 ---
-title: Agile Methodologies for AI Projects
 date: 2023-10-25
-permalink: posts/agile-methodologies-for-ai-projects-guide
+description: We'll be using TensorFlow and Keras for deep learning, scikit-learn for machine learning algorithms, and NLTK for natural language processing. These tools provide a wide range of capabilities to support our research on AI frameworks for Agile methodologies.
 layout: article
+permalink: posts/agile-methodologies-for-ai-projects-guide
+title: Inefficient development, AI Frameworks for Agile Methodologies.
 ---
 
 ## Agile Methodologies for AI Projects

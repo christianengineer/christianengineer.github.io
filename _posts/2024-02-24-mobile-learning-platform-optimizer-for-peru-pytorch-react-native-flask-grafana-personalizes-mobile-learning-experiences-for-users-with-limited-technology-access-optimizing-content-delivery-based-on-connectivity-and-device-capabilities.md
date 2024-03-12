@@ -1,8 +1,9 @@
 ---
-title: Mobile Learning Platform Optimizer for Peru (PyTorch, React Native, Flask, Grafana) Personalizes mobile learning experiences for users with limited technology access, optimizing content delivery based on connectivity and device capabilities
 date: 2024-02-24
-permalink: posts/mobile-learning-platform-optimizer-for-peru-pytorch-react-native-flask-grafana-personalizes-mobile-learning-experiences-for-users-with-limited-technology-access-optimizing-content-delivery-based-on-connectivity-and-device-capabilities
+description: We will be utilizing PyTorch for its flexibility and ease of use in developing mobile-friendly AI models. This will allow us to optimize learning experiences in limited tech access areas in Peru.
 layout: article
+permalink: posts/mobile-learning-platform-optimizer-for-peru-pytorch-react-native-flask-grafana-personalizes-mobile-learning-experiences-for-users-with-limited-technology-access-optimizing-content-delivery-based-on-connectivity-and-device-capabilities
+title: Limited tech access, PyTorch for mobile learning optimization in Peru
 ---
 
 ## AI Mobile Learning Platform Optimizer for Peru

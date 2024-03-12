@@ -1,8 +1,9 @@
 ---
-title: Intelligent Virtual Health Assistant
 date: 2023-11-18
-permalink: posts/intelligent-virtual-health-assistant
+description: We will be using tools such as TensorFlow and Keras for building and training deep learning models, and libraries like NumPy and pandas for data manipulation and analysis.
 layout: article
+permalink: posts/intelligent-virtual-health-assistant
+title: Virtual Health Assistant, Deep Learning for Innovative Health Management.
 ---
 
 ## Intelligent Virtual Health Assistant Technical Specifications

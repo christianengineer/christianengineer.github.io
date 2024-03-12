@@ -1,8 +1,9 @@
 ---
-title: Small Business Growth Toolkit for Peru Entrepreneurs (Scikit-Learn, TensorFlow, Django, Docker) Matches small business owners with resources, training, and tools tailored to their business stage and industry, promoting growth and income stability
 date: 2024-03-03
-permalink: posts/small-business-growth-toolkit-for-peru-entrepreneurs-scikit-learn-tensorflow-django-docker
+description: We will be using TensorFlow for machine learning models, Keras for neural networks, Pandas for data manipulation, and Scikit-learn for predictive analytics. These libraries offer a robust set of tools for creating and deploying AI solutions in small businesses.
 layout: article
+permalink: posts/small-business-growth-toolkit-for-peru-entrepreneurs-scikit-learn-tensorflow-django-docker
+title: Inadequate Resources, TensorFlow for Small Business Growth
 ---
 
 ### AI Small Business Growth Toolkit for Peru Entrepreneurs

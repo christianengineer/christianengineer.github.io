@@ -1,8 +1,9 @@
 ---
-title: Affordable Telemedicine Services (TensorFlow, PyTorch) For remote healthcare
 date: 2023-12-17
-permalink: posts/affordable-telemedicine-services-tensorflow-pytorch-for-remote-healthcare
+description: We will be using TensorFlow and PyTorch due to their robust AI capabilities for building telemedicine services. These libraries offer efficient workflows and powerful neural network functionality.
 layout: article
+permalink: posts/affordable-telemedicine-services-tensorflow-pytorch-for-remote-healthcare
+title: Inexpensive Telemedicine Services Leveraging TensorFlow PyTorch.
 ---
 
 ## AI Affordable Telemedicine Services

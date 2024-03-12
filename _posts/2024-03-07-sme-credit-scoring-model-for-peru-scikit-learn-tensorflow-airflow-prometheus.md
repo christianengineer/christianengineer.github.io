@@ -1,8 +1,9 @@
 ---
-title: SME Credit Scoring Model for Peru (Scikit-Learn, TensorFlow, Airflow, Prometheus) Facilitates access to credit for small and medium-sized enterprises (SMEs) by providing alternative credit scoring based on operational data
 date: 2024-03-07
-permalink: posts/sme-credit-scoring-model-for-peru-scikit-learn-tensorflow-airflow-prometheus
+description: We will be using TensorFlow for building and training neural networks, scikit-learn for preprocessing data, and pandas for data manipulation.
 layout: article
+permalink: posts/sme-credit-scoring-model-for-peru-scikit-learn-tensorflow-airflow-prometheus
+title: Inaccurate SME Credit Scoring, Utilizing TensorFlow AI.
 ---
 
 ## SME Credit Scoring Model for Peru

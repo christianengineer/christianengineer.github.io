@@ -1,8 +1,9 @@
 ---
-title: Real-time Audio Processing for Entertainment (TensorFlow, Apache NiFi, Grafana) For media production
 date: 2023-12-21
-permalink: posts/real-time-audio-processing-for-entertainment-tensorflow-apache-nifi-grafana-for-media-production
+description: We will be using TensorFlow for its high performance in training and deploying neural networks. We may also utilize tools like Keras for building models efficiently.
 layout: article
+permalink: posts/real-time-audio-processing-for-entertainment-tensorflow-apache-nifi-grafana-for-media-production
+title: Latency Reduction, TensorFlow for Realtime Audio Entertainment
 ---
 
 ### Objectives

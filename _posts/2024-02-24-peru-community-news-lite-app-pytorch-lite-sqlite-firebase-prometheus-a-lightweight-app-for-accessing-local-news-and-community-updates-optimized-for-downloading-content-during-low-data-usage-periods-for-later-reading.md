@@ -1,8 +1,9 @@
 ---
-title: Peru Community News Lite App (PyTorch Lite, SQLite, Firebase, Prometheus) A lightweight app for accessing local news and community updates, optimized for downloading content during low-data-usage periods for later reading
 date: 2024-02-24
-permalink: posts/peru-community-news-lite-app-pytorch-lite-sqlite-firebase-prometheus-a-lightweight-app-for-accessing-local-news-and-community-updates-optimized-for-downloading-content-during-low-data-usage-periods-for-later-reading
+description: We will be using PyTorch for efficient data retrieval optimization in Lite App. PyTorch is known for its ease of use, flexibility, and scalability in AI applications.
 layout: article
+permalink: posts/peru-community-news-lite-app-pytorch-lite-sqlite-firebase-prometheus-a-lightweight-app-for-accessing-local-news-and-community-updates-optimized-for-downloading-content-during-low-data-usage-periods-for-later-reading
+title: Inefficient Data Retrieval Optimization, PyTorch for Lite App.
 ---
 
 ## AI Peru Community News Lite App

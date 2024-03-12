@@ -1,8 +1,9 @@
 ---
-title: Python for Full Stack AI Solutions
 date: 2023-11-08
-permalink: posts/full-stack-ai-solutions-using-python-guide
+description: We will be using TensorFlow for its powerful machine learning capabilities, along with other AI tools like Keras, OpenCV, and NumPy for a comprehensive AI integration.
 layout: article
+permalink: posts/full-stack-ai-solutions-using-python-guide
+title: Inefficiencies, TensorFlow for AI Integration
 ---
 
 ## Python for Full Stack AI Solutions

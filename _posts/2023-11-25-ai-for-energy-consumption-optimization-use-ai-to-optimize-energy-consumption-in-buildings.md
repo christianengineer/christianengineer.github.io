@@ -1,8 +1,9 @@
 ---
-title: AI for Energy Consumption Optimization Use AI to optimize energy consumption in buildings
 date: 2023-11-25
-permalink: posts/ai-for-energy-consumption-optimization-use-ai-to-optimize-energy-consumption-in-buildings
+description: We will primarily be using TensorFlow and PyTorch for AI modeling, and scikit-learn for data preprocessing. These tools are commonly used in AI research for their flexibility and ease of use.
 layout: article
+permalink: posts/ai-for-energy-consumption-optimization-use-ai-to-optimize-energy-consumption-in-buildings
+title: Inefficient energy use, AI for optimized consumption.
 ---
 
 ## AI for Energy Consumption Optimization

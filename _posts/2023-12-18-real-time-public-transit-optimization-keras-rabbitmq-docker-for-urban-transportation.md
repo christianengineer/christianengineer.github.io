@@ -1,8 +1,9 @@
 ---
-title: Real-time Public Transit Optimization (Keras, RabbitMQ, Docker) For urban transportation
 date: 2023-12-18
-permalink: posts/real-time-public-transit-optimization-keras-rabbitmq-docker-for-urban-transportation
+description: For this project, we will be using Keras for deep learning, RabbitMQ for message queuing, and Docker for containerization to optimize urban transit systems.
 layout: article
+permalink: posts/real-time-public-transit-optimization-keras-rabbitmq-docker-for-urban-transportation
+title: Inefficient urban transit, Keras RabbitMQ Docker for optimization.
 ---
 
 ### Objectives

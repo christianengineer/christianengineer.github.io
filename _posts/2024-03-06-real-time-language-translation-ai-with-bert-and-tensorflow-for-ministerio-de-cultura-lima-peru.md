@@ -1,8 +1,9 @@
 ---
-title: Real-Time Language Translation AI with BERT and TensorFlow for Ministerio de Cultura (Lima, Peru), Cultural Liaison's pain point is facilitating communication between tourists and indigenous communities, solution is to provide real-time translation of indigenous languages, promoting cultural exchange and understanding
 date: 2024-03-06
-permalink: posts/real-time-language-translation-ai-with-bert-and-tensorflow-for-ministerio-de-cultura-lima-peru
+description: We will be using Google Translate API for real-time translation, Microsoft Translator Text API for language detection, and NLTK library for text processing.
 layout: article
+permalink: posts/real-time-language-translation-ai-with-bert-and-tensorflow-for-ministerio-de-cultura-lima-peru
+title: Facilitating communication with AI translation for cultural exchange
 ---
 
 ## Real-Time Language Translation AI with BERT and TensorFlow

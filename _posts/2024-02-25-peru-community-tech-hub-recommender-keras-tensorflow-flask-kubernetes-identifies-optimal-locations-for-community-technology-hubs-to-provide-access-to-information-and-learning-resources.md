@@ -1,8 +1,9 @@
 ---
-title: Peru Community Tech Hub Recommender (Keras, TensorFlow, Flask, Kubernetes) Identifies optimal locations for community technology hubs to provide access to information and learning resources
 date: 2024-02-25
-permalink: posts/peru-community-tech-hub-recommender-keras-tensorflow-flask-kubernetes-identifies-optimal-locations-for-community-technology-hubs-to-provide-access-to-information-and-learning-resources
+description: We will be using tools and libraries such as TensorFlow for machine learning, NumPy for numerical operations, and scikit-learn for model training and evaluation.
 layout: article
+permalink: posts/peru-community-tech-hub-recommender-keras-tensorflow-flask-kubernetes-identifies-optimal-locations-for-community-technology-hubs-to-provide-access-to-information-and-learning-resources
+title: Inadequate deployment, AI Recommender for tech hub location.
 ---
 
 ### Objectives:

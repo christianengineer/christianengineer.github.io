@@ -1,8 +1,9 @@
 ---
-title: Peruvian Ministry of Development and Social Inclusion (TensorFlow, Pandas) Social Program Analyst pain point is allocating social aid effectively, solution is to use machine learning to identify the most needy populations based on social data, improving program impact
 date: 2024-03-07
-permalink: posts/peruvian-ministry-of-development-and-social-inclusion-tensorflow-pandas
+description: We will be using TensorFlow for deep learning algorithms and Python libraries like NumPy for data analysis, Pandas for data manipulation, and Matplotlib for visualization. These tools will help us effectively identify the neediest populations and allocate social aid more efficiently.
 layout: article
+permalink: posts/peruvian-ministry-of-development-and-social-inclusion-tensorflow-pandas
+title: Ineffective social aid allocation, ML identifies neediest populations. [Ministry's challenge], [TensorFlow for effective aid].
 ---
 
 ## Machine Learning Solution for Peruvian Ministry of Development and Social Inclusion

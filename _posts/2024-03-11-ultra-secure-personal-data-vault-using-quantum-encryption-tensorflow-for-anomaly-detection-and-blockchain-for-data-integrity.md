@@ -1,8 +1,9 @@
 ---
-title: Ultra-Secure Personal Data Vault using Quantum Encryption, TensorFlow for anomaly detection, and blockchain for data integrity - Personal Data Sovereignty Guardian's problem is protecting the vast and sensitive personal data against future quantum computing threats. The solution is to create an ultra-secure vault that utilizes quantum encryption, ensuring impenetrable data security
 date: 2024-03-11
-permalink: posts/ultra-secure-personal-data-vault-using-quantum-encryption-tensorflow-for-anomaly-detection-and-blockchain-for-data-integrity
+description: We will be using TensorFlow for building and training quantum encryption models, and OpenAI's GPT-3 for natural language processing to enhance data security measures.
 layout: article
+permalink: posts/ultra-secure-personal-data-vault-using-quantum-encryption-tensorflow-for-anomaly-detection-and-blockchain-for-data-integrity
+title: Personal Data Security with Quantum Encryption and Blockchain
 ---
 
 ## Objectives and Benefits for Stakeholders:

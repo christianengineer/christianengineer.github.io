@@ -1,8 +1,9 @@
 ---
-title: Automated Disaster Response System (PyTorch, OpenCV) For rapid emergency management
 date: 2023-12-15
-permalink: posts/automated-disaster-response-system-pytorch-opencv-for-rapid-emergency-management
+description: For this project, we will be using PyTorch for deep learning tasks such as image analysis and classification, as well as OpenCV for computer vision applications to enhance the efficiency of emergency management processes. These tools are ideal for rapidly identifying and responding to disaster situations.
 layout: article
+permalink: posts/automated-disaster-response-system-pytorch-opencv-for-rapid-emergency-management
+title: Inefficient emergency management, PyTorch and OpenCV for rapid disaster response.
 ---
 
 ## AI Automated Disaster Response System

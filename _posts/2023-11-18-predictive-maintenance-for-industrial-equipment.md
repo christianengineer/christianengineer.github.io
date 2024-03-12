@@ -1,8 +1,9 @@
 ---
-title: Predictive Maintenance for Industrial Equipment
 date: 2023-11-18
-permalink: posts/predictive-maintenance-for-industrial-equipment
+description: We will be using Python with TensorFlow and Keras for LSTM modeling. These tools are popular for their ease of use and efficiency in training deep learning models.
 layout: article
+permalink: posts/predictive-maintenance-for-industrial-equipment
+title: Fault Detection, LSTM for Equipment Maintenance.
 ---
 
 ## Technical Specifications Document - Predictive Maintenance for Industrial Equipment

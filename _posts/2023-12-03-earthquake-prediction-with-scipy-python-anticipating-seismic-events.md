@@ -1,8 +1,9 @@
 ---
-title: Earthquake Prediction with SciPy (Python) Anticipating seismic events
 date: 2023-12-03
-permalink: posts/earthquake-prediction-with-scipy-python-anticipating-seismic-events
+description: We will be using tools like TensorFlow for building neural networks, scikit-learn for data preprocessing and prediction models, and pandas for data manipulation.
 layout: article
+permalink: posts/earthquake-prediction-with-scipy-python-anticipating-seismic-events
+title: Unforeseen earthquakes, SciPy model for predicting seismic events.
 ---
 
 ### Objectives

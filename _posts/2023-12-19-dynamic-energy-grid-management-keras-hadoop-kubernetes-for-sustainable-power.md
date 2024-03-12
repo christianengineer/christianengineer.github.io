@@ -1,8 +1,9 @@
 ---
-title: Dynamic Energy Grid Management (Keras, Hadoop, Kubernetes) For sustainable power
 date: 2023-12-19
-permalink: posts/dynamic-energy-grid-management-keras-hadoop-kubernetes-for-sustainable-power
+description: We will be using Keras for deep learning models, Hadoop for distributed data processing, and Kubernetes for container orchestration to optimize grid efficiency for sustainable power.
 layout: article
+permalink: posts/dynamic-energy-grid-management-keras-hadoop-kubernetes-for-sustainable-power
+title: Grid Efficiency Optimization, Keras Hadoop Kubernetes for Sustainable Power
 ---
 
 ## AI Dynamic Energy Grid Management System

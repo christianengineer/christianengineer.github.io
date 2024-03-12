@@ -1,8 +1,9 @@
 ---
-title: Kubernetes for ML Model Deployment - Demonstrate deploying and managing ML models at scale using Kubernetes, focusing on aspects like autoscaling and load balancing.
 date: 2023-11-22
-permalink: posts/kubernetes-for-ml-model-deployment-demonstrate-deploying-and-managing-ml-models-at-scale-using-kubernetes-focusing-on-aspects-like-autoscaling-and-load-balancing
+description: We will be using TensorFlow and PyTorch for building and training machine learning models, as well as Kubeflow for deploying and scaling these models on Kubernetes for efficient resource management.
 layout: article
+permalink: posts/kubernetes-for-ml-model-deployment-demonstrate-deploying-and-managing-ml-models-at-scale-using-kubernetes-focusing-on-aspects-like-autoscaling-and-load-balancing
+title: 'Scaling ML Models with Kubernetes: Autoscaling & Load Balancing for efficiency'
 ---
 
 ## AI Kubernetes for ML Model Deployment

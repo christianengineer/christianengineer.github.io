@@ -1,8 +1,9 @@
 ---
-title: VoiceStream - Advanced Speech Processing System
 date: 2023-11-21
-permalink: posts/voicestream-advanced-speech-processing-system
+description: Some AI tools and libraries we will be using include TensorFlow for deep learning models, NumPy for numerical computations and SciPy for signal processing algorithms.
 layout: article
+permalink: posts/voicestream-advanced-speech-processing-system
+title: Speech Signal Enhancement, Deep Learning for Improved VoiceStream
 ---
 
 ## AI VoiceStream - Advanced Speech Processing System

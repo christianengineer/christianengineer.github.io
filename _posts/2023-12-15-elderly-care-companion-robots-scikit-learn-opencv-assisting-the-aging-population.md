@@ -1,8 +1,9 @@
 ---
-title: Elderly Care Companion Robots (Scikit-Learn, OpenCV) Assisting the aging population
 date: 2023-12-15
-permalink: posts/elderly-care-companion-robots-scikit-learn-opencv-assisting-the-aging-population
+description: For this project, we will be using ScikitLearn for machine learning algorithms and OpenCV for computer vision tasks to better understand and address chronic loneliness.
 layout: article
+permalink: posts/elderly-care-companion-robots-scikit-learn-opencv-assisting-the-aging-population
+title: Chronic loneliness, incorporating ScikitLearn and OpenCV for connection.
 ---
 
 ## AI Elderly Care Companion Robots Repository

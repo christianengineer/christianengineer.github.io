@@ -1,8 +1,9 @@
 ---
-title: Building GraphQL Endpoints for AI Services That Support Multiple Front End Teams
 date: 2023-11-13
-permalink: posts/building-graphql-endpoints-ai-services-multiple-front-end-teams
+description: We'll be using TensorFlow and PyTorch for deep learning, spaCy for NLP, scikit-learn for machine learning, and FastAPI for building GraphQL APIs due to their robust features and strong community support.
 layout: article
+permalink: posts/building-graphql-endpoints-ai-services-multiple-front-end-teams
+title: Complex integration, GraphQL for multi-team AI services.
 ---
 
 ## Building GraphQL Endpoints for AI Services That Support Multiple Front End Teams

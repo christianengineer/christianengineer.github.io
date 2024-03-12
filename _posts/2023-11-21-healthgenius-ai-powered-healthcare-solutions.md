@@ -1,8 +1,9 @@
 ---
-title: HealthGenius - AI-Powered Healthcare Solutions
 date: 2023-11-21
-permalink: posts/healthgenius-ai-powered-healthcare-solutions
+description: We will be using tools like TensorFlow and Scikit-learn for building machine learning models, Pandas for data manipulation, and Matplotlib for visualization.
 layout: article
+permalink: posts/healthgenius-ai-powered-healthcare-solutions
+title: Machine Learning for Optimal Healthcare Solutions
 ---
 
 ## AI HealthGenius - AI-Powered Healthcare Solutions Repository

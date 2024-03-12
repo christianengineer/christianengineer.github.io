@@ -1,8 +1,9 @@
 ---
-title: Real-time Inference with Kafka and TensorFlow Integrate Kafka with TensorFlow for real-time data processing and model inference
 date: 2023-11-24
-permalink: posts/real-time-inference-with-kafka-and-tensorflow-integrate-kafka-with-tensorflow-for-real-time-data-processing-and-model-inference
+description: We will be using Kafka for real-time data streaming and TensorFlow for machine learning algorithms. These tools allow for low-latency processing and efficient data integration.
 layout: article
+permalink: posts/real-time-inference-with-kafka-and-tensorflow-integrate-kafka-with-tensorflow-for-real-time-data-processing-and-model-inference
+title: Low-latency data processing, Kafka and TensorFlow integration.
 ---
 
 ## Objectives

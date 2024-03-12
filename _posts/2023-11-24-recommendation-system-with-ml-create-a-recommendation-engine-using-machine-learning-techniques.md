@@ -1,8 +1,9 @@
 ---
-title: Recommendation System with ML Create a recommendation engine using machine learning techniques
 date: 2023-11-24
-permalink: posts/recommendation-system-with-ml-create-a-recommendation-engine-using-machine-learning-techniques
+description: We'll be using tools like TensorFlow and Scikit-learn for implementing machine learning algorithms, along with Pandas and NumPy for data manipulation and analysis.
 layout: article
+permalink: posts/recommendation-system-with-ml-create-a-recommendation-engine-using-machine-learning-techniques
+title: Personalized recommendation using ML for better user satisfaction
 ---
 
 ## Objectives

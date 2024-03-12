@@ -1,8 +1,9 @@
 ---
-title: LangTranslate Automated Language Translation AI
 date: 2023-11-22
-permalink: posts/langtranslate-automated-language-translation-ai
+description: We will be using libraries such as NLTK and TensorFlow for natural language processing, as well as Google Translate API for seamless translation capabilities.
 layout: article
+permalink: posts/langtranslate-automated-language-translation-ai
+title: Inaccurate Translations, LangTranslate AI for Enhanced Language Translation
 ---
 
 ## AI LangTranslate Automated Language Translation AI Repository

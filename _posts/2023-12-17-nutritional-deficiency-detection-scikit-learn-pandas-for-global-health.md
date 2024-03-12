@@ -1,8 +1,9 @@
 ---
-title: Nutritional Deficiency Detection (Scikit-Learn, Pandas) For global health
 date: 2023-12-17
-permalink: posts/nutritional-deficiency-detection-scikit-learn-pandas-for-global-health
+description: We will be using TensorFlow for its flexibility in building deep learning models, scikit-learn for traditional ML algorithms, and pandas for data manipulation.
 layout: article
+permalink: posts/nutritional-deficiency-detection-scikit-learn-pandas-for-global-health
+title: Insufficient Nutrition Identification ML Tool for Global Health
 ---
 
 ## AI Nutritional Deficiency Detection System

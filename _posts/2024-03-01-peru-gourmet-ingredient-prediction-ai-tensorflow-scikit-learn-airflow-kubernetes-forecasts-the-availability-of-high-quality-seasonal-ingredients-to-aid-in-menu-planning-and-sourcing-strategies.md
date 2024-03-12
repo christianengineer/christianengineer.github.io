@@ -1,8 +1,9 @@
 ---
-title: Peru Gourmet Ingredient Prediction AI (TensorFlow, Scikit-Learn, Airflow, Kubernetes) Forecasts the availability of high-quality, seasonal ingredients to aid in menu planning and sourcing strategies
 date: 2024-03-01
-permalink: posts/peru-gourmet-ingredient-prediction-ai-tensorflow-scikit-learn-airflow-kubernetes-forecasts-the-availability-of-high-quality-seasonal-ingredients-to-aid-in-menu-planning-and-sourcing-strategies
+description: We will be using machine learning algorithms from libraries such as TensorFlow and scikit-learn for data analysis and forecasting. These tools are preferred for their accuracy and efficiency in predicting ingredient demands.
 layout: article
+permalink: posts/peru-gourmet-ingredient-prediction-ai-tensorflow-scikit-learn-airflow-kubernetes-forecasts-the-availability-of-high-quality-seasonal-ingredients-to-aid-in-menu-planning-and-sourcing-strategies
+title: Inaccurate Ingredient Forecasting, AI Tools for Precise Predictions
 ---
 
 ## AI Peru Gourmet Ingredient Prediction Project

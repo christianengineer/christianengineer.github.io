@@ -1,8 +1,9 @@
 ---
-title: Fraud Detection using Machine Learning Build a fraud detection system using AI
 date: 2023-11-24
-permalink: posts/fraud-detection-using-machine-learning-build-a-fraud-detection-system-using-ai
+description: We will be using tools like TensorFlow and Keras for deep learning, scikit-learn for machine learning algorithms, and PyTorch for neural networks. These tools provide efficient ways to detect patterns in fraudulent behavior and make accurate predictions.
 layout: article
+permalink: posts/fraud-detection-using-machine-learning-build-a-fraud-detection-system-using-ai
+title: Fraud Detection, Leveraging AI for Improved Solution
 ---
 
 ## Objectives

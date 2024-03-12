@@ -1,8 +1,9 @@
 ---
-title: Customer Segmentation with Pandas (Python) Grouping customers based on behavior
 date: 2023-12-02
-permalink: posts/customer-segmentation-with-pandas-python-grouping-customers-based-on-behavior
+description: For this project, we will be using Python with Pandas for data manipulation, Scikit-learn for machine learning algorithms, and Matplotlib for data visualization to efficiently segment customers based on their behavior and preferences.
 layout: article
+permalink: posts/customer-segmentation-with-pandas-python-grouping-customers-based-on-behavior
+title: Inefficient Marketing, Pandas for Customer Segmentation
 ---
 
 ## AI Customer Segmentation with Pandas (Python)

@@ -1,8 +1,9 @@
 ---
-title: AI-based Credit Scoring System (Scikit-Learn, Flask, Prometheus) For financial assessments
 date: 2023-12-20
-permalink: posts/ai-based-credit-scoring-system-scikit-learn-flask-prometheus-for-financial-assessments
+description: We will be using ScikitLearn for machine learning algorithms, Pandas for data manipulation, and Flask for building the web application for finance.
 layout: article
+permalink: posts/ai-based-credit-scoring-system-scikit-learn-flask-prometheus-for-financial-assessments
+title: Inadequate Credit Scoring, AI ScikitLearn, Flask for Finance
 ---
 
 ## AI-Based Credit Scoring System Repository

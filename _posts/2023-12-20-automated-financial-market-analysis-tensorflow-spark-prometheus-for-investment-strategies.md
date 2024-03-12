@@ -1,8 +1,9 @@
 ---
-title: Automated Financial Market Analysis (TensorFlow, Spark, Prometheus) For investment strategies
 date: 2023-12-20
-permalink: posts/automated-financial-market-analysis-tensorflow-spark-prometheus-for-investment-strategies
+description: For this project, we will be using TensorFlow for deep learning, Spark for big data processing, Prometheus for monitoring, and optimization algorithms for investment strategies.
 layout: article
+permalink: posts/automated-financial-market-analysis-tensorflow-spark-prometheus-for-investment-strategies
+title: Inefficient Analysis, TensorFlow Spark Prometheus optimize investment.
 ---
 
 ## AI Automated Financial Market Analysis Repository

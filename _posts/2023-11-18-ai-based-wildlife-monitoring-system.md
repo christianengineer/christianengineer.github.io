@@ -1,8 +1,9 @@
 ---
-title: AI-Based Wildlife Monitoring System
 date: 2023-11-18
-permalink: posts/ai-based-wildlife-monitoring-system
+description: We will be using TensorFlow and Keras for deep learning algorithms, scikit-learn for machine learning models, and OpenCV for image processing in this project.
 layout: article
+permalink: posts/ai-based-wildlife-monitoring-system
+title: Monitoring Species Diversity Using AI Technology
 ---
 
 ## AI-Based Wildlife Monitoring System - Technical Specifications

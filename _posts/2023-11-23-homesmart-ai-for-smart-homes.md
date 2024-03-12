@@ -1,8 +1,9 @@
 ---
-title: HomeSmart AI for Smart Homes
 date: 2023-11-23
-permalink: posts/homesmart-ai-for-smart-homes
+description: We will be using TensorFlow for deep learning models, scikit-learn for machine learning algorithms, and OpenCV for image recognition in our HomeSmart AI project. These libraries provide robust tools for data processing, model training, and optimization.
 layout: article
+permalink: posts/homesmart-ai-for-smart-homes
+title: Energy Optimization, HomeSmart AI for Smart Homes
 ---
 
 **AI HomeSmart AI for Smart Homes Repository**

@@ -1,8 +1,9 @@
 ---
-title: AI-driven Energy Usage Forecasting for Buildings (PyTorch, Kafka, Kubernetes) For smart buildings
 date: 2023-12-20
-permalink: posts/ai-driven-energy-usage-forecasting-for-buildings-pytorch-kafka-kubernetes-for-smart-buildings
+description: We will be using PyTorch for its powerful deep learning capabilities to improve accuracy in our energy usage predictions, along with other AI tools for data preprocessing and model development.
 layout: article
+permalink: posts/ai-driven-energy-usage-forecasting-for-buildings-pytorch-kafka-kubernetes-for-smart-buildings
+title: Inaccurate forecasts, PyTorch for improved energy usage predictions.
 ---
 
 ## AI-driven Energy Usage Forecasting for Buildings Repository

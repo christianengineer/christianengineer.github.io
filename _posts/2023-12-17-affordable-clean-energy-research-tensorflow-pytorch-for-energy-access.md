@@ -1,8 +1,9 @@
 ---
-title: Affordable Clean Energy Research (TensorFlow, PyTorch) For energy access
 date: 2023-12-17
-permalink: posts/affordable-clean-energy-research-tensorflow-pytorch-for-energy-access
+description: We will be using tools such as TensorFlow for deep learning models, Scikit-learn for machine learning algorithms, and Pandas for data manipulation in Python.
 layout: article
+permalink: posts/affordable-clean-energy-research-tensorflow-pytorch-for-energy-access
+title: Energy Poverty Addressed, ML Tools for Clean Energy
 ---
 
 ## AI Affordable Clean Energy Research Repository

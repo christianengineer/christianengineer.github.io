@@ -1,8 +1,9 @@
 ---
-title: AI Chatbot with Deep Learning Build a chatbot using deep learning techniques
 date: 2023-11-24
-permalink: posts/ai-chatbot-with-deep-learning-build-a-chatbot-using-deep-learning-techniques
+description: We'll be using TensorFlow for building neural networks, NLTK for natural language processing, and MongoDB for storing and managing chatbot data.
 layout: article
+permalink: posts/ai-chatbot-with-deep-learning-build-a-chatbot-using-deep-learning-techniques
+title: Inadequate chatbot, neural networks for improvement
 ---
 
 ## Objectives

@@ -1,8 +1,9 @@
 ---
-title: Real-time Medical Emergency Response System (Keras, RabbitMQ, Kubernetes) For healthcare
 date: 2023-12-18
-permalink: posts/real-time-medical-emergency-response-system-keras-rabbitmq-kubernetes-for-healthcare
+description: We will be using Keras for building neural networks and RabbitMQ for real-time messaging in the healthcare application to minimize latency in emergency response.
 layout: article
+permalink: posts/real-time-medical-emergency-response-system-keras-rabbitmq-kubernetes-for-healthcare
+title: Latency in emergency response, Keras & RabbitMQ for real-time healthcare.
 ---
 
 ## AI Real-time Medical Emergency Response System

@@ -1,8 +1,9 @@
 ---
-title: Real-time Speech Translation Service (PyTorch, gRPC, Docker) For multilingual communication
 date: 2023-12-19
-permalink: posts/real-time-speech-translation-service-pytorch-grpc-docker-for-multilingual-communication
+description: For this project, we will be using PyTorch for its deep learning capabilities, along with tools like Torchtext for NLP preprocessing and Transformers for translation models. These tools are chosen for their efficiency and speed in handling real-time translation tasks.
 layout: article
+permalink: posts/real-time-speech-translation-service-pytorch-grpc-docker-for-multilingual-communication
+title: Latency issues, PyTorch for realtime translation.
 ---
 
 ## AI Real-time Speech Translation Service

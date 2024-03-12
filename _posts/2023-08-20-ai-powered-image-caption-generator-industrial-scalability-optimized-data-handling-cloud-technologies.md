@@ -1,8 +1,9 @@
 ---
-title: "Blueprint for Progress: Creating an Industrially Scalable AI-Powered Image Caption Generator with Optimized Data Handling and Integrated Cloud Technologies"
 date: 2023-08-20
-permalink: posts/ai-powered-image-caption-generator-industrial-scalability-optimized-data-handling-cloud-technologies
+description: We will be using TensorFlow and PyTorch for training deep learning models, OpenCV for image processing, NLTK and SpaCy for natural language processing, and Flask for API deployment.
 layout: article
+permalink: posts/ai-powered-image-caption-generator-industrial-scalability-optimized-data-handling-cloud-technologies
+title: Inefficient Data Processing, AI for Streamlined Image Caption Generation
 ---
 
 ## Blueprint for Progress: Creating an Industrially Scalable AI-Powered Image Caption Generator with Optimized Data Handling and Integrated Cloud Technologies

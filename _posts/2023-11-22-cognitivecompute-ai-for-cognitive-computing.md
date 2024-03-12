@@ -1,8 +1,9 @@
 ---
-title: CognitiveCompute - AI for Cognitive Computing
 date: 2023-11-22
-permalink: posts/cognitivecompute-ai-for-cognitive-computing
+description: For this project, we will be using tools such as TensorFlow, PyTorch, and Scikit-learn for machine learning algorithms, NLP, and image recognition tasks. These libraries provide advanced functionalities and capabilities to address the challenges in cognitive computing effectively.
 layout: article
+permalink: posts/cognitivecompute-ai-for-cognitive-computing
+title: Challenges in Cognitive Computing Addressed with CognitiveCompute AI
 ---
 
 ## AI CognitiveCompute - AI for Cognitive Computing Repository

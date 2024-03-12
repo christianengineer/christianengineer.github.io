@@ -1,8 +1,9 @@
 ---
-title: Financial Risk Modeling with Pandas (Python) Assessing investment risks
 date: 2023-12-03
-permalink: posts/financial-risk-modeling-with-pandas-python-assessing-investment-risks
+description: We will be using Pandas for data manipulation, NumPy for numerical computations, Scikit-learn for machine learning algorithms, Matplotlib for data visualization, and Pickle for model serialization. These tools are essential for building and analyzing investment risk models effectively.
 layout: article
+permalink: posts/financial-risk-modeling-with-pandas-python-assessing-investment-risks
+title: Risk Assessment, Pandas Python for Investment Risk Modeling
 ---
 
 ### Objectives

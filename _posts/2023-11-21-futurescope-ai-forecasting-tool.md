@@ -1,8 +1,9 @@
 ---
-title: FutureScope - AI Forecasting Tool
 date: 2023-11-21
-permalink: posts/futurescope-ai-forecasting-tool
+description: For this project, we will be using TensorFlow for deep learning models, Scikit-learn for machine learning algorithms, and Pandas for data manipulation.
 layout: article
+permalink: posts/futurescope-ai-forecasting-tool
+title: Inaccurate Prediction Analysis, FutureScope AI for Enhanced Forecasting.
 ---
 
 ## AI FutureScope - AI Forecasting Tool Repository

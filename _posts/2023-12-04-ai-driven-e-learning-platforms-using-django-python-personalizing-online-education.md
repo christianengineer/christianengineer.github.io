@@ -1,8 +1,9 @@
 ---
-title: AI-Driven E-Learning Platforms using Django (Python) Personalizing online education
 date: 2023-12-04
-permalink: posts/ai-driven-e-learning-platforms-using-django-python-personalizing-online-education
+description: For the Lack of Personalization project, we will be using TensorFlow for developing AI models, Scikit-learn for machine learning, and Django for web development. These tools provide a robust framework for implementing personalized learning experiences.
 layout: article
+permalink: posts/ai-driven-e-learning-platforms-using-django-python-personalizing-online-education
+title: Lack of Personalization, Django AI for Online Learning
 ---
 
 ## AI-Driven E-Learning Platform Using Django

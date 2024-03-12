@@ -1,8 +1,9 @@
 ---
-title: Scalable Data Pipeline in Apache Spark Implement a scalable data processing pipeline using Apache Spark
 date: 2023-11-24
-permalink: posts/scalable-data-pipeline-in-apache-spark-implement-a-scalable-data-processing-pipeline-using-apache-spark
+description: For this project, we will be utilizing Apache Spark for efficient data processing, along with libraries such as MLlib and TensorFlow for AI analytics and modeling.
 layout: article
+permalink: posts/scalable-data-pipeline-in-apache-spark-implement-a-scalable-data-processing-pipeline-using-apache-spark
+title: 'Scalable Data Pipeline: Spark for Efficient Processing'
 ---
 
 ## AI Scalable Data Pipeline in Apache Spark

@@ -1,8 +1,9 @@
 ---
-title: Automated Essay Scoring System Develop a system for scoring essays using NLP
 date: 2023-11-24
-permalink: posts/automated-essay-scoring-system-develop-a-system-for-scoring-essays-using-nlp
+description: We will be using Natural Language Processing (NLP) tools such as NLTK, Spacy, and Textblob for text analysis and sentiment analysis to score essays accurately.
 layout: article
+permalink: posts/automated-essay-scoring-system-develop-a-system-for-scoring-essays-using-nlp
+title: Inconsistent Essay Grading, NLP for Scoring
 ---
 
 ## AI Automated Essay Scoring System

@@ -1,8 +1,9 @@
 ---
-title: Blockchain-Based Food Traceability for Peru (Hyperledger, Scikit-Learn, Flask, Prometheus) Implements a blockchain-based system to ensure transparency and traceability in the food supply chain, from farm to table
 date: 2024-02-28
-permalink: posts/blockchain-based-food-traceability-for-peru-hyperledger-scikit-learn-flask-prometheus-implements-a-blockchain-based-system-to-ensure-transparency-and-traceability-in-the-food-supply-chain-from-farm-to-table
+description: We will be using TensorFlow for machine learning algorithms, NLTK for natural language processing, and OpenCV for image recognition to enhance food traceability with AI.
 layout: article
+permalink: posts/blockchain-based-food-traceability-for-peru-hyperledger-scikit-learn-flask-prometheus-implements-a-blockchain-based-system-to-ensure-transparency-and-traceability-in-the-food-supply-chain-from-farm-to-table
+title: Ensuring Food Traceability with Blockchain and AI
 ---
 
 ## AI Blockchain-Based Food Traceability System for Peru

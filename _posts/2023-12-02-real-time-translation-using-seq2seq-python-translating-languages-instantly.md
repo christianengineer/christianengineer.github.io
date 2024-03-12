@@ -1,8 +1,9 @@
 ---
-title: Real-time Translation using Seq2Seq (Python) Translating languages instantly
 date: 2023-12-02
-permalink: posts/real-time-translation-using-seq2seq-python-translating-languages-instantly
+description: We will be using PyTorch for building Seq2Seq models, torchtext for text preprocessing, and Transformers for pre-trained language models like BERT for improved translation accuracy.
 layout: article
+permalink: posts/real-time-translation-using-seq2seq-python-translating-languages-instantly
+title: Inefficiencies with Realtime Translation solved with Seq2Seq Python
 ---
 
 ## Objectives

@@ -1,8 +1,9 @@
 ---
-title: Automated Drug Discovery Platform (TensorFlow, Luigi, Docker) For pharmaceuticals
 date: 2023-12-20
-permalink: posts/automated-drug-discovery-platform-tensorflow-luigi-docker-for-pharmaceuticals
+description: We will be using TensorFlow for AI model training, Luigi for workflow management, and Docker for containerization to streamline drug discovery processes in pharma.
 layout: article
+permalink: posts/automated-drug-discovery-platform-tensorflow-luigi-docker-for-pharmaceuticals
+title: 'Drug Discovery Pains Solved: TensorFlow Luigi Docker For Pharma.'
 ---
 
 ## Objectives

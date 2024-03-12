@@ -1,8 +1,9 @@
 ---
-title: Real-time Logistics Optimization for Peru Food Supply (TensorFlow, Keras, Airflow, Grafana) Optimizes delivery routes and schedules in real-time, reducing costs and improving the timeliness of food distribution
 date: 2024-02-29
-permalink: posts/real-time-logistics-optimization-for-peru-food-supply-tensorflow-keras-airflow-grafana-optimizes-delivery-routes-and-schedules-in-real-time-reducing-costs-and-improving-the-timeliness-of-food-distribution
+description: We will be using TensorFlow for route optimization and efficient delivery planning. It helps in finding the best routes to reduce delivery times and costs.
 layout: article
+permalink: posts/real-time-logistics-optimization-for-peru-food-supply-tensorflow-keras-airflow-grafana-optimizes-delivery-routes-and-schedules-in-real-time-reducing-costs-and-improving-the-timeliness-of-food-distribution
+title: Inefficient Food Delivery, TensorFlow for Optimized Routes
 ---
 
 ## AI Real-time Logistics Optimization for Peru Food Supply

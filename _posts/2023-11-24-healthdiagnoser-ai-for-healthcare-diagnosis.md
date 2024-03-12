@@ -1,8 +1,9 @@
 ---
-title: HealthDiagnoser AI for Healthcare Diagnosis
 date: 2023-11-24
-permalink: posts/healthdiagnoser-ai-for-healthcare-diagnosis
+description: We'll be using TensorFlow and Keras for building the deep learning models, scikit-learn for data preprocessing, and Pandas for data manipulation.
 layout: article
+permalink: posts/healthdiagnoser-ai-for-healthcare-diagnosis
+title: Inadequate Diagnosis Accuracy; HealthDiagnoser AI for Precise Healthcare Diagnosis.
 ---
 
 ## AI HealthDiagnoser AI for Healthcare Diagnosis Repository

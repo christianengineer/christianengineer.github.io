@@ -1,8 +1,9 @@
 ---
-title: Automated Stock Trading with Reinforcement Learning (Python) Executing trades autonomously
 date: 2023-12-04
-permalink: posts/automated-stock-trading-with-reinforcement-learning-python-executing-trades-autonomously
+description: We will be using tools like OpenAI Gym for creating the trading environment, TensorFlow for implementing deep learning, and NumPy for numerical operations.
 layout: article
+permalink: posts/automated-stock-trading-with-reinforcement-learning-python-executing-trades-autonomously
+title: High-frequency trading using RL Python for autonomous trades.
 ---
 
 ## AI Automated Stock Trading with Reinforcement Learning

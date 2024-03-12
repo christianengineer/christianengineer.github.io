@@ -1,8 +1,9 @@
 ---
-title: Handwriting Recognition with MNIST (Python) Digitizing written text
 date: 2023-12-03
-permalink: posts/handwriting-recognition-with-mnist-python-digitizing-written-text
+description: We will be using the MNIST dataset, TensorFlow, Keras, and OpenCV. These libraries provide powerful tools for digitizing handwritten digits and creating efficient machine learning models.
 layout: article
+permalink: posts/handwriting-recognition-with-mnist-python-digitizing-written-text
+title: Inadequate Handwriting Recognition Resolved by MNIST Python Digitization.
 ---
 
 ## AI Handwriting Recognition with MNIST (Python) Digitizing written text

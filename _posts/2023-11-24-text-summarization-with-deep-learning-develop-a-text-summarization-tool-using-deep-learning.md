@@ -1,8 +1,9 @@
 ---
-title: Text Summarization with Deep Learning Develop a text summarization tool using deep learning
 date: 2023-11-24
-permalink: posts/text-summarization-with-deep-learning-develop-a-text-summarization-tool-using-deep-learning
+description: We will be using tools like TensorFlow, PyTorch, and Hugging Face Transformers for implementing deep learning models for summarization tasks due to their robustness and performance.
 layout: article
+permalink: posts/text-summarization-with-deep-learning-develop-a-text-summarization-tool-using-deep-learning
+title: Challenging summarization, Deep Learning for solution
 ---
 
 ## AI Text Summarization with Deep Learning

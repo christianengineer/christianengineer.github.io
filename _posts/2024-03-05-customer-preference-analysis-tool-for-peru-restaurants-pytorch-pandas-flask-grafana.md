@@ -1,8 +1,9 @@
 ---
-title: Customer Preference Analysis Tool for Peru Restaurants (PyTorch, Pandas, Flask, Grafana) Analyzes customer feedback and dining patterns to tailor menu offerings and improve satisfaction
 date: 2024-03-05
-permalink: posts/customer-preference-analysis-tool-for-peru-restaurants-pytorch-pandas-flask-grafana
+description: For this project, we will be using PyTorch as our main AI tool, along with libraries such as Pandas and NumPy for data manipulation and analysis. PyTorch is a powerful deep learning framework that will help us build and train models to improve customer satisfaction by recommending menu offerings based on customer preferences.
 layout: article
+permalink: posts/customer-preference-analysis-tool-for-peru-restaurants-pytorch-pandas-flask-grafana
+title: Inadequate menu offerings, PyTorch for customer satisfaction.
 ---
 
 ## Machine Learning Customer Preference Analysis Tool for Peru Restaurants

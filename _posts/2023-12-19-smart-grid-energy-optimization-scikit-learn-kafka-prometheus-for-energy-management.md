@@ -1,8 +1,9 @@
 ---
-title: Smart Grid Energy Optimization (Scikit-Learn, Kafka, Prometheus) For energy management
 date: 2023-12-19
-permalink: posts/smart-grid-energy-optimization-scikit-learn-kafka-prometheus-for-energy-management
+description: We'll be using ScikitLearn for machine learning algorithms, Kafka for real-time data processing, and Prometheus for monitoring and optimization to improve energy management efficiency.
 layout: article
+permalink: posts/smart-grid-energy-optimization-scikit-learn-kafka-prometheus-for-energy-management
+title: Inefficient energy management, ScikitLearn Kafka Prometheus for optimization.
 ---
 
 ## AI Smart Grid Energy Optimization Repository

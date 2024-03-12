@@ -1,8 +1,9 @@
 ---
-title: Fraud Detection with Scikit-Learn (Python) Identifying fraudulent transactions
 date: 2023-12-02
-permalink: posts/fraud-detection-with-scikit-learn-python-identifying-fraudulent-transactions
+description: We will be using Scikit-learn for machine learning algorithms, Pandas for data manipulation, and NumPy for numerical operations. These tools provide a robust framework for building and training models to flag suspect transactions effectively.
 layout: article
+permalink: posts/fraud-detection-with-scikit-learn-python-identifying-fraudulent-transactions
+title: Suspect transactions flagged using ScikitLearn for detection.
 ---
 
 ### Objectives

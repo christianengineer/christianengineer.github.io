@@ -1,8 +1,9 @@
 ---
-title: Community Solar Power Planning (Scikit-Learn, TensorFlow) Promoting renewable energy
 date: 2023-12-16
-permalink: posts/community-solar-power-planning-scikit-learn-tensorflow-promoting-renewable-energy
+description: We will be using TensorFlow for building neural networks for optimization, Pandas for data manipulation, Matplotlib for visualization, and Scikit-learn for machine learning algorithms.
 layout: article
+permalink: posts/community-solar-power-planning-scikit-learn-tensorflow-promoting-renewable-energy
+title: Limited Data, TensorFlow for Renewable Energy Optimization
 ---
 
 ## AI Community Solar Power Planning Repository

@@ -1,8 +1,9 @@
 ---
-title: Peru Education Gamification Engine (Scikit-Learn, Unity, Kafka, Kubernetes) Develops gamified learning experiences to engage students from low-income backgrounds, making education more accessible and enjoyable
 date: 2024-02-25
-permalink: posts/peru-education-gamification-engine-scikit-learn-unity-kafka-kubernetes-develops-gamified-learning-experiences-to-engage-students-from-low-income-backgrounds-making-education-more-accessible-and-enjoyable
+description: We will be using ScikitLearn for machine learning tasks, such as classification and clustering, to create a gamification engine for engaging low-income students.
 layout: article
+permalink: posts/peru-education-gamification-engine-scikit-learn-unity-kafka-kubernetes-develops-gamified-learning-experiences-to-engage-students-from-low-income-backgrounds-making-education-more-accessible-and-enjoyable
+title: Low-income student engagement using ScikitLearn for gamification engine.
 ---
 
 ## AI Peru Education Gamification Engine Project Overview

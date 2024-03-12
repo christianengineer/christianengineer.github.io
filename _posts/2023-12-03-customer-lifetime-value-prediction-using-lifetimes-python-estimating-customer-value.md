@@ -1,8 +1,9 @@
 ---
-title: Customer Lifetime Value Prediction using Lifetimes (Python) Estimating customer value
 date: 2023-12-03
-permalink: posts/customer-lifetime-value-prediction-using-lifetimes-python-estimating-customer-value
+description: We will be using Lifetimes library in Python for its robust tools for CLV prediction, including customer lifetime modeling and accurate estimation algorithms.
 layout: article
+permalink: posts/customer-lifetime-value-prediction-using-lifetimes-python-estimating-customer-value
+title: Inadequate CLV Prediction, Lifetimes Python for Accurate Estimation
 ---
 
 ## Objectives

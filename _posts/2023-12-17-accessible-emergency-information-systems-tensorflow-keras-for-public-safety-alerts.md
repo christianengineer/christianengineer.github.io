@@ -1,8 +1,9 @@
 ---
-title: Accessible Emergency Information Systems (TensorFlow, Keras) For public safety alerts
 date: 2023-12-17
-permalink: posts/accessible-emergency-information-systems-tensorflow-keras-for-public-safety-alerts
+description: We will be using TensorFlow and Keras for image recognition and classification to improve the accessibility of emergency alerts for individuals with disabilities.
 layout: article
+permalink: posts/accessible-emergency-information-systems-tensorflow-keras-for-public-safety-alerts
+title: Lack of Accessibility in Emergency Alerts, TensorFlow Keras for Inclusion.
 ---
 
 ## AI Accessible Emergency Information Systems

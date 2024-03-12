@@ -1,8 +1,9 @@
 ---
-title: ChainAnalytics AI for Supply Chain Analytics
 date: 2023-11-23
-permalink: posts/chainanalytics-ai-for-supply-chain-analytics
+description: We will be using tools such as TensorFlow for building and training neural networks, Pandas for data manipulation, and Scikit-learn for machine learning algorithms.
 layout: article
+permalink: posts/chainanalytics-ai-for-supply-chain-analytics
+title: Inefficient Data Handling, AI Solution for Supply Chain Optimization
 ---
 
 ## AI ChainAnalytics for Supply Chain Analytics

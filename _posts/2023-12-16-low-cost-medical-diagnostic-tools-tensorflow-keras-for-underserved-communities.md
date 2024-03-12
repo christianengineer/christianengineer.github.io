@@ -1,8 +1,9 @@
 ---
-title: Low-Cost Medical Diagnostic Tools (TensorFlow, Keras) For underserved communities
 date: 2023-12-16
-permalink: posts/low-cost-medical-diagnostic-tools-tensorflow-keras-for-underserved-communities
+description: We will be using TensorFlow and Keras due to their strong capabilities in deep learning and neural networks, allowing for better diagnosis with inadequate medical tools.
 layout: article
+permalink: posts/low-cost-medical-diagnostic-tools-tensorflow-keras-for-underserved-communities
+title: Inadequate Medical Tools, TensorFlow Keras for Improved Diagnosis
 ---
 
 ### Objectives

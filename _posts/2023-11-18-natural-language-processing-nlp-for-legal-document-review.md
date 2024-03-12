@@ -1,8 +1,9 @@
 ---
-title: Natural Language Processing (NLP) for Legal Document Review
 date: 2023-11-18
-permalink: posts/natural-language-processing-nlp-for-legal-document-review
+description: We will be using tools such as spaCy, NLTK, and transformers for NLP tasks, and TensorFlow or PyTorch for machine learning models to improve document review efficiency.
 layout: article
+permalink: posts/natural-language-processing-nlp-for-legal-document-review
+title: Inefficient Document Review, NLP for Legal Review
 ---
 
 ## Technical Specifications Document: NLP for Legal Document Review Repository

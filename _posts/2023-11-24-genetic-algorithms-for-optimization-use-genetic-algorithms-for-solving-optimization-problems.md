@@ -1,8 +1,9 @@
 ---
-title: Genetic Algorithms for Optimization Use genetic algorithms for solving optimization problems
 date: 2023-11-24
-permalink: posts/genetic-algorithms-for-optimization-use-genetic-algorithms-for-solving-optimization-problems
+description: We will be using Python with libraries such as DEAP, NumPy, and Pandas for implementing genetic algorithms and optimizing project efficiency.
 layout: article
+permalink: posts/genetic-algorithms-for-optimization-use-genetic-algorithms-for-solving-optimization-problems
+title: Optimization with Genetic Algorithms for Project Efficiency
 ---
 
 ## Objectives of the Repository

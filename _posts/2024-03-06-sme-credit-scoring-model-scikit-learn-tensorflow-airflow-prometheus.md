@@ -1,8 +1,9 @@
 ---
-title: SME Credit Scoring Model (Scikit-Learn, TensorFlow, Airflow, Prometheus) for Mibanco, Credit Analyst's pain point is traditional credit scoring excludes many viable SMEs due to lack of data, solution is to leverage alternative data sources to assess creditworthiness, expanding access to capital for small businesses across Peru and fostering economic growth
 date: 2024-03-06
-permalink: posts/sme-credit-scoring-model-scikit-learn-tensorflow-airflow-prometheus
+description: We will be using TensorFlow for building and training deep learning models for credit assessment. It offers flexibility and scalability for handling complex data.
 layout: article
+permalink: posts/sme-credit-scoring-model-scikit-learn-tensorflow-airflow-prometheus
+title: Traditional credit scoring excludes viable SMEs, TensorFlow for credit assessment.
 ---
 
 ## SME Credit Scoring Model Documentation

@@ -1,8 +1,9 @@
 ---
-title: Automated ML Model Testing Framework Develop a framework for automated testing of ML models
 date: 2023-11-24
-permalink: posts/automated-ml-model-testing-framework-develop-a-framework-for-automated-testing-of-ml-models
+description: We'll be using tools like TensorFlow for building and training ML models, scikit-learn for testing and evaluation, and MLflow for experiment tracking and management.
 layout: article
+permalink: posts/automated-ml-model-testing-framework-develop-a-framework-for-automated-testing-of-ml-models
+title: Testing ML Models Automatically, Leveraging AI for Framework.
 ---
 
 ## Objectives

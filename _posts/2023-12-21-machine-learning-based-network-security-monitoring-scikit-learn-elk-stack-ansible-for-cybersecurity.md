@@ -1,8 +1,9 @@
 ---
-title: Machine Learning-based Network Security Monitoring (Scikit-Learn, ELK Stack, Ansible) For cybersecurity
 date: 2023-12-21
-permalink: posts/machine-learning-based-network-security-monitoring-scikit-learn-elk-stack-ansible-for-cybersecurity
+description: We will be using Scikit-learn, a popular machine learning library in Python, for advanced network security tasks due to its wide range of algorithms and easy-to-use features.
 layout: article
+permalink: posts/machine-learning-based-network-security-monitoring-scikit-learn-elk-stack-ansible-for-cybersecurity
+title: Lack of visibility, ScikitLearn for advanced network security.
 ---
 
 ### Objectives:

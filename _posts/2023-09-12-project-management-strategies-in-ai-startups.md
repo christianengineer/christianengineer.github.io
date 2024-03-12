@@ -1,8 +1,9 @@
 ---
-title: Project Management in AI Startups
 date: 2023-09-10
-permalink: posts/project-management-strategies-in-ai-startups
+description: We will be using Scikit-learn for its efficient machine learning capabilities and tools for data analysis, as well as TensorFlow for deep learning models.
 layout: article
+permalink: posts/project-management-strategies-in-ai-startups
+title: Inadequate Project Oversight, Scikit-learn for Efficient AI Management
 ---
 
 ## Project Management in AI Startups: A Comprehensive Guide

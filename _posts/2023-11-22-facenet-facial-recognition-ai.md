@@ -1,8 +1,9 @@
 ---
-title: FaceNet - Facial Recognition AI
 date: 2023-11-22
-permalink: posts/facenet-facial-recognition-ai
+description: We will primarily utilize TensorFlow for its advanced machine learning capabilities and facial recognition models. Additionally, OpenCV may be used for image processing.
 layout: article
+permalink: posts/facenet-facial-recognition-ai
+title: Accuracy improvement, TensorFlow for facial recognition.
 ---
 
 ## Objectives of AI FaceNet - Facial Recognition AI repository

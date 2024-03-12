@@ -1,8 +1,9 @@
 ---
-title: Real-time Language Processing for Media Analysis (BERT, Spark, Terraform) For PR
 date: 2023-12-19
-permalink: posts/real-time-language-processing-for-media-analysis-bert-spark-terraform-for-pr
+description: We will be using BERT (Bidirectional Encoder Representations from Transformers) for natural language processing and Apache Spark for efficient data processing due to their advanced capabilities.
 layout: article
+permalink: posts/real-time-language-processing-for-media-analysis-bert-spark-terraform-for-pr
+title: Inefficient Media Analysis Improved by BERT and Spark.
 ---
 
 ## Objectives

@@ -1,8 +1,9 @@
 ---
-title: Peru Customer Sentiment Analysis Tool (BERT, TensorFlow, Flask, Grafana) Analyzes customer feedback across multiple channels to improve product offerings and customer service strategies
 date: 2024-03-07
-permalink: posts/peru-customer-sentiment-analysis-tool-bert-tensorflow-flask-grafana
+description: We will be using BERT (Bidirectional Encoder Representations from Transformers) for natural language processing, TensorFlow for building and training AI models, Flask for creating the web application, and Grafana for visualizing sentiment analysis results. These tools are chosen for their efficiency, reliability, and versatile capabilities in handling text data and generating customer insight.
 layout: article
+permalink: posts/peru-customer-sentiment-analysis-tool-bert-tensorflow-flask-grafana
+title: Lack of Customer Insight, BERT TensorFlow Flask Grafana for Sentiment Analysis
 ---
 
 ## Peru Customer Sentiment Analysis Tool

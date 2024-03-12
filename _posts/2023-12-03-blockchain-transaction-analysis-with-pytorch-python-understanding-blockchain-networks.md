@@ -1,8 +1,9 @@
 ---
-title: Blockchain Transaction Analysis with PyTorch (Python) Understanding blockchain networks
 date: 2023-12-03
-permalink: posts/blockchain-transaction-analysis-with-pytorch-python-understanding-blockchain-networks
+description: We will be using PyTorch for building and training our neural network models, as well as libraries like Pandas for data manipulation and Matplotlib for visualization.
 layout: article
+permalink: posts/blockchain-transaction-analysis-with-pytorch-python-understanding-blockchain-networks
+title: Complex blockchain analysis with PyTorch for enhanced understanding
 ---
 
 ## AI Blockchain Transaction Analysis with PyTorch (Python)

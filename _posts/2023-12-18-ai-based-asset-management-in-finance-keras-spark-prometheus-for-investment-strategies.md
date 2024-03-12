@@ -1,8 +1,9 @@
 ---
-title: AI-based Asset Management in Finance (Keras, Spark, Prometheus) For investment strategies
 date: 2023-12-18
-permalink: posts/ai-based-asset-management-in-finance-keras-spark-prometheus-for-investment-strategies
+description: We will be using Keras for building deep learning models due to its simplicity and flexibility, and Prometheus for monitoring and alerting system performance.
 layout: article
+permalink: posts/ai-based-asset-management-in-finance-keras-spark-prometheus-for-investment-strategies
+title: Inefficiencies in investment management, leveraging Keras and Prometheus for solutions
 ---
 
 ### Objectives

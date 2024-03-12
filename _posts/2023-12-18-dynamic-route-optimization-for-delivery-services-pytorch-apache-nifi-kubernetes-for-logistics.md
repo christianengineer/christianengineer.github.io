@@ -1,8 +1,9 @@
 ---
-title: Dynamic Route Optimization for Delivery Services (PyTorch, Apache NiFi, Kubernetes) For logistics
 date: 2023-12-18
-permalink: posts/dynamic-route-optimization-for-delivery-services-pytorch-apache-nifi-kubernetes-for-logistics
+description: We will be using PyTorch for building and training neural networks for optimizing route planning. PyTorch is chosen for its flexibility and efficiency in handling complex logistic problems.
 layout: article
+permalink: posts/dynamic-route-optimization-for-delivery-services-pytorch-apache-nifi-kubernetes-for-logistics
+title: Inefficient Route Planning, PyTorch for Logistics.
 ---
 
 ## AI Dynamic Route Optimization for Delivery Services

@@ -1,8 +1,9 @@
 ---
-title: Machine Learning and Deep Learning Concepts
 date: 2023-10-05
-permalink: posts/understanding-machine-learning-deep-learning-concepts
+description: We will be using TensorFlow for its efficient image classification capabilities, along with other AI tools and libraries such as Keras, OpenCV, and NumPy for data processing and model training.
 layout: article
+permalink: posts/understanding-machine-learning-deep-learning-concepts
+title: Improving Image Classification, TensorFlow for Project Efficiency.
 ---
 
 ## Machine Learning and Deep Learning Concepts

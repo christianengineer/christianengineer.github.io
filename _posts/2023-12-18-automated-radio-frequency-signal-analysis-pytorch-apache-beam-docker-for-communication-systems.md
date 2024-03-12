@@ -1,8 +1,9 @@
 ---
-title: Automated Radio Frequency Signal Analysis (PyTorch, Apache Beam, Docker) For communication systems
 date: 2023-12-18
-permalink: posts/automated-radio-frequency-signal-analysis-pytorch-apache-beam-docker-for-communication-systems
+description: We will be using PyTorch for deep learning techniques, NumPy for numerical operations, Matplotlib for data visualization, and Sci-Kit Learn for machine learning algorithms. These tools are essential for optimizing and analyzing RF signals in communication systems.
 layout: article
+permalink: posts/automated-radio-frequency-signal-analysis-pytorch-apache-beam-docker-for-communication-systems
+title: Inadequate RF Signal Analysis, PyTorch for Enhanced Communication Systems
 ---
 
 ## AI Automated Radio Frequency Signal Analysis Repository

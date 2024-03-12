@@ -1,8 +1,9 @@
 ---
-title: Language Modeling using BERT (Python) Understanding language context
 date: 2023-12-03
-permalink: posts/language-modeling-using-bert-python-understanding-language-context
+description: For this project, we will be using Hugging Face's Transformers library for BERT implementation and TensorFlow for deep learning functionalities.
 layout: article
+permalink: posts/language-modeling-using-bert-python-understanding-language-context
+title: Ambiguous texts, BERT for context understanding
 ---
 
 ## AI Language Modeling using BERT

@@ -1,8 +1,9 @@
 ---
-title: Virtual Personal Assistant Development using Rasa (Python) Building conversational AI
 date: 2023-12-03
-permalink: posts/virtual-personal-assistant-development-using-rasa-python-building-conversational-ai
+description: We will be using Rasa AI framework along with Python and libraries such as spaCy for NLP, TensorFlow for ML, and scikit-learn for classification to build a Virtual Assistant with improved efficiency.
 layout: article
+permalink: posts/virtual-personal-assistant-development-using-rasa-python-building-conversational-ai
+title: Lack of efficiency, Rasa Python for Virtual Assistant Development
 ---
 
 ## Objectives

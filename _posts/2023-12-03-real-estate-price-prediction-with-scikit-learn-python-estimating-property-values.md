@@ -1,8 +1,9 @@
 ---
-title: Real Estate Price Prediction with Scikit-Learn (Python) Estimating property values
 date: 2023-12-03
-permalink: posts/real-estate-price-prediction-with-scikit-learn-python-estimating-property-values
+description: We will be using ScikitLearn for machine learning algorithms, Pandas for data manipulation, and NumPy for numerical operations to detect pricing errors accurately.
 layout: article
+permalink: posts/real-estate-price-prediction-with-scikit-learn-python-estimating-property-values
+title: Inaccurate Property Pricing, ScikitLearn for Detecting Errors
 ---
 
 ## Objectives

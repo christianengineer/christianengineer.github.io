@@ -1,8 +1,9 @@
 ---
-title: Microservices Architecture for AI Systems
 date: 2023-11-17
-permalink: posts/microservices-architecture-ai-systems
+description: The AI tools and libraries we'll be using include TensorFlow for deep learning, Scikit-learn for machine learning, and spaCy for natural language processing. These tools are widely adopted, have strong community support, and offer powerful features for building AI systems.
 layout: article
+permalink: posts/microservices-architecture-ai-systems
+title: Scaling AI Systems with Microservices Architecture.
 ---
 
 ## Microservices Architecture for AI Systems

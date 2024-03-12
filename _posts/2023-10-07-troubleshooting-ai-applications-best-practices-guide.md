@@ -1,8 +1,9 @@
 ---
-title: Troubleshooting AI Applications
 date: 2023-10-07
-permalink: posts/troubleshooting-ai-applications-best-practices-guide
+description: We will be using TensorFlow for building and training neural networks due to its flexibility, scalability, and efficiency in handling complex AI models.
 layout: article
+permalink: posts/troubleshooting-ai-applications-best-practices-guide
+title: Malfunctioning neural networks, TensorFlow for AI performance.
 ---
 
 ## Troubleshooting AI Applications

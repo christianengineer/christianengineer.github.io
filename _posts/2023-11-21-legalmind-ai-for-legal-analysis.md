@@ -1,8 +1,9 @@
 ---
-title: LegalMind - AI for Legal Analysis
 date: 2023-11-21
-permalink: posts/legalmind-ai-for-legal-analysis
+description: Some of the AI tools and libraries we'll be using include Natural Language Processing (NLP) with libraries such as NLTK and spaCy for text analysis.
 layout: article
+permalink: posts/legalmind-ai-for-legal-analysis
+title: Complex Legal Analysis, LegalMind AI for Analyzing Legal Documents
 ---
 
 ## AI LegalMind - AI for Legal Analysis Repository

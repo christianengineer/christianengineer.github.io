@@ -1,8 +1,9 @@
 ---
-title: Competitive Intelligence Dashboard for Peru (GPT-3, Scikit-Learn, Airflow, Prometheus) Aggregates and analyzes competitor data, providing insights into market trends and opportunities for differentiation
 date: 2024-03-07
-permalink: posts/competitive-intelligence-dashboard-for-peru-gpt-3-scikit-learn-airflow-prometheus
+description: We will be using GPT-3 for natural language processing and ScikitLearn for machine learning algorithms to analyze competitive data and provide valuable insights.
 layout: article
+permalink: posts/competitive-intelligence-dashboard-for-peru-gpt-3-scikit-learn-airflow-prometheus
+title: Competitive Analysis Dashboard with GPT3 and ScikitLearn
 ---
 
 ## Competitive Intelligence Dashboard for Peru: Machine Learning Solution

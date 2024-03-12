@@ -1,8 +1,9 @@
 ---
-title: Customer Segmentation with Machine Learning Implement customer segmentation using unsupervised learning
 date: 2023-11-24
-permalink: posts/customer-segmentation-with-machine-learning-implement-customer-segmentation-using-unsupervised-learning
+description: We will be using tools such as TensorFlow and Keras for deep learning, scikit-learn for machine learning, and OpenCV for image processing to enhance customer segmentation.
 layout: article
+permalink: posts/customer-segmentation-with-machine-learning-implement-customer-segmentation-using-unsupervised-learning
+title: Inefficient Segmentation, AI for Enhanced Customer Segmentation
 ---
 
 ## AI Customer Segmentation with Machine Learning

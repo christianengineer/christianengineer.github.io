@@ -1,8 +1,9 @@
 ---
-title: Smart AI Contract Analyzer for Blockchain
 date: 2023-11-18
-permalink: posts/smart-ai-contract-analyzer-for-blockchain
+description: We will be using tools like TensorFlow and scikit-learn for machine learning, NLTK for natural language processing, and Solidity for smart contract analysis.
 layout: article
+permalink: posts/smart-ai-contract-analyzer-for-blockchain
+title: Inefficient Contract Analysis, AI Analytics for Blockchain
 ---
 
 ## Smart AI Contract Analyzer for Blockchain Technical Specifications

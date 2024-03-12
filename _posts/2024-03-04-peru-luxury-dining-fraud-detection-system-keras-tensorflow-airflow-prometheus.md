@@ -1,8 +1,9 @@
 ---
-title: Peru Luxury Dining Fraud Detection System (Keras, TensorFlow, Airflow, Prometheus) Detects and prevents fraudulent transactions, protecting revenue and enhancing customer trust
 date: 2024-03-04
-permalink: posts/peru-luxury-dining-fraud-detection-system-keras-tensorflow-airflow-prometheus
+description: We will be using Keras and TensorFlow for building deep learning models, as well as Apache Airflow for orchestrating the workflow and scheduling tasks efficiently.
 layout: article
+permalink: posts/peru-luxury-dining-fraud-detection-system-keras-tensorflow-airflow-prometheus
+title: Fraud Detection with Keras TensorFlow Airflow.
 ---
 
 ## Machine Learning Peru Luxury Dining Fraud Detection System

@@ -1,8 +1,9 @@
 ---
-title: RealEstateAnalyzer AI for Real Estate Analytics
 date: 2023-11-23
-permalink: posts/realestateanalyzer-ai-for-real-estate-analytics
+description: Some AI tools and libraries we will be using are Python, TensorFlow, scikit-learn, and Pandas for data processing, analysis, and machine learning algorithms.
 layout: article
+permalink: posts/realestateanalyzer-ai-for-real-estate-analytics
+title: Inefficiency in Real Estate Analysis, AI Tool for Efficient Analytics
 ---
 
 ## AI RealEstateAnalyzer Repository

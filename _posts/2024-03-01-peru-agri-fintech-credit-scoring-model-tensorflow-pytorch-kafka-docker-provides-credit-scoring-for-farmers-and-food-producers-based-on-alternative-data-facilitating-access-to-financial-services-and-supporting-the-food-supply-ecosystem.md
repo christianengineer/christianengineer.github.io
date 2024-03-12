@@ -1,8 +1,9 @@
 ---
-title: Peru Agri-FinTech Credit Scoring Model (TensorFlow, PyTorch, Kafka, Docker) Provides credit scoring for farmers and food producers based on alternative data, facilitating access to financial services and supporting the food supply ecosystem
 date: 2024-03-01
-permalink: posts/peru-agri-fintech-credit-scoring-model-tensorflow-pytorch-kafka-docker-provides-credit-scoring-for-farmers-and-food-producers-based-on-alternative-data-facilitating-access-to-financial-services-and-supporting-the-food-supply-ecosystem
+description: We will be using tools like TensorFlow and Scikit-learn for machine learning algorithms, NLTK for text processing, and Pandas for data manipulation. These tools provide the necessary capabilities for developing accurate credit scoring models.
 layout: article
+permalink: posts/peru-agri-fintech-credit-scoring-model-tensorflow-pytorch-kafka-docker-provides-credit-scoring-for-farmers-and-food-producers-based-on-alternative-data-facilitating-access-to-financial-services-and-supporting-the-food-supply-ecosystem
+title: Improving Credit Scoring with AgriFinTech AI Tools.
 ---
 
 ### Objectives:

@@ -1,8 +1,9 @@
 ---
-title: Music Genre Classification using PyTorch (Python) Categorizing music tracks
 date: 2023-12-04
-permalink: posts/music-genre-classification-using-pytorch-python-categorizing-music-tracks
+description: We will be using PyTorch for training and implementing neural networks, as well as libraries like NumPy for data manipulation and matplotlib for visualization.
 layout: article
+permalink: posts/music-genre-classification-using-pytorch-python-categorizing-music-tracks
+title: Inadequate music genre labels, PyTorch enhances classification
 ---
 
 ## AI Music Genre Classification using PyTorch

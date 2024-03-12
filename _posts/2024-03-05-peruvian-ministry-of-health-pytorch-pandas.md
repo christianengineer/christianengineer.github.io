@@ -1,8 +1,9 @@
 ---
-title: Peruvian Ministry of Health (PyTorch, Pandas) Public Health Analyst pain point is predicting disease outbreaks, solution is to use machine learning to analyze health data trends and predict potential outbreaks, enabling proactive healthcare responses
 date: 2024-03-05
-permalink: posts/peruvian-ministry-of-health-pytorch-pandas
+description: We will be using PyTorch for building neural networks, Pandas and NumPy for data manipulation, and Matplotlib for visualization to create an accurate pandemic prediction model.
 layout: article
+permalink: posts/peruvian-ministry-of-health-pytorch-pandas
+title: Unpredictable Outbreaks, PyTorch Pandemic Prediction Model
 ---
 
 ### Objectives and Benefits:

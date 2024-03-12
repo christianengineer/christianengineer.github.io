@@ -1,8 +1,9 @@
 ---
-title: Real-time Energy Usage Monitoring with IoT Sensors and TensorFlow for Reducing Carbon Footprint - Facility Manager's pain point is tracking and reducing excessive energy consumption in commercial buildings, solution is to implement a network of IoT sensors that monitor energy use in real time, coupled with TensorFlow for predictive analytics to identify inefficiencies and recommend optimizations
 date: 2024-03-10
-permalink: posts/real-time-energy-usage-monitoring-with-iot-sensors-and-tensorflow-for-reducing-carbon-footprint
+description: We will be using TensorFlow for implementing machine learning models and optimization algorithms. We'll also be using IoT sensors for collecting real-time data.
 layout: article
+permalink: posts/real-time-energy-usage-monitoring-with-iot-sensors-and-tensorflow-for-reducing-carbon-footprint
+title: Excessive Energy Use, IoT Sensors and TensorFlow for Optimization
 ---
 
 ## Machine Learning Solution for Real-time Energy Usage Monitoring with IoT Sensors and TensorFlow

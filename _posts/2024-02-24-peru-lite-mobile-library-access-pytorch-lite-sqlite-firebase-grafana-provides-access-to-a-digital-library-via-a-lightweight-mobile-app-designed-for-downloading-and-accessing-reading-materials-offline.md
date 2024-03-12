@@ -1,8 +1,9 @@
 ---
-title: Peru Lite Mobile Library Access (PyTorch Lite, SQLite, Firebase, Grafana) Provides access to a digital library via a lightweight mobile app, designed for downloading and accessing reading materials offline
 date: 2024-02-24
-permalink: posts/peru-lite-mobile-library-access-pytorch-lite-sqlite-firebase-grafana-provides-access-to-a-digital-library-via-a-lightweight-mobile-app-designed-for-downloading-and-accessing-reading-materials-offline
+description: We will be using PyTorch Lite for its efficient deployment on mobile devices, allowing us to optimize access to digital libraries with limited mobile data.
 layout: article
+permalink: posts/peru-lite-mobile-library-access-pytorch-lite-sqlite-firebase-grafana-provides-access-to-a-digital-library-via-a-lightweight-mobile-app-designed-for-downloading-and-accessing-reading-materials-offline
+title: Limited Mobile Access, PyTorch Lite Solves Digital Library Access
 ---
 
 ## Scalable File Structure for the Peru Lite Mobile Library Access

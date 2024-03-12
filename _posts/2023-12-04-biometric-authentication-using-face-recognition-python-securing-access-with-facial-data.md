@@ -1,8 +1,9 @@
 ---
-title: Biometric Authentication using Face Recognition (Python) Securing access with facial data
 date: 2023-12-04
-permalink: posts/biometric-authentication-using-face-recognition-python-securing-access-with-facial-data
+description: We will be using OpenCV for facial recognition and detection, along with Python for coding. OpenCV provides robust tools for image processing and analysis.
 layout: article
+permalink: posts/biometric-authentication-using-face-recognition-python-securing-access-with-facial-data
+title: Privacy concerns, OpenCV for facial data protection.
 ---
 
 **Objectives:**

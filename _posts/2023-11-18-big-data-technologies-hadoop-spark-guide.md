@@ -1,8 +1,9 @@
 ---
-title: "Big Data Technologies: A Focus on Hadoop and Spark"
 date: 2023-11-18
-permalink: posts/big-data-technologies-hadoop-spark-guide
+description: We will be using PySpark, MLlib, and SparkSQL for our project. PySpark allows us to interact with Spark in Python, MLlib for machine learning tasks, and SparkSQL for querying structured data efficiently.
 layout: article
+permalink: posts/big-data-technologies-hadoop-spark-guide
+title: Inefficient Processing Speed, Apache Spark for Improved Performance.
 ---
 
 ## Big Data Technologies: A Focus on Hadoop and Spark

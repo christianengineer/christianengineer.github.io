@@ -1,8 +1,9 @@
 ---
-title: Energy Cost Reduction Advisor for Peru Households (TensorFlow, Pandas, Flask, Grafana) Screens household energy usage patterns and matches with tailored advice on reducing energy bills through efficient practices and renewable energy sources
 date: 2024-03-03
-permalink: posts/energy-cost-reduction-advisor-for-peru-households-tensorflow-pandas-flask-grafana
+description: We will be using TensorFlow, scikit-learn, Pandas, and NumPy for data preprocessing, model building, and evaluation due to their robust capabilities and efficiency.
 layout: article
+permalink: posts/energy-cost-reduction-advisor-for-peru-households-tensorflow-pandas-flask-grafana
+title: Inefficient Energy Usage Analysis for Peru Households TensorFlow.
 ---
 
 ## Project: AI Energy Cost Reduction Advisor for Peru Households

@@ -1,8 +1,9 @@
 ---
-title: "Redefining Digital Imagery: A Comprehensive Blueprint for a Scalable and Cloud-Integrated AI-Based Photo Editor"
 date: 2023-02-10
-permalink: posts/machine-learning-enhanced-photo-editor-in-depth-guide
+description: We'll be using OpenCV for image processing, TensorFlow for machine learning, and Python's PIL library for image editing. These tools offer a comprehensive solution for efficient and effective AI-driven photo editing.
 layout: article
+permalink: posts/machine-learning-enhanced-photo-editor-in-depth-guide
+title: Inefficient Image Processing, Leveraging AI for Enhanced Photo Editing
 ---
 
 ## Machine Learning Enhanced Photo Editor

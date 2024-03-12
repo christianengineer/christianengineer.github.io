@@ -1,8 +1,9 @@
 ---
-title: AI-Enhanced Agricultural Advice (TensorFlow, Keras) For small-scale farmers
 date: 2023-12-17
-permalink: posts/ai-enhanced-agricultural-advice-tensorflow-keras-for-small-scale-farmers
+description: We will be using tools such as TensorFlow for machine learning models, OpenCV for image processing, and NLTK for natural language processing to provide personalized agricultural guidance to small farmers.
 layout: article
+permalink: posts/ai-enhanced-agricultural-advice-tensorflow-keras-for-small-scale-farmers
+title: Inadequate Agricultural Guidance, AI Solution for Small Farmers
 ---
 
 ### AI-Enhanced Agricultural Advice for Small-scale Farmers Repository

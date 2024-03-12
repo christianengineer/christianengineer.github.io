@@ -1,8 +1,9 @@
 ---
-title: AI-enhanced Pharmaceutical Research (Scikit-Learn, RabbitMQ, Docker) For drug development
 date: 2023-12-19
-permalink: posts/ai-enhanced-pharmaceutical-research-scikit-learn-rabbitmq-docker-for-drug-development
+description: We will be using Scikit-learn for machine learning, RabbitMQ for message queueing, Docker for containerization, and various AI libraries for accelerating drug development. Each tool plays a crucial role in speeding up research and improving efficiency.
 layout: article
+permalink: posts/ai-enhanced-pharmaceutical-research-scikit-learn-rabbitmq-docker-for-drug-development
+title: Drug development acceleration, ScikitLearn RabbitMQ Docker for AIenhanced research
 ---
 
 ## AI-enhanced Pharmaceutical Research Repository

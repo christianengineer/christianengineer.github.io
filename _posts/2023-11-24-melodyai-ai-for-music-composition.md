@@ -1,8 +1,9 @@
 ---
-title: MelodyAI AI for Music Composition
 date: 2023-11-24
-permalink: posts/melodyai-ai-for-music-composition
+description: We will be using Python programming language, TensorFlow for building the neural network model, and MIDI libraries for music representation and generation capabilities.
 layout: article
+permalink: posts/melodyai-ai-for-music-composition
+title: Innovative Music Composition with MelodyAI AI Trained Model
 ---
 
 ## AI MelodyAI AI for Music Composition Repository

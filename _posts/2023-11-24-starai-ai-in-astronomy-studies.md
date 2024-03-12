@@ -1,8 +1,9 @@
 ---
-title: StarAI AI in Astronomy Studies
 date: 2023-11-24
-permalink: posts/starai-ai-in-astronomy-studies
+description: We will be utilizing tools such as TensorFlow and Keras for deep learning algorithms, as well as scikit-learn for machine learning tasks due to their versatility and efficiency.
 layout: article
+permalink: posts/starai-ai-in-astronomy-studies
+title: Abnormal Galaxies Analysis with StarAI for Data Processing.
 ---
 
 ## AI StarAI in Astronomy Studies Repository

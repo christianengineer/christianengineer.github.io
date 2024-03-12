@@ -1,8 +1,9 @@
 ---
-title: Peru Informal Economy Tracker (BERT, GPT-3, Airflow, Prometheus) Utilizes NLP and economic modeling to understand the dynamics of the informal economy and its impact on poverty
 date: 2024-02-27
-permalink: posts/peru-informal-economy-tracker-bert-gpt-3-airflow-prometheus-utilizes-nlp-and-economic-modeling-to-understand-the-dynamics-of-the-informal-economy-and-its-impact-on-poverty
+description: We will be using BERT NLP model for text analysis and GPT-3 for generating economic models. Libraries like TensorFlow and OpenAI will be utilized for implementation.
 layout: article
+permalink: posts/peru-informal-economy-tracker-bert-gpt-3-airflow-prometheus-utilizes-nlp-and-economic-modeling-to-understand-the-dynamics-of-the-informal-economy-and-its-impact-on-poverty
+title: Informal Economy Analysis, BERT GPT3 for Economic Modeling
 ---
 
 ## AI Peru Informal Economy Tracker

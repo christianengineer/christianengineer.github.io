@@ -1,8 +1,9 @@
 ---
-title: Azure Cloud Solutions for Artificial Intelligence
 date: 2023-09-01
-permalink: posts/azure-cloud-solutions-ai-technology-guide
+description: We will be using Azure Cognitive Services for image recognition, speech recognition, and text analytics. Azure ML Studio will be used for custom machine learning models. These tools will help improve data processing efficiency and accuracy.
 layout: article
+permalink: posts/azure-cloud-solutions-ai-technology-guide
+title: Inefficient data processing, Azure AI Tools for Improved Solutions
 ---
 
 ## Azure Cloud Solutions for Artificial Intelligence

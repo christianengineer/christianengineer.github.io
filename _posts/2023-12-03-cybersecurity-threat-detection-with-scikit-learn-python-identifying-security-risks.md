@@ -1,8 +1,9 @@
 ---
-title: Cybersecurity Threat Detection with Scikit-Learn (Python) Identifying security risks
 date: 2023-12-03
-permalink: posts/cybersecurity-threat-detection-with-scikit-learn-python-identifying-security-risks
+description: We will be using Scikit-learn, a powerful machine learning library in Python, for threat detection in order to classify and predict security risks effectively.
 layout: article
+permalink: posts/cybersecurity-threat-detection-with-scikit-learn-python-identifying-security-risks
+title: Security risks ID, ScikitLearn for threat detection.
 ---
 
 ## AI Cybersecurity Threat Detection with Scikit-Learn

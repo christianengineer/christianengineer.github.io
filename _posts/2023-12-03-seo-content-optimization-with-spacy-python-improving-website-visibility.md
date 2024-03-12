@@ -1,8 +1,9 @@
 ---
-title: SEO Content Optimization with SpaCy (Python) Improving website visibility
 date: 2023-12-03
-permalink: posts/seo-content-optimization-with-spacy-python-improving-website-visibility
+description: We will be using SpaCy, a powerful open-source natural language processing library, to optimize website content for improved visibility on search engines.
 layout: article
+permalink: posts/seo-content-optimization-with-spacy-python-improving-website-visibility
+title: Poor website visibility, SpaCy for content optimization.
 ---
 
 ### Repository: AI SEO Content Optimization with SpaCy (Python) Improving Website Visibility

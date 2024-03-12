@@ -1,8 +1,9 @@
 ---
-title: Automated Financial Market Analysis Tool
 date: 2023-11-18
-permalink: posts/automated-financial-market-analysis-tool
+description: We will be using Python libraries such as Pandas, NumPy, and Scikit-learn for data analysis and machine learning algorithms to improve financial analysis efficiency.
 layout: article
+permalink: posts/automated-financial-market-analysis-tool
+title: Inefficient Financial Analysis, AI Tool for Improvement
 ---
 
 ## Automated Financial Market Analysis Tool

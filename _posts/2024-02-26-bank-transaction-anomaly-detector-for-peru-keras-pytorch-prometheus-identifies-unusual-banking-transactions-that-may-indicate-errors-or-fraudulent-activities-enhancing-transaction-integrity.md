@@ -1,8 +1,9 @@
 ---
-title: Bank Transaction Anomaly Detector for Peru (Keras, PyTorch, Prometheus) Identifies unusual banking transactions that may indicate errors or fraudulent activities, enhancing transaction integrity
 date: 2024-02-26
-permalink: posts/bank-transaction-anomaly-detector-for-peru-keras-pytorch-prometheus-identifies-unusual-banking-transactions-that-may-indicate-errors-or-fraudulent-activities-enhancing-transaction-integrity
+description: We will be using TensorFlow for deep learning algorithms, scikit-learn for machine learning models, NLTK for text processing, and OpenCV for image analysis.
 layout: article
+permalink: posts/bank-transaction-anomaly-detector-for-peru-keras-pytorch-prometheus-identifies-unusual-banking-transactions-that-may-indicate-errors-or-fraudulent-activities-enhancing-transaction-integrity
+title: Unusual banking transactions, AI tool for transaction integrity
 ---
 
 **AI Bank Transaction Anomaly Detector for Peru**

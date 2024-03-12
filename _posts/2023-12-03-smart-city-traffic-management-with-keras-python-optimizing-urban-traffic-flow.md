@@ -1,8 +1,9 @@
 ---
-title: Smart City Traffic Management with Keras (Python) Optimizing urban traffic flow
 date: 2023-12-03
-permalink: posts/smart-city-traffic-management-with-keras-python-optimizing-urban-traffic-flow
+description: We will be using TensorFlow and Keras for deep learning, OpenCV for image processing, and Scikit-learn for machine learning algorithms to optimize traffic control.
 layout: article
+permalink: posts/smart-city-traffic-management-with-keras-python-optimizing-urban-traffic-flow
+title: Inefficient Traffic Control, Keras for Traffic Optimization
 ---
 
 ### Objectives

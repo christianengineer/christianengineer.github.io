@@ -1,8 +1,9 @@
 ---
-title: Predictive Maintenance for Aerospace Equipment (Scikit-Learn, Kafka, Airflow) For aviation safety
 date: 2023-12-18
-permalink: posts/predictive-maintenance-for-aerospace-equipment-scikit-learn-kafka-airflow-for-aviation-safety
+description: For this project, we will be using Python and Scikit-learn for implementing machine learning algorithms to predict and optimize maintenance schedules.
 layout: article
+permalink: posts/predictive-maintenance-for-aerospace-equipment-scikit-learn-kafka-airflow-for-aviation-safety
+title: Unforeseen Issues, ScikitLearn for Maintenance Optimization.
 ---
 
 ## AI Predictive Maintenance for Aerospace Equipment

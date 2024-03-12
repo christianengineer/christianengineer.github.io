@@ -1,8 +1,9 @@
 ---
-title: ClaimProcessAI AI for Insurance Claims Automation
 date: 2023-11-23
-permalink: posts/claimprocessai-ai-for-insurance-claims-automation
+description: We will be using natural language processing(NLP) libraries like NLTK and spaCy for text analysis, TensorFlow for machine learning, and Rasa for chatbot development.
 layout: article
+permalink: posts/claimprocessai-ai-for-insurance-claims-automation
+title: Inefficient Claims Handling - AI Automation for Insurance.
 ---
 
 ## AI ClaimProcessAI for Insurance Claims Automation

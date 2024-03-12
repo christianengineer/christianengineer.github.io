@@ -1,8 +1,9 @@
 ---
-title: Automated Braille Translators (TensorFlow, Keras) For the visually impaired
 date: 2023-12-15
-permalink: posts/automated-braille-translators-tensorflow-keras-for-the-visually-impaired
+description: For this project, we will be using TensorFlow and Keras as AI tools and libraries. TensorFlow provides powerful neural network capabilities and Keras offers a user-friendly interface for building and training deep learning models, making it ideal for developing solutions for visually impaired individuals.
 layout: article
+permalink: posts/automated-braille-translators-tensorflow-keras-for-the-visually-impaired
+title: Lack of Braille access, TensorFlow Keras for visually impaired
 ---
 
 ## AI Automated Braille Translators

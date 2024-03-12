@@ -1,8 +1,9 @@
 ---
-title: Facial Recognition using Dlib (Python/C++) Identifying individuals from images
 date: 2023-12-03
-permalink: posts/facial-recognition-using-dlib-pythonc-identifying-individuals-from-images
+description: We will be using Dlib for facial recognition in order to analyze and detect faces in images with high accuracy and efficiency, ensuring privacy.
 layout: article
+permalink: posts/facial-recognition-using-dlib-pythonc-identifying-individuals-from-images
+title: Privacy concerns, Dlib for facial recognition.
 ---
 
 ## AI Facial Recognition using Dlib

@@ -1,8 +1,9 @@
 ---
-title: Theft and Fraud Detection System with TensorFlow and OpenCV for Secure Retail Environment - Security Officer's pain point is preventing theft and fraud, solution is to deploy AI for real-time surveillance and anomaly detection, increasing security and loss prevention
 date: 2024-03-11
-permalink: posts/theft-and-fraud-detection-system-with-tensorflow-and-opencv-for-secure-retail-environment
+description: We will be using TensorFlow for deep learning and OpenCV for image processing. These tools will help in identifying and detecting theft incidents efficiently.
 layout: article
+permalink: posts/theft-and-fraud-detection-system-with-tensorflow-and-opencv-for-secure-retail-environment
+title: Security Officers struggle with theft, TensorFlow and OpenCV is the solution.
 ---
 
 **Objectives and Benefits**

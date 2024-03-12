@@ -1,8 +1,9 @@
 ---
-title: Automated Video Encoding and Optimization (TensorFlow, Apache NiFi, Grafana) For streaming
 date: 2023-12-19
-permalink: posts/automated-video-encoding-and-optimization-tensorflow-apache-nifi-grafana-for-streaming
+description: We will be using TensorFlow for optimization due to its powerful capabilities in designing efficient neural networks and employing AI algorithms for video streaming improvement.
 layout: article
+permalink: posts/automated-video-encoding-and-optimization-tensorflow-apache-nifi-grafana-for-streaming
+title: Inefficient Video Streaming, TensorFlow for Optimization
 ---
 
 ### AI Automated Video Encoding and Optimization

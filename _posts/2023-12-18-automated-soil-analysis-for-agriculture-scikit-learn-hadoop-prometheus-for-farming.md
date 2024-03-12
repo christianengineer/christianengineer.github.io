@@ -1,8 +1,9 @@
 ---
-title: Automated Soil Analysis for Agriculture (Scikit-Learn, Hadoop, Prometheus) For farming
 date: 2023-12-18
-permalink: posts/automated-soil-analysis-for-agriculture-scikit-learn-hadoop-prometheus-for-farming
+description: We will be using Scikit-learn, Pandas, NumPy, and Matplotlib for our project. These tools are widely used for machine learning and data analysis in Python.
 layout: article
+permalink: posts/automated-soil-analysis-for-agriculture-scikit-learn-hadoop-prometheus-for-farming
+title: Inaccurate Soil Analysis, ScikitLearn for precise Agriculture.
 ---
 
 ## AI Automated Soil Analysis for Agriculture

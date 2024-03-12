@@ -1,8 +1,9 @@
 ---
-title: Stock Price Prediction using Keras (Python) Forecasting market trends
 date: 2023-12-02
-permalink: posts/stock-price-prediction-using-keras-python-forecasting-market-trends
+description: We will be using Keras, a high-level neural networks API written in Python, along with libraries such as NumPy and Pandas for data manipulation and analysis.
 layout: article
+permalink: posts/stock-price-prediction-using-keras-python-forecasting-market-trends
+title: Unpredictable market patterns, Keras Python for accurate forecasting.
 ---
 
 ## Objectives of the AI Stock Price Prediction using Keras (Python) Forecasting Market Trends Repository

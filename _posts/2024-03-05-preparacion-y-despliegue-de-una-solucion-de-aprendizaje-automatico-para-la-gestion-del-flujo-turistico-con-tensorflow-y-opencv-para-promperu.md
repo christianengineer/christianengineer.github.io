@@ -1,8 +1,9 @@
 ---
-title: Gestión de Flujo Turístico con IA utilizando TensorFlow y OpenCV para PromPerú (Lima, Perú). El punto de dolor del analista de marketing es optimizar las campañas de marketing para atraer turistas durante las temporadas bajas. La solución es analizar los datos del flujo turístico e identificar patrones, personalizando los esfuerzos de marketing para aumentar el turismo fuera de temporada
 date: 2024-03-05
-permalink: posts/preparacion-y-despliegue-de-una-solucion-de-aprendizaje-automatico-para-la-gestion-del-flujo-turistico-con-tensorflow-y-opencv-para-promperu
+description: We will be using TensorFlow for machine learning tasks and deep learning models, as well as OpenCV for image processing and computer vision tasks.
 layout: article
+permalink: posts/preparacion-y-despliegue-de-una-solucion-de-aprendizaje-automatico-para-la-gestion-del-flujo-turistico-con-tensorflow-y-opencv-para-promperu
+title: Optimizing Tourism Marketing with TensorFlow and OpenCV for PromPer Lima Per.
 ---
 
 ## Preparación y Despliegue de una Solución de Aprendizaje Automático para la Gestión del Flujo Turístico con TensorFlow y OpenCV para PromPerú

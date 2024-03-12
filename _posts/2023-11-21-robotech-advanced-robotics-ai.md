@@ -1,8 +1,9 @@
 ---
-title: RoboTech - Advanced Robotics AI
 date: 2023-11-21
-permalink: posts/robotech-advanced-robotics-ai
+description: For this project, we will be using tools like TensorFlow and PyTorch for building and training deep learning models, OpenCV for image processing, and ROS for robot control. These tools are popular in the AI and robotics community for their efficiency and flexibility.
 layout: article
+permalink: posts/robotech-advanced-robotics-ai
+title: 'RoboTech Challenges: AI Algorithms for Advanced Robotics'
 ---
 
 ### AI RoboTech - Advanced Robotics AI Repository

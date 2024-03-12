@@ -1,8 +1,9 @@
 ---
-title: EmotionAI - Emotion Recognition System
 date: 2023-11-22
-permalink: posts/emotionai-emotion-recognition-system
+description: We will be using TensorFlow and Keras for deep learning, OpenCV for computer vision, and NLTK for natural language processing to enhance accuracy in emotion recognition.
 layout: article
+permalink: posts/emotionai-emotion-recognition-system
+title: Lack of accuracy, EmotionAI for enhanced Emotion Recognition System
 ---
 
 ## AI EmotionAI - Emotion Recognition System Repository

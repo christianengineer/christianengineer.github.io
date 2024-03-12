@@ -1,8 +1,9 @@
 ---
-title: Cultural Fit Assessment in AI Startups
 date: 2023-11-05
-permalink: posts/cultural-fit-assessment-ai-startups-guide
+description: We will be using natural language processing tools like NLTK and spaCy for processing text data and scikit-learn for implementing machine learning algorithms.
 layout: article
+permalink: posts/cultural-fit-assessment-ai-startups-guide
+title: Lack of Alignment, AI Framework for Cultural Fit Assessment.
 ---
 
 ## Cultural Fit Assessment in AI Startups

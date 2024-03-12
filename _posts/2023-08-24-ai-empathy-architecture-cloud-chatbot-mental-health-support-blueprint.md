@@ -1,8 +1,9 @@
 ---
-title: "Architecting AI Empathy: A Scalable Cloud-Based Chatbot Development Blueprint for Advanced Mental Health Support"
 date: 2023-08-24
-permalink: posts/ai-empathy-architecture-cloud-chatbot-mental-health-support-blueprint
+description: We will be using tools like TensorFlow for natural language processing, Dialogflow for chatbot development, and sentiment analysis with NLTK for empathy detection.
 layout: article
+permalink: posts/ai-empathy-architecture-cloud-chatbot-mental-health-support-blueprint
+title: Lack of empathy, AI Chatbot for Mental Health Support
 ---
 
 ## Architecting AI Empathy: A Scalable Cloud-Based Chatbot Development Blueprint for Advanced Mental Health Support

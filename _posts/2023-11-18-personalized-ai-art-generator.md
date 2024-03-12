@@ -1,8 +1,9 @@
 ---
-title: Personalized AI Art Generator
 date: 2023-11-18
-permalink: posts/personalized-ai-art-generator
+description: We will be using TensorFlow and PyTorch for neural network models, StyleGAN for generative adversarial networks, and OpenCV for image manipulation.
 layout: article
+permalink: posts/personalized-ai-art-generator
+title: Lack of Creative Control, AI Algorithms for Artistic Personalization.
 ---
 
 ## Personalized AI Art Generator Repository Technical Specifications

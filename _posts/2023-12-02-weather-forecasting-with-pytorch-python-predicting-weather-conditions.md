@@ -1,8 +1,9 @@
 ---
-title: Weather Forecasting with PyTorch (Python) Predicting weather conditions
 date: 2023-12-02
-permalink: posts/weather-forecasting-with-pytorch-python-predicting-weather-conditions
+description: We will be utilizing PyTorch for its deep learning capabilities to create accurate weather predictions. Other tools include NumPy for numerical operations and Matplotlib for data visualization.
 layout: article
+permalink: posts/weather-forecasting-with-pytorch-python-predicting-weather-conditions
+title: Unstable Forecasting, PyTorch for Accurate Weather Predictions.
 ---
 
 ## AI Weather Forecasting with PyTorch

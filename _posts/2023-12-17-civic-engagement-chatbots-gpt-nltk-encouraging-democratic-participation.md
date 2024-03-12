@@ -1,8 +1,9 @@
 ---
-title: Civic Engagement Chatbots (GPT, NLTK) Encouraging democratic participation
 date: 2023-12-17
-permalink: posts/civic-engagement-chatbots-gpt-nltk-encouraging-democratic-participation
+description: For this project, we will be using GPT-3 for generating text, NLTK for natural language processing, and boosting algorithms for analyzing and enhancing citizen engagement data. These tools will help us create more engaging and relevant content for promoting democracy.
 layout: article
+permalink: posts/civic-engagement-chatbots-gpt-nltk-encouraging-democratic-participation
+title: Lack of Citizen Engagement, GPT NLTK Boosting Democracy.
 ---
 
 ### Objectives

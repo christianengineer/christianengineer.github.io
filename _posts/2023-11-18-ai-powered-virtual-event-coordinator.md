@@ -1,8 +1,9 @@
 ---
-title: AI-Powered Virtual Event Coordinator
 date: 2023-11-18
-permalink: posts/ai-powered-virtual-event-coordinator
+description: We will be using tools like TensorFlow for machine learning, OpenCV for image processing, and Pandas for data manipulation to optimize event scheduling.
 layout: article
+permalink: posts/ai-powered-virtual-event-coordinator
+title: Inefficient scheduling, AI algorithm for virtual event coordination
 ---
 
 ## Technical Specifications: AI-Powered Virtual Event Coordinator Repository

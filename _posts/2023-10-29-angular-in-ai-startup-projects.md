@@ -1,8 +1,9 @@
 ---
-title: Angular in AI Startup Projects
 date: 2023-10-29
-permalink: posts/angular-in-ai-startup-projects
+description: We will be using TensorFlow for its powerful deep learning capabilities, along with Python for programming. Additionally, we may use Keras for building neural networks.
 layout: article
+permalink: posts/angular-in-ai-startup-projects
+title: Outdated technology, TensorFlow for project modernization
 ---
 
 ## Angular in AI Startup Projects

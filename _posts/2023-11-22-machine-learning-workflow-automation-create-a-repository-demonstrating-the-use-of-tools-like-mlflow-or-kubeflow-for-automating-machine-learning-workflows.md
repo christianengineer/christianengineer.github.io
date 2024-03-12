@@ -1,8 +1,9 @@
 ---
-title: Machine Learning Workflow Automation - Create a repository demonstrating the use of tools like MLflow or Kubeflow for automating machine learning workflows.
 date: 2023-11-22
-permalink: posts/machine-learning-workflow-automation-create-a-repository-demonstrating-the-use-of-tools-like-mlflow-or-kubeflow-for-automating-machine-learning-workflows
+description: We will be using MLflow for experiment tracking, model management, and deployment. Additionally, tools like scikit-learn and TensorFlow will be utilized for building and training machine learning models efficiently.
 layout: article
+permalink: posts/machine-learning-workflow-automation-create-a-repository-demonstrating-the-use-of-tools-like-mlflow-or-kubeflow-for-automating-machine-learning-workflows
+title: Inefficiencies in ML Workflow Automation, MLflow for streamlining.
 ---
 
 ## AI Machine Learning Workflow Automation Repository

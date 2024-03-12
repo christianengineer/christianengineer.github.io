@@ -1,8 +1,9 @@
 ---
-title: Air Quality Prediction Models (Keras, TensorFlow) To combat air pollution
 date: 2023-12-15
-permalink: posts/air-quality-prediction-models-keras-tensorflow-to-combat-air-pollution
+description: For this project, we will be using Keras and TensorFlow for building and training our deep learning models due to their ease of use and efficiency in handling large datasets.
 layout: article
+permalink: posts/air-quality-prediction-models-keras-tensorflow-to-combat-air-pollution
+title: Air Pollution Forecasting Utilizing Keras TensorFlow for Enhanced Air QualityPrediction
 ---
 
 ## Objectives

@@ -1,8 +1,9 @@
 ---
-title: Automated Sentiment Analysis for Brand Monitoring (TensorFlow, Apache Beam, Kubernetes) For PR management
 date: 2023-12-21
-permalink: posts/automated-sentiment-analysis-for-brand-monitoring-tensorflow-apache-beam-kubernetes-for-pr-management
+description: We will be using TensorFlow for natural language processing and sentiment analysis. We will also use NLTK for text processing tasks.
 layout: article
+permalink: posts/automated-sentiment-analysis-for-brand-monitoring-tensorflow-apache-beam-kubernetes-for-pr-management
+title: Brand monitoring crisis, TensorFlow drives PR management.
 ---
 
 ## AI Automated Sentiment Analysis for Brand Monitoring

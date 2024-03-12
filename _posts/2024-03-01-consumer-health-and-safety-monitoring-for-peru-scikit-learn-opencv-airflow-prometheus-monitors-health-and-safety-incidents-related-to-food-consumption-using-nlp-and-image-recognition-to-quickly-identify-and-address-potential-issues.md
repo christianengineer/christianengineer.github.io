@@ -1,8 +1,9 @@
 ---
-title: Consumer Health and Safety Monitoring for Peru (Scikit-Learn, OpenCV, Airflow, Prometheus) Monitors health and safety incidents related to food consumption, using NLP and image recognition to quickly identify and address potential issues
 date: 2024-03-01
-permalink: posts/consumer-health-and-safety-monitoring-for-peru-scikit-learn-opencv-airflow-prometheus-monitors-health-and-safety-incidents-related-to-food-consumption-using-nlp-and-image-recognition-to-quickly-identify-and-address-potential-issues
+description: For the project, we will be using libraries such as ScikitLearn and OpenCV for machine learning and computer vision tasks to detect health and safety incidents accurately and efficiently.
 layout: article
+permalink: posts/consumer-health-and-safety-monitoring-for-peru-scikit-learn-opencv-airflow-prometheus-monitors-health-and-safety-incidents-related-to-food-consumption-using-nlp-and-image-recognition-to-quickly-identify-and-address-potential-issues
+title: Health and safety incident detection, ScikitLearn OpenCV AI for monitoring
 ---
 
 ## AI Consumer Health and Safety Monitoring for Peru

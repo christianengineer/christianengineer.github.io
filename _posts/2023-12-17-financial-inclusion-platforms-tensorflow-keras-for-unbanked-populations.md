@@ -1,8 +1,9 @@
 ---
-title: Financial Inclusion Platforms (TensorFlow, Keras) For unbanked populations
 date: 2023-12-17
-permalink: posts/financial-inclusion-platforms-tensorflow-keras-for-unbanked-populations
+description: We will be using TensorFlow for building and training machine learning models, along with libraries like NumPy for numerical computations and Matplotlib for data visualization. These tools provide a powerful framework for analyzing financial data and promoting financial inclusion.
 layout: article
+permalink: posts/financial-inclusion-platforms-tensorflow-keras-for-unbanked-populations
+title: Lack of access, TensorFlow for financial inclusion.
 ---
 
 ### AI Financial Inclusion Platforms for Unbanked Populations

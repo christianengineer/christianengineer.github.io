@@ -1,8 +1,9 @@
 ---
-title: Space Exploration Data Analysis with AstroPy (Python) Studying astronomical data
 date: 2023-12-14
-permalink: posts/space-exploration-data-analysis-with-astropy-python-studying-astronomical-data
+description: We will be using tools like scikit-learn for machine learning tasks, TensorFlow for neural network modeling, and NumPy for numerical operations in order to improve signal extraction from noisy space data with AstroPy.
 layout: article
+permalink: posts/space-exploration-data-analysis-with-astropy-python-studying-astronomical-data
+title: Low signal-to-noise ratio, AstroPy for enhanced space data analysis
 ---
 
 ## AI Space Exploration Data Analysis with AstroPy

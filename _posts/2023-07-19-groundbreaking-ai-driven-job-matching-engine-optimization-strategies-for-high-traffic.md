@@ -1,8 +1,9 @@
 ---
-title: "Transforming Recruitment Paradigm: A Master Plan for Designing an Ultra-Scalable, AI-Powered, Cloud-Facilitated Job Matching Engine Optimized for High-Volume Data Handling and Traffic Efficiency"
 date: 2023-07-19
-permalink: posts/groundbreaking-ai-driven-job-matching-engine-optimization-strategies-for-high-traffic
+description: We will be using tools like natural language processing (NLP) for analyzing job descriptions and candidate profiles, and machine learning algorithms for enhanced job matching.
 layout: article
+permalink: posts/groundbreaking-ai-driven-job-matching-engine-optimization-strategies-for-high-traffic
+title: Inefficient Recruitment Process,AI for Enhanced Job Matching
 ---
 
 ## AI-Driven Job Matching Engine Repository

@@ -1,8 +1,9 @@
 ---
-title: Affordable Housing Analysis (Scikit-Learn, Pandas) For urban development
 date: 2023-12-15
-permalink: posts/affordable-housing-analysis-scikit-learn-pandas-for-urban-development
+description: For this project, we will be using ScikitLearn for machine learning tasks and Pandas for data analysis due to their robust capabilities and ease of use.
 layout: article
+permalink: posts/affordable-housing-analysis-scikit-learn-pandas-for-urban-development
+title: Lack of affordable housing data, ScikitLearn Pandas for analysis.
 ---
 
 ## AI Affordable Housing Analysis Repository

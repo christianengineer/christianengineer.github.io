@@ -1,8 +1,9 @@
 ---
-title: AgriBot - AI for Agriculture
 date: 2023-11-21
-permalink: posts/agribot-ai-for-agriculture
+description: We will be using TensorFlow for machine learning models, OpenCV for image processing, and scikit-learn for data analysis in our AgriBot AI project.
 layout: article
+permalink: posts/agribot-ai-for-agriculture
+title: Inefficient Crop Monitoring, AgriBot AI for Precision Agriculture.
 ---
 
 ## AI AgriBot - AI for Agriculture Repository

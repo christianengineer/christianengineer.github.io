@@ -1,8 +1,9 @@
 ---
-title: CI/CD Pipelines in AI Application Deployment
 date: 2023-11-12
-permalink: posts/ci-cd-pipelines-in-ai-application-deployment-guide
+description: We will be using tools such as TensorFlow, PyTorch, Scikit-learn, and Keras to build and optimize our AI pipelines for optimal efficiency in deployment.
 layout: article
+permalink: posts/ci-cd-pipelines-in-ai-application-deployment-guide
+title: Inefficient Deployment, Using AI Pipelines for Optimal Efficiency
 ---
 
 ## CI/CD Pipelines in AI Application Deployment

@@ -1,8 +1,9 @@
 ---
-title: Language Translation with Seq2Seq Models (Python) Translating text between languages
 date: 2023-12-03
-permalink: posts/language-translation-with-seq2seq-models-python-translating-text-between-languages
+description: We will be using TensorFlow for building the Seq2Seq model, NLTK for preprocessing text data, and TensorFlow Serving for serving the model for translation.
 layout: article
+permalink: posts/language-translation-with-seq2seq-models-python-translating-text-between-languages
+title: Inaccurate translations, Seq2Seq for language translation.
 ---
 
 ## AI Language Translation with Seq2Seq Models

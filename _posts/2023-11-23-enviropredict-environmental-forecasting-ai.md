@@ -1,8 +1,9 @@
 ---
-title: EnviroPredict Environmental Forecasting AI
 date: 2023-11-23
-permalink: posts/enviropredict-environmental-forecasting-ai
+description: We will be using Python for programming AI algorithms, TensorFlow for machine learning, OpenCV for image processing, and Sci-Kit Learn for data analysis.
 layout: article
+permalink: posts/enviropredict-environmental-forecasting-ai
+title: Inaccurate Weather Forecasting AI for Improved Environmental Predictions
 ---
 
 ## AI EnviroPredict Environmental Forecasting AI Repository

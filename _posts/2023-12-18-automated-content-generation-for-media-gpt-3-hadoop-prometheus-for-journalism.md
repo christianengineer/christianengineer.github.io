@@ -1,8 +1,9 @@
 ---
-title: Automated Content Generation for Media (GPT-3, Hadoop, Prometheus) For journalism
 date: 2023-12-18
-permalink: posts/automated-content-generation-for-media-gpt-3-hadoop-prometheus-for-journalism
+description: For the project, we'll be using OpenAI's GPT-3 API for natural language processing. We'll also leverage libraries like TensorFlow and NLTK for NLP tasks.
 layout: article
+permalink: posts/automated-content-generation-for-media-gpt-3-hadoop-prometheus-for-journalism
+title: Content automation crisis solved by GPT3 integration.
 ---
 
 ## AI Automated Content Generation for Media

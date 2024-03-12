@@ -1,8 +1,9 @@
 ---
-title: FoodTechAI AI in Food Technology
 date: 2023-11-23
-permalink: posts/foodtechai-ai-in-food-technology
+description: We will be using TensorFlow for building and training deep learning models, OpenCV for image processing, and NLP libraries like NLTK for text analysis.
 layout: article
+permalink: posts/foodtechai-ai-in-food-technology
+title: Lack of Efficiency, Implementation of AI for FoodTech Solution
 ---
 
 ### AI FoodTech Repository

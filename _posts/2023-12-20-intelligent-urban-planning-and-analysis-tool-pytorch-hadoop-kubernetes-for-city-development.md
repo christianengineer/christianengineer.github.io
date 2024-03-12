@@ -1,8 +1,9 @@
 ---
-title: Intelligent Urban Planning and Analysis Tool (PyTorch, Hadoop, Kubernetes) For city development
 date: 2023-12-20
-permalink: posts/intelligent-urban-planning-and-analysis-tool-pytorch-hadoop-kubernetes-for-city-development
+description: We will be using PyTorch for deep learning, Hadoop for big data processing, and Kubernetes for container orchestration. These tools are chosen for their scalability and efficiency in handling complex urban planning data.
 layout: article
+permalink: posts/intelligent-urban-planning-and-analysis-tool-pytorch-hadoop-kubernetes-for-city-development
+title: Inefficient City Growth, PyTorch Hadoop Kubernetes for Urban Planning.
 ---
 
 ## Objectives of the AI Intelligent Urban Planning and Analysis Tool

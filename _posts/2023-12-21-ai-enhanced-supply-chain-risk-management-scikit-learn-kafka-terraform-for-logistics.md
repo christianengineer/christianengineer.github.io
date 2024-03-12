@@ -1,8 +1,9 @@
 ---
-title: AI-enhanced Supply Chain Risk Management (Scikit-Learn, Kafka, Terraform) For logistics
 date: 2023-12-21
-permalink: posts/ai-enhanced-supply-chain-risk-management-scikit-learn-kafka-terraform-for-logistics
+description: We will be using ScikitLearn for machine learning algorithms, Kafka for real-time data streaming, and Terraform for infrastructure automation to optimize logistics operations and mitigate risks using AI-driven solutions.
 layout: article
+permalink: posts/ai-enhanced-supply-chain-risk-management-scikit-learn-kafka-terraform-for-logistics
+title: Inefficient Logistics, AI-driven Risk Management, ScikitLearn Kafka Terraform.
 ---
 
 ## AI-enhanced Supply Chain Risk Management

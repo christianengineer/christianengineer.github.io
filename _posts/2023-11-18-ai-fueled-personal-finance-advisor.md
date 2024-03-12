@@ -1,8 +1,9 @@
 ---
-title: AI-Fueled Personal Finance Advisor
 date: 2023-11-18
-permalink: posts/ai-fueled-personal-finance-advisor
+description: We will be using TensorFlow for deep learning, pandas for data manipulation, and scikit-learn for machine learning algorithms to provide accurate and efficient solutions.
 layout: article
+permalink: posts/ai-fueled-personal-finance-advisor
+title: Inefficient Personal Finance Management, AI System for Improved Solutions
 ---
 
 ## AI-Fueled Personal Finance Advisor

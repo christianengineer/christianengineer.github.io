@@ -1,8 +1,9 @@
 ---
-title: ChainOptimize - Supply Chain Optimization AI
 date: 2023-11-21
-permalink: posts/chainoptimize-supply-chain-optimization-ai
+description: We will be using AI tools such as TensorFlow, Scikit-learn, and Pandas to analyze data, identify bottlenecks, and optimize supply chain processes efficiently.
 layout: article
+permalink: posts/chainoptimize-supply-chain-optimization-ai
+title: Inefficient bottlenecks, AI-driven optimization for supply chain.
 ---
 
 ### AI ChainOptimize - Supply Chain Optimization AI Repository

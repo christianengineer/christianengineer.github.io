@@ -1,8 +1,9 @@
 ---
-title: CrisisAvert AI for Crisis Management
 date: 2023-11-23
-permalink: posts/crisisavert-ai-for-crisis-management
+description: We will be using natural language processing (NLP) libraries like NLTK and spaCy for text analysis, TensorFlow for machine learning, and Tableau for data visualization.
 layout: article
+permalink: posts/crisisavert-ai-for-crisis-management
+title: Lack of crisis prediction accuracy, AI tool for crisis management.
 ---
 
 ## AI CrisisAvert for Crisis Management

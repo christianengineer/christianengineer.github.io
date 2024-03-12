@@ -1,8 +1,9 @@
 ---
-title: Speech Recognition using PyTorch (Python) Converting spoken words to text
 date: 2023-12-02
-permalink: posts/speech-recognition-using-pytorch-python-converting-spoken-words-to-text
+description: We will be using PyTorch for speech recognition due to its flexibility in building deep learning models. Additionally, we may use libraries like librosa for audio processing.
 layout: article
+permalink: posts/speech-recognition-using-pytorch-python-converting-spoken-words-to-text
+title: Difficulty in Speech Recognition, PyTorch Tool for Converting Speech to Text
 ---
 
 ## AI Speech Recognition using PyTorch

@@ -1,8 +1,9 @@
 ---
-title: Retail Inventory Optimization Model (TensorFlow, Airflow, Grafana) For supply chain efficiency
 date: 2023-12-20
-permalink: posts/retail-inventory-optimization-model-tensorflow-airflow-grafana-for-supply-chain-efficiency
+description: We will be using TensorFlow for algorithm development, Pandas for data manipulation, and scikit-learn for predictive modeling to optimize inventory levels.
 layout: article
+permalink: posts/retail-inventory-optimization-model-tensorflow-airflow-grafana-for-supply-chain-efficiency
+title: Inefficient Supply Chain, TensorFlow for Inventory Optimization
 ---
 
 ## AI Retail Inventory Optimization Model
