@@ -3,11 +3,11 @@ from openai import OpenAI
 from datetime import datetime, timedelta
 import re
 
-# # Remove comments to test locally
-# from dotenv import load_dotenv
+# Remove comments to test locally
+from dotenv import load_dotenv
 
-# # Load environment variables from .env file
-# load_dotenv()
+# Load environment variables from .env file
+load_dotenv()
 
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
@@ -58,10 +58,12 @@ def generate_post(project_name):
     # ]
 
     # v3.0 - March 11, 2024
-    system_content = f"You are an Artificial Intelligence Engineer writing in-depth documentation to explore, discuss and predict a solution for this project: '{project_name}'. Consider the potential for SEO-optimized content that showcases our expertise and findings, appealing to both search engines and the wider artificial intelligence community. Respond markdown format."
+    system_content = f"You are an Artificial Intelligence Engineer writing an in-depth documentation to explore, discuss and predict a solution for this project: '{project_name}'. Consider the potential for SEO-optimized content that showcases our expertise and findings, appealing to both search engines and the wider artificial intelligence community. Respond in markdown format."
 
     prompts = [
         f"Based on the project title and objectives, what should be the primary focus be? What would be a target variable name for our model that encapsulates the project's goal? Explain why this target variable is important for this project. Explore example values and how a user could make decisions from these values",
+        # 2024-03-19
+        f"What detailed plan do you suggest for sourcing data for this project? Include links of resources.",
         f"Using fictitious mocked data with a clear description of each input, generate the python script that will create and train a model, and finally print the predicted values of the target variable for the test set and evaluate the model's performance using an appropriate metric",
         f"What secondary target variable, which we'll refer to as '[Secondary_Target_Variable_Name]', could play a critical role in enhancing our predictive model's accuracy and insights? How does '[Secondary_Target_Variable_Name]' complement '[Primary_Target_Variable_Name]' in our quest to achieve groundbreaking results in [specific domain]? Explore example values and how a user could make decisions from these values",
         f"Using fictitious mocked data, generate the python script that will create and train a model using the '[Primary_Target_Variable_Name]' and '[Secondary_Target_Variable_Name]', and finally print the predicted values of the target variable for the test set and evaluate the model's performance using an appropriate metric",
