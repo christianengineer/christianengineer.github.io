@@ -3,6 +3,7 @@ title: AI-Driven Copper Deposit Locator with TensorFlow and GeoPandas for Compa√
 date: 2024-03-19
 permalink: posts/ai-driven-copper-deposit-locator-with-tensorflow-and-geopandas-for-compaa-minera-antapaccay-in-peru
 layout: article
+post_image: assets/images/posts/2024-03-19-ai-driven-copper-deposit-locator-with-tensorflow-and-geopandas-for-compaa-minera-antapaccay-in-peru.webp
 ---
 
 ## Primary Focus

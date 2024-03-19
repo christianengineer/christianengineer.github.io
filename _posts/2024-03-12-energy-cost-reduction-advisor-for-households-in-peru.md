@@ -3,6 +3,7 @@ title: Energy Cost Reduction Advisor for Households In Peru - Screens household 
 date: 2024-03-12
 permalink: posts/energy-cost-reduction-advisor-for-households-in-peru
 layout: article
+post_image: assets/images/posts/2024-03-12-energy-cost-reduction-advisor-for-households-in-peru.webp
 ---
 
 ## Project Focus and Target Variable
