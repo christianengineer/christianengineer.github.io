@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Artificial Intelligence Projects
-description: Welcome to my AI Projects Blog, where I dive into the world of artificial intelligence by harnessing the power of the industry's most used tools. My exploration spans TensorFlow and PyTorch for deep learning, Scikit-learn for machine learning algorithms, Keras for neural networks, and Pandas along with NumPy for data manipulation and analysis. I bring visuals to life with Matplotlib and manage projects in Jupyter Notebooks for seamless collaboration. OpenCV guides us through computer vision projects, while FastAI offers an accessible approach to deep learning. Join me as I navigate the complexities and breakthroughs of AI, leveraging these powerful tools to push the boundaries of technology and innovation.
+title: Artificial Intelligence Projects by Christian Ipanaque
+description: My exploration spans TensorFlow and PyTorch for deep learning, Scikit-learn for machine learning algorithms, Keras for neural networks, and Pandas along with NumPy for data manipulation and analysis.
 ---
 
 {% include header_navigation.html %}
@@ -13,23 +13,26 @@ description: Welcome to my AI Projects Blog, where I dive into the world of arti
   <h2>Latest Articles</h2>
 </header>
 <main>
-    {% for post in site.posts %}
-    <article>
-      {% if post.post_image %}
-      <figure class="figure">
-        <img src="{{ post.post_image }}" alt="{{ post.title }}">
-      </figure>
-      {% endif %}
-      <header class="article-header">
-        <h3>{{ post.title }}</h3>
-      </header>
-      <section class="article-section">
-        <p>{{ post.date | date: "%B %-d, %Y" }}</p>
-        <p>
-          <a href="{{ post.url | relative_url }}">Read more</a>
-        </p>
-      </section>
-    </article>
-    {% endfor %}
+  {% for post in site.posts %}
+  <article>
+    {% if post.post_image %}
+    <figure class="figure">
+      <img src="{{ post.post_image }}" alt="{{ post.title }}">
+    </figure>
+    {% endif %}
+    <header class="article-header">
+      <h3>{{ post.title }}</h3>
+    </header>
+    <section class="article-section">
+      <p>{{ post.date | date: "%B %-d, %Y" }}</p>
+      <p>
+        <a href="{{ post.url | relative_url }}">Read more</a>
+      </p>
+    </section>
+    <!-- <section>
+       {{ post.content | markdownify | strip_html | truncatewords: 50 }}
+    </section> -->
+  </article>
+  {% endfor %}
 </main>
 {% include footer_navigation.html %}

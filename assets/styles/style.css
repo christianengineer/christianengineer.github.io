@@ -77,9 +77,11 @@ h3 {
 /* reading space  */
 nav,
 header,
+footer p,
 .article-header,
 .article-section,
-.article-single-content {
+.article-single-content,
+.page-content {
   margin: 0 15vw 0 15vw;
 }
 
@@ -101,9 +103,11 @@ main article:not(:first-child) {
 @media (max-width: 900px) {
   nav,
   header,
+  footer p,
   .article-header,
   .article-section,
-  .article-single-content {
+  .article-single-content,
+  .page-content {
     margin: 0 5vw 0 5vw;
   }
 }

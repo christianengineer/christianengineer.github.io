@@ -1,13 +1,28 @@
+title: Artificial Intelligence Projects by Christian Ipanaque
+url: https://christianipanaque.com
 author:
   name: Christian Ipanaque
-  email: "christian.ipanaque@engineer.com"
-  url: https://github.com/christianipanaque
+  email: christian.ipanaque@engineer.com
+  url: https://linkedin.com/christianipanaque-ai
+logo: /assets/images/ci-ai-logo.webp
+page_excerpts: true
 collections:
   posts:
     output: true
+collections:
+  pages:
+    output: true
 defaults:
-  - scope:
-      path: ""
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
     values:
-      seo_description_max_words: 200
+      seo_description_max_words: 5
       image: /assets/images/ci-ai-logo.webp
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      seo_description_max_words: 5
+      layout: "pages"

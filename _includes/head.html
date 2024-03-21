@@ -1,8 +1,12 @@
 <head>
-  {% seo %}
+  {% seo title=false %}
+  <title>{{ page.title }}</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico" />
+
+  <meta itemprop="description" name="description"
+    content="{% if page.description %}{{ page.description | truncate: 160 }}{% else %}{{ site.description | truncate: 160  }}{% endif %}" />
 
   <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-MD51YRYGX9"></script>
   <script>
