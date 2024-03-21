@@ -137,3 +137,16 @@ nav ul li {
   display: inline-block; /* Displays list items inline but with block features */
   margin-right: 20px; /* Adjust space between items. Adjust as necessary */
 }
+
+.footer-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-nav ul {
+  padding-inline-start: 0;
+}
+
+.footer-copyright {
+  margin-bottom: 100px;
+}
