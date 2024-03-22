@@ -3,6 +3,7 @@ title: Personalized Health and Longevity Platform using Genomic Data Analysis, A
 date: 2024-03-22
 permalink: posts/personalized-health-and-longevity-platform-using-genomic-data-analysis-ai-driven-nutritional-planning-and-telemedicine-integrations
 layout: article
+post_image: assets/images/posts/2024-03-22-personalized-health-and-longevity-platform-using-genomic-data-analysis-ai-driven-nutritional-planning-and-telemedicine-integrations.webp
 ---
 
 # Project Focus and Target Variable
