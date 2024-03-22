@@ -6,23 +6,25 @@ layout: article
 post_image: assets/images/posts/2024-03-12-energy-cost-reduction-advisor-for-households-in-peru.webp
 ---
 
-## Project Focus and Target Variable
+We'll analyse household energy usage patterns to provide tailored advice on reducing energy bills through efficient practices and renewable energy sources.
 
-### Primary Focus:
-The primary focus of the project should be on analyzing household energy usage patterns to provide tailored advice on reducing energy bills through efficient practices and renewable energy sources.
+## Target Variable Name
 
-### Target Variable Name:
-A suitable target variable name for the model could be `Energy Cost Reduction Score`. This score would be a representation of the potential energy cost savings achievable through following the recommended advice provided by the system.
+The model's target variable name will be the `Energy Cost Reduction Score`. This score represents the potential energy cost savings achievable by following the system's recommended advice.
 
-### Importance of Target Variable:
-The `Energy Cost Reduction Score` is crucial for this project as it encapsulates the ultimate goal of helping households in Peru reduce their energy costs. By quantifying the potential savings into a single score, users can easily understand and compare the effectiveness of different recommendations.
+### Importance of Target Variable
 
-### Example Values:
-- If a household receives an `Energy Cost Reduction Score` of 80%, it indicates that the recommended actions have the potential to reduce their energy costs by 80%.
+The Energy Cost Reduction Score is crucial for this project as it encapsulates the ultimate goal of helping households in Peru reduce their energy costs. By quantifying the potential savings into a single score, users can easily understand and compare the effectiveness of different recommendations.
+
+### Example Values
+
+- If a household receives an Energy Cost Reduction Score of 80%, it indicates that the recommended actions have the potential to reduce their energy costs by 80%.
+
 - Alternatively, a score of 20% would suggest there is limited room for improvement in energy cost reduction through the current recommendations.
 
-### User Decision-making:
-Based on the `Energy Cost Reduction Score`, users can prioritize which recommendations to implement. For example, a household with a low score may focus on adopting more energy-efficient appliances, while a high-scoring household may consider investing in solar panels for significant cost savings in the long term. This score serves as a practical metric for users to take actionable steps towards reducing their energy bills effectively.
+### User Decision-making
+
+Users can prioritize which recommendations to implement based on the Energy Cost Reduction Score. For example, a household with a low score may focus on adopting more energy-efficient appliances, while a high-scoring household may consider investing in solar panels for significant long-term cost savings. This score is a practical metric for users to take actionable steps towards effectively reducing their energy bills.
 
 ```python
 # Import necessary libraries
@@ -69,16 +71,20 @@ This Python script generates a mock dataset with fictitious data representing ho
 ## Secondary Target Variable: Energy Efficiency Improvement Potential Score
 
 ### Importance of Secondary Target Variable:
+
 The `Energy Efficiency Improvement Potential Score` could play a crucial role in enhancing the predictive model's accuracy and providing valuable insights. This score would quantify the potential for improving energy efficiency within a household, considering factors such as appliance usage, insulation quality, and heating/cooling systems. By incorporating this secondary target variable, the model can offer more tailored and impactful recommendations to users, ultimately leading to significant energy cost reductions and environmental benefits.
 
 ### Complementarity with Primary Target Variable:
+
 The `Energy Efficiency Improvement Potential Score` complements the `Energy Cost Reduction Score` by providing a deeper understanding of where and how energy efficiency improvements can be made within a household. While the `Energy Cost Reduction Score` focuses on the overall potential savings, the `Energy Efficiency Improvement Potential Score` delves into specific areas for optimization, guiding users towards targeted actions that can maximize energy savings and sustainability efforts.
 
 ### Example Values:
+
 - A household with a high `Energy Efficiency Improvement Potential Score` of 90% may benefit from upgrading to energy-efficient appliances, improving insulation, and optimizing heating/cooling settings for significant long-term energy savings.
 - In contrast, a low score of 30% could indicate that the household has already implemented many energy-saving practices, prompting a focus on more advanced solutions like solar panel installation or smart energy management systems.
 
 ### User Decision-making:
+
 Users can leverage the `Energy Efficiency Improvement Potential Score` to prioritize energy efficiency upgrades based on specific recommendations tailored to their household profile. For instance, a user with a high score in heating/cooling systems optimization could prioritize insulating their home or upgrading to a smart thermostat. By guiding users towards areas with the highest potential for improvement, this score empowers them to make informed decisions that align with their energy efficiency goals and contribute to groundbreaking results in sustainable energy practices.
 
 ```python
@@ -136,16 +142,20 @@ This Python script generates a mock dataset with fictitious data representing ho
 ## Third Target Variable: Carbon Footprint Reduction Potential Score
 
 ### Importance of Third Target Variable:
+
 The `Carbon Footprint Reduction Potential Score` could be instrumental in enhancing the predictive model's accuracy and providing holistic insights into household energy practices. This score would quantify the potential for reducing the carbon footprint associated with energy consumption, taking into account energy sources, usage patterns, and efficiency improvements. By incorporating this target variable, the model can offer environmentally conscious recommendations to users, aligning energy cost reduction efforts with sustainable practices.
 
 ### Complementarity with Primary and Secondary Target Variables:
+
 The `Carbon Footprint Reduction Potential Score` complements the `Energy Cost Reduction Score` and `Energy Efficiency Improvement Potential Score` by addressing the environmental impact of energy consumption. While the primary target focuses on cost savings and the secondary target emphasizes efficiency improvements, the third target variable shifts the focus to carbon emission reductions. By considering all three scores together, users can make informed decisions that not only lower their energy bills but also contribute significantly to environmental sustainability.
 
 ### Example Values:
+
 - A household with a high `Carbon Footprint Reduction Potential Score` of 90% may benefit from transitioning to renewable energy sources, optimizing energy usage during peak hours, and reducing overall energy consumption for substantial carbon footprint reductions.
 - Conversely, a low score of 30% could indicate opportunities for implementing energy-efficient practices and adopting greener technologies to minimize carbon emissions associated with household energy usage.
 
 ### User Decision-making:
+
 Users can leverage the `Carbon Footprint Reduction Potential Score` to prioritize actions that align with their sustainability goals. For instance, a high score in renewable energy adoption may prompt a household to invest in solar panels or switch to a green energy provider. By quantifying the environmental impact of energy-saving measures, this score empowers users to make eco-conscious choices and drive groundbreaking results in reducing carbon footprints while simultaneously optimizing energy costs and efficiency.
 
 ```python
@@ -219,34 +229,40 @@ This Python script generates a mock dataset with fictitious data for household f
 ### User Stories:
 
 1. **Households on a Tight Budget**:
-   - *Scenario*: Maria, a single mother of two, finds it challenging to keep up with her high energy bills every month.
-   - *Pain Point*: Maria is worried about the financial strain caused by her energy expenses, limiting her ability to save or invest in her children's future.
-   - *Solution*: The `Energy Cost Reduction Score` provides Maria with a clear roadmap to cut down her energy costs by implementing efficient practices and renewable energy sources.
-   - *Benefits*: By following the tailored advice, Maria can significantly reduce her monthly expenses, easing her financial burden and improving her family's quality of life.
-   - *Project Component*: The AI-powered energy usage pattern analysis and personalized recommendations feature would offer Maria actionable steps to lower her energy bills effectively.
+
+   - _Scenario_: Maria, a single mother of two, finds it challenging to keep up with her high energy bills every month.
+   - _Pain Point_: Maria is worried about the financial strain caused by her energy expenses, limiting her ability to save or invest in her children's future.
+   - _Solution_: The `Energy Cost Reduction Score` provides Maria with a clear roadmap to cut down her energy costs by implementing efficient practices and renewable energy sources.
+   - _Benefits_: By following the tailored advice, Maria can significantly reduce her monthly expenses, easing her financial burden and improving her family's quality of life.
+   - _Project Component_: The AI-powered energy usage pattern analysis and personalized recommendations feature would offer Maria actionable steps to lower her energy bills effectively.
 
 2. **Environmentally Conscious Users**:
-   - *Scenario*: Javier, an environmental activist, is passionate about reducing his household's carbon footprint and transitioning to sustainable energy sources.
-   - *Pain Point*: Javier feels guilty about the negative impact his energy consumption has on the environment and is actively seeking green solutions.
-   - *Solution*: The `Carbon Footprint Reduction Potential Score` highlights the areas where Javier can make eco-friendly choices to minimize his household's carbon emissions.
-   - *Benefits*: By leveraging the sustainability-focused recommendations, Javier can align his energy practices with his environmental values, contributing to a greener future for the planet.
-   - *Project Component*: The renewable energy sources matching feature and carbon footprint analysis tool would empower Javier to make informed decisions that support his sustainability goals.
+
+   - _Scenario_: Javier, an environmental activist, is passionate about reducing his household's carbon footprint and transitioning to sustainable energy sources.
+   - _Pain Point_: Javier feels guilty about the negative impact his energy consumption has on the environment and is actively seeking green solutions.
+   - _Solution_: The `Carbon Footprint Reduction Potential Score` highlights the areas where Javier can make eco-friendly choices to minimize his household's carbon emissions.
+   - _Benefits_: By leveraging the sustainability-focused recommendations, Javier can align his energy practices with his environmental values, contributing to a greener future for the planet.
+   - _Project Component_: The renewable energy sources matching feature and carbon footprint analysis tool would empower Javier to make informed decisions that support his sustainability goals.
 
 3. **Innovative Technology Adopters**:
-   - *Scenario*: Diego, a tech enthusiast, is interested in exploring smart energy solutions to optimize his household's energy efficiency.
-   - *Pain Point*: Diego is keen on leveraging technology to enhance his energy management but is unsure about the most effective methods to achieve savings and efficiency.
-   - *Solution*: The `Energy Efficiency Improvement Potential Score` guides Diego towards adopting advanced technologies and practices to boost his household's energy efficiency.
-   - *Benefits*: By embracing cutting-edge solutions recommended by the system, Diego can optimize his energy usage, reduce waste, and potentially lower his energy bills in the long run.
-   - *Project Component*: The energy efficiency improvement insights and technology adoption suggestions feature would appeal to Diego's interest in innovative energy solutions, providing him with valuable strategies to enhance efficiency and savings.
+   - _Scenario_: Diego, a tech enthusiast, is interested in exploring smart energy solutions to optimize his household's energy efficiency.
+   - _Pain Point_: Diego is keen on leveraging technology to enhance his energy management but is unsure about the most effective methods to achieve savings and efficiency.
+   - _Solution_: The `Energy Efficiency Improvement Potential Score` guides Diego towards adopting advanced technologies and practices to boost his household's energy efficiency.
+   - _Benefits_: By embracing cutting-edge solutions recommended by the system, Diego can optimize his energy usage, reduce waste, and potentially lower his energy bills in the long run.
+   - _Project Component_: The energy efficiency improvement insights and technology adoption suggestions feature would appeal to Diego's interest in innovative energy solutions, providing him with valuable strategies to enhance efficiency and savings.
 
 By understanding the diverse user groups and crafting user stories that resonate with their specific needs and motivations, the project's value proposition is enhanced, showcasing its broad benefits and tailored approach to addressing various user pain points in the quest for energy cost reduction and sustainability.
 
 ## User Story:
 
 ### User Name: Sofia Garcia
+
 ### User Group: Environmentally Conscious Homeowner
+
 ### User Challenge: Struggling to Reduce Energy Costs While Minimizing Carbon Footprint
+
 ### Pain Point: High Energy Bills Impacting Environmental Values and Financial Stability
+
 ### Negative Impact: Feeling Helpless in Balancing Environmental Concerns and Budget Constraints
 
 In the bustling city of Lima, Sofia Garcia, an environmentally conscious homeowner, faces a specific challenge. Despite her dedication to sustainable living, Sofia finds herself struggling to reduce her energy costs while minimizing her carbon footprint. The more she tries to cut down on her electricity usage, the higher her bills become, leading to a significant pain point in her life — the intersection of environmental values and financial stability.
