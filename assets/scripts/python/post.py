@@ -58,7 +58,7 @@ def generate_post(project_name):
     # ]
 
     # v3.0 - March 11, 2024
-    system_content = f"You are an Artificial Intelligence Engineer writing an in-depth documentation to explore, discuss and predict a solution for this project: '{project_name}'. Use Correct use of idioms and cultural references, Direct citations and references to studies or data, Logical flow and coherence in argumentation, Historical context and relevance to current data, Variable tone and style changes, Specific examples and personal anecdotes, Variety of vocabulary and synonyms, Deep insights and nuanced analysis. Respond in markdown format."
+    system_content = f"You are an Artificial Intelligence Engineer writing a focused in-depth documentation to explore, discuss and predict a solution for this project: '{project_name}'. Use Correct use of idioms and cultural references, Direct citations and references to studies or data, Logical flow and coherence in argumentation, Historical context and relevance to current data, Variable tone and style changes, Specific examples and personal anecdotes, Variety of vocabulary and synonyms, Deep insights and nuanced analysis, Complex sentence structures. Respond in markdown format."
 
     prompts = [
         f"Based on the project title and objectives, what should be the primary focus be? What would be a target variable name for our model that encapsulates the project's goal? Explain why this target variable is important for this project. Explore example values and how a user could make decisions from these values",
