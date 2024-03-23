@@ -100,18 +100,6 @@ main article:not(:first-child) {
   justify-content: space-between;
 }
 
-@media (max-width: 900px) {
-  nav,
-  header,
-  footer p,
-  .article-header,
-  .article-section,
-  .article-single-content,
-  .page-content {
-    margin: 0 5vw 0 5vw;
-  }
-}
-
 h1,
 h2,
 h3 {
@@ -131,11 +119,11 @@ nav ul {
   display: flex;
   justify-content: flex-end;
   list-style: none; /* Removes default list styling */
+  gap: 20px;
 }
 
 nav ul li {
   display: inline-block; /* Displays list items inline but with block features */
-  margin-right: 20px; /* Adjust space between items. Adjust as necessary */
 }
 
 .footer-nav {
@@ -149,4 +137,25 @@ nav ul li {
 
 .footer-copyright {
   margin-bottom: 100px;
+}
+
+@media (max-width: 900px) {
+  header,
+  footer p,
+  .article-header,
+  .article-section,
+  .article-single-content,
+  .page-content {
+    margin: 0 5vw 0 5vw;
+  }
+
+  nav {
+    margin: 30px 5vw 30px 5vw;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-start;
+  }
 }

@@ -26,3 +26,9 @@ defaults:
     values:
       seo_description_max_words: 5
       layout: "pages"
+exclude:
+  - generator_files
+  - env
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
