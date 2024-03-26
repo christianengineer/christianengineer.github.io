@@ -147,7 +147,7 @@ def main():
 
     results = []
 
-    with open("assets/projects/project_list_user_problem_solution.txt", "r") as file:
+    with open("generator_files/projects/project_list_user_problem_solution.txt", "r") as file:
         project_names = [line.strip() for line in file if line.strip()]
 
     if project_names:
@@ -180,15 +180,15 @@ def main():
             )
 
             print(
-                f"Write the updated assets/projects/project_list_user_problem_solution.txt back to the file"
+                f"Write the updated /generator_files/projects/project_list_user_problem_solution.txt back to the file"
             )
             with open(
-                "assets/projects/project_list_user_problem_solution.txt", "w"
+                "generator_files/projects/project_list_user_problem_solution.txt", "w"
             ) as file:
                 for remaining_project_names in project_names:
                     file.write(f"{remaining_project_names}\n")
             print(
-                f"UPDATED: assets/projects/project_list_user_problem_solution.txt updated"
+                f"UPDATED: /generator_files/projects/project_list_user_problem_solution.txt updated"
             )
         else:
             print(f"ERROR: Failed to generate article for '{project_name}'.")
