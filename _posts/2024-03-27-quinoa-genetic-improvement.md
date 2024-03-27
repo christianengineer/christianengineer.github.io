@@ -3,6 +3,7 @@ title: Quinoa Genetic Improvement - Applying AI in genetic research to enhance q
 date: 2024-03-27
 permalink: posts/quinoa-genetic-improvement
 layout: article
+post_image: assets/images/posts/2024-03-27-quinoa-genetic-improvement.webp
 ---
 
 ## Primary Focus and Target Variable
